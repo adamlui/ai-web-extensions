@@ -37,7 +37,7 @@
   "devDependencies": {
     "@eslint/json": "^0.10.0",
     "@eslint/markdown": "^6.2.2",
-    "@stylistic/eslint-plugin-js": "^4.1.0",
+    "@stylistic/eslint-plugin-js": "^4.2.0",
     "eslint": "^9.21.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-yml": "^1.17.0",
