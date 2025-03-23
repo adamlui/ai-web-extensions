@@ -219,13 +219,13 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.22.1
+// @version             2025.3.22.2
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@8b39fb4/assets/images/icons/continue-symbol/circled/with-robot/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@8b39fb4/assets/images/icons/continue-symbol/circled/with-robot/icon64.png
 // @match               *://chatgpt.com/*
 // @connect             cdn.jsdelivr.net
-// @connect             gm.chatgptautocontinue.com
+// @connect             chatgptautocontinue.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.7.1/dist/chatgpt.min.js#sha256-uv1k2VxGy+ri3+2C+D/kTYSBCom5JzvrNCLxzItgD6M=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@274036c/chromium/extension/components/modals.js#sha256-8r+vAOuNqGSqk71EI5DlGyXbTLtcD21v64naKRJF5RI=
