@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.22
+// @version             2025.3.22.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -261,7 +261,7 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@cc1452d/chromium/extension/lib/settings.js#sha256-61hKRmY1j18By0lygK8mUqUHP0OP6czHrq4FFPJNxAY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f9ebcb0/chromium/extension/lib/ui.js#sha256-Bg82hwdZyJAORV7B6Vg3uIxQ8qnJhCsU624NyjQrKcA=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f9ebcb0/chromium/extension/components/buttons.js#sha256-+5qVTeQkcYg7r4sAfUAtSD1D9HTKF+Jo3Sin4ZjYDEc=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@05601b9/chromium/extension/components/icons.js#sha256-RG/BVbnnWk4KPfsvdmtZSsIs9XcsdV2yUwPN2PikJe4=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@d96f327/chromium/extension/components/icons.js#sha256-lrAx3C5E0gugnjUHqw/wLamG7aE9UTCfAJwM0WM8jjo=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@9d778e8/chromium/extension/components/modals.js#sha256-dMLSR939RGAI/ilIXt8Nnzq0QyKaUn89+AdPpNhGgtM=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@54e97d9/chromium/extension/components/tooltip.js#sha256-GljOgUbR7hOssEk0DWGgDEXbJBfG2XnmlxMTm0nZ/Jw=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
@@ -311,7 +311,7 @@
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         urls: { update: 'https://gm.chatgptwidescreen.com' },
-        latestResourceCommitHash: '7fb1782' // for cached app.json + sites.json5 + messages.json
+        latestResourceCommitHash: '3f25a44' // for cached app.json + sites.json5 + messages.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
