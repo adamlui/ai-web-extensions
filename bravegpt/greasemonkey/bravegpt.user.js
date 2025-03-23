@@ -148,10 +148,10 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.21
+// @version               2025.3.22
 // @license               MIT
-// @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
-// @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
+// @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
+// @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
 // @compatible            chrome
 // @compatible            firefox
 // @compatible            edge
@@ -172,7 +172,6 @@
 // @connect               api.binjie.fun
 // @connect               api.openai.com
 // @connect               api11.gptforlove.com
-// @connect               aiwebextensions.com
 // @connect               bravegpt.com
 // @connect               cdn.jsdelivr.net
 // @connect               chatai.mixerbox.com
@@ -182,19 +181,19 @@
 // @connect               raw.githubusercontent.com
 // @require               https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.7.1/dist/chatgpt.min.js#sha256-uv1k2VxGy+ri3+2C+D/kTYSBCom5JzvrNCLxzItgD6M=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
-// @require               https://assets.aiwebextensions.com/lib/crypto-utils.js/dist/crypto-utils.min.js?v=37e0d7d#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
-// @require               https://assets.aiwebextensions.com/lib/dom.js/dist/dom.min.js?v=607b343#sha256-p8+Cxb2EvM4F4H7nZbljakpZ+8H9wAgj6++MRErdXe8=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@37e0d7d/assets/lib/crypto-utils.js/dist/crypto-utils.min.js#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@607b343/assets/lib/dom.js/dist/dom.min.js#sha256-p8+Cxb2EvM4F4H7nZbljakpZ+8H9wAgj6++MRErdXe8=
 // @require               https://cdn.jsdelivr.net/npm/generate-ip@2.4.4/dist/generate-ip.min.js#sha256-aQQKAQcMgCu8IpJp9HKs387x0uYxngO+Fb4pc5nSF4I=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js#sha256-g3pvpbDHNrUrveKythkPMF2j/J7UFoHbUyFQcFe1yEY=
 // @require               https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js#sha256-n0UwfFeU7SR6DQlfOmLlLvIhWmeyMnIDp/2RmVmuedE=
 // @require               https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js#sha256-e1fUJ6xicGd9r42DgN7SzHMzb5FJoWe44f4NbvZmBK4=
 // @require               https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js#sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=
-// @resource bgptIcon     https://assets.bravegpt.com/images/icons/bravegpt/icon64.png.b64?v=a76e718#sha256-Abqr6XIwT+g72ig2haUUkniR89b5UlxL28cAI6BVT/c=
-// @resource bgptLSlogo   https://assets.bravegpt.com/images/logos/bravegpt/lightmode/logo730x155.png.b64?v=a76e718#sha256-gGomHdYcs/AE4Ep8dAJhPFbCX6uyHmb38vi9hWYJZLI=
-// @resource bgptDSlogo   https://assets.bravegpt.com/images/logos/bravegpt/darkmode/logo730x155.png.b64?v=a76e718#sha256-2Qx4bTS8s7dKj4m2dsJdPnijThaYRwYQMi30+KjtopI=
+// @resource bgptIcon     https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@a76e718/assets/images/icons/bravegpt/icon64.png.b64#sha256-Abqr6XIwT+g72ig2haUUkniR89b5UlxL28cAI6BVT/c=
+// @resource bgptLSlogo   https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@a76e718/assets/images/logos/bravegpt/lightmode/logo730x155.png.b64#sha256-gGomHdYcs/AE4Ep8dAJhPFbCX6uyHmb38vi9hWYJZLI=
+// @resource bgptDSlogo   https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@a76e718/assets/images/logos/bravegpt/darkmode/logo730x155.png.b64#sha256-2Qx4bTS8s7dKj4m2dsJdPnijThaYRwYQMi30+KjtopI=
 // @resource hljsCSS      https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css#sha256-v0N76BFFkH0dCB8bUr4cHSVN8A/zCaOopMuSmJWV/5w=
-// @resource rpgCSS       https://assets.aiwebextensions.com/styles/rising-particles/dist/gray.min.css?v=727feff#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
-// @resource rpwCSS       https://assets.aiwebextensions.com/styles/rising-particles/dist/white.min.css?v=727feff#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
+// @resource rpgCSS       https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
+// @resource rpwCSS       https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant                 GM_getValue
 // @grant                 GM_setValue
 // @grant                 GM_deleteValue
@@ -397,7 +396,7 @@
 
     // Init API data
     const apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
-        method: 'GET', url: 'https://assets.aiwebextensions.com/data/ai-chat-apis.json?v=456ac92',
+        method: 'GET', url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@456ac92/assets/data/ai-chat-apis.json',
         onload: resp => resolve(JSON.parse(resp.responseText))
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()

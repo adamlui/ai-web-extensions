@@ -220,10 +220,10 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.15
+// @version             2025.3.22
 // @license             MIT
-// @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
-// @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
+// @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@f11a0a8/assets/images/icons/openai/black/icon48.png
+// @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@f11a0a8/assets/images/icons/openai/black/icon64.png
 // @compatible          chrome
 // @compatible          firefox
 // @compatible          edge
@@ -239,9 +239,9 @@
 // @connect             gm.chatgptautorefresh.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.7.1/dist/chatgpt.min.js#sha256-uv1k2VxGy+ri3+2C+D/kTYSBCom5JzvrNCLxzItgD6M=
-// @require             https://assets.aiwebextensions.com/lib/dom.js/dist/dom.min.js?v=607b343#sha256-p8+Cxb2EvM4F4H7nZbljakpZ+8H9wAgj6++MRErdXe8=
-// @resource rpgCSS     https://assets.aiwebextensions.com/styles/rising-particles/dist/gray.min.css?v=727feff#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
-// @resource rpwCSS     https://assets.aiwebextensions.com/styles/rising-particles/dist/white.min.css?v=727feff#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@607b343/assets/lib/dom.js/dist/dom.min.js#sha256-p8+Cxb2EvM4F4H7nZbljakpZ+8H9wAgj6++MRErdXe8=
+// @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
+// @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant               GM_setValue
 // @grant               GM_getValue
 // @grant               GM_registerMenuCommand
@@ -294,15 +294,15 @@
                 payPal: 'https://paypal.me/adamlui'
             },
             gitHub: 'https://github.com/adamlui/chatgpt-auto-refresh',
-            assetHost: 'https://assets.chatgptautorefresh.com',
+            assetHost: 'https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@latest/assets',
             relatedExtensions: 'https://github.com/adamlui/ai-web-extensions',
             support: 'https://support.chatgptautorefresh.com',
             update: 'https://gm.chatgptautorefresh.com'
         },
         latestResourceCommitHash: '11d8353' // for cached messages.json + navicon in toggles.sidebar.insert()
     }
-    app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
-                          + `@${app.latestResourceCommitHash}`
+    app.urls.assetHost = app.urls.assetHost.replace('@latest', `@${app.latestResourceCommitHash}`)
+    app.urls.resourceHost = app.urls.assetHost.replace('/assets', '')
     app.msgs = {
         appName: app.name,
         appAuthor: app.author.name,
@@ -917,7 +917,7 @@
                 navicon({ preload = false } = {}) {
                     const baseURL = `${app.urls.assetHost}/images/icons/auto-refresh`,
                           schemeMap = { light: 'black', dark: 'white' },
-                          fileName = `icon32.png?v=${app.latestResourceCommitHash}`
+                          fileName = 'icon32.png'
                     if (preload)
                         Object.keys(schemeMap).forEach(scheme =>
                             new Image().src = `${baseURL}/${schemeMap[scheme]}/${fileName}`)

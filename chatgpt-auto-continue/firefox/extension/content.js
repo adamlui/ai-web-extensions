@@ -98,8 +98,8 @@
     // Add RISING PARTICLES styles
     ['gray', 'white'].forEach(color => document.head.append(
         dom.create.elem('link', { rel: 'stylesheet',
-            href: `https://assets.aiwebextensions.com/styles/rising-particles/dist/${
-                color}.min.css?v=727feff`
+            href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/styles/rising-particles/dist/${
+                color}.min.css`
     })))
 
     // Observe DOM for need to continue generating response

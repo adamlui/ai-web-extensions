@@ -2,9 +2,9 @@
   "name": "ChatGPT Auto-Continue", "symbol": "≫", "slug": "chatgpt-auto-continue",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "assetHost": "https://assets.chatgptautocontinue.com",
+    "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@latest/assets",
     "chatgptJS": "https://chatgpt.js.org",
-    "cjsAssetHost": "https://assets.chatgptjs.org",
+    "cjsAssetHost": "https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@latest/assets",
     "contributors": "https://docs.chatgptautocontinue.com/#-contributors",
     "discuss": "https://github.com/adamlui/chatgpt-auto-continue/discussions",
     "donate": {

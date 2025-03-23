@@ -2,9 +2,9 @@
   "name": "Autoclear ChatGPT History", "symbol": "🕶️", "slug": "autoclear-chatgpt-history",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "assetHost": "https://assets.autoclearchatgpt.com",
+    "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@latest/assets",
     "chatgptJS": "https://chatgpt.js.org",
-    "cjsAssetHost": "https://assets.chatgptjs.org",
+    "cjsAssetHost": "https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@latest/assets",
     "contributors": "https://docs.autoclearchatgpt.com/#-contributors",
     "discuss": "https://github.com/adamlui/autoclear-chatgpt-history/discussions",
     "donate": {
