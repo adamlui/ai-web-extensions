@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.22.1
+// @version             2025.3.22.2
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@f11a0a8/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@f11a0a8/assets/images/icons/openai/black/icon64.png
@@ -285,6 +285,7 @@
         configKeyPrefix: 'chatGPTautoRefresh', chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         author: { name: 'Adam Lui', url: 'https://github.com/adamlui' },
         urls: {
+            assetHost: 'https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@latest/assets',
             chatgptJS: 'https://chatgpt.js.org',
             contributors: 'https://docs.chatgptautorefresh.com/#-contributors',
             discuss: 'https://github.com/adamlui/chatgpt-auto-refresh/discussions',
@@ -294,7 +295,6 @@
                 payPal: 'https://paypal.me/adamlui'
             },
             gitHub: 'https://github.com/adamlui/chatgpt-auto-refresh',
-            assetHost: 'https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@latest/assets',
             relatedExtensions: 'https://github.com/adamlui/ai-web-extensions',
             support: 'https://support.chatgptautorefresh.com',
             update: 'https://gm.chatgptautorefresh.com'

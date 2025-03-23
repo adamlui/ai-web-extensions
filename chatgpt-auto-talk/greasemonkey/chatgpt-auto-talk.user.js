@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.22.1
+// @version             2025.3.22.2
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@9f1ed3c/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@9f1ed3c/assets/images/icons/openai/black/icon64.png
@@ -279,6 +279,7 @@
         configKeyPrefix: 'chatGPTautoTalk', chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         author: { name: 'Adam Lui', url: 'https://github.com/adamlui' },
         urls: {
+            assetHost: 'https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@latest/assets',
             chatgptJS: 'https://chatgpt.js.org',
             contributors: 'https://docs.chatgptautotalk.com/#-contributors',
             discuss: 'https://github.com/adamlui/chatgpt-auto-talk/discussions',
@@ -288,7 +289,6 @@
                 payPal: 'https://paypal.me/adamlui'
             },
             gitHub: 'https://github.com/adamlui/chatgpt-auto-talk',
-            assetHost: 'https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@latest/assets',
             relatedExtensions: 'https://github.com/adamlui/ai-web-extensions',
             support: 'https://support.chatgptautotalk.com',
             update: 'https://gm.chatgptautotalk.com'
