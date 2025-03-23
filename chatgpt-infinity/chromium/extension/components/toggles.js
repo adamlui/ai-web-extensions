@@ -134,7 +134,7 @@ window.toggles = {
             navicon({ preload = false } = {}) {
                 const baseURL = `${toggles.imports.app.urls.assetHost}/images/icons/infinity-symbol`,
                       schemeMap = { light: 'black', dark: 'white' },
-                      fileName = `icon32.png?v=${toggles.imports.app.latestResourceCommitHash}`
+                      fileName = 'icon32.png'
                 if (preload)
                     Object.keys(schemeMap).forEach(scheme =>
                         new Image().src = `${baseURL}/${schemeMap[scheme]}/${fileName}`)

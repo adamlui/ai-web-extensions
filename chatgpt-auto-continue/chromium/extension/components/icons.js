@@ -23,9 +23,6 @@ window.icons = {
 
     questionMark: {
         type: 'png',
-        get src() {
-            return `${icons.imports.app.urls.assetHost}/images/icons/question-mark/icon16.png?v=${
-                icons.imports.app.latestResourceCommitHash}`
-        }
+        get src() { return `${icons.imports.app.urls.assetHost}/images/icons/question-mark/icon16.png` }
     }
 };

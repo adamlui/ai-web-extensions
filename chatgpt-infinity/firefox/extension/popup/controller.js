@@ -126,7 +126,7 @@
                                 settings.save('replyLanguage', replyLang || chrome.i18n.getUILanguage())
                                 siteAlert(getMsg('alert_replyLangUpdated') + '!',
                                     `${getMsg('appName')} ${getMsg('alert_willReplyIn')} `
-                                    + `${ replyLang || getMsg('alert_yourSysLang') }.`
+                                      + `${ replyLang || getMsg('alert_yourSysLang') }.`
                                 )
                                 break
                             }
@@ -138,11 +138,11 @@
                             replyTopic = toTitleCase(replyTopic.toString()) // for menu/alert aesthetics
                             settings.save('replyTopic',
                                 !replyTopic || re_all.test(replyTopic) ? getMsg('menuLabel_all')
-                                                                    : replyTopic)
+                                                                       : replyTopic)
                             siteAlert(`${getMsg('alert_replyTopicUpdated')}!`,
                                 `${getMsg('appName')} ${getMsg('alert_willAnswer')} `
                                     + ( !replyTopic || re_all.test(replyTopic) ?
-                                            getMsg('alert_onAllTopics')
+                                             getMsg('alert_onAllTopics')
                                         : `${getMsg('alert_onTopicOf')} ${replyTopic}`
                                     ) + '!'
                             )
@@ -176,7 +176,7 @@
     const cjsSpan = dom.create.elem('span', { class: 'cjs-span',
         title: env.browser.displaysEnglish ? '' : `${getMsg('about_poweredBy')} chatgpt.js` })
     const cjsLogo = dom.create.elem('img', {
-        src: `${app.urls.cjsAssetHost}/images/badges/powered-by-chatgpt.js.png?b2a1975` })
+        src: `${app.urls.cjsAssetHost.replace('@latest', '@745f0ca')}/images/badges/powered-by-chatgpt.js.png` })
     cjsSpan.onclick = () => { open(app.urls.chatgptJS) ; close() }
     cjsSpan.append(cjsLogo) ; footer.append(cjsSpan)
 
