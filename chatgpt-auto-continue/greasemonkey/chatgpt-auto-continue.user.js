@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.22
+// @version             2025.3.22.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@8b39fb4/assets/images/icons/continue-symbol/circled/with-robot/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@8b39fb4/assets/images/icons/continue-symbol/circled/with-robot/icon64.png
@@ -276,7 +276,7 @@
         version: GM_info.script.version, configKeyPrefix: 'chatGPTautoContinue',
         chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         urls: { update: 'https://gm.chatgptautocontinue.com' },
-        latestResourceCommitHash: '2857f9a' // for cached app.json + messages.json
+        latestResourceCommitHash: '2fc3cc3' // for cached app.json + messages.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
