@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.22.3
+// @version             2025.3.23
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@a8c9387/assets/images/icons/continue-symbol/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@a8c9387/assets/images/icons/continue-symbol/black/icon64.png
@@ -348,7 +348,7 @@
                 } catch (err) { // if bad response
                     msgXHRtries++ ; if (msgXHRtries == 3) return resolve({}) // try original/region-stripped/EN only
                     msgHref = env.browser.language.includes('-') && msgXHRtries == 1 ? // if regional lang on 1st try...
-                        msgHref.replace(/([^_]+_[^_]+)_[^/]*(\/.*)/, '$1$2') // ...strip region before retrying
+                        msgHref.replace(/(_locales\/[^_]+)_[^_]+(\/)/, '$1$2') // ...strip region before retrying
                             : ( msgHostDir + 'en/messages.json' ) // else use default English messages
                     fetchMsgs()
                 }

@@ -6,8 +6,8 @@
 
     // Init ENV context
     const env = {
-        site: /([^.]+)\.[^.]+$/.exec(new URL((await chrome.tabs.query(
-            { active: true, currentWindow: true }))[0].url).hostname)?.[1],
+        site: new URL((await chrome.tabs.query({ active: true, currentWindow: true }))[0].url)
+            .hostname.split('.').slice(-2, -1)[0], // extract 2nd-level domain
         browser: {
             displaysEnglish: chrome.i18n.getUILanguage().startsWith('en'),
             isFF: navigator.userAgent.includes('Firefox')
@@ -105,9 +105,7 @@
     }
 
     // Create CHILD menu entries on matched pages
-    const matchHosts = chrome.runtime.getManifest().content_scripts[0].matches
-        .map(url => url.replace(/^https?:\/\/|\/.*$/g, ''))
-    if (matchHosts.some(host => host.includes(env.site))) {
+    if (chrome.runtime.getManifest().content_scripts[0].matches.some(match => match.includes(env.site))) {
         await settings.load(sites[env.site].availFeatures)
         const childEntriesDiv = dom.create.elem('div') ; document.body.append(childEntriesDiv)
         Object.keys(settings.controls).forEach(key => {

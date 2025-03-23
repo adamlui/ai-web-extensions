@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.22.2
+// @version             2025.3.23
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8df6f33/assets/images/icons/infinity-symbol/circled/with-robot/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8df6f33/assets/images/icons/infinity-symbol/circled/with-robot/icon64.png
@@ -362,7 +362,7 @@
                 } catch (err) { // if bad response
                     msgXHRtries++ ; if (msgXHRtries == 3) return resolve({}) // try original/region-stripped/EN only
                     msgHref = env.browser.language.includes('-') && msgXHRtries == 1 ? // if regional lang on 1st try...
-                        msgHref.replace(/([^_]+_[^_]+)_[^/]*(\/.*)/, '$1$2') // ...strip region before retrying
+                        msgHref.replace(/(_locales\/[^_]+)_[^_]+(\/)/, '$1$2') // ...strip region before retrying
                             : ( msgHostDir + 'en/messages.json' ) // else use default English messages
                     fetchMsgs()
                 }

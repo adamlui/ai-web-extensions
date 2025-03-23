@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.22.1
+// @version                2025.3.23
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -349,7 +349,7 @@
                 } catch (err) { // if bad response
                     msgXHRtries++ ; if (msgXHRtries == 3) return resolve({}) // try original/region-stripped/EN only
                     msgHref = env.browser.language.includes('-') && msgXHRtries == 1 ? // if regional lang on 1st try...
-                        msgHref.replace(/([^_]+_[^_]+)_[^/]*(\/.*)/, '$1$2') // ...strip region before retrying
+                        msgHref.replace(/(_locales\/[^_]+)_[^_]+(\/)/, '$1$2') // ...strip region before retrying
                             : ( msgHostDir + 'en/messages.json' ) // else use default English messages
                     fetchMsgs()
                 }
@@ -1116,7 +1116,7 @@
                                 const html = resp.responseText, dlLink = document.createElement('a')
                                 dlLink.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }))
                                 dlLink.download /* filename */ = html.match(/<title>([^<]+)<\/title>/i)[1] // page title
-                                    .replace(/\s+[—|/]+\s+/g, ' ') // convert suffix sep to space for hyphen-casing
+                                    .replace(/\s*[—|/]+\s*/g, ' ') // convert symbols to space for hyphen-casing
                                     .toLowerCase().trim().replace(/\s+/g, '-') // hyphen-case
                                     + '.html'
                                 document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download HTML

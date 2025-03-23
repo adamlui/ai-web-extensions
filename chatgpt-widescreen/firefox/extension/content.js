@@ -29,7 +29,7 @@
 
     // Init ENV context
     const env = {
-        browser: { isMobile: chatgpt.browser.isMobile() }, site: /([^.]+)\.[^.]+$/.exec(location.hostname)[1], ui: {}}
+        browser: { isMobile: chatgpt.browser.isMobile() }, site: location.hostname.split('.').slice(-2, -1)[0], ui: {}}
     env.browser.isPortrait = env.browser.isMobile && (innerWidth < innerHeight)
     ui.import({ site: env.site }) ; ui.getScheme().then(scheme => env.ui.scheme = scheme)
     if (env.site == 'chatgpt') // store native chatbar width for Wider Chatbox style

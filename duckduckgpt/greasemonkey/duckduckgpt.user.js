@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.22.1
+// @version                2025.3.23
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -506,7 +506,7 @@
                 } catch (err) { // if bad response
                     msgXHRtries++ ; if (msgXHRtries == 3) return resolve({}) // try original/region-stripped/EN only
                     msgHref = env.browser.language.includes('-') && msgXHRtries == 1 ? // if regional lang on 1st try...
-                        msgHref.replace(/([^_]+_[^_]+)_[^/]*(\/.*)/, '$1$2') // ...strip region before retrying
+                        msgHref.replace(/(_locales\/[^_]+)_[^_]+(\/)/, '$1$2') // ...strip region before retrying
                             : ( msgHostDir + 'en/messages.json' ) // else use default English messages
                     fetchMsgs()
                 }
@@ -1223,7 +1223,7 @@
                             else if (key.includes('rq')) toggle.relatedQueries()
                             else if (autoGenMatch) toggle.autoGen(autoGenMatch[0].toLowerCase())
                             else if (manualGenMatch) toggle.manualGen(manualGenMatch[0].toLowerCase())
-                            else if (key.includes('Sidebar')) toggle.sidebar(/(.*?)Sidebar$/.exec(key)[1])
+                            else if (key.includes('Sidebar')) toggle.sidebar(key.replace('Sidebar', ''))
                             else if (key.includes('anchor')) toggle.anchorMode()
                             else if (key.includes('bgAnimation')) toggle.animations('bg')
                             else if (key.includes('fgAnimation')) toggle.animations('fg')
@@ -1352,7 +1352,7 @@
                                 const html = resp.responseText, dlLink = document.createElement('a')
                                 dlLink.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }))
                                 dlLink.download /* filename */ = html.match(/<title>([^<]+)<\/title>/i)[1] // page title
-                                    .replace(/\s+[—|/]+\s+/g, ' ') // convert suffix sep to space for hyphen-casing
+                                    .replace(/\s*[—|/]+\s*/g, ' ') // convert symbols to space for hyphen-casing
                                     .toLowerCase().trim().replace(/\s+/g, '-') // hyphen-case
                                     + '.html'
                                 document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download HTML
@@ -4260,9 +4260,9 @@
     const msgChain = [], searchQuery = new URL(location.href).searchParams.get('q')
     if (config.autoGet || config.autoSummarize // Auto-Gen on
         || (config.prefixEnabled || config.suffixEnabled) // or Manual-Gen on
-            && [config.prefixEnabled && /.*q=%2F/.test(location.href), // prefix required/present
+            && [config.prefixEnabled && location.href.includes('q=%2F'), // prefix required/present
                 config.suffixEnabled // suffix required/present
-                    && /.*q=.*(?:%3F|？|%EF%BC%9F)(?:&|$)/.test(location.href)
+                    && /q=.*?(?:%3F|？|%EF%BC%9F)(?:&|$)/.test(location.href)
             ].filter(Boolean).length == (config.prefixEnabled + config.suffixEnabled) // validate both Manual-Gen modes
     ) { // auto-gen reply
         msgChain.push({

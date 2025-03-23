@@ -6,8 +6,8 @@
 
     // Init ENV context
     const env = {
-        site: /([^.]+)\.[^.]+$/.exec(new URL((await chrome.tabs.query(
-            { active: true, currentWindow: true }))[0].url).hostname)?.[1],
+        site: new URL((await chrome.tabs.query({ active: true, currentWindow: true }))[0].url)
+            .hostname.split('.').slice(-2, -1)[0], // extract 2nd-level domain
         browser: { displaysEnglish: chrome.i18n.getUILanguage().startsWith('en') }
     }
 
