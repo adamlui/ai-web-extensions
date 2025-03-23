@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.22
+// @version             2025.3.22.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon64.png
@@ -286,7 +286,7 @@
         version: GM_info.script.version, configKeyPrefix: 'autoclearChatGPThistory',
         chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         urls: { update: 'https://gm.autoclearchatgpt.com' },
-        latestResourceCommitHash: 'acf4877' // for cached app.json + messages.json + navicon in toggles.sidebar.insert()
+        latestResourceCommitHash: '6120099' // for cached app.json + messages.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = 'https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history'
                           + `@${app.latestResourceCommitHash}`
@@ -295,6 +295,7 @@
         onload: resp => resolve(JSON.parse(resp.responseText))
     }))
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
+    app.urls.assetHost = app.urls.assetHost.replace('@latest', `@${app.latestResourceCommitHash}`)
     app.msgs = {
         appName: app.name,
         appAuthor: app.author.name,
@@ -907,7 +908,7 @@
                 navicon({ preload = false } = {}) {
                     const baseURL = `${app.urls.assetHost}/images/icons/incognito`,
                           schemeMap = { light: 'black', dark: 'white' },
-                          fileName = `icon32.png?v=${app.latestResourceCommitHash}`
+                          fileName = 'icon32.png'
                     if (preload)
                         Object.keys(schemeMap).forEach(scheme =>
                             new Image().src = `${baseURL}/${schemeMap[scheme]}/${fileName}`)
