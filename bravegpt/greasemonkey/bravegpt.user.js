@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.23.2
+// @version               2025.3.23.3
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -256,6 +256,7 @@
             relatedExtensions: 'https://github.com/adamlui/ai-web-extensions',
             review: {
                 alternativeTo: 'https://alternativeto.net/software/bravegpt/about/',
+                g2: 'https://www.g2.com/products/bravegpt/take_survey',
                 productHunt: 'https://www.producthunt.com/products/bravegpt/reviews/new'
             },
             support: 'https://support.bravegpt.com',
@@ -839,7 +840,7 @@
             log.debug('Showing Feedback modal...')
 
             // Init buttons
-            let btns = [ function productHunt(){}, function alternativeto(){} ]
+            let btns = [ function productHunt(){}, function g2(){}, function alternativeto(){} ]
             if (modals.stack[0] != 'about') btns.push(function github(){})
 
             // Show modal
@@ -863,6 +864,7 @@
                 btn.replaceWith(btn = btn.cloneNode(true))
                 btn.onclick = () => modals.safeWinOpen(
                     btn.textContent == 'Product Hunt' ? app.urls.review.productHunt
+                  : btn.textContent == 'G2' ? app.urls.review.g2
                   : btn.textContent == 'Alternativeto' ? app.urls.review.alternativeTo
                   : app.urls.discuss
                 )
