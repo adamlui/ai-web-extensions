@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "huwa aġġornat" },
   "alert_unavailable": { "message": "mhux disponibbli" },
   "alert_isOnlyAvailFor": { "message": "huwa disponibbli biss għal" },
-  "alert_and": { "message": "u" },
   "alert_userscriptMgrNoStream": { "message": "Il-maniġer tal-iskript tal-utenti tiegħek ma jappoġġjax it-tweġibiet tal-flussi li jirrit" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "bħalissa hija disponibbli biss minn" },
   "alert_openAIsupportSoon": { "message": "L-appoġġ għall-API ta' OpenAI se jiżdied dalwaqt" },

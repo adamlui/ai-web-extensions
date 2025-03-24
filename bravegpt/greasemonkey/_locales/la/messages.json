@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "ad praesentem est" },
   "alert_unavailable": { "message": "non praesto" },
   "alert_isOnlyAvailFor": { "message": "solum praesto est pro" },
-  "alert_and": { "message": "et" },
   "alert_userscriptMgrNoStream": { "message": "Administra scriptorum tuorum non sustinet responsa stream" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "nunc solum praesto est per" },
   "alert_openAIsupportSoon": { "message": "Sustentatio ad OpenAI API brevi addetur" },

@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "imesasishwa" },
   "alert_unavailable": { "message": "(Haipatikani)" },
   "alert_isOnlyAvailFor": { "message": "inapatikana tu kwa" },
-  "alert_and": { "message": "na" },
   "alert_userscriptMgrNoStream": { "message": "Meneja wako wa hati za watumiaji haungi mkono majibu ya mkondo wa kurudi" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "kwa sasa inapatikana tu na" },
   "alert_openAIsupportSoon": { "message": "Usaidizi wa API ya OpenAI utaongezwa hivi karibuni" },

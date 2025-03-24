@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "tadɣa" },
   "alert_unavailable": { "message": "ur d-yella ara" },
   "alert_isOnlyAvailFor": { "message": "yella d-ittwafed i" },
-  "alert_and": { "message": "d" },
   "alert_userscriptMgrNoStream": { "message": "Nekkni ur d-yfka ara s-asnif n stream" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "yella d-ittwafed i" },
   "alert_openAIsupportSoon": { "message": "Sustentation i OpenAI API ad tserki" },

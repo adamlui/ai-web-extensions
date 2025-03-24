@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "ਨਵੀਨੀਕਰਨ" },
   "alert_unavailable": { "message": "ਅਣ- ਉਪਲੱਬਧ" },
   "alert_isOnlyAvailFor": { "message": "ਸਿਰਫ ਲਈ ਉਪਲਬਧ ਹੈ" },
-  "alert_and": { "message": "ਅਤੇ" },
   "alert_userscriptMgrNoStream": { "message": "ਤੁਹਾਡਾ ਯੂਜ਼ਰਸਕ੍ਰਿਪਟ ਮੈਨੇਜਰ ਵਾਪਸ ਆਉਣ ਵਾਲੇ ਸਟਰੀਮ ਜਵਾਬਾਂ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ਇਸ ਸਮੇਂ ਸਿਰਫ ਦੁਆਰਾ ਉਪਲਬਧ ਹੈ" },
   "alert_openAIsupportSoon": { "message": "ਓਪਨਏਆਈ ਏਪੀਆਈ ਲਈ ਸਹਾਇਤਾ ਜਲਦੀ ਹੀ ਸ਼ਾਮਲ ਕੀਤੀ ਜਾਏਗੀ" },

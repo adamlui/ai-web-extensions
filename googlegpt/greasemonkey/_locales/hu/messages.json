@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "naprakész" },
   "alert_unavailable": { "message": "nem elérhető" },
   "alert_isOnlyAvailFor": { "message": "csak ekkor érhető el" },
-  "alert_and": { "message": "és" },
   "alert_userscriptMgrNoStream": { "message": "A usercript menedzsere nem támogatja az adatfolyam-válaszok visszaküldését" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "jelenleg csak eddig érhető el" },
   "alert_openAIsupportSoon": { "message": "Hamarosan hozzáadjuk az OpenAI API támogatását" },

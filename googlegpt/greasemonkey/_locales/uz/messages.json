@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "dolzarb hisoblanadi" },
   "alert_unavailable": { "message": "mavjud emas" },
   "alert_isOnlyAvailFor": { "message": "uchungina mavjud" },
-  "alert_and": { "message": "va" },
   "alert_userscriptMgrNoStream": { "message": "Sizning foydalanuvchi skripti menejeri oqim javoblarini qaytarishni qo'llab-quvvatlamaydi" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "hozircha faqat tomonidan mavjud" },
   "alert_openAIsupportSoon": { "message": "Tez orada OpenAI API qo'llab-quvvatlashi qo'shiladi" },

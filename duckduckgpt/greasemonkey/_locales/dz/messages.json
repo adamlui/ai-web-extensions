@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "ད་ལྟོའི་བར་ན་ཡང་" },
   "alert_unavailable": { "message": "མ་ཐོབ་" },
   "alert_isOnlyAvailFor": { "message": "པ་ ཐོན་ཡོདཔ་ཨིན་པས།" },
-  "alert_and": { "message": "དང་" },
   "alert_userscriptMgrNoStream": { "message": "ཁྱོད་ཀྱི་ལག་ལེན་པའི་ཡིག་ཚུགས་འཛིན་སྐྱོང་པ་གིས་སླར་ལོག་རྒྱུན་ལམ་ལན་ཚུ་ལུ་རྒྱབ་སྐྱོར་མི་འབད།" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ད་ལྟོ་ལག་ལེན་འཐབ་ཚུགས་མི་དེ་" },
   "alert_openAIsupportSoon": { "message": "OpenAI API གི་དོན་ལུ་ རྒྱབ་སྐྱོར་འདི་ འཕྲལ་མགྱོགས་ར་ ཡར་སེང་འབད་ནི་ཨིན།" },

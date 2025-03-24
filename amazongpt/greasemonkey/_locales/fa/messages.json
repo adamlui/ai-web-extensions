@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "به روز است" },
   "alert_unavailable": { "message": "ناموجود" },
   "alert_isOnlyAvailFor": { "message": "فقط برای" },
-  "alert_and": { "message": "و" },
   "alert_userscriptMgrNoStream": { "message": "مدیر اسکریپت کاربر شما از پاسخ‌های جریان برگشتی پشتیبانی نمی‌کند" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "در حال حاضر فقط توسط" },
   "alert_openAIsupportSoon": { "message": "پشتیبانی از OpenAI API به زودی اضافه خواهد شد" },

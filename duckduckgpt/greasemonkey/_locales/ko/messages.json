@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "최신판입니다" },
   "alert_unavailable": { "message": "불가능" },
   "alert_isOnlyAvailFor": { "message": "은 (는) 다음에 대해서만 사용할 수" },
-  "alert_and": { "message": "및" },
   "alert_userscriptMgrNoStream": { "message": "사용자 스크립트 관리자가 스트림 응답 반환을 지원하지 않습니다" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "현재 까지만 이용 가능합니다" },
   "alert_openAIsupportSoon": { "message": "OpenAI API에 대한 지원이 곧 추가될 예정입니다" },

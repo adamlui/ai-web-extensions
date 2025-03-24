@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "Actualizat" },
   "alert_unavailable": { "message": "indisponibil" },
   "alert_isOnlyAvailFor": { "message": "este disponibil numai pentru" },
-  "alert_and": { "message": "și" },
   "alert_userscriptMgrNoStream": { "message": "Managerul dvs. de scripturi de utilizator nu acceptă returnarea răspunsurilor fluxului" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "este disponibil în prezent numai de" },
   "alert_openAIsupportSoon": { "message": "Suportul pentru OpenAI API va fi adăugat în scurt timp" },

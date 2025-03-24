@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "Elle est à jour" },
   "alert_unavailable": { "message": "Il ne reste plus de produit disponible pour cette date" },
   "alert_isOnlyAvailFor": { "message": "n'est disponible que pour" },
-  "alert_and": { "message": "et" },
   "alert_userscriptMgrNoStream": { "message": "Votre gestionnaire de script utilisateur ne prend pas en charge le retour des réponses de flux" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "n'est actuellement disponible que pour" },
   "alert_openAIsupportSoon": { "message": "La prise en charge de l'API OpenAI sera ajoutée sous peu" },

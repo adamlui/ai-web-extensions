@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "yenilənir" },
   "alert_unavailable": { "message": "ƏLÇATAN DEYİL" },
   "alert_isOnlyAvailFor": { "message": "yalnız bunun üçün mövcuddur" },
-  "alert_and": { "message": "və" },
   "alert_userscriptMgrNoStream": { "message": "İstifadəçilər üzrə meneceriniz axın cavablarının qaytarılmasını dəstəkləmir" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "hazırda yalnız aşağıdakılar mövcuddur" },
   "alert_openAIsupportSoon": { "message": "OpenAI API üçün dəstək qısa zamanda əlavə ediləcək" },

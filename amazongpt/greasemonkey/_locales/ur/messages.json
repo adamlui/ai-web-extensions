@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "تازہ ترین ہے" },
   "alert_unavailable": { "message": "دستیاب نہیں" },
   "alert_isOnlyAvailFor": { "message": "صرف کے لئے دستیاب ہے" },
-  "alert_and": { "message": "اور" },
   "alert_userscriptMgrNoStream": { "message": "آپ کا صارف اسکرپٹ مینیجر واپس آنے والے اسٹریم جوابات کی حمایت نہیں کرتا ہے" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "فی الحال صرف کی طرف سے دستیاب ہے" },
   "alert_openAIsupportSoon": { "message": "OpenAI API کے لیے سپورٹ جلد ہی شامل کر دی جائے گی" },

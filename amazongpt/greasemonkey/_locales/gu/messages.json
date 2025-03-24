@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "સુધારો" },
   "alert_unavailable": { "message": "ઉપલબ્ધ નથી" },
   "alert_isOnlyAvailFor": { "message": "માટે જ ઉપલબ્ધ છે" },
-  "alert_and": { "message": "અને" },
   "alert_userscriptMgrNoStream": { "message": "તમારા વપરાશકર્તા સ્ક્રિપ્ટ મેનેજર રીટર્નિંગ સ્ટ્રીમ રિસ્પોન્સને સપોર્ટ કરતા નથી" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "હાલમાં ફક્ત દ્વારા ઉપલબ્ધ છે" },
   "alert_openAIsupportSoon": { "message": "OpenAI API માટે સપોર્ટ ટૂંક સમયમાં ઉમેરવામાં આવશે" },

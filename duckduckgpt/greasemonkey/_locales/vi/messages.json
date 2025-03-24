@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "Cập nhật" },
   "alert_unavailable": { "message": "không có mặt" },
   "alert_isOnlyAvailFor": { "message": "chỉ khả dụng cho" },
-  "alert_and": { "message": "và" },
   "alert_userscriptMgrNoStream": { "message": "Người quản lý bản mô tả người dùng của bạn không hỗ trợ trả về phản hồi luồng" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "hiện chỉ khả dụng trước" },
   "alert_openAIsupportSoon": { "message": "Hỗ trợ cho API OpenAI sẽ sớm được thêm vào" },

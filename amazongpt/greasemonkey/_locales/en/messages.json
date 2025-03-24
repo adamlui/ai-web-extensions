@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "is up-to-date" },
   "alert_unavailable": { "message": "unavailable" },
   "alert_isOnlyAvailFor": { "message": "is only available for" },
-  "alert_and": { "message": "and" },
   "alert_userscriptMgrNoStream": { "message": "Your userscript manager does not support returning stream responses" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "is currently only available by" },
   "alert_openAIsupportSoon": { "message": "Support for OpenAI API will be added shortly" },

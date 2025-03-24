@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "uPDATE kini" },
   "alert_unavailable": { "message": "unavailable" },
   "alert_isOnlyAvailFor": { "message": "anaa lamang kini alang" },
-  "alert_and": { "message": "og wisdom" },
   "alert_userscriptMgrNoStream": { "message": "Ang imong tigdumala sa userscript dili mosuporta sa pagbalik sa mga tubag sa stream" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "sa pagkakaron anaa lamang" },
   "alert_openAIsupportSoon": { "message": "Ang suporta alang sa OpenAI API idugang sa dili madugay" },

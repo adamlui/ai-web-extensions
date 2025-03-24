@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "ወቅታዊ ነው" },
   "alert_unavailable": { "message": "አይገኝም" },
   "alert_isOnlyAvailFor": { "message": "ይገኛል ብቻ ለ" },
-  "alert_and": { "message": "እና" },
   "alert_userscriptMgrNoStream": { "message": "የተጠቃሚ ጽሑፍ አስተዳዳሪዎ የመመለሻ ዥረት ምላሾችን አይደግፍም" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "በአሁኑ ጊዜ በ ብቻ ይገኛል" },
   "alert_openAIsupportSoon": { "message": "ለ OpenAI ኤፒአይ ድጋፍ በቅርቡ ይታከላል" },

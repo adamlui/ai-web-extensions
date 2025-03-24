@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "yamaho Yama - Update" },
   "alert_unavailable": { "message": "ntaho bihuriye" },
   "alert_isOnlyAvailFor": { "message": "gusa birahari" },
-  "alert_and": { "message": "kandi" },
   "alert_userscriptMgrNoStream": { "message": "Uwurongoye uwo murongo ntiyasubiriye gutanga inyishu" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ubu iraboneka gusa mu" },
   "alert_openAIsupportSoon": { "message": "Ugushigikira API ya OpenAI bigiye kwongerwa vuba" },

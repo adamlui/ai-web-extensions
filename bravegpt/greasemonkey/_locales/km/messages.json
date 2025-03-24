@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "វាទាន់សម័យ" },
   "alert_unavailable": { "message": "មិនមាន" },
   "alert_isOnlyAvailFor": { "message": "មានសម្រាប់តែ" },
-  "alert_and": { "message": "និង" },
   "alert_userscriptMgrNoStream": { "message": "អ្នកគ្រប់គ្រងស្គ្រីបអ្នកប្រើរបស់អ្នកមិនគាំទ្រការឆ្លើយតបស្ទ្រីមត្រឡប់មកវិញទេ" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "បច្ចុប្បន្នមានតែនៅ" },
   "alert_openAIsupportSoon": { "message": "ការគាំទ្រ OpenAI API នឹងត្រូវបានបន្ថែមក្នុងពេលឆាប់ៗ" },

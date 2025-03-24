@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "ಅಪ್ ‌ ಟು ಡೇಟ್ ಆಗಿದೆ" },
   "alert_unavailable": { "message": "ಲಭ್ಯವಿರುವುದಿಲ್ಲ" },
   "alert_isOnlyAvailFor": { "message": "ಗೆ ಮಾತ್ರ ಲಭ್ಯವಿದೆ" },
-  "alert_and": { "message": "ಮತ್ತು" },
   "alert_userscriptMgrNoStream": { "message": "ನಿಮ್ಮ ಯೂಸರ್ ‌ ಸ್ಕ್ರಿಪ್ಟ್ ಮ್ಯಾನೇಜರ್ ಸ್ಟ್ರೀಮ್ ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಹಿಂದಿರುಗಿಸುವುದನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ಪ್ರಸ್ತುತ ರೊಳಗೆ ಮಾತ್ರ ಲಭ್ಯವಿದೆ" },
   "alert_openAIsupportSoon": { "message": "OpenAI API ಗೆ ಬೆಂಬಲವನ್ನು ಶೀಘ್ರದಲ್ಲೇ ಸೇರಿಸಲಾಗುತ್ತದೆ" },

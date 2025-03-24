@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "е ажуриран" },
   "alert_unavailable": { "message": "недостапно" },
   "alert_isOnlyAvailFor": { "message": "е достапен само за" },
-  "alert_and": { "message": "и" },
   "alert_userscriptMgrNoStream": { "message": "Вашиот менаџер на кориснички скрипт не поддржува повратни одговори на преносот" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "моментално е достапно само до" },
   "alert_openAIsupportSoon": { "message": "Поддршката за OpenAI API ќе биде додадена наскоро" },

@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "està actualitzat" },
   "alert_unavailable": { "message": "no disponible" },
   "alert_isOnlyAvailFor": { "message": "només està disponible per a" },
-  "alert_and": { "message": "i" },
   "alert_userscriptMgrNoStream": { "message": "El gestor de l'script d'usuari no admet el retorn de respostes de fluxos" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "actualment només està disponible per" },
   "alert_openAIsupportSoon": { "message": "En breu s'afegirà el suport per a l'API d'OpenAI" },

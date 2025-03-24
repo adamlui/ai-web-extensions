@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "अद्यावधिक गर्नुहोस्" },
   "alert_unavailable": { "message": "उपलब्ध छैन" },
   "alert_isOnlyAvailFor": { "message": "को लागी मात्र उपलब्ध छ" },
-  "alert_and": { "message": "र" },
   "alert_userscriptMgrNoStream": { "message": "तपाईंको प्रयोगकर्तास्क्रिप्ट प्रबन्धकले स्ट्रिम प्रतिक्रियाहरू फर्काउन समर्थन गर्दैन" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "हाल सम्म मात्र उपलब्ध छ" },
   "alert_openAIsupportSoon": { "message": "OpenAI API को लागि सहायता चाँडै थपिनेछ" },

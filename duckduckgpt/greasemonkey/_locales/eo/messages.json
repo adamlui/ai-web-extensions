@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "estas ĝisdata" },
   "alert_unavailable": { "message": "neatingebla" },
   "alert_isOnlyAvailFor": { "message": "estas disponebla nur por" },
-  "alert_and": { "message": "kaj" },
   "alert_userscriptMgrNoStream": { "message": "Via uzantoskripta administrilo ne subtenas revenantajn fluajn respondojn" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "nuntempe estas disponebla nur por" },
   "alert_openAIsupportSoon": { "message": "Subteno por OpenAI API estos aldonita baldaŭ" },

@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "是最新的" },
   "alert_unavailable": { "message": "不供預訂" },
   "alert_isOnlyAvailFor": { "message": "僅適用於" },
-  "alert_and": { "message": "及" },
   "alert_userscriptMgrNoStream": { "message": "您的用戶腳本管理器不支持返回流響應" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "目前僅適用於" },
   "alert_openAIsupportSoon": { "message": "很快將新增對 OpenAI API 的支援" },

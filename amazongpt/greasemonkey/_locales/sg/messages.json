@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "a yeke ti laso" },
   "alert_unavailable": { "message": "unbore MeUnbore" },
   "alert_isOnlyAvailFor": { "message": "tu n 'es ni fiable ni aimable" },
-  "alert_and": { "message": "na" },
   "alert_userscriptMgrNoStream": { "message": "Zo so ayeke sara kua na mo ayeke mû maboko na mo ape ti kiri na peko ti atënë so mo yeke kiri na ni" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "a yeke gi na lege ti" },
   "alert_openAIsupportSoon": { "message": "A yeke zia ande maboko na maboko ti OpenAI API na yâ ti kete ngoi" },

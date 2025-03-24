@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "hie/si, hatt/et gëtt aktualiséiert" },
   "alert_unavailable": { "message": "net disponibel" },
   "alert_isOnlyAvailFor": { "message": "ass nëmmen disponibel fir" },
-  "alert_and": { "message": "a(n)" },
   "alert_userscriptMgrNoStream": { "message": "Äre User Script Manager ënnerstëtzt net Retour Stream Äntwerten" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "aktuell exklusiv" },
   "alert_openAIsupportSoon": { "message": "Support fir OpenAI API gëtt geschwënn bäigefüügt" },

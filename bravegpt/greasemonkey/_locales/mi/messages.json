@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "kei a koe i tenei wa" },
   "alert_unavailable": { "message": "kāore e wātea ana" },
   "alert_isOnlyAvailFor": { "message": "anake e wātea ana mo" },
-  "alert_and": { "message": "Kyle Klye Ko" },
   "alert_userscriptMgrNoStream": { "message": "Kaore to kaiwhakahaere kaiwhakamahi e tautoko i te whakahoki mai i nga whakautu rere" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ko te mea anake e wātea ana i tēnei wā" },
   "alert_openAIsupportSoon": { "message": "Tautoko mo OpenAI API ka taapirihia wawe" },

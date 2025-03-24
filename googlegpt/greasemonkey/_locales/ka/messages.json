@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "არის განახლებული" },
   "alert_unavailable": { "message": "მიუწვდომელი" },
   "alert_isOnlyAvailFor": { "message": "ხელმისაწვდომია მხოლოდ" },
-  "alert_and": { "message": "და" },
   "alert_userscriptMgrNoStream": { "message": "Თქვენი მომხმარებლების სკრიპტების მენეჯერი მხარს არ უჭერს ნაკადზე დაბრუნებულ პასუხებს" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ამჟამად ხელმისაწვდომია მხოლოდ" },
   "alert_openAIsupportSoon": { "message": "OpenAI API-ის მხარდაჭერა მალე დაემატება" },

@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "محدث" },
   "alert_unavailable": { "message": "غير متوفره" },
   "alert_isOnlyAvailFor": { "message": "متاح فقط لـ" },
-  "alert_and": { "message": "و" },
   "alert_userscriptMgrNoStream": { "message": "لا يدعم مدير سكريبت المستخدم الخاص بك إرجاع استجابات البث" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "متاح حاليًا فقط من قبل" },
   "alert_openAIsupportSoon": { "message": "ستتم إضافة دعم واجهة برمجة تطبيقات OpenAI قريبًا" },

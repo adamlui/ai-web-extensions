@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "ഇന്നുവരെയുള്ള_മാറ്റങ്ങള്‍_വരുത്തിയത്" },
   "alert_unavailable": { "message": "ലഭ്യമല്ല" },
   "alert_isOnlyAvailFor": { "message": "എന്നതിന് മാത്രം ലഭ്യമാണ്" },
-  "alert_and": { "message": "ഒപ്പം" },
   "alert_userscriptMgrNoStream": { "message": "നിങ്ങളുടെ യൂസർസ്ക്രിപ്റ്റ് മാനേജർ സ്ട്രീം പ്രതികരണങ്ങൾ മടക്കിനൽകുന്നതിനെ പിന്തുണയ്ക്കുന്നില്ല" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "നിലവിൽ ലഭിക്കുന്നത്" },
   "alert_openAIsupportSoon": { "message": "OpenAI API-നുള്ള പിന്തുണ ഉടൻ ചേർക്കും" },

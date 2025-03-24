@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "ޒަމާނާ އެއްގޮތެވެ" },
   "alert_unavailable": { "message": "ނުލިބެއެވެ" },
   "alert_isOnlyAvailFor": { "message": "ލިބޭނީ ހަމައެކަނި" },
-  "alert_and": { "message": "އަދި" },
   "alert_userscriptMgrNoStream": { "message": "ތިބާގެ ޔޫޒަރސްކްރިޕްޓް މެނޭޖަރ ރިޓަރން ސްޓްރީމް ރެސްޕޮންސްތަކަށް ސަޕޯޓް ނުކުރެއެވެ" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "މިވަގުތު ލިބެން ހުރީ ހަމައެކަނި" },
   "alert_openAIsupportSoon": { "message": "އޯޕަންއޭއައި އެޕީއައި އަށް ސަޕޯޓް ވަރަށް އަވަހަށް އިތުރު ކުރެވޭނެ އެވެ" },

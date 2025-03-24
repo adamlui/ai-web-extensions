@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "מעודכן" },
   "alert_unavailable": { "message": "היעדר נגישות" },
   "alert_isOnlyAvailFor": { "message": "זמין רק עבור" },
-  "alert_and": { "message": "ו" },
   "alert_userscriptMgrNoStream": { "message": "מנהל הסקריפטים שלך אינו תומך בתגובות זרם חוזרות" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "זמין כרגע רק עד" },
   "alert_openAIsupportSoon": { "message": "תמיכה ב - OpenAI API תתווסף בקרוב" },

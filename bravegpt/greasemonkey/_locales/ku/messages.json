@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "تایبەتی نوێکردنەوەی" },
   "alert_unavailable": { "message": "لەبەردەست دا نیە" },
   "alert_isOnlyAvailFor": { "message": "tenê ji bo peyda dibe" },
-  "alert_and": { "message": "û" },
   "alert_userscriptMgrNoStream": { "message": "Rêvebirê nivîsara weya bikarhêner bersivên vegerandina tîrêjê piştgirî nake" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "niha tenê ji hêla" },
   "alert_openAIsupportSoon": { "message": "Piştgiriya ji bo OpenAI API dê di demek kurt de were zêdekirin" },

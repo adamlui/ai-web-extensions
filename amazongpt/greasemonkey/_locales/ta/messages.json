@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "புதுப்பித்த நிலையில் உள்ளது" },
   "alert_unavailable": { "message": "கிடைக்கவில்லை" },
   "alert_isOnlyAvailFor": { "message": "க்கு மட்டுமே கிடைக்கிறது" },
-  "alert_and": { "message": "மற்றும்" },
   "alert_userscriptMgrNoStream": { "message": "உங்கள் பயனர் ஸ்கிரிப்ட் மேலாளர் ஸ்ட்ரீம் பதில்களைத் திருப்பித் தருவதை ஆதரிக்கவில்லை" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "தற்போது ஆல் மட்டுமே கிடைக்கிறது" },
   "alert_openAIsupportSoon": { "message": "OpenAI APIக்கான ஆதரவு விரைவில் சேர்க்கப்படும்" },

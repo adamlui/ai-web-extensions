@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "up-to-date" },
   "alert_unavailable": { "message": "ບໍ່ສາມາດໃຊ້ໄດ້" },
   "alert_isOnlyAvailFor": { "message": "ມີພຽງແຕ່ສໍາລັບ" },
-  "alert_and": { "message": "ແລະ" },
   "alert_userscriptMgrNoStream": { "message": "ຜູ້ຈັດການສະຄິບຜູ້ໃຊ້ຂອງທ່ານບໍ່ສະໜັບສະໜູນການຕອບສະທ້ອນຄືນ" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ໃນປັດຈຸບັນມີພຽງແຕ່" },
   "alert_openAIsupportSoon": { "message": "ການສະ ຫນັບ ສະ ຫນູນ ສໍາ ລັບ OpenAI API ຈະເພີ່ມຂື້ນໃນໄວໆນີ້" },

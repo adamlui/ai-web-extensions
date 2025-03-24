@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "o loo i ai i le taimi nei" },
   "alert_unavailable": { "message": "e le mafai ona maua" },
   "alert_isOnlyAvailFor": { "message": "e na o le avanoa e maua ai" },
-  "alert_and": { "message": "ma" },
   "alert_userscriptMgrNoStream": { "message": "E le lagolagoina e lau pule o le tusiga le toe tali atu i le tafe" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "e na o le taimi nei e maua ai" },
   "alert_openAIsupportSoon": { "message": "Lagolago mo OpenAI API o le a faʻaopopoina i se taimi lata mai" },

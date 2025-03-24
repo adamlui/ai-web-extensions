@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "mankato ny fotoana" },
   "alert_unavailable": { "message": "tsy misy" },
   "alert_isOnlyAvailFor": { "message": "azo ihany ho an'ny" },
-  "alert_and": { "message": "ary" },
   "alert_userscriptMgrNoStream": { "message": "Ny mpitantana ny userscript anao dia tsy manohana ny famaliana fikoriana" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "amin'izao fotoana izao dia azo amin'ny" },
   "alert_openAIsupportSoon": { "message": "Tsy ho ela dia hanohana ny OpenAI API" },

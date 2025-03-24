@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "යාවත් කාළීන" },
   "alert_unavailable": { "message": "ලබා ගත නොහැක" },
   "alert_isOnlyAvailFor": { "message": "සඳහා පමණක් ලබා ගත හැකිය" },
-  "alert_and": { "message": "සහ" },
   "alert_userscriptMgrNoStream": { "message": "ඔබගේ පරිශීලක ස්ක් ‍ රිප්ට් කළමණාකරු ප් ‍ රවාහ ප් ‍ රතිචාර ආපසු ලබා දීමට සහාය නොදක්වයි" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "දැනට ලබා ගත හැක්කේ විසින් පමණි" },
   "alert_openAIsupportSoon": { "message": "OpenAI API සඳහා සහාය ළඟදීම එකතු වනු ඇත" },

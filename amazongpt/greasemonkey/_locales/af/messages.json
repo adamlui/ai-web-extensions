@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "die is up-to-date" },
   "alert_unavailable": { "message": "nie beskikbaar nie" },
   "alert_isOnlyAvailFor": { "message": "die is alleen beschikbaar om" },
-  "alert_and": { "message": "en" },
   "alert_userscriptMgrNoStream": { "message": "Jou gebruikerskripbestuurder ondersteun nie terugstuurreaksies nie" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "op dit moment is alleen toegestaan by" },
   "alert_openAIsupportSoon": { "message": "Ondersteuning vir OpenAI API sal binnekort bygevoeg word" },

@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "абноўлена" },
   "alert_unavailable": { "message": "недаступны" },
   "alert_isOnlyAvailFor": { "message": "даступны толькі для" },
-  "alert_and": { "message": "і" },
   "alert_userscriptMgrNoStream": { "message": "Ваш менеджэр сцэнарыяў не падтрымлівае адказы на зваротны паток" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "у цяперашні час даступны толькі" },
   "alert_openAIsupportSoon": { "message": "У бліжэйшы час будзе дададзена падтрымка API OpenAI" },

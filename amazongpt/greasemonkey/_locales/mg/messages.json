@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "zava-nitranga farany" },
   "alert_unavailable": { "message": "tsy misy" },
   "alert_isOnlyAvailFor": { "message": "tsy misy afa-tsy ho" },
-  "alert_and": { "message": "sy" },
   "alert_userscriptMgrNoStream": { "message": "Ny mpitantana ny mpampiasacript dia tsy manohana ny valiny miverina" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "aty am-piandohàna, tsy misy afa-tsy eto" },
   "alert_openAIsupportSoon": { "message": "Ny fanohanana ny OpenAI API dia hanampy tsy ho ela" },

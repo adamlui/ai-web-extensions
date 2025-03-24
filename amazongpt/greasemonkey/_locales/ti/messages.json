@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "ዝዘመነ" },
   "alert_unavailable": { "message": "ኣይርከብን" },
   "alert_isOnlyAvailFor": { "message": "ን" },
-  "alert_and": { "message": "ከምኡ ድማ" },
   "alert_userscriptMgrNoStream": { "message": "ናይ ተጠቀምቲ ጽሑፍ ኣማሓዳሪኻ ናይ ምምላስ መልሲ ኣይድግፍን" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ኣብዚ እዋን እዚ" },
   "alert_openAIsupportSoon": { "message": "ደገፍ OpenAI API ኣብ ቀረባ እዋን ክውስኽ ኢዩ" },

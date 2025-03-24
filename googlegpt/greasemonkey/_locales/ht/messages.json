@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "se ajou" },
   "alert_unavailable": { "message": "pa disponib" },
   "alert_isOnlyAvailFor": { "message": "se sèlman ki disponib pou/est disponible seule" },
-  "alert_and": { "message": "epi" },
   "alert_userscriptMgrNoStream": { "message": "Manadjè usercript ou a pa sipòte repons kouran retounen" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "se kounye a sèlman ki disponib pa/est actuellement" },
   "alert_openAIsupportSoon": { "message": "Yo pral ajoute sipò pou OpenAI API yon ti tan" },

@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "isexesheni" },
   "alert_unavailable": { "message": "engekhoyo" },
   "alert_isOnlyAvailFor": { "message": "ifumaneka kuphela" },
-  "alert_and": { "message": "no" },
   "alert_userscriptMgrNoStream": { "message": "Umphathi wakho weskripti akaxhasi iimpendulo ezibuyayo" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "okwangoku ifumaneka kuphela ngo" },
   "alert_openAIsupportSoon": { "message": "Inkxaso ye-OpenAI API iza kufakwa kungekudala" },

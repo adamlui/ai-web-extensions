@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "е актуален" },
   "alert_unavailable": { "message": "недостъпен" },
   "alert_isOnlyAvailFor": { "message": "се предлага само за" },
-  "alert_and": { "message": "и" },
   "alert_userscriptMgrNoStream": { "message": "Мениджърът на потребителския ви скрипт не поддържа отговори за връщане на поток" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "в момента се предлага само от" },
   "alert_openAIsupportSoon": { "message": "Поддръжката на OpenAI API ще бъде добавена скоро" },

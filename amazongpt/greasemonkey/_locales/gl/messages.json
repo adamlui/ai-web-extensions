@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "está actualizado" },
   "alert_unavailable": { "message": "non dispoñíbel" },
   "alert_isOnlyAvailFor": { "message": "só está dispoñible para" },
-  "alert_and": { "message": "y" },
   "alert_userscriptMgrNoStream": { "message": "O seu xestor de script de usuario non admite as respostas de fluxo de retorno" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "actualmente só está dispoñible por" },
   "alert_openAIsupportSoon": { "message": "O soporte para a API OpenAI engadirase en breve" },

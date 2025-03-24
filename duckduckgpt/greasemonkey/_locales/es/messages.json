@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "está actualizada" },
   "alert_unavailable": { "message": "no disponible" },
   "alert_isOnlyAvailFor": { "message": "solo está disponible para" },
-  "alert_and": { "message": "y" },
   "alert_userscriptMgrNoStream": { "message": "Su administrador de scripts de usuario no admite la devolución de respuestas de transmisión" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "actualmente solo está disponible para" },
   "alert_openAIsupportSoon": { "message": "El soporte para OpenAI API se añadirá en breve" },

@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "<PROTECTED> is geactualiseerd" },
   "alert_unavailable": { "message": "niet beschikbaar" },
   "alert_isOnlyAvailFor": { "message": "Alleen beschikbaar voor" },
-  "alert_and": { "message": "and" },
   "alert_userscriptMgrNoStream": { "message": "Uw gebruikersscriptmanager ondersteunt geen terugkerende streamreacties" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "is momenteel alleen beschikbaar door" },
   "alert_openAIsupportSoon": { "message": "Ondersteuning voor OpenAI API wordt binnenkort toegevoegd" },

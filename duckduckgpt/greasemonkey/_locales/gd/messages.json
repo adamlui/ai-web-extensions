@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "air a chumail suas gu ceàrnag" },
   "alert_unavailable": { "message": "gun fheum" },
   "alert_isOnlyAvailFor": { "message": "ri fhaighinn a-mhàin airson" },
-  "alert_and": { "message": "agus" },
   "alert_userscriptMgrNoStream": { "message": "Chan eil do bhainistear userscript a' toirt taic do freagairtean sruthadh" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ri fhaighinn an-dràsta a-mhàin le" },
   "alert_openAIsupportSoon": { "message": "Bidh taic airson OpenAI API ri bhith air a chur ris a' cheum seo" },

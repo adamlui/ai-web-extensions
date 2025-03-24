@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "оновлено" },
   "alert_unavailable": { "message": "недоступне" },
   "alert_isOnlyAvailFor": { "message": "доступний лише для" },
-  "alert_and": { "message": "та" },
   "alert_userscriptMgrNoStream": { "message": "Ваш менеджер скриптів користувачів не підтримує повернення відповідей потоку" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "наразі доступний лише для" },
   "alert_openAIsupportSoon": { "message": "Підтримку API OpenAI буде додано найближчим часом" },

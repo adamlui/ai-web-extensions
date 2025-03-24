@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "er oppdatert" },
   "alert_unavailable": { "message": "utilgjengelig" },
   "alert_isOnlyAvailFor": { "message": "er kun tilgjengelig for" },
-  "alert_and": { "message": "og" },
   "alert_userscriptMgrNoStream": { "message": "Brukerskriptbehandlingen din støtter ikke returnerende strømsvar" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "er foreløpig kun tilgjengelig av" },
   "alert_openAIsupportSoon": { "message": "Støtte for OpenAI API vil bli lagt til snart" },

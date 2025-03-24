@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "Eguneratu" },
   "alert_unavailable": { "message": "ez dago erabilgarri" },
   "alert_isOnlyAvailFor": { "message": "bakarrik dago eskuragarri" },
-  "alert_and": { "message": "eta" },
   "alert_userscriptMgrNoStream": { "message": "Zure userscript-en kudeatzaileak ez du onartzen korronteen erantzunak itzultzea" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "une honetan bakarrik dago eskuragarri" },
   "alert_openAIsupportSoon": { "message": "OpenAI APIrako laguntza laster gehituko da" },

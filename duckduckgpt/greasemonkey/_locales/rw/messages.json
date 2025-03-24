@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "ni ku gihe" },
   "alert_unavailable": { "message": "ntiboneka" },
   "alert_isOnlyAvailFor": { "message": "iboneka gusa kuri" },
-  "alert_and": { "message": "na" },
   "alert_userscriptMgrNoStream": { "message": "Umuyobozi wa userscript ntabwo ashyigikira gusubiza mu buryo bwa stream" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ubu iraboneka gusa kuri" },
   "alert_openAIsupportSoon": { "message": "Inkunga ya OpenAI API izongerwa vuba" },

@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "อัพเดทแล้ว" },
   "alert_unavailable": { "message": "ไม่มี" },
   "alert_isOnlyAvailFor": { "message": "ใช้ได้เฉพาะในราคา" },
-  "alert_and": { "message": "และ" },
   "alert_userscriptMgrNoStream": { "message": "ผู้จัดการสคริปต์ผู้ใช้ของคุณไม่สนับสนุนการตอบกลับสตรีมที่กลับมา" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "มีให้บริการในขณะนี้โดย" },
   "alert_openAIsupportSoon": { "message": "การสนับสนุน OpenAI API จะถูกเพิ่มในไม่ช้า" },

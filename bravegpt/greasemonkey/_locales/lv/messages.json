@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "Aktuāls" },
   "alert_unavailable": { "message": "Nav pieejams" },
   "alert_isOnlyAvailFor": { "message": "ir pieejams tikai" },
-  "alert_and": { "message": "un" },
   "alert_userscriptMgrNoStream": { "message": "Jūsu lietotāju skriptu pārvaldnieks neatbalsta straumes atbilžu atgriešanu" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "pašlaik ir pieejams tikai līdz" },
   "alert_openAIsupportSoon": { "message": "Drīzumā tiks pievienots OpenAI API atbalsts" },

@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "isesikhathini" },
   "alert_unavailable": { "message": "ayitholakali" },
   "alert_isOnlyAvailFor": { "message": "itholakala kuphela ku" },
-  "alert_and": { "message": "kanye" },
   "alert_userscriptMgrNoStream": { "message": "Imenenja yakho yombhalo wabasebenzisi ayisekeli izimpendulo zokusakaza ezibuyayo" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "okwamanje itholakala kuphela ngo" },
   "alert_openAIsupportSoon": { "message": "Usizo lwe-OpenAI API luzofakwa maduzane" },

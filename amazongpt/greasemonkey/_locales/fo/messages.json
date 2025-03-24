@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "núverandi tíðindi" },
   "alert_unavailable": { "message": "ikki tøkt" },
   "alert_isOnlyAvailFor": { "message": "tað er bert at fáa" },
-  "alert_and": { "message": "og" },
   "alert_userscriptMgrNoStream": { "message": "Brúkaraskrivstjórin hjá tær tekur ikki undir við afturvendandi streymum" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "nú er tað bert at fáa" },
   "alert_openAIsupportSoon": { "message": "Stuðul til OpenAI API verður lagt afturat skjótt" },

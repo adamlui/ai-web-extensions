@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "是最新版本" },
   "alert_unavailable": { "message": "不可用" },
   "alert_isOnlyAvailFor": { "message": "仅适用于" },
-  "alert_and": { "message": "和" },
   "alert_userscriptMgrNoStream": { "message": "您的用户脚本管理器不支持返回流响应" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "目前仅适用于" },
   "alert_openAIsupportSoon": { "message": "很快将添加对 OpenAI API 的支持" },

@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "sú aktuálne" },
   "alert_unavailable": { "message": "nedostupné" },
   "alert_isOnlyAvailFor": { "message": "je k dispozícii len pre" },
-  "alert_and": { "message": "a" },
   "alert_userscriptMgrNoStream": { "message": "Váš správca používateľského skriptu nepodporuje vracajúce sa odpovede streamu" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "je momentálne k dispozícii iba do" },
   "alert_openAIsupportSoon": { "message": "Podpora rozhrania OpenAI API bude čoskoro pridaná" },

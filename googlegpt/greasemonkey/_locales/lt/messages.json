@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "atnaujintas" },
   "alert_unavailable": { "message": "neprieinama" },
   "alert_isOnlyAvailFor": { "message": "galima tik" },
-  "alert_and": { "message": "ir" },
   "alert_userscriptMgrNoStream": { "message": "Jūsų UserScript tvarkyklė nepalaiko grįžtančių srauto atsakymų" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "šiuo metu galima tik iki" },
   "alert_openAIsupportSoon": { "message": "Netrukus bus pridėtas OpenAI API palaikymas" },

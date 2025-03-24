@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "waa up-to-date" },
   "alert_unavailable": { "message": "aan la aamini karin" },
   "alert_isOnlyAvailFor": { "message": "waxaa loo heli karaa oo keliya" },
-  "alert_and": { "message": "iyo" },
   "alert_userscriptMgrNoStream": { "message": "Maamulahaaga isticmaaleyaasha ma taageerayo soo noqoshada jawaabaha qulqulka" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "hadda waxaa la heli karaa oo keliya by" },
   "alert_openAIsupportSoon": { "message": "Taageerada OpenAI API ayaa lagu dari doonaa goor dhow" },

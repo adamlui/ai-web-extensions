@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "häzirki döwürde" },
   "alert_unavailable": { "message": "ähli zat ýok" },
   "alert_isOnlyAvailFor": { "message": "ýeke ulanmaga rugsat berilýän" },
-  "alert_and": { "message": "we" },
   "alert_userscriptMgrNoStream": { "message": "Siziň ulanýan ýazgylar menejeriňiz gaýdyp gelýän akma jogaplaryny goldamaýar" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "häzir diňe" },
   "alert_openAIsupportSoon": { "message": "OpenAI API-iň goldawy tizden goşulýar" },

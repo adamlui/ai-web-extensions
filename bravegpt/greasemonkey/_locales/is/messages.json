@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "er upp-til-dagsetning" },
   "alert_unavailable": { "message": "ekki til útláns" },
   "alert_isOnlyAvailFor": { "message": "er aðeins í boði fyrir" },
-  "alert_and": { "message": "og" },
   "alert_userscriptMgrNoStream": { "message": "Notandaforritið þitt styður ekki endursend svör við straumi" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "er aðeins í boði eins og er fyrir" },
   "alert_openAIsupportSoon": { "message": "Aðstoð við OpenAI API verður bætt við innan skamms" },

@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "актуалдуулугу" },
   "alert_unavailable": { "message": "жеткиликтүү эмес" },
   "alert_isOnlyAvailFor": { "message": "үчүн гана жеткиликтүү" },
-  "alert_and": { "message": "Ал эми" },
   "alert_userscriptMgrNoStream": { "message": "Сиздин колдонуучунун скрипт менеджери агымдын жоопторун кайтарууну колдобойт" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "учурда гана жеткиликтүү" },
   "alert_openAIsupportSoon": { "message": "Жакында OpenAI API колдоосу кошулат" },

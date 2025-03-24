@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "updateddd" },
   "alert_unavailable": { "message": "dim ar gael" },
   "alert_isOnlyAvailFor": { "message": "ar gael yn unig ar gyfer" },
-  "alert_and": { "message": "a" },
   "alert_userscriptMgrNoStream": { "message": "Nid yw eich rheolwr sgriptiau defnyddwyr yn cefnogi ymatebion llif sy'n dychwelyd" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ar hyn o bryd dim ond ar gael gan" },
   "alert_openAIsupportSoon": { "message": "Bydd cefnogaeth ar gyfer API OpenAI yn cael ei hychwanegu yn fuan" },

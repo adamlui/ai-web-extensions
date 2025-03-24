@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "আপ-টু-ডেট" },
   "alert_unavailable": { "message": "পাওয়া যাচ্ছেনা" },
   "alert_isOnlyAvailFor": { "message": "শুধুমাত্র এর জন্য উপলব্ধ" },
-  "alert_and": { "message": "এবং" },
   "alert_userscriptMgrNoStream": { "message": "আপনার ইউজারস্ক্রিপ্ট ম্যানেজার রিটার্নিং স্ট্রীম প্রতিক্রিয়া সমর্থন করে না" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "বর্তমানে শুধুমাত্র" },
   "alert_openAIsupportSoon": { "message": "OpenAI API-এর জন্য সমর্থন শীঘ্রই যোগ করা হবে" },

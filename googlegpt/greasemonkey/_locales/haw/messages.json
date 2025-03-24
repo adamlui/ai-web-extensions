@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "he mea hou" },
   "alert_unavailable": { "message": "loaʻa ʻole" },
   "alert_isOnlyAvailFor": { "message": "loaʻa wale no" },
-  "alert_and": { "message": "aloha au i ko'u mau kaikunane" },
   "alert_userscriptMgrNoStream": { "message": "ʻAʻole kākoʻo kāu mea hoʻohana palapala hoʻohana i nā pane kahawai" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "i kēia manawa wale nō i loaʻa e" },
   "alert_openAIsupportSoon": { "message": "E hoʻohui koke ʻia ke kākoʻo no OpenAI API" },

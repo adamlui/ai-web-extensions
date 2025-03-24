@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "em i stap up-to-date" },
   "alert_unavailable": { "message": "i no gat rot" },
   "alert_isOnlyAvailFor": { "message": "em i stap long rot bilong" },
-  "alert_and": { "message": "Na" },
   "alert_userscriptMgrNoStream": { "message": "Man bilong lukautim ol usercript bilong yu i no save sapotim bekim bilong ol tok i kam bek" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "long nau, ol i save yusim ol dispela samting long mekim wok bilong" },
   "alert_openAIsupportSoon": { "message": "Ol i laik bai ol i ken helpim ol long mekim ol samting bilong helpim ol long kamap gutpela" },

@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "နောက်ဆုံးအခြေအနေတွင်ရှိသည်" },
   "alert_unavailable": { "message": "(မရနိုင်ပါ)" },
   "alert_isOnlyAvailFor": { "message": "အတွက်သာ အသုံးပြုနိုင်မည် ဖြစ်ပါသည်" },
-  "alert_and": { "message": "နှင့်" },
   "alert_userscriptMgrNoStream": { "message": "သင် ၏ အသုံးပြုသူမှတ်တမ်း မန်နေဂျာသည် စီးဆင်းမှု တုံ့ပြန်မှုများကို မထောက်ပံ့ပါ" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "လောလောဆယ်တွင်သာ ရရှိနိုင်ပါသည်" },
   "alert_openAIsupportSoon": { "message": "OpenAI API အတွက်အထောက်အပံ့ကိုမကြာမီထည့်သွင်းပါလိမ့်မည်" },

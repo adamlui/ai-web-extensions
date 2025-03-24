@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "up-to-date аст" },
   "alert_unavailable": { "message": "дастрас нест" },
   "alert_isOnlyAvailFor": { "message": "isang magagamit lamang para sa" },
-  "alert_and": { "message": "ва" },
   "alert_userscriptMgrNoStream": { "message": "Мудири корвандони шумо ҷавобҳои ҷараёнро пуштибонӣ намекунад" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "kasalukuyang magagamit lamang sa" },
   "alert_openAIsupportSoon": { "message": "Дастгирии OpenAI API ба наздикӣ илова карда мешавад" },

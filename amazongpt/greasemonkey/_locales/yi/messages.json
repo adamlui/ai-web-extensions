@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "איז דערהייַנטיקט" },
   "alert_unavailable": { "message": "ניט בנימצא" },
   "alert_isOnlyAvailFor": { "message": "איז בלויז בנימצא פֿאַר" },
-  "alert_and": { "message": "און" },
   "alert_userscriptMgrNoStream": { "message": "דיין באַניצער סקריפּט פאַרוואַלטער שטיצט נישט צוריקקומען טייַך רעספּאָנסעס" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "איז דערווייַל בלויז בנימצא דורך" },
   "alert_openAIsupportSoon": { "message": "שטיצן פֿאַר OpenAI API וועט זיין מוסיף באַלד" },

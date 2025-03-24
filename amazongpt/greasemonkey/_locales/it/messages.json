@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "è aggiornato" },
   "alert_unavailable": { "message": "non disponibile" },
   "alert_isOnlyAvailFor": { "message": "è disponibile solo per" },
-  "alert_and": { "message": "e" },
   "alert_userscriptMgrNoStream": { "message": "Il tuo usercript manager non supporta la restituzione delle risposte di flusso" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "è attualmente disponibile solo per" },
   "alert_openAIsupportSoon": { "message": "Il supporto per l'API OpenAI verrà aggiunto a breve" },

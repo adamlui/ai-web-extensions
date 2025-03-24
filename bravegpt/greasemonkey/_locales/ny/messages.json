@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "ndi up-to-date" },
   "alert_unavailable": { "message": "osapezeka" },
   "alert_isOnlyAvailFor": { "message": "ndi kupezeka kokha kwa" },
-  "alert_and": { "message": "Ndi" },
   "alert_userscriptMgrNoStream": { "message": "Woyang 'anira wanu wa usercript samathandizira mayankho obwerera mumtsinje" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "pakali pano kokha ndi" },
   "alert_openAIsupportSoon": { "message": "Thandizo la OpenAI API lidzawonjezedwa posachedwa" },

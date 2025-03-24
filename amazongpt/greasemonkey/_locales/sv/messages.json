@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "är uppdaterad" },
   "alert_unavailable": { "message": "otillgänglig" },
   "alert_isOnlyAvailFor": { "message": "är endast tillgängligt för" },
-  "alert_and": { "message": "and" },
   "alert_userscriptMgrNoStream": { "message": "Din användarskripthanterare stöder inte återkommande strömsvar" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "är för närvarande endast tillgänglig av" },
   "alert_openAIsupportSoon": { "message": "Stöd för OpenAI API kommer att läggas till inom kort" },

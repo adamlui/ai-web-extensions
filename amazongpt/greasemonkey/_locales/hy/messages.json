@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "արդիական է" },
   "alert_unavailable": { "message": "ազատ չէ" },
   "alert_isOnlyAvailFor": { "message": "հասանելի է միայն" },
-  "alert_and": { "message": "և" },
   "alert_userscriptMgrNoStream": { "message": "Ձեր օգտատիրոջ սկրիպտի կառավարիչը չի աջակցում հոսքային պատասխանների վերադարձը" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ներկայումս հասանելի է միայն" },
   "alert_openAIsupportSoon": { "message": "OpenAI API - ի աջակցումը շուտով կավելացվի" },

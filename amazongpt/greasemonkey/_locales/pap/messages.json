@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "tabata up-to-date" },
   "alert_unavailable": { "message": "indisponibel" },
   "alert_isOnlyAvailFor": { "message": "ta disponibel solamente pa" },
-  "alert_and": { "message": "i" },
   "alert_userscriptMgrNoStream": { "message": "No User Responder No User Responder" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "na e momentonan aki ta disponibel solamente pa" },
   "alert_openAIsupportSoon": { "message": "Pronto lo añadí sosten na AOV" },

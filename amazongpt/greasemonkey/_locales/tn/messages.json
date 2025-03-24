@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "e mo nakong" },
   "alert_unavailable": { "message": "ga e yo" },
   "alert_isOnlyAvailFor": { "message": "e teng fela go" },
-  "alert_and": { "message": "le" },
   "alert_userscriptMgrNoStream": { "message": "Mmanejara wa gago wa dikwalo tsa badirisi ga a tshegetse dikarabo tse di busediwang tsa" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ga jaana e bonwa fela ke" },
   "alert_openAIsupportSoon": { "message": "Kemonokeng ya OpenAI API e tlile go tsenngwa mo bogautshwaneng" },

@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "<PROG_NAME> в актуальном состоянии" },
   "alert_unavailable": { "message": "отсутствует" },
   "alert_isOnlyAvailFor": { "message": "доступно только для" },
-  "alert_and": { "message": "и" },
   "alert_userscriptMgrNoStream": { "message": "Ваш менеджер пользовательских скриптов не поддерживает возврат ответов потока" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "в настоящее время доступен только" },
   "alert_openAIsupportSoon": { "message": "Поддержка OpenAI API будет добавлена в ближайшее время" },

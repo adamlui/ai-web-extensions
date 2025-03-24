@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "ajakohane" },
   "alert_unavailable": { "message": "kättesaamatu" },
   "alert_isOnlyAvailFor": { "message": "on saadaval ainult" },
-  "alert_and": { "message": "ja" },
   "alert_userscriptMgrNoStream": { "message": "Sinu kasutaja skriptihaldur ei toeta voo vastuste tagastamist" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "on praegu saadaval ainult kuupäevaks" },
   "alert_openAIsupportSoon": { "message": "OpenAI API tugi lisatakse peagi" },

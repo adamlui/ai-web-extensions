@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "tha ùr-nodha" },
   "alert_unavailable": { "message": "chan eil e ri fhaighinn" },
   "alert_isOnlyAvailFor": { "message": "chan eil e ri fhaighinn ach airson" },
-  "alert_and": { "message": "Agus" },
   "alert_userscriptMgrNoStream": { "message": "Chan eil am manaidsear luchd-cleachdaidh agad a 'toirt taic do fhreagairtean sruthadh air ais" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "chan eil e ri fhaighinn ach a - nis" },
   "alert_openAIsupportSoon": { "message": "Thèid taic airson OpenAI API a chuir ris a dh’ aithghearr" },

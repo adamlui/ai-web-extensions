@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "yesssss up-to-date" },
   "alert_unavailable": { "message": "ulac" },
   "alert_isOnlyAvailFor": { "message": "yettwasekles kan ɣef" },
-  "alert_and": { "message": "akked" },
   "alert_userscriptMgrNoStream": { "message": "Amseqdac n iseqdacen-inek ur yeṭṭif ara tiririyin n tuffɣa" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "isebtaren i sɛan azday ɣer \"Ala\"" },
   "alert_openAIsupportSoon": { "message": "Affinez votre recherche pour OpenAI API will be added soon" },

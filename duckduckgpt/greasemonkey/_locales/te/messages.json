@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "తాజాగా ఉంది" },
   "alert_unavailable": { "message": "అందుబాటులో లేదు" },
   "alert_isOnlyAvailFor": { "message": "కోసం మాత్రమే అందుబాటులో ఉంది" },
-  "alert_and": { "message": "మరియు" },
   "alert_userscriptMgrNoStream": { "message": "మీ యూజర్ ‌ స్క్రిప్ట్ మేనేజర్ స్ట్రీమ్ ప్రతిస్పందనలను తిరిగి ఇవ్వడానికి మద్దతు ఇవ్వదు" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ప్రస్తుతం లోపు మాత్రమే అందుబాటులో ఉంది" },
   "alert_openAIsupportSoon": { "message": "OpenAI APIకి మద్దతు త్వరలో జోడించబడుతుంది" },

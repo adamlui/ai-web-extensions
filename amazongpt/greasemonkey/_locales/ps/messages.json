@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "تازه دی" },
   "alert_unavailable": { "message": "شتون نلري" },
   "alert_isOnlyAvailFor": { "message": "یوازې د لپاره شتون لري" },
-  "alert_and": { "message": "او" },
   "alert_userscriptMgrNoStream": { "message": "ستاسو د کاروونکي سکریپ مدیر د جریان بیرته راستنیدو ملاتړ نه کوي" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "اوس مهال یوازې د لخوا شتون لري" },
   "alert_openAIsupportSoon": { "message": "د OpenAI API ملاتړ به ډیر ژر اضافه شي" },

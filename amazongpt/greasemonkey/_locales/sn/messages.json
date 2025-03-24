@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "is up-to-date" },
   "alert_unavailable": { "message": "hazviwanikwi" },
   "alert_isOnlyAvailFor": { "message": "inongowanikwa chete ye" },
-  "alert_and": { "message": "uye" },
   "alert_userscriptMgrNoStream": { "message": "Your userscript maneja haritsigiri kudzoka rukova mhinduro" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "parizvino inongowanikwa chete ne" },
   "alert_openAIsupportSoon": { "message": "Tsigiro yeOpenAI API ichawedzerwa munguva pfupi" },

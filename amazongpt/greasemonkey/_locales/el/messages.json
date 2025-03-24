@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": " είναι ενήμερο" },
   "alert_unavailable": { "message": "Μη Διαθέσιμη" },
   "alert_isOnlyAvailFor": { "message": "είναι διαθέσιμο μόνο για" },
-  "alert_and": { "message": "και" },
   "alert_userscriptMgrNoStream": { "message": "Ο διαχειριστής κειμένων χρηστών σας δεν υποστηρίζει την επιστροφή απαντήσεων ροής" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "είναι προς το παρόν διαθέσιμο μόνο από" },
   "alert_openAIsupportSoon": { "message": "Σύντομα θα προστεθεί υποστήριξη για το OpenAI API" },

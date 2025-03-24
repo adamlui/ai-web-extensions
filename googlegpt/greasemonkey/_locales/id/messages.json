@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "sudah mutakhir" },
   "alert_unavailable": { "message": "tidak tersedia" },
   "alert_isOnlyAvailFor": { "message": "hanya tersedia untuk" },
-  "alert_and": { "message": "dan" },
   "alert_userscriptMgrNoStream": { "message": "Manajer skrip pengguna Anda tidak mendukung respons aliran balik" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "saat ini hanya tersedia oleh" },
   "alert_openAIsupportSoon": { "message": "Dukungan untuk OpenAI api akan segera ditambahkan" },

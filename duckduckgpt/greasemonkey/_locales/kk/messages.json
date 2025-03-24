@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "жаңартылған" },
   "alert_unavailable": { "message": "қол жеткізбейді" },
   "alert_isOnlyAvailFor": { "message": "тек қол жетімді" },
-  "alert_and": { "message": "және" },
   "alert_userscriptMgrNoStream": { "message": "Пайдаланушы скрипті менеджері ағын жауаптарын қайтаруды қолдамайды" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "қазіргі уақытта тек қол жетімді" },
   "alert_openAIsupportSoon": { "message": "Көп ұзамай OpenAI API қолдауы қосылады" },

@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "est up-to-date" },
   "alert_unavailable": { "message": "unicutus" },
   "alert_isOnlyAvailFor": { "message": "is only available for" },
-  "alert_and": { "message": "ac (atque)" },
   "alert_userscriptMgrNoStream": { "message": "Your usercript manager non support backlink" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "is now only available by" },
   "alert_openAIsupportSoon": { "message": "Support for OpenAI API HQUAE PLUS" },

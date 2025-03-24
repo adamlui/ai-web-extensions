@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "одоогийн байдлаар" },
   "alert_unavailable": { "message": "Боломжгүй" },
   "alert_isOnlyAvailFor": { "message": "зөвхөн боломжтой" },
-  "alert_and": { "message": "болон" },
   "alert_userscriptMgrNoStream": { "message": "Таны хэрэглэгчийн редакторын менежер урсгалын буцах хариу урвалыг дэмжихгүй байна" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "одоогоор зөвхөн боломжтой" },
   "alert_openAIsupportSoon": { "message": "OpenAI API-ийн дэмжлэгийг удахгүй нэмж болно" },

@@ -92,7 +92,6 @@
   "alert_isUpToDate": { "message": "最新だ" },
   "alert_unavailable": { "message": "利用できません" },
   "alert_isOnlyAvailFor": { "message": "利用可能期間" },
-  "alert_and": { "message": "と" },
   "alert_userscriptMgrNoStream": { "message": "ユーザースクリプトマネージャーはストリーム応答の返信をサポートしていません" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "現在でのみ利用可能です" },
   "alert_openAIsupportSoon": { "message": "OpenAI API のサポートはまもなく追加されます" },

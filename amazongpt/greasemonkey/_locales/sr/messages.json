@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "je ažuran" },
   "alert_unavailable": { "message": "недоступан/на" },
   "alert_isOnlyAvailFor": { "message": "je dostupno samo za" },
-  "alert_and": { "message": "и" },
   "alert_userscriptMgrNoStream": { "message": "Menadžer korisničkih skripti ne podržava povratne odgovore strima" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "trenutno je dostupno samo do" },
   "alert_openAIsupportSoon": { "message": "Uskoro će biti dodata podrška za OpenAI API" },

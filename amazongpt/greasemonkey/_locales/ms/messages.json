@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "Kemas kini" },
   "alert_unavailable": { "message": "tiada" },
   "alert_isOnlyAvailFor": { "message": "hanya tersedia untuk" },
-  "alert_and": { "message": "dan" },
   "alert_userscriptMgrNoStream": { "message": "Pengurus skrip pengguna anda tidak menyokong jawapan strim yang kembali" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "buat masa ini hanya tersedia oleh" },
   "alert_openAIsupportSoon": { "message": "Sokongan untuk api OpenAI akan ditambah sebentar lagi" },

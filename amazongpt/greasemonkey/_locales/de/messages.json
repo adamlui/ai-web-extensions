@@ -65,7 +65,6 @@
   "alert_isUpToDate": { "message": "ist auf dem aktuellen Stand" },
   "alert_unavailable": { "message": "Weil der Artikel nicht verfügbar ist" },
   "alert_isOnlyAvailFor": { "message": "Es steht nur für <stringmarket stringmarket=\"omnipcx_office\"/> zur Verfügung" },
-  "alert_and": { "message": "und" },
   "alert_userscriptMgrNoStream": { "message": "Ihr Benutzerskript-Manager unterstützt keine Stream-Antworten" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ist derzeit nur verfügbar bis" },
   "alert_openAIsupportSoon": { "message": "Unterstützung für OpenAI-API wird in Kürze hinzugefügt" },
