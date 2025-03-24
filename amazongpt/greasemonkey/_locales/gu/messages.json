@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "આપમેળે" },
   "menuLabel_about": { "message": "માહિતી" },
   "menuLabel_settings": { "message": "સેટિંગ્સ" },
+  "componentLabel_used": { "message": "વપરાયેલ" },
   "about_author": { "message": "લેખક" },
   "about_and": { "message": "અને" },
   "about_contributors": { "message": "ફાળો આપનારાઓ" },

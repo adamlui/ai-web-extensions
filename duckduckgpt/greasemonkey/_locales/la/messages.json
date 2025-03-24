@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Automatica" },
   "menuLabel_about": { "message": "De" },
   "menuLabel_settings": { "message": "Instamenta" },
+  "componentLabel_used": { "message": "usus est" },
   "about_author": { "message": "auctor" },
   "about_and": { "message": "ac (atque)" },
   "about_contributors": { "message": "partes" },

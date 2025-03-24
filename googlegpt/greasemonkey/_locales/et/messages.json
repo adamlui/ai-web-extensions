@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Info" },
   "menuLabel_settings": { "message": "Seaded" },
+  "componentLabel_used": { "message": "lisaseadmed" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "ja" },
   "about_contributors": { "message": "Kaastöötajad" },

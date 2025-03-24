@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Otomatik" },
   "menuLabel_about": { "message": "Apwopo" },
   "menuLabel_settings": { "message": "Reglaj" },
+  "componentLabel_used": { "message": "itilize" },
   "about_author": { "message": "otè" },
   "about_and": { "message": "epi" },
   "about_contributors": { "message": "kontribitè" },

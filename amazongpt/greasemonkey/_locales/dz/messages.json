@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "རང་མགོ་རང་འདྲོངས་" },
   "menuLabel_about": { "message": "སྐོར་ལས་" },
   "menuLabel_settings": { "message": "སྒྲིག་འཇུག་བྱས་ཚད།" },
+  "componentLabel_used": { "message": "ལག་ལེན་འཐབ་མི་" },
   "about_author": { "message": "རྩོམ་པ་པོ།" },
   "about_and": { "message": "དང་" },
   "about_contributors": { "message": "གྲོགས་རམ་འབད་མི་" },

@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Om" },
   "menuLabel_settings": { "message": "Inställningar" },
+  "componentLabel_used": { "message": "som används" },
   "about_author": { "message": "Författare" },
   "about_and": { "message": "och" },
   "about_contributors": { "message": "bidragsgivare" },

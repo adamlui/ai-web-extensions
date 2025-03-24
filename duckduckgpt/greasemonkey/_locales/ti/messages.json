@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "ኣውቶሞቢል" },
   "menuLabel_about": { "message": "ብዛዕባ" },
   "menuLabel_settings": { "message": "መቓናት" },
+  "componentLabel_used": { "message": "f" },
   "about_author": { "message": "ደራሲ" },
   "about_and": { "message": "ከምኡ ድማ" },
   "about_contributors": { "message": "<g id=\"581\">ዘርጋሕቲ:</g>" },

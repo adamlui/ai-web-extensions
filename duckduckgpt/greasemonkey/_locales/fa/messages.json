@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "خودکار" },
   "menuLabel_about": { "message": "درباره" },
   "menuLabel_settings": { "message": "تنظیمات" },
+  "componentLabel_used": { "message": "استفاده شده" },
   "about_author": { "message": "نویسنده" },
   "about_and": { "message": "و" },
   "about_contributors": { "message": "همکاران" },

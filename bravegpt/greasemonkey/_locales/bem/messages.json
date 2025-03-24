@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "pafya" },
   "menuLabel_settings": { "message": "Ifilundwa" },
+  "componentLabel_used": { "message": "ukubomfya" },
   "about_author": { "message": "Kalemba" },
   "about_and": { "message": "Elyo na" },
   "about_contributors": { "message": "abalesendamo ulubali" },

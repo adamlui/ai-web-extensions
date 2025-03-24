@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Автоматты басқару" },
   "menuLabel_about": { "message": "Туралы" },
   "menuLabel_settings": { "message": "Баптаулар" },
+  "componentLabel_used": { "message": "«Пайдаланған»," },
   "about_author": { "message": "Авторы" },
   "about_and": { "message": "және" },
   "about_contributors": { "message": "Қатысушылар" },

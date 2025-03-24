@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "About" },
   "menuLabel_settings": { "message": "Settings" },
+  "componentLabel_used": { "message": "used" },
   "about_author": { "message": "Author" },
   "about_and": { "message": "&" },
   "about_contributors": { "message": "contributors" },

@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "ਆਟੋ" },
   "menuLabel_about": { "message": "ਇਸ ਬਾਰੇ" },
   "menuLabel_settings": { "message": "GConf ਸੈਟਿੰਗ" },
+  "componentLabel_used": { "message": "ਵਰਤੀ:" },
   "about_author": { "message": "_ਲੇਖਕ" },
   "about_and": { "message": "ਅਤੇ" },
   "about_contributors": { "message": "ਸਹਿਯੋਗ" },

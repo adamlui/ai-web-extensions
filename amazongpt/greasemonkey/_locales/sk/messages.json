@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "O nás" },
   "menuLabel_settings": { "message": "Nastavenia" },
+  "componentLabel_used": { "message": "použité" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "a" },
   "about_contributors": { "message": " PRISPIEVATELIA" },

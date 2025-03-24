@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "自动" },
   "menuLabel_about": { "message": "关于" },
   "menuLabel_settings": { "message": "设置" },
+  "componentLabel_used": { "message": "已使用" },
   "about_author": { "message": "作者" },
   "about_and": { "message": "和" },
   "about_contributors": { "message": "贡献者" },

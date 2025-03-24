@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Byikora" },
   "menuLabel_about": { "message": "Ibyerekeye" },
   "menuLabel_settings": { "message": "Gahunda" },
+  "componentLabel_used": { "message": "byakoreshejwe" },
   "about_author": { "message": "Ibisobanuro" },
   "about_and": { "message": "&&" },
   "about_contributors": { "message": "Ibigize" },

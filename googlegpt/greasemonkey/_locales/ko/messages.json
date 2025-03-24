@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "자동" },
   "menuLabel_about": { "message": "소개" },
   "menuLabel_settings": { "message": "설정" },
+  "componentLabel_used": { "message": "사용됨" },
   "about_author": { "message": "작성자" },
   "about_and": { "message": "및" },
   "about_contributors": { "message": "참여자" },

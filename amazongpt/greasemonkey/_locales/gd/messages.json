@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Gu fèin-obrachail" },
   "menuLabel_about": { "message": "Mar deidhinn" },
   "menuLabel_settings": { "message": "Roghainnean" },
+  "componentLabel_used": { "message": "air a chleachdadh" },
   "about_author": { "message": "Ùghdar" },
   "about_and": { "message": "agus" },
   "about_contributors": { "message": "luchd-tabhartais" },

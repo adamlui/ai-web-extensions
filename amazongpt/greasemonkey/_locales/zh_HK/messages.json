@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "自動" },
   "menuLabel_about": { "message": "關於我們" },
   "menuLabel_settings": { "message": "設定" },
+  "componentLabel_used": { "message": "用於" },
   "about_author": { "message": "作者" },
   "about_and": { "message": "及" },
   "about_contributors": { "message": "貢獻者" },

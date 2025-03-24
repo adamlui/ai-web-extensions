@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "အလိုအလျောက်" },
   "menuLabel_about": { "message": "အကြောင်း" },
   "menuLabel_settings": { "message": "ဆက္တင္မ်ား" },
+  "componentLabel_used": { "message": "ကို သုံးပါမည်။" },
   "about_author": { "message": "ရေးသူ" },
   "about_and": { "message": "Raw Material (Inventory) တွေ ဝယ်မယ့် လုပ်ငန်းမျိုးအတွက်၊" },
   "about_contributors": { "message": "ပါဝင်အားဖြည့်သူများ" },

@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Ukuzenzakalela" },
   "menuLabel_about": { "message": "Mayelana" },
   "menuLabel_settings": { "message": "Sebenzisa uhlelo X" },
+  "componentLabel_used": { "message": "esetshenzisiwe" },
   "about_author": { "message": "Ukhetho" },
   "about_and": { "message": "kanye" },
   "about_contributors": { "message": "abanikeli" },

@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Аўта" },
   "menuLabel_about": { "message": "Пра нас" },
   "menuLabel_settings": { "message": "Налады" },
+  "componentLabel_used": { "message": "Ужыта" },
   "about_author": { "message": "Аўтар" },
   "about_and": { "message": "і" },
   "about_contributors": { "message": "аўтары" },

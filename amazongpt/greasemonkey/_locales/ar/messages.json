@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "تلقائي" },
   "menuLabel_about": { "message": "نبذة" },
   "menuLabel_settings": { "message": "الإعدادات" },
+  "componentLabel_used": { "message": "مستعمَل" },
   "about_author": { "message": "مؤلف" },
   "about_and": { "message": "و" },
   "about_contributors": { "message": "ساهموا" },

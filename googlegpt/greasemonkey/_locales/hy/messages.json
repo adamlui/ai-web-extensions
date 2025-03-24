@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Ավտոմեքենա" },
   "menuLabel_about": { "message": "Մանրամասն" },
   "menuLabel_settings": { "message": "Կարգավորումներ" },
+  "componentLabel_used": { "message": "Օգտագործված" },
   "about_author": { "message": "Հեղինակ" },
   "about_and": { "message": "և" },
   "about_contributors": { "message": "ներդրողներ" },

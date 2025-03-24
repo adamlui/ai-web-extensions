@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Maşyn" },
   "menuLabel_about": { "message": "Barada" },
   "menuLabel_settings": { "message": "Saýlamalar" },
+  "componentLabel_used": { "message": "ulanyldy" },
   "about_author": { "message": "Otomatik gaýşart" },
   "about_and": { "message": "we" },
   "about_contributors": { "message": "öwrenýänler" },

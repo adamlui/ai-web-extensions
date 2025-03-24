@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "ອັດຕະໂນມັດ" },
   "menuLabel_about": { "message": "ກ່ຽວກັບ" },
   "menuLabel_settings": { "message": "ການຕັ້ງຄ່າ" },
+  "componentLabel_used": { "message": "ໃຊ້" },
   "about_author": { "message": "ຜູ້ຂຽນ" },
   "about_and": { "message": "ແລະ" },
   "about_contributors": { "message": "ຜູ້ປະກອບສ່ວນ" },

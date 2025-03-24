@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Ezenzekelayo" },
   "menuLabel_about": { "message": "Malunga" },
   "menuLabel_settings": { "message": "Imimiselo" },
+  "componentLabel_used": { "message": "esetyenzisiweyo" },
   "about_author": { "message": "Inkcazelo ngombhali" },
   "about_and": { "message": "no" },
   "about_contributors": { "message": "Abanikeli" },

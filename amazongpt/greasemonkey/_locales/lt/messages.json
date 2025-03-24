@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Automatinis" },
   "menuLabel_about": { "message": "Apie" },
   "menuLabel_settings": { "message": "Nustatymai" },
+  "componentLabel_used": { "message": "naudotas" },
   "about_author": { "message": "Autorius" },
   "about_and": { "message": "ir" },
   "about_contributors": { "message": "kontributoriai" },

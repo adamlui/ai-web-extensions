@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Automobili" },
   "menuLabel_about": { "message": "O nama" },
   "menuLabel_settings": { "message": "Postavke" },
+  "componentLabel_used": { "message": "korišten" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "i" },
   "about_contributors": { "message": "Saradnici" },

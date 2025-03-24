@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Iwwer Qt" },
   "menuLabel_settings": { "message": "Astellungen" },
+  "componentLabel_used": { "message": "benotzt" },
   "about_author": { "message": "Auteur" },
   "about_and": { "message": "a(n)" },
   "about_contributors": { "message": "Matwierkend" },

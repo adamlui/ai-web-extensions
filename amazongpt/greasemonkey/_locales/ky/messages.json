@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Авто" },
   "menuLabel_about": { "message": "Апплет жөнүндө" },
   "menuLabel_settings": { "message": "Чычканды ырастоо" },
+  "componentLabel_used": { "message": "колдонулган" },
   "about_author": { "message": "Автору:" },
   "about_and": { "message": "Ал эми" },
   "about_contributors": { "message": "Катышуучулар" },

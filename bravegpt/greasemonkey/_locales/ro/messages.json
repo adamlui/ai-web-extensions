@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Despre" },
   "menuLabel_settings": { "message": "Setări" },
+  "componentLabel_used": { "message": "(kg)" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "şi" },
   "about_contributors": { "message": "colaboratorilor" },

@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "އޮޓޯ" },
   "menuLabel_about": { "message": "މިއާއި ބެހޭ" },
   "menuLabel_settings": { "message": "ސެޓިންގސް" },
+  "componentLabel_used": { "message": "ބޭނުންކުރެވިފައިވަނީ" },
   "about_author": { "message": "ލިޔުންތެރިޔާ" },
   "about_and": { "message": "އަދި" },
   "about_contributors": { "message": "ކޮންޓްރިބިއުޓަރުންނެވެ" },

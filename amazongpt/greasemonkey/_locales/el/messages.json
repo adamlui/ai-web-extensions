@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Αυτόματη εφαρμογή" },
   "menuLabel_about": { "message": "Σχετικά" },
   "menuLabel_settings": { "message": "Ρυθμίσεις" },
+  "componentLabel_used": { "message": "#-#-#-#-#  nautilus.master.el.po (el)  #-#-#-#-#σε χρήση#-#-#-#-#  gparted.master.el.po (gparted.HEAD)  #-#-#-#-#χρησιμοποιούνται" },
   "about_author": { "message": "Συντάκτης" },
   "about_and": { "message": "και" },
   "about_contributors": { "message": "συντελεστές" },

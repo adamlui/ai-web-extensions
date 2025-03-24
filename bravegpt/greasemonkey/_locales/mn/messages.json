@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Авто" },
   "menuLabel_about": { "message": "Бидний тухай" },
   "menuLabel_settings": { "message": "Системийн тохиргоо" },
+  "componentLabel_used": { "message": "ашигласан" },
   "about_author": { "message": "Зохиогч" },
   "about_and": { "message": "болон" },
   "about_contributors": { "message": "ᠲᠤᠰᠠᠯᠠᠭᠴᠢᠳ" },

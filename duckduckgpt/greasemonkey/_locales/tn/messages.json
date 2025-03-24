@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "AUTO" },
   "menuLabel_about": { "message": "Ka" },
   "menuLabel_settings": { "message": "Diseting" },
+  "componentLabel_used": { "message": "used" },
   "about_author": { "message": "Mokwadi" },
   "about_and": { "message": "le" },
   "about_contributors": { "message": "bakgatlhegedi" },

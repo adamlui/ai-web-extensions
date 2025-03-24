@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Автоматичен" },
   "menuLabel_about": { "message": "Относно" },
   "menuLabel_settings": { "message": "Настройки" },
+  "componentLabel_used": { "message": "Тази" },
   "about_author": { "message": "Автор" },
   "about_and": { "message": "и" },
   "about_contributors": { "message": "Сътрудници" },

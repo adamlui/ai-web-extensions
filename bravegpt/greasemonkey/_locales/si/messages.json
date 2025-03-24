@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "ස්වයංක්‍රීය" },
   "menuLabel_about": { "message": "සම්බන්ධව" },
   "menuLabel_settings": { "message": "සැකසුම්" },
+  "componentLabel_used": { "message": "භාවිතය:" },
   "about_author": { "message": "කතෘ" },
   "about_and": { "message": "සහ" },
   "about_contributors": { "message": "දායකයින්" },

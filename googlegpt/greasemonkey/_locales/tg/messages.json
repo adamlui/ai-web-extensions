@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Худкор" },
   "menuLabel_about": { "message": "About" },
   "menuLabel_settings": { "message": "Танзимот" },
+  "componentLabel_used": { "message": "Истифодашуда" },
   "about_author": { "message": "Муаалиф" },
   "about_and": { "message": "ва" },
   "about_contributors": { "message": "саҳмгузорон" },

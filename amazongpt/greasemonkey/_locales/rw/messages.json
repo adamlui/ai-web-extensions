@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Byikora" },
   "menuLabel_about": { "message": "Bigyanye" },
   "menuLabel_settings": { "message": "Amagenamiterere" },
+  "componentLabel_used": { "message": "byakoreshejwe" },
   "about_author": { "message": "Ibisobanuro" },
   "about_and": { "message": "&&" },
   "about_contributors": { "message": "Ibigize" },

@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Automaticum" },
   "menuLabel_about": { "message": "phyllus spp" },
   "menuLabel_settings": { "message": "Configuratio" },
+  "componentLabel_used": { "message": "usus est" },
   "about_author": { "message": "auctor" },
   "about_and": { "message": "ac (atque)" },
   "about_contributors": { "message": "partes" },

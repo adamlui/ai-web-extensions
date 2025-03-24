@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Автоматичний режим" },
   "menuLabel_about": { "message": "Про нас" },
   "menuLabel_settings": { "message": "Налаштування" },
+  "componentLabel_used": { "message": "використано" },
   "about_author": { "message": "Автор" },
   "about_and": { "message": "та" },
   "about_contributors": { "message": "Співавтори" },

@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Bilur" },
   "menuLabel_about": { "message": "Um" },
   "menuLabel_settings": { "message": "Stillingar" },
+  "componentLabel_used": { "message": "brúkt" },
   "about_author": { "message": "Høvundur" },
   "about_and": { "message": "og" },
   "about_contributors": { "message": "ískoytisfólk" },

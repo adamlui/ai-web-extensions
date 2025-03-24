@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Samodejno" },
   "menuLabel_about": { "message": "Več informacij" },
   "menuLabel_settings": { "message": "Nastavitve" },
+  "componentLabel_used": { "message": "rabljeno" },
   "about_author": { "message": "Avtor" },
   "about_and": { "message": "in" },
   "about_contributors": { "message": "Sodelavci" },

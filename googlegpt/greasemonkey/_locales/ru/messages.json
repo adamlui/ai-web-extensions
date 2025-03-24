@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Auto (Автоматический)" },
   "menuLabel_about": { "message": "Шифр" },
   "menuLabel_settings": { "message": "Настройки" },
+  "componentLabel_used": { "message": "используется" },
   "about_author": { "message": "Автор" },
   "about_and": { "message": "и" },
   "about_contributors": { "message": "участников" },

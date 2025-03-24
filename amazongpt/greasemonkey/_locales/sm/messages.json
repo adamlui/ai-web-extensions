@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Taavale" },
   "menuLabel_about": { "message": "E uiga i" },
   "menuLabel_settings": { "message": "Faʻatulagaina" },
+  "componentLabel_used": { "message": "faaaogaina" },
   "about_author": { "message": "Tusitala" },
   "about_and": { "message": "ma" },
   "about_contributors": { "message": "saofaga" },

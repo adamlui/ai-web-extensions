@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "अपने-आप" },
   "menuLabel_about": { "message": "परिचय" },
   "menuLabel_settings": { "message": "सेटिंग" },
+  "componentLabel_used": { "message": "उपयोग किया गया" },
   "about_author": { "message": "लेखक" },
   "about_and": { "message": "और" },
   "about_contributors": { "message": "योगदानकर्ता" },

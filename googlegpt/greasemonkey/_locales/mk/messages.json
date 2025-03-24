@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Автоматски" },
   "menuLabel_about": { "message": "За" },
   "menuLabel_settings": { "message": "Поставки" },
+  "componentLabel_used": { "message": "- користен:" },
   "about_author": { "message": "Автор" },
   "about_and": { "message": "и" },
   "about_contributors": { "message": "Придонесувачи" },

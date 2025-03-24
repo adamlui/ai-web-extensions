@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Acerca de" },
   "menuLabel_settings": { "message": "Ajustes" },
+  "componentLabel_used": { "message": "usado" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "y" },
   "about_contributors": { "message": "colaboradores" },

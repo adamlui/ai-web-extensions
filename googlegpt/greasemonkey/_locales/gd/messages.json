@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Fèin-ghnìomhach" },
   "menuLabel_about": { "message": "Mu dheidhinn" },
   "menuLabel_settings": { "message": "Roghainnean" },
+  "componentLabel_used": { "message": "air a chleachdadh" },
   "about_author": { "message": "Ùghdar" },
   "about_and": { "message": "agus" },
   "about_contributors": { "message": "luchd-tabhartais" },

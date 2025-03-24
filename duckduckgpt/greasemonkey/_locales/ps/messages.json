@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "آټو (Auto)" },
   "menuLabel_about": { "message": "په هکله" },
   "menuLabel_settings": { "message": "تنظیمات" },
+  "componentLabel_used": { "message": "کارول شوی" },
   "about_author": { "message": "لیکونکی" },
   "about_and": { "message": "او" },
   "about_contributors": { "message": ":ګډونوالان" },

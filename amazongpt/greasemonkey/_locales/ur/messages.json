@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "خودکار" },
   "menuLabel_about": { "message": "متعلق" },
   "menuLabel_settings": { "message": "ترتیبات" },
+  "componentLabel_used": { "message": "استعمال" },
   "about_author": { "message": "مصنف" },
   "about_and": { "message": "اور" },
   "about_contributors": { "message": "تعاون کنندگان" },

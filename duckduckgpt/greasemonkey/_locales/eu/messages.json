@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Egileari Buruz" },
   "menuLabel_settings": { "message": "Ezarpenak" },
+  "componentLabel_used": { "message": "erabilita" },
   "about_author": { "message": "Egilea" },
   "about_and": { "message": "eta" },
   "about_contributors": { "message": "Laguntzaileak" },

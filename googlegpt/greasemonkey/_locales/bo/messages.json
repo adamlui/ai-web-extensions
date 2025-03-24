@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "རང་འགུལ" },
   "menuLabel_about": { "message": "མྱུར་ཨང་སྐོར།" },
   "menuLabel_settings": { "message": "སྒྲིག་བཀོད" },
+  "componentLabel_used": { "message": "སྤྱད་ཟིན" },
   "about_author": { "message": "Yazar" },
   "about_and": { "message": "ve" },
   "about_contributors": { "message": "གྲོགས་རམ །" },

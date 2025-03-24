@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "A" },
   "menuLabel_settings": { "message": "Beállítások" },
+  "componentLabel_used": { "message": "használt" },
   "about_author": { "message": "Szerző" },
   "about_and": { "message": "és" },
   "about_contributors": { "message": "Közreműködők" },

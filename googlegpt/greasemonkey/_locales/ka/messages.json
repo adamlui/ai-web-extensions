@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "ავტო" },
   "menuLabel_about": { "message": "პროგრამის შესახებ" },
   "menuLabel_settings": { "message": "&მორგება" },
+  "componentLabel_used": { "message": "გამოყენებულია" },
   "about_author": { "message": "ავტორი" },
   "about_and": { "message": "და" },
   "about_contributors": { "message": "შემომწირავები" },

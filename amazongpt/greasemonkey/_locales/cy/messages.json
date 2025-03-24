@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Awto" },
   "menuLabel_about": { "message": "Gwybodaeth" },
   "menuLabel_settings": { "message": "Gosodiadau" },
+  "componentLabel_used": { "message": "defnyddio" },
   "about_author": { "message": "Awdur" },
   "about_and": { "message": "a" },
   "about_contributors": { "message": "Cyfranwyr" },

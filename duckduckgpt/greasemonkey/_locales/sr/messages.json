@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Automatski" },
   "menuLabel_about": { "message": "O nama" },
   "menuLabel_settings": { "message": "Podešavanja" },
+  "componentLabel_used": { "message": "???" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "i" },
   "about_contributors": { "message": "Kontributori" },

@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Otomatik" },
   "menuLabel_about": { "message": "Hakkımızda" },
   "menuLabel_settings": { "message": "Ayarlar" },
+  "componentLabel_used": { "message": "kullanılan" },
   "about_author": { "message": "Yazar" },
   "about_and": { "message": "ve" },
   "about_contributors": { "message": "katkıda bulunanlar" },

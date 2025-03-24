@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Tự động" },
   "menuLabel_about": { "message": "Giới thiệu" },
   "menuLabel_settings": { "message": "Cài đặt" },
+  "componentLabel_used": { "message": "đã sử dụng" },
   "about_author": { "message": "Tác giả" },
   "about_and": { "message": "và" },
   "about_contributors": { "message": "Cộng sự" },

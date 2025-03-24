@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Automatisch" },
   "menuLabel_about": { "message": "Over" },
   "menuLabel_settings": { "message": "Instellingen" },
+  "componentLabel_used": { "message": "gebruikt" },
   "about_author": { "message": "Auteur" },
   "about_and": { "message": "and" },
   "about_contributors": { "message": "contributanten" },

@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "தானியங்கி" },
   "menuLabel_about": { "message": "இறக்கப் போகிறது" },
   "menuLabel_settings": { "message": "அமைப்புகள்" },
+  "componentLabel_used": { "message": "பயன்படுத்தப்பட்டதா:" },
   "about_author": { "message": "நூலாசிரியர்" },
   "about_and": { "message": "மற்றும்" },
   "about_contributors": { "message": "பங்களிப்போர்" },

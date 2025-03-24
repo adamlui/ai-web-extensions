@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Ho azy" },
   "menuLabel_about": { "message": "Momba ny" },
   "menuLabel_settings": { "message": "Fikirana" },
+  "componentLabel_used": { "message": "nampiasaina" },
   "about_author": { "message": "Mpanoratra" },
   "about_and": { "message": "sy" },
   "about_contributors": { "message": "Mpandray anjara" },

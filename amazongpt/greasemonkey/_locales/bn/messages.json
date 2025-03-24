@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "স্বয়ংক্রিয়" },
   "menuLabel_about": { "message": "সম্বন্ধে" },
   "menuLabel_settings": { "message": "সেটিংস" },
+  "componentLabel_used": { "message": "ব্যবহৃত" },
   "about_author": { "message": "রচয়িতা" },
   "about_and": { "message": "এবং" },
   "about_contributors": { "message": "অবদান রয়েছে" },

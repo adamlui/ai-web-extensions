@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Avtomatik" },
   "menuLabel_about": { "message": "Qisqacha ma'lumot" },
   "menuLabel_settings": { "message": "Sozlamalar" },
+  "componentLabel_used": { "message": "ishlatilgan" },
   "about_author": { "message": "Muallif" },
   "about_and": { "message": "va" },
   "about_contributors": { "message": "hissa qo'shuvchilar" },

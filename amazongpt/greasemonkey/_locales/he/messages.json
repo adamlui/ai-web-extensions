@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "אוטומטי" },
   "menuLabel_about": { "message": "אודות" },
   "menuLabel_settings": { "message": "הגדרות" },
+  "componentLabel_used": { "message": "מומש" },
   "about_author": { "message": "מחבר" },
   "about_and": { "message": "ו" },
   "about_contributors": { "message": "תורמים" },

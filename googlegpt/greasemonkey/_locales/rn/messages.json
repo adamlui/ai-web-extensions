@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Imodoka" },
   "menuLabel_about": { "message": "Ku vyerekeye" },
   "menuLabel_settings": { "message": "Ingorozi" },
+  "componentLabel_used": { "message": "koresha" },
   "about_author": { "message": "Umwanditsi" },
   "about_and": { "message": "kandi" },
   "about_contributors": { "message": "abaterankunga" },

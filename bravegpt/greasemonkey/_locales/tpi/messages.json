@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Automation" },
   "menuLabel_about": { "message": "About" },
   "menuLabel_settings": { "message": "Aitaim" },
+  "componentLabel_used": { "message": "ol i yusim" },
   "about_author": { "message": "Man bilong raitim" },
   "about_and": { "message": "Na" },
   "about_contributors": { "message": "ol contributor" },

@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "സ്വതേ" },
   "menuLabel_about": { "message": "സംബന്ധിച്ച്" },
   "menuLabel_settings": { "message": "ക്രമീകരണം" },
+  "componentLabel_used": { "message": "ഉപയോഗിച്ചു" },
   "about_author": { "message": "രചയിതാവ്" },
   "about_and": { "message": "കൂടാതെ" },
   "about_contributors": { "message": "തയ്യാറാക്കിയത്" },

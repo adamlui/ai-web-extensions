@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Meʻalele" },
   "menuLabel_about": { "message": "Fekauʻaki mo e" },
   "menuLabel_settings": { "message": "Ngaahi Feituʻú" },
+  "componentLabel_used": { "message": "fakaʻaongaʻi" },
   "about_author": { "message": "Tokotaha Faʻu Tohí" },
   "about_and": { "message": "e" },
   "about_contributors": { "message": "niʻihi ne nau ʻomi e" },

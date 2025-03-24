@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Automat" },
   "menuLabel_about": { "message": "Haqqında" },
   "menuLabel_settings": { "message": "Parametrlər" },
+  "componentLabel_used": { "message": "köhnə" },
   "about_author": { "message": "Müəllif" },
   "about_and": { "message": "və" },
   "about_contributors": { "message": "Dəstəkçilər" },

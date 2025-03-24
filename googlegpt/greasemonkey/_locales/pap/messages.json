@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Outo" },
   "menuLabel_about": { "message": "About About" },
   "menuLabel_settings": { "message": "Establesimentunan" },
+  "componentLabel_used": { "message": "usa" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "i" },
   "about_contributors": { "message": "kontributornan" },

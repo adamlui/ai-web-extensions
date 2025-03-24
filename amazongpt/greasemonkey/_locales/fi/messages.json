@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Tietoa" },
   "menuLabel_settings": { "message": "Asetukset" },
+  "componentLabel_used": { "message": "käytetty" },
   "about_author": { "message": "Tekijä" },
   "about_and": { "message": "ja" },
   "about_contributors": { "message": "tuottajat" },

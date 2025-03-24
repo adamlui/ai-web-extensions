@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "อัตโนมัติ" },
   "menuLabel_about": { "message": "เกี่ยวกับ" },
   "menuLabel_settings": { "message": "การตั้งค่า" },
+  "componentLabel_used": { "message": "ใช้ไปแล้ว" },
   "about_author": { "message": "ผู้เขียน" },
   "about_and": { "message": "และ" },
   "about_contributors": { "message": "ผู้ให้ข้อมูล" },

@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Der barê" },
   "menuLabel_about": { "message": "دەربارەی" },
   "menuLabel_settings": { "message": "Mîheng" },
+  "componentLabel_used": { "message": "بەکارھاتوو، بەکارھێنراو، دەسەدوو، ئاشنا، سوودوەرگیراو لێی، بەکارھاتووە، وەبەرھێنراو، پەیڕەو کراو، کۆن، کەڵک لێوەرگیراو، لەبەرکراو، پەیڕەوکراو، کارپێکراو، خراوەکار\n[ھونەر]: بەکارھێنراو، کۆن" },
   "about_author": { "message": "Nivîskar" },
   "about_and": { "message": "û" },
   "about_contributors": { "message": "ھاوبەشاکان، بەخشندەکان، بەھرەدرارەکان، بەشداریکەران" },

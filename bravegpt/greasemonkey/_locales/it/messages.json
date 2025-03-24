@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Automatico" },
   "menuLabel_about": { "message": "Informazioni generali" },
   "menuLabel_settings": { "message": "Impostazioni" },
+  "componentLabel_used": { "message": "usato" },
   "about_author": { "message": "Autore" },
   "about_and": { "message": "e" },
   "about_contributors": { "message": "collaboratori" },

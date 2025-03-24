@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "O" },
   "menuLabel_settings": { "message": "Nastavení" },
+  "componentLabel_used": { "message": "použito" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "a" },
   "about_contributors": { "message": "přispěvatelé" },

@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Otomatiki" },
   "menuLabel_about": { "message": "Kuhusu" },
   "menuLabel_settings": { "message": "Mipangilio" },
+  "componentLabel_used": { "message": "kutumika" },
   "about_author": { "message": "Mwandishi" },
   "about_and": { "message": "na" },
   "about_contributors": { "message": "Wachangiaji" },

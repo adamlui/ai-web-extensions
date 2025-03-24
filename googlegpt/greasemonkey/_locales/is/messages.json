@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "Sjálfvirkt" },
   "menuLabel_about": { "message": "Um" },
   "menuLabel_settings": { "message": "Stillingar" },
+  "componentLabel_used": { "message": "Notað" },
   "about_author": { "message": "Author" },
   "about_and": { "message": "og" },
   "about_contributors": { "message": "Meðhöfundar" },

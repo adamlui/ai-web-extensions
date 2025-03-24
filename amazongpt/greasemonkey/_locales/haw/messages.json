@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Ho‘ākāka" },
   "menuLabel_settings": { "message": "Nā hoʻonohonoho" },
+  "componentLabel_used": { "message": "hoʻohana ʻia" },
   "about_author": { "message": "Mea kākau" },
   "about_and": { "message": "aloha au i ko'u mau kaikunane" },
   "about_contributors": { "message": "nā mea kōkua" },

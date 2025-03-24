@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "लेखक" },
   "menuLabel_about": { "message": "बारेमा" },
   "menuLabel_settings": { "message": "सेटिङहरू" },
+  "componentLabel_used": { "message": "प्रयोग गरिएको" },
   "about_author": { "message": "लेखक" },
   "about_and": { "message": "र" },
   "about_contributors": { "message": "दाताहरू" },

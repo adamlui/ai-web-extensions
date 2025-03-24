@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "స్వయంచాలితం" },
   "menuLabel_about": { "message": "గురించి" },
   "menuLabel_settings": { "message": "సెట్టింగ్‌లు" },
+  "componentLabel_used": { "message": "ఉపయోగించబడిన" },
   "about_author": { "message": "రచయిత" },
   "about_and": { "message": "మరియు" },
   "about_contributors": { "message": "సహాయకులు" },

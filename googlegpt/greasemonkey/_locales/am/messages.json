@@ -24,6 +24,7 @@
   "menuLabel_auto": { "message": "በራሱ" },
   "menuLabel_about": { "message": "ስለ" },
   "menuLabel_settings": { "message": "ቅንብሮች" },
+  "componentLabel_used": { "message": "ጥቅም ላይ ውሏል" },
   "about_author": { "message": "ደራሲ" },
   "about_and": { "message": "እና" },
   "about_contributors": { "message": "አስተዋጽዖ አበርካቾች" },

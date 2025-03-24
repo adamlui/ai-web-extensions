@@ -11,6 +11,7 @@
   "menuLabel_auto": { "message": "អូតូ" },
   "menuLabel_about": { "message": "អំពី" },
   "menuLabel_settings": { "message": "ការកំណត់មុខងារ" },
+  "componentLabel_used": { "message": "បានប្រើ" },
   "about_author": { "message": "អ្នកបញ្ចូលព័ត៌មាន" },
   "about_and": { "message": "និង" },
   "about_contributors": { "message": "អ្នក​ចូល​រួម​ចំណែក​" },
