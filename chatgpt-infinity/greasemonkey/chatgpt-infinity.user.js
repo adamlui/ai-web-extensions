@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.23
+// @version             2025.3.24
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8df6f33/assets/images/icons/infinity-symbol/circled/with-robot/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8df6f33/assets/images/icons/infinity-symbol/circled/with-robot/icon64.png
@@ -269,7 +269,7 @@
         version: GM_info.script.version, configKeyPrefix: 'chatGPTinfinity',
         chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         urls: { update: 'https://gm.chatgptinfinity.com' },
-        latestResourceCommitHash: '5db9c74' // for cached app.json + messages.json + navicon in toggles.sidebar.insert()
+        latestResourceCommitHash: 'c62c2e6' // for cached app.json + messages.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({

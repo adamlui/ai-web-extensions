@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.23.1
+// @version             2025.3.24
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon64.png
@@ -286,7 +286,7 @@
         version: GM_info.script.version, configKeyPrefix: 'autoclearChatGPThistory',
         chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         urls: { update: 'https://gm.autoclearchatgpt.com' },
-        latestResourceCommitHash: '6120099' // for cached app.json + messages.json + navicon in toggles.sidebar.insert()
+        latestResourceCommitHash: 'ccf5c2e' // for cached app.json + messages.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = 'https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history'
                           + `@${app.latestResourceCommitHash}`
