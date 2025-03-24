@@ -32,7 +32,7 @@
   "about_poweredBy": { "message": "Destek" },
   "about_openSourceCode": { "message": "Açık kaynak kodu" },
   "scheme_light": { "message": "Açık" },
-  "scheme_dark": { "message": "Koyu" },
+  "scheme_dark": { "message": "Karanlık" },
   "mode_proxy": { "message": "Proxy Modu" },
   "mode_streaming": { "message": "Akış modu" },
   "mode_autoScroll": { "message": "Otomatik kaydırma" },
