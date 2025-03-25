@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.24
+// @version                  2025.3.25
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -4301,8 +4301,8 @@
                 if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = toggle.tooltip
                 this.share.onclick = event => {
                     if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
-                    this.share.style.animation = 'spinY 1s linear infinite'
                     this.share.style.cursor = 'default' // remove finger
+                    if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
                     toggle.tooltip(event) // update tooltip
                     xhr({
                         method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
@@ -4329,7 +4329,7 @@
                 if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = toggle.tooltip
                 this.regen.onclick = event => {
                     get.reply(msgChain, { src: 'regen' })
-                    regenSVGwrapper.style.cursor = 'default' // disable finger cursor
+                    regenSVGwrapper.style.cursor = 'default' // remove finger
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
                     toggle.tooltip(event) // update tooltip
