@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.25.4
+// @version                2025.3.25.5
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -3484,7 +3484,7 @@
                             if (appDiv.querySelector('code')) show.codeCopyBtns()
                             if (callerAPI == caller.sender) msgChain.push({
                                 role: 'assistant', content: textToShow,
-                                regenerated: msgChain[msgChain.length -2]?.role == 'assistant'
+                                regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
                             })
                             api.clearTimedOut(caller.triedAPIs)
                             caller.status = 'done' ; caller.sender = caller.attemptCnt = null
@@ -3562,7 +3562,7 @@
                                     if (appDiv.querySelector('code')) show.codeCopyBtns()
                                     msgChain.push({
                                         role: 'assistant', content: textToShow,
-                                        regenerated: msgChain[msgChain.length -2]?.role == 'assistant'
+                                        regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
                                     })
                                 } else resolve(arrayify(textToShow))
                             }
