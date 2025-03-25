@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.25.2
+// @version                2025.3.25.3
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -1349,10 +1349,11 @@
                         xhr({
                             method: 'GET', url: shareURL,
                             onload: resp => {
-                                const html = resp.responseText, dlLink = document.createElement('a')
+                                const html = resp.responseText, dlLink = dom.create.elem('a')
                                 dlLink.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }))
                                 dlLink.download /* filename */ = html.match(/<title>([^<]+)<\/title>/i)[1] // page title
                                     .replace(/\s*[—|/]+\s*/g, ' ') // convert symbols to space for hyphen-casing
+                                    .replace(/\.{2,}/g, '') // strip ellipsis
                                     .toLowerCase().trim().replace(/\s+/g, '-') // hyphen-case
                                     + '.html'
                                 document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download HTML
