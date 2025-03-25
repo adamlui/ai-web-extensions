@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.25.3
+// @version                  2025.3.25.4
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -3653,7 +3653,10 @@
                             api.tryNew(caller)
                         else { // text was shown
                             if (appDiv.querySelector('code')) show.codeCopyBtns()
-                            if (callerAPI == caller.sender) msgChain.push({ role: 'assistant', content: textToShow })
+                            if (callerAPI == caller.sender) msgChain.push({
+                                role: 'assistant', content: textToShow,
+                                regenerated: msgChain[msgChain.length -2]?.role == 'assistant'
+                            })
                             api.clearTimedOut(caller.triedAPIs)
                             caller.status = 'done' ; caller.sender = caller.attemptCnt = null
                         }
@@ -3728,7 +3731,10 @@
                                 if (caller == get.reply) {
                                     show.reply(textToShow, footerContent, { apiUsed: callerAPI })
                                     if (appDiv.querySelector('code')) show.codeCopyBtns()
-                                    msgChain.push({ role: 'assistant', content: textToShow })
+                                    msgChain.push({
+                                        role: 'assistant', content: textToShow,
+                                        regenerated: msgChain[msgChain.length -2]?.role == 'assistant'
+                                    })
                                 } else resolve(arrayify(textToShow))
                             }
                         }
