@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.25
+// @version               2025.3.25.1
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -3479,14 +3479,14 @@
                     } catch (err) { log.error('Error showing stream', err.message) }
 
                     function handleProcessCompletion() {
-                        caller.sender = null ; if (env.browser.isChromium) clearTimeout(this.timeout)
+                        if (env.browser.isChromium) clearTimeout(this.timeout)
                         if (appDiv.querySelector('.loading')) // no text shown
                             api.tryNew(caller)
                         else { // text was shown
-                            caller.status = 'done' ; caller.attemptCnt = null
-                            show.codeCopyBtns() ; api.clearTimedOut(caller.triedAPIs)
-                            if (msgChain[msgChain.length -1]?.role != 'assistant')
-                                msgChain.push({ role: 'assistant', content: textToShow })
+                            if (appDiv.querySelector('code')) show.codeCopyBtns()
+                            if (callerAPI == caller.sender) msgChain.push({ role: 'assistant', content: textToShow })
+                            api.clearTimedOut(caller.triedAPIs)
+                            caller.status = 'done' ; caller.sender = caller.attemptCnt = null
                         }
                     }
 
