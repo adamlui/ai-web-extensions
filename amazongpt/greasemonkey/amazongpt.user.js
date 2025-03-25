@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.23.1
+// @version                2025.3.24
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -134,7 +134,7 @@
             support: 'https://amazongpt.kudoai.com/issues',
             update: 'https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js'
         },
-        latestResourceCommitHash: 'efccd1e' // for cached messages.json
+        latestResourceCommitHash: 'bdc6a20' // for cached messages.json
     }
     app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
                           + `@${app.latestResourceCommitHash}`
@@ -151,6 +151,7 @@
         menuLabel_auto: 'Auto',
         menuLabel_about: 'About',
         menuLabel_settings: 'Settings',
+        componentLabel_used: 'used',
         about_author: 'Author',
         about_and: '&',
         about_contributors: 'contributors',
@@ -204,7 +205,6 @@
         alert_isUpToDate: 'is up-to-date',
         alert_unavailable: 'unavailable',
         alert_isOnlyAvailFor: 'is only available for',
-        alert_and: 'and',
         alert_userscriptMgrNoStream: 'Your userscript manager does not support returning stream responses',
         alert_isCurrentlyOnlyAvailBy: 'is currently only available by',
         alert_openAIsupportSoon: 'Support for OpenAI API will be added shortly',
@@ -1637,7 +1637,7 @@
 
         soundwave: {
             create({ height } = {}) {
-                const svg = dom.create.svgElem('svg', { width: 22, height: 22, viewBox: '0 0 24 24' })
+                const svg = dom.create.svgElem('svg', { width: 19, height: 19, viewBox: '0 0 24 24' })
                 const svgPath = dom.create.svgElem('path', { 'stroke-width': 1.75, 'stroke-linecap': 'round',
                     d: height == 'short' ? 'M3 11V13M6 11V13M9 11V13M12 10V14M15 11V13M18 11V13M21 11V13'
                      : height == 'tall' ? 'M3 11V13M6 8V16M9 10V14M12 7V17M15 4V20M18 9V15M21 11V13'
@@ -1729,10 +1729,14 @@
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled
             modals.stylize() // update modal styles
             app.styles.innerText = (
-                ':root {' // vars
-                  + '--app-bg-color-light-scheme: #ffffff ; --app-bg-color-dark-scheme: #282828 ;'
-                  + '--pre-bg-color-light-scheme: #e7e7e799 ; --pre-bg-color-dark-scheme: #3a3a3a ;'
-                  + '--font-color-light-scheme: #282828 ; --font-color-dark-scheme: #e3e3e3 ;'
+              `:root { /* vars */
+                    --app-bg-color-light-scheme: white ; --app-bg-color-dark-scheme: #282828 ;
+                    --pre-bg-color-light-scheme: #b7b7b736 ; --pre-bg-color-dark-scheme: #3a3a3a ;
+                    --pre-header-bg-color-light-scheme: #dfdfdf ;
+                    --pre-header-bg-color-dark-scheme: ${ !isParticlizedDS ? '#545454' : '#0e0e0e24' };
+                    --pre-header-fg-color-light-scheme: white ; --pre-header-fg-color-dark-scheme: white ;
+                    --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: white ;
+                    --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;`
                   + '--app-shadow: 0 2px 3px rgb(0,0,0,0.06) ; --app-hover-shadow: 0 1px 6px rgba(0,0,0,0.14) ;'
                   + '--app-transition: opacity 0.5s ease, transform 0.5s ease,' // for 1st fade-in
                                     + 'bottom 0.1s cubic-bezier(0,0,0.2,1),' // smoothen Anchor Y min/restore
@@ -1748,7 +1752,7 @@
               + '@keyframes btn-zoom-fade-out {'
                   + '0% { opacity: 1 } 55% { opacity: 0.25 ; transform: scale(1.85) }'
                   + '75% { opacity: 0.05 ; transform: scale(2.15) } 100% { opacity: 0 ; transform: scale(6.85) }}'
-              + '@keyframes icon-scroll { 0% { transform: translateX(0) } 100% { transform: translateX(-18px) }}'
+              + '@keyframes icon-scroll { 0% { transform: translateX(0) } 100% { transform: translateX(-14px) }}'
               + '@keyframes pulse { 0%, to { opacity: 1 } 50% { opacity: .5 }}'
               + '@keyframes rotate { from { transform: rotate(0deg) } to { transform: rotate(360deg) }}'
               + '@keyframes spinY { 0% { transform: rotateY(0deg) } 100% { transform: rotateY(360deg) }}'
@@ -1829,6 +1833,7 @@
                                                                             : '#aaaaaa21 7px' } 7px 3px) }` ))
               + `#${app.slug} .loading {
                     color: #b6b8ba ; fill: #b6b8ba ; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite }`
+              + `#${app.slug} section.loading { padding-left: 5px }` // left-pad loading status when sending replies
               + `#${app.slug}-font-size-slider-track {`
                   + 'width: 98% ; height: 7px ; margin: -6px auto -13px ; padding: 15px 0 ;'
                   + 'background-color: #ccc ; box-sizing: content-box; background-clip: content-box ;'
@@ -1858,12 +1863,12 @@
                   + 'float: left ; left: 7px ; margin: 1.89em -14px 0 0 ;' // positioning
                   + 'border-bottom-style: solid ; border-bottom-width: 16px ; border-top: 0 ; border-bottom-color:'
                       + `${ // hide reply tip for terminal aesthetic
-                            isParticlizedDS ? '#0000' : `var(--pre-bg-color-${env.ui.app.scheme}-scheme)` }}`
+                            isParticlizedDS ? '#0000' : `var(--pre-header-bg-color-${env.ui.app.scheme}-scheme)` }}`
               + `#${app.slug} > pre {`
                   + `font-size: ${config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;`
                   + `line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;`
-                  + 'margin: .99rem 0 7px 0 ; padding: 1.25em 1.25em 0 1.25em ;'
-                  + 'border-radius: 10px ; overflow: auto ;'
+                  + 'margin: 13px 0 7px 0 ; padding: 1.25em 1.25em 0 1.25em ;'
+                  + 'border-radius: 0 0 10px 10px ; overflow: auto ;'
                   + ( config.bgAnimationsDisabled ? // classic opaque bg
                         `background: var(--pre-bg-color-${env.ui.app.scheme}-scheme) ;`
                       + `color: var(--font-color-${env.ui.app.scheme}-scheme)`
@@ -1879,17 +1884,22 @@
                             + '-ms-transition: var(--answer-pre-transition)' }}`
               + `#${app.slug} > pre a, #${app.slug} > pre a:visited { color: #4495d4 }`
               + `#${app.slug} pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#ea7a28' }}`
-              + `#${app.slug} section.loading { padding-left: 5px }` // left-pad loading status when sending replies
-              + `#${app.slug}-reply-corner-btns {
-                    --light-scheme-color: #6f6f6f ; --dark-scheme-color: white ; float: right ; margin-left: 5px ;
-                    fill: var(--${env.ui.app.scheme}-scheme-color) ; stroke: var(--${env.ui.app.scheme}-scheme-color) }`
-              + `#${app.slug}-reply-corner-btns + pre {` // nudge top-code blocks down to expand full-width
-                    + 'margin-top: 25px }'
+              + `#${app.slug}-pre-header {
+                    display: flex ; align-items: center ; position: relative ;
+                    top: 14px ; padding: 16px 14px ; height: 18px ; border-radius: 10px 10px 0 0 ;
+                    ${ env.ui.app.scheme == 'light' ? 'border-bottom: 1px solid white'
+                                 : isParticlizedDS ? 'border: 1px solid ; border-bottom-color: transparent' : '' };
+                    background: var(--pre-header-bg-color-${env.ui.app.scheme}-scheme) ;
+                    color:      var(--pre-header-fg-color-${env.ui.app.scheme}-scheme) ;
+                    fill:       var(--pre-header-fg-color-${env.ui.app.scheme}-scheme) ;
+                    stroke:     var(--pre-header-fg-color-${env.ui.app.scheme}-scheme) }
+                .${app.slug}-pre-header-text { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
+                .${app.slug}-pre-header-btns { margin: 7.5px -5px 0 }`
               + `code #${app.slug}-copy-btn { position: relative ; top: -6px ; right: -9px }`
               + `code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
               + `#${app.slug}-chatbar {`
                   + `border: solid 1px ${ env.ui.app.scheme == 'dark' ?
-                        ( config.bgAnimationsDisabled ? '#777' : '#aaa' ) : '#638ed4' } ;`
+                        ( config.bgAnimationsDisabled ? '#777' : '#aaa' ) : '#dfdfdf' } ;`
                   + 'border-radius: 12px 13px 12px 0 ; margin: 3px 0 15px 0 ; padding: 13px 57px 9px 10px ;'
                   + 'font-size: 14.5px ; height: 46px ; width: 100% ; max-height: 200px ; resize: none ; '
                   + `position: relative ; z-index: 555 ; color: #${ env.ui.app.scheme == 'dark' ? 'eee' : '222' } ;`
@@ -1899,10 +1909,21 @@
                         `--shadow: 0 1px 2px rgba(15,17,17,0.1) inset ; box-shadow: var(--shadow) ;
                             -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)` }}`
               + `#${app.slug}-chatbar:hover:not(:focus) {
-                    filter: brightness(${ env.ui.app.scheme == 'dark' ? 86 : 90 }%) ; transition: filter 0.2s ease }
+                    filter: brightness(${ env.ui.app.scheme == 'dark' ? 95 : 97 }%) ;
+                    ${ isParticlizedDS ? '' :
+                        `--inset-shadow: 0 ${
+                            env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 5px' } rgba(15,17,17,0.1) inset ;
+                        box-shadow: var(--inset-shadow) ; -webkit-box-shadow: var(--inset-shadow) ;
+                        -moz-box-shadow: var(--inset-shadow)` };
+                    transition: box-shadow 0.35s ease, filter 0.2s ease
+                 }
                  #${app.slug}-chatbar:focus-visible {
-                    outline: -webkit-focus-ring-color auto 1px ; --shadow: 0 1px 2px rgba(0,0,0,0.3) inset ;
-                    box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) }`
+                    outline: -webkit-focus-ring-color auto 1px ;
+                    ${ isParticlizedDS ? '' :
+                        `--inset-shadow: 0 ${
+                                env.ui.app.scheme == 'dark' ? '3px -1px' : '1px 2px' } rgba(0,0,0,0.3) inset ;
+                        box-shadow: var(--inset-shadow) ; -webkit-box-shadow: var(--inset-shadow) ;
+                        -moz-box-shadow: var(--inset-shadow)`}}`
               + '.fade-in { opacity: 0 ; transform: translateY(10px) }'
               + '.fade-in-less { opacity: 0 ;'
                   + 'transition: var(--fade-in-less-transition) ;'
@@ -1915,10 +1936,11 @@
                   + 'z-index: 560 ; border: none ; float: right ; position: relative ;'
                   + 'bottom: 50px ; background: none ; cursor: pointer ;'
                   + `${ env.ui.app.scheme == 'dark' ? 'color: #aaa ; fill: #aaa ; stroke: #aaa'
-                                                : 'color: lightgrey ; fill: lightgrey ; stroke: lightgrey' }}`
-              + `.${app.slug}-chatbar-btn:hover {`
-                  + `${ env.ui.app.scheme == 'dark' ? 'color: white ; fill: white ; stroke: white'
-                                                    : 'color: #638ed4 ; fill: #638ed4 ; stroke: #638ed4' }}`
+                                                    : 'color: lightgrey ; fill: lightgrey ; stroke: lightgrey' }}`
+              + `.${app.slug}-chatbar-btn:hover {
+                    color:  var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
+                    fill:   var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
+                    stroke: var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) }`
               + ( // rendered markdown styles
                     `#${app.slug} > pre h1 { font-size: 1.8em }`
                   + `#${app.slug} > pre h2 { font-size: 1.65em }`
@@ -1927,7 +1949,7 @@
                       + 'margin-bottom: -15px }'
                   + `#${app.slug} > pre ol {`
                       + `color: var(--font-color-${env.ui.app.scheme}-scheme) ;` // override ol styles
-                      + 'margin: -15px 0 -6px 7px }'
+                      + 'margin: -5px 0 -6px 7px }'
                   + `#${app.slug} > pre ol > li {` // reduce v-padding, show number markers
                       + 'margin: -10px 0 -6px 1.6em ; list-style: decimal }'
                   + `#${app.slug} > pre ol > li::marker { font-size: 0.9em }` // shrink number markers
@@ -1981,7 +2003,7 @@
             const headerElems = { byline: appDiv.querySelector('.kudoai') }
             if (!headerElems.byline) return // since in loading state
             Object.assign(headerElems, {
-                btns: appDiv.querySelectorAll('[id$=-header-btns] > btn'),
+                btns: appDiv.querySelectorAll(`#${app.slug}-header-btns > btn`),
                 logo: appDiv.querySelector(`#${app.slug}-logo`)
             })
 
@@ -2433,7 +2455,7 @@
                     `${settings.controls.streamingDisabled.label} ${app.msgs.alert_unavailable}`,
                     `${settings.controls.streamingDisabled.label} ${app.msgs.alert_isOnlyAvailFor}`
                         + ` <a target="_blank" rel="noopener" href="https://tampermonkey.net">Tampermonkey</a> ${
-                                app.msgs.alert_and}`
+                                app.msgs.about_and}`
                         + ` <a target="_blank" rel="noopener" href="${scLink}">ScriptCat</a>.`
                         + ` (${app.msgs.alert_userscriptMgrNoStream}.)`
                 )
@@ -2463,7 +2485,6 @@
 
             const btn = stateOrEvent.currentTarget, btnType = /[^-]+-([\w-]+)-btn/.exec(btn.id)[1]
             const appHeaderBtnTypes = ['chevron', 'about', 'settings', 'font-size', 'arrows']
-            const replyCornerBtnTypes = ['share', 'copy', 'regen', 'speak']
             const baseText = (
                 btnType == 'chevron' ? ( config.minimized ? `${app.msgs.tooltip_restore}`
                                                           : `${app.msgs.tooltip_minimize}` )
@@ -2513,8 +2534,8 @@
                   rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
             tooltipDiv.style.top = `${
                 appHeaderBtnTypes.includes(btnType) ? -22
-              : replyCornerBtnTypes.includes(btnType) && !stateOrEvent.currentTarget.closest('code') ?
-                   38 + ( rects.fsSlider?.height > 0 ? rects.fsSlider.height -18 : 0 )
+              : answerBubble.buttons.types.includes(btnType) && !stateOrEvent.currentTarget.closest('code') ?
+                   28 + ( rects.fsSlider?.height > 0 ? rects.fsSlider.height -18 : 0 )
               : rects.btn.top - rects.appDiv.top -36 - ( stateOrEvent.currentTarget.closest('code') ? 7 : 0 )
             }px`
             tooltipDiv.style.right = `${
@@ -2710,7 +2731,7 @@
                             if (!caller.sender) caller.sender = callerAPI // app is waiting, become sender
                             if (caller.sender == callerAPI // app is sending from this api
                                 && textToShow.trim() != '' // empty reply chunk not read
-                            ) show.reply(textToShow)
+                            ) show.reply(textToShow, { apiUsed: callerAPI })
                         }
                     } catch (err) { log.error('Error showing stream', err.message) }
 
@@ -2720,7 +2741,7 @@
                             api.tryNew(caller)
                         else { // text was shown
                             caller.status = 'done' ; caller.attemptCnt = null
-                            show.replyCornerBtns() ; api.clearTimedOut(caller.triedAPIs)
+                            show.codeCopyBtns() ; api.clearTimedOut(caller.triedAPIs)
                             if (msgChain[msgChain.length -1]?.role != 'assistant')
                                 msgChain.push({ role: 'assistant', content: textToShow })
                         }
@@ -2792,7 +2813,7 @@
                             } else {
                                 caller.status = 'done' ; api.clearTimedOut(caller.triedAPIs) ; caller.attemptCnt = null
                                 textToShow = textToShow.replace(apis[callerAPI].respPatterns?.watermark, '').trim()
-                                show.reply(textToShow) ; show.replyCornerBtns()
+                                show.reply(textToShow, { apiUsed: callerAPI }) ; show.codeCopyBtns()
                                 msgChain.push({ role: 'assistant', content: textToShow })
                     }}}
 
@@ -2836,6 +2857,7 @@
         },
 
         async reply(msgChain) {
+            show.reply.updatedAPIinHeader = false
 
             // Show loading status
             const loadingSpinner = icons.arrowsCyclic.create() ; let loadingElem
@@ -2915,10 +2937,26 @@
 
     const show = {
 
-        reply(answer) {
+        codeCopyBtns() {
+            appDiv.querySelectorAll('code').forEach(block => {
+                const copyBtnDiv = dom.create.elem('div', { style: 'height: 11px ; margin: 4px 6px 0 0' })
+                copyBtnDiv.append(answerBubble.buttons.copy.cloneNode(true))
+                Object.entries(answerBubble.buttons.copy.listeners).forEach(
+                    ([eventType, handler]) => copyBtnDiv.firstChild[eventType] = handler)
+                block.prepend(copyBtnDiv)
+            })
+        },
+
+        reply(answer, { apiUsed = null } = {}) {
             show.reply.shareURL = null // reset to regen using longer msgChain
-            if (!env.browser.isMobile) // hide lingering tooltip if cursor was on corner button
-                toggle.tooltip('off')
+            toggle.tooltip('off') // hide lingering tooltip if cursor was on corner button
+            const regenSVGwrapper = appDiv.querySelector('[id$=regen-btn]')?.firstChild
+            if (regenSVGwrapper?.style?.animation || regenSVGwrapper?.style?.transform) {
+                Object.assign(regenSVGwrapper.style, { animation: '', transform: '', cursor: '' }) // rm animation/tilt
+                const regenBtn = regenSVGwrapper.closest('btn')
+                if (regenBtn.matches(':hover')) // restore tooltip
+                    regenBtn.dispatchEvent(new Event('mouseenter')) // + tooltip
+            }
 
             // Build answer interface up to reply section if missing
             if (!appDiv.querySelector('pre')) {
@@ -2983,9 +3021,7 @@
                 update.bylineVisibility()
 
                 // Create/append answer bubble
-                const answerPre = dom.create.elem('pre'),
-                        replyTipSpan = dom.create.elem('span', { class: `${app.slug}-reply-tip` })
-                appDiv.append(replyTipSpan, answerPre) ; update.answerPreMaxHeight()
+                answerBubble.insert()
             }
 
             // Build reply section if missing
@@ -3003,7 +3039,7 @@
                     id: `${app.slug}-chatbar`, rows: 1, placeholder: `${app.msgs.tooltip_sendReply}...` })
                 continueChatDiv.append(chatTextarea)
                 replyForm.append(continueChatDiv) ; replySection.append(replyForm)
-                appDiv.querySelector('pre').after(replySection);
+                appDiv.querySelector('pre, [class*=standby-btns]').after(replySection);
 
                 // Create/append chatbar buttons
                 ['send', 'shuffle'].forEach(btnType => {
@@ -3025,7 +3061,22 @@
                 }
             }
 
-            // Render/show answer
+            // Show API used in bubble header
+            if (!show.reply.updatedAPIinHeader) {
+                show.reply.updatedAPIinHeader = true
+                const preHeaderLabel = appDiv.querySelector(`.${app.slug}-pre-header-text`)
+                preHeaderLabel.replaceChildren(`⦿ API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
+                setTimeout(() => type(apiUsed, preHeaderLabel.lastChild, { speed: 1.5 }), 150)
+                function type(text, targetElem, { speed = 1 } = {}) {
+                    targetElem.textContent = '' ; let i = 0;
+                    (function typeNextChar() {
+                        if (i < text.length) {
+                            targetElem.textContent += text[i] ; i++ ; setTimeout(typeNextChar, 50 / speed) }
+                    })()
+                }
+            }
+
+            // Render MD, highlight JS
             const answerPre = appDiv.querySelector('pre')
             try { // to render markdown
                 answerPre.innerHTML = marked.parse(answer) } catch (err) { log.error(err.message) }
@@ -3068,206 +3119,234 @@
             update.appBottomPos() // restore minimized/restored state
 
             show.reply.userInteracted = false
+        }
+    }
+
+    const answerBubble = {
+
+        create() {
+            if (this.answerPre) return
+            this.replyTip = dom.create.elem('span', { class: `${app.slug}-reply-tip` })
+            this.preHeader = dom.create.elem('div', { id: `${app.slug}-pre-header` })
+            this.preHeader.append(dom.create.elem('span', { class: `${app.slug}-pre-header-text no-user-select`}))
+            this.buttons.insert()
+            this.answerPre = dom.create.elem('pre')
         },
 
-        replyCornerBtns() {
-            if (!document.querySelector(`#${app.slug} > pre`) // reply bubble missing
-              || document.getElementById(`${app.slug}-copy-btn`) // Copy button not missing
-            ) return
-            const baseBtnStyles = 'float: right ; cursor: pointer ;'
+        buttons: {
+            types: ['copy', 'share', 'regen', 'speak'], // right-to-left
+            styles: 'float: right ; cursor: pointer ;',
 
-            // Add top parent div
-            const cornerBtnsDiv = dom.create.elem('div', { id: `${app.slug}-reply-corner-btns` })
-            appDiv.querySelector('pre').prepend(cornerBtnsDiv)
+            create() {
+                if (this.share) return
 
-            // Add Share button
-            const shareBtn = dom.create.elem('btn', {
-                id: `${app.slug}-share-btn`, class: 'no-mobile-tap-outline',
-                style: baseBtnStyles + 'margin-right: 10px' })
-            shareBtn.append(icons.arrowShare.create()) ; cornerBtnsDiv.append(shareBtn)
-            if (!env.browser.isMobile) shareBtn.onmouseenter = shareBtn.onmouseleave = toggle.tooltip
-            shareBtn.onclick = event => {
-                if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
-                shareBtn.style.animation = 'spinY 1s linear infinite'
-                shareBtn.style.cursor = 'default' // remove finger
-                toggle.tooltip(event) // update tooltip
-                xhr({
-                    method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
-                    headers: { 'Content-Type': 'application/json', 'Referer': location.href },
-                    data: JSON.stringify({ messages: prompts.stripAugments(msgChain) }),
-                    onload: resp => {
-                        const shareURL = JSON.parse(resp.responseText).url
-                        show.reply.shareURL = shareURL ; modals.shareChat(shareURL)
-                        shareBtn.style.animation = '' ; shareBtn.style.cursor = 'pointer'
-                    }
-                })
-            }
-
-            // Add Copy buttons
-            appDiv.querySelectorAll(`#${app.slug} > pre, code`).forEach(parentElem => {
-                const copyBtn = dom.create.elem('btn', {
+                // Copy button
+                this.copy = dom.create.elem('btn', {
                     id: `${app.slug}-copy-btn`, class: 'no-mobile-tap-outline',
-                    style: baseBtnStyles + 'display: flex' })
-                const copySVGs = { copy: icons.copy.create(parentElem), copied: icons.checkmarkDouble.create() }
-                Object.entries(copySVGs).forEach(([svgType, svg]) => svg.id = `${app.slug}-${svgType}-icon`)
-                copySVGs.copied.style.marginLeft = '1px' // set same left boundary as Copy icon to not shift other ones
-                copyBtn.append(copySVGs.copy) ; let elemToPrepend = copyBtn
-
-                // Wrap code button in div for v-offset
-                if (parentElem.tagName == 'CODE') {
-                    elemToPrepend = dom.create.elem('div', { style: 'height: 11px ; margin: 4px 5px 0 0' })
-                    elemToPrepend.append(copyBtn)
-                }
-
-                // Add listeners
-                if (!env.browser.isMobile) copyBtn.onmouseenter = copyBtn.onmouseleave = toggle.tooltip
-                copyBtn.onclick = event => { // copy text, update icon + tooltip status
-                    if (!copyBtn.contains(copySVGs.copy)) return // since clicking on Copied icon
+                    style: this.styles + 'display: flex'
+                })
+                const copySVGs = { copy: icons.copy.create(), copied: icons.checkmarkDouble.create() }
+                Object.entries(copySVGs).forEach(([svgType, svg]) => {
+                    svg.id = `${app.slug}-${svgType}-icon`;
+                    ['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
+                })
+                this.copy.append(copySVGs.copy)
+                this.copy.listeners = {}
+                if (!env.browser.isMobile) // store/add tooltip listeners
+                    ['onmouseenter', 'onmouseleave'].forEach(eventType =>
+                        this.copy[eventType] = this.copy.listeners[eventType] = toggle.tooltip)
+                this.copy.listeners.onclick = this.copy.onclick = event => { // copy text, update icon + tooltip status
+                    const copyBtn = event.currentTarget
+                    if (!copyBtn.firstChild.matches('[id$=copy-icon]')) return // since clicking on Copied icon
                     const textContainer = (
-                        copyBtn.parentNode.tagName == 'PRE' ? copyBtn.parentNode // reply container
-                                                            : copyBtn.parentNode.parentNode ) // code container
+                        event.currentTarget.parentNode.className.includes('pre-header')
+                            ? appDiv.querySelector('pre') // reply container
+                                : event.currentTarget.closest('code') // code container
+                    )
                     const textToCopy = textContainer.textContent.replace(/^>> /, '').trim()
                     copyBtn.style.cursor = 'default' // remove finger
-                    copySVGs.copy.replaceWith(copySVGs.copied) // change to Copied icon
+                    copyBtn.firstChild.replaceWith(copySVGs.copied.cloneNode(true)) // change to Copied icon
                     toggle.tooltip(event) // update tooltip
                     setTimeout(() => { // restore icon/cursor/tooltip after a bit
-                        copySVGs.copied.replaceWith(copySVGs.copy)
-                        copyBtn.style.cursor = 'pointer' ; copyBtn.dispatchEvent(new Event('mouseenter'))
+                        copyBtn.firstChild.replaceWith(copySVGs.copy.cloneNode(true))
+                        copyBtn.style.cursor = 'pointer'
+                        if (copyBtn.matches(':hover')) // restore tooltip
+                            copyBtn.dispatchEvent(new Event('mouseenter'))
                     }, 1355)
                     navigator.clipboard.writeText(textToCopy) // copy text to clipboard
                 }
 
-                // Prepend button
-                const parentToInsertInto = parentElem.tagName == 'CODE' ? parentElem : cornerBtnsDiv
-                parentToInsertInto.prepend(elemToPrepend)
-            })
-
-            // Add Regenerate button
-            const regenBtn = dom.create.elem('btn', {
-                id: `${app.slug}-regen-btn`, class: 'no-mobile-tap-outline',
-                style: baseBtnStyles + 'position: relative ; top: 1px ; margin: 0 9px 0 5px' })
-            const regenSVGwrapper = dom.create.elem('div', { // to spin while respecting ini icon tilt
-                style: 'display: flex' }) // wrap the icon tightly
-            const regenSVG = icons.arrowsCyclic.create();
-            ['width', 'height'].forEach(attr => regenSVG.setAttribute(attr, 17))
-            regenSVGwrapper.append(regenSVG) ; regenBtn.append(regenSVGwrapper) ; cornerBtnsDiv.append(regenBtn)
-            if (!env.browser.isMobile) regenBtn.onmouseenter = regenBtn.onmouseleave = toggle.tooltip
-            regenBtn.onclick = event => {
-                get.reply(msgChain)
-                regenSVGwrapper.style.cursor = 'default' // disable finger cursor
-                if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
-                else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
-                toggle.tooltip(event) // update tooltip
-                show.reply.src = null ; show.reply.chatbarFocused = false ; show.reply.userInteracted = true
-            }
-
-            // Add Speak button
-            const speakBtn = dom.create.elem('btn', {
-                id: `${app.slug}-speak-btn`, class: 'no-mobile-tap-outline',
-                style: baseBtnStyles + 'margin: -1px 3px 0 0' })
-            const speakSVGwrapper = dom.create.elem('div', { // to show 1 icon at a time during scroll
-                style: 'width: 22px ; height: 22px ; overflow: hidden' })
-            const speakSVGscroller = dom.create.elem('div', { // to scroll the icons
-                style: `display: flex ; /* align the SVGs horizontally */
-                        width: 41px ; height: 22px /* rectangle to fit both icons */` })
-            const speakSVGs = { speak: icons.soundwave.create() } ; speakSVGs.speak.id = `${app.slug}-speak-icon`;
-            ['generating', 'playing'].forEach(state => {
-                speakSVGs[state] = []
-                for (let i = 0 ; i < 2 ; i++) { // push/id 2 of each state icon for continuous scroll animation
-                    speakSVGs[state].push(icons.soundwave.create({ height: state == 'generating' ? 'short' : 'tall' }))
-                    speakSVGs[state][i].id = `${app.slug}-${state}-icon-${i+1}`
-                    if (i == 1) speakSVGs[state][i].style.marginLeft = '-3px' // close gap of 2nd icon during scroll
-                }
-            })
-            speakSVGscroller.append(speakSVGs.speak) ; speakSVGwrapper.append(speakSVGscroller)
-            speakBtn.append(speakSVGwrapper) ; cornerBtnsDiv.append(speakBtn)
-            if (!env.browser.isMobile) speakBtn.onmouseenter = speakBtn.onmouseleave = toggle.tooltip
-            speakBtn.onclick = event => {
-                if (!speakBtn.contains(speakSVGs.speak)) return // since clicking on Generating or Playing icon
-                speakBtn.style.cursor = 'default' // remove finger
-
-                // Update icon to Generating ones
-                speakSVGscroller.textContent = '' // rid Speak icon
-                speakSVGscroller.append(speakSVGs.generating[0], speakSVGs.generating[1]) // add Generating icons
-                if (!config.fgAnimationsDisabled) { // animate icons
-                    speakSVGscroller.style.animation = 'icon-scroll 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite'
-                    speakSVGwrapper.style.maskImage = ( // fade edges
-                        'linear-gradient(to right, transparent, black 20%, black 81%, transparent)' )
-                }
-
-                toggle.tooltip(event) // update tooltip
-
-                // Play reply
-                const wholeAnswer = appDiv.querySelector('pre').textContent
-                const cjsSpeakConfig = { voice: 2, pitch: 1, speed: 1.5, onend: handleAudioEnded }
-                const sgtDialectMap = [
-                    { code: 'en', regex: /^(eng(lish)?|en(-\w\w)?)$/i, rate: 2 },
-                    { code: 'ar', regex: /^(ara?(bic)?|اللغة العربية)$/i, rate: 1.5 },
-                    { code: 'cs', regex: /^(cze(ch)?|[cč]e[sš].*|cs)$/i, rate: 1.4 },
-                    { code: 'da', regex: /^dan?(ish|sk)?$/i, rate: 1.3 },
-                    { code: 'de', regex: /^(german|deu?(tsch)?)$/i, rate: 1.5 },
-                    { code: 'es', regex: /^(spa(nish)?|espa.*|es(-\w\w)?)$/i, rate: 1.5 },
-                    { code: 'fi', regex: /^(fin?(nish)?|suom.*)$/i, rate: 1.4 },
-                    { code: 'fr', regex: /^fr/i, rate: 1.2 },
-                    { code: 'hu', regex: /^(hun?(garian)?|magyar)$/i, rate: 1.5 },
-                    { code: 'it', regex: /^ita?(lian[ao]?)?$/i, rate: 1.4 },
-                    { code: 'ja', regex: /^(ja?pa?n(ese)?|日本語|ja)$/i, rate: 1.5 },
-                    { code: 'nl', regex: /^(dut(ch)?|flemish|nederlandse?|vlaamse?|nld?)$/i, rate: 1.3 },
-                    { code: 'pl', regex: /^po?l(ish|ski)?$/i, rate: 1.4 },
-                    { code: 'pt', regex: /^(por(tugu[eê]se?)?|pt(-\w\w)?)$/i, rate: 1.5 },
-                    { code: 'ru', regex: /^(rus?(sian)?|русский)$/i, rate: 1.3 },
-                    { code: 'sv', regex: /^(swe?(dish)?|sv(enska)?)$/i, rate: 1.4 },
-                    { code: 'tr', regex: /^t[uü]?r(k.*)?$/i, rate: 1.6 },
-                    { code: 'vi', regex: /^vi[eệ]?t?(namese)?$/i, rate: 1.5 },
-                    { code: 'zh-CHS', regex: /^(chi(nese)?|zh|中[国國])/i, rate: 2 }
-                ]
-                const sgtReplyDialect = sgtDialectMap.find(entry =>
-                    entry.regex.test(config.replyLang)) || sgtDialectMap[0]
-                const payload = {
-                    text: wholeAnswer, curTime: Date.now(), spokenDialect: sgtReplyDialect.code,
-                    rate: sgtReplyDialect.rate.toString()
-                }
-                const key = CryptoJS.enc.Utf8.parse('76350b1840ff9832eb6244ac6d444366')
-                const iv = CryptoJS.enc.Utf8.parse(
-                    atob('AAAAAAAAAAAAAAAAAAAAAA==') || '76350b1840ff9832eb6244ac6d444366')
-                const securePayload = CryptoJS.AES.encrypt(JSON.stringify(payload), key, {
-                    iv: iv, mode: CryptoJS.mode.CBC, pad: CryptoJS.pad.Pkcs7 }).toString()
-                xhr({ // audio from Sogou TTS
-                    url: 'https://fanyi.sogou.com/openapi/external/getWebTTS?S-AppId=102356845&S-Param='
-                        + encodeURIComponent(securePayload),
-                    method: 'GET', responseType: 'arraybuffer',
-                    onload: async resp => {
-
-                        // Update icons to Playing ones
-                        speakSVGscroller.textContent = '' // rid Generating icons
-                        speakSVGscroller.append(speakSVGs.playing[0], speakSVGs.playing[1]) // add Playing icons
-                        if (!config.fgAnimationsDisabled) // animate icons
-                            speakSVGscroller.style.animation = 'icon-scroll 0.5s linear infinite'
-
-                        speakBtn.dispatchEvent(new Event('mouseenter')) // update tooltip
-
-                        // Play audio
-                        if (resp.status != 200) chatgpt.speak(wholeAnswer, cjsSpeakConfig)
-                        else {
-                            const audioContext = new (window.AudioContext || window.webkitAudioContext)()
-                            audioContext.decodeAudioData(resp.response, buffer => {
-                                const audioSrc = audioContext.createBufferSource()
-                                audioSrc.buffer = buffer
-                                audioSrc.connect(audioContext.destination) // connect source to speakers
-                                audioSrc.start(0) // play audio
-                                audioSrc.onended = handleAudioEnded
-                            }).catch(() => chatgpt.speak(wholeAnswer, cjsSpeakConfig))
+                // Share button
+                this.share = dom.create.elem('btn', {
+                    id: `${app.slug}-share-btn`, class: 'no-mobile-tap-outline',
+                    style: this.styles + 'margin-right: 10px'
+                })
+                const shareSVG = icons.arrowShare.create();
+                ['width', 'height'].forEach(attr => shareSVG.setAttribute(attr, 16))
+                this.share.append(shareSVG)
+                if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = toggle.tooltip
+                this.share.onclick = event => {
+                    if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
+                    this.share.style.animation = 'spinY 1s linear infinite'
+                    this.share.style.cursor = 'default' // remove finger
+                    toggle.tooltip(event) // update tooltip
+                    xhr({
+                        method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
+                        headers: { 'Content-Type': 'application/json', 'Referer': location.href },
+                        data: JSON.stringify({ messages: prompts.stripAugments(msgChain) }),
+                        onload: resp => {
+                            const shareURL = JSON.parse(resp.responseText).url
+                            show.reply.shareURL = shareURL ; modals.shareChat(shareURL)
+                            this.share.style.animation = '' ; this.share.style.cursor = 'pointer'
                         }
+                    })
+                }
+
+                // Regenerate button
+                this.regen = dom.create.elem('btn', {
+                    id: `${app.slug}-regen-btn`, class: 'no-mobile-tap-outline',
+                    style: this.styles + 'position: relative ; top: 1px ; margin: 0 9px 0 5px'
+                })
+                const regenSVGwrapper = dom.create.elem('div', { // to spin while respecting ini icon tilt
+                    style: 'display: flex' }) // wrap the icon tightly
+                const regenSVG = icons.arrowsCyclic.create();
+                ['width', 'height'].forEach(attr => regenSVG.setAttribute(attr, 14))
+                regenSVGwrapper.append(regenSVG) ; this.regen.append(regenSVGwrapper)
+                if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = toggle.tooltip
+                this.regen.onclick = event => {
+                    get.reply(msgChain, { src: 'regen' })
+                    regenSVGwrapper.style.cursor = 'default' // disable finger cursor
+                    if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
+                    else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
+                    toggle.tooltip(event) // update tooltip
+                    show.reply.src = null ; show.reply.chatbarFocused = false ; show.reply.userInteracted = true
+                }
+
+                // Speak button
+                this.speak = dom.create.elem('btn', {
+                    id: `${app.slug}-speak-btn`, class: 'no-mobile-tap-outline',
+                    style: this.styles + 'margin: -1px 3px 0 0'
+                })
+                const speakSVGwrapper = dom.create.elem('div', { // to show 1 icon at a time during scroll
+                    style: 'width: 19px ; height: 19px ; overflow: hidden' })
+                const speakSVGscroller = dom.create.elem('div', { // to scroll the icons
+                    style: `display: flex ; /* align the SVGs horizontally */
+                            width: 41px ; height: 22px /* rectangle to fit both icons */` })
+                const speakSVGs = { speak: icons.soundwave.create() } ; speakSVGs.speak.id = `${app.slug}-speak-icon`;
+                ['generating', 'playing'].forEach(state => {
+                    speakSVGs[state] = []
+                    for (let i = 0 ; i < 2 ; i++) { // push/id 2 of each state icon for continuous scroll animation
+                        speakSVGs[state].push(icons.soundwave.create({ height: state == 'generating' ? 'short' : 'tall' }))
+                        speakSVGs[state][i].id = `${app.slug}-${state}-icon-${i+1}`
+                        if (i == 1) // close gap of 2nd icon during scroll
+                            speakSVGs[state][i].style.marginLeft = `-${ state == 'generating' ? 3 : 5 }px`
                     }
                 })
+                speakSVGscroller.append(speakSVGs.speak) ; speakSVGwrapper.append(speakSVGscroller)
+                this.speak.append(speakSVGwrapper)
+                if (!env.browser.isMobile) this.speak.onmouseenter = this.speak.onmouseleave = toggle.tooltip
+                this.speak.onclick = async event => {
+                    if (!this.speak.contains(speakSVGs.speak)) return // since clicking on Generating or Playing icon
+                    this.speak.style.cursor = 'default' // remove finger
 
-                function handleAudioEnded() {
-                    speakBtn.style.cursor = 'pointer' // restore cursor
-                    speakSVGscroller.textContent = speakSVGscroller.style.animation = '' // rid Playing icons
-                    speakSVGscroller.append(speakSVGs.speak) // restore Speak icon
-                    speakBtn.dispatchEvent(new Event('mouseenter')) // restore tooltip
+                    // Update icon to Generating ones
+                    speakSVGscroller.textContent = '' // rid Speak icon
+                    speakSVGscroller.append(speakSVGs.generating[0], speakSVGs.generating[1]) // add Generating icons
+                    if (!config.fgAnimationsDisabled) { // animate icons
+                        speakSVGscroller.style.animation = 'icon-scroll 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite'
+                        speakSVGwrapper.style.maskImage = ( // fade edges
+                            'linear-gradient(to right, transparent, black 20%, black 81%, transparent)' )
+                    }
+
+                    toggle.tooltip(event) // update tooltip
+
+                    // Play reply
+                    const wholeAnswer = appDiv.querySelector('pre').textContent
+                    const cjsSpeakConfig = { voice: 2, pitch: 1, speed: 1.5, onend: handleAudioEnded }
+                    const sgtDialectMap = [
+                        { code: 'en', regex: /^(eng(lish)?|en(-\w\w)?)$/i, rate: 2 },
+                        { code: 'ar', regex: /^(ara?(bic)?|اللغة العربية)$/i, rate: 1.5 },
+                        { code: 'cs', regex: /^(cze(ch)?|[cč]e[sš].*|cs)$/i, rate: 1.4 },
+                        { code: 'da', regex: /^dan?(ish|sk)?$/i, rate: 1.3 },
+                        { code: 'de', regex: /^(german|deu?(tsch)?)$/i, rate: 1.5 },
+                        { code: 'es', regex: /^(spa(nish)?|espa.*|es(-\w\w)?)$/i, rate: 1.5 },
+                        { code: 'fi', regex: /^(fin?(nish)?|suom.*)$/i, rate: 1.4 },
+                        { code: 'fr', regex: /^fr/i, rate: 1.2 },
+                        { code: 'hu', regex: /^(hun?(garian)?|magyar)$/i, rate: 1.5 },
+                        { code: 'it', regex: /^ita?(lian[ao]?)?$/i, rate: 1.4 },
+                        { code: 'ja', regex: /^(ja?pa?n(ese)?|日本語|ja)$/i, rate: 1.5 },
+                        { code: 'nl', regex: /^(dut(ch)?|flemish|nederlandse?|vlaamse?|nld?)$/i, rate: 1.3 },
+                        { code: 'pl', regex: /^po?l(ish|ski)?$/i, rate: 1.4 },
+                        { code: 'pt', regex: /^(por(tugu[eê]se?)?|pt(-\w\w)?)$/i, rate: 1.5 },
+                        { code: 'ru', regex: /^(rus?(sian)?|русский)$/i, rate: 1.3 },
+                        { code: 'sv', regex: /^(swe?(dish)?|sv(enska)?)$/i, rate: 1.4 },
+                        { code: 'tr', regex: /^t[uü]?r(k.*)?$/i, rate: 1.6 },
+                        { code: 'vi', regex: /^vi[eệ]?t?(namese)?$/i, rate: 1.5 },
+                        { code: 'zh-CHS', regex: /^(chi(nese)?|zh|中[国國])/i, rate: 2 }
+                    ]
+                    const sgtReplyDialect = sgtDialectMap.find(entry =>
+                        entry.regex.test(config.replyLang)) || sgtDialectMap[0]
+                    const payload = {
+                        text: wholeAnswer, curTime: Date.now(), spokenDialect: sgtReplyDialect.code,
+                        rate: sgtReplyDialect.rate.toString()
+                    }
+                    const key = CryptoJS.enc.Utf8.parse('76350b1840ff9832eb6244ac6d444366')
+                    const iv = CryptoJS.enc.Utf8.parse(
+                        atob('AAAAAAAAAAAAAAAAAAAAAA==') || '76350b1840ff9832eb6244ac6d444366')
+                    const securePayload = CryptoJS.AES.encrypt(JSON.stringify(payload), key, {
+                        iv: iv, mode: CryptoJS.mode.CBC, pad: CryptoJS.pad.Pkcs7 }).toString()
+                    xhr({ // audio from Sogou TTS
+                        url: 'https://fanyi.sogou.com/openapi/external/getWebTTS?S-AppId=102356845&S-Param='
+                            + encodeURIComponent(securePayload),
+                        method: 'GET', responseType: 'arraybuffer',
+                        onload: async resp => {
+
+                            // Update icons to Playing ones
+                            speakSVGscroller.textContent = '' // rid Generating icons
+                            speakSVGscroller.append(speakSVGs.playing[0], speakSVGs.playing[1]) // add Playing icons
+                            if (!config.fgAnimationsDisabled) // animate icons
+                                speakSVGscroller.style.animation = 'icon-scroll 0.5s linear infinite'
+
+                            if (this.speak.matches(':hover')) // restore tooltip
+                                this.speak.dispatchEvent(new Event('mouseenter'))
+
+                            // Play audio
+                            if (resp.status != 200) chatgpt.speak(wholeAnswer, cjsSpeakConfig)
+                            else {
+                                const audioContext = new (window.webkitAudioContext || window.AudioContext)()
+                                audioContext.decodeAudioData(resp.response, buffer => {
+                                    const audioSrc = audioContext.createBufferSource()
+                                    audioSrc.buffer = buffer
+                                    audioSrc.connect(audioContext.destination) // connect source to speakers
+                                    audioSrc.start(0) // play audio
+                                    audioSrc.onended = handleAudioEnded
+                                }).catch(() => chatgpt.speak(wholeAnswer, cjsSpeakConfig))
+                            }
+                        }
+                    })
+
+                    function handleAudioEnded() {
+                        answerBubble.buttons.speak.style.cursor = 'pointer' // restore cursor
+                        speakSVGscroller.textContent = speakSVGscroller.style.animation = '' // rid Playing icons
+                        speakSVGscroller.append(speakSVGs.speak) // restore Speak icon
+                        if (answerBubble.buttons.speak.matches(':hover')) // restore tooltip
+                            answerBubble.buttons.speak.dispatchEvent(new Event('mouseenter'))
+                    }
                 }
+
+            },
+
+            insert() {
+                if (!this.share) this.create() ; if (!answerBubble.preHeader) answerBubble.create()
+                const preHeaderBtnsDiv = dom.create.elem('div', { class: `${app.slug}-pre-header-btns` })
+                preHeaderBtnsDiv.append(this.copy, this.share, this.regen, this.speak)
+                answerBubble.preHeader.append(preHeaderBtnsDiv)
             }
+        },
+
+        insert() {
+            if (!this.answerPre) this.create()
+            appDiv.append(this.replyTip, this.preHeader, this.answerPre) ; update.answerPreMaxHeight()
         }
     }
 
