@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.25.5
+// @version               2025.3.25.6
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -2383,35 +2383,35 @@
                         -moz-box-shadow: var(--inset-shadow)`}}`
               + `.${app.slug}-related-queries {
                     display: flex ; flex-wrap: wrap ; width: 100% ; margin-bottom: -28px ;
-                    position: relative ; top: -3px } /* scooch up to hug feedback gap */`
-              + `.${app.slug}-related-query {`
-                  + 'font-size: 0.77em ; cursor: pointer ;'
-                  + 'box-sizing: border-box ; width: fit-content ; max-width: 100% ;' // confine to outer div
-                  + 'margin: 4px 12px 7px 0 ; padding: 8px 13px 7px 14px ;'
-                  + `color: ${ env.ui.app.scheme == 'dark' ? ( config.bgAnimationsDisabled ? '#ccc' : '#f2f2f2' )
-                                                           : '#767676' } ;`
-                  + `background: ${
+                    position: relative ; top: -3px } /* scooch up to hug feedback gap */
+                .${app.slug}-related-query {
+                    font-size: 0.77em ; cursor: pointer ; will-change: transform ;
+                    box-sizing: border-box ; width: fit-content ; max-width: 100% ; /* confine to outer div */
+                    margin: 4px 12px 7px 0 ; padding: 8px 13px 7px 14px ;
+                    color: ${ env.ui.app.scheme == 'dark' ? ( config.bgAnimationsDisabled ? '#ccc' : '#f2f2f2' )
+                                                 : '#767676' };
+                    background: ${
                          config.bgAnimationsDisabled ? ( env.ui.app.scheme == 'dark' ? '#404040' : '#dadada12' )
-                                                     : ( env.ui.app.scheme == 'dark' ? '#595858d6' : '#fbfbfbb0' )} ;`
-                  + `border: 1px solid ${ env.ui.app.scheme == 'dark' ? (
-                        config.bgAnimationsDisabled ? '#5f5f5f' : '#777' ) : '#e1e1e1' } ;`
-                  + 'border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;'
-                  + `--shadow: 1px 4px ${ env.ui.app.scheme == 'dark' ?
+                                                     : ( env.ui.app.scheme == 'dark' ? '#595858d6' : '#fbfbfbb0' )};
+                    border: 1px solid ${ env.ui.app.scheme == 'dark' ? (
+                        config.bgAnimationsDisabled ? '#5f5f5f' : '#777' ) : '#e1e1e1' };
+                    border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;
+                    --shadow: 1px 4px ${ env.ui.app.scheme == 'dark' ?
                         `${ config.bgAnimationsDisabled ? 10 : 18 }px -8px lightgray`
                             : '8px -6px rgba(169,169,169,0.75)' };
-                    box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;`
-                  + `${ config.fgAnimationsDisabled ? '' : // smoothen hover-zoom
-                        'transition: var(--rq-transition) ;'
-                          + '-webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;'
-                          + '-o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)' }}`
-              + `.${app.slug}-related-query:hover, .${app.slug}-related-query:focus {`
-                  + ( config.fgAnimationsDisabled || env.browser.isMobile ? ''
-                        : 'transform: scale(1.055) !important ;' )
-                  + `background: ${ env.ui.app.scheme == 'dark' ? '#a2a2a270'
-                        : '#dae5ffa3 ; color: #000000a8 ; border-color: #a3c9ff' }}`
-              + `.${app.slug}-related-query svg {` // related query icon
-                  + 'float: left ; margin: 0.09em 6px 0 0 ;'
-                  + `color: ${ env.ui.app.scheme == 'dark' ? '#aaa' : '#c1c1c1' }}`
+                    box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
+                    ${ config.fgAnimationsDisabled ? '' : // smoothen hover-zoom
+                        `transition: var(--rq-transition) ;
+                            -webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;
+                            -o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)` }}
+                .${app.slug}-related-query:hover, .${app.slug}-related-query:focus {
+                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? ''
+                        : 'transform: scale(1.055) !important ;' }
+                    background: ${ env.ui.app.scheme == 'dark' ? '#a2a2a270'
+                        : '#dae5ffa3 ; color: #000000a8 ; border-color: #a3c9ff' }}
+                .${app.slug}-related-query svg { /* related query icon */
+                    float: left ; margin: 0.09em 6px 0 0 ;
+                    color: ${ env.ui.app.scheme == 'dark' ? '#aaa' : '#c1c1c1' }}`
               + '.fade-in { opacity: 0 ; transform: translateY(10px) }'
               + '.fade-in-less { opacity: 0 ;'
                   + 'transition: var(--fade-in-less-transition) ;'

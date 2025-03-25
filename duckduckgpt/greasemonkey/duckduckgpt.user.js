@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.25.5
+// @version                2025.3.25.6
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -2376,37 +2376,37 @@
                                 env.ui.app.scheme == 'dark' ? '3px -1px' : '1px 2px' } rgba(0,0,0,0.3) inset ;
                         box-shadow: var(--inset-shadow) ; -webkit-box-shadow: var(--inset-shadow) ;
                         -moz-box-shadow: var(--inset-shadow)`}}`
-              + `.${app.slug}-related-queries {`
-                  + 'display: flex ; flex-wrap: wrap ; width: 100% ; position: relative ; overflow: visible ;'
-                  + `${ env.browser.isFF ? 'top: -20px ; smargin: -3px 0 -10px' : 'top: -25px ; margin: -7px 0 -15px' }}`
-              + `.${app.slug}-related-query {`
-                  + 'font-size: 0.88em ; cursor: pointer ;'
-                  + 'box-sizing: border-box ; width: fit-content ; max-width: 100% ;' // confine to outer div
-                  + 'margin: 4px 12px 8px 0 ; padding: 4px 10px 5px 10px ;'
-                  + `color: ${ env.ui.app.scheme == 'dark' ? ( config.bgAnimationsDisabled ? '#ccc' : '#f2f2f2' )
-                                                           : '#767676' } ;`
-                  + `background: ${
+              + `.${app.slug}-related-queries {
+                    display: flex ; flex-wrap: wrap ; width: 100% ; position: relative ; overflow: visible ;
+                    ${ env.browser.isFF ? 'top: -20px ; smargin: -3px 0 -10px' : 'top: -25px ; margin: -7px 0 -15px' }}
+                .${app.slug}-related-query {
+                    font-size: 0.88em ; cursor: pointer ; will-change: transform ;
+                    box-sizing: border-box ; width: fit-content ; max-width: 100% ; /* confine to outer div */
+                    margin: 4px 12px 8px 0 ; padding: 4px 10px 5px 10px ;
+                    color: ${ env.ui.app.scheme == 'dark' ? ( config.bgAnimationsDisabled ? '#ccc' : '#f2f2f2' )
+                                                 : '#767676' };
+                    background: ${
                          config.bgAnimationsDisabled ? ( env.ui.app.scheme == 'dark' ? '#404040' : '#dadada12' )
-                                                     : ( env.ui.app.scheme == 'dark' ? '#595858d6' : '#fbfbfbb0' )} ;`
-                  + `border: 1px solid ${ env.ui.app.scheme == 'dark' ? (
-                        config.bgAnimationsDisabled ? '#5f5f5f' : '#777' ) : '#e1e1e1' } ;`
-                  + 'border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;'
-                  + `--shadow: 1px 4px ${ env.ui.app.scheme == 'dark' ?
+                                                     : ( env.ui.app.scheme == 'dark' ? '#595858d6' : '#fbfbfbb0' )};
+                    border: 1px solid ${ env.ui.app.scheme == 'dark' ? (
+                        config.bgAnimationsDisabled ? '#5f5f5f' : '#777' ) : '#e1e1e1' } ;
+                    border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;
+                    --shadow: 1px 4px ${ env.ui.app.scheme == 'dark' ?
                         `${ config.bgAnimationsDisabled ? 10 : 18 }px -8px lightgray`
                             : '8px -6px rgba(169,169,169,0.75)' };
-                    box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;`
-                  + `${ config.fgAnimationsDisabled ? '' : // smoothen hover-zoom
-                        'transition: var(--rq-transition) ;'
-                          + '-webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;'
-                          + '-o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)' }}`
-              + `.${app.slug}-related-query:hover, .${app.slug}-related-query:focus {`
-                  + ( config.fgAnimationsDisabled || env.browser.isMobile ? ''
-                        : 'transform: scale(1.055) !important ;' )
-                  + `background: ${ env.ui.app.scheme == 'dark' ? '#a2a2a270'
-                        : '#dae5ffa3 ; color: #000000a8 ; border-color: #a3c9ff' }}`
-              + `.${app.slug}-related-query svg {` // related query icon
-                  + 'position: relative ; top: 4px ; margin-right: 6px ;'
-                  + `color: ${ env.ui.app.scheme == 'dark' ? '#aaa' : '#c1c1c1' }}`
+                    box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
+                    ${ config.fgAnimationsDisabled ? '' : // smoothen hover-zoom
+                        `transition: var(--rq-transition) ;
+                            -webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;
+                            -o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)` }}
+                .${app.slug}-related-query:hover, .${app.slug}-related-query:focus {
+                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? ''
+                        : 'transform: scale(1.055) !important ;' }
+                    background: ${ env.ui.app.scheme == 'dark' ? '#a2a2a270'
+                        : '#dae5ffa3 ; color: #000000a8 ; border-color: #a3c9ff' }}
+                .${app.slug}-related-query svg { /* related query icon */
+                    position: relative ; top: 4px ; margin-right: 6px ;
+                    color: ${ env.ui.app.scheme == 'dark' ? '#aaa' : '#c1c1c1' }}`
               + '.fade-in { opacity: 0 ; transform: translateY(10px) }'
               + '.fade-in-less { opacity: 0 ;'
                   + 'transition: var(--fade-in-less-transition) ;'
