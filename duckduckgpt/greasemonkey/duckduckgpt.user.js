@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.25.6
+// @version                2025.3.26
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -2312,7 +2312,7 @@
               + `.${app.slug}-reply-tip {`
                   + 'content: "" ; position: relative ; border: 7px solid transparent ;'
                   + 'float: left ; left: 9px ; margin: 33px -14px 0 0 ;' // positioning
-                  + 'border-bottom-style: solid ; border-bottom-width: 16px ; border-top: 0 ; border-bottom-color:'
+                  + 'border-bottom-style: solid ; border-bottom-width: 18px ; border-top: 0 ; border-bottom-color:'
                       + `${ // hide reply tip for terminal aesthetic
                             isParticlizedDS ? '#0000' : `var(--pre-header-bg-color-${env.ui.app.scheme}-scheme)` }}`
               + `#${app.slug} pre { background-color: inherit }` // override DDG's unattractive thicc light border
