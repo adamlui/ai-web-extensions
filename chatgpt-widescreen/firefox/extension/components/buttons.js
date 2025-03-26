@@ -164,10 +164,10 @@ window.buttons = {
     },
 
     update: {
-        color() {
+        async color() {
             buttons.color = (
                 buttons.imports.env.site == 'chatgpt' ? (
-                    chatbar.is.dark() || buttons.imports.env.ui.scheme == 'dark' ? 'white' : '#202123'
+                    await chatbar.is.dark() || buttons.imports.env.ui.scheme == 'dark' ? 'white' : '#202123'
                 ) : buttons.imports.env.site == 'perplexity' ? (
                     buttons.imports.env.ui.scheme == 'dark' ?
                         'oklch(var(--dark-text-color-100)/var(--tw-text-opacity))'

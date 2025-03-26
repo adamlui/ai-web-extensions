@@ -30,6 +30,7 @@
     // Init ENV context
     const env = {
         browser: { isMobile: chatgpt.browser.isMobile() }, site: location.hostname.split('.').slice(-2, -1)[0], ui: {}}
+
     env.browser.isPortrait = env.browser.isMobile && (innerWidth < innerHeight)
     ui.import({ site: env.site }) ; ui.getScheme().then(scheme => env.ui.scheme = scheme)
     if (env.site == 'chatgpt') // store native chatbar width for Wider Chatbox style
@@ -319,7 +320,7 @@
 
     // Monitor NODE CHANGES to maintain button visibility + update colors
     let isTempChat = false, canvasWasOpen = chatgpt.canvasIsOpen()
-    new MutationObserver(() => {
+    new MutationObserver(async () => {
 
         // Maintain button visibility on nav
         if (config.extensionDisabled || config[`${env.site}Disabled`]) return
@@ -331,7 +332,7 @@
         if (env.site == 'chatgpt') {
 
             // Update button colors on temp chat toggle
-            const chatbarIsDark = chatbar.is.dark()
+            const chatbarIsDark = await chatbar.is.dark()
             if (chatbarIsDark != isTempChat) { buttons.update.color() ; isTempChat = chatbarIsDark }
 
             // Remove buttons on Canvas mode toggle-on
