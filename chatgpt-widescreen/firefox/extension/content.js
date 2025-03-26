@@ -29,7 +29,9 @@
 
     // Init ENV context
     const env = {
-        browser: { isMobile: chatgpt.browser.isMobile() }, site: location.hostname.split('.').slice(-2, -1)[0], ui: {}}
+        browser: { isFF: navigator.userAgent.includes('Firefox'), isMobile: chatgpt.browser.isMobile() },
+        site: location.hostname.split('.').slice(-2, -1)[0], ui: {}
+    }
 
     env.browser.isPortrait = env.browser.isMobile && (innerWidth < innerHeight)
     ui.import({ site: env.site }) ; ui.getScheme().then(scheme => env.ui.scheme = scheme)
@@ -45,7 +47,7 @@
     dom.import({ scheme: env.ui.scheme }) // for dom.addRisingParticles()
     modals.import({ app, env }) // for app data + env['<browser|ui>'] flags
     settings.import({ site: env.site, sites }) // to load/save active tab's settings + `${site}Disabled`
-    tooltip.import({ site: env.site, sites }) // for tooltip.update() position logic
+    tooltip.import({ env, sites }) // for tooltip.update() position logic
     ui.import({ sites }) // for ui.isFullWin() sidebar selector/flag
 
     // Init SETTINGS

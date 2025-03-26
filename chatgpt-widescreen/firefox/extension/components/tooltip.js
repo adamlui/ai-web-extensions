@@ -1,4 +1,4 @@
-// Requires lib/dom.js + components/buttons.js + env.site + msgs: app.msgs (Greasemonkey only) + site: env.site + sites
+// Requires lib/dom.js + components/buttons.js + env + msgs: app.msgs (Greasemonkey only) + sites
 
 window.tooltip = {
     import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
@@ -32,13 +32,13 @@ window.tooltip = {
     },
 
     async update(btnType) { // text & position
-        const site = this.imports.site
+        const site = this.imports.env.site
         const rightBtnRect = (await buttons.getRightBtn()).getBoundingClientRect()
         const ctrAddend = rightBtnRect.width + (
             site == 'perplexity' ? ( location.pathname == '/' ? -1
                 : innerWidth - rightBtnRect.right -( innerWidth < 768 ? 11 : 26 ))
           : site == 'poe' ? 22 : -3 )
-        const spreadFactor = site == 'chatgpt' ? 28 : 27
+        const spreadFactor = site == 'chatgpt' ? ( this.imports.env.browser.isFF ? 29.5 : 28 ) : 27
         const iniRoffset = spreadFactor * ( buttons.getTypes.visible().indexOf(btnType) +1 ) + ctrAddend
                          + ( site == 'chatgpt' && await chatbar.is.tall() ? -2 : 4 )
         this.div.innerText = this.getMsg(`tooltip_${btnType}${
