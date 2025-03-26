@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.26
+// @version                2025.3.26.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -257,6 +257,7 @@
             relatedExtensions: 'https://github.com/adamlui/ai-web-extensions',
             review: {
                 alternativeTo: 'https://alternativeto.net/software/duckduckgpt/about/',
+                g2: 'https://www.g2.com/products/duckduckgpt/take_survey',
                 productHunt: 'https://www.producthunt.com/products/duckduckgpt/reviews/new'
             },
             support: 'https://support.ddgpt.com',
@@ -842,11 +843,11 @@
             log.debug('Showing Feedback modal...')
 
             // Init buttons
-            let btns = [ function productHunt(){}, function alternativeto() {} ]
+            let btns = [ function productHunt(){}, function g2(){}, function alternativeto() {} ]
             if (modals.stack[0] != 'about') btns.push(function github(){})
 
             // Show modal
-            const feedbackModal = modals.alert(`${app.msgs.alert_choosePlatform}:`, '', btns, '', 408)
+            const feedbackModal = modals.alert(`${app.msgs.alert_choosePlatform}:`, '', btns, '', 456)
 
             // Center CTA
             feedbackModal.querySelector('h2').style.justifySelf = 'center'
@@ -866,6 +867,7 @@
                 btn.replaceWith(btn = btn.cloneNode(true))
                 btn.onclick = () => modals.safeWinOpen(
                     btn.textContent == 'Product Hunt' ? app.urls.review.productHunt
+                  : btn.textContent == 'G2' ? app.urls.review.g2
                   : btn.textContent == 'Alternativeto' ? app.urls.review.alternativeTo
                   : app.urls.discuss
                 )
