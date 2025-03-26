@@ -136,7 +136,7 @@ window.buttons = {
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
         const btnTypesToInsert = this.getTypes.valid()
         const parentToInsertInto = (
-            this.imports.env.site == 'chatgpt' ? (await this.getRightBtn()).closest('[class*=bottom]') // right btn div
+            this.imports.env.site == 'chatgpt' ? this.rightBtn.closest('[class*=bottom]') // right btn div
           : chatbarDiv.lastChild ) // parent of [Perplexity right btns or Poe Mic/Send btns]
         const elemToInsertBefore = parentToInsertInto[
             this.imports.env.site == 'chatgpt' ? 'lastChild' // right btn
