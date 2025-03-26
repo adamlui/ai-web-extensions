@@ -37,8 +37,8 @@ window.tooltip = {
         const ctrAddend = rightBtnRect.width + (
             site == 'perplexity' ? ( location.pathname == '/' ? -1
                 : innerWidth - rightBtnRect.right -( innerWidth < 768 ? 11 : 26 ))
-          : site == 'poe' ? 22 : 6 )
-        const spreadFactor = site == 'chatgpt' ? 31 : 27
+          : site == 'poe' ? 22 : -3 )
+        const spreadFactor = site == 'chatgpt' ? 28 : 27
         const iniRoffset = spreadFactor * ( buttons.getTypes.visible().indexOf(btnType) +1 ) + ctrAddend
                          + ( site == 'chatgpt' && await chatbar.is.tall() ? -2 : 4 )
         this.div.innerText = this.getMsg(`tooltip_${btnType}${
@@ -50,7 +50,7 @@ window.tooltip = {
                   : document.querySelector( // logged-in homepage
                         this.imports.sites.perplexity.selectors.btns.settings) ? 'revert-layer'
                                          : '50vh' // logged-out homepage
-            ) : site == 'poe' ? '50px' : '59px'
+            ) : site == 'poe' ? '50px' : '42px'
         )
     }
 };

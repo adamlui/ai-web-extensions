@@ -5,7 +5,7 @@ window.chatbar = {
 
     async get() {
         const site = this.imports.site
-        return site == 'chatgpt' ? document.querySelector('[id^=composer]')
+        return site == 'chatgpt' ? document.querySelector('form[data-type=unified-composer] > div')
              : (await dom.get.loadedElem(this.imports.sites[site].selectors.input)).parentNode.parentNode
     },
 

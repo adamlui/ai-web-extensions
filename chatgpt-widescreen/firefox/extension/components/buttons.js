@@ -62,9 +62,9 @@ window.buttons = {
         if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.getRightBtn() // for rOffset + styles
 
         const validBtnTypes = this.getTypes.valid()
-        const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? 31 : -8.85
+        const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? 28 : -8.85
         const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4
-                      : hasTallChatbar ? ( this.rightBtn.getBoundingClientRect().width +14 ) : -0.25
+                      : hasTallChatbar ? ( this.rightBtn.getBoundingClientRect().width +6 ) : -0.25
         const transitionStyles = 'transform 0.15s ease, opacity 0.5s ease'
 
         validBtnTypes.forEach(async (btnType, idx) => {
@@ -79,7 +79,7 @@ window.buttons = {
                     '-webkit-transition': transitionStyles, '-moz-transition': transitionStyles,
                     '-o-transition': transitionStyles, '-ms-transition': transitionStyles
             })
-            if (site == 'chatgpt' && hasTallChatbar) btn.style.bottom = '11.85px'
+            if (site == 'chatgpt' && hasTallChatbar) btn.style.bottom = '-0.5px'
             else btn.style.top = `${ site == 'chatgpt' ? -3.25
                                    : site == 'poe' ? ( btnType == 'newChat' ? 0.25 : 3 ) : 0 }px`
             if (/chatgpt|perplexity/.test(site)) { // assign classes + tweak styles
@@ -112,12 +112,6 @@ window.buttons = {
 
     async getRightBtn() {
         const btnSelectors = this.imports.sites[this.imports.env.site].selectors.btns
-        if (this.imports.env.site == 'chatgpt' && !this.chatgptBtnStripChecked
-                && document.querySelector(btnSelectors.login)) {
-            await dom.get.loadedElem( // wait for cheesy colored btn strip below chatbar (earliest Speak btn appears...
-                'ul:has(svg.icon-md)', { timeout: 1500 }) // ...since it can be wide/spammy or skinny/textless as Guest)
-            this.chatgptBtnStripChecked = true
-        }
         return await dom.get.loadedElem(`${btnSelectors.send}, ${btnSelectors.voice}`)
     },
 
@@ -140,10 +134,10 @@ window.buttons = {
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
         const btnTypesToInsert = this.getTypes.valid()
         const parentToInsertInto = (
-            this.imports.env.site == 'chatgpt' ? chatbarDiv.nextElementSibling || chatbarDiv
-          : chatbarDiv.lastChild ) // parent of (Perplexity right btns or Poe Mic/Send btns)
+            this.imports.env.site == 'chatgpt' ? (await this.getRightBtn()).closest('[class*=bottom]') // right btn div
+          : chatbarDiv.lastChild ) // parent of [Perplexity right btns or Poe Mic/Send btns]
         const elemToInsertBefore = parentToInsertInto[
-            this.imports.env.site == 'chatgpt' ? 'lastChild'
+            this.imports.env.site == 'chatgpt' ? 'lastChild' // right btn
           : 'firstChild'] // Perplexity Pro spam toggle or Poe Mic btn
 
         // Insert buttons
