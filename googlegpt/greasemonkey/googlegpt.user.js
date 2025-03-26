@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.25.6
+// @version                  2025.3.26
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -446,6 +446,7 @@
             gitHub: 'https://github.com/KudoAI/googlegpt',
             publisher: 'https://www.kudoai.com',
             relatedExtensions: 'https://github.com/adamlui/ai-web-extensions',
+            review: { g2: 'https://www.g2.com/products/googlegpt/take_survey' },
             support: 'https://support.googlegpt.io',
             update: 'https://gm.googlegpt.io'
         },
@@ -965,7 +966,7 @@
                 [ // buttons
                     function checkForUpdates() { updateCheck() },
                     function getSupport(){},
-                    function discuss(){},
+                    function rateUs(){},
                     function moreAIextensions(){}
                 ], '', 585 // modal width
             )
@@ -987,11 +988,12 @@
                 btn.style.cssText = 'height: 50px ; min-width: 136px'
 
                 // Replace link buttons w/ clones that don't dismiss modal
-                if (/support|discuss|extensions/i.test(btn.textContent)) {
+                if (/support|rate|extensions/i.test(btn.textContent)) {
                     btn.replaceWith(btn = btn.cloneNode(true))
-                    btn.onclick = () => modals.safeWinOpen(app.urls[
-                        btn.textContent.includes(app.msgs.btnLabel_getSupport) ? 'support'
-                      : btn.textContent.includes(app.msgs.btnLabel_discuss) ? 'discuss' : 'relatedExtensions' ])
+                    btn.onclick = () => modals.safeWinOpen(
+                        btn.textContent.includes(app.msgs.btnLabel_getSupport) ? app.urls.support
+                      : btn.textContent.includes(app.msgs.btnLabel_rateUs) ? app.urls.review.g2
+                      : app.urls.relatedExtensions)
                 }
 
                 // Prepend emoji + localize labels
@@ -999,8 +1001,8 @@
                     btn.textContent = `🚀 ${app.msgs.btnLabel_checkForUpdates}`
                 else if (/support/i.test(btn.textContent))
                     btn.textContent = `🧠 ${app.msgs.btnLabel_getSupport}`
-                else if (/discuss/i.test(btn.textContent))
-                    btn.textContent = `⭐ ${app.msgs.btnLabel_discuss}`
+                else if (/rate/i.test(btn.textContent))
+                    btn.textContent = `⭐ ${app.msgs.btnLabel_rateUs}`
                 else if (/extensions/i.test(btn.textContent))
                     btn.textContent = `🤖 ${app.msgs.btnLabel_moreAIextensions}`
 
