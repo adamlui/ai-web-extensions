@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.27.1
+// @version                2025.3.27.2
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -2235,8 +2235,7 @@
                         `#${app.slug}:hover, #${app.slug}:active {
                             box-shadow: var(--app-hover-shadow-${env.ui.app.scheme}-scheme) ;
                             transition: var(--app-shadow-transition) }`
-                    : // remove app padding if no border for fuller desktop view
-                        `#${app.slug}:not(.anchored):not(:has(.${app.slug}-alert)) { padding: 0 }` }`
+                    : '' }`
               + `#${app.slug} .app-hover-only {` // hide app-hover-only elems
                   + 'position: absolute ; left: -9999px ; opacity: 0 ;' // using position to support transitions
                   + 'width: 0 }' // to support width calcs
