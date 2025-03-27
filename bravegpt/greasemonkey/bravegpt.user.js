@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.27.2
+// @version               2025.3.27.3
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -1673,11 +1673,15 @@
 
             toggle(event) { // visibility
                 const pinMenu = document.getElementById(`${app.slug}-pin-menu`) || menus.pin.createAppend()
-                if (!menus.pin.topPos)
-                     menus.pin.topPos = ( event.clientY || event.touches?.[0]?.clientY ) < 195 ? 58 : -80
-                if (!menus.pin.rightPos)
-                     menus.pin.rightPos = appDiv.getBoundingClientRect().right - event.clientX - pinMenu.offsetWidth/2
-                pinMenu.style.top = `${menus.pin.topPos}px` ; pinMenu.style.right = `${menus.pin.rightPos}px`
+                const rects = {
+                    appDiv: appDiv.getBoundingClientRect(), pinBtn: event.currentTarget.getBoundingClientRect(),
+                    pinMenu: pinMenu.getBoundingClientRect()
+                }
+                const appIsHigh = ( event.clientY || event.touches?.[0]?.clientY ) < 195
+                pinMenu.style.top = `${ rects.pinBtn.top - rects.appDiv.top + (
+                    appIsHigh ? /* point down */ 29 : /* point up */ - rects.pinMenu.height -13  )}px`
+                if (!menus.pin.rightPos) menus.pin.rightPos = rects.appDiv.right - event.clientX - pinMenu.offsetWidth/2
+                pinMenu.style.right = `${menus.pin.rightPos}px`
                 clearTimeout(menus.pin.hideTimeout)
                 if (event.type == 'mouseover') pinMenu.style.opacity = 1
                 else menus.pin.hideTimeout = setTimeout(() => pinMenu.remove(), 55) // delay to cover gap
@@ -3053,7 +3057,7 @@
                 const anchorToggle = document.querySelector('[id*=anchor] input')
                 if (anchorToggle.checked != config.anchored) modals.settings.toggle.switch(anchorToggle)
             }
-            menus.pin.topPos = menus.pin.rightPos = null
+            menus.pin.rightPos = null
             notify(`${app.msgs.mode_anchor} ${toolbarMenu.state.words[+config.anchored]}`,
                 null, sidebarModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
         },
@@ -3253,7 +3257,6 @@
                 return tooltipDiv.style.opacity = 0
 
             const btn = stateOrEvent.currentTarget, btnType = /[^-]+-([\w-]+)-btn/.exec(btn.id)[1]
-            const appHeaderBtnTypes = ['chevron', 'about', 'settings', 'font-size', 'pin', 'wsb', 'arrows']
             const baseText = (
                 btnType == 'chevron' ? ( config.minimized ? `${app.msgs.tooltip_restore}`
                                                           : `${app.msgs.tooltip_minimize}` )
@@ -3302,18 +3305,14 @@
                   tooltipDiv.style.paddingRight = toggle.tooltip.nativeRpadding
 
             // Update position
-            const elems = { appDiv, btn, tooltipDiv, fsSlider: appDiv.querySelector('[id*=font-size-slider]') },
-                  rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
-            tooltipDiv.style.top = `${
-                appHeaderBtnTypes.includes(btnType) ? -13
-              : replyBubble.buttons.types.includes(btnType) && !stateOrEvent.currentTarget.closest('code') ?
-                   36 + ( rects.fsSlider?.height > 0 ? rects.fsSlider.height -16 : 0 )
-              : rects.btn.top - rects.appDiv.top -36 - ( stateOrEvent.currentTarget.closest('code') ? 4 : 0 )
-            }px`
+            const elems = { appDiv, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv }
+            const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
+            tooltipDiv.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
             tooltipDiv.style.right = `${
-                rects.appDiv.right - ( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2
-                    * ( btn.className.includes('chatbar') ? // increase spread for zoomed chatbar btns
-                            parseFloat(getComputedStyle(btn.closest('div')).transform.split(',')[3]) : 1 )}px`
+                rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2
+                     *( btn.className.includes('chatbar') ? // increase spread for zoomed chatbar btns
+                            parseFloat(getComputedStyle(btn.closest('div')).transform.split(',')[3]) : 1 )
+            }px`
 
             // Show tooltip
             tooltipDiv.style.opacity = 1
@@ -3964,7 +3963,7 @@
                         standbyBtn.prepend(icons[btnType == 'query' ? 'send' : 'summarize'].create())
                         show.reply[`${btnType}BtnClickHandler`] = function() {
                             show.reply.userInteracted = true ; show.reply.chatbarFocused = false
-                            menus.pin.topPos = menus.pin.rightPos = null
+                            menus.pin.rightPos = null
                             msgChain.push({ role: 'user', content:
                                 btnType == 'summarize' ? prompts.create('summarizeResults')
                                                        : new URL(location.href).searchParams.get('q') })
