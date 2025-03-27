@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.27.6
+// @version                  2025.3.27.7
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -1824,7 +1824,7 @@
                     appDiv: appDiv.getBoundingClientRect(), pinBtn: event.currentTarget.getBoundingClientRect(),
                     pinMenu: pinMenu.getBoundingClientRect()
                 }
-                const appIsHigh = ( event.clientY || event.touches?.[0]?.clientY ) < 195
+                const appIsHigh = ( event.clientY || event.touches?.[0]?.clientY ) < ( rects.pinMenu.height +15 )
                 pinMenu.style.top = `${ rects.pinBtn.top - rects.appDiv.top + (
                     appIsHigh ? /* point down */ 29 : /* point up */ - rects.pinMenu.height -13  )}px`
                 if (!menus.pin.rightPos) menus.pin.rightPos = rects.appDiv.right - event.clientX - pinMenu.offsetWidth/2
