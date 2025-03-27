@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.27.3
+// @version                  2025.3.27.4
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -2543,14 +2543,18 @@
               + `code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
 
               // Rendered AI reply styles
-              + `#${app.slug} > pre h1 { font-size: 1.25em }`
-              + `#${app.slug} > pre h2 { font-size: 1.1em }` // size headings
-              + `#${app.slug} > pre > p:last-of-type { margin-bottom: -1.25em }` // eliminate bottom gap
-              + `#${app.slug} > pre ol { padding-left: 1.58em ; margin: -5px 0 -8px 7px }`
-              + `#${app.slug} > pre ul { margin: -10px 0 -6px ; padding-left: 1.5em }` // reduce v-spacing, indent
-              + `#${app.slug} > pre li { margin: -8px 0 ; list-style: circle }` // reduce v-spacing, show left symbols
-              + 'code.hljs { text-wrap: nowrap ; overflow-x: scroll }' // don't wrap highlighted code to be scrollable horizontally
-              + '.katex-html { display: none }' // hide unrendered math
+              + `#${app.slug} > pre h1 { font-size: 1.25em }
+                 #${app.slug} > pre h2 { font-size: 1.1em } /* size headings */
+                 #${app.slug} > pre > p:last-of-type { margin-bottom: -1.25em } /* eliminate bottom gap */
+                 #${app.slug} > pre ol { padding-left: 1.58em ; margin: -5px 0 -8px 7px }
+                 #${app.slug} > pre ul { margin: -10px 0 -6px ; padding-left: 1.5em } /* reduce v-spacing, indent */
+                 #${app.slug} > pre li { margin: -8px 0 ; list-style: circle } /* reduce v-spacing, show left symbols */
+                 code.hljs { /* don't wrap highlighted code to be scrollable horizontally */
+                    text-wrap: nowrap ; overflow-x: scroll }
+                 #${app.slug} .hljs { /* set code highlighting scheme */
+                    ${ env.ui.app.scheme == 'dark' ? 'color: #ddd ; background: #0e0e0e'
+                                                   : 'color: #24292e ; background: #fbfbfb' }}
+                 .katex-html { display: none } /* hide unrendered math */`
 
               // Chatbar styles
               + `#${app.slug}-chatbar {`

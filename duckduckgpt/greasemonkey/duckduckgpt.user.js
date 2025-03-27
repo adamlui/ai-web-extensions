@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.27.4
+// @version                2025.3.27.5
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -2375,18 +2375,21 @@
               + `code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
 
               // Rendered AI reply styles
-              + `#${app.slug} > pre h1 { font-size: 1.8em }`
-              + `#${app.slug} > pre h2 { font-size: 1.65em }`
-              + `#${app.slug} > pre h3 { font-size: 1.4em }`
-              + `#${app.slug} > pre h1, #${app.slug} > pre h2, #${app.slug} > pre h3 {`
-                  + 'margin-bottom: -15px }' // reduce gap after headings
-              + `#${app.slug} > pre ol { margin: -16px 0 -20px 7px }`
-              + `#${app.slug} > pre ol > li { margin: -10px 0 -6px 1.6em ; list-style: decimal }`
-              + `#${app.slug} > pre ol > li::marker { font-size: 0.9em }` // shrink number markers
-              + `#${app.slug} > pre ul { margin: -14px 0 -21px }` // reduce v-padding
-              + `#${app.slug} > pre ul > li { /* reduce v-padding, show bullets */
-                    margin: -10px 0 0 1.2em ; list-style: circle }`
-              + '.katex-html { display: none } ' // hide unrendered math
+              + `#${app.slug} > pre h1 { font-size: 1.8em }
+                 #${app.slug} > pre h2 { font-size: 1.65em }
+                 #${app.slug} > pre h3 { font-size: 1.4em }
+                 #${app.slug} > pre h1, #${app.slug} > pre h2, #${app.slug} > pre h3 {
+                    margin-bottom: -15px } /* reduce gap after headings */
+                 #${app.slug} > pre ol { margin: -16px 0 -20px 7px }
+                 #${app.slug} > pre ol > li { margin: -10px 0 -6px 1.6em ; list-style: decimal }
+                 #${app.slug} > pre ol > li::marker { font-size: 0.9em } /* shrink number markers */
+                 #${app.slug} > pre ul { margin: -14px 0 -21px } /* reduce v-padding */
+                 #${app.slug} > pre ul > li { /* reduce v-padding, show bullets */
+                    margin: -10px 0 0 1.2em ; list-style: circle }
+                 #${app.slug} .hljs { /* set code highlighting scheme */
+                    ${ env.ui.app.scheme == 'dark' ? 'color: #ddd ; background: #0e0e0e'
+                                                   : 'color: #24292e ; background: #fbfbfb' }}
+                 .katex-html { display: none } /* hide unrendered math */`
 
               // Chatbar styles
               + `#${app.slug}-chatbar {`

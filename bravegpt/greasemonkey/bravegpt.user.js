@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.27.3
+// @version               2025.3.27.4
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -2380,13 +2380,16 @@
               + `code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
 
               // Rendered AI reply styles
-              + `#${app.slug} > pre h1 { font-size: 1.25em }`
-              + `#${app.slug} > pre h2 { font-size: 1.1em }`
-              + `#${app.slug} > pre ul { margin: -10px 0 -6px ; }` // reduce v-spacing
-              + `#${app.slug} > pre ol { margin: -5px 0 -6px 7px ; }`
-              + `#${app.slug} > pre li {` // reduce v-spacing, show left symbols
-                  + 'margin: -10px 0 -6px 12px ; list-style: circle }'
-              + '.katex-html { display: none }' // hide unrendered math
+              + `#${app.slug} > pre h1 { font-size: 1.25em }
+                 #${app.slug} > pre h2 { font-size: 1.1em }
+                 #${app.slug} > pre ul { margin: -10px 0 -6px } /* reduce v-spacing */
+                 #${app.slug} > pre ol { margin: -5px 0 -6px 7px }
+                 #${app.slug} > pre li { /* reduce v-spacing, show left symbols */
+                    margin: -10px 0 -6px 12px ; list-style: circle }
+                 #${app.slug} .hljs { /* set code highlighting scheme */
+                    ${ env.ui.app.scheme == 'dark' ? 'color: #ddd ; background: #0e0e0e'
+                                                   : 'color: #24292e ; background: #fbfbfb' }}
+                .katex-html { display: none } /* hide unrendered math */`
 
               // Chatbar styles
               + `#${app.slug}-chatbar {`
