@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.27.4
+// @version                  2025.3.27.5
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -3698,7 +3698,7 @@
                         if (appDiv.querySelector('.loading')) // no text shown
                             api.tryNew(caller)
                         else { // text was shown
-                            if (appDiv.querySelector('code')) show.codeCopyBtns()
+                            show.codeCopyBtns()
                             if (callerAPI == caller.sender) msgChain.push({
                                 role: 'assistant', content: textToShow,
                                 regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
@@ -3775,8 +3775,7 @@
                                 caller.status = 'done' ; api.clearTimedOut(caller.triedAPIs) ; caller.attemptCnt = null
                                 textToShow = textToShow.replace(apis[callerAPI].respPatterns?.watermark, '').trim()
                                 if (caller == get.reply) {
-                                    show.reply(textToShow, footerContent, { apiUsed: callerAPI })
-                                    if (appDiv.querySelector('code')) show.codeCopyBtns()
+                                    show.reply(textToShow, footerContent, { apiUsed: callerAPI }) ; show.codeCopyBtns()
                                     msgChain.push({
                                         role: 'assistant', content: textToShow,
                                         regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
@@ -3984,7 +3983,9 @@
     const show = {
 
         codeCopyBtns() {
+            if (!appDiv.querySelector('code')) return
             appDiv.querySelectorAll('code').forEach(block => {
+                if (block.querySelector('[id$=copy-btn]')) return
                 const copyBtnDiv = dom.create.elem('div', { style: 'height: 11px ; margin: 4px 6px 0 0' })
                 copyBtnDiv.append(replyBubble.buttons.copy.cloneNode(true))
                 Object.entries(replyBubble.buttons.copy.listeners).forEach(
