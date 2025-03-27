@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.25.5
+// @version                2025.3.27
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -487,7 +487,7 @@
     function appAlert(...alerts) {
         alerts = alerts.flat() // flatten array args nested by spread operator
         appDiv.textContent = ''
-        const alertP = dom.create.elem('p', { id: `${app.slug}-alert`, class: 'no-user-select' })
+        const alertP = dom.create.elem('p', { class: `${app.slug}-alert no-user-select` })
 
         alerts.forEach((alert, idx) => { // process each alert for display
             let msg = app.alerts[alert] || alert // use string verbatim if not found in app.alerts
@@ -1718,10 +1718,10 @@
 
     const update = {
 
-        answerPreMaxHeight() { // for various mode toggles
-            const answerPre = appDiv.querySelector('pre'),
+        replyPreMaxHeight() { // for various mode toggles
+            const replyPre = appDiv.querySelector('.reply-pre'),
                   longerPreHeight = innerHeight - 255
-            if (answerPre) answerPre.style.maxHeight = `${ longerPreHeight - ( config.expanded ? 115 : 365 )}px`
+            if (replyPre) replyPre.style.maxHeight = `${ longerPreHeight - ( config.expanded ? 115 : 365 )}px`
         },
 
         appBottomPos() { appDiv.style.bottom = `${ config.minimized ? 55 - appDiv.offsetHeight : -7 }px` },
@@ -1730,19 +1730,25 @@
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled
             modals.stylize() // update modal styles
             app.styles.innerText = (
-              `:root { /* vars */
-                    --app-bg-color-light-scheme: white ; --app-bg-color-dark-scheme: #282828 ;
+
+                // Init vars
+                `:root {
+                    --app-bg-color-light-scheme: white ; --app-bg-color-dark-scheme: #1c1c1c ;
                     --pre-bg-color-light-scheme: #b7b7b736 ; --pre-bg-color-dark-scheme: #3a3a3a ;
-                    --pre-header-bg-color-light-scheme: #dfdfdf ;
-                    --pre-header-bg-color-dark-scheme: ${ !isParticlizedDS ? '#545454' : '#0e0e0e24' };
-                    --pre-header-fg-color-light-scheme: white ; --pre-header-fg-color-dark-scheme: white ;
+                    --reply-header-bg-color-light-scheme: #dfdfdf ;
+                    --reply-header-bg-color-dark-scheme: ${ !isParticlizedDS ? '#545454' : '#0e0e0e24' };
+                    --reply-header-fg-color-light-scheme: white ; --reply-header-fg-color-dark-scheme: white ;
                     --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: white ;
-                    --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;`
-                  + '--app-shadow: 0 2px 3px rgb(0,0,0,0.06) ; --app-hover-shadow: 0 1px 6px rgba(0,0,0,0.14) ;'
+                    --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;
+                    --app-border: ${ isParticlizedDS ? 'none'
+                        : `1px solid #${ env.ui.app.scheme == 'light' ? 'dadce0' : '3b3b3b' }` };
+                    --app-gradient-bg: linear-gradient(180deg, ${
+                        env.ui.app.scheme == 'dark' ? '#99a8a6 -245px, black 185px' : '#b6ebff -163px, white 65px' }) ;
+                    --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
+                                                                                               : '11,0.22' }) ;`
                   + '--app-transition: opacity 0.5s ease, transform 0.5s ease,' // for 1st fade-in
                                     + 'bottom 0.1s cubic-bezier(0,0,0.2,1),' // smoothen Anchor Y min/restore
                                     + 'width 0.167s cubic-bezier(0,0,0.2,1) ;' // smoothen Anchor X expand/shrink
-                  + '--app-shadow-transition: box-shadow 0.15s ease ;' // for app:hover to not trigger on hover-off
                   + '--btn-transition: transform 0.15s ease,' // for hover-zoom
                                     + 'opacity 0.25s ease-in-out ;' // + btn-zoom-fade-out + .app-hover-only shows
                   + '--font-size-slider-thumb-transition: transform 0.05s ease ;' // for hover-zoom
@@ -1750,6 +1756,14 @@
                   + '--fade-in-less-transition: opacity 0.2s ease }' // used by Font Size slider
 
                 // Animations
+              + '.fade-in { opacity: 0 ; transform: translateY(10px) }'
+              + '.fade-in-less { opacity: 0 ;'
+                  + 'transition: var(--fade-in-less-transition) ;'
+                      + '-webkit-transition: var(--fade-in-less-transition) ;'
+                      + '-moz-transition: var(--fade-in-less-transition) ;'
+                      + '-o-transition: var(--fade-in-less-transition) ;'
+                      + '-ms-transition: var(--fade-in-less-transition) }'
+              + '.fade-in.active, .fade-in-less.active { opacity: 1 ; transform: translateY(0) }'
               + '@keyframes btn-zoom-fade-out {'
                   + '0% { opacity: 1 } 55% { opacity: 0.25 ; transform: scale(1.85) }'
                   + '75% { opacity: 0.05 ; transform: scale(2.15) } 100% { opacity: 0 ; transform: scale(6.85) }}'
@@ -1768,21 +1782,16 @@
                   // ...to show resize cursor everywhere
                   + 'position: fixed ; top: 0 ; left: 0 ; width: 100% ; height: 100% ;'
                   + 'z-index: 9999 ; cursor: ew-resize }'
-              + `#${app.slug} {`
-                  + `color: var(--font-color-${env.ui.app.scheme}-scheme) ;`
-                  + 'z-index: 5555 ; border-radius: 8px ; padding: 17px 26px 16px ; flex-basis: 0 ;'
-                  + `border: ${ env.ui.app.scheme == 'dark' ? 'none' : '1px solid #dadce0' } ;`
-                  + 'border-radius: 15px ; flex-grow: 1 ; word-wrap: break-word ; white-space: pre-wrap ;'
-                  + ( config.bgAnimationsDisabled ? // classic flat bg
-                        `background: var(--app-bg-color-${env.ui.app.scheme}-scheme) ;`
-                  : `background-image: linear-gradient(180deg, ${ // gradient bg to match rising particles
-                        env.ui.app.scheme == 'dark' ? '#99a8a6 -245px, black 185px'
-                                                    : '#b6ebff -163px, white 65px' }) ;` )
-                  + `transition: var(--app-transition) ;
+              + `#${app.slug} { /* main app div */
+                    color: var(--font-color-${env.ui.app.scheme}-scheme) ;
+                    background: var(--app-bg-color-${env.ui.app.scheme}-scheme) ;
+                    z-index: 5555 ; padding: 17px 26px 16px ; border-radius: 15px ;
+                    word-wrap: break-word ; white-space: pre-wrap ;
+                    transition: var(--app-transition) ;
                         -webkit-transition: var(--app-transition) ; -moz-transition: var(--app-transition) ;
                         -o-transition: var(--app-transition) ; -ms-transition: var(--app-transition) ;
-                    box-shadow: var(--app-shadow) ;
-                        -webkit-box-shadow: var(--app-shadow) ; -moz-box-shadow: var(--app-shadow) }`
+                    ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${env.ui.app.scheme}-scheme)`
+                                                   : 'background-image: var(--app-gradient-bg)' }}`
               + `#${app.slug} .app-hover-only {` // hide app-hover-only elems
                   + 'position: absolute ; left: -9999px ; opacity: 0 ;' // using position to support transitions
                   + 'width: 0 }' // to support width calcs
@@ -1790,14 +1799,6 @@
               + `#${app.slug}:hover .app-hover-only, #${app.slug}:active .app-hover-only,
                     #${app.slug}:has([id$=font-size-slider-track].active) [id$=font-size-btn] {
                         position: relative ; left: auto ; width: auto ; opacity: 1 }`
-              + `#${app.slug}:hover, #${app.slug}:active {` // show app shadow on hover
-                  + `box-shadow: var(--app-hover-shadow) ;
-                        -webkit-box-shadow: var(--app-hover-shadow) ; -moz-box-shadow: var(--app-hover-shadow) ;
-                    transition: var(--app-transition), var(--app-shadow-transition) ;
-                        -webkit-transition: var(--app-transition), var(--app-shadow-transition) ;
-                        -moz-transition: var(--app-transition), var(--app-shadow-transition) ;
-                        -o-transition: var(--app-transition), var(--app-shadow-transition) ;
-                        -ms-transition: var(--app-transition), var(--app-shadow-transition) }`
               + `#${app.slug} p { margin: 0 }`
               + `#${app.slug} .alert-link { color: ${
                     env.ui.app.scheme == 'light' ? '#190cb0' : 'white ; text-decoration: underline' }}`
@@ -1859,17 +1860,30 @@
                         -ms-transition: var(--font-size-slider-thumb-transition) }`
               + ( config.fgAnimationsDisabled || env.browser.isMobile ?
                     '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }` )
-              + `.${app.slug}-reply-tip {`
+
+              // AI reply elem styles
+              + `#${app.slug} .reply-tip {`
                   + 'content: "" ; position: relative ; border: 7px solid transparent ;'
                   + 'float: left ; left: 7px ; margin: 1.89em -14px 0 0 ;' // positioning
                   + 'border-bottom-style: solid ; border-bottom-width: 16px ; border-top: 0 ; border-bottom-color:'
                       + `${ // hide reply tip for terminal aesthetic
-                            isParticlizedDS ? '#0000' : `var(--pre-header-bg-color-${env.ui.app.scheme}-scheme)` }}`
-              + `#${app.slug} > pre {`
+                            isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${env.ui.app.scheme}-scheme)` }}`
+              + `#${app.slug} .reply-header {
+                    display: flex ; align-items: center ; position: relative ;
+                    top: 14px ; padding: 16px 14px ; height: 18px ; border-radius: 12px 12px 0 0 ;
+                    ${ env.ui.app.scheme == 'light' ? 'border-bottom: 1px solid white'
+                                 : isParticlizedDS ? 'border: 1px solid ; border-bottom-color: transparent' : '' };
+                    background: var(--reply-header-bg-color-${env.ui.app.scheme}-scheme) ;
+                    color:      var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) ;
+                    fill:       var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) ;
+                    stroke:     var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) }
+                #${app.slug} .reply-header-text { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
+                #${app.slug} .reply-header-btns { margin: 7.5px -5px 0 }`
+              + `#${app.slug} .reply-pre {`
                   + `font-size: ${config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;`
                   + `line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;`
                   + 'margin: 13px 0 7px 0 ; padding: 1.25em 1.25em 0 1.25em ;'
-                  + 'border-radius: 0 0 10px 10px ; overflow: auto ;'
+                  + 'border-radius: 0 0 12px 12px ; overflow: auto ;'
                   + ( config.bgAnimationsDisabled ? // classic opaque bg
                         `background: var(--pre-bg-color-${env.ui.app.scheme}-scheme) ;`
                       + `color: var(--font-color-${env.ui.app.scheme}-scheme)`
@@ -1883,89 +1897,79 @@
                             + '-moz-transition: var(--answer-pre-transition) ;'
                             + '-o-transition: var(--answer-pre-transition) ;'
                             + '-ms-transition: var(--answer-pre-transition)' }}`
-              + `#${app.slug} > pre a, #${app.slug} > pre a:visited { color: #4495d4 }`
-              + `#${app.slug} pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#ea7a28' }}`
-              + `#${app.slug}-pre-header {
-                    display: flex ; align-items: center ; position: relative ;
-                    top: 14px ; padding: 16px 14px ; height: 18px ; border-radius: 10px 10px 0 0 ;
-                    ${ env.ui.app.scheme == 'light' ? 'border-bottom: 1px solid white'
-                                 : isParticlizedDS ? 'border: 1px solid ; border-bottom-color: transparent' : '' };
-                    background: var(--pre-header-bg-color-${env.ui.app.scheme}-scheme) ;
-                    color:      var(--pre-header-fg-color-${env.ui.app.scheme}-scheme) ;
-                    fill:       var(--pre-header-fg-color-${env.ui.app.scheme}-scheme) ;
-                    stroke:     var(--pre-header-fg-color-${env.ui.app.scheme}-scheme) }
-                .${app.slug}-pre-header-text { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
-                .${app.slug}-pre-header-btns { margin: 7.5px -5px 0 }`
+              + `#${app.slug} .reply-pre a, #${app.slug} .reply-pre a:visited { color: #4495d4 }`
+              + `#${app.slug} .reply-pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#ea7a28' }}`
               + `code #${app.slug}-copy-btn { position: relative ; top: -6px ; right: -9px }`
               + `code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
+
+              // Rendered AI reply styles
+              + `#${app.slug} > pre h1 { font-size: 1.8em }`
+              + `#${app.slug} > pre h2 { font-size: 1.65em }`
+              + `#${app.slug} > pre h3 { font-size: 1.4em }`
+              + `#${app.slug} > pre h1, #${app.slug} > pre h2, #${app.slug} > pre h3 { margin-bottom: -15px }`
+              + `#${app.slug} > pre ol {` // override ol styles
+                  + `color: var(--font-color-${env.ui.app.scheme}-scheme) ; margin: -5px 0 -6px 7px }`
+              + `#${app.slug} > pre ol > li {` // reduce v-padding, show number markers
+                  + 'margin: -10px 0 -6px 1.6em ; list-style: decimal }'
+              + `#${app.slug} > pre ol > li::marker { font-size: 0.9em }` // shrink number markers
+              + `#${app.slug} > pre ul {` // override ul styles
+                  + `color: var(--font-color-${env.ui.app.scheme}-scheme) ; margin-bottom: -21px }`
+              + `#${app.slug} > pre ul > li { list-style: circle }` // show bullets
+              + '.katex-html { display: none } ' // hide unrendered math
+
+              // Chatbar styles
               + `#${app.slug}-chatbar {`
-                  + `border: solid 1px ${ env.ui.app.scheme == 'dark' ?
-                        ( config.bgAnimationsDisabled ? '#777' : '#aaa' ) : '#dfdfdf' } ;`
+                  + `border: solid 1px ${ isParticlizedDS ? '#aaa' : env.ui.app.scheme == 'dark' ? '#777' : '#555' };`
                   + 'border-radius: 12px 13px 12px 0 ; margin: 3px 0 15px 0 ; padding: 13px 57px 9px 10px ;'
                   + 'font-size: 14.5px ; height: 46px ; width: 100% ; max-height: 200px ; resize: none ; '
                   + `position: relative ; z-index: 555 ; color: #${ env.ui.app.scheme == 'dark' ? 'eee' : '222' } ;`
                   + `background: ${ env.ui.app.scheme == 'light' ? '#eeeeee9e'
                         : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }` } ;`
                   + `${ env.ui.app.scheme == 'dark' ? '' :
-                        `--shadow: 0 1px 2px rgba(15,17,17,0.1) inset ; box-shadow: var(--shadow) ;
-                            -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)` }}`
-              + `#${app.slug}-chatbar:hover:not(:focus) {
-                    filter: brightness(${ env.ui.app.scheme == 'dark' ? 95 : 97 }%) ;
-                    ${ isParticlizedDS ? '' :
-                        `--inset-shadow: 0 ${
-                            env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 5px' } rgba(15,17,17,0.1) inset ;
-                        box-shadow: var(--inset-shadow) ; -webkit-box-shadow: var(--inset-shadow) ;
-                        -moz-box-shadow: var(--inset-shadow)` };
-                    transition: box-shadow 0.35s ease, filter 0.2s ease
-                 }
-                 #${app.slug}-chatbar:focus-visible {
+                        `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
+                        box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
+                        -moz-box-shadow: var(--chatbar-inset-shadow) ;` }
+                    transition: transform 0.15s ease, box-shadow 0.15s ease ; will-change: transform }
+                ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' : // zoom chatbar + btns on parent hover
+                    `div:has(> #${app.slug}-chatbar) { transition: var(--rq-transition) ; will-change: transform }
+                     div:has(> #${app.slug}-chatbar:hover, > [class*=chatbar-btn]:hover) { transform: scale(1.025) }` }
+                ${ isParticlizedDS ? '' : // add inset shadow to chatbar on hover
+                    `#${app.slug}-chatbar:hover:not(:focus) {
+                        --chatbar-hover-inset-shadow: 0 ${
+                            env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 7px' } rgba(15,17,17,0.15) inset ;
+                        box-shadow: var(--chatbar-hover-inset-shadow) ;
+                        -webkit-box-shadow: var(--chatbar-hover-inset-shadow) ;
+                        -moz-box-shadow: var(--chatbar-hover-inset-shadow) ;
+                        transition: transform 0.15s ease, box-shadow 0.25s ease }` }
+                 #${app.slug}-chatbar:focus-visible { /* fallback outline chatbar + reduce inset shadow on focus */
                     outline: -webkit-focus-ring-color auto 1px ;
                     ${ isParticlizedDS ? '' :
                         `--inset-shadow: 0 ${
                                 env.ui.app.scheme == 'dark' ? '3px -1px' : '1px 2px' } rgba(0,0,0,0.3) inset ;
                         box-shadow: var(--inset-shadow) ; -webkit-box-shadow: var(--inset-shadow) ;
-                        -moz-box-shadow: var(--inset-shadow)`}}`
-              + '.fade-in { opacity: 0 ; transform: translateY(10px) }'
-              + '.fade-in-less { opacity: 0 ;'
-                  + 'transition: var(--fade-in-less-transition) ;'
-                      + '-webkit-transition: var(--fade-in-less-transition) ;'
-                      + '-moz-transition: var(--fade-in-less-transition) ;'
-                      + '-o-transition: var(--fade-in-less-transition) ;'
-                      + '-ms-transition: var(--fade-in-less-transition) }'
-              + '.fade-in.active, .fade-in-less.active { opacity: 1 ; transform: translateY(0) }'
-              + `.${app.slug}-chatbar-btn {`
-                  + 'z-index: 560 ; border: none ; float: right ; position: relative ;'
-                  + 'bottom: 50px ; background: none ; cursor: pointer ;'
-                  + `${ env.ui.app.scheme == 'dark' ? 'color: #aaa ; fill: #aaa ; stroke: #aaa'
-                                                    : 'color: lightgrey ; fill: lightgrey ; stroke: lightgrey' }}`
-              + `.${app.slug}-chatbar-btn:hover {
+                        -moz-box-shadow: var(--inset-shadow)`}}
+                .${app.slug}-chatbar-btn {
+                    z-index: 560 ; border: none ; float: right ; position: relative ;
+                    bottom: 50px ; background: none ; cursor: pointer ;
+                    ${ env.ui.app.scheme == 'dark' ? 'color: #aaa ; fill: #aaa ; stroke: #aaa'
+                                                    : 'color: lightgrey ; fill: lightgrey ; stroke: lightgrey' }}
+                .${app.slug}-chatbar-btn:hover {
                     color:  var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
                     fill:   var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
                     stroke: var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) }`
-              + ( // rendered markdown styles
-                    `#${app.slug} > pre h1 { font-size: 1.8em }`
-                  + `#${app.slug} > pre h2 { font-size: 1.65em }`
-                  + `#${app.slug} > pre h3 { font-size: 1.4em }`
-                  + `#${app.slug} > pre h1, #${app.slug} > pre h2, #${app.slug} > pre h3 {`
-                      + 'margin-bottom: -15px }'
-                  + `#${app.slug} > pre ol {`
-                      + `color: var(--font-color-${env.ui.app.scheme}-scheme) ;` // override ol styles
-                      + 'margin: -5px 0 -6px 7px }'
-                  + `#${app.slug} > pre ol > li {` // reduce v-padding, show number markers
-                      + 'margin: -10px 0 -6px 1.6em ; list-style: decimal }'
-                  + `#${app.slug} > pre ol > li::marker { font-size: 0.9em }` // shrink number markers
-                  + `#${app.slug} > pre ul {`
-                      + `color: var(--font-color-${env.ui.app.scheme}-scheme) ;` // override ul styles
-                      + 'margin-bottom: -21px }' // reduce bottom-gap
-                  + `#${app.slug} > pre ul > li { list-style: circle }` ) // show bullets
-              + '.katex-html { display: none } ' // hide unrendered math
+
+              // Footer styles
               + `#${app.slug} + footer { margin: 2px 0 25px ; position: relative }`
               + `#${app.slug} + footer * {`
                   + `color: ${ env.ui.app.scheme == 'dark' ? '#ccc' : '#666' } !important }`
+
+              // Notif styles
               + '.chatgpt-notif {'
                   + 'font-size: 26px !important ; fill: white ; stroke: white ; color: white ;'
                   + 'padding: 9px 14px 18px 11.5px !important }'
               + '.notif-close-btn { display: none !important }' // hide notif close btn
+
+              // Menu styles
               + `.${app.slug}-menu {`
                   + 'position: absolute ; z-index: 2250 ;'
                   + 'padding: 3.5px 5px !important ; font-family: "Source Sans Pro", sans-serif ; font-size: 12px }'
@@ -1977,23 +1981,24 @@
               // Anchor Mode styles
               + `#${app.slug}.anchored {
                     position: fixed ; bottom: -7px ; right: 35px ; z-index: 8888 ;
+                    border: var(--app-border) ; box-shadow: var(--app-anchored-shadow) ;
                     right: ${ env.browser.isMobile ? innerWidth *0.01 : 35 }px ;
-                    width: ${ env.browser.isMobile ? '98%' : '441px' }}`
-              + `#${app.slug}.expanded { width: 528px }`
-              + `#${app.slug}.anchored .anchored-hidden { display: none }` // hide non-Anchor elems in mode
-              + `#${app.slug}:not(.anchored) .anchored-only { display: none }` // hide Anchor elems outside mode
+                    width: ${ env.browser.isMobile ? '98%' : '441px' }}
+                #${app.slug}.expanded { width: 528px }
+                #${app.slug}.anchored .anchored-hidden { display: none } /* hide non-Anchor elems in mode */
+                #${app.slug}:not(.anchored) .anchored-only { display: none } /* hide Anchor elems outside mode */`
 
               // Touch device styles
-              + '@media (hover: none) {'
-                  + `#${app.slug} .app-hover-only { display: initial }` // show app-hover-only elems
-              + '}'
+              + `@media (hover: none) {
+                    #${app.slug} .app-hover-only { display: initial } /* show app-hover-only elems */
+                }`
 
               // Phone styles
-              + '@media screen and (max-width: 480px) {'
-                  + `#${app.slug} #${app.slug}-logo { width: calc(100% - 118px) }` // widen logo till btns
-                  + `#${app.slug} .kudoai { display: none !important }` // hide byline
-                  + `#${app.slug} [class*=reply-tip] { display: none }` // hide reply tip
-              + '}'
+              + `@media screen and (max-width: 480px) {
+                    #${app.slug} #${app.slug}-logo { width: calc(100% - 118px) } /* widen logo till btns */
+                    #${app.slug} .kudoai { display: none !important } /* hide byline */
+                    #${app.slug} .reply-tip { display: none } /* hide reply tip */
+                }`
             )
         },
 
@@ -2180,7 +2185,7 @@
             // Assemble/insert elems
             slider.append(sliderThumb, sliderTip)
             appDiv.insertBefore(slider, appDiv.querySelector(`.${app.slug}-btn-tooltip,` // desktop
-                                                           + 'pre')) // mobile
+                                                           + '.reply-bubble')) // mobile
             // Init thumb pos
             setTimeout(() => {
                 const iniLeft = (config.fontSize - config.minFontSize) / (config.maxFontSize - config.minFontSize)
@@ -2231,11 +2236,11 @@
                 sliderThumb.style.left = newLeft + 'px'
 
                 // Adjust font size based on thumb position
-                const answerPre = appDiv.querySelector('pre'),
+                const replyPre = appDiv.querySelector('.reply-pre'),
                       fontSizePercent = newLeft / sliderWidth,
                       fontSize = config.minFontSize + fontSizePercent * (config.maxFontSize - config.minFontSize)
-                answerPre.style.fontSize = fontSize + 'px'
-                answerPre.style.lineHeight = fontSize * config.lineHeightRatio + 'px'
+                replyPre.style.fontSize = fontSize + 'px'
+                replyPre.style.lineHeight = fontSize * config.lineHeightRatio + 'px'
                 settings.save('fontSize', fontSize)
                 sliderThumb.title = Math.floor(config.fontSize *10) /10 + 'px'
             }
@@ -2246,7 +2251,7 @@
         toggle(state = '') {
             const slider = document.getElementById(`${app.slug}-font-size-slider-track`)
                          || fontSizeSlider.createAppend()
-            const replyTip = appDiv.querySelector(`.${app.slug}-reply-tip`)
+            const replyTip = appDiv.querySelector('.reply-tip')
             const sliderTip = document.getElementById(`${app.slug}-font-size-slider-tip`)
 
             // Show slider
@@ -2441,7 +2446,7 @@
                         !streamingToggle.checked && config.proxyAPIenabled && !config.streamingDisabled)
                             modals.settings.toggle.switch(streamingToggle)
             }
-            if (appDiv.querySelector(`#${app.slug}-alert`)) location.reload() // re-send query if user alerted
+            if (appDiv.querySelector(`.${app.slug}-alert`)) location.reload() // re-send query if user alerted
         },
 
         streaming() {
@@ -2535,12 +2540,14 @@
                   rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
             tooltipDiv.style.top = `${
                 appHeaderBtnTypes.includes(btnType) ? -22
-              : answerBubble.buttons.types.includes(btnType) && !stateOrEvent.currentTarget.closest('code') ?
+              : replyBubble.buttons.types.includes(btnType) && !stateOrEvent.currentTarget.closest('code') ?
                    28 + ( rects.fsSlider?.height > 0 ? rects.fsSlider.height -18 : 0 )
               : rects.btn.top - rects.appDiv.top -36 - ( stateOrEvent.currentTarget.closest('code') ? 7 : 0 )
             }px`
             tooltipDiv.style.right = `${
-                rects.appDiv.right - ( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
+                rects.appDiv.right - ( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2
+                    * ( btn.className.includes('chatbar') ? // increase spread for zoomed chatbar btns
+                            parseFloat(getComputedStyle(btn.closest('div')).transform.split(',')[3]) : 1 )}px`
 
             // Show tooltip
             tooltipDiv.style.opacity = 1
@@ -2872,13 +2879,13 @@
             // Show loading status
             const loadingSpinner = icons.arrowsCyclic.create() ; let loadingElem
             loadingSpinner.style.cssText = 'position: relative ; top: 2px ; margin-right: 6px'
-            if (appDiv.querySelector('pre')) { // reply exists, show where chatbar was
+            if (appDiv.querySelector('.reply-pre')) { // reply exists, show where chatbar was
                 loadingElem = appDiv.querySelector('section')
                 loadingElem.innerText = app.alerts.waitingResponse
                 loadingSpinner.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)' // faster ver
             } else { // replace app div w/ alert
                 appAlert('waitingResponse')
-                loadingElem = appDiv.querySelector(`#${app.slug}-alert`)
+                loadingElem = appDiv.querySelector(`.${app.slug}-alert`)
                 loadingSpinner.style.animation = 'rotate 2s infinite linear' // slower ver
             }
             loadingElem.classList.add('loading', 'no-user-select')
@@ -2950,8 +2957,8 @@
         codeCopyBtns() {
             appDiv.querySelectorAll('code').forEach(block => {
                 const copyBtnDiv = dom.create.elem('div', { style: 'height: 11px ; margin: 4px 6px 0 0' })
-                copyBtnDiv.append(answerBubble.buttons.copy.cloneNode(true))
-                Object.entries(answerBubble.buttons.copy.listeners).forEach(
+                copyBtnDiv.append(replyBubble.buttons.copy.cloneNode(true))
+                Object.entries(replyBubble.buttons.copy.listeners).forEach(
                     ([eventType, handler]) => copyBtnDiv.firstChild[eventType] = handler)
                 block.prepend(copyBtnDiv)
             })
@@ -2969,7 +2976,7 @@
             }
 
             // Build answer interface up to reply section if missing
-            if (!appDiv.querySelector('pre')) {
+            if (!appDiv.querySelector('.reply-pre')) {
                 appDiv.textContent = '' ; dom.addRisingParticles(appDiv)
 
                 // Create/append title
@@ -3031,7 +3038,7 @@
                 update.bylineVisibility()
 
                 // Create/append answer bubble
-                answerBubble.insert()
+                replyBubble.insert()
             }
 
             // Build reply section if missing
@@ -3049,7 +3056,7 @@
                     id: `${app.slug}-chatbar`, rows: 1, placeholder: `${app.msgs.tooltip_sendReply}...` })
                 continueChatDiv.append(chatTextarea)
                 replyForm.append(continueChatDiv) ; replySection.append(replyForm)
-                appDiv.querySelector('pre, [class*=standby-btns]').after(replySection);
+                appDiv.querySelector('.reply-bubble, [class*=standby-btns]').after(replySection);
 
                 // Create/append chatbar buttons
                 ['send', 'shuffle'].forEach(btnType => {
@@ -3074,7 +3081,7 @@
             // Show API used in bubble header
             if (!show.reply.updatedAPIinHeader) {
                 show.reply.updatedAPIinHeader = true
-                const preHeaderLabel = appDiv.querySelector(`.${app.slug}-pre-header-text`)
+                const preHeaderLabel = appDiv.querySelector('.reply-header-text')
                 preHeaderLabel.replaceChildren(`⦿ API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
                 setTimeout(() => type(apiUsed, preHeaderLabel.lastChild, { speed: 1.5 }), 150)
                 function type(text, targetElem, { speed = 1 } = {}) {
@@ -3087,16 +3094,16 @@
             }
 
             // Render MD, highlight JS
-            const answerPre = appDiv.querySelector('pre')
+            const replyPre = appDiv.querySelector('.reply-pre')
             try { // to render markdown
-                answerPre.innerHTML = marked.parse(answer) } catch (err) { log.error(err.message) }
+                replyPre.innerHTML = marked.parse(answer) } catch (err) { log.error(err.message) }
             hljs.highlightAll() // highlight code
             update.replyPrefix() // prepend '>> ' if dark scheme w/ bg animations to emulate terminal
 
             // Typeset math
-            answerPre.querySelectorAll('code').forEach(codeBlock => // add linebreaks after semicolons
+            replyPre.querySelectorAll('code').forEach(codeBlock => // add linebreaks after semicolons
                 codeBlock.innerHTML = codeBlock.innerHTML.replace(/;\s*/g, ';<br>'))
-            const elemsToRenderMathIn = [answerPre, ...answerPre.querySelectorAll('*')]
+            const elemsToRenderMathIn = [replyPre, ...replyPre.querySelectorAll('*')]
             elemsToRenderMathIn.forEach(elem => { renderMathInElement(elem, {
                 delimiters: [
                     { left: '$$', right: '$$', display: true },
@@ -3115,7 +3122,7 @@
 
             // Auto-scroll if active
             if (config.autoScroll && !env.browser.isMobile && config.proxyAPIenabled && !config.streamingDisabled)
-                answerPre.scrollTop = answerPre.scrollHeight
+                replyPre.scrollTop = replyPre.scrollHeight
 
             // Focus chatbar conditionally
             if (!show.reply.chatbarFocused // do only once
@@ -3132,15 +3139,17 @@
         }
     }
 
-    const answerBubble = {
+    const replyBubble = {
 
         create() {
-            if (this.answerPre) return
-            this.replyTip = dom.create.elem('span', { class: `${app.slug}-reply-tip` })
-            this.preHeader = dom.create.elem('div', { id: `${app.slug}-pre-header` })
-            this.preHeader.append(dom.create.elem('span', { class: `${app.slug}-pre-header-text no-user-select`}))
+            if (this.bubbleDiv) return
+            this.replyTip = dom.create.elem('span', { class: 'reply-tip' })
+            this.bubbleDiv = dom.create.elem('div', { class: 'reply-bubble bubble-elem' })
+            this.preHeader = dom.create.elem('div', { class: 'reply-header bubble-elem' })
+            this.preHeader.append(dom.create.elem('span', { class: 'reply-header-text no-user-select' }))
             this.buttons.insert()
-            this.answerPre = dom.create.elem('pre')
+            this.replyPre = dom.create.elem('pre', { class: 'reply-pre bubble-elem' })
+            this.bubbleDiv.append(this.preHeader, this.replyPre)
         },
 
         buttons: {
@@ -3169,8 +3178,8 @@
                     const copyBtn = event.currentTarget
                     if (!copyBtn.firstChild.matches('[id$=copy-icon]')) return // since clicking on Copied icon
                     const textContainer = (
-                        event.currentTarget.parentNode.className.includes('pre-header')
-                            ? appDiv.querySelector('pre') // reply container
+                        event.currentTarget.parentNode.className.includes('reply-header')
+                            ? appDiv.querySelector('.reply-pre') // reply container
                                 : event.currentTarget.closest('code') // code container
                     )
                     const textToCopy = textContainer.textContent.replace(/^>> /, '').trim()
@@ -3271,7 +3280,7 @@
                     toggle.tooltip(event) // update tooltip
 
                     // Play reply
-                    const wholeAnswer = appDiv.querySelector('pre').textContent
+                    const wholeAnswer = appDiv.querySelector('.reply-pre').textContent
                     const cjsSpeakConfig = { voice: 2, pitch: 1, speed: 1.5, onend: handleAudioEnded }
                     const sgtDialectMap = [
                         { code: 'en', regex: /^(eng(lish)?|en(-\w\w)?)$/i, rate: 2 },
@@ -3336,27 +3345,27 @@
                     })
 
                     function handleAudioEnded() {
-                        answerBubble.buttons.speak.style.cursor = 'pointer' // restore cursor
+                        replyBubble.buttons.speak.style.cursor = 'pointer' // restore cursor
                         speakSVGscroller.textContent = speakSVGscroller.style.animation = '' // rid Playing icons
                         speakSVGscroller.append(speakSVGs.speak) // restore Speak icon
-                        if (answerBubble.buttons.speak.matches(':hover')) // restore tooltip
-                            answerBubble.buttons.speak.dispatchEvent(new Event('mouseenter'))
+                        if (replyBubble.buttons.speak.matches(':hover')) // restore tooltip
+                            replyBubble.buttons.speak.dispatchEvent(new Event('mouseenter'))
                     }
                 }
 
             },
 
             insert() {
-                if (!this.share) this.create() ; if (!answerBubble.preHeader) answerBubble.create()
-                const preHeaderBtnsDiv = dom.create.elem('div', { class: `${app.slug}-pre-header-btns` })
+                if (!this.share) this.create() ; if (!replyBubble.preHeader) replyBubble.create()
+                const preHeaderBtnsDiv = dom.create.elem('div', { class: 'reply-header-btns' })
                 preHeaderBtnsDiv.append(this.copy, this.share, this.regen, this.speak)
-                answerBubble.preHeader.append(preHeaderBtnsDiv)
+                replyBubble.preHeader.append(preHeaderBtnsDiv)
             }
         },
 
         insert() {
-            if (!this.answerPre) this.create()
-            appDiv.append(this.replyTip, this.preHeader, this.answerPre) ; update.answerPreMaxHeight()
+            if (!this.bubbleDiv) this.create()
+            appDiv.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
         }
     }
 

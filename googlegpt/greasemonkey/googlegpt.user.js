@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.26
+// @version                  2025.3.27
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -856,7 +856,7 @@
     function appAlert(...alerts) {
         alerts = alerts.flat() // flatten array args nested by spread operator
         appDiv.textContent = ''
-        const alertP = dom.create.elem('p', { id: `${app.slug}-alert`, class: 'no-user-select' })
+        const alertP = dom.create.elem('p', { class: `${app.slug}-alert no-user-select` })
         if (!alerts.includes('waitingResponse')) alertP.style.marginBottom = '16px' // counteract #googlegpt p margins
 
         alerts.forEach((alert, idx) => { // process each alert for display
@@ -2296,12 +2296,12 @@
 
     const update = {
 
-        answerPreMaxHeight() { // for various mode toggles
-            const answerPre = appDiv.querySelector('pre'),
+        replyPreMaxHeight() { // for various mode toggles
+            const replyPre = appDiv.querySelector('.reply-pre'),
                   relatedQueries = appDiv.querySelector(`.${app.slug}-related-queries`),
                   shorterPreHeight = innerHeight - relatedQueries?.offsetHeight - 328,
                   longerPreHeight = innerHeight - 309
-            if (answerPre) answerPre.style.maxHeight = (
+            if (replyPre) replyPre.style.maxHeight = (
                 config.stickySidebar ? (
                     relatedQueries?.offsetHeight > 0 ? `${shorterPreHeight}px` : `${longerPreHeight}px` )
               : config.anchored ? `${ longerPreHeight - ( config.expanded ? 115 : 365 ) }px` : 'none'
@@ -2314,15 +2314,25 @@
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled
             modals.stylize() // update modal styles
             app.styles.innerText = (
-              `:root { /* vars */
-                    --app-bg-color-light-scheme: white ; --app-bg-color-dark-scheme: #282828 ;
+
+                // Init vars
+                `:root {
+                    --app-bg-color-light-scheme: white ; --app-bg-color-dark-scheme: #1c1c1c ;
                     --pre-bg-color-light-scheme: #b7b7b736 ; --pre-bg-color-dark-scheme: #3a3a3a ;
-                    --pre-header-bg-color-light-scheme: #dfdfdf ;
-                    --pre-header-bg-color-dark-scheme: ${ !isParticlizedDS ? '#545454' : '#0e0e0e24' };
-                    --pre-header-fg-color-light-scheme: white ; --pre-header-fg-color-dark-scheme: white ;
+                    --reply-header-bg-color-light-scheme: #dfdfdf ;
+                    --reply-header-bg-color-dark-scheme: ${ !isParticlizedDS ? '#545454' : '#0e0e0e24' };
+                    --reply-header-fg-color-light-scheme: white ; --reply-header-fg-color-dark-scheme: white ;
                     --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: white ;
-                    --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;`
-                  + '--app-shadow: 0 2px 3px rgb(0,0,0,0.06) ; --app-hover-shadow: 0 9px 28px rgba(0,0,0,0.09) ;'
+                    --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;
+                    --app-border: ${ isParticlizedDS ? 'none'
+                        : `1px solid #${ env.ui.app.scheme == 'light' ? 'dadce0' : '3b3b3b' }` };
+                    --app-gradient-bg: linear-gradient(180deg, ${
+                        env.ui.app.scheme == 'dark' ? '#99a8a6 -245px, black 185px' : '#b6ebff -163px, white 65px' }) ;
+                    --app-shadow: 0 2px 3px rgb(0,0,0,0.06) ;
+                    --app-hover-shadow-light-scheme: 0 9px 28px rgba(0,0,0,0.09) ;
+                    --app-hover-shadow-dark-scheme: 0 9px 28px rgba(0,0,0,0.39) ;
+                    --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
+                                                                                               : '11,0.22' }) ;`
                   + '--app-transition: opacity 0.5s ease, transform 0.5s ease,' // for 1st fade-in
                                     + 'bottom 0.1s cubic-bezier(0,0,0.2,1),' // smoothen Anchor Y min/restore
                                     + 'width 0.167s cubic-bezier(0,0,0.2,1) ;' // smoothen Anchor X expand/shrink
@@ -2335,6 +2345,14 @@
                   + '--fade-in-less-transition: opacity 0.2s ease }' // used by Font Size slider + Pin menu
 
                 // Animations
+              + '.fade-in { opacity: 0 ; transform: translateY(10px) }'
+              + '.fade-in-less { opacity: 0 ;'
+                  + 'transition: var(--fade-in-less-transition) ;'
+                      + '-webkit-transition: var(--fade-in-less-transition) ;'
+                      + '-moz-transition: var(--fade-in-less-transition) ;'
+                      + '-o-transition: var(--fade-in-less-transition) ;'
+                      + '-ms-transition: var(--fade-in-less-transition) }'
+              + '.fade-in.active, .fade-in-less.active { opacity: 1 ; transform: translateY(0) }'
               + '@keyframes btn-zoom-fade-out {'
                   + '0% { opacity: 1 } 55% { opacity: 0.25 ; transform: scale(1.85) }'
                   + '75% { opacity: 0.05 ; transform: scale(2.15) } 100% { opacity: 0 ; transform: scale(6.85) }}'
@@ -2358,24 +2376,34 @@
                   // ...to show resize cursor everywhere
                   + 'position: fixed ; top: 0 ; left: 0 ; width: 100% ; height: 100% ;'
                   + 'z-index: 9999 ; cursor: ew-resize }'
-              + `#${app.slug} {`
-                  + `color: var(--font-color-${env.ui.app.scheme}-scheme) ;`
-                  + `position: sticky ; z-index: 101 ; padding: ${ env.browser.isFF ? 20 : 22 }px 26px 6px 26px ;`
-                  + 'flex-basis: 0 ; height: fit-content ;'
-                  + `border: ${ env.ui.app.scheme == 'dark' ? 'none' : '1px solid #dadce0' } ; border-radius: 8px ;`
-                  + `width: ${ env.browser.isMobile ? 'auto' : '319px' } ;` // hard-width to prevent Google's flex-wrap moving app to bottom
-                  + ( env.browser.isMobile ? 'margin: 8px 0 8px' : 'margin-bottom: 30px' ) + ';' // add vertical margins
-                  + 'flex-grow: 1 ; word-wrap: break-word ; white-space: pre-wrap ;'
-                  + ( config.bgAnimationsDisabled ? // classic flat bg
-                        `background: var(--app-bg-color-${env.ui.app.scheme}-scheme) ;`
-                  : `background-image: linear-gradient(180deg, ${ // gradient bg to match rising particles
-                          env.ui.app.scheme == 'dark' ? '#99a8a6 -245px, black 185px'
-                                                      : '#b6ebff -163px, white 65px' }) ;` )
-                  + `transition: var(--app-transition) ;
+              + `#${app.slug} { /* main app div */
+                    color: var(--font-color-${env.ui.app.scheme}-scheme) ;
+                    background: var(--app-bg-color-${env.ui.app.scheme}-scheme) ;
+                    position: sticky ; z-index: 101 ; padding: ${ env.browser.isFF ? 20 : 22 }px 26px 6px 26px ;
+                    ${ !env.browser.isMobile ? 'margin-top: 55px ;' : '' } /* add top margin on desktop */
+                    border-radius: 8px ; height: fit-content ;
+                    width: ${ // hard-width to prevent Google's flex-wrap moving app to bottom
+                        env.browser.isMobile ? 'auto' : '319px' } ;
+                    ${ env.browser.isMobile ? 'margin: 8px 0 8px' : 'margin-bottom: 30px' }; /* add vertical margins */
+                    word-wrap: break-word ; white-space: pre-wrap ;
+                    transition: var(--app-transition) ;
                         -webkit-transition: var(--app-transition) ; -moz-transition: var(--app-transition) ;
-                        -o-transition: var(--app-transition) ; -ms-transition: var(--app-transition) ;
-                    box-shadow: var(--app-shadow) ;
-                        -webkit-box-shadow: var(--app-shadow) ; -moz-box-shadow: var(--app-shadow) }`
+                        -o-transition: var(--app-transition) ; -ms-transition: var(--app-transition) }
+                #${app.slug}:has(.${app.slug}-alert) { /* app alerts */
+                    border: var(--app-border) ; box-shadow: var(--app-shadow) ;
+                    -webkit-box-shadow: var(--app-shadow) ; -moz-box-shadow: var(--app-shadow) ;
+                    ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${env.ui.app.scheme}-scheme)`
+                                                   : 'background-image: var(--app-gradient-bg)' }}
+                #${app.slug}:has(.${app.slug}-alert):hover, #${app.slug}:has(.${app.slug}-alert):active {
+                    box-shadow: var(--app-hover-shadow-${env.ui.app.scheme}-scheme) ;
+                    transition: var(--app-shadow-transition) }
+                ${ env.ui.app.scheme != env.ui.site.scheme ?
+                      // add hover shadow to bordered/un-anchored app div
+                        `#${app.slug}:hover, #${app.slug}:active {
+                            box-shadow: var(--app-hover-shadow-${env.ui.app.scheme}-scheme) ;
+                            transition: var(--app-shadow-transition) }`
+                    : // remove app padding if no border for fuller view
+                        `#${app.slug}:not(.anchored):not(:has(.${app.slug}-alert)) { padding: 0 }` }`
               + `#${app.slug} .app-hover-only {` // hide app-hover-only elems
                   + 'position: absolute ; left: -9999px ; opacity: 0 ;' // using position to support transitions
                   + 'width: 0 }' // to support width calcs
@@ -2383,14 +2411,6 @@
               + `#${app.slug}:hover .app-hover-only, #${app.slug}:active .app-hover-only,
                     #${app.slug}:has([id$=font-size-slider-track].active) [id$=font-size-btn] {
                         position: relative ; left: auto ; width: auto ; opacity: 1 }`
-              + `#${app.slug}:hover, #${app.slug}:active {` // show app shadow on hover
-                  + `box-shadow: var(--app-hover-shadow) ;
-                        -webkit-box-shadow: var(--app-hover-shadow) ; -moz-box-shadow: var(--app-hover-shadow) ;
-                    transition: var(--app-transition), var(--app-shadow-transition) ;
-                        -webkit-transition: var(--app-transition), var(--app-shadow-transition) ;
-                        -moz-transition: var(--app-transition), var(--app-shadow-transition) ;
-                        -o-transition: var(--app-transition), var(--app-shadow-transition) ;
-                        -ms-transition: var(--app-transition), var(--app-shadow-transition) }`
               + `#${app.slug} p { margin: 0 }`
               + `#${app.slug} .alert-link {`
                   + `color: ${ env.ui.app.scheme == 'light' ? '#190cb0' : 'white ; text-decoration: underline' }}`
@@ -2476,17 +2496,30 @@
                     width: 11px ; height: 11px ; margin-right: 4px ; top: -1px }
                 .${app.slug}-standby-btn:nth-of-type(2) svg { /* Summarize button icon */
                     width: 12.5px ; height: 12.5px ; margin-right: 6px ; top: 1px }`
-              + `.${app.slug}-reply-tip {`
+
+              // AI reply elem styles
+              + `#${app.slug} .reply-tip {`
                   + 'content: "" ; position: relative ; border: 7px solid transparent ;'
                   + `float: left ; margin: ${ env.browser.isMobile ? 39 : 27 }px -15px 0 0 ;`
                   + `left: ${ env.browser.isMobile ? 12 : 6 }px ;` // positioning
                   + 'border-bottom-style: solid ; border-bottom-width: 16px ; border-top: 0 ; border-bottom-color:'
                       + `${ // hide reply tip for terminal aesthetic
-                            isParticlizedDS ? '#0000' : `var(--pre-header-bg-color-${env.ui.app.scheme}-scheme)` }}`
-              + `#${app.slug} > pre {`
+                            isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${env.ui.app.scheme}-scheme)` }}`
+              + `#${app.slug} .reply-header {
+                    display: flex ; align-items: center ; position: relative ;
+                    top: 14px ; padding: 7px 14px ; height: 18px ; border-radius: 12px 12px 0 0 ;
+                    ${ env.ui.app.scheme == 'light' ? 'border-bottom: 1px solid white'
+                                 : isParticlizedDS ? 'border: 1px solid ; border-bottom-color: transparent' : '' };
+                    background: var(--reply-header-bg-color-${env.ui.app.scheme}-scheme) ;
+                    color:      var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) ;
+                    fill:       var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) ;
+                    stroke:     var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) }
+                #${app.slug} .reply-header-text { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
+                #${app.slug} .reply-header-btns { margin: 3.5px -5px 0 }`
+              + `#${app.slug} .reply-pre {`
                   + `font-size: ${config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;`
                   + `line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;`
-                  + 'margin: 13px 0 0 0 ; padding: 1.25em ; border-radius: 0 0 10px 10px ; overflow: auto ;'
+                  + 'margin-top: 13px ; padding: 1em 1em 0 1em ; border-radius: 0 0 12px 12px ; overflow: auto ;'
                   + ( config.bgAnimationsDisabled ? // classic opaque bg
                         `background: var(--pre-bg-color-${env.ui.app.scheme}-scheme) ;`
                       + `color: var(--font-color-${env.ui.app.scheme}-scheme)`
@@ -2500,66 +2533,77 @@
                             + '-moz-transition: var(--answer-pre-transition) ;'
                             + '-o-transition: var(--answer-pre-transition) ;'
                             + '-ms-transition: var(--answer-pre-transition)' }}`
-              + `#${app.slug} > pre a, #${app.slug} > pre a:visited { color: #4495d4 }`
-              + `#${app.slug} pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#28a017' }}`
-              + `#${app.slug}-pre-header {
-                    display: flex ; align-items: center ; position: relative ;
-                    top: 14px ; padding: 7px 14px ; height: 18px ; border-radius: 10px 10px 0 0 ;
-                    ${ env.ui.app.scheme == 'light' ? 'border-bottom: 1px solid white'
-                                 : isParticlizedDS ? 'border: 1px solid ; border-bottom-color: transparent' : '' };
-                    background: var(--pre-header-bg-color-${env.ui.app.scheme}-scheme) ;
-                    color:      var(--pre-header-fg-color-${env.ui.app.scheme}-scheme) ;
-                    fill:       var(--pre-header-fg-color-${env.ui.app.scheme}-scheme) ;
-                    stroke:     var(--pre-header-fg-color-${env.ui.app.scheme}-scheme) }
-                .${app.slug}-pre-header-text { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
-                .${app.slug}-pre-header-btns { margin: 3.5px -5px 0 }`
+              + `#${app.slug} .reply-pre a, #${app.slug} .reply-pre a:visited { color: #4495d4 }`
+              + `#${app.slug} .reply-pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#28a017' }}`
               + `code #${app.slug}-copy-btn { position: relative ; top: -6px ; right: -9px }`
               + `code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
+
+              // Rendered AI reply styles
+              + `#${app.slug} > pre h1 { font-size: 1.25em }`
+              + `#${app.slug} > pre h2 { font-size: 1.1em }` // size headings
+              + `#${app.slug} > pre > p:last-of-type { margin-bottom: -1.25em }` // eliminate bottom gap
+              + `#${app.slug} > pre ol { padding-left: 1.58em ; margin: -5px 0 -8px 7px }`
+              + `#${app.slug} > pre ul { margin: -10px 0 -6px ; padding-left: 1.5em }` // reduce v-spacing, indent
+              + `#${app.slug} > pre li { margin: -8px 0 ; list-style: circle }` // reduce v-spacing, show left symbols
+              + 'code.hljs { text-wrap: nowrap ; overflow-x: scroll }' // don't wrap highlighted code to be scrollable horizontally
+              + '.katex-html { display: none }' // hide unrendered math
+
+              // Chatbar styles
               + `#${app.slug}-chatbar {`
-                  + `border: solid 1px ${ env.ui.app.scheme == 'dark' ?
-                        ( config.bgAnimationsDisabled ? '#777' : '#aaa' ) : '#dfdfdf' } ;`
+                  + `border: solid 1px ${ isParticlizedDS ? '#aaa' : env.ui.app.scheme == 'dark' ? '#777' : '#555' };`
                   + 'border-radius: 12px 13px 12px 0 ; margin: 13px 0 15px 0 ; padding: 13px 55px 13px 10px ;'
                   + `position: relative ; z-index: 555 ; color: ${ env.ui.app.scheme == 'dark' ? '#eee' : '#222' } ;`
                   + 'height: 16px ; max-height: 200px ; resize: none ;'
                   + `background: ${ env.ui.app.scheme == 'light' ? '#eeeeee9e'
                         : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }` } ;`
                   + `${ env.ui.app.scheme == 'dark' ? '' :
-                        `--shadow: 0 1px 2px rgba(15,17,17,0.1) inset ; box-shadow: var(--shadow) ;
-                            -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)` }}`
-              + `#${app.slug}-chatbar:hover:not(:focus) {
-                    filter: brightness(${ env.ui.app.scheme == 'dark' ? 95 : 97 }%) ;
-                    ${ isParticlizedDS ? '' :
-                        `--inset-shadow: 0 ${
-                            env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 5px' } rgba(15,17,17,0.1) inset ;
-                        box-shadow: var(--inset-shadow) ; -webkit-box-shadow: var(--inset-shadow) ;
-                        -moz-box-shadow: var(--inset-shadow)` };
-                    transition: box-shadow 0.35s ease, filter 0.2s ease
-                 }
-                 #${app.slug}-chatbar:focus-visible {
+                        `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
+                        box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
+                        -moz-box-shadow: var(--chatbar-inset-shadow) ;` }
+                    transition: transform 0.15s ease, box-shadow 0.15s ease ; will-change: transform }
+                ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' : // zoom chatbar + btns on parent hover
+                    `div:has(> #${app.slug}-chatbar) { transition: var(--rq-transition) ; will-change: transform }
+                     div:has(> #${app.slug}-chatbar:hover, > [class*=chatbar-btn]:hover) { transform: scale(1.025) }` }
+                ${ isParticlizedDS ? '' : // add inset shadow to chatbar on hover
+                    `#${app.slug}-chatbar:hover:not(:focus) {
+                        --chatbar-hover-inset-shadow: 0 ${
+                            env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 7px' } rgba(15,17,17,0.15) inset ;
+                        box-shadow: var(--chatbar-hover-inset-shadow) ;
+                        -webkit-box-shadow: var(--chatbar-hover-inset-shadow) ;
+                        -moz-box-shadow: var(--chatbar-hover-inset-shadow) ;
+                        transition: transform 0.15s ease, box-shadow 0.25s ease }` }
+                 #${app.slug}-chatbar:focus-visible { /* fallback outline chatbar + reduce inset shadow on focus */
                     outline: -webkit-focus-ring-color auto 1px ;
                     ${ isParticlizedDS ? '' :
                         `--inset-shadow: 0 ${
                                 env.ui.app.scheme == 'dark' ? '3px -1px' : '1px 2px' } rgba(0,0,0,0.3) inset ;
                         box-shadow: var(--inset-shadow) ; -webkit-box-shadow: var(--inset-shadow) ;
-                        -moz-box-shadow: var(--inset-shadow)`}}`
+                        -moz-box-shadow: var(--inset-shadow)`}}
+                .${app.slug}-chatbar-btn {
+                    z-index: 560 ; border: none ; float: right ; position: relative ; background: none ;
+                    cursor: pointer ; bottom: ${ env.browser.isFF ? 50 : 55 }px ;
+                    ${ env.ui.app.scheme == 'dark' ? 'color: #aaa ; fill: #aaa ; stroke: #aaa'
+                                                   : 'color: lightgrey ; fill: lightgrey ; stroke: lightgrey' }}
+                .${app.slug}-chatbar-btn:hover {
+                    color:  var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
+                    fill:   var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
+                    stroke: var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) }`
+
+              // Related Queries styles
               + `.${app.slug}-related-queries {
-                    display: flex ; flex-wrap: wrap ; width: 100% ; margin-bottom: 19px }
+                    display: flex ; flex-wrap: wrap ; width: 100% ; margin-bottom: 19px ; padding: 0 5px }
                 .${app.slug}-related-query {
                     font-size: ${ env.browser.isMobile ? 1 : 0.81}em ; cursor: pointer ; will-change: transform ;
                     box-sizing: border-box ; width: fit-content ; max-width: 100% ; /* confine to outer div */
                     margin: 5px 12px 7px 0 ; padding: 8px 12px 8px 13px ;
                     color: ${ env.ui.app.scheme == 'dark' ? ( config.bgAnimationsDisabled ? '#ccc' : '#f2f2f2' )
                                                  : '#767676' };
-                    background: ${
-                         config.bgAnimationsDisabled ? ( env.ui.app.scheme == 'dark' ? '#404040' : '#dadada12' )
-                                                     : ( env.ui.app.scheme == 'dark' ? '#595858d6' : '#fbfbfbb0' )} ;
+                    background: ${ env.ui.app.scheme == 'dark' ? '#7e7e7e4f' : '#fdfdfdb0' };
                     border: 1px solid ${ env.ui.app.scheme == 'dark' ? (
                         config.bgAnimationsDisabled ? '#5f5f5f' : '#777' ) : '#e1e1e1' } ;
                     border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;
-                    --shadow: 1px 4px ${ env.ui.app.scheme == 'dark' ?
-                        `${ config.bgAnimationsDisabled ? 10 : 18 }px -8px lightgray`
-                            : '8px -6px rgba(169,169,169,0.75)' };
-                    box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
+                    --rq-shadow: 1px 4px 8px -6px rgba(169,169,169,0.75) ; box-shadow: var(--rq-shadow) ;
+                        -webkit-box-shadow: var(--rq-shadow) ; -moz-box-shadow: var(--rq-shadow) ;
                     ${ config.fgAnimationsDisabled ? '' : // smoothen hover-zoom
                         `transition: var(--rq-transition) ;
                             -webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;
@@ -2571,45 +2615,34 @@
                         : '#dae5ffa3 ; color: #000000a8 ; border-color: #a3c9ff' }}
                 .${app.slug}-related-query svg { /* related query icon */
                     float: left ; margin: -0.09em 6px 0 0 ;
-                    color: ${ env.ui.app.scheme == 'dark' ? '#aaa' : '#c1c1c1' }}`
-              + '.fade-in { opacity: 0 ; transform: translateY(10px) }'
-              + '.fade-in-less { opacity: 0 ;'
-                  + 'transition: var(--fade-in-less-transition) ;'
-                      + '-webkit-transition: var(--fade-in-less-transition) ;'
-                      + '-moz-transition: var(--fade-in-less-transition) ;'
-                      + '-o-transition: var(--fade-in-less-transition) ;'
-                      + '-ms-transition: var(--fade-in-less-transition) }'
-              + '.fade-in.active, .fade-in-less.active { opacity: 1 ; transform: translateY(0) }'
-              + `.${app.slug}-chatbar-btn {`
-                  + 'z-index: 560 ;'
-                  + 'border: none ; float: right ; position: relative ; background: none ; cursor: pointer ;'
-                  + `bottom: ${( env.browser.isFF ? 46 : 49 ) + ( env.ui.site.hasSidebar ? 3 : 2 )}px ;`
-                  + `${ env.ui.app.scheme == 'dark' ? 'color: #aaa ; fill: #aaa ; stroke: #aaa'
-                                                    : 'color: lightgrey ; fill: lightgrey ; stroke: lightgrey' }}`
-              + `.${app.slug}-chatbar-btn:hover {
+                    color: ${ env.ui.app.scheme == 'dark' ? '#aaa' : '#c1c1c1' }}
+                .${app.slug}-chatbar-btn {
+                    z-index: 560 ;
+                    border: none ; float: right ; position: relative ; background: none ; cursor: pointer ;
+                    bottom: ${( env.browser.isFF ? 46 : 49 ) + ( env.ui.site.hasSidebar ? 3 : 2 )}px ;
+                    ${ env.ui.app.scheme == 'dark' ? 'color: #aaa ; fill: #aaa ; stroke: #aaa'
+                                                   : 'color: lightgrey ; fill: lightgrey ; stroke: lightgrey' }}
+                .${app.slug}-chatbar-btn:hover {
                     color:  var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
                     fill:   var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
                     stroke: var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) }`
-              + ( // markdown styles
-                    `#${app.slug} > pre h1 { font-size: 1.25em }`
-                  + `#${app.slug} > pre h2 { font-size: 1.1em }` // size headings
-                  + `#${app.slug} > pre > p:last-of-type { margin-bottom: -1.25em }` // eliminate bottom gap
-                  + `#${app.slug} > pre ol { padding-left: 1.58em ; margin: -5px 0 -8px 7px }`
-                  + `#${app.slug} > pre ul { margin: -10px 0 -6px ; padding-left: 1.5em }` // reduce v-spacing, indent
-                  + `#${app.slug} > pre li { margin: -8px 0 ; list-style: circle }` ) // reduce v-spacing, show left symbols
-              + 'code.hljs { text-wrap: nowrap ; overflow-x: scroll }' // don't wrap highlighted code to be scrollable horizontally
-              + '.katex-html { display: none }' // hide unrendered math
+
+              // Footer styles
               + `#${app.slug} footer {`
                   + 'position: relative ; text-align: right ; font-size: 0.75rem ; line-height: 1.43em ;'
                   + `right: ${ env.browser.isFF ? -54 : -60 }px ;`
                   + `margin: ${ env.browser.isFF ? 1 : -2 }px -32px 12px }`
               + `#${app.slug} footer * { color: #aaa ; text-decoration: none }`
               + `#${app.slug} footer a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}`
+
+              // Notif styles
               + '.chatgpt-notif { fill: white ; stroke: white ; font-size: 25px !important ; padding: 13px 14px 13px 13px !important }'
               + '.notif-close-btn { display: none !important }' // hide notif close btn
               + `.${app.slug}-menu {`
                   + 'position: absolute ; z-index: 12250 ;'
                   + 'padding: 3.5px 5px !important ; font-family: "Source Sans Pro", sans-serif ; font-size: 12px }'
+
+              // Menu styles
               + `.${app.slug}-menu ul { margin: 0 ; padding: 0 ; list-style: none }`
               + `.${app.slug}-menu-item { padding: 0 5px ; line-height: 20.5px }`
               + `.${app.slug}-menu-item:not(.${app.slug}-menu-header):hover {`
@@ -2631,23 +2664,28 @@
                  #${app.slug}.sticky ~ * { display: none }` // hide sidebar contents
 
               // Anchor Mode styles
-              + `#${app.slug}.anchored { position: fixed ; bottom: -7px ; right: 35px ; width: 388px ; z-index: 8888 }`
-              + '#${app.slug}.expanded { width: 528px !important }'
-              + `#${app.slug}.anchored .anchored-hidden { display: none }` // hide non-Anchor elems in mode
-              + `#${app.slug}:not(.anchored) .anchored-only { display: none }` // hide Anchor elems outside mode
+              + `#${app.slug}.anchored {
+                    position: fixed ; bottom: -7px ; right: 35px ; width: 388px ; z-index: 8888 ;
+                    border: var(--app-border) ; box-shadow: var(--app-anchored-shadow) ;
+                    ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${env.ui.app.scheme}-scheme)`
+                                                   : 'background-image: var(--app-gradient-bg)' }}
+                #${app.slug}.expanded { width: 528px !important }
+                #${app.slug}.anchored .anchored-hidden { display: none } /* hide non-Anchor elems in mode */
+                #${app.slug}:not(.anchored) .anchored-only { display: none } /* hide Anchor elems outside mode */`
 
               // Touch device styles
-              + '@media (hover: none) {'
-                  + `#${app.slug} .app-hover-only { display: initial }` // show app-hover-only elems
-              + '}'
+              + `@media (hover: none) {
+                    #${app.slug} .app-hover-only { display: initial } /* show app-hover-only elems */
+                }`
 
               // Phone styles
-              + '@media screen and (max-width: 480px) {'
-                  + `#${app.slug} #${app.slug}-logo {` // header logo...
-                      + 'top: 0 ; width: calc(100% - 154px) }' // remove y-pos, widen till btns
-                  + `#${app.slug} .kudoai { display: none !important }` // hide byline
-                  + `#${app.slug} [class*=reply-tip] { display: none }` // hide reply tip
-              + '}'
+              + `@media screen and (max-width: 480px) {
+                    #${app.slug} #${app.slug}-logo { /* header logo... */
+                        top: 0 ; width: calc(100% - 154px) } /* remove y-pos, widen till btns */
+                    #${app.slug} .kudoai { display: none !important } /* hide byline */
+                    #${app.slug} [class*=reply-tip] { display: none } /* hide reply tip */
+                    .${app.slug}-related-queries { padding: 0 } /* remove RQ parent padding */
+                }`
             )
         },
 
@@ -2956,7 +2994,7 @@
             // Assemble/insert elems
             slider.append(sliderThumb, sliderTip)
             appDiv.insertBefore(slider, appDiv.querySelector(`.${app.slug}-btn-tooltip,` // desktop
-                                                           + 'pre')) // mobile
+                                                           + '.reply-bubble')) // mobile
             // Init thumb pos
             setTimeout(() => {
                 const iniLeft = (config.fontSize - config.minFontSize) / (config.maxFontSize - config.minFontSize)
@@ -3007,11 +3045,11 @@
                 sliderThumb.style.left = newLeft + 'px'
 
                 // Adjust font size based on thumb position
-                const answerPre = appDiv.querySelector('pre'),
+                const replyPre = appDiv.querySelector('.reply-pre'),
                       fontSizePercent = newLeft / sliderWidth,
                       fontSize = config.minFontSize + fontSizePercent * (config.maxFontSize - config.minFontSize)
-                answerPre.style.fontSize = fontSize + 'px'
-                answerPre.style.lineHeight = fontSize * config.lineHeightRatio + 'px'
+                replyPre.style.fontSize = fontSize + 'px'
+                replyPre.style.lineHeight = fontSize * config.lineHeightRatio + 'px'
                 settings.save('fontSize', fontSize)
                 sliderThumb.title = Math.floor(config.fontSize *10) /10 + 'px'
             }
@@ -3022,7 +3060,7 @@
         toggle(state = '') {
             const slider = document.getElementById(`${app.slug}-font-size-slider-track`)
                          || fontSizeSlider.createAppend()
-            const replyTip = appDiv.querySelector(`.${app.slug}-reply-tip`)
+            const replyTip = appDiv.querySelector('.reply-tip')
             const sliderTip = document.getElementById(`${app.slug}-font-size-slider-tip`)
 
             // Show slider
@@ -3183,7 +3221,7 @@
 
             // Apply changed state to UI
             appDiv.classList.toggle('anchored', config.anchored)
-            update.rqVisibility() ; update.answerPreMaxHeight() ; update.chatbarWidth()
+            update.rqVisibility() ; update.replyPreMaxHeight() ; update.chatbarWidth()
             if (getComputedStyle(appDiv).transitionProperty.includes('width')) // update byline visibility
                 appDiv.addEventListener('transitionend', function onTransitionEnd(event) { // ...after width transition
                     if (event.propertyName == 'width') {
@@ -3309,7 +3347,7 @@
                         !streamingToggle.checked && config.proxyAPIenabled && !config.streamingDisabled)
                             modals.settings.toggle.switch(streamingToggle)
             }
-            if (appDiv.querySelector(`#${app.slug}-alert`)) location.reload() // re-send query if user alerted
+            if (appDiv.querySelector(`.${app.slug}-alert`)) location.reload() // re-send query if user alerted
         },
 
         relatedQueries() {
@@ -3319,7 +3357,7 @@
                 get.related(msgChain[msgChain.length - 1]?.content || searchQuery)
                     .then(queries => show.related(queries))
                     .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
-            update.answerPreMaxHeight()
+            update.replyPreMaxHeight()
             notify(`${app.msgs.menuLabel_relatedQueries} ${toolbarMenu.state.words[+!config.rqDisabled]}`)
         },
 
@@ -3336,7 +3374,7 @@
 
             // Apply new state to UI
             appDiv.classList.toggle(mode, config[configKeyName])
-            update.answerPreMaxHeight() ; update.bylineVisibility() ; update.chatbarWidth()
+            update.replyPreMaxHeight() ; update.bylineVisibility() ; update.chatbarWidth()
             if (mode == 'wider') icons.widescreen.update() // toggle icons everywhere
             if (modals.settings.get()) { // update visual state of Settings toggles
                 const sidebarToggle = document.querySelector(`[id*=${mode}] input`)
@@ -3444,12 +3482,14 @@
                   rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
             tooltipDiv.style.top = `${
                 appHeaderBtnTypes.includes(btnType) ? -14
-              : answerBubble.buttons.types.includes(btnType) && !stateOrEvent.currentTarget.closest('code') ?
+              : replyBubble.buttons.types.includes(btnType) && !stateOrEvent.currentTarget.closest('code') ?
                    33 + ( rects.fsSlider?.height > 0 ? rects.fsSlider.height -16 : 0 )
               : rects.btn.top - rects.appDiv.top -35 - ( stateOrEvent.currentTarget.closest('code') ? 6 : 0 )
             }px`
             tooltipDiv.style.right = `${
-                rects.appDiv.right - ( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
+                rects.appDiv.right - ( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2
+                    * ( btn.className.includes('chatbar') ? // increase spread for zoomed chatbar btns
+                            parseFloat(getComputedStyle(btn.closest('div')).transform.split(',')[3]) : 1 )}px`
 
             // Show tooltip
             tooltipDiv.style.opacity = 1
@@ -3853,7 +3893,7 @@
                   loadingSpinner = icons.arrowsCyclic.create()
             let loadingElem
             loadingSpinner.style.cssText = 'position: relative ; top: 2px ; margin-right: 6px'
-            if (appDiv.querySelector('pre')) { // reply exists, show where chatbar was
+            if (appDiv.querySelector('.reply-pre')) { // reply exists, show where chatbar was
                 if (!/regen|summarize/i.test(src)) rqDiv?.remove() // clear RQs to re-get later
                 appDiv.querySelector('footer').textContent = '' // clear footer
                 loadingElem = appDiv.querySelector('section')
@@ -3862,7 +3902,7 @@
                 loadingSpinner.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)' // faster ver
             } else { // replace app div w/ alert
                 appAlert('waitingResponse')
-                loadingElem = appDiv.querySelector(`#${app.slug}-alert`)
+                loadingElem = appDiv.querySelector(`.${app.slug}-alert`)
                 loadingSpinner.style.animation = 'rotate 2s infinite linear' // slower ver
             }
             loadingElem.classList.add('loading', 'no-user-select')
@@ -3942,8 +3982,8 @@
         codeCopyBtns() {
             appDiv.querySelectorAll('code').forEach(block => {
                 const copyBtnDiv = dom.create.elem('div', { style: 'height: 11px ; margin: 4px 6px 0 0' })
-                copyBtnDiv.append(answerBubble.buttons.copy.cloneNode(true))
-                Object.entries(answerBubble.buttons.copy.listeners).forEach(
+                copyBtnDiv.append(replyBubble.buttons.copy.cloneNode(true))
+                Object.entries(replyBubble.buttons.copy.listeners).forEach(
                     ([eventType, handler]) => copyBtnDiv.firstChild[eventType] = handler)
                 block.prepend(copyBtnDiv)
             })
@@ -3997,7 +4037,7 @@
                     }, (idx+1) *50)
                 })
 
-                update.answerPreMaxHeight() ; get.related.replyIsQuestion = null
+                update.replyPreMaxHeight() ; get.related.replyIsQuestion = null
             }
         },
 
@@ -4013,7 +4053,7 @@
             }
 
             // Build answer interface up to reply section if missing
-            if (!appDiv.querySelector('pre')) {
+            if (!appDiv.querySelector('.reply-pre')) {
                 appDiv.textContent = '' ; dom.addRisingParticles(appDiv)
 
                 // Create/append title
@@ -4038,7 +4078,7 @@
                 // Create/append Chevron button
                 if (!env.browser.isMobile) {
                     var chevronBtn = dom.create.elem('btn', {
-                        d: `${app.slug}-chevron-btn`, class: `${app.slug}-header-btn anchored-only`,
+                        id: `${app.slug}-chevron-btn`, class: `${app.slug}-header-btn anchored-only`,
                         style: 'margin: -3.5px 1px 0 11px' })
                     chevronBtn.append(icons[`chevron${ config.minimized ? 'Up' : 'Down' }`].create())
                     headerBtnsDiv.append(chevronBtn)
@@ -4122,7 +4162,7 @@
                     appDiv.append(standbyBtnsDiv)
 
                 // Otherwise create/append answer bubble section
-                } else answerBubble.insert()
+                } else replyBubble.insert()
             }
 
             // Build reply section if missing
@@ -4143,7 +4183,7 @@
                 })
                 continueChatDiv.append(chatTextarea)
                 replyForm.append(continueChatDiv) ; replySection.append(replyForm)
-                appDiv.querySelector('pre, [class*=standby-btns]').after(replySection);
+                appDiv.querySelector('.reply-bubble, [class*=standby-btns]').after(replySection);
 
                 // Create/append chatbar buttons
                 ['send', 'shuffle', 'summarize'].forEach((btnType, idx) => {
@@ -4178,7 +4218,7 @@
                 // Show API used in bubble header
                 if (!show.reply.updatedAPIinHeader) {
                     show.reply.updatedAPIinHeader = true
-                    const preHeaderLabel = appDiv.querySelector(`.${app.slug}-pre-header-text`)
+                    const preHeaderLabel = appDiv.querySelector('.reply-header-text')
                     preHeaderLabel.replaceChildren(`⦿ API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
                     setTimeout(() => type(apiUsed, preHeaderLabel.lastChild, { speed: 1.5 }), 150)
                     function type(text, targetElem, { speed = 1 } = {}) {
@@ -4191,16 +4231,16 @@
                 }
 
                 // Render MD, highlight JS
-                const answerPre = appDiv.querySelector('pre')
+                const replyPre = appDiv.querySelector('.reply-pre')
                 try { // to render markdown
-                    answerPre.innerHTML = marked.parse(answer) } catch (err) { log.error(err.message) }
+                    replyPre.innerHTML = marked.parse(answer) } catch (err) { log.error(err.message) }
                 hljs.highlightAll() // highlight code
                 update.replyPrefix() // prepend '>> ' if dark scheme w/ bg animations to emulate terminal
 
                 // Typeset math
-                answerPre.querySelectorAll('code').forEach(codeBlock => { // add linebreaks after semicolons
+                replyPre.querySelectorAll('code').forEach(codeBlock => { // add linebreaks after semicolons
                     codeBlock.innerHTML = codeBlock.innerHTML.replace(/;\s*/g, ';<br>') })
-                const elemsToRenderMathIn = [answerPre, ...answerPre.querySelectorAll('*')]
+                const elemsToRenderMathIn = [replyPre, ...replyPre.querySelectorAll('*')]
                 elemsToRenderMathIn.forEach(elem => {
                     renderMathInElement(elem, { // typeset math
                         delimiters: [
@@ -4218,11 +4258,11 @@
                         throwOnError: false
                 })})
 
-                if (config.stickySidebar) update.answerPreMaxHeight()
+                if (config.stickySidebar) update.replyPreMaxHeight()
 
                 // Auto-scroll if active
                 if (config.autoScroll && !env.browser.isMobile && config.proxyAPIenabled && !config.streamingDisabled) {
-                    if (config.stickySidebar || config.anchored) answerPre.scrollTop = answerPre.scrollHeight
+                    if (config.stickySidebar || config.anchored) replyPre.scrollTop = replyPre.scrollHeight
                     else scrollBy({ top: appDiv.querySelector(`#${app.slug}-chatbar`)
                         .getBoundingClientRect().bottom - innerHeight +13 })
                 }
@@ -4246,15 +4286,17 @@
         }
     }
 
-    const answerBubble = {
+    const replyBubble = {
 
         create() {
-            if (this.answerPre) return
-            this.replyTip = dom.create.elem('span', { class: `${app.slug}-reply-tip` })
-            this.preHeader = dom.create.elem('div', { id: `${app.slug}-pre-header` })
-            this.preHeader.append(dom.create.elem('span', { class: `${app.slug}-pre-header-text no-user-select`}))
+            if (this.bubbleDiv) return
+            this.replyTip = dom.create.elem('span', { class: 'reply-tip' })
+            this.bubbleDiv = dom.create.elem('div', { class: 'reply-bubble bubble-elem' })
+            this.preHeader = dom.create.elem('div', { class: 'reply-header bubble-elem' })
+            this.preHeader.append(dom.create.elem('span', { class: 'reply-header-text no-user-select' }))
             this.buttons.insert()
-            this.answerPre = dom.create.elem('pre')
+            this.replyPre = dom.create.elem('pre', { class: 'reply-pre bubble-elem' })
+            this.bubbleDiv.append(this.preHeader, this.replyPre)
         },
 
         buttons: {
@@ -4283,8 +4325,8 @@
                     const copyBtn = event.currentTarget
                     if (!copyBtn.firstChild.matches('[id$=copy-icon]')) return // since clicking on Copied icon
                     const textContainer = (
-                        event.currentTarget.parentNode.className.includes('pre-header')
-                            ? appDiv.querySelector('pre') // reply container
+                        event.currentTarget.parentNode.className.includes('reply-header')
+                            ? appDiv.querySelector('.reply-pre') // reply container
                                 : event.currentTarget.closest('code') // code container
                     )
                     const textToCopy = textContainer.textContent.replace(/^>> /, '').trim()
@@ -4385,7 +4427,7 @@
                     toggle.tooltip(event) // update tooltip
 
                     // Play reply
-                    const wholeAnswer = appDiv.querySelector('pre').textContent
+                    const wholeAnswer = appDiv.querySelector('.reply-pre').textContent
                     const cjsSpeakConfig = { voice: 2, pitch: 1, speed: 1.5, onend: handleAudioEnded }
                     const sgtDialectMap = [
                         { code: 'en', regex: /^(eng(lish)?|en(-\w\w)?)$/i, rate: 2 },
@@ -4450,27 +4492,27 @@
                     })
 
                     function handleAudioEnded() {
-                        answerBubble.buttons.speak.style.cursor = 'pointer' // restore cursor
+                        replyBubble.buttons.speak.style.cursor = 'pointer' // restore cursor
                         speakSVGscroller.textContent = speakSVGscroller.style.animation = '' // rid Playing icons
                         speakSVGscroller.append(speakSVGs.speak) // restore Speak icon
-                        if (answerBubble.buttons.speak.matches(':hover')) // restore tooltip
-                            answerBubble.buttons.speak.dispatchEvent(new Event('mouseenter'))
+                        if (replyBubble.buttons.speak.matches(':hover')) // restore tooltip
+                            replyBubble.buttons.speak.dispatchEvent(new Event('mouseenter'))
                     }
                 }
 
             },
 
             insert() {
-                if (!this.share) this.create() ; if (!answerBubble.preHeader) answerBubble.create()
-                const preHeaderBtnsDiv = dom.create.elem('div', { class: `${app.slug}-pre-header-btns` })
+                if (!this.share) this.create() ; if (!replyBubble.preHeader) replyBubble.create()
+                const preHeaderBtnsDiv = dom.create.elem('div', { class: 'reply-header-btns' })
                 preHeaderBtnsDiv.append(this.copy, this.share, this.regen, this.speak)
-                answerBubble.preHeader.append(preHeaderBtnsDiv)
+                replyBubble.preHeader.append(preHeaderBtnsDiv)
             }
         },
 
         insert() {
-            if (!this.answerPre) this.create()
-            appDiv.append(this.replyTip, this.preHeader, this.answerPre) ; update.answerPreMaxHeight()
+            if (!this.bubbleDiv) this.create()
+            appDiv.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
         }
     }
 
