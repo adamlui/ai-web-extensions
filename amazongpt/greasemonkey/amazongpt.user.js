@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.27.1
+// @version                2025.3.27.2
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -2491,7 +2491,6 @@
                 return tooltipDiv.style.opacity = 0
 
             const btn = stateOrEvent.currentTarget, btnType = /[^-]+-([\w-]+)-btn/.exec(btn.id)[1]
-            const appHeaderBtnTypes = ['chevron', 'about', 'settings', 'font-size', 'arrows']
             const baseText = (
                 btnType == 'chevron' ? ( config.minimized ? `${app.msgs.tooltip_restore}`
                                                           : `${app.msgs.tooltip_minimize}` )
@@ -2537,18 +2536,14 @@
                   tooltipDiv.style.paddingRight = toggle.tooltip.nativeRpadding
 
             // Update position
-            const elems = { appDiv, btn, tooltipDiv, fsSlider: appDiv.querySelector('[id*=font-size-slider]') },
-                  rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
-            tooltipDiv.style.top = `${
-                appHeaderBtnTypes.includes(btnType) ? -22
-              : replyBubble.buttons.types.includes(btnType) && !stateOrEvent.currentTarget.closest('code') ?
-                   28 + ( rects.fsSlider?.height > 0 ? rects.fsSlider.height -18 : 0 )
-              : rects.btn.top - rects.appDiv.top -36 - ( stateOrEvent.currentTarget.closest('code') ? 7 : 0 )
-            }px`
+            const elems = { appDiv, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv }
+            const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
+            tooltipDiv.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
             tooltipDiv.style.right = `${
-                rects.appDiv.right - ( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2
-                    * ( btn.className.includes('chatbar') ? // increase spread for zoomed chatbar btns
-                            parseFloat(getComputedStyle(btn.closest('div')).transform.split(',')[3]) : 1 )}px`
+                rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2
+                     *( btn.className.includes('chatbar') ? // increase spread for zoomed chatbar btns
+                            parseFloat(getComputedStyle(btn.closest('div')).transform.split(',')[3]) : 1 )
+            }px`
 
             // Show tooltip
             tooltipDiv.style.opacity = 1
