@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.28.1
+// @version                2025.3.28.2
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1903,18 +1903,18 @@
               + `code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
 
               // Rendered AI reply styles
-              + `#${app.slug} > pre h1 { font-size: 1.8em }
-                 #${app.slug} > pre h2 { font-size: 1.65em }
-                 #${app.slug} > pre h3 { font-size: 1.4em }
-                 #${app.slug} > pre h1, #${app.slug} > pre h2, #${app.slug} > pre h3 { margin-bottom: -15px }
-                 #${app.slug} > pre ol { /* override ol styles */
+              + `#${app.slug} .reply-pre h1 { font-size: 1.8em }
+                 #${app.slug} .reply-pre h2 { font-size: 1.65em }
+                 #${app.slug} .reply-pre h3 { font-size: 1.4em }
+                 #${app.slug} .reply-pre h1, #${app.slug} .reply-pre h2, #${app.slug} .reply-pre h3 { margin-bottom: -15px }
+                 #${app.slug} .reply-pre ol { /* override ol styles */
                     color: var(--font-color-${env.ui.app.scheme}-scheme) ; margin: -5px 0 -6px 7px }
-                 #${app.slug} > pre ol > li { /* reduce v-padding, show number markers */
+                 #${app.slug} .reply-pre ol > li { /* reduce v-padding, show number markers */
                     margin: -10px 0 -6px 1.6em ; list-style: decimal }
-                 #${app.slug} > pre ol > li::marker { font-size: 0.9em } /* shrink number markers */
-                 #${app.slug} > pre ul { /* override ul styles */
+                 #${app.slug} .reply-pre ol > li::marker { font-size: 0.9em } /* shrink number markers */
+                 #${app.slug} .reply-pre ul { /* override ul styles */
                     color: var(--font-color-${env.ui.app.scheme}-scheme) ; margin-bottom: -21px }
-                 #${app.slug} > pre ul > li { list-style: circle } /* show bullets */
+                 #${app.slug} .reply-pre ul > li { list-style: circle } /* show bullets */
                  #${app.slug} .hljs { /* set code highlighting scheme */
                     ${ env.ui.app.scheme == 'dark' ? 'color: #ddd ; background: #0e0e0e'
                                                    : 'color: #24292e ; background: #fbfbfb' }}

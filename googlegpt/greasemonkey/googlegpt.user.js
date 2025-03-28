@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.28.1
+// @version                  2025.3.28.2
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -2543,12 +2543,12 @@
               + `code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
 
               // Rendered AI reply styles
-              + `#${app.slug} > pre h1 { font-size: 1.25em }
-                 #${app.slug} > pre h2 { font-size: 1.1em } /* size headings */
-                 #${app.slug} > pre > p:last-of-type { margin-bottom: -1.25em } /* eliminate bottom gap */
-                 #${app.slug} > pre ol { padding-left: 1.58em ; margin: -5px 0 -8px 7px }
-                 #${app.slug} > pre ul { margin: -10px 0 -6px ; padding-left: 1.5em } /* reduce v-spacing, indent */
-                 #${app.slug} > pre li { margin: -8px 0 ; list-style: circle } /* reduce v-spacing, show left symbols */
+              + `#${app.slug} .reply-pre h1 { font-size: 1.25em }
+                 #${app.slug} .reply-pre h2 { font-size: 1.1em } /* size headings */
+                 #${app.slug} .reply-pre > p:last-of-type { margin-bottom: -1.25em } /* eliminate bottom gap */
+                 #${app.slug} .reply-pre ol { padding-left: 1.58em ; margin: -5px 0 -8px 7px }
+                 #${app.slug} .reply-pre ul { margin: -10px 0 -6px ; padding-left: 1.5em } /* reduce v-spacing, indent */
+                 #${app.slug} .reply-pre li { margin: -8px 0 ; list-style: circle } /* reduce v-spacing, show left symbols */
                  code.hljs { /* don't wrap highlighted code to be scrollable horizontally */
                     text-wrap: nowrap ; overflow-x: scroll }
                  #${app.slug} .hljs { /* set code highlighting scheme */
@@ -3994,7 +3994,7 @@
                 return setTimeout(() => show.related(queries), 500, queries)
 
             // Re-get.related() if current reply is question to suggest answers
-            const currentReply = appDiv.querySelector(`#${app.slug} > pre`)?.textContent.trim()
+            const currentReply = appDiv.querySelector(`#${app.slug} .reply-pre`)?.textContent.trim()
             if (!/shuffle|summarize/i.test(show.reply.src)
                     && !get.related.replyIsQuestion && /[?？]/.test(currentReply)) {
                 log.debug('Re-getting related queries to answer reply question...')

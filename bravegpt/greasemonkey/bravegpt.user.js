@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.28.2
+// @version               2025.3.28.3
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -2380,11 +2380,11 @@
               + `code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
 
               // Rendered AI reply styles
-              + `#${app.slug} > pre h1 { font-size: 1.25em }
-                 #${app.slug} > pre h2 { font-size: 1.1em }
-                 #${app.slug} > pre ul { margin: -10px 0 -6px } /* reduce v-spacing */
-                 #${app.slug} > pre ol { margin: -5px 0 -6px 7px }
-                 #${app.slug} > pre li { /* reduce v-spacing, show left symbols */
+              + `#${app.slug} .reply-pre h1 { font-size: 1.25em }
+                 #${app.slug} .reply-pre h2 { font-size: 1.1em }
+                 #${app.slug} .reply-pre ul { margin: -10px 0 -6px } /* reduce v-spacing */
+                 #${app.slug} .reply-pre ol { margin: -5px 0 -6px 7px }
+                 #${app.slug} .reply-pre li { /* reduce v-spacing, show left symbols */
                     margin: -10px 0 -6px 12px ; list-style: circle }
                  #${app.slug} .hljs { /* set code highlighting scheme */
                     ${ env.ui.app.scheme == 'dark' ? 'color: #ddd ; background: #0e0e0e'
@@ -3816,7 +3816,7 @@
                 return setTimeout(() => show.related(queries), 500, queries)
 
             // Re-get.related() if current reply is question to suggest answers
-            const currentReply = appDiv.querySelector(`#${app.slug} > pre`)?.textContent.trim()
+            const currentReply = appDiv.querySelector(`#${app.slug} .reply-pre`)?.textContent.trim()
             if (!/shuffle|summarize/i.test(show.reply.src)
                     && !get.related.replyIsQuestion && /[?？]/.test(currentReply)) {
                 log.debug('Re-getting related queries to answer reply question...')
