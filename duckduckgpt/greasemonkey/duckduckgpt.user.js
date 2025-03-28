@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.28
+// @version                2025.3.28.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -2285,7 +2285,7 @@
                     color: #b6b8ba ; fill: #b6b8ba ; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite }`
               + `#${app.slug} section.loading { padding-left: 5px }` // left-pad loading status when sending replies
               + `#${app.slug}-font-size-slider-track {
-                    width: 98% ; height: 7px ; margin: -6px auto ${ env.browser.isPhone ? -8 : -13 }px ;
+                    width: 98% ; height: 7px ; margin: -6px auto ${ env.browser.isPhone ? -5 : -10 }px ;
                     padding: 15px 0 ; background-color: #ccc ; box-sizing: content-box; background-clip: content-box ;
                     -webkit-background-clip: content-box }`
               + `#${app.slug}-font-size-slider-track::before {` // to add finger cursor to unpadded core only
@@ -2296,8 +2296,8 @@
                   + 'border-left: 4.5px solid transparent ; border-right: 4.5px solid transparent ;'
                   + 'border-bottom: 16px solid #ccc }'
               + `#${app.slug}-font-size-slider-thumb {
-                    z-index: 2 ; width: 10px ; height: 25px ; border-radius: 30% ; position: relative ;
-                    top: -7.65px ; cursor: ew-resize ;
+                    z-index: 2 ; width: 7px ; height: 25px ; border-radius: 30% ; position: relative ;
+                    top: -7.5px ; cursor: ew-resize ;
                     background-color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#4a4a4a' } ;
                     --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
