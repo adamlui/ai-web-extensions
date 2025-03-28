@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.28.2
+// @version                  2025.3.28.4
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -383,7 +383,7 @@
 // @resource ggptIconWhite   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@9db3bda/assets/images/icons/googlegpt/white/icon64.png.b64#sha256-BYRq92cF5knykaKnmNi1U4CrwBC/jK1V+MGfH4NGui4=
 // @resource ggptLSlogo      https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@9db3bda/assets/images/logos/googlegpt/flat/black-green/logo480x64.png.b64#sha256-fzSZhLVQQolCLWYr/h29NWfR1Yl4glHv1TcsveYYv+U=
 // @resource ggptDSlogo      https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@9db3bda/assets/images/logos/googlegpt/flat/white-green/logo480x64.png.b64#sha256-3qRdGKhF3pojDqVVh/5kODIg7QvYbbLf4zFkEh5xoGc=
-// @resource hljsCSS         https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css#sha256-v0N76BFFkH0dCB8bUr4cHSVN8A/zCaOopMuSmJWV/5w=
+// @resource hljsCSS         https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/railscasts.min.css#sha256-nMf0Oxaj3sYJiwGCsfqNpGnBbcofnzk+zz3xTxtdLEQ=
 // @resource rpgCSS          https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS          https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant                    GM_getValue
@@ -2551,9 +2551,8 @@
                  #${app.slug} .reply-pre li { margin: -8px 0 ; list-style: circle } /* reduce v-spacing, show left symbols */
                  code.hljs { /* don't wrap highlighted code to be scrollable horizontally */
                     text-wrap: nowrap ; overflow-x: scroll }
-                 #${app.slug} .hljs { /* set code highlighting scheme */
-                    ${ env.ui.app.scheme == 'dark' ? 'color: #ddd ; background: #0e0e0e'
-                                                   : 'color: #24292e ; background: #fbfbfb' }}
+                 ${GM_getResourceText('hljsCSS').replace(/[;}]/g, '!important$&')} /* highlight code */
+                 #${app.slug} pre:has(code) { padding: 0 } /* remove padded border from code blocks */
                  .katex-html { display: none } /* hide unrendered math */`
 
               // Chatbar styles
@@ -4532,7 +4531,7 @@
     ['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
         (config[mode] || config[`${mode}Sidebar`]) && appDiv.classList.add(mode))
     app.styles = dom.create.style() ; update.appStyle() ; document.head.append(app.styles);
-    ['rpg', 'rpw', 'hljs'].forEach(cssType => // rising particles, code highlighting
+    ['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
     // Create/stylize TOOLTIPs

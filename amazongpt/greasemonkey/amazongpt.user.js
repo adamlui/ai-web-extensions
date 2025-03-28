@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.28.2
+// @version                2025.3.28.4
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -71,7 +71,7 @@
 // @resource amzgptDSicon  https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@1ac5561/assets/images/icons/amazongpt/white/icon64.png.b64#sha256-qTQ5tnMF6XeH3UZkQOlJZvdE1nkn5/9srNKJqFtcCDo=
 // @resource amzgptLSlogo  https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@1ac5561/assets/images/logos/amazongpt/black-gold/logo509x74.png.b64#sha256-wSW1EtGtscP0ZcUweFBqKfswt3NzEjbKxn5COYyihVA=
 // @resource amzgptDSlogo  https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@1ac5561/assets/images/logos/amazongpt/white-teal/logo509x74.png.b64#sha256-EWstwtlU8+gXSM98gpr6OR3OZ63ttHVNp/NQ7IMzFDA=
-// @resource hljsCSS       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css#sha256-v0N76BFFkH0dCB8bUr4cHSVN8A/zCaOopMuSmJWV/5w=
+// @resource hljsCSS       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/railscasts.min.css#sha256-nMf0Oxaj3sYJiwGCsfqNpGnBbcofnzk+zz3xTxtdLEQ=
 // @resource rpgCSS        https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS        https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant                  GM_getValue
@@ -1915,9 +1915,8 @@
                  #${app.slug} .reply-pre ul { /* override ul styles */
                     color: var(--font-color-${env.ui.app.scheme}-scheme) ; margin-bottom: -21px }
                  #${app.slug} .reply-pre ul > li { list-style: circle } /* show bullets */
-                 #${app.slug} .hljs { /* set code highlighting scheme */
-                    ${ env.ui.app.scheme == 'dark' ? 'color: #ddd ; background: #0e0e0e'
-                                                   : 'color: #24292e ; background: #fbfbfb' }}
+                 ${GM_getResourceText('hljsCSS').replace(/[;}]/g, '!important$&')} /* highlight code */
+                 #${app.slug} pre:has(code) { padding: 0 } /* remove padded border from code blocks */
                 .katex-html { display: none } /* hide unrendered math */`
 
               // Chatbar styles
@@ -3381,7 +3380,7 @@
     const appDiv = dom.create.elem('div', { id: app.slug, class: 'anchored fade-in' })
     addListeners.appDiv() ; if (config.expanded) appDiv.classList.add('expanded')
     app.styles = dom.create.style() ; update.appStyle() ; document.head.append(app.styles);
-    ['rpg', 'rpw', 'hljs'].forEach(cssType => // rising particles, code highlighting
+    ['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
     // Create/stylize TOOLTIPs

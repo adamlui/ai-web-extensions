@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.28.3
+// @version                2025.3.28.4
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -192,7 +192,7 @@
 // @resource ddgptIcon     https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@8482c4b/assets/images/icons/duckduckgpt/icon64.png.b64#sha256-k7hl9PAq+HAKG2vS9wlKmu3EEvdE3k2Z2KR/SRkk6D4=
 // @resource ddgptLSlogo   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@8482c4b/assets/images/logos/duckduckgpt/lightmode/logo697x122.png.b64#sha256-7O4AxPinoZ6h36KHuJVa4vwfTEOYTwT+lKiDbf/jjkg=
 // @resource ddgptDSlogo   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@8482c4b/assets/images/logos/duckduckgpt/darkmode/logo697x122.png.b64#sha256-lSd4M3RPT4+SjjBk8PKGFoyM9p3rZHgxt0NgoKqQkiM=
-// @resource hljsCSS       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css#sha256-v0N76BFFkH0dCB8bUr4cHSVN8A/zCaOopMuSmJWV/5w=
+// @resource hljsCSS       https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/railscasts.min.css#sha256-nMf0Oxaj3sYJiwGCsfqNpGnBbcofnzk+zz3xTxtdLEQ=
 // @resource rpgCSS        https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS        https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant                  GM_getValue
@@ -2339,7 +2339,6 @@
                   + 'border-bottom-style: solid ; border-bottom-width: 18px ; border-top: 0 ; border-bottom-color:'
                       + `${ // hide reply tip for terminal aesthetic
                             isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${env.ui.app.scheme}-scheme)` }}`
-              + `#${app.slug} pre { background-color: inherit }` // override DDG's unattractive thicc light border
               + `#${app.slug} .reply-header {
                     display: flex ; align-items: center ; position: relative ;
                     top: 14px ; padding: 7px 14px ; height: 18px ; border-radius: 12px 12px 0 0 ;
@@ -2386,9 +2385,8 @@
                  #${app.slug} .reply-pre ul { margin: -14px 0 -21px } /* reduce v-padding */
                  #${app.slug} .reply-pre ul > li { /* reduce v-padding, show bullets */
                     margin: -10px 0 0 1.2em ; list-style: circle }
-                 #${app.slug} .hljs { /* set code highlighting scheme */
-                    ${ env.ui.app.scheme == 'dark' ? 'color: #ddd ; background: #0e0e0e'
-                                                   : 'color: #24292e ; background: #fbfbfb' }}
+                 ${GM_getResourceText('hljsCSS').replace(/[;}]/g, '!important$&')} /* highlight code */
+                 #${app.slug} pre:has(code) { padding: 0 } /* remove padded border from code blocks */
                  .katex-html { display: none } /* hide unrendered math */`
 
               // Chatbar styles
@@ -4330,7 +4328,7 @@
     ['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
         (config[mode] || config[`${mode}Sidebar`]) && appDiv.classList.add(mode))
     app.styles = dom.create.style() ; update.appStyle() ; document.head.append(app.styles);
-    ['rpg', 'rpw', 'hljs'].forEach(cssType => // rising particles, code highlighting
+    ['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
     // Create/stylize TOOLTIPs
