@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.28.1
+// @version                2025.3.28.2
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -2377,7 +2377,7 @@
               // Rendered AI reply styles
               + `#${app.slug} > pre h1 { font-size: 1.8em }
                  #${app.slug} > pre h2 { font-size: 1.65em }
-                 #${app.slug} > pre h3 { font-size: 1.4em }
+                 #${app.slug} > pre h3 { font-size: 1.4em ; line-height: 1.25 }
                  #${app.slug} > pre h1, #${app.slug} > pre h2, #${app.slug} > pre h3 {
                     margin-bottom: -15px } /* reduce gap after headings */
                  #${app.slug} > pre ol { margin: -16px 0 -20px 7px }
