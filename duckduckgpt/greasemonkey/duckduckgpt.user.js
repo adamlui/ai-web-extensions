@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.27.8
+// @version                2025.3.28
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -2284,10 +2284,10 @@
               + `#${app.slug} .loading {
                     color: #b6b8ba ; fill: #b6b8ba ; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite }`
               + `#${app.slug} section.loading { padding-left: 5px }` // left-pad loading status when sending replies
-              + `#${app.slug}-font-size-slider-track {`
-                  + 'width: 98% ; height: 7px ; margin: -6px auto -13px ; padding: 15px 0 ;'
-                  + 'background-color: #ccc ; box-sizing: content-box; background-clip: content-box ;'
-                  + '-webkit-background-clip: content-box }'
+              + `#${app.slug}-font-size-slider-track {
+                    width: 98% ; height: 7px ; margin: -6px auto ${ env.browser.isPhone ? -8 : -13 }px ;
+                    padding: 15px 0 ; background-color: #ccc ; box-sizing: content-box; background-clip: content-box ;
+                    -webkit-background-clip: content-box }`
               + `#${app.slug}-font-size-slider-track::before {` // to add finger cursor to unpadded core only
                   + 'content: "" ; position: absolute ; top: 10px ; left: 0 ; right: 0 ;'
                   + 'height: calc(100% - 20px) ; cursor: pointer }'
