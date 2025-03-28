@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.28.4
+// @version                  2025.3.28.5
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -2551,7 +2551,9 @@
                  #${app.slug} .reply-pre li { margin: -8px 0 ; list-style: circle } /* reduce v-spacing, show left symbols */
                  code.hljs { /* don't wrap highlighted code to be scrollable horizontally */
                     text-wrap: nowrap ; overflow-x: scroll }
-                 ${GM_getResourceText('hljsCSS').replace(/[;}]/g, '!important$&')} /* highlight code */
+                 ${GM_getResourceText('hljsCSS') // highlight code
+                    .replace(/\/\*[^*]+\*\//g, '') // strip comments
+                    .trim().replace(/^|[,}](?![^{]*\}|$)/g, `$&#${app.slug} `)} /* scope selectors to app */
                  #${app.slug} pre:has(code) { padding: 0 } /* remove padded border from code blocks */
                  .katex-html { display: none } /* hide unrendered math */`
 
