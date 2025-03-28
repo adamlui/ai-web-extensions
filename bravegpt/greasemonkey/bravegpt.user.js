@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.27.7
+// @version               2025.3.27.8
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -2403,10 +2403,7 @@
                         `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
                         box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
                         -moz-box-shadow: var(--chatbar-inset-shadow) ;` }
-                    transition: transform 0.15s ease, box-shadow 0.15s ease ; will-change: transform }
-                ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' : // zoom chatbar + btns on parent hover
-                    `div:has(> #${app.slug}-chatbar) { transition: var(--rq-transition) ; will-change: transform }
-                     div:has(> #${app.slug}-chatbar:hover, > [class*=chatbar-btn]:hover) { transform: scale(1.025) }` }
+                    transition: box-shadow 0.15s ease }
                 ${ isParticlizedDS ? '' : // add inset shadow to chatbar on hover
                     `#${app.slug}-chatbar:hover:not(:focus) {
                         --chatbar-hover-inset-shadow: 0 ${
@@ -3312,10 +3309,7 @@
             const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
             tooltipDiv.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
             tooltipDiv.style.right = `${
-                rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2
-                     *( btn.className.includes('chatbar') ? // increase spread for zoomed chatbar btns
-                            parseFloat(getComputedStyle(btn.closest('div')).transform.split(',')[3]) : 1 )
-            }px`
+                rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
 
             // Show tooltip
             tooltipDiv.style.opacity = 1
