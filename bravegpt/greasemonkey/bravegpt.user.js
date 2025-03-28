@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.28
+// @version               2025.3.28.1
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -2291,7 +2291,7 @@
                     color: #b6b8ba ; fill: #b6b8ba ; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite }`
               + `#${app.slug} section.loading { padding: 0 0 14px 5px ; font-size: 90% }` // pad loading status
               + `#${app.slug}-font-size-slider-track {
-                    width: 98% ; height: 7px ; margin: -5px auto ${ env.browser.isPhone ? -14 : -9 }px ;
+                    width: 98% ; height: 7px ; margin: -5px auto ${ env.browser.isPhone ? -4 : -9 }px ;
                     padding: 15px 0 ; background-color: #ccc ; box-sizing: content-box; background-clip: content-box ;
                     -webkit-background-clip: content-box }`
               + `#${app.slug}-font-size-slider-track::before {` // to add finger cursor to unpadded core only
