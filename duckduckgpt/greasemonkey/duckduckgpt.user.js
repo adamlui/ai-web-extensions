@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.28.5
+// @version                2025.3.28.6
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -2386,8 +2386,7 @@
                  #${app.slug} .reply-pre ul > li { /* reduce v-padding, show bullets */
                     margin: -10px 0 0 1.2em ; list-style: circle }
                  ${GM_getResourceText('hljsCSS') // highlight code
-                    .replace(/\/\*[^*]+\*\//g, '') // strip comments
-                    .trim().replace(/^|[,}](?![^{]*\}|$)/g, `$&#${app.slug} `)} /* scope selectors to app */
+                    .trim().replace(/pre|(?<=[,}])(.)(?![^{]*\})/g, `#${app.slug} $&`)} /* scope selectors to app */
                  #${app.slug} pre:has(code) { padding: 0 } /* remove padded border from code blocks */
                  .katex-html { display: none } /* hide unrendered math */`
 
