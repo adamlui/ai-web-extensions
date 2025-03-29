@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.29.1
+// @version                2025.3.29.2
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1919,6 +1919,7 @@
                     .replace(/\/\*[^*]+\*\//g, '') // strip comments
                     .trim().replace(/([,}])(.)(?![^{]*\})/g, `$1#${app.slug} $2`)} /* scope selectors to app */
                  #${app.slug} pre:has(code) { padding: 0 } /* remove padded border from code blocks */
+                 #${app.slug} code { font-size: 0.85em } /* shrink code vs. regular text */
                 .katex-html { display: none } /* hide unrendered math */`
 
               // Chatbar styles
