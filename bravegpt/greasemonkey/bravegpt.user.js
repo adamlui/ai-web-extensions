@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.28.7
+// @version               2025.3.29
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -262,7 +262,7 @@
             support: 'https://support.bravegpt.com',
             update: 'https://gm.bravegpt.com'
         },
-        latestResourceCommitHash: 'aa3057a' // for cached messages.json
+        latestResourceCommitHash: '8df8f7b' // for cached messages.json
     }
     app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
                           + `@${app.latestResourceCommitHash}`
@@ -324,7 +324,6 @@
         tooltip_regenerating: 'Regenerating',
         tooltip_play: 'Play',
         tooltip_playing: 'Playing',
-        tooltip_html: 'HTML',
         tooltip_reply: 'Reply',
         tooltip_code: 'Code',
         tooltip_generatingAudio: 'Generating audio',
@@ -3268,7 +3267,7 @@
               : btnType == 'arrows' ? ( config.expanded ? `${app.msgs.tooltip_shrink}`
                                                         : `${app.msgs.tooltip_expand}` )
               : btnType == 'share' ? (
-                    btn.style.animation ? `${app.msgs.tooltip_generating} ${app.msgs.tooltip_html}...`
+                    btn.style.animation ? `${app.msgs.tooltip_generating} HTML...`
                                         : app.msgs.tooltip_shareConvo )
               : btnType == 'copy' ? (
                     btn.firstChild.id.includes('-copy-') ?

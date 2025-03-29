@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "ขยาย" },
   "tooltip_shrink": { "message": "หด" },
   "tooltip_close": { "message": "ปิด" },
-  "tooltip_shareConvo": { "message": "แชร์การสนทนา" },
   "tooltip_copy": { "message": "คัดลอก" },
   "tooltip_generate": { "message": "สร้าง" },
   "tooltip_generating": { "message": "กำลังสร้าง" },

@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Firehtir Bike" },
   "tooltip_shrink": { "message": "Shrink" },
   "tooltip_close": { "message": "Bigire" },
-  "tooltip_shareConvo": { "message": "Axaftinê parve bikin" },
   "tooltip_copy": { "message": "Kopî bike" },
   "tooltip_generate": { "message": "دەست دەکەوێت، دروست دەکات، پێک دێنێت، دەھێنێتە بەرھەم، بەدیھێنان، دروست کردن، چاککردن، خەلق کردن، منداڵبوون، ھێنانەدنیاوە\n[پزیشکی]: دروست کردن، دەرھێنان، پەیداکردن\n[کۆمپیوتەر]: بەدیھێنان" },
   "tooltip_generating": { "message": "بەرھەمدان، بوون، منداڵبوون، زاوزێکردن" },

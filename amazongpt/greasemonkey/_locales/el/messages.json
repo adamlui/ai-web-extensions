@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Ανάπτυξη" },
   "tooltip_shrink": { "message": "Σμίκρυνση" },
   "tooltip_close": { "message": "Κλείσιμο" },
-  "tooltip_shareConvo": { "message": "Κοινοποίηση συνομιλίας" },
   "tooltip_copy": { "message": "Αντιγραφή" },
   "tooltip_generate": { "message": "Δημιουργία" },
   "tooltip_generating": { "message": "δημιουργία" },

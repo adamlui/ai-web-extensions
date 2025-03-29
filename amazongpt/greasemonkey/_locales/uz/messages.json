@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Kengaytirish" },
   "tooltip_shrink": { "message": "Shakllar" },
   "tooltip_close": { "message": "Yopish" },
-  "tooltip_shareConvo": { "message": "Suhbatni baham ko'ring" },
   "tooltip_copy": { "message": "NUSXA QILISh" },
   "tooltip_generate": { "message": "Yaratish" },
   "tooltip_generating": { "message": "Yaratish" },

@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "ስፍሕፋሕ" },
   "tooltip_shrink": { "message": "ጸርፊ" },
   "tooltip_close": { "message": "ዕጾ" },
-  "tooltip_shareConvo": { "message": "ዝርርብ ምዝርጋሕ" },
   "tooltip_copy": { "message": "ቅዳሕ" },
   "tooltip_generate": { "message": "ኣማዕብል" },
   "tooltip_generating": { "message": "ምፍጣር" },

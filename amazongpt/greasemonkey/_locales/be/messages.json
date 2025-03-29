@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Разгарнуць" },
   "tooltip_shrink": { "message": "Павелічэнне рэзкасці" },
   "tooltip_close": { "message": "Закрыць" },
-  "tooltip_shareConvo": { "message": "Падзяліцца размовай" },
   "tooltip_copy": { "message": "Капіяваць" },
   "tooltip_generate": { "message": "Генераваць" },
   "tooltip_generating": { "message": "Стварэнне $0" },

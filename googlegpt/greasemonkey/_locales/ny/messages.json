@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Kuchulukitsa" },
   "tooltip_shrink": { "message": "ZOKHUDZA" },
   "tooltip_close": { "message": "tseka" },
-  "tooltip_shareConvo": { "message": "Kugawana zokambirana" },
   "tooltip_copy": { "message": "Kopelani" },
   "tooltip_generate": { "message": "Lumikizanani nafe" },
   "tooltip_generating": { "message": "Kulengedwa" },

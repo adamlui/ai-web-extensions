@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Expandeix" },
   "tooltip_shrink": { "message": "Psiquiatre" },
   "tooltip_close": { "message": "Tanca" },
-  "tooltip_shareConvo": { "message": "Comparteix la conversa" },
   "tooltip_copy": { "message": "Copia" },
   "tooltip_generate": { "message": "Genera" },
   "tooltip_generating": { "message": "Generant" },

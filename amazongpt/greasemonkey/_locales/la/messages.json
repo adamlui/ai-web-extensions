@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Expandum" },
   "tooltip_shrink": { "message": "Accipere" },
   "tooltip_close": { "message": "Claudere" },
-  "tooltip_shareConvo": { "message": "Partes" },
   "tooltip_copy": { "message": "Duplicare" },
   "tooltip_generate": { "message": "Generationis" },
   "tooltip_generating": { "message": "Generale" },

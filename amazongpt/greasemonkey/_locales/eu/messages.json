@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Zabaldu" },
   "tooltip_shrink": { "message": "Txikitu" },
   "tooltip_close": { "message": "Itxi" },
-  "tooltip_shareConvo": { "message": "Partekatu elkarrizketa" },
   "tooltip_copy": { "message": "Kopiatu" },
   "tooltip_generate": { "message": "Orokorra" },
   "tooltip_generating": { "message": "Sortzen" },

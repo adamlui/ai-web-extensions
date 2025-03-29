@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "ಹಿಗ್ಗಿಸು" },
   "tooltip_shrink": { "message": "ಕುಗ್ಗಿಸಿ" },
   "tooltip_close": { "message": "ಮುಚ್ಚಿ" },
-  "tooltip_shareConvo": { "message": "ಸಂಭಾಷಣೆಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ" },
   "tooltip_copy": { "message": "à²à²²à²¾à²¯à²¿à²¸à³" },
   "tooltip_generate": { "message": "ರಚಿಸು" },
   "tooltip_generating": { "message": "ಉತ್ಪಾದಿಸಲಾಗುತ್ತಿದೆ" },

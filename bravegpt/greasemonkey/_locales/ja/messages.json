@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "拡大する" },
   "tooltip_shrink": { "message": "小さく" },
   "tooltip_close": { "message": "Close" },
-  "tooltip_shareConvo": { "message": "会話を共有" },
   "tooltip_copy": { "message": "コピー" },
   "tooltip_generate": { "message": "生成する" },
   "tooltip_generating": { "message": "生成中" },

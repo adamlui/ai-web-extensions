@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Aç" },
   "tooltip_shrink": { "message": "Otomatik boyut" },
   "tooltip_close": { "message": "Kapat" },
-  "tooltip_shareConvo": { "message": "Konuşmayı paylaş" },
   "tooltip_copy": { "message": "Kopya" },
   "tooltip_generate": { "message": "Oluştur" },
   "tooltip_generating": { "message": "Üretiliyor" },

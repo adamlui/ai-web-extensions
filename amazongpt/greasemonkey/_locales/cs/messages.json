@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Roztáhnout" },
   "tooltip_shrink": { "message": "Zmenšit" },
   "tooltip_close": { "message": "Zavřít" },
-  "tooltip_shareConvo": { "message": "Sdílet konverzaci" },
   "tooltip_copy": { "message": "Kopírování" },
   "tooltip_generate": { "message": "Generovat" },
   "tooltip_generating": { "message": "Generování" },

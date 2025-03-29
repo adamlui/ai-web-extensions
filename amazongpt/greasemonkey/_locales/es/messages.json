@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Expandir" },
   "tooltip_shrink": { "message": "Reducir" },
   "tooltip_close": { "message": "Cerrar" },
-  "tooltip_shareConvo": { "message": "Compartir con conversación" },
   "tooltip_copy": { "message": "Copy" },
   "tooltip_generate": { "message": "Generar" },
   "tooltip_generating": { "message": "Generando" },

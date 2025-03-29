@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Разгъване" },
   "tooltip_shrink": { "message": "Изостряне" },
   "tooltip_close": { "message": "Затвори" },
-  "tooltip_shareConvo": { "message": "Споделяне на разговор" },
   "tooltip_copy": { "message": "Копиране" },
   "tooltip_generate": { "message": "Генериране" },
   "tooltip_generating": { "message": "Генериране" },

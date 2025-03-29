@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Vis" },
   "tooltip_shrink": { "message": "Gør mindre" },
   "tooltip_close": { "message": "Luk" },
-  "tooltip_shareConvo": { "message": "Del med samtale" },
   "tooltip_copy": { "message": "Kopi" },
   "tooltip_generate": { "message": "Generér" },
   "tooltip_generating": { "message": "Genererer" },

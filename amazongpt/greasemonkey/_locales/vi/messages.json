@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Mở rộng" },
   "tooltip_shrink": { "message": "Thu Nhỏ/Co Lại (Shrink)" },
   "tooltip_close": { "message": "Đóng" },
-  "tooltip_shareConvo": { "message": "Chia sẻ với Cuộc hội thoại" },
   "tooltip_copy": { "message": "Sao chép" },
   "tooltip_generate": { "message": "Tạo" },
   "tooltip_generating": { "message": "Tạo" },

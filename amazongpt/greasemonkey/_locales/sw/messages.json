@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Panua" },
   "tooltip_shrink": { "message": "Punguza" },
   "tooltip_close": { "message": "Funga" },
-  "tooltip_shareConvo": { "message": "Shiriki mazungumzo" },
   "tooltip_copy": { "message": "Nakili" },
   "tooltip_generate": { "message": "Tengeneza" },
   "tooltip_generating": { "message": "Inazalisha" },

@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Uitbrei" },
   "tooltip_shrink": { "message": "Verklein" },
   "tooltip_close": { "message": "Maak toe" },
-  "tooltip_shareConvo": { "message": "Deel gesprek" },
   "tooltip_copy": { "message": "Kopie" },
   "tooltip_generate": { "message": "Genereer" },
   "tooltip_generating": { "message": "Genereer" },

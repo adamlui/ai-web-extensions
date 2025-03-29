@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "সম্প্রসারিত করুন" },
   "tooltip_shrink": { "message": "সংকুচিত করা" },
   "tooltip_close": { "message": "বন্ধ করুন" },
-  "tooltip_shareConvo": { "message": "কথোপকথন শেয়ার করুন" },
   "tooltip_copy": { "message": "কপি করুন" },
   "tooltip_generate": { "message": "জেনারেট করুন" },
   "tooltip_generating": { "message": "জেনারেট করা হচ্ছে" },

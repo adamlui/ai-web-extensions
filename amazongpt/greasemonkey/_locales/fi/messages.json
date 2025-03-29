@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Laajenna" },
   "tooltip_shrink": { "message": "Kutista" },
   "tooltip_close": { "message": "Sulje" },
-  "tooltip_shareConvo": { "message": "Jaa keskustelu" },
   "tooltip_copy": { "message": "Kopioi" },
   "tooltip_generate": { "message": "Muodosta" },
   "tooltip_generating": { "message": "Luodaan…" },

@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Despregar" },
   "tooltip_shrink": { "message": "Reducir" },
   "tooltip_close": { "message": "Pechar" },
-  "tooltip_shareConvo": { "message": "Conversa Compartir" },
   "tooltip_copy": { "message": "Copiar" },
   "tooltip_generate": { "message": "Xerado" },
   "tooltip_generating": { "message": "a xerarLinking object files into a library or executable" },

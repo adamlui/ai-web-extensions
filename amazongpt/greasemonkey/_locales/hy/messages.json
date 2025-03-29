@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Տարածել" },
   "tooltip_shrink": { "message": "Նեղանալ" },
   "tooltip_close": { "message": "Փակել" },
-  "tooltip_shareConvo": { "message": "Կիսվել զրույցով" },
   "tooltip_copy": { "message": "Պատճենել" },
   "tooltip_generate": { "message": "Կատարել" },
   "tooltip_generating": { "message": "Ստեղծում" },

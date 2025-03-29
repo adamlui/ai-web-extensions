@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.28.7
+// @version                2025.3.29
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -134,7 +134,7 @@
             support: 'https://amazongpt.kudoai.com/issues',
             update: 'https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js'
         },
-        latestResourceCommitHash: 'bdc6a20' // for cached messages.json
+        latestResourceCommitHash: 'f79bc5c' // for cached messages.json
     }
     app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
                           + `@${app.latestResourceCommitHash}`
@@ -179,7 +179,6 @@
         tooltip_regenerating: 'Regenerating',
         tooltip_play: 'Play',
         tooltip_playing: 'Playing',
-        tooltip_html: 'HTML',
         tooltip_reply: 'Reply',
         tooltip_code: 'Code',
         tooltip_generatingAudio: 'Generating audio',

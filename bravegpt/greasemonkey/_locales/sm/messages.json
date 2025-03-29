@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Faalauteleina" },
   "tooltip_shrink": { "message": "Shrink" },
   "tooltip_close": { "message": "Tapuni" },
-  "tooltip_shareConvo": { "message": "Faasoa talanoaga" },
   "tooltip_copy": { "message": "Kopi" },
   "tooltip_generate": { "message": "Faatupuina" },
   "tooltip_generating": { "message": "Faatupuina" },

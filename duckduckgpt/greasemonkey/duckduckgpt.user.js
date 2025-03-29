@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.28.7
+// @version                2025.3.29
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -263,7 +263,7 @@
             support: 'https://support.ddgpt.com',
             update: 'https://gm.ddgpt.com'
         },
-        latestResourceCommitHash: '7a3a292' // for cached messages.json
+        latestResourceCommitHash: '8764a4b' // for cached messages.json
     }
     app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
                           + `@${app.latestResourceCommitHash}`
@@ -325,7 +325,6 @@
         tooltip_regenerating: 'Regenerating',
         tooltip_play: 'Play',
         tooltip_playing: 'Playing',
-        tooltip_html: 'HTML',
         tooltip_reply: 'Reply',
         tooltip_code: 'Code',
         tooltip_generatingAudio: 'Generating audio',
@@ -3269,7 +3268,7 @@
               : btnType == 'arrows' ? ( config.expanded ? `${app.msgs.tooltip_shrink}`
                                                         : `${app.msgs.tooltip_expand}` )
               : btnType == 'share' ? (
-                    btn.style.animation ? `${app.msgs.tooltip_generating} ${app.msgs.tooltip_html}...`
+                    btn.style.animation ? `${app.msgs.tooltip_generating} HTML...`
                                         : app.msgs.tooltip_shareConvo )
               : btnType == 'copy' ? (
                     btn.firstChild.id.includes('-copy-') ?

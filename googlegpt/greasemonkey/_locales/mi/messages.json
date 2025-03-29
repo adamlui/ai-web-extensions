@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Whakanuia" },
   "tooltip_shrink": { "message": "Whakarewa" },
   "tooltip_close": { "message": "Whakamoe&#x0D;" },
-  "tooltip_shareConvo": { "message": "Whakawhitiwhiti kōrerorero" },
   "tooltip_copy": { "message": "Tārua" },
   "tooltip_generate": { "message": "Whakanuia" },
   "tooltip_generating": { "message": "Te whakaputa" },

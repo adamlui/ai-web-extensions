@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Atolosa" },
   "tooltip_shrink": { "message": "Khutshwane" },
   "tooltip_close": { "message": "Tswala" },
-  "tooltip_shareConvo": { "message": "Go tlotla le mongwe" },
   "tooltip_copy": { "message": "Khopi" },
   "tooltip_generate": { "message": "Generate" },
   "tooltip_generating": { "message": "Go dira ditlhagiso" },

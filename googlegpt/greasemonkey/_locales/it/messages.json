@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Espansione" },
   "tooltip_shrink": { "message": "Restringi" },
   "tooltip_close": { "message": "Chiudere" },
-  "tooltip_shareConvo": { "message": "Condividi con conversazione" },
   "tooltip_copy": { "message": "Copy" },
   "tooltip_generate": { "message": "Genera" },
   "tooltip_generating": { "message": "Creazione in corso" },

@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Густариш додан" },
   "tooltip_shrink": { "message": "Шакл" },
   "tooltip_close": { "message": "Пӯшидан" },
-  "tooltip_shareConvo": { "message": "Мубодилаи гуфтугӯ" },
   "tooltip_copy": { "message": "Нусха бардоштан" },
   "tooltip_generate": { "message": "& Генерирондан" },
   "tooltip_generating": { "message": "Генератор" },

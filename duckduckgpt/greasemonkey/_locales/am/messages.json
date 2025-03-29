@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "አይስላንድ" },
   "tooltip_shrink": { "message": "Shrink" },
   "tooltip_close": { "message": "ዝጋ" },
-  "tooltip_shareConvo": { "message": "ውይይት ያጋሩ" },
   "tooltip_copy": { "message": "ቅጂ" },
   "tooltip_generate": { "message": "ያመነጩ" },
   "tooltip_generating": { "message": "ማመንጨት" },

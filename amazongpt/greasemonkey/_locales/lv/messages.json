@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Izvērst" },
   "tooltip_shrink": { "message": "Samazināt" },
   "tooltip_close": { "message": "Aizvērt" },
-  "tooltip_shareConvo": { "message": "Dalīties sarunā" },
   "tooltip_copy": { "message": "Kopēt" },
   "tooltip_generate": { "message": "Ģenerēt" },
   "tooltip_generating": { "message": "Notiek ģenerēšana" },

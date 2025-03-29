@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Pagpalapad" },
   "tooltip_shrink": { "message": "Pagminus" },
   "tooltip_close": { "message": "Duol" },
-  "tooltip_shareConvo": { "message": "Ipakigbahin ang panag-istoryahan" },
   "tooltip_copy": { "message": "Kopya" },
   "tooltip_generate": { "message": "Generate" },
   "tooltip_generating": { "message": "Generasyon" },

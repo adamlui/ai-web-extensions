@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "विस्तार" },
   "tooltip_shrink": { "message": "सिकोड़ें" },
   "tooltip_close": { "message": "बंद करें" },
-  "tooltip_shareConvo": { "message": "बातचीत शेयर करें" },
   "tooltip_copy": { "message": "नाम पर्ची" },
   "tooltip_generate": { "message": "उत्पन्न करें" },
   "tooltip_generating": { "message": "जनरेट हो रहा है" },

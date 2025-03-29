@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "విస్తరించు" },
   "tooltip_shrink": { "message": "కుదించు" },
   "tooltip_close": { "message": "క్లోజ్ చేయండి" },
-  "tooltip_shareConvo": { "message": "సంభాషణను పంచుకోండి" },
   "tooltip_copy": { "message": "కాపీ చేయండి" },
   "tooltip_generate": { "message": "ఉత్పత్తి చేయండి" },
   "tooltip_generating": { "message": "ఉత్పత్తి చేస్తోంది" },

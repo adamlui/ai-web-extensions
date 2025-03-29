@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "展開" },
   "tooltip_shrink": { "message": "縮小" },
   "tooltip_close": { "message": "關閉" },
-  "tooltip_shareConvo": { "message": "分享對話" },
   "tooltip_copy": { "message": "複製" },
   "tooltip_generate": { "message": "生成" },
   "tooltip_generating": { "message": "正在生成" },

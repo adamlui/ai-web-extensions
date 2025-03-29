@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "ठूलो बनाउनु" },
   "tooltip_shrink": { "message": "खुम्चाउनुहोस्" },
   "tooltip_close": { "message": "बन्द गर्नुहोस्" },
-  "tooltip_shareConvo": { "message": "कुराकानी साझा गर्नुहोस्" },
   "tooltip_copy": { "message": "सार्नुहोस्" },
   "tooltip_generate": { "message": "उत्पन्न गर्नुहोस्" },
   "tooltip_generating": { "message": "उत्पन्न हुँदैछ" },

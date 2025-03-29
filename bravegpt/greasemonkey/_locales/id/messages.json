@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Tampilkan" },
   "tooltip_shrink": { "message": "Perkecil" },
   "tooltip_close": { "message": "Tutup" },
-  "tooltip_shareConvo": { "message": "Bagikan kode percakapan" },
   "tooltip_copy": { "message": "Salin" },
   "tooltip_generate": { "message": "Buat" },
   "tooltip_generating": { "message": "Membangkitkan" },

@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "පුළුල් කරන්න" },
   "tooltip_shrink": { "message": "හැකිලෙනවා" },
   "tooltip_close": { "message": "වසන්න" },
-  "tooltip_shareConvo": { "message": "සංවාදය බෙදා ගන්න" },
   "tooltip_copy": { "message": "පිටපත් කරන්න" },
   "tooltip_generate": { "message": "à·à¶§à·à¶±à·:% 1" },
   "tooltip_generating": { "message": "ජනනය කරමින් පවතී" },

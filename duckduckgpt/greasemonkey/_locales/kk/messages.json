@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Тарқату" },
   "tooltip_shrink": { "message": "Жиыру" },
   "tooltip_close": { "message": "Жабу" },
-  "tooltip_shareConvo": { "message": "Әңгімені бөлісу" },
   "tooltip_copy": { "message": "Көшіру" },
   "tooltip_generate": { "message": "Құру" },
   "tooltip_generating": { "message": "Жасау" },

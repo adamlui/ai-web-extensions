@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Utvid" },
   "tooltip_shrink": { "message": "Krymp" },
   "tooltip_close": { "message": "Lukk" },
-  "tooltip_shareConvo": { "message": "Del samtale" },
   "tooltip_copy": { "message": "Kopier" },
   "tooltip_generate": { "message": "Generer" },
   "tooltip_generating": { "message": "Genererer" },

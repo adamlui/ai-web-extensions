@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "توسيع" },
   "tooltip_shrink": { "message": "مقدار التقلص أو الانكماش" },
   "tooltip_close": { "message": "إغلاق" },
-  "tooltip_shareConvo": { "message": "مشاركة مع المحادثة" },
   "tooltip_copy": { "message": "‫نسخ‬" },
   "tooltip_generate": { "message": "توليد" },
   "tooltip_generating": { "message": "مولد كهربائي ، مولد طاقة" },

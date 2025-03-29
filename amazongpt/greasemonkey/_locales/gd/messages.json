@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Leudaich" },
   "tooltip_shrink": { "message": "Crùb" },
   "tooltip_close": { "message": "Dùin" },
-  "tooltip_shareConvo": { "message": "Co - roinn còmhradh" },
   "tooltip_copy": { "message": "Dèan lethbhreac" },
   "tooltip_generate": { "message": "Gin" },
   "tooltip_generating": { "message": "A 'gineadh" },

@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "agrandi" },
   "tooltip_shrink": { "message": "Retresi" },
   "tooltip_close": { "message": "Fèmen" },
-  "tooltip_shareConvo": { "message": "Pataje konvèsasyon" },
   "tooltip_copy": { "message": "Kopi" },
   "tooltip_generate": { "message": "jenere/générer" },
   "tooltip_generating": { "message": "Jenere" },

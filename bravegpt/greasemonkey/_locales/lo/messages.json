@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "ຂະຫຍາຍ" },
   "tooltip_shrink": { "message": "ຫຍໍ້" },
   "tooltip_close": { "message": "ປິດ" },
-  "tooltip_shareConvo": { "message": "ແບ່ງປັນການສົນທະນາ" },
   "tooltip_copy": { "message": "ສຳເນົາ" },
   "tooltip_generate": { "message": "Generate" },
   "tooltip_generating": { "message": "ການສ້າງ" },

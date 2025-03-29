@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "ពង្រីក" },
   "tooltip_shrink": { "message": "បង្រួម" },
   "tooltip_close": { "message": "បិទ​" },
-  "tooltip_shareConvo": { "message": "ចែករំលែកការសន្ទនា" },
   "tooltip_copy": { "message": "ចម្លង​" },
   "tooltip_generate": { "message": "បង្កើត" },
   "tooltip_generating": { "message": "បង្កើត" },

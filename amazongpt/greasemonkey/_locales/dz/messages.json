@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "རྒྱ་སྐྱེད་འབད་" },
   "tooltip_shrink": { "message": "སེངྒེ་" },
   "tooltip_close": { "message": "སྒོ་བསྡམས་" },
-  "tooltip_shareConvo": { "message": "- གྲོས་བསྡུར་འབད་ནི་" },
   "tooltip_copy": { "message": "འདྲ་བཤུས་" },
   "tooltip_generate": { "message": "ཐོན་སྐྱེད་འབད་" },
   "tooltip_generating": { "message": "འབྱུང་ཁུངས།" },

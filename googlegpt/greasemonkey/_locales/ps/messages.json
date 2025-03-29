@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "پراخ کړئ" },
   "tooltip_shrink": { "message": "غونجول" },
   "tooltip_close": { "message": "بندول" },
-  "tooltip_shareConvo": { "message": "خبرې شریک کړئ" },
   "tooltip_copy": { "message": "...لمېسل_" },
   "tooltip_generate": { "message": "تولید کړئ" },
   "tooltip_generating": { "message": "تولیدول" },

@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Прошири" },
   "tooltip_shrink": { "message": "Smanji" },
   "tooltip_close": { "message": "Zatvori" },
-  "tooltip_shareConvo": { "message": "Делите са разговором" },
   "tooltip_copy": { "message": "Kopiraj" },
   "tooltip_generate": { "message": "Generiši" },
   "tooltip_generating": { "message": "Generisanje" },

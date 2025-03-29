@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "توسیع" },
   "tooltip_shrink": { "message": "سکڑیں" },
   "tooltip_close": { "message": "بند" },
-  "tooltip_shareConvo": { "message": "گفتگو کا اشتراک کریں" },
   "tooltip_copy": { "message": "کاپی کریں" },
   "tooltip_generate": { "message": "بنائیں" },
   "tooltip_generating": { "message": "بنا رہا" },

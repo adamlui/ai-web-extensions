@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Dangos" },
   "tooltip_shrink": { "message": "Lleihau" },
   "tooltip_close": { "message": "Cau" },
-  "tooltip_shareConvo": { "message": "Rhannu sgwrs" },
   "tooltip_copy": { "message": "Copïo" },
   "tooltip_generate": { "message": "Creu" },
   "tooltip_generating": { "message": "Yn cynhyrchu" },

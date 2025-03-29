@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Expandera" },
   "tooltip_shrink": { "message": "Krympa" },
   "tooltip_close": { "message": "Stäng" },
-  "tooltip_shareConvo": { "message": "Dela konversation" },
   "tooltip_copy": { "message": "Kopiera" },
   "tooltip_generate": { "message": "Generera" },
   "tooltip_generating": { "message": "Genererar" },

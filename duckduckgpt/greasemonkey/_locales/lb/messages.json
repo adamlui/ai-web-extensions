@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Erweideren" },
   "tooltip_shrink": { "message": "Verréngeren" },
   "tooltip_close": { "message": "Zoumaachen" },
-  "tooltip_shareConvo": { "message": "Gespréich deelen" },
   "tooltip_copy": { "message": "Kopéieren" },
   "tooltip_generate": { "message": "Generéieren" },
   "tooltip_generating": { "message": "Generéieren" },

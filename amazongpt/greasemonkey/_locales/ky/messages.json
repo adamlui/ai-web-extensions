@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Кеңейтүү" },
   "tooltip_shrink": { "message": "Шринк" },
   "tooltip_close": { "message": "Жабуу" },
-  "tooltip_shareConvo": { "message": "Сүйлөшүүнү бөлүшүү" },
   "tooltip_copy": { "message": "Копиялоо" },
   "tooltip_generate": { "message": "Түзүү" },
   "tooltip_generating": { "message": "Генерациялоо" },

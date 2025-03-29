@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Agura" },
   "tooltip_shrink": { "message": "Kugabanuka" },
   "tooltip_close": { "message": "Gufunga" },
-  "tooltip_shareConvo": { "message": "Gusangiza ikiganiro" },
   "tooltip_copy": { "message": "Gukoporora" },
   "tooltip_generate": { "message": "Gradient-editor-action" },
   "tooltip_generating": { "message": "Gradient-editor-action" },

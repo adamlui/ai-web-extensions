@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Genişləndir" },
   "tooltip_shrink": { "message": "Sıxlaşdır" },
   "tooltip_close": { "message": "Bağla" },
-  "tooltip_shareConvo": { "message": "Söhbəti paylaşın" },
   "tooltip_copy": { "message": "Kopyala" },
   "tooltip_generate": { "message": "Yarat" },
   "tooltip_generating": { "message": "Yaradılır" },

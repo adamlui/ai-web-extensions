@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "הרחבה" },
   "tooltip_shrink": { "message": "חדות" },
   "tooltip_close": { "message": "סגירה" },
-  "tooltip_shareConvo": { "message": "שיתוף שיחה" },
   "tooltip_copy": { "message": "העתקה" },
   "tooltip_generate": { "message": "יצירה" },
   "tooltip_generating": { "message": "יוצר" },

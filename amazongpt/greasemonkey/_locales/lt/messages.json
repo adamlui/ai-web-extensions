@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Išskleisti" },
   "tooltip_shrink": { "message": "Sinusas" },
   "tooltip_close": { "message": "Užverti" },
-  "tooltip_shareConvo": { "message": "Dalytis pokalbiu" },
   "tooltip_copy": { "message": "Kopijuoti" },
   "tooltip_generate": { "message": "Generuoti" },
   "tooltip_generating": { "message": "Generuojama" },

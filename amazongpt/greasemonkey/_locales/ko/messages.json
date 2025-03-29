@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "펼치기" },
   "tooltip_shrink": { "message": "Shrink" },
   "tooltip_close": { "message": "닫기" },
-  "tooltip_shareConvo": { "message": "대화 공유하기" },
   "tooltip_copy": { "message": "복사" },
   "tooltip_generate": { "message": "생성" },
   "tooltip_generating": { "message": "생성 중" },

@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "ချဲ့ထွင်ပါ" },
   "tooltip_shrink": { "message": "ကျုံ့ပါ" },
   "tooltip_close": { "message": "ပိတ်ရန်" },
-  "tooltip_shareConvo": { "message": "စကားပြောဆိုမှုကို မျှဝေပါ" },
   "tooltip_copy": { "message": "မိတ္တူကို" },
   "tooltip_generate": { "message": "ထုတ်ယူမည်" },
   "tooltip_generating": { "message": "ထုတ်ယူနေသည်" },

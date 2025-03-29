@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Nyújt" },
   "tooltip_shrink": { "message": "Zsugorítás" },
   "tooltip_close": { "message": "Bezárás" },
-  "tooltip_shareConvo": { "message": "Beszélgetés megosztása" },
   "tooltip_copy": { "message": "Másolja" },
   "tooltip_generate": { "message": "Generálás" },
   "tooltip_generating": { "message": "Generálás…." },

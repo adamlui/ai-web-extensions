@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "გაფართოება" },
   "tooltip_shrink": { "message": "დაპატარავება" },
   "tooltip_close": { "message": "დაკეტვა" },
-  "tooltip_shareConvo": { "message": "Მიმოწერის გაზიარება" },
   "tooltip_copy": { "message": "copy" },
   "tooltip_generate": { "message": "გენერაცია" },
   "tooltip_generating": { "message": "გენერაცია" },

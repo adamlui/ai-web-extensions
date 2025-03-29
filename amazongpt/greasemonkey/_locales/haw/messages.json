@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Hoʻonui" },
   "tooltip_shrink": { "message": "Hoʻoemi" },
   "tooltip_close": { "message": "Pani" },
-  "tooltip_shareConvo": { "message": "Kaʻana kamaʻilio" },
   "tooltip_copy": { "message": "kope" },
   "tooltip_generate": { "message": "Hanau" },
   "tooltip_generating": { "message": "Hoʻohua" },

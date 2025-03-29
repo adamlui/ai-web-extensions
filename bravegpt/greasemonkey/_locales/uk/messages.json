@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Розгорнути" },
   "tooltip_shrink": { "message": "стискатися" },
   "tooltip_close": { "message": "Закрити" },
-  "tooltip_shareConvo": { "message": "Поділитися розмовою" },
   "tooltip_copy": { "message": "Копіювати" },
   "tooltip_generate": { "message": "Згенерувати" },
   "tooltip_generating": { "message": "утворенняLinking object files into a library or executable" },

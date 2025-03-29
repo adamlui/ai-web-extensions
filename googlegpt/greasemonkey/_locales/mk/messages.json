@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Прошири" },
   "tooltip_shrink": { "message": "Психијатар" },
   "tooltip_close": { "message": "Затвори" },
-  "tooltip_shareConvo": { "message": "Споделете го разговорот" },
   "tooltip_copy": { "message": "Копирај" },
   "tooltip_generate": { "message": "& Генерирај" },
   "tooltip_generating": { "message": "Генерирање" },

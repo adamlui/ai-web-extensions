@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Stækka" },
   "tooltip_shrink": { "message": "Gildi" },
   "tooltip_close": { "message": "Loka" },
-  "tooltip_shareConvo": { "message": "Deila samtali" },
   "tooltip_copy": { "message": "Afrita" },
   "tooltip_generate": { "message": "Búa til lyklapar" },
   "tooltip_generating": { "message": "Bý til" },

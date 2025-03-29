@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "വലുതാക്കുക" },
   "tooltip_shrink": { "message": "ചുരുക്കുക" },
   "tooltip_close": { "message": "ക്ലോസ് ചെയ്യുക" },
-  "tooltip_shareConvo": { "message": "സംഭാഷണം പങ്കിടുക" },
   "tooltip_copy": { "message": "പക‍ര്പ്പ്" },
   "tooltip_generate": { "message": "ജനറേറ്റുചെയ്യുക" },
   "tooltip_generating": { "message": "സൃഷ്ടിക്കുന്നു" },

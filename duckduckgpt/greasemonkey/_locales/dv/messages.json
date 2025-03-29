@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "އިތުރުކުރުން" },
   "tooltip_shrink": { "message": "ކުޑަވުން" },
   "tooltip_close": { "message": "ލެއްޕުން" },
-  "tooltip_shareConvo": { "message": "ވާހަކަ ހިއްސާކުރުން" },
   "tooltip_copy": { "message": "(ކޮޕީ)" },
   "tooltip_generate": { "message": "ޖެނެރޭޓް" },
   "tooltip_generating": { "message": "ޖެނެރޭޓް ކުރަމުންނެވެ" },

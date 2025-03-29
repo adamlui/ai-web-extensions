@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "ਫੈਲਾਓ" },
   "tooltip_shrink": { "message": "ਸੁੰਘਡ਼ੋ" },
   "tooltip_close": { "message": "ਬੰਦ" },
-  "tooltip_shareConvo": { "message": "ਗੱਲਬਾਤ ਸਾਂਝੀ ਕਰੋ" },
   "tooltip_copy": { "message": "ਕਾਪੀ" },
   "tooltip_generate": { "message": "ਬਣਾਓ" },
   "tooltip_generating": { "message": "ਤਿਆਰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ" },

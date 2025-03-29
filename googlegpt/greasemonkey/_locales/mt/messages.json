@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Stat Membru" },
   "tooltip_shrink": { "message": "Niżżel" },
   "tooltip_close": { "message": "Agħlaq" },
-  "tooltip_shareConvo": { "message": "Aqsam il-konverżazzjoni mal-" },
   "tooltip_copy": { "message": "Ikkopja" },
   "tooltip_generate": { "message": "Iġġenera" },
   "tooltip_generating": { "message": "Qed jiġġenera" },

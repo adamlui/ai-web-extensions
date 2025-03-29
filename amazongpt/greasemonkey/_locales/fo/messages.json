@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Útbyggja" },
   "tooltip_shrink": { "message": "Skríggja" },
   "tooltip_close": { "message": "Sløkk" },
-  "tooltip_shareConvo": { "message": "Deil samrøður" },
   "tooltip_copy": { "message": "Avrita" },
   "tooltip_generate": { "message": "Generera" },
   "tooltip_generating": { "message": "Framleiðsla" },

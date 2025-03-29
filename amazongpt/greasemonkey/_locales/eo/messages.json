@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Etendi" },
   "tooltip_shrink": { "message": "Ŝrumpi" },
   "tooltip_close": { "message": "Fermi" },
-  "tooltip_shareConvo": { "message": "Dividi konversacion" },
   "tooltip_copy": { "message": "Kopii" },
   "tooltip_generate": { "message": "& Generi" },
   "tooltip_generating": { "message": "Generante" },

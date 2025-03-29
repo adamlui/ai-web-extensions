@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Өргөтгөх" },
   "tooltip_shrink": { "message": "Буурах" },
   "tooltip_close": { "message": "Хаах" },
-  "tooltip_shareConvo": { "message": "Ярилцлагыг хуваалцах" },
   "tooltip_copy": { "message": "Хуулах" },
   "tooltip_generate": { "message": "Үүсгэх" },
   "tooltip_generating": { "message": "Үүсгэх" },

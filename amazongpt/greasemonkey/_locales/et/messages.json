@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Laienda" },
   "tooltip_shrink": { "message": "Kahandamine" },
   "tooltip_close": { "message": "Sulge" },
-  "tooltip_shareConvo": { "message": "Jaga vestlust" },
   "tooltip_copy": { "message": "Kopeeri" },
   "tooltip_generate": { "message": "Loo raport" },
   "tooltip_generating": { "message": "Genereerimine" },

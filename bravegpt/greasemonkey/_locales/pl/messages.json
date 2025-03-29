@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Rozwiń" },
   "tooltip_shrink": { "message": "Straty towaru" },
   "tooltip_close": { "message": "Zamknij" },
-  "tooltip_shareConvo": { "message": "Udostępnij w rozmowie" },
   "tooltip_copy": { "message": "Skopiuj" },
   "tooltip_generate": { "message": "Generuj" },
   "tooltip_generating": { "message": "Generowanie " },

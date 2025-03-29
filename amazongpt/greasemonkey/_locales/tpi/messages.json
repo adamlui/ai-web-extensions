@@ -32,7 +32,6 @@
   "tooltip_expand": { "message": "Wok long go bikpela" },
   "tooltip_shrink": { "message": "Skim" },
   "tooltip_close": { "message": "Klostu" },
-  "tooltip_shareConvo": { "message": "Toktok wantaim" },
   "tooltip_copy": { "message": "Salim kopi i go long klipbod / kopi" },
   "tooltip_generate": { "message": "Genereer" },
   "tooltip_generating": { "message": "Wokim" },

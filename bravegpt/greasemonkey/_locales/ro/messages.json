@@ -49,7 +49,6 @@
   "tooltip_expand": { "message": "Extindere" },
   "tooltip_shrink": { "message": "Micsora" },
   "tooltip_close": { "message": "Închideți" },
-  "tooltip_shareConvo": { "message": "Distribuie conversația" },
   "tooltip_copy": { "message": "Copiere" },
   "tooltip_generate": { "message": "Generaţi" },
   "tooltip_generating": { "message": "în curs de generare" },
