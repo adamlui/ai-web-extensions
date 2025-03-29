@@ -121,7 +121,7 @@ window.buttons = {
              && !(type == 'widescreen' && chatgpt.canvasIsOpen()))
         },
 
-        visible() { // used in tooltip.update() + chatbar.tweak() for horizontal math
+        visible() { // used in chatbar.tweak() for horizontal math
             return this.valid().filter(type => !(type == 'newChat' && config.ncbDisabled)) }
     },
 
