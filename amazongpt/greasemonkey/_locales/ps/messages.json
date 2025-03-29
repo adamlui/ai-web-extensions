@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "وغږوئ" },
   "tooltip_playing": { "message": "غږيږي" },
   "tooltip_page": { "message": "پاڼه  " },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "ځواب ورکړه" },
   "tooltip_code": { "message": "کوډ" },
   "tooltip_generatingAudio": { "message": "د غږ جوړول" },

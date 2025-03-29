@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "ကစားခြင်း" },
   "tooltip_playing": { "message": "ကစားခြင်း" },
   "tooltip_page": { "message": "Page" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "ပြန်ပြောပါ" },
   "tooltip_code": { "message": "Code" },
   "tooltip_generatingAudio": { "message": "အသံကို ထုတ်ယူနေသည်" },

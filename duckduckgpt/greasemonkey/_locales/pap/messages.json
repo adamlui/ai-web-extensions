@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "Wega" },
   "tooltip_playing": { "message": "Hunga" },
   "tooltip_page": { "message": "Página" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Kontesta" },
   "tooltip_code": { "message": "Kódigo" },
   "tooltip_generatingAudio": { "message": "Generacion Audio" },

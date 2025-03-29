@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "Mängi" },
   "tooltip_playing": { "message": "Mängin" },
   "tooltip_page": { "message": "Lehekülg" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Vasta" },
   "tooltip_code": { "message": "Kood" },
   "tooltip_generatingAudio": { "message": "Heli genereerimine" },

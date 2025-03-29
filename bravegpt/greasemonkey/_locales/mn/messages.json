@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "Тоглуулах" },
   "tooltip_playing": { "message": "Тоглох" },
   "tooltip_page": { "message": "Хуудас" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Хариулах" },
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Аудио боловсруулах" },

@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "መጫወት" },
   "tooltip_playing": { "message": "በመጫወት ላይ" },
   "tooltip_page": { "message": "ገጽ " },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "መልስ ይስጡ" },
   "tooltip_code": { "message": "ኮድ" },
   "tooltip_generatingAudio": { "message": "ኦዲዮ ማመንጨት" },

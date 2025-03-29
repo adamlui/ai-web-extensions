@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Hrát" },
   "tooltip_playing": { "message": "Hraje" },
   "tooltip_page": { "message": "Stránka" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Odpovědět" },
   "tooltip_code": { "message": "Kód" },
   "tooltip_generatingAudio": { "message": "Generování zvuku" },

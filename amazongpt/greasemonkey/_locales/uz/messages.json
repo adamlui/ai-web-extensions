@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Oʻynash" },
   "tooltip_playing": { "message": "Oʻynamoqda" },
   "tooltip_page": { "message": "Sahifa" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Ответить" },
   "tooltip_code": { "message": "Kod" },
   "tooltip_generatingAudio": { "message": "Audio yaratish" },

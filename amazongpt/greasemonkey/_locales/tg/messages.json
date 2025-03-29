@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Пахш кардан" },
   "tooltip_playing": { "message": "Дар ҳоли пахш" },
   "tooltip_page": { "message": "Саҳифа" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "& Ð£ÑÑÐ¾Ð´Ð¸ Ð·Ð¸Ð´Ð´Ð¸ ÑÐ¿Ð°Ð¼" },
   "tooltip_code": { "message": "Рамз" },
   "tooltip_generatingAudio": { "message": "Тавлиди аудио" },

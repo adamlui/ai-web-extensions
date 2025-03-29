@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "播放" },
   "tooltip_playing": { "message": "正在播放" },
   "tooltip_page": { "message": "頁" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "回覆" },
   "tooltip_code": { "message": "代碼" },
   "tooltip_generatingAudio": { "message": "正在產生音訊" },

@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "Toista" },
   "tooltip_playing": { "message": "Pelaa" },
   "tooltip_page": { "message": "Sivu" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Vastaus" },
   "tooltip_code": { "message": "Koodi" },
   "tooltip_generatingAudio": { "message": "Luodaan ääntä" },

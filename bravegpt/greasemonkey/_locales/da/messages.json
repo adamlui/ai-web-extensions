@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "Afspil" },
   "tooltip_playing": { "message": "Spiller" },
   "tooltip_page": { "message": "Side" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Svar" },
   "tooltip_code": { "message": "Kode" },
   "tooltip_generatingAudio": { "message": "Genererer lyd" },

@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "ຫຼິ້ນ" },
   "tooltip_playing": { "message": "ຫຼີ້ນ" },
   "tooltip_page": { "message": "ໜ້າ" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "ຕອບ" },
   "tooltip_code": { "message": "ລະຫັດ" },
   "tooltip_generatingAudio": { "message": "ການສ້າງສຽງ" },

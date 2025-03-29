@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Խաղալ" },
   "tooltip_playing": { "message": "Խաղում ենք" },
   "tooltip_page": { "message": "Էջ" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Պատասխանել" },
   "tooltip_code": { "message": "Միավորի բանալի" },
   "tooltip_generatingAudio": { "message": "Ձայնի ստեղծում" },

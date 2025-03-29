@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Predvajaj" },
   "tooltip_playing": { "message": "Predvajanje" },
   "tooltip_page": { "message": "Stran" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Odgovori" },
   "tooltip_code": { "message": "Šifra" },
   "tooltip_generatingAudio": { "message": "Ustvarjanje zvoka" },

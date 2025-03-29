@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "Prehrať" },
   "tooltip_playing": { "message": "Prehrávanie" },
   "tooltip_page": { "message": "Page" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Odpovedať" },
   "tooltip_code": { "message": "Kód" },
   "tooltip_generatingAudio": { "message": "Generovanie zvuku" },

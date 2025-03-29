@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Играй" },
   "tooltip_playing": { "message": "Изпълнение" },
   "tooltip_page": { "message": "Страница" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Отговор" },
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Генериране на аудио" },

@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Ойноту" },
   "tooltip_playing": { "message": "Азыр ойнотулат" },
   "tooltip_page": { "message": "Page" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Жооп" },
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Аудиону түзүү" },

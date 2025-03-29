@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Chơi" },
   "tooltip_playing": { "message": "Đang chơi" },
   "tooltip_page": { "message": "Trang" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Trả lời" },
   "tooltip_code": { "message": "Mã" },
   "tooltip_generatingAudio": { "message": "Đang tạo âm thanh" },

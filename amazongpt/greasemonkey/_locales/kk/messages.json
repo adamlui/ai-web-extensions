@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Ойнау" },
   "tooltip_playing": { "message": "Ойнату" },
   "tooltip_page": { "message": "Беті" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Жауап" },
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Аудио жасау" },

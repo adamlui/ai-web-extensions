@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Juga" },
   "tooltip_playing": { "message": "Jocs" },
   "tooltip_page": { "message": "Pàgina" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Respondre" },
   "tooltip_code": { "message": "Codi" },
   "tooltip_generatingAudio": { "message": "S'està generant l'àudio" },

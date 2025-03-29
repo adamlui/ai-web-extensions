@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "തുടരുക" },
   "tooltip_playing": { "message": "കളിക്കുന്നു" },
   "tooltip_page": { "message": "താള്‍" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "മറുപടി" },
   "tooltip_code": { "message": "കോഡ്" },
   "tooltip_generatingAudio": { "message": "ഓഡിയോ ജനറേറ്റുചെയ്യുന്നു" },

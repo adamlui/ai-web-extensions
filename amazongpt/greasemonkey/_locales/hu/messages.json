@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Játék" },
   "tooltip_playing": { "message": "Játék" },
   "tooltip_page": { "message": "Oldal" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Válasz" },
   "tooltip_code": { "message": "Termékkód" },
   "tooltip_generatingAudio": { "message": "Hang létrehozása" },

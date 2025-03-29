@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "ಪ್ಲೇ" },
   "tooltip_playing": { "message": "ಚಲಾಯಿಸಲಾಗುತ್ತಿದೆ" },
   "tooltip_page": { "message": "ಪುಟ" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "ಪ್ರತ್ಯುತ್ತರಿಸಿ" },
   "tooltip_code": { "message": "ಕೋಡ್" },
   "tooltip_generatingAudio": { "message": "ಆಡಿಯೋ ರಚಿಸಲಾಗುತ್ತಿದೆ" },

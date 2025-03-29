@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "ప్లే" },
   "tooltip_playing": { "message": "ఆడుతోంది" },
   "tooltip_page": { "message": "పేజీ" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "ఖాళీReload context menu item" },
   "tooltip_code": { "message": "కోడ్" },
   "tooltip_generatingAudio": { "message": "ఆడియోను ఉత్పత్తి చేస్తోంది" },

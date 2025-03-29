@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Грати" },
   "tooltip_playing": { "message": "Бавлення" },
   "tooltip_page": { "message": "Сторінка" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Відповісти" },
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Створення аудіо" },

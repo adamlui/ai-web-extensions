@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "Spela upp" },
   "tooltip_playing": { "message": "Spelar" },
   "tooltip_page": { "message": "Page" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Svara" },
   "tooltip_code": { "message": "Kod" },
   "tooltip_generatingAudio": { "message": "Genererar ljud" },

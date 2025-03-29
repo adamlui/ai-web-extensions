@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Reproducir" },
   "tooltip_playing": { "message": "Reproducindo" },
   "tooltip_page": { "message": "Páx" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Contestar" },
   "tooltip_code": { "message": "Código" },
   "tooltip_generatingAudio": { "message": "A xerar o audio" },

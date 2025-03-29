@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "재생" },
   "tooltip_playing": { "message": "재생 중" },
   "tooltip_page": { "message": "페이지" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "댓글" },
   "tooltip_code": { "message": "코드" },
   "tooltip_generatingAudio": { "message": "오디오 생성 중" },

@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Spēlēties" },
   "tooltip_playing": { "message": "Spēlēšana" },
   "tooltip_page": { "message": "Lapa" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Atbildēt" },
   "tooltip_code": { "message": "Kods" },
   "tooltip_generatingAudio": { "message": "Notiek audio ģenerēšana" },

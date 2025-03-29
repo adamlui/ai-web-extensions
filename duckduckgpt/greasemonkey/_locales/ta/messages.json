@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "A button on a Remote Control" },
   "tooltip_playing": { "message": "இயக்குகிறது" },
   "tooltip_page": { "message": "பக்கம் " },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "பதில்" },
   "tooltip_code": { "message": "குறியீடு" },
   "tooltip_generatingAudio": { "message": "ஆடியோவை உருவாக்குகிறது" },

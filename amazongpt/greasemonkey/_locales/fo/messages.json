@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "spæl" },
   "tooltip_playing": { "message": "Spæl" },
   "tooltip_page": { "message": "Síða" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Svara" },
   "tooltip_code": { "message": "Kota" },
   "tooltip_generatingAudio": { "message": "At skapa ljóð" },

@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "დაკვრა" },
   "tooltip_playing": { "message": "მიმდინარეობს დაკვრა" },
   "tooltip_page": { "message": "გვერდი" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "პასუხი" },
   "tooltip_code": { "message": "კოდი" },
   "tooltip_generatingAudio": { "message": "Აუდიოს გენერაცია" },

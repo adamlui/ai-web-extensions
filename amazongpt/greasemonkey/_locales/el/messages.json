@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Αναπαραγωγή" },
   "tooltip_playing": { "message": "Αναπαράγεται" },
   "tooltip_page": { "message": "Σελίδα" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Απάντηση" },
   "tooltip_code": { "message": "Κωδικός" },
   "tooltip_generatingAudio": { "message": "Δημιουργία ήχου" },

@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "播放" },
   "tooltip_playing": { "message": "播放中" },
   "tooltip_page": { "message": "页面" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "回复" },
   "tooltip_code": { "message": "代码" },
   "tooltip_generatingAudio": { "message": "生成音頻" },

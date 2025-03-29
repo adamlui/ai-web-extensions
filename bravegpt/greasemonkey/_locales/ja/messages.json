@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "プレイ" },
   "tooltip_playing": { "message": "再生中" },
   "tooltip_page": { "message": "ページ" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "返事" },
   "tooltip_code": { "message": "Code" },
   "tooltip_generatingAudio": { "message": "オーディオを生成しています" },

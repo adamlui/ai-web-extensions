@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Redare" },
   "tooltip_playing": { "message": "Redare" },
   "tooltip_page": { "message": "Pag" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Răspunde" },
   "tooltip_code": { "message": "Cod" },
   "tooltip_generatingAudio": { "message": "Se generează sunetul" },

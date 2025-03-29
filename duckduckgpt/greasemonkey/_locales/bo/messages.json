@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "གླུ་གཞས །" },
   "tooltip_playing": { "message": "རྩེད་པ" },
   "tooltip_page": { "message": "ཤོག་ངོས།" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "ལན་འདེབས" },
   "tooltip_code": { "message": "སྦྲེལ་མཐུད" },
   "tooltip_generatingAudio": { "message": "སྒྲ་དབྱངས་བཟོ་བཞིན་པ" },

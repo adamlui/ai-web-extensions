@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "الترفيه" },
   "tooltip_playing": { "message": "الألعاب" },
   "tooltip_page": { "message": "الصفحة" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "الرد" },
   "tooltip_code": { "message": "الكود" },
   "tooltip_generatingAudio": { "message": "توليد الصوت" },

@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "پلے" },
   "tooltip_playing": { "message": "چلا رہا ہے" },
   "tooltip_page": { "message": "صفحہ" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "جواب" },
   "tooltip_code": { "message": "کوڈ" },
   "tooltip_generatingAudio": { "message": "آڈیو جنریٹ ہو رہی ہے" },

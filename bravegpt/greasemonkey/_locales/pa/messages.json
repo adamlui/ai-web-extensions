@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "ਪਲੇ ਕਰੋ" },
   "tooltip_playing": { "message": "ਚੱਲ ਰਿਹਾ ਹੈ" },
   "tooltip_page": { "message": "ਸਫ਼ਾ" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Responder" },
   "tooltip_code": { "message": "&#x09;&#x09;ਕੋਡ" },
   "tooltip_generatingAudio": { "message": "ਆਡੀਓ ਤਿਆਰ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ" },

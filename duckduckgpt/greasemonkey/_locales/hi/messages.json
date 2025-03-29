@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "चलाएं" },
   "tooltip_playing": { "message": "बजाया जा रहा है" },
   "tooltip_page": { "message": "पृष्ठ" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "जवाब" },
   "tooltip_code": { "message": "कोड" },
   "tooltip_generatingAudio": { "message": "ऑडियो जनरेट किया जा रहा है" },

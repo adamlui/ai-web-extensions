@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "Chwarae" },
   "tooltip_playing": { "message": "Yn chwarae" },
   "tooltip_page": { "message": "Tudalen" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Ateb" },
   "tooltip_code": { "message": "Côd" },
   "tooltip_generatingAudio": { "message": "Cynhyrchu sain" },

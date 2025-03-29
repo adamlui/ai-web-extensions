@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "Воспроизведение" },
   "tooltip_playing": { "message": "Воспроизведение" },
   "tooltip_page": { "message": "Страница" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Ответ" },
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Генерирование звука" },

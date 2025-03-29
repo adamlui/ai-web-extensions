@@ -41,7 +41,6 @@
   "tooltip_play": { "message": "Paleisti" },
   "tooltip_playing": { "message": "Leidžiama" },
   "tooltip_page": { "message": "Puslapis" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Atsakyti" },
   "tooltip_code": { "message": "Kodas" },
   "tooltip_generatingAudio": { "message": "Generuojamas garsas" },

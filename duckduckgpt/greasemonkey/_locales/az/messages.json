@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "Oyna" },
   "tooltip_playing": { "message": "Çal" },
   "tooltip_page": { "message": "Səhifə" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Cavab" },
   "tooltip_code": { "message": "Kodu" },
   "tooltip_generatingAudio": { "message": "Audio yaradılır" },

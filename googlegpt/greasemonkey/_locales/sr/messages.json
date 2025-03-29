@@ -58,7 +58,6 @@
   "tooltip_play": { "message": "Igraj" },
   "tooltip_playing": { "message": "Пуштање" },
   "tooltip_page": { "message": "Strana" },
-  "tooltip_html": { "message": "HTML" },
   "tooltip_reply": { "message": "Odgovor" },
   "tooltip_code": { "message": "Šifra" },
   "tooltip_generatingAudio": { "message": "Generisanje zvuka" },
