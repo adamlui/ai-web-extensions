@@ -53,7 +53,7 @@
     // Init SETTINGS
     const firstRunKey = `${env.site}_isFirstRun`
     if ((await chrome.storage.local.get(firstRunKey))[firstRunKey] == undefined) { // activate widescreen on install
-        settings.save('wideScreen', true) ; settings.save('isFirstRun', false) }
+        settings.save('widescreen', true) ; settings.save('isFirstRun', false) }
     settings.siteDisabledKeys = Object.keys(sites).map(site => `${site}Disabled`)
     await settings.load('extensionDisabled', ...settings.siteDisabledKeys, ...sites[env.site].availFeatures)
 
@@ -96,13 +96,13 @@
         switch (state.toUpperCase()) {
             case 'ON' : activateMode(mode) ; break
             case 'OFF' : deactivateMode(mode) ; break
-            default : ( mode == 'wideScreen' ? document.head.contains(wideScreenStyle)
+            default : ( mode == 'widescreen' ? document.head.contains(widescreenStyle)
                       : mode == 'fullWindow' ? ui.isFullWin() : chatgpt.isFullScreen() ) ? deactivateMode(mode)
                                                                                          : activateMode(mode)
         }
 
         function activateMode(mode) {
-            if (mode == 'wideScreen') { document.head.append(wideScreenStyle) ; sync.mode('wideScreen') }
+            if (mode == 'widescreen') { document.head.append(widescreenStyle) ; sync.mode('widescreen') }
             else if (mode == 'fullWindow') {
                 const selectors = sites[env.site].selectors,
                       sidebarToggle = document.querySelector(selectors.btns.sidebar)
@@ -114,11 +114,11 @@
                     sidebarsToHide.forEach(({ side, bar }) => { // hide'em
                         if (side == 'left') sidebarToggle.click() ; else bar.style.display = 'none' })
                 } else { document.head.append(fullWinStyle) ; sync.mode('fullWindow') }
-            } else if (mode == 'fullScreen') document.documentElement.requestFullscreen()
+            } else if (mode == 'fullscreen') document.documentElement.requestFullscreen()
         }
 
         function deactivateMode(mode) {
-            if (mode == 'wideScreen') { wideScreenStyle.remove() ; sync.mode('wideScreen') }
+            if (mode == 'widescreen') { widescreenStyle.remove() ; sync.mode('widescreen') }
             else if (mode == 'fullWindow') {
                 const selectors = sites[env.site].selectors,
                       sidebarToggle = document.querySelector(selectors.btns.sidebar)
@@ -129,7 +129,7 @@
                         if (rightbar) rightbar.style.display = ''
                     }
                 } else { fullWinStyle.remove() ; sync.mode('fullWindow') }
-            } else if (mode == 'fullScreen') {
+            } else if (mode == 'fullscreen') {
                 if (config.f11) modals.alert(getMsg('alert_pressF11'), `${getMsg('alert_f11reason')}.`)
                 else document.exitFullscreen()
                     .catch(err => console.error(app.symbol + ' » Failed to exit fullscreen', err))
@@ -148,7 +148,7 @@
                 chatbarStyle.innerText = (
                     env.site == 'chatgpt' ? ( config.widerChatbox ? ''
                           : `main form { max-width: ${chatbar.nativeWidth}px !important ; margin: auto }`
-                    ) : env.site == 'poe' ? ( config.widerChatbox && config.wideScreen ?
+                    ) : env.site == 'poe' ? ( config.widerChatbox && config.widescreen ?
                           '[class^=ChatPageMainFooter_footerInner] { width: 98% ; margin-right: 15px }' : ''
                     ) : ''
                 )
@@ -176,8 +176,8 @@
                     return Object.values(obj).flatMap(val => typeof val == 'object' ? getAllSelectors(val) : val) }
             },
 
-            wideScreen() {
-                wideScreenStyle.innerText = (
+            widescreen() {
+                widescreenStyle.innerText = (
                     env.site == 'chatgpt' ?
                         '.text-base { max-width: 100% !important }' // widen outer container
                     : env.site == 'perplexity' ?
@@ -198,11 +198,11 @@
             const extensionWasDisabled = config.extensionDisabled || config[`${env.site}Disabled`]
             await settings.load('extensionDisabled', ...settings.siteDisabledKeys, ...sites[env.site].availFeatures)
             if (!extensionWasDisabled && ( config.extensionDisabled || config[`${env.site}Disabled`] )) { // reset UI
-                [wideScreenStyle, fullWinStyle, buttons].forEach(target => target.remove())
+                [widescreenStyle, fullWinStyle, buttons].forEach(target => target.remove())
                 tweaksStyle.innerText = '' ; chatbar.reset()
             } else if (!config.extensionDisabled && !config[`${env.site}Disabled`]) { // sync modes/tweaks/btns
-                if (config.wideScreen ^ document.head.contains(wideScreenStyle)) { // sync Widescreen
-                    supressNotifs() ; toggleMode('wideScreen') }
+                if (config.widescreen ^ document.head.contains(widescreenStyle)) { // sync Widescreen
+                    supressNotifs() ; toggleMode('widescreen') }
                 if (sites[env.site].hasSidebar) {
                     if (config.fullWindow ^ ui.isFullWin()) { // sync Full-Window
                         supressNotifs() ; toggleMode('fullWindow') }
@@ -225,24 +225,24 @@
         },
 
         fullerWin() {
-            if (config.fullWindow && config.fullerWindows && !config.wideScreen) { // activate fuller windows
-                document.head.append(wideScreenStyle) ; buttons.update.svg('wideScreen', 'on')
+            if (config.fullWindow && config.fullerWindows && !config.widescreen) { // activate fuller windows
+                document.head.append(widescreenStyle) ; buttons.update.svg('widescreen', 'on')
             } else if (!config.fullWindow) { // de-activate fuller windows
                 fullWinStyle.remove() // to remove style too so sidebar shows
-                if (!config.wideScreen) { // disable widescreen if result of fuller window
-                    wideScreenStyle.remove() ; buttons.update.svg('wideScreen', 'off')
+                if (!config.widescreen) { // disable widescreen if result of fuller window
+                    widescreenStyle.remove() ; buttons.update.svg('widescreen', 'off')
             }}
         },
 
         async mode(mode) { // setting + icon + tooltip + chatbar
-            const state = ( mode == 'wideScreen' ? !!document.getElementById('wideScreen-mode')
+            const state = ( mode == 'widescreen' ? !!document.getElementById('widescreen-mode')
                           : mode == 'fullWindow' ? ui.isFullWin()
                                                  : chatgpt.isFullScreen() )
             settings.save(mode, state) ; buttons.update.svg(mode) ; tooltip.update(mode)
             if (!config.extensionDisabled && !config[`${env.site}Disabled`]) { // tweak UI
                 if (mode == 'fullWindow') sync.fullerWin()
                 if (env.site == 'chatgpt') setTimeout(() => chatbar.tweak(), // update inner width
-                    mode == 'fullWindow' && ( config.wideScreen || config.fullerWindows )
+                    mode == 'fullWindow' && ( config.widescreen || config.fullerWindows )
                         && config.widerChatbox ? 111 : 0) // delay if toggled to/from active WCB to avoid wrong width
                 else if (env.site == 'perplexity' || env.site == 'poe' && config.widerChatbox)
                     update.style.chatbar() // toggle full-width Perplexity chatbar or sync Poe WCB
@@ -267,7 +267,7 @@
     }
 
     // Init FULL-MODE states
-    config.fullScreen = chatgpt.isFullScreen()
+    config.fullscreen = chatgpt.isFullScreen()
     if (sites[env.site].selectors.btns.sidebar) // site has native FW state
          config.fullWindow = ui.isFullWin() // ...so match it
     else await settings.load('fullWindow') // otherwise load CWM's saved state
@@ -292,8 +292,8 @@
     })))
 
     // Create WIDESCREEN style
-    const wideScreenStyle = dom.create.style(null, { id: 'wideScreen-mode' })
-    update.style.wideScreen()
+    const widescreenStyle = dom.create.style(null, { id: 'widescreen-mode' })
+    update.style.widescreen()
 
     // Create FULL-WINDOW style
     const fullWinStyle = dom.create.style(
@@ -303,13 +303,15 @@
     const chatbarStyle = dom.create.style()
     update.style.chatbar() ; document.head.append(chatbarStyle)
 
+    console.log(config)
+
     // Insert BUTTONS/TOOLTIPS
     tooltip.createDiv() ; tooltip.stylize()
     if (!config.extensionDisabled && !config[`${env.site}Disabled`]) {
         buttons.insert()
 
     // Restore PREV SESSION's state
-        if (config.wideScreen) toggleMode('wideScreen', 'ON')
+        if (config.widescreen) toggleMode('widescreen', 'ON')
         if (config.fullWindow && sites[env.site].hasSidebar) {
             if (sites[env.site].selectors.btns.sidebar) // site has own FW config
                 sync.mode('fullWindow') // ...so sync w/ it
@@ -323,7 +325,7 @@
 
         // Maintain button visibility on nav
         if (config.extensionDisabled || config[`${env.site}Disabled`]) return
-        else if (!buttons.fullScreen?.isConnected && !chatgpt.canvasIsOpen()
+        else if (!buttons.fullscreen?.isConnected && !chatgpt.canvasIsOpen()
             && chatbar.get() && buttons.state.status != 'inserting'
         ) { buttons.state.status = 'missing' ; buttons.insert() }
 
@@ -381,24 +383,24 @@
         new MutationObserver(async () => { if (location.pathname != prevPath) {
             prevPath = location.pathname
             const attachFileBtn = await dom.get.loadedElem(sites.perplexity.selectors.btns.attachFile),
-                  cwmActive = buttons.fullScreen.isConnected
+                  cwmActive = buttons.fullscreen.isConnected
             if (attachFileBtn['left-aligned'] ^ cwmActive) chatbar[cwmActive ? 'tweak' : 'reset']()
         }}).observe(document.body, { childList: true, subtree: true })
     }
 
     // Add RESIZE LISTENER to update full screen setting/button + disable F11 flag
     addEventListener('resize', () => {
-        const fullScreenState = chatgpt.isFullScreen()
-        if (config.fullScreen && !fullScreenState) { // exiting full screen
-            sync.mode('fullScreen') ; config.f11 = false }
-        else if (!config.fullScreen && fullScreenState) // entering full screen
-            sync.mode('fullScreen')
+        const fullscreenState = chatgpt.isFullScreen()
+        if (config.fullscreen && !fullscreenState) { // exiting full screen
+            sync.mode('fullscreen') ; config.f11 = false }
+        else if (!config.fullscreen && fullscreenState) // entering full screen
+            sync.mode('fullscreen')
         if (env.site == 'chatgpt') chatbar.tweak() // update chatgpt.com chatbar inner width
     })
 
     // Add KEY LISTENER to enable flag on F11 + stop generating text on ESC
     document.addEventListener('keydown', event => {
-        if ((event.key == 'F11' || event.keyCode == 122) && !config.fullScreen) config.f11 = true
+        if ((event.key == 'F11' || event.keyCode == 122) && !config.fullscreen) config.f11 = true
         else if ((event.key.startsWith('Esc') || event.keyCode == 27) && chatgpt.isTyping())
             try { chatgpt.stop() ; requestAnimationFrame(() => !chatgpt.isTyping() &&
                     notify(getMsg('notif_chatStopped'), 'bottom-right')) } catch (err) {}

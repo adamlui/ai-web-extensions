@@ -4,7 +4,7 @@
 window.buttons = {
     import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
 
-    types: [ 'fullScreen', 'fullWindow', 'wideScreen', 'newChat' ], // right-to-left
+    types: [ 'fullscreen', 'fullWindow', 'widescreen', 'newChat' ], // right-to-left
     get class() { return `${this.imports.appName.replace(/ /g, '-').toLowerCase()}-btn` },
 
     state: {
@@ -13,7 +13,7 @@ window.buttons = {
     },
 
     svgElems: {
-        fullScreen: {
+        fullscreen: {
             off: [
                 dom.create.svgElem('path', { stroke: 'none', d: 'm10,16 2,0 0,-4 4,0 0,-2 L 10,10 l 0,6 0,0 z' }),
                 dom.create.svgElem('path', { stroke: 'none', d: 'm20,10 0,2 4,0 0,4 2,0 L 26,10 l -6,0 0,0 z' }),
@@ -35,7 +35,7 @@ window.buttons = {
 
         newChat: [ dom.create.svgElem('path', { stroke: 'none', d: 'M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z' }) ],
 
-        wideScreen: {
+        widescreen: {
             off: [
                 dom.create.svgElem('path', { stroke: 'none', 'fill-rule': 'evenodd',
                     d: 'm28,11 0,14 -20,0 0,-14 z m-18,2 16,0 0,10 -16,0 0,-10 z' }) ],
@@ -98,7 +98,7 @@ window.buttons = {
                     if (btnType == 'fullWindow' // disable right btn tooltips on Perplexity homepage to avoid v-flicker
                             && this.imports.env.site == 'perplexity' && location.pathname == '/') {
                         tooltip.div.style.opacity = 0;
-                        ['fullWindow', 'fullScreen'].forEach(btnType => {
+                        ['fullWindow', 'fullscreen'].forEach(btnType => {
                             const btn = this[btnType]
                             btn.onmouseover = btn.onmouseout = null
                             setTimeout(() => btn.onmouseover = btn.onmouseout = tooltip.toggle, 300)
@@ -118,7 +118,7 @@ window.buttons = {
         valid() { // used in buttons.create() + buttons.insert() + this.visible()
             return buttons.types.filter(type =>
                 !(type == 'fullWindow' && !buttons.imports.sites[buttons.imports.env.site].hasSidebar)
-             && !(type == 'wideScreen' && chatgpt.canvasIsOpen()))
+             && !(type == 'widescreen' && chatgpt.canvasIsOpen()))
         },
 
         visible() { // used in tooltip.update() + chatbar.tweak() for horizontal math
@@ -126,8 +126,8 @@ window.buttons = {
     },
 
     async insert() {
-        if (this.state.status == 'inserting' || this.fullScreen?.isConnected) return
-        this.state.status = 'inserting' ; if (!this.fullScreen) await this.create()
+        if (this.state.status == 'inserting' || this.fullscreen?.isConnected) return
+        this.state.status = 'inserting' ; if (!this.fullscreen) await this.create()
 
         // Init elems
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
@@ -156,7 +156,7 @@ window.buttons = {
     },
 
     async remove() {
-        if (!await chatbar.get() || !this.fullScreen?.isConnected) return
+        if (!await chatbar.get() || !this.fullscreen?.isConnected) return
         this.types.forEach(type => this[type]?.remove()) ; tooltip.div?.remove()
         this.state.status = 'missing' // ensure next .insert() doesn't return early
         this.state.hasFadedIn = false // ensure next .insert() fades in buttons
@@ -173,21 +173,21 @@ window.buttons = {
                       : 'oklch(var(--text-color-100)/var(--tw-text-opacity))'
                 ) : 'currentColor'
             )
-            if (buttons.wideScreen?.style.fill != buttons.color)
+            if (buttons.widescreen?.style.fill != buttons.color)
                 buttons.types.forEach(type => {
                     if (buttons[type]) buttons[type].style.fill = buttons[type].style.stroke = buttons.color })
         },
 
         svg(mode, state = '') {
-            if (!buttons.wideScreen) buttons.create()
+            if (!buttons.widescreen) buttons.create()
 
             // Pick appropriate button/elements
             const [btn, ONelems, OFFelems] = (
-                mode == 'fullScreen' ? [
-                    buttons.fullScreen, buttons.svgElems.fullScreen.on, buttons.svgElems.fullScreen.off]
+                mode == 'fullscreen' ? [
+                    buttons.fullscreen, buttons.svgElems.fullscreen.on, buttons.svgElems.fullscreen.off]
               : mode == 'fullWindow' ? [buttons.fullWindow, buttons.svgElems.fullWin, buttons.svgElems.fullWin]
-              : mode == 'wideScreen' ? [
-                    buttons.wideScreen, buttons.svgElems.wideScreen.on, buttons.svgElems.wideScreen.off]
+              : mode == 'widescreen' ? [
+                    buttons.widescreen, buttons.svgElems.widescreen.on, buttons.svgElems.widescreen.off]
                                      : [buttons.newChat, buttons.svgElems.newChat, buttons.svgElems.newChat])
             if (!btn) return
 

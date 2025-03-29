@@ -5,7 +5,7 @@ window.settings = {
     import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
 
     get browserwideKeys() {
-        return [ 'extensionDisabled', 'fullScreen',
+        return [ 'extensionDisabled', 'fullscreen',
             ...Object.keys(this.imports.sites).map(site => `${site}Disabled`) ]
     },
 
