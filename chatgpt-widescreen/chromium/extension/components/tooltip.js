@@ -33,17 +33,14 @@ window.tooltip = {
 
     async update(btnType) { // text & position
         const site = this.imports.env.site
-        const rightBtnRect = (await buttons.getRightBtn()).getBoundingClientRect()
-        const ctrAddend = rightBtnRect.width + (
-            site == 'perplexity' ? ( location.pathname == '/' ? -1
-                : innerWidth - rightBtnRect.right -( innerWidth < 768 ? 11 : 26 ))
-          : site == 'poe' ? 22 : -3 )
-        const spreadFactor = site == 'chatgpt' ? ( this.imports.env.browser.isFF ? 29.5 : 28 ) : 27
-        const iniRoffset = spreadFactor * ( buttons.getTypes.visible().indexOf(btnType) +1 ) + ctrAddend
-                         + ( site == 'chatgpt' && await chatbar.is.tall() ? -2 : 4 )
+        const rects = {
+            btn: buttons[btnType]?.getBoundingClientRect(), chatbar: (await chatbar.get())?.getBoundingClientRect() }
         this.div.innerText = this.getMsg(`tooltip_${btnType}${
             !/full|wide/i.test(btnType) ? '' : (config[btnType] ? 'OFF' : 'ON')}`)
-        this.div.style.right = `${ iniRoffset - this.div.getBoundingClientRect().width /2 }px` // x-pos
+        rects.tooltipDiv = this.div.getBoundingClientRect()
+        this.div.style.right = `${
+            rects.chatbar.right -( rects.btn?.left + rects.btn?.right )/2 - rects.tooltipDiv.width/2
+                +( site == 'chatgpt' ? -9 : site == 'perplexity' ? 15 : /* poe */ 3 )}px` // site offset
         this.div.style.bottom = ( // y-pos
             site == 'perplexity' ? (
                 location.pathname != '/' ? '64px' // not homepage
