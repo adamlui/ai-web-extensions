@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.29
+// @version                2025.3.29.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -263,7 +263,7 @@
             support: 'https://support.ddgpt.com',
             update: 'https://gm.ddgpt.com'
         },
-        latestResourceCommitHash: '8764a4b' // for cached messages.json
+        latestResourceCommitHash: 'b63970d' // for cached messages.json
     }
     app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
                           + `@${app.latestResourceCommitHash}`
@@ -318,13 +318,14 @@
         tooltip_expand: 'Expand',
         tooltip_shrink: 'Shrink',
         tooltip_close: 'Close',
-        tooltip_shareConvo: 'Share conversation',
         tooltip_copy: 'Copy',
+        tooltip_generate: 'Generate',
         tooltip_generating: 'Generating',
         tooltip_regenerate: 'Regenerate',
         tooltip_regenerating: 'Regenerating',
         tooltip_play: 'Play',
         tooltip_playing: 'Playing',
+        tooltip_page: 'Page',
         tooltip_reply: 'Reply',
         tooltip_code: 'Code',
         tooltip_generatingAudio: 'Generating audio',
@@ -387,7 +388,7 @@
         btnLabel_dismiss: 'Dismiss',
         btnLabel_visitPage: 'Visit Page',
         btnLabel_download: 'Download',
-        btnLabel_convo: 'Chat',
+        btnLabel_convo: 'chat',
         link_viewChanges: 'View changes',
         link_shareFeedback: 'Share Feedback',
         prefix_exit: 'Exit',
@@ -1359,7 +1360,7 @@
                                     + '.html'
                                 document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download HTML
                                 URL.revokeObjectURL(dlLink.href) // prevent memory leaks
-                                notify(`${app.msgs.btnLabel_convo} ${app.msgs.notif_downloaded}`)
+                                notify(`${log.toTitleCase(app.msgs.btnLabel_convo)} ${app.msgs.notif_downloaded}`)
                             },
                             onerror: err => log.error('Failed to download chat:', err)
                         })
@@ -1381,7 +1382,7 @@
                     if (/copy/i.test(btn.textContent)) btn.textContent = `${app.msgs.tooltip_copy} URL`
                     else if (/visit/i.test(btn.textContent)) btn.textContent = app.msgs.btnLabel_visitPage
                     else if (/download/i.test(btn.textContent))
-                         btn.textContent = `${app.msgs.btnLabel_download} ${app.msgs.btnLabel_convo}`
+                         btn.textContent = `${app.msgs.btnLabel_download} ${log.toTitleCase(app.msgs.btnLabel_convo)}`
                 })
 
             // Style elements
@@ -3269,7 +3270,8 @@
                                                         : `${app.msgs.tooltip_expand}` )
               : btnType == 'share' ? (
                     btn.style.animation ? `${app.msgs.tooltip_generating} HTML...`
-                                        : app.msgs.tooltip_shareConvo )
+                        : `${app.msgs.tooltip_generate} ${app.msgs.btnLabel_convo} ${
+                             app.msgs.tooltip_page.toLowerCase()}` )
               : btnType == 'copy' ? (
                     btn.firstChild.id.includes('-copy-') ?
                         `${app.msgs.tooltip_copy} ${
