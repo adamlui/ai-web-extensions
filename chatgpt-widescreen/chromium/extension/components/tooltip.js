@@ -46,7 +46,7 @@ window.tooltip = {
                 location.pathname != '/' ? '64px' // not homepage
                   : document.querySelector( // logged-in homepage
                         this.imports.sites.perplexity.selectors.btns.settings) ? 'revert-layer'
-                                         : '50vh' // logged-out homepage
+                                         : '51vh' // logged-out homepage
             ) : site == 'poe' ? '50px' : '42px'
         )
     }
