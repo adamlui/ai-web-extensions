@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.30.2
+// @version                  2025.3.30.3
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -2345,7 +2345,7 @@
                   + '--btn-transition: transform 0.15s ease,' // for hover-zoom
                                     + 'opacity 0.25s ease-in-out ;' // + btn-zoom-fade-out + .app-hover-only shows
                   + '--font-size-slider-thumb-transition: transform 0.05s ease ;' // for hover-zoom
-                  + '--answer-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ;' // for Anchor changes
+                  + '--reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ;' // for Anchor changes
                   + '--rq-transition: opacity 0.55s ease, transform 0.1s ease !important ;' // for fade-in + hover-zoom
                   + '--fade-in-less-transition: opacity 0.2s ease }' // used by Font Size slider + Pin menu
 
@@ -2535,9 +2535,9 @@
                     : /* light scheme */ `background: var(--pre-bg-color-light-scheme) ;
                             color: var(--font-color-light-scheme) ; border: none` };
                     ${ config.fgAnimationsDisabled ? '' : // smoothen Anchor mode expand/shrink
-                        `transition: var(--answer-pre-transition) ;
-                        -webkit-transition: var(--answer-pre-transition) ; -moz-transition: var(--answer-pre-transition) ;
-                        -o-transition: var(--answer-pre-transition) ; -ms-transition: var(--answer-pre-transition)` }}
+                        `transition: var(--reply-pre-transition) ;
+                        -webkit-transition: var(--reply-pre-transition) ; -moz-transition: var(--reply-pre-transition) ;
+                        -o-transition: var(--reply-pre-transition) ; -ms-transition: var(--reply-pre-transition)` }}
                 #${app.slug} .reply-pre a, #${app.slug} .reply-pre a:visited { color: #4495d4 }
                 #${app.slug} .reply-pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#28a017' }}
                 code #${app.slug}-copy-btn { position: relative ; top: -6px ; right: -9px }
