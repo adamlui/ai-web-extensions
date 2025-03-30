@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.30
+// @version                2025.3.30.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -263,7 +263,7 @@
             support: 'https://support.ddgpt.com',
             update: 'https://gm.ddgpt.com'
         },
-        latestResourceCommitHash: 'b63970d' // for cached messages.json
+        latestResourceCommitHash: 'a6dd373' // for cached messages.json
     }
     app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
                           + `@${app.latestResourceCommitHash}`
@@ -376,7 +376,7 @@
         alert_try: 'Try',
         alert_switchingOn: 'switching on',
         alert_switchingOff: 'switching off',
-        alert_sharePageGenerated: 'Share Page generated',
+        alert_generated: 'Generated',
         notif_copiedToClipboard: 'Copied to clipboard',
         notif_downloaded: 'downloaded',
         btnLabel_sendQueryToApp: 'Send search query to DuckDuckGPT',
@@ -1341,7 +1341,8 @@
 
             // Show modal
             const shareChatModal = modals.alert(
-                app.msgs.alert_sharePageGenerated + '!', // title
+                `${log.toTitleCase(app.msgs.btnLabel_convo)} ${app.msgs.tooltip_page} ${ // title
+                    app.msgs.alert_generated.toLowerCase()}!`,
                 `<a target="_blank" rel="noopener" href="${shareURL}">${shareURL}</a>`, // link msg
                 [ // buttons
                     function copyUrl() {

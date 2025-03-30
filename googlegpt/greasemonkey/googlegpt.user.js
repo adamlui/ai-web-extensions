@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.30.1
+// @version                  2025.3.30.2
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -450,7 +450,7 @@
             support: 'https://support.googlegpt.io',
             update: 'https://gm.googlegpt.io'
         },
-        latestResourceCommitHash: '92cbe96' // for cached messages.json
+        latestResourceCommitHash: '707c1ec' // for cached messages.json
     }
     app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
                           + `@${app.latestResourceCommitHash}`
@@ -563,7 +563,7 @@
         alert_try: 'Try',
         alert_switchingOn: 'switching on',
         alert_switchingOff: 'switching off',
-        alert_sharePageGenerated: 'Share Page generated',
+        alert_generated: 'Generated',
         notif_copiedToClipboard: 'Copied to clipboard',
         notif_downloaded: 'downloaded',
         btnLabel_sendQueryToApp: 'Send search query to GoogleGPT',
@@ -1482,7 +1482,8 @@
 
             // Show modal
             const shareChatModal = modals.alert(
-                app.msgs.alert_sharePageGenerated + '!', // title
+                `${log.toTitleCase(app.msgs.btnLabel_convo)} ${app.msgs.tooltip_page} ${ // title
+                    app.msgs.alert_generated.toLowerCase()}!`,
                 `<a target="_blank" rel="noopener" href="${shareURL}">${shareURL}</a>`, // link msg
                 [ // buttons
                     function copyUrl() {

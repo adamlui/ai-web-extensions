@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.30
+// @version                2025.3.30.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -134,7 +134,7 @@
             support: 'https://amazongpt.kudoai.com/issues',
             update: 'https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js'
         },
-        latestResourceCommitHash: '6c3b80e' // for cached messages.json
+        latestResourceCommitHash: '2ab74be' // for cached messages.json
     }
     app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
                           + `@${app.latestResourceCommitHash}`
@@ -220,7 +220,7 @@
         alert_try: 'Try',
         alert_switchingOn: 'switching on',
         alert_switchingOff: 'switching off',
-        alert_sharePageGenerated: 'Share Page generated',
+        alert_generated: 'Generated',
         notif_copiedToClipboard: 'Copied to clipboard',
         notif_downloaded: 'downloaded',
         btnLabel_moreAIextensions: 'More AI Extensions',
@@ -1103,7 +1103,8 @@
 
             // Show modal
             const shareChatModal = modals.alert(
-                app.msgs.alert_sharePageGenerated + '!', // title
+                `${log.toTitleCase(app.msgs.btnLabel_convo)} ${app.msgs.tooltip_page} ${ // title
+                    app.msgs.alert_generated.toLowerCase()}!`,
                 `<a target="_blank" rel="noopener" href="${shareURL}">${shareURL}</a>`, // link msg
                 [ // buttons
                     function copyUrl() {
