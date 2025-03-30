@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.29.4
+// @version               2025.3.30
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -2339,13 +2339,13 @@
                     width: 12.5px ; height: 12.5px ; margin-right: 6px ; top: 1px }`
 
               // AI reply elem styles
-              + `#${app.slug} .reply-tip {`
-                  + 'content: "" ; position: relative ; border: 7px solid transparent ;'
-                  + 'float: left ; left: 7px ; margin: 29px -13px 0 0 ;' // positioning
-                  + 'border-bottom-style: solid ; border-bottom-width: 16px ; border-top: 0 ; border-bottom-color:'
-                      + `${ // hide reply tip for terminal aesthetic
-                            isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${env.ui.app.scheme}-scheme)` }}`
-              + `#${app.slug} .reply-header {
+              + `#${app.slug} .reply-tip {
+                    content: "" ; position: relative ; border: 7px solid transparent ;
+                    float: left ; left: 7px ; margin: 29px -13px 0 0 ; /* positioning */
+                    border-bottom-style: solid ; border-bottom-width: 16px ; border-top: 0 ; border-bottom-color:
+                        ${ // hide reply tip for terminal aesthetic
+                            isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${env.ui.app.scheme}-scheme)` }}
+                #${app.slug} .reply-header {
                     display: flex ; align-items: center ; position: relative ;
                     top: 12px ; padding: 16px 14px ; height: 18px ; border-radius: 12px 12px 0 0 ;
                     ${ env.ui.app.scheme == 'light' ? 'border-bottom: 1px solid white'
@@ -2355,31 +2355,31 @@
                     fill:       var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) ;
                     stroke:     var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) }
                 #${app.slug} .reply-header-text { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
-                #${app.slug} .reply-header-btns { margin: 10.5px -5px 0 }`
-              + `#${app.slug} .reply-pre {`
-                  + `font-size: ${config.fontSize}px ; white-space: pre-wrap ;`
-                  + 'font-family: Consolas, Menlo, Monaco, monospace ;'
-                  + `line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;`
-                  + 'margin-top: 12px ; padding: 1.2em 1.2em 0 1.2em ; border-radius: 0 0 12px 12px ; overflow: auto ;'
-                  + ( config.bgAnimationsDisabled ? // classic opaque bg
-                        `background: var(--pre-bg-color-${env.ui.app.scheme}-scheme) ;`
-                      + `color: var(--font-color-${env.ui.app.scheme}-scheme)`
-                  : `${ env.ui.app.scheme == 'dark' ? // slightly tranluscent bg
+                #${app.slug} .reply-header-btns { margin: 10.5px -5px 0 }
+                #${app.slug} .reply-pre {
+                    font-size: ${config.fontSize}px ; white-space: pre-wrap ;
+                    font-family: Consolas, Menlo, Monaco, monospace ;
+                    line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;
+                    position: relative ; z-index: 1 ; /* allow top-margin to overlap header in light scheme */
+                    margin-top: ${ env.ui.app.scheme == 'light' ? 10 : 12 }px ; padding: 1.2em 1.2em 0 1.2em ;
+                    border-radius: 0 0 12px 12px ; overflow: auto ;
+                    ${ config.bgAnimationsDisabled ? // classic opaque bg
+                        `background: var(--pre-bg-color-${env.ui.app.scheme}-scheme) ;
+                         color: var(--font-color-${env.ui.app.scheme}-scheme)`
+                    : env.ui.app.scheme == 'dark' ? // slightly tranluscent bg
                         'background: #2b3a40cf ; color: var(--font-color-dark-scheme) ; border: 1px solid white'
-                            : 'background: var(--pre-bg-color-light-scheme) ;'
-                                + 'color: var(--font-color-light-scheme) ; border: none' };` )
-                  + `${ config.fgAnimationsDisabled ? '' : // smoothen Anchor mode expand/shrink
-                        'transition: var(--answer-pre-transition) ;'
-                            + '-webkit-transition: var(--answer-pre-transition) ;'
-                            + '-moz-transition: var(--answer-pre-transition) ;'
-                            + '-o-transition: var(--answer-pre-transition) ;'
-                            + '-ms-transition: var(--answer-pre-transition)' }}`
-              + `#${app.slug} .reply-pre a, #${app.slug} .reply-pre a:visited { color: #4495d4 }`
-              + `#${app.slug} .reply-pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#ea7a28' }}`
-              + `code #${app.slug}-copy-btn { position: relative ; top: -6px ; right: -9px }`
-              + `code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
+                    : /* light scheme */ `background: var(--pre-bg-color-light-scheme) ;
+                         color: var(--font-color-light-scheme) ; border: none` };
+                    ${ config.fgAnimationsDisabled ? '' : // smoothen Anchor mode expand/shrink
+                        `transition: var(--answer-pre-transition) ;
+                        -webkit-transition: var(--answer-pre-transition) ; -moz-transition: var(--answer-pre-transition) ;
+                        -o-transition: var(--answer-pre-transition) ; -ms-transition: var(--answer-pre-transition)` }}
+                #${app.slug} .reply-pre a, #${app.slug} .reply-pre a:visited { color: #4495d4 }
+                #${app.slug} .reply-pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#ea7a28' }}
+                code #${app.slug}-copy-btn { position: relative ; top: -6px ; right: -9px }
+                code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
 
-              // Rendered AI reply styles
+              // Rendered AI reply text styles
               + `#${app.slug} .reply-pre h1 { font-size: 1.25em }
                  #${app.slug} .reply-pre h2 { font-size: 1.1em }
                  #${app.slug} .reply-pre ul { margin: -10px 0 -6px } /* reduce v-spacing */

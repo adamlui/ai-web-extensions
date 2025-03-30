@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.29.4
+// @version                2025.3.30
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -2333,13 +2333,13 @@
                     width: 12.5px ; height: 12.5px ; margin-right: 6px ; top: 1px }`
 
               // AI reply elem styles
-              + `#${app.slug} .reply-tip {`
-                  + 'content: "" ; position: relative ; border: 7px solid transparent ;'
-                  + 'float: left ; left: 9px ; margin: 33px -14px 0 0 ;' // positioning
-                  + 'border-bottom-style: solid ; border-bottom-width: 18px ; border-top: 0 ; border-bottom-color:'
-                      + `${ // hide reply tip for terminal aesthetic
-                            isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${env.ui.app.scheme}-scheme)` }}`
-              + `#${app.slug} .reply-header {
+              + `#${app.slug} .reply-tip {
+                    content: "" ; position: relative ; border: 7px solid transparent ;
+                    float: left ; left: 9px ; margin: 33px -14px 0 0 ; /* positioning */
+                    border-bottom-style: solid ; border-bottom-width: 18px ; border-top: 0 ; border-bottom-color:
+                        ${ // hide reply tip for terminal aesthetic
+                            isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${env.ui.app.scheme}-scheme)` }}
+                #${app.slug} .reply-header {
                     display: flex ; align-items: center ; position: relative ;
                     top: 14px ; padding: 7px 14px ; height: 18px ; border-radius: 12px 12px 0 0 ;
                     ${ env.ui.app.scheme == 'light' ? 'border-bottom: 1px solid white'
@@ -2349,31 +2349,30 @@
                     fill:       var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) ;
                     stroke:     var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) }
                 #${app.slug} .reply-header-text { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
-                #${app.slug} .reply-header-btns { margin: 7.5px -5px 0 }`
-              + `#${app.slug} .reply-pre {`
-                  + `font-size: ${config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;`
-                  + `line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;`
-                  + 'margin: 13px 0 7px 0 ; padding: 1.25em 1.25em 0 1.25em ;'
-                  + 'border-radius: 0 0 12px 12px ; overflow: auto ;'
-                  + ( config.bgAnimationsDisabled ? // classic opaque bg
-                        `background: var(--pre-bg-color-${env.ui.app.scheme}-scheme) ;`
-                      + `color: var(--font-color-${env.ui.app.scheme}-scheme)`
-                  : `${ env.ui.app.scheme == 'dark' ? // slightly tranluscent bg
+                #${app.slug} .reply-header-btns { margin: 7.5px -5px 0 }
+                #${app.slug} .reply-pre {
+                    font-size: ${config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;
+                    line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;
+                    position: relative ; z-index: 1 ; /* allow top-margin to overlap header in light scheme */
+                    margin: ${ env.ui.app.scheme == 'light' ? 11 : 13 }px 0 7px 0 ; padding: 1.25em 1.25em 0 1.25em ;
+                    border-radius: 0 0 12px 12px ; overflow: auto ;
+                    ${ config.bgAnimationsDisabled ? // classic opaque bg
+                        `background: var(--pre-bg-color-${env.ui.app.scheme}-scheme) ;
+                         color: var(--font-color-${env.ui.app.scheme}-scheme)`
+                    : env.ui.app.scheme == 'dark' ? // slightly tranluscent bg
                         'background: #2b3a40cf ; color: var(--font-color-dark-scheme) ; border: 1px solid white'
-                            : 'background: var(--pre-bg-color-light-scheme) ;'
-                                + 'color: var(--font-color-light-scheme) ; border: none' };` )
-                  + `${ config.fgAnimationsDisabled ? '' : // smoothen Anchor mode expand/shrink
-                        'transition: var(--reply-pre-transition) ;'
-                            + '-webkit-transition: var(--reply-pre-transition) ;'
-                            + '-moz-transition: var(--reply-pre-transition) ;'
-                            + '-o-transition: var(--reply-pre-transition) ;'
-                            + '-ms-transition: var(--reply-pre-transition)' }}`
-              + `#${app.slug} .reply-pre a, #${app.slug} .reply-pre a:visited { color: #4495d4 }`
-              + `#${app.slug} .reply-pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#ea7a28' }}`
-              + `code #${app.slug}-copy-btn { position: relative ; top: -6px ; right: -9px }`
-              + `code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
+                    : /* light scheme */ `background: var(--pre-bg-color-light-scheme) ;
+                         color: var(--font-color-light-scheme) ; border: none` };
+                    ${ config.fgAnimationsDisabled ? '' : // smoothen Anchor mode expand/shrink
+                        `transition: var(--reply-pre-transition) ;
+                        -webkit-transition: var(--reply-pre-transition) ; -moz-transition: var(--reply-pre-transition) ;
+                        -o-transition: var(--reply-pre-transition) ; -ms-transition: var(--reply-pre-transition)` }}
+                #${app.slug} .reply-pre a, #${app.slug} .reply-pre a:visited { color: #4495d4 }
+                #${app.slug} .reply-pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#ea7a28' }}
+                code #${app.slug}-copy-btn { position: relative ; top: -6px ; right: -9px }
+                code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
 
-              // Rendered AI reply styles
+              // Rendered AI reply text styles
               + `#${app.slug} .reply-pre h1 { font-size: 1.8em }
                  #${app.slug} .reply-pre h2 { font-size: 1.65em }
                  #${app.slug} .reply-pre h3 { font-size: 1.4em ; line-height: 1.25 }
