@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.30.3
+// @version                  2025.3.30.4
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -2543,18 +2543,24 @@
                 code #${app.slug}-copy-btn { position: relative ; top: -6px ; right: -9px }
                 code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
 
-              // Rendered AI reply text styles
+              // Rendered markdown styles
               + `#${app.slug} .reply-pre h1 { font-size: 1.25em }
                  #${app.slug} .reply-pre h2 { font-size: 1.1em } /* size headings */
-                 #${app.slug} .reply-pre ol { padding-left: 1.58em ; margin: -5px 0 -8px 7px }
-                 #${app.slug} .reply-pre ul { margin: -10px 0 -6px ; padding-left: 1.5em } /* reduce v-spacing, indent */
-                 #${app.slug} .reply-pre li { margin: -8px 0 ; list-style: circle } /* reduce v-spacing, show left symbols */
-                 #${app.slug} ${GM_getResourceText('hljsCSS') // highlight code
+                 #${app.slug} .reply-pre ol { margin: -5px 0 -8px 7px ; padding-left: 1.58em }
+                 #${app.slug} .reply-pre ul { /* reduce v-spacing, indent */
+                    margin: -10px 0 -6px ; padding-left: 1.5em }
+                 #${app.slug} .reply-pre li { /* reduce v-spacing, show left symbols */
+                    margin: -8px 0 ; list-style: circle }`
+
+              // Rendered code styles
+              + `#${app.slug} ${GM_getResourceText('hljsCSS') // color code
                     .replace(/\/\*[^*]+\*\//g, '') // strip comments
                     .trim().replace(/([,}])(.)(?![^{]*\})/g, `$1#${app.slug} $2`)} /* scope selectors to app */
-                 #${app.slug} pre:has(> code) { padding: 0 } /* remove padded border from code blocks */
-                 #${app.slug} code { font-size: 0.85em } /* shrink code vs. regular text */
-                 .katex-html { display: none } /* hide unrendered math */`
+                 #${app.slug} pre:has(> code) { padding: 0 } /* remove padded border around code blocks */
+                 #${app.slug} code { font-size: 0.85em } /* shrink code vs. regular text */`
+
+              // Rendered math styles
+              + '.katex-html { display: none } /* hide unrendered math */'
 
               // Chatbar styles
               + `#${app.slug}-chatbar {`

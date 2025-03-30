@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.30.2
+// @version                2025.3.30.3
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1902,11 +1902,12 @@
                 code #${app.slug}-copy-btn { position: relative ; top: -6px ; right: -9px }
                 code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
 
-              // Rendered AI reply text styles
+              // Rendered markdown styles
               + `#${app.slug} .reply-pre h1 { font-size: 1.8em }
                  #${app.slug} .reply-pre h2 { font-size: 1.65em }
                  #${app.slug} .reply-pre h3 { font-size: 1.4em }
-                 #${app.slug} .reply-pre h1, #${app.slug} .reply-pre h2, #${app.slug} .reply-pre h3 { margin-bottom: -15px }
+                 #${app.slug} .reply-pre h1, #${app.slug} .reply-pre h2, #${app.slug} .reply-pre h3 {
+                    margin-bottom: -15px } /* reduce gap after headings */
                  #${app.slug} .reply-pre ol { /* override ol styles */
                     color: var(--font-color-${env.ui.app.scheme}-scheme) ; margin: -5px 0 -6px 7px }
                  #${app.slug} .reply-pre ol > li { /* reduce v-padding, show number markers */
@@ -1914,13 +1915,17 @@
                  #${app.slug} .reply-pre ol > li::marker { font-size: 0.9em } /* shrink number markers */
                  #${app.slug} .reply-pre ul { /* override ul styles */
                     color: var(--font-color-${env.ui.app.scheme}-scheme) ; margin-bottom: -21px }
-                 #${app.slug} .reply-pre ul > li { list-style: circle } /* show bullets */
-                 #${app.slug} ${GM_getResourceText('hljsCSS') // highlight code
+                 #${app.slug} .reply-pre ul > li { list-style: circle } /* show bullets */`
+
+              // Rendered code styles
+              + `#${app.slug} ${GM_getResourceText('hljsCSS') // color code
                     .replace(/\/\*[^*]+\*\//g, '') // strip comments
                     .trim().replace(/([,}])(.)(?![^{]*\})/g, `$1#${app.slug} $2`)} /* scope selectors to app */
-                 #${app.slug} pre:has(> code) { padding: 0 } /* remove padded border from code blocks */
-                 #${app.slug} code { font-size: 0.85em } /* shrink code vs. regular text */
-                .katex-html { display: none } /* hide unrendered math */`
+                 #${app.slug} pre:has(> code) { padding: 0 } /* remove padded border around code blocks */
+                 #${app.slug} code { font-size: 0.85em } /* shrink code vs. regular text */`
+
+              // Rendered math styles
+              + '.katex-html { display: none } /* hide unrendered math */'
 
               // Chatbar styles
               + `#${app.slug}-chatbar {`
