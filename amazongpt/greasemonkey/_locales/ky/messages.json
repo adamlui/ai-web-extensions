@@ -80,7 +80,7 @@
   "alert_try": { "message": "Аракет" },
   "alert_switchingOn": { "message": "которулуп жатат" },
   "alert_switchingOff": { "message": "өчүрүү" },
-  "alert_sharePageGenerated": { "message": "Баракча түзүлдү" },
+  "alert_generated": { "message": "Түзүлдү" },
   "notif_copiedToClipboard": { "message": "Алмашуу буферине көчүрүлдү" },
   "notif_downloaded": { "message": "Жүктөөлөр" },
   "btnLabel_moreAIextensions": { "message": "Көбүрөөк AI кеңейтүүлөрү" },

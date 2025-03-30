@@ -80,7 +80,7 @@
   "alert_try": { "message": "પ્રયત્ન કરો" },
   "alert_switchingOn": { "message": "પર સ્વિચ કરી રહ્યા છીએ" },
   "alert_switchingOff": { "message": "સ્વીચ ઓફ થઈ રહ્યું છે" },
-  "alert_sharePageGenerated": { "message": "જનરેટ થયેલ પૃષ્ઠ શેર કરો" },
+  "alert_generated": { "message": "જનરેટ થયેલ" },
   "notif_copiedToClipboard": { "message": "ક્લિપબોર્ડ પર કૉપિ કરેલું" },
   "notif_downloaded": { "message": "ડાઉનલોડ થયેલ" },
   "btnLabel_moreAIextensions": { "message": "વધુ AI એક્સ્ટેન્શન્સ" },

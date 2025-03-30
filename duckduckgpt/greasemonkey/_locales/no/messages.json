@@ -107,7 +107,7 @@
   "alert_try": { "message": "Prøv" },
   "alert_switchingOn": { "message": "SLÅ PÅ" },
   "alert_switchingOff": { "message": "SL\\xC5 AV" },
-  "alert_sharePageGenerated": { "message": "Delside generert" },
+  "alert_generated": { "message": "Opprettet" },
   "notif_copiedToClipboard": { "message": "Kopiert til utklippstavlen" },
   "notif_downloaded": { "message": "lastet ned" },
   "btnLabel_moreAIextensions": { "message": "Flere AI-utvidelser" },

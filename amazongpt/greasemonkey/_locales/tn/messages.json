@@ -80,7 +80,7 @@
   "alert_try": { "message": "Leka" },
   "alert_switchingOn": { "message": "go tshuba" },
   "alert_switchingOff": { "message": "go tima" },
-  "alert_sharePageGenerated": { "message": "Tsebe ya Share e e tlhagisitsweng" },
+  "alert_generated": { "message": "E tlhagisitswe ka tlhamalalo" },
   "notif_copiedToClipboard": { "message": "E kopolotswe go clipboard" },
   "notif_downloaded": { "message": " E taoneloutilwe " },
   "btnLabel_moreAIextensions": { "message": "Di-AI Extensions tse Dintsi" },

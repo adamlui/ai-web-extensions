@@ -80,7 +80,7 @@
   "alert_try": { "message": "උත්සහ කරන්න" },
   "alert_switchingOn": { "message": "ක් ‍ රියාත්මක වෙමින්" },
   "alert_switchingOff": { "message": "ක් ‍ රියා විරහිත කරමින්" },
-  "alert_sharePageGenerated": { "message": "පිටුව බෙදාගන්න උත්පාදනය කරන ලදි" },
+  "alert_generated": { "message": "ජනනය කරන ලදි" },
   "notif_copiedToClipboard": { "message": "@ info" },
   "notif_downloaded": { "message": "බාගත කර ඇත" },
   "btnLabel_moreAIextensions": { "message": "තවත් AI දිගු" },

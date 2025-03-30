@@ -80,7 +80,7 @@
   "alert_try": { "message": "Versuchen, versuch, versuche, versucht, versuchen Sie" },
   "alert_switchingOn": { "message": "Einschalten" },
   "alert_switchingOff": { "message": "Abschaltung" },
-  "alert_sharePageGenerated": { "message": "Seite teilen generiert" },
+  "alert_generated": { "message": "Generiert" },
   "notif_copiedToClipboard": { "message": "In Zwischenablage kopiert" },
   "notif_downloaded": { "message": "heruntergeladen" },
   "btnLabel_moreAIextensions": { "message": "Weitere KI-Erweiterungen" },

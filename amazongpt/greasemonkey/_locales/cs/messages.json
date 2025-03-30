@@ -80,7 +80,7 @@
   "alert_try": { "message": "Vyzkoušet" },
   "alert_switchingOn": { "message": "Zapínání" },
   "alert_switchingOff": { "message": "vypnutí" },
-  "alert_sharePageGenerated": { "message": "Sdílet stránku vygenerovanou" },
+  "alert_generated": { "message": "Vygenerováno!" },
   "notif_copiedToClipboard": { "message": "Zkopírováno do schránky" },
   "notif_downloaded": { "message": "staženo" },
   "btnLabel_moreAIextensions": { "message": "Další rozšíření AI" },

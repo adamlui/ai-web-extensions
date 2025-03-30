@@ -80,7 +80,7 @@
   "alert_try": { "message": "Isku day" },
   "alert_switchingOn": { "message": "badiyadka to badiyadka to" },
   "alert_switchingOff": { "message": "badiyadka to badar" },
-  "alert_sharePageGenerated": { "message": "La wadaag Bogga la soo saaray" },
+  "alert_generated": { "message": "La soo saaray" },
   "notif_copiedToClipboard": { "message": "Nuqul ka mid ah clipboard" },
   "notif_downloaded": { "message": "La soo dejiyay" },
   "btnLabel_moreAIextensions": { "message": "Kordhinta AI dheeraad ah" },

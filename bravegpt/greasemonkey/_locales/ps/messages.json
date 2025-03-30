@@ -107,7 +107,7 @@
   "alert_try": { "message": "هڅه کول" },
   "alert_switchingOn": { "message": "سویچ کول" },
   "alert_switchingOff": { "message": "بندول، بندول" },
-  "alert_sharePageGenerated": { "message": "د شریکولو پاڼه جوړه شوه" },
+  "alert_generated": { "message": "تولید شوی" },
   "notif_copiedToClipboard": { "message": "د ټوټې دړې ته کاپي شوی" },
   "notif_downloaded": { "message": "رالېښلي" },
   "btnLabel_moreAIextensions": { "message": "د AI نور تمدیدونه" },

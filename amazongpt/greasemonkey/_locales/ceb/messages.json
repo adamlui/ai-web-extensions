@@ -80,7 +80,7 @@
   "alert_try": { "message": "Sulayi" },
   "alert_switchingOn": { "message": "sa switching on" },
   "alert_switchingOff": { "message": "nag-turn off" },
-  "alert_sharePageGenerated": { "message": "Ipakigbahin ang Panid nga namugna" },
+  "alert_generated": { "message": "Gimugna" },
   "notif_copiedToClipboard": { "message": "Kopyahin sa clipboard" },
   "notif_downloaded": { "message": "gi-download" },
   "btnLabel_moreAIextensions": { "message": "Dugang nga mga Extension sa AI" },

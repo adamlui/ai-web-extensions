@@ -80,7 +80,7 @@
   "alert_try": { "message": "Δοκιμή" },
   "alert_switchingOn": { "message": "Ενεργοποίηση" },
   "alert_switchingOff": { "message": "Απενεργοποιήση" },
-  "alert_sharePageGenerated": { "message": "Δημιουργήθηκε σελίδα κοινοποίησης" },
+  "alert_generated": { "message": "Δημιουργήθηκε" },
   "notif_copiedToClipboard": { "message": "Αντιγράφηκε στο πρόχειρο" },
   "notif_downloaded": { "message": "ληφθέντα" },
   "btnLabel_moreAIextensions": { "message": "Περισσότερες επεκτάσεις τεχνητής νοημοσύνης" },

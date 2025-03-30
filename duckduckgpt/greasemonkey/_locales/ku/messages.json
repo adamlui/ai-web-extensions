@@ -107,7 +107,7 @@
   "alert_try": { "message": "ھەوڵ دەدات، دادگای دەکات، تاقی دەکاتەوە، ھەوڵدان، جیاکردنەوە، دەرھێنان، پاک کردنەوە، ھەوڵ، تاقی کردنەوە، دادگایی کردن" },
   "alert_switchingOn": { "message": "veguherandin" },
   "alert_switchingOff": { "message": "بڕینی تەزووی کارەبا" },
-  "alert_sharePageGenerated": { "message": "Parvekirina Rûpelê hate çêkirin" },
+  "alert_generated": { "message": "دروستکرا، بەرھەمھێنرا" },
   "notif_copiedToClipboard": { "message": "کۆپی کراوە بۆ کلیپبۆرد" },
   "notif_downloaded": { "message": "داگیرا، داگیراوە، داگیراو" },
   "btnLabel_moreAIextensions": { "message": "Zêdetir Pêvekên AI-ê" },

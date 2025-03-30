@@ -107,7 +107,7 @@
   "alert_try": { "message": "Ipprova" },
   "alert_switchingOn": { "message": "Kif tixgħel" },
   "alert_switchingOff": { "message": "Kif titfi" },
-  "alert_sharePageGenerated": { "message": "Aqsam il-paġna ġġenerata" },
+  "alert_generated": { "message": "Ġenerat" },
   "notif_copiedToClipboard": { "message": "Kopjati lill-clipboard" },
   "notif_downloaded": { "message": "niżżel" },
   "btnLabel_moreAIextensions": { "message": "Iktar Estensjonijiet tal-IA" },

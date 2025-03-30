@@ -80,7 +80,7 @@
   "alert_try": { "message": "Traim" },
   "alert_switchingOn": { "message": "wok bilong senisim" },
   "alert_switchingOff": { "message": "kisim bek" },
-  "alert_sharePageGenerated": { "message": "Ol pes ol i bin wokim" },
+  "alert_generated": { "message": "Wok bilong kamapim" },
   "notif_copiedToClipboard": { "message": "Kopiim long Clipboard" },
   "notif_downloaded": { "message": "yu ken kisim" },
   "btnLabel_moreAIextensions": { "message": "+ long extensions" },

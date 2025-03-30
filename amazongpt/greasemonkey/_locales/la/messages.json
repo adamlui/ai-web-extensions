@@ -80,7 +80,7 @@
   "alert_try": { "message": "conatus" },
   "alert_switchingOn": { "message": "sine salutatione" },
   "alert_switchingOff": { "message": "commutilio" },
-  "alert_sharePageGenerated": { "message": "Pagina Partis" },
+  "alert_generated": { "message": "Generale" },
   "notif_copiedToClipboard": { "message": "Clipboard" },
   "notif_downloaded": { "message": "download" },
   "btnLabel_moreAIextensions": { "message": "Extensionsum AI" },

@@ -80,7 +80,7 @@
   "alert_try": { "message": "ცდა" },
   "alert_switchingOn": { "message": "ჩართვა" },
   "alert_switchingOff": { "message": "გამორთვა" },
-  "alert_sharePageGenerated": { "message": "Შექმნილია გვერდის გაზიარება" },
+  "alert_generated": { "message": "გენერირებული" },
   "notif_copiedToClipboard": { "message": "დაკოპირდა გაცვლის ბაფერში" },
   "notif_downloaded": { "message": "გადმოწერილია" },
   "btnLabel_moreAIextensions": { "message": "Სხვა AI გაფართოებები" },

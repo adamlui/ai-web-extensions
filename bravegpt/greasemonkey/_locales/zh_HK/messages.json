@@ -107,7 +107,7 @@
   "alert_try": { "message": "嘗試" },
   "alert_switchingOn": { "message": "正在開啓" },
   "alert_switchingOff": { "message": "正在關閉" },
-  "alert_sharePageGenerated": { "message": "已產生分享頁面" },
+  "alert_generated": { "message": "已生成" },
   "notif_copiedToClipboard": { "message": "已複製到剪貼簿" },
   "notif_downloaded": { "message": "已下載" },
   "btnLabel_moreAIextensions": { "message": "更多人工智慧擴充功能" },

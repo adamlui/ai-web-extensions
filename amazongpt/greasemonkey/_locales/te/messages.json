@@ -80,7 +80,7 @@
   "alert_try": { "message": "ప్రయత్నించడం" },
   "alert_switchingOn": { "message": "ఆన్ చేస్తోంది" },
   "alert_switchingOff": { "message": "స్విచ్ ఆఫ్ చేస్తోంది" },
-  "alert_sharePageGenerated": { "message": "పేజీని పంచుకోవడం జనరేట్ చేయబడింది" },
+  "alert_generated": { "message": "సృష్టించబడింది" },
   "notif_copiedToClipboard": { "message": "క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది" },
   "notif_downloaded": { "message": "డౌన్‌లోడ్అయినది" },
   "btnLabel_moreAIextensions": { "message": "మరిన్ని AI పొడిగింపులు" },

@@ -80,7 +80,7 @@
   "alert_try": { "message": "Скачать" },
   "alert_switchingOn": { "message": "Включение" },
   "alert_switchingOff": { "message": "Выключение" },
-  "alert_sharePageGenerated": { "message": "Создана страница «Поделиться»" },
+  "alert_generated": { "message": "Создано" },
   "notif_copiedToClipboard": { "message": "Скопировано в буфер обмена" },
   "notif_downloaded": { "message": "загружено" },
   "btnLabel_moreAIextensions": { "message": "Больше расширений ИИ" },

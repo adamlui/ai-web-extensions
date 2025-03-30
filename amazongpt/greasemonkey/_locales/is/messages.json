@@ -80,7 +80,7 @@
   "alert_try": { "message": "Prófa" },
   "alert_switchingOn": { "message": "að kveikja á" },
   "alert_switchingOff": { "message": "slökkt" },
-  "alert_sharePageGenerated": { "message": "Deilisíða búin til" },
+  "alert_generated": { "message": "Búið til" },
   "notif_copiedToClipboard": { "message": "Slóð afrituð á klemmuspjaldið" },
   "notif_downloaded": { "message": "Skjal sótt" },
   "btnLabel_moreAIextensions": { "message": "Fleiri gervigreindarviðbætur" },

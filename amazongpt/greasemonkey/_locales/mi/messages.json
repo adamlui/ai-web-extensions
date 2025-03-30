@@ -80,7 +80,7 @@
   "alert_try": { "message": "Whakamātauria" },
   "alert_switchingOn": { "message": "whakawhiti i runga i" },
   "alert_switchingOff": { "message": "whakawhiti" },
-  "alert_sharePageGenerated": { "message": "Whārangi tohatoha i hangaia" },
+  "alert_generated": { "message": "Te whakatipuranga" },
   "notif_copiedToClipboard": { "message": "Tārua ki te papapātuhi" },
   "notif_downloaded": { "message": "tikiake" },
   "btnLabel_moreAIextensions": { "message": "Ētahi atu whakawhitinga AI" },

@@ -107,7 +107,7 @@
   "alert_try": { "message": "Kokeile" },
   "alert_switchingOn": { "message": "PÄÄLLEKYTKEMINEN" },
   "alert_switchingOff": { "message": "Sammutetaan" },
-  "alert_sharePageGenerated": { "message": "Jaa sivu luotu" },
+  "alert_generated": { "message": "Luotu" },
   "notif_copiedToClipboard": { "message": "Kopioitu leikepöydälle" },
   "notif_downloaded": { "message": "ladattu." },
   "btnLabel_moreAIextensions": { "message": "Lisää tekoälylaajennuksia" },

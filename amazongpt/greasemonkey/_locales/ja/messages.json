@@ -80,7 +80,7 @@
   "alert_try": { "message": "試行" },
   "alert_switchingOn": { "message": "スイッチを入れる" },
   "alert_switchingOff": { "message": "スイッチをオフにする" },
-  "alert_sharePageGenerated": { "message": "シェアページが生成されました" },
+  "alert_generated": { "message": "生成画像" },
   "notif_copiedToClipboard": { "message": "クリップボードにコピー" },
   "notif_downloaded": { "message": "ダウンロード済み" },
   "btnLabel_moreAIextensions": { "message": "その他のAI拡張機能" },

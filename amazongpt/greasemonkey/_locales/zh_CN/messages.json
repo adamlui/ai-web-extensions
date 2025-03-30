@@ -80,7 +80,7 @@
   "alert_try": { "message": "尝试" },
   "alert_switchingOn": { "message": "接通" },
   "alert_switchingOff": { "message": "断电" },
-  "alert_sharePageGenerated": { "message": "已生成分享页面" },
+  "alert_generated": { "message": "已生成" },
   "notif_copiedToClipboard": { "message": "复制到剪贴板" },
   "notif_downloaded": { "message": "下载" },
   "btnLabel_moreAIextensions": { "message": "更多 AI 扩展" },

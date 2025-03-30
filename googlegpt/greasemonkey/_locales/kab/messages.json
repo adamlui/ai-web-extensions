@@ -107,7 +107,7 @@
   "alert_try": { "message": "Sserki" },
   "alert_switchingOn": { "message": "twiɣ ad" },
   "alert_switchingOff": { "message": "twiɣ ad-d" },
-  "alert_sharePageGenerated": { "message": "Rnu asebter i d-yeffɣen" },
+  "alert_generated": { "message": "Ittwasurew" },
   "notif_copiedToClipboard": { "message": "Aḍris yettwanɣel ɣef afus" },
   "notif_downloaded": { "message": "Yettwasider-d" },
   "btnLabel_moreAIextensions": { "message": "Ugar n iwenniten n AI" },

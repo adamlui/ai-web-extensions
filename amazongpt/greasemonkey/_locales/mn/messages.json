@@ -80,7 +80,7 @@
   "alert_try": { "message": "Турших" },
   "alert_switchingOn": { "message": "асаах" },
   "alert_switchingOff": { "message": "унтраах" },
-  "alert_sharePageGenerated": { "message": "Боловсруулсан Хуудасны Хуваалцах" },
+  "alert_generated": { "message": "Үүсмэл" },
   "notif_copiedToClipboard": { "message": "Түр санах ой руу хуулсан" },
   "notif_downloaded": { "message": "татаж авсан" },
   "btnLabel_moreAIextensions": { "message": "Илүү AI Өргөтгөлүүд" },

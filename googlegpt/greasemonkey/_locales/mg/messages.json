@@ -107,7 +107,7 @@
   "alert_try": { "message": "Andramo" },
   "alert_switchingOn": { "message": "mandeha" },
   "alert_switchingOff": { "message": "miala" },
-  "alert_sharePageGenerated": { "message": "Namboarina ny pejin'ny fizarana" },
+  "alert_generated": { "message": "Novolavolaina" },
   "notif_copiedToClipboard": { "message": "Dika mitovy mankany anaty fanindri-taratasy" },
   "notif_downloaded": { "message": "sintonina" },
   "btnLabel_moreAIextensions": { "message": "More AI Extensions" },

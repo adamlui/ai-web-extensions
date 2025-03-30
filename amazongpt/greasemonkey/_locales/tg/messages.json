@@ -80,7 +80,7 @@
   "alert_try": { "message": "& Кӯшиш кунед" },
   "alert_switchingOn": { "message": "переключить вкл" },
   "alert_switchingOff": { "message": "хомӯш кардан" },
-  "alert_sharePageGenerated": { "message": "Ibahagi ang Pahina na n" },
+  "alert_generated": { "message": "Тавлидшуда" },
   "notif_copiedToClipboard": { "message": "URL дар буфери тағйирот копӣ карда шудааст" },
   "notif_downloaded": { "message": "Боргирӣ шуд" },
   "btnLabel_moreAIextensions": { "message": "Васеъсозии бештари AI" },

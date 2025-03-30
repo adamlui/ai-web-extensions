@@ -80,7 +80,7 @@
   "alert_try": { "message": "Proovi" },
   "alert_switchingOn": { "message": "Sisse lülitamine" },
   "alert_switchingOff": { "message": "Välja lülitamine" },
-  "alert_sharePageGenerated": { "message": "Jagamisleht on loodud" },
+  "alert_generated": { "message": "Loodud" },
   "notif_copiedToClipboard": { "message": "Kopeeritud lõikelauale" },
   "notif_downloaded": { "message": "allalaetud" },
   "btnLabel_moreAIextensions": { "message": "Veel tehisintellekti laiendusi" },

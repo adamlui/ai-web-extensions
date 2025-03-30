@@ -107,7 +107,7 @@
   "alert_try": { "message": "ʻAhiʻahi" },
   "alert_switchingOn": { "message": "liliu ʻi he" },
   "alert_switchingOff": { "message": "liliu" },
-  "alert_sharePageGenerated": { "message": "Vahevahe ʻa e peesi ʻoku ʻoatu" },
+  "alert_generated": { "message": "Faʻu" },
   "notif_copiedToClipboard": { "message": "Hiki tatau ki he Papafakamaʻú" },
   "notif_downloaded": { "message": "ʻosi download" },
   "btnLabel_moreAIextensions": { "message": "Toe lahi ange ʻa e fakaloloaʻi" },

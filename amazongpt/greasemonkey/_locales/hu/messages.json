@@ -80,7 +80,7 @@
   "alert_try": { "message": "Próbáld ki" },
   "alert_switchingOn": { "message": "Bekapcsolás" },
   "alert_switchingOff": { "message": "Kikapcsolás" },
-  "alert_sharePageGenerated": { "message": "Oldal megosztása létrehozva" },
+  "alert_generated": { "message": "Létrehozott" },
   "notif_copiedToClipboard": { "message": "Vágólapra másolva" },
   "notif_downloaded": { "message": "letöltve" },
   "btnLabel_moreAIextensions": { "message": "További MI-kiterjesztések" },

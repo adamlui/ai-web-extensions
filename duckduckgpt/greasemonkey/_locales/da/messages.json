@@ -107,7 +107,7 @@
   "alert_try": { "message": "Prøv" },
   "alert_switchingOn": { "message": "SÅDAN TÆNDES DET" },
   "alert_switchingOff": { "message": "Slukning" },
-  "alert_sharePageGenerated": { "message": "Del side genereret" },
+  "alert_generated": { "message": "Oprettet den" },
   "notif_copiedToClipboard": { "message": "Kopieret til udklipsholder" },
   "notif_downloaded": { "message": "downloadet" },
   "btnLabel_moreAIextensions": { "message": "Flere AI-udvidelser" },

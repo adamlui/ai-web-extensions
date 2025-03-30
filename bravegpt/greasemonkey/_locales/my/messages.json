@@ -107,7 +107,7 @@
   "alert_try": { "message": "ကြိုးစားပါ" },
   "alert_switchingOn": { "message": "ဖွင့်နေသည်" },
   "alert_switchingOff": { "message": "ခလုတ်ပိတ်ခြင်း" },
-  "alert_sharePageGenerated": { "message": "စာမျက်နှာကို မျှဝေပါ" },
+  "alert_generated": { "message": "ထုတ်ယူသည်" },
   "notif_copiedToClipboard": { "message": "ကလစ်ဘုတ်သို့ကူးယူပြီး" },
   "notif_downloaded": { "message": "ဒေါင်းလုဒ်လုပ်ထားသည်" },
   "btnLabel_moreAIextensions": { "message": "ပိုများသော AI Extensions" },

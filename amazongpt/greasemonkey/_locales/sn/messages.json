@@ -80,7 +80,7 @@
   "alert_try": { "message": "Edza" },
   "alert_switchingOn": { "message": "kushandura pamusoro" },
   "alert_switchingOff": { "message": "kudzima" },
-  "alert_sharePageGenerated": { "message": "Goverana Peji yakagadzirwa" },
+  "alert_generated": { "message": "ZVAKAITIKA" },
   "notif_copiedToClipboard": { "message": "Yakakopwa kune clipboard" },
   "notif_downloaded": { "message": "kurodha pasi" },
   "btnLabel_moreAIextensions": { "message": "Zvimwe AI Extensions" },

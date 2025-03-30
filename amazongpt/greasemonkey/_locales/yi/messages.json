@@ -80,7 +80,7 @@
   "alert_try": { "message": "פּרוּווט" },
   "alert_switchingOn": { "message": "באַשטימען אויף" },
   "alert_switchingOff": { "message": "באַשטימען אַוועק" },
-  "alert_sharePageGenerated": { "message": "ייַנטיילן בלאַט דזשענערייטאַד" },
+  "alert_generated": { "message": "דזשענערייטאַד" },
   "notif_copiedToClipboard": { "message": "קאַפּיד צו קליפּבאָרד" },
   "notif_downloaded": { "message": "דאַונלאָודיד" },
   "btnLabel_moreAIextensions": { "message": "מער אַי יקסטענשאַנז" },

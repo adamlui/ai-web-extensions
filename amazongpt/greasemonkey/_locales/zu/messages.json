@@ -80,7 +80,7 @@
   "alert_try": { "message": "uzame" },
   "alert_switchingOn": { "message": "ukuvula" },
   "alert_switchingOff": { "message": "ukuvala" },
-  "alert_sharePageGenerated": { "message": "Ikhasi Lokwabelana lenziwe" },
+  "alert_generated": { "message": "Kukhiqizwe" },
   "notif_copiedToClipboard": { "message": "Ikopishiwe ebhodini lokunamathisela" },
   "notif_downloaded": { "message": "idawunilodiwe" },
   "btnLabel_moreAIextensions": { "message": "Izandiso Ezengeziwe ze-AI" },

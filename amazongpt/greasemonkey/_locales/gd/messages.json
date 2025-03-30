@@ -80,7 +80,7 @@
   "alert_try": { "message": "Feuch" },
   "alert_switchingOn": { "message": "a 'tionndadh air" },
   "alert_switchingOff": { "message": "a 'cur dheth" },
-  "alert_sharePageGenerated": { "message": "Chaidh an duilleag co - roinn a chruthachadh" },
+  "alert_generated": { "message": "Air a ghineadh" },
   "notif_copiedToClipboard": { "message": "Chaidh a chopaigeadh dhan stòr-bhòrd" },
   "notif_downloaded": { "message": "Air a luchdadh a-nuas" },
   "btnLabel_moreAIextensions": { "message": "Barrachd leudachain" },

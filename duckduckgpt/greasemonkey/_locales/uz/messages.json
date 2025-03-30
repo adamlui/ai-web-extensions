@@ -107,7 +107,7 @@
   "alert_try": { "message": "Sinash" },
   "alert_switchingOn": { "message": "yoqish" },
   "alert_switchingOff": { "message": "o'chirish" },
-  "alert_sharePageGenerated": { "message": "Ulashish sahifasi yaratildi" },
+  "alert_generated": { "message": "Yaratilgan" },
   "notif_copiedToClipboard": { "message": "Buferga nusxa olindi" },
   "notif_downloaded": { "message": "Yozib olish davom ettrildi" },
   "btnLabel_moreAIextensions": { "message": "Ko'proq AI kengaytmalari" },

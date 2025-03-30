@@ -107,7 +107,7 @@
   "alert_try": { "message": "Gerageza" },
   "alert_switchingOn": { "message": "guhinduranya" },
   "alert_switchingOff": { "message": "numa Numa" },
-  "alert_sharePageGenerated": { "message": "Share Page yaremwe" },
+  "alert_generated": { "message": "Generation None None" },
   "notif_copiedToClipboard": { "message": "Ikebukuro clipboard" },
   "notif_downloaded": { "message": "download None None" },
   "btnLabel_moreAIextensions": { "message": "More Ikebukuro Ikebukuro" },

@@ -107,7 +107,7 @@
   "alert_try": { "message": "Prova" },
   "alert_switchingOn": { "message": "accensione" },
   "alert_switchingOff": { "message": "spegnimento" },
-  "alert_sharePageGenerated": { "message": "Pagina di condivisione generata" },
+  "alert_generated": { "message": "Generata" },
   "notif_copiedToClipboard": { "message": "Copiato negli appunti" },
   "notif_downloaded": { "message": "scaricati" },
   "btnLabel_moreAIextensions": { "message": "Altre estensioni AI" },

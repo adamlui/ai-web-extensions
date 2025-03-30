@@ -80,7 +80,7 @@
   "alert_try": { "message": "Bandyti" },
   "alert_switchingOn": { "message": "Įjungti" },
   "alert_switchingOff": { "message": "Išjungti" },
-  "alert_sharePageGenerated": { "message": "Dalytis puslapiu sugeneruota" },
+  "alert_generated": { "message": "Sugeneruota" },
   "notif_copiedToClipboard": { "message": "<g x=1 id=\"13\"/> nukopijuota į iškarpinę" },
   "notif_downloaded": { "message": "Atsisiųsta" },
   "btnLabel_moreAIextensions": { "message": "Daugiau DI plėtinių" },

@@ -80,7 +80,7 @@
   "alert_try": { "message": "Hono" },
   "alert_switchingOn": { "message": "ke hoʻololi ʻana" },
   "alert_switchingOff": { "message": "e hoopau ana" },
-  "alert_sharePageGenerated": { "message": "Kaʻana like ʻAoʻao i hana ʻia" },
+  "alert_generated": { "message": "Hana ʻia" },
   "notif_copiedToClipboard": { "message": "Kope ʻia i ka papa ʻokiʻoki" },
   "notif_downloaded": { "message": "hoʻoiho ʻia" },
   "btnLabel_moreAIextensions": { "message": "Hoʻonui AI hou aku" },

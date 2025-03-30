@@ -80,7 +80,7 @@
   "alert_try": { "message": "សាកល្បង" },
   "alert_switchingOn": { "message": "កំពុងបើក" },
   "alert_switchingOff": { "message": "បិទ" },
-  "alert_sharePageGenerated": { "message": "ចែករំលែកទំព័រដែលបានបង្កើត" },
+  "alert_generated": { "message": "បានបង្កើត ។ " },
   "notif_copiedToClipboard": { "message": "បាន​ចម្លងទៅ​ក្ដារតម្បៀតខ្ទាស់" },
   "notif_downloaded": { "message": "បានទាញយក" },
   "btnLabel_moreAIextensions": { "message": "ផ្នែកបន្ថែម AI ច្រើនទៀត" },

@@ -107,7 +107,7 @@
   "alert_try": { "message": "abyssinia" },
   "alert_switchingOn": { "message": "ላይ መቀየር" },
   "alert_switchingOff": { "message": "ማጥፋት" },
-  "alert_sharePageGenerated": { "message": "ያጋሩ ገጽ የተፈጠረ" },
+  "alert_generated": { "message": "<g id=\"1\">የመነጨ</g> " },
   "notif_copiedToClipboard": { "message": "ወደ ክሊፕቦርድ ይቀዳጃል" },
   "notif_downloaded": { "message": "የወረዱ" },
   "btnLabel_moreAIextensions": { "message": "ተጨማሪ የ AI ቅጥያዎች" },

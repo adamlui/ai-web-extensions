@@ -107,7 +107,7 @@
   "alert_try": { "message": "ਕੋਸ਼ਿਸ ਕਰੋ" },
   "alert_switchingOn": { "message": "ਚਾਲੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ" },
   "alert_switchingOff": { "message": "ਬੰਦ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ" },
-  "alert_sharePageGenerated": { "message": "ਪੇਜ਼ ਸਾਂਝਾ ਕਰੋ ਤਿਆਰ ਕੀਤਾ ਗਿਆ" },
+  "alert_generated": { "message": "ਤਿਆਰ ਕੀਤਾ" },
   "notif_copiedToClipboard": { "message": "ਕਲਿੱਪਬੋਰਡ ਤੇ ਕਾਪੀ ਕੀਤਾ ਗਿਆ।" },
   "notif_downloaded": { "message": "ਡਾਊਨਲੋਡ" },
   "btnLabel_moreAIextensions": { "message": "ਹੋਰ AI ਐਕਸਟੈਂਸ਼ਨਾਂ" },

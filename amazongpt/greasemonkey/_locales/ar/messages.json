@@ -80,7 +80,7 @@
   "alert_try": { "message": "جرب" },
   "alert_switchingOn": { "message": "جاري التشغيل" },
   "alert_switchingOff": { "message": "قَطْعُ التّيّارِ الكَهْرَبَائِيّ" },
-  "alert_sharePageGenerated": { "message": "تم إنشاء صفحة المشاركة" },
+  "alert_generated": { "message": "تم الإصدار" },
   "notif_copiedToClipboard": { "message": "نسخ إلى الحافظة" },
   "notif_downloaded": { "message": "تم التنزيل" },
   "btnLabel_moreAIextensions": { "message": "المزيد من ملحقات الذكاء الاصطناعي" },

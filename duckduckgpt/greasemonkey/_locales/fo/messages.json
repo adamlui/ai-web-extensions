@@ -107,7 +107,7 @@
   "alert_try": { "message": "Royn" },
   "alert_switchingOn": { "message": "skift um" },
   "alert_switchingOff": { "message": "at venda sær" },
-  "alert_sharePageGenerated": { "message": "Dela síðuna, sum er skapt" },
+  "alert_generated": { "message": "Framleiðsla" },
   "notif_copiedToClipboard": { "message": "Avritað til klippborð" },
   "notif_downloaded": { "message": "niðurlagdur" },
   "btnLabel_moreAIextensions": { "message": "Fleiri AI útbyggingar" },

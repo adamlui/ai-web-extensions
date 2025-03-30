@@ -80,7 +80,7 @@
   "alert_try": { "message": "Փորձել" },
   "alert_switchingOn": { "message": "միացնել" },
   "alert_switchingOff": { "message": "անջատում" },
-  "alert_sharePageGenerated": { "message": "Կիսվել էջը ստեղծվել է" },
+  "alert_generated": { "message": "Ստեղծվել է" },
   "notif_copiedToClipboard": { "message": "Պատճենված է շապիկի մեջ" },
   "notif_downloaded": { "message": "ներբեռնված է" },
   "btnLabel_moreAIextensions": { "message": "Լրացուցիչ արհեստական ինտելեկտի ընդլայնումներ" },

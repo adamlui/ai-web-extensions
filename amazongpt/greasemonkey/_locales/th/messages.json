@@ -80,7 +80,7 @@
   "alert_try": { "message": "ลอง" },
   "alert_switchingOn": { "message": "การเปิดเครื่อง" },
   "alert_switchingOff": { "message": "การปิดสวิตช์" },
-  "alert_sharePageGenerated": { "message": "สร้างหน้าแชร์แล้ว" },
+  "alert_generated": { "message": "สร้าง" },
   "notif_copiedToClipboard": { "message": "คัดลอกไปที่คลิปบอร์ด" },
   "notif_downloaded": { "message": "ดาวน์โหลด " },
   "btnLabel_moreAIextensions": { "message": "ส่วนขยาย AI เพิ่มเติม" },

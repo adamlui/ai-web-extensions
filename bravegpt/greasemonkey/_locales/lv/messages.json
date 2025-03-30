@@ -107,7 +107,7 @@
   "alert_try": { "message": "Mēģināt" },
   "alert_switchingOn": { "message": "Ieslēgšana" },
   "alert_switchingOff": { "message": "Svaru Izslēgšana" },
-  "alert_sharePageGenerated": { "message": "Kopīgošanas lapa ģenerēta" },
+  "alert_generated": { "message": "Ģenerēts" },
   "notif_copiedToClipboard": { "message": "Kopēt uz starpliktuvi" },
   "notif_downloaded": { "message": "Lejupielādēts" },
   "btnLabel_moreAIextensions": { "message": "Citi MI paplašinājumi" },

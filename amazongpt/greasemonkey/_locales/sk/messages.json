@@ -80,7 +80,7 @@
   "alert_try": { "message": "Vyskúšať" },
   "alert_switchingOn": { "message": "zapnutie" },
   "alert_switchingOff": { "message": "Vypnutie" },
-  "alert_sharePageGenerated": { "message": "Vygenerovaná stránka zdieľania" },
+  "alert_generated": { "message": "Vygenerované" },
   "notif_copiedToClipboard": { "message": "Skopírované do schránky" },
   "notif_downloaded": { "message": "Stiahnuté" },
   "btnLabel_moreAIextensions": { "message": "Ďalšie rozšírenia umelej inteligencie" },

@@ -107,7 +107,7 @@
   "alert_try": { "message": "Nu, provu" },
   "alert_switchingOn": { "message": "ŝalti" },
   "alert_switchingOff": { "message": "malŝalti" },
-  "alert_sharePageGenerated": { "message": "Kunhavigi paĝon generitan" },
+  "alert_generated": { "message": "Generita" },
   "notif_copiedToClipboard": { "message": "URL kopiita al interdeponejo" },
   "notif_downloaded": { "message": "Elŝutite" },
   "btnLabel_moreAIextensions": { "message": "Pli da AI- etendaĵoj" },

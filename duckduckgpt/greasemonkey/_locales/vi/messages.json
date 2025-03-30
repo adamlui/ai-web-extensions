@@ -107,7 +107,7 @@
   "alert_try": { "message": "Thử" },
   "alert_switchingOn": { "message": "Mở máy" },
   "alert_switchingOff": { "message": "Tắt" },
-  "alert_sharePageGenerated": { "message": "Đã tạo trang chia sẻ" },
+  "alert_generated": { "message": "Đã tạo" },
   "notif_copiedToClipboard": { "message": "Đã sao chép vào bộ nhớ đệm" },
   "notif_downloaded": { "message": "Đã tải xuống" },
   "btnLabel_moreAIextensions": { "message": "Tiện ích mở rộng AI khác" },

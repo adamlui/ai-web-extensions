@@ -80,7 +80,7 @@
   "alert_try": { "message": "Обиди се" },
   "alert_switchingOn": { "message": "вклучување" },
   "alert_switchingOff": { "message": "исклучување" },
-  "alert_sharePageGenerated": { "message": "Страницата за споделување е генерирана" },
+  "alert_generated": { "message": "Генерирано" },
   "notif_copiedToClipboard": { "message": "URL е копиран на таблата со исечоци" },
   "notif_downloaded": { "message": "Преземено" },
   "btnLabel_moreAIextensions": { "message": "Повеќе екстензии на вештачка интелигенција" },

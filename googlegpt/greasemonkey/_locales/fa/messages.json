@@ -107,7 +107,7 @@
   "alert_try": { "message": "تلاش کردن" },
   "alert_switchingOn": { "message": "روشن شدن" },
   "alert_switchingOff": { "message": "خاموش کردن" },
-  "alert_sharePageGenerated": { "message": "اشتراک گذاری صفحه ایجاد شد" },
+  "alert_generated": { "message": "تولید شده" },
   "notif_copiedToClipboard": { "message": "در کلیپ بورد کپی شد" },
   "notif_downloaded": { "message": "دانلود" },
   "btnLabel_moreAIextensions": { "message": "افزونه های بیشتر هوش مصنوعی" },

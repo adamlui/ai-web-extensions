@@ -80,7 +80,7 @@
   "alert_try": { "message": "Try ti try" },
   "alert_switchingOn": { "message": "change thinga" },
   "alert_switchingOff": { "message": "ti zia lege ti sarango ye ti lo" },
-  "alert_sharePageGenerated": { "message": "Kangbi ni Kangbi ni Kangbi ni Sara kua nzoni na mbage ti" },
+  "alert_generated": { "message": "A yeke sara si azo aga na fini" },
   "notif_copiedToClipboard": { "message": "Gbu li ti mo na ndo ti clipboard" },
   "notif_downloaded": { "message": "yeke yeke download" },
   "btnLabel_moreAIextensions": { "message": "A yeke kota ye ti tene a sara tënë ti aye so" },

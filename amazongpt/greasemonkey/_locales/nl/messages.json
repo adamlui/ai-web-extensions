@@ -80,7 +80,7 @@
   "alert_try": { "message": "Proberen" },
   "alert_switchingOn": { "message": "het inschakelen" },
   "alert_switchingOff": { "message": "Uitschakelen" },
-  "alert_sharePageGenerated": { "message": "Pagina delen gegenereerd" },
+  "alert_generated": { "message": "Gegenereerd" },
   "notif_copiedToClipboard": { "message": "Gekopieerd naar klembord" },
   "notif_downloaded": { "message": "gedownload" },
   "btnLabel_moreAIextensions": { "message": "Meer AI-extensies" },

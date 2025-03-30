@@ -107,7 +107,7 @@
   "alert_try": { "message": "Cubalah" },
   "alert_switchingOn": { "message": "dihidupkan" },
   "alert_switchingOff": { "message": "mematikan" },
-  "alert_sharePageGenerated": { "message": "Kongsi Halaman dijana" },
+  "alert_generated": { "message": "makluman" },
   "notif_copiedToClipboard": { "message": "Disalin ke papan klip" },
   "notif_downloaded": { "message": "Dimuat turun" },
   "btnLabel_moreAIextensions": { "message": "Lebih Banyak Sambungan AI" },

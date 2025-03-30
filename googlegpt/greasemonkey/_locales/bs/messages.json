@@ -107,7 +107,7 @@
   "alert_try": { "message": "p" },
   "alert_switchingOn": { "message": "uključivanje" },
   "alert_switchingOff": { "message": "isključivanje" },
-  "alert_sharePageGenerated": { "message": "Generisana stranica za dijeljenje" },
+  "alert_generated": { "message": "Generisani" },
   "notif_copiedToClipboard": { "message": "Podaci kopirani u međuspremnik" },
   "notif_downloaded": { "message": "Preuzeto" },
   "btnLabel_moreAIextensions": { "message": "Više proširenja za vještačku inteligenciju" },

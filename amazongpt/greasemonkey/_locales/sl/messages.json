@@ -80,7 +80,7 @@
   "alert_try": { "message": "Poskusite" },
   "alert_switchingOn": { "message": "Vklop" },
   "alert_switchingOff": { "message": "Izklop" },
-  "alert_sharePageGenerated": { "message": "Skupna raba strani je ustvarjena" },
+  "alert_generated": { "message": "Ustvarjeno" },
   "notif_copiedToClipboard": { "message": "Kopirano v odložišče" },
   "notif_downloaded": { "message": "Preneseno" },
   "btnLabel_moreAIextensions": { "message": "Več razširitev umetne inteligence" },

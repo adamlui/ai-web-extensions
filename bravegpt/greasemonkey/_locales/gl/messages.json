@@ -107,7 +107,7 @@
   "alert_try": { "message": "Ensaio" },
   "alert_switchingOn": { "message": "encendido encendido" },
   "alert_switchingOff": { "message": "apagón de conmutación" },
-  "alert_sharePageGenerated": { "message": "Compartir Páxina xerada" },
+  "alert_generated": { "message": "Xerado" },
   "notif_copiedToClipboard": { "message": "Copiado ao  portapapeis" },
   "notif_downloaded": { "message": "Recibido" },
   "btnLabel_moreAIextensions": { "message": "Máis extensións de IA" },

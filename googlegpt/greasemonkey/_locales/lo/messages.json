@@ -107,7 +107,7 @@
   "alert_try": { "message": "ພະ ຍາ ຍາມ" },
   "alert_switchingOn": { "message": "ການເປີດໃຊ້ງານ" },
   "alert_switchingOff": { "message": "ການປິດການໃຊ້ງານ" },
-  "alert_sharePageGenerated": { "message": "ແບ່ງປັນໜ້າທີ່ສ້າງຂື້ນ" },
+  "alert_generated": { "message": "ສ້າງຂື້ນ" },
   "notif_copiedToClipboard": { "message": "ສຳເນົາໄປທີ່ຄລິບບອດ" },
   "notif_downloaded": { "message": "ດາວໂຫຼດແລ້ວ" },
   "btnLabel_moreAIextensions": { "message": "ການຂະຫຍາຍ AI ເພີ່ມເຕີມ" },

@@ -107,7 +107,7 @@
   "alert_try": { "message": "চেষ্টা করা" },
   "alert_switchingOn": { "message": "স্যুইচ করা হচ্ছে" },
   "alert_switchingOff": { "message": "স্যুইচ অফ করা" },
-  "alert_sharePageGenerated": { "message": "শেয়ার পৃষ্ঠা তৈরি করা হয়েছে" },
+  "alert_generated": { "message": "উৎপন্ন হয়েছে" },
   "notif_copiedToClipboard": { "message": "ক্লিপবোর্ড-এ কপি করা হয়েছে" },
   "notif_downloaded": { "message": "ডাউনলোড করা হয়েছে:" },
   "btnLabel_moreAIextensions": { "message": "আরও AI এক্সটেনশন" },

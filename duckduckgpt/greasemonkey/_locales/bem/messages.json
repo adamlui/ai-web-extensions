@@ -107,7 +107,7 @@
   "alert_try": { "message": "Tontonkanyapo" },
   "alert_switchingOn": { "message": "ukucinja" },
   "alert_switchingOff": { "message": "ukuleka" },
-  "alert_sharePageGenerated": { "message": "Share Pepala lyapangwa" },
+  "alert_generated": { "message": "Ukupanga" },
   "notif_copiedToClipboard": { "message": "Yalili Yalila clipboard" },
   "notif_downloaded": { "message": "ukukopolola" },
   "btnLabel_moreAIextensions": { "message": "More Awkwafina" },

@@ -80,7 +80,7 @@
   "alert_try": { "message": "ಪ್ರಯತ್ನಿಸು( T)" },
   "alert_switchingOn": { "message": "ಆನ್ ಮಾಡಲಾಗುತ್ತಿದೆ" },
   "alert_switchingOff": { "message": "ಸ್ವಿಚ್ ಆಫ್ ಮಾಡಲಾಗುತ್ತಿದೆ" },
-  "alert_sharePageGenerated": { "message": "ಪುಟವನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗಿದೆ" },
+  "alert_generated": { "message": "ಸೃಷ್ಟಿಸಲಾಗಿದೆ" },
   "notif_copiedToClipboard": { "message": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ" },
   "notif_downloaded": { "message": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗಿದೆ" },
   "btnLabel_moreAIextensions": { "message": "ಹೆಚ್ಚಿನ AI ವಿಸ್ತರಣೆಗಳು" },

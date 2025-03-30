@@ -107,7 +107,7 @@
   "alert_try": { "message": "Gerageza" },
   "alert_switchingOn": { "message": "kugenda kuri" },
   "alert_switchingOff": { "message": "guhindura kuri" },
-  "alert_sharePageGenerated": { "message": "< B B" },
+  "alert_generated": { "message": "Gradient-editor-action" },
   "notif_copiedToClipboard": { "message": "Kuri Ububikokoporora" },
   "notif_downloaded": { "message": "Iyimura" },
   "btnLabel_moreAIextensions": { "message": "Umigereka" },

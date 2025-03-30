@@ -80,7 +80,7 @@
   "alert_try": { "message": "& Zama" },
   "alert_switchingOn": { "message": "ukuyivula" },
   "alert_switchingOff": { "message": "ukucima" },
-  "alert_sharePageGenerated": { "message": "Iphepha lokuthumela lenziwe" },
+  "alert_generated": { "message": "Iveliswe" },
   "notif_copiedToClipboard": { "message": "URL ikhutshelwa kwibhodi eqhotyoshwayo. @ info" },
   "notif_downloaded": { "message": "ikhutshelwe" },
   "btnLabel_moreAIextensions": { "message": "Izongezo Ezingakumbi zeAI" },

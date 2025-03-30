@@ -107,7 +107,7 @@
   "alert_try": { "message": "Conare" },
   "alert_switchingOn": { "message": "commutans on" },
   "alert_switchingOff": { "message": "commutans off" },
-  "alert_sharePageGenerated": { "message": "Pagina Partis" },
+  "alert_generated": { "message": "Generale" },
   "notif_copiedToClipboard": { "message": "Clipboard" },
   "notif_downloaded": { "message": "download" },
   "btnLabel_moreAIextensions": { "message": "Extensionsum AI" },

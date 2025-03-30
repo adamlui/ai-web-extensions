@@ -80,7 +80,7 @@
   "alert_try": { "message": "དཔྱད་རྩོམ།" },
   "alert_switchingOn": { "message": "བསྒྱུར་བཅོས་འབད་" },
   "alert_switchingOff": { "message": "ཕྱིར་འབུད་འབད་" },
-  "alert_sharePageGenerated": { "message": "པ་ ཐོན་ཡོདཔ་ཨིན་པས།" },
+  "alert_generated": { "message": "བཟོ་སྐྲུན་འབད་" },
   "notif_copiedToClipboard": { "message": "གློག་ཐག་ར་བ་ལུ་འདྲ་བཤུས་འབད།" },
   "notif_downloaded": { "message": "ཌ་ལོཌ་" },
   "btnLabel_moreAIextensions": { "message": "རྒྱང་སྒྲིལ་ཚུ་" },

@@ -80,7 +80,7 @@
   "alert_try": { "message": "트라이" },
   "alert_switchingOn": { "message": "스위치 켜기" },
   "alert_switchingOff": { "message": "스위치 끄기" },
-  "alert_sharePageGenerated": { "message": "공유 페이지 생성됨" },
+  "alert_generated": { "message": "생성됨" },
   "notif_copiedToClipboard": { "message": "클립보드에 복사되었습니다" },
   "notif_downloaded": { "message": "다운로드 완료" },
   "btnLabel_moreAIextensions": { "message": "AI 확장 프로그램 더 보기" },

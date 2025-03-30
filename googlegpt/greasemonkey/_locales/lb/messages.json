@@ -107,7 +107,7 @@
   "alert_try": { "message": "& Probéieren" },
   "alert_switchingOn": { "message": "wiesselen un" },
   "alert_switchingOff": { "message": "auszeschalten" },
-  "alert_sharePageGenerated": { "message": "Deelen Säit generéiert" },
+  "alert_generated": { "message": "Generéiert" },
   "notif_copiedToClipboard": { "message": "Op Clipboard kopéieren" },
   "notif_downloaded": { "message": "erofgelueden" },
   "btnLabel_moreAIextensions": { "message": "Méi AI Extensiounen" },

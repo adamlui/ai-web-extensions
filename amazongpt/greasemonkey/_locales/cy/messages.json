@@ -80,7 +80,7 @@
   "alert_try": { "message": "Cais" },
   "alert_switchingOn": { "message": "troi ymlaen" },
   "alert_switchingOff": { "message": "diffodd" },
-  "alert_sharePageGenerated": { "message": "Cynhyrchwyd y Dudalen Rhannu" },
+  "alert_generated": { "message": "Cynhyrchwyd" },
   "notif_copiedToClipboard": { "message": "Wedi'i gopïo i'r clipfwrdd" },
   "notif_downloaded": { "message": "Wedi llwytho i lawr" },
   "btnLabel_moreAIextensions": { "message": "Mwy o Estyniadau AI" },

@@ -107,7 +107,7 @@
   "alert_try": { "message": "བརྟག་ཞིབ" },
   "alert_switchingOn": { "message": "བསྒྱུར་རྩོམ །" },
   "alert_switchingOff": { "message": "ཕྱིར་འབུད་པ །" },
-  "alert_sharePageGenerated": { "message": "ཤོག་ངོས་བཟོ་བཅོས །" },
+  "alert_generated": { "message": "འབྱུང་ཁུངས །" },
   "notif_copiedToClipboard": { "message": "ཨང་ཚབ་བཤུས་ཟིན" },
   "notif_downloaded": { "message": "ཕབ་ལེན །" },
   "btnLabel_moreAIextensions": { "message": "ཕྱོགས་སྟོན ། གཙོ་ངོས ། \"རྩོམ་རིག\"" },

@@ -107,7 +107,7 @@
   "alert_try": { "message": "Басқа пароль" },
   "alert_switchingOn": { "message": "қосу" },
   "alert_switchingOff": { "message": "Өшіру" },
-  "alert_sharePageGenerated": { "message": "Бөлісу Бет жасалды" },
+  "alert_generated": { "message": "Жасалған" },
   "notif_copiedToClipboard": { "message": "URL алмасу буферіне көшірімеленді" },
   "notif_downloaded": { "message": "Жүктеу жалғастырылды" },
   "btnLabel_moreAIextensions": { "message": "Қосымша жасанды интеллект кеңейтімдері" },

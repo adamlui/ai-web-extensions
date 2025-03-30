@@ -107,7 +107,7 @@
   "alert_try": { "message": "Intenta- ho" },
   "alert_switchingOn": { "message": "activant" },
   "alert_switchingOff": { "message": "desactivar" },
-  "alert_sharePageGenerated": { "message": "Pàgina de compartició generada" },
+  "alert_generated": { "message": "Generat" },
   "notif_copiedToClipboard": { "message": "S'ha copiat al porta-retalls" },
   "notif_downloaded": { "message": "Descàrrega" },
   "btnLabel_moreAIextensions": { "message": "Més extensions d'IA" },

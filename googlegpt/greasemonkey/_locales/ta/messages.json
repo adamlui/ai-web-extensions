@@ -107,7 +107,7 @@
   "alert_try": { "message": "முயற்சிக்க" },
   "alert_switchingOn": { "message": "இயக்குகிறது" },
   "alert_switchingOff": { "message": "சுவிட்ச் ஆஃப்" },
-  "alert_sharePageGenerated": { "message": "பக்கத்தைப் பகிரவும் உருவாக்கப்பட்டது" },
+  "alert_generated": { "message": "உருவாக்கப்பட்டது" },
   "notif_copiedToClipboard": { "message": "கிளிப்போர்டுக்கு மறுபிரதி செய்யப்பட்டது" },
   "notif_downloaded": { "message": "பதிவிறக்கப்பட்டது" },
   "btnLabel_moreAIextensions": { "message": "மேலும் AI நீட்டிப்புகள்" },

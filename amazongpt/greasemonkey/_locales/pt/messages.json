@@ -80,7 +80,7 @@
   "alert_try": { "message": "Tentar" },
   "alert_switchingOn": { "message": "Ligar" },
   "alert_switchingOff": { "message": "Desligar" },
-  "alert_sharePageGenerated": { "message": "Partilhar página gerada" },
+  "alert_generated": { "message": "Gerado" },
   "notif_copiedToClipboard": { "message": "Copiado para a área de transferência" },
   "notif_downloaded": { "message": "descarregado" },
   "btnLabel_moreAIextensions": { "message": "Mais extensões de IA" },

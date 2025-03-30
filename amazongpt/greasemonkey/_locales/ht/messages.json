@@ -80,7 +80,7 @@
   "alert_try": { "message": "Eseye" },
   "alert_switchingOn": { "message": "chanje sou" },
   "alert_switchingOff": { "message": "chanje koupe" },
-  "alert_sharePageGenerated": { "message": "Pataje Paj ki te pwodwi" },
+  "alert_generated": { "message": "Jenerasyon" },
   "notif_copiedToClipboard": { "message": "Kopi nan clipboard" },
   "notif_downloaded": { "message": "telechaje" },
   "btnLabel_moreAIextensions": { "message": "Plis Ekstansyon AI" },

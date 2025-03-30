@@ -107,7 +107,7 @@
   "alert_try": { "message": "Purba" },
   "alert_switchingOn": { "message": "kambio riba" },
   "alert_switchingOff": { "message": "kaká Kaká" },
-  "alert_sharePageGenerated": { "message": "Compartir Página Generacion" },
+  "alert_generated": { "message": "Generá" },
   "notif_copiedToClipboard": { "message": "Copiando a Clipboard" },
   "notif_downloaded": { "message": "deskargá" },
   "btnLabel_moreAIextensions": { "message": "Mas Ampliacion" },

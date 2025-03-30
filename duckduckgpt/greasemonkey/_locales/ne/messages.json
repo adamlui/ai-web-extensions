@@ -107,7 +107,7 @@
   "alert_try": { "message": "प्रयास गर्नुहोस्" },
   "alert_switchingOn": { "message": "स्विच अन गर्दै" },
   "alert_switchingOff": { "message": "स्विच अफ गर्दै" },
-  "alert_sharePageGenerated": { "message": "सिर्जना गरिएको पृष्ठ सेयर गर्नुहोस्" },
+  "alert_generated": { "message": "बनाइयो" },
   "notif_copiedToClipboard": { "message": "टेक्स्ट क्लिपबोर्डमा  कपि भयो" },
   "notif_downloaded": { "message": "डाउनलोड गरिएको " },
   "btnLabel_moreAIextensions": { "message": "थप AI विस्तारहरू" },

@@ -80,7 +80,7 @@
   "alert_try": { "message": "Prova" },
   "alert_switchingOn": { "message": "Påslagning" },
   "alert_switchingOff": { "message": "Så här stänger man av" },
-  "alert_sharePageGenerated": { "message": "Dela sida genererad" },
+  "alert_generated": { "message": "Genererad" },
   "notif_copiedToClipboard": { "message": "Kopierat till urklipp" },
   "notif_downloaded": { "message": "nedladdad" },
   "btnLabel_moreAIextensions": { "message": "Fler AI-tillägg" },

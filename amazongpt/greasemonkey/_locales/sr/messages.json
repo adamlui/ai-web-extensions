@@ -80,7 +80,7 @@
   "alert_try": { "message": "Pokušavam" },
   "alert_switchingOn": { "message": "Uključivanje" },
   "alert_switchingOff": { "message": "Isključivanje" },
-  "alert_sharePageGenerated": { "message": "Stranica za deljenje je generisana" },
+  "alert_generated": { "message": "Generisano" },
   "notif_copiedToClipboard": { "message": "Kopirano u clipboard" },
   "notif_downloaded": { "message": "Преузето" },
   "btnLabel_moreAIextensions": { "message": "Još proširenja za veštačku inteligenciju" },

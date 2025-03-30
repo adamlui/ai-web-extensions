@@ -80,7 +80,7 @@
   "alert_try": { "message": "Lumikizanani nafe" },
   "alert_switchingOn": { "message": "kusinthanitsa" },
   "alert_switchingOff": { "message": "kuzimitsa" },
-  "alert_sharePageGenerated": { "message": "Gawani Tsamba lopangidwa" },
+  "alert_generated": { "message": "Zopangidwa" },
   "notif_copiedToClipboard": { "message": "Anakopera kuti clipboard" },
   "notif_downloaded": { "message": "kukopera" },
   "btnLabel_moreAIextensions": { "message": "Zambiri za AI" },

@@ -107,7 +107,7 @@
   "alert_try": { "message": "Synap gör" },
   "alert_switchingOn": { "message": "üýtgeşik" },
   "alert_switchingOff": { "message": "çykyş" },
-  "alert_sharePageGenerated": { "message": "Sahypa ýaradyldy" },
+  "alert_generated": { "message": "Ýaradylyş" },
   "notif_copiedToClipboard": { "message": "Klipbordda nusga alynýar" },
   "notif_downloaded": { "message": "indir" },
   "btnLabel_moreAIextensions": { "message": "Ähli uzynlyklar" },

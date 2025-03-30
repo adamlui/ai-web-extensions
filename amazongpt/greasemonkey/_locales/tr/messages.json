@@ -80,7 +80,7 @@
   "alert_try": { "message": "Try" },
   "alert_switchingOn": { "message": "Açma" },
   "alert_switchingOff": { "message": "Kapatma" },
-  "alert_sharePageGenerated": { "message": "Paylaşım Sayfası oluşturuldu" },
+  "alert_generated": { "message": "generated" },
   "notif_copiedToClipboard": { "message": "Panoya kopyalandı" },
   "notif_downloaded": { "message": "İndirilmiş" },
   "btnLabel_moreAIextensions": { "message": "Daha Fazla Yapay Zeka Uzantısı" },

@@ -107,7 +107,7 @@
   "alert_try": { "message": "कोशिश करें" },
   "alert_switchingOn": { "message": "स्विच ऑन किया जा रहा है" },
   "alert_switchingOff": { "message": "स्विच ऑफ किया जा रहा है" },
-  "alert_sharePageGenerated": { "message": "जनरेट किया गया पेज शेयर करें" },
+  "alert_generated": { "message": "जनरेट किया गया" },
   "notif_copiedToClipboard": { "message": "क्लिपबोर्ड पर कॉपी कर लिया गया है" },
   "notif_downloaded": { "message": "डाउनलोड हो गया" },
   "btnLabel_moreAIextensions": { "message": "और AI एक्सटेंशन" },

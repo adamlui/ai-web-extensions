@@ -107,7 +107,7 @@
   "alert_try": { "message": "Jaribu" },
   "alert_switchingOn": { "message": "kuwasha" },
   "alert_switchingOff": { "message": "kuzima" },
-  "alert_sharePageGenerated": { "message": "Ukurasa wa Kushiriki umetengenezwa" },
+  "alert_generated": { "message": "Zinazozalishwa" },
   "notif_copiedToClipboard": { "message": "Msimbo umenakiliwa kwenye ubao klipu" },
   "notif_downloaded": { "message": "imepakuliwa" },
   "btnLabel_moreAIextensions": { "message": "Viendelezi zaidi vya AI" },

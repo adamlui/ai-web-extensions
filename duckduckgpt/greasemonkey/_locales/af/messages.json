@@ -107,7 +107,7 @@
   "alert_try": { "message": "Probeer" },
   "alert_switchingOn": { "message": "skakelaar aan" },
   "alert_switchingOff": { "message": "afskakel" },
-  "alert_sharePageGenerated": { "message": "Deel Bladsy gegenereer" },
+  "alert_generated": { "message": "Genereer" },
   "notif_copiedToClipboard": { "message": "Knyp gekopiëerde aan knipbord" },
   "notif_downloaded": { "message": "afgelaai" },
   "btnLabel_moreAIextensions": { "message": "Meer AI-uitbreidings" },

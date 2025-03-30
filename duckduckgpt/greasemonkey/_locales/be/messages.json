@@ -107,7 +107,7 @@
   "alert_try": { "message": "Паспрабаваць" },
   "alert_switchingOn": { "message": "уключэнне" },
   "alert_switchingOff": { "message": "выключэнне" },
-  "alert_sharePageGenerated": { "message": "Стварыць старонку сумеснага доступу" },
+  "alert_generated": { "message": "Згенеравана" },
   "notif_copiedToClipboard": { "message": "Тэкст скапіраваны ў буфер абмену" },
   "notif_downloaded": { "message": "Сцягванні" },
   "btnLabel_moreAIextensions": { "message": "Больш пашырэнняў штучнага інтэлекту" },

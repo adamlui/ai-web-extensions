@@ -107,7 +107,7 @@
   "alert_try": { "message": "Încercați" },
   "alert_switchingOn": { "message": "PORNIREA" },
   "alert_switchingOff": { "message": "DECONECTAREA" },
-  "alert_sharePageGenerated": { "message": "Distribuie pagina generată" },
+  "alert_generated": { "message": "Generat" },
   "notif_copiedToClipboard": { "message": "Copiat în clipboard" },
   "notif_downloaded": { "message": "Descărcat" },
   "btnLabel_moreAIextensions": { "message": "Mai multe extensii AI" },

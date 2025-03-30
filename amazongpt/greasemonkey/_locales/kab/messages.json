@@ -80,7 +80,7 @@
   "alert_try": { "message": "ɛreḍ" },
   "alert_switchingOn": { "message": "asebded ɣef" },
   "alert_switchingOff": { "message": "asebded n tneqqiḍt" },
-  "alert_sharePageGenerated": { "message": "Rnu asebter i d-yeffɣen" },
+  "alert_generated": { "message": "Ittwasurew" },
   "notif_copiedToClipboard": { "message": "Aḍris yettwanɣel ɣef afus" },
   "notif_downloaded": { "message": "Yettwasider-d" },
   "btnLabel_moreAIextensions": { "message": "Ugar n iwenniten n AI" },

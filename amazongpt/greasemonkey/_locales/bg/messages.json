@@ -80,7 +80,7 @@
   "alert_try": { "message": "Нов опит" },
   "alert_switchingOn": { "message": "включване" },
   "alert_switchingOff": { "message": "Изключване" },
-  "alert_sharePageGenerated": { "message": "Страницата за споделяне е генерирана" },
+  "alert_generated": { "message": "генериран" },
   "notif_copiedToClipboard": { "message": "Копирани в клипборда" },
   "notif_downloaded": { "message": "изтеглено" },
   "btnLabel_moreAIextensions": { "message": "Още разширения с изкуствен интелект" },

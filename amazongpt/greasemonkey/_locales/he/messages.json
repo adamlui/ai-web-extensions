@@ -80,7 +80,7 @@
   "alert_try": { "message": "נסה" },
   "alert_switchingOn": { "message": "הפעלה" },
   "alert_switchingOff": { "message": "הפסקת פעולה" },
-  "alert_sharePageGenerated": { "message": "דף השיתוף נוצר" },
+  "alert_generated": { "message": "שנוצר" },
   "notif_copiedToClipboard": { "message": "קוד הועתק ללוח" },
   "notif_downloaded": { "message": "הורדה" },
   "btnLabel_moreAIextensions": { "message": "הרחבות נוספות של בינה מלאכותית" },

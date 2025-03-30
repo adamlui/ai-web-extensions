@@ -80,7 +80,7 @@
   "alert_try": { "message": "ፈትኖ" },
   "alert_switchingOn": { "message": "ምቕያር" },
   "alert_switchingOff": { "message": "ምጥፋእ" },
-  "alert_sharePageGenerated": { "message": "እተፈጥረ ገጽ ምዝርጋሕ" },
+  "alert_generated": { "message": "እተፈጥረ" },
   "notif_copiedToClipboard": { "message": "ናብ ክሊፕቦርድ እተቐርጸ" },
   "notif_downloaded": { "message": "ምውራድ" },
   "btnLabel_moreAIextensions": { "message": "ዝያዳ ናይ AI ምስፍሕፋሕ" },

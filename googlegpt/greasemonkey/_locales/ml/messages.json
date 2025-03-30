@@ -107,7 +107,7 @@
   "alert_try": { "message": "& ശ്രമിക്കുക" },
   "alert_switchingOn": { "message": "സ്വിച്ച് ഓൺ ചെയ്യുന്നു" },
   "alert_switchingOff": { "message": "സ്വിച്ച് ഓഫ്" },
-  "alert_sharePageGenerated": { "message": "പേജ് പങ്കിടൽ ജനറേറ്റുചെയ്‌തു" },
+  "alert_generated": { "message": "ജനറേറ്റുചെയ്തു" },
   "notif_copiedToClipboard": { "message": "%@ ക്ലിപ്പ്ബോർഡിലേക്കു പകർത്തി" },
   "notif_downloaded": { "message": "ഡൗൺലോഡ് ചെയ്തു" },
   "btnLabel_moreAIextensions": { "message": "കൂടുതൽ AI എക്സ്റ്റെൻഷനുകൾ" },

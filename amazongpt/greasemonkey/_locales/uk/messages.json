@@ -80,7 +80,7 @@
   "alert_try": { "message": "Спробуйте" },
   "alert_switchingOn": { "message": "Увімкнення" },
   "alert_switchingOff": { "message": "Вимкнення" },
-  "alert_sharePageGenerated": { "message": "Створено сторінку \"Поділитися" },
+  "alert_generated": { "message": "Згенеровано" },
   "notif_copiedToClipboard": { "message": "скопійовано" },
   "notif_downloaded": { "message": "завантажено" },
   "btnLabel_moreAIextensions": { "message": "Більше розширень AI" },

@@ -80,7 +80,7 @@
   "alert_try": { "message": "Taumafai" },
   "alert_switchingOn": { "message": "suia i luga" },
   "alert_switchingOff": { "message": "faʻamutaina o le Faʻamutaina" },
-  "alert_sharePageGenerated": { "message": "Faasoa Itulau Fausiaina" },
+  "alert_generated": { "message": "Faʻatupuina" },
   "notif_copiedToClipboard": { "message": "Lolomiina i le clipboard" },
   "notif_downloaded": { "message": "download" },
   "btnLabel_moreAIextensions": { "message": "Sili atu AI Faʻalauteleina" },

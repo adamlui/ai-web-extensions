@@ -107,7 +107,7 @@
   "alert_try": { "message": "Try" },
   "alert_switchingOn": { "message": "menyalakan" },
   "alert_switchingOff": { "message": "mematikan" },
-  "alert_sharePageGenerated": { "message": "Halaman Berbagi dibuat" },
+  "alert_generated": { "message": "Dihasilkan" },
   "notif_copiedToClipboard": { "message": "Disalin ke papan klip" },
   "notif_downloaded": { "message": "terunduh" },
   "btnLabel_moreAIextensions": { "message": "Ekstensi AI Lainnya" },

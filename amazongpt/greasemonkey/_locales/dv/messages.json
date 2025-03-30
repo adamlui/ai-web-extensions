@@ -80,7 +80,7 @@
   "alert_try": { "message": "މަސައްކަތްކުރުން" },
   "alert_switchingOn": { "message": "ސްވިޗް އޮން ކުރުމެވެ" },
   "alert_switchingOff": { "message": "ސްވިޗް އޮފް ކުރުމެވެ" },
-  "alert_sharePageGenerated": { "message": "ޝެއާ ޕޭޖް ޖެނެރޭޓް ކުރެވިއްޖެއެވެ" },
+  "alert_generated": { "message": "ޖެނެރޭޓް ކުރެވިއްޖެއެވެ" },
   "notif_copiedToClipboard": { "message": "ކްލިޕްބޯޑަށް ކޮޕީކޮށްފައިވެއެވެ" },
   "notif_downloaded": { "message": "ޑައުންލޯޑް ކޮށްފިއެވެ" },
   "btnLabel_moreAIextensions": { "message": "އިތުރު އެއައި އެކްސްޓެންޝަންސް" },

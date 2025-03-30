@@ -80,7 +80,7 @@
   "alert_try": { "message": "Saiatu" },
   "alert_switchingOn": { "message": "pizten" },
   "alert_switchingOff": { "message": "itzaltzea" },
-  "alert_sharePageGenerated": { "message": "Sortutako orrialdea partekatu" },
+  "alert_generated": { "message": "Sortutakoa" },
   "notif_copiedToClipboard": { "message": "URLa arbelean kopiatuta" },
   "notif_downloaded": { "message": "Deskargatua" },
   "btnLabel_moreAIextensions": { "message": "AI luzapen gehiago" },

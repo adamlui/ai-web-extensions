@@ -107,7 +107,7 @@
   "alert_try": { "message": "cəhd etmək" },
   "alert_switchingOn": { "message": "dəyişdirilir" },
   "alert_switchingOff": { "message": "söndürülür" },
-  "alert_sharePageGenerated": { "message": "Səhifəni paylaşın" },
+  "alert_generated": { "message": "Yaradılıb" },
   "notif_copiedToClipboard": { "message": "Mübadilə buferinə kopyal" },
   "notif_downloaded": { "message": "endirildi" },
   "btnLabel_moreAIextensions": { "message": "Daha çox AI Uzantısı" },
