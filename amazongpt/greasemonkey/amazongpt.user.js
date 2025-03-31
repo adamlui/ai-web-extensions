@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.31.4
+// @version                2025.3.31.5
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -2307,7 +2307,7 @@
                 background-color: /* bubble style */
                     rgba(0,0,0,0.64) ; padding: 4px 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
                 font-size: 0.87em ; color: white ; fill: white ; stroke: white ; /* font/icon style */
-                position: absolute ; /* for update.tooltip() calcs */
+                position: absolute ; /* for this.update() calcs */
                 --shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
                     box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)
                 opacity: 0 ; height: fit-content ; z-index: 1250 ; /* visibility */
@@ -2317,21 +2317,22 @@
             document.head.append(this.styles)
         },
 
-        toggle(stateOrEvent) {
-        // * stateOrEvent: 'on'|'off' or button `event`
-
+        toggle(stateOrEvent) { // visibility
             if (env.browser.isMobile) return
             if (!tooltip.div) tooltip.div = dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
             if (!tooltip.div.isConnected) appDiv.append(tooltip.div)
             if (!tooltip.styles) tooltip.stylize()
+            if (typeof stateOrEvent == 'object') // mouse event from btn hover, update text/pos
+                tooltip.update(/[^-]+-([\w-]+)-btn/.exec(stateOrEvent.currentTarget.id)[1])
+            tooltip.div.style.opacity = +( stateOrEvent?.type == 'mouseenter' || stateOrEvent == 'on' )
+        },
 
-            if (stateOrEvent?.type == 'mouseleave' || stateOrEvent == 'off')
-                return tooltip.div.style.opacity = 0
-
-            const btn = stateOrEvent.currentTarget, btnType = /[^-]+-([\w-]+)-btn/.exec(btn.id)[1]
+        update(btnType) { // text & position
+            if (!this.div) return // since nothing to update
+            const btn = appDiv.querySelector(`[id*=${btnType}-btn]`)
             const baseText = (
-                btnType == 'chevron' ? ( config.minimized ? `${app.msgs.tooltip_restore}`
-                                                          : `${app.msgs.tooltip_minimize}` )
+                  btnType == 'chevron' ? ( config.minimized ? `${app.msgs.tooltip_restore}`
+                                                            : `${app.msgs.tooltip_minimize}` )
                 : btnType == 'about' ? app.msgs.menuLabel_about
                 : btnType == 'settings' ? app.msgs.menuLabel_settings
                 : btnType == 'font-size' ? app.msgs.tooltip_fontSize
@@ -2380,9 +2381,6 @@
             tooltip.div.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
             tooltip.div.style.right = `${
                 rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
-
-            // Show tooltip
-            tooltip.div.style.opacity = 1
         }
     }
 
@@ -3224,7 +3222,7 @@
                     const textToCopy = textContainer.textContent.replace(/^>> /, '').trim()
                     copyBtn.style.cursor = 'default' // remove finger
                     copyBtn.firstChild.replaceWith(copySVGs.copied.cloneNode(true)) // change to Copied icon
-                    tooltip.toggle(event) // update tooltip
+                    tooltip.update('copy')
                     setTimeout(() => { // restore icon/cursor/tooltip after a bit
                         copyBtn.firstChild.replaceWith(copySVGs.copy.cloneNode(true))
                         copyBtn.style.cursor = 'pointer'
@@ -3243,11 +3241,11 @@
                 ['width', 'height'].forEach(attr => shareSVG.setAttribute(attr, 16))
                 this.share.append(shareSVG)
                 if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = tooltip.toggle
-                this.share.onclick = event => {
+                this.share.onclick = () => {
                     if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
                     this.share.style.cursor = 'default' // remove finger
                     if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
-                    tooltip.toggle(event) // update tooltip
+                    tooltip.update('share')
                     xhr({
                         method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
                         headers: { 'Content-Type': 'application/json', 'Referer': location.href },
@@ -3271,12 +3269,12 @@
                 ['width', 'height'].forEach(attr => regenSVG.setAttribute(attr, 14))
                 regenSVGwrapper.append(regenSVG) ; this.regen.append(regenSVGwrapper)
                 if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = tooltip.toggle
-                this.regen.onclick = event => {
+                this.regen.onclick = () => {
                     get.reply(msgChain, { src: 'regen' })
                     regenSVGwrapper.style.cursor = 'default' // remove finger
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
-                    tooltip.toggle(event) // update tooltip
+                    tooltip.update('regen')
                     show.reply.src = null ; show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
 
@@ -3303,7 +3301,7 @@
                 speakSVGscroller.append(speakSVGs.speak) ; speakSVGwrapper.append(speakSVGscroller)
                 this.speak.append(speakSVGwrapper)
                 if (!env.browser.isMobile) this.speak.onmouseenter = this.speak.onmouseleave = tooltip.toggle
-                this.speak.onclick = async event => {
+                this.speak.onclick = async () => {
                     if (!this.speak.contains(speakSVGs.speak)) return // since clicking on Generating or Playing icon
                     this.speak.style.cursor = 'default' // remove finger
 
@@ -3316,7 +3314,7 @@
                             'linear-gradient(to right, transparent, black 20%, black 81%, transparent)' )
                     }
 
-                    tooltip.toggle(event) // update tooltip
+                    tooltip.update('speak')
 
                     // Play reply
                     const wholeAnswer = appDiv.querySelector('.reply-pre').textContent
