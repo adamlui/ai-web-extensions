@@ -26,14 +26,15 @@ window.tooltip = {
     },
 
     toggle(event) {
+        if (!tooltip.div) tooltip.div = dom.create.elem('div', { class: 'cwm-tooltip' })
+        if (!tooltip.div.isConnected) event.currentTarget?.before(tooltip.div)
+        if (!tooltip.styles) tooltip.stylize()
         tooltip.update(event.currentTarget.id.replace(/-btn$/, ''))
-        tooltip.div.style.opacity = event.type == 'mouseover' ? 1 : 0
+        tooltip.div.style.opacity = +(event.type == 'mouseenter')
     },
 
     async update(btnType) { // text & position
-        if (!tooltip.div) tooltip.div = dom.create.elem('div', { class: 'cwm-tooltip' })
-        if (!tooltip.div.isConnected) buttons[btnType]?.before(tooltip.div)
-        if (!tooltip.styles) tooltip.stylize()
+        if (!this.div) return // since nothing to update
         const site = this.imports.env.site
         const rects = {
             btn: buttons[btnType]?.getBoundingClientRect(), chatbar: (await chatbar.get())?.getBoundingClientRect() }

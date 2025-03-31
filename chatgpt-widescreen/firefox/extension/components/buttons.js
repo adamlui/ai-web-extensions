@@ -88,7 +88,7 @@ window.buttons = {
             }
 
             // Add hover/click listeners
-            btn.onmouseover = btn.onmouseout = tooltip.toggle
+            btn.onmouseenter = btn.onmouseleave = tooltip.toggle
             btn.onclick = () => {
                 if (btnType == 'newChat') {
                     document.querySelector(this.imports.sites[site].selectors.btns.newChat)?.click()
@@ -100,8 +100,8 @@ window.buttons = {
                         tooltip.div.style.opacity = 0;
                         ['fullWindow', 'fullscreen'].forEach(btnType => {
                             const btn = this[btnType]
-                            btn.onmouseover = btn.onmouseout = null
-                            setTimeout(() => btn.onmouseover = btn.onmouseout = tooltip.toggle, 300)
+                            btn.onmouseenter = btn.onmouseleave = null
+                            setTimeout(() => btn.onmouseenter = btn.onmouseleave = tooltip.toggle, 300)
                         })
                     }
                 }
