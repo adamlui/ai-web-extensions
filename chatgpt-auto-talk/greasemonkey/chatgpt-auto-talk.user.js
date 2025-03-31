@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.24
+// @version             2025.3.31
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@9f1ed3c/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@9f1ed3c/assets/images/icons/openai/black/icon64.png
@@ -615,7 +615,7 @@
 
         init(modal) {
             if (!this.styles) this.stylize() // to init/append stylesheet
-            modal.classList.add('no-user-select', this.class) ; modal.parentNode.classList.add(`${this.class}-bg`)
+            modal.classList.add(this.class) ; modal.parentNode.classList.add(`${this.class}-bg`)
             dom.addRisingParticles(modal)
         },
 
@@ -652,9 +652,8 @@
                 document.head.append(this.styles)
             }
             this.styles.innerText = (
-                `.no-user-select {
-                    user-select: none ; -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none }`
-              + `.${this.class} {` // modals
+                `.${this.class} {` // modals
+                  + 'user-select: none ; -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ;'
                   + 'font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,'
                       + 'Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif ;'
                   + 'padding: 20px 25px 24px 25px !important ; font-size: 20px ;'
