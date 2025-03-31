@@ -92,7 +92,11 @@ window.buttons = {
             btn.onclick = () => {
                 if (btnType == 'newChat') {
                     document.querySelector(this.imports.sites[site].selectors.btns.newChat)?.click()
-                    tooltip.div.style.opacity = 0
+                    btn.style.cursor = 'default' ; btn.dispatchEvent(new Event('mouseleave')) // disable finger/tooltip
+                    setTimeout(() => { // restore finger/tooltip after 1s
+                        btn.style.cursor = 'pointer'
+                        if (btn.matches(':hover')) btn.dispatchEvent(new Event('mouseenter'))
+                    }, 1000)
                 } else { // toggle mode
                     this.imports.toggleMode(btnType)
                     if (btnType == 'fullWindow' // disable right btn tooltips on Perplexity homepage to avoid v-flicker
