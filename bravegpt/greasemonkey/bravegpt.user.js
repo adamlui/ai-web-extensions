@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.30.5
+// @version               2025.3.30.6
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -1608,8 +1608,6 @@
     // Define MENU functions
 
     const menus = {
-        fadeInDelay: 5, // ms
-
         pin: {
             clickHandler(event) {
                 const pinMenu = event.target.closest(`#${app.slug}-pin-menu`),
@@ -1675,29 +1673,25 @@
                 pinMenu.append(pinMenuUL)
 
                 // Add listeners
-                pinMenu.onmouseover = pinMenu.onmouseout = menus.pin.toggle
+                pinMenu.onmouseenter = pinMenu.onmouseleave = menus.pin.toggle
             },
 
             toggle(event) { // visibility
-                const pinMenu = document.getElementById(`${app.slug}-pin-menu`) || menus.pin.createAppend()
+                clearTimeout(menus.pin.hideTimeout) // in case rapid re-enter before ran
+                const pinMenu = appDiv.querySelector(`#${app.slug}-pin-menu`) || menus.pin.createAppend()
+                if (event.type == 'mouseleave') // schedule delayed removal to cover gap
+                    return menus.pin.hideTimeout = setTimeout(() => pinMenu.remove(), 55)
+                const pinBtn = appDiv.querySelector(`#${app.slug}-pin-btn`)
                 const rects = {
-                    appDiv: appDiv.getBoundingClientRect(), pinBtn: event.currentTarget.getBoundingClientRect(),
+                    appDiv: appDiv.getBoundingClientRect(), pinBtn: pinBtn.getBoundingClientRect(),
                     pinMenu: pinMenu.getBoundingClientRect()
                 }
-                const appIsHigh = ( event.clientY || event.touches?.[0]?.clientY ) < ( rects.pinMenu.height +15 )
-                pinMenu.style.top = `${ rects.pinBtn.top - rects.appDiv.top + (
-                    appIsHigh ? /* point down */ 29 : /* point up */ - rects.pinMenu.height -13  )}px`
+                const appIsHigh = rects.pinBtn.top < ( rects.pinMenu.height +15 )
+                pinMenu.style.top = `${ rects.pinBtn.top - rects.appDiv.top +(
+                    appIsHigh ? /* point down */ 29 : /* point up */ - rects.pinMenu.height -13 )}px`
                 if (!menus.pin.rightPos) menus.pin.rightPos = rects.appDiv.right - event.clientX - pinMenu.offsetWidth/2
-                pinMenu.style.right = `${menus.pin.rightPos}px`
-                clearTimeout(menus.pin.hideTimeout)
-                if (event.type == 'mouseover') pinMenu.style.opacity = 1
-                else menus.pin.hideTimeout = setTimeout(() => pinMenu.remove(), 55) // delay to cover gap
+                Object.assign(pinMenu.style, { right: `${menus.pin.rightPos}px`, opacity: 1 })
             }
-        },
-
-        show(menu) {
-            menu.style.display = ''
-            setTimeout(() => menu.classList.add('active'), menus.fadeInDelay)
         }
     }
 
@@ -2741,7 +2735,7 @@
                 else if (btn.id.endsWith('about-btn')) btn.onclick = () => modals.open('about')
                 else if (btn.id.endsWith('settings-btn')) btn.onclick = () => modals.open('settings')
                 else if (btn.id.endsWith('font-size-btn')) btn.onclick = () => fontSizeSlider.toggle()
-                else if (btn.id.endsWith('pin-btn')) btn.onmouseover = btn.onmouseout = menus.pin.toggle
+                else if (btn.id.endsWith('pin-btn')) btn.onmouseenter = btn.onmouseleave = menus.pin.toggle
                 else if (btn.id.endsWith('wsb-btn'))
                     btn.onclick = event => { toggle.sidebar('wider') ; toggle.tooltip(event) }
                 else if (btn.id.endsWith('arrows-btn')) btn.onclick = () => toggle.expandedMode()
