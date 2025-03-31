@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.31.1
+// @version                2025.3.31.2
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -3421,8 +3421,8 @@
         + `--shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
                 box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)`
         + 'opacity: 0 ; height: fit-content ; z-index: 1250 ;' // visibility
-        + `transition: opacity 0.1s ; -webkit-transition: opacity 0.1s ; -moz-transition: opacity 0.1s ;
-                -o-transition: opacity 0.1s ; -ms-transition: opacity 0.1s }`
+        + `transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
+                -o-transition: opacity 0.15s ; -ms-transition: opacity 0.15s }`
     ))
 
     // APPEND AMAZONGPT to Amazon
