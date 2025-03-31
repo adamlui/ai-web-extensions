@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.31.8
+// @version                  2025.3.31.9
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -3420,7 +3420,8 @@
                     if (event.propertyName == 'width') {
                         update.bylineVisibility() ; appDiv.removeEventListener('transitionend', onTransitionEnd)
             }})
-            icons.arrowsDiagonal.update() ; tooltip.update('arrows') // update icon/tooltip
+            icons.arrowsDiagonal.update() // toggle downwawrd/upward caret icons
+            tooltip.update('arrows') // toggle 'Minimize/Restore'
         },
 
         manualGen(mode) { // Prefix/Suffix modes
@@ -4378,7 +4379,7 @@
                     const textToCopy = textContainer.textContent.replace(/^>> /, '').trim()
                     copyBtn.style.cursor = 'default' // remove finger
                     copyBtn.firstChild.replaceWith(copySVGs.copied.cloneNode(true)) // change to Copied icon
-                    tooltip.update('copy')
+                    tooltip.update('copy') // to 'Copied to clipboard!'
                     setTimeout(() => { // restore icon/cursor/tooltip after a bit
                         copyBtn.firstChild.replaceWith(copySVGs.copy.cloneNode(true))
                         copyBtn.style.cursor = 'pointer'
@@ -4401,7 +4402,7 @@
                     if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
                     this.share.style.cursor = 'default' // remove finger
                     if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
-                    tooltip.update('share')
+                    tooltip.update('share') // to 'Generating HTML...'
                     xhr({
                         method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
                         headers: { 'Content-Type': 'application/json', 'Referer': location.href },
@@ -4430,7 +4431,7 @@
                     regenSVGwrapper.style.cursor = 'default' // remove finger
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
-                    tooltip.update('regen')
+                    tooltip.update('regen') // to 'Regenerating...'
                     show.reply.src = null ; show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
 
@@ -4470,7 +4471,7 @@
                             'linear-gradient(to right, transparent, black 20%, black 81%, transparent)' )
                     }
 
-                    tooltip.update('speak')
+                    tooltip.update('speak') // to 'Generating audio...'
 
                     // Play reply
                     const wholeAnswer = appDiv.querySelector('.reply-pre').textContent
