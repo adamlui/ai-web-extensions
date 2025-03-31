@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.31.2
+// @version                2025.3.31.3
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -2209,7 +2209,7 @@
 
             // Assemble/insert elems
             slider.append(sliderThumb, sliderTip)
-            appDiv.insertBefore(slider, appDiv.querySelector(`.${app.slug}-btn-tooltip,` // desktop
+            appDiv.insertBefore(slider, appDiv.querySelector(`.${app.slug}-tooltip,` // desktop
                                                            + '.reply-bubble')) // mobile
             // Init thumb pos
             setTimeout(() => {
@@ -2300,6 +2300,23 @@
     }
 
     const tooltip = {
+
+        stylize() {
+            if (this.styles) return
+            this.styles = dom.create.style(`.${app.slug}-tooltip {
+                background-color: /* bubble style */
+                    rgba(0,0,0,0.64) ; padding: 4px 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
+                font-size: 0.87em ; color: white ; fill: white ; stroke: white ; /* font/icon style */
+                position: absolute ; /* for update.tooltip() calcs */
+                --shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
+                    box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)
+                opacity: 0 ; height: fit-content ; z-index: 1250 ; /* visibility */
+                transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
+                    -o-transition: opacity 0.15s ; -ms-transition: opacity 0.15s }`
+            )
+            document.head.append(this.styles)
+        },
+
         toggle(stateOrEvent) {
         // * stateOrEvent: 'on'|'off' or button `event`
 
@@ -3412,18 +3429,7 @@
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
     // Create/stylize TOOLTIPs
-    const tooltipDiv = dom.create.elem('div', { class: `${app.slug}-btn-tooltip no-user-select` })
-    document.head.append(dom.create.style(`.${app.slug}-btn-tooltip {`
-        + 'background-color:' // bubble style
-            + 'rgba(0,0,0,0.64) ; padding: 4px 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;'
-        + 'font-size: 0.87em ; color: white ; fill: white ; stroke: white ;' // font/icon style
-        + 'position: absolute ;' // for update.tooltip() calcs
-        + `--shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
-                box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)`
-        + 'opacity: 0 ; height: fit-content ; z-index: 1250 ;' // visibility
-        + `transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
-                -o-transition: opacity 0.15s ; -ms-transition: opacity 0.15s }`
-    ))
+    const tooltipDiv = dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` }) ; tooltip.stylize()
 
     // APPEND AMAZONGPT to Amazon
     document.body.append(appDiv)

@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.31.4
+// @version                2025.3.31.5
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -1628,7 +1628,7 @@
 
             createAppend() {
                 this.div = dom.create.elem('div', { id: `${app.slug}-pin-menu`,
-                    class: `${app.slug}-menu ${app.slug}-btn-tooltip fade-in-less no-user-select` })
+                    class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select` })
                 this.ul = dom.create.elem('ul')
                 this.div.append(this.ul) ; appDiv.append(this.div)
                 this.div.onmouseenter = this.div.onmouseleave = this.toggle
@@ -2853,7 +2853,7 @@
 
             // Assemble/insert elems
             slider.append(sliderThumb, sliderTip)
-            appDiv.insertBefore(slider, appDiv.querySelector(`.${app.slug}-btn-tooltip,` // desktop
+            appDiv.insertBefore(slider, appDiv.querySelector(`.${app.slug}-tooltip,` // desktop
                                                            + '.reply-bubble')) // mobile
             // Init thumb pos
             setTimeout(() => {
@@ -2945,6 +2945,23 @@
     }
 
     const tooltip = {
+
+        stylize() {
+            if (this.styles) return
+            this.styles = dom.create.style(`.${app.slug}-tooltip {
+                background-color: /* bubble style */
+                    rgba(0,0,0,0.64) ; padding: 5px 6px 3px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
+                font-size: 0.87em ; color: white ; fill: white ; stroke: white ; /* font/icon style */
+                position: absolute ; /* for update.tooltip() calcs */
+                --shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
+                    box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)
+                opacity: 0 ; height: fit-content ; z-index: 1250 ; /* visibility */
+                transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
+                    -o-transition: opacity 0.15s ; -ms-transition: opacity 0.15s }`
+            )
+            document.head.append(this.styles)
+        },
+
         toggle(stateOrEvent) {
         // * stateOrEvent: 'on'|'off' or button `event`
 
@@ -4363,18 +4380,7 @@
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
     // Create/stylize TOOLTIPs
-    const tooltipDiv = dom.create.elem('div', { class: `${app.slug}-btn-tooltip no-user-select` })
-    document.head.append(dom.create.style(`.${app.slug}-btn-tooltip {`
-        + 'background-color:' // bubble style
-            + 'rgba(0,0,0,0.64) ; padding: 5px 6px 3px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;'
-        + 'font-size: 0.87em ; color: white ; fill: white ; stroke: white ;' // font/icon style
-        + 'position: absolute ;' // for update.tooltip() calcs
-        + `--shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
-                box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)`
-        + 'opacity: 0 ; height: fit-content ; z-index: 1250 ;' // visibility
-        + `transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
-                -o-transition: opacity 0.15s ; -ms-transition: opacity 0.15s }`
-    ))
+    const tooltipDiv = dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` }) ; tooltip.stylize()
 
     // Create/classify/fill feedback FOOTER
     const appFooter = dom.create.elem('footer', { class: 'fade-in anchored-hidden' })
