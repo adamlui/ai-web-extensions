@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.3.31.2
+// @version                  2025.3.31.3
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -1820,7 +1820,10 @@
             toggle(event) { // visibility
                 clearTimeout(menus.pin.hide.timeout) // in case rapid re-enter before ran
                 if (!menus.pin.div) menus.pin.createAppend()
-                if (event.type == 'mouseenter' && menus.pin.status == 'hidden' && event.target != menus.pin.div) {
+                if (menus.pin.status == 'hidden' && (
+                    event.type == 'mouseenter' && event.target != menus.pin.div // Pin btn hovered-on
+                    || event.type == 'click' ) // Pin btn clicked
+                ) { // show menu
                     menus.pin.div.style.display = '' // for rects calc
                     const pinBtn = appDiv.querySelector(`#${app.slug}-pin-btn`)
                     const rects = {
@@ -1834,7 +1837,7 @@
                         menus.pin.rightPos = rects.appDiv.right - event.clientX - menus.pin.div.offsetWidth/2
                     Object.assign(menus.pin.div.style, { right: `${menus.pin.rightPos}px`, opacity: 1 })
                     menus.pin.status = 'visible'
-                } else if (event.type == 'mouseleave')
+                } else if (/click|mouseleave/.test(event.type)) // Pin menu/btn hovered-off or btn clicked, hide menu
                     return menus.pin.hide.timeout = setTimeout(() => menus.pin.hide(), 55)
             }
         }
@@ -2912,7 +2915,8 @@
                 else if (btn.id.endsWith('about-btn')) btn.onclick = () => modals.open('about')
                 else if (btn.id.endsWith('settings-btn')) btn.onclick = () => modals.open('settings')
                 else if (btn.id.endsWith('font-size-btn')) btn.onclick = () => fontSizeSlider.toggle()
-                else if (btn.id.endsWith('pin-btn')) btn.onmouseenter = btn.onmouseleave = menus.pin.toggle
+                else if (btn.id.endsWith('pin-btn'))
+                    btn.onmouseenter = btn.onmouseleave = btn.onclick = menus.pin.toggle
                 else if (btn.id.endsWith('wsb-btn'))
                     btn.onclick = event => { toggle.sidebar('wider') ; tooltip.toggle(event) }
                 else if (btn.id.endsWith('arrows-btn')) btn.onclick = () => toggle.expandedMode()
