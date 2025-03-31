@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.31.1
+// @version               2025.3.31.2
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -2737,10 +2737,10 @@
                 else if (btn.id.endsWith('font-size-btn')) btn.onclick = () => fontSizeSlider.toggle()
                 else if (btn.id.endsWith('pin-btn')) btn.onmouseenter = btn.onmouseleave = menus.pin.toggle
                 else if (btn.id.endsWith('wsb-btn'))
-                    btn.onclick = event => { toggle.sidebar('wider') ; toggle.tooltip(event) }
+                    btn.onclick = event => { toggle.sidebar('wider') ; tooltip.toggle(event) }
                 else if (btn.id.endsWith('arrows-btn')) btn.onclick = () => toggle.expandedMode()
                 if (!env.browser.isMobile && !btn.id.endsWith('pin-btn')) // add hover listeners for tooltips
-                    btn.onmouseenter = btn.onmouseleave = toggle.tooltip
+                    btn.onmouseenter = btn.onmouseleave = tooltip.toggle
                 if (/about|settings|speak/.test(btn.id)) btn.onmouseup = () => { // add zoom/fade-out to select buttons
                     if (config.fgAnimationsDisabled) return
                     btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
@@ -2820,7 +2820,7 @@
                         key: 'Enter', bubbles: true, cancelable: true }))
                 }
                 if (!env.browser.isMobile) // add hover listener for tooltips
-                    btn.onmouseenter = btn.onmouseleave = toggle.tooltip
+                    btn.onmouseenter = btn.onmouseleave = tooltip.toggle
             })
         }
     }
@@ -2930,6 +2930,75 @@
                 slider.classList.remove('active') ; if (replyTip) replyTip.style.display = ''
                 sliderTip.style.display = slider.style.display = 'none'
             }
+        }
+    }
+
+    const tooltip = {
+        toggle(stateOrEvent) {
+        // * stateOrEvent: 'on'|'off' or button `event`
+
+            if (env.browser.isMobile) return
+            if (stateOrEvent?.type == 'mouseleave' || stateOrEvent == 'off')
+                return tooltipDiv.style.opacity = 0
+
+            const btn = stateOrEvent.currentTarget, btnType = /[^-]+-([\w-]+)-btn/.exec(btn.id)[1]
+            const baseText = (
+                btnType == 'chevron' ? ( config.minimized ? `${app.msgs.tooltip_restore}`
+                                                          : `${app.msgs.tooltip_minimize}` )
+                : btnType == 'about' ? app.msgs.menuLabel_about
+                : btnType == 'settings' ? app.msgs.menuLabel_settings
+                : btnType == 'font-size' ? app.msgs.tooltip_fontSize
+                : btnType == 'wsb' ? (( config.widerSidebar ? `${app.msgs.prefix_exit} ` :  '' )
+                                    +  ( app.msgs.menuLabel_widerSidebar ))
+                : btnType == 'arrows' ? ( config.expanded ? `${app.msgs.tooltip_shrink}`
+                                                          : `${app.msgs.tooltip_expand}` )
+                : btnType == 'share' ? (
+                    btn.style.animation ? `${app.msgs.tooltip_generating} HTML...`
+                        : `${app.msgs.tooltip_generate} ${app.msgs.btnLabel_convo} ${
+                                app.msgs.tooltip_page.toLowerCase()}` )
+                : btnType == 'copy' ? (
+                    btn.firstChild.id.includes('-copy-') ?
+                        `${app.msgs.tooltip_copy} ${
+                            app.msgs[`tooltip_${ btn.closest('code') ? 'code' : 'reply' }`].toLowerCase()}`
+                    : `${app.msgs.notif_copiedToClipboard}!` )
+                : btnType == 'regen' ? (
+                    btn.firstChild.style.animation || btn.firstChild.style.transform ?
+                        `${app.msgs.tooltip_regenerating} ${app.msgs.tooltip_reply.toLowerCase()}...`
+                        : `${app.msgs.tooltip_regenerate} ${app.msgs.tooltip_reply.toLowerCase()}` )
+                : btnType == 'speak' ? (
+                    btn.querySelector('svg').id.includes('-speak-') ?
+                        `${app.msgs.tooltip_play} ${app.msgs.tooltip_reply.toLowerCase()}`
+                    : btn.querySelector('svg').id.includes('generating-') ? `${app.msgs.tooltip_generatingAudio}...`
+                    : `${app.msgs.tooltip_playing} ${app.msgs.tooltip_reply.toLowerCase()}...` )
+                : btnType == 'send' ? app.msgs.tooltip_sendReply
+                : btnType == 'shuffle' ? app.msgs.tooltip_askRandQuestion
+                : btnType == 'summarize' ? app.msgs.tooltip_summarizeResults : '' )
+
+                // Update text
+                tooltipDiv.innerText = baseText
+                tooltip.nativeRpadding = tooltip.nativeRpadding
+                    || parseFloat(window.getComputedStyle(tooltipDiv).paddingRight)
+                clearInterval(tooltip.dotCycler)
+                if (baseText.endsWith('...')) { // animate the dots
+                    const noDotText = baseText.slice(0, -3), dotWidth = 2.75 ; let dotCnt = 3
+                    tooltip.dotCycler = setInterval(() => {
+                        dotCnt = (dotCnt % 3) + 1 // cycle thru 1 → 2 → 3
+                        tooltipDiv.innerText = noDotText + '.'.repeat(dotCnt)
+                        tooltipDiv.style.paddingRight = `${ // adjust based on dotCnt
+                            tooltip.nativeRpadding + (3 - dotCnt) * dotWidth }px`
+                    }, 350)
+                } else // restore native right-padding
+                    tooltipDiv.style.paddingRight = tooltip.nativeRpadding
+
+            // Update position
+            const elems = { appDiv, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv }
+            const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
+            tooltipDiv.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
+            tooltipDiv.style.right = `${
+                rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
+
+            // Show tooltip
+            tooltipDiv.style.opacity = 1
         }
     }
 
@@ -3150,7 +3219,7 @@
                     if (event.propertyName == 'width') {
                         update.bylineVisibility() ; appDiv.removeEventListener('transitionend', onTransitionEnd)
             }})
-            icons.arrowsDiagonal.update() ; toggle.tooltip('off') // update icon/tooltip
+            icons.arrowsDiagonal.update() ; tooltip.toggle('off') // update icon/tooltip
         },
 
         manualGen(mode) { // Prefix/Suffix modes
@@ -3184,7 +3253,7 @@
                 }
             }
             update.appBottomPos() // toggle visual minimization
-            setTimeout(() => toggle.tooltip('off'), 1) // remove lingering tooltip
+            setTimeout(() => tooltip.toggle('off'), 1) // remove lingering tooltip
         },
 
         proxyMode() {
@@ -3273,73 +3342,6 @@
                 notify(`${settings.controls.streamingDisabled.label} ${
                           toolbarMenu.state.words[+!config.streamingDisabled]}`)
             }
-        },
-
-        tooltip(stateOrEvent) {
-        // * stateOrEvent: 'on'|'off' or button `event`
-
-            if (env.browser.isMobile) return
-            if (stateOrEvent?.type == 'mouseleave' || stateOrEvent == 'off')
-                return tooltipDiv.style.opacity = 0
-
-            const btn = stateOrEvent.currentTarget, btnType = /[^-]+-([\w-]+)-btn/.exec(btn.id)[1]
-            const baseText = (
-                btnType == 'chevron' ? ( config.minimized ? `${app.msgs.tooltip_restore}`
-                                                          : `${app.msgs.tooltip_minimize}` )
-              : btnType == 'about' ? app.msgs.menuLabel_about
-              : btnType == 'settings' ? app.msgs.menuLabel_settings
-              : btnType == 'font-size' ? app.msgs.tooltip_fontSize
-              : btnType == 'wsb' ? (( config.widerSidebar ? `${app.msgs.prefix_exit} ` :  '' )
-                                 +  ( app.msgs.menuLabel_widerSidebar ))
-              : btnType == 'arrows' ? ( config.expanded ? `${app.msgs.tooltip_shrink}`
-                                                        : `${app.msgs.tooltip_expand}` )
-              : btnType == 'share' ? (
-                    btn.style.animation ? `${app.msgs.tooltip_generating} HTML...`
-                        : `${app.msgs.tooltip_generate} ${app.msgs.btnLabel_convo} ${
-                             app.msgs.tooltip_page.toLowerCase()}` )
-              : btnType == 'copy' ? (
-                    btn.firstChild.id.includes('-copy-') ?
-                        `${app.msgs.tooltip_copy} ${
-                            app.msgs[`tooltip_${ btn.closest('code') ? 'code' : 'reply' }`].toLowerCase()}`
-                  : `${app.msgs.notif_copiedToClipboard}!` )
-              : btnType == 'regen' ? (
-                    btn.firstChild.style.animation || btn.firstChild.style.transform ?
-                        `${app.msgs.tooltip_regenerating} ${app.msgs.tooltip_reply.toLowerCase()}...`
-                      : `${app.msgs.tooltip_regenerate} ${app.msgs.tooltip_reply.toLowerCase()}` )
-              : btnType == 'speak' ? (
-                    btn.querySelector('svg').id.includes('-speak-') ?
-                        `${app.msgs.tooltip_play} ${app.msgs.tooltip_reply.toLowerCase()}`
-                  : btn.querySelector('svg').id.includes('generating-') ? `${app.msgs.tooltip_generatingAudio}...`
-                  : `${app.msgs.tooltip_playing} ${app.msgs.tooltip_reply.toLowerCase()}...` )
-              : btnType == 'send' ? app.msgs.tooltip_sendReply
-              : btnType == 'shuffle' ? app.msgs.tooltip_askRandQuestion
-              : btnType == 'summarize' ? app.msgs.tooltip_summarizeResults : '' )
-
-              // Update text
-              tooltipDiv.innerText = baseText
-              toggle.tooltip.nativeRpadding = toggle.tooltip.nativeRpadding
-                  || parseFloat(window.getComputedStyle(tooltipDiv).paddingRight)
-              clearInterval(toggle.tooltip.dotCycler)
-              if (baseText.endsWith('...')) { // animate the dots
-                  const noDotText = baseText.slice(0, -3), dotWidth = 2.75 ; let dotCnt = 3
-                  toggle.tooltip.dotCycler = setInterval(() => {
-                      dotCnt = (dotCnt % 3) + 1 // cycle thru 1 → 2 → 3
-                      tooltipDiv.innerText = noDotText + '.'.repeat(dotCnt)
-                      tooltipDiv.style.paddingRight = `${ // adjust based on dotCnt
-                          toggle.tooltip.nativeRpadding + (3 - dotCnt) * dotWidth }px`
-                  }, 350)
-              } else // restore native right-padding
-                  tooltipDiv.style.paddingRight = toggle.tooltip.nativeRpadding
-
-            // Update position
-            const elems = { appDiv, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv }
-            const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
-            tooltipDiv.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
-            tooltipDiv.style.right = `${
-                rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
-
-            // Show tooltip
-            tooltipDiv.style.opacity = 1
         }
     }
 
@@ -3891,7 +3893,7 @@
 
         reply(answer, footerContent, { apiUsed = null } = {}) {
             show.reply.shareURL = null // reset to regen using longer msgChain
-            toggle.tooltip('off') // hide lingering tooltip if cursor was on corner button
+            tooltip.toggle('off') // hide lingering tooltip if cursor was on corner button
             const regenSVGwrapper = appDiv.querySelector('[id$=regen-btn]')?.firstChild
             if (regenSVGwrapper?.style?.animation) { // remove animation, restore cursor/tooltip
                 regenSVGwrapper.style.animation = regenSVGwrapper.style.cursor = ''
@@ -4161,7 +4163,7 @@
                 this.copy.listeners = {}
                 if (!env.browser.isMobile) // store/add tooltip listeners
                     ['onmouseenter', 'onmouseleave'].forEach(eventType =>
-                        this.copy[eventType] = this.copy.listeners[eventType] = toggle.tooltip)
+                        this.copy[eventType] = this.copy.listeners[eventType] = tooltip.toggle)
                 this.copy.listeners.onclick = this.copy.onclick = event => { // copy text, update icon + tooltip status
                     const copyBtn = event.currentTarget
                     if (!copyBtn.firstChild.matches('[id$=copy-icon]')) return // since clicking on Copied icon
@@ -4173,7 +4175,7 @@
                     const textToCopy = textContainer.textContent.replace(/^>> /, '').trim()
                     copyBtn.style.cursor = 'default' // remove finger
                     copyBtn.firstChild.replaceWith(copySVGs.copied.cloneNode(true)) // change to Copied icon
-                    toggle.tooltip(event) // update tooltip
+                    tooltip.toggle(event) // update tooltip
                     setTimeout(() => { // restore icon/cursor/tooltip after a bit
                         copyBtn.firstChild.replaceWith(copySVGs.copy.cloneNode(true))
                         copyBtn.style.cursor = 'pointer'
@@ -4191,12 +4193,12 @@
                 const shareSVG = icons.arrowShare.create();
                 ['width', 'height'].forEach(attr => shareSVG.setAttribute(attr, 16))
                 this.share.append(shareSVG)
-                if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = toggle.tooltip
+                if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = tooltip.toggle
                 this.share.onclick = event => {
                     if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
                     this.share.style.cursor = 'default' // remove finger
                     if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
-                    toggle.tooltip(event) // update tooltip
+                    tooltip.toggle(event) // update tooltip
                     xhr({
                         method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
                         headers: { 'Content-Type': 'application/json', 'Referer': location.href },
@@ -4219,13 +4221,13 @@
                 const regenSVG = icons.arrowsCyclic.create();
                 ['width', 'height'].forEach(attr => regenSVG.setAttribute(attr, 14))
                 regenSVGwrapper.append(regenSVG) ; this.regen.append(regenSVGwrapper)
-                if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = toggle.tooltip
+                if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = tooltip.toggle
                 this.regen.onclick = event => {
                     get.reply(msgChain, { src: 'regen' })
                     regenSVGwrapper.style.cursor = 'default' // remove finger
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
-                    toggle.tooltip(event) // update tooltip
+                    tooltip.toggle(event) // update tooltip
                     show.reply.src = null ; show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
 
@@ -4251,7 +4253,7 @@
                 })
                 speakSVGscroller.append(speakSVGs.speak) ; speakSVGwrapper.append(speakSVGscroller)
                 this.speak.append(speakSVGwrapper)
-                if (!env.browser.isMobile) this.speak.onmouseenter = this.speak.onmouseleave = toggle.tooltip
+                if (!env.browser.isMobile) this.speak.onmouseenter = this.speak.onmouseleave = tooltip.toggle
                 this.speak.onclick = async event => {
                     if (!this.speak.contains(speakSVGs.speak)) return // since clicking on Generating or Playing icon
                     this.speak.style.cursor = 'default' // remove finger
@@ -4265,7 +4267,7 @@
                             'linear-gradient(to right, transparent, black 20%, black 81%, transparent)' )
                     }
 
-                    toggle.tooltip(event) // update tooltip
+                    tooltip.toggle(event) // update tooltip
 
                     // Play reply
                     const wholeAnswer = appDiv.querySelector('.reply-pre').textContent
