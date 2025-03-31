@@ -17,7 +17,7 @@ window.tooltip = {
             font-size: 0.85rem ; color: white ; white-space: nowrap ; /* text style */
             --shadow: 4px 6px 16px 0 rgb(0 0 0 / 38%) ;
                 box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
-            position: absolute ; bottom: 58px ; opacity: 0 ; z-index: 9999 ; /* visibility */
+            position: absolute ; bottom: 58px ; opacity: 0 ; z-index: 99999 ; /* visibility */
             transition: opacity 0.1s ; -webkit-transition: opacity 0.1s ; -moz-transition: opacity 0.1s ;
                 -ms-transition: opacity 0.1s ; -o-transition: opacity 0.1s ;
             user-select: none ; webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none }`
