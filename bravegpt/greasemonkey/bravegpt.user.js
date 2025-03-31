@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.31.6
+// @version               2025.3.31.7
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -2957,8 +2957,12 @@
         // * stateOrEvent: 'on'|'off' or button `event`
 
             if (env.browser.isMobile) return
+            if (!tooltip.div) tooltip.div = dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
+            if (!tooltip.div.isConnected) appDiv.append(tooltip.div)
+            if (!tooltip.styles) tooltip.stylize()
+
             if (stateOrEvent?.type == 'mouseleave' || stateOrEvent == 'off')
-                return tooltipDiv.style.opacity = 0
+                return tooltip.div.style.opacity = 0
 
             const btn = stateOrEvent.currentTarget, btnType = /[^-]+-([\w-]+)-btn/.exec(btn.id)[1]
             const baseText = (
@@ -2993,31 +2997,31 @@
                 : btnType == 'shuffle' ? app.msgs.tooltip_askRandQuestion
                 : btnType == 'summarize' ? app.msgs.tooltip_summarizeResults : '' )
 
-                // Update text
-                tooltipDiv.innerText = baseText
-                tooltip.nativeRpadding = tooltip.nativeRpadding
-                    || parseFloat(window.getComputedStyle(tooltipDiv).paddingRight)
-                clearInterval(tooltip.dotCycler)
-                if (baseText.endsWith('...')) { // animate the dots
-                    const noDotText = baseText.slice(0, -3), dotWidth = 2.75 ; let dotCnt = 3
-                    tooltip.dotCycler = setInterval(() => {
-                        dotCnt = (dotCnt % 3) + 1 // cycle thru 1 → 2 → 3
-                        tooltipDiv.innerText = noDotText + '.'.repeat(dotCnt)
-                        tooltipDiv.style.paddingRight = `${ // adjust based on dotCnt
-                            tooltip.nativeRpadding + (3 - dotCnt) * dotWidth }px`
-                    }, 350)
-                } else // restore native right-padding
-                    tooltipDiv.style.paddingRight = tooltip.nativeRpadding
+            // Update text
+            tooltip.div.innerText = baseText
+            tooltip.nativeRpadding = tooltip.nativeRpadding
+                || parseFloat(window.getComputedStyle(tooltip.div).paddingRight)
+            clearInterval(tooltip.dotCycler)
+            if (baseText.endsWith('...')) { // animate the dots
+                const noDotText = baseText.slice(0, -3), dotWidth = 2.75 ; let dotCnt = 3
+                tooltip.dotCycler = setInterval(() => {
+                    dotCnt = (dotCnt % 3) + 1 // cycle thru 1 → 2 → 3
+                    tooltip.div.innerText = noDotText + '.'.repeat(dotCnt)
+                    tooltip.div.style.paddingRight = `${ // adjust based on dotCnt
+                        tooltip.nativeRpadding + (3 - dotCnt) * dotWidth }px`
+                }, 350)
+            } else // restore native right-padding
+                tooltip.div.style.paddingRight = tooltip.nativeRpadding
 
             // Update position
-            const elems = { appDiv, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv }
+            const elems = { appDiv, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv: tooltip.div }
             const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
-            tooltipDiv.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
-            tooltipDiv.style.right = `${
+            tooltip.div.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
+            tooltip.div.style.right = `${
                 rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
 
             // Show tooltip
-            tooltipDiv.style.opacity = 1
+            tooltip.div.style.opacity = 1
         }
     }
 
@@ -3984,9 +3988,6 @@
                     arrowsBtn.append(icons.arrowsDiagonal.create()) ; headerBtnsDiv.append(arrowsBtn)
                 }
 
-                // Add tooltips
-                if (!env.browser.isMobile) appDiv.append(tooltipDiv)
-
                 // Add app header button listeners
                 addListeners.appHeaderBtns()
 
@@ -4081,7 +4082,6 @@
                     show.reply.updatedAPIinHeader = true
                     const preHeaderLabel = appDiv.querySelector('.reply-header-text')
                     preHeaderLabel.replaceChildren(`⦿ API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
-                    console.log(apiUsed)
                     setTimeout(() => type(apiUsed, preHeaderLabel.lastChild, { speed: 1.5 }), 150)
                     function type(text, targetElem, { speed = 1 } = {}) {
                         targetElem.textContent = '' ; let i = 0;
@@ -4393,9 +4393,6 @@
     ['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
-    // Create/stylize TOOLTIPs
-    const tooltipDiv = dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` }) ; tooltip.stylize()
-
     // APPEND to Brave
     const appDivParentSelector = env.browser.isMobile ? '#results' : '.sidebar'
     const appDivParent = await new Promise(resolve => {
@@ -4464,7 +4461,6 @@
         ['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
             (config[mode] || config[`${mode}Sidebar`]) && appDiv.classList.add(mode))
         appDiv.innerHTML = saveAppDiv.html
-        if (!env.browser.isMobile) { tooltipDiv.style.opacity = 0 ; appDiv.append(tooltipDiv) }
         if (appDiv.querySelector(`.${app.slug}-header-btn`)) addListeners.appHeaderBtns()
         appDiv.querySelectorAll(`.${app.slug}-standby-btn`).forEach((btn, idx) =>
             btn.onclick = show.reply[`${['query', 'summarize'][idx]}BtnClickHandler`])

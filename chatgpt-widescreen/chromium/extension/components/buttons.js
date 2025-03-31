@@ -150,7 +150,6 @@ window.buttons = {
                     this.state.hasFadedIn = true // ...so disable fade-in on subsequent .insert()s till .remove()
             }
         })
-        elemToInsertBefore.before(tooltip.div) // add tooltips
         setTimeout(() => chatbar.tweak(), 1) ; this.update.color()
         this.state.status = 'inserted'
     },

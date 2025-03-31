@@ -3,8 +3,6 @@
 window.tooltip = {
     import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
 
-    createDiv() { this.div = dom.create.elem('div', { class: 'cwm-tooltip' }) },
-
     getMsg(key) {
         return typeof GM_info != 'undefined' ?
             this.imports.msgs[key] // from tooltip.import({ msgs: app.msgs }) in userscript
@@ -14,7 +12,8 @@ window.tooltip = {
     stylize() {
         if (this.styles) return
         this.styles = dom.create.style(`.cwm-tooltip {
-            background-color: rgba(0,0,0,0.71) ; padding: 5px 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
+            background-color: /* bubble style */
+                rgba(0,0,0,0.71) ; padding: 5px 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
             font-size: 0.85rem ; color: white ; white-space: nowrap ; /* text style */
             --shadow: 4px 6px 16px 0 rgb(0 0 0 / 38%) ;
                 box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
@@ -32,6 +31,9 @@ window.tooltip = {
     },
 
     async update(btnType) { // text & position
+        if (!tooltip.div) tooltip.div = dom.create.elem('div', { class: 'cwm-tooltip' })
+        if (!tooltip.div.isConnected) buttons[btnType]?.before(tooltip.div)
+        if (!tooltip.styles) tooltip.stylize()
         const site = this.imports.env.site
         const rects = {
             btn: buttons[btnType]?.getBoundingClientRect(), chatbar: (await chatbar.get())?.getBoundingClientRect() }

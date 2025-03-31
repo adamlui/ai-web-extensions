@@ -303,8 +303,7 @@
     const chatbarStyle = dom.create.style()
     update.style.chatbar() ; document.head.append(chatbarStyle)
 
-    // Insert BUTTONS/TOOLTIPS
-    tooltip.createDiv() ; tooltip.stylize()
+    // Insert BUTTONS
     if (!config.extensionDisabled && !config[`${env.site}Disabled`]) {
         buttons.insert()
 
