@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.31
+// @version             2025.3.31.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -262,8 +262,8 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f9ebcb0/chromium/extension/lib/ui.js#sha256-Bg82hwdZyJAORV7B6Vg3uIxQ8qnJhCsU624NyjQrKcA=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@77a96fb/chromium/extension/components/buttons.js#sha256-NmB01/JOkNw90QRnFDjBTX8Uk5LSAQR15auYtMbZqCI=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@d96f327/chromium/extension/components/icons.js#sha256-lrAx3C5E0gugnjUHqw/wLamG7aE9UTCfAJwM0WM8jjo=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@9d778e8/chromium/extension/components/modals.js#sha256-dMLSR939RGAI/ilIXt8Nnzq0QyKaUn89+AdPpNhGgtM=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@5d173f7/chromium/extension/components/tooltip.js#sha256-f5CUKeFMCEUlX/yu4Rqek8igQlX1V5Pk9uMUfwCukBk=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7c41d55/chromium/extension/components/modals.js#sha256-ETMRpzM8O1ymtxnc3dhYcogck069jEysN2PVqFeX74s=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7c41d55/chromium/extension/components/tooltip.js#sha256-i48qBLme8CQF+Jy6kemCXmTn4otvajZX+N8EVeaehM4=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant               GM_setValue
