@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.30.3
+// @version                2025.3.30.5
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -680,7 +680,10 @@
                     modals.draggingModal = event.currentTarget
                     event.preventDefault() // prevent sub-elems like icons being draggable
                     Object.assign(modals.draggingModal.style, { // update styles
-                        transition: '0.1s', willChange: 'transform', transform: 'scale(1.05)' })
+                        transform: 'scale(1.05)', willChange: 'transform',
+                        transition: '0.1s', '-webkit-transition': '0.1s', '-moz-transition': '0.1s',
+                            '-o-transition': '0.1s', '-ms-transition': '0.1s'
+                    })
                     document.body.style.cursor = 'grabbing'; // update cursor
                     [...modals.draggingModal.children] // prevent hover FX if drag lags behind cursor
                         .forEach(child => child.style.pointerEvents = 'none');
@@ -701,7 +704,10 @@
 
                 mouseup() { // restore styles/pointer events, remove listeners, reset modals.draggingModal
                     Object.assign(modals.draggingModal.style, { // restore styles
-                        cursor: 'inherit', transition: 'inherit', willChange: 'auto', transform: 'scale(1)' })
+                        cursor: 'inherit', transform: 'scale(1)', willChange: 'auto',
+                        transition: 'inherit', '-webkit-transition': 'inherit', '-moz-transition': 'inherit',
+                            '-o-transition': 'inherit', '-ms-transition': 'inherit'
+                    })
                     document.body.style.cursor = ''; // restore cursor
                     [...modals.draggingModal.children] // restore pointer events
                         .forEach(child => child.style.pointerEvents = '');
@@ -1163,12 +1169,12 @@
                 document.head.append(this.styles)
             }
             this.styles.innerText = (
-                ':root {' // vars
-                    + '--transition: opacity 0.65s cubic-bezier(0.165,0.84,0.44,1),' // for modal fade-in
-                                  + 'transform 0.55s cubic-bezier(0.165,0.84,0.44,1) !important ;' // for modal move-in
-                    + '--bg-transition: background-color 0.25s ease !important ;' // for modal bg dim
-                    + '--btn-transition: transform 0.15s ease ;' // for modal button hover-zoom
-                    + '--settings-transition: transform 0.1s ease }' // for Settings entry hover-zoom
+
+                // Vars
+                `:root {
+                    --fg-transition: opacity 0.65s cubic-bezier(0.165,0.84,0.44,1), /* fade-in */
+                                     transform 0.55s cubic-bezier(0.165,0.84,0.44,1) !important ; /* move-in */
+                    --bg-transition: background-color 0.25s ease !important } /* dim */`
 
                 // Main modal styles
               + '@keyframes modal-zoom-fade-out {'
@@ -1216,9 +1222,9 @@
                   + 'pointer-events: auto ;' // override any disabling from site modals
                   + 'position: fixed ; top: 0 ; left: 0 ; width: 100% ; height: 100% ;' // expand to full view-port
                   + 'display: flex ; justify-content: center ; align-items: center ; z-index: 9999 ;' // align
-                  + 'transition: var(--bg-transition) ;' // for bg dim
-                      + '-webkit-transition: var(--bg-transition) ; -moz-transition: var(--bg-transition) ;'
-                      + '-o-transition: var(--bg-transition) ; -ms-transition: var(--bg-transition) }'
+                  + `transition: var(--bg-transition) ; /* dim */
+                        -webkit-transition: var(--bg-transition) ; -moz-transition: var(--bg-transition) ;
+                        -o-transition: var(--bg-transition) ; -ms-transition: var(--bg-transition) }`
               + '[class*=-modal-bg].animated > div {'
                   + 'z-index: 13456 ; opacity: 0.98 ; transform: translateX(0) translateY(0) }'
               + '[class$=-modal] {' // native modals + chatgpt.alert()s
@@ -1229,14 +1235,14 @@
                   + `border: 1px solid ${ env.ui.app.scheme == 'dark' ? 'white' : '#b5b5b5' } !important ;`
                   + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' } ;`
                   + 'transform: translateX(-3px) translateY(7px) ;' // offset to move-in from
-                  + 'transition: var(--transition) ;' // for fade-in + move-in
-                      + '-webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;'
-                      + '-o-transition: var(--transition) ; -ms-transition: var(--transition) }'
-              + ( config.fgAnimationsDisabled || env.browser.isMobile ? '' : (
-                    '[class$=-modal] button:hover { transform: scale(1.055) }'
-                  + '[class$=-modal] button { transition: var(--btn-transition) ;'
-                      + '-webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;'
-                      + '-o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }' ))
+                  + `transition: var(--fg-transition) ; /* fade-in + move-in */
+                        -webkit-transition: var(--fg-transition) ; -moz-transition: var(--fg-transition) ;
+                        -o-transition: var(--fg-transition) ; -ms-transition:  var(--fg-transition) }`
+              + ( config.fgAnimationsDisabled || env.browser.isMobile ? '' : `
+                    [class$=-modal] button:hover { transform: scale(1.055) }
+                    [class$=-modal] button { transition: var(--zoom-transition-more) ;
+                        -webkit-transition: var(--zoom-transition-more) ; -moz-transition: var(--zoom-transition-more) ;
+                        -o-transition: var(--zoom-transition-more) ; -ms-transition: var(--zoom-transition-more) }` )
 
               // Glowing modal btns
               + ':root { --glow-color: hsl(186 100% 69%) }'
@@ -1294,9 +1300,9 @@
                   + 'height: 37px ; padding: 6px 10px 4px ; font-size: 15.5px ; list-style: none ;'
                   + `border-bottom: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' } ;` // add separators
                   + 'border-radius: 3px ;' // slightly round highlight strip
-                  + 'transition: var(--settings-transition) ;' // for hover-zoom
-                      + '-webkit-transition: var(--settings-transition) ; -moz-transition: var(--settings-transition) ;'
-                      + '-o-transition: var(--settings-transition) ; -ms-transition: var(--settings-transition) }'
+                  + `transition: var(--zoom-transition-less) ;
+                        -webkit-transition: var(--zoom-transition-less) ; -moz-transition: var(--zoom-transition-less) ;
+                        -o-transition: var(--zoom-transition-less) ; -ms-transition: var(--zoom-transition-less) }`
               + `#${app.slug}-settings li.active {`
                   + `color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' } ;` // for text
                   + `fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' } ;` // for icons
@@ -1750,7 +1756,9 @@
                   + '--app-transition: opacity 0.5s ease, transform 0.5s ease,' // for 1st fade-in
                                     + 'bottom 0.1s cubic-bezier(0,0,0.2,1),' // smoothen Anchor Y min/restore
                                     + 'width 0.167s cubic-bezier(0,0,0.2,1) ;' // smoothen Anchor X expand/shrink
-                  + '--btn-transition: transform 0.15s ease,' // for hover-zoom
+                  + '--zoom-transition-more: transform 0.15s ease ;' // for button hover-zoom
+                  + '--zoom-transition-less: transform 0.1s ease ;' // for Settings entry hover-zoom
+                  + '--btn-transition: var(--zoom-transition-more),' // for hover-zoom
                                     + 'opacity 0.25s ease-in-out ;' // + btn-zoom-fade-out + .app-hover-only shows
                   + '--font-size-slider-thumb-transition: transform 0.05s ease ;' // for hover-zoom
                   + '--reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ;' // for Anchor changes
@@ -1758,12 +1766,12 @@
 
                 // Animations
               + '.fade-in { opacity: 0 ; transform: translateY(10px) }'
-              + '.fade-in-less { opacity: 0 ;'
-                  + 'transition: var(--fade-in-less-transition) ;'
-                      + '-webkit-transition: var(--fade-in-less-transition) ;'
-                      + '-moz-transition: var(--fade-in-less-transition) ;'
-                      + '-o-transition: var(--fade-in-less-transition) ;'
-                      + '-ms-transition: var(--fade-in-less-transition) }'
+              + `.fade-in-less { opacity: 0 ;
+                    transition: var(--fade-in-less-transition) ;
+                        -webkit-transition: var(--fade-in-less-transition) ;
+                        -moz-transition: var(--fade-in-less-transition) ;
+                        -o-transition: var(--fade-in-less-transition) ;
+                        -ms-transition: var(--fade-in-less-transition) }`
               + '.fade-in.active, .fade-in-less.active { opacity: 1 ; transform: translateY(0) }'
               + '@keyframes btn-zoom-fade-out {'
                   + '0% { opacity: 1 } 55% { opacity: 0.25 ; transform: scale(1.85) }'
@@ -1808,12 +1816,15 @@
                   + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}`
               + '.kudoai {' // header byline
                   + `position: relative ; bottom: -1px ; margin-left: 8px ; color: #aaa ;
-                    --transition: 0.15s ease-in-out ; transition: var(--transition) ;
-                        -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
-                        -o-transition: var(--transition) ; -ms-transition: var(--transition) }`
+                    --kudoai-transition: 0.15s ease-in-out ; transition: var(--kudoai-transition) ;
+                        -webkit-transition: var(--kudoai-transition) ; -moz-transition: var(--kudoai-transition) ;
+                        -o-transition: var(--kudoai-transition) ; -ms-transition: var(--kudoai-transition) }`
               + '.kudoai a, .kudoai a:visited { color: #aaa ; text-decoration: none !important } '
               + `.kudoai a:hover {
-                    transition: 0.15s ease-in ; color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}`
+                    color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
+                    transition: var(--kudoai-transition) ;
+                        -webkit-transition: var(--kudoai-transition) ; -moz-transition: var(--kudoai-transition) ;
+                        -o-transition: var(--kudoai-transition) ; -ms-transition: var(--kudoai-transition) }`
               + `#${app.slug}-header-btns { float: right ; margin-top: -2px }`
               + `.${app.slug}-header-btn {`
                   + 'float: right ; cursor: pointer ; position: relative ; top: 4px ;'
@@ -1895,8 +1906,10 @@
                          color: var(--font-color-light-scheme) ; border: none` };
                     ${ config.fgAnimationsDisabled ? '' : // smoothen Anchor mode expand/shrink
                         `transition: var(--reply-pre-transition) ;
-                        -webkit-transition: var(--reply-pre-transition) ; -moz-transition: var(--reply-pre-transition) ;
-                        -o-transition: var(--reply-pre-transition) ; -ms-transition: var(--reply-pre-transition)` }}
+                            -webkit-transition: var(--reply-pre-transition) ;
+                            -moz-transition: var(--reply-pre-transition) ;
+                            -o-transition: var(--reply-pre-transition) ;
+                            -ms-transition: var(--reply-pre-transition)` }}
                 #${app.slug} .reply-pre a, #${app.slug} .reply-pre a:visited { color: #4495d4 }
                 #${app.slug} .reply-pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#ea7a28' }}
                 code #${app.slug}-copy-btn { position: relative ; top: -6px ; right: -9px }
@@ -1939,7 +1952,9 @@
                         `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
                         box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
                         -moz-box-shadow: var(--chatbar-inset-shadow) ;` }
-                    transition: box-shadow 0.15s ease }
+                        transition: box-shadow 0.15s ease ;
+                            -webkit-transition: box-shadow 0.15s ease ; -moz-transition: box-shadow 0.15s ease ;
+                            -o-transition: box-shadow 0.15s ease ; -ms-transition: box-shadow 0.15s ease }
                 ${ isParticlizedDS ? '' : // add inset shadow to chatbar on hover
                     `#${app.slug}-chatbar:hover:not(:focus) {
                         --chatbar-hover-inset-shadow: 0 ${
@@ -1947,7 +1962,9 @@
                         box-shadow: var(--chatbar-hover-inset-shadow) ;
                         -webkit-box-shadow: var(--chatbar-hover-inset-shadow) ;
                         -moz-box-shadow: var(--chatbar-hover-inset-shadow) ;
-                        transition: transform 0.15s ease, box-shadow 0.25s ease }` }
+                        transition: box-shadow 0.25s ease ;
+                            -webkit-transition: box-shadow 0.25s ease ; -moz-transition: box-shadow 0.25s ease ;
+                            -o-transition: box-shadow 0.25s ease ; -ms-transition: box-shadow 0.25s ease }` }
                  #${app.slug}-chatbar:focus-visible { /* fallback outline chatbar + reduce inset shadow on focus */
                     outline: -webkit-focus-ring-color auto 1px ;
                     ${ isParticlizedDS ? '' :
@@ -3402,8 +3419,8 @@
         + `--shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
                 box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)`
         + 'opacity: 0 ; height: fit-content ; z-index: 1250 ;' // visibility
-        + 'transition: opacity 0.1s ; -webkit-transition: opacity 0.1s ; -moz-transition: opacity 0.1s ;'
-            + '-o-transition: opacity 0.1s ; -ms-transition: opacity 0.1s }'
+        + `transition: opacity 0.1s ; -webkit-transition: opacity 0.1s ; -moz-transition: opacity 0.1s ;
+                -o-transition: opacity 0.1s ; -ms-transition: opacity 0.1s }`
     ))
 
     // APPEND AMAZONGPT to Amazon
