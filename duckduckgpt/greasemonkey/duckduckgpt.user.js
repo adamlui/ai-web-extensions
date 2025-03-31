@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.3.31.1
+// @version                2025.3.31.2
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -1613,9 +1613,7 @@
     const menus = {
         pin: {
             clickHandler(event) {
-                const pinMenu = event.target.closest(`#${app.slug}-pin-menu`),
-                      itemLabel = event.target.textContent,
-                      prevOffsetTop = appDiv.offsetTop
+                const itemLabel = event.target.textContent, prevOffsetTop = appDiv.offsetTop
 
                 // Switch mode
                 if (itemLabel == app.msgs.menuLabel_top) toggle.sidebar('sticky')
@@ -1624,29 +1622,29 @@
                 else if (itemLabel == app.msgs.menuLabel_bottom) toggle.anchorMode()
 
                 // Close/update menu
-                if (appDiv.offsetTop != prevOffsetTop) pinMenu.remove() // since app moved
-                else menus.pin.update(pinMenu) // since menu stayed in place
+                if (appDiv.offsetTop != prevOffsetTop) menus.pin.hide() // since app moved
+                menus.pin.update()
             },
 
             createAppend() {
-                const pinMenu = dom.create.elem('div', { id: `${app.slug}-pin-menu`,
+                this.div = dom.create.elem('div', { id: `${app.slug}-pin-menu`,
                     class: `${app.slug}-menu ${app.slug}-btn-tooltip fade-in-less no-user-select` })
-                menus.pin.update(pinMenu) ; appDiv.append(pinMenu)
-                return pinMenu
+                this.ul = dom.create.elem('ul')
+                this.div.append(this.ul) ; appDiv.append(this.div)
+                this.div.onmouseenter = this.div.onmouseleave = this.toggle
+                this.update() ; this.status = 'hidden'
             },
 
-            update(pinMenu) {
-                pinMenu.textContent = ''
+            hide() { Object.assign(this.div.style, { display: 'none', opacity: 0 }) ; this.status = 'hidden' },
 
-                // Init core elems
-                const pinMenuUL = document.querySelector(`#${app.slug}-pin-menu ul`)
-                               || dom.create.elem('ul')
+            update() {
+
+                // Init elems
+                this.ul.textContent = ''
                 const pinMenuItems = []
-                const pinMenulabels = [
-                    `${app.msgs.menuLabel_pinTo}...`, app.msgs.menuLabel_top,
-                    app.msgs.menuLabel_sidebar, app.msgs.menuLabel_bottom ]
-                const pinMenuIcons = [
-                    icons.webCorner.create(), icons.sidebar.create(), icons.anchor.create(), icons.checkmark.create()]
+                const pinMenuIcons = ['webCorner', 'sidebar', 'anchor', 'checkmark'].map(key => icons[key].create())
+                const pinMenulabels = [ `${app.msgs.menuLabel_pinTo}...`,
+                    app.msgs.menuLabel_top, app.msgs.menuLabel_sidebar, app.msgs.menuLabel_bottom ]
 
                 // Style icons
                 pinMenuIcons.forEach(icon => icon.style.cssText = (
@@ -1671,29 +1669,29 @@
                      || i == 3 && config.anchored) // 'Bottom' item + Anchor mode on
                             pinMenuItems[i].append(pinMenuIcons[pinMenuIcons.length -1]) // append right checkmark
                     pinMenuItems[i].onclick = menus.pin.clickHandler
-                    pinMenuUL.append(pinMenuItems[i])
+                    this.ul.append(pinMenuItems[i])
                 }
-                pinMenu.append(pinMenuUL)
-
-                // Add listeners
-                pinMenu.onmouseenter = pinMenu.onmouseleave = menus.pin.toggle
             },
 
             toggle(event) { // visibility
-                clearTimeout(menus.pin.hideTimeout) // in case rapid re-enter before ran
-                const pinMenu = appDiv.querySelector(`#${app.slug}-pin-menu`) || menus.pin.createAppend()
-                if (event.type == 'mouseleave') // schedule delayed removal to cover gap
-                    return menus.pin.hideTimeout = setTimeout(() => pinMenu.remove(), 55)
-                const pinBtn = appDiv.querySelector(`#${app.slug}-pin-btn`)
-                const rects = {
-                    appDiv: appDiv.getBoundingClientRect(), pinBtn: pinBtn.getBoundingClientRect(),
-                    pinMenu: pinMenu.getBoundingClientRect()
-                }
-                const appIsHigh = rects.pinBtn.top < ( rects.pinMenu.height +15 )
-                pinMenu.style.top = `${ rects.pinBtn.top - rects.appDiv.top +(
-                    appIsHigh ? /* point down */ 29 : /* point up */ - rects.pinMenu.height -13 )}px`
-                if (!menus.pin.rightPos) menus.pin.rightPos = rects.appDiv.right - event.clientX - pinMenu.offsetWidth/2
-                Object.assign(pinMenu.style, { right: `${menus.pin.rightPos}px`, opacity: 1 })
+                clearTimeout(menus.pin.hide.timeout) // in case rapid re-enter before ran
+                if (!menus.pin.div) menus.pin.createAppend()
+                if (event.type == 'mouseenter' && menus.pin.status == 'hidden' && event.target != menus.pin.div) {
+                    menus.pin.div.style.display = '' // for rects calc
+                    const pinBtn = appDiv.querySelector(`#${app.slug}-pin-btn`)
+                    const rects = {
+                        appDiv: appDiv.getBoundingClientRect(), pinBtn: pinBtn.getBoundingClientRect(),
+                        pinMenu: menus.pin.div.getBoundingClientRect()
+                    }
+                    const appIsHigh = rects.pinBtn.top < ( rects.pinMenu.height +15 )
+                    menus.pin.div.style.top = `${ rects.pinBtn.top - rects.appDiv.top +(
+                        appIsHigh ? /* point down */ 29 : /* point up */ - rects.pinMenu.height -13 )}px`
+                    if (!menus.pin.rightPos)
+                        menus.pin.rightPos = rects.appDiv.right - event.clientX - menus.pin.div.offsetWidth/2
+                    Object.assign(menus.pin.div.style, { right: `${menus.pin.rightPos}px`, opacity: 1 })
+                    menus.pin.status = 'visible'
+                } else if (event.type == 'mouseleave')
+                    return menus.pin.hide.timeout = setTimeout(() => menus.pin.hide(), 55)
             }
         }
     }
