@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.3.31.8
+// @version               2025.3.31.9
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -2813,6 +2813,7 @@
             // Add button listeners
             appDiv.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn =>{
                 btn.onclick = () => {
+                    tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
                     const btnType = /-(\w+)-btn$/.exec(btn.id)[1]
                     if (btnType == 'send') return // since handled by form submit
                     show.reply.src = btnType
@@ -2959,7 +2960,7 @@
             if (!tooltip.div.isConnected) appDiv.append(tooltip.div)
             if (!tooltip.styles) tooltip.stylize()
             if (typeof stateOrEvent == 'object') // mouse event from btn hover, update text/pos
-                tooltip.update(/[^-]+-([\w-]+)-btn/.exec(stateOrEvent.currentTarget.id)[1])
+                tooltip.update(new RegExp(`${app.slug}-([\\w-]+)-btn`).exec(stateOrEvent.currentTarget.id)[1])
             tooltip.div.style.opacity = +( stateOrEvent?.type == 'mouseenter' || stateOrEvent == 'on' )
         },
 
@@ -3240,7 +3241,7 @@
                     if (event.propertyName == 'width') {
                         update.bylineVisibility() ; appDiv.removeEventListener('transitionend', onTransitionEnd)
             }})
-            icons.arrowsDiagonal.update() ; tooltip.toggle('off') // update icon/tooltip
+            icons.arrowsDiagonal.update() ; tooltip.update('arrows') // update icon/tooltip
         },
 
         manualGen(mode) { // Prefix/Suffix modes
@@ -3274,7 +3275,7 @@
                 }
             }
             update.appBottomPos() // toggle visual minimization
-            setTimeout(() => tooltip.toggle('off'), 1) // remove lingering tooltip
+            tooltip.toggle('off') // hide lingering tooltip
         },
 
         proxyMode() {
