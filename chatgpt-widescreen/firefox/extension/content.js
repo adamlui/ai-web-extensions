@@ -323,7 +323,7 @@
         // Maintain button visibility on nav
         if (config.extensionDisabled || config[`${env.site}Disabled`]) return
         else if (!buttons.fullscreen?.isConnected && !chatgpt.canvasIsOpen()
-            && chatbar.get() && buttons.state.status != 'inserting'
+            && await chatbar.get() && buttons.state.status != 'inserting'
         ) { buttons.state.status = 'missing' ; buttons.insert() }
 
         // Maintain button colors + Widescreen button visibility on snowflake chatgpt.com
