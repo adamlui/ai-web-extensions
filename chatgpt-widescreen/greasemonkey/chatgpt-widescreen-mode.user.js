@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1.4
+// @version             2025.4.1.5
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -260,7 +260,7 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@58c2d29/chromium/extension/lib/dom.js#sha256-WXPxvMnJU6LGvINaENBbmvGXTAcAlXlBkyGwIDGXiC4=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7ed283d/chromium/extension/lib/settings.js#sha256-XQWeorSHtTm0rLz9FCXtU2rSk8ds0Tgj11Pw7a4Tfz4=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f9ebcb0/chromium/extension/lib/ui.js#sha256-Bg82hwdZyJAORV7B6Vg3uIxQ8qnJhCsU624NyjQrKcA=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7ed283d/chromium/extension/components/buttons.js#sha256-d624TUDUH6ZgT/DFSGQqudR2AqRiqxTeFZPBBuNLJ30=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@580df55/chromium/extension/components/buttons.js#sha256-FVFZm8EPXN3HPg89qxbWlfWc6AOQMA1BXtg9kbyTPIQ=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@d96f327/chromium/extension/components/icons.js#sha256-lrAx3C5E0gugnjUHqw/wLamG7aE9UTCfAJwM0WM8jjo=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7c41d55/chromium/extension/components/modals.js#sha256-ETMRpzM8O1ymtxnc3dhYcogck069jEysN2PVqFeX74s=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7ed283d/chromium/extension/components/tooltip.js#sha256-8ifKNrnKJ6b9oQ6aY7FM6SnqTYJ1IOUcvEbMHt8dVsA=
