@@ -81,12 +81,13 @@
 <!-- GOLDEN SPONSORS -->
 
 <div id="golden-sponsors" align="center">
+
 <br>
 
-### Golden Sponsors:
+### Supported by:
 
 <div id="warp">
-    <br><br>
+    <br>
     <a href="https://www.warp.dev/chatgptjs" target="_blank">
         <img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">
     </a>
@@ -96,19 +97,7 @@
         Available for MacOS, Linux, & Windows</a></i>
 </div>
 
-<br>
-
-#
-
-<br>
-
-<a href="https://www.burncloud.com/893.html">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptjs.org/images/logos/partners/burncloud/with-description/white.png?v=610795b">
-        <img width=685 src="https://assets.chatgptjs.org/images/logos/partners/burncloud/with-description/black.png?v=610795b">
-    </picture>
-</a>
-<br><br><br>
+<br><br>
 
 </div>
 
