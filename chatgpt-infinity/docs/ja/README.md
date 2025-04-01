@@ -151,7 +151,6 @@ ChatGPT Infinity は、強力な [chatgpt.js](https://github.com/KudoAI/chatgpt.
 
 <br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/logos/platforms/android/head-plus-word/white/logo150x24.png"><img alt="Android" width=111 src="https://assets.chatgptinfinity.com/images/logos/platforms/android/head-plus-word/green-head-black-word/logo150x24.png"></picture><br>
 
-- **[Kiwi](https://kiwibrowser.com)**（[Chrome 拡張機能](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link)または[Greasemonkey ユーザースクリプト](https://gm.chatgptinfinity.com)を介して）
 - **[Mozilla Firefox](https://www.mozilla.org/firefox/browsers/mobile/android/)**（[Greasemonkey ユーザースクリプト](https://gm.chatgptinfinity.com)を介して）
 
 <br>
