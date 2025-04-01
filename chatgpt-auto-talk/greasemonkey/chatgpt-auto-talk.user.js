@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1.2
+// @version             2025.4.1.3
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@9f1ed3c/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@9f1ed3c/assets/images/icons/openai/black/icon64.png
@@ -434,7 +434,8 @@
             ['about', 'donate'].forEach(entryType => this.ids.push(GM_registerMenuCommand(
                 `${ entryType == 'about' ? '💡' : '💖' } ${
                     app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
-                () => modals.open(entryType), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
+                () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate.gitHub),
+                env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
             )))
         }
     }
