@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1
+// @version             2025.4.1.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -258,12 +258,12 @@
 // @require             https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@5d3db9c/chromium/extension/lib/chatbar.js#sha256-KIIufXI7xyuVFSrj2NW0RQGloNEl80tzuBgxaOsCMB8=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@58c2d29/chromium/extension/lib/dom.js#sha256-WXPxvMnJU6LGvINaENBbmvGXTAcAlXlBkyGwIDGXiC4=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@8d967ea/chromium/extension/lib/settings.js#sha256-KUJV9WBAfwgLLuGugYmoy9MHang/LkkecKFQhnDX15A=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7ed283d/chromium/extension/lib/settings.js#sha256-XQWeorSHtTm0rLz9FCXtU2rSk8ds0Tgj11Pw7a4Tfz4=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f9ebcb0/chromium/extension/lib/ui.js#sha256-Bg82hwdZyJAORV7B6Vg3uIxQ8qnJhCsU624NyjQrKcA=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@77a96fb/chromium/extension/components/buttons.js#sha256-NmB01/JOkNw90QRnFDjBTX8Uk5LSAQR15auYtMbZqCI=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7ed283d/chromium/extension/components/buttons.js#sha256-d624TUDUH6ZgT/DFSGQqudR2AqRiqxTeFZPBBuNLJ30=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@d96f327/chromium/extension/components/icons.js#sha256-lrAx3C5E0gugnjUHqw/wLamG7aE9UTCfAJwM0WM8jjo=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7c41d55/chromium/extension/components/modals.js#sha256-ETMRpzM8O1ymtxnc3dhYcogck069jEysN2PVqFeX74s=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7c41d55/chromium/extension/components/tooltip.js#sha256-i48qBLme8CQF+Jy6kemCXmTn4otvajZX+N8EVeaehM4=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7ed283d/chromium/extension/components/tooltip.js#sha256-8ifKNrnKJ6b9oQ6aY7FM6SnqTYJ1IOUcvEbMHt8dVsA=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant               GM_setValue
@@ -469,10 +469,14 @@
             : !config[`${env.site}Disabled`] ?
                 Object.keys(settings.controls).map(key => {
                     if (sites[env.site].availFeatures.includes(key)) {
-                        const menuLabel = `${ settings.controls[key].symbol
-                                           || this.state.symbols[+settings.isEnabled(key)] } `
-                                        + settings.controls[key].label
-                                        + this.state.separator + this.state.words[+settings.isEnabled(key)]
+                        const ctrlType = settings.controls[key].type
+                        const ctrlStatus = settings.controls[key].status
+                        const menuLabel = `${
+                            settings.controls[key].symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${
+                            settings.controls[key].label} ${
+                                ctrlType == 'toggle' ? this.state.separator
+                                                     + this.state.words[+settings.typeIsEnabled(key)]
+                                                     : ctrlStatus ? `— ${ctrlStatus}` : '' }`
                         return GM_registerMenuCommand(menuLabel, () => {
                             settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
                             notify(`${settings.controls[key].label}: ${

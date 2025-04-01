@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1
+// @version             2025.4.1.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@a8c9387/assets/images/icons/continue-symbol/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@a8c9387/assets/images/icons/continue-symbol/black/icon64.png
@@ -230,7 +230,7 @@
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.7.1/dist/chatgpt.min.js#sha256-uv1k2VxGy+ri3+2C+D/kTYSBCom5JzvrNCLxzItgD6M=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@ab099a3/chromium/extension/components/modals.js#sha256-NGaCScpnN0140ej6eFh/+Yorx6VLea1uNoZ5kY5cX4Q=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@762a364/chromium/extension/lib/dom.js#sha256-U+SUWAkqLIY6krdR2WPhVy5/f+cTV03n3F8b+Y+/Py0=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@c2aac90/chromium/extension/lib/settings.js#sha256-TuYeKA5lzdAQdgsZgR7TjlUamABhWwdfVgZsPM0+IJM=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@9f4e5b1/chromium/extension/lib/settings.js#sha256-lwjhc3z5/1zCooHxCyaf+BlVJqkBwf26kLfkddHWiLs=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@80e800c/chromium/extension/lib/ui.js#sha256-/szI0bDpLL1aVTrc29iyToff58VMfeM/lSyjHWTipt0=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
@@ -390,9 +390,13 @@
 
             // ...or add settings toggles
             : Object.keys(settings.controls).map(key => {
-                const menuLabel = `${ settings.controls[key].symbol || this.state.symbols[+settings.isEnabled(key)] } `
-                                + settings.controls[key].label
-                                + this.state.separator + this.state.words[+settings.isEnabled(key)]
+                const ctrlType = settings.controls[key].type
+                const ctrlStatus = settings.controls[key].status
+                const menuLabel = `${
+                    settings.controls[key].symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${
+                    settings.controls[key].label} ${
+                        ctrlType == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
+                                             : ctrlStatus ? `— ${ctrlStatus}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     settings.save(key, !config[key]) ; syncConfigToUI({ updatedKey: key })
                     notify(`${settings.controls[key].label}: ${
