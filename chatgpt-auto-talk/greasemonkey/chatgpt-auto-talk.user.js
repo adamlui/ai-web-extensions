@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1.1
+// @version             2025.4.1.2
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@9f1ed3c/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@9f1ed3c/assets/images/icons/openai/black/icon64.png
@@ -389,7 +389,14 @@
             })
         },
 
-        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val }
+        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val },
+
+        typeIsEnabled(key) { // for menu labels + notifs to return ON/OFF for type w/o suffix
+            const reInvertSuffixes = /disabled|hidden/i
+            return reInvertSuffixes.test(key) // flag in control key name
+                && !reInvertSuffixes.test(this.controls[key]?.label || '') // but not in label msg key name
+                    ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
+        }
     }
     settings.load(Object.keys(settings.controls))
 
@@ -410,14 +417,16 @@
 
             // Add toggles
             this.ids = Object.keys(settings.controls).map(key => {
-                const settingIsEnabled = config[key] ^ /disabled/i.test(key)
-                const menuLabel = `${ settings.controls[key].symbol || this.state.symbols[+settingIsEnabled] } `
-                                + settings.controls[key].label
-                                + this.state.separator + this.state.words[+settingIsEnabled]
+                const ctrlType = settings.controls[key].type
+                const ctrlStatus = settings.controls[key].status
+                const menuLabel = `${
+                    settings.controls[key].symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${
+                    settings.controls[key].label} ${
+                        ctrlType == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
+                                             : ctrlStatus ? `— ${ctrlStatus}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     settings.save(key, !config[key]) ; syncConfigToUI({ updatedKey: key })
-                    notify(`${settings.controls[key].label}: ${
-                        this.state.words[+(config[key] ^ /disabled/i.test(key))]}`)
+                    notify(`${settings.controls[key].label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
                 }, env.scriptManager.supportsTooltips ? { title: settings.controls[key].helptip || ' ' } : undefined)
             });
 
