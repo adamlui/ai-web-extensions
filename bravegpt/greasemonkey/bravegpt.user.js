@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.1
+// @version               2025.4.1.1
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -405,19 +405,22 @@
     // Init DEBUG mode
     const config = {}
     const settings = {
-        isEnabled(key) {
-            const reInvertFlags = /disabled|hidden/i
-            return reInvertFlags.test(key) // flag in control key name
-                && !reInvertFlags.test(this.controls[key]?.label || '') // but not in label msg key name
-                    ? !config[key] : config[key] // so invert since flag reps opposite state, else don't
-        },
+
         load(...keys) {
             keys.flat().forEach(key => {
                 config[key] = GM_getValue(`${app.configKeyPrefix}_${key}`,
                     this.controls?.[key]?.defaultVal ?? this.controls?.[key]?.type == 'toggle')
             })
         },
-        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val }
+
+        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val },
+
+        typeIsEnabled(key) { // for toggle.<auto|manual>Gen auto-toggles + notifs
+            const reInvertSuffixes = /disabled|hidden/i
+            return reInvertSuffixes.test(key) // flag in control key name
+                && !reInvertSuffixes.test(this.controls[key]?.label || '') // but not in label msg key name
+                    ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
+        }
     }
     settings.load('debugMode')
 
@@ -3202,18 +3205,18 @@
                   modeKey = `auto${log.toTitleCase(mode)}${ mode == 'get' ? 'Disabled' : '' }`
             let conflictingModeToggled = false // to extend this notif duration
             settings.save(modeKey, !config[modeKey])
-            if (settings.isEnabled(modeKey)) { // this Auto-Gen mode toggled on, disable other one + Manual-Gen
+            if (settings.typeIsEnabled(modeKey)) { // this Auto-Gen mode toggled on, disable other one + Manual-Gen
                 const otherMode = validModes[+(mode == validModes[0])],
                       otherModeKey = `auto${log.toTitleCase(otherMode)}${ otherMode == 'get' ? 'Disabled' : '' }`
-                if (settings.isEnabled(otherModeKey)) { toggle.autoGen(otherMode) ; conflictingModeToggled = true }
+                if (settings.typeIsEnabled(otherModeKey)) { toggle.autoGen(otherMode) ; conflictingModeToggled = true }
                 ['prefix', 'suffix'].forEach(mode => {
                     if (config[`${mode}Enabled`]) { toggle.manualGen(mode) ; conflictingModeToggled = true }})
             }
-            notify(`${settings.controls[modeKey].label} ${toolbarMenu.state.words[+settings.isEnabled(modeKey)]}`,
+            notify(`${settings.controls[modeKey].label} ${toolbarMenu.state.words[+settings.typeIsEnabled(modeKey)]}`,
                 null, conflictingModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
-                if (modeToggle.checked != settings.isEnabled(modeKey)) modals.settings.toggle.switch(modeToggle)
+                if (modeToggle.checked != settings.typeIsEnabled(modeKey)) modals.settings.toggle.switch(modeToggle)
             }
         },
 
@@ -3251,7 +3254,7 @@
             settings.save(modeKey, !config[modeKey])
             if (config[modeKey]) // Manual-Gen toggled on, disable all Auto-Gen
                 ['get', 'summarize'].forEach(mode => {
-                    if (settings.isEnabled(`auto${log.toTitleCase(mode)}${ mode == 'get' ? 'Disabled' : '' }`)) {
+                    if (settings.typeIsEnabled(`auto${log.toTitleCase(mode)}${ mode == 'get' ? 'Disabled' : '' }`)) {
                         toggle.autoGen(mode) ; autoGenToggled = true }
                 })
             notify(`${settings.controls[modeKey].label} ${toolbarMenu.state.words[+config[modeKey]]}`,

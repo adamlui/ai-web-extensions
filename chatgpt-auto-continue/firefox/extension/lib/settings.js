@@ -22,11 +22,11 @@ window.settings = {
         return msg
     },
 
-    isEnabled(key) {
+    typeIsEnabled(key) { // for menu labels + notifs to return ON/OFF for type w/o suffix
         const reInvertFlags = /disabled|hidden/i
         return reInvertFlags.test(key) // flag in control key name
             && !reInvertFlags.test(this._msgKeys.get(this.controls[key]?.label) || '') // but not in label msg key name
-                ? !config[key] : config[key] // so invert since flag reps opposite state, else don't
+                ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
     },
 
     load(...keys) {

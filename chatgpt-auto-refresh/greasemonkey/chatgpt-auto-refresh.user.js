@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1.2
+// @version             2025.4.1.3
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@f11a0a8/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@f11a0a8/assets/images/icons/openai/black/icon64.png
@@ -401,13 +401,6 @@
                 label: app.msgs.menuLabel_refreshInt, helptip: app.msgs.helptip_refreshInt }
         },
 
-        isEnabled(key) {
-            const reInvertFlags = /disabled|hidden/i
-            return reInvertFlags.test(key) // flag in control key name
-                && !reInvertFlags.test(this.controls[key]?.label || '') // but not in label msg key name
-                    ? !config[key] : config[key] // so invert since flag reps opposite state, else don't
-        },
-
         load(...keys) {
             keys.flat().forEach(key => {
                 config[key] = GM_getValue(`${app.configKeyPrefix}_${key}`,
@@ -415,7 +408,14 @@
             })
         },
 
-        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val }
+        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val },
+
+        typeIsEnabled(key) { // for menu labels + notifs to return ON/OFF for type w/o suffix
+            const reInvertSuffixes = /disabled|hidden/i
+            return reInvertSuffixes.test(key) // flag in control key name
+                && !reInvertSuffixes.test(this.controls[key]?.label || '') // but not in label msg key name
+                    ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
+        }
     }
     settings.load(Object.keys(settings.controls))
     if (!config.refreshInterval) settings.save('refreshInterval', 30) // init refresh interval to 30 secs if unset
@@ -442,15 +442,15 @@
             this.ids = Object.keys(settings.controls).map(key => {
                 const ctrlType = settings.controls[key].type
                 const ctrlStatus = settings.controls[key].status
-                const menuLabel = `${ settings.controls[key].symbol || this.state.symbols[+settings.isEnabled(key)] } `
-                                + settings.controls[key].label
-                                + ( ctrlType == 'toggle' ? this.state.separator
-                                                         + this.state.words[+settings.isEnabled(key)]
-                                                         : ctrlStatus ? `— ${settings.controls[key].status}` : '' )
+                const menuLabel = `${
+                    settings.controls[key].symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${
+                    settings.controls[key].label} ${
+                        ctrlType == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
+                                             : ctrlStatus ? `— ${ctrlStatus}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     if (ctrlType == 'toggle') {
                         settings.save(key, !config[key])
-                        notify(`${settings.controls[key].label}: ${this.state.words[+settings.isEnabled(key)]}`)
+                        notify(`${settings.controls[key].label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
                     } else { // Refresh Interval prompt
                         while (true) {
                             const refreshInterval = prompt(
