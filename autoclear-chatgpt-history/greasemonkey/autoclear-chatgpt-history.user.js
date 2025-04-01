@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.31
+// @version             2025.4.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon64.png
@@ -413,7 +413,7 @@
     // Define MENU functions
 
     const toolbarMenu = {
-        ids: [], state: {
+        state: {
             symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
             words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
         },
@@ -426,7 +426,7 @@
         register() {
 
             // Add toggles
-            Object.keys(settings.controls).forEach(key => {
+            this.ids = Object.keys(settings.controls).map(key => {
                 const ctrlType = settings.controls[key].type
                 const ctrlStatus = settings.controls[key].status
                 const menuLabel = `${ settings.controls[key].symbol || this.state.symbols[+settings.isEnabled(key)] } `
@@ -434,19 +434,19 @@
                                 + ( ctrlType == 'toggle' ? this.state.separator
                                                          + this.state.words[+settings.isEnabled(key)]
                                                          : ctrlStatus ? `— ${ctrlStatus}` : '' )
-                this.ids.push(GM_registerMenuCommand(menuLabel, () => {
+                return GM_registerMenuCommand(menuLabel, () => {
                     if (ctrlType == 'toggle') {
                         settings.save(key, !config[key]) ; syncConfigToUI({ updatedKey: key })
                         notify(`${settings.controls[key].label}: ${this.state.words[+settings.isEnabled(key)]}`)
                     } else // Clear Now action
                         clearChatsAndGoHome()
-                }, env.scriptManager.supportsTooltips ? { title: settings.controls[key].helptip || ' ' } : undefined))
+                }, env.scriptManager.supportsTooltips ? { title: settings.controls[key].helptip || ' ' } : undefined)
             });
 
             // Add About/Donate entries
             ['about', 'donate'].forEach(entryType => this.ids.push(GM_registerMenuCommand(
-                `${ entryType == 'about' ? '💡' : '💖' }`
-                    + ` ${app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
+                `${ entryType == 'about' ? '💡' : '💖' } ${
+                    app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
                 () => modals.open(entryType), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
             )))
         }

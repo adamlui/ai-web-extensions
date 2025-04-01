@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.31
+// @version             2025.4.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@a8c9387/assets/images/icons/continue-symbol/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@a8c9387/assets/images/icons/continue-symbol/black/icon64.png
@@ -369,7 +369,7 @@
     // Define MENU functions
 
     const toolbarMenu = {
-        ids: [], state: {
+        state: {
             symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
             words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
         },
@@ -382,29 +382,30 @@
         register() {
 
             // Show "Disabled (extension active)"
-            if (env.extensionActive)
+            this.ids = env.extensionActive ? [
                 GM_registerMenuCommand(`${this.state.symbols[0]} ${
                         toTitleCase(app.msgs.state_disabled)} (${app.msgs.menuLabel_extensionActive})`,
                     () => modals.open('about'), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined )
+            ]
 
             // ...or add settings toggles
-            else Object.keys(settings.controls).forEach(key => {
+            : Object.keys(settings.controls).map(key => {
                 const menuLabel = `${ settings.controls[key].symbol || this.state.symbols[+settings.isEnabled(key)] } `
                                 + settings.controls[key].label
                                 + this.state.separator + this.state.words[+settings.isEnabled(key)]
-                this.ids.push(GM_registerMenuCommand(menuLabel, () => {
+                return GM_registerMenuCommand(menuLabel, () => {
                     settings.save(key, !config[key]) ; syncConfigToUI({ updatedKey: key })
                     notify(`${settings.controls[key].label}: ${
                         this.state.words[+(/disabled/i.test(key) ^ config[key])]}`)
-                }, env.scriptManager.supportsTooltips ? { title: settings.controls[key].helptip || ' ' } : undefined))
+                }, env.scriptManager.supportsTooltips ? { title: settings.controls[key].helptip || ' ' } : undefined)
             });
 
             // Add About/Donate entries
             ['about', 'donate'].forEach(entryType => {
                 if (entryType === 'donate' && env.extensionActive) return
                 this.ids.push(GM_registerMenuCommand(
-                    `${ entryType == 'about' ? '💡' : '💖' }`
-                        + ` ${app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
+                    `${ entryType == 'about' ? '💡' : '💖' } ${
+                        app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
                     () => modals.open(entryType), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
                 ))
             })

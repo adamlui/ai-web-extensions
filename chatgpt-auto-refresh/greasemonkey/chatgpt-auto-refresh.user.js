@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.31
+// @version             2025.4.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@f11a0a8/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@f11a0a8/assets/images/icons/openai/black/icon64.png
@@ -423,7 +423,7 @@
     // Define MENU functions
 
     const toolbarMenu = {
-        ids: [], state: {
+        state: {
             symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
             words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
         },
@@ -439,7 +439,7 @@
             settings.controls.refreshInterval.status = `${config.refreshInterval}s`
 
             // Add toggles
-            Object.keys(settings.controls).forEach(key => {
+            this.ids = Object.keys(settings.controls).map(key => {
                 const ctrlType = settings.controls[key].type
                 const ctrlStatus = settings.controls[key].status
                 const menuLabel = `${ settings.controls[key].symbol || this.state.symbols[+settings.isEnabled(key)] } `
@@ -447,7 +447,7 @@
                                 + ( ctrlType == 'toggle' ? this.state.separator
                                                          + this.state.words[+settings.isEnabled(key)]
                                                          : ctrlStatus ? `— ${settings.controls[key].status}` : '' )
-                this.ids.push(GM_registerMenuCommand(menuLabel, () => {
+                return GM_registerMenuCommand(menuLabel, () => {
                     if (ctrlType == 'toggle') {
                         settings.save(key, !config[key])
                         notify(`${settings.controls[key].label}: ${
@@ -472,13 +472,13 @@
                         }}
                     }
                     syncConfigToUI({ updatedKey: key })
-                }, env.scriptManager.supportsTooltips ? { title: settings.controls[key].helptip || ' ' } : undefined))
+                }, env.scriptManager.supportsTooltips ? { title: settings.controls[key].helptip || ' ' } : undefined)
             });
 
             // Add About/Donate entries
             ['about', 'donate'].forEach(entryType => this.ids.push(GM_registerMenuCommand(
-                `${ entryType == 'about' ? '💡' : '💖' }`
-                    + ` ${app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
+                `${ entryType == 'about' ? '💡' : '💖' } ${
+                    app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
                 () => modals.open(entryType), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
             )))
         }

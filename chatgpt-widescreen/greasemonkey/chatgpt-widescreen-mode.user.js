@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.3.31.1
+// @version             2025.4.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -446,7 +446,7 @@
     // Define MENU functions
 
     const toolbarMenu = {
-        ids: [], state: {
+        state: {
             symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
             words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
         },
@@ -459,31 +459,32 @@
         register() {
 
             // Show "Disabled (extension active)"
-            if (env.extensionActive)
+            this.ids = env.extensionActive ? [
                 GM_registerMenuCommand(`${this.state.symbols[0]} ${
                         toTitleCase(app.msgs.state_disabled)} (${app.msgs.menuLabel_extensionActive})`,
                     () => modals.open('about'), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined )
+            ]
 
-            // ...or add settings toggles
-            else {
-
-                // Create toggles for available features if script not disabled via Site Settings
-                if (!config[`${env.site}Disabled`]) Object.keys(settings.controls).forEach(key => {
+            // ...or create toggles for available features if script not disabled via Site Settings
+            : !config[`${env.site}Disabled`] ?
+                Object.keys(settings.controls).map(key => {
                     if (sites[env.site].availFeatures.includes(key)) {
                         const menuLabel = `${ settings.controls[key].symbol
                                            || this.state.symbols[+settings.isEnabled(key)] } `
                                         + settings.controls[key].label
                                         + this.state.separator + this.state.words[+settings.isEnabled(key)]
-                        this.ids.push(GM_registerMenuCommand(menuLabel, () => {
+                        return GM_registerMenuCommand(menuLabel, () => {
                             settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
                             notify(`${settings.controls[key].label}: ${
                                 this.state.words[+(key.includes('Disabled') ^ config[key])]}`)
                         }, env.scriptManager.supportsTooltips ?
-                            { title: settings.controls[key].helptip || ' ' } : undefined ))
+                            { title: settings.controls[key].helptip || ' ' } : undefined )
                     }
-                });
+                })
+            : []
 
-                // Create Site Settings
+            // Add Site Settings
+            if (!env.extensionActive) {
                 const siteSettingsLabel = `🌐 ${settings.categories.siteSettings.label}`
                 this.ids.push(GM_registerMenuCommand(siteSettingsLabel, () => {
 
@@ -563,7 +564,7 @@
                         function getTextColor() {
                             return config[`${site}Disabled`] ?
                                 ( env.ui.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' ) // off
-                              : ( env.ui.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' ) // on
+                                : ( env.ui.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' ) // on
                         }
 
                         function switchToggle(toggleInput) {
