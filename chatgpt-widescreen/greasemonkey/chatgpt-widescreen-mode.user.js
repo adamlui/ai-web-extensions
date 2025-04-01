@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1.1
+// @version             2025.4.1.2
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -479,8 +479,7 @@
                                                      : ctrlStatus ? `— ${ctrlStatus}` : '' }`
                         return GM_registerMenuCommand(menuLabel, () => {
                             settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
-                            notify(`${settings.controls[key].label}: ${
-                                this.state.words[+(key.includes('Disabled') ^ config[key])]}`)
+                            notify(`${settings.controls[key].label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
                         }, env.scriptManager.supportsTooltips ?
                             { title: settings.controls[key].helptip || ' ' } : undefined )
                     }

@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1.1
+// @version             2025.4.1.2
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8df6f33/assets/images/icons/infinity-symbol/circled/with-robot/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8df6f33/assets/images/icons/infinity-symbol/circled/with-robot/icon64.png
@@ -414,14 +414,12 @@
                 const menuLabel = `${
                     settings.controls[key].symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${
                     settings.controls[key].label} ${
-                        ctrlType == 'toggle' ? this.state.separator
-                                             + this.state.words[+settings.typeIsEnabled(key)]
+                        ctrlType == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
                                              : ctrlStatus ? `— ${ctrlStatus}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     if (ctrlType == 'toggle') {
                         settings.save(key, !config[key])
-                        notify(`${settings.controls[key].label}: ${
-                            this.state.words[+(/disabled/i.test(key) ^ config[key])]}`)
+                        notify(`${settings.controls[key].label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
                     } else if (key == 'replyLanguage') {
                         while (true) {
                             let replyLang = prompt(
