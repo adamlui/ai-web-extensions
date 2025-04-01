@@ -233,6 +233,8 @@ This app exists thanks to code, translations, issues & ideas from the following 
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://amazongpt.kudoai.com/assets/images/icons/web-stores/greasy-fork/white/icon50.png?v=dc250b9">
         <img width=50 src="https://amazongpt.kudoai.com/assets/images/icons/web-stores/greasy-fork/black/icon50.png?v=dc250b9&first-contrib=2025.1.12-reported-googlegpt-reply-lang-setting-stopped-persisting" title="happyhojjat">
     </picture></a>
+<a href="https://github.com/cyber-sec0">
+    <img width=50 title="@cyber-sec0" src="https://avatars.githubusercontent.com/u/91571849?first-contrib=2025.4.1-reported-kiwi-browser-no-longer-maintained"></img></a>
 <a href="https://github.com/ImgBotApp">
     <img width=50 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></img></a>
 <a href="https://github.com/dependabot">
