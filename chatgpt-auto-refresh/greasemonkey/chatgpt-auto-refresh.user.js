@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1.1
+// @version             2025.4.1.2
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@f11a0a8/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@f11a0a8/assets/images/icons/openai/black/icon64.png
@@ -418,7 +418,6 @@
         save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val }
     }
     settings.load(Object.keys(settings.controls))
-    console.log(config)
     if (!config.refreshInterval) settings.save('refreshInterval', 30) // init refresh interval to 30 secs if unset
 
     // Define MENU functions
@@ -451,8 +450,7 @@
                 return GM_registerMenuCommand(menuLabel, () => {
                     if (ctrlType == 'toggle') {
                         settings.save(key, !config[key])
-                        notify(`${settings.controls[key].label}: ${
-                            this.state.words[+(config[key] ^ /disabled/i.test(key))]}`)
+                        notify(`${settings.controls[key].label}: ${this.state.words[+settings.isEnabled(key)]}`)
                     } else { // Refresh Interval prompt
                         while (true) {
                             const refreshInterval = prompt(
