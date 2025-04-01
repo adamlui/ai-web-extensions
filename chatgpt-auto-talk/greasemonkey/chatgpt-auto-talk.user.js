@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1
+// @version             2025.4.1.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@9f1ed3c/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@9f1ed3c/assets/images/icons/openai/black/icon64.png
@@ -885,7 +885,6 @@
                     toggles.sidebar.toggleInput.checked = !config.autoTalkDisabled
                     toggles.sidebar.toggleLabel.innerText = `${app.msgs.mode_autoTalk} `
                         + app.msgs[`state_${ toggles.sidebar.toggleInput.checked ? 'enabled' : 'disabled' }`]
-                    toggles.sidebar.update.navicon()
                     requestAnimationFrame(() => {
                         toggles.sidebar.switchSpan.className = toggles.sidebar.toggleInput.checked ? 'enabled'
                                                                                                    : 'disabled'
