@@ -40,7 +40,7 @@
 
 ### AI browser extensions & userscripts to enhance your web experience
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/rainbow-red-to-blue.png">
 
 </div>
 
@@ -50,7 +50,7 @@
 
 💡 **Tip:** _To show screenshots, click the ▸ or descriptions below extension names._
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/rainbow-blue-to-red.png">
 
 <!-- AMAZONGPT -->
 

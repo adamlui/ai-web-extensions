@@ -40,7 +40,7 @@
 
 ### AI 浏览器扩展和用户脚本可增强您的网络体验
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/rainbow-red-to-blue.png">
 
 </div>
 
@@ -50,7 +50,7 @@
 
 💡 **Tip:** _要显示屏幕截图，请点击扩展名称下方的 ▸ 或描述。_
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/rainbow-blue-to-red.png">
 
 <!-- AMAZONGPT -->
 
