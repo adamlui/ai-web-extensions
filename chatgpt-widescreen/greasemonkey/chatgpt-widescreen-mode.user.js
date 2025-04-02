@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1.5
+// @version             2025.4.2
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -453,13 +453,13 @@
 
         refresh() {
             if (typeof GM_unregisterMenuCommand == 'undefined') return
-            for (const id of this.ids) { GM_unregisterMenuCommand(id) } this.register()
+            for (const id of this.entryIDs) { GM_unregisterMenuCommand(id) } this.register()
         },
 
         register() {
 
             // Show "Disabled (extension active)"
-            this.ids = env.extensionActive ? [
+            this.entryIDs = env.extensionActive ? [
                 GM_registerMenuCommand(`${this.state.symbols[0]} ${
                         toTitleCase(app.msgs.state_disabled)} (${app.msgs.menuLabel_extensionActive})`,
                     () => modals.open('about'), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined )
@@ -489,7 +489,7 @@
             // Add Site Settings
             if (!env.extensionActive) {
                 const siteSettingsLabel = `🌐 ${settings.categories.siteSettings.label}`
-                this.ids.push(GM_registerMenuCommand(siteSettingsLabel, () => {
+                this.entryIDs.push(GM_registerMenuCommand(siteSettingsLabel, () => {
 
                     // Show modal
                     const siteSettingsModal = modals.alert(siteSettingsLabel,
@@ -590,7 +590,7 @@
             // Add About/Donate entries
             ['about', 'donate'].forEach(entryType => {
                 if (entryType === 'donate' && env.extensionActive) return
-                this.ids.push(GM_registerMenuCommand(
+                this.entryIDs.push(GM_registerMenuCommand(
                     `${ entryType == 'about' ? '💡' : '💖' }`
                         + ` ${app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
                     () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate.gitHub),

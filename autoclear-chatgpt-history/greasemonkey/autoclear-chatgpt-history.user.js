@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.1.3
+// @version             2025.4.2
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon64.png
@@ -420,13 +420,13 @@
 
         refresh() {
             if (typeof GM_unregisterMenuCommand == 'undefined') return
-            for (const id of this.ids) { GM_unregisterMenuCommand(id) } this.register()
+            for (const id of this.entryIDs) { GM_unregisterMenuCommand(id) } this.register()
         },
 
         register() {
 
             // Add toggles
-            this.ids = Object.keys(settings.controls).map(key => {
+            this.entryIDs = Object.keys(settings.controls).map(key => {
                 const ctrlType = settings.controls[key].type
                 const ctrlStatus = settings.controls[key].status
                 const menuLabel = `${
@@ -444,7 +444,7 @@
             });
 
             // Add About/Donate entries
-            ['about', 'donate'].forEach(entryType => this.ids.push(GM_registerMenuCommand(
+            ['about', 'donate'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
                 `${ entryType == 'about' ? '💡' : '💖' } ${
                     app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
                 () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate.gitHub),

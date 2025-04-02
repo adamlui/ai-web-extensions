@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.1.1
+// @version                  2025.4.2
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -802,7 +802,7 @@
         refresh() {
             if (typeof GM_unregisterMenuCommand == 'undefined')
                 return log.debug('GM_unregisterMenuCommand not supported.')
-            for (const id of this.ids) { GM_unregisterMenuCommand(id) } this.register()
+            for (const id of this.entryIDs) { GM_unregisterMenuCommand(id) } this.register()
         },
 
         register() {
@@ -811,11 +811,11 @@
             const pmLabel = this.state.symbols[+config.proxyAPIenabled] + ' '
                           + settings.controls.proxyAPIenabled.label + ' '
                           + this.state.separator + this.state.words[+config.proxyAPIenabled]
-            this.ids = [GM_registerMenuCommand(pmLabel, toggle.proxyMode,
+            this.entryIDs = [GM_registerMenuCommand(pmLabel, toggle.proxyMode,
                 env.scriptManager.supportsTooltips ? { title: settings.controls.proxyAPIenabled.helptip } : undefined)];
 
             // Add About/Settings entries
-            ['about', 'settings'].forEach(entryType => this.ids.push(GM_registerMenuCommand(
+            ['about', 'settings'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
                 entryType == 'about' ? `💡 ${settings.controls.about.label}` : `⚙️ ${app.msgs.menuLabel_settings}`,
                 () => modals.open(entryType), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
             )))
