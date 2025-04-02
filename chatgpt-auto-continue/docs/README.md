@@ -63,7 +63,7 @@
 
 ## 🚀 Installation
 
-### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png?v=8a2e0e9"> Browser extension:
+### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"> Browser extension:
 
 1. Install ChatGPT Auto-Continue extension ([Chrome](https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-link), [Edge](https://edge.chatgptautocontinue.com), [Firefox](https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-link))
 

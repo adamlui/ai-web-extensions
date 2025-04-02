@@ -63,7 +63,7 @@
 
 ## 🚀 如何安装
 
-### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png?v=8a2e0e9"> 浏览器扩展:
+### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"> 浏览器扩展:
 
 1. 安装 ChatGPT 自动继续 扩展程序 ([Chrome](https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-link), [Edge](https://edge.chatgptautocontinue.com), [Firefox](https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-link))
 

@@ -80,7 +80,7 @@
 
 ## 🚀 インストール方法
 
-### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png?v=8a2e0e9"> ブラウザ拡張機能:
+### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"> ブラウザ拡張機能:
 
 1. ChatGPT Infinity 拡張機能をインストールします ([Chrome](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link), [Edge](https://edge.chatgptinfinity.com))
 
