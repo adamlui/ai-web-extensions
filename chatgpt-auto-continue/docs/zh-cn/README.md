@@ -143,7 +143,7 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 <a href="https://github.com/dependabot"><img width=47 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://chatgpt.com"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/platforms/chatgpt/black-on-white/icon50.png"><img width=47 title="ChatGPT" src="https://assets.chatgptautocontinue.com/images/icons/platforms/chatgpt/white-on-gray/icon50.png"></img></picture></a>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -164,7 +164,7 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 
 </div>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 ## 🤖 更多 ChatGPT 应用
 

@@ -135,7 +135,7 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 
 <br>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -156,7 +156,7 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 
 </div>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 ## 🤖 更多 ChatGPT 应用
 

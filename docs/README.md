@@ -40,7 +40,7 @@
 
 ### AI browser extensions & userscripts to enhance your web experience
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 </div>
 
@@ -50,7 +50,7 @@
 
 💡 **Tip:** _To show screenshots, click the ▸ or descriptions below extension names._
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <!-- AMAZONGPT -->
 
@@ -235,13 +235,13 @@
 
 <!-- IDEA CTA -->
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <h3>Have an extension idea or request?</h3>
 
 Create a new discussion: https://github.com/adamlui/ai-web-extensions/discussions/new?category=ideas
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <!-- CHATGPT AUTO REFRESH -->
 
@@ -460,7 +460,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
 
 <!-- WARP BANNER -->
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <div id="warp" align="center">
     <h5>Sponsored:</h5>
@@ -471,7 +471,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
         Warp, the AI Devtool that lives in your terminal</a></h3>
 </div>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <!-- DUCKDUCKGPT -->
 
@@ -634,7 +634,7 @@ Type @you in browser address bar to get results from You.com AI.
 
 <!-- FOOTER -->
 
-<img height=7px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=7px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 [Discuss](https://github.com/adamlui/ai-web-extensions/discussions) /
 [Contact author](https://github.com/adamlui) /

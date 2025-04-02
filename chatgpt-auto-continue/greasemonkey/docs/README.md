@@ -143,7 +143,7 @@ This project exists thanks to code, testing, issues, translations & ideas from t
 
 <br>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -164,7 +164,7 @@ This project exists thanks to code, testing, issues, translations & ideas from t
 
 </div>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 ## 🤖 More ChatGPT apps
 

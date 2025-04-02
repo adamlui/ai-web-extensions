@@ -151,7 +151,7 @@ This project exists thanks to code, testing, issues, translations & ideas from t
 <a href="https://github.com/ImgBotApp"><img width=47 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></img></a>
 <a href="https://chatgpt.com"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/platforms/chatgpt/black-on-white/icon50.png"><img width=47 title="ChatGPT" src="https://assets.chatgptinfinity.com/images/icons/platforms/chatgpt/white-on-gray/icon50.png" title="ChatGPT"></picture></a>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -172,7 +172,7 @@ This project exists thanks to code, testing, issues, translations & ideas from t
 
 </div>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 ## 🤖 More ChatGPT apps
 

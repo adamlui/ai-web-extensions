@@ -40,7 +40,7 @@
 
 ### AI 浏览器扩展和用户脚本可增强您的网络体验
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 </div>
 
@@ -50,7 +50,7 @@
 
 💡 **Tip:** _要显示屏幕截图，请点击扩展名称下方的 ▸ 或描述。_
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <!-- AMAZONGPT -->
 
@@ -237,13 +237,13 @@
 
 <!-- IDEA CTA -->
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <h3>有扩展的想法或要求吗？</h3>
 
 创建新讨论：https://github.com/adamlui/ai-web-extensions/discussions/new?category=ideas
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <!-- CHATGPT AUTO REFRESH -->
 
@@ -461,7 +461,7 @@
 
 <!-- WARP BANNER -->
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <div id="warp" align="center">
     <h5>贊助：</h5>
@@ -472,7 +472,7 @@
         Warp，存在于你的终端中的 AI Devtool</a></h3>
 </div>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 <!-- DUCKDUCKGPT -->
 
@@ -635,7 +635,7 @@
 
 <!-- FOOTER -->
 
-<img height=7px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
+<img height=7px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
 [讨论](https://github.com/adamlui/ai-web-extensions/discussions) /
 [联系作者](https://github.com/adamlui) /
