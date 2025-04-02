@@ -464,7 +464,7 @@
 <img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
 
 <div id="warp" align="center">
-    <h5>支持：</h5>
+    <h5>贊助：</h5>
     <a href="https://www.warp.dev/chatgptjs" target="_blank">
         <img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">
     </a>

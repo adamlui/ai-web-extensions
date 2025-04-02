@@ -463,7 +463,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
 <img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/aqua-gradient.png">
 
 <div id="warp" align="center">
-    <h5>Supported by:</h5>
+    <h5>Sponsored:</h5>
     <a href="https://www.warp.dev/chatgptjs" target="_blank">
         <img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">
     </a>
