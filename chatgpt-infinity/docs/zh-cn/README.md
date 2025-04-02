@@ -79,7 +79,7 @@
 
 ## 🚀 如何安装
 
-### <img height=16 src="https://assets.chatgptinfinity.com/images/icons/browsers/chrome/icon16.png"><img height=17 src="https://assets.chatgptinfinity.com/images/icons/browsers/firefox/icon16.png"><img height=16 src="https://assets.chatgptinfinity.com/images/icons/browsers/edge/icon16.png"> 浏览器扩展:
+### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png?v=8a2e0e9"> 浏览器扩展:
 
 1. 安装 ChatGPT 无限 扩展程序 ([Chrome](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link), [Edge](https://edge.chatgptinfinity.com), [Firefox](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link))
 

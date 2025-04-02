@@ -138,15 +138,15 @@
 
 <blockquote>
     <a href="https://chrome.braveomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=13 src="https://assets.braveomnibox.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png?v=8a2e0e9"></a>
     <a href="https://chrome.braveomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Chrome</a> /
     <a href="https://ff.braveomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=14 src="https://assets.braveomnibox.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png?v=8a2e0e9"></a>
     <a href="https://ff.braveomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Firefox</a> /
     <a href="https://edge.braveomnibox.com">
-        <img height=12 src="https://assets.braveomnibox.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png?v=8a2e0e9"></a>
     <a href="https://edge.braveomnibox.com">
         Edge</a> /
     <a href="../../brave-omnibox/#readme">
@@ -210,15 +210,15 @@
 
 <blockquote>
     <a href="https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=13 src="https://assets.chatgptautocontinue.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png?v=8a2e0e9"></a>
     <a href="https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Chrome</a> /
     <a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=14 src="https://assets.chatgptautocontinue.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png?v=8a2e0e9"></a>
     <a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Firefox</a> /
     <a href="https://edge.chatgptautocontinue.com">
-        <img height=12 src="https://assets.chatgptautocontinue.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png?v=8a2e0e9"></a>
     <a href="https://edge.chatgptautocontinue.com">
         Edge</a> /
     <a href="https://gm.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
@@ -319,15 +319,15 @@
 
 <blockquote>
     <a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=13 src="https://assets.chatgptinfinity.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png?v=8a2e0e9"></a>
     <a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Chrome</a> /
     <a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=14 src="https://assets.chatgptinfinity.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png?v=8a2e0e9"></a>
     <a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Firefox</a> /
     <a href="https://edge.chatgptinfinity.com">
-        <img height=12 src="https://assets.chatgptinfinity.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png?v=8a2e0e9"></a>
     <a href="https://edge.chatgptinfinity.com">
         Edge</a> /
     <a href="https://gm.chatgptinfinity.com">
@@ -356,7 +356,7 @@
 
 <blockquote>
     <a href="https://ff.chatgptomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=14 src="https://assets.chatgptomnibox.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png?v=8a2e0e9"></a>
     <a href="https://ff.chatgptomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Firefox</a> /
     <a href="../../chatgpt-omnibox/#readme">
@@ -390,15 +390,15 @@
 
 <blockquote>
     <a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=13 src="https://assets.chatgptwidescreen.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png?v=8a2e0e9"></a>
     <a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Chrome</a> /
     <a href="https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=14 src="https://assets.chatgptwidescreen.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png?v=8a2e0e9"></a>
     <a href="https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Firefox</a> /
     <a href="https://edge.chatgptwidescreen.com">
-        <img height=12 src="https://assets.chatgptwidescreen.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png?v=8a2e0e9"></a>
     <a href="https://edge.chatgptwidescreen.com">
         Edge</a> /
     <a href="https://gm.chatgptwidescreen.com">
@@ -438,15 +438,15 @@
 
 <blockquote>
     <a href="https://chrome.deepseekomnibox.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=13 src="https://assets.deepseekomnibox.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png?v=8a2e0e9"></a>
     <a href="https://chrome.deepseekomnibox.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Chrome</a> /
     <a href="https://ff.deepseekomnibox.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=14 src="https://assets.deepseekomnibox.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png?v=8a2e0e9"></a>
     <a href="https://ff.deepseekomnibox.com/?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Firefox</a> /
     <a href="https://edge.deepseekomnibox.com">
-        <img height=12 src="https://assets.deepseekomnibox.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png?v=8a2e0e9"></a>
     <a href="https://edge.deepseekomnibox.com">
         Edge</a> /
     <a href="../deepseek-omnibox/#readme">
@@ -560,11 +560,11 @@
 
 <blockquote>
     <a href="https://chrome.perplexityomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=13 src="https://assets.perplexityomnibox.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png?v=8a2e0e9"></a>
     <a href="https://chrome.perplexityomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Chrome</a> /
     <a href="https://edge.perplexityomnibox.com">
-        <img height=12 src="https://assets.perplexityomnibox.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png?v=8a2e0e9"></a>
     <a href="https://edge.perplexityomnibox.com">
         Edge</a> /
     <a href="../../perplexity-omnibox/#readme">
@@ -589,7 +589,7 @@
 
 <blockquote>
     <a href="https://ff.phindomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=14 src="https://assets.phindomnibox.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png?v=8a2e0e9"></a>
     <a href="https://ff.phindomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Firefox</a> /
     <a href="../../phind-omnibox/#readme">
@@ -614,7 +614,7 @@
 
 <blockquote>
     <a href="https://ff.youomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
-        <img height=14 src="https://assets.youomnibox.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png?v=8a2e0e9"></a>
     <a href="https://ff.youomnibox.com?utm_source=github&utm_medium=readme&utm_content=platform-link">
         Firefox</a> /
     <a href="../../you.com-omnibox/#readme">
