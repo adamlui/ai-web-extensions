@@ -95,7 +95,7 @@
   
 </div>
 
-## <img width=25px src="https://assets.ddgpt.com/images/icons/platforms/tampermonkey/icon28.png"><img width=25px src="https://assets.ddgpt.com/images/icons/platforms/orangemonkey/icon32.png"> Tampermonkey / OrangeMonkey Users
+## <img width=25px src="https://assets.ddgpt.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img width=25px src="https://assets.ddgpt.com/images/icons/userscript-managers/orangemonkey/icon32.png"> Tampermonkey / OrangeMonkey Users
 
 If you are installing **Tampermonkey** or **OrangeMonkey** for a Chromium browser (Chrome, Edge, etc.) you _must enable **Developer Mode**_ for userscripts to function.
 

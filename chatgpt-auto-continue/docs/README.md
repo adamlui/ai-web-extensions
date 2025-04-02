@@ -69,7 +69,7 @@
 
 2. Visit [chatgpt.com](https://chatgpt.com) as normal, and multi-reply conversations will automatically continue generating when cut-off!
 
-### <img height=17 src="https://assets.chatgptautocontinue.com/images/icons/platforms/tampermonkey/icon28.png"><img height=17.5 src="https://assets.chatgptautocontinue.com/images/icons/platforms/violentmonkey/icon25.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/platforms/scriptcat/icon16.png"> Greasemonkey userscript:
+### <img height=17 src="https://assets.chatgptautocontinue.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=17.5 src="https://assets.chatgptautocontinue.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"> Greasemonkey userscript:
 
 1. Install a userscript manager:
     - ScriptCat for [Chrome](https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf), [Firefox](https://addons.mozilla.org/firefox/addon/scriptcat/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)

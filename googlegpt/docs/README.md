@@ -126,7 +126,7 @@
 
 <img height=6px width="100%" src="https://assets.googlegpt.io/images/separators/gradient-aqua.png">
 
-## <img width=25px src="https://assets.googlegpt.io/images/icons/platforms/tampermonkey/icon28.png"><img width=25px src="https://assets.googlegpt.io/images/icons/platforms/orangemonkey/icon32.png"> Tampermonkey / OrangeMonkey Users
+## <img width=25px src="https://assets.googlegpt.io/images/icons/userscript-managers/tampermonkey/icon28.png"><img width=25px src="https://assets.googlegpt.io/images/icons/userscript-managers/orangemonkey/icon32.png"> Tampermonkey / OrangeMonkey Users
 
 If you are installing **Tampermonkey** or **OrangeMonkey** for a Chromium browser (Chrome, Edge, etc.) you _must enable **Developer Mode**_ for userscripts to function.
 

@@ -94,7 +94,7 @@
 
 </div>
 
-### <img height=17 src="https://assets.chatgptinfinity.com/images/icons/platforms/tampermonkey/icon28.png"><img height=17.5 src="https://assets.chatgptinfinity.com/images/icons/platforms/violentmonkey/icon25.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/platforms/scriptcat/icon16.png"> Greasemonkey 用户脚本:
+### <img height=17 src="https://assets.chatgptinfinity.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=17.5 src="https://assets.chatgptinfinity.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"> Greasemonkey 用户脚本:
 
 1. 安装用户脚本管理器：
     - ScriptCat 为了 [Chrome](https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf), [Firefox](https://addons.mozilla.org/firefox/addon/scriptcat/) 或 [Edge](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)

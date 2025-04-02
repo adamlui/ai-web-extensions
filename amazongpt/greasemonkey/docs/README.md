@@ -125,7 +125,7 @@
 
 <!-- TAMPERMONKEY/ORANGEMONKEY USERS -->
 
-## <img width=25px src="https://amazongpt.kudoai.com/assets/images/icons/platforms/tampermonkey/icon28.png?v=dc250b9"><img width=25px src="https://amazongpt.kudoai.com/assets/images/icons/platforms/orangemonkey/icon32.png?v=dc250b9"> Tampermonkey / OrangeMonkey Users
+## <img width=25px src="https://amazongpt.kudoai.com/assets/images/icons/userscript-managers/tampermonkey/icon28.png?v=dc250b9"><img width=25px src="https://amazongpt.kudoai.com/assets/images/icons/userscript-managers/orangemonkey/icon32.png?v=dc250b9"> Tampermonkey / OrangeMonkey Users
 
 If you are installing **Tampermonkey** or **OrangeMonkey** for a Chromium browser (Chrome, Edge, etc.) you _must enable **Developer Mode**_ for userscripts to function.
 
