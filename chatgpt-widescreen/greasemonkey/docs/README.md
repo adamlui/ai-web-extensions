@@ -197,7 +197,7 @@ This script exists thanks to code, translations, issues & ideas from the followi
 <a href="https://github.com/wobfan"><img width=46 title="@wobfan" src="https://avatars.githubusercontent.com/u/30731925?first-contrib=2025.1.11-enable-widescreen-by-default-suggestion"></img></a>
 <a href="https://github.com/dependabot"><img width=46 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp"><img width=46 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></img></a>
-<a href="https://chatgpt.com"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/platforms/chatgpt/black-on-white/icon50.png"><img width=46 title="ChatGPT" src="https://assets.chatgptwidescreen.com/images/icons/platforms/chatgpt/white-on-gray/icon50.png"></img></picture></a>
+<a href="https://chatgpt.com"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/chatgpt/black-on-white/icon50.png"><img width=46 title="ChatGPT" src="https://assets.chatgptwidescreen.com/images/icons/chatgpt/white-on-gray/icon50.png"></img></picture></a>
 
 </div><br>
 
