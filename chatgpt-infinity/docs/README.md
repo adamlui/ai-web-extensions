@@ -79,7 +79,7 @@
 
 ## 🚀 Installation
 
-### <img height=16 src="https://assets.chatgptinfinity.com/images/icons/platforms/chrome/icon16.png"><img height=17 src="https://assets.chatgptinfinity.com/images/icons/platforms/firefox/icon16.png"><img height=16 src="https://assets.chatgptinfinity.com/images/icons/platforms/edge/icon16.png"> Browser extension:
+### <img height=16 src="https://assets.chatgptinfinity.com/images/icons/browsers/chrome/icon16.png"><img height=17 src="https://assets.chatgptinfinity.com/images/icons/browsers/firefox/icon16.png"><img height=16 src="https://assets.chatgptinfinity.com/images/icons/browsers/edge/icon16.png"> Browser extension:
 
 1. Install ChatGPT Infinity extension ([Chrome](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link), [Edge](https://edge.chatgptinfinity.com), [Firefox](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link))
 
