@@ -102,14 +102,14 @@ ChatGPT Infinity is compatible w/ the following browsers using [ScriptCat](https
 
 ### 🖥️ Desktop
 
-- [Google Chrome](https://www.chrome.com) (also available on [Chrome Web Store](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link))
-- [Mozilla Firefox](https://www.firefox.com) (also available on [Firefox Add-on Store](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link))
+- [Google Chrome](https://www.chrome.com) (also available on [Chrome Web Store](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
+- [Mozilla Firefox](https://www.firefox.com) (also available on [Firefox Add-on Store](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
 - [Microsoft Edge](https://www.microsoft.com/edge) (also available on [Microsoft Store](https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb))
 - [Opera](https://www.opera.com)
 - [Brave](https://brave.com)
 - [Vivaldi](https://vivaldi.com)
 - [Waterfox](https://www.waterfox.net)
-- [LibreWolf](https://librewolf.net) (also available on [Firefox Add-on Store](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link))
+- [LibreWolf](https://librewolf.net) (also available on [Firefox Add-on Store](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
 - [Ghost](https://ghostbrowser.com)
 - [QQ](https://browser.qq.com)
 - [Whale](https://whale.naver.com)

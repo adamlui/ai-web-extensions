@@ -25,7 +25,7 @@
     <img alt="[SonarCloud 漏洞]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_deepseek-omnibox%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonarcloud&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=gold"></img></a>
 <br><br>
 
-<a href="https://chrome.deepseekomnibox.com/?utm_source=github&utm_medium=readme&utm_content=platform-badge">
+<a href="https://chrome.deepseekomnibox.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
     <img alt="[获取 Chrome 版本]" width=auto height=60 src="https://assets.deepseekomnibox.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://ff.deepseekomnibox.com">
     <img alt="[获取 Firefox 版本]" width=auto height=60 src="https://assets.deepseekomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>

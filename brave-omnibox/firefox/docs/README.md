@@ -13,7 +13,7 @@
     <img alt="jsDelivr stats" height=31 src="https://img.shields.io/jsdelivr/gh/hm/adamlui/brave-omnibox?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></img></a>
 <br><br>
 
-<a href="https://ff.braveomnibox.com/?utm_source=github&utm_medium=readme&utm_content=platform-badge">
+<a href="https://ff.braveomnibox.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
     <img alt="[Get for Firefox]" width=auto height=60 src="https://assets.braveomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 
 </div>

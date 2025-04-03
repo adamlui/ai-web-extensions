@@ -18,7 +18,7 @@
 
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-150,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
-<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=featured-by-google-shield">
+<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-shield">
     <img alt="[由 Google 推荐]" height=31 src="https://img.shields.io/badge/%E7%B2%BE%E9%80%89%E8%80%85-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://edge.chatgptinfinity.com">
     <img alt="[Microsoft Edge]" height=31 src="https://img.shields.io/badge/dynamic/json?logo=data:image/svg%2bxml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTIxLjg2IDE3Ljg2cS4xNCAwIC4yNS4xMi4xLjEzLjEuMjV0LS4xMS4zM2wtLjMyLjQ2LS40My41My0uNDQuNXEtLjIxLjI1LS4zOC40MmwtLjIyLjIzcS0uNTguNTMtMS4zNCAxLjA0LS43Ni41MS0xLjYuOTEtLjg2LjQtMS43NC42NHQtMS42Ny4yNHEtLjkgMC0xLjY5LS4yOC0uOC0uMjgtMS40OC0uNzgtLjY4LS41LTEuMjItMS4xNy0uNTMtLjY2LS45Mi0xLjQ0LS4zOC0uNzctLjU4LTEuNi0uMi0uODMtLjItMS42NyAwLTEgLjMyLTEuOTYuMzMtLjk3Ljg3LTEuOC4xNC45NS41NSAxLjc3LjQxLjgyIDEuMDIgMS41LjYuNjggMS4zOCAxLjIxLjc4LjU0IDEuNjQuOS44Ni4zNiAxLjc3LjU2LjkyLjIgMS44LjIgMS4xMiAwIDIuMTgtLjI0IDEuMDYtLjIzIDIuMDYtLjcybC4yLS4xLjItLjA1em0tMTUuNS0xLjI3cTAgMS4xLjI3IDIuMTUuMjcgMS4wNi43OCAyLjAzLjUxLjk2IDEuMjQgMS43Ny43NC44MiAxLjY2IDEuNC0xLjQ3LS4yLTIuOC0uNzQtMS4zMy0uNTUtMi40OC0xLjM3LTEuMTUtLjgzLTIuMDgtMS45LS45Mi0xLjA3LTEuNTgtMi4zM1QuMzYgMTQuOTRRMCAxMy41NCAwIDEyLjA2cTAtLjgxLjMyLTEuNDkuMzEtLjY4LjgzLTEuMjMuNTMtLjU1IDEuMi0uOTYuNjYtLjQgMS4zNS0uNjYuNzQtLjI3IDEuNS0uMzkuNzgtLjEyIDEuNTUtLjEyLjcgMCAxLjQyLjEuNzIuMTIgMS40LjM1LjY4LjIzIDEuMzIuNTcuNjMuMzUgMS4xNi44My0uMzUgMC0uNy4wNy0uMzMuMDctLjY1LjIzdi0uMDJxLS42My4yOC0xLjIuNzQtLjU3LjQ2LTEuMDUgMS4wNC0uNDguNTgtLjg3IDEuMjYtLjM4LjY3LS42NSAxLjM5LS4yNy43MS0uNDIgMS40NC0uMTUuNzItLjE1IDEuMzh6TTExLjk2LjA2cTEuNyAwIDMuMzMuMzkgMS42My4zOCAzLjA3IDEuMTUgMS40My43NyAyLjYyIDEuOTMgMS4xOCAxLjE2IDEuOTggMi43LjQ5Ljk0Ljc2IDEuOTYuMjggMSAuMjggMi4wOCAwIC44OS0uMjMgMS43LS4yNC44LS42OSAxLjQ4LS40NS42OC0xLjEgMS4yMi0uNjQuNTMtMS40NS44OC0uNTQuMjQtMS4xMS4zNi0uNTguMTMtMS4xNi4xMy0uNDIgMC0uOTctLjAzLS41NC0uMDMtMS4xLS4xMi0uNTUtLjEtMS4wNS0uMjgtLjUtLjE5LS44NC0uNS0uMTItLjA5LS4yMy0uMjQtLjEtLjE2LS4xLS4zMyAwLS4xNS4xNi0uMzUuMTYtLjIuMzUtLjUuMi0uMjguMzYtLjY4LjE2LS40LjE2LS45NSAwLTEuMDYtLjQtMS45Ni0uNC0uOTEtMS4wNi0xLjY0LS42Ni0uNzQtMS41Mi0xLjI4LS44Ni0uNTUtMS43OS0uODktLjg0LS4zLTEuNzItLjQ0LS44Ny0uMTQtMS43Ni0uMTQtMS41NSAwLTMuMDYuNDVULjk0IDcuNTVxLjcxLTEuNzQgMS44MS0zLjEzIDEuMS0xLjM4IDIuNTItMi4zNVE2LjY4IDEuMSA4LjM3LjU4cTEuNy0uNTIgMy41OC0uNTJaIi8+PC9zdmc+&logoColor=white&labelColor=464646&color=7bfce9&label=%E8%AF%84%E5%88%86&suffix=/5&query=%24.averageRating&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fjgonecnbmehicpdpjkdekamhmlebfagb&style=for-the-badge"></img></a>
@@ -43,11 +43,11 @@
 
 <div align="center">
 
-<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-badge">
+<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
     <img alt="[获取 Chrome 版本]" width=auto height=60 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://edge.chatgptinfinity.com">
     <img alt="[获取 Edge 版本]" width=auto height=60 src="https://assets.chatgptinfinity.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
-<a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-badge">
+<a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
     <img alt="[获取 Firefox 版本]" width=auto height=60 src="https://assets.chatgptinfinity.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://gm.chatgptinfinity.com">
     <img alt="[获取 Greasemonkey 版本]" width=auto height=60 src="https://assets.chatgptinfinity.com/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
@@ -81,7 +81,7 @@
 
 ### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"> 浏览器扩展:
 
-1. 安装 ChatGPT 无限 扩展程序 ([Chrome](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link), [Edge](https://edge.chatgptinfinity.com), [Firefox](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link))
+1. 安装 ChatGPT 无限 扩展程序 ([Chrome](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link), [Edge](https://edge.chatgptinfinity.com), [Firefox](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
 
 2. 正常访问 [chatgpt.com](https://chatgpt.com)，侧边栏和工具栏菜单中会出现一个切换开关
 
@@ -140,16 +140,16 @@ ChatGPT 无穷 与以下浏览器兼容:
 
 ### 🖥️ 台式
 
-- **[Google Chrome](https://www.chrome.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Mozilla Firefox](https://www.firefox.com)** (通过 [Firefox 扩展程序](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link) 或 [Greasemonkey userscript](https://gm.chatgptinfinity.com))
+- **[Google Chrome](https://www.chrome.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Mozilla Firefox](https://www.firefox.com)** (通过 [Firefox 扩展程序](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) 或 [Greasemonkey userscript](https://gm.chatgptinfinity.com))
 - **[Microsoft Edge](https://www.microsoft.com/edge)** (通过 [Edge 扩大](https://edge.chatgptinfinity.com) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Opera](https://www.opera.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Brave](https://brave.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Vivaldi](https://vivaldi.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[LibreWolf](https://librewolf.net)** (通过 [Firefox 扩展程序](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link) 或 [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Ghost](https://ghostbrowser.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[QQ](https://browser.qq.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Whale](https://whale.naver.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Opera](https://www.opera.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Brave](https://brave.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Vivaldi](https://vivaldi.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[LibreWolf](https://librewolf.net)** (通过 [Firefox 扩展程序](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) 或 [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Ghost](https://ghostbrowser.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[QQ](https://browser.qq.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Whale](https://whale.naver.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
 
 <br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/logos/platforms/android/head-plus-word/white/logo150x24.png"><img alt="Android" width=111 src="https://assets.chatgptinfinity.com/images/logos/platforms/android/head-plus-word/green-head-black-word/logo150x24.png"></picture><br>
 
@@ -159,11 +159,11 @@ ChatGPT 无穷 与以下浏览器兼容:
 
 <div align="center">
 
-<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=install-button">
+<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
     <img alt="[获取 Chrome 版本]" height=75 src="https://assets.chatgptinfinity.com/images/buttons/add-to-chrome-button.png"></a>
 <a href="https://edge.chatgptinfinity.com">
     <img alt="[获取 Edge 版本]" height=75 src="https://assets.chatgptinfinity.com/images/buttons/add-to-edge-button.png"></a>
-<a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=install-button">
+<a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
     <img alt="[获取 Firefox 版本]" height=75 src="https://assets.chatgptinfinity.com/images/buttons/add-to-firefox-button.png"></a>
 <a href="https://gm.chatgptinfinity.com">
     <img alt="[获取 Greasemonkey 版本]" height=75 src="https://assets.chatgptinfinity.com/images/buttons/add-userscript-button.png"></a>

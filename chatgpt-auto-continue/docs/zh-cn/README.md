@@ -38,11 +38,11 @@
 
 <div align="center">
 
-<a href="https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-badge">
+<a href="https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
     <img alt="[获取 Chrome 版本]" width=auto height=60 src="https://assets.chatgptautocontinue.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://edge.chatgptautocontinue.com">
     <img alt="[获取 Edge 版本]" width=auto height=60 src="https://assets.chatgptautocontinue.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
-<a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-badge">
+<a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
     <img alt="[获取 Firefox 版本]" width=auto height=60 src="https://assets.chatgptautocontinue.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://gm.chatgptautocontinue.com">
     <img alt="[获取 Greasemonkey 版本]" width=auto height=60 src="https://assets.chatgptautocontinue.com/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
@@ -65,7 +65,7 @@
 
 ### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"> 浏览器扩展:
 
-1. 安装 ChatGPT 自动继续 扩展程序 ([Chrome](https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-link), [Edge](https://edge.chatgptautocontinue.com), [Firefox](https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=platform-link))
+1. 安装 ChatGPT 自动继续 扩展程序 ([Chrome](https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link), [Edge](https://edge.chatgptautocontinue.com), [Firefox](https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
 
 2. 正常访问 [chatgpt.com](https://chatgpt.com)，多条回复对话中断时会自动继续生成!
 
@@ -106,11 +106,11 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 
 <div align="center">
 
-<a href="https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=install-button">
+<a href="https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
     <img alt="[获取 Chrome 版本]" height=75 src="https://assets.chatgptautocontinue.com/images/buttons/add-to-chrome-button.png"></a>
 <a href="https://edge.chatgptautocontinue.com">
     <img alt="[获取 Edge 版本]" height=75 src="https://assets.chatgptautocontinue.com/images/buttons/add-to-edge-button.png"></a>
-<a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=install-button">
+<a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
     <img alt="[获取 Firefox 版本]" height=75 src="https://assets.chatgptautocontinue.com/images/buttons/add-to-firefox-button.png"></a>
 <a href="https://gm.chatgptautocontinue.com">
     <img alt="[获取 Greasemonkey 版本]" height=75 src="https://assets.chatgptautocontinue.com/images/buttons/add-userscript-button.png"></a>
@@ -181,7 +181,7 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 [自述文件](https://github.com/adamlui/chatgpt-auto-talk/tree/main/docs/zh-cn/#readme) /
 [讨论](https://github.com/adamlui/chatgpt-auto-talk/discussions)
 
-### <img width=16 src="https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/icon32.png?65fcf31"> [ChatGPT无限](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/icon32.png?65fcf31"> [ChatGPT无限](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 
 > 从无所不知的 ChatGPT (任何语言!) 生成无穷无尽的答案。<br>
 [安装](https://docs.chatgptinfinity.com/zh-cn/#-如何安装) / 

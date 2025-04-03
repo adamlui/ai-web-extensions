@@ -1,6 +1,6 @@
 <a id="top"></a>
 
-<a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=header-tile"><img src="https://assets.chatgptautocontinue.com/images//tiles/marquee/tile1400x560.png"></a>
+<a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=header-tile"><img src="https://assets.chatgptautocontinue.com/images//tiles/marquee/tile1400x560.png"></a>
 
 <div align="center">
 
@@ -18,13 +18,13 @@
     <img height=31 alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-auto-continue?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=install-button">
+<a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
     <img alt="[Get for Firefox]" height=75 src="https://assets.chatgptautocontinue.com/images/buttons/add-to-firefox-button.png"></a>
 
 <br>
 
 [Discuss](https://github.com/adamlui/chatgpt-auto-continue/discussions) / 
-[Review](https://ff.chatgptautocontinue.com/reviews?utm_source=github&utm_medium=readme&utm_content=review-link) / 
+[Review](https://ff.chatgptautocontinue.com/reviews?utm_source=github&utm_medium=referral&utm_content=review-link) / 
 [Contact author](https://github.com/adamlui)
   
 </div>
@@ -43,7 +43,7 @@
 
 ## 🚀 Installation
 
-1. Install [ChatGPT Auto-Continue](https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=add-on-link) Firefox add-on
+1. Install [ChatGPT Auto-Continue](https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=add-on-link) Firefox add-on
 
 2. Visit [chatgpt.com](https://chatgpt.com) as normal, and multi-reply conversations will automatically continue generating when cut-off!
 <br><br>
@@ -73,7 +73,7 @@ ChatGPT Auto-Continue relies on code from the powerful [chatgpt.js](https://gith
 
 <div align="center">
 
-<a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=readme&utm_content=install-button">
+<a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
     <img alt="[Get for Firefox]" height=75 src="https://assets.chatgptautocontinue.com/images/buttons/add-to-firefox-button.png"></a>
 
 <br>
@@ -166,7 +166,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://docs.bravegpt.com/#readme) /
 [Discuss](https://github.com/KudoAI/bravegpt/discussions)
 
-### <img width=16 src="https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/icon32.png?65fcf31"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=readme&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/icon32.png?65fcf31"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 > Generate endless answers from all-knowing ChatGPT (in any language!)
 <br>[Install](https://docs.chatgptinfinity.com/#-installation) /
 [Readme](https://docs.chatgptinfinity.com/#-readme) /

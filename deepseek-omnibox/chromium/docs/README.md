@@ -27,7 +27,7 @@
     <img alt="[SonarCloud vulnerabilities]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_deepseek-omnibox%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonarcloud&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></img></a>
 <br><br>
 
-<a href="https://chrome.deepseekomnibox.com/?utm_source=github&utm_medium=readme&utm_content=platform-badge">
+<a href="https://chrome.deepseekomnibox.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
     <img alt="[Get for Chrome]" width=auto height=60 src="https://assets.deepseekomnibox.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 
 </div>
