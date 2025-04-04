@@ -136,6 +136,10 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
 - [Mozilla Firefox](https://www.mozilla.org/firefox/browsers/mobile/android/) (using [Tampermonkey](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Violentmonkey](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)* for Firefox)
 - [Waterfox](https://play.google.com/store/apps/details?id=net.waterfox.android.release) (using [Tampermonkey](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Violentmonkey](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)* for Firefox)
 
+<br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/logos/platforms/ios/apple-plus-word/white/logo150x71.png"><img alt="iOS" width=55 src="https://assets.aiwebextensions.com/images/logos/platforms/ios/apple-plus-word/black/logo150x71.png"></picture>
+
+- [Orion](https://apps.apple.com/app/orion-browser-by-kagi/id1484498200)
+
 ##### _*Violentmonkey, OrangeMonkey & OrangeMonkey Pro do not support Streaming Mode, so are not recommended_
 
 <br>
