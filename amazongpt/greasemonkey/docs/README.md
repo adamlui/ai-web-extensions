@@ -230,6 +230,8 @@ This app exists thanks to code, translations, issues & ideas from the following 
     <img width=50 title="@pasThal" src="https://avatars.githubusercontent.com/u/175899275?first-contrib=2024.10.6-opera-gx-compatible-report"></img></a>
 <a href="https://github.com/mberetvas">
     <img width=50 title="@mberetvas" src="https://avatars.githubusercontent.com/u/100215730?first-contrib=2024.11.2-fix-belgium-amazon-match"></img></a>
+<a href="https://github.com/bao3">
+    <img width=50 title="@bao3" src="https://avatars.githubusercontent.com/u/499205?first-contrib=2024.11.24-safari-ios-compatible-report"></img></a>
 <a href="https://github.com/ChinaGodMan">
     <img width=50 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2025.1.3-showed-googlegpt-header-distorts-reply-bubble-on-skinny-phones"></img></a>
 <a href="https://greasyfork.org/users/1406320-happyhojjat">
