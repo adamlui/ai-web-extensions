@@ -173,6 +173,7 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
 
 <br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/logos/platforms/ios/apple-plus-word/white/logo150x71.png"><img alt="iOS" width=55 src="https://assets.googlegpt.io/images/logos/platforms/ios/apple-plus-word/black/logo150x71.png"></picture>
 
+- [Safari](https://apps.apple.com/app/safari/id1146562112)
 - [Orion](https://apps.apple.com/app/orion-browser-by-kagi/id1484498200)
 
 ##### _*Violentmonkey, OrangeMonkey & OrangeMonkey Pro do not support Streaming Mode, so are not recommended_
