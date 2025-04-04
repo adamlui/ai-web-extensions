@@ -77,17 +77,17 @@
 
 ## 🚀 Installation
 
-1. Install a userscript manager:
-    - ScriptCat for [Chrome](https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf), [Firefox](https://addons.mozilla.org/firefox/addon/scriptcat/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)
-    - Tampermonkey for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/), [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd) or [Opera](https://addons.opera.com/extensions/details/tampermonkey-beta/)
-    - Violentmonkey* for [Chrome](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag), [Firefox](https://addons.mozilla.org/firefox/addon/violentmonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao)
-    - [OrangeMonkey](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf)* or [OrangeMonkey Pro](https://chromewebstore.google.com/detail/orangemonkey-pro/ggdmdoodcfamjggeigifpjfnnjfbland)* for Chrome
+1. Install a userscript manager, such as:
+    - **ScriptCat** for [Chrome](https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf), [Firefox](https://addons.mozilla.org/firefox/addon/scriptcat/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)
+    - **Tampermonkey** for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/), [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd) or [Opera](https://addons.opera.com/extensions/details/tampermonkey-beta/)
+    - **Violentmonkey*** for [Chrome](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag), [Firefox](https://addons.mozilla.org/firefox/addon/violentmonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao)
+    - [**OrangeMonkey**](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf)* for Chrome
 
-2. Install [DuckDuckGPT](https://gm.ddgpt.com) userscript (will load in manager installed above)
+2. Install [**DuckDuckGPT**](https://gm.ddgpt.com) userscript (will load in manager installed above)
 
-3. Visit [duckduckgo.com](https://duckduckgo.com), type your search, engage bot!
+3. Visit [**duckduckgo.com**](https://duckduckgo.com), type your search, engage bot!
 
-##### _*Violentmonkey, OrangeMonkey & OrangeMonkey Pro do not support Streaming Mode, so are not recommended_
+##### _*Violentmonkey & OrangeMonkey do not support Streaming Mode, so are not recommended_
 
 <div align="center">
 
@@ -116,37 +116,251 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
 
 ## 🌐 Compatibility 
 
-**DuckDuckGPT** is compatible w/ the following browsers using [ScriptCat](https://docs.scriptcat.org), [Tampermonkey](https://www.tampermonkey.net), [Violentmonkey](https://violentmonkey.github.io)\*, [OrangeMonkey](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf)* or [OrangeMonkey Pro](https://chromewebstore.google.com/detail/orangemonkey-pro/ggdmdoodcfamjggeigifpjfnnjfbland)*.
+**DuckDuckGPT** is compatible w/ the following browsers:
 
-### 🖥️ Desktop
+<table>
+    <thead><th>Browser</th><th>Userscript manager</th><th>Install browser</th></thead>
+    <tbody align="center">
+        <tr> <!-- CHROME/CHROMIUM -->
+            <td> <!-- Browser -->
+                <a href="https://www.chrome.com" title="Chrome">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"
+                             width=16 alt="[Chrome]"></a>
+                Chrome or Chromium-based browsers
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+                   title="Install Tampermonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+                   title="Install Tampermonkey for Chrome">
+                        Tampermonkey</a>
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        Violentmonkey</a>*
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        ScriptCat</a>
+                or
+                <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
+                   title="Install OrangeMonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"></a>
+                <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
+                   title="Install OrangeMonkey for Chrome">
+                        OrangeMonkey</a>*
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://www.chrome.com" title="Chrome">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"
+                         width=16 alt="[Chrome]"></a>
+                <a href="https://www.microsoft.com/edge" title="Edge">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
+                         width=16 alt="[Edge]"></a>
+                <a href="https://www.opera.com" title="Opera">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/opera/icon16.png"
+                         width=16 alt="[Opera]"></a>
+                <a href="https://www.opera.com/gx" title="Opera GX">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/opera/gx/icon16.png"
+                         width=16 alt="[Opera GX]"></a>
+                <a href="https://brave.com" title="Brave">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/brave/icon16.png"
+                         width=16 alt="[Brave]"></a>
+                <a href="https://vivaldi.com" title="Vivaldi">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/vivaldi/icon16.png"
+                         width=16 alt="[Vivaldi]"></a>
+                <a href="https://ghostbrowser.com" title="Ghost Browser">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/ghost/icon16.png"
+                         width=16 alt="[Ghost Browser]"></a>
+                <a href="https://browser.qq.com" title="QQ Browser">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
+                         width=16 alt="[QQ Browser]"></a>
+                <a href="https://whale.naver.com" title="Whale">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/whale/tiled/icon16.png"
+                         width=16 alt="[Whale]"></a>
+            </td>
+        </tr>
+        <tr> <!-- SAFARI -->
+            <td> <!-- Browser -->
+                <a href="https://www.apple.com/safari/" title="Safari">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/safari/icon16.png"
+                         width=16 alt="[Safari]"></a>
+                Safari (macOS, iOS, iPadOS)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://apps.apple.com/app/stay-for-safari/id1591620171"
+                   title="Install Stay for Safari">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"></a>
+                <a href="https://apps.apple.com/app/stay-for-safari/id1591620171"
+                   title="Install Stay for Safari">
+                        Stay</a>
+                or
+                <a href="https://apps.apple.com/app/userscripts/id1463298887"
+                   title="Install Userscripts for Safari">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+                <a href="https://apps.apple.com/app/userscripts/id1463298887"
+                   title="Install Userscripts for Safari">
+                        Userscripts</a>
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://www.apple.com/safari/" title="Safari">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/safari/icon16.png"
+                         width=16 alt="[Safari]"></a>
+            </td>
+        </tr>
+        <tr> <!-- FIREFOX/GECKO DESKTOP -->
+            <td> <!-- Browser -->
+                <a href="https://www.firefox.com" title="Firefox">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
+                             width=16 alt="[Firefox]"></a>
+                Firefox or Gecko-based browsers (Windows, macOS, Linux)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
+                   title="Install Tampermonkey for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
+                   title="Install Tampermonkey for Firefox">
+                        Tampermonkey</a>
+                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
+                   title="Install Violentmonkey for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
+                   title="Install Violentmonkey for Firefox">
+                        Violentmonkey</a>*
+                or
+                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
+                   title="Install ScriptCat for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
+                   title="Install ScriptCat for Firefox">
+                        ScriptCat</a>
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://www.firefox.com" title="Firefox">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
+                         width=16 alt="[Firefox]"></a>
+                <a href="https://www.waterfox.net" title="Waterfox">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
+                         width=16 alt="[Waterfox]"></a>
+                <a href="https://librewolf.net" title="LibreWolf">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/librewolf/icon16.svg"
+                         width=16 alt="[LibreWolf]"></a>
+            </td>
+        </tr>
+        <tr> <!-- FIREFOX ANDROID -->
+            <td> <!-- Browser -->
+                <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
+                             width=16 alt="[Firefox]"></a>
+                Firefox (Android)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
+                   title="Install Tampermonkey for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
+                   title="Install Tampermonkey for Firefox">
+                        Tampermonkey</a>
+                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
+                   title="Install Violentmonkey for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
+                   title="Install Violentmonkey for Firefox">
+                        Violentmonkey</a>*
+                or
+                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
+                   title="Install ScriptCat for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
+                   title="Install ScriptCat for Firefox">
+                        ScriptCat</a>
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
+                         width=16 alt="[Firefox for Android]"></a>
+            </td>
+        </tr>
+        <tr> <!-- WATERFOX ANDROID -->
+            <td> <!-- Browser -->
+                <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release"
+                   title="Waterfox for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
+                             width=16 alt="[Waterfox]"></a>
+                Waterfox (Android)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
+                   title="Install Tampermonkey for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
+                   title="Install Tampermonkey for Firefox">
+                        Tampermonkey</a>
+                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
+                   title="Install Violentmonkey for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
+                   title="Install Violentmonkey for Firefox">
+                        Violentmonkey</a>*
+                or
+                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
+                   title="Install ScriptCat for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
+                   title="Install ScriptCat for Firefox">
+                        ScriptCat</a>
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release"
+                   title="Waterfox for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
+                             width=16 alt="[Waterfox for Android]"></a>
+            </td>
+        </tr>
+        <tr> <!-- ORION iOS -->
+            <td> <!-- Browser -->
+                <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
+                   title="Orion">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/orion/icon16.png"
+                             width=16 alt="[Orion]"></a>
+                Orion (iOS)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://apps.apple.com/app/stay-for-safari/id1591620171"
+                   title="Install Stay for Safari">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"></a>
+                <a href="https://apps.apple.com/app/stay-for-safari/id1591620171"
+                   title="Install Stay for Safari">
+                        Stay</a>
+                or
+                <a href="https://apps.apple.com/app/userscripts/id1463298887"
+                   title="Install Userscripts for Safari">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+                <a href="https://apps.apple.com/app/userscripts/id1463298887"
+                   title="Install Userscripts for Safari">
+                        Userscripts</a>
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
+                   title="Orion">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/orion/icon16.png"
+                             width=16 alt="[Orion]"></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-- [Google Chrome](https://www.chrome.com)
-- [Mozilla Firefox](https://www.firefox.com)
-- [Microsoft Edge](https://www.microsoft.com/edge)
-- [Opera](https://www.opera.com)
-- [Opera GX](https://www.operagx.com)
-- [Brave](https://brave.com)
-- [Vivaldi](https://vivaldi.com)
-- [LibreWolf](https://librewolf.net)
-- [Ghost](https://ghostbrowser.com)
-- [QQ](https://browser.qq.com)
-- [Whale](https://whale.naver.com)
-
-<br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.ddgpt.com/images/logos/platforms/android/head-plus-word/white/logo150x24.png"><img alt="Android" width=111 src="https://assets.ddgpt.com/images/logos/platforms/android/head-plus-word/green-head-black-word/logo150x24.png"></picture><br>
-
-- [Mozilla Firefox](https://www.mozilla.org/firefox/browsers/mobile/android/) (using [Tampermonkey](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Violentmonkey](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)* for Firefox)
-- [Waterfox](https://play.google.com/store/apps/details?id=net.waterfox.android.release) (using [Tampermonkey](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Violentmonkey](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)* for Firefox)
-
-<br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/logos/platforms/ios/apple-plus-word/white/logo150x71.png"><img alt="iOS" width=55 src="https://assets.aiwebextensions.com/images/logos/platforms/ios/apple-plus-word/black/logo150x71.png"></picture>
-
-- [Safari](https://apps.apple.com/app/safari/id1146562112)
-- [Orion](https://apps.apple.com/app/orion-browser-by-kagi/id1484498200)
-
-##### _*Violentmonkey, OrangeMonkey & OrangeMonkey Pro do not support Streaming Mode, so are not recommended_
+##### _*Violentmonkey & OrangeMonkey do not support Streaming Mode, so are not recommended_
 
 <br>
 
-If you've tested it to work in a browser not listed, simply create a [pull request](https://github.com/KudoAI/duckduckgpt/pulls) to become a contributor!
+If you've tested it to work in a browser not listed, simply create a [pull request](https://github.com/KudoAI/duckduckgpt/pulls) or [issue](https://github.com/KudoAI/duckduckgpt/issues/new) to become a contributor!
 <br><br>
 
 ## 🕵️ Proxy Mode
