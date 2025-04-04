@@ -155,7 +155,6 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
 - [Google Chrome](https://www.chrome.com)
 - [Mozilla Firefox](https://www.firefox.com)
 - [Microsoft Edge](https://www.microsoft.com/edge)
-- [Safari](https://www.apple.com/safari/)
 - [Opera](https://www.opera.com)
 - [Opera GX](https://www.operagx.com)
 - [Brave](https://brave.com)
@@ -256,6 +255,7 @@ This app exists thanks to code, testing, issues, translations & ideas from the f
 <a href="https://github.com/amamelia"><img width=50 title="@amamelia" src="https://avatars.githubusercontent.com/u/40690639?first-contrib=2024.5.15-proxy-mode-broken-confirmation"></img></a>
 <a href="https://github.com/bbradleyjoness"><img width=50 title="@bbradleyjoness" src="https://avatars.githubusercontent.com/u/30918938?first-contrib=2024.5.30-added-safari-to-readme-compatibility"></img></a>
 <a href="https://greasyfork.org/users/670188-hacker09"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.5.30-render-markdown-idea" title="hacker09"></picture></a>
+<a href="https://github.com/sshiva01"><img width=50 title="@sshiva01" src="https://avatars.githubusercontent.com/u/122478157?first-contrib=2024.6.4-safari-macos-not-working-report"></img></a>
 <a href="https://greasyfork.org/users/1318541-kalopsia"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.16-region-stripping-broken-alert" title="Kalopsia"></picture></a>
 <a href="https://greasyfork.org/users/27097-grisipisimisi"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.20-asktip-disabled-localstorage-setting-not-sticky" title="GrisiPisiMisi"></picture></a>
 <a href="https://github.com/Mrhazed"><img width=50 title="@Mrhazed" src="https://avatars.githubusercontent.com/u/149096330?first-contrib=2024.6.20-streaming-mode-unsupported-by-brave"></img></a>
