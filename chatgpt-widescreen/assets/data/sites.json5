@@ -1,8 +1,8 @@
 {
   "chatgpt": {
     "availFeatures": [
-      "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenFooter", "hiddenHeader",
-      "notifDisabled", "ncbDisabled", "tcbDisabled", "widerChatbox", "widescreen"
+      "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenFooter",
+      "hiddenHeader", "notifDisabled", "ncbDisabled", "tcbDisabled", "widerChatbox", "widescreen"
     ],
     "selectors": {
       "btns": {
@@ -24,8 +24,8 @@
   },
   "perplexity": {
     "availFeatures": [
-      "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenFooter", "hiddenHeader",
-      "notifDisabled", "ncbDisabled", "tcbDisabled", "widescreen"
+      "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenFooter",
+      "hiddenHeader", "notifDisabled", "ncbDisabled", "tcbDisabled", "widescreen"
     ],
     "hasSidebar": true,
     "selectors": {
@@ -52,8 +52,8 @@
   },
   "poe": {
     "availFeatures": [
-      "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenHeader", "notifDisabled",
-      "ncbDisabled", "tcbDisabled", "widerChatbox", "widescreen"
+      "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenHeader",
+      "notifDisabled", "ncbDisabled", "tcbDisabled", "widerChatbox", "widescreen"
     ],
     "hasSidebar": true,
     "selectors": {
