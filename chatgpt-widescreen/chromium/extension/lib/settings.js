@@ -38,6 +38,10 @@ window.settings = {
             label: settings.getMsg('menuLabel_btnAnimations'),
             helptip: settings.getMsg('helptip_btnAnimations')
         }},
+        get btnsVisible() { return { type: 'toggle', defaultVal: true,
+            label: settings.getMsg('menuLabel_btnVisibility'),
+            helptip: settings.getMsg('helptip_btnVisibility')
+        }},
         get notifDisabled() { return { type: 'toggle', defaultVal: false,
             label: settings.getMsg('menuLabel_modeNotifs'),
             helptip: settings.getMsg('helptip_modeNotifs')

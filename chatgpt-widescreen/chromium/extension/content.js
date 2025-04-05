@@ -211,7 +211,7 @@
                 update.style.tweaks() // sync TCB/NCB/HH/HF/BA
                 update.style.chatbar() // sync WCB
                 chatbar.tweak() // update ChatGPT chatbar inner width or hack other sites' button positions
-                buttons.insert() // since .remove()'d when extension disabled
+                buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                     // ...to visually signal location + preview fx applied by Button Animations toggle-on
                     buttons.animate()
@@ -304,7 +304,7 @@
     update.style.chatbar() ; document.head.append(chatbarStyle)
 
     // Insert BUTTONS
-    if (!config.extensionDisabled && !config[`${env.site}Disabled`]) {
+    if (!config.extensionDisabled && !config[`${env.site}Disabled`] && config.btnsVisible) {
         buttons.insert()
 
     // Restore PREV SESSION's state
@@ -321,7 +321,7 @@
     new MutationObserver(async () => {
 
         // Maintain button visibility on nav
-        if (config.extensionDisabled || config[`${env.site}Disabled`]) return
+        if (config.extensionDisabled || config[`${env.site}Disabled`] || !config.btnsVisible) return
         else if (!buttons.fullscreen?.isConnected && !chatgpt.canvasIsOpen()
             && await chatbar.get() && buttons.state.status != 'inserting'
         ) { buttons.state.status = 'missing' ; buttons.insert() }

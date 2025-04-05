@@ -130,7 +130,7 @@ window.buttons = {
     },
 
     async insert() {
-        if (this.state.status == 'inserting' || this.fullscreen?.isConnected) return
+        if (!config.btnsVisible || this.state.status == 'inserting' || this.fullscreen?.isConnected) return
         this.state.status = 'inserting' ; if (!this.fullscreen) await this.create()
 
         // Init elems
