@@ -97,7 +97,7 @@
 
 ## 🌐 Compatibility 
 
-**DuckDuckGPT** is compatible w/ the following browsers (create a [pull request](https://github.com/KudoAI/duckduckgpt/pulls) or [issue](https://github.com/KudoAI/duckduckgpt/issues/new) to add more tested working ones):
+**DuckDuckGPT** is compatible w/ the following browsers (to contribute more tested working ones, simply create a [pull request](https://github.com/KudoAI/duckduckgpt/pulls) or [issue](https://github.com/KudoAI/duckduckgpt/issues/new)):
 
 <table>
     <thead><th>Browser</th><th>Userscript manager</th><th>Install browser</th></thead>
