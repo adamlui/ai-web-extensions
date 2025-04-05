@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.2
+// @version             2025.4.4
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -258,9 +258,9 @@
 // @require             https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@5d3db9c/chromium/extension/lib/chatbar.js#sha256-KIIufXI7xyuVFSrj2NW0RQGloNEl80tzuBgxaOsCMB8=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@58c2d29/chromium/extension/lib/dom.js#sha256-WXPxvMnJU6LGvINaENBbmvGXTAcAlXlBkyGwIDGXiC4=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7ed283d/chromium/extension/lib/settings.js#sha256-XQWeorSHtTm0rLz9FCXtU2rSk8ds0Tgj11Pw7a4Tfz4=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@64cf12b/chromium/extension/lib/settings.js#sha256-ziqiWd1wvVZSmdEiIgSNZoCjpwkC2MQz1f+j8oxVCSk=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f9ebcb0/chromium/extension/lib/ui.js#sha256-Bg82hwdZyJAORV7B6Vg3uIxQ8qnJhCsU624NyjQrKcA=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@580df55/chromium/extension/components/buttons.js#sha256-FVFZm8EPXN3HPg89qxbWlfWc6AOQMA1BXtg9kbyTPIQ=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@64cf12b/chromium/extension/components/buttons.js#sha256-eXxLKmtD3a44Tq6OQ2af1+RYHytldxHY89VEtK+9qVc=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@d96f327/chromium/extension/components/icons.js#sha256-lrAx3C5E0gugnjUHqw/wLamG7aE9UTCfAJwM0WM8jjo=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7c41d55/chromium/extension/components/modals.js#sha256-ETMRpzM8O1ymtxnc3dhYcogck069jEysN2PVqFeX74s=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@7ed283d/chromium/extension/components/tooltip.js#sha256-8ifKNrnKJ6b9oQ6aY7FM6SnqTYJ1IOUcvEbMHt8dVsA=
@@ -311,7 +311,7 @@
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         urls: { update: 'https://gm.chatgptwidescreen.com' },
-        latestResourceCommitHash: '5307431' // for cached app.json + sites.json5 + messages.json
+        latestResourceCommitHash: 'ea045a9' // for cached app.json + sites.json5 + messages.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -330,6 +330,7 @@
         menuLabel_hiddenHeader: 'Hidden Header',
         menuLabel_hiddenFooter: 'Hidden Footer',
         menuLabel_btnAnimations: 'Button Animations',
+        menuLabel_btnVisibility: 'Button Visibility',
         menuLabel_modeNotifs: 'Mode Notifications',
         menuLabel_blockSpam: 'Spam Block',
         menuLabel_siteSettings: 'Site Settings',
@@ -359,6 +360,7 @@
         helptip_hiddenFooter: 'Hide site footer',
         helptip_hiddenHeader: 'Hide site header',
         helptip_btnAnimations: 'Animate chatbar buttons on hover',
+        helptip_btnVisibility: 'Show custom buttons in chatbar',
         helptip_modeNotifs: 'Show notifications when toggling modes/settings',
         helptip_blockSpam: 'Hide spam banners from cluttering the page',
         helptip_enableDisable: 'Enable/disable',
@@ -808,7 +810,7 @@
                 update.style.tweaks() // sync TCB/NCB/HH/HF/BA
                 update.style.chatbar() // sync WCB
                 chatbar.tweak() // update ChatGPT chatbar inner width or hack other sites' button positions
-                buttons.insert() // since .remove()'d when script disabled
+                buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                     // ...to visually signal location + preview fx applied by Button Animations toggle-on
                     buttons.animate()
@@ -892,7 +894,7 @@
     update.style.chatbar() ; document.head.append(chatbarStyle)
 
     // Insert BUTTONS
-    if (!config[`${env.site}Disabled`]) {
+    if (!config[`${env.site}Disabled`] && config.btnsVisible) {
         buttons.insert()
 
     // Restore PREV SESSION's state
@@ -909,7 +911,7 @@
     new MutationObserver(async () => {
 
         // Maintain button visibility on nav
-        if (config[`${env.site}Disabled`]) return
+        if (config[`${env.site}Disabled`] || !buttons.visible) return
         else if (!buttons.fullscreen?.isConnected && !chatgpt.canvasIsOpen()
             && await chatbar.get() && buttons.state.status != 'inserting'
         ) { buttons.state.status = 'missing' ; buttons.insert() }
