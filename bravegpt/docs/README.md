@@ -1,11 +1,15 @@
 <a id="top"></a>
 
-<h1>
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/logos/bravegpt/darkmode/logo730x155.png">
-        <img alt="BraveGPT" width=322 src="https://assets.bravegpt.com/images/logos/bravegpt/lightmode/logo730x155.png">
-    </picture>
-</h1>
+<!-- HEADER LOGO -->
+
+<div align="center">
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/logos/bravegpt/darkmode/logo730x155.png">
+    <img alt="BraveGPT" width=555 src="https://assets.bravegpt.com/images/logos/bravegpt/lightmode/logo730x155.png">
+</picture>
+<br><br>
+
+<!-- SHIELDS -->
 
 <a href="../LICENSE.md">
     <img height=31 alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
@@ -27,19 +31,36 @@
     <img height=31 alt="[Built by KudoAI]" src="https://img.shields.io/badge/Built_by-KudoAI-a07bfc?logo=esbuild&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/KudoAI/bravegpt?tab=stats">
     <img height=31 alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/bravegpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
+<br><br>
 
-<h3><b>BraveGPT</b> brings the magic of ChatGPT to Brave Search (powered by GPT-4o!)</h3>
+<!-- HEADER INSTALL BUTTON -->
 
-> [!IMPORTANT]
-> _**Greasy Fork users:** If you installed BraveGPT **before January 18, 2025**, auto-updates no longer work because the script's update mechanism has migrated to GitHub. To continue receiving updates, click the green 'Install this script' button below (once) or click [this link](https://gm.bravegpt.com) (once)_
+<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
-<a href="https://gm.bravegpt.com"><img height=45 alt="[Install this script]" src="https://assets.bravegpt.com/images/buttons/greasy-fork/install-button.svg"></a><a href="#installation"><img height=45 alt="[How to install]" title="How to install" src="https://assets.bravegpt.com/images/buttons/greasy-fork/help-button.svg"></a>
+<h3>Bring the magic of ChatGPT to Brave Search</h3>
+
+<a href="https://gm.bravegpt.com"><img height=50 alt="[Install this script]" src="https://assets.bravegpt.com/images/buttons/greasy-fork/install-button.svg?v=5771632"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://assets.bravegpt.com/images/buttons/greasy-fork/help-button.svg?v=5771632"></a>
 <br>
-[Discuss](https://github.com/KudoAI/bravegpt/discussions) / 
-[Get support](https://support.bravegpt.com) / 
+[Discuss](https://github.com/KudoAI/bravegpt/discussions) /
+[Get support](https://support.bravegpt.com) /
 [Contact author](https://github.com/adamlui)
 
-#
+<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+
+</div>
+
+<!-- GREASY FORK NOTICE -->
+
+<br>
+
+> [!IMPORTANT]
+> _**Greasy Fork users:** If you installed BraveGPT **before January 18, 2025**, auto-updates no longer work because the script's update mechanism has migrated to GitHub. To continue receiving updates, click the green 'Install this script' button above (once) or click [this link](https://gm.bravegpt.com) (once)_
+
+<!-- SCREENSHOTS -->
+
+<div align="center">
+
+### Desktop:
 
 <img src="https://assets.bravegpt.com/images/screenshots/desktop/bitcoin-query/darkmode.png">
 
@@ -47,10 +68,13 @@
 
 <img src="https://assets.bravegpt.com/images/screenshots/mobile/hi-query/darkmode.png">
 
-<br>
-<br>
+</div>
 
-<img height=8px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png?v=d80d04b">
+<br><br>
+
+<img height=8px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+
+<!-- GOLDEN SPONSORS -->
 
 <div id="golden-sponsors" align="center">
 
@@ -73,7 +97,9 @@
 
 </div>
 
-<img height=8px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png?v=d80d04b">
+<img height=8px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+
+<!-- INSTALLATION -->
 
 ## 🚀 Installation
 
@@ -97,6 +123,8 @@
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
+<!-- TAMPERMONKEY/ORANGEMONKEY USERS -->
+
 ## <img width=25px src="https://assets.bravegpt.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img width=25px src="https://assets.bravegpt.com/images/icons/userscript-managers/orangemonkey/icon32.png"> Tampermonkey / OrangeMonkey Users
 
 If you are installing **Tampermonkey** or **OrangeMonkey** for a Chromium browser (Chrome, Edge, etc.) you _must enable **Developer Mode**_ for userscripts to function.
@@ -116,6 +144,8 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
 💡 _**Note:** If you installed Tampermonkey from the add-on store for [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/), then Developer Mode is not required._
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+
+<!-- COMPATIBILITY -->
 
 ## 🌐 Compatibility
 
@@ -364,8 +394,23 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
 <br>
 
 If you've tested it to work in a browser not listed, create a [pull request](https://github.com/KudoAI/bravegpt/pulls) or [issue](https://github.com/KudoAI/bravegpt/issues/new) to become a contributor!
+<br><br>
+
+<div align="center">
+
+<a href="https://gm.bravegpt.com"><img height=50 alt="[Install this script]" src="https://assets.bravegpt.com/images/buttons/greasy-fork/install-button.svg?v=5771632"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://assets.bravegpt.com/images/buttons/greasy-fork/help-button.svg?v=5771632"></a>
+<br>
+[Discuss](https://github.com/KudoAI/bravegpt/discussions) /
+[Get support](https://support.bravegpt.com) /
+[More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
+
+</div>
+
+<br>
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+
+<!-- PROXY MODE -->
 
 ## 🕵️ Proxy Mode
 
@@ -382,29 +427,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <br>
 
-<a href="https://gm.bravegpt.com"><img height=45 alt="[Install this script]" src="https://assets.bravegpt.com/images/buttons/greasy-fork/install-button.svg"></a><a href="#installation"><img height=45 alt="[How to install]" title="How to install" src="https://assets.bravegpt.com/images/buttons/greasy-fork/help-button.svg"></a>
-<br>
-[Discuss](https://github.com/KudoAI/bravegpt/discussions) /
-[Get support](https://support.bravegpt.com) /
-[More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
-
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
-## 📣 Social links
-
-[![](https://img.shields.io/mastodon/follow/111075576869014999?domain=https%3A%2F%2Ftechnodon.org&style=social "Follow @kudoai on Mastodon (technodon.org)")](https://technodon.org/@kudoai?utm_source=bravegpt&utm_content=github_shield)
-[![](https://img.shields.io/badge/Follow%20company%2fkudo--ai-151-blue?logo=linkedin&style=social "Follow company/kudo-ai on LinkedIn")](https://linkedin.com/company/kudo-ai)
-[![](https://img.shields.io/github/followers/kudoai?label=Follow%20%40kudoai&style=social "Follow @kudoai on GitHub")](https://github.com/KudoAI)
-[![](https://img.shields.io/youtube/channel/subscribers/UCdwQlbPJW3RbkLcHh_DGb0g?label=Follow%20%40kudoailabs&style=social "Follow @kudoailabs on YouTube")](https://www.youtube.com/@kudoailabs?sub_confirmation=1)
-[![](https://img.shields.io/badge/Follow%20KudoAI-6-blue?logo=medium&style=social "Follow KudoAI on Medium")](https://blog.kudoai.com?utm_source=bravegpt&utm_content=github_shield)
-<br>[![](https://img.shields.io/mastodon/follow/109387703022229926?domain=https%3A%2F%2Felonsucks.org&style=social "Follow @adam on Mastodon (elonsucks.org)")](https://elonsucks.org/@adam?utm_source=bravegpt&utm_content=github_shield)
-[![](https://img.shields.io/badge/Follow%20@adamllui-2.2k-blue?logo=x&style=social "Follow @adamllui on X")](https://x.com/intent/user?screen_name=adamllui)
-[![](https://img.shields.io/badge/Follow%20in%2fadamlui-1.3k-blue?logo=linkedin&style=social "Follow in/adamlui on LinkedIn")](https://linkedin.com/in/adamlui)
-[![](https://img.shields.io/badge/Follow%20@adamlui-637-blue?logo=medium&style=social "Follow @adamlui on Medium")](https://adamlui.com?utm_source=bravegpt&utm_content=github_shield)
-[![](https://img.shields.io/youtube/channel/subscribers/UCgBMqK7SRL5R__3qM-YAcSg?label=Follow%20%40adamluitube&style=social "Follow @adamluitube on YouTube")](https://www.youtube.com/AdamLuiTube?sub_confirmation=1)
-[![](https://img.shields.io/github/followers/adamlui?label=Follow%20%40adamlui&style=social "Follow @adamlui on GitHub")](https://github.com/adamlui)
-
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<!-- DEPENDENCIES -->
 
 ## ⚡ Dependencies
 
@@ -427,6 +452,8 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 </h6>
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+
+<!-- CONTRIBUTORS -->
 
 ## 🧠 Contributors
 
@@ -460,6 +487,8 @@ This app exists thanks to code, translations, issues & ideas from the following 
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
+<!-- STAR HISTORY -->
+
 <div align="center">
 
 <br>
@@ -477,12 +506,16 @@ This app exists thanks to code, translations, issues & ideas from the following 
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
+<!-- MORE CHATGPT APPS -->
+
 ## 🤖 More ChatGPT apps
 
 For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+
+<!-- RELATED SCRIPTS -->
 
 ## 📜 Related scripts
 
