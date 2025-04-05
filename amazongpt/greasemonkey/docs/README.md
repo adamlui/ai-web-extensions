@@ -37,7 +37,7 @@
 
 <!-- HEADER INSTALL BUTTON -->
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png?v=dc250b9">
+<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
 <h3>🤖 Bring the magic of AI to Amazon Shopping 🛒</h3>
 
@@ -47,7 +47,7 @@
 [Get support](https://amazongpt.kudoai.com/issues) /
 [Contact author](https://github.com/adamlui)
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png?v=dc250b9">
+<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
 </div>
 
@@ -76,7 +76,7 @@
 
 <br><br>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png?v=dc250b9">
+<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
 <!-- GOLDEN SPONSORS -->
 
@@ -101,7 +101,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png?v=dc250b9">
+<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
 <!-- INSTALLATION -->
 
@@ -121,7 +121,7 @@
 
 <br><a href="https://github.com/sponsors/KudoAI"><img src="https://amazongpt.kudoai.com/assets/images/banners/sponsor/$10/banner1660x260.png?v=dc250b9"></a>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png?v=dc250b9">
+<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
 <!-- TAMPERMONKEY/ORANGEMONKEY USERS -->
 
@@ -143,7 +143,7 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
 
 💡 _**Note:** If you installed Tampermonkey from the add-on store for [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/), then Developer Mode is not required._
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png?v=dc250b9">
+<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
 <!-- COMPATIBILITY -->
 
@@ -408,7 +408,7 @@ If you've tested it to work in a browser not listed, simply create a [pull reque
 
 <br>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png?v=dc250b9">
+<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
 <!-- DEPENDENCIES -->
 
@@ -432,7 +432,7 @@ If you've tested it to work in a browser not listed, simply create a [pull reque
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png?v=dc250b9">
+<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
 <!-- CONTRIBUTORS -->
 
@@ -465,7 +465,7 @@ This app exists thanks to code, translations, issues & ideas from the following 
     <img title="ChatGPT" src="https://assets.aiwebextensions.com/images/icons/chatgpt/white-on-gray/icon50.png"></picture></a>
 <br><br>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png?v=dc250b9">
+<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
 <!-- MORE CHATGPT APPS -->
 
@@ -474,7 +474,7 @@ This app exists thanks to code, translations, issues & ideas from the following 
 For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png?v=dc250b9">
+<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
 <!-- RELATED APPS -->
 
@@ -501,7 +501,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.kudoai.com/googlegpt/#readme) /
 [Discuss](https://github.kudoai.com/googlegpt/discussions)
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png?v=dc250b9">
+<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
 <a href="https://github.com/adamlui/ai-web-extensions">**More ChatGPT apps**</a> / 
 <a href="#top">Back to top ↑</a>
