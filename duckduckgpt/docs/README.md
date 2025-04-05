@@ -95,28 +95,9 @@
   
 </div>
 
-## <img width=25px src="https://assets.ddgpt.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img width=25px src="https://assets.ddgpt.com/images/icons/userscript-managers/orangemonkey/icon32.png"> Tampermonkey / OrangeMonkey Users
-
-If you are installing **Tampermonkey** or **OrangeMonkey** for a Chromium browser (Chrome, Edge, etc.) you _must enable **Developer Mode**_ for userscripts to function.
-
-To do so, visit [chrome://extensions](chrome://extensions) > activate **Developer Mode** toggle > restart browser
-
-<br>
-
-<div align="center">
-
-<img width=635 src="https://assets.ddgpt.com/images/screenshots/desktop/chrome/developer-mode-toggle.png">
-
-</div>
-
-<br>
-
-💡 _**Note:** If you installed Tampermonkey from the add-on store for [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/), then Developer Mode is not required._
-<br><br>
-
 ## 🌐 Compatibility 
 
-**DuckDuckGPT** is compatible w/ the following browsers:
+**DuckDuckGPT** is compatible w/ the following browsers (create a [pull request](https://github.com/KudoAI/duckduckgpt/pulls) or [issue](https://github.com/KudoAI/duckduckgpt/issues/new) to add more tested working ones):
 
 <table>
     <thead><th>Browser</th><th>Userscript manager</th><th>Install browser</th></thead>
@@ -134,13 +115,13 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
                         <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
                 <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
                    title="Install Tampermonkey for Chrome">
-                        Tampermonkey</a>
+                        Tampermonkey</a><sup>1</sup>
                 <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
                    title="Install Violentmonkey for Chrome">
                         <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
                 <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
                    title="Install Violentmonkey for Chrome">
-                        Violentmonkey</a>*
+                        Violentmonkey</a><sup>2</sup>
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
                         <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
@@ -153,7 +134,7 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
                         <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"></a>
                 <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
                    title="Install OrangeMonkey for Chrome">
-                        OrangeMonkey</a>*
+                        OrangeMonkey</a><sup>1,2</sup>
             </td>
             <td> <!-- Install browser -->
                 <a href="https://www.chrome.com" title="Chrome">
@@ -232,7 +213,7 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
                         <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
                 <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
                    title="Install Violentmonkey for Firefox">
-                        Violentmonkey</a>*
+                        Violentmonkey</a><sup>2</sup>
                 or
                 <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
                    title="Install ScriptCat for Firefox">
@@ -272,7 +253,7 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
                         <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
                 <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
                    title="Install Violentmonkey for Firefox">
-                        Violentmonkey</a>*
+                        Violentmonkey</a><sup>2</sup>
                 or
                 <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
                    title="Install ScriptCat for Firefox">
@@ -307,7 +288,7 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
                         <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
                 <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
                    title="Install Violentmonkey for Firefox">
-                        Violentmonkey</a>*
+                        Violentmonkey</a><sup>2</sup>
                 or
                 <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
                    title="Install ScriptCat for Firefox">
@@ -356,12 +337,12 @@ To do so, visit [chrome://extensions](chrome://extensions) > activate **Develope
     </tbody>
 </table>
 
-##### _*Violentmonkey & OrangeMonkey do not support Streaming Mode, so are not recommended_
+<h5>
+    <i>1. If you are installing Tampermonkey or OrangeMonkey for a Chromium browser (Chrome, Edge, etc.) you must enable Developer Mode (in chrome://extensions) for userscripts to function</i><br><br>
+    <i>2. Violentmonkey & OrangeMonkey do not support Streaming Mode, so are not recommended</i>
+</h5>
 
 <br>
-
-If you've tested it to work in a browser not listed, simply create a [pull request](https://github.com/KudoAI/duckduckgpt/pulls) or [issue](https://github.com/KudoAI/duckduckgpt/issues/new) to become a contributor!
-<br><br>
 
 ## 🕵️ Proxy Mode
 
