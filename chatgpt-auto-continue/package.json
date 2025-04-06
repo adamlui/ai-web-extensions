@@ -28,6 +28,8 @@
     "translate:chromium": "py chromium/utils/translate-en-messages.py",
     "translate:ff": "py firefox/utils/translate-en-messages.py",
     "translate:firefox": "py firefox/utils/translate-en-messages.py",
+    "build:js-pages": "minify-js pages --no-mangle",
+    "build:pages-js": "minify-js pages --no-mangle",
     "bump": "bash utils/bump/extension-manifests.sh",
     "bump:res": "node utils/bump/resources",
     "bump:resources": "node utils/bump/resources",
@@ -42,6 +44,7 @@
     "bump:firefox": "bash utils/bump/extension-manifests.sh --ff"
   },
   "devDependencies": {
+    "@adamlui/minify.js": "^1.8.6",
     "@eslint/css": "^0.6.0",
     "@eslint/json": "^0.11.0",
     "@eslint/markdown": "^6.3.0",
