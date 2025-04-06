@@ -63,7 +63,7 @@ window.chatbar = {
                     widths.chatbar - totalBtnWidths -43 }px`
                 inputArea.style.width = '100%' // rid h-scrollbar
             }
-        } else if (site == 'perplexity') { // left-align Attach File + Search buttons
+        } else if (site == 'perplexity' && location.pathname == '/') { // left-align Attach File + Search buttons
             const rightBtns = {} ; ['attachFile', 'search'].forEach(btnType =>
                 rightBtns[btnType] = chatbarDiv.querySelector(selectors.btns[btnType]))
             const modelSelectorDiv = chatbarDiv.querySelector('button').closest('div')
