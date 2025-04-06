@@ -303,11 +303,9 @@
     const chatbarStyle = dom.create.style()
     update.style.chatbar() ; document.head.append(chatbarStyle)
 
-    // Insert BUTTONS
-    if (!config.extensionDisabled && !config[`${env.site}Disabled`] && config.btnsVisible) {
-        buttons.insert()
-
     // Restore PREV SESSION's state
+    if (!config.extensionDisabled && !config[`${env.site}Disabled`]) {
+        if (config.btnsVisible) buttons.insert()
         if (config.widescreen) toggleMode('widescreen', 'ON')
         if (config.fullWindow && sites[env.site].hasSidebar) {
             if (sites[env.site].selectors.btns.sidebar) // site has own FW config

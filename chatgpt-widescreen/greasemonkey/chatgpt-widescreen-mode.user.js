@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.4
+// @version             2025.4.5
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -893,11 +893,9 @@
     const chatbarStyle = dom.create.style()
     update.style.chatbar() ; document.head.append(chatbarStyle)
 
-    // Insert BUTTONS
-    if (!config[`${env.site}Disabled`] && config.btnsVisible) {
-        buttons.insert()
-
     // Restore PREV SESSION's state
+    if (!config[`${env.site}Disabled`]) {
+        if (config.btnsVisible) buttons.insert()
         if (config.widescreen) toggleMode('widescreen', 'ON')
         if (config.fullWindow && sites[env.site].hasSidebar) {
             if (sites[env.site].selectors.btns.sidebar) // site has own FW config
