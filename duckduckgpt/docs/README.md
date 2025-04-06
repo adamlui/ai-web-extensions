@@ -268,6 +268,35 @@
                          width=16 alt="[Firefox for Android]"></a>
             </td>
         </tr>
+        <tr> <!-- QUETTA MOBILE -->
+            <td> <!-- Browser -->
+                <a href="https://www.quetta.net"
+                   title="Quetta">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/quetta/circled/icon16.png"
+                             width=16 alt="[Quetta]"></a>
+                Quetta (Android, iOS, iPadOS)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        Violentmonkey</a><sup>2</sup>
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        ScriptCat</a>
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://www.quetta.net"
+                   title="Quetta">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/quetta/circled/icon16.png"
+                             width=16 alt="[Quetta]"></a>
+            </td>
+        </tr>
         <tr> <!-- LEMUR ANDROID/iOS -->
             <td> <!-- Browser -->
                 <a href="https://www.lemurbrowser.com"

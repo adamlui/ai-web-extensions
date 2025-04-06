@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.6
+// @version               2025.4.6.1
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
@@ -165,6 +165,7 @@
 // @compatible            ghost
 // @compatible            qq
 // @compatible            whale
+// @compatible            quetta
 // @compatible            lemur
 // @compatible            orion
 // @match                 *://search.brave.com/search*
