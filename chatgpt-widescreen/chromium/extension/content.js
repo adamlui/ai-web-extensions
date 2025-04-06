@@ -161,6 +161,7 @@
                            `[id$=-btn]:hover { opacity: 100% !important } /* prevent chatbar btn dim on hover */
                             main { overflow: clip !important }` // prevent h-scrollbar...
                                 // ...on sync.mode('fullWindow) => delayed chatbar.tweak()
+                    : env.site == 'perplexity' ? '[id$=-btn]:hover { background: none !important }' // prevent overlay
                     : '' )
                   + ( config.tcbDisabled == false ? tcbStyle : '' ) // expand text input vertically
                   + ( config.hiddenHeader ? hhStyle : '' ) // hide header
