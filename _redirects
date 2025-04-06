@@ -1,6 +1,9 @@
 # https://developers.cloudflare.com/pages/configuration/redirects/
 
-# Serve /<project>/pages/* normally
+# Redir platform-less (/<project>/pages/welcome/) to ${1}chromium/
+/:project/pages/welcome/ /:project/pages/welcome/chromium/ 301
+
+# Serve all other /<project>/pages/* normally
 /:project/pages/* /:project/pages/:splat 200
 
 # Redirect non-Pages paths to GitHub
