@@ -340,7 +340,7 @@
                    title="Orion">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/orion/icon16.png"
                              width=16 alt="[Orion]"></a>
-                Orion (iOS)
+                Orion (iOS, iPadOS)
             </td>
             <td> <!-- Userscript manager -->
                 <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
