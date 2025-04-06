@@ -344,19 +344,31 @@
                 Orion (iOS)
             </td>
             <td> <!-- Userscript manager -->
-                <a href="https://apps.apple.com/app/stay-for-safari/id1591620171"
-                   title="Install Stay for Safari">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"></a>
-                <a href="https://apps.apple.com/app/stay-for-safari/id1591620171"
-                   title="Install Stay for Safari">
-                        Stay</a>
+                <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+                   title="Install Tampermonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+                   title="Install Tampermonkey for Chrome">
+                        Tampermonkey</a><sup>1</sup>
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        Violentmonkey</a><sup>2</sup>
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        ScriptCat</a>
                 or
-                <a href="https://apps.apple.com/app/userscripts/id1463298887"
-                   title="Install Userscripts for Safari">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
-                <a href="https://apps.apple.com/app/userscripts/id1463298887"
-                   title="Install Userscripts for Safari">
-                        Userscripts</a>
+                <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
+                   title="Install OrangeMonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"></a>
+                <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
+                   title="Install OrangeMonkey for Chrome">
+                        OrangeMonkey</a><sup>1,2</sup>
             </td>
             <td> <!-- Install browser -->
                 <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
@@ -369,7 +381,7 @@
 </table>
 
 <h5>
-    <i>1. If you are installing Tampermonkey or OrangeMonkey for a Chromium browser (Chrome, Edge, etc.) you must enable Developer Mode (in chrome://extensions) for userscripts to function</i><br><br>
+    <i>1. If you are installing Tampermonkey or OrangeMonkey from the Chrome Web Store, you must enable Developer Mode (in chrome://extensions) for userscripts to function</i><br><br>
     <i>2. Violentmonkey & OrangeMonkey do not support Streaming Mode</i>
 </h5>
 
