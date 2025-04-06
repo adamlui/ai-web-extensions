@@ -9,14 +9,14 @@ body {
     font-family: Arial,sans-serif ; text-align: center ;
     margin: 0 ; background-color: #f9f9f9 }
 .main { max-width: 812px ; margin: 0 auto ; padding: 56px 16.5vw 131px }
-.title-icon { width: 50px ; height: 50px ; position: relative ; top: 21.5px ; margin-right: 15px }
-h1 { font-size: 48px ; margin-bottom: 48px }
+.title-icon { width: 67px ; height: 67px ; position: relative ; top: 21.5px ; margin-right: 18px }
+h1 { font-size: 68px ; margin-bottom: 48px }
 p { font-size: 24px ; margin-bottom: 8px }
 img { max-width: 100% ; height: auto ; margin-bottom: 15px }
 footer { height: 75px ; font-weight: bold ; font-size: 22px }
 
 @media (max-width: 768px) {
-    .title-icon { width: 33px ; height: 33px ; position: relative ; top: 19.5px ; margin-right: 11px }
+    .title-icon { width: 33px ; height: 33px ; top: 19.5px ; margin-right: 11px }
     h1 { font-size: 32px ; margin-bottom: 20px }
     p { font-size: 18px ; margin-bottom: 15px }
     .main { padding: 16px 10vw 60px }
