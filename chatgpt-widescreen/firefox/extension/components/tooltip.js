@@ -43,6 +43,7 @@ window.tooltip = {
         rects.tooltipDiv = this.div.getBoundingClientRect()
         this.div.style.right = `${
             rects.chatbar.right -( rects.btn?.left + rects.btn?.right )/2 - rects.tooltipDiv.width/2
+                +( site == 'perplexity' && location.pathname != '/' ? ( innerWidth - rects.chatbar.right -28 ) : 0 )
                 +( site == 'chatgpt' ? -9 : site == 'perplexity' ? 15 : /* poe */ 3 )}px` // site offset
         this.div.style.bottom = ( // y-pos
             site == 'perplexity' ? (
