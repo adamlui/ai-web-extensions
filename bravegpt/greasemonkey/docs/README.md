@@ -5,7 +5,7 @@
 <div align="center">
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/logos/bravegpt/darkmode/logo730x155.png">
-    <img alt="BraveGPT" width=555 src="https://assets.bravegpt.com/images/logos/bravegpt/lightmode/logo730x155.png">
+    <img alt="BraveGPT" width=545 src="https://assets.bravegpt.com/images/logos/bravegpt/lightmode/logo730x155.png">
 </picture>
 <br><br>
 
