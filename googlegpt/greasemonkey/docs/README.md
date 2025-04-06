@@ -120,7 +120,7 @@
 
 3. Visit [**google.com**](https://google.com), type your search, engage bot!
 
-##### _*Violentmonkey & OrangeMonkey do not support Streaming Mode, so are not recommended_
+##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey, so are not recommended_
 
 <br><a href="https://github.com/sponsors/KudoAI"><img src="https://assets.googlegpt.io/images/banners/sponsor/$10/banner1660x260.png"></a>
 
@@ -440,7 +440,7 @@
 
 <h5>
     <i>1. If you are installing Tampermonkey or OrangeMonkey from the Chrome Web Store, you must enable Developer Mode (in chrome://extensions) for userscripts to function</i><br><br>
-    <i>2. Violentmonkey & OrangeMonkey do not support Streaming Mode</i>
+    <i>2. Streaming Mode not supported in Violentmonkey & OrangeMonkey</i>
 </h5>
 
 <br>
