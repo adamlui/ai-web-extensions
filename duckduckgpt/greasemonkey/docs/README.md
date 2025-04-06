@@ -339,7 +339,7 @@
 
 <h5>
     <i>1. If you are installing Tampermonkey or OrangeMonkey for a Chromium browser (Chrome, Edge, etc.) you must enable Developer Mode (in chrome://extensions) for userscripts to function</i><br><br>
-    <i>2. Violentmonkey & OrangeMonkey do not support Streaming Mode, so are not recommended</i>
+    <i>2. Violentmonkey & OrangeMonkey do not support Streaming Mode</i>
 </h5>
 
 <br>
