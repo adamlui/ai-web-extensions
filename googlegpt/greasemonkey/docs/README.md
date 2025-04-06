@@ -335,7 +335,36 @@
                              width=16 alt="[Waterfox for Android]"></a>
             </td>
         </tr>
-        <tr> <!-- ORION iOS -->
+        <tr> <!-- LEMUR ANDROID/iOS -->
+            <td> <!-- Browser -->
+                <a href="https://www.lemurbrowser.com"
+                   title="Lemur">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/lemur/icon16.png"
+                             width=16 alt="[Lemur]"></a>
+                Lemur (Android, iOS)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        Violentmonkey</a><sup>2</sup>
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        ScriptCat</a>
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://www.lemurbrowser.com"
+                   title="Lemur">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/lemur/icon16.png"
+                             width=16 alt="[Lemur]"></a>
+            </td>
+        </tr>
+        <tr> <!-- ORION iOS/iPADOS -->
             <td> <!-- Browser -->
                 <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
                    title="Orion">
