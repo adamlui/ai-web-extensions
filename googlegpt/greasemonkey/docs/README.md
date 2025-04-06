@@ -128,7 +128,7 @@
 
 ## 🌐 Compatibility 
 
-**GoogleGPT** is compatible w/ the following browsers (to contribute more tested working ones, simply create a [pull request](https://github.com/KudoAI/googlegpt/pulls) or [issue](https://github.com/KudoAI/googlegpt/issues/new)):
+**GoogleGPT** is compatible w/ the following browsers:
 
 <table>
     <thead><th>Browser</th><th>Userscript manager</th><th>Install browser</th></thead>
