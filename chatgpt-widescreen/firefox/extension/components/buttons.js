@@ -59,8 +59,8 @@ window.buttons = {
 
     async create() {
         const site = this.imports.env.site, hasTallChatbar = this.imports.env.ui.hasTallChatbar
-        if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.getRightBtn() // for rOffset + styles
-        const validBtnTypes = this.getTypes.valid()
+        if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.get.rightBtn() // for rOffset + styles
+        const validBtnTypes = this.get.types.valid()
         const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? 29 : -8.85
         const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4
                       : hasTallChatbar ? ( this.rightBtn.getBoundingClientRect().width +2 ) : -0.25
@@ -113,20 +113,22 @@ window.buttons = {
         })
     },
 
-    async getRightBtn() {
-        const btnSelectors = this.imports.sites[this.imports.env.site].selectors.btns
-        return await dom.get.loadedElem(`${btnSelectors.send}, ${ btnSelectors.voice || btnSelectors.dictation }`)
-    },
-
-    getTypes: {
-        valid() { // used in buttons.create() + buttons.insert() + this.visible()
-            return buttons.types.filter(type =>
-                !(type == 'fullWindow' && !buttons.imports.sites[buttons.imports.env.site].hasSidebar)
-             && !(type == 'widescreen' && chatgpt.canvasIsOpen()))
+    get: {
+        async rightBtn() {
+            const btnSelectors = buttons.imports.sites[buttons.imports.env.site].selectors.btns
+            return await dom.get.loadedElem(`${btnSelectors.send}, ${ btnSelectors.voice || btnSelectors.dictation }`)
         },
 
-        visible() { // used in chatbar.tweak() for horizontal math
-            return this.valid().filter(type => !(type == 'newChat' && config.ncbDisabled)) }
+        types: {
+            valid() { // used in buttons.<create|insert>()
+                return buttons.types.filter(type =>
+                    !(type == 'fullWindow' && !buttons.imports.sites[buttons.imports.env.site].hasSidebar)
+                 && !(type == 'widescreen' && chatgpt.canvasIsOpen()))
+            },
+
+            visible() { // used in chatbar.tweak() for horizontal math
+                return this.valid().filter(type => !(type == 'newChat' && config.ncbDisabled)) }
+        }
     },
 
     async insert() {
@@ -135,9 +137,9 @@ window.buttons = {
 
         // Init elems
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
-        const btnTypesToInsert = this.getTypes.valid()
+        const btnTypesToInsert = this.get.types.valid()
         const parentToInsertInto = (
-            this.imports.env.site == 'chatgpt' ? (await this.getRightBtn()).closest('[class*=bottom]') // right btn div
+            this.imports.env.site == 'chatgpt' ? (await this.get.rightBtn()).closest('[class*=bottom]') // right btn div
           : chatbarDiv.lastChild ) // parent of [Perplexity right btns or Poe Mic/Send btns]
         const elemToInsertBefore = parentToInsertInto[
             this.imports.env.site == 'chatgpt' ? 'lastChild' // right btn
