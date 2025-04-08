@@ -200,7 +200,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                         Userscripts</a>
             </td>
             <td> <!-- Install browser -->
-                <a href="https://www.apple.com/safari/" title="Safari">
+                <a href="https://apps.apple.com/app/safari/id1146562112" title="Safari">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/safari/icon16.png"
                          width=16 alt="[Safari]"></a>
             </td>
