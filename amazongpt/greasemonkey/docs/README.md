@@ -175,10 +175,10 @@
                          width=16 alt="[Edge]"></a>
                 <a href="https://www.opera.com" title="Opera">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/opera/icon16.png"
-                         width=16 alt="[Opera]"></a><sup>3</sup>
+                         width=16 alt="[Opera]"></a>
                 <a href="https://www.opera.com/gx" title="Opera GX">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/opera/gx/icon16.png"
-                         width=16 alt="[Opera GX]"></a><sup>3</sup>
+                         width=16 alt="[Opera GX]"></a>
                 <a href="https://brave.com" title="Brave">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/brave/icon16.png"
                          width=16 alt="[Brave]"></a>
@@ -453,8 +453,7 @@
 
 <h5>
     <i>1. If you are installing Tampermonkey or OrangeMonkey from the Chrome Web Store, you must enable Developer Mode in chrome://extensions for userscripts to function</i><br><br>
-    <i>2. Violentmonkey & OrangeMonkey do not support Streaming Mode</i><br><br>
-    <i>3. If you are installing a userscript manager for Opera or Opera GX, you must allow it access to search page results in opera://extensions</i>
+    <i>2. Violentmonkey & OrangeMonkey do not support Streaming Mode</i>
 </h5>
 
 <br>
