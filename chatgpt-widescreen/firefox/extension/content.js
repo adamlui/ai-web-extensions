@@ -182,9 +182,9 @@
                     env.site == 'chatgpt' ?
                         '.text-base { max-width: 100% !important }' // widen outer container
                     : env.site == 'perplexity' ?
-                       `.max-w-threadContentWidth { max-width: 100% } /* widen limited containers */
+                       `.max-w-threadWidth, .max-w-threadContentWidth { max-width: 100% } /* widen limited containers */
                         .col-span-8 { width: 151% } /* widen inner-left container */
-                        .col-span-4:has([data-icon=plus]) { display: none }` // hide right-bar
+                        .col-span-4:has([class*=sticky]) { display: none }` // hide right-bar
                     : env.site == 'poe' ?
                        `[class*=ChatMessagesView] { width: 100% !important } /* widen outer container */
                         [class^=Message] { max-width: 100% !important }` // widen speech bubbles
