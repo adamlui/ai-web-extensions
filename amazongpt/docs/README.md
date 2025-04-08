@@ -211,12 +211,12 @@
                    title="Install Stay for Safari">
                         Stay</a>
                 or
-                <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
-                   title="Install OrangeMonkey for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"></a>
-                <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
-                   title="Install OrangeMonkey for Chrome">
-                        OrangeMonkey</a><sup>1,2</sup>
+                <a href="https://apps.apple.com/app/userscripts/id1463298887"
+                   title="Install Userscripts for Safari">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+                <a href="https://apps.apple.com/app/userscripts/id1463298887"
+                   title="Install Userscripts for Safari">
+                        Userscripts</a>
             </td>
             <td> <!-- Install browser -->
                 <a href="https://apps.apple.com/app/safari/id1146562112" title="Safari">
