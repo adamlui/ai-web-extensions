@@ -126,6 +126,23 @@
 
 <img height=6px width="100%" src="https://assets.googlegpt.io/images/separators/gradient-aqua.png">
 
+## 🕶️ Proxy Mode
+
+Proxy API Mode (disabled by default) returns text responses using Google Gemma + GPT-4o, without the need for a chatgpt.com account.
+
+When disabled, a ChatGPT account is required to fetch responses. If OpenAI API is acting unreliable, enable Proxy Mode like this:
+
+<div align='center'>
+
+<img width=355 src="https://assets.googlegpt.io/images/screenshots/desktop/tampermonkey-proxy-mode-menu.png">
+<img src="https://assets.googlegpt.io/images/screenshots/desktop/proxy-mode-notification.png">
+
+</div>
+
+<br>
+
+<img height=6px width="100%" src="https://assets.googlegpt.io/images/separators/gradient-aqua.png">
+
 ## 🌐 Compatibility 
 
 **GoogleGPT** is compatible w/ the following browsers:
@@ -442,27 +459,6 @@
     <i>1. If you are installing Tampermonkey or OrangeMonkey from the Chrome Web Store, you must enable Developer Mode for userscripts to function</i><br><br>
     <i>2. Streaming Mode not supported in Violentmonkey & OrangeMonkey</i>
 </h5>
-
-<br>
-
-<img height=6px width="100%" src="https://assets.googlegpt.io/images/separators/gradient-aqua.png">
-
-## 🕶️ Proxy Mode
-
-Proxy API Mode (disabled by default) returns text responses using Google Gemma + GPT-4o, without the need for a chatgpt.com account.
-
-When disabled, a ChatGPT account is required to fetch responses. If OpenAI API is acting unreliable, enable Proxy Mode like this:
-
-<div align='center'>
-
-<img width=355 src="https://assets.googlegpt.io/images/screenshots/desktop/tampermonkey-proxy-mode-menu.png">
-<img src="https://assets.googlegpt.io/images/screenshots/desktop/proxy-mode-notification.png">
-
-</div>
-
-<br>
-
-<div align="center">
 
 <br>
 

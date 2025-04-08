@@ -117,6 +117,25 @@
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
+<!-- PROXY MODE -->
+
+## 🕵️ Proxy Mode
+
+Proxy API Mode (disabled by default) returns text responses using GPT-4o, without the need for a chatgpt.com account.
+
+When disabled, a ChatGPT account is required to fetch responses. If OpenAI API is acting unreliable, enable Proxy Mode like this:
+
+<div align='center'>
+
+![](https://assets.bravegpt.com/images/screenshots/desktop/proxy-mode/tm-menu.png)
+![](https://assets.bravegpt.com/images/screenshots/desktop/proxy-mode/notif.png)
+
+</div>
+
+<br>
+
+<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+
 <!-- COMPATIBILITY -->
 
 ## 🌐 Compatibility
@@ -445,25 +464,6 @@
 [Discuss](https://github.com/KudoAI/bravegpt/discussions) /
 [Get support](https://support.bravegpt.com) /
 [More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
-
-</div>
-
-<br>
-
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
-
-<!-- PROXY MODE -->
-
-## 🕵️ Proxy Mode
-
-Proxy API Mode (disabled by default) returns text responses using GPT-4o, without the need for a chatgpt.com account.
-
-When disabled, a ChatGPT account is required to fetch responses. If OpenAI API is acting unreliable, enable Proxy Mode like this:
-
-<div align='center'>
-
-![](https://assets.bravegpt.com/images/screenshots/desktop/proxy-mode/tm-menu.png)
-![](https://assets.bravegpt.com/images/screenshots/desktop/proxy-mode/notif.png)
 
 </div>
 

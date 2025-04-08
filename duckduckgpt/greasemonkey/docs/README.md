@@ -91,6 +91,21 @@
 
 <br>
 
+## 🕵️ Proxy Mode
+
+Proxy API Mode (disabled by default) returns text responses using GPT-4o, without the need for a chatgpt.com account.
+
+When disabled, a ChatGPT account is required to fetch responses. If OpenAI API is acting unreliable, enable Proxy Mode like this:
+
+<div align='center'>
+
+![](https://assets.ddgpt.com/images/screenshots/desktop/proxy-mode/tm-menu.png)
+![](https://assets.ddgpt.com/images/screenshots/desktop/proxy-mode/notif.png)
+
+</div>
+
+<br>
+
 ## 🌐 Compatibility 
 
 **DuckDuckGPT** is compatible w/ the following browsers:
@@ -407,21 +422,6 @@
     <i>1. If you are installing Tampermonkey or OrangeMonkey from the Chrome Web Store, you must enable Developer Mode for userscripts to function</i><br><br>
     <i>2. Streaming Mode not supported in Violentmonkey & OrangeMonkey</i>
 </h5>
-
-<br>
-
-## 🕵️ Proxy Mode
-
-Proxy API Mode (disabled by default) returns text responses using GPT-4o, without the need for a chatgpt.com account.
-
-When disabled, a ChatGPT account is required to fetch responses. If OpenAI API is acting unreliable, enable Proxy Mode like this:
-
-<div align='center'>
-
-![](https://assets.ddgpt.com/images/screenshots/desktop/proxy-mode/tm-menu.png)
-![](https://assets.ddgpt.com/images/screenshots/desktop/proxy-mode/notif.png)
-
-</div>
 
 <br>
 
