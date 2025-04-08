@@ -115,7 +115,7 @@ window.buttons = {
 
     async getRightBtn() {
         const btnSelectors = this.imports.sites[this.imports.env.site].selectors.btns
-        return await dom.get.loadedElem(`${btnSelectors.send}, ${btnSelectors.voice}`)
+        return await dom.get.loadedElem(`${btnSelectors.send}, ${ btnSelectors.voice || btnSelectors.dictation }`)
     },
 
     getTypes: {
