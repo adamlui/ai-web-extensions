@@ -205,7 +205,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                          width=16 alt="[Safari]"></a>
             </td>
         </tr>
-        <tr> <!-- FIREFOX/GECKO DESKTOP -->
+        <tr> <!-- FIREFOX/GECKO desktop -->
             <td> <!-- Browser -->
                 <a href="https://www.firefox.com" title="Firefox">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
@@ -245,7 +245,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                          width=16 alt="[LibreWolf]"></a>
             </td>
         </tr>
-        <tr> <!-- FIREFOX ANDROID -->
+        <tr> <!-- FIREFOX Android -->
             <td> <!-- Browser -->
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
@@ -282,7 +282,45 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 </details>
             </td>
         </tr>
-        <tr> <!-- QUETTA MOBILE -->
+        <tr> <!-- MISES mobile -->
+            <td> <!-- Browser -->
+                <a href="https://www.mises.site"
+                   title="Mises">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/mises/icon16.png"
+                             width=16 alt="[Install]"></a>
+                Mises (Android, iOS, iPadOS)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+                   title="Install Tampermonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+                   title="Install Tampermonkey for Chrome">
+                        Tampermonkey</a><sup>1</sup>
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        Violentmonkey</a><sup>2</sup>
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        ScriptCat</a>
+            </td>
+            <td> <!-- Install browser -->
+                <details>
+                    <summary>Show QR code</summary>
+                    <a href="https://www.mises.site/download"
+                       title="Mises">
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/mises/download-page/black.png"
+                                 width=125 alt="[Quetta]"></a>
+                </detail>
+            </td>
+        </tr>
+        <tr> <!-- QUETTA mobile -->
             <td> <!-- Browser -->
                 <a href="https://www.quetta.net"
                    title="Quetta">
@@ -314,7 +352,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 </detail>
             </td>
         </tr>
-        <tr> <!-- LEMUR ANDROID/iOS -->
+        <tr> <!-- LEMUR Android/iOS -->
             <td> <!-- Browser -->
                 <a href="https://www.lemurbrowser.com"
                    title="Lemur">
@@ -345,7 +383,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 </details>
             </td>
         </tr>
-        <tr> <!-- WATERFOX ANDROID -->
+        <tr> <!-- WATERFOX Android -->
             <td> <!-- Browser -->
                 <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release"
                    title="Waterfox for Android">
@@ -384,7 +422,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 </details>
             </td>
         </tr>
-        <tr> <!-- ORION iOS/iPADOS -->
+        <tr> <!-- ORION iOS/iPadOS -->
             <td> <!-- Browser -->
                 <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
                    title="Orion">
