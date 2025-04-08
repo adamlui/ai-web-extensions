@@ -293,9 +293,12 @@
                         ScriptCat</a>
             </td>
             <td> <!-- Install browser -->
-                <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
-                         width=16 alt="[Firefox for Android]"></a>
+                <details>
+                    <summary>Show QR code</summary>
+                    <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
+                        <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/firefox/google-play/black.png"
+                             width=125 alt="[Firefox for Android]"></a>
+                </details>
             </td>
         </tr>
         <tr> <!-- QUETTA MOBILE -->
@@ -321,10 +324,13 @@
                         ScriptCat</a>
             </td>
             <td> <!-- Install browser -->
-                <a href="https://www.quetta.net"
-                   title="Quetta">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/quetta/circled/icon16.png"
-                             width=16 alt="[Quetta]"></a>
+                <details>
+                    <summary>Show QR code</summary>
+                    <a href="https://www.quetta.net"
+                    title="Quetta">
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/quetta/homepage/black.png"
+                                 width=125 alt="[Quetta]"></a>
+                </detail>
             </td>
         </tr>
         <tr> <!-- LEMUR ANDROID/iOS -->
@@ -350,10 +356,12 @@
                         ScriptCat</a>
             </td>
             <td> <!-- Install browser -->
-                <a href="https://www.lemurbrowser.com"
-                   title="Lemur">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/lemur/icon16.png"
-                             width=16 alt="[Lemur]"></a>
+                <details>
+                    <summary>Show QR code</summary>
+                    <a href="https://www.lemurbrowser.com" title="Lemur">
+                        <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/lemur/homepage/black.png"
+                             width=125 alt="[Lemur]"></a>
+                </details>
             </td>
         </tr>
         <tr> <!-- WATERFOX ANDROID -->
@@ -386,10 +394,13 @@
                         ScriptCat</a>
             </td>
             <td> <!-- Install browser -->
-                <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release"
-                   title="Waterfox for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
-                             width=16 alt="[Waterfox for Android]"></a>
+                <details>
+                    <summary>Show QR code</summary>
+                    <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release"
+                       title="Waterfox for Android">
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/waterfox/google-play/black.png"
+                                 width=125 alt="[Waterfox for Android]"></a>
+                </details>
             </td>
         </tr>
         <tr> <!-- ORION iOS/iPADOS -->
@@ -428,10 +439,13 @@
                         OrangeMonkey</a><sup>1,2</sup>
             </td>
             <td> <!-- Install browser -->
-                <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
-                   title="Orion">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/orion/icon16.png"
-                             width=16 alt="[Orion]"></a>
+                <details>
+                    <summary>Show QR code</summary>
+                    <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
+                       title="Orion">
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/orion/apple-app-store/black.png"
+                                 width=125 alt="[Orion]"></a>
+                </details>
             </td>
         </tr>
     </tbody>
