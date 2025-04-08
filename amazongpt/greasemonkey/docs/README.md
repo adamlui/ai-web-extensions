@@ -201,7 +201,7 @@
                 <a href="https://www.apple.com/safari/" title="Safari">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/safari/icon16.png"
                          width=16 alt="[Install]"></a>
-                Safari (macOS, iOS, iPadOS)
+                Safari (macOS, iOS, iPadOS, visionOS)
             </td>
             <td> <!-- Userscript manager -->
                 <a href="https://apps.apple.com/app/stay-for-safari/id1591620171"
