@@ -115,12 +115,6 @@
 
 ##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey, so are not recommended_
 
-<div align="center">
-
-![](https://assets.bravegpt.com/images/screenshots/desktop/lion-vs-gorilla-query.gif)
-
-</div>
-
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
 <!-- COMPATIBILITY -->
