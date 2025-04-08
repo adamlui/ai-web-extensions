@@ -193,10 +193,10 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                          width=16 alt="[Edge]"></a>
                 <a href="https://www.opera.com" title="Opera">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/opera/icon16.png"
-                         width=16 alt="[Opera]"></a>
+                         width=16 alt="[Opera]"></a><sup>3</sup>
                 <a href="https://www.opera.com/gx" title="Opera GX">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/opera/gx/icon16.png"
-                         width=16 alt="[Opera GX]"></a>
+                         width=16 alt="[Opera GX]"></a><sup>3</sup>
                 <a href="https://brave.com" title="Brave">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/brave/icon16.png"
                          width=16 alt="[Brave]"></a>
@@ -471,7 +471,8 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <h5>
     <i>1. If you are installing Tampermonkey or OrangeMonkey from the Chrome Web Store, you must enable Developer Mode for userscripts to function</i><br><br>
-    <i>2. Streaming Mode not supported in Violentmonkey & OrangeMonkey</i>
+    <i>2. Violentmonkey & OrangeMonkey do not support Streaming Mode</i><br><br>
+    <i>3. If you are installing a userscript manager for Opera or Opera GX, you must allow it access to search page results in opera://extensions</i>
 </h5>
 
 <br>
