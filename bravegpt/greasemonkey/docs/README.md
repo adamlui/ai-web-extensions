@@ -465,7 +465,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 </table>
 
 <h5>
-    <i>1. If you are installing Tampermonkey or OrangeMonkey from the Chrome Web Store, you must enable Developer Mode for userscripts to function</i><br><br>
+    <i>1. If you are installing Tampermonkey or OrangeMonkey from the Chrome Web Store, you must enable Developer Mode in chrome://extensions for userscripts to function</i><br><br>
     <i>2. Violentmonkey & OrangeMonkey do not support Streaming Mode</i><br><br>
     <i>3. If you are installing a userscript manager for Opera or Opera GX, you must allow it access to search page results in opera://extensions</i>
 </h5>
