@@ -137,7 +137,7 @@
             <td> <!-- Browser -->
                 <a href="https://www.chrome.com" title="Chrome">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"
-                             width=16 alt="[Chrome]"></a>
+                             width=16 alt="[Install]"></a>
                 Chrome or Chromium-based browsers
             </td>
             <td> <!-- Userscript manager -->
@@ -201,7 +201,7 @@
             <td> <!-- Browser -->
                 <a href="https://www.apple.com/safari/" title="Safari">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/safari/icon16.png"
-                         width=16 alt="[Safari]"></a>
+                         width=16 alt="[Install]"></a>
                 Safari (macOS, iOS, iPadOS)
             </td>
             <td> <!-- Userscript manager -->
@@ -229,7 +229,7 @@
             <td> <!-- Browser -->
                 <a href="https://www.firefox.com" title="Firefox">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
-                             width=16 alt="[Firefox]"></a>
+                             width=16 alt="[Install]"></a>
                 Firefox or Gecko-based browsers (Windows, macOS, Linux)
             </td>
             <td> <!-- Userscript manager -->
@@ -269,7 +269,7 @@
             <td> <!-- Browser -->
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
-                             width=16 alt="[Firefox]"></a>
+                             width=16 alt="[Install]"></a>
                 Firefox (Android)
             </td>
             <td> <!-- Userscript manager -->
@@ -304,7 +304,7 @@
                 <a href="https://www.quetta.net"
                    title="Quetta">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/quetta/circled/icon16.png"
-                             width=16 alt="[Quetta]"></a>
+                             width=16 alt="[Install]"></a>
                 Quetta (Android, iOS, iPadOS)
             </td>
             <td> <!-- Userscript manager -->
@@ -333,7 +333,7 @@
                 <a href="https://www.lemurbrowser.com"
                    title="Lemur">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/lemur/icon16.png"
-                             width=16 alt="[Lemur]"></a>
+                             width=16 alt="[Install]"></a>
                 Lemur (Android, iOS)
             </td>
             <td> <!-- Userscript manager -->
@@ -362,7 +362,7 @@
                 <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release"
                    title="Waterfox for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
-                             width=16 alt="[Waterfox]"></a>
+                             width=16 alt="[Install]"></a>
                 Waterfox (Android)
             </td>
             <td> <!-- Userscript manager -->
@@ -398,7 +398,7 @@
                 <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
                    title="Orion">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/orion/icon16.png"
-                             width=16 alt="[Orion]"></a>
+                             width=16 alt="[Install]"></a>
                 Orion (iOS, iPadOS)
             </td>
             <td> <!-- Userscript manager -->
@@ -439,7 +439,7 @@
 </table>
 
 <h5>
-    <i>1. If you are installing Tampermonkey or OrangeMonkey from the Chrome Web Store, you must enable Developer Mode (in chrome://extensions) for userscripts to function</i><br><br>
+    <i>1. If you are installing Tampermonkey or OrangeMonkey from the Chrome Web Store, you must enable Developer Mode for userscripts to function</i><br><br>
     <i>2. Streaming Mode not supported in Violentmonkey & OrangeMonkey</i>
 </h5>
 
