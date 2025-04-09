@@ -245,6 +245,22 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                          width=16 alt="[LibreWolf]"></a>
             </td>
         </tr>
+        <tr> <!-- QQ BROWSER desktop -->
+            <td> <!-- Browser -->
+                <a href="https://browser.qq.com" title="QQ Browser">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
+                             width=16 alt="[Install]"></a>
+                QQ Browser (Windows, macOS)
+            </td>
+            <td> <!-- Userscript manager -->
+                Not required <i>(Tampermonkey & Violentmonkey pre-installed)</i>
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://browser.qq.com" title="QQ Browser">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
+                         width=16 alt="[QQ Browser]"></a>
+            </td>
+        </tr>
         <tr> <!-- FIREFOX Android -->
             <td> <!-- Browser -->
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
