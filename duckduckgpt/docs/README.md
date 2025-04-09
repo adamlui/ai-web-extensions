@@ -297,7 +297,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 Violentmonkey
                 <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png">
                 or ScriptCat
-                <br><i>(install from ≡ > Extensions)</i>
+                <i>(install from ≡ > Extensions)</i>
             </td>
             <td> <!-- Install browser -->
                 <details>
