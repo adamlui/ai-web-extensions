@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.9
+// @version                2025.4.9.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -49,7 +49,7 @@
 // @match                  *://www.amazon.sa/*
 // @match                  *://www.amazon.se/*
 // @match                  *://www.amazon.sg/*
-// @exclude                *://*.amazon.*/ap/signin*
+// @exclude                *://*.amazon.*/ap/*
 // @include                https://auth0.openai.com
 // @connect                am.aifree.site
 // @connect                api.binjie.fun
@@ -3423,8 +3423,6 @@
         return log.debug('Exited from Captcha page')
     else if (document.querySelector('a > img[src*="/error"]'))
         return log.debug('Exited from 404 page')
-    else if (location.pathname.startsWith('/ap/'))
-        return log.debug('Exited from account-related page')
 
     // Create/ID/classify/listenerize/stylize APP container
     const appDiv = dom.create.elem('div', { id: app.slug, class: 'anchored fade-in' })
