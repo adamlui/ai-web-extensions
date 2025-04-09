@@ -148,26 +148,28 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.8
+// @version               2025.4.9
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@df624b0/assets/images/icons/bravegpt/icon64.png
+// @compatible            brave
 // @compatible            chrome
-// @compatible            firefox
 // @compatible            edge
-// @compatible            safari
+// @compatible            edgecanary
+// @compatible            firefox
+// @compatible            ghost
+// @compatible            lemur
+// @compatible            librewolf
+// @compatible            mises
 // @compatible            opera after allowing userscript manager access to search page results in opera://extensions
 // @compatible            operagx after allowing userscript manager access to search page results in opera://extensions
-// @compatible            brave
+// @compatible            qq
+// @compatible            quetta
+// @compatible            safari
+// @compatible            orion
 // @compatible            vivaldi
 // @compatible            waterfox
-// @compatible            librewolf
-// @compatible            ghost
-// @compatible            qq
 // @compatible            whale
-// @compatible            quetta
-// @compatible            lemur
-// @compatible            orion
 // @match                 *://search.brave.com/search*
 // @include               https://auth0.openai.com
 // @connect               am.aifree.site
