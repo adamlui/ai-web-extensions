@@ -345,34 +345,6 @@
                 </detail>
             </td>
         </tr>
-        <tr> <!-- EDGE CANARY Android -->
-            <td> <!-- Browser -->
-                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
-                   title="Edge Canary for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                             width=16 alt="[Install]"></a>
-                Edge Canary (Android)
-            </td>
-            <td> <!-- Userscript manager -->
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png">
-                    Tampermonkey
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png">
-                    Violentmonkey
-                or
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png">
-                    ScriptCat
-                <i>(install from ≡ > Extensions)</i>
-            </td>
-            <td> <!-- Install browser -->
-                <details>
-                    <summary>Show QR code</summary>
-                    <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
-                       title="Edge Canary">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/canary/google-play/black-with-icon.png"
-                                 width=125 alt="[Edge Canary]"></a>
-                </detail>
-            </td>
-        </tr>
         <tr> <!-- MISES mobile -->
             <td> <!-- Browser -->
                 <a href="https://www.mises.site"
@@ -412,36 +384,31 @@
                 </detail>
             </td>
         </tr>
-        <tr> <!-- QUETTA mobile -->
+        <tr> <!-- EDGE CANARY Android -->
             <td> <!-- Browser -->
-                <a href="https://www.quetta.net"
-                   title="Quetta">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/quetta/circled/icon16.png"
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
+                   title="Edge Canary for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
                              width=16 alt="[Install]"></a>
-                Quetta (Android, iOS, iPadOS)
+                Edge Canary (Android)
             </td>
             <td> <!-- Userscript manager -->
-                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
-                   title="Install Violentmonkey for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
-                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
-                   title="Install Violentmonkey for Chrome">
-                        Violentmonkey</a><sup>2</sup>
-                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
-                   title="Install ScriptCat for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png">
+                    Tampermonkey
+                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png">
+                    Violentmonkey
                 or
-                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
-                   title="Install ScriptCat for Chrome">
-                        ScriptCat</a>
+                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png">
+                    ScriptCat
+                <i>(install from ≡ > Extensions)</i>
             </td>
             <td> <!-- Install browser -->
                 <details>
                     <summary>Show QR code</summary>
-                    <a href="https://www.quetta.net"
-                    title="Quetta">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/quetta/homepage/black.png"
-                                 width=125 alt="[Quetta]"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
+                       title="Edge Canary">
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/canary/google-play/black-with-icon.png"
+                                 width=125 alt="[Edge Canary]"></a>
                 </detail>
             </td>
         </tr>
@@ -475,6 +442,39 @@
                         <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/lemur/homepage/black.png"
                              width=125 alt="[Lemur]"></a>
                 </details>
+            </td>
+        </tr>
+        <tr> <!-- QUETTA mobile -->
+            <td> <!-- Browser -->
+                <a href="https://www.quetta.net"
+                   title="Quetta">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/quetta/circled/icon16.png"
+                             width=16 alt="[Install]"></a>
+                Quetta (Android, iOS, iPadOS)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+                   title="Install Violentmonkey for Chrome">
+                        Violentmonkey</a><sup>2</sup>
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                or
+                <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+                   title="Install ScriptCat for Chrome">
+                        ScriptCat</a>
+            </td>
+            <td> <!-- Install browser -->
+                <details>
+                    <summary>Show QR code</summary>
+                    <a href="https://www.quetta.net"
+                    title="Quetta">
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/quetta/homepage/black.png"
+                                 width=125 alt="[Quetta]"></a>
+                </detail>
             </td>
         </tr>
         <tr> <!-- WATERFOX Android -->
