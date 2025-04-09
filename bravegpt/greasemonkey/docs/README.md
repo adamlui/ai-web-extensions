@@ -420,7 +420,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                     <summary>Show QR code</summary>
                     <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
                        title="Edge Canary">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/canary/google-play/black-with-icon.png"
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/canary/google-play/with-icon/black.png"
                                  width=125 alt="[Edge Canary]"></a>
                 </detail>
             </td>
