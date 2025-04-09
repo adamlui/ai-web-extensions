@@ -330,7 +330,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <details>
                     <summary>Show QR code</summary>
                     <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
-                        <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/firefox/google-play/black.png"
+                        <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/firefox/google-play/with-icon/amber.png"
                              width=125 alt="[Firefox for Android]"></a>
                 </details>
             </td>
@@ -358,7 +358,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                     <summary>Show QR code</summary>
                     <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
                        title="Edge">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/google-play/black.png"
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/google-play/with-icon/blue.png"
                                  width=125 alt="[Edge]"></a>
                 </detail>
             </td>
@@ -397,7 +397,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                     <summary>Show QR code</summary>
                     <a href="https://www.mises.site/download"
                        title="Mises">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/mises/download-page/black.png"
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/mises/download-page/with-icon/purple.png"
                                  width=125 alt="[Quetta]"></a>
                 </detail>
             </td>
@@ -425,7 +425,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                     <summary>Show QR code</summary>
                     <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
                        title="Edge Canary">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/canary/google-play/with-icon/black.png"
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/canary/google-play/with-icon/amber.png"
                                  width=125 alt="[Edge Canary]"></a>
                 </detail>
             </td>
@@ -457,7 +457,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <details>
                     <summary>Show QR code</summary>
                     <a href="https://www.lemurbrowser.com" title="Lemur">
-                        <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/lemur/homepage/black.png"
+                        <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/lemur/homepage/with-icon/blue.png"
                              width=125 alt="[Lemur]"></a>
                 </details>
             </td>
@@ -490,7 +490,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                     <summary>Show QR code</summary>
                     <a href="https://www.quetta.net"
                     title="Quetta">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/quetta/homepage/black.png"
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/quetta/homepage/with-icon/red.png"
                                  width=125 alt="[Quetta]"></a>
                 </detail>
             </td>
@@ -529,7 +529,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                     <summary>Show QR code</summary>
                     <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release"
                        title="Waterfox for Android">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/waterfox/google-play/black.png"
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/waterfox/google-play/with-icon/blue.png"
                                  width=125 alt="[Waterfox for Android]"></a>
                 </details>
             </td>
@@ -574,7 +574,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                     <summary>Show QR code</summary>
                     <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
                        title="Orion">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/orion/apple-app-store/black.png"
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/orion/apple-app-store/with-icon/purple.png"
                                  width=125 alt="[Orion]"></a>
                 </details>
             </td>
