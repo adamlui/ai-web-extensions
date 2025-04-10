@@ -420,7 +420,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <details>
                     <summary>Show QR code</summary>
                     <a href="https://www.lemurbrowser.com" title="Lemur">
-                        <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/lemur/homepage/with-icon/blue.png"
+                        <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/lemur/homepage/with-icon/teal.png"
                              width=125 alt="[Lemur]"></a>
                 </details>
             </td>
