@@ -561,6 +561,84 @@
                 </details>
             </td>
         </tr>
+        <tr> <!-- FENNEC Android -->
+            <td> <!-- Browser -->
+                <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/"
+                   title="Fennec for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/fennec/icon16.png"
+                             width=16 alt="[Install]"></a>
+                Fennec (Android)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
+                   title="Install Tampermonkey for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
+                   title="Install Tampermonkey for Firefox">
+                        Tampermonkey</a>
+                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
+                   title="Install Violentmonkey for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
+                   title="Install Violentmonkey for Firefox">
+                        Violentmonkey</a><sup>2</sup>
+                or
+                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
+                   title="Install ScriptCat for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
+                   title="Install ScriptCat for Firefox">
+                        ScriptCat</a>
+            </td>
+            <td> <!-- Install browser -->
+                <details>
+                    <summary>Show QR code</summary>
+                    <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/"
+                       title="Fennec for Android">
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/fennec/f-droid/with-icon/amber.png"
+                                 width=125 alt="[Fennec for Android]"></a>
+                </details>
+            </td>
+        </tr>
+        <tr> <!-- ICERAVEN Android -->
+            <td> <!-- Browser -->
+                <a href="https://github.com/fork-maintainers/iceraven-browser/releases"
+                   title="Iceraven for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/iceraven/icon16.png"
+                             width=16 alt="[Install]"></a>
+                Iceraven (Android)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
+                   title="Install Tampermonkey for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
+                   title="Install Tampermonkey for Firefox">
+                        Tampermonkey</a>
+                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
+                   title="Install Violentmonkey for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
+                   title="Install Violentmonkey for Firefox">
+                        Violentmonkey</a><sup>2</sup>
+                or
+                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
+                   title="Install ScriptCat for Firefox">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
+                   title="Install ScriptCat for Firefox">
+                        ScriptCat</a>
+            </td>
+            <td> <!-- Install browser -->
+                <details>
+                    <summary>Show QR code</summary>
+                    <a href="https://github.com/fork-maintainers/iceraven-browser/releases"
+                       title="Iceraven for Android">
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/iceraven/github-releases/with-icon/blue.png"
+                                 width=125 alt="[Iceraven for Android]"></a>
+                </details>
+            </td>
+        </tr>
     </tbody>
 </table>
 
