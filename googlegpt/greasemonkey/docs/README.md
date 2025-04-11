@@ -44,7 +44,7 @@
 
 <h3>🤖 Bring the magic of AI to Google Search (powered by Google Gemma + GPT-4o!)</h3>
 
-<a href="https://gm.googlegpt.io"><img height=50 alt="[Install this script]" src="https://assets.googlegpt.io/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://assets.googlegpt.io/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://gm.googlegpt.io"><img height=50 alt="[Install this script]" src="https://assets.googlegpt.io/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://assets.googlegpt.io/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/googlegpt/discussions) / 
 [Get support](https://support.googlegpt.io) / 
@@ -613,7 +613,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <br>
 
-<a href="https://gm.googlegpt.io"><img height=48 alt="[Install this script]" src="https://assets.googlegpt.io/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=48 alt="[How to install]" title="How to install" src="https://assets.googlegpt.io/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://gm.googlegpt.io"><img height=48 alt="[Install GoogleGPT]" src="https://assets.googlegpt.io/images/buttons/greasy-fork/install/googlegpt.svg"></a><a href="#-installation"><img height=48 alt="[How to install]" title="How to install" src="https://assets.googlegpt.io/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/googlegpt/discussions) /
 [Get support](https://support.googlegpt.io) / 

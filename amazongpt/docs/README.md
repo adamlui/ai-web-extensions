@@ -41,7 +41,7 @@
 
 <h3>🤖 Bring the magic of AI to Amazon Shopping 🛒</h3>
 
-<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img height=50 alt="[Install this script]" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/install-button.svg?v=dc250b9"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/help-button.svg?v=dc250b9"></a>
+<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img height=50 alt="[Install this script]" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/amazongpt/discussions) /
 [Get support](https://amazongpt.kudoai.com/issues) /
@@ -596,7 +596,7 @@
 
 <div align="center">
 
-<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img height=50 alt="[Install this script]" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/install-button.svg?v=dc250b9"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/help-button.svg?v=dc250b9"></a>
+<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img height=50 alt="[Install AmazonGPT]" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/install/amazongpt.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/amazongpt/discussions) /
 [Get support](https://amazongpt.kudoai.com/issues) /
