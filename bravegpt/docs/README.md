@@ -285,18 +285,13 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                             width=16 alt="[Edge Beta]"></a>
             </td>
         </tr>
-        <tr> <!-- EDGE/CANARY Android -->
+        <tr> <!-- EDGE Android -->
             <td> <!-- Browser -->
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
                    title="Edge for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
                              width=16 alt="[Install]"></a>
-                Edge or
-                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
-                   title="Edge Canary for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                             width=16 alt="[Install]"></a>
-                Edge Canary (Android)
+                Edge or dev builds (Android)
             </td>
             <td> <!-- Userscript manager -->
                 <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png">
@@ -317,6 +312,14 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                    title="Edge Canary for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
                             width=16 alt="[Edge Canary]"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.dev"
+                   title="Edge Dev">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
+                            width=16 alt="[Edge Dev]"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.beta"
+                   title="Edge Beta">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
+                            width=16 alt="[Edge Beta]"></a>
             </td>
         </tr>
         <tr> <!-- FIREFOX/GECKO desktop -->
@@ -400,6 +403,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://github.com/fork-maintainers/iceraven-browser/releases" title="Iceraven for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/iceraven/icon16.png"
                          width=16 alt="[Iceraven]"></a>
+                <a href="https://gitlab.com/ironfox-oss/IronFox/-/releases" title="IronFox for Android">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/ironfox/icon16.png"
+                         width=16 alt="[IronFox]"></a>
             </td>
         </tr>
         <tr> <!-- QQ BROWSER desktop -->
