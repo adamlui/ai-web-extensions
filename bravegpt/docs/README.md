@@ -339,30 +339,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                    title="Edge for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
                              width=16 alt="[Install]"></a>
-                Edge (Android)
-            </td>
-            <td> <!-- Userscript manager -->
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png">
-                    Tampermonkey
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png">
-                    Violentmonkey
-                or
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png">
-                    ScriptCat
-                <i>(install from ≡ > Extensions)</i>
-            </td>
-            <td> <!-- Install browser -->
-                <details>
-                    <summary>Show QR code</summary>
-                    <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
-                       title="Edge on Google Play">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/google-play/with-icon/blue.png"
-                                 width=125 alt="[Edge]"></a>
-                </detail>
-            </td>
-        </tr>
-        <tr> <!-- EDGE CANARY Android -->
-            <td> <!-- Browser -->
+                Edge or
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
                    title="Edge Canary for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
@@ -380,13 +357,14 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <i>(install from ≡ > Extensions)</i>
             </td>
             <td> <!-- Install browser -->
-                <details>
-                    <summary>Show QR code</summary>
-                    <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
-                       title="Edge Canary on Google Play">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/canary/google-play/with-icon/amber.png"
-                                 width=125 alt="[Edge Canary]"></a>
-                </detail>
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
+                   title="Edge for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
+                            width=16 alt="[Edge]"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
+                   title="Edge Canary for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
+                            width=16 alt="[Edge Canary]"></a>
             </td>
         </tr>
         <tr> <!-- MISES mobile -->
