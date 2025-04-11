@@ -118,7 +118,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://www.chrome.com" title="Chrome">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"
                              width=16 alt="[Install]"></a>
-                Chrome or Chromium-based browsers
+                Chrome or Chromium-based browsers (Windows, macOS, Linux)
             </td>
             <td> <!-- Userscript manager -->
                 <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
@@ -169,9 +169,6 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://ghostbrowser.com" title="Ghost Browser">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/ghost/icon16.png"
                          width=16 alt="[Ghost Browser]"></a>
-                <a href="https://browser.qq.com" title="QQ Browser">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
-                         width=16 alt="[QQ Browser]"></a>
                 <a href="https://whale.naver.com" title="Whale">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/whale/tiled/icon16.png"
                          width=16 alt="[Whale]"></a>
@@ -256,9 +253,6 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 Not required <i>(Tampermonkey & Violentmonkey pre-installed)</i>
             </td>
             <td> <!-- Install browser -->
-                <a href="https://browser.qq.com" title="QQ Browser">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
-                         width=16 alt="[QQ Browser]"></a>
             </td>
         </tr>
         <tr> <!-- FIREFOX Android -->
