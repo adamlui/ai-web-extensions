@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.11.4
+// @version               2025.4.11.5
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -2825,7 +2825,7 @@
 
                 // Yes reply, submit it + transform to loading UI
                 } else {
-                    msgChain.push({ role: 'user', content: chatTextarea.value })
+                    msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
                     get.reply(msgChain)
                     show.reply.src = null ; show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
@@ -3593,7 +3593,7 @@
                         else { // text was shown
                             show.codeCopyBtns()
                             if (callerAPI == caller.sender) msgChain.push({
-                                role: 'assistant', content: textToShow, api: callerAPI,
+                                time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
                                 regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
                             })
                             api.clearTimedOut(caller.triedAPIs)
@@ -3670,7 +3670,7 @@
                                 if (caller == get.reply) {
                                     show.reply(textToShow, footerContent, { apiUsed: callerAPI }) ; show.codeCopyBtns()
                                     msgChain.push({
-                                        role: 'assistant', content: textToShow, api: callerAPI,
+                                        time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
                                         regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
                                     })
                                 } else resolve(arrayify(textToShow))
@@ -4459,7 +4459,9 @@
             ].filter(Boolean).length == (config.prefixEnabled + config.suffixEnabled) // validate both Manual-Gen modes
     ) { // auto-gen reply
         msgChain.push({
-            role: 'user', content: config.autoSummarize ? prompts.create('summarizeResults') : searchQuery })
+            time: Date.now(), role: 'user',
+            content: config.autoSummarize ? prompts.create('summarizeResults') : searchQuery
+        })
         get.reply(msgChain)
     } else { // show Standby mode
         show.reply('standby', footerContent)
