@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.10.4
+// @version                2025.4.11
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -60,6 +60,10 @@
 // @match                  *://www.amazon.sa/*
 // @match                  *://www.amazon.se/*
 // @match                  *://www.amazon.sg/*
+// @match                  *://github.com/KudoAI/amazongpt*
+// @match                  *://github.com/kudoai/amazongpt*
+// @match                  *://github.com/adamlui/ai-web-extensions/*/amazongpt*
+// @match                  *://github.com/adamlui/userscripts/*/amazongpt*
 // @exclude                *://*.amazon.*/ap/*
 // @include                https://auth0.openai.com
 // @connect                am.aifree.site
@@ -3441,6 +3445,13 @@
     app.styles = dom.create.style() ; update.appStyle() ; document.head.append(app.styles);
     ['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
+
+    // Hide GF alert on GitHub if found
+    if (location.host == 'github.com') {
+        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
+            .find(alert => alert.textContent.includes('Greasy Fork'))
+        return !gfAlert ? undefined : gfAlert.style.display = 'none'
+    }
 
     // APPEND AMAZONGPT to Amazon
     document.body.append(appDiv)

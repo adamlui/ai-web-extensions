@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.10.4
+// @version                2025.4.11
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -182,6 +182,10 @@
 // @compatible             waterfox
 // @compatible             whale
 // @match                  *://duckduckgo.com/?*
+// @match                  *://github.com/KudoAI/duckduckgpt*
+// @match                  *://github.com/kudoai/duckduckgpt*
+// @match                  *://github.com/adamlui/ai-web-extensions/*/duckduckgpt*
+// @match                  *://github.com/adamlui/userscripts/*/duckduckgpt*
 // @include                https://auth0.openai.com
 // @connect                am.aifree.site
 // @connect                api.binjie.fun
@@ -4394,6 +4398,13 @@
     app.styles = dom.create.style() ; update.appStyle() ; document.head.append(app.styles);
     ['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
+
+    // Hide GF alert on GitHub if found
+    if (location.host == 'github.com') {
+        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
+            .find(alert => alert.textContent.includes('Greasy Fork'))
+        return !gfAlert ? undefined : gfAlert.style.display = 'none'
+    }
 
     // Create/classify/fill feedback FOOTER
     const appFooter = dom.create.elem('footer', { class: 'fade-in anchored-hidden' })

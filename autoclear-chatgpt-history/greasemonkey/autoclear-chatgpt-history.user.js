@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.2
+// @version             2025.4.11
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon64.png
@@ -239,6 +239,9 @@
 // @compatible          ghost
 // @compatible          qq
 // @match               *://chatgpt.com/*
+// @match               *://github.com/adamlui/autoclear-chatgpt-history*
+// @match               *://github.com/adamlui/ai-web-extensions/*/autoclear-chatgpt-history*
+// @match               *://github.com/adamlui/userscripts/*/autoclear-chatgpt-history*
 // @connect             cdn.jsdelivr.net
 // @connect             autoclearchatgpt.com
 // @connect             raw.githubusercontent.com
@@ -266,6 +269,13 @@
 //  © 2023–2025 KudoAI & contributors under the MIT license.
 
 (async () => {
+
+    // Hide GF alert on GitHub if found
+    if (location.host == 'github.com') {
+        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
+            .find(alert => alert.textContent.includes('Greasy Fork'))
+        return !gfAlert ? undefined : gfAlert.style.display = 'none'
+    }
 
     // Init ENV context
     const env = {

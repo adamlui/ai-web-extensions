@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.6
+// @version             2025.4.11
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8df6f33/assets/images/icons/infinity-symbol/circled/with-robot/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8df6f33/assets/images/icons/infinity-symbol/circled/with-robot/icon64.png
@@ -215,6 +215,9 @@
 // @compatible          qq
 // @compatible          whale
 // @match               *://chatgpt.com/*
+// @match               *://github.com/adamlui/chatgpt-infinity*
+// @match               *://github.com/adamlui/ai-web-extensions/*/chatgpt-infinity*
+// @match               *://github.com/adamlui/userscripts/*/chatgpt-infinity*
 // @connect             cdn.jsdelivr.net
 // @connect             chatgptinfinity.com
 // @connect             raw.githubusercontent.com
@@ -246,6 +249,13 @@
 //  © 2023–2025 KudoAI & contributors under the MIT license.
 
 (async () => {
+
+    // Hide GF alert on GitHub if found
+    if (location.host == 'github.com') {
+        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
+            .find(alert => alert.textContent.includes('Greasy Fork'))
+        return !gfAlert ? undefined : gfAlert.style.display = 'none'
+    }
 
     // Init ENV context
     const env = {

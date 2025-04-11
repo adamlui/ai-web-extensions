@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.7.3
+// @version             2025.4.11
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -251,6 +251,9 @@
 // @match               *://chatgpt.com/*
 // @match               *://*.perplexity.ai/*
 // @match               *://poe.com/*
+// @match               *://github.com/adamlui/chatgpt-widescreen*
+// @match               *://github.com/adamlui/ai-web-extensions/*/chatgpt-widescreen*
+// @match               *://github.com/adamlui/userscripts/*/chatgpt-widescreen*
 // @connect             cdn.jsdelivr.net
 // @connect             chatgptwidescreen.com
 // @connect             raw.githubusercontent.com
@@ -286,6 +289,13 @@
 //  © 2023–2025 KudoAI & contributors under the MIT license.
 
 (async () => {
+
+    // Hide GF alert on GitHub if found
+    if (location.host == 'github.com') {
+        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
+            .find(alert => alert.textContent.includes('Greasy Fork'))
+        return !gfAlert ? undefined : gfAlert.style.display = 'none'
+    }
 
     // Init ENV context
     const env = {

@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.10.4
+// @version                  2025.4.11
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -372,6 +372,10 @@
 // @match                    *://*.google.co.zm/search*
 // @match                    *://*.google.co.zw/search*
 // @match                    *://*.google.cat/search*
+// @match                    *://github.com/KudoAI/googlegpt*
+// @match                    *://github.com/kudoai/googlegpt*
+// @match                    *://github.com/adamlui/ai-web-extensions/*/googlegpt*
+// @match                    *://github.com/adamlui/userscripts/*/googlegpt*
 // @include                  https://auth0.openai.com
 // @connect                  am.aifree.site
 // @connect                  api.binjie.fun
@@ -4595,6 +4599,13 @@
     app.styles = dom.create.style() ; update.appStyle() ; document.head.append(app.styles);
     ['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
+
+    // Hide GF alert on GitHub if found
+    if (location.host == 'github.com') {
+        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
+            .find(alert => alert.textContent.includes('Greasy Fork'))
+        return !gfAlert ? undefined : gfAlert.style.display = 'none'
+    }
 
     // APPEND to Google
     const centerCol = document.querySelector('#center_col') || document.querySelector('#main')

@@ -219,11 +219,14 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.6
+// @version             2025.4.11
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@a8c9387/assets/images/icons/continue-symbol/black/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@a8c9387/assets/images/icons/continue-symbol/black/icon64.png
 // @match               *://chatgpt.com/*
+// @match               *://github.com/adamlui/chatgpt-auto-continue*
+// @match               *://github.com/adamlui/ai-web-extensions/*/chatgpt-auto-continue*
+// @match               *://github.com/adamlui/userscripts/*/chatgpt-auto-continue*
 // @connect             cdn.jsdelivr.net
 // @connect             chatgptautocontinue.com
 // @connect             raw.githubusercontent.com
@@ -254,6 +257,13 @@
 //  © 2023–2025 KudoAI & contributors under the MIT license.
 
 (async () => {
+
+    // Hide GF alert on GitHub if found
+    if (location.host == 'github.com') {
+        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
+            .find(alert => alert.textContent.includes('Greasy Fork'))
+        return !gfAlert ? undefined : gfAlert.style.display = 'none'
+    }
 
     // Init ENV context
     const env = {
