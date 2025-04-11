@@ -279,22 +279,6 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                          width=16 alt="[LibreWolf]"></a>
             </td>
         </tr>
-        <tr> <!-- QQ BROWSER desktop -->
-            <td> <!-- Browser -->
-                <a href="https://browser.qq.com" title="QQ Browser">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
-                             width=16 alt="[Install]"></a>
-                QQ Browser (Windows, macOS)
-            </td>
-            <td> <!-- Userscript manager -->
-                Not required <i>(Tampermonkey & Violentmonkey pre-installed)</i>
-            </td>
-            <td> <!-- Install browser -->
-                <a href="https://browser.qq.com" title="QQ Browser">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
-                         width=16 alt="[QQ Browser]"></a>
-            </td>
-        </tr>
         <tr> <!-- FIREFOX/GECKO Android -->
             <td> <!-- Browser -->
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
@@ -327,7 +311,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
                          width=16 alt="[Firefox]"></a>
-                <a href="https://www.waterfox.net" title="Waterfox">
+                <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release" title="Waterfox for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
                          width=16 alt="[Waterfox]"></a>
                 <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/" title="Fennec for Android">
@@ -336,6 +320,22 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://github.com/fork-maintainers/iceraven-browser/releases" title="Iceraven for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/iceraven/icon16.png"
                          width=16 alt="[Iceraven]"></a>
+            </td>
+        </tr>
+        <tr> <!-- QQ BROWSER desktop -->
+            <td> <!-- Browser -->
+                <a href="https://browser.qq.com" title="QQ Browser">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
+                             width=16 alt="[Install]"></a>
+                QQ Browser (Windows, macOS)
+            </td>
+            <td> <!-- Userscript manager -->
+                Not required <i>(Tampermonkey & Violentmonkey pre-installed)</i>
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://browser.qq.com" title="QQ Browser">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
+                         width=16 alt="[QQ Browser]"></a>
             </td>
         </tr>
         <tr> <!-- EDGE Android -->
@@ -360,9 +360,37 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <details>
                     <summary>Show QR code</summary>
                     <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
-                       title="Edge">
+                       title="Edge on Google Play">
                             <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/google-play/with-icon/blue.png"
                                  width=125 alt="[Edge]"></a>
+                </detail>
+            </td>
+        </tr>
+        <tr> <!-- EDGE CANARY Android -->
+            <td> <!-- Browser -->
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
+                   title="Edge Canary for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
+                             width=16 alt="[Install]"></a>
+                Edge Canary (Android)
+            </td>
+            <td> <!-- Userscript manager -->
+                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png">
+                    Tampermonkey
+                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png">
+                    Violentmonkey
+                or
+                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png">
+                    ScriptCat
+                <i>(install from ≡ > Extensions)</i>
+            </td>
+            <td> <!-- Install browser -->
+                <details>
+                    <summary>Show QR code</summary>
+                    <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
+                       title="Edge Canary on Google Play">
+                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/canary/google-play/with-icon/amber.png"
+                                 width=125 alt="[Edge Canary]"></a>
                 </detail>
             </td>
         </tr>
@@ -399,37 +427,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <details>
                     <summary>Show QR code</summary>
                     <a href="https://www.mises.site/download"
-                       title="Mises">
+                       title="Download Mises">
                             <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/mises/download-page/with-icon/purple.png"
                                  width=125 alt="[Quetta]"></a>
-                </detail>
-            </td>
-        </tr>
-        <tr> <!-- EDGE CANARY Android -->
-            <td> <!-- Browser -->
-                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
-                   title="Edge Canary for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                             width=16 alt="[Install]"></a>
-                Edge Canary (Android)
-            </td>
-            <td> <!-- Userscript manager -->
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png">
-                    Tampermonkey
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png">
-                    Violentmonkey
-                or
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png">
-                    ScriptCat
-                <i>(install from ≡ > Extensions)</i>
-            </td>
-            <td> <!-- Install browser -->
-                <details>
-                    <summary>Show QR code</summary>
-                    <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
-                       title="Edge Canary">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/edge/canary/google-play/with-icon/amber.png"
-                                 width=125 alt="[Edge Canary]"></a>
                 </detail>
             </td>
         </tr>
@@ -537,7 +537,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <details>
                     <summary>Show QR code</summary>
                     <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
-                       title="Orion">
+                       title="Orion on Apple App Store">
                             <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/orion/apple-app-store/with-icon/purple.png"
                                  width=125 alt="[Orion]"></a>
                 </details>
