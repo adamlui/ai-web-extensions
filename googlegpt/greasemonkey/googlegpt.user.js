@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.11.2
+// @version                  2025.4.11.3
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2919,36 +2919,56 @@
             appDiv.onmouseover = appDiv.onmouseout = update.bylineVisibility
         },
 
-        appHeaderBtns() {
-            appDiv.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
-                if (btn.id.endsWith('chevron-btn')) btn.onclick = () => {
-                    if (appDiv.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
-                        fontSizeSlider.toggle('off')
-                    toggle.minimized()
-                }
-                else if (btn.id.endsWith('about-btn')) btn.onclick = () => modals.open('about')
-                else if (btn.id.endsWith('settings-btn')) btn.onclick = () => modals.open('settings')
-                else if (btn.id.endsWith('font-size-btn')) btn.onclick = () => fontSizeSlider.toggle()
-                else if (btn.id.endsWith('pin-btn'))
-                    btn.onmouseenter = btn.onmouseleave = btn.onclick = menus.pin.toggle
-                else if (btn.id.endsWith('wsb-btn'))
-                    btn.onclick = () => { toggle.sidebar('wider') ; tooltip.update('wsb') }
-                else if (btn.id.endsWith('arrows-btn')) btn.onclick = () => toggle.expandedMode()
-                if (!env.browser.isMobile && !btn.id.endsWith('pin-btn')) // add hover listeners for tooltips
-                    btn.onmouseenter = btn.onmouseleave = tooltip.toggle
-                if (/about|settings|speak/.test(btn.id)) btn.onmouseup = () => { // add zoom/fade-out to select buttons
-                    if (config.fgAnimationsDisabled) return
-                    btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
-                    if (env.browser.isFF) // end animation 0.08s early to avoid icon overgrowth
-                        setTimeout(handleAnimationEnded, 0.12 *1000)
-                    else btn.onanimationend = handleAnimationEnded
-                    function handleAnimationEnded() {
-                        Object.assign(btn.style, { opacity: '0', visibility: 'hidden', animation: '' }) // hide btn
-                        setTimeout(() => // show btn after short delay
-                            Object.assign(btn.style, { visibility: 'visible', opacity: '1' }), 135)
+        btns: {
+            appHeader() {
+                appDiv.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
+                    if (btn.id.endsWith('chevron-btn')) btn.onclick = () => {
+                        if (appDiv.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
+                            fontSizeSlider.toggle('off')
+                        toggle.minimized()
                     }
-                }
-            })
+                    else if (btn.id.endsWith('about-btn')) btn.onclick = () => modals.open('about')
+                    else if (btn.id.endsWith('settings-btn')) btn.onclick = () => modals.open('settings')
+                    else if (btn.id.endsWith('font-size-btn')) btn.onclick = () => fontSizeSlider.toggle()
+                    else if (btn.id.endsWith('pin-btn'))
+                        btn.onmouseenter = btn.onmouseleave = btn.onclick = menus.pin.toggle
+                    else if (btn.id.endsWith('wsb-btn'))
+                        btn.onclick = () => { toggle.sidebar('wider') ; tooltip.update('wsb') }
+                    else if (btn.id.endsWith('arrows-btn')) btn.onclick = () => toggle.expandedMode()
+                    if (!env.browser.isMobile && !btn.id.endsWith('pin-btn')) // add hover listeners for tooltips
+                        btn.onmouseenter = btn.onmouseleave = tooltip.toggle
+                    if (/about|settings|speak/.test(btn.id)) btn.onmouseup = () => { // add zoom/fade-out to select buttons
+                        if (config.fgAnimationsDisabled) return
+                        btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
+                        if (env.browser.isFF) // end animation 0.08s early to avoid icon overgrowth
+                            setTimeout(handleAnimationEnded, 0.12 *1000)
+                        else btn.onanimationend = handleAnimationEnded
+                        function handleAnimationEnded() {
+                            Object.assign(btn.style, { opacity: '0', visibility: 'hidden', animation: '' }) // hide btn
+                            setTimeout(() => // show btn after short delay
+                                Object.assign(btn.style, { visibility: 'visible', opacity: '1' }), 135)
+                        }
+                    }
+                })
+            },
+
+            chatbar() {
+                const chatTextarea = appDiv.querySelector(`#${app.slug}-chatbar`)
+                appDiv.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn =>{
+                    btn.onclick = () => {
+                        tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
+                        const btnType = /-(\w+)-btn$/.exec(btn.id)[1]
+                        if (btnType == 'send') return // since handled by form submit
+                        show.reply.src = btnType
+                        chatTextarea.value = prompts.create(
+                            btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })
+                        chatTextarea.dispatchEvent(new KeyboardEvent('keydown', {
+                            key: 'Enter', bubbles: true, cancelable: true }))
+                    }
+                    if (!env.browser.isMobile) // add hover listener for tooltips
+                        btn.onmouseenter = btn.onmouseleave = tooltip.toggle
+                })
+            }
         },
 
         replySection() {
@@ -3006,20 +3026,7 @@
             chatTextarea.oninput = addListeners.replySection.chatbarAutoSizer
 
             // Add button listeners
-            appDiv.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn =>{
-                btn.onclick = () => {
-                    tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
-                    const btnType = /-(\w+)-btn$/.exec(btn.id)[1]
-                    if (btnType == 'send') return // since handled by form submit
-                    show.reply.src = btnType
-                    chatTextarea.value = prompts.create(
-                        btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })
-                    chatTextarea.dispatchEvent(new KeyboardEvent('keydown', {
-                        key: 'Enter', bubbles: true, cancelable: true }))
-                }
-                if (!env.browser.isMobile) // add hover listener for tooltips
-                    btn.onmouseenter = btn.onmouseleave = tooltip.toggle
-            })
+            this.btns.chatbar()
         }
     }
 
@@ -4189,7 +4196,7 @@
                 }
 
                 // Add app header button listeners
-                addListeners.appHeaderBtns()
+                addListeners.btns.appHeader()
 
                 // Create/append 'by KudoAI' if it fits
                 if (!env.browser.isMobile) {
