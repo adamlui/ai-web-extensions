@@ -194,7 +194,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                         Userscripts</a>
             </td>
             <td> <!-- Install browser -->
-                <a href="https://apps.apple.com/app/safari/id1146562112" title="Safari">
+                <a href="https://www.apple.com/safari/" title="Safari">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/safari/icon16.png"
                          width=16 alt="[Safari]"></a>
             </td>
@@ -240,17 +240,17 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
                             width=16 alt="[Edge]"></a>
                 <a href="https://www.microsoft.com/edge/download/insider"
-                   title="Edge Canary">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                            width=16 alt="[Edge Canary]"></a>
+                   title="Edge Beta">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
+                            width=16 alt="[Edge Beta]"></a>
                 <a href="https://www.microsoft.com/edge/download/insider"
                    title="Edge Dev">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
                             width=16 alt="[Edge Dev]"></a>
                 <a href="https://www.microsoft.com/edge/download/insider"
-                   title="Edge Beta">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
-                            width=16 alt="[Edge Beta]"></a>
+                   title="Edge Canary">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
+                            width=16 alt="[Edge Canary]"></a>
             </td>
         </tr>
         <tr> <!-- EDGE Android -->
@@ -276,18 +276,18 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                    title="Edge for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
                             width=16 alt="[Edge]"></a>
-                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
-                   title="Edge Canary for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                            width=16 alt="[Edge Canary]"></a>
-                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.dev"
-                   title="Edge Dev">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
-                            width=16 alt="[Edge Dev]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.beta"
                    title="Edge Beta">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
                             width=16 alt="[Edge Beta]"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.dev"
+                   title="Edge Dev">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
+                            width=16 alt="[Edge Dev]"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
+                   title="Edge Canary for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
+                            width=16 alt="[Edge Canary]"></a>
             </td>
         </tr>
         <tr> <!-- FIREFOX/GECKO desktop -->
