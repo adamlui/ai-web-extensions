@@ -295,7 +295,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://www.firefox.com" title="Firefox">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
                              width=16 alt="[Install]"></a>
-                Firefox or Gecko-based browsers (Windows, macOS, Linux)
+                Firefox, dev builds or Gecko-based browsers (Windows, macOS, Linux)
             </td>
             <td> <!-- Userscript manager -->
                 <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
@@ -322,6 +322,12 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://www.firefox.com" title="Firefox">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
                          width=16 alt="[Firefox]"></a>
+                <a href="https://download.mozilla.org/?product=firefox-beta-stub" title="Firefox Beta">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/beta/icon16.png"
+                         width=16 alt="[Firefox Beta]"></a>
+                <a href="https://download.mozilla.org/?product=firefox-nightly-stub" title="Firefox Nightly">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon16.png"
+                         width=16 alt="[Firefox Nightly]"></a>
                 <a href="https://www.waterfox.net" title="Waterfox">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
                          width=16 alt="[Waterfox]"></a>
@@ -335,7 +341,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
                              width=16 alt="[Install]"></a>
-                Firefox or Gecko-based browsers (Android)
+                Firefox, dev builds or Gecko-based browsers (Android)
             </td>
             <td> <!-- Userscript manager -->
                 <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
@@ -362,6 +368,12 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
                          width=16 alt="[Firefox]"></a>
+                <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta" title="Firefox Beta for Android">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/beta/icon16.png"
+                         width=16 alt="[Firefox Beta]"></a>
+                <a href="https://play.google.com/store/apps/details?id=org.mozilla.fenix" title="Firefox Nightly for Android">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon16.png"
+                         width=16 alt="[Firefox Nightly]"></a>
                 <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release" title="Waterfox for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
                          width=16 alt="[Waterfox]"></a>
