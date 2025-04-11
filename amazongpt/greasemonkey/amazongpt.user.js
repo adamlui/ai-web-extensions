@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.11.1
+// @version                2025.4.11.2
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -60,7 +60,6 @@
 // @match                  *://www.amazon.sa/*
 // @match                  *://www.amazon.se/*
 // @match                  *://www.amazon.sg/*
-// @match                  *://github.com/KudoAI/amazongpt*
 // @match                  *://github.com/*/amazongpt*
 // @exclude                *://*.amazon.*/ap/*
 // @include                https://auth0.openai.com
