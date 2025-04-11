@@ -185,6 +185,9 @@
                 <a href="https://www.opera.com/gx" title="Opera GX">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/opera/gx/icon16.png"
                          width=16 alt="[Opera GX]"></a>
+                <a href="https://www.opera.com/air" title="Opera Air">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/opera/air/icon16.png"
+                         width=16 alt="[Opera Air]">
                 <a href="https://brave.com" title="Brave">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/brave/icon16.png"
                          width=16 alt="[Brave]"></a>
