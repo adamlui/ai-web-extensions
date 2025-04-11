@@ -225,10 +225,10 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.11.1
+// @version             2025.4.11.2
 // @license             MIT
-// @icon                https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon48.png
-// @icon64              https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@f461c06/assets/images/icons/openai/black/icon64.png
+// @icon                https://assets.autoclearchatgpt.com/images/icons/openai/black/icon48.png?v=f461c06
+// @icon64              https://assets.autoclearchatgpt.com/images/icons/openai/black/icon64.png?v=f461c06
 // @compatible          chrome
 // @compatible          edge
 // @compatible          firefox
