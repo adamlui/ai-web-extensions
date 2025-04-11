@@ -124,7 +124,7 @@
         <img width=20 src="https://assets.braveomnibox.com/images/icons/brave/icon32.png"></a>
     <a href="../brave-omnibox">Brave Omnibox</a>&nbsp;
     <a href="https://edge.braveomnibox.com">
-        <img height=20 alt="Trending on Microsoft Edge Add-ons" title="Trending on Microsoft Edge Add-ons" src="https://assets.braveomnibox.com/images/badges/microsoft-store/trending/trending-badge-500x91.png"></a>
+        <img height=20 alt="Trended on Microsoft Edge Add-ons" title="Trended on Microsoft Edge Add-ons" src="https://assets.braveomnibox.com/images/badges/microsoft-store/trending/trended-badge-500x91.png"></a>
 </h3>
 
 <details><summary>Type @brave in browser address bar to get results from Brave AI.</summary>

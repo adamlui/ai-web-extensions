@@ -125,7 +125,7 @@
         <img width=20 src="https://assets.braveomnibox.com/images/icons/brave/icon32.png"></a>
     <a href="../../brave-omnibox">Brave Omnibox</a>&nbsp;
     <a href="https://edge.braveomnibox.com">
-        <img height=20 alt="[Microsoft Edge Add-ons 上的热门内容]" title="Microsoft Edge Add-ons 上的热门内容" src="https://assets.braveomnibox.com/images/badges/microsoft-store/trending/trending-badge-500x91.png"></a>
+        <img height=20 alt="[Microsoft Edge 附加组件的流行趋势]" title="Microsoft Edge 附加组件的流行趋势" src="https://assets.braveomnibox.com/images/badges/microsoft-store/trending/trended-badge-500x91.png"></a>
 </h3>
 
 <details>
