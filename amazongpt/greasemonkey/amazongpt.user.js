@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.11.4
+// @version                2025.4.11.5
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -2815,7 +2815,7 @@
                         else { // text was shown
                             show.codeCopyBtns()
                             if (callerAPI == caller.sender) msgChain.push({
-                                role: 'assistant', content: textToShow,
+                                role: 'assistant', content: textToShow, api: callerAPI,
                                 regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
                             })
                             api.clearTimedOut(caller.triedAPIs)
@@ -2891,7 +2891,7 @@
                                 textToShow = textToShow.replace(apis[callerAPI].respPatterns?.watermark, '').trim()
                                 show.reply(textToShow, { apiUsed: callerAPI }) ; show.codeCopyBtns()
                                 msgChain.push({
-                                    role: 'assistant', content: textToShow,
+                                    role: 'assistant', content: textToShow, api: callerAPI,
                                     regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
                                 })
                             }

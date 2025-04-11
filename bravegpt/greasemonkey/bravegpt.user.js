@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.11.3
+// @version               2025.4.11.4
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -3593,7 +3593,7 @@
                         else { // text was shown
                             show.codeCopyBtns()
                             if (callerAPI == caller.sender) msgChain.push({
-                                role: 'assistant', content: textToShow,
+                                role: 'assistant', content: textToShow, api: callerAPI,
                                 regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
                             })
                             api.clearTimedOut(caller.triedAPIs)
@@ -3670,7 +3670,7 @@
                                 if (caller == get.reply) {
                                     show.reply(textToShow, footerContent, { apiUsed: callerAPI }) ; show.codeCopyBtns()
                                     msgChain.push({
-                                        role: 'assistant', content: textToShow,
+                                        role: 'assistant', content: textToShow, api: callerAPI,
                                         regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
                                     })
                                 } else resolve(arrayify(textToShow))

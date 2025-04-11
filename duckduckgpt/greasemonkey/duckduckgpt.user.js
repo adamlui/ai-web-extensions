@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.11.3
+// @version                2025.4.11.4
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -3590,7 +3590,7 @@
                         else { // text was shown
                             show.codeCopyBtns()
                             if (callerAPI == caller.sender) msgChain.push({
-                                role: 'assistant', content: textToShow,
+                                role: 'assistant', content: textToShow, api: callerAPI,
                                 regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
                             })
                             api.clearTimedOut(caller.triedAPIs)
@@ -3667,7 +3667,7 @@
                                 if (caller == get.reply) {
                                     show.reply(textToShow, { apiUsed: callerAPI }) ; show.codeCopyBtns()
                                     msgChain.push({
-                                        role: 'assistant', content: textToShow,
+                                        role: 'assistant', content: textToShow, api: callerAPI,
                                         regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
                                     })
                                 } else resolve(arrayify(textToShow))
