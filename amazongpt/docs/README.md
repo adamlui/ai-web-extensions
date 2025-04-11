@@ -137,7 +137,7 @@
                 <a href="https://www.chrome.com" title="Chrome">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"
                              width=16 alt="[Install]"></a>
-                Chrome or Chromium-based browsers (Windows, macOS, Linux)
+                Chrome, dev builds or Chromium-based browsers (Windows, macOS, Linux)
             </td>
             <td> <!-- Userscript manager -->
                 <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
@@ -170,6 +170,15 @@
                 <a href="https://www.chrome.com" title="Chrome">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"
                          width=16 alt="[Chrome]"></a>
+                <a href="https://www.google.com/chrome/beta/" title="Chrome Beta">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/beta/icon16.svg"
+                         width=16 alt="[Chrome Beta]"></a>
+                <a href="https://www.google.com/chrome/dev/" title="Chrome Dev">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/dev/icon16.svg"
+                         width=16 alt="[Chrome Dev]"></a>
+                <a href="https://www.google.com/chrome/canary/" title="Chrome Canary">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/canary/icon16.svg"
+                         width=16 alt="[Chrome Canary]"></a>
                 <a href="https://www.opera.com" title="Opera">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/opera/icon16.png"
                          width=16 alt="[Opera]"></a>
