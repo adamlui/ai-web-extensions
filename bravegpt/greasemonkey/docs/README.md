@@ -145,7 +145,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 <table>
     <thead><th>Browser</th><th>Userscript manager</th><th>Install browser</th></thead>
     <tbody align="center">
-        <tr> <!-- CHROME/CHROMIUM -->
+        <tr> <!-- CHROME/CHROMIUM desktop -->
             <td> <!-- Browser -->
                 <a href="https://www.chrome.com" title="Chrome">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"
@@ -183,9 +183,6 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://www.chrome.com" title="Chrome">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"
                          width=16 alt="[Chrome]"></a>
-                <a href="https://www.microsoft.com/edge" title="Edge">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
-                         width=16 alt="[Edge]"></a>
                 <a href="https://www.opera.com" title="Opera">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/opera/icon16.png"
                          width=16 alt="[Opera]"></a><sup>3</sup>
@@ -232,6 +229,94 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://apps.apple.com/app/safari/id1146562112" title="Safari">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/safari/icon16.png"
                          width=16 alt="[Safari]"></a>
+            </td>
+        </tr>
+        <tr> <!-- EDGE desktop -->
+            <td> <!-- Browser -->
+                <a href="https://www.microsoft.com/edge"
+                   title="Edge">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
+                             width=16 alt="[Install]"></a>
+                Edge or dev builds (Windows, macOS, Linux)
+            </td>
+            <td> <!-- Userscript manager -->
+                <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+                   title="Install Tampermonkey for Edge">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+                   title="Install Tampermonkey for Edge">
+                        Tampermonkey</a><sup>1</sup>
+                <a href="https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao"
+                   title="Install Violentmonkey for Edge">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                <a href="https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao"
+                   title="Install Violentmonkey for Edge">
+                        Violentmonkey</a><sup>2</sup>
+                <a href="https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh"
+                   title="Install ScriptCat for Edge">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                <a href="https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh"
+                   title="Install ScriptCat for Edge">
+                        ScriptCat</a>
+                or
+                <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
+                   title="Install OrangeMonkey for Chrome">
+                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"></a>
+                <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
+                   title="Install OrangeMonkey for Chrome">
+                        OrangeMonkey</a><sup>1,2</sup>
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://www.microsoft.com/edge/download"
+                   title="Edge">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
+                            width=16 alt="[Edge]"></a>
+                <a href="https://www.microsoft.com/edge/download/insider"
+                   title="Edge Canary">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
+                            width=16 alt="[Edge Canary]"></a>
+                <a href="https://www.microsoft.com/edge/download/insider"
+                   title="Edge Dev">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
+                            width=16 alt="[Edge Dev]"></a>
+                <a href="https://www.microsoft.com/edge/download/insider"
+                   title="Edge Beta">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
+                            width=16 alt="[Edge Beta]"></a>
+            </td>
+        </tr>
+        <tr> <!-- EDGE/CANARY Android -->
+            <td> <!-- Browser -->
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
+                   title="Edge for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
+                             width=16 alt="[Install]"></a>
+                Edge or
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
+                   title="Edge Canary for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
+                             width=16 alt="[Install]"></a>
+                Edge Canary (Android)
+            </td>
+            <td> <!-- Userscript manager -->
+                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png">
+                    Tampermonkey
+                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png">
+                    Violentmonkey
+                or
+                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png">
+                    ScriptCat
+                <i>(install from ≡ > Extensions)</i>
+            </td>
+            <td> <!-- Install browser -->
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
+                   title="Edge for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
+                            width=16 alt="[Edge]"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
+                   title="Edge Canary for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
+                            width=16 alt="[Edge Canary]"></a>
             </td>
         </tr>
         <tr> <!-- FIREFOX/GECKO desktop -->
@@ -331,40 +416,6 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://browser.qq.com" title="QQ Browser">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
                          width=16 alt="[QQ Browser]"></a>
-            </td>
-        </tr>
-        <tr> <!-- EDGE Android -->
-            <td> <!-- Browser -->
-                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
-                   title="Edge for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
-                             width=16 alt="[Install]"></a>
-                Edge or
-                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
-                   title="Edge Canary for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                             width=16 alt="[Install]"></a>
-                Edge Canary (Android)
-            </td>
-            <td> <!-- Userscript manager -->
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png">
-                    Tampermonkey
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png">
-                    Violentmonkey
-                or
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png">
-                    ScriptCat
-                <i>(install from ≡ > Extensions)</i>
-            </td>
-            <td> <!-- Install browser -->
-                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
-                   title="Edge for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
-                            width=16 alt="[Edge]"></a>
-                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
-                   title="Edge Canary for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                            width=16 alt="[Edge Canary]"></a>
             </td>
         </tr>
         <tr> <!-- MISES mobile -->
@@ -520,7 +571,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 </table>
 
 <h5>
-    <i>1. If you are installing Tampermonkey or OrangeMonkey from the Chrome Web Store, you must enable Developer Mode in chrome://extensions for userscripts to function</i><br><br>
+    <i>1. If you are installing Tampermonkey or OrangeMonkey for a Chromium browser, you must enable Developer Mode in chrome://extensions for userscripts to function</i><br><br>
     <i>2. Violentmonkey & OrangeMonkey do not support Streaming Mode</i><br><br>
     <i>3. If you are installing a userscript manager for Opera or Opera GX, you must allow it access to search page results in opera://extensions</i>
 </h5>
