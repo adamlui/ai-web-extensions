@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.11
+// @version                  2025.4.11.1
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@59409b2/assets/images/icons/googlegpt/black/icon64.png
@@ -372,10 +372,7 @@
 // @match                    *://*.google.co.zm/search*
 // @match                    *://*.google.co.zw/search*
 // @match                    *://*.google.cat/search*
-// @match                    *://github.com/KudoAI/googlegpt*
-// @match                    *://github.com/kudoai/googlegpt*
-// @match                    *://github.com/adamlui/ai-web-extensions/*/googlegpt*
-// @match                    *://github.com/adamlui/userscripts/*/googlegpt*
+// @match                    *://github.com/*/googlegpt*
 // @include                  https://auth0.openai.com
 // @connect                  am.aifree.site
 // @connect                  api.binjie.fun

@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.11
+// @version                2025.4.11.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@06af076/assets/images/icons/duckduckgpt/icon64.png
@@ -182,10 +182,7 @@
 // @compatible             waterfox
 // @compatible             whale
 // @match                  *://duckduckgo.com/?*
-// @match                  *://github.com/KudoAI/duckduckgpt*
-// @match                  *://github.com/kudoai/duckduckgpt*
-// @match                  *://github.com/adamlui/ai-web-extensions/*/duckduckgpt*
-// @match                  *://github.com/adamlui/userscripts/*/duckduckgpt*
+// @match                  *://github.com/*/duckduckgpt*
 // @include                https://auth0.openai.com
 // @connect                am.aifree.site
 // @connect                api.binjie.fun
