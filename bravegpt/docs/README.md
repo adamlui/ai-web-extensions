@@ -285,14 +285,17 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 Not required <i>(Tampermonkey & Violentmonkey pre-installed)</i>
             </td>
             <td> <!-- Install browser -->
+                <a href="https://browser.qq.com" title="QQ Browser">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
+                         width=16 alt="[QQ Browser]"></a>
             </td>
         </tr>
-        <tr> <!-- FIREFOX Android -->
+        <tr> <!-- FIREFOX/GECKO Android -->
             <td> <!-- Browser -->
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
                              width=16 alt="[Install]"></a>
-                Firefox (Android)
+                Firefox or Gecko-based browsers (Android)
             </td>
             <td> <!-- Userscript manager -->
                 <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
@@ -316,12 +319,18 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                         ScriptCat</a>
             </td>
             <td> <!-- Install browser -->
-                <details>
-                    <summary>Show QR code</summary>
-                    <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
-                        <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/firefox/google-play/with-icon/amber.png"
-                             width=125 alt="[Firefox for Android]"></a>
-                </details>
+                <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
+                         width=16 alt="[Firefox]"></a>
+                <a href="https://www.waterfox.net" title="Waterfox">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
+                         width=16 alt="[Waterfox]"></a>
+                <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/" title="Fennec for Android">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/fennec/icon16.png"
+                         width=16 alt="[Fennec]"></a>
+                <a href="https://github.com/fork-maintainers/iceraven-browser/releases" title="Iceraven for Android">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/iceraven/icon16.png"
+                         width=16 alt="[Iceraven]"></a>
             </td>
         </tr>
         <tr> <!-- EDGE Android -->
@@ -484,45 +493,6 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 </detail>
             </td>
         </tr>
-        <tr> <!-- WATERFOX Android -->
-            <td> <!-- Browser -->
-                <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release"
-                   title="Waterfox for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
-                             width=16 alt="[Install]"></a>
-                Waterfox (Android)
-            </td>
-            <td> <!-- Userscript manager -->
-                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
-                   title="Install Tampermonkey for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
-                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
-                   title="Install Tampermonkey for Firefox">
-                        Tampermonkey</a>
-                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
-                   title="Install Violentmonkey for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
-                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
-                   title="Install Violentmonkey for Firefox">
-                        Violentmonkey</a><sup>2</sup>
-                or
-                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
-                   title="Install ScriptCat for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
-                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
-                   title="Install ScriptCat for Firefox">
-                        ScriptCat</a>
-            </td>
-            <td> <!-- Install browser -->
-                <details>
-                    <summary>Show QR code</summary>
-                    <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release"
-                       title="Waterfox for Android">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/waterfox/google-play/with-icon/blue.png"
-                                 width=125 alt="[Waterfox for Android]"></a>
-                </details>
-            </td>
-        </tr>
         <tr> <!-- ORION iOS/iPadOS -->
             <td> <!-- Browser -->
                 <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
@@ -565,84 +535,6 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                        title="Orion">
                             <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/orion/apple-app-store/with-icon/purple.png"
                                  width=125 alt="[Orion]"></a>
-                </details>
-            </td>
-        </tr>
-        <tr> <!-- FENNEC Android -->
-            <td> <!-- Browser -->
-                <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/"
-                   title="Fennec for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/fennec/icon16.png"
-                             width=16 alt="[Install]"></a>
-                Fennec (Android)
-            </td>
-            <td> <!-- Userscript manager -->
-                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
-                   title="Install Tampermonkey for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
-                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
-                   title="Install Tampermonkey for Firefox">
-                        Tampermonkey</a>
-                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
-                   title="Install Violentmonkey for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
-                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
-                   title="Install Violentmonkey for Firefox">
-                        Violentmonkey</a><sup>2</sup>
-                or
-                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
-                   title="Install ScriptCat for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
-                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
-                   title="Install ScriptCat for Firefox">
-                        ScriptCat</a>
-            </td>
-            <td> <!-- Install browser -->
-                <details>
-                    <summary>Show QR code</summary>
-                    <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/"
-                       title="Fennec for Android">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/fennec/f-droid/with-icon/amber.png"
-                                 width=125 alt="[Fennec for Android]"></a>
-                </details>
-            </td>
-        </tr>
-        <tr> <!-- ICERAVEN Android -->
-            <td> <!-- Browser -->
-                <a href="https://github.com/fork-maintainers/iceraven-browser/releases"
-                   title="Iceraven for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/iceraven/icon16.png"
-                             width=16 alt="[Install]"></a>
-                Iceraven (Android)
-            </td>
-            <td> <!-- Userscript manager -->
-                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
-                   title="Install Tampermonkey for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
-                <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
-                   title="Install Tampermonkey for Firefox">
-                        Tampermonkey</a>
-                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
-                   title="Install Violentmonkey for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
-                <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
-                   title="Install Violentmonkey for Firefox">
-                        Violentmonkey</a><sup>2</sup>
-                or
-                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
-                   title="Install ScriptCat for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
-                <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
-                   title="Install ScriptCat for Firefox">
-                        ScriptCat</a>
-            </td>
-            <td> <!-- Install browser -->
-                <details>
-                    <summary>Show QR code</summary>
-                    <a href="https://github.com/fork-maintainers/iceraven-browser/releases"
-                       title="Iceraven for Android">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/iceraven/github-releases/with-icon/blue.png"
-                                 width=125 alt="[Iceraven for Android]"></a>
                 </details>
             </td>
         </tr>
