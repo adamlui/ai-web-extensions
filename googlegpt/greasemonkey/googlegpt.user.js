@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.12
+// @version                  2025.4.12.1
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -4200,10 +4200,10 @@
 
                 // Create/append 'by KudoAI' if it fits
                 if (!env.browser.isMobile) {
-                    const kudoAIspan = dom.create.elem('span', { class: 'byline no-user-select' })
-                    kudoAIspan.textContent = 'by '
-                    kudoAIspan.append(dom.create.anchor(app.urls.publisher, 'KudoAI'))
-                    appDiv.querySelector(`.${app.slug}-name`).insertAdjacentElement('afterend', kudoAIspan)
+                    const bylineSpan = dom.create.elem('span', { class: 'byline no-user-select' })
+                    bylineSpan.textContent = 'by '
+                    bylineSpan.append(dom.create.anchor(app.urls.publisher, 'KudoAI'))
+                    appDiv.querySelector(`.${app.slug}-name`).insertAdjacentElement('afterend', bylineSpan)
                     update.bylineVisibility()
                 }
 

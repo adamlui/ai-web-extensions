@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.12
+// @version                2025.4.12.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -3094,10 +3094,10 @@
                 addListeners.btns.appHeader()
 
                 // Create/append 'by KudoAI'
-                const kudoAIspan = dom.create.elem('span', { class: 'byline no-user-select' })
-                kudoAIspan.textContent = 'by '
-                kudoAIspan.append(dom.create.anchor(app.urls.publisher, 'KudoAI'))
-                appDiv.querySelector(`.${app.slug}-name`).insertAdjacentElement('afterend', kudoAIspan)
+                const bylineSpan = dom.create.elem('span', { class: 'byline no-user-select' })
+                bylineSpan.textContent = 'by '
+                bylineSpan.append(dom.create.anchor(app.urls.publisher, 'KudoAI'))
+                appDiv.querySelector(`.${app.slug}-name`).insertAdjacentElement('afterend', bylineSpan)
                 update.bylineVisibility()
 
                 // Create/append answer bubble
