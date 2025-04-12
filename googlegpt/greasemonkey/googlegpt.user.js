@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.12.1
+// @version                  2025.4.12.2
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2449,15 +2449,15 @@
                   + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' } !important }`
               + '.byline {' // header byline
                   + `font-size: 12px ; margin-left: 7px ; color: #aaa ;
-                    --kudoai-transition: 0.15s ease-in-out ; transition: var(--kudoai-transition) ;
-                        -webkit-transition: var(--kudoai-transition) ; -moz-transition: var(--kudoai-transition) ;
-                        -o-transition: var(--kudoai-transition) ; -ms-transition: var(--kudoai-transition) }`
+                    --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
+                        -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
+                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }`
               + '.byline a, .kudoai a:visited { color: #aaa ; text-decoration: none !important }'
               + `.kudoai a:hover {
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
-                    transition: var(--kudoai-transition) ;
-                        -webkit-transition: var(--kudoai-transition) ; -moz-transition: var(--kudoai-transition) ;
-                        -o-transition: var(--kudoai-transition) ; -ms-transition: var(--kudoai-transition) }`
+                    transition: var(--byline-transition) ;
+                        -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
+                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }`
               + `#${app.slug}-header-btns { float: right }`
               + `.${app.slug}-header-btn {`
                   + 'float: right ; cursor: pointer ; position: relative ; top: 6px ;'

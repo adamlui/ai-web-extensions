@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.12.1
+// @version                2025.4.12.2
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1833,15 +1833,15 @@
                   + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}`
               + '.byline {' // header byline
                   + `position: relative ; bottom: -1px ; margin-left: 8px ; color: #aaa ;
-                    --kudoai-transition: 0.15s ease-in-out ; transition: var(--kudoai-transition) ;
-                        -webkit-transition: var(--kudoai-transition) ; -moz-transition: var(--kudoai-transition) ;
-                        -o-transition: var(--kudoai-transition) ; -ms-transition: var(--kudoai-transition) }`
+                    --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
+                        -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
+                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }`
               + '.byline a, .kudoai a:visited { color: #aaa ; text-decoration: none !important } '
               + `.kudoai a:hover {
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
-                    transition: var(--kudoai-transition) ;
-                        -webkit-transition: var(--kudoai-transition) ; -moz-transition: var(--kudoai-transition) ;
-                        -o-transition: var(--kudoai-transition) ; -ms-transition: var(--kudoai-transition) }`
+                    transition: var(--byline-transition) ;
+                        -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
+                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }`
               + `#${app.slug}-header-btns { float: right ; margin-top: -2px }`
               + `.${app.slug}-header-btn {`
                   + 'float: right ; cursor: pointer ; position: relative ; top: 4px ;'

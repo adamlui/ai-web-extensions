@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.12.1
+// @version                2025.4.12.2
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -2283,15 +2283,15 @@
                   + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}`
               + '.byline {' // header byline
                   + `position: relative ; bottom: 2.25px ; margin-left: 6px ; color: #aaa ; font-size: 13.1px ;
-                    --kudoai-transition: 0.15s ease-in-out ; transition: var(--kudoai-transition) ;
-                        -webkit-transition: var(--kudoai-transition) ; -moz-transition: var(--kudoai-transition) ;
-                        -o-transition: var(--kudoai-transition) ; -ms-transition: var(--kudoai-transition) }`
+                    --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
+                        -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
+                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }`
               + '.byline a, .kudoai a:visited { color: #aaa ; text-decoration: none !important } '
               + `.kudoai a:hover {
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
-                    transition: var(--kudoai-transition) ;
-                        -webkit-transition: var(--kudoai-transition) ; -moz-transition: var(--kudoai-transition) ;
-                        -o-transition: var(--kudoai-transition) ; -ms-transition: var(--kudoai-transition) }`
+                    transition: var(--byline-transition) ;
+                        -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
+                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }`
               + `#${app.slug}-header-btns { float: right ; margin-top: 2px }`
               + `.${app.slug}-header-btn {`
                   + 'float: right ; cursor: pointer ; position: relative ; top: 4px ;'
