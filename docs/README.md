@@ -56,7 +56,7 @@
 
 <h3>
     <a href="../amazongpt">
-        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://amazongpt.kudoai.com/assets/images/icons/amazongpt/white/icon48.png"><img width=18 src="https://amazongpt.kudoai.com/assets/images/icons/amazongpt/black-gold-teal/icon48.png" width=18></a>
+        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://amazongpt.kudoai.com/assets/images/icons/app/white/icon48.png"><img width=18 src="https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png" width=18></a>
     <a href="../amazongpt">AmazonGPT</a>&nbsp;
     <a href="https://amazongpt.kudoai.com/assets/wolfram-award/letter.pdf">
         <img height=20 src="https://amazongpt.kudoai.com/assets/images/badges/wolfram-award/gold-badge.png"></a>
@@ -161,7 +161,7 @@
 
 <h3>
     <a href="../bravegpt">
-        <img width=21 src="https://assets.bravegpt.com/images/icons/bravegpt/icon48.png"></a>
+        <img width=21 src="https://assets.bravegpt.com/images/icons/app/icon48.png"></a>
     <a href="../bravegpt">BraveGPT</a>&nbsp;
     <a href="https://www.producthunt.com/posts/bravegpt">
         <img width="112" height="24" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light"></a>
@@ -477,7 +477,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
 
 <h3>
     <a href="../duckduckgpt">
-        <img width=20 src="https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png"></a>
+        <img width=20 src="https://assets.ddgpt.com/images/icons/app/icon48.png"></a>
     <a href="../duckduckgpt">DuckDuckGPT</a>&nbsp;
     <a href="https://www.producthunt.com/posts/duckduckgpt">
         <img width="112" height="24" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light"></a>
@@ -510,7 +510,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
 
 <h3>
     <a href="../googlegpt">
-        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/googlegpt/white/icon32.png"><img width=19 src="https://assets.googlegpt.io/images/icons/googlegpt/black/icon32.png"></picture></a>
+        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/app/white/icon32.png"><img width=19 src="https://assets.googlegpt.io/images/icons/app/black/icon32.png"></picture></a>
     <a href="../googlegpt">GoogleGPT</a>&nbsp;
     <a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt">
         <img src="https://assets.googlegpt.io/images/badges/awesome/badge.svg"></a>

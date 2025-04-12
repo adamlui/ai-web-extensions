@@ -2,8 +2,8 @@
 
 <h1>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.ddgpt.com/images/logos/duckduckgpt/darkmode/logo371x65.png">
-    <img src="https://assets.ddgpt.com/images/logos/duckduckgpt/lightmode/logo371x65.png">
+    <source media="(prefers-color-scheme: dark)" srcset="https://assets.ddgpt.com/images/logos/app/darkmode/logo371x65.png">
+    <img src="https://assets.ddgpt.com/images/logos/app/lightmode/logo371x65.png">
   </picture>
 </h1>
 
@@ -680,7 +680,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 
 ## 📜 Related scripts
 
-### <img src="https://amazongpt.kudoai.com/assets/images/icons/amazongpt/black-gold-teal/icon48.png" width=17> [AmazonGPT](https://amazongpt.kudoai.com) &nbsp;<a href="https://amazongpt.kudoai.com/assets/wolfram-award/letter.pdf"><img height=20 src="https://amazongpt.kudoai.com/assets/images/badges/wolfram-award/gold-badge.png"></a>
+### <img src="https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png" width=17> [AmazonGPT](https://amazongpt.kudoai.com) &nbsp;<a href="https://amazongpt.kudoai.com/assets/wolfram-award/letter.pdf"><img height=20 src="https://amazongpt.kudoai.com/assets/images/badges/wolfram-award/gold-badge.png"></a>
 
 > Add AI to Amazon shopping.
 <br>[Install](https://amazongpt.kudoai.com/#-installation) /
@@ -694,7 +694,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.com/adamlui/chatgpt-infinity/#readme) / 
 [Discuss](https://chatgptinfinity.com/discuss)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/googlegpt/white/icon32.png"><img width=17 src="https://assets.googlegpt.io/images/icons/googlegpt/black/icon32.png"></picture> [GoogleGPT](https://googlegpt.io) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt"><img src="https://assets.googlegpt.io/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/app/white/icon32.png"><img width=17 src="https://assets.googlegpt.io/images/icons/app/black/icon32.png"></picture> [GoogleGPT](https://googlegpt.io) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt"><img src="https://assets.googlegpt.io/images/badges/awesome/badge.svg"></a>
 
 > Bring the magic of AI to Google Search (powered by Google Gemma + GPT-4o!)
 <br>[Install](https://gm.googlegpt.io) /

@@ -289,7 +289,7 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 [自述文件](https://github.com/adamlui/chatgpt-auto-talk/tree/main/docs/zh-cn/#readme) /
 [讨论](https://github.com/adamlui/chatgpt-auto-talk/discussions)
 
-### <img src="https://assets.bravegpt.com/images/icons/bravegpt/icon48.png" width=18> [BraveGPT](https://bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="24" /></a>
+### <img src="https://assets.bravegpt.com/images/icons/app/icon48.png" width=18> [BraveGPT](https://bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="24" /></a>
 
 > 为 Brave Search 添加 AI 答案（由 GPT-4o 提供支持！）
 <br>[安装](https://docs.bravegpt.com/#-installation) /

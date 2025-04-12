@@ -117,7 +117,7 @@ For even more epic ChatGPT apps, go here: https://github.com/adamlui/ai-web-exte
 
 ## 📜 Related scripts
 
-### <img src="https://amazongpt.kudoai.com/assets/images/icons/amazongpt/black-gold-teal/icon48.png" width=17> [AmazonGPT](https://amazongpt.kudoai.com) &nbsp;<a href="https://amazongpt.kudoai.com/assets/wolfram-award/letter.pdf"><img height=20 src="https://amazongpt.kudoai.com/assets/images/badges/wolfram-award/gold-badge.png"></a>
+### <img src="https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png" width=17> [AmazonGPT](https://amazongpt.kudoai.com) &nbsp;<a href="https://amazongpt.kudoai.com/assets/wolfram-award/letter.pdf"><img height=20 src="https://amazongpt.kudoai.com/assets/images/badges/wolfram-award/gold-badge.png"></a>
 
 > Add AI to Amazon shopping.
 <br>[Install](https://amazongpt.kudoai.com/#-installation) /

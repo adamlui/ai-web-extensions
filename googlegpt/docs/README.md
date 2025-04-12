@@ -5,8 +5,8 @@
 <br>
 
 <picture>
-    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/logos/googlegpt/with-reflection/white.png">
-    <img alt="GoogleGPT" width=888 src="https://assets.googlegpt.io/images/logos/googlegpt/with-reflection/black.png">
+    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/logos/app/with-reflection/white.png">
+    <img alt="GoogleGPT" width=888 src="https://assets.googlegpt.io/images/logos/app/with-reflection/black.png">
 </picture>
 
 <br>
@@ -692,7 +692,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 
 ## 📜 Related scripts
 
-### <img src="https://amazongpt.kudoai.com/assets/images/icons/amazongpt/black-gold-teal/icon48.png" width=17> [AmazonGPT](https://amazongpt.kudoai.com) &nbsp;<a href="https://amazongpt.kudoai.com/assets/wolfram-award/letter.pdf"><img height=20 src="https://amazongpt.kudoai.com/assets/images/badges/wolfram-award/gold-badge.png"></a>
+### <img src="https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png" width=17> [AmazonGPT](https://amazongpt.kudoai.com) &nbsp;<a href="https://amazongpt.kudoai.com/assets/wolfram-award/letter.pdf"><img height=20 src="https://amazongpt.kudoai.com/assets/images/badges/wolfram-award/gold-badge.png"></a>
 
 > Add AI to Amazon shopping.
 <br>[Install](https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js) /
@@ -706,7 +706,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://docs.chatgptinfinity.com/#readme) / 
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
-### <img src="https://assets.bravegpt.com/images/icons/bravegpt/icon48.png" width=18> [BraveGPT](https://bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="24" /></a>
+### <img src="https://assets.bravegpt.com/images/icons/app/icon48.png" width=18> [BraveGPT](https://bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="24" /></a>
 
 > Bring the magic of ChatGPT to Brave Search (powered by GPT-4o!)
 <br>[Install](https://docs.bravegpt.com/#-installation) /

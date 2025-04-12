@@ -4,8 +4,8 @@
 
 <div align="center">
 <picture>
-    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://amazongpt.kudoai.com/assets/images/logos/amazongpt/white-teal/logo1018x148.png?v=dc250b9">
-    <img alt="AmazonGPT" src="https://amazongpt.kudoai.com/assets/images/logos/amazongpt/black-gold/logo1018x148.png?v=dc250b9">
+    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://amazongpt.kudoai.com/assets/images/logos/app/white-teal/logo1018x148.png">
+    <img alt="AmazonGPT" src="https://amazongpt.kudoai.com/assets/images/logos/app/black-gold/logo1018x148.png">
 </picture>
 <br><br>
 
@@ -678,21 +678,21 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 
 ## 📜 Related apps
 
-### <img src="https://assets.bravegpt.com/images/icons/bravegpt/icon48.png" width=21> [BraveGPT](https://www.bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="24" /></a>
+### <img src="https://assets.bravegpt.com/images/icons/app/icon48.png" width=21> [BraveGPT](https://www.bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="24" /></a>
 
 > Bring the magic of AI to Brave Search (powered by GPT-4o!)
 <br>[Install](https://github.com/KudoAI/bravegpt/#-installation) /
 [Readme](https://github.com/KudoAI/bravegpt/#readme) /
 [Discuss](https://github.com/KudoAI/bravegpt/discussions)
 
-### <img width=17 src="https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?af89302"> [DuckDuckGPT](https://duckduckgpt.com) &nbsp;<a href="https://www.producthunt.com/posts/duckduckgpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light" width="112" height="24" /></a>
+### <img width=17 src="https://assets.ddgpt.com/images/icons/app/icon48.png"> [DuckDuckGPT](https://duckduckgpt.com) &nbsp;<a href="https://www.producthunt.com/posts/duckduckgpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light" width="112" height="24" /></a>
 
 > Bring the magic of AI to DuckDuckGo (powered by GPT-4o!)
 <br>[Install](https://github.com/KudoAI/duckduckgpt/#-installation) /
 [Readme](https://github.com/KudoAI/duckduckgpt/#readme) /
 [Discuss](https://github.com/KudoAI/duckduckgpt/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/googlegpt/white/icon32.png?8652a6e"><img width=17 src="https://assets.googlegpt.io/images/icons/googlegpt/black/icon32.png?8652a6e"></picture> [GoogleGPT](https://googlegpt.io) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt"><img src="https://assets.googlegpt.io/images/badges/awesome/badge.svg?699c63d"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/app/white/icon32.png"><img width=17 src="https://assets.googlegpt.io/images/icons/app/black/icon32.png"></picture> [GoogleGPT](https://googlegpt.io) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt"><img src="https://assets.googlegpt.io/images/badges/awesome/badge.svg?699c63d"></a>
 
 > Bring the magic of AI to Google Search (powered by Google Gemma + GPT-4o!)
 <br>[Install](https://gm.googlegpt.io) /
