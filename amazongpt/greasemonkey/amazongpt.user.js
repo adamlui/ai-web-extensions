@@ -3,7 +3,7 @@
 // @description            Adds the magic of AI to Amazon shopping
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.12.2
+// @version                2025.4.12.3
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -69,11 +69,11 @@
 // @connect                api.openai.com
 // @connect                api11.gptforlove.com
 // @connect                cdn.jsdelivr.net
+// @connect                chat-share.kudoai.workers.dev
 // @connect                chatai.mixerbox.com
 // @connect                chatgpt.com
 // @connect                fanyi.sogou.com
 // @connect                kudoai.com
-// @connect                kudoai.workers.dev
 // @connect                raw.githubusercontent.com
 // @require                https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.7.1/dist/chatgpt.min.js#sha256-uv1k2VxGy+ri3+2C+D/kTYSBCom5JzvrNCLxzItgD6M=
 // @require                https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
