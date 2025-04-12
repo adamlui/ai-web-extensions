@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.11.5
+// @version                  2025.4.12
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2331,7 +2331,7 @@
 
         appBottomPos() { appDiv.style.bottom = `${ config.minimized ? 35 - appDiv.offsetHeight : -33 }px` },
 
-        appStyle() {
+        appStyle() { // used in toggle.animations() + update.scheme() + main's app init
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled
             modals.stylize() // update modal styles
             app.styles.innerText = (
@@ -2447,12 +2447,12 @@
               + `.${app.slug}-name {`
                   + 'font-size: 1.35rem ; font-weight: 700 ; text-decoration: none ;'
                   + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' } !important }`
-              + '.kudoai {' // header byline
+              + '.byline {' // header byline
                   + `font-size: 12px ; margin-left: 7px ; color: #aaa ;
                     --kudoai-transition: 0.15s ease-in-out ; transition: var(--kudoai-transition) ;
                         -webkit-transition: var(--kudoai-transition) ; -moz-transition: var(--kudoai-transition) ;
                         -o-transition: var(--kudoai-transition) ; -ms-transition: var(--kudoai-transition) }`
-              + '.kudoai a, .kudoai a:visited { color: #aaa ; text-decoration: none !important }'
+              + '.byline a, .kudoai a:visited { color: #aaa ; text-decoration: none !important }'
               + `.kudoai a:hover {
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
                     transition: var(--kudoai-transition) ;
@@ -2739,7 +2739,7 @@
             if (env.browser.isPhone) return // since byline hidden by app.styles
 
             // Init header elems
-            const headerElems = { byline: appDiv.querySelector('.kudoai') }
+            const headerElems = { byline: appDiv.querySelector('.byline') }
             if (!headerElems.byline) return // since in loading state
             Object.assign(headerElems, {
                 appPrefix: appDiv.querySelector('#app-prefix'),
@@ -2756,8 +2756,8 @@
             Object.entries(headerElems).forEach(([key, elem]) => widths[key] = dom.get.computedWidth(elem))
 
             // Hide/show byline based on space available
-            const availSpace = widths.appDiv - widths.appDivXpadding - widths.appPrefix - widths.logo - widths.btns
-            Object.assign(headerElems.byline.style, (widths.byline +10) > availSpace ?
+            const availSpace = widths.appDiv - widths.appDivXpadding - widths.appPrefix - widths.logo - widths.btns -10
+            Object.assign(headerElems.byline.style, widths.byline > availSpace ?
                 { position: 'absolute', left: '-9999px', opacity: 0 } // hide using position to support transition
               : { position: '', left: '', opacity: 1 } // show
             )
@@ -4200,7 +4200,7 @@
 
                 // Create/append 'by KudoAI' if it fits
                 if (!env.browser.isMobile) {
-                    const kudoAIspan = dom.create.elem('span', { class: 'kudoai no-user-select' })
+                    const kudoAIspan = dom.create.elem('span', { class: 'byline no-user-select' })
                     kudoAIspan.textContent = 'by '
                     kudoAIspan.append(dom.create.anchor(app.urls.publisher, 'KudoAI'))
                     appDiv.querySelector(`.${app.slug}-name`).insertAdjacentElement('afterend', kudoAIspan)

@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.11.5
+// @version               2025.4.12
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -2176,7 +2176,7 @@
 
         appBottomPos() { appDiv.style.bottom = `${ config.minimized ? 48 - appDiv.offsetHeight : -32 }px` },
 
-        appStyle() {
+        appStyle() { // used in toggle.animations() + update.scheme() + main's app init
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled
             modals.stylize() // update modal styles
             app.styles.innerText = (
@@ -2286,12 +2286,12 @@
               + `.${app.slug}-name {`
                   + 'font-size: 20px ; font-family: var(--brand-font) ; text-decoration: none ;'
                   + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' } !important }`
-              + '.kudoai {' // header byline
+              + '.byline {' // header byline
                   + `position: relative ; bottom: 5.5px ; margin-left: 7px ; color: #aaa ; font-size: 11px ;
                     --kudoai-transition: 0.15s ease-in-out ; transition: var(--kudoai-transition) ;
                         -webkit-transition: var(--kudoai-transition) ; -moz-transition: var(--kudoai-transition) ;
                         -o-transition: var(--kudoai-transition) ; -ms-transition: var(--kudoai-transition) }`
-              + '.kudoai a { color: #aaa ; text-decoration: none !important }'
+              + '.byline a { color: #aaa ; text-decoration: none !important }'
               + `.kudoai a:hover {
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
                     transition: var(--kudoai-transition) ;
@@ -2573,7 +2573,7 @@
             if (env.browser.isPhone) return // since byline hidden by app.styles
 
             // Init header elems
-            const headerElems = { byline: appDiv.querySelector('.kudoai') }
+            const headerElems = { byline: appDiv.querySelector('.byline') }
             if (!headerElems.byline) return // since in loading state
             Object.assign(headerElems, {
                 btns: appDiv.querySelectorAll(`#${app.slug}-header-btns > btn`),
@@ -2589,8 +2589,8 @@
             Object.entries(headerElems).forEach(([key, elem]) => widths[key] = dom.get.computedWidth(elem))
 
             // Hide/show byline based on space available
-            const availSpace = widths.appDiv - widths.appDivXpadding - widths.logo - widths.btns
-            Object.assign(headerElems.byline.style, (widths.byline +10) > availSpace ?
+            const availSpace = widths.appDiv - widths.appDivXpadding - widths.logo - widths.btns -10
+            Object.assign(headerElems.byline.style, widths.byline > availSpace ?
                 { position: 'absolute', left: '-9999px', opacity: 0 } // hide using position to support transition
               : { position: '', left: '', opacity: 1 } // show
             )
@@ -4017,7 +4017,7 @@
                 addListeners.btns.appHeader()
 
                 // Create/append 'by KudoAI'
-                const kudoAIspan = dom.create.elem('span', { class: 'kudoai no-user-select' })
+                const kudoAIspan = dom.create.elem('span', { class: 'byline no-user-select' })
                 kudoAIspan.textContent = 'by '
                 kudoAIspan.append(dom.create.anchor(app.urls.publisher, 'KudoAI'))
                 appDiv.querySelector(`.${app.slug}-name`).insertAdjacentElement('afterend', kudoAIspan)
