@@ -40,9 +40,19 @@ const aiHomeURLs = chrome.runtime.getManifest().content_scripts[0].matches.map(u
 chrome.runtime.onMessage.addListener(async req => {
     if (req.action == 'showAbout') {
         const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true })
-        const aiTab = aiHomeURLs.some(aiURL => // check if active tab is AI site
-            new URL(activeTab.url).hostname == new URL(aiURL).hostname) ? activeTab
-                : await chrome.tabs.create({ url: aiHomeURLs[0] }) // ...if not, open AI site
+        const aiTab = aiHomeURLs.some(aiURL =>
+            new URL(activeTab.url).hostname == new URL(aiURL).hostname) ? activeTab // active tab is AI site, use it
+                : // else use random enabled site or ChatGPT
+                await chrome.storage.local.get(['chatgptDisabled', 'perplexityDisabled', 'poeDisabled'])
+                    .then(({chatgptDisabled, perplexityDisabled, poeDisabled}) => {
+                        const sitesEnabled = [
+                            !chatgptDisabled && aiHomeURLs[0],
+                            !perplexityDisabled && aiHomeURLs[1],
+                            !poeDisabled && aiHomeURLs[2]
+                        ].filter(Boolean)
+                    return chrome.tabs.create({
+                        url: sitesEnabled[Math.floor(Math.random() * sitesEnabled.length)] || aiHomeURLs[0] })
+                })
         if (activeTab != aiTab) await new Promise(resolve => // after new tab loads
             chrome.tabs.onUpdated.addListener(function loadedListener(tabId, info) {
                 if (tabId == aiTab.id && info.status == 'complete') {
