@@ -58,12 +58,14 @@ window.buttons = {
     },
 
     async create() {
-        const site = this.imports.env.site, hasTallChatbar = this.imports.env.ui.hasTallChatbar
+        const site = this.imports.env.site, hasTallChatbar = this.imports.env.ui.hasTallChatbar,
+              btnSelectors = this.imports.sites[site].selectors.btns
         if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.get.rightBtn() // for rOffset + styles
         const validBtnTypes = this.get.types.valid()
         const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? 29 : -8.85
-        const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4
-                      : hasTallChatbar ? ( this.rightBtn.getBoundingClientRect().width +2 ) : -0.25
+        const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4 : hasTallChatbar ? (
+            this.rightBtn.getBoundingClientRect().width +2 ) * (
+                document.querySelector(/\(([^()]+)\)$/.exec(btnSelectors.dictate)?.[1]) ? 2 : 1 ) : -0.25
         const transitionStyles = 'transform 0.15s ease, opacity 0.5s ease'
 
         validBtnTypes.forEach(async (btnType, idx) => {
