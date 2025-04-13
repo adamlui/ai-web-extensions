@@ -39,7 +39,7 @@
 
 <img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
 
-<h3>🛒 Adds AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o! 🤖</h3>
+<h3>🛒 Bring the magic of ChatGPT to Amazon Shopping 🤖</h3>
 
 <a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img height=50 alt="[Install this script]" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
