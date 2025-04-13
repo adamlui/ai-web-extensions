@@ -1,5 +1,6 @@
 {
   "name": "Autoclear ChatGPT History", "symbol": "🕶️", "slug": "autoclear-chatgpt-history",
+  "configKeyPrefix": "autoclearChatGPThistory",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
     "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@latest/assets",

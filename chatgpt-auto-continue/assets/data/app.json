@@ -1,5 +1,6 @@
 {
   "name": "ChatGPT Auto-Continue", "symbol": "≫", "slug": "chatgpt-auto-continue",
+  "configKeyPrefix": "chatGPTautoContinue",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
     "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@latest/assets",

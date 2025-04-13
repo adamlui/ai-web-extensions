@@ -1,5 +1,6 @@
 {
   "name": "ChatGPT Infinity", "symbol": "∞", "slug": "chatgpt-infinity",
+  "configKeyPrefix": "chatGPTinfinity",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
     "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@latest/assets",
