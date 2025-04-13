@@ -489,10 +489,10 @@
                 <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
                    title="Install Violentmonkey for Chrome">
                         Violentmonkey</a><sup>2</sup>
+                or
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
                         <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
-                or
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
                         ScriptCat</a>
@@ -521,10 +521,10 @@
                 <a href="https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
                    title="Install Violentmonkey for Chrome">
                         Violentmonkey</a><sup>2</sup>
+                or
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
                         <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
-                or
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
                         ScriptCat</a>
