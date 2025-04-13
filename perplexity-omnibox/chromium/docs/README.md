@@ -3,6 +3,8 @@
 <img width="100%" src="https://assets.perplexityomnibox.com/images/tiles/marquee/edge/tile1400x560.png">
 <br><br>
 
+<a href="#">
+    <img height=31 src="https://img.shields.io/badge/Users-2.4K-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.perplexityomnibox.com/?utm_source=github&utm_medium=referral&utm_content=chrome-rating-shield">
     <img alt="[Google Chrome]" height=31 src="https://img.shields.io/chrome-web-store/rating/ckhgddjdjkphbaediggjdddjdjgkalom?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://edge.perplexityomnibox.com">
