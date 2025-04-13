@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.12.4
+// @version                  2025.4.12.5
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -447,28 +447,17 @@
                                       && parseInt(env.scriptManager.version.split('.')[0]) >= 5
     const xhr = typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
 
-    // Init APP data
+    // Init APP dataa
     const app = {
-        name: 'GoogleGPT', version: GM_info.script.version, symbol: '🤖',
-        configKeyPrefix: 'googleGPT', slug: 'googlegpt',
-        chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        author: { name: 'KudoAI', url: 'https://kudoai.com' },
-        urls: {
-            app: 'https://www.googlegpt.io',
-            chatgptJS: 'https://chatgpt.js.org',
-            contributors: 'https://docs.googlegpt.io/#-contributors',
-            discuss: 'https://github.com/KudoAI/googlegpt/discussions',
-            gitHub: 'https://github.com/KudoAI/googlegpt',
-            publisher: 'https://www.kudoai.com',
-            relatedExtensions: 'https://github.com/adamlui/ai-web-extensions',
-            review: { g2: 'https://www.g2.com/products/googlegpt/take_survey' },
-            support: 'https://support.googlegpt.io',
-            update: 'https://gm.googlegpt.io'
-        },
-        latestResourceCommitHash: '707c1ec' // for cached messages.json
+        version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
+        latestResourceCommitHash: '9f75f27' // for cached app.json + messages.json
     }
-    app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
-                          + `@${app.latestResourceCommitHash}`
+    app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@${app.latestResourceCommitHash}`
+    const remoteAppData = await new Promise(resolve => xhr({
+        method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
+        onload: resp => resolve(JSON.parse(resp.responseText))
+    }))
+    Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     app.msgs = {
         appDesc: 'Add AI answers to Google Search (powered by Google Gemma + GPT-4o!)',
         menuLabel_autoGetAnswers: 'Auto-Get Answers',
@@ -601,7 +590,8 @@
 
     // Init API data
     const apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
-        method: 'GET', url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@456ac92/assets/data/ai-chat-apis.json',
+        method: 'GET',
+        url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@456ac92/assets/data/ai-chat-apis.json',
         onload: resp => resolve(JSON.parse(resp.responseText))
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()
@@ -845,7 +835,7 @@
         // Fetch latest meta
         log.debug('Fetching latest userscript metadata...')
         xhr({
-            method: 'GET', url: app.urls.update + '?t=' + Date.now(),
+            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
             headers: { 'Cache-Control': 'no-cache' },
             onload: resp => {
                 log.debug('Success! Response received')
@@ -968,7 +958,7 @@
             const aboutModal = modals.alert(
                 `${app.symbol} ${app.msgs.appName}`, // title
                 `<span style="${labelStyles}">🧠 ${app.msgs.about_author}:</span> `
-                    + `<a href="${app.author.url}">${app.author.name}</a> ${app.msgs.about_and}`
+                    + `<a href="${app.author.url}">${app.author[0].name}</a> ${app.msgs.about_and}`
                         + ` <a href="${app.urls.contributors}">${app.msgs.about_contributors}</a>\n`
                 + `<span style="${labelStyles}">🏷️ ${app.msgs.about_version}:</span> `
                     + `<span class="about-em">${app.version}</span>\n`
@@ -1744,7 +1734,7 @@
                             + `${app.urls.gitHub}/commits/main/greasemonkey/${app.slug}.user.js`
                         + `">${app.msgs.link_viewChanges}</a>`,
                     function update() { // button
-                        modals.safeWinOpen(`${app.urls.update}?t=${Date.now()}`)
+                        modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
                     }, '', modals.update.width
                 )
 

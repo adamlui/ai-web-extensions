@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.12.6
+// @version                2025.4.12.7
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -136,25 +136,15 @@
 
     // Init APP data
     const app = {
-        name: 'AmazonGPT', version: GM_info.script.version, symbol: '🤖',
-        configKeyPrefix: 'amazonGPT', slug: 'amazongpt',
-        author: { name: 'KudoAI', url: 'https://kudoai.com' },
-        chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        urls: {
-            app: 'https://amazongpt.kudoai.com',
-            chatgptJS: 'https://chatgpt.js.org',
-            contributors: 'https://github.com/KudoAI/amazongpt/tree/main/docs/#-contributors',
-            discuss: 'https://github.com/KudoAI/amazongpt/discussions',
-            gitHub: 'https://github.com/KudoAI/amazongpt',
-            publisher: 'https://www.kudoai.com',
-            relatedExtensions: 'https://github.com/adamlui/ai-web-extensions',
-            support: 'https://amazongpt.kudoai.com/issues',
-            update: 'https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js'
-        },
-        latestResourceCommitHash: '2ab74be' // for cached messages.json
+        version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
+        latestResourceCommitHash: '63aa021' // for cached app.json + messages.json
     }
-    app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
-                          + `@${app.latestResourceCommitHash}`
+    app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@${app.latestResourceCommitHash}`
+    const remoteAppData = await new Promise(resolve => xhr({
+        method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
+        onload: resp => resolve(JSON.parse(resp.responseText))
+    }))
+    Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     app.msgs = {
         appDesc: 'Add AI to Amazon shopping',
         menuLabel_proxyAPImode: 'Proxy API Mode',
@@ -257,7 +247,8 @@
 
     // Init API data
     const apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
-        method: 'GET', url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@456ac92/assets/data/ai-chat-apis.json',
+        method: 'GET',
+        url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@456ac92/assets/data/ai-chat-apis.json',
         onload: resp => resolve(JSON.parse(resp.responseText))
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()
@@ -478,7 +469,7 @@
         // Fetch latest meta
         log.debug('Fetching latest userscript metadata...')
         xhr({
-            method: 'GET', url: app.urls.update + '?t=' + Date.now(),
+            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
             headers: { 'Cache-Control': 'no-cache' },
             onload: resp => {
                 log.debug('Success! Response received')
@@ -606,7 +597,7 @@
             const aboutModal = modals.alert(
                 `${app.symbol} ${app.msgs.appName}`, // title
                 `<span style="${labelStyles}">🧠 ${app.msgs.about_author}:</span> `
-                    + `<a href="${app.author.url}">${app.author.name}</a> ${app.msgs.about_and}`
+                    + `<a href="${app.author.url}">${app.author[0].name}</a> ${app.msgs.about_and}`
                         + ` <a href="${app.urls.contributors}">${app.msgs.about_contributors}</a>\n`
                 + `<span style="${labelStyles}">🏷️ ${app.msgs.about_version}:</span> `
                     + `<span class="about-em">${app.version}</span>\n`
@@ -1369,7 +1360,7 @@
                             + `${app.urls.gitHub}/commits/main/greasemonkey/${app.slug}.user.js`
                         + `">${app.msgs.link_viewChanges}</a>`,
                     function update() { // button
-                        modals.safeWinOpen(`${app.urls.update}?t=${Date.now()}`)
+                        modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
                     }, '', modals.update.width
                 )
 

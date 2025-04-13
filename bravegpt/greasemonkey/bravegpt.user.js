@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.12.4
+// @version               2025.4.12.5
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -258,30 +258,15 @@
 
     // Init APP data
     const app = {
-        name: 'BraveGPT', version: GM_info.script.version, symbol: '🦁',
-        configKeyPrefix: 'braveGPT', slug: 'bravegpt',
-        chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        author: { name: 'KudoAI', url: 'https://kudoai.com' },
-        urls: {
-            app: 'https://www.bravegpt.com',
-            chatgptJS: 'https://chatgpt.js.org',
-            contributors: 'https://docs.bravegpt.com/#-contributors',
-            discuss: 'https://github.com/KudoAI/bravegpt/discussions',
-            gitHub: 'https://github.com/KudoAI/bravegpt',
-            publisher: 'https://www.kudoai.com',
-            relatedExtensions: 'https://github.com/adamlui/ai-web-extensions',
-            review: {
-                alternativeTo: 'https://alternativeto.net/software/bravegpt/about/',
-                g2: 'https://www.g2.com/products/bravegpt/take_survey',
-                productHunt: 'https://www.producthunt.com/products/bravegpt/reviews/new'
-            },
-            support: 'https://support.bravegpt.com',
-            update: 'https://gm.bravegpt.com'
-        },
-        latestResourceCommitHash: 'f0cbaea' // for cached messages.json
+        version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
+        latestResourceCommitHash: 'd5fef0d' // for cached app.json + messages.json
     }
-    app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
-                          + `@${app.latestResourceCommitHash}`
+    app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@${app.latestResourceCommitHash}`
+    const remoteAppData = await new Promise(resolve => xhr({
+        method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
+        onload: resp => resolve(JSON.parse(resp.responseText))
+    }))
+    Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     app.msgs = {
         appDesc: 'Adds ChatGPT answers to Brave Search sidebar (powered by GPT-4o!)',
         menuLabel_proxyAPImode: 'Proxy API Mode',
@@ -413,7 +398,8 @@
 
     // Init API data
     const apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
-        method: 'GET', url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@456ac92/assets/data/ai-chat-apis.json',
+        method: 'GET',
+        url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@456ac92/assets/data/ai-chat-apis.json',
         onload: resp => resolve(JSON.parse(resp.responseText))
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()
@@ -664,7 +650,7 @@
         // Fetch latest meta
         log.debug('Fetching latest userscript metadata...')
         xhr({
-            method: 'GET', url: app.urls.update + '?t=' + Date.now(),
+            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
             headers: { 'Cache-Control': 'no-cache' },
             onload: resp => {
                 log.debug('Success! Response received')
@@ -787,7 +773,7 @@
             const aboutModal = modals.alert(
                 `${app.symbol} ${app.msgs.appName}`, // title
                 `<span style="${labelStyles}">🧠 ${app.msgs.about_author}:</span> `
-                    + `<a href="${app.author.url}">${app.author.name}</a> ${app.msgs.about_and}`
+                    + `<a href="${app.author.url}">${app.author[0].name}</a> ${app.msgs.about_and}`
                         + ` <a href="${app.urls.contributors}">${app.msgs.about_contributors}</a>\n`
                 + `<span style="${labelStyles}">🏷️ ${app.msgs.about_version}:</span> `
                     + `<span class="about-em">${app.version}</span>\n`
@@ -1601,7 +1587,7 @@
                             + `${app.urls.gitHub}/commits/main/greasemonkey/${app.slug}.user.js`
                         + `">${app.msgs.link_viewChanges}</a>`,
                     function update() { // button
-                        modals.safeWinOpen(`${app.urls.update}?t=${Date.now()}`)
+                        modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
                     }, '', modals.update.width
                 )
 

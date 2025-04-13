@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.12
+// @version             2025.4.12.1
 // @license             MIT
 // @icon                https://assets.chatgptautotalk.com/images/icons/openai/black/icon48.png?v=9f1ed3c
 // @icon64              https://assets.chatgptautotalk.com/images/icons/openai/black/icon64.png?v=9f1ed3c
@@ -283,28 +283,16 @@
 
     // Init APP data
     const app = {
-        name: 'ChatGPT Auto-Talk', version: GM_info.script.version, symbol: '📣', slug: 'chatgpt-auto-talk',
-        configKeyPrefix: 'chatGPTautoTalk', chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        author: { name: 'Adam Lui', url: 'https://github.com/adamlui' },
-        urls: {
-            assetHost: 'https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@latest/assets',
-            chatgptJS: 'https://chatgpt.js.org',
-            contributors: 'https://docs.chatgptautotalk.com/#-contributors',
-            discuss: 'https://github.com/adamlui/chatgpt-auto-talk/discussions',
-            donate: {
-                cashApp: 'https://cash.app/$adamlui',
-                gitHub: 'https://github.com/sponsors/adamlui',
-                payPal: 'https://paypal.me/adamlui'
-            },
-            gitHub: 'https://github.com/adamlui/chatgpt-auto-talk',
-            relatedExtensions: 'https://github.com/adamlui/ai-web-extensions',
-            support: 'https://support.chatgptautotalk.com',
-            update: 'https://gm.chatgptautotalk.com'
-        },
-        latestResourceCommitHash: 'e617ae1' // for cached messages.json + navicon in toggles.sidebar.insert()
+        version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
+        latestResourceCommitHash: '861ee4d' // for cached app.json + messages.json + navicon in toggles.sidebar.insert()
     }
+    app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@${app.latestResourceCommitHash}`
+    const remoteAppData = await new Promise(resolve => xhr({
+        method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
+        onload: resp => resolve(JSON.parse(resp.responseText))
+    }))
+    Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     app.urls.assetHost = app.urls.assetHost.replace('@latest', `@${app.latestResourceCommitHash}`)
-    app.urls.resourceHost = app.urls.assetHost.replace('/assets', '')
     app.msgs = {
         appName: app.name,
         appAuthor: app.author.name,
@@ -450,7 +438,7 @@
 
     function updateCheck() {
         xhr({
-            method: 'GET', url: app.urls.update + '?t=' + Date.now(),
+            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
             headers: { 'Cache-Control': 'no-cache' },
             onload: resp => {
 
@@ -721,7 +709,7 @@
                             + `${app.urls.gitHub}/commits/main/greasemonkey/${app.slug}.user.js`
                         + `">${app.msgs.link_viewChanges}</a>`,
                     function update() { // button
-                        modals.safeWinOpen(`${app.urls.update}?t=${Date.now()}`)
+                        modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
                     }, '', modals.update.width
                 )
 
