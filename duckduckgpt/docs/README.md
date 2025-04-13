@@ -682,7 +682,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 
 ### <img src="https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png" width=17> [AmazonGPT](https://amazongpt.kudoai.com) &nbsp;<a href="https://amazongpt.kudoai.com/assets/wolfram-award/letter.pdf"><img height=20 src="https://amazongpt.kudoai.com/assets/images/badges/wolfram-award/gold-badge.png"></a>
 
-> Adds AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
+> Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 <br>[Install](https://amazongpt.kudoai.com/#-installation) /
 [Readme](https://amazongpt.kudoai.com/#readme) /
 [Discuss](https://amazongpt.kudoai.com/discussions)

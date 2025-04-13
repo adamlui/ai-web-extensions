@@ -63,7 +63,7 @@
 </h3>
 
 <details>
-    <summary>Adds AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!</summary>
+    <summary>Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!</summary>
     <br><blockquote>
         <a href="../amazongpt">
             <img width=511 src="https://amazongpt.kudoai.com/assets/images/screenshots/desktop/mice-md-reply-darkmode.png"></a>

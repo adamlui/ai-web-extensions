@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name                   AmazonGPT 🤖
-// @description            Adds AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
+// @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.12.5
+// @version                2025.4.12.6
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -156,7 +156,7 @@
     app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
                           + `@${app.latestResourceCommitHash}`
     app.msgs = {
-        appDesc: 'Adds AI to Amazon shopping',
+        appDesc: 'Add AI to Amazon shopping',
         menuLabel_proxyAPImode: 'Proxy API Mode',
         menuLabel_autoFocusChatbar: 'Auto-Focus Chatbar',
         menuLabel_whenStreaming: 'when streaming',

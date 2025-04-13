@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name                  BraveGPT 🤖
-// @description           Adds AI answers to Brave Search (powered by GPT-4o!)
+// @description           Add AI answers to Brave Search (powered by GPT-4o!)
 // @description:af        Voeg AI-antwoorde by Brave Search (aangedryf deur GPT-4o!)
 // @description:am        የ Brave Search ውስጥ AI መልቀቅን አድርግ፣ (GPT-4o በመሣሪያዎቹ ውስጥ!)
 // @description:ar        يضيف إجابات AI إلى Brave Search (مدعوم بواسطة GPT-4o!)
@@ -18,7 +18,7 @@
 // @description:da        Tilføjer AI-svar til Brave Search (drevet af GPT-4o!)
 // @description:de        Fügt AI-Antworten zu Brave Search hinzu (betrieben von GPT-4o!)
 // @description:el        Προσθέτει απαντήσεις AI στο Brave Search (τροφοδοτούμενο από GPT-4o!)
-// @description:en        Adds AI answers to Brave Search (powered by GPT-4o!)
+// @description:en        Add AI answers to Brave Search (powered by GPT-4o!)
 // @description:eo        Aldonas AI-respondojn al Brave Search (ebligita de GPT-4o!)
 // @description:es        Añade respuestas de IA a Brave Search (impulsado por GPT-4o!)
 // @description:et        Lisab AI-vastused Brave Search'le (juhitud GPT-4o-ga!)
@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.12.3
+// @version               2025.4.12.4
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0

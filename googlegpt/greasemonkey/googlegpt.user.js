@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                     GoogleGPT 🤖
 // @name:zh-CN               GoogleGPT 🤖
-// @description              Adds AI answers to Google Search (powered by Google Gemma + GPT-4o!)
+// @description              Add AI answers to Google Search (powered by Google Gemma + GPT-4o!)
 // @description:af           Voeg AI-antwoorde by Google Search (aangedryf deur Google Gemma + GPT-4o!)
 // @description:am           የ Google Search ውስጥ AI መልቀቅን አድርግ፣ (Google Gemma + GPT-4o በመሣሪያዎቹ ውስጥ!)
 // @description:ar           يضيف إجابات AI إلى Google Search (مدعوم بواسطة Google Gemma + GPT-4o!)
@@ -19,7 +19,7 @@
 // @description:da           Tilføjer AI-svar til Google Search (drevet af Google Gemma + GPT-4o!)
 // @description:de           Fügt AI-Antworten zu Google Search hinzu (betrieben von Google Gemma + GPT-4o!)
 // @description:el           Προσθέτει απαντήσεις AI στο Google Search (τροφοδοτούμενο από Google Gemma + GPT-4o!)
-// @description:en           Adds AI answers to Google Search (powered by Google Gemma + GPT-4o!)
+// @description:en           Add AI answers to Google Search (powered by Google Gemma + GPT-4o!)
 // @description:eo           Aldonas AI-respondojn al Google Search (ebligita de Google Gemma + GPT-4o!)
 // @description:es           Añade respuestas de IA a Google Search (impulsado por Google Gemma + GPT-4o!)
 // @description:et           Lisab AI-vastused Google Search'le (juhitud Google Gemma + GPT-4o-ga!)
@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.12.3
+// @version                  2025.4.12.4
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -470,7 +470,7 @@
     app.urls.resourceHost = app.urls.gitHub.replace('github.com', 'cdn.jsdelivr.net/gh')
                           + `@${app.latestResourceCommitHash}`
     app.msgs = {
-        appDesc: 'Adds AI answers to Google Search (powered by Google Gemma + GPT-4o!)',
+        appDesc: 'Add AI answers to Google Search (powered by Google Gemma + GPT-4o!)',
         menuLabel_autoGetAnswers: 'Auto-Get Answers',
         menuLabel_autoSummarizeResults: 'Auto-Summarize Results',
         menuLabel_autoFocusChatbar: 'Auto-Focus Chatbar',
