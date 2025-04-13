@@ -1,0 +1,18 @@
+{
+  "name": "AmazonGPT", "symbol": "🛒", "slug": "amazongpt", "configKeyPrefix": "amazonGPT",
+  "author": [
+    { "name": "Adam Lui", "url": "https://github.com/adamlui" }, { "name": "KudoAI", "url": "https://www.kudoai.com" }],
+  "urls": {
+    "app": "https://amazongpt.kudoai.com",
+    "assetHost": "https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@latest/assets",
+    "chatgptJS": "https://chatgpt.js.org",
+    "contributors": "https://github.com/KudoAI/amazongpt/tree/main/docs/#-contributors",
+    "discuss": "https://github.com/KudoAI/amazongpt/discussions",
+    "donate": { "gitHub": "https://github.com/sponsors/KudoAI" },
+    "gitHub": "https://github.com/KudoAI/amazongpt",
+    "publisher": "https://www.kudoai.com",
+    "relatedExtensions": "https://aiwebextensions.com",
+    "support": "ttps://amazongpt.kudoai.com/issues",
+    "update": { "gm": "https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js" }
+  }
+}

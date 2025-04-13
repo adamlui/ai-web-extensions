@@ -163,9 +163,9 @@ window.modals = {
             // Replace buttons w/ clones that don't dismiss modal
             btn.replaceWith(btn = btn.cloneNode(true))
             btn.onclick = () => this.safeWinOpen(this.imports.app.urls.review[
-                btn.textContent == 'Chrome Web Store' ? 'chromeWebStore'
-              : btn.textContent == 'Edge Addons' ? 'edgeAddons'
-              : btn.textContent == 'Firefox Addons' ? 'firefoxAddons'
+                btn.textContent == 'Chrome Web Store' ? 'chrome'
+              : btn.textContent == 'Edge Addons' ? 'edge'
+              : btn.textContent == 'Firefox Addons' ? 'firefox'
               : 'productHunt'
             ])
         })

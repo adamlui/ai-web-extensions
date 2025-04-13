@@ -15,12 +15,13 @@
     "gitHub": "https://github.com/adamlui/chatgpt-widescreen",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
-      "chromeWebStore": "https://chrome.chatgptwidescreen.com/reviews",
-      "edgeAddons": "https://edge.chatgptwidescreen.com",
-      "firefoxAddons": "https://ff.chatgptwidescreen.com/reviews",
+      "chrome": "https://chrome.chatgptwidescreen.com/reviews",
+      "edge": "https://edge.chatgptwidescreen.com",
+      "firefox": "https://ff.chatgptwidescreen.com/reviews",
       "productHunt": "https://www.producthunt.com/products/chatgpt-widescreen-mode/reviews/new"
     },
     "support": "https://support.chatgptwidescreen.com",
+    "update": { "gm": "https://gm.chatgptwidescreen.com" },
     "welcome": "https://chatgptwidescreen.com/welcome"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "name": "BraveGPT", "symbol": "🦁", "slug": "bravegpt", "configKeyPrefix": "braveGPT",
+  "author": [
+    { "name": "Adam Lui", "url": "https://github.com/adamlui" }, { "name": "KudoAI", "url": "https://www.kudoai.com" }],
+  "urls": {
+    "app": "https://www.bravegpt.com",
+    "assetHost": "https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@latest/assets",
+    "chatgptJS": "https://chatgpt.js.org",
+    "contributors": "https://docs.bravegpt.com/#-contributors",
+    "discuss": "https://github.com/KudoAI/bravegpt/discussions",
+    "donate": { "gitHub": "https://github.com/sponsors/KudoAI" },
+    "gitHub": "https://github.com/KudoAI/bravegpt",
+    "publisher": "https://www.kudoai.com",
+    "relatedExtensions": "https://aiwebextensions.com",
+    "review": {
+      "alternativeTo": "https://alternativeto.net/software/bravegpt/about/",
+      "g2": "https://www.g2.com/products/bravegpt/take_survey",
+      "productHunt": "https://www.producthunt.com/products/bravegpt/reviews/new"
+    },
+    "support": "https://amazongpt.kudoai.com/issues",
+    "update": { "gm": "https://gm.bravegpt.com" }
+  }
+}

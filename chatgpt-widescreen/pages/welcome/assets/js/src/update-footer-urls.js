@@ -10,7 +10,7 @@
             document.querySelectorAll('.footer-links a').forEach(link =>
                 link.href = link.id.includes('support') ? app.urls.support
                           : link.id.includes('review') ? app.urls.review[
-                                navigator.userAgent.includes('Edg') ? 'edgeAddons' : 'chromeWebStore']
+                                navigator.userAgent.includes('Edg') ? 'edge' : 'chrome']
                           : link.href // don't update other links
             )
         }

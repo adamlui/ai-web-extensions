@@ -1,0 +1,18 @@
+{
+  "name": "ChatGPT Omnibox", "symbol": "🤖", "slug": "chatgpt-omnibox",
+  "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
+  "urls": {
+    "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-omnibox@latest/assets",
+    "discuss": "https://github.com/adamlui/chatgpt-omnibox/discussions",
+    "donate": {
+      "cashApp": "https://cash.app/$adamlui",
+      "gitHub": "https://github.com/sponsors/adamlui",
+      "payPal": "https://paypal.me/adamlui"
+    },
+    "gitHub": "https://github.com/adamlui/chatgpt-omnibox",
+    "publisher": "https://aiwebextensions.com",
+    "relatedExtensions": "https://aiwebextensions.com",
+    "review": { "firefox": "https://ff.chatgptomnibox.com/reviews" },
+    "support": "https://support.chatgptomnibox.com"
+  }
+}

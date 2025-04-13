@@ -1,0 +1,23 @@
+{
+  "name": "DeepSeek Omnibox", "symbol": "🐋", "slug": "deepseek-omnibox",
+  "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
+  "urls": {
+    "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox@latest/assets",
+    "discuss": "https://github.com/adamlui/deepseek-omnibox/discussions",
+    "donate": {
+      "cashApp": "https://cash.app/$adamlui",
+      "gitHub": "https://github.com/sponsors/adamlui",
+      "payPal": "https://paypal.me/adamlui"
+    },
+    "gitHub": "https://github.com/adamlui/deepseek-omnibox",
+    "publisher": "https://aiwebextensions.com",
+    "relatedExtensions": "https://aiwebextensions.com",
+    "review": {
+      "chrome": "https://chrome.deepseekomnibox.com/reviews",
+      "edge": "https://edge.deepseekomnibox.com/reviews",
+      "firefox": "https://ff.deepseekomnibox.com/reviews",
+      "g2": "https://www.g2.com/products/deepseek-omnibox/take_survey"
+    },
+    "support": "https://support.deepseekomnibox.com"
+  }
+}

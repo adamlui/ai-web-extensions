@@ -14,6 +14,7 @@
     },
     "gitHub": "https://github.com/adamlui/autoclear-chatgpt-history",
     "relatedExtensions": "https://aiwebextensions.com",
-    "support": "https://support.autoclearchatgpt.com"
+    "support": "https://support.autoclearchatgpt.com",
+    "update": { "gm": "https://gm.autoclearchatgpt.com" }
   }
 }

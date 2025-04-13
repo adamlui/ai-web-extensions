@@ -16,12 +16,13 @@
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
       "alternativeTo": "https://alternativeto.net/software/chatgpt-infinity/about/",
-      "chromeWebStore": "https://chrome.chatgptinfinity.com/reviews",
-      "edgeAddons": "https://edge.chatgptinfinity.com",
-      "firefoxAddons": "https://ff.chatgptinfinity.com/reviews",
+      "chrome": "https://chrome.chatgptinfinity.com/reviews",
+      "edge": "https://edge.chatgptinfinity.com",
+      "firefox": "https://ff.chatgptinfinity.com/reviews",
       "productHunt": "https://www.producthunt.com/products/chatgpt-infinity/reviews/new"
     },
     "support": "https://support.chatgptinfinity.com",
+    "update": { "gm": "https://gm.chatgptinfinity.com" },
     "welcome": "https://chatgptinfinity.com/welcome"
   }
 }

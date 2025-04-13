@@ -62,8 +62,8 @@ window.modals = {
                 btn.onclick = () => this.safeWinOpen(
                     btn.textContent.includes(this.getMsg('btnLabel_getSupport')) ? this.imports.app.urls.support
                   : btn.textContent.includes(this.getMsg('btnLabel_rateUs')) ? this.imports.app.urls.review[
-                        this.runtime.includes('Edge') ? 'edgeAddons'
-                      : this.runtime.includes('Firefox') ? 'firefoxAddons' : 'chromeWebStore']
+                        this.runtime.includes('Edge') ? 'edge'
+                      : this.runtime.includes('Firefox') ? 'firefox' : 'chrome']
                   : btn.textContent.includes(this.getMsg('btnLabel_discuss')) ? this.imports.app.urls.discuss
                   : this.imports.app.urls.relatedExtensions
                 )

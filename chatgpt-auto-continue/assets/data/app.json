@@ -15,11 +15,12 @@
     "gitHub": "https://github.com/adamlui/chatgpt-auto-continue",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
-      "chromeWebStore": "https://chrome.chatgptautocontinue.com/reviews",
-      "edgeAddons": "https://edge.chatgptautocontinue.com",
-      "firefoxAddons": "https://ff.chatgptautocontinue.com/reviews"
+      "chrome": "https://chrome.chatgptautocontinue.com/reviews",
+      "edge": "https://edge.chatgptautocontinue.com",
+      "firefox": "https://ff.chatgptautocontinue.com/reviews"
     },
     "support": "https://support.chatgptautocontinue.com",
+    "update": { "gm": "https://gm.chatgptautocontinue.com" },
     "welcome": "https://chatgptautocontinue.com/welcome"
   }
 }
