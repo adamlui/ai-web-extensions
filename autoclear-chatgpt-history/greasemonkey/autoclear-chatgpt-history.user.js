@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.12
+// @version             2025.4.12.1
 // @license             MIT
 // @icon                https://assets.autoclearchatgpt.com/images/icons/openai/black/icon48.png?v=f461c06
 // @icon64              https://assets.autoclearchatgpt.com/images/icons/openai/black/icon64.png?v=f461c06
@@ -292,9 +292,8 @@
     // Init APP data
     const app = {
         version: GM_info.script.version, configKeyPrefix: 'autoclearChatGPThistory',
-        chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        urls: { update: 'https://gm.autoclearchatgpt.com' },
-        latestResourceCommitHash: 'ccf5c2e' // for cached app.json + messages.json + navicon in toggles.sidebar.insert()
+        chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
+        latestResourceCommitHash: '3c647c7' // for cached app.json + messages.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = 'https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history'
                           + `@${app.latestResourceCommitHash}`
@@ -463,7 +462,7 @@
 
     function updateCheck() {
         xhr({
-            method: 'GET', url: app.urls.update + '?t=' + Date.now(),
+            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
             headers: { 'Cache-Control': 'no-cache' },
             onload: resp => {
 
@@ -735,7 +734,7 @@
                             + `${app.urls.gitHub}/commits/main/greasemonkey/${app.slug}.user.js`
                         + `">${app.msgs.link_viewChanges}</a>`,
                     function update() { // button
-                        modals.safeWinOpen(`${app.urls.update}?t=${Date.now()}`)
+                        modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
                     }, '', modals.update.width
                 )
 

@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.12
+// @version             2025.4.12.1
 // @license             MIT
 // @icon                https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon48.png?v=a8c9387
 // @icon64              https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon64.png?v=a8c9387
@@ -229,7 +229,7 @@
 // @connect             gm.chatgptautocontinue.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.7.1/dist/chatgpt.min.js#sha256-uv1k2VxGy+ri3+2C+D/kTYSBCom5JzvrNCLxzItgD6M=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@ab099a3/chromium/extension/components/modals.js#sha256-NGaCScpnN0140ej6eFh/+Yorx6VLea1uNoZ5kY5cX4Q=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@c7e6353/chromium/extension/components/modals.js#sha256-19pTp/+K8rf5vKdr4fDDi5CsEv4qVvrJ/iR5/wbXyXw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@762a364/chromium/extension/lib/dom.js#sha256-U+SUWAkqLIY6krdR2WPhVy5/f+cTV03n3F8b+Y+/Py0=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@9f4e5b1/chromium/extension/lib/settings.js#sha256-lwjhc3z5/1zCooHxCyaf+BlVJqkBwf26kLfkddHWiLs=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@80e800c/chromium/extension/lib/ui.js#sha256-/szI0bDpLL1aVTrc29iyToff58VMfeM/lSyjHWTipt0=
@@ -282,9 +282,8 @@
     // Init APP data
     const app = {
         version: GM_info.script.version, configKeyPrefix: 'chatGPTautoContinue',
-        chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        urls: { update: 'https://gm.chatgptautocontinue.com' },
-        latestResourceCommitHash: '260f739' // for cached app.json + messages.json
+        chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
+        latestResourceCommitHash: 'c7e6353' // for cached app.json + messages.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -426,7 +425,7 @@
 
     function updateCheck() {
         xhr({
-            method: 'GET', url: app.urls.update + '?t=' + Date.now(),
+            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
             headers: { 'Cache-Control': 'no-cache' },
             onload: resp => {
 

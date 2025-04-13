@@ -274,7 +274,7 @@ window.modals = {
                              modals.imports.app.slug}-mode.user.js`
                     + `">${modals.getMsg('link_viewChanges')}</a>`,
                 function update() { // button
-                    modals.safeWinOpen(`${modals.imports.app.urls.update}?t=${Date.now()}`)
+                    modals.safeWinOpen(`${modals.imports.app.urls.update.gm}?t=${Date.now()}`)
                 }, '', modals.update.width
             )
 

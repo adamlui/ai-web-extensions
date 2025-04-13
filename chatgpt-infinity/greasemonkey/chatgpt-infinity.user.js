@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.12
+// @version             2025.4.12.1
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -220,7 +220,7 @@
 // @connect             gm.chatgptinfinity.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.7.1/dist/chatgpt.min.js#sha256-uv1k2VxGy+ri3+2C+D/kTYSBCom5JzvrNCLxzItgD6M=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@02523e3/chromium/extension/components/modals.js#sha256-ARDA7a8Td27PNs20OZ+OHFXqOBL2tbPFy2rQLcOWUpw=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@92c7c1a/chromium/extension/components/modals.js#sha256-9bQSGBicrZYxcim9MtxNQJpGelLTGXFiUFmSM+lgoME=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@1920a70/chromium/extension/components/toggles.js#sha256-NB7hi4nvjegGUAnedewXXiJYEeMELMNrn3pu2Ozp57w=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@1ae4e33/chromium/extension/lib/dom.js#sha256-U+SUWAkqLIY6krdR2WPhVy5/f+cTV03n3F8b+Y+/Py0=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@0d11d9a/chromium/extension/lib/settings.js#sha256-6TUEuqq5UgRRL+9movbFf3eeTqWloP7Y4S04392BHso=
@@ -274,9 +274,8 @@
     // Init APP data
     const app = {
         version: GM_info.script.version, configKeyPrefix: 'chatGPTinfinity',
-        chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        urls: { update: 'https://gm.chatgptinfinity.com' },
-        latestResourceCommitHash: 'f7ece07' // for cached app.json + messages.json + navicon in toggles.sidebar.insert()
+        chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
+        latestResourceCommitHash: '92c7c1a' // for cached app.json + messages.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -494,7 +493,7 @@
 
     function updateCheck() {
         xhr({
-            method: 'GET', url: app.urls.update + '?t=' + Date.now(),
+            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
             headers: { 'Cache-Control': 'no-cache' },
             onload: resp => {
 
