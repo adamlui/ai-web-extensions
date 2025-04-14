@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ба панели паҳлӯии DuckDuckGo ҷавобҳои ChatGPT-ро илова мекунад (бо GPT-4o кор мекунад!)" },
   "menuLabel_proxyAPImode": { "message": "Усули API Proxy" },
+  "menuLabel_preferred": { "message": "Size Policy" },
   "menuLabel_autoGetAnswers": { "message": "Ҷавоби худкор" },
   "menuLabel_autoSummarizeResults": { "message": "Худмаблағгузорӣ кардани натиҷаҳо" },
   "menuLabel_autoFocusChatbar": { "message": "Пайраҳаи чат бо фокуси худкор" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Худкор" },
   "menuLabel_about": { "message": "Дар бораи" },
   "menuLabel_settings": { "message": "Танзимот" },
+  "menuLabel_random": { "message": "Занондан" },
+  "menuLabel_saved": { "message": "Нигоҳ доштани сурат" },
   "componentLabel_used": { "message": "Истифодашуда" },
   "about_author": { "message": "Муаалиф" },
   "about_and": { "message": "ва" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Тавлиди аудио" },
   "tooltip_sendRelatedQuery": { "message": "Фиристодани дархости марбута" },
   "helptip_proxyAPImode": { "message": "Name" },
+  "helptip_preferredAPI": { "message": "API барои истифода ҳангоми гирифтани ҷавобҳо дар режими Proxy" },
   "helptip_streamingMode": { "message": "Қабул кардани ҷавобҳо дар ҷараёни матнии доимӣ" },
   "helptip_autoGetAnswers": { "message": "Awtomatikong nagpapadala ng mga query sa DuckDuckGPT kapag gumagamit ng search engine" },
   "helptip_autoSummarizeResults": { "message": "Awtomatikong sumali ang pahina ng mga resulta sa paghah" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "& Кӯшиш кунед" },
   "alert_switchingOn": { "message": "переключить вкл" },
   "alert_switchingOff": { "message": "хомӯш кардан" },
+  "alert_selectingDiff": { "message": "pumili ng iba 't ibang" },
   "alert_generated": { "message": "Тавлидшуда" },
   "notif_copiedToClipboard": { "message": "URL дар буфери тағйирот копӣ карда шудааст" },
   "notif_downloaded": { "message": "Боргирӣ шуд" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Мубодилаи фикру ақида" },
   "prefix_exit": { "message": "Баромад" },
   "state_on": { "message": "Оран" },
-  "state_off": { "message": "& Ғайри фаъол" }
+  "state_off": { "message": "& Ғайри фаъол" },
+  "state_no": { "message": "Не" }
 }

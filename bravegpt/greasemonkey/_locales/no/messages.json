@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Legger ChatGPT-svar til Brave Search-sidefeltet (drevet av GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API-modus" },
+  "menuLabel_preferred": { "message": "Foretrukket" },
   "menuLabel_autoGetAnswers": { "message": "Få svar automatisk" },
   "menuLabel_autoSummarizeResults": { "message": "Automatisk oppsummering av resultater" },
   "menuLabel_autoFocusChatbar": { "message": "Autofokus chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Om" },
   "menuLabel_settings": { "message": "Innstillinger" },
+  "menuLabel_random": { "message": "Tilfeldig" },
+  "menuLabel_saved": { "message": "Lagret" },
   "componentLabel_used": { "message": "brukt" },
   "about_author": { "message": "Forfatter" },
   "about_and": { "message": "og" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Genererer lyd" },
   "tooltip_sendRelatedQuery": { "message": "Send relatert forespørsel" },
   "helptip_proxyAPImode": { "message": "Bruker en Proxy API for tilgang til AI uten pålogging" },
+  "helptip_preferredAPI": { "message": "API som skal brukes når du får svar i proxy-modus" },
   "helptip_streamingMode": { "message": "Motta svar i en kontinuerlig tekststrøm" },
   "helptip_autoGetAnswers": { "message": "Send forespørsler automatisk til BraveGPT når du bruker søkemotor" },
   "helptip_autoSummarizeResults": { "message": "Oppsummer søkeresultatsiden automatisk" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Prøv" },
   "alert_switchingOn": { "message": "SLÅ PÅ" },
   "alert_switchingOff": { "message": "SL\\xC5 AV" },
+  "alert_selectingDiff": { "message": "velge en annen" },
   "alert_generated": { "message": "Opprettet" },
   "notif_copiedToClipboard": { "message": "Kopiert til utklippstavlen" },
   "notif_downloaded": { "message": "lastet ned" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Tilbakemeldinger" },
   "prefix_exit": { "message": "Utgang" },
   "state_on": { "message": "På" },
-  "state_off": { "message": "Av" }
+  "state_off": { "message": "Av" },
+  "state_no": { "message": "Nei" }
 }

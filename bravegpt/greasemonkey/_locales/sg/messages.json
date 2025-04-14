@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Add ChatGPT answers to Brave Search sidebar (so GPT-4o ayeke sara kua na ni!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API mode na na na" },
+  "menuLabel_preferred": { "message": "Mbi ye ni mingi" },
   "menuLabel_autoGetAnswers": { "message": "Auto-Get Réponses" },
   "menuLabel_autoSummarizeResults": { "message": "Aye so asi na yâ ti oto-summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar Anglais" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Ala Auto" },
   "menuLabel_about": { "message": "About sara" },
   "menuLabel_settings": { "message": "Akpengba ye so a leke na yâ ti Bible" },
+  "menuLabel_random": { "message": "Hirondelle Random" },
+  "menuLabel_saved": { "message": "A ti Sauve" },
   "componentLabel_used": { "message": "use of ti" },
   "about_author": { "message": "Author sara" },
   "about_and": { "message": "na" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Audio Lege ayeke dä ti téléchargé a-enregistre" },
   "tooltip_sendRelatedQuery": { "message": "Ti tokua mbeni hundango tënë so andu tënë ni" },
   "helptip_proxyAPImode": { "message": "Sara kua na mbeni API ti proxy ti wara lege ti sara kua na aye so ayeke na lege ni ape" },
+  "helptip_preferredAPI": { "message": "API ti sara kua na ni na ngoi so mo yeke wara akiringo tënë na yâ ti mode Proxy" },
   "helptip_streamingMode": { "message": "Ti wara akiringo tënë na yâ ti mbeni mbeti so angbâ lakue" },
   "helptip_autoGetAnswers": { "message": "Auto-send questions to BraveGPT na ngoi so mo yeke sara kua na moteur ti gi ye" },
   "helptip_autoSummarizeResults": { "message": "A yeke sara si a yeke nzoni ti tene azo ti Israël asara kua na aye so ala ye ti sara." },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Try ti try" },
   "alert_switchingOn": { "message": "change thinga" },
   "alert_switchingOff": { "message": "ti zia lege ti sarango ye ti lo" },
+  "alert_selectingDiff": { "message": "soro mbeni ye nde" },
   "alert_generated": { "message": "A yeke sara si azo aga na fini" },
   "notif_copiedToClipboard": { "message": "Gbu li ti mo na ndo ti clipboard" },
   "notif_downloaded": { "message": "yeke yeke download" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Mbi Feedback" },
   "prefix_exit": { "message": "A yeke sigigi na ni" },
   "state_on": { "message": "Na ndo ti" },
-  "state_off": { "message": "A yeke na lege ni ape" }
+  "state_off": { "message": "A yeke na lege ni ape" },
+  "state_no": { "message": "A yeke pëpe" }
 }

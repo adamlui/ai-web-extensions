@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ավելացնում է AI - ն Amazon - ի գնումներին" },
   "menuLabel_proxyAPImode": { "message": "Proxy API ռեժիմ" },
+  "menuLabel_preferred": { "message": "Նախընտրելի" },
   "menuLabel_autoFocusChatbar": { "message": "Ավտոմատ կենտրոնացման զրույցի վահանակ" },
   "menuLabel_whenStreaming": { "message": "հոսքի ժամանակ" },
   "menuLabel_background": { "message": "Խորքը" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Ավտոմեքենա" },
   "menuLabel_about": { "message": "Մոտ" },
   "menuLabel_settings": { "message": "Կարգավորումներ" },
+  "menuLabel_random": { "message": "Պատահական" },
+  "menuLabel_saved": { "message": "Պահպանված" },
   "componentLabel_used": { "message": "Օգտագործված" },
   "about_author": { "message": "Հեղինակ" },
   "about_and": { "message": "և" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Միավորի բանալի" },
   "tooltip_generatingAudio": { "message": "Ձայնի ստեղծում" },
   "helptip_proxyAPImode": { "message": "Օգտագործում է վստահված անձի API ՝ առանց AI - ին մուտք գործելու համար" },
+  "helptip_preferredAPI": { "message": "API - ն կօգտագործվի պրոքսի ռեժիմում պատասխաններ ստանալիս" },
   "helptip_streamingMode": { "message": "Պատասխանները ստացեք շարունակական տեքստային հոսքով" },
   "helptip_autoFocusChatbar": { "message": "Ամեն անգամ, երբ հայտնվում է, ավտոմատ ֆոկուսացման չաթ - բար" },
   "helptip_autoScroll": { "message": "Ինքնաթափանց պատասխաններ, երբ դրանք առաջանում են հոսքային ռեժիմում" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Փորձել" },
   "alert_switchingOn": { "message": "միացնել" },
   "alert_switchingOff": { "message": "անջատում" },
+  "alert_selectingDiff": { "message": "ինչպես ընտրել այլ" },
   "alert_generated": { "message": "Ստեղծվել է" },
   "notif_copiedToClipboard": { "message": "Պատճենված է շապիկի մեջ" },
   "notif_downloaded": { "message": "ներբեռնված է" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Զրույցներ" },
   "link_viewChanges": { "message": "Դիտել փոփոխությունները" },
   "state_on": { "message": "Միացնել" },
-  "state_off": { "message": "Անջատել" }
+  "state_off": { "message": "Անջատել" },
+  "state_no": { "message": "Ոչ" }
 }

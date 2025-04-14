@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "DuckDuckGo ಸೈಡ್ ಬಾರ್ ಗೆ ChatGPT ಉತ್ತರಗಳನ್ನು ಸೇರಿಸುತ್ತದೆ (GPT-4o ನಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ!)" },
   "menuLabel_proxyAPImode": { "message": "ಪ್ರಾಕ್ಸಿ API ಮೋಡ್" },
+  "menuLabel_preferred": { "message": "ಆದ್ಯತೆಗಳು" },
   "menuLabel_autoGetAnswers": { "message": "ಸ್ವಯಂ-ಗೆಟ್ ಉತ್ತರಗಳು" },
   "menuLabel_autoSummarizeResults": { "message": "ಸ್ವಯಂಚಾಲಿತ ಸಾರಾಂಶ ಫಲಿತಾಂಶಗಳು" },
   "menuLabel_autoFocusChatbar": { "message": "ಆಟೋ-ಫೋಕಸ್ ಚಾಟ್ ‌ ಬಾರ್" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "ಸ್ವಯಂ" },
   "menuLabel_about": { "message": "ಕುರಿತಾಗಿ" },
   "menuLabel_settings": { "message": "à²µà²¿à²²à³à²® à²à²¯à³à²à³@ action: inmenu Go" },
+  "menuLabel_random": { "message": "ಮನಬಂದಂತೆ" },
+  "menuLabel_saved": { "message": "ಉಳಿಸಲಾಗಿದೆ" },
   "componentLabel_used": { "message": "ಬಳಸಿದ" },
   "about_author": { "message": "ಲೇಖಕ" },
   "about_and": { "message": "ಮತ್ತು" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "ಆಡಿಯೋ ರಚಿಸಲಾಗುತ್ತಿದೆ" },
   "tooltip_sendRelatedQuery": { "message": "ಸಂಬಂಧಿತ ಪ್ರಶ್ನೆಯನ್ನು ಕಳುಹಿಸಿ" },
   "helptip_proxyAPImode": { "message": "AI ಗೆ ಯಾವುದೇ ಲಾಗಿನ್ ಪ್ರವೇಶಕ್ಕಾಗಿ ಪ್ರಾಕ್ಸಿ API ಅನ್ನು ಬಳಸುತ್ತದೆ" },
+  "helptip_preferredAPI": { "message": "ಪ್ರಾಕ್ಸಿ ಮೋಡ್‌ನಲ್ಲಿ ಉತ್ತರಗಳನ್ನು ಪಡೆಯುವಾಗ ಬಳಸಲು API" },
   "helptip_streamingMode": { "message": "ನಿರಂತರ ಪಠ್ಯ ಸ್ಟ್ರೀಮ್ ‌ ನಲ್ಲಿ ಪ್ರತ್ಯುತ್ತರಗಳನ್ನು ಸ್ವೀಕರಿಸಿ" },
   "helptip_autoGetAnswers": { "message": "ಸರ್ಚ್ ಎಂಜಿನ್ ಬಳಸುವಾಗ DuckDuckGPT ಗೆ ಸ್ವಯಂ-ಪ್ರಶ್ನೆಗಳನ್ನು ಕಳುಹಿಸಿ" },
   "helptip_autoSummarizeResults": { "message": "ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳ ಪುಟವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಂಕ್ಷಿಪ್ತಗೊಳಿಸಿ" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "ಪ್ರಯತ್ನಿಸು( T)" },
   "alert_switchingOn": { "message": "ಆನ್ ಮಾಡಲಾಗುತ್ತಿದೆ" },
   "alert_switchingOff": { "message": "ಸ್ವಿಚ್ ಆಫ್ ಮಾಡಲಾಗುತ್ತಿದೆ" },
+  "alert_selectingDiff": { "message": "ಬೇರೊಂದನ್ನು ಆಯ್ಕೆ ಮಾಡುವುದು" },
   "alert_generated": { "message": "ಸೃಷ್ಟಿಸಲಾಗಿದೆ" },
   "notif_copiedToClipboard": { "message": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ" },
   "notif_downloaded": { "message": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗಿದೆ" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಹಂಚಿಕೊಳ್ಳಿ" },
   "prefix_exit": { "message": "ನಿರ್ಗಮಿಸಿ" },
   "state_on": { "message": "ರಂದು" },
-  "state_off": { "message": "ಆಫ್" }
+  "state_off": { "message": "ಆಫ್" },
+  "state_no": { "message": "ಇಲ್ಲ" }
 }

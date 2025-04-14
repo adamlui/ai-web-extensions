@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ifaka i-AI kwiivenkile zeAmazon" },
   "menuLabel_proxyAPImode": { "message": "Imowudi ye-API ye-proxy" },
+  "menuLabel_preferred": { "message": "Okukhethwayo" },
   "menuLabel_autoFocusChatbar": { "message": "I-Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "xa kusasazwa" },
   "menuLabel_background": { "message": "Background" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Ezenzekelayo" },
   "menuLabel_about": { "message": "Malunga" },
   "menuLabel_settings": { "message": "Imimiselo" },
+  "menuLabel_random": { "message": "Ngokuzenzekelayo" },
+  "menuLabel_saved": { "message": "Igciniwe" },
   "componentLabel_used": { "message": "esetyenzisiweyo" },
   "about_author": { "message": "Inkcazelo ngombhali" },
   "about_and": { "message": "no" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Ikhowudi" },
   "tooltip_generatingAudio": { "message": "Ivelisa isandi" },
   "helptip_proxyAPImode": { "message": "Usebenzisa i-API yeProxy ukuze ungangeni kwiAI" },
+  "helptip_preferredAPI": { "message": "I-API omele uyisebenzise xa ufumana iimpendulo kwiMowudi yeProxy" },
   "helptip_streamingMode": { "message": "Fumana iimpendulo kumyalezo oqhubekayo" },
   "helptip_autoFocusChatbar": { "message": "Ibha yokuncokola egxile ngokuzenzekelayo nanini na ivela" },
   "helptip_autoScroll": { "message": "Iimpendulo zee-autocroll njengoko ziveliswa Kwimowudi Yokusasaza" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "& Zama" },
   "alert_switchingOn": { "message": "ukuyivula" },
   "alert_switchingOff": { "message": "ukucima" },
+  "alert_selectingDiff": { "message": "ukukhetha eyahlukileyo" },
   "alert_generated": { "message": "Iveliswe" },
   "notif_copiedToClipboard": { "message": "URL ikhutshelwa kwibhodi eqhotyoshwayo. @ info" },
   "notif_downloaded": { "message": "ikhutshelwe" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Incoko" },
   "link_viewChanges": { "message": "Jonga izinto ezitshintshiweyo" },
   "state_on": { "message": "Inye" },
-  "state_off": { "message": "cima" }
+  "state_off": { "message": "cima" },
+  "state_no": { "message": "Hayi" }
 }

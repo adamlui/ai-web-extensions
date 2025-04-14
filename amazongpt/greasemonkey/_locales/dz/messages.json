@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ཨ་མ་སཱོན་གི་ཚོང་ཁང་" },
   "menuLabel_proxyAPImode": { "message": "པོརསི་ཨེཔི་གི་རྣམ་ཐར།" },
+  "menuLabel_preferred": { "message": "གདམ་ཁ་ ཁ་སྐོང་ཚུ་སྟོནམ་" },
   "menuLabel_autoFocusChatbar": { "message": "རང་མགོ་རང་འདྲོངས་ chatbar" },
   "menuLabel_whenStreaming": { "message": "དེ་ལས་གློག་འཁྱོལ་བའི་དུས་ཚོད་འདི་" },
   "menuLabel_background": { "message": "རྒྱབ་ཁོངས།" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "རང་མགོ་རང་འདྲོངས་" },
   "menuLabel_about": { "message": "སྐོར་ལས་" },
   "menuLabel_settings": { "message": "སྒྲིག་འཇུག་བྱས་ཚད།" },
+  "menuLabel_random": { "message": "རཱན་ཌོམ་" },
+  "menuLabel_saved": { "message": "ཉམ་ཆུང་བཟོ།" },
   "componentLabel_used": { "message": "ལག་ལེན་འཐབ་མི་" },
   "about_author": { "message": "རྩོམ་པ་པོ།" },
   "about_and": { "message": "དང་" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Code" },
   "tooltip_generatingAudio": { "message": "སྒྲ་བཟོ།" },
   "helptip_proxyAPImode": { "message": "AIལུ་ ཐོ་བཀོད་འབད་ནིའི་དོན་ལུ་ Proxy API ལག་ལེན་འཐབ་དགོ།" },
+  "helptip_preferredAPI": { "message": "ཁྱོད་ཀྱིས་ལན་འདི་ Proxy Modeནང་ལུ་ཐོབ་པའི་སྐབས་ལུ་ ལག་ལེན་འཐབ་དགོ་པའི་ API" },
   "helptip_streamingMode": { "message": "ལན་སློག འཕྲུལ་ཆས་ཚུ་ འཕྲུལ་ཆས་ཚུ་ འཕྲུལ་ཆས་ཚུ་" },
   "helptip_autoFocusChatbar": { "message": "རང་གིས་རང་ལུ་ལྟེ་བའི་ chatbar འདི་མཐོངམ་ད་" },
   "helptip_autoScroll": { "message": "རང་བཞིན་གྱི་ཨེབ་ཐག་གི་ལན་འདེབས་ཚུ་ རྒྱང་བསྒྲགས་འབད་ཐངས་ནང་ བཟོ་སྐྲུན་འབད་ཐངས་ནང་" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "དཔྱད་རྩོམ།" },
   "alert_switchingOn": { "message": "བསྒྱུར་བཅོས་འབད་" },
   "alert_switchingOff": { "message": "ཕྱིར་འབུད་འབད་" },
+  "alert_selectingDiff": { "message": "གདམ་ཁ་ ཁ་སྐོང་ཚུ་སྟོནམ་ཨིན།." },
   "alert_generated": { "message": "བཟོ་སྐྲུན་འབད་" },
   "notif_copiedToClipboard": { "message": "གློག་ཐག་ར་བ་ལུ་འདྲ་བཤུས་འབད།" },
   "notif_downloaded": { "message": "ཌ་ལོཌ་" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "གྲོས་བསྡུར་" },
   "link_viewChanges": { "message": "བསྒྱུར་བཅོས་ཚུ་བལྟ་" },
   "state_on": { "message": "སྤོ་བཤུད་འབད་" },
-  "state_off": { "message": "སེལ་འཐུ་འབད།" }
+  "state_off": { "message": "སེལ་འཐུ་འབད།" },
+  "state_no": { "message": "མེན།" }
 }

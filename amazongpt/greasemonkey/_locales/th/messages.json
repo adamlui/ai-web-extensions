@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "เพิ่ม AI ไปยังการช็อปปิ้งใน Amazon" },
   "menuLabel_proxyAPImode": { "message": "โหมด API พร็อกซี" },
+  "menuLabel_preferred": { "message": "ค่าที่ควรใช้Size Policy" },
   "menuLabel_autoFocusChatbar": { "message": "แถบสนทนาโฟกัสอัตโนมัติ" },
   "menuLabel_whenStreaming": { "message": "เมื่อสตรีมมิ่ง" },
   "menuLabel_background": { "message": "ความเป็นมา" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "อัตโนมัติ" },
   "menuLabel_about": { "message": "เกี่ยวกับ" },
   "menuLabel_settings": { "message": "การตั้งค่า" },
+  "menuLabel_random": { "message": "สุ่ม" },
+  "menuLabel_saved": { "message": "บันทึกแล้ว" },
   "componentLabel_used": { "message": "ใช้ไปแล้ว" },
   "about_author": { "message": "ผู้เขียน" },
   "about_and": { "message": "และ" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Code" },
   "tooltip_generatingAudio": { "message": "กำลังสร้างเสียง" },
   "helptip_proxyAPImode": { "message": "ใช้ API พร็อกซีสำหรับการเข้าถึง AI โดยไม่ต้องเข้าสู่ระบบ" },
+  "helptip_preferredAPI": { "message": "API ที่จะใช้เมื่อได้รับคำตอบในโหมดพร็อกซี" },
   "helptip_streamingMode": { "message": "รับการตอบกลับในสตรีมข้อความแบบต่อเนื่อง" },
   "helptip_autoFocusChatbar": { "message": "แถบสนทนาที่โฟกัสอัตโนมัติเมื่อใดก็ตามที่ปรากฏขึ้น" },
   "helptip_autoScroll": { "message": "เลื่อนการตอบกลับอัตโนมัติเมื่อสร้างขึ้นในโหมดสตรีมมิ่ง" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "ลอง" },
   "alert_switchingOn": { "message": "การเปิดเครื่อง" },
   "alert_switchingOff": { "message": "การปิดสวิตช์" },
+  "alert_selectingDiff": { "message": "การเลือกที่แตกต่างกัน" },
   "alert_generated": { "message": "สร้าง" },
   "notif_copiedToClipboard": { "message": "คัดลอกไปที่คลิปบอร์ด" },
   "notif_downloaded": { "message": "ดาวน์โหลด " },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "การสนทนา" },
   "link_viewChanges": { "message": "ดูการเปลี่ยนแปลง" },
   "state_on": { "message": "เปิด" },
-  "state_off": { "message": "ปิด" }
+  "state_off": { "message": "ปิด" },
+  "state_no": { "message": "ไม่" }
 }

@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "自動對焦聊天列" },
   "menuLabel_whenStreaming": { "message": "串流時" },
   "menuLabel_proxyAPImode": { "message": "代理 API 模式" },
+  "menuLabel_preferred": { "message": "首選" },
   "menuLabel_show": { "message": "顯示" },
   "menuLabel_relatedQueries": { "message": "相關查詢" },
   "menuLabel_require": { "message": "需要" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "自動" },
   "menuLabel_about": { "message": "關於我們" },
   "menuLabel_settings": { "message": "設定" },
+  "menuLabel_random": { "message": "隨機" },
+  "menuLabel_saved": { "message": "保存地圖樣式" },
   "componentLabel_used": { "message": "用於" },
   "about_author": { "message": "作者" },
   "about_and": { "message": "及" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "正在產生音訊" },
   "tooltip_sendRelatedQuery": { "message": "傳送相關查詢" },
   "helptip_proxyAPImode": { "message": "使用 Proxy API 無需登入即可存取 AI" },
+  "helptip_preferredAPI": { "message": "在代理模式下獲取答案時使用的 API" },
   "helptip_streamingMode": { "message": "接收連續文字串流的回覆" },
   "helptip_autoGetAnswers": { "message": "使用搜尋引擎時，自動將查詢傳送到GoogleGPT" },
   "helptip_autoSummarizeResults": { "message": "自動摘要搜尋結果頁面" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "嘗試" },
   "alert_switchingOn": { "message": "正在開啓" },
   "alert_switchingOff": { "message": "正在關閉" },
+  "alert_selectingDiff": { "message": "選擇不同的" },
   "alert_generated": { "message": "已生成" },
   "notif_copiedToClipboard": { "message": "已複製到剪貼簿" },
   "notif_downloaded": { "message": "已下載" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "分享意見回饋" },
   "prefix_exit": { "message": "退出" },
   "state_on": { "message": "開" },
-  "state_off": { "message": "關" }
+  "state_off": { "message": "關" },
+  "state_no": { "message": "否" }
 }

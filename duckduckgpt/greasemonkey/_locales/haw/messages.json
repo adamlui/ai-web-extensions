@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Hoʻohui i nā pane ChatGPT i ka ʻaoʻao ʻaoʻao DuckDuckGo (hoʻohana ʻia e GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Kūlana API Kūlana" },
+  "menuLabel_preferred": { "message": "Makemake ‘ia" },
   "menuLabel_autoGetAnswers": { "message": "Loaʻa i nā pane" },
   "menuLabel_autoSummarizeResults": { "message": "Hōʻuluʻulu 'akomi i nā hopena" },
   "menuLabel_autoFocusChatbar": { "message": "Kūkākūkā Kūkākūkā-Aunoa" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Ho‘ākāka" },
   "menuLabel_settings": { "message": "Nā hoʻonohonoho" },
+  "menuLabel_random": { "message": "Hoʻokaʻawale" },
+  "menuLabel_saved": { "message": "Mālama ʻia" },
   "componentLabel_used": { "message": "hoʻohana ʻia" },
   "about_author": { "message": "Mea kākau" },
   "about_and": { "message": "aloha au i ko'u mau kaikunane" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Hoʻopuka leo" },
   "tooltip_sendRelatedQuery": { "message": "E hoʻouna i ka nīnau pili" },
   "helptip_proxyAPImode": { "message": "Hoʻohana i kahi API Proxy no ke komo ʻole ʻana iā AI" },
+  "helptip_preferredAPI": { "message": "API e hoʻohana i ka loaʻa ʻana o nā pane ma ke ʻano Proxy" },
   "helptip_streamingMode": { "message": "Loaʻa nā pane ma ke kahawai kikokiko mau" },
   "helptip_autoGetAnswers": { "message": "Hoʻouna aku i nā nīnau iā DuckDuckGPT i ka wā e hoʻohana ai i ka ʻenekini huli" },
   "helptip_autoSummarizeResults": { "message": "E hōʻuluʻulu ʻakomi i ka ʻaoʻao hualoaʻa" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Hono" },
   "alert_switchingOn": { "message": "ke hoʻololi ʻana" },
   "alert_switchingOff": { "message": "e hoopau ana" },
+  "alert_selectingDiff": { "message": "ke koho ʻana i kahi ʻokoʻa" },
   "alert_generated": { "message": "Hana ʻia" },
   "notif_copiedToClipboard": { "message": "Kope ʻia i ka papa ʻokiʻoki" },
   "notif_downloaded": { "message": "hoʻoiho ʻia" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Kaʻana Manaʻo" },
   "prefix_exit": { "message": "Puka" },
   "state_on": { "message": "Ma ka" },
-  "state_off": { "message": "hemo" }
+  "state_off": { "message": "hemo" },
+  "state_no": { "message": "Aʻole" }
 }

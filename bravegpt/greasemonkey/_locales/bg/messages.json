@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Добавя ChatGPT отговори към страничната лента на Brave Search (захранва се от GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Режим на прокси API" },
+  "menuLabel_preferred": { "message": "Предпочитано" },
   "menuLabel_autoGetAnswers": { "message": "Автоматично получаване на отговори" },
   "menuLabel_autoSummarizeResults": { "message": "Автоматично обобщаване на резултатите" },
   "menuLabel_autoFocusChatbar": { "message": "Чат лента за автоматично фокусиране" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Автоматичен" },
   "menuLabel_about": { "message": "Относно" },
   "menuLabel_settings": { "message": "Настройки" },
+  "menuLabel_random": { "message": "Случаен" },
+  "menuLabel_saved": { "message": "Запазено" },
   "componentLabel_used": { "message": "Тази" },
   "about_author": { "message": "Автор" },
   "about_and": { "message": "и" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Генериране на аудио" },
   "tooltip_sendRelatedQuery": { "message": "Изпращане на свързано запитване" },
   "helptip_proxyAPImode": { "message": "Използва приложен програмен интерфейс (API) за прокси сървър (Proxy API) за достъп без влизане до изку" },
+  "helptip_preferredAPI": { "message": "API, който да се използва при получаване на отговори в режим на прокси сървър" },
   "helptip_streamingMode": { "message": "Получаване на отговори в непрекъснат текстов поток" },
   "helptip_autoGetAnswers": { "message": "Автоматично изпращане на заявки до BraveGPT при използване на търсачка" },
   "helptip_autoSummarizeResults": { "message": "Автоматично обобщаване на страницата с резултати от търсенето" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Нов опит" },
   "alert_switchingOn": { "message": "включване" },
   "alert_switchingOff": { "message": "Изключване" },
+  "alert_selectingDiff": { "message": "избиране на различен" },
   "alert_generated": { "message": "генериран" },
   "notif_copiedToClipboard": { "message": "Копирани в клипборда" },
   "notif_downloaded": { "message": "изтеглено" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Обратна информация" },
   "prefix_exit": { "message": "Изход" },
   "state_on": { "message": "на" },
-  "state_off": { "message": "Изкл" }
+  "state_off": { "message": "Изкл" },
+  "state_no": { "message": "Не" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Huongeza AI kwenye ununuzi wa Amazon" },
   "menuLabel_proxyAPImode": { "message": "Hali Mbadala ya API" },
+  "menuLabel_preferred": { "message": "inayopendelewa" },
   "menuLabel_autoFocusChatbar": { "message": "Baa ya Gumzo la Kuzingatia Kiotomatiki" },
   "menuLabel_whenStreaming": { "message": "wakati wa kutiririsha" },
   "menuLabel_background": { "message": "Usuli" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Otomatiki" },
   "menuLabel_about": { "message": "Kuhusu" },
   "menuLabel_settings": { "message": "Mipangilio" },
+  "menuLabel_random": { "message": "Mchanganyiko" },
+  "menuLabel_saved": { "message": "Imehifadhiwa" },
   "componentLabel_used": { "message": "kutumika" },
   "about_author": { "message": "Mwandishi" },
   "about_and": { "message": "na" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Msimbo" },
   "tooltip_generatingAudio": { "message": "Inazalisha sauti" },
   "helptip_proxyAPImode": { "message": "Inatumia API Wakala kwa ufikiaji usioingia kwenye AI" },
+  "helptip_preferredAPI": { "message": "API ya kutumia wakati wa kupata majibu katika Hali ya Wakala" },
   "helptip_streamingMode": { "message": "Pokea majibu katika mkondo wa maandishi unaoendelea" },
   "helptip_autoFocusChatbar": { "message": "Upau wa gumzo unaozingatia kiotomatiki wakati wowote unapoonekana" },
   "helptip_autoScroll": { "message": "Majibu ya skrola kiotomatiki yanapozalishwa katika Modi ya Kutiririsha" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Jaribu" },
   "alert_switchingOn": { "message": "kuwasha" },
   "alert_switchingOff": { "message": "kuzima" },
+  "alert_selectingDiff": { "message": "kuchagua tofauti" },
   "alert_generated": { "message": "Zinazozalishwa" },
   "notif_copiedToClipboard": { "message": "Msimbo umenakiliwa kwenye ubao klipu" },
   "notif_downloaded": { "message": "imepakuliwa" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Escher Cat (SMS)" },
   "link_viewChanges": { "message": "Angalia mabadiliko" },
   "state_on": { "message": "Washa" },
-  "state_off": { "message": "Zima" }
+  "state_off": { "message": "Zima" },
+  "state_no": { "message": "Hapana" }
 }

@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Taura nesu" },
   "menuLabel_whenStreaming": { "message": "apo kudirana" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
+  "menuLabel_preferred": { "message": "Zvinodiwa" },
   "menuLabel_show": { "message": "Ratidza" },
   "menuLabel_relatedQueries": { "message": "Mibvunzo yakabatana" },
   "menuLabel_require": { "message": "ZVINODZIDZA" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Nezvedu" },
   "menuLabel_settings": { "message": "Masetingi" },
+  "menuLabel_random": { "message": "ZVAKAITIKA" },
+  "menuLabel_saved": { "message": "Zvakachengetwa" },
   "componentLabel_used": { "message": "kushandiswa" },
   "about_author": { "message": "Munyori" },
   "about_and": { "message": "uye" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Kugadzira ruzha" },
   "tooltip_sendRelatedQuery": { "message": "Tumira mubvunzo wakabatana" },
   "helptip_proxyAPImode": { "message": "Anoshandisa munhu Proxy API kuti hapana- Login kuwana AI" },
+  "helptip_preferredAPI": { "message": "API kushandisa kana kuwana mhinduro muna Proxy Mode" },
   "helptip_streamingMode": { "message": "Gamuchira mhinduro murukova rwemashoko anoramba achienderera mberi" },
   "helptip_autoGetAnswers": { "message": "Auto-tumira mibvunzo kuGoogleGPT kana uchishandisa injini yekutsvaga" },
   "helptip_autoSummarizeResults": { "message": "Pfupisa tsvakurudzo yemigumisiro peji" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Edza" },
   "alert_switchingOn": { "message": "kushandura pamusoro" },
   "alert_switchingOff": { "message": "kudzima" },
+  "alert_selectingDiff": { "message": "kusarudza yakasiyana" },
   "alert_generated": { "message": "ZVAKAITIKA" },
   "notif_copiedToClipboard": { "message": "Yakakopwa kune clipboard" },
   "notif_downloaded": { "message": "kurodha pasi" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Taura nesu" },
   "prefix_exit": { "message": "Buda" },
   "state_on": { "message": "Pana" },
-  "state_off": { "message": "ZVIMWE" }
+  "state_off": { "message": "ZVIMWE" },
+  "state_no": { "message": "Kwete" }
 }

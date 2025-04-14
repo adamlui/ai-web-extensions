@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Lisää tekoälyä Amazon-ostoksiin" },
   "menuLabel_proxyAPImode": { "message": "Välityspalvelimen API-tila" },
+  "menuLabel_preferred": { "message": "Ensisijainen" },
   "menuLabel_autoFocusChatbar": { "message": "Automaattitarkennuksen keskustelupalkki" },
   "menuLabel_whenStreaming": { "message": "kun suoratoistat" },
   "menuLabel_background": { "message": "Taustaa" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Tietoa" },
   "menuLabel_settings": { "message": "Asetukset" },
+  "menuLabel_random": { "message": "Satunnainen" },
+  "menuLabel_saved": { "message": "Tallennettu" },
   "componentLabel_used": { "message": "käytetty" },
   "about_author": { "message": "Tekijä" },
   "about_and": { "message": "ja" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Koodi" },
   "tooltip_generatingAudio": { "message": "Luodaan ääntä" },
   "helptip_proxyAPImode": { "message": "Käyttää välityspalvelimen sovellusliittymää tekoälyn kirjautumattomaan käyttöön" },
+  "helptip_preferredAPI": { "message": "Sovellusliittymä, jota käytetään, kun vastauksia haetaan välityspalvelintilassa" },
   "helptip_streamingMode": { "message": "Vastaanota vastaukset jatkuvana tekstivirtana" },
   "helptip_autoFocusChatbar": { "message": "Automaattinen tarkennus chat-palkkiin aina, kun se tulee näkyviin" },
   "helptip_autoScroll": { "message": "Vieritä vastauksia automaattisesti, kun ne luodaan suoratoistotilassa" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Kokeile" },
   "alert_switchingOn": { "message": "Kytkeminen päälle" },
   "alert_switchingOff": { "message": "Sammutetaan" },
+  "alert_selectingDiff": { "message": "valitaan toinen" },
   "alert_generated": { "message": "Luotu" },
   "notif_copiedToClipboard": { "message": "Kopioitu leikepöydälle" },
   "notif_downloaded": { "message": "ladattu." },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Keskustelu" },
   "link_viewChanges": { "message": "Näytä muutokset" },
   "state_on": { "message": "Päällä" },
-  "state_off": { "message": "Pois päältä" }
+  "state_off": { "message": "Pois päältä" },
+  "state_no": { "message": "Ei" }
 }

@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Ավտոմատ կենտրոնացման զրույցի վահանակ" },
   "menuLabel_whenStreaming": { "message": "հոսքի ժամանակ" },
   "menuLabel_proxyAPImode": { "message": "Proxy API ռեժիմ" },
+  "menuLabel_preferred": { "message": "Նախընտրելի" },
   "menuLabel_show": { "message": "Ցուցադրել" },
   "menuLabel_relatedQueries": { "message": "Առնչվող հարցումներ" },
   "menuLabel_require": { "message": "Պահանջել" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Ավտոմեքենա" },
   "menuLabel_about": { "message": "Մանրամասն" },
   "menuLabel_settings": { "message": "Կարգավորումներ" },
+  "menuLabel_random": { "message": "Պատահական" },
+  "menuLabel_saved": { "message": "Պահպանված" },
   "componentLabel_used": { "message": "Օգտագործված" },
   "about_author": { "message": "Հեղինակ" },
   "about_and": { "message": "և" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Ձայնի ստեղծում" },
   "tooltip_sendRelatedQuery": { "message": "Ուղարկել համապատասխան հարցում" },
   "helptip_proxyAPImode": { "message": "Օգտագործում է վստահված անձի API ՝ առանց AI - ին մուտք գործելու համար" },
+  "helptip_preferredAPI": { "message": "API - ն կօգտագործվի պրոքսի ռեժիմում պատասխաններ ստանալիս" },
   "helptip_streamingMode": { "message": "Պատասխանները ստացեք շարունակական տեքստային հոսքով" },
   "helptip_autoGetAnswers": { "message": "Որոնման համակարգն օգտագործելիս ավտոմատ հարցումներ ուղարկեք GoogleGPT - ին" },
   "helptip_autoSummarizeResults": { "message": "Ավտոմատ ամփոփեք որոնման արդյունքների էջը" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Փորձել" },
   "alert_switchingOn": { "message": "միացնել" },
   "alert_switchingOff": { "message": "անջատում" },
+  "alert_selectingDiff": { "message": "ինչպես ընտրել այլ" },
   "alert_generated": { "message": "Ստեղծվել է" },
   "notif_copiedToClipboard": { "message": "Պատճենված է շապիկի մեջ" },
   "notif_downloaded": { "message": "ներբեռնված է" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Կիսվել կարծիքներով" },
   "prefix_exit": { "message": "Exit" },
   "state_on": { "message": "Միացնել" },
-  "state_off": { "message": "Անջատել" }
+  "state_off": { "message": "Անջատել" },
+  "state_no": { "message": "Ոչ" }
 }

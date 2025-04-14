@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Დაამატეთ ChatGPT-ის პასუხები Brave Search-ის გვერდით ზოლში (GPT-4o-ის მეშვეობით!)" },
   "menuLabel_proxyAPImode": { "message": "Პროქსი API რეჟიმი" },
+  "menuLabel_preferred": { "message": "მირჩევნია" },
   "menuLabel_autoGetAnswers": { "message": "Პასუხების ავტომატური მიღება" },
   "menuLabel_autoSummarizeResults": { "message": "Შედეგების ავტომატური შეჯამება" },
   "menuLabel_autoFocusChatbar": { "message": "Ავტომატურად ფოკუსირებული ჩატების ზოლი" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "ავტო" },
   "menuLabel_about": { "message": "პროგრამის შესახებ" },
   "menuLabel_settings": { "message": "&მორგება" },
+  "menuLabel_random": { "message": "შემთხვევითი" },
+  "menuLabel_saved": { "message": "შენახულია" },
   "componentLabel_used": { "message": "გამოყენებულია" },
   "about_author": { "message": "ავტორი" },
   "about_and": { "message": "და" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Აუდიოს გენერაცია" },
   "tooltip_sendRelatedQuery": { "message": "Შესაბამისი მოთხოვნის გაგზავნა" },
   "helptip_proxyAPImode": { "message": "Იყენებს Proxy API-ს AI-ზე ლოგინის გარეშე წვდომისთვის" },
+  "helptip_preferredAPI": { "message": "API, რომელიც უნდა გამოიყენოთ პროქსის რეჟიმში პასუხების მიღებისას" },
   "helptip_streamingMode": { "message": "Პასუხების მიღება უწყვეტ ტექსტურ ნაკადში" },
   "helptip_autoGetAnswers": { "message": "Ავტომატურად გაუგზავნეთ შეკითხვები BraveGPT-ს საძიებო სისტემის გამოყენებისას" },
   "helptip_autoSummarizeResults": { "message": "Ავტომატურად შეაჯამეთ ძიების შედეგების გვერდი" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "ცდა" },
   "alert_switchingOn": { "message": "ჩართვა" },
   "alert_switchingOff": { "message": "გამორთვა" },
+  "alert_selectingDiff": { "message": "სხვა ვარიანტის არჩევა" },
   "alert_generated": { "message": "გენერირებული" },
   "notif_copiedToClipboard": { "message": "დაკოპირდა გაცვლის ბაფერში" },
   "notif_downloaded": { "message": "გადმოწერილია" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "უკუკავშირი" },
   "prefix_exit": { "message": "გასვლა" },
   "state_on": { "message": "ჩართულია" },
-  "state_off": { "message": "გამორთ" }
+  "state_off": { "message": "გამორთ" },
+  "state_no": { "message": "არა" }
 }

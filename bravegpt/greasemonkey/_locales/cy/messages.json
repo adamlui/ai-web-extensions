@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ychwanegu atebion ChatGPT i bar ochr Brave Search (powered by GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Modd API Dirprwy" },
+  "menuLabel_preferred": { "message": "Ffefrir" },
   "menuLabel_autoGetAnswers": { "message": "Atebion Auto - GET" },
   "menuLabel_autoSummarizeResults": { "message": "Canlyniadau Hunan - Fformatio" },
   "menuLabel_autoFocusChatbar": { "message": "Bar Sgwrs Awtomatig - Ffocws" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Awto" },
   "menuLabel_about": { "message": "Gwybodaeth" },
   "menuLabel_settings": { "message": "Gosodiadau" },
+  "menuLabel_random": { "message": "Ar hap" },
+  "menuLabel_saved": { "message": "Cadwyd" },
   "componentLabel_used": { "message": "defnyddio" },
   "about_author": { "message": "Awdur" },
   "about_and": { "message": "a" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Cynhyrchu sain" },
   "tooltip_sendRelatedQuery": { "message": "Anfon ymholiad cysylltiedig" },
   "helptip_proxyAPImode": { "message": "Defnyddio API Proxy ar gyfer mynediad dim login i AI" },
+  "helptip_preferredAPI": { "message": "API i'w ddefnyddio wrth gael atebion yn y modd Dirprwy" },
   "helptip_streamingMode": { "message": "Derbyn atebion mewn llif testun parhaus" },
   "helptip_autoGetAnswers": { "message": "Awto - anfon ymholiadau i BraveGPT wrth ddefnyddio peiriant chwilio" },
   "helptip_autoSummarizeResults": { "message": "Crynhowch y dudalen canlyniadau chwilio yn awtomatig" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Cais" },
   "alert_switchingOn": { "message": "troi ymlaen" },
   "alert_switchingOff": { "message": "diffodd" },
+  "alert_selectingDiff": { "message": "dewis arall" },
   "alert_generated": { "message": "Cynhyrchwyd" },
   "notif_copiedToClipboard": { "message": "Wedi'i gopïo i'r clipfwrdd" },
   "notif_downloaded": { "message": "Wedi llwytho i lawr" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Adborth" },
   "prefix_exit": { "message": "Man gadael" },
   "state_on": { "message": "Ymlaen" },
-  "state_off": { "message": "Wedi'i ddiffodd" }
+  "state_off": { "message": "Wedi'i ddiffodd" },
+  "state_no": { "message": "Na" }
 }

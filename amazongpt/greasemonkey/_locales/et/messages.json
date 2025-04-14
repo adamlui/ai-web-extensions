@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Lisab Amazoni ostudele tehisintellekti" },
   "menuLabel_proxyAPImode": { "message": "Puhverserveri API-režiim" },
+  "menuLabel_preferred": { "message": "Eelistatud" },
   "menuLabel_autoFocusChatbar": { "message": "Automaatse teravustamise vestlusriba" },
   "menuLabel_whenStreaming": { "message": "voogesituse ajal" },
   "menuLabel_background": { "message": "" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Yense" },
   "menuLabel_settings": { "message": "Seaded" },
+  "menuLabel_random": { "message": "Suvaline" },
+  "menuLabel_saved": { "message": "Salvestatud" },
   "componentLabel_used": { "message": "lisaseadmed" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "ja" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kood" },
   "tooltip_generatingAudio": { "message": "Heli genereerimine" },
   "helptip_proxyAPImode": { "message": "Kasutab puhverserveri API-d sisselogimiseta juurdepääsuks tehisintellektile" },
+  "helptip_preferredAPI": { "message": "API, mida kasutada puhverrežiimis vastuste saamisel" },
   "helptip_streamingMode": { "message": "Saa vastused pidevas tekstivoos" },
   "helptip_autoFocusChatbar": { "message": "Automaatse teravustamise vestlusriba alati, kui see ilmub" },
   "helptip_autoScroll": { "message": "Voogesituse režiimis genereeritud vastuste automaatne kerimine" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Proovi" },
   "alert_switchingOn": { "message": "Sisse lülitamine" },
   "alert_switchingOff": { "message": "Välja lülitamine" },
+  "alert_selectingDiff": { "message": "teise valimine" },
   "alert_generated": { "message": "Loodud" },
   "notif_copiedToClipboard": { "message": "Kopeeritud lõikelauale" },
   "notif_downloaded": { "message": "allalaetud" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Vestlus" },
   "link_viewChanges": { "message": "Vaata muudatusi" },
   "state_on": { "message": "Sees" },
-  "state_off": { "message": "Välja lülitatud" }
+  "state_off": { "message": "Välja lülitatud" },
+  "state_no": { "message": "Ei" }
 }

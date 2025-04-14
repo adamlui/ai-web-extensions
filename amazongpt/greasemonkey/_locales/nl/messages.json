@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Voegt AI toe aan Amazon-winkelen" },
   "menuLabel_proxyAPImode": { "message": "Proxy-API-modus" },
+  "menuLabel_preferred": { "message": "Voorkeur" },
   "menuLabel_autoFocusChatbar": { "message": "Chatbalk met automatische focus" },
   "menuLabel_whenStreaming": { "message": "bij het streamen" },
   "menuLabel_background": { "message": "Achtergrond" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Automatisch" },
   "menuLabel_about": { "message": "Over" },
   "menuLabel_settings": { "message": "Instellingen" },
+  "menuLabel_random": { "message": "Willekeurig" },
+  "menuLabel_saved": { "message": "Opgeslagen" },
   "componentLabel_used": { "message": "gebruikt" },
   "about_author": { "message": "Auteur" },
   "about_and": { "message": "and" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Code" },
   "tooltip_generatingAudio": { "message": "Audio genereren" },
   "helptip_proxyAPImode": { "message": "Gebruikt een proxy-API voor geen aanmeldingstoegang tot AI" },
+  "helptip_preferredAPI": { "message": "API om te gebruiken bij het verkrijgen van antwoorden in Proxy-modus" },
   "helptip_streamingMode": { "message": "Antwoorden ontvangen in een doorlopende tekststream" },
   "helptip_autoFocusChatbar": { "message": "Chatbalk automatisch scherpstellen wanneer deze verschijnt" },
   "helptip_autoScroll": { "message": "Reacties automatisch scrollen terwijl ze worden gegenereerd in de streamingmodus" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Proberen" },
   "alert_switchingOn": { "message": "het inschakelen" },
   "alert_switchingOff": { "message": "Uitschakelen" },
+  "alert_selectingDiff": { "message": "het selecteren van een andere" },
   "alert_generated": { "message": "Gegenereerd" },
   "notif_copiedToClipboard": { "message": "Gekopieerd naar klembord" },
   "notif_downloaded": { "message": "gedownload" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Gesprek" },
   "link_viewChanges": { "message": "Wijzigingen weergeven" },
   "state_on": { "message": "Aan" },
-  "state_off": { "message": "Uit" }
+  "state_off": { "message": "Uit" },
+  "state_no": { "message": "Nee" }
 }

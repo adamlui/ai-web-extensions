@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Дадае штучны інтэлект у пакупкі Amazon" },
   "menuLabel_proxyAPImode": { "message": "Рэжым API-проксі" },
+  "menuLabel_preferred": { "message": "Home phone" },
   "menuLabel_autoFocusChatbar": { "message": "Аўтаматычная фокусная панель чата" },
   "menuLabel_whenStreaming": { "message": "пры струменевай перадачы" },
   "menuLabel_background": { "message": "Даведка" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Аўта" },
   "menuLabel_about": { "message": "Пра нас" },
   "menuLabel_settings": { "message": "Налады" },
+  "menuLabel_random": { "message": "Выпадковы" },
+  "menuLabel_saved": { "message": "Захавана" },
   "componentLabel_used": { "message": "Ужыта" },
   "about_author": { "message": "Аўтар" },
   "about_and": { "message": "і" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Стварэнне аўдыё" },
   "helptip_proxyAPImode": { "message": "Выкарыстоўвае API проксі для доступу без уваходу ў ІІ" },
+  "helptip_preferredAPI": { "message": "API, які можна выкарыстоўваць пры атрыманні адказаў у рэжыме проксі" },
   "helptip_streamingMode": { "message": "Атрымаць адказы ў бесперапынным тэкставым патоку" },
   "helptip_autoFocusChatbar": { "message": "Аўтаматычная фокусная панэль чата кожны раз, калі яна з 'яўляецца" },
   "helptip_autoScroll": { "message": "Адказы аўтаматычна пракручваць, калі яны ствараюцца ў рэжыме Streaming" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Паспрабаваць" },
   "alert_switchingOn": { "message": "уключэнне" },
   "alert_switchingOff": { "message": "выключэнне" },
+  "alert_selectingDiff": { "message": "выбар іншага" },
   "alert_generated": { "message": "Згенеравана" },
   "notif_copiedToClipboard": { "message": "Тэкст скапіраваны ў буфер абмену" },
   "notif_downloaded": { "message": "Сцягванні" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Размова" },
   "link_viewChanges": { "message": "Праглядзець змены" },
   "state_on": { "message": "Уключэнне" },
-  "state_off": { "message": "Выключэнне" }
+  "state_off": { "message": "Выключэнне" },
+  "state_no": { "message": "Не" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "پاسخ‌های ChatGPT را به نوار کناری Brave Search اضافه می‌کند (با GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "حالت API پروکسی" },
+  "menuLabel_preferred": { "message": "ارجح" },
   "menuLabel_autoGetAnswers": { "message": "دریافت خودکار پاسخ" },
   "menuLabel_autoSummarizeResults": { "message": "خلاصه خودکار نتایج" },
   "menuLabel_autoFocusChatbar": { "message": "نوار چت فوکوس خودکار" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "خودکار" },
   "menuLabel_about": { "message": "درباره" },
   "menuLabel_settings": { "message": "تنظیمات" },
+  "menuLabel_random": { "message": "تصادفی" },
+  "menuLabel_saved": { "message": "ذخیره شده" },
   "componentLabel_used": { "message": "استفاده شده" },
   "about_author": { "message": "نویسنده" },
   "about_and": { "message": "و" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "تولید صدا" },
   "tooltip_sendRelatedQuery": { "message": "ارسال درخواست مرتبط" },
   "helptip_proxyAPImode": { "message": "از یک API پروکسی برای دسترسی بدون ورود به هوش مصنوعی استفاده می کند" },
+  "helptip_preferredAPI": { "message": "API برای استفاده در هنگام دریافت پاسخ در حالت پروکسی" },
   "helptip_streamingMode": { "message": "پاسخ ها را در یک جریان متنی مداوم دریافت کنید" },
   "helptip_autoGetAnswers": { "message": "هنگام استفاده از موتور جستجو، درخواست‌ها را به BraveGPT ارسال کنید" },
   "helptip_autoSummarizeResults": { "message": "خلاصه کردن خودکار صفحه نتایج جستجو" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "تلاش کردن" },
   "alert_switchingOn": { "message": "روشن شدن" },
   "alert_switchingOff": { "message": "خاموش کردن" },
+  "alert_selectingDiff": { "message": "انتخاب متفاوت" },
   "alert_generated": { "message": "تولید شده" },
   "notif_copiedToClipboard": { "message": "در کلیپ بورد کپی شد" },
   "notif_downloaded": { "message": "دانلود" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "بازخورد" },
   "prefix_exit": { "message": "خروج" },
   "state_on": { "message": "شما در" },
-  "state_off": { "message": "خاموش" }
+  "state_off": { "message": "خاموش" },
+  "state_no": { "message": "خیر" }
 }

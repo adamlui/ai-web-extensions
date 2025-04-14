@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Automātiskās fokusēšanas tērzēšanas josla" },
   "menuLabel_whenStreaming": { "message": "straumējot" },
   "menuLabel_proxyAPImode": { "message": "Starpniekservera API režīms" },
+  "menuLabel_preferred": { "message": "Ieteicamais" },
   "menuLabel_show": { "message": "Rādīt" },
   "menuLabel_relatedQueries": { "message": "Saistītie vaicājumi" },
   "menuLabel_require": { "message": "Nepieciešams" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Automātiski" },
   "menuLabel_about": { "message": "Par produktu" },
   "menuLabel_settings": { "message": "Iestatījumi" },
+  "menuLabel_random": { "message": "Nejaušs" },
+  "menuLabel_saved": { "message": "Saglabāts" },
   "componentLabel_used": { "message": "lietots" },
   "about_author": { "message": "Autors" },
   "about_and": { "message": "un" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Notiek audio ģenerēšana" },
   "tooltip_sendRelatedQuery": { "message": "Sūtīt saistīto vaicājumu" },
   "helptip_proxyAPImode": { "message": "Izmanto starpniekservera API, lai bez pieteikšanās piekļūtu MI" },
+  "helptip_preferredAPI": { "message": "API, ko izmantot, saņemot atbildes starpniekservera režīmā" },
   "helptip_streamingMode": { "message": "Saņemiet atbildes nepārtrauktā teksta straumē" },
   "helptip_autoGetAnswers": { "message": "Automātiski nosūtīt vaicājumus GoogleGPT, izmantojot meklētājprogrammu" },
   "helptip_autoSummarizeResults": { "message": "Automātiski apkopot meklēšanas rezultātu lapu" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Mēģināt" },
   "alert_switchingOn": { "message": "Ieslēgšana" },
   "alert_switchingOff": { "message": "Svaru Izslēgšana" },
+  "alert_selectingDiff": { "message": "izvēloties citu" },
   "alert_generated": { "message": "Ģenerēts" },
   "notif_copiedToClipboard": { "message": "Kopēt uz starpliktuvi" },
   "notif_downloaded": { "message": "Lejupielādēts" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Dalieties savās atsauksmēs" },
   "prefix_exit": { "message": "Iziet" },
   "state_on": { "message": "Ieslēgt" },
-  "state_off": { "message": "Izslēgta" }
+  "state_off": { "message": "Izslēgta" },
+  "state_no": { "message": "Ne" }
 }

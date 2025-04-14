@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "རང་མོས་རང་མོས་རང་མོས་ཀྱི་གླེང་མོལ །" },
   "menuLabel_whenStreaming": { "message": "གློག་ཀླད་དང་ཁ་པར །" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
+  "menuLabel_preferred": { "message": "ཁྱེད་ཀྱི་ཐུགས་བརྩེ་" },
   "menuLabel_show": { "message": "སྟོན།" },
   "menuLabel_relatedQueries": { "message": "འབྲེལ་མཐུད་ཀྱི་དྲི་བ་" },
   "menuLabel_require": { "message": "དགོས་མཁོ །" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "རང་འགུལ" },
   "menuLabel_about": { "message": "མྱུར་ཨང་སྐོར།" },
   "menuLabel_settings": { "message": "སྒྲིག་བཀོད" },
+  "menuLabel_random": { "message": "སྟོད་ཆ །" },
+  "menuLabel_saved": { "message": "ཉར་ཟིན།" },
   "componentLabel_used": { "message": "སྤྱད་ཟིན" },
   "about_author": { "message": "རྩོམ་མཁན" },
   "about_and": { "message": "དང་" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "སྒྲ་དབྱངས་བཟོ་བཞིན་པ" },
   "tooltip_sendRelatedQuery": { "message": "འབྲེལ་བ་ཡོད་པའི་དྲི་བ་གཏོང་བ" },
   "helptip_proxyAPImode": { "message": "AI ནང་འཛུལ་མི་བྱེད་པའི་Proxy API ལག་ལེན་འཐབ་།" },
+  "helptip_preferredAPI": { "message": "Proxy Mode ནང་ལན་འཚོལ་སྐབས་ལག་ལེན་བྱེད་པའི་API" },
   "helptip_streamingMode": { "message": "རྒྱུན་ཆད་མེད་པར་རྒྱུན་ཆད་མེད་པར་རྒྱུན་ཆད་མེད་པར་ལན་འདེབས་བྱ་" },
   "helptip_autoGetAnswers": { "message": "GoogleGPT སྒྲིག་འཇུག་བྱས་ཚད ། ཐེངས་10 ལས་ཉུང་བ ། ཐོན་རིམ་5.7.1 ནང་དུ་ཚོད་ལྟ་བྱས་ཟིན ། ཟླ 6 སྔོན་ལ་གསར་བཅོས་བྱས །" },
   "helptip_autoSummarizeResults": { "message": "འཚོལ་བཤེར་འབྲས་ཤོག་ངོས་རང་འགུལ་གྱིས་མདོར་བསྡུས །" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "བརྟག་ཞིབ" },
   "alert_switchingOn": { "message": "བསྒྱུར་རྩོམ །" },
   "alert_switchingOff": { "message": "ཕྱིར་འབུད་པ །" },
+  "alert_selectingDiff": { "message": "གཞན་ཞིག་གདམ་ཁ་བྱེད་དགོས །" },
   "alert_generated": { "message": "འབྱུང་ཁུངས །" },
   "notif_copiedToClipboard": { "message": "ཨང་ཚབ་བཤུས་ཟིན" },
   "notif_downloaded": { "message": "ཕབ་ལེན །" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "འདྲ་ཕབ །" },
   "prefix_exit": { "message": "ཐོན་ཐབས །" },
   "state_on": { "message": "སྤར་རྒྱུ" },
-  "state_off": { "message": "གསོད" }
+  "state_off": { "message": "གསོད" },
+  "state_no": { "message": "མིན།" }
 }

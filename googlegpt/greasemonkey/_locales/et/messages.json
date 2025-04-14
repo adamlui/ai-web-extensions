@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Automaatse teravustamise vestlusriba" },
   "menuLabel_whenStreaming": { "message": "voogesituse ajal" },
   "menuLabel_proxyAPImode": { "message": "Puhverserveri API-režiim" },
+  "menuLabel_preferred": { "message": "Eelistatud" },
   "menuLabel_show": { "message": "Näita" },
   "menuLabel_relatedQueries": { "message": "Seotud päringud" },
   "menuLabel_require": { "message": "Jaapani jeen" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Info" },
   "menuLabel_settings": { "message": "Seaded" },
+  "menuLabel_random": { "message": "Suvaline" },
+  "menuLabel_saved": { "message": "Salvestatud" },
   "componentLabel_used": { "message": "lisaseadmed" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "ja" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Heli genereerimine" },
   "tooltip_sendRelatedQuery": { "message": "Saada seotud päring" },
   "helptip_proxyAPImode": { "message": "Kasutab puhverserveri API-d sisselogimiseta juurdepääsuks tehisintellektile" },
+  "helptip_preferredAPI": { "message": "API, mida kasutada puhverrežiimis vastuste saamisel" },
   "helptip_streamingMode": { "message": "Saa vastused pidevas tekstivoos" },
   "helptip_autoGetAnswers": { "message": "Saada otsingumootori kasutamisel päringud automaatselt GoogleGPT-le" },
   "helptip_autoSummarizeResults": { "message": "Otsingutulemuste lehe automaatne kokkuvõte" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Proovi" },
   "alert_switchingOn": { "message": "Sisse lülitamine" },
   "alert_switchingOff": { "message": "Välja lülitamine" },
+  "alert_selectingDiff": { "message": "teise valimine" },
   "alert_generated": { "message": "Loodud" },
   "notif_copiedToClipboard": { "message": "Kopeeritud lõikelauale" },
   "notif_downloaded": { "message": "allalaetud" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "tagasiside jagamine" },
   "prefix_exit": { "message": "Väljumine" },
   "state_on": { "message": "Sees" },
-  "state_off": { "message": "Välja lülitatud" }
+  "state_off": { "message": "Välja lülitatud" },
+  "state_no": { "message": "Ei" }
 }

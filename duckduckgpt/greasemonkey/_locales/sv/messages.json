@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Lägger till ChatGPT-svar till DuckDuckGo-sidofältet (drivs av GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API-läge" },
+  "menuLabel_preferred": { "message": "Prioriterad" },
   "menuLabel_autoGetAnswers": { "message": "Få svar automatiskt" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-sammanfatta resultat" },
   "menuLabel_autoFocusChatbar": { "message": "Chatbar med autofokus" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Om" },
   "menuLabel_settings": { "message": "Inställningar" },
+  "menuLabel_random": { "message": "Slumpmässig" },
+  "menuLabel_saved": { "message": "Sparad" },
   "componentLabel_used": { "message": "som används" },
   "about_author": { "message": "Författare" },
   "about_and": { "message": "och" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Genererar ljud" },
   "tooltip_sendRelatedQuery": { "message": "Skicka relaterad fråga" },
   "helptip_proxyAPImode": { "message": "Använder ett proxy-API för åtkomst utan inloggning till AI" },
+  "helptip_preferredAPI": { "message": "API att använda när du får svar i proxy-läge" },
   "helptip_streamingMode": { "message": "Ta emot svar i en kontinuerlig textström" },
   "helptip_autoGetAnswers": { "message": "Skicka automatiskt frågor till DuckDuckGPT när du använder sökmotorn" },
   "helptip_autoSummarizeResults": { "message": "Sammanfatta sökresultatsidan automatiskt" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Prova" },
   "alert_switchingOn": { "message": "Påslagning" },
   "alert_switchingOff": { "message": "Så här stänger man av" },
+  "alert_selectingDiff": { "message": "välja en annan" },
   "alert_generated": { "message": "Genererad" },
   "notif_copiedToClipboard": { "message": "Kopierat till urklipp" },
   "notif_downloaded": { "message": "nedladdad" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Dela feedback" },
   "prefix_exit": { "message": "Avsluta" },
   "state_on": { "message": "På" },
-  "state_off": { "message": "Av" }
+  "state_off": { "message": "Av" },
+  "state_no": { "message": "Nej" }
 }

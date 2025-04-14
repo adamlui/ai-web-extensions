@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ajoute des réponses ChatGPT à la barre latérale de Brave Search (optimisée par GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Mode API proxy" },
+  "menuLabel_preferred": { "message": "Préféré" },
   "menuLabel_autoGetAnswers": { "message": "Obtention automatique des réponses" },
   "menuLabel_autoSummarizeResults": { "message": "Synthèse automatique des résultats" },
   "menuLabel_autoFocusChatbar": { "message": "Barre de discussion autofocus" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "À propos de" },
   "menuLabel_settings": { "message": "Paramètres" },
+  "menuLabel_random": { "message": "Aléatoire" },
+  "menuLabel_saved": { "message": "Enregistré" },
   "componentLabel_used": { "message": "occasion" },
   "about_author": { "message": "Auteur" },
   "about_and": { "message": "et" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Génération audio" },
   "tooltip_sendRelatedQuery": { "message": "Envoyer une requête associée" },
   "helptip_proxyAPImode": { "message": "Utilise une API proxy pour un accès sans connexion à l'IA" },
+  "helptip_preferredAPI": { "message": "API à utiliser lors de l'obtention de réponses en mode proxy" },
   "helptip_streamingMode": { "message": "Recevoir des réponses dans un flux de texte continu" },
   "helptip_autoGetAnswers": { "message": "Envoyer automatiquement des requêtes à BraveGPT lors de l'utilisation du moteur de recherche" },
   "helptip_autoSummarizeResults": { "message": "Résumer automatiquement la page de résultats de recherche" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Essayer" },
   "alert_switchingOn": { "message": "Mise en marche" },
   "alert_switchingOff": { "message": "Arrêt" },
+  "alert_selectingDiff": { "message": "sélectionner un autre" },
   "alert_generated": { "message": "Généré" },
   "notif_copiedToClipboard": { "message": "Copié dans le presse-papier" },
   "notif_downloaded": { "message": "téléchargés" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Commentaire" },
   "prefix_exit": { "message": "Quitter" },
   "state_on": { "message": "Activé" },
-  "state_off": { "message": "Arrêt" }
+  "state_off": { "message": "Arrêt" },
+  "state_no": { "message": "Non" }
 }

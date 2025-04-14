@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Добавляет ИИ в покупки Amazon" },
   "menuLabel_proxyAPImode": { "message": "Режим API прокси-сервера" },
+  "menuLabel_preferred": { "message": "Предпочтительно" },
   "menuLabel_autoFocusChatbar": { "message": "Панель чата с автофокусом" },
   "menuLabel_whenStreaming": { "message": "при потоковой передаче" },
   "menuLabel_background": { "message": "Прошлое" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto (Автоматический)" },
   "menuLabel_about": { "message": "О нас" },
   "menuLabel_settings": { "message": "Настройки" },
+  "menuLabel_random": { "message": "Случайные" },
+  "menuLabel_saved": { "message": "Сохранено" },
   "componentLabel_used": { "message": "используется" },
   "about_author": { "message": "Автор" },
   "about_and": { "message": "и" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Генерирование звука" },
   "helptip_proxyAPImode": { "message": "Использует API прокси для доступа к ИИ без входа в систему" },
+  "helptip_preferredAPI": { "message": "API, используемый при получении ответов в режиме прокси" },
   "helptip_streamingMode": { "message": "Получать ответы в непрерывном текстовом потоке" },
   "helptip_autoFocusChatbar": { "message": "Чат-бар с автофокусом, когда бы он ни появлялся" },
   "helptip_autoScroll": { "message": "Автоматическая прокрутка ответов по мере их генерации в режиме потоковой передачи" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Скачать" },
   "alert_switchingOn": { "message": "Включение" },
   "alert_switchingOff": { "message": "Выключение" },
+  "alert_selectingDiff": { "message": "выбирая другой" },
   "alert_generated": { "message": "Создано" },
   "notif_copiedToClipboard": { "message": "Скопировано в буфер обмена" },
   "notif_downloaded": { "message": "загружено" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Общение" },
   "link_viewChanges": { "message": "Просмотреть изменения" },
   "state_on": { "message": "On (Вкл)" },
-  "state_off": { "message": "Off (Выкл)" }
+  "state_off": { "message": "Off (Выкл)" },
+  "state_no": { "message": "Нет" }
 }

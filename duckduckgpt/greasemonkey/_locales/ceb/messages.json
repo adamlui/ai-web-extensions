@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Nagdugang mga tubag sa ChatGPT sa DuckDuckGo sidebar (gipadagan sa GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Modo sa Proxy API" },
+  "menuLabel_preferred": { "message": "Mas gipalabi" },
   "menuLabel_autoGetAnswers": { "message": "Mga Tubag sa Auto-Get" },
   "menuLabel_autoSummarizeResults": { "message": "Mga Resulta sa Auto-Summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Awtomatikong Pag-focus sa Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Mahitungod" },
   "menuLabel_settings": { "message": "Mga Konteksto" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Naluwas" },
   "componentLabel_used": { "message": "gigamit" },
   "about_author": { "message": "Awtor" },
   "about_and": { "message": "og" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Paghimo og audio" },
   "tooltip_sendRelatedQuery": { "message": "Ipadala ang may kalabutan nga pangutana" },
   "helptip_proxyAPImode": { "message": "Paggamit usa ka Proxy API alang sa dili pag-login nga pag-access sa AI" },
+  "helptip_preferredAPI": { "message": "API sa paggamit sa diha nga sa pagkuha sa mga tubag sa Proxy Mode" },
   "helptip_streamingMode": { "message": "Pagdawat mga tubag sa usa ka padayon nga pag-stream sa teksto" },
   "helptip_autoGetAnswers": { "message": "Auto-pagpadala sa mga pangutana sa DuckDuckGPT sa diha nga ang paggamit sa search engine" },
   "helptip_autoSummarizeResults": { "message": "Awtomatikong i-summarize ang panid sa mga resulta sa pagpangita" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Sulayi" },
   "alert_switchingOn": { "message": "sa switching on" },
   "alert_switchingOff": { "message": "nag-turn off" },
+  "alert_selectingDiff": { "message": "pagpili usa ka lahi" },
   "alert_generated": { "message": "Gimugna" },
   "notif_copiedToClipboard": { "message": "Kopyahin sa clipboard" },
   "notif_downloaded": { "message": "gi-download" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Ipakigbahin ang Feedback" },
   "prefix_exit": { "message": "Mogawas" },
   "state_on": { "message": "sa" },
-  "state_off": { "message": "off" }
+  "state_off": { "message": "off" },
+  "state_no": { "message": "Wala. " }
 }

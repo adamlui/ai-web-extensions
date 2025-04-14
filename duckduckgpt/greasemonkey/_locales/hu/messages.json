@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ChatGPT válaszokat ad a DuckDuckGo oldalsávhoz (GPT-4o motorral!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API mód" },
+  "menuLabel_preferred": { "message": "Ajánlott" },
   "menuLabel_autoGetAnswers": { "message": "Válaszok automatikus lekérése" },
   "menuLabel_autoSummarizeResults": { "message": "Eredmények automatikus összegzése" },
   "menuLabel_autoFocusChatbar": { "message": "Automatikus fókuszálás a csevegősávon" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "A" },
   "menuLabel_settings": { "message": "Beállítások" },
+  "menuLabel_random": { "message": "Véletlenszerű" },
+  "menuLabel_saved": { "message": "Mentve" },
   "componentLabel_used": { "message": "használt" },
   "about_author": { "message": "Szerző" },
   "about_and": { "message": "és" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Hang létrehozása" },
   "tooltip_sendRelatedQuery": { "message": "Kapcsolódó lekérdezés küldése" },
   "helptip_proxyAPImode": { "message": "Proxy API-t használ a mesterséges intelligenciához való bejelentkezés nélküli hozzáféréshez" },
+  "helptip_preferredAPI": { "message": "Proxy módban válaszadáskor használandó API" },
   "helptip_streamingMode": { "message": "Válaszok fogadása folyamatos szöveges adatfolyamban" },
   "helptip_autoGetAnswers": { "message": "Lekérdezések automatikus küldése a DuckDuckGPT-nek a keresőmotor használatakor" },
   "helptip_autoSummarizeResults": { "message": "Keresési találatok oldalának automatikus összegzése" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Próbáld ki" },
   "alert_switchingOn": { "message": "Bekapcsolás" },
   "alert_switchingOff": { "message": "Kikapcsolás" },
+  "alert_selectingDiff": { "message": "másik kiválasztása" },
   "alert_generated": { "message": "Létrehozott" },
   "notif_copiedToClipboard": { "message": "Vágólapra másolva" },
   "notif_downloaded": { "message": "letöltve" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Ossza meg visszajelzését" },
   "prefix_exit": { "message": "Kilépés" },
   "state_on": { "message": "Be" },
-  "state_off": { "message": "Kikapcsolva" }
+  "state_off": { "message": "Kikapcsolva" },
+  "state_no": { "message": "Nem" }
 }

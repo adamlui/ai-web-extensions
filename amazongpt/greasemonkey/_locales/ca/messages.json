@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Afegeix IA a les compres d'Amazon" },
   "menuLabel_proxyAPImode": { "message": "Mode API de servidor intermediari" },
+  "menuLabel_preferred": { "message": "Preferència" },
   "menuLabel_autoFocusChatbar": { "message": "Barra de xat amb enfocament automàtic" },
   "menuLabel_whenStreaming": { "message": "en transmetre" },
   "menuLabel_background": { "message": "Fons" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Automàtic" },
   "menuLabel_about": { "message": "Quant a" },
   "menuLabel_settings": { "message": "Configuració" },
+  "menuLabel_random": { "message": "Aleatori" },
+  "menuLabel_saved": { "message": "Desat" },
   "componentLabel_used": { "message": "utilitzat" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "i" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Codi" },
   "tooltip_generatingAudio": { "message": "S'està generant l'àudio" },
   "helptip_proxyAPImode": { "message": "Utilitza una API de proxy per accedir sense inici de sessió a la IA" },
+  "helptip_preferredAPI": { "message": "API per utilitzar quan s'obtenen respostes en mode Proxy" },
   "helptip_streamingMode": { "message": "Rebre respostes en un flux de text continu" },
   "helptip_autoFocusChatbar": { "message": "Enfoca automàticament la barra de xat sempre que aparegui" },
   "helptip_autoScroll": { "message": "Respostes de desplaçament automàtic a mesura que es generen en mode de transmissió" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Intenta- ho" },
   "alert_switchingOn": { "message": "activant" },
   "alert_switchingOff": { "message": "desactivar" },
+  "alert_selectingDiff": { "message": "seleccionant un altre" },
   "alert_generated": { "message": "Generat" },
   "notif_copiedToClipboard": { "message": "S'ha copiat al porta-retalls" },
   "notif_downloaded": { "message": "Descàrrega" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Conversa" },
   "link_viewChanges": { "message": "Mostra els canvis" },
   "state_on": { "message": "Activat" },
-  "state_off": { "message": "Desactivat" }
+  "state_off": { "message": "Desactivat" },
+  "state_no": { "message": "No" }
 }

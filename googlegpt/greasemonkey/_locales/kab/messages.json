@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Aderwa d anukkat n tchatbar" },
   "menuLabel_whenStreaming": { "message": "mi ttwali" },
   "menuLabel_proxyAPImode": { "message": "Tanmirt n API Proxy" },
+  "menuLabel_preferred": { "message": "imsenyafen" },
   "menuLabel_show": { "message": "Sxur" },
   "menuLabel_relatedQueries": { "message": "Tazult n teqsiwin" },
   "menuLabel_require": { "message": "Asfeg" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Aderwa" },
   "menuLabel_about": { "message": "Axxam" },
   "menuLabel_settings": { "message": "Tameslayt" },
+  "menuLabel_random": { "message": "[Agacuran]" },
+  "menuLabel_saved": { "message": "Yettwasekles." },
   "componentLabel_used": { "message": "yettwaseqdacen" },
   "about_author": { "message": "Ameskar" },
   "about_and": { "message": "akked" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Asebded n taɣect" },
   "tooltip_sendRelatedQuery": { "message": "Sselk tazult n teqsiwin" },
   "helptip_proxyAPImode": { "message": "Yefka API Proxy i ttwazriwin ur n-twafed ara" },
+  "helptip_preferredAPI": { "message": "Affiner la recherche pour proxy mode" },
   "helptip_streamingMode": { "message": "Tzri yidles deg ttsuts n txt" },
   "helptip_autoGetAnswers": { "message": "Sselk tazult s GoogleGPT mi tura s taɣriche n yal" },
   "helptip_autoSummarizeResults": { "message": "Snulfu asebter n uwennit s wudem awurman" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Sserki" },
   "alert_switchingOn": { "message": "twiɣ ad" },
   "alert_switchingOff": { "message": "twiɣ ad-d" },
+  "alert_selectingDiff": { "message": "fren yiwen n umaynut" },
   "alert_generated": { "message": "Ittwasurew" },
   "notif_copiedToClipboard": { "message": "Aḍris yettwanɣel ɣef afus" },
   "notif_downloaded": { "message": "Yettwasider-d" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Amusn ad-yefk s" },
   "prefix_exit": { "message": "Aksum" },
   "state_on": { "message": "D" },
-  "state_off": { "message": "Ur d-" }
+  "state_off": { "message": "Ur d-" },
+  "state_no": { "message": "Uhu" }
 }

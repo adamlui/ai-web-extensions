@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Προσθέτει τεχνητή νοημοσύνη στις αγορές του Amazon" },
   "menuLabel_proxyAPImode": { "message": "Λειτουργία API διακομιστή μεσολάβησης" },
+  "menuLabel_preferred": { "message": "Προτιμώμενη" },
   "menuLabel_autoFocusChatbar": { "message": "Γραμμή συνομιλίας αυτόματης εστίασης" },
   "menuLabel_whenStreaming": { "message": "κατά τη ροή" },
   "menuLabel_background": { "message": "Ιστορικό" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Αυτόματη εφαρμογή" },
   "menuLabel_about": { "message": "Σχετικά" },
   "menuLabel_settings": { "message": "Ρυθμίσεις" },
+  "menuLabel_random": { "message": "Τυχαία Σειρά" },
+  "menuLabel_saved": { "message": "Αποθηκεύτηκε" },
   "componentLabel_used": { "message": "#-#-#-#-#  nautilus.master.el.po (el)  #-#-#-#-#σε χρήση#-#-#-#-#  gparted.master.el.po (gparted.HEAD)  #-#-#-#-#χρησιμοποιούνται" },
   "about_author": { "message": "Συντάκτης" },
   "about_and": { "message": "και" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Κωδικός" },
   "tooltip_generatingAudio": { "message": "Δημιουργία ήχου" },
   "helptip_proxyAPImode": { "message": "Χρησιμοποιεί ένα API διακομιστή μεσολάβησης για πρόσβαση χωρίς σύνδεση στην τεχνητή νοημοσύνη" },
+  "helptip_preferredAPI": { "message": "API για χρήση κατά τη λήψη απαντήσεων σε λειτουργία διακομιστή μεσολάβησης" },
   "helptip_streamingMode": { "message": "Λήψη απαντήσεων σε συνεχή ροή κειμένου" },
   "helptip_autoFocusChatbar": { "message": "Γραμμή συνομιλίας αυτόματης εστίασης όποτε εμφανίζεται" },
   "helptip_autoScroll": { "message": "Αυτόματη κύλιση απαντήσεων καθώς δημιουργούνται σε λειτουργία ροής" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Δοκιμή" },
   "alert_switchingOn": { "message": "Ενεργοποίηση" },
   "alert_switchingOff": { "message": "Απενεργοποιήση" },
+  "alert_selectingDiff": { "message": "επιλογή διαφορετικού" },
   "alert_generated": { "message": "Δημιουργήθηκε" },
   "notif_copiedToClipboard": { "message": "Αντιγράφηκε στο πρόχειρο" },
   "notif_downloaded": { "message": "ληφθέντα" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Συζήτηση" },
   "link_viewChanges": { "message": "Εμφάνιση αλλαγών" },
   "state_on": { "message": "επί" },
-  "state_off": { "message": "μακριά από" }
+  "state_off": { "message": "μακριά από" },
+  "state_no": { "message": "Όχι" }
 }

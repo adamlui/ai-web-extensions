@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ol samting bilong baim ol samting long Amazon" },
   "menuLabel_proxyAPImode": { "message": "Proxy API mode" },
+  "menuLabel_preferred": { "message": "Mi laikim tumas" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "taim Streaming" },
   "menuLabel_background": { "message": "Bekgraun" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Automation" },
   "menuLabel_about": { "message": "About" },
   "menuLabel_settings": { "message": "Aitaim" },
+  "menuLabel_random": { "message": "Lukluk" },
+  "menuLabel_saved": { "message": "Ol i kisim bek ol" },
   "componentLabel_used": { "message": "ol i yusim" },
   "about_author": { "message": "Man bilong raitim" },
   "about_and": { "message": "Na" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kod" },
   "tooltip_generatingAudio": { "message": "Wokim ol tok" },
   "helptip_proxyAPImode": { "message": "Wokim wanpela Proxy API bilong no-login access long AI" },
+  "helptip_preferredAPI": { "message": "API bilong yusim taim yu kisim bekim long Proxy Mode" },
   "helptip_streamingMode": { "message": "Kisim bekim long wanpela tok i stap oltaim" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar taim em i kamap" },
   "helptip_autoScroll": { "message": "Ol bekim bilong ol auto-scroll olsem ol i kamapim long streaming mode" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Traim" },
   "alert_switchingOn": { "message": "wok bilong senisim" },
   "alert_switchingOff": { "message": "kisim bek" },
+  "alert_selectingDiff": { "message": "piksaim narapela narapela" },
   "alert_generated": { "message": "Wok bilong kamapim" },
   "notif_copiedToClipboard": { "message": "Kopiim long Clipboard" },
   "notif_downloaded": { "message": "yu ken kisim" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Toktok" },
   "link_viewChanges": { "message": "Lukim ol senis" },
   "state_on": { "message": "Long" },
-  "state_off": { "message": "Kisim i go" }
+  "state_off": { "message": "Kisim i go" },
+  "state_no": { "message": "Nogat" }
 }

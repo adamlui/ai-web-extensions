@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Outo-fokus kletsbalk" },
   "menuLabel_whenStreaming": { "message": "wanneer om te stroom" },
   "menuLabel_proxyAPImode": { "message": "Volmag-API-modus" },
+  "menuLabel_preferred": { "message": "Voorkeur" },
   "menuLabel_show": { "message": "Wys" },
   "menuLabel_relatedQueries": { "message": "Verwante navrae" },
   "menuLabel_require": { "message": "Vereis" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Ada" },
   "menuLabel_about": { "message": "Omtrent" },
   "menuLabel_settings": { "message": "bevel" },
+  "menuLabel_random": { "message": "Lukraak" },
+  "menuLabel_saved": { "message": "Gebêre" },
   "componentLabel_used": { "message": "in gebruik" },
   "about_author": { "message": "Outeur" },
   "about_and": { "message": "en" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Genereer oudio" },
   "tooltip_sendRelatedQuery": { "message": "Stuur verwante navraag" },
   "helptip_proxyAPImode": { "message": "Gebruik 'n Proxy API vir no-login toegang tot AI" },
+  "helptip_preferredAPI": { "message": "API om te gebruik wanneer u antwoorde in Volmagmodus kry" },
   "helptip_streamingMode": { "message": "Ontvang antwoorde in 'n deurlopende teksstroom" },
   "helptip_autoGetAnswers": { "message": "Auto-send navrae na GoogleGPT wanneer die gebruik van soektog" },
   "helptip_autoSummarizeResults": { "message": "Opsomming van soekresultate bladsy outomaties" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Probeer" },
   "alert_switchingOn": { "message": "skakelaar aan" },
   "alert_switchingOff": { "message": "afskakel" },
+  "alert_selectingDiff": { "message": "kies een ander" },
   "alert_generated": { "message": "Genereer" },
   "notif_copiedToClipboard": { "message": "Knyp gekopiëerde aan knipbord" },
   "notif_downloaded": { "message": "afgelaai" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Deel terugvoer" },
   "prefix_exit": { "message": "Gaan uit" },
   "state_on": { "message": "Op" },
-  "state_off": { "message": "Af" }
+  "state_off": { "message": "Af" },
+  "state_no": { "message": "Wees 'n goeie kind" }
 }

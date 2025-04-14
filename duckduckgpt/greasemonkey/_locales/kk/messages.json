@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "DuckDuckGo бүйірлік тақтасына ChatGPT жауаптарын қосады (GPT-4o арқылы жұмыс істейді!)" },
   "menuLabel_proxyAPImode": { "message": "Прокси API режимі" },
+  "menuLabel_preferred": { "message": "БасымдыSize Policy" },
   "menuLabel_autoGetAnswers": { "message": "Автоматты түрде орнату жауаптары" },
   "menuLabel_autoSummarizeResults": { "message": "Нәтижелерді автоматты түрде жинақтау" },
   "menuLabel_autoFocusChatbar": { "message": "Автоматты фокустық чат панелі" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Автоматты басқару" },
   "menuLabel_about": { "message": "Туралы" },
   "menuLabel_settings": { "message": "Баптаулар" },
+  "menuLabel_random": { "message": "Кездейсоқ" },
+  "menuLabel_saved": { "message": "Сақталған" },
   "componentLabel_used": { "message": "«Пайдаланған»," },
   "about_author": { "message": "Авторы" },
   "about_and": { "message": "және" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Аудио жасау" },
   "tooltip_sendRelatedQuery": { "message": "Тиісті сұранысты жіберу" },
   "helptip_proxyAPImode": { "message": "AI-ге логинсіз кіру үшін прокси API пайдаланады" },
+  "helptip_preferredAPI": { "message": "Прокси режимінде жауап алу кезінде қолданылатын API" },
   "helptip_streamingMode": { "message": "Үздіксіз мәтін ағынында жауаптар алу" },
   "helptip_autoGetAnswers": { "message": "Іздеу жүйесін пайдаланған кезде сұрауларды DuckDuckGPT-ге автоматты түрде жіберу" },
   "helptip_autoSummarizeResults": { "message": "Іздеу нәтижелері бетін автоматты түрде қорытындылау" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Басқа пароль" },
   "alert_switchingOn": { "message": "қосу" },
   "alert_switchingOff": { "message": "Өшіру" },
+  "alert_selectingDiff": { "message": "басқа таңдау" },
   "alert_generated": { "message": "Жасалған" },
   "notif_copiedToClipboard": { "message": "URL алмасу буферіне көшірімеленді" },
   "notif_downloaded": { "message": "Жүктеу жалғастырылды" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Кері байланыспен бөлісу" },
   "prefix_exit": { "message": "Шығу" },
   "state_on": { "message": "Болсын" },
-  "state_off": { "message": "Өшіру" }
+  "state_off": { "message": "Өшіру" },
+  "state_no": { "message": "Жоқ" }
 }

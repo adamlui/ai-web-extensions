@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "將人工智慧加入 Amazon 購物中" },
   "menuLabel_proxyAPImode": { "message": "代理 API 模式" },
+  "menuLabel_preferred": { "message": "優先選用" },
   "menuLabel_autoFocusChatbar": { "message": "自動對焦聊天列" },
   "menuLabel_whenStreaming": { "message": "串流時" },
   "menuLabel_background": { "message": "背景" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "自動" },
   "menuLabel_about": { "message": "關於我們" },
   "menuLabel_settings": { "message": "設定" },
+  "menuLabel_random": { "message": "隨機產生" },
+  "menuLabel_saved": { "message": "已儲存" },
   "componentLabel_used": { "message": "使用的" },
   "about_author": { "message": "作者" },
   "about_and": { "message": "以及" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "代碼" },
   "tooltip_generatingAudio": { "message": "正在產生音訊" },
   "helptip_proxyAPImode": { "message": "使用 Proxy API 無需登入即可存取 AI" },
+  "helptip_preferredAPI": { "message": "在代理模式下獲取答案時使用的 API" },
   "helptip_streamingMode": { "message": "接收連續文字串流的回覆" },
   "helptip_autoFocusChatbar": { "message": "每當聊天列出現時自動對焦" },
   "helptip_autoScroll": { "message": "在串流模式下產生的自動捲動回應" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "嘗試" },
   "alert_switchingOn": { "message": "正在開啓" },
   "alert_switchingOff": { "message": "正在關閉" },
+  "alert_selectingDiff": { "message": "選擇不同的" },
   "alert_generated": { "message": "已產生" },
   "notif_copiedToClipboard": { "message": "複製到剪貼簿" },
   "notif_downloaded": { "message": "已下載" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "對話內容" },
   "link_viewChanges": { "message": "查看變更" },
   "state_on": { "message": "開" },
-  "state_off": { "message": "關" }
+  "state_off": { "message": "關" },
+  "state_no": { "message": "否" }
 }

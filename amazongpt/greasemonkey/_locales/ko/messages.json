@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Amazon 쇼핑에 AI 추가" },
   "menuLabel_proxyAPImode": { "message": "프록시 API 모드" },
+  "menuLabel_preferred": { "message": "선호" },
   "menuLabel_autoFocusChatbar": { "message": "자동 초점 채팅창" },
   "menuLabel_whenStreaming": { "message": "스트리밍할 때" },
   "menuLabel_background": { "message": "배경" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "자동" },
   "menuLabel_about": { "message": "소개" },
   "menuLabel_settings": { "message": "설정" },
+  "menuLabel_random": { "message": "랜덤" },
+  "menuLabel_saved": { "message": "저장했습니다" },
   "componentLabel_used": { "message": "사용됨" },
   "about_author": { "message": "작성자" },
   "about_and": { "message": "및" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "코드" },
   "tooltip_generatingAudio": { "message": "오디오 생성 중" },
   "helptip_proxyAPImode": { "message": "AI에 대한 노-로그인 액세스에 프록시 API 사용" },
+  "helptip_preferredAPI": { "message": "프록시 모드에서 답변을 받을 때 사용할 API" },
   "helptip_streamingMode": { "message": "연속 텍스트 스트림에서 응답 받기" },
   "helptip_autoFocusChatbar": { "message": "채팅바가 나타날 때마다 자동 포커스" },
   "helptip_autoScroll": { "message": "스트리밍 모드에서 생성되는 응답을 자동 스크롤" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "트라이" },
   "alert_switchingOn": { "message": "스위치 켜기" },
   "alert_switchingOff": { "message": "스위치 끄기" },
+  "alert_selectingDiff": { "message": "다른 숙소 선택하기" },
   "alert_generated": { "message": "생성됨" },
   "notif_copiedToClipboard": { "message": "클립보드에 복사되었습니다" },
   "notif_downloaded": { "message": "다운로드 완료" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "채팅" },
   "link_viewChanges": { "message": "변경 보기" },
   "state_on": { "message": "켜짐" },
-  "state_off": { "message": "꺼짐" }
+  "state_off": { "message": "꺼짐" },
+  "state_no": { "message": "아니오" }
 }

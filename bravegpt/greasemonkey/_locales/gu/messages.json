@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "બહાદુર શોધ સાઇડબારમાં ChatGPT જવાબો ઉમેરે છે (GPT-4o દ્વારા સંચાલિત!)" },
   "menuLabel_proxyAPImode": { "message": "પ્રોક્સી API મોડ" },
+  "menuLabel_preferred": { "message": "પસંદીદા" },
   "menuLabel_autoGetAnswers": { "message": "આપમેળે જવાબો મેળવો" },
   "menuLabel_autoSummarizeResults": { "message": "પરિણામોને આપમેળે સારાંશ આપો" },
   "menuLabel_autoFocusChatbar": { "message": "આપમેળે ફોકસ ચેટબાર" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "આપમેળે" },
   "menuLabel_about": { "message": "માહિતી" },
   "menuLabel_settings": { "message": "સેટિંગ્સ" },
+  "menuLabel_random": { "message": "અવ્યવસ્થિત" },
+  "menuLabel_saved": { "message": "સંગ્રહ થયેલ છે" },
   "componentLabel_used": { "message": "વપરાયેલ" },
   "about_author": { "message": "લેખક" },
   "about_and": { "message": "અને" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "ઑડિઓ જનરેટ કરી રહ્યા છીએ" },
   "tooltip_sendRelatedQuery": { "message": "સંબંધિત ક્વેરી મોકલો" },
   "helptip_proxyAPImode": { "message": "AI ની નો-લોગિન ઍક્સેસ માટે પ્રોક્સી API નો ઉપયોગ કરે છે" },
+  "helptip_preferredAPI": { "message": "પ્રોક્સી મોડમાં જવાબો મેળવતી વખતે ઉપયોગ કરવા માટે API" },
   "helptip_streamingMode": { "message": "સતત ટેક્સ્ટ સ્ટ્રીમમાં જવાબો મેળવો" },
   "helptip_autoGetAnswers": { "message": "સર્ચ એન્જિનનો ઉપયોગ કરતી વખતે BraveGPT ને પ્રશ્નો આપોઆપ મોકલો" },
   "helptip_autoSummarizeResults": { "message": "આપમેળે શોધ પરિણામો પૃષ્ઠનો સારાંશ આપો" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "પ્રયત્ન કરો" },
   "alert_switchingOn": { "message": "પર સ્વિચ કરી રહ્યા છીએ" },
   "alert_switchingOff": { "message": "સ્વીચ ઓફ થઈ રહ્યું છે" },
+  "alert_selectingDiff": { "message": "એક અલગ પસંદ કરી રહ્યા છીએ" },
   "alert_generated": { "message": "જનરેટ થયેલ" },
   "notif_copiedToClipboard": { "message": "ક્લિપબોર્ડ પર કૉપિ કરેલું" },
   "notif_downloaded": { "message": "ડાઉનલોડ થયેલ" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "પ્રતિભાવ આપો" },
   "prefix_exit": { "message": "એક્ઝીટ" },
   "state_on": { "message": "બરાબર" },
-  "state_off": { "message": "બંધ" }
+  "state_off": { "message": "બંધ" },
+  "state_no": { "message": "ના" }
 }

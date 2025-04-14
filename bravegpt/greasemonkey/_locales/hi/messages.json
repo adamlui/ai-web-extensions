@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ChatGPT जवाबों को Brave Search साइडबार में जोड़ता है (GPT-4o! द्वारा संचालित)" },
   "menuLabel_proxyAPImode": { "message": "प्रॉक्सी एपीआई मोड" },
+  "menuLabel_preferred": { "message": "पसंदीदा" },
   "menuLabel_autoGetAnswers": { "message": "अपने आप जवाब पाएँ" },
   "menuLabel_autoSummarizeResults": { "message": "ऑटो - समराइज़ के नतीजे" },
   "menuLabel_autoFocusChatbar": { "message": "ऑटो - फ़ोकस चैटबार" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "अपने-आप" },
   "menuLabel_about": { "message": "परिचय" },
   "menuLabel_settings": { "message": "सेटिंग" },
+  "menuLabel_random": { "message": "बेतरतीब" },
+  "menuLabel_saved": { "message": "सहेजा गया" },
   "componentLabel_used": { "message": "उपयोग किया गया" },
   "about_author": { "message": "लेखक" },
   "about_and": { "message": "और" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "ऑडियो जनरेट किया जा रहा है" },
   "tooltip_sendRelatedQuery": { "message": "संबंधित क्वेरी भेजें" },
   "helptip_proxyAPImode": { "message": "AI तक नो - लॉगिन एक्सेस के लिए एक प्रॉक्सी एपीआई का उपयोग करता है" },
+  "helptip_preferredAPI": { "message": "प्रॉक्सी मोड में उत्तर प्राप्त करते समय उपयोग करने के लिए एपीआई" },
   "helptip_streamingMode": { "message": "लगातार टेक्स्ट स्ट्रीम में जवाब पाएँ" },
   "helptip_autoGetAnswers": { "message": "खोज इंजन का उपयोग करते समय BraveGPT को प्रश्न स्वतः भेजें" },
   "helptip_autoSummarizeResults": { "message": "खोज परिणामों के पेज को अपने आप संक्षेप में बताएँ" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "कोशिश करें" },
   "alert_switchingOn": { "message": "स्विच ऑन किया जा रहा है" },
   "alert_switchingOff": { "message": "स्विच ऑफ किया जा रहा है" },
+  "alert_selectingDiff": { "message": "कोई दूसरा विकल्प चुनना" },
   "alert_generated": { "message": "जनरेट किया गया" },
   "notif_copiedToClipboard": { "message": "क्लिपबोर्ड पर कॉपी कर लिया गया है" },
   "notif_downloaded": { "message": "डाउनलोड हो गया" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "फ़ीडबैक" },
   "prefix_exit": { "message": "बाहर निकलें" },
   "state_on": { "message": "चालू" },
-  "state_off": { "message": "बंद" }
+  "state_off": { "message": "बंद" },
+  "state_no": { "message": "नहीं" }
 }

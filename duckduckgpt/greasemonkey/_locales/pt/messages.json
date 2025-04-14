@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Adiciona respostas do ChatGPT à barra lateral do DuckDuckGo (com tecnologia GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Modo API Proxy" },
+  "menuLabel_preferred": { "message": "Preferido" },
   "menuLabel_autoGetAnswers": { "message": "Obter respostas automaticamente" },
   "menuLabel_autoSummarizeResults": { "message": "Resumir resultados automaticamente" },
   "menuLabel_autoFocusChatbar": { "message": "Barra de Chat com Foco Automático" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Quem somos" },
   "menuLabel_settings": { "message": "Settings (Configurações)" },
+  "menuLabel_random": { "message": "Aleatório" },
+  "menuLabel_saved": { "message": "Guardado" },
   "componentLabel_used": { "message": "usou" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "e" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "A gerar áudio" },
   "tooltip_sendRelatedQuery": { "message": "Enviar consulta relacionada" },
   "helptip_proxyAPImode": { "message": "Usa uma API Proxy para acesso sem login à IA" },
+  "helptip_preferredAPI": { "message": "API para usar ao obter respostas no Modo Proxy" },
   "helptip_streamingMode": { "message": "Receber respostas num fluxo de texto contínuo" },
   "helptip_autoGetAnswers": { "message": "Envio automático de consultas para o DuckDuckGPT ao usar o mecanismo de pesquisa" },
   "helptip_autoSummarizeResults": { "message": "Resumir automaticamente a página de resultados de pesquisa" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Tentar" },
   "alert_switchingOn": { "message": "Ligar" },
   "alert_switchingOff": { "message": "Desligar" },
+  "alert_selectingDiff": { "message": "a seleccionar um diferente" },
   "alert_generated": { "message": "Gerado" },
   "notif_copiedToClipboard": { "message": "Copiado para a área de transferência" },
   "notif_downloaded": { "message": "descarregado" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Partilhe o seu feedback" },
   "prefix_exit": { "message": "Sair" },
   "state_on": { "message": "Ativado" },
-  "state_off": { "message": "Desligado" }
+  "state_off": { "message": "Desligado" },
+  "state_no": { "message": "Não" }
 }

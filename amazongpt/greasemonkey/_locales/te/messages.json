@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "అమెజాన్ షాపింగ్ ‌ కు AIని జోడిస్తుంది" },
   "menuLabel_proxyAPImode": { "message": "ప్రాక్సీ API మోడ్" },
+  "menuLabel_preferred": { "message": "ప్రాధాన్యత ఇవ్వబడింది" },
   "menuLabel_autoFocusChatbar": { "message": "ఆటో-ఫోకస్ చాట్ ‌ బార్" },
   "menuLabel_whenStreaming": { "message": "ప్రసారం చేసేటప్పుడు" },
   "menuLabel_background": { "message": "బ్యాక్‌గ్రౌండు" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "స్వయంచాలితం" },
   "menuLabel_about": { "message": "గురించి" },
   "menuLabel_settings": { "message": "సెట్టింగ్‌లు" },
+  "menuLabel_random": { "message": "యాదృచ్ఛికం" },
+  "menuLabel_saved": { "message": "భద్రపరచబడింది" },
   "componentLabel_used": { "message": "ఉపయోగించబడిన" },
   "about_author": { "message": "రచయిత" },
   "about_and": { "message": "మరియు" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "కోడ్" },
   "tooltip_generatingAudio": { "message": "ఆడియోను ఉత్పత్తి చేస్తోంది" },
   "helptip_proxyAPImode": { "message": "AIకి లాగిన్ చేయని యాక్సెస్ కోసం ప్రాక్సీ APIని ఉపయోగిస్తుంది" },
+  "helptip_preferredAPI": { "message": "ప్రాక్సీ మోడ్ ‌ లో సమాధానాలు పొందేటప్పుడు ఉపయోగించడానికి API" },
   "helptip_streamingMode": { "message": "నిరంతర టెక్స్ట్ స్ట్రీమ్ ‌ లో ప్రత్యుత్తరాలను స్వీకరించండి" },
   "helptip_autoFocusChatbar": { "message": "ఆటో-ఫోకస్ చాట్ ‌ బార్ కనిపించినప్పుడల్లా" },
   "helptip_autoScroll": { "message": "స్ట్రీమింగ్ మోడ్ ‌ లో ఆటో-స్క్రోల్ స్పందనలు ఉత్పత్తి అవుతాయి" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "ప్రయత్నించడం" },
   "alert_switchingOn": { "message": "ఆన్ చేస్తోంది" },
   "alert_switchingOff": { "message": "స్విచ్ ఆఫ్ చేస్తోంది" },
+  "alert_selectingDiff": { "message": "వేరొకదాన్ని ఎంచుకోవడం" },
   "alert_generated": { "message": "సృష్టించబడింది" },
   "notif_copiedToClipboard": { "message": "క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది" },
   "notif_downloaded": { "message": "డౌన్‌లోడ్అయినది" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "సంభాషణ" },
   "link_viewChanges": { "message": "మార్పులను చూడండి" },
   "state_on": { "message": "ఆన్" },
-  "state_off": { "message": "ఆఫ్" }
+  "state_off": { "message": "ఆఫ్" },
+  "state_no": { "message": "కాదు" }
 }

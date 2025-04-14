@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "DuckDuckGo yon paneliga ChatGPT javoblarini qo'shadi (GPT-4o tomonidan quvvatlanadi!)" },
   "menuLabel_proxyAPImode": { "message": "Proksi API rejimi" },
+  "menuLabel_preferred": { "message": "Afzal" },
   "menuLabel_autoGetAnswers": { "message": "Javoblarni avtomatik olish" },
   "menuLabel_autoSummarizeResults": { "message": "Natijalarni avtomatik umumlashtirish" },
   "menuLabel_autoFocusChatbar": { "message": "Avtofokusli suhbat paneli" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Avtomatik" },
   "menuLabel_about": { "message": "Qisqacha ma'lumot" },
   "menuLabel_settings": { "message": "Sozlamalar" },
+  "menuLabel_random": { "message": "Ixtiyoriy" },
+  "menuLabel_saved": { "message": "Saqlash muvaffaqiyatsiz tugadi" },
   "componentLabel_used": { "message": "ishlatilgan" },
   "about_author": { "message": "Muallif" },
   "about_and": { "message": "va" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Audio yaratish" },
   "tooltip_sendRelatedQuery": { "message": "Tegishli so'rov yuboring" },
   "helptip_proxyAPImode": { "message": "Kirishsiz AI uchun Proxy API foydalanadi" },
+  "helptip_preferredAPI": { "message": "Proksi rejimida javob olishda foydalanish uchun API" },
   "helptip_streamingMode": { "message": "Javoblarni uzluksiz matn oqimida qabul qiling" },
   "helptip_autoGetAnswers": { "message": "Qidiruv tizimidan foydalanganda so'rovlarni DuckDuckGPT ga avtomatik yuboring" },
   "helptip_autoSummarizeResults": { "message": "Qidiruv natijalari sahifasini avtomatik umumlashtirish" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Sinash" },
   "alert_switchingOn": { "message": "yoqish" },
   "alert_switchingOff": { "message": "o'chirish" },
+  "alert_selectingDiff": { "message": "boshqasini tanlash" },
   "alert_generated": { "message": "Yaratilgan" },
   "notif_copiedToClipboard": { "message": "Buferga nusxa olindi" },
   "notif_downloaded": { "message": "Yozib olish davom ettrildi" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Fikr-mulohazangizni baham ko'ring" },
   "prefix_exit": { "message": "Chiqish" },
   "state_on": { "message": "Yoniq" },
-  "state_off": { "message": "O'chirilgan" }
+  "state_off": { "message": "O'chirilgan" },
+  "state_no": { "message": "Yo'q" }
 }

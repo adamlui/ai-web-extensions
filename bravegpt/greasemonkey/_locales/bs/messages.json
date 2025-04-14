@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Dodaje ChatGPT odgovore na bočnu traku Hrabrog pretraživanja (pokreće GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API režim" },
+  "menuLabel_preferred": { "message": "Poželjno" },
   "menuLabel_autoGetAnswers": { "message": "Automatsko dobijanje odgovora" },
   "menuLabel_autoSummarizeResults": { "message": "Automatski sažmi rezultate" },
   "menuLabel_autoFocusChatbar": { "message": "Traka za razgovor s automatskim fokusiranjem" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Automobili" },
   "menuLabel_about": { "message": "O nama" },
   "menuLabel_settings": { "message": "Postavke" },
+  "menuLabel_random": { "message": "Nasumično" },
+  "menuLabel_saved": { "message": "Spašeno" },
   "componentLabel_used": { "message": "korišten" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "i" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Generišem zvuk" },
   "tooltip_sendRelatedQuery": { "message": "Pošaljite povezani upit" },
   "helptip_proxyAPImode": { "message": "Koristi proxy API za pristup AI bez prijave" },
+  "helptip_preferredAPI": { "message": "API koji se koristi prilikom dobijanja odgovora u proxy režimu" },
   "helptip_streamingMode": { "message": "Primajte odgovore u kontinuiranom toku teksta" },
   "helptip_autoGetAnswers": { "message": "Automatsko slanje upita BraveGPT-u kada se koristi pretraživač" },
   "helptip_autoSummarizeResults": { "message": "Automatski sažmi stranicu s rezultatima pretraživanja" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "p" },
   "alert_switchingOn": { "message": "uključivanje" },
   "alert_switchingOff": { "message": "isključivanje" },
+  "alert_selectingDiff": { "message": "odabir drugog" },
   "alert_generated": { "message": "Generisani" },
   "notif_copiedToClipboard": { "message": "Podaci kopirani u međuspremnik" },
   "notif_downloaded": { "message": "Preuzeto" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Povratne informacije" },
   "prefix_exit": { "message": "Izlaz" },
   "state_on": { "message": "Da" },
-  "state_off": { "message": "Ne" }
+  "state_off": { "message": "Ne" },
+  "state_no": { "message": "Ne" }
 }

@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Aŭtomata Fokusa Babilejo" },
   "menuLabel_whenStreaming": { "message": "dum fluo" },
   "menuLabel_proxyAPImode": { "message": "Prokura API-Reĝimo" },
+  "menuLabel_preferred": { "message": "Home phone" },
   "menuLabel_show": { "message": "Montri" },
   "menuLabel_relatedQueries": { "message": "Rilataj demandoj" },
   "menuLabel_require": { "message": "necesi" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Aŭtomate" },
   "menuLabel_about": { "message": "Alproksimigas" },
   "menuLabel_settings": { "message": "Agordoj" },
+  "menuLabel_random": { "message": "Hazarde" },
+  "menuLabel_saved": { "message": "Konservu bildon" },
   "componentLabel_used": { "message": "uzate:" },
   "about_author": { "message": "Aŭtoro" },
   "about_and": { "message": "kaj" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Generante sonon" },
   "tooltip_sendRelatedQuery": { "message": "Sendi rilatan peton" },
   "helptip_proxyAPImode": { "message": "Uzas Proxy API por ne-login aliro al AI" },
+  "helptip_preferredAPI": { "message": "API uzi kiam akiranta respondojn en Proxy Mode" },
   "helptip_streamingMode": { "message": "Ricevi respondojn en kontinua tekstfluo" },
   "helptip_autoGetAnswers": { "message": "Aŭtomate sendi demandojn al GoogleGPT dum uzado de serĉilo" },
   "helptip_autoSummarizeResults": { "message": "Aŭtomate resumi la serĉrezultan paĝon" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Nu, provu" },
   "alert_switchingOn": { "message": "ŝalti" },
   "alert_switchingOff": { "message": "malŝalti" },
+  "alert_selectingDiff": { "message": "elekti alian" },
   "alert_generated": { "message": "Generita" },
   "notif_copiedToClipboard": { "message": "URL kopiita al interdeponejo" },
   "notif_downloaded": { "message": "Elŝutite" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Kunhavigi Rimarkojn" },
   "prefix_exit": { "message": "Eliri" },
   "state_on": { "message": "Oran" },
-  "state_off": { "message": "Malŝaltita" }
+  "state_off": { "message": "Malŝaltita" },
+  "state_no": { "message": "- Saluton." }
 }

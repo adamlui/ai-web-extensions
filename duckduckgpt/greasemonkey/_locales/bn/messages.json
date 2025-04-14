@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "DuckDuckGo সাইডবারে ChatGPT উত্তর যোগ করে (GPT-4o দ্বারা চালিত!)" },
   "menuLabel_proxyAPImode": { "message": "প্রক্সি API মোড" },
+  "menuLabel_preferred": { "message": "পছন্দসমূহ" },
   "menuLabel_autoGetAnswers": { "message": "স্বয়ংক্রিয়ভাবে উত্তর পান" },
   "menuLabel_autoSummarizeResults": { "message": "স্বতঃস্ফূর্ত ফলাফল" },
   "menuLabel_autoFocusChatbar": { "message": "অটো-ফোকাস চ্যাটবার" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "স্বয়ংক্রিয়" },
   "menuLabel_about": { "message": "সম্বন্ধে" },
   "menuLabel_settings": { "message": "সেটিংস" },
+  "menuLabel_random": { "message": "এলোমেলো" },
+  "menuLabel_saved": { "message": "সংরক্ষণ হয়েছে" },
   "componentLabel_used": { "message": "ব্যবহৃত" },
   "about_author": { "message": "রচয়িতা" },
   "about_and": { "message": "এবং" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "অডিও তৈরি করা হচ্ছে" },
   "tooltip_sendRelatedQuery": { "message": "সম্পর্কিত ক্যোয়ারী পাঠান" },
   "helptip_proxyAPImode": { "message": "AI-তে নো-লগিন অ্যাক্সেসের জন্য একটি প্রক্সি API ব্যবহার করে" },
+  "helptip_preferredAPI": { "message": "প্রক্সি মোডে উত্তর পাওয়ার সময় API ব্যবহার করতে হবে" },
   "helptip_streamingMode": { "message": "একটি অবিচ্ছিন্ন টেক্সট স্ট্রীমে উত্তরগুলি পান" },
   "helptip_autoGetAnswers": { "message": "সার্চ ইঞ্জিন ব্যবহার করার সময় DuckDuckGPT-কে স্বয়ংক্রিয়ভাবে প্রশ্ন পাঠান" },
   "helptip_autoSummarizeResults": { "message": "অনুসন্ধানের ফলাফলের পৃষ্ঠাটি স্বয়ংক্রিয়ভাবে সারসংক্ষেপ করুন" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "চেষ্টা করা" },
   "alert_switchingOn": { "message": "স্যুইচ করা হচ্ছে" },
   "alert_switchingOff": { "message": "স্যুইচ অফ করা" },
+  "alert_selectingDiff": { "message": "একটি ভিন্ন নির্বাচন করা" },
   "alert_generated": { "message": "উৎপন্ন হয়েছে" },
   "notif_copiedToClipboard": { "message": "ক্লিপবোর্ড-এ কপি করা হয়েছে" },
   "notif_downloaded": { "message": "ডাউনলোড করা হয়েছে:" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "ফিডব্যাক শেয়ার করুন" },
   "prefix_exit": { "message": "বের হয়ে যান" },
   "state_on": { "message": "চালু" },
-  "state_off": { "message": "বন্ধ" }
+  "state_off": { "message": "বন্ধ" },
+  "state_no": { "message": "নং" }
 }

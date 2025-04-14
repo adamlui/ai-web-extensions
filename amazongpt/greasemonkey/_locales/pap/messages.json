@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Agregá una foto_Promocioná Amazon Shop" },
   "menuLabel_proxyAPImode": { "message": "Propiedad Api Moda" },
+  "menuLabel_preferred": { "message": "Preferibel" },
   "menuLabel_autoFocusChatbar": { "message": "Auto Trader Chatbar" },
   "menuLabel_whenStreaming": { "message": "ora Streaming" },
   "menuLabel_background": { "message": "Background" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Outo" },
   "menuLabel_about": { "message": "About About" },
   "menuLabel_settings": { "message": "Establesimentunan" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Salbashon" },
   "componentLabel_used": { "message": "usa" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "i" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kódigo" },
   "tooltip_generatingAudio": { "message": "Generacion Audio" },
   "helptip_proxyAPImode": { "message": "Use a Proxy API for No Login" },
+  "helptip_preferredAPI": { "message": "Aplicacion Para Rastrear Un Celular En Modo Proxy" },
   "helptip_streamingMode": { "message": "Responderá cuestionando un texto continuo" },
   "helptip_autoFocusChatbar": { "message": "Carrefour cuando sea necesario" },
   "helptip_autoScroll": { "message": "Motociclismo Como Crear Contenido En El Módulo De Streaming" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Purba" },
   "alert_switchingOn": { "message": "kambio riba" },
   "alert_switchingOff": { "message": "kaká Kaká" },
+  "alert_selectingDiff": { "message": "eligiendo un Diferente" },
   "alert_generated": { "message": "Generá" },
   "notif_copiedToClipboard": { "message": "Copiando a Clipboard" },
   "notif_downloaded": { "message": "deskargá" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Kombersashon" },
   "link_viewChanges": { "message": "Bista riba kambionan" },
   "state_on": { "message": "Riba" },
-  "state_off": { "message": "For di" }
+  "state_off": { "message": "For di" },
+  "state_no": { "message": "No" }
 }

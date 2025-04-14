@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Fügt ChatGPT-Antworten zur DuckDuckGo-Seitenleiste hinzu (unterstützt von GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy-API-Modus" },
+  "menuLabel_preferred": { "message": "Vorzugsweise" },
   "menuLabel_autoGetAnswers": { "message": "Antworten automatisch abrufen" },
   "menuLabel_autoSummarizeResults": { "message": "Ergebnisse zusammenfassen" },
   "menuLabel_autoFocusChatbar": { "message": "Autofokus-Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Automatisch" },
   "menuLabel_about": { "message": "Über" },
   "menuLabel_settings": { "message": "Einstellungen" },
+  "menuLabel_random": { "message": "Zufällig" },
+  "menuLabel_saved": { "message": "Gespeichert" },
   "componentLabel_used": { "message": "verwendet, genutzt, benutzt, gebraucht" },
   "about_author": { "message": "Verfasser" },
   "about_and": { "message": "und" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Audio wird generiert" },
   "tooltip_sendRelatedQuery": { "message": "Zugehörige Abfrage senden" },
   "helptip_proxyAPImode": { "message": "Verwendet eine Proxy-API für den No-Login-Zugriff auf KI" },
+  "helptip_preferredAPI": { "message": "API zum Abrufen von Antworten im Proxy-Modus" },
   "helptip_streamingMode": { "message": "Erhalten Sie Antworten in einem kontinuierlichen Textstrom" },
   "helptip_autoGetAnswers": { "message": "Automatisches Senden von Abfragen an DuckDuckGPT bei Verwendung der Suchmaschine" },
   "helptip_autoSummarizeResults": { "message": "Suchergebnisseite automatisch zusammenfassen" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Versuchen, versuch, versuche, versucht, versuchen Sie" },
   "alert_switchingOn": { "message": "Einschalten" },
   "alert_switchingOff": { "message": "Abschaltung" },
+  "alert_selectingDiff": { "message": "auswahl eines anderen" },
   "alert_generated": { "message": "Generiert" },
   "notif_copiedToClipboard": { "message": "In Zwischenablage kopiert" },
   "notif_downloaded": { "message": "heruntergeladen" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Feedback teilen" },
   "prefix_exit": { "message": "Abbrechen" },
   "state_on": { "message": "Auf" },
-  "state_off": { "message": "Aus" }
+  "state_off": { "message": "Aus" },
+  "state_no": { "message": "Nein" }
 }

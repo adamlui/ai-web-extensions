@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Tanaki atu ʻa e ʻi ai ki he fakatau ʻAmasoni" },
   "menuLabel_proxyAPImode": { "message": "API Mode fakafofonga" },
+  "menuLabel_preferred": { "message": "Fie maʻu" },
   "menuLabel_autoFocusChatbar": { "message": "Tokanga taha ki he meʻalele Chatbar" },
   "menuLabel_whenStreaming": { "message": "ʻi he taimi ʻoku stream ai" },
   "menuLabel_background": { "message": "Puipuituʻa" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Meʻalele" },
   "menuLabel_about": { "message": "Fekauʻaki mo e" },
   "menuLabel_settings": { "message": "Ngaahi Feituʻú" },
+  "menuLabel_random": { "message": "Tavale" },
+  "menuLabel_saved": { "message": "Fakahaofi" },
   "componentLabel_used": { "message": "fakaʻaongaʻi" },
   "about_author": { "message": "Tokotaha Faʻu Tohí" },
   "about_and": { "message": "e" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kouti" },
   "tooltip_generatingAudio": { "message": "Faʻu ʻo e ongó" },
   "helptip_proxyAPImode": { "message": "Fakaʻaongaʻi ha API fakafofonga ki he ʻikai lava ke hu ki he ʻi ai" },
+  "helptip_preferredAPI": { "message": "API ke fakaʻaongaʻi ʻi he taimi ʻoku maʻu ai ʻa e ngaahi tali ʻi he Proxy Mode" },
   "helptip_streamingMode": { "message": "Maʻu e tali ʻi ha text hokohoko" },
   "helptip_autoFocusChatbar": { "message": "Chatbar tokanga taha ki he meʻalele ʻi he taimi kotoa pe ʻoku ʻasi ai" },
   "helptip_autoScroll": { "message": "Ngaahi tali ki he scroll ʻo e meʻalele ʻi heʻenau fakatupu ʻi he streaming Mode" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "ʻAhiʻahi" },
   "alert_switchingOn": { "message": "liliu ʻi he" },
   "alert_switchingOff": { "message": "liliu" },
+  "alert_selectingDiff": { "message": "Fili ha taha kehe" },
   "alert_generated": { "message": "Faʻu" },
   "notif_copiedToClipboard": { "message": "Hiki tatau ki he Papafakamaʻú" },
   "notif_downloaded": { "message": "ʻosi download" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Fepotalanoaʻaki" },
   "link_viewChanges": { "message": "Vakai ki he ngaahi liliú" },
   "state_on": { "message": "ʻI he" },
-  "state_off": { "message": "ʻOsi" }
+  "state_off": { "message": "ʻOsi" },
+  "state_no": { "message": "ʻIkai" }
 }

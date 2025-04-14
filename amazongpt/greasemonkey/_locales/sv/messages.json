@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Lägger till AI till Amazon shopping" },
   "menuLabel_proxyAPImode": { "message": "Proxy API-läge" },
+  "menuLabel_preferred": { "message": "Prioriterad" },
   "menuLabel_autoFocusChatbar": { "message": "Chatbar med autofokus" },
   "menuLabel_whenStreaming": { "message": "vid streaming" },
   "menuLabel_background": { "message": "Bakgrund" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Om" },
   "menuLabel_settings": { "message": "Inställningar" },
+  "menuLabel_random": { "message": "Slumpmässig" },
+  "menuLabel_saved": { "message": "Sparad" },
   "componentLabel_used": { "message": "som används" },
   "about_author": { "message": "Författare" },
   "about_and": { "message": "och" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kod" },
   "tooltip_generatingAudio": { "message": "Genererar ljud" },
   "helptip_proxyAPImode": { "message": "Använder ett proxy-API för åtkomst utan inloggning till AI" },
+  "helptip_preferredAPI": { "message": "API att använda när du får svar i proxy-läge" },
   "helptip_streamingMode": { "message": "Ta emot svar i en kontinuerlig textström" },
   "helptip_autoFocusChatbar": { "message": "Autofokusera chattfältet närhelst det visas" },
   "helptip_autoScroll": { "message": "Automatisk bläddring av svar när de genereras i strömningsläge" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Prova" },
   "alert_switchingOn": { "message": "Påslagning" },
   "alert_switchingOff": { "message": "Så här stänger man av" },
+  "alert_selectingDiff": { "message": "välja en annan" },
   "alert_generated": { "message": "Genererad" },
   "notif_copiedToClipboard": { "message": "Kopierat till urklipp" },
   "notif_downloaded": { "message": "nedladdad" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Konversation" },
   "link_viewChanges": { "message": "Visa ändringar" },
   "state_on": { "message": "På" },
-  "state_off": { "message": "Av" }
+  "state_off": { "message": "Av" },
+  "state_no": { "message": "Nej" }
 }

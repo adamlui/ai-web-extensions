@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Faʻaopopo AI i le faʻatau Amazon" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
+  "menuLabel_preferred": { "message": "E sili ona fiafia i ai" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "pe a tafe" },
   "menuLabel_background": { "message": "Tala'aga" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Taavale" },
   "menuLabel_about": { "message": "E uiga i" },
   "menuLabel_settings": { "message": "Faʻatulagaina" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Faasaoina" },
   "componentLabel_used": { "message": "faaaogaina" },
   "about_author": { "message": "Tusitala" },
   "about_and": { "message": "ma" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Fa'ailoga" },
   "tooltip_generatingAudio": { "message": "Fausia leo" },
   "helptip_proxyAPImode": { "message": "Faʻaaoga se Proxy API mo le leai-login avanoa i AI" },
+  "helptip_preferredAPI": { "message": "API e faʻaaoga pe a maua tali i le Proxy Mode" },
   "helptip_streamingMode": { "message": "Maua tali i se tafe mau faifai pea" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar i soo se taimi e foliga mai" },
   "helptip_autoScroll": { "message": "Auto-scroll tali a o latou gaosia i le Streaming Mode" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Taumafai" },
   "alert_switchingOn": { "message": "suia i luga" },
   "alert_switchingOff": { "message": "faʻamutaina o le Faʻamutaina" },
+  "alert_selectingDiff": { "message": "filifili se isi" },
   "alert_generated": { "message": "Faʻatupuina" },
   "notif_copiedToClipboard": { "message": "Lolomiina i le clipboard" },
   "notif_downloaded": { "message": "download" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Talanoaga" },
   "link_viewChanges": { "message": "Vaʻai suiga" },
   "state_on": { "message": "I luga o" },
-  "state_off": { "message": "ALU" }
+  "state_off": { "message": "ALU" },
+  "state_no": { "message": "Leai" }
 }

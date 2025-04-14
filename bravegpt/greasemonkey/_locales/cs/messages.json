@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Přidá odpovědi ChatGPT na boční panel Brave Search (poháněný GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Režim proxy API" },
+  "menuLabel_preferred": { "message": "Preference" },
   "menuLabel_autoGetAnswers": { "message": "Automatické získávání odpovědí" },
   "menuLabel_autoSummarizeResults": { "message": "Automaticky shrnout výsledky" },
   "menuLabel_autoFocusChatbar": { "message": "Chatovací panel s automatickým zaostřováním" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "O" },
   "menuLabel_settings": { "message": "Nastavení" },
+  "menuLabel_random": { "message": "Náhodně" },
+  "menuLabel_saved": { "message": "Uloženo" },
   "componentLabel_used": { "message": "použito" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "a" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Generování zvuku" },
   "tooltip_sendRelatedQuery": { "message": "Odeslat související dotaz" },
   "helptip_proxyAPImode": { "message": "Používá proxy API pro přístup bez přihlášení k AI" },
+  "helptip_preferredAPI": { "message": "API pro použití při získávání odpovědí v režimu proxy" },
   "helptip_streamingMode": { "message": "Přijímat odpovědi v nepřetržitém textovém proudu" },
   "helptip_autoGetAnswers": { "message": "Automatické odesílání dotazů do BraveGPT při použití vyhledávače" },
   "helptip_autoSummarizeResults": { "message": "Automaticky shrnout stránku s výsledky vyhledávání" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Vyzkoušet" },
   "alert_switchingOn": { "message": "Zapínání" },
   "alert_switchingOff": { "message": "vypnutí" },
+  "alert_selectingDiff": { "message": "výběr jiného" },
   "alert_generated": { "message": "Vygenerováno!" },
   "notif_copiedToClipboard": { "message": "Zkopírováno do schránky" },
   "notif_downloaded": { "message": "staženo" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Zpětná vazba" },
   "prefix_exit": { "message": "Východ/výjezd" },
   "state_on": { "message": "Zapnuto" },
-  "state_off": { "message": "Vypnuto" }
+  "state_off": { "message": "Vypnuto" },
+  "state_no": { "message": "Ne" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ChatGPT መልሲ ናብ Brave Search sidebar (ብ GPT-4o ዝተሰርሐ) ኣክሎ" },
   "menuLabel_proxyAPImode": { "message": "ፕሮክሲ ኤፒአይ ሞድ" },
+  "menuLabel_preferred": { "message": "እተመርጸ" },
   "menuLabel_autoGetAnswers": { "message": "ናይ ኣውቶ-ጀት መልሲ" },
   "menuLabel_autoSummarizeResults": { "message": "ውጽኢት ናይ ኣውቶማቲክ ሱማሪዝ" },
   "menuLabel_autoFocusChatbar": { "message": "ናይ ኣውቶ-ፎኩስ ቻትባር" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "ኣውቶሞቢል" },
   "menuLabel_about": { "message": "ብዛዕባ" },
   "menuLabel_settings": { "message": "መቓናት" },
+  "menuLabel_random": { "message": "ዘልኣለማዊ" },
+  "menuLabel_saved": { "message": "ኣድሒኑ" },
   "componentLabel_used": { "message": "f" },
   "about_author": { "message": "ደራሲ" },
   "about_and": { "message": "ከምኡ ድማ" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "ድምጺ ምፍጣር" },
   "tooltip_sendRelatedQuery": { "message": "ምስዚ ዚተሓሓዝ ሕቶ ልኣኽ" },
   "helptip_proxyAPImode": { "message": "ምትእታት Proxy API ብዘይ መእተዊ ናብ AI ንእትው" },
+  "helptip_preferredAPI": { "message": "ኣብ Proxy Mode መልሲ ምስ እትረክብ ክትጥቀመሉ እትኽእል API" },
   "helptip_streamingMode": { "message": "መልሲ ኣብ ቀጣይ ጽሑፍ ምምላእ" },
   "helptip_autoGetAnswers": { "message": "ኣብ መንበረታት ምርታዕ BraveGPT ምስ ተጠቒምካ ምርካብ ሕቶ" },
   "helptip_autoSummarizeResults": { "message": "ናይ ምርምር ውጽኢት ገጽ ብገዛእ ርእሱ ኣጠቃቕማ" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "ፈትኖ" },
   "alert_switchingOn": { "message": "ምቕያር" },
   "alert_switchingOff": { "message": "ምጥፋእ" },
+  "alert_selectingDiff": { "message": "ካልእ ምርጫ" },
   "alert_generated": { "message": "እተፈጥረ" },
   "notif_copiedToClipboard": { "message": "ናብ ክሊፕቦርድ እተቐርጸ" },
   "notif_downloaded": { "message": "ምውራድ" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "ግብረ መልሲ" },
   "prefix_exit": { "message": "ውጻእ" },
   "state_on": { "message": "o" },
-  "state_off": { "message": "ዝወጽ" }
+  "state_off": { "message": "ዝወጽ" },
+  "state_no": { "message": "ኣይፋል" }
 }

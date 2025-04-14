@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "为 Amazon 购物添加人工智能" },
   "menuLabel_proxyAPImode": { "message": "代理 API 模式" },
+  "menuLabel_preferred": { "message": "首选" },
   "menuLabel_autoFocusChatbar": { "message": "自动对焦聊天栏" },
   "menuLabel_whenStreaming": { "message": "流式传输时" },
   "menuLabel_background": { "message": "背景技术" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "自动" },
   "menuLabel_about": { "message": "关于" },
   "menuLabel_settings": { "message": "设置" },
+  "menuLabel_random": { "message": "随机" },
+  "menuLabel_saved": { "message": "已保存" },
   "componentLabel_used": { "message": "已使用" },
   "about_author": { "message": "作者" },
   "about_and": { "message": "和" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "代码" },
   "tooltip_generatingAudio": { "message": "生成音頻" },
   "helptip_proxyAPImode": { "message": "使用代理API无需登录即可访问 AI" },
+  "helptip_preferredAPI": { "message": "在代理模式下获取答案时使用的 API" },
   "helptip_streamingMode": { "message": "接收连续文本流中的回复" },
   "helptip_autoFocusChatbar": { "message": "每当聊天栏出现时自动聚焦" },
   "helptip_autoScroll": { "message": "在流媒体模式下生成时自动滚动响应" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "尝试" },
   "alert_switchingOn": { "message": "接通" },
   "alert_switchingOff": { "message": "断电" },
+  "alert_selectingDiff": { "message": "选择一个不同的" },
   "alert_generated": { "message": "已生成" },
   "notif_copiedToClipboard": { "message": "复制到剪贴板" },
   "notif_downloaded": { "message": "下载" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "询盘" },
   "link_viewChanges": { "message": "查看修改" },
   "state_on": { "message": "开" },
-  "state_off": { "message": "关" }
+  "state_off": { "message": "关" },
+  "state_no": { "message": "个" }
 }

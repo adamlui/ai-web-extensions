@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Inowedzera AI kuAmazon kutenga" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
+  "menuLabel_preferred": { "message": "Zvinodiwa" },
   "menuLabel_autoFocusChatbar": { "message": "Taura nesu" },
   "menuLabel_whenStreaming": { "message": "apo kudirana" },
   "menuLabel_background": { "message": "Nechekumashure" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Nezvedu" },
   "menuLabel_settings": { "message": "Masetingi" },
+  "menuLabel_random": { "message": "ZVAKAITIKA" },
+  "menuLabel_saved": { "message": "Zvakachengetwa" },
   "componentLabel_used": { "message": "kushandiswa" },
   "about_author": { "message": "Munyori" },
   "about_and": { "message": "uye" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kodhi" },
   "tooltip_generatingAudio": { "message": "Kugadzira ruzha" },
   "helptip_proxyAPImode": { "message": "Anoshandisa munhu Proxy API kuti hapana- Login kuwana AI" },
+  "helptip_preferredAPI": { "message": "API kushandisa kana kuwana mhinduro muna Proxy Mode" },
   "helptip_streamingMode": { "message": "Gamuchira mhinduro murukova rwemashoko anoramba achienderera mberi" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar pese painoratidzika" },
   "helptip_autoScroll": { "message": "Auto-scroll mhinduro sezvavanogadzira muStreaming Mode" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Edza" },
   "alert_switchingOn": { "message": "kushandura pamusoro" },
   "alert_switchingOff": { "message": "kudzima" },
+  "alert_selectingDiff": { "message": "kusarudza yakasiyana" },
   "alert_generated": { "message": "ZVAKAITIKA" },
   "notif_copiedToClipboard": { "message": "Yakakopwa kune clipboard" },
   "notif_downloaded": { "message": "kurodha pasi" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Kukurukurirana" },
   "link_viewChanges": { "message": "Vonanyi cinjo" },
   "state_on": { "message": "Pana" },
-  "state_off": { "message": "ZVIMWE" }
+  "state_off": { "message": "ZVIMWE" },
+  "state_no": { "message": "Kwete" }
 }

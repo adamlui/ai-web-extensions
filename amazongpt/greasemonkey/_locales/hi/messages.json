@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "अमेज़ॅन शॉपिंग में AI जोड़ता है" },
   "menuLabel_proxyAPImode": { "message": "प्रॉक्सी एपीआई मोड" },
+  "menuLabel_preferred": { "message": "पसंदीदा" },
   "menuLabel_autoFocusChatbar": { "message": "ऑटो - फ़ोकस चैटबार" },
   "menuLabel_whenStreaming": { "message": "स्ट्रीमिंग करते समय" },
   "menuLabel_background": { "message": "पृष्ठभूमि" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "अपने-आप" },
   "menuLabel_about": { "message": "परिचय" },
   "menuLabel_settings": { "message": "सेटिंग" },
+  "menuLabel_random": { "message": "बेतरतीब" },
+  "menuLabel_saved": { "message": "सहेजा गया" },
   "componentLabel_used": { "message": "उपयोग किया गया" },
   "about_author": { "message": "लेखक" },
   "about_and": { "message": "और" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "कोड" },
   "tooltip_generatingAudio": { "message": "ऑडियो जनरेट किया जा रहा है" },
   "helptip_proxyAPImode": { "message": "AI तक नो - लॉगिन एक्सेस के लिए एक प्रॉक्सी एपीआई का उपयोग करता है" },
+  "helptip_preferredAPI": { "message": "प्रॉक्सी मोड में उत्तर प्राप्त करते समय उपयोग करने के लिए एपीआई" },
   "helptip_streamingMode": { "message": "लगातार टेक्स्ट स्ट्रीम में जवाब पाएँ" },
   "helptip_autoFocusChatbar": { "message": "जब भी दिखाई दे, ऑटो - फ़ोकस चैटबार" },
   "helptip_autoScroll": { "message": "स्ट्रीमिंग मोड में उत्पन्न होने पर प्रतिक्रियाओं को ऑटो - स्क्रॉल करें" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "कोशिश करें" },
   "alert_switchingOn": { "message": "स्विच ऑन किया जा रहा है" },
   "alert_switchingOff": { "message": "स्विच ऑफ किया जा रहा है" },
+  "alert_selectingDiff": { "message": "कोई दूसरा विकल्प चुनना" },
   "alert_generated": { "message": "जनरेट किया गया" },
   "notif_copiedToClipboard": { "message": "क्लिपबोर्ड पर कॉपी कर लिया गया है" },
   "notif_downloaded": { "message": "डाउनलोड हो गया" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "संवाद" },
   "link_viewChanges": { "message": "बदलाव देखें" },
   "state_on": { "message": "चालू" },
-  "state_off": { "message": "बंद" }
+  "state_off": { "message": "बंद" },
+  "state_no": { "message": "नहीं" }
 }

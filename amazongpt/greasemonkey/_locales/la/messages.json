@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Addatum a Amazonium shopping" },
   "menuLabel_proxyAPImode": { "message": "Mode API Proxy" },
+  "menuLabel_preferred": { "message": "Praeficere" },
   "menuLabel_autoFocusChatbar": { "message": "Autocus Chatbar" },
   "menuLabel_whenStreaming": { "message": "quando streaming" },
   "menuLabel_background": { "message": "Fundus" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Automaticum" },
   "menuLabel_about": { "message": "phyllus spp" },
   "menuLabel_settings": { "message": "Configuratio" },
+  "menuLabel_random": { "message": "Fors" },
+  "menuLabel_saved": { "message": "spe salvi" },
   "componentLabel_used": { "message": "usus est" },
   "about_author": { "message": "auctor" },
   "about_and": { "message": "ac (atque)" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Codex" },
   "tooltip_generatingAudio": { "message": "Аудио caractus" },
   "helptip_proxyAPImode": { "message": "Uses a Proxy API for no-login access to AI" },
+  "helptip_preferredAPI": { "message": "API usate quando respondes in Proxy Mode" },
   "helptip_streamingMode": { "message": "Receive answers in un text stream" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar quae sunt" },
   "helptip_autoScroll": { "message": "Valimus interfecitur in mode ratione études" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "conatus" },
   "alert_switchingOn": { "message": "sine salutatione" },
   "alert_switchingOff": { "message": "commutilio" },
+  "alert_selectingDiff": { "message": "electio differentiendum" },
   "alert_generated": { "message": "Generale" },
   "notif_copiedToClipboard": { "message": "Clipboard" },
   "notif_downloaded": { "message": "download" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Transeamus" },
   "link_viewChanges": { "message": "Mutare" },
   "state_on": { "message": "mutare melius" },
-  "state_off": { "message": "finis eum" }
+  "state_off": { "message": "finis eum" },
+  "state_no": { "message": "risu veritas" }
 }

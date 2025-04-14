@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Inshita ine ya ChatGPT yakwete mu suka ya Brave Search (emikono eya GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Indoshi ya API ya Mbofyo" },
+  "menuLabel_preferred": { "message": "Ukutemwa" },
   "menuLabel_autoGetAnswers": { "message": "Auto-Get Amabile" },
   "menuLabel_autoSummarizeResults": { "message": "Bipasha Basu Auto-Summarize Results" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "pafya" },
   "menuLabel_settings": { "message": "Ifilundwa" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Ukupusuka" },
   "componentLabel_used": { "message": "ukubomfya" },
   "about_author": { "message": "Kalemba" },
   "about_and": { "message": "Elyo na" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Ukupanga Audio" },
   "tooltip_sendRelatedQuery": { "message": "Tumineni ifipusho ifilanda pali ili lyashi" },
   "helptip_proxyAPImode": { "message": "Ibomfya API iya kwimininako ukwabula ukwingila mu AI" },
+  "helptip_preferredAPI": { "message": "Ifingakwafwa Ukwishiba Ifingakwafwa Ukuba ne Nsansa nga ca Kuti Ulesanga Amasuko mu" },
   "helptip_streamingMode": { "message": "Pokeleleni amasuko mu mashiwi ayakonkana" },
   "helptip_autoGetAnswers": { "message": "Tuma ifipusho ku BraveGPT ilyo ulebomfya injini ya kufwailamo" },
   "helptip_autoSummarizeResults": { "message": "Sangeni ifyebo pa mabula ya pa kompyuta" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Tontonkanyapo" },
   "alert_switchingOn": { "message": "ukucinja" },
   "alert_switchingOff": { "message": "ukuleka" },
+  "alert_selectingDiff": { "message": "salenipo Umbi" },
   "alert_generated": { "message": "Ukupanga" },
   "notif_copiedToClipboard": { "message": "Yalili Yalila clipboard" },
   "notif_downloaded": { "message": "ukukopolola" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Ifingakwafwa" },
   "prefix_exit": { "message": "Fumenimo" },
   "state_on": { "message": "Pali" },
-  "state_off": { "message": "ukuleka" }
+  "state_off": { "message": "ukuleka" },
+  "state_no": { "message": "Awe" }
 }

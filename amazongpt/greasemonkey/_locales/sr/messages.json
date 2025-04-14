@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Dodaje veštačku inteligenciju u kupovinu na Ama" },
   "menuLabel_proxyAPImode": { "message": "API režim proksija" },
+  "menuLabel_preferred": { "message": "Preferirano" },
   "menuLabel_autoFocusChatbar": { "message": "Traka za ćaskanje sa automatskim fokusiranjem" },
   "menuLabel_whenStreaming": { "message": "prilikom striminga" },
   "menuLabel_background": { "message": "Pozadina" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Automatski" },
   "menuLabel_about": { "message": "About" },
   "menuLabel_settings": { "message": "Podešavanja" },
+  "menuLabel_random": { "message": "Nasumično" },
+  "menuLabel_saved": { "message": "Sačuvano" },
   "componentLabel_used": { "message": "???" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "i" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Šifra" },
   "tooltip_generatingAudio": { "message": "Generisanje zvuka" },
   "helptip_proxyAPImode": { "message": "Koristi proksi API za pristup veštačkoj inteligenciji bez prijave" },
+  "helptip_preferredAPI": { "message": "API koji se koristi prilikom dobijanja odgovora u proksi režimu" },
   "helptip_streamingMode": { "message": "Primajte odgovore u neprekidnom toku teksta" },
   "helptip_autoFocusChatbar": { "message": "Automatsko fokusiranje trake za ćaskanje kad god se pojavi" },
   "helptip_autoScroll": { "message": "Odgovori automatskog pomeranja dok se generišu u režimu striminga" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Pokušavam" },
   "alert_switchingOn": { "message": "Uključivanje" },
   "alert_switchingOff": { "message": "Isključivanje" },
+  "alert_selectingDiff": { "message": "biranje drugog" },
   "alert_generated": { "message": "Generisano" },
   "notif_copiedToClipboard": { "message": "Kopirano u clipboard" },
   "notif_downloaded": { "message": "Преузето" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Konverzacija" },
   "link_viewChanges": { "message": "Pogledajte promene" },
   "state_on": { "message": "Uključeno" },
-  "state_off": { "message": "Off (isključeno)" }
+  "state_off": { "message": "Off (isključeno)" },
+  "state_no": { "message": "Ne" }
 }

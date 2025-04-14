@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Amawonjezera AI ku Amazon kugula" },
   "menuLabel_proxyAPImode": { "message": "Njira ya Proxy API" },
+  "menuLabel_preferred": { "message": "Wokondedwa" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "pamene akukhamukira" },
   "menuLabel_background": { "message": "Mbiri Yakumbuyo" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Zokhudza" },
   "menuLabel_settings": { "message": "Zikhazikiko" },
+  "menuLabel_random": { "message": "Zosintha" },
+  "menuLabel_saved": { "message": "Kupulumutsidwa" },
   "componentLabel_used": { "message": "ntchito" },
   "about_author": { "message": "Wolemba" },
   "about_and": { "message": "Ndi" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Code" },
   "tooltip_generatingAudio": { "message": "Kupanga zomvetsera" },
   "helptip_proxyAPImode": { "message": "Gwiritsani ntchito Proxy API kuti musalowe mu AI" },
+  "helptip_preferredAPI": { "message": "API kuti mugwiritse ntchito mukalandira mayankho mu Proxy Mode" },
   "helptip_streamingMode": { "message": "Landirani mayankho mumtsinje wopitilira" },
   "helptip_autoFocusChatbar": { "message": "Auto-kuyang 'ana chatbar pamene izo zikuoneka" },
   "helptip_autoScroll": { "message": "Auto-scroll mayankho monga iwo kupanga mu Streaming mumalowedwe" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Lumikizanani nafe" },
   "alert_switchingOn": { "message": "kusinthanitsa" },
   "alert_switchingOff": { "message": "kuzimitsa" },
+  "alert_selectingDiff": { "message": "kusankha osiyana" },
   "alert_generated": { "message": "Zopangidwa" },
   "notif_copiedToClipboard": { "message": "Anakopera kuti clipboard" },
   "notif_downloaded": { "message": "kukopera" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Kukambirana" },
   "link_viewChanges": { "message": "Onani zosintha" },
   "state_on": { "message": "ZOKHUD" },
-  "state_off": { "message": "Kuzimitsa" }
+  "state_off": { "message": "Kuzimitsa" },
+  "state_no": { "message": "Ayi" }
 }

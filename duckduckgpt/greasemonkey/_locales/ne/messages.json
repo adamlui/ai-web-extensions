@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "DuckDuckGo साइडबारमा ChatGPT उत्तरहरू थप्दछ (GPT-4o द्वारा संचालित!)" },
   "menuLabel_proxyAPImode": { "message": "प्रोक्सी API मोड" },
+  "menuLabel_preferred": { "message": "रुचाइएकोSize Policy" },
   "menuLabel_autoGetAnswers": { "message": "स्वतः - उत्तरहरू प्राप्त गर्नुहोस्" },
   "menuLabel_autoSummarizeResults": { "message": "परिणामहरू स्वतः सारांश गर्नुहोस्" },
   "menuLabel_autoFocusChatbar": { "message": "स्वत: फोकस कुराकानीपट्टी" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "लेखक" },
   "menuLabel_about": { "message": "बारेमा" },
   "menuLabel_settings": { "message": "सेटिङहरू" },
+  "menuLabel_random": { "message": "अनियमित" },
+  "menuLabel_saved": { "message": "बचत गरियो" },
   "componentLabel_used": { "message": "प्रयोग गरिएको" },
   "about_author": { "message": "लेखक" },
   "about_and": { "message": "र" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "अडियो उत्पन्न गर्दै" },
   "tooltip_sendRelatedQuery": { "message": "सम्बन्धित क्वेरी पठाउनुहोस्" },
   "helptip_proxyAPImode": { "message": "AI मा लगइन नभएको पहुँचको लागि प्रोक्सी API प्रयोग गर्दछ" },
+  "helptip_preferredAPI": { "message": "प्रोक्सी मोडमा उत्तरहरू प्राप्त गर्दा प्रयोग गरिने एपीआई" },
   "helptip_streamingMode": { "message": "निरन्तर टेक्स्ट स्ट्रिममा जवाफहरू प्राप्त गर्नुहोस्" },
   "helptip_autoGetAnswers": { "message": "खोज इन्जिन प्रयोग गर्दा DuckDuckGPT लाई प्रश्नहरू स्वत: पठाउनुहोस्" },
   "helptip_autoSummarizeResults": { "message": "स्वचालित रूपमा खोज परिणाम पृष्ठ संक्षेप गर्नुहोस्" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "प्रयास गर्नुहोस्" },
   "alert_switchingOn": { "message": "स्विच अन गर्दै" },
   "alert_switchingOff": { "message": "स्विच अफ गर्दै" },
+  "alert_selectingDiff": { "message": "फरक छान्ने" },
   "alert_generated": { "message": "बनाइयो" },
   "notif_copiedToClipboard": { "message": "टेक्स्ट क्लिपबोर्डमा  कपि भयो" },
   "notif_downloaded": { "message": "डाउनलोड गरिएको " },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "प्रतिक्रिया साझा गर्नुहोस्" },
   "prefix_exit": { "message": "निस्कने ठाउँ" },
   "state_on": { "message": "खुला" },
-  "state_off": { "message": "बन्द" }
+  "state_off": { "message": "बन्द" },
+  "state_no": { "message": "होइन" }
 }

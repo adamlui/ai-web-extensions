@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "AmazonショッピングにAIを追加" },
   "menuLabel_proxyAPImode": { "message": "プロキシAPIモード" },
+  "menuLabel_preferred": { "message": "推奨" },
   "menuLabel_autoFocusChatbar": { "message": "オートフォーカスチャットバー" },
   "menuLabel_whenStreaming": { "message": "ストリーミング時" },
   "menuLabel_background": { "message": "【背景技術】" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "自動" },
   "menuLabel_about": { "message": "詳細" },
   "menuLabel_settings": { "message": "設定" },
+  "menuLabel_random": { "message": "ランダム" },
+  "menuLabel_saved": { "message": "セーブ" },
   "componentLabel_used": { "message": "使用済み" },
   "about_author": { "message": "作成者" },
   "about_and": { "message": "と" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Code" },
   "tooltip_generatingAudio": { "message": "オーディオを生成しています" },
   "helptip_proxyAPImode": { "message": "AIへのノーログインアクセスにプロキシAPIを使用" },
+  "helptip_preferredAPI": { "message": "プロキシモードで回答を取得するときに使用するAPI" },
   "helptip_streamingMode": { "message": "連続したテキストストリームで返信を受け取る" },
   "helptip_autoFocusChatbar": { "message": "チャットバーが表示されるたびに自動フォーカス" },
   "helptip_autoScroll": { "message": "ストリーミングモードで生成される自動スクロール応答" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "試行" },
   "alert_switchingOn": { "message": "スイッチを入れる" },
   "alert_switchingOff": { "message": "スイッチをオフにする" },
+  "alert_selectingDiff": { "message": "別のものを選択する" },
   "alert_generated": { "message": "生成画像" },
   "notif_copiedToClipboard": { "message": "クリップボードにコピー" },
   "notif_downloaded": { "message": "ダウンロード済み" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "会話" },
   "link_viewChanges": { "message": "変更を表示" },
   "state_on": { "message": "オン" },
-  "state_off": { "message": "オフ" }
+  "state_off": { "message": "オフ" },
+  "state_no": { "message": "いいえ" }
 }

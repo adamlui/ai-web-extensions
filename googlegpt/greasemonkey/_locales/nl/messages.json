@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Chatbalk met automatische focus" },
   "menuLabel_whenStreaming": { "message": "bij het streamen" },
   "menuLabel_proxyAPImode": { "message": "Proxy-API-modus" },
+  "menuLabel_preferred": { "message": "Voorkeur" },
   "menuLabel_show": { "message": "Weergeven" },
   "menuLabel_relatedQueries": { "message": "Gerelateerde query 's" },
   "menuLabel_require": { "message": "Vereisen" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Automatisch" },
   "menuLabel_about": { "message": "Over" },
   "menuLabel_settings": { "message": "Instellingen" },
+  "menuLabel_random": { "message": "Willekeurig" },
+  "menuLabel_saved": { "message": "Opgeslagen" },
   "componentLabel_used": { "message": "gebruikt" },
   "about_author": { "message": "Auteur" },
   "about_and": { "message": "and" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Audio genereren" },
   "tooltip_sendRelatedQuery": { "message": "Verwante query verzenden" },
   "helptip_proxyAPImode": { "message": "Gebruikt een proxy-API voor geen aanmeldingstoegang tot AI" },
+  "helptip_preferredAPI": { "message": "API om te gebruiken bij het verkrijgen van antwoorden in Proxy-modus" },
   "helptip_streamingMode": { "message": "Antwoorden ontvangen in een doorlopende tekststream" },
   "helptip_autoGetAnswers": { "message": "Auto-send queries to GoogleGPT when using search engine" },
   "helptip_autoSummarizeResults": { "message": "Pagina met zoekresultaten automatisch samenvatten" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Proberen" },
   "alert_switchingOn": { "message": "het inschakelen" },
   "alert_switchingOff": { "message": "Uitschakelen" },
+  "alert_selectingDiff": { "message": "het selecteren van een andere" },
   "alert_generated": { "message": "Gegenereerd" },
   "notif_copiedToClipboard": { "message": "Gekopieerd naar klembord" },
   "notif_downloaded": { "message": "gedownload" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Deel feedback" },
   "prefix_exit": { "message": "Exit" },
   "state_on": { "message": "Incident melden" },
-  "state_off": { "message": "Uit" }
+  "state_off": { "message": "Uit" },
+  "state_no": { "message": "Nee" }
 }

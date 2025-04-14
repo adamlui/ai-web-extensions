@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ChatGPT erantzunak gehitzen ditu Brave Search alboko barran (GPT-4o-k bultzatuta!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API modua" },
+  "menuLabel_preferred": { "message": "hobetsia" },
   "menuLabel_autoGetAnswers": { "message": "Lortu erantzunak automatikoki" },
   "menuLabel_autoSummarizeResults": { "message": "Emaitzak automatikoki laburtu" },
   "menuLabel_autoFocusChatbar": { "message": "Foku automatikoko txat-barra" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Egileari Buruz" },
   "menuLabel_settings": { "message": "Ezarpenak" },
+  "menuLabel_random": { "message": "Ausazkoa" },
+  "menuLabel_saved": { "message": "Gordeta" },
   "componentLabel_used": { "message": "erabilita" },
   "about_author": { "message": "Egilea" },
   "about_and": { "message": "eta" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Audioa sortzea" },
   "tooltip_sendRelatedQuery": { "message": "Bidali erlazionatutako kontsulta" },
   "helptip_proxyAPImode": { "message": "Proxy API bat erabiltzen du AI-ra saioa hasi gabe sartzeko" },
+  "helptip_preferredAPI": { "message": "Proxy moduan erantzunak jasotzean erabiltzeko APIa" },
   "helptip_streamingMode": { "message": "Jaso erantzunak etengabeko testu-korronte batean" },
   "helptip_autoGetAnswers": { "message": "Bidali automatikoki kontsultak BraveGPT-ra bilatzailea erabiltzean" },
   "helptip_autoSummarizeResults": { "message": "Automatikoki laburbildu bilaketa-emaitzen orria" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Saiatu" },
   "alert_switchingOn": { "message": "pizten" },
   "alert_switchingOff": { "message": "itzaltzea" },
+  "alert_selectingDiff": { "message": "ezberdin bat hautatzea" },
   "alert_generated": { "message": "Sortutakoa" },
   "notif_copiedToClipboard": { "message": "URLa arbelean kopiatuta" },
   "notif_downloaded": { "message": "Deskargatua" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Ohar-bidaltzea" },
   "prefix_exit": { "message": "Irten" },
   "state_on": { "message": "Piztuta" },
-  "state_off": { "message": "Itzalita" }
+  "state_off": { "message": "Itzalita" },
+  "state_no": { "message": "Ez" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "AI-ê li kirîna Amazonê zêde dike" },
   "menuLabel_proxyAPImode": { "message": "Moda API-ê ya Proxy" },
+  "menuLabel_preferred": { "message": "Vebijêrk" },
   "menuLabel_autoFocusChatbar": { "message": "Oto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "dema streaming" },
   "menuLabel_background": { "message": "Paşxane" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Der barê" },
   "menuLabel_about": { "message": "Derbarê de" },
   "menuLabel_settings": { "message": "Mîheng" },
+  "menuLabel_random": { "message": "Lêrasthatî" },
+  "menuLabel_saved": { "message": "پاشە کەوت کرا، پاشەکەوتکراو، ڕزگارکراو، ھەڵگیراو، دەستی گرتەوە، پاشەکەوتیکرد" },
   "componentLabel_used": { "message": "بەکارھاتوو، بەکارھێنراو، دەسەدوو، ئاشنا، سوودوەرگیراو لێی، بەکارھاتووە، وەبەرھێنراو، پەیڕەو کراو، کۆن، کەڵک لێوەرگیراو، لەبەرکراو، پەیڕەوکراو، کارپێکراو، خراوەکار\n[ھونەر]: بەکارھێنراو، کۆن" },
   "about_author": { "message": "Nivîskar" },
   "about_and": { "message": "û" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "@ title: menu" },
   "tooltip_generatingAudio": { "message": "Hilberîna deng" },
   "helptip_proxyAPImode": { "message": "Ji bo gihîştina ne-têketinê ya AI-ê Proxy API-ê bikar tîne" },
+  "helptip_preferredAPI": { "message": "API-ê ku dema ku di Moda Proxy-ê de bersivan digirin bikar bînin" },
   "helptip_streamingMode": { "message": "Bersivên di pêvekek nivîsê ya domdar de bistînin" },
   "helptip_autoFocusChatbar": { "message": "Dema ku ew xuya bibe chatbara chatbarê bixweber-fokus bike" },
   "helptip_autoScroll": { "message": "Gava ku ew di Moda Streaming-ê de çêdikin, bersivên bixweber bigerin" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "ھەوڵ دەدات، دادگای دەکات، تاقی دەکاتەوە، ھەوڵدان، جیاکردنەوە، دەرھێنان، پاک کردنەوە، ھەوڵ، تاقی کردنەوە، دادگایی کردن" },
   "alert_switchingOn": { "message": "veguherandin" },
   "alert_switchingOff": { "message": "بڕینی تەزووی کارەبا" },
+  "alert_selectingDiff": { "message": "hilbijartina cuda" },
   "alert_generated": { "message": "دروستکرا، بەرھەمھێنرا" },
   "notif_copiedToClipboard": { "message": "کۆپی کراوە بۆ کلیپبۆرد" },
   "notif_downloaded": { "message": "داگیرا، داگیراوە، داگیراو" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Pevaxaftin" },
   "link_viewChanges": { "message": "Guhertinan bibînin" },
   "state_on": { "message": "Vekirî" },
-  "state_off": { "message": "Girtî" }
+  "state_off": { "message": "Girtî" },
+  "state_no": { "message": "Na" }
 }

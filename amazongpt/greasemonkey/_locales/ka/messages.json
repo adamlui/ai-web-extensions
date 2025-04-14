@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ამაზონის საყიდლებზე AI ‑ ს დამატება" },
   "menuLabel_proxyAPImode": { "message": "Პროქსი API რეჟიმი" },
+  "menuLabel_preferred": { "message": "მირჩევნია" },
   "menuLabel_autoFocusChatbar": { "message": "Ავტომატურად ფოკუსირებული ჩატების ზოლი" },
   "menuLabel_whenStreaming": { "message": "სტრიმინგისას" },
   "menuLabel_background": { "message": "წინამძღვრები" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "ავტო" },
   "menuLabel_about": { "message": "პროგრამის შესახებ" },
   "menuLabel_settings": { "message": "&მორგება" },
+  "menuLabel_random": { "message": "შემთხვევითი" },
+  "menuLabel_saved": { "message": "შენახულია" },
   "componentLabel_used": { "message": "გამოყენებულია" },
   "about_author": { "message": "ავტორი" },
   "about_and": { "message": "და" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "კოდი" },
   "tooltip_generatingAudio": { "message": "Აუდიოს გენერაცია" },
   "helptip_proxyAPImode": { "message": "Იყენებს Proxy API-ს AI-ზე ლოგინის გარეშე წვდომისთვის" },
+  "helptip_preferredAPI": { "message": "API, რომელიც უნდა გამოიყენოთ პროქსის რეჟიმში პასუხების მიღებისას" },
   "helptip_streamingMode": { "message": "Პასუხების მიღება უწყვეტ ტექსტურ ნაკადში" },
   "helptip_autoFocusChatbar": { "message": "Ავტომატურად ფოკუსირებული ჩატების ზოლი, როცა გამოჩნდება" },
   "helptip_autoScroll": { "message": "Ავტომატური გადახვევის პასუხები, რომლებსაც ისინი აგენერირებენ Streaming რეჟიმში" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "ცდა" },
   "alert_switchingOn": { "message": "ჩართვა" },
   "alert_switchingOff": { "message": "გამორთვა" },
+  "alert_selectingDiff": { "message": "სხვა ვარიანტის არჩევა" },
   "alert_generated": { "message": "გენერირებული" },
   "notif_copiedToClipboard": { "message": "დაკოპირდა გაცვლის ბაფერში" },
   "notif_downloaded": { "message": "გადმოწერილია" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "საუბარი" },
   "link_viewChanges": { "message": "ცვლილებების ნახვა" },
   "state_on": { "message": "ჩართულია" },
-  "state_off": { "message": "გამორთ" }
+  "state_off": { "message": "გამორთ" },
+  "state_no": { "message": "არა" }
 }

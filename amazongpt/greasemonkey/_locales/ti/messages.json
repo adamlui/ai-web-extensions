@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ኣብ ኣማዞን መግዛእቲ AI ኣክሊልካ" },
   "menuLabel_proxyAPImode": { "message": "ፕሮክሲ ኤፒአይ ሞድ" },
+  "menuLabel_preferred": { "message": "እተመርጸ" },
   "menuLabel_autoFocusChatbar": { "message": "ናይ ኣውቶ-ፎኩስ ቻትባር" },
   "menuLabel_whenStreaming": { "message": "ምስ ዥረት" },
   "menuLabel_background": { "message": "ድሕረ-ባይታ" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "ኣውቶሞቢል" },
   "menuLabel_about": { "message": "ብዛዕባ" },
   "menuLabel_settings": { "message": "መቓናት" },
+  "menuLabel_random": { "message": "ዘልኣለማዊ" },
+  "menuLabel_saved": { "message": "ኣድሒኑ" },
   "componentLabel_used": { "message": "f" },
   "about_author": { "message": "ደራሲ" },
   "about_and": { "message": "ከምኡ ድማ" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "ደንቢ" },
   "tooltip_generatingAudio": { "message": "ድምጺ ምፍጣር" },
   "helptip_proxyAPImode": { "message": "Proxy API ንዘይምእታው ናብ AI ይጥቀም" },
+  "helptip_preferredAPI": { "message": "ኣብ Proxy Mode መልሲ ምስ እትረክብ ክትጥቀመሉ እትኽእል API" },
   "helptip_streamingMode": { "message": "ኣብ ቀጻሊ ናይ ጽሑፍ ፍሰት መልሲ ተቐበል" },
   "helptip_autoFocusChatbar": { "message": "ናይ ኣውቶ-ፎኩስ ቻትባር ኣብ ዝረኣየሉ እዋን" },
   "helptip_autoScroll": { "message": "ኣብ Streaming Mode ከም ዝፍጠር ናይ ኣውቶ-ሽክለታ መልሲ" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "ፈትኖ" },
   "alert_switchingOn": { "message": "ምቕያር" },
   "alert_switchingOff": { "message": "ምጥፋእ" },
+  "alert_selectingDiff": { "message": "ካልእ ምርጫ" },
   "alert_generated": { "message": "እተፈጥረ" },
   "notif_copiedToClipboard": { "message": "ናብ ክሊፕቦርድ እተቐርጸ" },
   "notif_downloaded": { "message": "ምውራድ" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "ዝርርብ " },
   "link_viewChanges": { "message": "ለውጢ ርኣዮ" },
   "state_on": { "message": "o" },
-  "state_off": { "message": "ዝወጽ" }
+  "state_off": { "message": "ዝወጽ" },
+  "state_no": { "message": "ኣይፋል" }
 }

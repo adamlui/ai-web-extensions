@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ADD AI ба хариди Amazon" },
   "menuLabel_proxyAPImode": { "message": "Усули API- и прокси" },
+  "menuLabel_preferred": { "message": "Size Policy" },
   "menuLabel_autoFocusChatbar": { "message": "Пайраҳаи чат бо фокуси худкор" },
   "menuLabel_whenStreaming": { "message": "ҳангоми ҷараён" },
   "menuLabel_background": { "message": "Пасзамина" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Худкор" },
   "menuLabel_about": { "message": "Дар бораи" },
   "menuLabel_settings": { "message": "Танзимот" },
+  "menuLabel_random": { "message": "Занондан" },
+  "menuLabel_saved": { "message": "Нигоҳ доштани сурат" },
   "componentLabel_used": { "message": "Истифодашуда" },
   "about_author": { "message": "Муаалиф" },
   "about_and": { "message": "ва" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Рамз" },
   "tooltip_generatingAudio": { "message": "Тавлиди аудио" },
   "helptip_proxyAPImode": { "message": "Name" },
+  "helptip_preferredAPI": { "message": "API барои истифода ҳангоми гирифтани ҷавобҳо дар режими Proxy" },
   "helptip_streamingMode": { "message": "Қабул кардани ҷавобҳо дар ҷараёни матнии доимӣ" },
   "helptip_autoFocusChatbar": { "message": "Панели чат бо фокуси худкор ҳар вақте, ки пайдо мешавад" },
   "helptip_autoScroll": { "message": "Посухҳои худкор" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "& Кӯшиш кунед" },
   "alert_switchingOn": { "message": "переключить вкл" },
   "alert_switchingOff": { "message": "хомӯш кардан" },
+  "alert_selectingDiff": { "message": "pumili ng iba 't ibang" },
   "alert_generated": { "message": "Тавлидшуда" },
   "notif_copiedToClipboard": { "message": "URL дар буфери тағйирот копӣ карда шудааст" },
   "notif_downloaded": { "message": "Боргирӣ шуд" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "МуколамаEscher Cat (SMS)" },
   "link_viewChanges": { "message": "Tingnan ang mga pagbabago" },
   "state_on": { "message": "Оран" },
-  "state_off": { "message": "& Ғайри фаъол" }
+  "state_off": { "message": "& Ғайри фаъол" },
+  "state_no": { "message": "Не" }
 }

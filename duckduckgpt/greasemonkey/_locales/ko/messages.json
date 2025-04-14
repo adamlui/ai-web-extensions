@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "DuckDuckGo 사이드바에 ChatGPT 답변 추가 (GPT-4o 제공!)" },
   "menuLabel_proxyAPImode": { "message": "프록시 API 모드" },
+  "menuLabel_preferred": { "message": "선호" },
   "menuLabel_autoGetAnswers": { "message": "답변 자동 가져오기" },
   "menuLabel_autoSummarizeResults": { "message": "자동 요약 결과" },
   "menuLabel_autoFocusChatbar": { "message": "자동 초점 채팅창" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "자동" },
   "menuLabel_about": { "message": "소개" },
   "menuLabel_settings": { "message": "설정" },
+  "menuLabel_random": { "message": "랜덤" },
+  "menuLabel_saved": { "message": "저장했습니다" },
   "componentLabel_used": { "message": "사용됨" },
   "about_author": { "message": "작성자" },
   "about_and": { "message": "및" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "오디오 생성 중" },
   "tooltip_sendRelatedQuery": { "message": "관련 쿼리 보내기" },
   "helptip_proxyAPImode": { "message": "AI에 대한 노-로그인 액세스에 프록시 API 사용" },
+  "helptip_preferredAPI": { "message": "프록시 모드에서 답변을 받을 때 사용할 API" },
   "helptip_streamingMode": { "message": "연속 텍스트 스트림에서 응답 받기" },
   "helptip_autoGetAnswers": { "message": "검색 엔진을 사용할 때 DuckDuckGPT로 쿼리 자동 전송" },
   "helptip_autoSummarizeResults": { "message": "검색 결과 페이지 자동 요약" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "트라이" },
   "alert_switchingOn": { "message": "스위치 켜기" },
   "alert_switchingOff": { "message": "스위치 끄기" },
+  "alert_selectingDiff": { "message": "다른 숙소 선택하기" },
   "alert_generated": { "message": "생성됨" },
   "notif_copiedToClipboard": { "message": "클립보드에 복사되었습니다" },
   "notif_downloaded": { "message": "다운로드 완료" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "피드백 공유하기" },
   "prefix_exit": { "message": "나가기" },
   "state_on": { "message": "켜짐" },
-  "state_off": { "message": "꺼짐" }
+  "state_off": { "message": "꺼짐" },
+  "state_no": { "message": "아니오" }
 }

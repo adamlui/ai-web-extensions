@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Afegeix les respostes de ChatGPT a la barra lateral de Brave Search (amb tecnologia GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Mode API de servidor intermediari" },
+  "menuLabel_preferred": { "message": "Preferència" },
   "menuLabel_autoGetAnswers": { "message": "Obtenir respostes automàticament" },
   "menuLabel_autoSummarizeResults": { "message": "Resum automàtic dels resultats" },
   "menuLabel_autoFocusChatbar": { "message": "Barra de xat amb enfocament automàtic" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Automàtic" },
   "menuLabel_about": { "message": "Quant a" },
   "menuLabel_settings": { "message": "Configuració" },
+  "menuLabel_random": { "message": "Aleatori" },
+  "menuLabel_saved": { "message": "Desat" },
   "componentLabel_used": { "message": "utilitzat" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "i" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "S'està generant l'àudio" },
   "tooltip_sendRelatedQuery": { "message": "Envia una consulta relacionada" },
   "helptip_proxyAPImode": { "message": "Utilitza una API de proxy per accedir sense inici de sessió a la IA" },
+  "helptip_preferredAPI": { "message": "API per utilitzar quan s'obtenen respostes en mode Proxy" },
   "helptip_streamingMode": { "message": "Rebre respostes en un flux de text continu" },
   "helptip_autoGetAnswers": { "message": "Envia consultes automàticament a BraveGPT quan utilitzis el motor de cerca" },
   "helptip_autoSummarizeResults": { "message": "Resumeix automàticament la pàgina de resultats de cerca" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Intenta- ho" },
   "alert_switchingOn": { "message": "activant" },
   "alert_switchingOff": { "message": "desactivar" },
+  "alert_selectingDiff": { "message": "seleccionant un altre" },
   "alert_generated": { "message": "Generat" },
   "notif_copiedToClipboard": { "message": "S'ha copiat al porta-retalls" },
   "notif_downloaded": { "message": "Descàrrega" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Dóna’ns la teva opinió" },
   "prefix_exit": { "message": "Surt" },
   "state_on": { "message": "Activat" },
-  "state_off": { "message": "Desactivat" }
+  "state_off": { "message": "Desactivat" },
+  "state_no": { "message": "No" }
 }

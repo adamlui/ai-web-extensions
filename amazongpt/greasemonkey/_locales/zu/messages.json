@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ifaka i-AI ekuthengeni kwe-Amazon" },
   "menuLabel_proxyAPImode": { "message": "Imodi ye-API Yombambeli" },
+  "menuLabel_preferred": { "message": "Okuthandwayo" },
   "menuLabel_autoFocusChatbar": { "message": "I-Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "lapho kusakazwa" },
   "menuLabel_background": { "message": "Isizanda" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Ukuzenzakalela" },
   "menuLabel_about": { "message": "Mayelana" },
   "menuLabel_settings": { "message": "Sebenzisa uhlelo X" },
+  "menuLabel_random": { "message": "Okungahleliwe" },
+  "menuLabel_saved": { "message": "Okugciniwe" },
   "componentLabel_used": { "message": "esetshenzisiwe" },
   "about_author": { "message": "Ukhetho" },
   "about_and": { "message": "kanye" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Ikhodi" },
   "tooltip_generatingAudio": { "message": "Ikhiqiza umsindo" },
   "helptip_proxyAPImode": { "message": "Isebenzisa i-Proxy API ukuze ingangeni ku-AI" },
+  "helptip_preferredAPI": { "message": "I-API ongayisebenzisa lapho uthola izimpendulo ku-Proxy Mode" },
   "helptip_streamingMode": { "message": "Thola izimpendulo kusakazo lombhalo oluqhubekayo" },
   "helptip_autoFocusChatbar": { "message": "Ibha yengxoxo egxile ngokuzenzakalelayo noma nini lapho ivela" },
   "helptip_autoScroll": { "message": "Izimpendulo ze-auto-scroll njengoba zikhiqiza Kumodi Yokusakaza" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "uzame" },
   "alert_switchingOn": { "message": "ukuvula" },
   "alert_switchingOff": { "message": "ukuvala" },
+  "alert_selectingDiff": { "message": "ukukhetha okuhlukile" },
   "alert_generated": { "message": "Kukhiqizwe" },
   "notif_copiedToClipboard": { "message": "Ikopishiwe ebhodini lokunamathisela" },
   "notif_downloaded": { "message": "idawunilodiwe" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Ingxoxo" },
   "link_viewChanges": { "message": "Buka ushintsho" },
   "state_on": { "message": "ku" },
-  "state_off": { "message": "Kuvaliwe" }
+  "state_off": { "message": "Kuvaliwe" },
+  "state_no": { "message": "Cha" }
 }

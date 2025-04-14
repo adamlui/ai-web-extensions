@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "အမေဇုံစျေးဝယ်ရန် AI ကိုထည့်သွင်းသည်" },
   "menuLabel_proxyAPImode": { "message": "Proxy API ကို Mode ကို" },
+  "menuLabel_preferred": { "message": "နှစ်သက်ရာများ" },
   "menuLabel_autoFocusChatbar": { "message": "အလိုအလျောက်အာရုံစူးစိုက်မှု စကားပြောဘား" },
   "menuLabel_whenStreaming": { "message": "streaming လုပ်သည့်အခါ" },
   "menuLabel_background": { "message": "နောက်ခံအကြောင်းအရာ" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "အလိုအလျောက်" },
   "menuLabel_about": { "message": "အကြောင်း" },
   "menuLabel_settings": { "message": "ဆက္တင္မ်ား" },
+  "menuLabel_random": { "message": "ကြုံရာလုပ်မှု" },
+  "menuLabel_saved": { "message": "သိမ်းပြီး" },
   "componentLabel_used": { "message": "ကို သုံးပါမည်။" },
   "about_author": { "message": "ရေးသူ" },
   "about_and": { "message": "Raw Material (Inventory) တွေ ဝယ်မယ့် လုပ်ငန်းမျိုးအတွက်၊" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Code" },
   "tooltip_generatingAudio": { "message": "အသံကို ထုတ်ယူနေသည်" },
   "helptip_proxyAPImode": { "message": "APK ကိုဒေါင်းလုပ်_APK ကိုအန်းဒရွိုက်သည် Download" },
+  "helptip_preferredAPI": { "message": "Proxy Mode ဖြင့် အဖြေများရယူရာတွင် အသုံးပြုရန် API" },
   "helptip_streamingMode": { "message": "စဉ်ဆက်မပြတ်စာသားစီးဆင်းမှုတွင်အဖြေများကိုလက်ခံရရှိပါ" },
   "helptip_autoFocusChatbar": { "message": "အလိုအလျောက်-အာရုံစူးစိုက်မှု chatbar ပေါ်လာသည့်အခါတိုင်း" },
   "helptip_autoScroll": { "message": "Streaming Mode ဖြင့် ထုတ်ပေးသည့်အတိုင်း အလိုအလျောက် Scroll တုံ့ပြန်မှုများ" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "ကြိုးစားပါ" },
   "alert_switchingOn": { "message": "ဖွင့်နေသည်" },
   "alert_switchingOff": { "message": "ခလုတ်ပိတ်ခြင်း" },
+  "alert_selectingDiff": { "message": "တစ် ဦး ကကွဲပြားခြားနားသောရွေးချယ်ရေး" },
   "alert_generated": { "message": "ထုတ်ယူသည်" },
   "notif_copiedToClipboard": { "message": "ကလစ်ဘုတ်သို့ကူးယူပြီး" },
   "notif_downloaded": { "message": "ဒေါင်းလုဒ်လုပ်ထားသည်" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "စကားပြောဆိုမှု" },
   "link_viewChanges": { "message": "အပြောင်းအလဲများကို ကြည့်ရန်" },
   "state_on": { "message": "(ျဖစ္စဥ္)" },
-  "state_off": { "message": "ပိတ်" }
+  "state_off": { "message": "ပိတ်" },
+  "state_no": { "message": "မရှိ" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "يضيف إجابات ChatGPT إلى الشريط الجانبي لـ DuckDuckGo (مدعوم من GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "وضع واجهة برمجة التطبيقات للوكيل" },
+  "menuLabel_preferred": { "message": "مفضل ، مميز ، ممتاز" },
   "menuLabel_autoGetAnswers": { "message": "الحصول على الإجابات تلقائيًا" },
   "menuLabel_autoSummarizeResults": { "message": "لخص النتائج" },
   "menuLabel_autoFocusChatbar": { "message": "شريط دردشة التركيز التلقائي" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "تلقائي" },
   "menuLabel_about": { "message": "عن وزارة الثقافة" },
   "menuLabel_settings": { "message": "الإعدادات" },
+  "menuLabel_random": { "message": "عشوائية" },
+  "menuLabel_saved": { "message": "تم الحفظ" },
   "componentLabel_used": { "message": "مستعمَل" },
   "about_author": { "message": "مؤلف" },
   "about_and": { "message": "و" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "توليد الصوت" },
   "tooltip_sendRelatedQuery": { "message": "إرسال استعلام ذي صلة" },
   "helptip_proxyAPImode": { "message": "يستخدم واجهة برمجة تطبيقات بروكسي للوصول دون تسجيل الدخول إلى الذكاء الاصطناعي" },
+  "helptip_preferredAPI": { "message": "واجهة برمجة التطبيقات لاستخدامها عند الحصول على إجابات في وضع الوكيل" },
   "helptip_streamingMode": { "message": "تلقي الردود في دفق نصي مستمر" },
   "helptip_autoGetAnswers": { "message": "إرسال الاستعلامات تلقائيًا إلى DuckDuckGPT عند استخدام محرك البحث" },
   "helptip_autoSummarizeResults": { "message": "تلخيص صفحة نتائج البحث تلقائيًا" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "جرب" },
   "alert_switchingOn": { "message": "جاري التشغيل" },
   "alert_switchingOff": { "message": "قَطْعُ التّيّارِ الكَهْرَبَائِيّ" },
+  "alert_selectingDiff": { "message": "اختيار نوع مختلف من" },
   "alert_generated": { "message": "تم الإصدار" },
   "notif_copiedToClipboard": { "message": "نسخ إلى الحافظة" },
   "notif_downloaded": { "message": "تم التنزيل" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "مشاركة الملاحظات" },
   "prefix_exit": { "message": "خروج" },
   "state_on": { "message": "تشغيل" },
-  "state_off": { "message": "إيقاف التشغيل" }
+  "state_off": { "message": "إيقاف التشغيل" },
+  "state_no": { "message": "لا" }
 }

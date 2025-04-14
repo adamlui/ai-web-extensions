@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar None None" },
   "menuLabel_whenStreaming": { "message": "numa Numa Streaming" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode None None" },
+  "menuLabel_preferred": { "message": "Ukunda" },
   "menuLabel_show": { "message": "Erekana" },
   "menuLabel_relatedQueries": { "message": "Ibibazo bifitaniye isano" },
   "menuLabel_require": { "message": "Ibisabwa" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Imodoka" },
   "menuLabel_about": { "message": "Ku vyerekeye" },
   "menuLabel_settings": { "message": "Ingorozi" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Gucungurwa" },
   "componentLabel_used": { "message": "koresha" },
   "about_author": { "message": "Umwanditsi" },
   "about_and": { "message": "kandi" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Guteza imbere amajwi" },
   "tooltip_sendRelatedQuery": { "message": "Rungika Rungika Ibibazo bifitaniye isano" },
   "helptip_proxyAPImode": { "message": "Koresha API ya Proxy ngo ntihagire uwushobora kwinjira muri AI" },
+  "helptip_preferredAPI": { "message": "AccueilUmurwi wa API ukwiye gukoresha igihe uronse inyishu mu buryo bwa Proxy" },
   "helptip_streamingMode": { "message": "Rungika Rungika Kuronka inyishu mu gisomwa kibandanya" },
   "helptip_autoGetAnswers": { "message": "Ibibazo kuri GoogleGPT igihe ukoresha injineri yo kurondera" },
   "helptip_autoSummarizeResults": { "message": "Kurondora mu buryo bwikora urupapuro rw'ivyavuye mu bushakashatsi" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Gerageza" },
   "alert_switchingOn": { "message": "guhinduranya" },
   "alert_switchingOff": { "message": "numa Numa" },
+  "alert_selectingDiff": { "message": "hitamwo iyindi" },
   "alert_generated": { "message": "Generation None None" },
   "notif_copiedToClipboard": { "message": "Ikebukuro clipboard" },
   "notif_downloaded": { "message": "download None None" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Gira ico ushikirije" },
   "prefix_exit": { "message": "Gusohoka" },
   "state_on": { "message": "Ku" },
-  "state_off": { "message": "Numa Numa" }
+  "state_off": { "message": "Numa Numa" },
+  "state_no": { "message": "Oya" }
 }

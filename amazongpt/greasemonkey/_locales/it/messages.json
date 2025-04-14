@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Aggiunge l'intelligenza artificiale allo shopping su Amazon" },
   "menuLabel_proxyAPImode": { "message": "Modalità API proxy" },
+  "menuLabel_preferred": { "message": "Preferito" },
   "menuLabel_autoFocusChatbar": { "message": "Messa a fuoco automatica della barra di chat" },
   "menuLabel_whenStreaming": { "message": "durante lo streaming" },
   "menuLabel_background": { "message": "Preliminari" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Automatico" },
   "menuLabel_about": { "message": "Generalità" },
   "menuLabel_settings": { "message": "Impostazioni" },
+  "menuLabel_random": { "message": "Casuale" },
+  "menuLabel_saved": { "message": "Salvato" },
   "componentLabel_used": { "message": "usato" },
   "about_author": { "message": "Autore" },
   "about_and": { "message": "e" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Codice" },
   "tooltip_generatingAudio": { "message": "Generazione audio in corso" },
   "helptip_proxyAPImode": { "message": "Utilizza un'API proxy per l'accesso no-login all'IA" },
+  "helptip_preferredAPI": { "message": "API da utilizzare quando si ottengono risposte in Modalità Proxy" },
   "helptip_streamingMode": { "message": "Ricevi risposte in un flusso di testo continuo" },
   "helptip_autoFocusChatbar": { "message": "Messa a fuoco automatica della chatbar ogni volta che viene visualizzata" },
   "helptip_autoScroll": { "message": "Scorrimento automatico delle risposte man mano che vengono generate in modalità Streaming" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Provare" },
   "alert_switchingOn": { "message": "accensione" },
   "alert_switchingOff": { "message": "spegnimento" },
+  "alert_selectingDiff": { "message": "selezionando un diverso" },
   "alert_generated": { "message": "Generata" },
   "notif_copiedToClipboard": { "message": "Copiato negli appunti" },
   "notif_downloaded": { "message": "scaricati" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Conversazione" },
   "link_viewChanges": { "message": "Visualizza modifiche" },
   "state_on": { "message": "su" },
-  "state_off": { "message": "Spento" }
+  "state_off": { "message": "Spento" },
+  "state_no": { "message": "No" }
 }

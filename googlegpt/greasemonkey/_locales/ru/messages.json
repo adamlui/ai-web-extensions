@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Панель чата с автофокусом" },
   "menuLabel_whenStreaming": { "message": "при потоковой передаче" },
   "menuLabel_proxyAPImode": { "message": "Режим API прокси-сервера" },
+  "menuLabel_preferred": { "message": "Предпочтительно" },
   "menuLabel_show": { "message": "Демонстрация" },
   "menuLabel_relatedQueries": { "message": "маркетинга" },
   "menuLabel_require": { "message": "Требова" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto (Автоматический)" },
   "menuLabel_about": { "message": "Шифр" },
   "menuLabel_settings": { "message": "Настройки" },
+  "menuLabel_random": { "message": "Случайные" },
+  "menuLabel_saved": { "message": "Сохранено" },
   "componentLabel_used": { "message": "используется" },
   "about_author": { "message": "Автор" },
   "about_and": { "message": "и" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Генерирование звука" },
   "tooltip_sendRelatedQuery": { "message": "Отправить связанный запрос" },
   "helptip_proxyAPImode": { "message": "Использует API прокси для доступа к ИИ без входа в систему" },
+  "helptip_preferredAPI": { "message": "API, используемый при получении ответов в режиме прокси" },
   "helptip_streamingMode": { "message": "Получать ответы в непрерывном текстовом потоке" },
   "helptip_autoGetAnswers": { "message": "Автоматическая отправка запросов в GoogleGPT при использовании поисковой системы" },
   "helptip_autoSummarizeResults": { "message": "Автоматически суммировать страницу результатов поиска" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Скачать" },
   "alert_switchingOn": { "message": "Включение" },
   "alert_switchingOff": { "message": "Выключение" },
+  "alert_selectingDiff": { "message": "выбирая другой" },
   "alert_generated": { "message": "Создано" },
   "notif_copiedToClipboard": { "message": "Скопировано в буфер обмена" },
   "notif_downloaded": { "message": "загружено" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Поделиться отзывом" },
   "prefix_exit": { "message": "Выход" },
   "state_on": { "message": "Вкл" },
-  "state_off": { "message": "Выкл" }
+  "state_off": { "message": "Выкл" },
+  "state_no": { "message": "Нет" }
 }

@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Oto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "dema streaming" },
   "menuLabel_proxyAPImode": { "message": "شێوەی ڕاپرسی ئەپی" },
+  "menuLabel_preferred": { "message": "Vebijêrk" },
   "menuLabel_show": { "message": "Nîşan bide" },
   "menuLabel_relatedQueries": { "message": "پرسیارە پەیوەندیدارەکان" },
   "menuLabel_require": { "message": "پێویستە" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Der barê" },
   "menuLabel_about": { "message": "دەربارەی" },
   "menuLabel_settings": { "message": "Mîheng" },
+  "menuLabel_random": { "message": "Lêrasthatî" },
+  "menuLabel_saved": { "message": "پاشە کەوت کرا، پاشەکەوتکراو، ڕزگارکراو، ھەڵگیراو، دەستی گرتەوە، پاشەکەوتیکرد" },
   "componentLabel_used": { "message": "بەکارھاتوو، بەکارھێنراو، دەسەدوو، ئاشنا، سوودوەرگیراو لێی، بەکارھاتووە، وەبەرھێنراو، پەیڕەو کراو، کۆن، کەڵک لێوەرگیراو، لەبەرکراو، پەیڕەوکراو، کارپێکراو، خراوەکار\n[ھونەر]: بەکارھێنراو، کۆن" },
   "about_author": { "message": "Nivîskar" },
   "about_and": { "message": "û" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Hilberîna deng" },
   "tooltip_sendRelatedQuery": { "message": "پرسیاری پەیوەندیدار بنێرە" },
   "helptip_proxyAPImode": { "message": "Ji bo gihîştina ne-têketinê ya AI-ê Proxy API-ê bikar tîne" },
+  "helptip_preferredAPI": { "message": "API-ê ku dema ku di Moda Proxy-ê de bersivan digirin bikar bînin" },
   "helptip_streamingMode": { "message": "Bersivên di pêvekek nivîsê ya domdar de bistînin" },
   "helptip_autoGetAnswers": { "message": "Dema ku motora lêgerînê bikar tînin, pirsan bixweber bişînin GoogleGPT" },
   "helptip_autoSummarizeResults": { "message": "Rûpelê encamên lêgerînê bixweber kurt bikin" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "ھەوڵ دەدات، دادگای دەکات، تاقی دەکاتەوە، ھەوڵدان، جیاکردنەوە، دەرھێنان، پاک کردنەوە، ھەوڵ، تاقی کردنەوە، دادگایی کردن" },
   "alert_switchingOn": { "message": "veguherandin" },
   "alert_switchingOff": { "message": "بڕینی تەزووی کارەبا" },
+  "alert_selectingDiff": { "message": "hilbijartina cuda" },
   "alert_generated": { "message": "دروستکرا، بەرھەمھێنرا" },
   "notif_copiedToClipboard": { "message": "کۆپی کراوە بۆ کلیپبۆرد" },
   "notif_downloaded": { "message": "داگیرا، داگیراوە، داگیراو" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "پەیامی ئەزموون بگرە" },
   "prefix_exit": { "message": "دەرچوون" },
   "state_on": { "message": "Vekirî" },
-  "state_off": { "message": "Girtî" }
+  "state_off": { "message": "Girtî" },
+  "state_no": { "message": "Na" }
 }

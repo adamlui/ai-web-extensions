@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Hoʻohui AI i ka kūʻai ʻana ma Amazon" },
   "menuLabel_proxyAPImode": { "message": "Kūlana API Kūlana" },
+  "menuLabel_preferred": { "message": "Makemake ‘ia" },
   "menuLabel_autoFocusChatbar": { "message": "Kūkākūkā Kūkākūkā-Aunoa" },
   "menuLabel_whenStreaming": { "message": "i ke kahe ana" },
   "menuLabel_background": { "message": "Kāpae" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Ho‘ākāka" },
   "menuLabel_settings": { "message": "Nā hoʻonohonoho" },
+  "menuLabel_random": { "message": "Hoʻokaʻawale" },
+  "menuLabel_saved": { "message": "Mālama ʻia" },
   "componentLabel_used": { "message": "hoʻohana ʻia" },
   "about_author": { "message": "Mea kākau" },
   "about_and": { "message": "aloha au i ko'u mau kaikunane" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Pāʻālua" },
   "tooltip_generatingAudio": { "message": "Hoʻopuka leo" },
   "helptip_proxyAPImode": { "message": "Hoʻohana i kahi API Proxy no ke komo ʻole ʻana iā AI" },
+  "helptip_preferredAPI": { "message": "API e hoʻohana i ka loaʻa ʻana o nā pane ma ke ʻano Proxy" },
   "helptip_streamingMode": { "message": "Loaʻa nā pane ma ke kahawai kikokiko mau" },
   "helptip_autoFocusChatbar": { "message": "ʻO ka pahu kamaʻilio kikoʻī ʻakomi i ka wā e ʻike ʻia ai" },
   "helptip_autoScroll": { "message": "ʻO nā pane ʻōwili ʻauʻa i ka wā e hoʻopuka ai lākou ma ke ʻano Streaming" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Hono" },
   "alert_switchingOn": { "message": "ke hoʻololi ʻana" },
   "alert_switchingOff": { "message": "e hoopau ana" },
+  "alert_selectingDiff": { "message": "ke koho ʻana i kahi ʻokoʻa" },
   "alert_generated": { "message": "Hana ʻia" },
   "notif_copiedToClipboard": { "message": "Kope ʻia i ka papa ʻokiʻoki" },
   "notif_downloaded": { "message": "hoʻoiho ʻia" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Kūkākūkā" },
   "link_viewChanges": { "message": "Nānā i nā hoʻololi" },
   "state_on": { "message": "Ma ka" },
-  "state_off": { "message": "hemo" }
+  "state_off": { "message": "hemo" },
+  "state_no": { "message": "Aʻole" }
 }

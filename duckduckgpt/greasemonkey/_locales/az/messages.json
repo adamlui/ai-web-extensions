@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "DuckDuckGo sidebarına ChatGPT cavabları əlavə edir (GPT-4o ilə təchiz edilmişdir!)" },
   "menuLabel_proxyAPImode": { "message": "Proksi API Rejimi" },
+  "menuLabel_preferred": { "message": "Qurğular" },
   "menuLabel_autoGetAnswers": { "message": "Avtomatik verilən cavablar" },
   "menuLabel_autoSummarizeResults": { "message": "Nəticələri Avtomatik Sümükləndirin" },
   "menuLabel_autoFocusChatbar": { "message": "Avtomatik Fokus Çatbarı" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Automat" },
   "menuLabel_about": { "message": "Haqqında" },
   "menuLabel_settings": { "message": "Parametrlər" },
+  "menuLabel_random": { "message": "Təsadüfi" },
+  "menuLabel_saved": { "message": "Yadda saxlandı" },
   "componentLabel_used": { "message": "köhnə" },
   "about_author": { "message": "Müəllif" },
   "about_and": { "message": "və" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Audio yaradılır" },
   "tooltip_sendRelatedQuery": { "message": "Əlaqəli sorğu göndərin" },
   "helptip_proxyAPImode": { "message": "AI-yə giriş imkanı olmayan giriş üçün Proksi API-sindən istifadə edir" },
+  "helptip_preferredAPI": { "message": "Proksi Rejimində cavab alarkən istifadə etmək üçün API" },
   "helptip_streamingMode": { "message": "Davamlı mətn axınında cavablar alın" },
   "helptip_autoGetAnswers": { "message": "Axtarış sistemindən istifadə edərkən DuckDuckGPT-yə sorğuları avtomatik göndərin" },
   "helptip_autoSummarizeResults": { "message": "Axtarış nəticələri səhifəsini avtomatik yekunlaşdırmaq" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "cəhd etmək" },
   "alert_switchingOn": { "message": "dəyişdirilir" },
   "alert_switchingOff": { "message": "söndürülür" },
+  "alert_selectingDiff": { "message": "başqasını seçmək" },
   "alert_generated": { "message": "Yaradılıb" },
   "notif_copiedToClipboard": { "message": "Mübadilə buferinə kopyal" },
   "notif_downloaded": { "message": "endirildi" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Məxfi rəy paylaşın" },
   "prefix_exit": { "message": "Çıxmaq" },
   "state_on": { "message": "Aktiv" },
-  "state_off": { "message": "İŞLƏMİR" }
+  "state_off": { "message": "İŞLƏMİR" },
+  "state_no": { "message": "Sıra №" }
 }

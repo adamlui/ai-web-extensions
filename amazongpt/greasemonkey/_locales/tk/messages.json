@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Amazonda satylýan satyklar" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
+  "menuLabel_preferred": { "message": "Terbiýe" },
   "menuLabel_autoFocusChatbar": { "message": "Awto-Fokus Çatbary" },
   "menuLabel_whenStreaming": { "message": "ötýänçä" },
   "menuLabel_background": { "message": "Arkaplany Aýry Gaýd Et" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Maşyn" },
   "menuLabel_about": { "message": "Barada" },
   "menuLabel_settings": { "message": "Saýlamalar" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Saýla" },
   "componentLabel_used": { "message": "ulanyldy" },
   "about_author": { "message": "Otomatik gaýşart" },
   "about_and": { "message": "we" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kody" },
   "tooltip_generatingAudio": { "message": "Saýlamalary döretmek" },
   "helptip_proxyAPImode": { "message": "AI-de loginsiz giriş üçin proxy API-ni ulan" },
+  "helptip_preferredAPI": { "message": "Proxy Mode-da jogaplary alanda ulanmak üçin API" },
   "helptip_streamingMode": { "message": "Galyberse-de, bu soraglaryň jogabyny tapyp bilersiňiz" },
   "helptip_autoFocusChatbar": { "message": "Autofocus chatbar her gezek görünýär" },
   "helptip_autoScroll": { "message": "Auto-Scroll jogaplary Streaming Mode-da döredilende" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Synap gör" },
   "alert_switchingOn": { "message": "üýtgeşik" },
   "alert_switchingOff": { "message": "çykyş" },
+  "alert_selectingDiff": { "message": "başga birini saýla" },
   "alert_generated": { "message": "Ýaradylyş" },
   "notif_copiedToClipboard": { "message": "Klipbordda nusga alynýar" },
   "notif_downloaded": { "message": "indir" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Escher Cat (SMS)" },
   "link_viewChanges": { "message": "Özgertmeleri Gör" },
   "state_on": { "message": "% jeminden" },
-  "state_off": { "message": "Çyk" }
+  "state_off": { "message": "Çyk" },
+  "state_no": { "message": "Ýok" }
 }

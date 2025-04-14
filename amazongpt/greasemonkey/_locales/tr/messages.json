@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Amazon alışverişine yapay zeka ekler" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Modu" },
+  "menuLabel_preferred": { "message": "Tercih ettiğiniz SMS Ağ Geçidini seçin." },
   "menuLabel_autoFocusChatbar": { "message": "Otomatik Odaklanma Sohbet Çubuğu" },
   "menuLabel_whenStreaming": { "message": "akış sırasında" },
   "menuLabel_background": { "message": "Arka Plan" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Otomatik" },
   "menuLabel_about": { "message": "Hakkında" },
   "menuLabel_settings": { "message": "Ayarlar" },
+  "menuLabel_random": { "message": "Rastgele" },
+  "menuLabel_saved": { "message": "Kaydedildi" },
   "componentLabel_used": { "message": "kullanılan" },
   "about_author": { "message": "Yazar" },
   "about_and": { "message": "ve" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kodu" },
   "tooltip_generatingAudio": { "message": "Ses oluşturuluyor" },
   "helptip_proxyAPImode": { "message": "Yapay zekaya giriş gerektirmeyen erişim için bir Proxy API'si kullanır" },
+  "helptip_preferredAPI": { "message": "Proxy Modunda yanıt alırken kullanılacak API" },
   "helptip_streamingMode": { "message": "Yanıtları sürekli bir metin akışında alın" },
   "helptip_autoFocusChatbar": { "message": "Göründüğünde sohbet çubuğunu otomatik odakla" },
   "helptip_autoScroll": { "message": "Akış Modunda oluşturulan yanıtları otomatik olarak kaydır" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Try" },
   "alert_switchingOn": { "message": "Açma" },
   "alert_switchingOff": { "message": "Kapatma" },
+  "alert_selectingDiff": { "message": "farklı bir tane seçerek" },
   "alert_generated": { "message": "generated" },
   "notif_copiedToClipboard": { "message": "Panoya kopyalandı" },
   "notif_downloaded": { "message": "İndirilmiş" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Konuşma" },
   "link_viewChanges": { "message": "Değişen Dosyalar" },
   "state_on": { "message": "Açık" },
-  "state_off": { "message": "Kapalı" }
+  "state_off": { "message": "Kapalı" },
+  "state_no": { "message": "Hayır" }
 }

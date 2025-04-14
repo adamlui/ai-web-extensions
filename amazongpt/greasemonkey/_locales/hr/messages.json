@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Dodaje umjetnu inteligenciju u kupovinu na Amazonu" },
   "menuLabel_proxyAPImode": { "message": "Proxy API način rada" },
+  "menuLabel_preferred": { "message": "Poželjno" },
   "menuLabel_autoFocusChatbar": { "message": "Traka za razgovor s automatskim fokusiranjem" },
   "menuLabel_whenStreaming": { "message": "prilikom streaminga" },
   "menuLabel_background": { "message": "Pozadina" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "O nama" },
   "menuLabel_settings": { "message": "Postavke" },
+  "menuLabel_random": { "message": "Nasumično" },
+  "menuLabel_saved": { "message": "Spremljeno" },
   "componentLabel_used": { "message": "iskorišteno" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "i" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Šifra" },
   "tooltip_generatingAudio": { "message": "Generiranje zvuka" },
   "helptip_proxyAPImode": { "message": "Koristi proxy API za pristup umjetnoj inteligenciji bez prijave" },
+  "helptip_preferredAPI": { "message": "API koji se koristi za dobivanje odgovora u proxy načinu rada" },
   "helptip_streamingMode": { "message": "Primajte odgovore u kontinuiranom tekstualnom toku" },
   "helptip_autoFocusChatbar": { "message": "Automatsko fokusiranje trake za razgovor kad god se pojavi" },
   "helptip_autoScroll": { "message": "Odgovori automatskog pomicanja dok se generiraju u načinu rada za streaming" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "﻿Pokušaj" },
   "alert_switchingOn": { "message": "uključuje" },
   "alert_switchingOff": { "message": "Isključivanje" },
+  "alert_selectingDiff": { "message": "odabir drugog" },
   "alert_generated": { "message": "proizveden" },
   "notif_copiedToClipboard": { "message": "Kopirano" },
   "notif_downloaded": { "message": "skinut" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Razgovor" },
   "link_viewChanges": { "message": "Pregledaj promjene" },
   "state_on": { "message": "On (Uključeno)" },
-  "state_off": { "message": "Isključivanje" }
+  "state_off": { "message": "Isključivanje" },
+  "state_no": { "message": "serije" }
 }

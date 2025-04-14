@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "బ్రేవ్ సెర్చ్ సైడ్ ‌ బార్ ‌ కు ChatGPT సమాధానాలను జోడిస్తుంది (GPT-4o ద్వారా ఆధారితం!)" },
   "menuLabel_proxyAPImode": { "message": "ప్రాక్సీ API మోడ్" },
+  "menuLabel_preferred": { "message": "ప్రాధాన్యత ఇవ్వబడింది" },
   "menuLabel_autoGetAnswers": { "message": "ఆటో-గెట్ సమాధానాలు" },
   "menuLabel_autoSummarizeResults": { "message": "ఆటో-సారాంశం ఫలితాలు" },
   "menuLabel_autoFocusChatbar": { "message": "ఆటో-ఫోకస్ చాట్ ‌ బార్" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "స్వయంచాలితం" },
   "menuLabel_about": { "message": "గురించి" },
   "menuLabel_settings": { "message": "సెట్టింగ్‌లు" },
+  "menuLabel_random": { "message": "యాదృచ్ఛికం" },
+  "menuLabel_saved": { "message": "భద్రపరచబడింది" },
   "componentLabel_used": { "message": "ఉపయోగించబడిన" },
   "about_author": { "message": "రచయిత" },
   "about_and": { "message": "మరియు" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "ఆడియోను ఉత్పత్తి చేస్తోంది" },
   "tooltip_sendRelatedQuery": { "message": "సంబంధిత ప్రశ్నను పంపండి" },
   "helptip_proxyAPImode": { "message": "AIకి లాగిన్ చేయని యాక్సెస్ కోసం ప్రాక్సీ APIని ఉపయోగిస్తుంది" },
+  "helptip_preferredAPI": { "message": "ప్రాక్సీ మోడ్ ‌ లో సమాధానాలు పొందేటప్పుడు ఉపయోగించడానికి API" },
   "helptip_streamingMode": { "message": "నిరంతర టెక్స్ట్ స్ట్రీమ్ ‌ లో ప్రత్యుత్తరాలను స్వీకరించండి" },
   "helptip_autoGetAnswers": { "message": "సెర్చ్ ఇంజిన్ను ఉపయోగిస్తున్నప్పుడు BraveGPTకి స్వయంచాలకంగా ప్రశ్నలను పంపండి" },
   "helptip_autoSummarizeResults": { "message": "శోధన ఫలితాల పేజీని స్వయంచాలకంగా సంగ్రహించండి" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "ప్రయత్నించడం" },
   "alert_switchingOn": { "message": "ఆన్ చేస్తోంది" },
   "alert_switchingOff": { "message": "స్విచ్ ఆఫ్ చేస్తోంది" },
+  "alert_selectingDiff": { "message": "వేరొకదాన్ని ఎంచుకోవడం" },
   "alert_generated": { "message": "సృష్టించబడింది" },
   "notif_copiedToClipboard": { "message": "క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది" },
   "notif_downloaded": { "message": "డౌన్‌లోడ్అయినది" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "ఫీడ్‌బ్యాక్" },
   "prefix_exit": { "message": "నిష్క్రమించండి" },
   "state_on": { "message": "ఆన్" },
-  "state_off": { "message": "ఆఫ్" }
+  "state_off": { "message": "ఆఫ్" },
+  "state_no": { "message": "కాదు" }
 }

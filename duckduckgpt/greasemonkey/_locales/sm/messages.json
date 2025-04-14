@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Faaopoopo ChatGPT tali i DuckDuckGo sidebar (faagaoioia e GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
+  "menuLabel_preferred": { "message": "E sili ona fiafia i ai" },
   "menuLabel_autoGetAnswers": { "message": "Tali Auto-Get" },
   "menuLabel_autoSummarizeResults": { "message": "Faaiuga Auto-Summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Taavale" },
   "menuLabel_about": { "message": "E uiga i" },
   "menuLabel_settings": { "message": "Faʻatulagaina" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Faasaoina" },
   "componentLabel_used": { "message": "faaaogaina" },
   "about_author": { "message": "Tusitala" },
   "about_and": { "message": "ma" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Fausia leo" },
   "tooltip_sendRelatedQuery": { "message": "Auina atu fesili e fesootai i ai" },
   "helptip_proxyAPImode": { "message": "Faʻaaoga se Proxy API mo le leai-login avanoa i AI" },
+  "helptip_preferredAPI": { "message": "API e faʻaaoga pe a maua tali i le Proxy Mode" },
   "helptip_streamingMode": { "message": "Maua tali i se tafe mau faifai pea" },
   "helptip_autoGetAnswers": { "message": "Auto-send fesili i DuckDuckGPT pe a faʻaaogaina search engine" },
   "helptip_autoSummarizeResults": { "message": "Faʻamutaina otometi le itulau o iʻuga o sailiga" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Taumafai" },
   "alert_switchingOn": { "message": "suia i luga" },
   "alert_switchingOff": { "message": "faʻamutaina o le Faʻamutaina" },
+  "alert_selectingDiff": { "message": "filifili se isi" },
   "alert_generated": { "message": "Faʻatupuina" },
   "notif_copiedToClipboard": { "message": "Lolomiina i le clipboard" },
   "notif_downloaded": { "message": "download" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Faasoa atu Feedback" },
   "prefix_exit": { "message": "Alu'ese" },
   "state_on": { "message": "I luga o" },
-  "state_off": { "message": "ALU" }
+  "state_off": { "message": "ALU" },
+  "state_no": { "message": "Leai" }
 }

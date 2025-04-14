@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Pridáva umelú inteligenciu do nakupovania na Amazone" },
   "menuLabel_proxyAPImode": { "message": "Režim proxy API" },
+  "menuLabel_preferred": { "message": "Preferované" },
   "menuLabel_autoFocusChatbar": { "message": "Chatbar s automatickým zaostrovaním" },
   "menuLabel_whenStreaming": { "message": "pri streamovaní" },
   "menuLabel_background": { "message": "Kontext" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "O nás" },
   "menuLabel_settings": { "message": "Nastavenia" },
+  "menuLabel_random": { "message": "Náhodné" },
+  "menuLabel_saved": { "message": "Uložené" },
   "componentLabel_used": { "message": "použité" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "a" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kód" },
   "tooltip_generatingAudio": { "message": "Generovanie zvuku" },
   "helptip_proxyAPImode": { "message": "Používa rozhranie Proxy API na prístup bez prihlásenia k umelej inteligencii" },
+  "helptip_preferredAPI": { "message": "API, ktoré sa má použiť pri získavaní odpovedí v režime proxy" },
   "helptip_streamingMode": { "message": "Prijímať odpovede v nepretržitom textovom prúde" },
   "helptip_autoFocusChatbar": { "message": "Chatovací panel s automatickým zaostrovaním vždy, keď sa zobrazí" },
   "helptip_autoScroll": { "message": "Automatické posúvanie odpovedí pri ich generovaní v režime streamovania" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Vyskúšať" },
   "alert_switchingOn": { "message": "zapnutie" },
   "alert_switchingOff": { "message": "Vypnutie" },
+  "alert_selectingDiff": { "message": "výber iného" },
   "alert_generated": { "message": "Vygenerované" },
   "notif_copiedToClipboard": { "message": "Skopírované do schránky" },
   "notif_downloaded": { "message": "Stiahnuté" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Rozhovor" },
   "link_viewChanges": { "message": "Zobraziť zmeny" },
   "state_on": { "message": "Zapnuté" },
-  "state_off": { "message": "Vypnuté" }
+  "state_off": { "message": "Vypnuté" },
+  "state_no": { "message": "Nie" }
 }

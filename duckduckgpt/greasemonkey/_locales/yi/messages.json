@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "לייגט ChatGPT ענטפֿערס צו DuckDuckGo סיידבאַר (פּאַוערד דורך GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "פּראָקסי אַפּי מאָדע" },
+  "menuLabel_preferred": { "message": "בילכער" },
   "menuLabel_autoGetAnswers": { "message": "אַוטאָ-באַקומען ענטפֿערס" },
   "menuLabel_autoSummarizeResults": { "message": "אַוטאָ סאַמערייז רעזולטאַטן" },
   "menuLabel_autoFocusChatbar": { "message": "אַוטאָ-פאָקוס טשאַטבאַר" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "אַוטאָ" },
   "menuLabel_about": { "message": "וועגן" },
   "menuLabel_settings": { "message": "סעטטינגס" },
+  "menuLabel_random": { "message": "טראַפ" },
+  "menuLabel_saved": { "message": "געראטעוועט" },
   "componentLabel_used": { "message": "געוויינט" },
   "about_author": { "message": "מחבר" },
   "about_and": { "message": "און" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "דזשענערייטינג אַודיאָ" },
   "tooltip_sendRelatedQuery": { "message": "שיקן פֿאַרבונדענע אָנפֿרעג" },
   "helptip_proxyAPImode": { "message": "ניצט אַ פּראָקסי אַפּי פֿאַר קיין לאָגין אַקסעס צו אַי" },
+  "helptip_preferredAPI": { "message": "אַפּי צו נוצן ווען איר באַקומען ענטפֿערס אין פּראָקסי מאָדע" },
   "helptip_streamingMode": { "message": "באַקומען ענטפֿערס אין אַ קעסיידערדיק טעקסט טייַך" },
   "helptip_autoGetAnswers": { "message": "אַוטאָ-שיקן פֿראגן צו DuckDuckGPT ווען איר נוצן זוכן מאָטאָר" },
   "helptip_autoSummarizeResults": { "message": "אָטאַמאַטיק סאַמערייז זוכן רעזולטאַטן בלאַט" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "פּרוּווט" },
   "alert_switchingOn": { "message": "באַשטימען אויף" },
   "alert_switchingOff": { "message": "באַשטימען אַוועק" },
+  "alert_selectingDiff": { "message": "סאַלעקטינג אַ אַנדערש" },
   "alert_generated": { "message": "דזשענערייטאַד" },
   "notif_copiedToClipboard": { "message": "קאַפּיד צו קליפּבאָרד" },
   "notif_downloaded": { "message": "דאַונלאָודיד" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "ייַנטיילן באַמערקונגען" },
   "prefix_exit": { "message": "אַרויסגאַנג" },
   "state_on": { "message": "אויף" },
-  "state_off": { "message": "אַוועק" }
+  "state_off": { "message": "אַוועק" },
+  "state_no": { "message": "ניין" }
 }

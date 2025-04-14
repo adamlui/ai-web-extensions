@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Amazon xaridlariga AI qo'shadi" },
   "menuLabel_proxyAPImode": { "message": "Proksi API rejimi" },
+  "menuLabel_preferred": { "message": "Afzal" },
   "menuLabel_autoFocusChatbar": { "message": "Avtomatik fokusli suhbat paneli" },
   "menuLabel_whenStreaming": { "message": "oqim paytida" },
   "menuLabel_background": { "message": "Fon" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Avtomatik" },
   "menuLabel_about": { "message": "Qisqacha ma'lumot" },
   "menuLabel_settings": { "message": "Sozlamalar" },
+  "menuLabel_random": { "message": "Ixtiyoriy" },
+  "menuLabel_saved": { "message": "Saqlash muvaffaqiyatsiz tugadi" },
   "componentLabel_used": { "message": "ishlatilgan" },
   "about_author": { "message": "Muallif" },
   "about_and": { "message": "va" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kod" },
   "tooltip_generatingAudio": { "message": "Audio yaratish" },
   "helptip_proxyAPImode": { "message": "AIga kirishsiz kirish uchun Proksi API-dan foydalanadi" },
+  "helptip_preferredAPI": { "message": "Proksi rejimida javob olishda foydalanish uchun API" },
   "helptip_streamingMode": { "message": "Javoblarni uzluksiz matn oqimida oling" },
   "helptip_autoFocusChatbar": { "message": "Chat paneli paydo bo'lganda avtomatik fokuslash" },
   "helptip_autoScroll": { "message": "Oqim rejimida yaratilgan javoblarni avtomatik aylantiring" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Sinash" },
   "alert_switchingOn": { "message": "yoqish" },
   "alert_switchingOff": { "message": "o'chirish" },
+  "alert_selectingDiff": { "message": "boshqasini tanlash" },
   "alert_generated": { "message": "Yaratilgan" },
   "notif_copiedToClipboard": { "message": "Buferga nusxa olindi" },
   "notif_downloaded": { "message": "Yozib olish davom ettrildi" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "СуҳбатEscher Cat (SMS)" },
   "link_viewChanges": { "message": "O'zgarishlarni ko'rish" },
   "state_on": { "message": "Yoniq" },
-  "state_off": { "message": "O'chirilgan" }
+  "state_off": { "message": "O'chirilgan" },
+  "state_no": { "message": "Yo'q" }
 }

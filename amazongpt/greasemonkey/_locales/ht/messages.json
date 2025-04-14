@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ajoute AI nan makèt Amazon" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
+  "menuLabel_preferred": { "message": "Li pi bon" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "lè difizyon" },
   "menuLabel_background": { "message": "Kontèks" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Otomatik" },
   "menuLabel_about": { "message": "Apwopo" },
   "menuLabel_settings": { "message": "Reglaj" },
+  "menuLabel_random": { "message": "o aza/pa aza " },
+  "menuLabel_saved": { "message": "Sove" },
   "componentLabel_used": { "message": "itilize" },
   "about_author": { "message": "otè" },
   "about_and": { "message": "epi" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Sèvis" },
   "tooltip_generatingAudio": { "message": "Jenere odyo" },
   "helptip_proxyAPImode": { "message": "Sèvi ak yon API Proxy pou pa gen aksè login nan AI" },
+  "helptip_preferredAPI": { "message": "API pou itilize lè w ap resevwa repons nan mòd Proxy" },
   "helptip_streamingMode": { "message": "Resevwa repons nan yon kouran tèks kontinyèl" },
   "helptip_autoFocusChatbar": { "message": "Oto-konsantre chatbar chak fwa li parèt" },
   "helptip_autoScroll": { "message": "Repons Auto-scroll jan yo jenere nan Mòd Streaming" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Eseye" },
   "alert_switchingOn": { "message": "chanje sou" },
   "alert_switchingOff": { "message": "chanje koupe" },
+  "alert_selectingDiff": { "message": "chwazi yon diferan/sélectionner un diffé" },
   "alert_generated": { "message": "Jenerasyon" },
   "notif_copiedToClipboard": { "message": "Kopi nan clipboard" },
   "notif_downloaded": { "message": "telechaje" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "konvèzasyon" },
   "link_viewChanges": { "message": "Gade chanjman yo" },
   "state_on": { "message": "Sou" },
-  "state_off": { "message": "Koupe " }
+  "state_off": { "message": "Koupe " },
+  "state_no": { "message": "Non" }
 }

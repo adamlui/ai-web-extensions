@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "அமேசான் ஷாப்பிங்கில் AI ஐச் சேர்க்கிறது" },
   "menuLabel_proxyAPImode": { "message": "ப்ராக்ஸி API பயன்முறை" },
+  "menuLabel_preferred": { "message": "விருப்பமானது" },
   "menuLabel_autoFocusChatbar": { "message": "ஆட்டோ-ஃபோகஸ் சாட்பார்" },
   "menuLabel_whenStreaming": { "message": "ஸ்ட்ரீமிங் செய்யும் போது" },
   "menuLabel_background": { "message": "பின்னணி" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "தானியங்கி" },
   "menuLabel_about": { "message": "இறக்கப் போகிறது" },
   "menuLabel_settings": { "message": "அமைப்புகள்" },
+  "menuLabel_random": { "message": "சீரற்ற" },
+  "menuLabel_saved": { "message": "சேமிக்கப்பட்டது" },
   "componentLabel_used": { "message": "பயன்படுத்தப்பட்டதா:" },
   "about_author": { "message": "நூலாசிரியர்" },
   "about_and": { "message": "மற்றும்" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "குறியீடு" },
   "tooltip_generatingAudio": { "message": "ஆடியோவை உருவாக்குகிறது" },
   "helptip_proxyAPImode": { "message": "AI-க்கான உள்நுழைவு அணுகலுக்கு ப்ராக்ஸி API ஐப் பயன்படுத்துகிறது" },
+  "helptip_preferredAPI": { "message": "ப்ராக்ஸி பயன்முறையில் பதில்களைப் பெறும்போது பயன்படுத்த ஏபிஐ" },
   "helptip_streamingMode": { "message": "தொடர்ச்சியான உரை ஸ்ட்ரீமில் பதில்களைப் பெறுங்கள்" },
   "helptip_autoFocusChatbar": { "message": "தானியங்கு குவிப்பு அரட்டைப் பட்டி தோன்றும் போதெல்லாம்" },
   "helptip_autoScroll": { "message": "ஸ்ட்ரீமிங் பயன்முறையில் தானாக உருட்டும் பதில்கள்" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "முயற்சிக்க" },
   "alert_switchingOn": { "message": "இயக்குகிறது" },
   "alert_switchingOff": { "message": "சுவிட்ச் ஆஃப்" },
+  "alert_selectingDiff": { "message": "வேறு ஒன்றைத் தேர்ந்தெடுப்பது" },
   "alert_generated": { "message": "உருவாக்கப்பட்டது" },
   "notif_copiedToClipboard": { "message": "கிளிப்போர்டுக்கு மறுபிரதி செய்யப்பட்டது" },
   "notif_downloaded": { "message": "பதிவிறக்கப்பட்டது" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "உரையாடல்" },
   "link_viewChanges": { "message": "மாற்றங்களைக் காண்க" },
   "state_on": { "message": "மீது" },
-  "state_off": { "message": "நிறுத்துக" }
+  "state_off": { "message": "நிறுத்துக" },
+  "state_no": { "message": "இல்லை" }
 }

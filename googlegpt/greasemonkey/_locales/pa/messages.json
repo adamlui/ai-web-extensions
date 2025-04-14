@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "ਆਟੋ-ਫੋਕਸ ਚੈਟਬਾਰ" },
   "menuLabel_whenStreaming": { "message": "ਜਦੋਂ ਸਟ੍ਰੀਮਿੰਗ ਹੋਵੇ" },
   "menuLabel_proxyAPImode": { "message": "ਪਰਾਕਸੀ API ਮੋਡ" },
+  "menuLabel_preferred": { "message": "ਪਸੰਦੀਦਾHome phone" },
   "menuLabel_show": { "message": "ਵਿਖਾਉ" },
   "menuLabel_relatedQueries": { "message": "ਸੰਬੰਧਿਤ ਪੁੱਛਗਿੱਛ" },
   "menuLabel_require": { "message": "à¨²à©à©à©à¨¦à¨¾" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "ਆਟੋ" },
   "menuLabel_about": { "message": "ਇਸ ਬਾਰੇ" },
   "menuLabel_settings": { "message": "GConf ਸੈਟਿੰਗ" },
+  "menuLabel_random": { "message": "ਰਲਵਾਂ" },
+  "menuLabel_saved": { "message": "ਸੰਭਾਲੀ" },
   "componentLabel_used": { "message": "ਵਰਤੀ:" },
   "about_author": { "message": "_ਲੇਖਕ" },
   "about_and": { "message": "ਅਤੇ" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "ਆਡੀਓ ਤਿਆਰ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ" },
   "tooltip_sendRelatedQuery": { "message": "ਸੰਬੰਧਿਤ ਪੁੱਛਗਿੱਛ ਭੇਜੋ" },
   "helptip_proxyAPImode": { "message": "ਏਆਈ ਤੱਕ ਨੋ-ਲੌਗਇਨ ਪਹੁੰਚ ਲਈ ਇੱਕ ਪ੍ਰੌਕਸੀ ਏਪੀਆਈ ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ" },
+  "helptip_preferredAPI": { "message": "ਪ੍ਰੌਕਸੀ ਮੋਡ ਵਿੱਚ ਜਵਾਬ ਪ੍ਰਾਪਤ ਕਰਨ ਵੇਲੇ ਵਰਤਣ ਲਈ API" },
   "helptip_streamingMode": { "message": "ਇੱਕ ਲਗਾਤਾਰ ਟੈਕਸਟ ਸਟਰੀਮ ਵਿੱਚ ਜਵਾਬ ਪ੍ਰਾਪਤ ਕਰੋ" },
   "helptip_autoGetAnswers": { "message": "ਖੋਜ ਇੰਜਨ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਸਮੇਂ GoogleGPT ਨੂੰ ਆਟੋ-ਸੈਂਡ ਪੁੱਛਗਿੱਛ" },
   "helptip_autoSummarizeResults": { "message": "ਖੋਜ ਨਤੀਜਿਆਂ ਦੇ ਪੰਨੇ ਨੂੰ ਆਟੋਮੈਟਿਕਲੀ ਸੰਖੇਪ ਕਰੋ" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "ਕੋਸ਼ਿਸ ਕਰੋ" },
   "alert_switchingOn": { "message": "ਚਾਲੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ" },
   "alert_switchingOff": { "message": "ਬੰਦ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ" },
+  "alert_selectingDiff": { "message": "ਇੱਕ ਵੱਖਰਾ ਦੀ ਚੋਣ" },
   "alert_generated": { "message": "ਤਿਆਰ ਕੀਤਾ" },
   "notif_copiedToClipboard": { "message": "ਕਲਿੱਪਬੋਰਡ ਤੇ ਕਾਪੀ ਕੀਤਾ ਗਿਆ।" },
   "notif_downloaded": { "message": "ਡਾਊਨਲੋਡ" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "ਫੀਡਬੈਕ ਸਾਂਝਾ ਕਰੋ" },
   "prefix_exit": { "message": "ਬਾਹਰ ਨਿਕਲੋ" },
   "state_on": { "message": "ਚਾਲੂ" },
-  "state_off": { "message": "ਬੰਦ" }
+  "state_off": { "message": "ਬੰਦ" },
+  "state_no": { "message": "ਨਹੀਂ" }
 }

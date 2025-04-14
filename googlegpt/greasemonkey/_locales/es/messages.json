@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Barra de chat de enfoque automático" },
   "menuLabel_whenStreaming": { "message": "al transmitir" },
   "menuLabel_proxyAPImode": { "message": "Modo API de proxy" },
+  "menuLabel_preferred": { "message": "Preferido" },
   "menuLabel_show": { "message": "Mostrar" },
   "menuLabel_relatedQueries": { "message": "Consultas relacionadas" },
   "menuLabel_require": { "message": "Obligatorio" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Acerca de" },
   "menuLabel_settings": { "message": "Ajustes" },
+  "menuLabel_random": { "message": "Aleatorio" },
+  "menuLabel_saved": { "message": "Guardado" },
   "componentLabel_used": { "message": "usado" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "y" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Generando audio" },
   "tooltip_sendRelatedQuery": { "message": "Enviar consulta relacionada" },
   "helptip_proxyAPImode": { "message": "Utiliza una API de proxy para el acceso sin inicio de sesión a la IA" },
+  "helptip_preferredAPI": { "message": "API para usar al obtener respuestas en Modo Proxy" },
   "helptip_streamingMode": { "message": "Recibir respuestas en un flujo de texto continuo" },
   "helptip_autoGetAnswers": { "message": "Enviar consultas automáticamente a GoogleGPT cuando se utiliza el motor de búsqueda" },
   "helptip_autoSummarizeResults": { "message": "Resumir automáticamente la página de resultados de búsqueda" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "ha probado" },
   "alert_switchingOn": { "message": "ENCENDIDO" },
   "alert_switchingOff": { "message": "Apagado" },
+  "alert_selectingDiff": { "message": "seleccionando una" },
   "alert_generated": { "message": "Generado" },
   "notif_copiedToClipboard": { "message": "Copiado al portapapeles" },
   "notif_downloaded": { "message": "descargado" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Compartir comentarios" },
   "prefix_exit": { "message": "Salida" },
   "state_on": { "message": "Activado" },
-  "state_off": { "message": "Apagado" }
+  "state_off": { "message": "Apagado" },
+  "state_no": { "message": "No" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Pievieno AI Amazon iepirkšanās vietnei" },
   "menuLabel_proxyAPImode": { "message": "Starpniekservera API režīms" },
+  "menuLabel_preferred": { "message": "Ieteicamais" },
   "menuLabel_autoFocusChatbar": { "message": "Automātiskās fokusēšanas tērzēšanas josla" },
   "menuLabel_whenStreaming": { "message": "straumējot" },
   "menuLabel_background": { "message": "Vēstījums" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Automātiski" },
   "menuLabel_about": { "message": "Par produktu" },
   "menuLabel_settings": { "message": "Iestatījumi" },
+  "menuLabel_random": { "message": "Nejaušs" },
+  "menuLabel_saved": { "message": "Saglabāts" },
   "componentLabel_used": { "message": "lietots" },
   "about_author": { "message": "Autors" },
   "about_and": { "message": "un" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kods" },
   "tooltip_generatingAudio": { "message": "Notiek audio ģenerēšana" },
   "helptip_proxyAPImode": { "message": "Izmanto starpniekservera API, lai bez pieteikšanās piekļūtu MI" },
+  "helptip_preferredAPI": { "message": "API, ko izmantot, saņemot atbildes starpniekservera režīmā" },
   "helptip_streamingMode": { "message": "Saņemiet atbildes nepārtrauktā teksta straumē" },
   "helptip_autoFocusChatbar": { "message": "Automātiskās fokusēšanas tērzēšanas josla, kad vien tā parādās" },
   "helptip_autoScroll": { "message": "Automātiski ritināt atbildes, kad tās tiek ģenerētas straumēšanas režīmā" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Mēģināt" },
   "alert_switchingOn": { "message": "Ieslēgšana" },
   "alert_switchingOff": { "message": "Svaru Izslēgšana" },
+  "alert_selectingDiff": { "message": "izvēloties citu" },
   "alert_generated": { "message": "Ģenerēts" },
   "notif_copiedToClipboard": { "message": "Kopēt uz starpliktuvi" },
   "notif_downloaded": { "message": "Lejupielādēts" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Saruna" },
   "link_viewChanges": { "message": "Skatīt izmaiņas" },
   "state_on": { "message": "Ieslēgt" },
-  "state_off": { "message": "Izslēgta" }
+  "state_off": { "message": "Izslēgta" },
+  "state_no": { "message": "Ne" }
 }

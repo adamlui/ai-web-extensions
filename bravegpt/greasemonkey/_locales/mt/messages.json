@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Żid it-tweġibiet taċ-ChatGPT mal-ġenb tat-tiftix kuraġġuż (imħaddem minn GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Modalità API Proxy" },
+  "menuLabel_preferred": { "message": "Preferut" },
   "menuLabel_autoGetAnswers": { "message": "Ikseb Tweġibiet Awtomatiċi" },
   "menuLabel_autoSummarizeResults": { "message": "Awtomatizza r-Riżultati" },
   "menuLabel_autoFocusChatbar": { "message": "Fokus Awtomatiku fuq iċ-chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Awto" },
   "menuLabel_about": { "message": "Dwar" },
   "menuLabel_settings": { "message": "Settings" },
+  "menuLabel_random": { "message": "każwali" },
+  "menuLabel_saved": { "message": "Ssejvjata" },
   "componentLabel_used": { "message": "li trid tinyuża" },
   "about_author": { "message": "Awtur" },
   "about_and": { "message": "u" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Kif tiġġenera l-awdjo" },
   "tooltip_sendRelatedQuery": { "message": "Ibgħat mistoqsija relatata" },
   "helptip_proxyAPImode": { "message": "Uża API Proxy għall-aċċess mingħajr login għall-IA" },
+  "helptip_preferredAPI": { "message": "API li għandek tuża meta tirċievi t-tweġibiet fil-Modalità Proxy" },
   "helptip_streamingMode": { "message": "Irċievi t-tweġibiet permezz ta' messaġġ kontinwu" },
   "helptip_autoGetAnswers": { "message": "Ibgħat il-mistoqsijiet awtomatikament lil BraveGPT meta tuża l-magna tat-tiftix" },
   "helptip_autoSummarizeResults": { "message": "Qassar awtomatikament il-paġna tar-riżultati tat-tiftix" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Ipprova" },
   "alert_switchingOn": { "message": "Kif tixgħel" },
   "alert_switchingOff": { "message": "Kif titfi" },
+  "alert_selectingDiff": { "message": "għażla ta' waħda differenti" },
   "alert_generated": { "message": "Ġenerat" },
   "notif_copiedToClipboard": { "message": "Kopjati lill-clipboard" },
   "notif_downloaded": { "message": "niżżel" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Kummenti b'reazzjoni" },
   "prefix_exit": { "message": "Ħruġ" },
   "state_on": { "message": "fil" },
-  "state_off": { "message": "Diżattivata" }
+  "state_off": { "message": "Diżattivata" },
+  "state_no": { "message": "Le" }
 }

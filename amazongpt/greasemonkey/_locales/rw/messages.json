@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Yuzuru Hanyu Amazon Buy" },
   "menuLabel_proxyAPImode": { "message": "Ubwoko" },
+  "menuLabel_preferred": { "message": "< Uburemere UTSINDAGIY" },
   "menuLabel_autoFocusChatbar": { "message": "Umwanyabikoresho" },
   "menuLabel_whenStreaming": { "message": "ryari" },
   "menuLabel_background": { "message": "Amavu n’amavuko" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Byikora" },
   "menuLabel_about": { "message": "Bigyanye" },
   "menuLabel_settings": { "message": "Amagenamiterere" },
+  "menuLabel_random": { "message": "< Ijambo > < / Ijambo >" },
+  "menuLabel_saved": { "message": "Gupima" },
   "componentLabel_used": { "message": "byakoreshejwe" },
   "about_author": { "message": "Ibisobanuro" },
   "about_and": { "message": "&&" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kode" },
   "tooltip_generatingAudio": { "message": "Inyumvo" },
   "helptip_proxyAPImode": { "message": "A kugirango Oya LOG Kuri" },
+  "helptip_preferredAPI": { "message": "Kuri Gukoresha Ryari: in" },
   "helptip_streamingMode": { "message": "In a Gikomeza Umwandiko" },
   "helptip_autoFocusChatbar": { "message": "- - Umwanyabikoresho Igihe cyose Kugaragara" },
   "helptip_autoScroll": { "message": "Nka in" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Gerageza" },
   "alert_switchingOn": { "message": "ku" },
   "alert_switchingOff": { "message": "bidakora" },
+  "alert_selectingDiff": { "message": "hitamo ubundi buryo" },
   "alert_generated": { "message": "Gradient-editor-action" },
   "notif_copiedToClipboard": { "message": "Kuri Ububikokoporora" },
   "notif_downloaded": { "message": "Iyimura" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Ikiganiro" },
   "link_viewChanges": { "message": "Amahinduka" },
   "state_on": { "message": "Gufungura" },
-  "state_off": { "message": "Gufunga" }
+  "state_off": { "message": "Gufunga" },
+  "state_no": { "message": "Oya" }
 }

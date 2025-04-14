@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ifaka iimpendulo ze-ChatGPT kwibar esecaleni yeDuckDuckGo (exhaswa yi-GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Imowudi ye-API ye-proxy" },
+  "menuLabel_preferred": { "message": "Okukhethwayo" },
   "menuLabel_autoGetAnswers": { "message": "Fumana Iimpendulo Ngokuzenzekelayo" },
   "menuLabel_autoSummarizeResults": { "message": "Zixabise Ngokuzenzekelayo Iziphumo" },
   "menuLabel_autoFocusChatbar": { "message": "I-Auto-Focus Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Ezenzekelayo" },
   "menuLabel_about": { "message": "Malunga" },
   "menuLabel_settings": { "message": "Imimiselo" },
+  "menuLabel_random": { "message": "Ngokuzenzekelayo" },
+  "menuLabel_saved": { "message": "Igciniwe" },
   "componentLabel_used": { "message": "esetyenzisiweyo" },
   "about_author": { "message": "Inkcazelo ngombhali" },
   "about_and": { "message": "no" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Ivelisa isandi" },
   "tooltip_sendRelatedQuery": { "message": "Thumela umbuzo onento yokwenza noko" },
   "helptip_proxyAPImode": { "message": "Usebenzisa i-API yeProxy ukuze ungangeni kwiAI" },
+  "helptip_preferredAPI": { "message": "I-API omele uyisebenzise xa ufumana iimpendulo kwiMowudi yeProxy" },
   "helptip_streamingMode": { "message": "Fumana iimpendulo kumyalezo oqhubekayo" },
   "helptip_autoGetAnswers": { "message": "Thumela imibuzo ngokuzenzekelayo kwiDuckDuckGPT xa usebenzisa injini yokukhangela" },
   "helptip_autoSummarizeResults": { "message": "Shwankathela ngokuzenzekelayo iphepha leziphumo zokukhangela" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "& Zama" },
   "alert_switchingOn": { "message": "ukuyivula" },
   "alert_switchingOff": { "message": "ukucima" },
+  "alert_selectingDiff": { "message": "ukukhetha eyahlukileyo" },
   "alert_generated": { "message": "Iveliswe" },
   "notif_copiedToClipboard": { "message": "URL ikhutshelwa kwibhodi eqhotyoshwayo. @ info" },
   "notif_downloaded": { "message": "ikhutshelwe" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Yabelana ngengxelo yakho" },
   "prefix_exit": { "message": "Phuma" },
   "state_on": { "message": "Inye" },
-  "state_off": { "message": "cima" }
+  "state_off": { "message": "cima" },
+  "state_no": { "message": "Hayi" }
 }

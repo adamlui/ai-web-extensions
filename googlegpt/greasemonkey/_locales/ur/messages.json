@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "آٹو فوکس چیٹ بار" },
   "menuLabel_whenStreaming": { "message": "اسٹریم کرتے وقت" },
   "menuLabel_proxyAPImode": { "message": "پراکسی API موڈ" },
+  "menuLabel_preferred": { "message": "ترجیحی" },
   "menuLabel_show": { "message": "دکھائیں" },
   "menuLabel_relatedQueries": { "message": "متعلقہ سوالات" },
   "menuLabel_require": { "message": "تقاضہ کرنا" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "خودکار" },
   "menuLabel_about": { "message": "متعلق" },
   "menuLabel_settings": { "message": "ترتیبات" },
+  "menuLabel_random": { "message": "بے ترتیب" },
+  "menuLabel_saved": { "message": "محفوظ۔" },
   "componentLabel_used": { "message": "استعمال" },
   "about_author": { "message": "مصنف" },
   "about_and": { "message": "اور" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "آڈیو جنریٹ ہو رہی ہے" },
   "tooltip_sendRelatedQuery": { "message": "متعلقہ استفسار بھیجیں" },
   "helptip_proxyAPImode": { "message": "AI تک نو لاگ ان رسائی کے لیے ایک پراکسی API استعمال کرتا ہے" },
+  "helptip_preferredAPI": { "message": "پراکسی موڈ میں جوابات حاصل کرتے وقت استعمال کرنے کے لیے API" },
   "helptip_streamingMode": { "message": "مسلسل ٹیکسٹ اسٹریم میں جوابات موصول کریں" },
   "helptip_autoGetAnswers": { "message": "سرچ انجن استعمال کرتے وقت GoogleGPT کو سوالات خود بخود بھیجیں" },
   "helptip_autoSummarizeResults": { "message": "تلاش کے نتائج کے صفحے کا خود بخود خلاصہ کریں" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "کوشش" },
   "alert_switchingOn": { "message": "سوئچ آن کرنا" },
   "alert_switchingOff": { "message": "سوئچ آف کرنا" },
+  "alert_selectingDiff": { "message": "ایک مختلف کا انتخاب کرنا" },
   "alert_generated": { "message": "بنایا" },
   "notif_copiedToClipboard": { "message": "کلپ بورڈ پر کاپی" },
   "notif_downloaded": { "message": "ڈاؤن لوڈ" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "تاثرات شیئر کریں" },
   "prefix_exit": { "message": "خارج ہوں" },
   "state_on": { "message": "چالو کریں" },
-  "state_off": { "message": "بند کریں" }
+  "state_off": { "message": "بند کریں" },
+  "state_no": { "message": "نہیں" }
 }

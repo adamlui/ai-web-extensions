@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Adds AI amin'ny fividianana Amazon" },
   "menuLabel_proxyAPImode": { "message": "Fomba API'ny proxy" },
+  "menuLabel_preferred": { "message": "Safidy" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "rehefa miraikitra" },
   "menuLabel_background": { "message": "Fototra" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Mikasika ny" },
   "menuLabel_settings": { "message": "Fandrindrana" },
+  "menuLabel_random": { "message": "Kisendrasendra" },
+  "menuLabel_saved": { "message": "Noraketina" },
   "componentLabel_used": { "message": "nampiasaina" },
   "about_author": { "message": "Mpanoratra" },
   "about_and": { "message": "sy" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "KAODY" },
   "tooltip_generatingAudio": { "message": "Mamorona feo" },
   "helptip_proxyAPImode": { "message": "Mampiasa ny API Proxy ho an'ny tsy fidirana amin'ny AI" },
+  "helptip_preferredAPI": { "message": "API ampiasaina rehefa mahazo valiny amin'ny fomba proxy" },
   "helptip_streamingMode": { "message": "Valio anatin'ny tosakaan-dahabolana mitohy ny valin-teny" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar isaky ny miseho" },
   "helptip_autoScroll": { "message": "Auto-scroll valinteny rehefa miteraka in nirohotra Mode" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Andramo" },
   "alert_switchingOn": { "message": "eo am-pamindrana" },
   "alert_switchingOff": { "message": "fa-instagram" },
+  "alert_selectingDiff": { "message": "misafidiana iray hafa" },
   "alert_generated": { "message": "Novolavolaina" },
   "notif_copiedToClipboard": { "message": "Dika mitovy mankany anaty fanindri-taratasy" },
   "notif_downloaded": { "message": "sintonina" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Fifanakalozan-kevitra" },
   "link_viewChanges": { "message": "Hijery ireo fanovana" },
   "state_on": { "message": "Tamin’I –" },
-  "state_off": { "message": "Ajanona" }
+  "state_off": { "message": "Ajanona" },
+  "state_no": { "message": "Tsia" }
 }

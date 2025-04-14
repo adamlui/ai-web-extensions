@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Dodaje sztuczną inteligencję do zakupów na Amazonie" },
   "menuLabel_proxyAPImode": { "message": "Tryb proxy API" },
+  "menuLabel_preferred": { "message": "Preferowane" },
   "menuLabel_autoFocusChatbar": { "message": "Automatycznie ustawiaj ostrość na czacie" },
   "menuLabel_whenStreaming": { "message": "podczas przesyłania strumieniowego" },
   "menuLabel_background": { "message": "Kontekst" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Informacje o" },
   "menuLabel_settings": { "message": "Ustawienia" },
+  "menuLabel_random": { "message": "Losowo" },
+  "menuLabel_saved": { "message": "Zapisane" },
   "componentLabel_used": { "message": "wykorzystano" },
   "about_author": { "message": "Wytwórca" },
   "about_and": { "message": "oraz" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kod" },
   "tooltip_generatingAudio": { "message": "Generowanie dźwięku" },
   "helptip_proxyAPImode": { "message": "Używa interfejsu API serwera proxy w celu uzyskania dostępu bez logowania do sztucznej inteligencji" },
+  "helptip_preferredAPI": { "message": "Interfejs API używany podczas uzyskiwania odpowiedzi w trybie proxy" },
   "helptip_streamingMode": { "message": "Otrzymuj odpowiedzi w ciągłym strumieniu tekstu" },
   "helptip_autoFocusChatbar": { "message": "Automatycznie skupiaj pasek czatu za każdym razem, gdy się pojawi" },
   "helptip_autoScroll": { "message": "Automatyczne przewijanie odpowiedzi generowanych w trybie przesyłania strumieniowego" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Spróbuj" },
   "alert_switchingOn": { "message": "Włączanie" },
   "alert_switchingOff": { "message": "Wyłączanie" },
+  "alert_selectingDiff": { "message": "wybranie innego" },
   "alert_generated": { "message": "Wygenerowany" },
   "notif_copiedToClipboard": { "message": "Skopiowano do schowka" },
   "notif_downloaded": { "message": "pobrany" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Rozmowa" },
   "link_viewChanges": { "message": "Przegląd zmian" },
   "state_on": { "message": "Wł" },
-  "state_off": { "message": "Wył" }
+  "state_off": { "message": "Wył" },
+  "state_no": { "message": "Nie" }
 }

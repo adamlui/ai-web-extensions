@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "wann streamen" },
   "menuLabel_proxyAPImode": { "message": "Proxy-API-Modus" },
+  "menuLabel_preferred": { "message": "Am léifsten" },
   "menuLabel_show": { "message": "Uweisen" },
   "menuLabel_relatedQueries": { "message": "Ik ben heel benieuwd naar jouw mening laat het me weten in de comments" },
   "menuLabel_require": { "message": "Fuerderen" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Iwwer Qt" },
   "menuLabel_settings": { "message": "Astellungen" },
+  "menuLabel_random": { "message": "Zoufälleg" },
+  "menuLabel_saved": { "message": "Gespäichert..." },
   "componentLabel_used": { "message": "benotzt" },
   "about_author": { "message": "Auteur" },
   "about_and": { "message": "a(n)" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Audio generéieren" },
   "tooltip_sendRelatedQuery": { "message": "Zesummenhang Ufro schécken" },
   "helptip_proxyAPImode": { "message": "Benotzt e Proxy-API fir keen Login Zougang zu AI" },
+  "helptip_preferredAPI": { "message": "API fir ze benotzen wann Dir Äntwerten am Proxy Modus kritt" },
   "helptip_streamingMode": { "message": "Kritt Äntwerten an engem kontinuéierlechen Textstroum" },
   "helptip_autoGetAnswers": { "message": "Auto-Send Ufroen op GoogleGPT wann Dir Sichmotor benotzt" },
   "helptip_autoSummarizeResults": { "message": "Resuméiert d'Sichresultater Säit automatesch" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "& Probéieren" },
   "alert_switchingOn": { "message": "wiesselen un" },
   "alert_switchingOff": { "message": "auszeschalten" },
+  "alert_selectingDiff": { "message": "select a Different Den" },
   "alert_generated": { "message": "Generéiert" },
   "notif_copiedToClipboard": { "message": "Op Clipboard kopéieren" },
   "notif_downloaded": { "message": "erofgelueden" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Feedback deelen" },
   "prefix_exit": { "message": "Zoumaachen" },
   "state_on": { "message": "Un" },
-  "state_off": { "message": "Aus" }
+  "state_off": { "message": "Aus" },
+  "state_no": { "message": "Nee" }
 }

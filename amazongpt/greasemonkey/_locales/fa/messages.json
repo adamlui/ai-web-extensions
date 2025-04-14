@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "هوش مصنوعی را به خرید آمازون اضافه می کند" },
   "menuLabel_proxyAPImode": { "message": "حالت API پروکسی" },
+  "menuLabel_preferred": { "message": "ارجح" },
   "menuLabel_autoFocusChatbar": { "message": "نوار چت فوکوس خودکار" },
   "menuLabel_whenStreaming": { "message": "هنگام پخش جریانی" },
   "menuLabel_background": { "message": "پیشینه" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "خودکار" },
   "menuLabel_about": { "message": "درباره" },
   "menuLabel_settings": { "message": "تنظیمات" },
+  "menuLabel_random": { "message": "تصادفی" },
+  "menuLabel_saved": { "message": "ذخیره شده" },
   "componentLabel_used": { "message": "استفاده شده" },
   "about_author": { "message": "نویسنده" },
   "about_and": { "message": "و" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "کد" },
   "tooltip_generatingAudio": { "message": "تولید صدا" },
   "helptip_proxyAPImode": { "message": "از یک API پروکسی برای دسترسی بدون ورود به هوش مصنوعی استفاده می کند" },
+  "helptip_preferredAPI": { "message": "API برای استفاده در هنگام دریافت پاسخ در حالت پروکسی" },
   "helptip_streamingMode": { "message": "پاسخ ها را در یک جریان متنی مداوم دریافت کنید" },
   "helptip_autoFocusChatbar": { "message": "فوکوس خودکار نوار چت هر زمان که ظاهر شد" },
   "helptip_autoScroll": { "message": "پیمایش خودکار پاسخ‌ها همانطور که در حالت استریم ایجاد می‌شوند" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "تلاش کردن" },
   "alert_switchingOn": { "message": "روشن شدن" },
   "alert_switchingOff": { "message": "خاموش کردن" },
+  "alert_selectingDiff": { "message": "انتخاب متفاوت" },
   "alert_generated": { "message": "تولید شده" },
   "notif_copiedToClipboard": { "message": "در کلیپ بورد کپی شد" },
   "notif_downloaded": { "message": "دانلود" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "گفتگو" },
   "link_viewChanges": { "message": "نمایش تغییرات" },
   "state_on": { "message": "شما در" },
-  "state_off": { "message": "خاموش" }
+  "state_off": { "message": "خاموش" },
+  "state_no": { "message": "خیر" }
 }

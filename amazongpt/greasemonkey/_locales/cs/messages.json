@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Přidává umělou inteligenci do nákupů na Amazonu" },
   "menuLabel_proxyAPImode": { "message": "Režim proxy API" },
+  "menuLabel_preferred": { "message": "Preference" },
   "menuLabel_autoFocusChatbar": { "message": "Chatovací panel s automatickým zaostřováním" },
   "menuLabel_whenStreaming": { "message": "při streamování" },
   "menuLabel_background": { "message": "Základní informace" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "O nás" },
   "menuLabel_settings": { "message": "Nastavení" },
+  "menuLabel_random": { "message": "Náhodně" },
+  "menuLabel_saved": { "message": "Uloženo" },
   "componentLabel_used": { "message": "použito" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "a" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kód" },
   "tooltip_generatingAudio": { "message": "Generování zvuku" },
   "helptip_proxyAPImode": { "message": "Používá proxy API pro přístup bez přihlášení k AI" },
+  "helptip_preferredAPI": { "message": "API pro použití při získávání odpovědí v režimu proxy" },
   "helptip_streamingMode": { "message": "Přijímat odpovědi v nepřetržitém textovém proudu" },
   "helptip_autoFocusChatbar": { "message": "Automatické zaostření chatbaru vždy, když se objeví" },
   "helptip_autoScroll": { "message": "Automatické posouvání odpovědí při generování v režimu streamování" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Vyzkoušet" },
   "alert_switchingOn": { "message": "Zapínání" },
   "alert_switchingOff": { "message": "vypnutí" },
+  "alert_selectingDiff": { "message": "výběr jiného" },
   "alert_generated": { "message": "Vygenerováno!" },
   "notif_copiedToClipboard": { "message": "Zkopírováno do schránky" },
   "notif_downloaded": { "message": "staženo" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Konverzace" },
   "link_viewChanges": { "message": "Zobrazit změny" },
   "state_on": { "message": "Zapnuto" },
-  "state_off": { "message": "Vypnuto" }
+  "state_off": { "message": "Vypnuto" },
+  "state_no": { "message": "Ne" }
 }

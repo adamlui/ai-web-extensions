@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Амазонка сатып алуына жасанды интеллект қос" },
   "menuLabel_proxyAPImode": { "message": "Прокси API режимі" },
+  "menuLabel_preferred": { "message": "БасымдыSize Policy" },
   "menuLabel_autoFocusChatbar": { "message": "Автоматты фокустық чат панелі" },
   "menuLabel_whenStreaming": { "message": "ағын кезінде" },
   "menuLabel_background": { "message": "Артқы фоны" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Автоматты басқару" },
   "menuLabel_about": { "message": "Туралы" },
   "menuLabel_settings": { "message": "Баптаулар" },
+  "menuLabel_random": { "message": "Кездейсоқ" },
+  "menuLabel_saved": { "message": "Сақталған" },
   "componentLabel_used": { "message": "«Пайдаланған»," },
   "about_author": { "message": "Авторы" },
   "about_and": { "message": "және" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Аудио жасау" },
   "helptip_proxyAPImode": { "message": "AI-ге логинсіз кіру үшін прокси API пайдаланады" },
+  "helptip_preferredAPI": { "message": "Прокси режимінде жауап алу кезінде қолданылатын API" },
   "helptip_streamingMode": { "message": "Үздіксіз мәтін ағынында жауаптар алу" },
   "helptip_autoFocusChatbar": { "message": "Автоматты түрде фокусталған чатбар пайда болған кезде" },
   "helptip_autoScroll": { "message": "Ағындық режимде пайда болған жауаптарды автоматты түрде жылжыту" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Басқа пароль" },
   "alert_switchingOn": { "message": "қосу" },
   "alert_switchingOff": { "message": "Өшіру" },
+  "alert_selectingDiff": { "message": "басқа таңдау" },
   "alert_generated": { "message": "Жасалған" },
   "notif_copiedToClipboard": { "message": "URL алмасу буферіне көшірімеленді" },
   "notif_downloaded": { "message": "Жүктеу жалғастырылды" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Сөйлесу" },
   "link_viewChanges": { "message": "Өзгерістерді көру" },
   "state_on": { "message": "Болсын" },
-  "state_off": { "message": "Өшіру" }
+  "state_off": { "message": "Өшіру" },
+  "state_no": { "message": "Жоқ" }
 }

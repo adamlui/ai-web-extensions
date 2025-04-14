@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ಅಮೆಜಾನ್ ಶಾಪಿಂಗ್ಗೆ AI ಅನ್ನು ಸೇರಿಸುತ್ತದೆ" },
   "menuLabel_proxyAPImode": { "message": "ಪ್ರಾಕ್ಸಿ API ಮೋಡ್" },
+  "menuLabel_preferred": { "message": "ಆದ್ಯತೆಗಳು" },
   "menuLabel_autoFocusChatbar": { "message": "ಆಟೋ-ಫೋಕಸ್ ಚಾಟ್ ‌ ಬಾರ್" },
   "menuLabel_whenStreaming": { "message": "ಸ್ಟ್ರೀಮ್ ಮಾಡುವಾಗ" },
   "menuLabel_background": { "message": "Background" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "ಸ್ವಯಂ" },
   "menuLabel_about": { "message": "ಕುರಿತಾಗಿ" },
   "menuLabel_settings": { "message": "à²µà²¿à²²à³à²® à²à²¯à³à²à³@ action: inmenu Go" },
+  "menuLabel_random": { "message": "ಮನಬಂದಂತೆ" },
+  "menuLabel_saved": { "message": "ಉಳಿಸಲಾಗಿದೆ" },
   "componentLabel_used": { "message": "ಬಳಸಿದ" },
   "about_author": { "message": "ಲೇಖಕ" },
   "about_and": { "message": "ಮತ್ತು" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "ಕೋಡ್" },
   "tooltip_generatingAudio": { "message": "ಆಡಿಯೋ ರಚಿಸಲಾಗುತ್ತಿದೆ" },
   "helptip_proxyAPImode": { "message": "AI ಗೆ ಯಾವುದೇ ಲಾಗಿನ್ ಪ್ರವೇಶಕ್ಕಾಗಿ ಪ್ರಾಕ್ಸಿ API ಅನ್ನು ಬಳಸುತ್ತದೆ" },
+  "helptip_preferredAPI": { "message": "ಪ್ರಾಕ್ಸಿ ಮೋಡ್‌ನಲ್ಲಿ ಉತ್ತರಗಳನ್ನು ಪಡೆಯುವಾಗ ಬಳಸಲು API" },
   "helptip_streamingMode": { "message": "ನಿರಂತರ ಪಠ್ಯ ಸ್ಟ್ರೀಮ್ ‌ ನಲ್ಲಿ ಪ್ರತ್ಯುತ್ತರಗಳನ್ನು ಸ್ವೀಕರಿಸಿ" },
   "helptip_autoFocusChatbar": { "message": "ಆಟೋ-ಫೋಕಸ್ ಚಾಟ್ ‌ ಬಾರ್ ಕಾಣಿಸಿಕೊಂಡಾಗಲೆಲ್ಲಾ" },
   "helptip_autoScroll": { "message": "ಸ್ಟ್ರೀಮಿಂಗ್ ಮೋಡ್ ‌ ನಲ್ಲಿ ಸ್ವಯಂ-ಸ್ಕ್ರೋಲ್ ಪ್ರತಿಕ್ರಿಯೆಗಳು ಉತ್ಪತ್ತಿಯಾಗುತ್ತವೆ" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "ಪ್ರಯತ್ನಿಸು( T)" },
   "alert_switchingOn": { "message": "ಆನ್ ಮಾಡಲಾಗುತ್ತಿದೆ" },
   "alert_switchingOff": { "message": "ಸ್ವಿಚ್ ಆಫ್ ಮಾಡಲಾಗುತ್ತಿದೆ" },
+  "alert_selectingDiff": { "message": "ಬೇರೊಂದನ್ನು ಆಯ್ಕೆ ಮಾಡುವುದು" },
   "alert_generated": { "message": "ಸೃಷ್ಟಿಸಲಾಗಿದೆ" },
   "notif_copiedToClipboard": { "message": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ" },
   "notif_downloaded": { "message": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಲಾಗಿದೆ" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "ಸಂಭಾಷಣೆ, " },
   "link_viewChanges": { "message": "ಬದಲಾವಣೆಗಳನ್ನು ವೀಕ್ಷಿಸಿ" },
   "state_on": { "message": "ರಂದು" },
-  "state_off": { "message": "ಆಫ್" }
+  "state_off": { "message": "ಆಫ್" },
+  "state_no": { "message": "ಇಲ್ಲ" }
 }

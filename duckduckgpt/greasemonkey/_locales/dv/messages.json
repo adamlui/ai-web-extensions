@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ޑަކްޑަކްގޯ ސައިޑްބާ (ޖީޕީޓީ-4 އިން ޕަވާޑް!) އަށް ޗެޓްޖީޕީޓީ ގެ ޖަވާބުތައް އިތުރުކުރޭ" },
   "menuLabel_proxyAPImode": { "message": "ޕްރޮކްސީ އެޕީއައި މޯޑެވެ" },
+  "menuLabel_preferred": { "message": "އިސްކަންދެއެވެ" },
   "menuLabel_autoGetAnswers": { "message": "އޮޓޯ-ގެޓް ޖަވާބު" },
   "menuLabel_autoSummarizeResults": { "message": "އޮޓޯ-ސަމާރައިޒް ނަތީޖާ" },
   "menuLabel_autoFocusChatbar": { "message": "އޮޓޯ ފޯކަސް ޗެޓްބާރ އެވެ" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "އޮޓޯ" },
   "menuLabel_about": { "message": "މިއާއި ބެހޭ" },
   "menuLabel_settings": { "message": "ސެޓިންގސް" },
+  "menuLabel_random": { "message": "ވަކޮގޮތެއްނެތް" },
+  "menuLabel_saved": { "message": "ރައްކާކުރެވިއްޖެއެވެ" },
   "componentLabel_used": { "message": "ބޭނުންކުރެވިފައިވަނީ" },
   "about_author": { "message": "ލިޔުންތެރިޔާ" },
   "about_and": { "message": "އަދި" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "އޯޑިއޯ ޖެނެރޭޓް ކުރުން" },
   "tooltip_sendRelatedQuery": { "message": "ގުޅުންހުރި ސުވާލު ތައް ފޮނުވުން" },
   "helptip_proxyAPImode": { "message": "އެއައި އަށް ނޯ-ލޮގިން އެކްސެސް އަށް ޕްރޮކްސީ އެޕީއައި އެއް ބޭނުން ކުރެއެވެ" },
+  "helptip_preferredAPI": { "message": "ޕްރޮކްސީ މޯޑުގައި ޖަވާބު ލިބޭއިރު ބޭނުންކުރާނެ އެޕީއައި" },
   "helptip_streamingMode": { "message": "މެދުނުކެނޑި ޓެކްސްޓް ސްޓްރީމެއްގައި ޖަވާބު ލިބުން" },
   "helptip_autoGetAnswers": { "message": "ސަރޗް އިންޖީން ބޭނުންކުރާއިރު ޑަކްޑަކްޖީޕީޓީއަށް ކިއުއަރީތައް އޮޓޯ ފޮނުވުން" },
   "helptip_autoSummarizeResults": { "message": "އޮޓޮމެޓިކުން ސަރޗް ނަތީޖާ ޕޭޖް ޚުލާޞާކުރުން" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "މަސައްކަތްކުރުން" },
   "alert_switchingOn": { "message": "ސްވިޗް އޮން ކުރުމެވެ" },
   "alert_switchingOff": { "message": "ސްވިޗް އޮފް ކުރުމެވެ" },
+  "alert_selectingDiff": { "message": "ތަފާތު އެއްޗެއް ހޮވުމެވެ" },
   "alert_generated": { "message": "ޖެނެރޭޓް ކުރެވިއްޖެއެވެ" },
   "notif_copiedToClipboard": { "message": "ކްލިޕްބޯޑަށް ކޮޕީކޮށްފައިވެއެވެ" },
   "notif_downloaded": { "message": "ޑައުންލޯޑް ކޮށްފިއެވެ" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "ފީޑްބެކް ޝެއާ ކުރޭ" },
   "prefix_exit": { "message": "ނުކުތުން" },
   "state_on": { "message": "މަތީގައި" },
-  "state_off": { "message": "އޮފް" }
+  "state_off": { "message": "އޮފް" },
+  "state_no": { "message": "ނޫނެކެވެ" }
 }

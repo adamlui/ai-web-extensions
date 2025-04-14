@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Tāpiri ChatGPT whakautu ki Brave Search sidebar (e whakahaerehia ana e GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Aratau API Proxy" },
+  "menuLabel_preferred": { "message": "He pai ake" },
   "menuLabel_autoGetAnswers": { "message": "Whakautu Auto-Get" },
   "menuLabel_autoSummarizeResults": { "message": "Ngā hua Auto-Summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Mō" },
   "menuLabel_settings": { "message": "Ngā Tautuhinga" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Whakaora" },
   "componentLabel_used": { "message": "whakamahia" },
   "about_author": { "message": "Kaitito" },
   "about_and": { "message": "he tamāhine ahau" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Te whakaputa i te oro" },
   "tooltip_sendRelatedQuery": { "message": "Tukua mai he pātai e pā ana" },
   "helptip_proxyAPImode": { "message": "Whakamahia he API Proxy mo te urunga kore-login ki AI" },
+  "helptip_preferredAPI": { "message": "API ki te whakamahi i te wa e whiwhi whakautu i roto i Proxy Mode" },
   "helptip_streamingMode": { "message": "Whakautu i roto i te rere kuputuhi tonu" },
   "helptip_autoGetAnswers": { "message": "Ko nga uiui Auto-Send ki BraveGPT i te wa e whakamahi ana i te miihini rapu" },
   "helptip_autoSummarizeResults": { "message": "Te whakarāpopototanga aunoa o te whārangi hua rapu" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Whakamātauria" },
   "alert_switchingOn": { "message": "whakawhiti i runga i" },
   "alert_switchingOff": { "message": "whakawhiti" },
+  "alert_selectingDiff": { "message": "kōwhiri i tētahi atu" },
   "alert_generated": { "message": "Te whakatipuranga" },
   "notif_copiedToClipboard": { "message": "Tārua ki te papapātuhi" },
   "notif_downloaded": { "message": "tikiake" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Ngā kōrero" },
   "prefix_exit": { "message": "Whakawhiti" },
   "state_on": { "message": "runga" },
-  "state_off": { "message": "..e whakaweto ana" }
+  "state_off": { "message": "..e whakaweto ana" },
+  "state_no": { "message": "Kāo" }
 }

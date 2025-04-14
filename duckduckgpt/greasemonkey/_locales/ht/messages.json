@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ajoute repons ChatGPT nan bar bò DuckDuckGo (patrone pa GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Mòd API proxy" },
+  "menuLabel_preferred": { "message": "Li pi bon" },
   "menuLabel_autoGetAnswers": { "message": "Repons Auto-Get" },
   "menuLabel_autoSummarizeResults": { "message": "Rezilta Auto-Summerize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Otomatik" },
   "menuLabel_about": { "message": "Apwopo" },
   "menuLabel_settings": { "message": "Reglaj" },
+  "menuLabel_random": { "message": "o aza/pa aza " },
+  "menuLabel_saved": { "message": "Sove" },
   "componentLabel_used": { "message": "itilize" },
   "about_author": { "message": "otè" },
   "about_and": { "message": "epi" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Jenere odyo" },
   "tooltip_sendRelatedQuery": { "message": "Voye demann ki gen rapò" },
   "helptip_proxyAPImode": { "message": "Sèvi ak yon API Proxy pou pa gen aksè login nan AI" },
+  "helptip_preferredAPI": { "message": "API pou itilize lè w ap resevwa repons nan mòd Proxy" },
   "helptip_streamingMode": { "message": "Resevwa repons nan yon kouran tèks kontinyèl" },
   "helptip_autoGetAnswers": { "message": "Voye kesyon oto bay DuckDuckGPT lè w ap itilize motè rechèch" },
   "helptip_autoSummarizeResults": { "message": "Rezime otomatikman paj rezilta rechèch yo" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Eseye" },
   "alert_switchingOn": { "message": "chanje sou" },
   "alert_switchingOff": { "message": "chanje koupe" },
+  "alert_selectingDiff": { "message": "chwazi yon diferan/sélectionner un diffé" },
   "alert_generated": { "message": "Jenerasyon" },
   "notif_copiedToClipboard": { "message": "Kopi nan clipboard" },
   "notif_downloaded": { "message": "telechaje" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Pataje kòmantè ou yo/Pataje fidbak ou yo/Faites part de vos commentaires" },
   "prefix_exit": { "message": "Sòti" },
   "state_on": { "message": "Sou" },
-  "state_off": { "message": "Koupe " }
+  "state_off": { "message": "Koupe " },
+  "state_no": { "message": "Non" }
 }

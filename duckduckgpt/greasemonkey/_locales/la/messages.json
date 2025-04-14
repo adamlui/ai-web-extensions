@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Adicit responsa ChatGPT ad DuckDuckGo lateram (a GPT-4o sustentata!)" },
   "menuLabel_proxyAPImode": { "message": "Modus API Proxy" },
+  "menuLabel_preferred": { "message": "Praeficere" },
   "menuLabel_autoGetAnswers": { "message": "Responsa Automatice Accipere" },
   "menuLabel_autoSummarizeResults": { "message": "Accummarize Resultses" },
   "menuLabel_autoFocusChatbar": { "message": "Automatica Focus Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Automatica" },
   "menuLabel_about": { "message": "De" },
   "menuLabel_settings": { "message": "Instamenta" },
+  "menuLabel_random": { "message": "Fors" },
+  "menuLabel_saved": { "message": "spe salvi" },
   "componentLabel_used": { "message": "usus est" },
   "about_author": { "message": "auctor" },
   "about_and": { "message": "ac (atque)" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Аудио caractus" },
   "tooltip_sendRelatedQuery": { "message": "Mitto quaestionem relatam" },
   "helptip_proxyAPImode": { "message": "Utitur API Proxy ad accessum AI sine login" },
+  "helptip_preferredAPI": { "message": "API usate quando respondes in Proxy Mode" },
   "helptip_streamingMode": { "message": "Accipere responsa in continuo textu stream" },
   "helptip_autoGetAnswers": { "message": "Automatica mittere quaestiones ad DuckDuckGPT cum utens machinam quaerendi" },
   "helptip_autoSummarizeResults": { "message": "Pagina recultatio automatique summitatio" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Conare" },
   "alert_switchingOn": { "message": "commutans on" },
   "alert_switchingOff": { "message": "commutans off" },
+  "alert_selectingDiff": { "message": "electio differentiendum" },
   "alert_generated": { "message": "Generale" },
   "notif_copiedToClipboard": { "message": "Clipboard" },
   "notif_downloaded": { "message": "download" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Communica Feedback" },
   "prefix_exit": { "message": "Exitus" },
   "state_on": { "message": "In" },
-  "state_off": { "message": "Ex" }
+  "state_off": { "message": "Ex" },
+  "state_no": { "message": "risu veritas" }
 }

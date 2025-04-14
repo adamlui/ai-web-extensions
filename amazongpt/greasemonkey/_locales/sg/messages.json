@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Gbu li ti mo na ndo ti achete ti Amazon" },
   "menuLabel_proxyAPImode": { "message": "Proxy API mode na na na" },
+  "menuLabel_preferred": { "message": "Mbi ye ni mingi" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar Anglais" },
   "menuLabel_whenStreaming": { "message": "na ngoi so a yeke pika" },
   "menuLabel_background": { "message": "Backpage na" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Ala Auto" },
   "menuLabel_about": { "message": "About sara" },
   "menuLabel_settings": { "message": "Akpengba ye so a leke na yâ ti Bible" },
+  "menuLabel_random": { "message": "Hirondelle Random" },
+  "menuLabel_saved": { "message": "A ti Sauve" },
   "componentLabel_used": { "message": "use of ti" },
   "about_author": { "message": "Author sara" },
   "about_and": { "message": "na" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kode ti kodro" },
   "tooltip_generatingAudio": { "message": "Audio Lege ayeke dä ti téléchargé a-enregistre" },
   "helptip_proxyAPImode": { "message": "Sara kua na mbeni API ti proxy ti wara lege ti sara kua na aye so ayeke na lege ni ape" },
+  "helptip_preferredAPI": { "message": "API ti sara kua na ni na ngoi so mo yeke wara akiringo tënë na yâ ti mode Proxy" },
   "helptip_streamingMode": { "message": "Ti wara akiringo tënë na yâ ti mbeni mbeti so angbâ lakue" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar na ngoi kue so a yeke bâ ni" },
   "helptip_autoScroll": { "message": "Auto-scroll kiringo tënë tongana ti so ala yeke sara na yâ ti mode ti streaming" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Try ti try" },
   "alert_switchingOn": { "message": "change thinga" },
   "alert_switchingOff": { "message": "ti zia lege ti sarango ye ti lo" },
+  "alert_selectingDiff": { "message": "soro mbeni ye nde" },
   "alert_generated": { "message": "A yeke sara si azo aga na fini" },
   "notif_copiedToClipboard": { "message": "Gbu li ti mo na ndo ti clipboard" },
   "notif_downloaded": { "message": "yeke yeke download" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Dikur une e ti" },
   "link_viewChanges": { "message": "Bâ achangement" },
   "state_on": { "message": "Na ndo ti" },
-  "state_off": { "message": "A yeke na lege ni ape" }
+  "state_off": { "message": "A yeke na lege ni ape" },
+  "state_no": { "message": "A yeke pëpe" }
 }

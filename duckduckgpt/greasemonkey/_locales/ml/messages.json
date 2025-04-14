@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "DuckDuckGo സൈഡ്‌ബാറിലേക്ക് ChatGPT ഉത്തരങ്ങൾ ചേർക്കുന്നു (GPT-4o നാൽ നയിക്കപ്പെടുന്നു!)" },
   "menuLabel_proxyAPImode": { "message": "പ്രോക്സി API മോഡ്" },
+  "menuLabel_preferred": { "message": "Size Policy" },
   "menuLabel_autoGetAnswers": { "message": "യാന്ത്രികമായി ലഭിക്കുന്ന ഉത്തരങ്ങൾ" },
   "menuLabel_autoSummarizeResults": { "message": "യാന്ത്രികമായി സംഗ്രഹിക്കുന്ന ഫലങ്ങൾ" },
   "menuLabel_autoFocusChatbar": { "message": "ഓട്ടോ-ഫോക്കസ് ചാറ്റ്ബാർ" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "സ്വതേ" },
   "menuLabel_about": { "message": "സംബന്ധിച്ച്" },
   "menuLabel_settings": { "message": "ക്രമീകരണം" },
+  "menuLabel_random": { "message": "ഏതെങ്കിലും" },
+  "menuLabel_saved": { "message": "സംരക്ഷിച്ചു" },
   "componentLabel_used": { "message": "ഉപയോഗിച്ചു" },
   "about_author": { "message": "രചയിതാവ്" },
   "about_and": { "message": "കൂടാതെ" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "ഓഡിയോ ജനറേറ്റുചെയ്യുന്നു" },
   "tooltip_sendRelatedQuery": { "message": "ബന്ധപ്പെട്ട ചോദ്യം അയയ്ക്കുക" },
   "helptip_proxyAPImode": { "message": "AI-ലേക്ക് നോ-ലോഗിൻ ആക്‌സസ് ചെയ്യുന്നതിന് ഒരു പ്രോക്സി API ഉപയോഗിക്കുന്നു" },
+  "helptip_preferredAPI": { "message": "പ്രോക്സി മോഡിൽ ഉത്തരങ്ങൾ ലഭിക്കുമ്പോൾ ഉപയോഗിക്കേണ്ട API" },
   "helptip_streamingMode": { "message": "തുടർച്ചയായ ടെക്സ്റ്റ് സ്ട്രീമിൽ മറുപടികൾ സ്വീകരിക്കുക" },
   "helptip_autoGetAnswers": { "message": "സെർച്ച് എഞ്ചിൻ ഉപയോഗിക്കുമ്പോൾ DuckDuckGPT-ലേക്ക് യാന്ത്രികമായി ചോദ്യങ്ങൾ അയയ്ക്കുക" },
   "helptip_autoSummarizeResults": { "message": "തിരയൽ ഫലങ്ങളുടെ പേജ് യാന്ത്രികമായി സംഗ്രഹിക്കുക" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "& ശ്രമിക്കുക" },
   "alert_switchingOn": { "message": "സ്വിച്ച് ഓൺ ചെയ്യുന്നു" },
   "alert_switchingOff": { "message": "സ്വിച്ച് ഓഫ്" },
+  "alert_selectingDiff": { "message": "s" },
   "alert_generated": { "message": "ജനറേറ്റുചെയ്തു" },
   "notif_copiedToClipboard": { "message": "%@ ക്ലിപ്പ്ബോർഡിലേക്കു പകർത്തി" },
   "notif_downloaded": { "message": "ഡൗൺലോഡ് ചെയ്തു" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "ഫീഡ്‌ബാക്ക് പങ്കിടുക" },
   "prefix_exit": { "message": "പുറത്തു് കടക്കുക" },
   "state_on": { "message": "ഓണ്‍" },
-  "state_off": { "message": "ഓഫ്" }
+  "state_off": { "message": "ഓഫ്" },
+  "state_no": { "message": "അല്ല" }
 }

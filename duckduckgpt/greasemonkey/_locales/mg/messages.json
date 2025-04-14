@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Manampy ny valin-tenin'i ChatGPT amin'ny sisin'ny DuckDuckGo (azo avy amin'ny GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Fomba Proxy API" },
+  "menuLabel_preferred": { "message": "Safidy" },
   "menuLabel_autoGetAnswers": { "message": "Mahazo Valiny ho azy" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-Mamaritra ny Vokatra" },
   "menuLabel_autoFocusChatbar": { "message": "Mifantoka ho azy amin'ny Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Ho azy" },
   "menuLabel_about": { "message": "Momba ny" },
   "menuLabel_settings": { "message": "Fikirana" },
+  "menuLabel_random": { "message": "Kisendrasendra" },
+  "menuLabel_saved": { "message": "Noraketina" },
   "componentLabel_used": { "message": "nampiasaina" },
   "about_author": { "message": "Mpanoratra" },
   "about_and": { "message": "sy" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Mamorona feo" },
   "tooltip_sendRelatedQuery": { "message": "Alefaso fanontaniana mifandraika" },
   "helptip_proxyAPImode": { "message": "Mampiasa Proxy API ho an'ny fidirana tsy misy login amin'ny AI" },
+  "helptip_preferredAPI": { "message": "API ampiasaina rehefa mahazo valiny amin'ny fomba proxy" },
   "helptip_streamingMode": { "message": "Mahazo valiny amin'ny fikoriana lahatsoratra mitohy" },
   "helptip_autoGetAnswers": { "message": "Alefaso fanontaniana ho azy amin'ny DuckDuckGPT rehefa mampiasa milina fitadiavana" },
   "helptip_autoSummarizeResults": { "message": "Fintino avy hatrany ny valin'ny fikarohana" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Andramo" },
   "alert_switchingOn": { "message": "mandeha" },
   "alert_switchingOff": { "message": "miala" },
+  "alert_selectingDiff": { "message": "misafidiana iray hafa" },
   "alert_generated": { "message": "Novolavolaina" },
   "notif_copiedToClipboard": { "message": "Dika mitovy mankany anaty fanindri-taratasy" },
   "notif_downloaded": { "message": "sintonina" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Zarao ny hevitra" },
   "prefix_exit": { "message": "Fivoahana" },
   "state_on": { "message": "Misy" },
-  "state_off": { "message": "Tsy misy" }
+  "state_off": { "message": "Tsy misy" },
+  "state_no": { "message": "Tsia" }
 }

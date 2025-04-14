@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Voeg AI by Amazon-aankope" },
   "menuLabel_proxyAPImode": { "message": "Volmag-API-modus" },
+  "menuLabel_preferred": { "message": "Voorkeur" },
   "menuLabel_autoFocusChatbar": { "message": "Outo-fokus kletsbalk" },
   "menuLabel_whenStreaming": { "message": "wanneer om te stroom" },
   "menuLabel_background": { "message": "Agtergrond" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Ada" },
   "menuLabel_about": { "message": "Omtrent" },
   "menuLabel_settings": { "message": "bevel" },
+  "menuLabel_random": { "message": "Lukraak" },
+  "menuLabel_saved": { "message": "Gebêre" },
   "componentLabel_used": { "message": "in gebruik" },
   "about_author": { "message": "Outeur" },
   "about_and": { "message": "en" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kode" },
   "tooltip_generatingAudio": { "message": "Genereer oudio" },
   "helptip_proxyAPImode": { "message": "Gebruik 'n Proxy API vir no-login toegang tot AI" },
+  "helptip_preferredAPI": { "message": "API om te gebruik wanneer u antwoorde in Volmagmodus kry" },
   "helptip_streamingMode": { "message": "Ontvang antwoorde in 'n deurlopende teksstroom" },
   "helptip_autoFocusChatbar": { "message": "Outo-fokus kletsbalk wanneer dit verskyn" },
   "helptip_autoScroll": { "message": "Outo-rol antwoorde as hulle genereer in Streaming af" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Probeer" },
   "alert_switchingOn": { "message": "skakelaar aan" },
   "alert_switchingOff": { "message": "afskakel" },
+  "alert_selectingDiff": { "message": "kies een ander" },
   "alert_generated": { "message": "Genereer" },
   "notif_copiedToClipboard": { "message": "Knyp gekopiëerde aan knipbord" },
   "notif_downloaded": { "message": "afgelaai" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Gesprek" },
   "link_viewChanges": { "message": "Besigtig veranderinge" },
   "state_on": { "message": "Op" },
-  "state_off": { "message": "Af" }
+  "state_off": { "message": "Af" },
+  "state_no": { "message": "Wees 'n goeie kind" }
 }

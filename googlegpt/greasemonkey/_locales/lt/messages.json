@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Automatinio fokusavimo pokalbių juosta" },
   "menuLabel_whenStreaming": { "message": "srautinio perdavimo metu" },
   "menuLabel_proxyAPImode": { "message": "Tarpinio serverio API režimas" },
+  "menuLabel_preferred": { "message": "Naglazyme" },
   "menuLabel_show": { "message": "Rodyti" },
   "menuLabel_relatedQueries": { "message": "Susijusios užklausos" },
   "menuLabel_require": { "message": "Privalomas laukas" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Automatinis" },
   "menuLabel_about": { "message": "Apie" },
   "menuLabel_settings": { "message": "Nustatymai" },
+  "menuLabel_random": { "message": "Atsitiktine tvarka" },
+  "menuLabel_saved": { "message": "Įrašyta" },
   "componentLabel_used": { "message": "naudotas" },
   "about_author": { "message": "Autorius" },
   "about_and": { "message": "ir" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Generuojamas garsas" },
   "tooltip_sendRelatedQuery": { "message": "Siųsti susijusią užklausą" },
   "helptip_proxyAPImode": { "message": "Naudoja tarpinio serverio API, kad negalėtų prisijungti prie AI" },
+  "helptip_preferredAPI": { "message": "API, naudojama gaunant atsakymus tarpinio serverio režimu" },
   "helptip_streamingMode": { "message": "Gauti atsakymus nepertraukiamu teksto srautu" },
   "helptip_autoGetAnswers": { "message": "Automatiškai siųsti užklausas į GoogleGPT naudojant paieškos variklį" },
   "helptip_autoSummarizeResults": { "message": "Automatiškai apibendrinti paieškos rezultatų puslapį" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Bandyti" },
   "alert_switchingOn": { "message": "Įjungti" },
   "alert_switchingOff": { "message": "Išjungti" },
+  "alert_selectingDiff": { "message": "kito pasirinkimas" },
   "alert_generated": { "message": "Sugeneruota" },
   "notif_copiedToClipboard": { "message": "<g x=1 id=\"13\"/> nukopijuota į iškarpinę" },
   "notif_downloaded": { "message": "Atsisiųsta" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Išsakykite savo nuomonę" },
   "prefix_exit": { "message": "Išeiti" },
   "state_on": { "message": "Įjungta" },
-  "state_off": { "message": "Išjungta" }
+  "state_off": { "message": "Išjungta" },
+  "state_no": { "message": "Ne" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "E tsenya dikarabo tsa ChatGPT go Brave Search sidebar (e tsamaisiwa ke GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
+  "menuLabel_preferred": { "message": "Ke e rata thata" },
   "menuLabel_autoGetAnswers": { "message": "Go Bona Dikarabo ka Tsela e e Itshwarang" },
   "menuLabel_autoSummarizeResults": { "message": "Dipoelo tsa go Itirisa ka Ntlha ya Mmatota" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "AUTO" },
   "menuLabel_about": { "message": "Ka" },
   "menuLabel_settings": { "message": "Diseting" },
+  "menuLabel_random": { "message": "Ka go phopholetsa" },
+  "menuLabel_saved": { "message": "E bolokilwe" },
   "componentLabel_used": { "message": "used" },
   "about_author": { "message": "Mokwadi" },
   "about_and": { "message": "le" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "E dira gore go nne le modumo" },
   "tooltip_sendRelatedQuery": { "message": "ROMELA DIPOTSO TSE DI AMAN" },
   "helptip_proxyAPImode": { "message": "O dirisa Proxy API gore o seka wa tsena mo tirong ya AI" },
+  "helptip_preferredAPI": { "message": "API e o tshwanelang go e dirisa fa o bona dikarabo mo Moding wa Proxy" },
   "helptip_streamingMode": { "message": "Go amogela dikarabo mo tseleng e e tswelelang ya tshedimosetso" },
   "helptip_autoGetAnswers": { "message": "Go romela dipotso ka go itirisa go BraveGPT fa o dirisa enjene ya go senka" },
   "helptip_autoSummarizeResults": { "message": "Go sobokanya tsebe ya dipholo tsa patlisiso ka go itirisa" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Leka" },
   "alert_switchingOn": { "message": "go tshuba" },
   "alert_switchingOff": { "message": "go tima" },
+  "alert_selectingDiff": { "message": "go tlhopha e e farologaneng" },
   "alert_generated": { "message": "E tlhagisitswe ka tlhamalalo" },
   "notif_copiedToClipboard": { "message": "E kopolotswe go clipboard" },
   "notif_downloaded": { "message": " E taoneloutilwe " },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Ditshwaelo" },
   "prefix_exit": { "message": "Tswa" },
   "state_on": { "message": "mo" },
-  "state_off": { "message": "tswa go" }
+  "state_off": { "message": "tswa go" },
+  "state_no": { "message": "Nnyaa" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "A’ cur AI ri ceannach Amazon" },
   "menuLabel_proxyAPImode": { "message": "Modh API Proxy" },
+  "menuLabel_preferred": { "message": "An roghainn as fheàrr leat" },
   "menuLabel_autoFocusChatbar": { "message": "Bàr-còmhraidh fèin-fhòcas" },
   "menuLabel_whenStreaming": { "message": "nuair a tha thu a 'sruthadh" },
   "menuLabel_background": { "message": "Cùlaibh" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Gu fèin-obrachail" },
   "menuLabel_about": { "message": "Mar deidhinn" },
   "menuLabel_settings": { "message": "Roghainnean" },
+  "menuLabel_random": { "message": "Air thuaiream" },
+  "menuLabel_saved": { "message": "Air a shàbhaladh" },
   "componentLabel_used": { "message": "air a chleachdadh" },
   "about_author": { "message": "Ùghdar" },
   "about_and": { "message": "agus" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Còd" },
   "tooltip_generatingAudio": { "message": "A 'gineadh na fuaime" },
   "helptip_proxyAPImode": { "message": "A’ cleachdadh API Proxy airson ruigsinneachd gun logadh a-steach gu AI" },
+  "helptip_preferredAPI": { "message": "API ri chleachdadh nuair a gheibh thu freagairtean ann am Modh Proxy" },
   "helptip_streamingMode": { "message": "Faigh freagairtean ann an sruthadh teacsa leantainneach" },
   "helptip_autoFocusChatbar": { "message": "Fòcas fèin-obrachail chatbar uair sam bith a nochdas e" },
   "helptip_autoScroll": { "message": "Freagairtean fèin-ghluasadach mar a bhios iad a 'gineadh ann am modh sruthadh" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Feuch" },
   "alert_switchingOn": { "message": "a 'tionndadh air" },
   "alert_switchingOff": { "message": "a 'cur dheth" },
+  "alert_selectingDiff": { "message": "roghainn eile" },
   "alert_generated": { "message": "Air a ghineadh" },
   "notif_copiedToClipboard": { "message": "Chaidh a chopaigeadh dhan stòr-bhòrd" },
   "notif_downloaded": { "message": "Air a luchdadh a-nuas" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Còmhradh" },
   "link_viewChanges": { "message": "Seall na h-atharraichean" },
   "state_on": { "message": "air" },
-  "state_off": { "message": "dheth" }
+  "state_off": { "message": "dheth" },
+  "state_no": { "message": "Chan eil" }
 }

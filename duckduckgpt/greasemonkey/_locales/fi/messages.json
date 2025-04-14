@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Lisää ChatGPT-vastaukset DuckDuckGo-sivupalkkiin (powered by GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Välityspalvelimen API-tila" },
+  "menuLabel_preferred": { "message": "Ensisijainen" },
   "menuLabel_autoGetAnswers": { "message": "Automaattinen vastausten haku" },
   "menuLabel_autoSummarizeResults": { "message": "Automaattinen yhteenveto tuloksista" },
   "menuLabel_autoFocusChatbar": { "message": "Automaattitarkennuksen keskustelupalkki" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Tietoa" },
   "menuLabel_settings": { "message": "Asetukset" },
+  "menuLabel_random": { "message": "Satunnainen" },
+  "menuLabel_saved": { "message": "Tallennettu" },
   "componentLabel_used": { "message": "käytetty" },
   "about_author": { "message": "Tekijä" },
   "about_and": { "message": "ja" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Luodaan ääntä" },
   "tooltip_sendRelatedQuery": { "message": "Lähetä liittyvä kysely" },
   "helptip_proxyAPImode": { "message": "Käyttää välityspalvelimen sovellusliittymää tekoälyn kirjautumattomaan käyttöön" },
+  "helptip_preferredAPI": { "message": "Sovellusliittymä, jota käytetään, kun vastauksia haetaan välityspalvelintilassa" },
   "helptip_streamingMode": { "message": "Vastaanota vastaukset jatkuvana tekstivirtana" },
   "helptip_autoGetAnswers": { "message": "Lähetä kyselyt automaattisesti DuckDuckGPT: lle, kun käytät hakukonetta" },
   "helptip_autoSummarizeResults": { "message": "Tiivistä hakutulossivu automaattisesti" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Kokeile" },
   "alert_switchingOn": { "message": "PÄÄLLEKYTKEMINEN" },
   "alert_switchingOff": { "message": "Sammutetaan" },
+  "alert_selectingDiff": { "message": "valitaan toinen" },
   "alert_generated": { "message": "Luotu" },
   "notif_copiedToClipboard": { "message": "Kopioitu leikepöydälle" },
   "notif_downloaded": { "message": "ladattu." },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Anna palautetta" },
   "prefix_exit": { "message": "Poistu" },
   "state_on": { "message": "Päällä" },
-  "state_off": { "message": "Pois päältä" }
+  "state_off": { "message": "Pois päältä" },
+  "state_no": { "message": "Ei" }
 }

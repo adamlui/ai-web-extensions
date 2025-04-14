@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Menambahkan AI ke belanja Amazon" },
   "menuLabel_proxyAPImode": { "message": "Mode api Proxy" },
+  "menuLabel_preferred": { "message": "Disukai" },
   "menuLabel_autoFocusChatbar": { "message": "Bilah Obrolan Fokus Otomatis" },
   "menuLabel_whenStreaming": { "message": "saat streaming" },
   "menuLabel_background": { "message": "Latar Belakang" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Otomatis" },
   "menuLabel_about": { "message": "Ihwal" },
   "menuLabel_settings": { "message": "Pengaturan" },
+  "menuLabel_random": { "message": "Acak" },
+  "menuLabel_saved": { "message": "Disimpan" },
   "componentLabel_used": { "message": "digunakan" },
   "about_author": { "message": "Penulis" },
   "about_and": { "message": "dan" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kode" },
   "tooltip_generatingAudio": { "message": "Menghasilkan audio" },
   "helptip_proxyAPImode": { "message": "Menggunakan api Proxy untuk akses tanpa login ke AI" },
+  "helptip_preferredAPI": { "message": "Api yang digunakan saat mendapatkan jawaban dalam Mode Proxy" },
   "helptip_streamingMode": { "message": "Terima balasan dalam aliran teks berkelanjutan" },
   "helptip_autoFocusChatbar": { "message": "Auto - focus chatbar setiap kali muncul" },
   "helptip_autoScroll": { "message": "Gulir otomatis respons saat dihasilkan dalam Mode Streaming" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Try" },
   "alert_switchingOn": { "message": "menyalakan" },
   "alert_switchingOff": { "message": "mematikan" },
+  "alert_selectingDiff": { "message": "memilih yang lain" },
   "alert_generated": { "message": "Dihasilkan" },
   "notif_copiedToClipboard": { "message": "Disalin ke papan klip" },
   "notif_downloaded": { "message": "terunduh" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Diskusi" },
   "link_viewChanges": { "message": "Lihat perubahan" },
   "state_on": { "message": "Hidup" },
-  "state_off": { "message": "Mati" }
+  "state_off": { "message": "Mati" },
+  "state_no": { "message": "Tidak" }
 }

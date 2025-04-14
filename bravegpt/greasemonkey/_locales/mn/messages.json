@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Brave Search sidebar-д ChatGPT-ийн хариултыг нэмнэ (GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API горим" },
+  "menuLabel_preferred": { "message": "Эрхэмлэвэл зохих" },
   "menuLabel_autoGetAnswers": { "message": "Авто-Орлогийн хариултууд" },
   "menuLabel_autoSummarizeResults": { "message": "Автоматаар хураангуйлах үр дүн" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Авто" },
   "menuLabel_about": { "message": "Бидний тухай" },
   "menuLabel_settings": { "message": "Системийн тохиргоо" },
+  "menuLabel_random": { "message": "Санамсаргүй" },
+  "menuLabel_saved": { "message": "ᠬᠠᠳᠠᠭᠠᠯᠠᠭᠰᠠᠨ" },
   "componentLabel_used": { "message": "ашигласан" },
   "about_author": { "message": "Зохиогч" },
   "about_and": { "message": "болон" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Аудио боловсруулах" },
   "tooltip_sendRelatedQuery": { "message": "Холбогдох асуулга илгээх" },
   "helptip_proxyAPImode": { "message": "AI-д логингүй нэвтрэх прокси API ашигладаг" },
+  "helptip_preferredAPI": { "message": "Прокси горимд хариулт авахдаа API ашиглагддаг" },
   "helptip_streamingMode": { "message": "Үргэлжилсэн текстийн урсгалд хариулт хүлээн авах" },
   "helptip_autoGetAnswers": { "message": "Хайлтын системийг ашиглах үед BraveGPT-д автоматаар илгээх асуултууд" },
   "helptip_autoSummarizeResults": { "message": "Хайлтын үр дүнгийн хуудсыг автоматаар нэгтгэн дүгнэх" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Турших" },
   "alert_switchingOn": { "message": "асаах" },
   "alert_switchingOff": { "message": "унтраах" },
+  "alert_selectingDiff": { "message": "өөр сонголт сонгоно уу" },
   "alert_generated": { "message": "Үүсмэл" },
   "notif_copiedToClipboard": { "message": "Түр санах ой руу хуулсан" },
   "notif_downloaded": { "message": "татаж авсан" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Санал хүсэлт" },
   "prefix_exit": { "message": "Гарах" },
   "state_on": { "message": "Асаах" },
-  "state_off": { "message": "Хаах" }
+  "state_off": { "message": "Хаах" },
+  "state_no": { "message": "Үгүй" }
 }

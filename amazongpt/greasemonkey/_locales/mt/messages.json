@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Żid l-AI max-xiri ta' Amazon" },
   "menuLabel_proxyAPImode": { "message": "Modalità API Proxy" },
+  "menuLabel_preferred": { "message": "Preferut" },
   "menuLabel_autoFocusChatbar": { "message": "Fokus Awtomatiku fuq iċ-chatbar" },
   "menuLabel_whenStreaming": { "message": "waqt l-istreaming" },
   "menuLabel_background": { "message": "Sfond" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Awto" },
   "menuLabel_about": { "message": "Dwar" },
   "menuLabel_settings": { "message": "Settings" },
+  "menuLabel_random": { "message": "każwali" },
+  "menuLabel_saved": { "message": "Ssejvjata" },
   "componentLabel_used": { "message": "li trid tinyuża" },
   "about_author": { "message": "Awtur" },
   "about_and": { "message": "u" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Code" },
   "tooltip_generatingAudio": { "message": "Kif tiġġenera l-awdjo" },
   "helptip_proxyAPImode": { "message": "Uża API Proxy għall-aċċess mingħajr login għall-IA" },
+  "helptip_preferredAPI": { "message": "API li għandek tuża meta tirċievi t-tweġibiet fil-Modalità Proxy" },
   "helptip_streamingMode": { "message": "Irċievi t-tweġibiet permezz ta' messaġġ kontinwu" },
   "helptip_autoFocusChatbar": { "message": "Fokus awtomatiku fuq iċ-chatbar kull meta jidher" },
   "helptip_autoScroll": { "message": "It-tweġibiet awtomatikament jiskrolljaw hekk kif jiġġeneraw fil-Modalità Streaming" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Ipprova" },
   "alert_switchingOn": { "message": "Kif tixgħel" },
   "alert_switchingOff": { "message": "Kif titfi" },
+  "alert_selectingDiff": { "message": "għażla ta' waħda differenti" },
   "alert_generated": { "message": "Ġenerat" },
   "notif_copiedToClipboard": { "message": "Kopjati lill-clipboard" },
   "notif_downloaded": { "message": "niżżel" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Konverżazzjoni:" },
   "link_viewChanges": { "message": "Ara l-bidliet" },
   "state_on": { "message": "fil" },
-  "state_off": { "message": "Diżattivata" }
+  "state_off": { "message": "Diżattivata" },
+  "state_no": { "message": "Le" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Toka'anga 'a e ngaahi fakamatala 'o e ChatGPT ki he saiti fakafonua 'o e DuckDuckGo (pau'i 'i he GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "API Mode fakafofonga" },
+  "menuLabel_preferred": { "message": "Fie maʻu" },
   "menuLabel_autoGetAnswers": { "message": "Ngaahi tali ki he meʻalele" },
   "menuLabel_autoSummarizeResults": { "message": "Ngaahi ola ʻo e meʻalele-fakamatalaʻi fakanounou" },
   "menuLabel_autoFocusChatbar": { "message": "Tokanga taha ki he meʻalele Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Meʻalele" },
   "menuLabel_about": { "message": "Fekauʻaki mo e" },
   "menuLabel_settings": { "message": "Ngaahi Feituʻú" },
+  "menuLabel_random": { "message": "Tavale" },
+  "menuLabel_saved": { "message": "Fakahaofi" },
   "componentLabel_used": { "message": "fakaʻaongaʻi" },
   "about_author": { "message": "Tokotaha Faʻu Tohí" },
   "about_and": { "message": "e" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Faʻu ʻo e ongó" },
   "tooltip_sendRelatedQuery": { "message": "ʻAve ʻa e fehuʻi ʻoku fekauʻaki" },
   "helptip_proxyAPImode": { "message": "Fakaʻaongaʻi ha API fakafofonga ki he ʻikai lava ke hu ki he ʻi ai" },
+  "helptip_preferredAPI": { "message": "API ke fakaʻaongaʻi ʻi he taimi ʻoku maʻu ai ʻa e ngaahi tali ʻi he Proxy Mode" },
   "helptip_streamingMode": { "message": "Maʻu e tali ʻi ha text hokohoko" },
   "helptip_autoGetAnswers": { "message": "ʻAve ʻa e ngaahi fakaʻekeʻeke ki he DuckDuckGPT ʻi he taimi ʻoku fakaʻaongaʻi ai ʻa e misini kumi" },
   "helptip_autoSummarizeResults": { "message": "ʻOtomētiki hono fakamatalaʻi fakanounou ʻo e peesi ola ʻo e fekumí" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "ʻAhiʻahi" },
   "alert_switchingOn": { "message": "liliu ʻi he" },
   "alert_switchingOff": { "message": "liliu" },
+  "alert_selectingDiff": { "message": "Fili ha taha kehe" },
   "alert_generated": { "message": "Faʻu" },
   "notif_copiedToClipboard": { "message": "Hiki tatau ki he Papafakamaʻú" },
   "notif_downloaded": { "message": "ʻosi download" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Vahevahe ʻa e Fakamatala" },
   "prefix_exit": { "message": "Hū ki tu’a" },
   "state_on": { "message": "ʻI he" },
-  "state_off": { "message": "ʻOsi" }
+  "state_off": { "message": "ʻOsi" },
+  "state_no": { "message": "ʻIkai" }
 }

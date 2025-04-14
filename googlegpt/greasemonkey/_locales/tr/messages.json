@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Otomatik Odaklanma Sohbet Çubuğu" },
   "menuLabel_whenStreaming": { "message": "akış sırasında" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Modu" },
+  "menuLabel_preferred": { "message": "Tercih ettiğiniz SMS Ağ Geçidini seçin." },
   "menuLabel_show": { "message": "Göster" },
   "menuLabel_relatedQueries": { "message": "İlgili Sorgular" },
   "menuLabel_require": { "message": "Gerekli" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Otomatik" },
   "menuLabel_about": { "message": "Hakkımızda" },
   "menuLabel_settings": { "message": "Ayarlar" },
+  "menuLabel_random": { "message": "Rastgele" },
+  "menuLabel_saved": { "message": "Kaydedildi" },
   "componentLabel_used": { "message": "kullanılan" },
   "about_author": { "message": "Yazar" },
   "about_and": { "message": "ve" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Ses oluşturuluyor" },
   "tooltip_sendRelatedQuery": { "message": "İlgili sorguyu gönder" },
   "helptip_proxyAPImode": { "message": "Yapay zekaya giriş gerektirmeyen erişim için bir Proxy API'si kullanır" },
+  "helptip_preferredAPI": { "message": "Proxy Modunda yanıt alırken kullanılacak API" },
   "helptip_streamingMode": { "message": "Yanıtları sürekli bir metin akışında alın" },
   "helptip_autoGetAnswers": { "message": "Arama motorunu kullanırken sorguları GoogleGPT'ye otomatik olarak gönder" },
   "helptip_autoSummarizeResults": { "message": "Arama sonuçları sayfasını otomatik olarak özetle" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Try" },
   "alert_switchingOn": { "message": "Açma" },
   "alert_switchingOff": { "message": "Kapatma" },
+  "alert_selectingDiff": { "message": "farklı bir tane seçerek" },
   "alert_generated": { "message": "generated" },
   "notif_copiedToClipboard": { "message": "Panoya kopyalandı" },
   "notif_downloaded": { "message": "İndirilmiş" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Geri Bildirim Paylaş" },
   "prefix_exit": { "message": "Çık" },
   "state_on": { "message": "Açık" },
-  "state_off": { "message": "Kapalı" }
+  "state_off": { "message": "Kapalı" },
+  "state_no": { "message": "Hayır" }
 }

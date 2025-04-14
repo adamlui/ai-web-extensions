@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Aggiunge le risposte ChatGPT alla barra laterale di Brave Search (con tecnologia GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Modalità API proxy" },
+  "menuLabel_preferred": { "message": "Preferito" },
   "menuLabel_autoGetAnswers": { "message": "Ottieni automaticamente risposte" },
   "menuLabel_autoSummarizeResults": { "message": "Riepiloga automaticamente i risultati" },
   "menuLabel_autoFocusChatbar": { "message": "Messa a fuoco automatica della barra di chat" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Automatico" },
   "menuLabel_about": { "message": "Informazioni generali" },
   "menuLabel_settings": { "message": "Impostazioni" },
+  "menuLabel_random": { "message": "Casuale" },
+  "menuLabel_saved": { "message": "Salvato" },
   "componentLabel_used": { "message": "usato" },
   "about_author": { "message": "Autore" },
   "about_and": { "message": "e" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Generazione audio in corso" },
   "tooltip_sendRelatedQuery": { "message": "Invia query correlata" },
   "helptip_proxyAPImode": { "message": "Utilizza un'API proxy per l'accesso no-login all'IA" },
+  "helptip_preferredAPI": { "message": "API da utilizzare quando si ottengono risposte in Modalità Proxy" },
   "helptip_streamingMode": { "message": "Ricevi risposte in un flusso di testo continuo" },
   "helptip_autoGetAnswers": { "message": "Invio automatico di query a BraveGPT quando si utilizza il motore di ricerca" },
   "helptip_autoSummarizeResults": { "message": "Riepiloga automaticamente la pagina dei risultati di ricerca" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Prova" },
   "alert_switchingOn": { "message": "accensione" },
   "alert_switchingOff": { "message": "spegnimento" },
+  "alert_selectingDiff": { "message": "selezionando un diverso" },
   "alert_generated": { "message": "Generata" },
   "notif_copiedToClipboard": { "message": "Copiato negli appunti" },
   "notif_downloaded": { "message": "scaricati" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Riscontro" },
   "prefix_exit": { "message": "Esci" },
   "state_on": { "message": "su" },
-  "state_off": { "message": "Spento" }
+  "state_off": { "message": "Spento" },
+  "state_no": { "message": "No" }
 }

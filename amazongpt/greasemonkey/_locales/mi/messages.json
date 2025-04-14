@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Tāpirihia te AI ki te hoko Amazon" },
   "menuLabel_proxyAPImode": { "message": "Aratau API Proxy" },
+  "menuLabel_preferred": { "message": "He pai ake" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "i te wa e rere ana" },
   "menuLabel_background": { "message": "Ngā momotuhi" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Mō" },
   "menuLabel_settings": { "message": "Ngā Tautuhinga" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Whakaora" },
   "componentLabel_used": { "message": "whakamahia" },
   "about_author": { "message": "Kaitito" },
   "about_and": { "message": "he tamāhine ahau" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Waehere" },
   "tooltip_generatingAudio": { "message": "Te whakaputa i te oro" },
   "helptip_proxyAPImode": { "message": "Whakamahia he API Proxy mo te urunga kore-login ki AI" },
+  "helptip_preferredAPI": { "message": "API ki te whakamahi i te wa e whiwhi whakautu i roto i Proxy Mode" },
   "helptip_streamingMode": { "message": "Whakautu i roto i te rere kuputuhi tonu" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar i nga wa katoa e puta ana" },
   "helptip_autoScroll": { "message": "Ko nga whakautu tirotiro aunoa i a raatau e whakaputa ana i roto i te Aratau Streaming" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Whakamātauria" },
   "alert_switchingOn": { "message": "whakawhiti i runga i" },
   "alert_switchingOff": { "message": "whakawhiti" },
+  "alert_selectingDiff": { "message": "kōwhiri i tētahi atu" },
   "alert_generated": { "message": "Te whakatipuranga" },
   "notif_copiedToClipboard": { "message": "Tārua ki te papapātuhi" },
   "notif_downloaded": { "message": "tikiake" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Escher Cat (SMS)" },
   "link_viewChanges": { "message": "Tirohia nga huringa" },
   "state_on": { "message": "runga" },
-  "state_off": { "message": "..e whakaweto ana" }
+  "state_off": { "message": "..e whakaweto ana" },
+  "state_no": { "message": "Kāo" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ChatGPT အဖြေနဲ့ DuckDuckGo ဘေးဘားတွင် ပေါင်းထည့်ပါ (GPT-4o မှ အားဖြည့်ထားသည်!)" },
   "menuLabel_proxyAPImode": { "message": "ပရောက်စီ API မုဒ်" },
+  "menuLabel_preferred": { "message": "နှစ်သက်ရာများ" },
   "menuLabel_autoGetAnswers": { "message": "အလိုအလျောက်-အဖြေများရယူပါ" },
   "menuLabel_autoSummarizeResults": { "message": "အလိုအလျောက် အကျဉ်းချုပ်ရလဒ်များ" },
   "menuLabel_autoFocusChatbar": { "message": "အလိုအလျောက်အာရုံစူးစိုက်မှု စကားပြောဘား" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "အလိုအလျောက်" },
   "menuLabel_about": { "message": "အကြောင်း" },
   "menuLabel_settings": { "message": "ဆက္တင္မ်ား" },
+  "menuLabel_random": { "message": "ကြုံရာလုပ်မှု" },
+  "menuLabel_saved": { "message": "သိမ်းပြီး" },
   "componentLabel_used": { "message": "ကို သုံးပါမည်။" },
   "about_author": { "message": "ရေးသူ" },
   "about_and": { "message": "Raw Material (Inventory) တွေ ဝယ်မယ့် လုပ်ငန်းမျိုးအတွက်၊" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "အသံကို ထုတ်ယူနေသည်" },
   "tooltip_sendRelatedQuery": { "message": "ဆက်စပ်မေးမြန်းချက် ပေးပို့ပါ" },
   "helptip_proxyAPImode": { "message": "AI သို့ဝင်ရောက်ခြင်းမပြုရန် Proxy API ကိုအသုံးပြုသည်" },
+  "helptip_preferredAPI": { "message": "Proxy Mode ဖြင့် အဖြေများရယူရာတွင် အသုံးပြုရန် API" },
   "helptip_streamingMode": { "message": "စဉ်ဆက်မပြတ်စာသားစီးဆင်းမှုတွင်အဖြေများကိုလက်ခံရရှိပါ" },
   "helptip_autoGetAnswers": { "message": "ရှာဖွေရေးအင်ဂျင်ကို အသုံးပြု. သောအခါ DuckDuckGPT မှအော်တိုစေလွှတ်မေးမြန်းချက်" },
   "helptip_autoSummarizeResults": { "message": "ရှာဖွေမှု ရလဒ် စာမျက်နှာကို အလိုအလျောက် အကျဉ်းချုံးပါ" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "ကြိုးစားပါ" },
   "alert_switchingOn": { "message": "ဖွင့်နေသည်" },
   "alert_switchingOff": { "message": "ခလုတ်ပိတ်ခြင်း" },
+  "alert_selectingDiff": { "message": "တစ် ဦး ကကွဲပြားခြားနားသောရွေးချယ်ရေး" },
   "alert_generated": { "message": "ထုတ်ယူသည်" },
   "notif_copiedToClipboard": { "message": "ကလစ်ဘုတ်သို့ကူးယူပြီး" },
   "notif_downloaded": { "message": "ဒေါင်းလုဒ်လုပ်ထားသည်" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "ဝေမျှရန် တုံ့ပြန်ချက်" },
   "prefix_exit": { "message": "ထြက္ရန္" },
   "state_on": { "message": "(ျဖစ္စဥ္)" },
-  "state_off": { "message": "ပိတ်" }
+  "state_off": { "message": "ပိတ်" },
+  "state_no": { "message": "မရှိ" }
 }

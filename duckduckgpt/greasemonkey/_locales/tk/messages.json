@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ÇatGPT jogaplaryny DuckDuckGo (GPT-4o bilen işleýän!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API tertibi" },
+  "menuLabel_preferred": { "message": "Terbiýe" },
   "menuLabel_autoGetAnswers": { "message": "Auto-Get jogaplary" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-Summarize netijeleri" },
   "menuLabel_autoFocusChatbar": { "message": "Awto-Fokus Çatbary" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Maşyn" },
   "menuLabel_about": { "message": "Barada" },
   "menuLabel_settings": { "message": "Saýlamalar" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Saýla" },
   "componentLabel_used": { "message": "ulanyldy" },
   "about_author": { "message": "Otomatik gaýşart" },
   "about_and": { "message": "we" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Saýlamalary döretmek" },
   "tooltip_sendRelatedQuery": { "message": "Baglanyşykly soragy iber" },
   "helptip_proxyAPImode": { "message": "AI-de loginsiz giriş üçin proxy API-ni ulan" },
+  "helptip_preferredAPI": { "message": "Proxy Mode-da jogaplary alanda ulanmak üçin API" },
   "helptip_streamingMode": { "message": "Galyberse-de, bu soraglaryň jogabyny tapyp bilersiňiz" },
   "helptip_autoGetAnswers": { "message": "Garawul diňi we Garawul diňi" },
   "helptip_autoSummarizeResults": { "message": "Arama netijeleriniň sahypasyny avtomatik gysgaça gysgaça gysgaça gys" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Synap gör" },
   "alert_switchingOn": { "message": "üýtgeşik" },
   "alert_switchingOff": { "message": "çykyş" },
+  "alert_selectingDiff": { "message": "başga birini saýla" },
   "alert_generated": { "message": "Ýaradylyş" },
   "notif_copiedToClipboard": { "message": "Klipbordda nusga alynýar" },
   "notif_downloaded": { "message": "indir" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Öwrenme paýlaş" },
   "prefix_exit": { "message": "Çyk" },
   "state_on": { "message": "% jeminden" },
-  "state_off": { "message": "Çyk" }
+  "state_off": { "message": "Çyk" },
+  "state_no": { "message": "Ýok" }
 }

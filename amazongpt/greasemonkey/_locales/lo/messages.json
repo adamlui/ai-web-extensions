@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ເພີ່ມ AI ເຂົ້າໃນການຊື້ເຄື່ອງ Amazon" },
   "menuLabel_proxyAPImode": { "message": "ໂໝດໂປຣແກຣມ API" },
+  "menuLabel_preferred": { "message": "ມັກ" },
   "menuLabel_autoFocusChatbar": { "message": "ແຖບສົນທະນາໂຟກັສອັດຕະໂນມັດ" },
   "menuLabel_whenStreaming": { "message": "ເມື່ອການຖ່າຍທອດ" },
   "menuLabel_background": { "message": "ປະຫວັດຄວາມເປັນມາ" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "ອັດຕະໂນມັດ" },
   "menuLabel_about": { "message": "ກ່ຽວກັບ" },
   "menuLabel_settings": { "message": "ການຕັ້ງຄ່າ" },
+  "menuLabel_random": { "message": "ສຸ່ມ" },
+  "menuLabel_saved": { "message": "ບັນທຶກແລ້ວ" },
   "componentLabel_used": { "message": "ໃຊ້" },
   "about_author": { "message": "ຜູ້ຂຽນ" },
   "about_and": { "message": "ແລະ" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "ລະຫັດ" },
   "tooltip_generatingAudio": { "message": "ການສ້າງສຽງ" },
   "helptip_proxyAPImode": { "message": "ໃຊ້ API Proxy ສໍາ ລັບການເຂົ້າເຖິງທີ່ບໍ່ມີການເຂົ້າສູ່ລະບົບກັບ AI" },
+  "helptip_preferredAPI": { "message": "API ເພື່ອໃຊ້ເມື່ອໄດ້ຮັບ ຄໍາ ຕອບໃນໂຫມດ Proxy" },
   "helptip_streamingMode": { "message": "ຮັບ ຄໍາ ຕອບໃນກະແສຂໍ້ຄວາມຕໍ່ເນື່ອງ" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar ທຸກຄັ້ງທີ່ມັນປາກົດ" },
   "helptip_autoScroll": { "message": "ສະຫຼັບຄຳຕອບໂດຍອັດຕະໂນມັດໃນຂະນະທີ່ພວກມັນສ້າງໃນໂໝດສະຕີມມິງ" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "ພະ ຍາ ຍາມ" },
   "alert_switchingOn": { "message": "ການເປີດໃຊ້ງານ" },
   "alert_switchingOff": { "message": "ການປິດການໃຊ້ງານ" },
+  "alert_selectingDiff": { "message": "ທາງ ເລືອກ ທີ່ ແຕກ ຕ່າງ ກັນ" },
   "alert_generated": { "message": "ສ້າງຂື້ນ" },
   "notif_copiedToClipboard": { "message": "ສຳເນົາໄປທີ່ຄລິບບອດ" },
   "notif_downloaded": { "message": "ດາວໂຫຼດແລ້ວ" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "ການສົນທະນາ" },
   "link_viewChanges": { "message": "ເບິ່ງການປ່ຽນແປງ" },
   "state_on": { "message": "ເປີດ" },
-  "state_off": { "message": "ປິດ" }
+  "state_off": { "message": "ປິດ" },
+  "state_no": { "message": "ລຳດັບ" }
 }

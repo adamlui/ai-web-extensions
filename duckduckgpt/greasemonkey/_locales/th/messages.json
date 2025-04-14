@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "เพิ่มคำตอบ ChatGPT ในแถบด้านข้าง DuckDuckGo (ขับเคลื่อนโดย GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "โหมด API พร็อกซี" },
+  "menuLabel_preferred": { "message": "ค่าที่ควรใช้Size Policy" },
   "menuLabel_autoGetAnswers": { "message": "รับคำตอบอัตโนมัติ" },
   "menuLabel_autoSummarizeResults": { "message": "สรุปผลลัพธ์อัตโนมัติ" },
   "menuLabel_autoFocusChatbar": { "message": "แถบสนทนาโฟกัสอัตโนมัติ" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "อัตโนมัติ" },
   "menuLabel_about": { "message": "เกี่ยวกับ" },
   "menuLabel_settings": { "message": "การตั้งค่า" },
+  "menuLabel_random": { "message": "สุ่ม" },
+  "menuLabel_saved": { "message": "บันทึกแล้ว" },
   "componentLabel_used": { "message": "ใช้ไปแล้ว" },
   "about_author": { "message": "ผู้เขียน" },
   "about_and": { "message": "และ" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "กำลังสร้างเสียง" },
   "tooltip_sendRelatedQuery": { "message": "ส่งคำค้นหาที่เกี่ยวข้อง" },
   "helptip_proxyAPImode": { "message": "ใช้ API พร็อกซีสำหรับการเข้าถึง AI โดยไม่ต้องเข้าสู่ระบบ" },
+  "helptip_preferredAPI": { "message": "API ที่จะใช้เมื่อได้รับคำตอบในโหมดพร็อกซี" },
   "helptip_streamingMode": { "message": "รับการตอบกลับในสตรีมข้อความแบบต่อเนื่อง" },
   "helptip_autoGetAnswers": { "message": "ส่งข้อความค้นหาไปยัง DuckDuckGPT โดยอัตโนมัติเมื่อใช้เครื่องมือค้นหา" },
   "helptip_autoSummarizeResults": { "message": "สรุปหน้าผลการค้นหาโดยอัตโนมัติ" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "ลอง" },
   "alert_switchingOn": { "message": "การเปิดเครื่อง" },
   "alert_switchingOff": { "message": "การปิดสวิตช์" },
+  "alert_selectingDiff": { "message": "การเลือกที่แตกต่างกัน" },
   "alert_generated": { "message": "สร้าง" },
   "notif_copiedToClipboard": { "message": "คัดลอกไปที่คลิปบอร์ด" },
   "notif_downloaded": { "message": "ดาวน์โหลด " },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "แชร์ข้อเสนอแนะ" },
   "prefix_exit": { "message": "ออก" },
   "state_on": { "message": "เปิด" },
-  "state_off": { "message": "ปิด" }
+  "state_off": { "message": "ปิด" },
+  "state_no": { "message": "ไม่" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ਐਮਾਜ਼ਾਨ ਖਰੀਦਦਾਰੀ ਵਿੱਚ ਏਆਈ ਸ਼ਾਮਲ ਕਰਦਾ ਹੈ" },
   "menuLabel_proxyAPImode": { "message": "ਪਰਾਕਸੀ API ਮੋਡ" },
+  "menuLabel_preferred": { "message": "ਪਸੰਦੀਦਾHome phone" },
   "menuLabel_autoFocusChatbar": { "message": "ਆਟੋ-ਫੋਕਸ ਚੈਟਬਾਰ" },
   "menuLabel_whenStreaming": { "message": "ਜਦੋਂ ਸਟ੍ਰੀਮਿੰਗ ਹੋਵੇ" },
   "menuLabel_background": { "message": "ਪਿਛੋਕੜ" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "ਆਟੋ" },
   "menuLabel_about": { "message": "ਇਸ ਬਾਰੇ" },
   "menuLabel_settings": { "message": "GConf ਸੈਟਿੰਗ" },
+  "menuLabel_random": { "message": "ਰਲਵਾਂ" },
+  "menuLabel_saved": { "message": "ਸੰਭਾਲੀ" },
   "componentLabel_used": { "message": "ਵਰਤੀ:" },
   "about_author": { "message": "_ਲੇਖਕ" },
   "about_and": { "message": "ਅਤੇ" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "&#x09;&#x09;ਕੋਡ" },
   "tooltip_generatingAudio": { "message": "ਆਡੀਓ ਤਿਆਰ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ" },
   "helptip_proxyAPImode": { "message": "ਏਆਈ ਤੱਕ ਨੋ-ਲੌਗਇਨ ਪਹੁੰਚ ਲਈ ਇੱਕ ਪ੍ਰੌਕਸੀ ਏਪੀਆਈ ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ" },
+  "helptip_preferredAPI": { "message": "ਪ੍ਰੌਕਸੀ ਮੋਡ ਵਿੱਚ ਜਵਾਬ ਪ੍ਰਾਪਤ ਕਰਨ ਵੇਲੇ ਵਰਤਣ ਲਈ API" },
   "helptip_streamingMode": { "message": "ਇੱਕ ਲਗਾਤਾਰ ਟੈਕਸਟ ਸਟਰੀਮ ਵਿੱਚ ਜਵਾਬ ਪ੍ਰਾਪਤ ਕਰੋ" },
   "helptip_autoFocusChatbar": { "message": "ਜਦੋਂ ਵੀ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ ਤਾਂ ਆਟੋ-ਫੋਕਸ ਚੈਟਬਾਰ" },
   "helptip_autoScroll": { "message": "ਜਿਵੇਂ ਕਿ ਉਹ ਸਟ੍ਰੀਮਿੰਗ ਮੋਡ ਵਿੱਚ ਤਿਆਰ ਕਰਦੇ ਹਨ ਆਟੋ-ਸਕਰੋਲ ਜਵਾਬ" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "ਕੋਸ਼ਿਸ ਕਰੋ" },
   "alert_switchingOn": { "message": "ਚਾਲੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ" },
   "alert_switchingOff": { "message": "ਬੰਦ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ" },
+  "alert_selectingDiff": { "message": "ਇੱਕ ਵੱਖਰਾ ਦੀ ਚੋਣ" },
   "alert_generated": { "message": "ਤਿਆਰ ਕੀਤਾ" },
   "notif_copiedToClipboard": { "message": "ਕਲਿੱਪਬੋਰਡ ਤੇ ਕਾਪੀ ਕੀਤਾ ਗਿਆ।" },
   "notif_downloaded": { "message": "ਡਾਊਨਲੋਡ" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "ਸੰਰਚਨਾ" },
   "link_viewChanges": { "message": "ਤਬਦੀਲੀਆਂ ਵੇਖੋ" },
   "state_on": { "message": "ਚਾਲੂ" },
-  "state_off": { "message": "ਬੰਦ" }
+  "state_off": { "message": "ਬੰਦ" },
+  "state_no": { "message": "ਨਹੀਂ" }
 }

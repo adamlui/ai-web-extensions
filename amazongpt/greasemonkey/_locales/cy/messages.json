@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Add a Store to Amazon Store" },
   "menuLabel_proxyAPImode": { "message": "Modd API Dirprwy" },
+  "menuLabel_preferred": { "message": "Ffefrir" },
   "menuLabel_autoFocusChatbar": { "message": "Bar Sgwrs Awtomatig - Ffocws" },
   "menuLabel_whenStreaming": { "message": "wrth ffrydio" },
   "menuLabel_background": { "message": "Cefndir" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Awto" },
   "menuLabel_about": { "message": "Gwybodaeth" },
   "menuLabel_settings": { "message": "Gosodiadau" },
+  "menuLabel_random": { "message": "Ar hap" },
+  "menuLabel_saved": { "message": "Cadwyd" },
   "componentLabel_used": { "message": "defnyddio" },
   "about_author": { "message": "Awdur" },
   "about_and": { "message": "a" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Côd" },
   "tooltip_generatingAudio": { "message": "Cynhyrchu sain" },
   "helptip_proxyAPImode": { "message": "Defnyddio API Proxy ar gyfer mynediad dim login i AI" },
+  "helptip_preferredAPI": { "message": "API i'w ddefnyddio wrth gael atebion yn y modd Dirprwy" },
   "helptip_streamingMode": { "message": "Derbyn atebion mewn llif testun parhaus" },
   "helptip_autoFocusChatbar": { "message": "Bar sgwrsio sy'n canolbwyntio'n awtomatig pryd bynnag y mae'n ymddangos" },
   "helptip_autoScroll": { "message": "Ymatebion sgrolio awtomatig wrth iddynt gynhyrchu yn y Modd Ffrydio" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Cais" },
   "alert_switchingOn": { "message": "troi ymlaen" },
   "alert_switchingOff": { "message": "diffodd" },
+  "alert_selectingDiff": { "message": "dewis arall" },
   "alert_generated": { "message": "Cynhyrchwyd" },
   "notif_copiedToClipboard": { "message": "Wedi'i gopïo i'r clipfwrdd" },
   "notif_downloaded": { "message": "Wedi llwytho i lawr" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "rhisgl coed" },
   "link_viewChanges": { "message": "Gweld newidiadau" },
   "state_on": { "message": "Ymlaen" },
-  "state_off": { "message": "Wedi'i ddiffodd" }
+  "state_off": { "message": "Wedi'i ddiffodd" },
+  "state_no": { "message": "Na" }
 }

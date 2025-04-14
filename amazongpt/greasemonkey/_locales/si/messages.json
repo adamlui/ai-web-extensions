@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "ඇමසන් සාප්පු සවාරි සඳහා AI එක් කරයි" },
   "menuLabel_proxyAPImode": { "message": "ප් ‍ රොක්සි API ප් ‍ රකාරය" },
+  "menuLabel_preferred": { "message": "කැමති" },
   "menuLabel_autoFocusChatbar": { "message": "ස්වයංක් ‍ රීය නාභිගත සංවාද තීරුව" },
   "menuLabel_whenStreaming": { "message": "ප් ‍ රවාහනය කරන විට" },
   "menuLabel_background": { "message": "පසුබිම" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "ස්වයංක්‍රීය" },
   "menuLabel_about": { "message": "සම්බන්ධව" },
   "menuLabel_settings": { "message": "සැකසුම්" },
+  "menuLabel_random": { "message": "අහබු ලෙස" },
+  "menuLabel_saved": { "message": "ඉතිරි කරන ලදී" },
   "componentLabel_used": { "message": "භාවිතය:" },
   "about_author": { "message": "කතෘ" },
   "about_and": { "message": "සහ" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "කේතය" },
   "tooltip_generatingAudio": { "message": "ශ් ‍ රව් ‍ ය ජනනය කරමින්" },
   "helptip_proxyAPImode": { "message": "AI වෙත ලොගින් නොවන ප්රවේශය සඳහා ප්රොක්සි API භාවිතා කරයි" },
+  "helptip_preferredAPI": { "message": "ප් ‍ රොක්සි ප් ‍ රකාරයෙන් පිළිතුරු ලබා ගැනීමේදී භාවිතා කළ යුතු API" },
   "helptip_streamingMode": { "message": "අඛණ්ඩ පෙළ ප් ‍ රවාහයක පිළිතුරු ලබා ගන්න" },
   "helptip_autoFocusChatbar": { "message": "ස්වයංක් රීය කේන්ද් රීය චැට් තීරුව එය දිස්වන සෑම අවස්ථාවකම" },
   "helptip_autoScroll": { "message": "ප් ‍ රවාහ ප් ‍ රකාරයෙන් උත්පාදනය කරන විට ස්වයංක් ‍ රීය-ස්ක් ‍ රෝල් ප් ‍ රතිචාර" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "උත්සහ කරන්න" },
   "alert_switchingOn": { "message": "ක් ‍ රියාත්මක වෙමින්" },
   "alert_switchingOff": { "message": "ක් ‍ රියා විරහිත කරමින්" },
+  "alert_selectingDiff": { "message": "වෙනස් එකක් තෝරා ගැනීම" },
   "alert_generated": { "message": "ජනනය කරන ලදි" },
   "notif_copiedToClipboard": { "message": "@ info" },
   "notif_downloaded": { "message": "බාගත කර ඇත" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "සංවාදය" },
   "link_viewChanges": { "message": "වෙනස්කම් බලන්න" },
   "state_on": { "message": "ක්‍රියාත්මකයි" },
-  "state_off": { "message": "Property_BAR_NewPrefs_App_BAR_" }
+  "state_off": { "message": "Property_BAR_NewPrefs_App_BAR_" },
+  "state_no": { "message": "නැත " }
 }

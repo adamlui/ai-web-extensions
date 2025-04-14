@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Fèin-ghnìomhach Fòcas Chatbar" },
   "menuLabel_whenStreaming": { "message": "nuair a tha thu a' sruthadh" },
   "menuLabel_proxyAPImode": { "message": "Modh API Proxy" },
+  "menuLabel_preferred": { "message": "An roghainn as fheàrr leat" },
   "menuLabel_show": { "message": "Seall" },
   "menuLabel_relatedQueries": { "message": "Ceistean co-cheangailte" },
   "menuLabel_require": { "message": "Feum" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Fèin-ghnìomhach" },
   "menuLabel_about": { "message": "Mu dheidhinn" },
   "menuLabel_settings": { "message": "Roghainnean" },
+  "menuLabel_random": { "message": "Air thuaiream" },
+  "menuLabel_saved": { "message": "Air a shàbhaladh" },
   "componentLabel_used": { "message": "air a chleachdadh" },
   "about_author": { "message": "Ùghdar" },
   "about_and": { "message": "agus" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "A 'gineadh na fuaime" },
   "tooltip_sendRelatedQuery": { "message": "Cuir ceist co-cheangailte" },
   "helptip_proxyAPImode": { "message": "A' cleachdadh API Proxy airson faighinn gu AI gun logadh a-steach" },
+  "helptip_preferredAPI": { "message": "API ri chleachdadh nuair a gheibh thu freagairtean ann am Modh Proxy" },
   "helptip_streamingMode": { "message": "Faighinn freagairtean ann an sruth leantainneach de teacsa" },
   "helptip_autoGetAnswers": { "message": "Fèin-ghnìomhach cuir ceistean gu GoogleGPT nuair a bhios tu a' cleachdadh motair rannsachaidh" },
   "helptip_autoSummarizeResults": { "message": "Thoir geàrr - chunntas air duilleag nan toraidhean rannsachaidh gu fèin - obrachail" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Feuch" },
   "alert_switchingOn": { "message": "a' tionndadh air" },
   "alert_switchingOff": { "message": "a' tionndadh dheth" },
+  "alert_selectingDiff": { "message": "roghainn eile" },
   "alert_generated": { "message": "Air a ghineadh" },
   "notif_copiedToClipboard": { "message": "Chaidh a chopaigeadh dhan stòr-bhòrd" },
   "notif_downloaded": { "message": "Air a luchdadh a-nuas" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Roinn Freagairtean" },
   "prefix_exit": { "message": "Fàg" },
   "state_on": { "message": "Air" },
-  "state_off": { "message": "Dheth" }
+  "state_off": { "message": "Dheth" },
+  "state_no": { "message": "Chan eil" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Bætir ChatGPT svörum við Brave Search hliðarstiku (keyrð af GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API hamur" },
+  "menuLabel_preferred": { "message": "Æskilegt" },
   "menuLabel_autoGetAnswers": { "message": "Sjálfvirk svör" },
   "menuLabel_autoSummarizeResults": { "message": "Sjálfvirk samantekt niðurstaðna" },
   "menuLabel_autoFocusChatbar": { "message": "Spjallslá með sjálfvirkum fókus" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Sjálfvirkt" },
   "menuLabel_about": { "message": "Um" },
   "menuLabel_settings": { "message": "Stillingar" },
+  "menuLabel_random": { "message": "Tilviljunarkenndur" },
+  "menuLabel_saved": { "message": "Vistuð" },
   "componentLabel_used": { "message": "Notað" },
   "about_author": { "message": "Author" },
   "about_and": { "message": "og" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Bý til hljóð" },
   "tooltip_sendRelatedQuery": { "message": "Senda tengda fyrirspurn" },
   "helptip_proxyAPImode": { "message": "Notar Proxy API fyrir aðgang án innskráningar að AI" },
+  "helptip_preferredAPI": { "message": "API til að nota þegar svör eru fengin í milliþjónsham" },
   "helptip_streamingMode": { "message": "Fáðu svör í samfelldu textastreymi" },
   "helptip_autoGetAnswers": { "message": "Senda sjálfvirkt fyrirspurnir til BraveGPT þegar leitarvél er notuð" },
   "helptip_autoSummarizeResults": { "message": "Taka sjálfkrafa saman leitarniðurstöðusíðu" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Prófa" },
   "alert_switchingOn": { "message": "að kveikja á" },
   "alert_switchingOff": { "message": "slökkt" },
+  "alert_selectingDiff": { "message": "að velja annað" },
   "alert_generated": { "message": "Búið til" },
   "notif_copiedToClipboard": { "message": "Slóð afrituð á klemmuspjaldið" },
   "notif_downloaded": { "message": "Skjal sótt" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Svar" },
   "prefix_exit": { "message": "Hætta" },
   "state_on": { "message": "Á" },
-  "state_off": { "message": "Óvirkt" }
+  "state_off": { "message": "Óvirkt" },
+  "state_no": { "message": "Nei" }
 }

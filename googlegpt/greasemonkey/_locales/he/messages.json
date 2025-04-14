@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "פוקוס אוטומטי של סרגל הצ'אט" },
   "menuLabel_whenStreaming": { "message": "בזמן סטרימינג" },
   "menuLabel_proxyAPImode": { "message": "מצב API של שרת Proxy" },
+  "menuLabel_preferred": { "message": "מועדף" },
   "menuLabel_show": { "message": "הצג" },
   "menuLabel_relatedQueries": { "message": "שאילתות קשורות" },
   "menuLabel_require": { "message": "חובה" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "אוטומטי" },
   "menuLabel_about": { "message": "אודות" },
   "menuLabel_settings": { "message": "הגדרות" },
+  "menuLabel_random": { "message": "אקראי" },
+  "menuLabel_saved": { "message": "נשמר" },
   "componentLabel_used": { "message": "מומש" },
   "about_author": { "message": "מחבר" },
   "about_and": { "message": "ו" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "יוצר אודיו" },
   "tooltip_sendRelatedQuery": { "message": "שלח שאילתה קשורה" },
   "helptip_proxyAPImode": { "message": "משתמש ב - Proxy API לגישה ללא כניסה ל - AI" },
+  "helptip_preferredAPI": { "message": "API לשימוש בעת קבלת תשובות במצב Proxy" },
   "helptip_streamingMode": { "message": "קבלת תשובות בזרם טקסט רציף" },
   "helptip_autoGetAnswers": { "message": "שליחה אוטומטית של שאילתות ל - GoogleGPT בעת שימוש במנוע חיפוש" },
   "helptip_autoSummarizeResults": { "message": "סיכום אוטומטי של דף תוצאות החיפוש" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "נסה" },
   "alert_switchingOn": { "message": "הפעלה" },
   "alert_switchingOff": { "message": "הפסקת פעולה" },
+  "alert_selectingDiff": { "message": "בחירה באפשרות אחרת" },
   "alert_generated": { "message": "שנוצר" },
   "notif_copiedToClipboard": { "message": "קוד הועתק ללוח" },
   "notif_downloaded": { "message": "הורדה" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "שתפי משוב" },
   "prefix_exit": { "message": "יציאה" },
   "state_on": { "message": "פועל" },
-  "state_off": { "message": "כבוי" }
+  "state_off": { "message": "כבוי" },
+  "state_no": { "message": "לא" }
 }

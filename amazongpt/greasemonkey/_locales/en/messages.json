@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Adds AI to Amazon shopping" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
+  "menuLabel_preferred": { "message": "Preferred" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "when streaming" },
   "menuLabel_background": { "message": "Background" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "About" },
   "menuLabel_settings": { "message": "Settings" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Saved" },
   "componentLabel_used": { "message": "used" },
   "about_author": { "message": "Author" },
   "about_and": { "message": "&" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Code" },
   "tooltip_generatingAudio": { "message": "Generating audio" },
   "helptip_proxyAPImode": { "message": "Uses a Proxy API for no-login access to AI" },
+  "helptip_preferredAPI": { "message": "API to use when getting answers in Proxy Mode" },
   "helptip_streamingMode": { "message": "Receive replies in a continuous text stream" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar whenever it appears" },
   "helptip_autoScroll": { "message": "Auto-scroll responses as they generate in Streaming Mode" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Try" },
   "alert_switchingOn": { "message": "switching on" },
   "alert_switchingOff": { "message": "switching off" },
+  "alert_selectingDiff": { "message": "selecting a different" },
   "alert_generated": { "message": "Generated" },
   "notif_copiedToClipboard": { "message": "Copied to clipboard" },
   "notif_downloaded": { "message": "downloaded" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "chat" },
   "link_viewChanges": { "message": "View changes" },
   "state_on": { "message": "On" },
-  "state_off": { "message": "Off" }
+  "state_off": { "message": "Off" },
+  "state_no": { "message": "No" }
 }

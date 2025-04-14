@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "オートフォーカスチャットバー" },
   "menuLabel_whenStreaming": { "message": "ストリーミング時" },
   "menuLabel_proxyAPImode": { "message": "プロキシ API モード" },
+  "menuLabel_preferred": { "message": "推奨" },
   "menuLabel_show": { "message": "表示" },
   "menuLabel_relatedQueries": { "message": "関連するクエリ" },
   "menuLabel_require": { "message": "必須" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "自動" },
   "menuLabel_about": { "message": "詳細" },
   "menuLabel_settings": { "message": "設定" },
+  "menuLabel_random": { "message": "ランダム" },
+  "menuLabel_saved": { "message": "セーブ" },
   "componentLabel_used": { "message": "使用済み" },
   "about_author": { "message": "作成者" },
   "about_and": { "message": "と" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "オーディオを生成しています" },
   "tooltip_sendRelatedQuery": { "message": "関連するクエリを送信" },
   "helptip_proxyAPImode": { "message": "AI へのノーログインアクセスにプロキシ API を使用" },
+  "helptip_preferredAPI": { "message": "プロキシモードで回答を取得するときに使用するAPI" },
   "helptip_streamingMode": { "message": "連続したテキストストリームで返信を受け取る" },
   "helptip_autoGetAnswers": { "message": "検索エンジンを使用しているときに GoogleGPT にクエリを自動送信する" },
   "helptip_autoSummarizeResults": { "message": "検索結果ページを自動的に要約する" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "試行" },
   "alert_switchingOn": { "message": "スイッチを入れる" },
   "alert_switchingOff": { "message": "スイッチをオフにする" },
+  "alert_selectingDiff": { "message": "別のものを選択する" },
   "alert_generated": { "message": "生成画像" },
   "notif_copiedToClipboard": { "message": "クリップボードにコピー" },
   "notif_downloaded": { "message": "ダウンロード済み" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "フィードバックを送る" },
   "prefix_exit": { "message": "終了" },
   "state_on": { "message": "オン" },
-  "state_off": { "message": "オフ" }
+  "state_off": { "message": "オフ" },
+  "state_no": { "message": "いいえ" }
 }

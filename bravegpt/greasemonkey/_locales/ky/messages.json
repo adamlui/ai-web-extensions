@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Кошуу ChatGPT Brave Издөө капталында жооп (GPT-4o менен иштейт!)" },
   "menuLabel_proxyAPImode": { "message": "Прокси API режими" },
+  "menuLabel_preferred": { "message": "Сүйүктүү" },
   "menuLabel_autoGetAnswers": { "message": "Жоопторду автоматтык түрдө алуу" },
   "menuLabel_autoSummarizeResults": { "message": "Undo-type" },
   "menuLabel_autoFocusChatbar": { "message": "Undo-type" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Авто" },
   "menuLabel_about": { "message": "Апплет жөнүндө" },
   "menuLabel_settings": { "message": "Чычканды ырастоо" },
+  "menuLabel_random": { "message": "Кокустан" },
+  "menuLabel_saved": { "message": "Сакталды" },
   "componentLabel_used": { "message": "колдонулган" },
   "about_author": { "message": "Автору:" },
   "about_and": { "message": "Ал эми" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Аудиону түзүү" },
   "tooltip_sendRelatedQuery": { "message": "Тиешелүү сурам жөнөтүү" },
   "helptip_proxyAPImode": { "message": "AIге логинсиз кирүү үчүн прокси API колдонот" },
+  "helptip_preferredAPI": { "message": "API прокси режиминде жооп алууда колдонулат" },
   "helptip_streamingMode": { "message": "Жоопторду үзгүлтүксүз текст агымында кабыл алуу" },
   "helptip_autoGetAnswers": { "message": "Издөө тутумун колдонууда BraveGPTге автоматтык түрдө суроо жөнөтүү" },
   "helptip_autoSummarizeResults": { "message": "Издөө натыйжалары баракчасын автоматтык түрдө жыйынтыктоо" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Аракет" },
   "alert_switchingOn": { "message": "которулуп жатат" },
   "alert_switchingOff": { "message": "өчүрүү" },
+  "alert_selectingDiff": { "message": "башка тандоо" },
   "alert_generated": { "message": "Түзүлдү" },
   "notif_copiedToClipboard": { "message": "Алмашуу буферине көчүрүлдү" },
   "notif_downloaded": { "message": "Жүктөөлөр" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Пикир" },
   "prefix_exit": { "message": "Чыгуу" },
   "state_on": { "message": "БАР" },
-  "state_off": { "message": "Өчүрүү" }
+  "state_off": { "message": "Өчүрүү" },
+  "state_no": { "message": "Жок" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Додава вештачка интелигенција во купувањето на Амазон" },
   "menuLabel_proxyAPImode": { "message": "Режим на прокси API" },
+  "menuLabel_preferred": { "message": "Претпочитано" },
   "menuLabel_autoFocusChatbar": { "message": "Лента за разговор за автоматско фокусирање" },
   "menuLabel_whenStreaming": { "message": "при преносот" },
   "menuLabel_background": { "message": "Контекст" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Автоматски" },
   "menuLabel_about": { "message": "За" },
   "menuLabel_settings": { "message": "Поставки" },
+  "menuLabel_random": { "message": "По случаен избор" },
+  "menuLabel_saved": { "message": "Вовлекување" },
   "componentLabel_used": { "message": "- користен:" },
   "about_author": { "message": "Автор" },
   "about_and": { "message": "и" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Генерирање аудио" },
   "helptip_proxyAPImode": { "message": "Користи Proxy API за пристап без најава до AI" },
+  "helptip_preferredAPI": { "message": "API за користење при добивање одговори во режим на прокси" },
   "helptip_streamingMode": { "message": "Добијте одговори во континуиран текстуален поток" },
   "helptip_autoFocusChatbar": { "message": "Лента за разговор за автоматско фокусирање кога и да се појави" },
   "helptip_autoScroll": { "message": "Автоматско лизгање на одговорите додека се генерираат во режимот за стриминг" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Обиди се" },
   "alert_switchingOn": { "message": "вклучување" },
   "alert_switchingOff": { "message": "исклучување" },
+  "alert_selectingDiff": { "message": "избирање на друго" },
   "alert_generated": { "message": "Генерирано" },
   "notif_copiedToClipboard": { "message": "URL е копиран на таблата со исечоци" },
   "notif_downloaded": { "message": "Преземено" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Разговор" },
   "link_viewChanges": { "message": "Прикажи ги промените" },
   "state_on": { "message": "На" },
-  "state_off": { "message": "Исклучено" }
+  "state_off": { "message": "Исклучено" },
+  "state_no": { "message": "Не" }
 }

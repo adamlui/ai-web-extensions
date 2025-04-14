@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Menambah AI untuk membeli-belah di Amazon" },
   "menuLabel_proxyAPImode": { "message": "Mod api Proksi" },
+  "menuLabel_preferred": { "message": "projek penyelidika" },
   "menuLabel_autoFocusChatbar": { "message": "Bar Sembang Fokus Automatik" },
   "menuLabel_whenStreaming": { "message": "apabila penstriman" },
   "menuLabel_background": { "message": "Latar Belakang" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Tentang" },
   "menuLabel_settings": { "message": "Tetapan" },
+  "menuLabel_random": { "message": "Rawak" },
+  "menuLabel_saved": { "message": "Berjaya disimpan" },
   "componentLabel_used": { "message": "digunakan" },
   "about_author": { "message": "Author" },
   "about_and": { "message": "dan" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kod" },
   "tooltip_generatingAudio": { "message": "Menjana audio" },
   "helptip_proxyAPImode": { "message": "Menggunakan api Proksi untuk akses tanpa log masuk ke AI" },
+  "helptip_preferredAPI": { "message": "Api untuk digunakan apabila mendapat jawapan dalam Mod Proksi" },
   "helptip_streamingMode": { "message": "Terima balasan dalam strim teks berterusan" },
   "helptip_autoFocusChatbar": { "message": "Auto-fokus bar sembang apabila ia muncul" },
   "helptip_autoScroll": { "message": "Tatal automatik jawapan apabila ia dijana dalam Mod Penstriman" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Cubalah" },
   "alert_switchingOn": { "message": "dihidupkan" },
   "alert_switchingOff": { "message": "mematikan" },
+  "alert_selectingDiff": { "message": "memilih yang lain" },
   "alert_generated": { "message": "makluman" },
   "notif_copiedToClipboard": { "message": "Disalin ke papan klip" },
   "notif_downloaded": { "message": "Dimuat turun" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Per_bualan" },
   "link_viewChanges": { "message": "Lihat perubahan" },
   "state_on": { "message": "Hidup" },
-  "state_off": { "message": "Mati" }
+  "state_off": { "message": "Mati" },
+  "state_no": { "message": "No" }
 }

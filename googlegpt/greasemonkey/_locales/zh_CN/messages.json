@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "自动对焦聊天栏" },
   "menuLabel_whenStreaming": { "message": "流式传输时" },
   "menuLabel_proxyAPImode": { "message": "代理 API 模式" },
+  "menuLabel_preferred": { "message": "首选" },
   "menuLabel_show": { "message": "显示" },
   "menuLabel_relatedQueries": { "message": "相关查询" },
   "menuLabel_require": { "message": "需要" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "自动" },
   "menuLabel_about": { "message": "关于" },
   "menuLabel_settings": { "message": "设置" },
+  "menuLabel_random": { "message": "随机" },
+  "menuLabel_saved": { "message": "已保存" },
   "componentLabel_used": { "message": "已使用" },
   "about_author": { "message": "作者" },
   "about_and": { "message": "和" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "生成音頻" },
   "tooltip_sendRelatedQuery": { "message": "发送相关查询" },
   "helptip_proxyAPImode": { "message": "使用代理 API 无需登录即可访问 AI" },
+  "helptip_preferredAPI": { "message": "在代理模式下获取答案时使用的 API" },
   "helptip_streamingMode": { "message": "接收连续文本流中的回复" },
   "helptip_autoGetAnswers": { "message": "使用搜索引擎时自动向 GoogleGPT 发送查询" },
   "helptip_autoSummarizeResults": { "message": "自动汇总搜索结果页面" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "尝试" },
   "alert_switchingOn": { "message": "接通" },
   "alert_switchingOff": { "message": "断电" },
+  "alert_selectingDiff": { "message": "选择一个不同的" },
   "alert_generated": { "message": "已生成" },
   "notif_copiedToClipboard": { "message": "复制到剪贴板" },
   "notif_downloaded": { "message": "下载" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "分享反馈" },
   "prefix_exit": { "message": "退出" },
   "state_on": { "message": "开" },
-  "state_off": { "message": "关" }
+  "state_off": { "message": "关" },
+  "state_no": { "message": "个" }
 }

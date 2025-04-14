@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ajoute l'IA aux achats sur Amazon" },
   "menuLabel_proxyAPImode": { "message": "Mode API proxy" },
+  "menuLabel_preferred": { "message": "Préféré" },
   "menuLabel_autoFocusChatbar": { "message": "Barre de discussion autofocus" },
   "menuLabel_whenStreaming": { "message": "lors du streaming" },
   "menuLabel_background": { "message": "Contexte" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "À propos de" },
   "menuLabel_settings": { "message": "Paramètres" },
+  "menuLabel_random": { "message": "Aléatoire" },
+  "menuLabel_saved": { "message": "Enregistré" },
   "componentLabel_used": { "message": "occasion" },
   "about_author": { "message": "Auteur" },
   "about_and": { "message": "et" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Code" },
   "tooltip_generatingAudio": { "message": "Génération audio" },
   "helptip_proxyAPImode": { "message": "Utilise une API proxy pour un accès sans connexion à l'IA" },
+  "helptip_preferredAPI": { "message": "API à utiliser lors de l'obtention de réponses en mode proxy" },
   "helptip_streamingMode": { "message": "Recevoir des réponses dans un flux de texte continu" },
   "helptip_autoFocusChatbar": { "message": "Barre de discussion à mise au point automatique chaque fois qu'elle apparaît" },
   "helptip_autoScroll": { "message": "Faire défiler automatiquement les réponses au fur et à mesure qu'elles sont générées en mode streaming" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Essayer" },
   "alert_switchingOn": { "message": "Mise en marche" },
   "alert_switchingOff": { "message": "Arrêt" },
+  "alert_selectingDiff": { "message": "sélectionner un autre" },
   "alert_generated": { "message": "Généré" },
   "notif_copiedToClipboard": { "message": "Copié dans le presse-papier" },
   "notif_downloaded": { "message": "téléchargés" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Conversation" },
   "link_viewChanges": { "message": "Afficher les modifications" },
   "state_on": { "message": "Activé" },
-  "state_off": { "message": "Arrêt" }
+  "state_off": { "message": "Arrêt" },
+  "state_no": { "message": "Non" }
 }

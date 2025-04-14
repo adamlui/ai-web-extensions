@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Adaugă răspunsuri ChatGPT la bara laterală DuckDuckGo (alimentat de GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Mod API proxy" },
+  "menuLabel_preferred": { "message": "Clasificare pe" },
   "menuLabel_autoGetAnswers": { "message": "Obținere automată răspunsuri" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-Summarize Results (Rezumare automată rezultate" },
   "menuLabel_autoFocusChatbar": { "message": "Bară de chat cu focalizare automată" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Despre" },
   "menuLabel_settings": { "message": "Setări" },
+  "menuLabel_random": { "message": "Aleator" },
+  "menuLabel_saved": { "message": "Salvat" },
   "componentLabel_used": { "message": "(kg)" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "şi" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Se generează sunetul" },
   "tooltip_sendRelatedQuery": { "message": "Trimitere interogare asociată" },
   "helptip_proxyAPImode": { "message": "Utilizează un API Proxy pentru acces fără conectare la AI" },
+  "helptip_preferredAPI": { "message": "API de utilizat atunci când primiți răspunsuri în modul Proxy" },
   "helptip_streamingMode": { "message": "Primiți răspunsuri într-un flux continuu de text" },
   "helptip_autoGetAnswers": { "message": "Trimiteți automat interogări către DuckDuckGPT atunci când utilizați motorul de căutare" },
   "helptip_autoSummarizeResults": { "message": "Rezumați automat pagina cu rezultatele căutării" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Încercați" },
   "alert_switchingOn": { "message": "PORNIREA" },
   "alert_switchingOff": { "message": "DECONECTAREA" },
+  "alert_selectingDiff": { "message": "selectarea unei alte" },
   "alert_generated": { "message": "Generat" },
   "notif_copiedToClipboard": { "message": "Copiat în clipboard" },
   "notif_downloaded": { "message": "Descărcat" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Trimite feedback" },
   "prefix_exit": { "message": "Ieșire" },
   "state_on": { "message": "pe" },
-  "state_off": { "message": "oprit" }
+  "state_off": { "message": "oprit" },
+  "state_no": { "message": "Nr." }
 }

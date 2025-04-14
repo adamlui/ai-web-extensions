@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Chatbar med autofokus" },
   "menuLabel_whenStreaming": { "message": "når du streamer" },
   "menuLabel_proxyAPImode": { "message": "Proxy API-tilstand" },
+  "menuLabel_preferred": { "message": "foretrukken" },
   "menuLabel_show": { "message": "Vis" },
   "menuLabel_relatedQueries": { "message": "Relaterede forespørgsler" },
   "menuLabel_require": { "message": "Kræv" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Om" },
   "menuLabel_settings": { "message": "Indstillinger" },
+  "menuLabel_random": { "message": "Tilfældig" },
+  "menuLabel_saved": { "message": "Gemt" },
   "componentLabel_used": { "message": "brugt" },
   "about_author": { "message": "Forfatter" },
   "about_and": { "message": "og" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Genererer lyd" },
   "tooltip_sendRelatedQuery": { "message": "Send relateret forespørgsel" },
   "helptip_proxyAPImode": { "message": "Bruger en proxy-API til nul-login-adgang til AI" },
+  "helptip_preferredAPI": { "message": "API, der skal bruges, når du får svar i proxy-tilstand" },
   "helptip_streamingMode": { "message": "Modtag svar i en kontinuerlig tekststrøm" },
   "helptip_autoGetAnswers": { "message": "Send automatisk forespørgsler til GoogleGPT, når du bruger en søgemaskine" },
   "helptip_autoSummarizeResults": { "message": "Opsummer søgeresultatsiden automatisk" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Prøv" },
   "alert_switchingOn": { "message": "SÅDAN TÆNDES DET" },
   "alert_switchingOff": { "message": "Slukning" },
+  "alert_selectingDiff": { "message": "vælge en anden" },
   "alert_generated": { "message": "Oprettet den" },
   "notif_copiedToClipboard": { "message": "Kopieret til udklipsholder" },
   "notif_downloaded": { "message": "downloadet" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Del din feedback" },
   "prefix_exit": { "message": "Afslut" },
   "state_on": { "message": "Til" },
-  "state_off": { "message": "Fra" }
+  "state_off": { "message": "Fra" },
+  "state_no": { "message": "Nej" }
 }

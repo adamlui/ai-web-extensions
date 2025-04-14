@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Amazon дүкөнгө AI кошот" },
   "menuLabel_proxyAPImode": { "message": "Прокси API режими" },
+  "menuLabel_preferred": { "message": "Сүйүктүү" },
   "menuLabel_autoFocusChatbar": { "message": "Undo-type" },
   "menuLabel_whenStreaming": { "message": "агым учурунда" },
   "menuLabel_background": { "message": "Фон тиби" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Авто" },
   "menuLabel_about": { "message": "Апплет жөнүндө" },
   "menuLabel_settings": { "message": "Чычканды ырастоо" },
+  "menuLabel_random": { "message": "Кокустан" },
+  "menuLabel_saved": { "message": "Сакталды" },
   "componentLabel_used": { "message": "колдонулган" },
   "about_author": { "message": "Автору:" },
   "about_and": { "message": "Ал эми" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Аудиону түзүү" },
   "helptip_proxyAPImode": { "message": "AIге логинсиз кирүү үчүн прокси API колдонот" },
+  "helptip_preferredAPI": { "message": "API прокси режиминде жооп алууда колдонулат" },
   "helptip_streamingMode": { "message": "Жоопторду үзгүлтүксүз текст агымында кабыл алуу" },
   "helptip_autoFocusChatbar": { "message": "Чат-бар пайда болгондо автоматтык түрдө фокустоо" },
   "helptip_autoScroll": { "message": "Агым режиминде пайда болгон жоопторду автоматтык түрдө жылдыруу" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Аракет" },
   "alert_switchingOn": { "message": "которулуп жатат" },
   "alert_switchingOff": { "message": "өчүрүү" },
+  "alert_selectingDiff": { "message": "башка тандоо" },
   "alert_generated": { "message": "Түзүлдү" },
   "notif_copiedToClipboard": { "message": "Алмашуу буферине көчүрүлдү" },
   "notif_downloaded": { "message": "Жүктөөлөр" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Escher Cat (SMS)" },
   "link_viewChanges": { "message": "Өзгөртүүлөрдү көрүү" },
   "state_on": { "message": "БАР" },
-  "state_off": { "message": "Өчүрүү" }
+  "state_off": { "message": "Өчүрүү" },
+  "state_no": { "message": "Жок" }
 }

@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Add AI à Amazon shopping" },
   "menuLabel_proxyAPImode": { "message": "Aɣewwaṛ n API Proxy" },
+  "menuLabel_preferred": { "message": "imsenyafen" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "asmi ara tessuffɣeḍ" },
   "menuLabel_background": { "message": "Agilal" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Awurman" },
   "menuLabel_about": { "message": "Talɣut ɣef" },
   "menuLabel_settings": { "message": "Iɣewwaren" },
+  "menuLabel_random": { "message": "[Agacuran]" },
+  "menuLabel_saved": { "message": "Yettwasekles." },
   "componentLabel_used": { "message": "yettwaseqdacen" },
   "about_author": { "message": "Ameskar" },
   "about_and": { "message": "akked" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Tangalt" },
   "tooltip_generatingAudio": { "message": "Asebded n taɣect" },
   "helptip_proxyAPImode": { "message": "Use ur proxy API for no-login access to AI" },
+  "helptip_preferredAPI": { "message": "Affiner la recherche pour proxy mode" },
   "helptip_streamingMode": { "message": "Awi tiririyin deg uzegrir n uḍris" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar melmi ara d-yeffeɣ" },
   "helptip_autoScroll": { "message": "Tags relatifs à \"Streaming Mode\"" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "ɛreḍ" },
   "alert_switchingOn": { "message": "asebded ɣef" },
   "alert_switchingOff": { "message": "asebded n tneqqiḍt" },
+  "alert_selectingDiff": { "message": "fren yiwen n umaynut" },
   "alert_generated": { "message": "Ittwasurew" },
   "notif_copiedToClipboard": { "message": "Aḍris yettwanɣel ɣef afus" },
   "notif_downloaded": { "message": "Yettwasider-d" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Adiwenni" },
   "link_viewChanges": { "message": "Wali ibeddilen" },
   "state_on": { "message": "Yermed" },
-  "state_off": { "message": "Yensa" }
+  "state_off": { "message": "Yensa" },
+  "state_no": { "message": "Uhu" }
 }

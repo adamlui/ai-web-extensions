@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Traka za razgovor s automatskim fokusiranjem" },
   "menuLabel_whenStreaming": { "message": "prilikom streaminga" },
   "menuLabel_proxyAPImode": { "message": "Proxy API način rada" },
+  "menuLabel_preferred": { "message": "Poželjno" },
   "menuLabel_show": { "message": "Prikaži" },
   "menuLabel_relatedQueries": { "message": "Povezani upiti" },
   "menuLabel_require": { "message": "Zadano" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "O nama" },
   "menuLabel_settings": { "message": "Postavke" },
+  "menuLabel_random": { "message": "Nasumično" },
+  "menuLabel_saved": { "message": "Spremljeno" },
   "componentLabel_used": { "message": "iskorišteno" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "i" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Generiranje zvuka" },
   "tooltip_sendRelatedQuery": { "message": "Pošaljite povezani upit" },
   "helptip_proxyAPImode": { "message": "Koristi proxy API za pristup umjetnoj inteligenciji bez prijave" },
+  "helptip_preferredAPI": { "message": "API koji se koristi za dobivanje odgovora u proxy načinu rada" },
   "helptip_streamingMode": { "message": "Primajte odgovore u kontinuiranom tekstualnom toku" },
   "helptip_autoGetAnswers": { "message": "Automatsko slanje upita na GoogleGPT kada se koristi tražilica" },
   "helptip_autoSummarizeResults": { "message": "Automatski sažmi stranicu s rezultatima pretraživanja" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Pokušaj" },
   "alert_switchingOn": { "message": "uključuje" },
   "alert_switchingOff": { "message": "Isključivanje" },
+  "alert_selectingDiff": { "message": "odabir drugog" },
   "alert_generated": { "message": "proizveden" },
   "notif_copiedToClipboard": { "message": "Kopirano" },
   "notif_downloaded": { "message": "skinut" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Podijeli komentar" },
   "prefix_exit": { "message": "Izlaz" },
   "state_on": { "message": "On (Uključeno)" },
-  "state_off": { "message": "Isključivanje" }
+  "state_off": { "message": "Isključivanje" },
+  "state_no": { "message": "serije" }
 }

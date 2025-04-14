@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Kwitaho Chatbar byikora" },
   "menuLabel_whenStreaming": { "message": "igihe utanga ibitekerezo byihuse" },
   "menuLabel_proxyAPImode": { "message": "Uburyo bwa Proxy API" },
+  "menuLabel_preferred": { "message": "< Uburemere UTSINDAGIY" },
   "menuLabel_show": { "message": "Kwerekana" },
   "menuLabel_relatedQueries": { "message": "Ibibazo Bihuye" },
   "menuLabel_require": { "message": "Gusaba" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Byikora" },
   "menuLabel_about": { "message": "Ibyerekeye" },
   "menuLabel_settings": { "message": "Gahunda" },
+  "menuLabel_random": { "message": "< Ijambo > < / Ijambo >" },
+  "menuLabel_saved": { "message": "Gupima" },
   "componentLabel_used": { "message": "byakoreshejwe" },
   "about_author": { "message": "Ibisobanuro" },
   "about_and": { "message": "&&" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Inyumvo" },
   "tooltip_sendRelatedQuery": { "message": "Ohereza ikibazo gihuye" },
   "helptip_proxyAPImode": { "message": "Koresha Proxy API kugirango winjire kuri AI utinjiye" },
+  "helptip_preferredAPI": { "message": "Kuri Gukoresha Ryari: in" },
   "helptip_streamingMode": { "message": "Akira ibisubizo mu murongo uhoraho w'inyandiko" },
   "helptip_autoGetAnswers": { "message": "Ohereza ibibazo kuri GoogleGPT mu buryo bwikora igihe ukoresha imashini ishyakisha" },
   "helptip_autoSummarizeResults": { "message": "Inshamake Shakisha Ibisubizo Ipaji" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Gerageza" },
   "alert_switchingOn": { "message": "kugenda kuri" },
   "alert_switchingOff": { "message": "guhindura kuri" },
+  "alert_selectingDiff": { "message": "hitamo ubundi buryo" },
   "alert_generated": { "message": "Gradient-editor-action" },
   "notif_copiedToClipboard": { "message": "Kuri Ububikokoporora" },
   "notif_downloaded": { "message": "Iyimura" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Tanga Ibyo utekereza" },
   "prefix_exit": { "message": "Gusohoka" },
   "state_on": { "message": "Birimo gukora" },
-  "state_off": { "message": "Bikureho" }
+  "state_off": { "message": "Bikureho" },
+  "state_no": { "message": "Oya" }
 }

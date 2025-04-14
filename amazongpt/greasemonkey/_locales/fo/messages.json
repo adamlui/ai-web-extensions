@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Til ber at keypa á Amazon" },
   "menuLabel_proxyAPImode": { "message": "Proxy API standi" },
+  "menuLabel_preferred": { "message": "Vælkomin" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "tá ið tað verður streymt" },
   "menuLabel_background": { "message": "Bakgrund" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Bilur" },
   "menuLabel_about": { "message": "Um" },
   "menuLabel_settings": { "message": "Stillingar" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Sparað" },
   "componentLabel_used": { "message": "brúkt" },
   "about_author": { "message": "Høvundur" },
   "about_and": { "message": "og" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Kota" },
   "tooltip_generatingAudio": { "message": "At skapa ljóð" },
   "helptip_proxyAPImode": { "message": "Brúka Proxy API til ikki-login atgongd til AI" },
+  "helptip_preferredAPI": { "message": "API at brúka, tá ið tú fært svar í Proxy mode" },
   "helptip_streamingMode": { "message": "Fáa svar í einum støðugum tekststrøm" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar, tá ið tað kemur" },
   "helptip_autoScroll": { "message": "Auto-scroll svar sum tey skapa í Streaming mode" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Royn" },
   "alert_switchingOn": { "message": "skift um" },
   "alert_switchingOff": { "message": "at venda sær" },
+  "alert_selectingDiff": { "message": "at velja ein annan" },
   "alert_generated": { "message": "Framleiðsla" },
   "notif_copiedToClipboard": { "message": "Avritað til klippborð" },
   "notif_downloaded": { "message": "niðurlagdur" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Samrøða" },
   "link_viewChanges": { "message": "Sí broytingar" },
   "state_on": { "message": "t" },
-  "state_off": { "message": "Av" }
+  "state_off": { "message": "Av" },
+  "state_no": { "message": "Nei" }
 }

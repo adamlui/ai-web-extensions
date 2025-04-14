@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "tá ið tað verður streymt" },
   "menuLabel_proxyAPImode": { "message": "Proxy API standi" },
+  "menuLabel_preferred": { "message": "Vælkomin" },
   "menuLabel_show": { "message": "Vís" },
   "menuLabel_relatedQueries": { "message": "Viðkomandi spurningar" },
   "menuLabel_require": { "message": "Kravið" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Bilur" },
   "menuLabel_about": { "message": "Um" },
   "menuLabel_settings": { "message": "Stillingar" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Sparað" },
   "componentLabel_used": { "message": "brúkt" },
   "about_author": { "message": "Høvundur" },
   "about_and": { "message": "og" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "At skapa ljóð" },
   "tooltip_sendRelatedQuery": { "message": "Send viðkomandi spurning" },
   "helptip_proxyAPImode": { "message": "Brúka Proxy API til ikki-login atgongd til AI" },
+  "helptip_preferredAPI": { "message": "API at brúka, tá ið tú fært svar í Proxy mode" },
   "helptip_streamingMode": { "message": "Fáa svar í einum støðugum tekststrøm" },
   "helptip_autoGetAnswers": { "message": "Auto-send spurningar til GoogleGPT, tá ið søgan verður brúkt" },
   "helptip_autoSummarizeResults": { "message": "Summar av leitarúrslitunum síðu sjálvvirkandi" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Royn" },
   "alert_switchingOn": { "message": "skift um" },
   "alert_switchingOff": { "message": "at venda sær" },
+  "alert_selectingDiff": { "message": "at velja ein annan" },
   "alert_generated": { "message": "Framleiðsla" },
   "notif_copiedToClipboard": { "message": "Avritað til klippborð" },
   "notif_downloaded": { "message": "niðurlagdur" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Deil afturmelding" },
   "prefix_exit": { "message": "Útgangur" },
   "state_on": { "message": "t" },
-  "state_off": { "message": "Av" }
+  "state_off": { "message": "Av" },
+  "state_no": { "message": "Nei" }
 }

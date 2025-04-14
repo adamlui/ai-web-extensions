@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Добавя изкуствен интелект към пазаруването в Amazon" },
   "menuLabel_proxyAPImode": { "message": "Режим на прокси API" },
+  "menuLabel_preferred": { "message": "Предпочитано" },
   "menuLabel_autoFocusChatbar": { "message": "Чат лента за автоматично фокусиране" },
   "menuLabel_whenStreaming": { "message": "при стрийминг" },
   "menuLabel_background": { "message": "Предистория" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Автоматичен" },
   "menuLabel_about": { "message": "Относно" },
   "menuLabel_settings": { "message": "Настройки" },
+  "menuLabel_random": { "message": "Случаен" },
+  "menuLabel_saved": { "message": "Запазено" },
   "componentLabel_used": { "message": "Тази" },
   "about_author": { "message": "Автор" },
   "about_and": { "message": "и" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Генериране на аудио" },
   "helptip_proxyAPImode": { "message": "Използва приложен програмен интерфейс (API) за прокси сървър (Proxy API) за достъп без влизане до изку" },
+  "helptip_preferredAPI": { "message": "API, който да се използва при получаване на отговори в режим на прокси сървър" },
   "helptip_streamingMode": { "message": "Получаване на отговори в непрекъснат текстов поток" },
   "helptip_autoFocusChatbar": { "message": "Чатбар за автоматично фокусиране, когато се появи" },
   "helptip_autoScroll": { "message": "Автоматично превъртане на отговорите, тъй като те генерират в режим на поточно предаване" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Нов опит" },
   "alert_switchingOn": { "message": "включване" },
   "alert_switchingOff": { "message": "Изключване" },
+  "alert_selectingDiff": { "message": "избиране на различен" },
   "alert_generated": { "message": "генериран" },
   "notif_copiedToClipboard": { "message": "Копирани в клипборда" },
   "notif_downloaded": { "message": "изтеглено" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Преглед на разговора" },
   "link_viewChanges": { "message": "Вижте Промените" },
   "state_on": { "message": "на" },
-  "state_off": { "message": "Изкл" }
+  "state_off": { "message": "Изкл" },
+  "state_no": { "message": "Не" }
 }

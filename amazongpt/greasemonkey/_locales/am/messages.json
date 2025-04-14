@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "በአማዞን ግዢ ላይ AI ን ያክሉ" },
   "menuLabel_proxyAPImode": { "message": "Proxy ኤፒአይ ሁነታ" },
+  "menuLabel_preferred": { "message": "ተመራጭ" },
   "menuLabel_autoFocusChatbar": { "message": "ራስ-ፎኩስ ቻትባር" },
   "menuLabel_whenStreaming": { "message": "ዥረት ጊዜ" },
   "menuLabel_background": { "message": "ሁኔታ፦" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "በራሱ" },
   "menuLabel_about": { "message": "ስለ" },
   "menuLabel_settings": { "message": "ቅንብሮች" },
+  "menuLabel_random": { "message": "በዘፈቀደ" },
+  "menuLabel_saved": { "message": "አስቀምጧል፡፡" },
   "componentLabel_used": { "message": "ጥቅም ላይ ውሏል" },
   "about_author": { "message": "ደራሲ" },
   "about_and": { "message": "እና" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "ኮድ" },
   "tooltip_generatingAudio": { "message": "ኦዲዮ ማመንጨት" },
   "helptip_proxyAPImode": { "message": "ለ AI ምንም ምዝገባ መዳረሻ ፕሮክሲ ኤፒአይ ይጠቀማል" },
+  "helptip_preferredAPI": { "message": "ኤፒአይ በ Proxy ሁነታ ውስጥ መልሶችን ሲያገኙ ለመጠቀም" },
   "helptip_streamingMode": { "message": "በተከታታይ የጽሑፍ ዥረት ውስጥ ምላሾችን ይቀበሉ" },
   "helptip_autoFocusChatbar": { "message": "ራስ-ፎኩስ ቻትባር በሚታይበት ጊዜ ሁሉ" },
   "helptip_autoScroll": { "message": "ራስ-ሽክርክሪት ምላሾች በዥረት ሁነታ ውስጥ ሲመነጩ" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "abyssinia" },
   "alert_switchingOn": { "message": "ላይ መቀየር" },
   "alert_switchingOff": { "message": "ማጥፋት" },
+  "alert_selectingDiff": { "message": "የተለየ መምረጥ" },
   "alert_generated": { "message": "<g id=\"1\">የመነጨ</g> " },
   "notif_copiedToClipboard": { "message": "ወደ ክሊፕቦርድ ይቀዳጃል" },
   "notif_downloaded": { "message": "የወረዱ" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Escher Cat (SMS)" },
   "link_viewChanges": { "message": "ለውጦችን ይመልከቱ" },
   "state_on": { "message": "በላይ" },
-  "state_off": { "message": "አጥፋ" }
+  "state_off": { "message": "አጥፋ" },
+  "state_no": { "message": "አይ" }
 }

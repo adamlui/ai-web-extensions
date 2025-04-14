@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Adaugă AI la cumpărăturile Amazon" },
   "menuLabel_proxyAPImode": { "message": "Mod API proxy" },
+  "menuLabel_preferred": { "message": "Clasificare pe" },
   "menuLabel_autoFocusChatbar": { "message": "Bară de chat cu focalizare automată" },
   "menuLabel_whenStreaming": { "message": "când redați în flux" },
   "menuLabel_background": { "message": "Istoric" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Automat" },
   "menuLabel_about": { "message": "Despre" },
   "menuLabel_settings": { "message": "Setări" },
+  "menuLabel_random": { "message": "Aleator" },
+  "menuLabel_saved": { "message": "Salvat" },
   "componentLabel_used": { "message": "(kg)" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "şi" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Cod" },
   "tooltip_generatingAudio": { "message": "Se generează sunetul" },
   "helptip_proxyAPImode": { "message": "Utilizează un API Proxy pentru acces fără conectare la AI" },
+  "helptip_preferredAPI": { "message": "API de utilizat atunci când primiți răspunsuri în modul Proxy" },
   "helptip_streamingMode": { "message": "Primiți răspunsuri într-un flux continuu de text" },
   "helptip_autoFocusChatbar": { "message": "Bara de chat cu focalizare automată ori de câte ori apare" },
   "helptip_autoScroll": { "message": "Derulare automată a răspunsurilor pe măsură ce acestea generează în modul de redare în flux" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Încercați" },
   "alert_switchingOn": { "message": "PORNIREA" },
   "alert_switchingOff": { "message": "DECONECTAREA" },
+  "alert_selectingDiff": { "message": "selectarea unei alte" },
   "alert_generated": { "message": "Generat" },
   "notif_copiedToClipboard": { "message": "Copiat în clipboard" },
   "notif_downloaded": { "message": "Descărcat" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Conversație" },
   "link_viewChanges": { "message": "Vizualizează modificările" },
   "state_on": { "message": "pe" },
-  "state_off": { "message": "oprit" }
+  "state_off": { "message": "oprit" },
+  "state_no": { "message": "Nr." }
 }

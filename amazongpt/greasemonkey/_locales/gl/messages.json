@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Engade Intelixencia Artificial ás compras de Amazon" },
   "menuLabel_proxyAPImode": { "message": "Modo API de proxy" },
+  "menuLabel_preferred": { "message": "Preferida" },
   "menuLabel_autoFocusChatbar": { "message": "Barra de conversa de foco automático" },
   "menuLabel_whenStreaming": { "message": "ao streaming" },
   "menuLabel_background": { "message": "Fondo" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Acerca de" },
   "menuLabel_settings": { "message": "Configuración" },
+  "menuLabel_random": { "message": "Aleatorio" },
+  "menuLabel_saved": { "message": "Gardado" },
   "componentLabel_used": { "message": "Empregado@ label partition flags" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "y" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Código" },
   "tooltip_generatingAudio": { "message": "A xerar o audio" },
   "helptip_proxyAPImode": { "message": "Usa unha API Proxy para o acceso sen login á IA" },
+  "helptip_preferredAPI": { "message": "API a usar ao obter respostas no Modo Proxy" },
   "helptip_streamingMode": { "message": "Recibir respostas nun fluxo de texto continuo" },
   "helptip_autoFocusChatbar": { "message": "Barra de chat de enfoque automático sempre que apareza" },
   "helptip_autoScroll": { "message": "Auto-scroll respostas a medida que xeran en Streaming Mode" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Ensaio" },
   "alert_switchingOn": { "message": "encendido encendido" },
   "alert_switchingOff": { "message": "apagón de conmutación" },
+  "alert_selectingDiff": { "message": "seleccionando un diferente" },
   "alert_generated": { "message": "Xerado" },
   "notif_copiedToClipboard": { "message": "Copiado ao  portapapeis" },
   "notif_downloaded": { "message": "Recibido" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Mostrar a conversa" },
   "link_viewChanges": { "message": "Ver cambios" },
   "state_on": { "message": "Activado" },
-  "state_off": { "message": "Apagado" }
+  "state_off": { "message": "Apagado" },
+  "state_no": { "message": "Non" }
 }

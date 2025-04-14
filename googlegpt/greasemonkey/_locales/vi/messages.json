@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Tự động lấy nét Chatbar" },
   "menuLabel_whenStreaming": { "message": "khi phát trực tuyến" },
   "menuLabel_proxyAPImode": { "message": "Chế độ API proxy" },
+  "menuLabel_preferred": { "message": "Được ưu tiên hơn" },
   "menuLabel_show": { "message": "Hiển thị" },
   "menuLabel_relatedQueries": { "message": "Truy vấn liên quan" },
   "menuLabel_require": { "message": "Cần thiết" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Tự động" },
   "menuLabel_about": { "message": "Giới thiệu" },
   "menuLabel_settings": { "message": "Cài đặt" },
+  "menuLabel_random": { "message": "Ngẫu Nhiên" },
+  "menuLabel_saved": { "message": "Đã lưu" },
   "componentLabel_used": { "message": "đã sử dụng" },
   "about_author": { "message": "Tác giả" },
   "about_and": { "message": "và" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Đang tạo âm thanh" },
   "tooltip_sendRelatedQuery": { "message": "Gửi truy vấn liên quan" },
   "helptip_proxyAPImode": { "message": "Sử dụng API Proxy để truy cập AI mà không cần đăng nhập" },
+  "helptip_preferredAPI": { "message": "API để sử dụng khi nhận câu trả lời trong Chế độ proxy" },
   "helptip_streamingMode": { "message": "Nhận trả lời trong luồng văn bản liên tục" },
   "helptip_autoGetAnswers": { "message": "Tự động gửi truy vấn đến GoogleGPT khi sử dụng công cụ tìm kiếm" },
   "helptip_autoSummarizeResults": { "message": "Tự động tóm tắt trang kết quả tìm kiếm" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Thử" },
   "alert_switchingOn": { "message": "Mở máy" },
   "alert_switchingOff": { "message": "Tắt" },
+  "alert_selectingDiff": { "message": "chọn một lựa chọn khác" },
   "alert_generated": { "message": "Đã tạo" },
   "notif_copiedToClipboard": { "message": "Đã sao chép vào bộ nhớ đệm" },
   "notif_downloaded": { "message": "Đã tải xuống" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Chia sẻ phản hồi của bạn" },
   "prefix_exit": { "message": "Thoát" },
   "state_on": { "message": "Bật" },
-  "state_off": { "message": "Tắt" }
+  "state_off": { "message": "Tắt" },
+  "state_no": { "message": "Không" }
 }

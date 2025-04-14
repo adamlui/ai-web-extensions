@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Додає штучний інтелект до покупок на Amazon" },
   "menuLabel_proxyAPImode": { "message": "Режим API проксі-сервера" },
+  "menuLabel_preferred": { "message": "Улюблене" },
   "menuLabel_autoFocusChatbar": { "message": "Панель чату з автофокусом" },
   "menuLabel_whenStreaming": { "message": "під час потокової передачі" },
   "menuLabel_background": { "message": "Фонові проби" },
@@ -11,6 +12,8 @@
   "menuLabel_auto": { "message": "Автоматичний режим" },
   "menuLabel_about": { "message": "Про нас" },
   "menuLabel_settings": { "message": "Налаштування" },
+  "menuLabel_random": { "message": "Випадково" },
+  "menuLabel_saved": { "message": "Збережено" },
   "componentLabel_used": { "message": "використано" },
   "about_author": { "message": "Автор" },
   "about_and": { "message": "та" },
@@ -44,6 +47,7 @@
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Створення аудіо" },
   "helptip_proxyAPImode": { "message": "Використовує проксі API для доступу без входу до AI" },
+  "helptip_preferredAPI": { "message": "API для використання при отриманні відповідей у режимі проксі-сервера" },
   "helptip_streamingMode": { "message": "Отримання відповідей у безперервному текстовому потоці" },
   "helptip_autoFocusChatbar": { "message": "Панель чату з автофокусом, коли вона з 'являється" },
   "helptip_autoScroll": { "message": "Автоматичне прокручування відповідей, коли вони генеруються в режимі потокової передачі" },
@@ -80,6 +84,7 @@
   "alert_try": { "message": "Спробуйте" },
   "alert_switchingOn": { "message": "Увімкнення" },
   "alert_switchingOff": { "message": "Вимкнення" },
+  "alert_selectingDiff": { "message": "вибираючи інший" },
   "alert_generated": { "message": "Згенеровано" },
   "notif_copiedToClipboard": { "message": "скопійовано" },
   "notif_downloaded": { "message": "завантажено" },
@@ -96,5 +101,6 @@
   "btnLabel_convo": { "message": "Розмова" },
   "link_viewChanges": { "message": "Переглянути зміни" },
   "state_on": { "message": "На" },
-  "state_off": { "message": "Вимкнуто" }
+  "state_off": { "message": "Вимкнуто" },
+  "state_no": { "message": "Ні" }
 }

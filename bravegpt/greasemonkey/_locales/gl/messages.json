@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Agrega ChatGPT responde a Brave Search sidebar (¡alimentado por GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Modo API de proxy" },
+  "menuLabel_preferred": { "message": "Preferida" },
   "menuLabel_autoGetAnswers": { "message": "Obter respostas automáticas" },
   "menuLabel_autoSummarizeResults": { "message": "Resumir automaticamente os resultados" },
   "menuLabel_autoFocusChatbar": { "message": "Barra de conversa de foco automático" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "Acerca de" },
   "menuLabel_settings": { "message": "Configuración" },
+  "menuLabel_random": { "message": "Aleatorio" },
+  "menuLabel_saved": { "message": "Gardado" },
   "componentLabel_used": { "message": "Empregado@ label partition flags" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "y" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "A xerar o audio" },
   "tooltip_sendRelatedQuery": { "message": "Enviar consulta relacionada" },
   "helptip_proxyAPImode": { "message": "Usa unha API Proxy para o acceso sen login á IA" },
+  "helptip_preferredAPI": { "message": "API a usar ao obter respostas no Modo Proxy" },
   "helptip_streamingMode": { "message": "Recibir respostas nun fluxo de texto continuo" },
   "helptip_autoGetAnswers": { "message": "Autoenviar consultas a BraveGPT ao usar motor de busca" },
   "helptip_autoSummarizeResults": { "message": "Resumir automaticamente a páxina de resultados da busca" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Ensaio" },
   "alert_switchingOn": { "message": "encendido encendido" },
   "alert_switchingOff": { "message": "apagón de conmutación" },
+  "alert_selectingDiff": { "message": "seleccionando un diferente" },
   "alert_generated": { "message": "Xerado" },
   "notif_copiedToClipboard": { "message": "Copiado ao  portapapeis" },
   "notif_downloaded": { "message": "Recibido" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Comentarios" },
   "prefix_exit": { "message": "Sair" },
   "state_on": { "message": "Activado" },
-  "state_off": { "message": "Apagado" }
+  "state_off": { "message": "Apagado" },
+  "state_no": { "message": "Non" }
 }

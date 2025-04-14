@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "DuckDuckGo පැති තීරුවට ChatGPT පිළිතුරු එක් කරයි (GPT-4o මගින් බල ගැන්වේ!)" },
   "menuLabel_proxyAPImode": { "message": "ප් ‍ රොක්සි API ප් ‍ රකාරය" },
+  "menuLabel_preferred": { "message": "කැමති" },
   "menuLabel_autoGetAnswers": { "message": "ස්වයංක් ‍ රීය පිළිතුරු ලබා ගන්න" },
   "menuLabel_autoSummarizeResults": { "message": "ප් ‍ රතිඵල ස්වයංක් ‍ රීයව සාරාංශ කරන්න" },
   "menuLabel_autoFocusChatbar": { "message": "ස්වයංක් ‍ රීය නාභිගත සංවාද තීරුව" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "ස්වයංක්‍රීය" },
   "menuLabel_about": { "message": "සම්බන්ධව" },
   "menuLabel_settings": { "message": "සැකසුම්" },
+  "menuLabel_random": { "message": "අහබු ලෙස" },
+  "menuLabel_saved": { "message": "ඉතිරි කරන ලදී" },
   "componentLabel_used": { "message": "භාවිතය:" },
   "about_author": { "message": "කතෘ" },
   "about_and": { "message": "සහ" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "ශ් ‍ රව් ‍ ය ජනනය කරමින්" },
   "tooltip_sendRelatedQuery": { "message": "අදාළ විමසුම යවන්න" },
   "helptip_proxyAPImode": { "message": "AI වෙත ලොගින් නොවන ප්රවේශය සඳහා ප්රොක්සි API භාවිතා කරයි" },
+  "helptip_preferredAPI": { "message": "ප් ‍ රොක්සි ප් ‍ රකාරයෙන් පිළිතුරු ලබා ගැනීමේදී භාවිතා කළ යුතු API" },
   "helptip_streamingMode": { "message": "අඛණ්ඩ පෙළ ප් ‍ රවාහයක පිළිතුරු ලබා ගන්න" },
   "helptip_autoGetAnswers": { "message": "සෙවුම් යන්ත්රය භාවිතා කරන විට DuckDuckGPT වෙත ස්වයංක්රීයව යැවීම විමසුම්" },
   "helptip_autoSummarizeResults": { "message": "සෙවුම් ප් ‍ රතිඵල පිටුව ස්වයංක් ‍ රීයව සාරාංශ කරන්න" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "උත්සහ කරන්න" },
   "alert_switchingOn": { "message": "ක් ‍ රියාත්මක වෙමින්" },
   "alert_switchingOff": { "message": "ක් ‍ රියා විරහිත කරමින්" },
+  "alert_selectingDiff": { "message": "වෙනස් එකක් තෝරා ගැනීම" },
   "alert_generated": { "message": "ජනනය කරන ලදි" },
   "notif_copiedToClipboard": { "message": "@ info" },
   "notif_downloaded": { "message": "බාගත කර ඇත" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "ප්‍රතිපෝෂණය බෙදා ගන්න" },
   "prefix_exit": { "message": "පිට වන්න" },
   "state_on": { "message": "ක්‍රියාත්මකයි" },
-  "state_off": { "message": "Property_BAR_NewPrefs_App_BAR_" }
+  "state_off": { "message": "Property_BAR_NewPrefs_App_BAR_" },
+  "state_no": { "message": "නැත " }
 }

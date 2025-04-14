@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Agregá una foto_Promocioná Brave Search Sidebar (Powered by GPT-4o)" },
   "menuLabel_proxyAPImode": { "message": "Propiedad Api Moda" },
+  "menuLabel_preferred": { "message": "Preferibel" },
   "menuLabel_autoGetAnswers": { "message": "Solucion Auto-Get" },
   "menuLabel_autoSummarizeResults": { "message": "Resultado Autoevaluacion" },
   "menuLabel_autoFocusChatbar": { "message": "Auto Trader Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Outo" },
   "menuLabel_about": { "message": "About About" },
   "menuLabel_settings": { "message": "Establesimentunan" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Salbashon" },
   "componentLabel_used": { "message": "usa" },
   "about_author": { "message": "Autor" },
   "about_and": { "message": "i" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Generacion Audio" },
   "tooltip_sendRelatedQuery": { "message": "Envoyer un message a Konan" },
   "helptip_proxyAPImode": { "message": "Usa un Proxy API pa acceso sin login na AI" },
+  "helptip_preferredAPI": { "message": "Aplicacion Para Rastrear Un Celular En Modo Proxy" },
   "helptip_streamingMode": { "message": "Resibí respuesta den un strobo di teksto kontinuo" },
   "helptip_autoGetAnswers": { "message": "Manda e pregunta na BraveGPT automáticamente ora bo ta usa e zoekmotor" },
   "helptip_autoSummarizeResults": { "message": "Resumiendo Automáticamente la Página de Resultado" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Purba" },
   "alert_switchingOn": { "message": "kambio riba" },
   "alert_switchingOff": { "message": "kaká Kaká" },
+  "alert_selectingDiff": { "message": "eligiendo un Diferente" },
   "alert_generated": { "message": "Generá" },
   "notif_copiedToClipboard": { "message": "Copiando a Clipboard" },
   "notif_downloaded": { "message": "deskargá" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Feedback" },
   "prefix_exit": { "message": "Salida" },
   "state_on": { "message": "Riba" },
-  "state_off": { "message": "For di" }
+  "state_off": { "message": "For di" },
+  "state_no": { "message": "No" }
 }

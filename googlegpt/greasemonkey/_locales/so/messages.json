@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "marka qulqulaya" },
   "menuLabel_proxyAPImode": { "message": "Qaabka API Proxy" },
+  "menuLabel_preferred": { "message": "La Doorbiday" },
   "menuLabel_show": { "message": "bandhig" },
   "menuLabel_relatedQueries": { "message": "Su 'aalaha la xiriira" },
   "menuLabel_require": { "message": "Baahida" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Baabuur" },
   "menuLabel_about": { "message": "Jabuuti" },
   "menuLabel_settings": { "message": "Settings" },
+  "menuLabel_random": { "message": "Wareegto" },
+  "menuLabel_saved": { "message": "Waa La kaydiyey" },
   "componentLabel_used": { "message": "la isticmaalay" },
   "about_author": { "message": "Qoraa" },
   "about_and": { "message": "iyo" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Soo saarida maqalka" },
   "tooltip_sendRelatedQuery": { "message": "U dir su 'aalaha la xiriira" },
   "helptip_proxyAPImode": { "message": "Isticmaal API Proxy oo loogu talagalay helitaanka no-login ee AI" },
+  "helptip_preferredAPI": { "message": "API si ay u isticmaalaan marka aad hesho jawaabo in Proxy Mode" },
   "helptip_streamingMode": { "message": "Hel jawaabaha qulqulka qoraalka joogtada ah" },
   "helptip_autoGetAnswers": { "message": "Su 'aalaha otomaatiga ah ee GoogleGPT markaad isticmaaleyso mashiinka raadinta" },
   "helptip_autoSummarizeResults": { "message": "Si otomaatig ah u soo koob bogga natiijooyinka raadinta" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Isku day" },
   "alert_switchingOn": { "message": "badiyadka to badiyadka to" },
   "alert_switchingOff": { "message": "badiyadka to badar" },
+  "alert_selectingDiff": { "message": "dooro mid ka duwan" },
   "alert_generated": { "message": "La soo saaray" },
   "notif_copiedToClipboard": { "message": "Nuqul ka mid ah clipboard" },
   "notif_downloaded": { "message": "La soo dejiyay" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Nala wadaag war-celintaada" },
   "prefix_exit": { "message": "Bixid" },
   "state_on": { "message": "Shid" },
-  "state_off": { "message": "Dami" }
+  "state_off": { "message": "Dami" },
+  "state_no": { "message": "Maya" }
 }

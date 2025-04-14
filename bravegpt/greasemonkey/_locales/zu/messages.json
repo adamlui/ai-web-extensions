@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "Ifaka izimpendulo ze-ChatGPT kubha eseceleni Yosesho Olunesibindi (inikwe amandla yi-GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Imodi ye-API Yombambeli" },
+  "menuLabel_preferred": { "message": "Okuthandwayo" },
   "menuLabel_autoGetAnswers": { "message": "Thola Izimpendulo Ngokuzenzakalelayo" },
   "menuLabel_autoSummarizeResults": { "message": "Sebenzisa Imiphumela Ngokuzenzakalelayo" },
   "menuLabel_autoFocusChatbar": { "message": "I-Auto-Focus Chatbar" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Ukuzenzakalela" },
   "menuLabel_about": { "message": "Mayelana" },
   "menuLabel_settings": { "message": "Sebenzisa uhlelo X" },
+  "menuLabel_random": { "message": "Okungahleliwe" },
+  "menuLabel_saved": { "message": "Okugciniwe" },
   "componentLabel_used": { "message": "esetshenzisiwe" },
   "about_author": { "message": "Ukhetho" },
   "about_and": { "message": "kanye" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Ikhiqiza umsindo" },
   "tooltip_sendRelatedQuery": { "message": "Thumela umbuzo ohlobene" },
   "helptip_proxyAPImode": { "message": "Isebenzisa i-Proxy API ukuze ingangeni ku-AI" },
+  "helptip_preferredAPI": { "message": "I-API ongayisebenzisa lapho uthola izimpendulo ku-Proxy Mode" },
   "helptip_streamingMode": { "message": "Thola izimpendulo kusakazo lombhalo oluqhubekayo" },
   "helptip_autoGetAnswers": { "message": "Thumela imibuzo ngokuzenzakalelayo ku-BraveGPT uma usebenzisa injini yokusesha" },
   "helptip_autoSummarizeResults": { "message": "Fingqa ngokuzenzakalelayo ikhasi lemiphumela yokusesha" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "uzame" },
   "alert_switchingOn": { "message": "ukuvula" },
   "alert_switchingOff": { "message": "ukuvala" },
+  "alert_selectingDiff": { "message": "ukukhetha okuhlukile" },
   "alert_generated": { "message": "Kukhiqizwe" },
   "notif_copiedToClipboard": { "message": "Ikopishiwe ebhodini lokunamathisela" },
   "notif_downloaded": { "message": "idawunilodiwe" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "Skill" },
   "prefix_exit": { "message": "Phuma" },
   "state_on": { "message": "ku" },
-  "state_off": { "message": "Kuvaliwe" }
+  "state_off": { "message": "Kuvaliwe" },
+  "state_no": { "message": "Cha" }
 }

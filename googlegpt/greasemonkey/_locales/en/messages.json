@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "when streaming" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
+  "menuLabel_preferred": { "message": "Preferred" },
   "menuLabel_show": { "message": "Show" },
   "menuLabel_relatedQueries": { "message": "Related Queries" },
   "menuLabel_require": { "message": "Require" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Auto" },
   "menuLabel_about": { "message": "About" },
   "menuLabel_settings": { "message": "Settings" },
+  "menuLabel_random": { "message": "Random" },
+  "menuLabel_saved": { "message": "Saved" },
   "componentLabel_used": { "message": "used" },
   "about_author": { "message": "Author" },
   "about_and": { "message": "&" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Generating audio" },
   "tooltip_sendRelatedQuery": { "message": "Send related query" },
   "helptip_proxyAPImode": { "message": "Uses a Proxy API for no-login access to AI" },
+  "helptip_preferredAPI": { "message": "API to use when getting answers in Proxy Mode" },
   "helptip_streamingMode": { "message": "Receive replies in a continuous text stream" },
   "helptip_autoGetAnswers": { "message": "Auto-send queries to GoogleGPT when using search engine" },
   "helptip_autoSummarizeResults": { "message": "Automatically summarize search results page" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Try" },
   "alert_switchingOn": { "message": "switching on" },
   "alert_switchingOff": { "message": "switching off" },
+  "alert_selectingDiff": { "message": "selecting a different" },
   "alert_generated": { "message": "Generated" },
   "notif_copiedToClipboard": { "message": "Copied to clipboard" },
   "notif_downloaded": { "message": "downloaded" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Share Feedback" },
   "prefix_exit": { "message": "Exit" },
   "state_on": { "message": "On" },
-  "state_off": { "message": "Off" }
+  "state_off": { "message": "Off" },
+  "state_no": { "message": "No" }
 }

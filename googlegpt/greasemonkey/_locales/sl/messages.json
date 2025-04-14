@@ -5,6 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Vrstica za klepet s samodejnim ostrenjem" },
   "menuLabel_whenStreaming": { "message": "pri pretočnem predvajanju" },
   "menuLabel_proxyAPImode": { "message": "Proxy API način" },
+  "menuLabel_preferred": { "message": "Prednostno" },
   "menuLabel_show": { "message": "Prikaži" },
   "menuLabel_relatedQueries": { "message": "Povezane poizvedbe" },
   "menuLabel_require": { "message": "Zahtevaj" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "Samodejno" },
   "menuLabel_about": { "message": "Vizitka" },
   "menuLabel_settings": { "message": "Nastavitve" },
+  "menuLabel_random": { "message": "Treba je" },
+  "menuLabel_saved": { "message": "Shranjeno" },
   "componentLabel_used": { "message": "rabljeno" },
   "about_author": { "message": "Avtor" },
   "about_and": { "message": "in" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "Ustvarjanje zvoka" },
   "tooltip_sendRelatedQuery": { "message": "Pošlji povezano poizvedbo" },
   "helptip_proxyAPImode": { "message": "Uporablja proxy API za dostop brez prijave do umetne inteligence" },
+  "helptip_preferredAPI": { "message": "API za uporabo pri pridobivanju odgovorov v načinu proxy" },
   "helptip_streamingMode": { "message": "Prejmite odgovore v neprekinjenem toku besedila" },
   "helptip_autoGetAnswers": { "message": "Samodejno pošiljanje poizvedb v GoogleGPT pri uporabi iskalnika" },
   "helptip_autoSummarizeResults": { "message": "Samodejno povzemite stran z rezultati iskanja" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "Poskusite" },
   "alert_switchingOn": { "message": "Vklop" },
   "alert_switchingOff": { "message": "Izklop" },
+  "alert_selectingDiff": { "message": "izbira drugega" },
   "alert_generated": { "message": "Ustvarjeno" },
   "notif_copiedToClipboard": { "message": "Kopirano v odložišče" },
   "notif_downloaded": { "message": "Preneseno" },
@@ -126,5 +131,6 @@
   "link_shareFeedback": { "message": "Delite povratne informacije" },
   "prefix_exit": { "message": "Izhod" },
   "state_on": { "message": "Vklopljeno" },
-  "state_off": { "message": "izklopljeno" }
+  "state_off": { "message": "izklopljeno" },
+  "state_no": { "message": "Ne" }
 }

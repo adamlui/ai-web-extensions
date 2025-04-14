@@ -1,6 +1,7 @@
 {
   "appDesc": { "message": "បន្ថែមចម្លើយ ChatGPT ទៅរបារចំហៀងស្វែងរកក្លាហាន (ដំណើរការដោយ GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "ម៉ូដប្រូកស៊ី API" },
+  "menuLabel_preferred": { "message": "Size Policy" },
   "menuLabel_autoGetAnswers": { "message": "ចម្លើយស្វ័យប្រវត្តិកម្ម" },
   "menuLabel_autoSummarizeResults": { "message": "សង្ខេបលទ្ធផលដោយស្វ័យប្រវត្តិ" },
   "menuLabel_autoFocusChatbar": { "message": "របារជជែកផ្តោតអារម្មណ៍ដោយស្វ័យប្រវត្តិ" },
@@ -24,6 +25,8 @@
   "menuLabel_auto": { "message": "អូតូ" },
   "menuLabel_about": { "message": "អំពី" },
   "menuLabel_settings": { "message": "ការកំណត់មុខងារ" },
+  "menuLabel_random": { "message": "ដោយចៃដន្យ " },
+  "menuLabel_saved": { "message": "បានរក្សារទុក" },
   "componentLabel_used": { "message": "បានប្រើ" },
   "about_author": { "message": "អ្នកបញ្ចូលព័ត៌មាន" },
   "about_and": { "message": "និង" },
@@ -62,6 +65,7 @@
   "tooltip_generatingAudio": { "message": "កំពុង បង្កើត អូឌីយ៉ូ" },
   "tooltip_sendRelatedQuery": { "message": "ផ្ញើសំណួរដែលពាក់ព័ន្ធ" },
   "helptip_proxyAPImode": { "message": "ប្រើ API Proxy សម្រាប់ការចូលដោយគ្មានការចូលទៅកាន់ AI" },
+  "helptip_preferredAPI": { "message": "API ដែលត្រូវប្រើពេលទទួលបានចម្លើយនៅក្នុងម៉ូដប្រូកស៊ី" },
   "helptip_streamingMode": { "message": "ទទួលការឆ្លើយតបនៅក្នុងស្ទ្រីមអត្ថបទជាបន្តបន្ទាប់" },
   "helptip_autoGetAnswers": { "message": "ផ្ញើសំណួរដោយស្វ័យប្រវត្តិទៅ BraveGPT នៅពេលប្រើម៉ាស៊ីនស្វែងរក" },
   "helptip_autoSummarizeResults": { "message": "សង្ខេបទំព័រលទ្ធផលស្វែងរកដោយស្វ័យប្រវត្តិ" },
@@ -107,6 +111,7 @@
   "alert_try": { "message": "សាកល្បង" },
   "alert_switchingOn": { "message": "កំពុងបើក" },
   "alert_switchingOff": { "message": "បិទ" },
+  "alert_selectingDiff": { "message": "ការជ្រើសរើសផ្សេងគ្នា" },
   "alert_generated": { "message": "បានបង្កើត ។ " },
   "notif_copiedToClipboard": { "message": "បាន​ចម្លងទៅ​ក្ដារតម្បៀតខ្ទាស់" },
   "notif_downloaded": { "message": "បានទាញយក" },
@@ -125,5 +130,6 @@
   "link_shareFeedback": { "message": "មតិត្រឡប់" },
   "prefix_exit": { "message": "ច្រកចេញ" },
   "state_on": { "message": "ស្តីពី" },
-  "state_off": { "message": "បិទ" }
+  "state_off": { "message": "បិទ" },
+  "state_no": { "message": "មិនដឹង" }
 }
