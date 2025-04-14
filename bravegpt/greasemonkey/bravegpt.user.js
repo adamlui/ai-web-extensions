@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.14
+// @version               2025.4.14.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1612,7 +1612,7 @@
 
     // Define MENU functions
 
-    const menus = {
+    const hoverMenus = {
 
         createAppend(menuType) {
             this[menuType].div = dom.create.elem('div', { id: `${app.slug}-${menuType}-menu`,
@@ -1640,8 +1640,8 @@
                 else if (itemLabel == app.msgs.menuLabel_bottom) toggle.anchorMode()
 
                 // Close/update menu
-                if (appDiv.offsetTop != prevOffsetTop) menus.hide('pin') // since app moved
-                menus.pin.update()
+                if (appDiv.offsetTop != prevOffsetTop) hoverMenus.hide('pin') // since app moved
+                hoverMenus.pin.update()
             },
 
             update() {
@@ -1675,33 +1675,33 @@
                      || i == 2 && !config.stickySidebar && !config.anchored // 'Sidebar' item + no mode on
                      || i == 3 && config.anchored) // 'Bottom' item + Anchor mode on
                             pinMenuItems[i].append(pinMenuIcons[pinMenuIcons.length -1]) // append right checkmark
-                    pinMenuItems[i].onclick = menus.pin.clickHandler
+                    pinMenuItems[i].onclick = hoverMenus.pin.clickHandler
                     this.ul.append(pinMenuItems[i])
                 }
             },
 
             toggle(event) { // visibility
-                clearTimeout(menus.pin.hideTimeout) // in case rapid re-enter before ran
-                if (!menus.pin.div) menus.createAppend('pin')
-                if (menus.pin.status == 'hidden' && (
-                    event.type == 'mouseenter' && event.target != menus.pin.div // Pin btn hovered-on
+                clearTimeout(hoverMenus.pin.hideTimeout) // in case rapid re-enter before ran
+                if (!hoverMenus.pin.div) hoverMenus.createAppend('pin')
+                if (hoverMenus.pin.status == 'hidden' && (
+                    event.type == 'mouseenter' && event.target != hoverMenus.pin.div // Pin btn hovered-on
                     || event.type == 'click' ) // Pin btn clicked
                 ) { // show menu
-                    menus.pin.div.style.display = '' // for rects calc
+                    hoverMenus.pin.div.style.display = '' // for rects calc
                     const pinBtn = appDiv.querySelector(`#${app.slug}-pin-btn`)
                     const rects = {
                         appDiv: appDiv.getBoundingClientRect(), pinBtn: pinBtn.getBoundingClientRect(),
-                        pinMenu: menus.pin.div.getBoundingClientRect()
+                        pinMenu: hoverMenus.pin.div.getBoundingClientRect()
                     }
                     const appIsHigh = rects.pinBtn.top < ( rects.pinMenu.height +15 )
-                    menus.pin.div.style.top = `${ rects.pinBtn.top - rects.appDiv.top +(
+                    hoverMenus.pin.div.style.top = `${ rects.pinBtn.top - rects.appDiv.top +(
                         appIsHigh ? /* point down */ 29 : /* point up */ - rects.pinMenu.height -13 )}px`
-                    if (!menus.pin.rightPos)
-                        menus.pin.rightPos = rects.appDiv.right - event.clientX - menus.pin.div.offsetWidth/2
-                    Object.assign(menus.pin.div.style, { right: `${menus.pin.rightPos}px`, opacity: 1 })
-                    menus.pin.status = 'visible'
+                    if (!hoverMenus.pin.rightPos)
+                        hoverMenus.pin.rightPos = rects.appDiv.right - event.clientX - hoverMenus.pin.div.offsetWidth/2
+                    Object.assign(hoverMenus.pin.div.style, { right: `${hoverMenus.pin.rightPos}px`, opacity: 1 })
+                    hoverMenus.pin.status = 'visible'
                 } else if (/click|mouseleave/.test(event.type)) // Pin menu/btn hovered-off or btn clicked, hide menu
-                    return menus.pin.hideTimeout = setTimeout(() => menus.hide('pin'), 55)
+                    return hoverMenus.pin.hideTimeout = setTimeout(() => hoverMenus.hide('pin'), 55)
             }
         }
     }
@@ -2747,7 +2747,7 @@
                     else if (btn.id.endsWith('settings-btn')) btn.onclick = () => modals.open('settings')
                     else if (btn.id.endsWith('font-size-btn')) btn.onclick = () => fontSizeSlider.toggle()
                     else if (btn.id.endsWith('pin-btn'))
-                        btn.onmouseenter = btn.onmouseleave = btn.onclick = menus.pin.toggle
+                        btn.onmouseenter = btn.onmouseleave = btn.onclick = hoverMenus.pin.toggle
                     else if (btn.id.endsWith('wsb-btn'))
                         btn.onclick = () => { toggle.sidebar('wider') ; tooltip.update('wsb') }
                     else if (btn.id.endsWith('arrows-btn')) btn.onclick = () => toggle.expandedMode()
@@ -3190,7 +3190,7 @@
                 const anchorToggle = document.querySelector('[id*=anchor] input')
                 if (anchorToggle.checked != config.anchored) modals.settings.toggle.switch(anchorToggle)
             }
-            menus.pin.rightPos = null
+            hoverMenus.pin.rightPos = null
             notify(`${app.msgs.mode_anchor} ${toolbarMenu.state.words[+config.anchored]}`,
                 null, sidebarModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
         },
@@ -4026,7 +4026,7 @@
                         standbyBtn.prepend(icons[btnType == 'query' ? 'send' : 'summarize'].create())
                         show.reply[`${btnType}BtnClickHandler`] = function() {
                             show.reply.userInteracted = true ; show.reply.chatbarFocused = false
-                            menus.pin.rightPos = null
+                            hoverMenus.pin.rightPos = null
                             msgChain.push({ role: 'user', content:
                                 btnType == 'summarize' ? prompts.create('summarizeResults')
                                                        : new URL(location.href).searchParams.get('q') })
