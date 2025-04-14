@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.12.7
+// @version                2025.4.14
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -546,8 +546,9 @@
         notif.prepend(notifIcon)
 
         // Append notif type icon
-        const iconStyles = 'width: 28px ; height: 28px ; position: relative ; top: 3.5px ; margin-left: 11px ;',
-              mode = Object.keys(settings.controls).find(key => settings.controls[key].label.includes(msg.trim()))
+        const iconStyles = 'width: 28px ; height: 28px ; position: relative ; top: 3.5px ; margin-left: 11px ;'
+        const mode = Object.keys(settings.controls).find(
+            key => msg.toLowerCase().includes(settings.controls[key].label.trim().toLowerCase()))
         if (mode && !/(?:pre|suf)fix/.test(mode)) {
             const modeIcon = icons[settings.controls[mode].icon].create()
             modeIcon.style.cssText = iconStyles

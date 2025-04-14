@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.14.1
+// @version                2025.4.14.2
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -727,8 +727,9 @@
         notif.prepend(notifIcon)
 
         // Append notif type icon
-        const iconStyles = 'width: 28px ; height: 28px ; position: relative ; top: 3.5px ; margin-left: 11px ;',
-              mode = Object.keys(settings.controls).find(key => settings.controls[key].label.includes(msg.trim()))
+        const iconStyles = 'width: 28px ; height: 28px ; position: relative ; top: 3.5px ; margin-left: 11px ;'
+        const mode = Object.keys(settings.controls).find(
+            key => msg.toLowerCase().includes(settings.controls[key].label.trim().toLowerCase()))
         if (mode && !/(?:pre|suf)fix/.test(mode)) {
             const modeIcon = icons[settings.controls[mode].icon].create()
             modeIcon.style.cssText = iconStyles

@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.14.2
+// @version               2025.4.14.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -728,8 +728,9 @@
         notif.prepend(notifIcon)
 
         // Append notif type icon
-        const iconStyles = 'width: 28px ; height: 28px ; position: relative ; top: 3px ; margin-left: 11px ;',
-              mode = Object.keys(settings.controls).find(key => settings.controls[key].label.includes(msg.trim()))
+        const iconStyles = 'width: 28px ; height: 28px ; position: relative ; top: 3px ; margin-left: 11px ;'
+        const mode = Object.keys(settings.controls).find(
+            key => msg.toLowerCase().includes(settings.controls[key].label.trim().toLowerCase()))
         if (mode && !/(?:pre|suf)fix/.test(mode)) {
             const modeIcon = icons[settings.controls[mode].icon].create()
             modeIcon.style.cssText = iconStyles
