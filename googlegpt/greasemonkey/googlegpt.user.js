@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.14.2
+// @version                  2025.4.14.3
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -465,6 +465,7 @@
         menuLabel_autoFocusChatbar: 'Auto-Focus Chatbar',
         menuLabel_whenStreaming: 'when streaming',
         menuLabel_proxyAPImode: 'Proxy API Mode',
+        menuLabel_preferred: 'Preferred',
         menuLabel_show: 'Show',
         menuLabel_relatedQueries: 'Related Queries',
         menuLabel_require: 'Require',
@@ -484,6 +485,8 @@
         menuLabel_auto: 'Auto',
         menuLabel_about: 'About',
         menuLabel_settings: 'Settings',
+        menuLabel_random: 'Random',
+        menuLabel_saved: 'Saved',
         componentLabel_used: 'used',
         about_author: 'Author',
         about_and: '&',
@@ -522,6 +525,7 @@
         tooltip_generatingAudio: 'Generating audio',
         tooltip_sendRelatedQuery: 'Send related query',
         helptip_proxyAPImode: 'Uses a Proxy API for no-login access to AI',
+        helptip_preferredAPI: 'API to use when getting answers in Proxy Mode',
         helptip_streamingMode: 'Receive replies in a continuous text stream',
         helptip_autoGetAnswers: 'Auto-send queries to GoogleGPT when using search engine',
         helptip_autoSummarizeResults: 'Automatically summarize search results page',
@@ -567,6 +571,7 @@
         alert_try: 'Try',
         alert_switchingOn: 'switching on',
         alert_switchingOff: 'switching off',
+        alert_selectingDiff: 'selecting a different',
         alert_generated: 'Generated',
         notif_copiedToClipboard: 'Copied to clipboard',
         notif_downloaded: 'downloaded',
@@ -585,7 +590,8 @@
         link_shareFeedback: 'Share Feedback',
         prefix_exit: 'Exit',
         state_on: 'On',
-        state_off: 'Off'
+        state_off: 'Off',
+        state_no: 'No'
     }
 
     // Init API data
@@ -717,6 +723,9 @@
         proxyAPIenabled: { type: 'toggle', icon: 'sunglasses', defaultVal: false,
             label: app.msgs.menuLabel_proxyAPImode,
             helptip: app.msgs.helptip_proxyAPImode },
+        preferredAPI: { type: 'modal', icon: 'lightningBolt', defaultVal: false,
+            label: `${app.msgs.menuLabel_preferred} API`,
+            helptip: app.msgs.helptip_preferredAPI },
         streamingDisabled: { type: 'toggle', icon: 'signalStream', defaultVal: false,
             label: app.msgs.mode_streaming,
             helptip: app.msgs.helptip_streamingMode },
@@ -789,8 +798,9 @@
         tooManyRequests:  `${app.msgs.alert_tooManyRequests}.`,
         parseFailed:      `${app.msgs.alert_parseFailed}.`,
         proxyNotWorking:  `${app.msgs.mode_proxy} ${app.msgs.alert_notWorking}.`,
-        openAInotWorking: `OpenAI API ${app.msgs.alert_notWorking}.`,
+        apiNotWorking:    `API ${app.msgs.alert_notWorking}.`,
         suggestProxy:     `${app.msgs.alert_try} ${app.msgs.alert_switchingOn} ${app.msgs.mode_proxy}`,
+        suggestDiffAPI:   `${app.msgs.alert_try} ${app.msgs.alert_selectingDiff} API`,
         suggestOpenAI:    `${app.msgs.alert_try} ${app.msgs.alert_switchingOff} ${app.msgs.mode_proxy}`
     }})
 
@@ -879,12 +889,18 @@
                      + ` ${app.msgs.alert_switchingOn}`
                      + ` ${app.msgs.mode_proxy})`
 
+            // Hyperlink app.msgs.alert_suggestDiffAPI
+            if (msg.includes(app.alerts.suggestDiffAPI)) {
+                const selectPhrase = `${app.msgs.alert_selectingDiff} API`
+                msg = msg.replace(selectPhrase, `<a class="alert-link suggest-api" href="#">${selectPhrase}</a>`)
+            }
+
             // Hyperlink app.msgs.alert_switching<On|Off>
             const foundState = ['On', 'Off'].find(state =>
                 msg.includes(app.msgs['alert_switching' + state]) || new RegExp(`\\b${state}\\b`, 'i').test(msg))
             if (foundState) { // hyperlink switch phrase for click listener to toggle.proxyMode()
                 const switchPhrase = app.msgs['alert_switching' + foundState] || 'switching ' + foundState.toLowerCase()
-                msg = msg.replace(switchPhrase, `<a class="alert-link" href="#">${switchPhrase}</a>`)
+                msg = msg.replace(switchPhrase, `<a class="alert-link switch-proxy" href="#">${switchPhrase}</a>`)
             }
 
             // Create/fill/append msg span
@@ -892,7 +908,10 @@
             msgSpan.innerHTML = msg ; alertP.append(msgSpan)
 
             // Activate toggle link if necessary
-            msgSpan.querySelector('[href="#"]')?.addEventListener('click', toggle.proxyMode)
+            msgSpan.querySelectorAll('a[href="#"]').forEach(anchor =>
+                anchor.onclick = () => anchor.classList.contains('suggest-api') ? modals.open('api')
+                    : anchor.classList.contains('switch-proxy') ? toggle.proxyMode() : {}
+            )
         })
         appDiv.append(alertP)
     }
@@ -1026,6 +1045,44 @@
                   alert = document.getElementById(alertID).firstChild
             this.init(alert) // add classes/listeners/hack bg/glowup btns
             return alert
+        },
+
+        api() {
+
+            // Show modal
+            const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
+                .map(api => { // to btn callback/label
+                    const cb = function() {
+                        settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
+                        if (modals.settings.get()) { // update status of Preferred API entry
+                            const preferredAPIstatus = document.querySelector('[id*=preferredAPI] > span')
+                            if (preferredAPIstatus.textContent != api) preferredAPIstatus.textContent = api
+                        }
+                        notify(`${ api == app.msgs.menuLabel_random ? app.msgs.state_no : api } ${
+                            app.msgs.menuLabel_preferred.toLowerCase()} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
+                            `${ config.anchored ? 'top' : 'bottom' }-right`
+                        )
+                    }
+                    Object.defineProperty(cb, 'name', { value: api.toLowerCase() })
+                    return cb
+                })
+            const apiModal = modals.alert(`${app.msgs.menuLabel_preferred} API:`, '', modalBtns, '', 503)
+
+            // Re-style elems
+            apiModal.querySelector('h2').style.justifySelf = 'center' // center title
+            const btnsDiv = apiModal.querySelector('.modal-buttons')
+            btnsDiv.style.cssText = ` /* y-pad, gridify */
+                margin: 18px 0px 14px !important ; display: grid ; grid-template-columns: repeat(3, 1fr) ; gap: 10px`
+            btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
+                if (idx == 0) btn.style.display = 'none' // hide Dismiss button
+                btn.classList = ( // emphasize preferred API
+                    config.preferredAPI.toLowerCase() == btn.textContent.toLowerCase()
+                        || btn.textContent == app.msgs.menuLabel_random && !config.preferredAPI ? 'primary-modal-btn'
+                            : ''
+                )
+            })
+
+            return apiModal
         },
 
         handlers: {
@@ -1313,6 +1370,7 @@
                     const settingIcon = icons[setting.icon].create(/bg|fg/.exec(key)?.[0] ?? '')
                     settingIcon.style.cssText = 'position: relative ;' + (
                         /proxy/i.test(key) ? 'top: 3px ; left: -0.5px ; margin-right: 9px'
+                      : /preferred/i.test(key) ? 'top: 2px ; left: 1.5px ; margin-right: 7.5px'
                       : /streaming/i.test(key) ? 'top: 3px ; left: 0.5px ; margin-right: 9px'
                       : /auto(?:get|focus)/i.test(key) ? 'top: 4.5px ; margin-right: 7px'
                       : /summarize/i.test(key) ? 'top: 3.5px ; left: -5px ; margin-right: 3px ; height: 17.5px'
@@ -1401,7 +1459,10 @@
                         const configStatusSpan = dom.create.elem('span')
                         configStatusSpan.style.cssText = 'float: right ; font-size: 11px ; margin-top: '
                             + ( key.includes('about') ? '5px' : '3px ; text-transform: uppercase !important')
-                        if (key.includes('replyLang')) {
+                        if (key.includes('preferredAPI')) {
+                            configStatusSpan.textContent = config.preferredAPI || app.msgs.menuLabel_random
+                            settingItem.onclick = () => modals.open('api')
+                        } else if (key.includes('replyLang')) {
                             configStatusSpan.textContent = config.replyLang
                             settingItem.onclick = () => modals.open('replyLang')
                         } else if (key.includes('scheme')) {
@@ -1763,8 +1824,11 @@
     const hoverMenus = {
 
         createAppend(menuType) {
-            this[menuType].div = dom.create.elem('div', { id: `${app.slug}-${menuType}-menu`,
-                class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select` })
+            if (!this.styles) this.stylize()
+            this[menuType].div = dom.create.elem('div', {
+                id: `${app.slug}-${menuType}-menu`, style: 'width: max-content',
+                class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select`
+            })
             this[menuType].ul = dom.create.elem('ul')
             this[menuType].div.append(this[menuType].ul) ; appDiv.append(this[menuType].div)
             this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this[menuType].toggle
@@ -1774,6 +1838,88 @@
         hide(menuType) {
             Object.assign(this[menuType].div.style, { display: 'none', opacity: 0 })
             this[menuType].status = 'hidden'
+        },
+
+        stylize() {
+            if (this.styles) return
+            this.styles = dom.create.style(`
+                .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }`)
+            document.head.append(this.styles)
+        },
+
+        api: {
+
+            clickHandler(event) {
+                const itemLabel = event.target.textContent, prevOffsetTop = appDiv.offsetTop
+
+                // Switch preferred API
+                settings.save('preferredAPI', itemLabel == app.msgs.menuLabel_random ? false : itemLabel)
+                notify(`${ itemLabel == app.msgs.menuLabel_random ? app.msgs.state_no : itemLabel } ${
+                    app.msgs.menuLabel_preferred.toLowerCase()} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
+                    `${ config.anchored ? 'top' : 'bottom' }-right`
+                )
+
+                // Close/update menu
+                if (appDiv.offsetTop != prevOffsetTop) hoverMenus.hide('api') // since app moved
+                hoverMenus.api.update()
+            },
+
+            update() {
+
+                // Init elems
+                this.ul.textContent = ''
+                const apiMenuItems = [], apiMenuIcons = ['checkmark'].map(key => icons[key].create())
+                const apiMenuLabels = [
+                    `${app.msgs.menuLabel_preferred} API:`, app.msgs.menuLabel_random,
+                    ...Object.keys(apis).filter(api => api != 'OpenAI')
+                ]
+
+                // Style icons
+                apiMenuIcons[0].style.cssText = ( // re-style checkmarks
+                    'position: relative ; float: right ; margin-right: -16px ; top: 4px' )
+
+                // Fill menu UL
+                for (let i = 0 ; i < apiMenuLabels.length ; i++) {
+                    apiMenuItems.push(dom.create.elem('li', { class: `${app.slug}-menu-item` }))
+                    apiMenuItems[i].textContent = apiMenuLabels[i]
+                    if (i == 0) { // format header item
+                        apiMenuItems[i].innerHTML = `<b>${apiMenuLabels[i]}</b>`
+                        apiMenuItems[i].classList.add(`${app.slug}-menu-header`) // to not apply hover fx from app.styles
+                        apiMenuItems[i].style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
+                    } else if (i == 1) apiMenuItems[i].style.marginTop = '3px' // top-pad first non-header item
+                    apiMenuItems[i].style.paddingRight = '24px' // make room for checkmark
+                    if (i > 0) apiMenuItems[i].style.paddingLeft = '11px' // indent non-header items
+                    if (!config.preferredAPI && i == 1
+                      || config.preferredAPI && apiMenuItems[i].textContent == config.preferredAPI
+                    ) apiMenuItems[i].append(apiMenuIcons[0]) // append right checkmark
+                    apiMenuItems[i].onclick = hoverMenus.api.clickHandler
+                    this.ul.append(apiMenuItems[i])
+                }
+            },
+
+            toggle(event) { // visibility
+                clearTimeout(hoverMenus.api.hideTimeout) // in case rapid re-enter before ran
+                if (!hoverMenus.api.div) hoverMenus.createAppend('api')
+                if (hoverMenus.api.status == 'hidden' && (
+                    event.type == 'mouseenter' && event.target != hoverMenus.api.div // API btn hovered-on
+                    || event.type == 'click' ) // API btn clicked
+                ) { // show menu
+                    hoverMenus.api.div.style.display = '' // for rects calc
+                    const apiBtn = appDiv.querySelector(`#${app.slug}-api-btn`)
+                    const rects = {
+                        appDiv: appDiv.getBoundingClientRect(), apiBtn: apiBtn.getBoundingClientRect(),
+                        apiMenu: hoverMenus.api.div.getBoundingClientRect()
+                    }
+                    const appIsHigh = rects.apiBtn.top < ( rects.apiMenu.height +15 )
+                    hoverMenus.api.div.style.top = `${ rects.apiBtn.top - rects.appDiv.top +(
+                        appIsHigh ? /* point down */ 29 : /* point up */ - rects.apiMenu.height -13 )}px`
+                    if (!hoverMenus.api.rightPos)
+                        hoverMenus.api.rightPos = rects.appDiv.right - event.clientX - hoverMenus.api.div.offsetWidth/2
+                    Object.assign(hoverMenus.api.div.style, { right: `${hoverMenus.api.rightPos}px`, opacity: 1 })
+                    hoverMenus.api.status = 'visible'
+                } else if (/click|mouseleave/.test(event.type)) // API menu/btn hovered-off or btn clicked, hide menu
+                    return hoverMenus.api.hideTimeout = setTimeout(() => hoverMenus.hide('api'), 55)
+            }
         },
 
         pin: {
@@ -2048,6 +2194,18 @@
                 const svgPath = dom.create.svgElem('path', { stroke: 'none',
                     d: 'm459-48 188-526h125L960-48H847l-35-100H603L568-48H459ZM130-169l-75-75 196-196q-42-45-78-101t-55-105h117q17 32 40.5 67.5T325-514q35-37 70-93t64-119H0v-106h290v-80h106v80h290v106H572q-23 74-70 152T399-438l82 85-39 111-118-121-194 194Zm508-79h139l-69-197-70 197Z' })
                 svg.append(svgPath) ; return svg
+            }
+        },
+
+        lightningBolt: {
+            create() {
+                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 0 560.317 560.316' }),
+                      g = dom.create.svgElem('g', { style: 'transform: rotate(12deg)' })
+                g.append(
+                    dom.create.svgElem('path', {
+                        d: 'M207.523 560.316s194.42-421.925 194.444-421.986l10.79-23.997c-41.824 12.02-135.271 34.902-135.57 35.833C286.96 122.816 329.017 0 330.829 0H210.902l-12.167 57.938-51.176 209.995 135.191-36.806-75.227 329.189z' })
+                ) ; svg.append(g)
+                return svg
             }
         },
 
@@ -3370,7 +3528,7 @@
                 const anchorToggle = document.querySelector('[id*=anchor] input')
                 if (anchorToggle.checked != config.anchored) modals.settings.toggle.switch(anchorToggle)
             }
-            hoverMenus.pin.rightPos = null
+            hoverMenus.api.rightPos = hoverMenus.pin.rightPos = null
             notify(`${app.msgs.mode_anchor} ${toolbarMenu.state.words[+config.anchored]}`,
                 null, sidebarModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
         },
@@ -3479,9 +3637,11 @@
             toolbarMenu.refresh()
             if (modals.settings.get()) { // update visual states of Settings toggles
                 const proxyToggle = document.querySelector('[id*=proxy] input'),
+                      preferredAPIentry = document.querySelector('[id*=preferredAPI]'),
                       streamingToggle = document.querySelector('[id*=streaming] input')
                 if (proxyToggle.checked != config.proxyAPIenabled) // Proxy state out-of-sync (from using toolbar menu)
                     modals.settings.toggle.switch(proxyToggle)
+                preferredAPIentry.classList.toggle('active', config.proxyAPIenabled)
                 if (streamingToggle.checked && !config.proxyAPIenabled // Streaming checked but OpenAI mode
                     || // ...or Streaming unchecked but enabled in Proxy mode
                         !streamingToggle.checked && config.proxyAPIenabled && !config.streamingDisabled)
@@ -3652,6 +3812,7 @@
 
         createReqData(api, msgs) { // returns payload for POST / query string for GET
             log.caller = `api.createReqData('${api}', msgs)`
+            msgs = msgs.map(({ api, regenerated, ...rest }) => rest) // eslint-disable-line no-unused-vars
             const time = Date.now(), lastUserMsg = msgs[msgs.length - 1]
             const reqData = api == 'OpenAI' ? { messages: msgs, model: 'gpt-3.5-turbo', max_tokens: 4000 }
               : api == 'AIchatOS' ? {
@@ -3682,12 +3843,14 @@
                     Object.prototype.hasOwnProperty.call(entry, api))
                     && ( caller == get.related || ( // handle get.reply exclusions
                         api != 'OpenAI' // exclude OpenAI since api.pick in get.reply only in Proxy Mode
+                        && ( // exclude unpreferred APIs if config.preferredAPI
+                            !config.preferredAPI || api == config.preferredAPI)
                         && ( // exclude unstreamable APIs if !config.streamingDisabled
-                        config.streamingDisabled || apis[api].streamable)
+                            config.streamingDisabled || apis[api].streamable)
                         && !( // exclude GET APIs if msg history established while not shuffling
-                        apis[api].method == 'GET' && show.reply.src != 'shuffle' && msgChain.length > 2)
+                            apis[api].method == 'GET' && show.reply.src != 'shuffle' && msgChain.length > 2)
                         && !( // exclude APIs that don't support long prompts while summarizing
-                        show.reply.src == 'summarize' && apis[api].supportsLongPrompts == false)
+                            show.reply.src == 'summarize' && apis[api].supportsLongPrompts == false)
                     ))
             )
             const chosenAPI = untriedAPIs[ // pick random array entry
@@ -3765,7 +3928,7 @@
                                 time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
                                 regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
                             })
-                            api.clearTimedOut(caller.triedAPIs)
+                            api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
                             caller.status = 'done' ; caller.sender = caller.attemptCnt = null
                         }
                     }
@@ -3791,7 +3954,7 @@
                             appAlert(resp.status == 401 ? 'login'
                                    : resp.status == 403 ? 'checkCloudflare'
                                    : resp.status == 429 ? ['tooManyRequests', 'suggestProxy']
-                                                        : ['openAInotWorking', 'suggestProxy'] )
+                                                        : ['OpenAI', 'notWorking', 'suggestProxy'] )
                         else api.tryNew(caller)
                     } else if (callerAPI == 'OpenAI' && resp.response) { // show response or return RQs from OpenAI
                         try { // to show response or return RQs
@@ -3834,7 +3997,8 @@
                                 }
                                 api.tryNew(caller)
                             } else {
-                                caller.status = 'done' ; api.clearTimedOut(caller.triedAPIs) ; caller.attemptCnt = null
+                                caller.status = 'done' ; caller.attemptCnt = null
+                                api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
                                 textToShow = textToShow.replace(apis[callerAPI].respPatterns?.watermark, '').trim()
                                 if (caller == get.reply) {
                                     show.reply(textToShow, footerContent, { apiUsed: callerAPI }) ; show.codeCopyBtns()
@@ -3848,9 +4012,9 @@
                     }
 
                     function handleProcessError(err) { // suggest proxy or try diff API
-                        log.debug('Response text', resp.response)
-                        log.error(app.alerts.parseFailed, err)
-                        if (callerAPI == 'OpenAI' && caller == get.reply) appAlert('openAInotWorking', 'suggestProxy')
+                        log.debug('Response text', resp.response) ; log.error(app.alerts.parseFailed, err)
+                        if (callerAPI == 'OpenAI' && caller == get.reply)
+                            appAlert('OpenAI', 'notWorking', 'suggestProxy')
                         else api.tryNew(caller)
                     }
 
@@ -3879,7 +4043,9 @@
                     .then(result => { if (caller == get.related) show.related(result) ; else return })
             } else {
                 log.debug('No remaining untried endpoints')
-                if (caller == get.reply) appAlert('proxyNotWorking', 'suggestOpenAI')
+                if (caller == get.reply)
+                    appAlert(`${ config.preferredAPI ? 'api' : 'proxy' }NotWorking`,
+                        `suggest${ config.preferredAPI ? 'DiffAPI' : 'OpenAI' }`)
             }
         }
     }
@@ -3922,7 +4088,7 @@
             // Try diff API after 7s of no response
             const iniAPI = get.related.api
             get.related.query = query // expose to api.tryNew() in case modded
-            setTimeout(() => {
+            get.related.timeout = setTimeout(() => {
                 if (get.related.status != 'done' // still no queries received
                     && get.related.api == iniAPI // not already trying diff API from err
                     && get.related.triedAPIs.length != Object.keys(apis).length // untried APIs remain
@@ -3988,23 +4154,24 @@
             // Pick API
             get.reply.api = config.proxyAPIenabled ? api.pick(get.reply) : 'OpenAI'
             if (!get.reply.api) // no more proxy APIs left untried
-                return appAlert('proxyNotWorking', 'suggestOpenAI')
+                return appAlert(`${ config.preferredAPI ? 'api' : 'proxy' }NotWorking`,
+                    `suggest${ config.preferredAPI ? 'DiffAPI' : 'OpenAI' }`)
 
             // Init OpenAI key
             if (!config.proxyAPIenabled)
                 config.openAIkey = await Promise.race(
                     [session.getOAItoken(), new Promise(reject => setTimeout(reject, 3000))])
 
-            // Try diff API after 7-10s of no response
+            // Try diff API after 7-20s of no response
             else {
-                const iniAPI = get.reply.api
-                setTimeout(() => {
+                const iniAPI = get.reply.api ; clearTimeout(get.reply.timeout)
+                get.reply.timeout = get.reply.timeout = setTimeout(() => {
                     if (config.proxyAPIenabled // only do in Proxy mode
                         && get.reply.status != 'done' && !get.reply.sender // still no reply received
                         && get.reply.api == iniAPI // not already trying diff API from err
                         && get.reply.triedAPIs.length != Object.keys(apis).length -1 // untried APIs remain
                     ) { get.reply.src = src ; api.tryNew(get.reply, 'timeout') }
-                }, config.streamingDisabled ? 10000 : 7000)
+                }, config.streamingDisabled ? 10000 : 7000 *( config.preferredAPI ? 2 : 1 ))
             }
 
             // Augment query
@@ -4019,7 +4186,7 @@
                 responseType: config.streamingDisabled || !config.proxyAPIenabled ? 'text' : 'stream',
                 onerror: err => { log.error(err)
                     if (!config.proxyAPIenabled)
-                        appAlert(!config.openAIkey ? 'login' : ['openAInotWorking', 'suggestProxy'])
+                        appAlert(!config.openAIkey ? 'login' : ['OpenAI', 'notWorking', 'suggestProxy'])
                     else api.tryNew(get.reply)
                 },
                 onload: resp => api.process.text(resp, { caller: get.reply, callerAPI: reqAPI }),
@@ -4215,7 +4382,7 @@
                         standbyBtn.prepend(icons[btnType == 'query' ? 'send' : 'summarize'].create())
                         standbyBtn.onclick = () => {
                             show.reply.userInteracted = true ; show.reply.chatbarFocused = false
-                            hoverMenus.pin.rightPos = null
+                            hoverMenus.api.rightPos = hoverMenus.pin.rightPos = null
                             msgChain.push({ role: 'user', content:
                                 btnType == 'summarize' ? prompts.create('summarizeResults')
                                                        : new URL(location.href).searchParams.get('q') })
@@ -4282,8 +4449,12 @@
                 // Show API used in bubble header
                 if (!show.reply.updatedAPIinHeader) {
                     show.reply.updatedAPIinHeader = true
-                    const preHeaderLabel = appDiv.querySelector('.reply-header-text')
-                    preHeaderLabel.replaceChildren(`⦿ API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
+                    const preHeaderLabel = appDiv.querySelector('.reply-header-text'),
+                          apiDot = dom.create.elem('span', { id: `${app.slug}-api-btn`, style: 'cursor: pointer' })
+                    apiDot.textContent = '⦿'
+                    apiDot.onmouseenter = apiDot.onmouseleave = apiDot.onclick = hoverMenus.api.toggle
+                    preHeaderLabel.replaceChildren(
+                        apiDot, ` API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
                     setTimeout(() => type(apiUsed, preHeaderLabel.lastChild, { speed: 1.5 }), 150)
                     function type(text, targetElem, { speed = 1 } = {}) {
                         targetElem.textContent = '' ; let i = 0;
