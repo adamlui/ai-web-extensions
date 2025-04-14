@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.14.4
+// @version               2025.4.14.5
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -875,6 +875,8 @@
                             app.msgs.menuLabel_preferred.toLowerCase()} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`
                         )
+                        if (appDiv.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
+                            get.reply(msgChain) // re-send query if user alerted
                     }
                     Object.defineProperty(cb, 'name', { value: api.toLowerCase() })
                     return cb
@@ -3470,7 +3472,7 @@
                         !streamingToggle.checked && config.proxyAPIenabled && !config.streamingDisabled)
                             modals.settings.toggle.switch(streamingToggle)
             }
-            if (appDiv.querySelector(`.${app.slug}-alert`)) location.reload() // re-send query if user alerted
+            if (appDiv.querySelector(`.${app.slug}-alert`)) get.reply(msgChain) // re-send query if user alerted
         },
 
         relatedQueries() {

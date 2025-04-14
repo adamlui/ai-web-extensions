@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.14.4
+// @version                  2025.4.14.5
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1062,6 +1062,8 @@
                             app.msgs.menuLabel_preferred.toLowerCase()} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`
                         )
+                        if (appDiv.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
+                            get.reply(msgChain) // re-send query if user alerted
                     }
                     Object.defineProperty(cb, 'name', { value: api.toLowerCase() })
                     return cb
@@ -3647,7 +3649,7 @@
                         !streamingToggle.checked && config.proxyAPIenabled && !config.streamingDisabled)
                             modals.settings.toggle.switch(streamingToggle)
             }
-            if (appDiv.querySelector(`.${app.slug}-alert`)) location.reload() // re-send query if user alerted
+            if (appDiv.querySelector(`.${app.slug}-alert`)) get.reply(msgChain) // re-send query if user alerted
         },
 
         relatedQueries() {
