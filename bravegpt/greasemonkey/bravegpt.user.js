@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.14.5
+// @version               2025.4.14.6
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1765,7 +1765,7 @@
                         appDiv: appDiv.getBoundingClientRect(), apiBtn: apiBtn.getBoundingClientRect(),
                         apiMenu: hoverMenus.api.div.getBoundingClientRect()
                     }
-                    const appIsHigh = rects.apiBtn.top < ( rects.apiMenu.height +15 )
+                    const appIsHigh = rects.apiBtn.top < ( rects.apiMenu.height +103 )
                     hoverMenus.api.div.style.top = `${ rects.apiBtn.top - rects.appDiv.top +(
                         appIsHigh ? /* point down */ 29 : /* point up */ - rects.apiMenu.height -13 )}px`
                     if (!hoverMenus.api.rightPos)
@@ -1842,7 +1842,7 @@
                         appDiv: appDiv.getBoundingClientRect(), pinBtn: pinBtn.getBoundingClientRect(),
                         pinMenu: hoverMenus.pin.div.getBoundingClientRect()
                     }
-                    const appIsHigh = rects.pinBtn.top < ( rects.pinMenu.height +15 )
+                    const appIsHigh = rects.pinBtn.top < ( rects.pinMenu.height +103 )
                     hoverMenus.pin.div.style.top = `${ rects.pinBtn.top - rects.appDiv.top +(
                         appIsHigh ? /* point down */ 29 : /* point up */ - rects.pinMenu.height -13 )}px`
                     if (!hoverMenus.pin.rightPos)
