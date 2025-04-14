@@ -4238,7 +4238,7 @@
                     const btn = dom.create.elem('button', {
                         id: `${app.slug}-${btnType}-btn`, class: `${app.slug}-chatbar-btn no-mobile-tap-outline` })
                     btn.style.right = `${ rOffset + idx * spreadFactor }px`
-                    if (env.browser.isFF && btnType == 'shuffle') btn.style.right = '17px'
+                    if (btnType == 'shuffle') btn.style.right = '17px'
                     btn.append(icons[btnType].create())
                     continueChatDiv.append(btn)
                 })

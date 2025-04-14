@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.14.5
+// @version                  2025.4.14.6
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -4424,8 +4424,7 @@
                         return // since big Summarize button exists
                     const btn = dom.create.elem('button', {
                         id: `${app.slug}-${btnType}-btn`, class: `${app.slug}-chatbar-btn no-mobile-tap-outline` })
-                    btn.style.right = env.browser.isFF ? `${ idx == 0 ? 3 : idx == 1 ? -3 : -5 }px`
-                                                       : `${ idx == 0 ? 3 : idx == 1 ? -7 : -12 }px`
+                    btn.style.right = `${ idx == 0 ? 3 : idx == 1 ? -3 : -5 }px`
                     btn.append(icons[btnType].create())
                     continueChatDiv.append(btn)
                 })
