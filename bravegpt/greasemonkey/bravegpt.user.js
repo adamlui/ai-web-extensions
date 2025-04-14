@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.13
+// @version               2025.4.14
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1613,7 +1613,23 @@
     // Define MENU functions
 
     const menus = {
+
+        createAppend(menuType) {
+            this[menuType].div = dom.create.elem('div', { id: `${app.slug}-${menuType}-menu`,
+                class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select` })
+            this[menuType].ul = dom.create.elem('ul')
+            this[menuType].div.append(this[menuType].ul) ; appDiv.append(this[menuType].div)
+            this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this[menuType].toggle
+            this[menuType].update() ; this[menuType].status = 'hidden'
+        },
+
+        hide(menuType) {
+            Object.assign(this[menuType].div.style, { display: 'none', opacity: 0 })
+            this[menuType].status = 'hidden'
+        },
+
         pin: {
+
             clickHandler(event) {
                 const itemLabel = event.target.textContent, prevOffsetTop = appDiv.offsetTop
 
@@ -1624,20 +1640,9 @@
                 else if (itemLabel == app.msgs.menuLabel_bottom) toggle.anchorMode()
 
                 // Close/update menu
-                if (appDiv.offsetTop != prevOffsetTop) menus.pin.hide() // since app moved
+                if (appDiv.offsetTop != prevOffsetTop) menus.hide('pin') // since app moved
                 menus.pin.update()
             },
-
-            createAppend() {
-                this.div = dom.create.elem('div', { id: `${app.slug}-pin-menu`,
-                    class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select` })
-                this.ul = dom.create.elem('ul')
-                this.div.append(this.ul) ; appDiv.append(this.div)
-                this.div.onmouseenter = this.div.onmouseleave = this.toggle
-                this.update() ; this.status = 'hidden'
-            },
-
-            hide() { Object.assign(this.div.style, { display: 'none', opacity: 0 }) ; this.status = 'hidden' },
 
             update() {
 
@@ -1676,8 +1681,8 @@
             },
 
             toggle(event) { // visibility
-                clearTimeout(menus.pin.hide.timeout) // in case rapid re-enter before ran
-                if (!menus.pin.div) menus.pin.createAppend()
+                clearTimeout(menus.pin.hideTimeout) // in case rapid re-enter before ran
+                if (!menus.pin.div) menus.createAppend('pin')
                 if (menus.pin.status == 'hidden' && (
                     event.type == 'mouseenter' && event.target != menus.pin.div // Pin btn hovered-on
                     || event.type == 'click' ) // Pin btn clicked
@@ -1696,7 +1701,7 @@
                     Object.assign(menus.pin.div.style, { right: `${menus.pin.rightPos}px`, opacity: 1 })
                     menus.pin.status = 'visible'
                 } else if (/click|mouseleave/.test(event.type)) // Pin menu/btn hovered-off or btn clicked, hide menu
-                    return menus.pin.hide.timeout = setTimeout(() => menus.pin.hide(), 55)
+                    return menus.pin.hideTimeout = setTimeout(() => menus.hide('pin'), 55)
             }
         }
     }
