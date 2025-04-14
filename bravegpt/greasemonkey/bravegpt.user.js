@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.14.1
+// @version               2025.4.14.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -4486,7 +4486,7 @@
         ['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
             (config[mode] || config[`${mode}Sidebar`]) && appDiv.classList.add(mode))
         appDiv.innerHTML = saveAppDiv.html
-        if (appDiv.querySelector(`.${app.slug}-header-btn`)) addListeners.appHeaderBtns()
+        if (appDiv.querySelector(`.${app.slug}-header-btn`)) addListeners.btns.appHeader()
         appDiv.querySelectorAll(`.${app.slug}-standby-btn`).forEach((btn, idx) =>
             btn.onclick = show.reply[`${['query', 'summarize'][idx]}BtnClickHandler`])
         show.codeCopyBtns()
