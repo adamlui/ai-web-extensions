@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.14.6
+// @version                  2025.4.15
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1870,11 +1870,12 @@
 
                 // Init elems
                 this.ul.textContent = ''
-                const apiMenuItems = [], apiMenuIcons = ['checkmark'].map(key => icons[key].create())
+                const apiMenuIcons = ['checkmark'].map(key => icons[key].create())
                 const apiMenuLabels = [
                     `${app.msgs.menuLabel_preferred} API:`, app.msgs.menuLabel_random,
                     ...Object.keys(apis).filter(api => api != 'OpenAI')
                 ]
+                const apiMenuItems = apiMenuLabels.map(() => dom.create.elem('li', { class: `${app.slug}-menu-item` }))
 
                 // Style icons
                 apiMenuIcons[0].style.cssText = ( // re-style checkmarks
@@ -1882,7 +1883,6 @@
 
                 // Fill menu UL
                 for (let i = 0 ; i < apiMenuLabels.length ; i++) {
-                    apiMenuItems.push(dom.create.elem('li', { class: `${app.slug}-menu-item` }))
                     apiMenuItems[i].textContent = apiMenuLabels[i]
                     if (i == 0) { // format header item
                         apiMenuItems[i].innerHTML = `<b>${apiMenuLabels[i]}</b>`
@@ -1944,10 +1944,10 @@
 
                 // Init elems
                 this.ul.textContent = ''
-                const pinMenuItems = []
                 const pinMenuIcons = ['webCorner', 'sidebar', 'anchor', 'checkmark'].map(key => icons[key].create())
                 const pinMenulabels = [ `${app.msgs.menuLabel_pinTo}...`,
                     app.msgs.menuLabel_top, app.msgs.menuLabel_sidebar, app.msgs.menuLabel_bottom ]
+                const pinMenuItems = pinMenulabels.map(() => dom.create.elem('li', { class: `${app.slug}-menu-item` }))
 
                 // Style icons
                 pinMenuIcons.forEach(icon => icon.style.cssText = (
@@ -1958,7 +1958,6 @@
 
                 // Fill menu UL
                 for (let i = 0 ; i < 4 ; i++) {
-                    pinMenuItems.push(dom.create.elem('li', { class: `${app.slug}-menu-item` }))
                     pinMenuItems[i].textContent = pinMenulabels[i]
                     if (i == 0) { // format header item
                         pinMenuItems[i].innerHTML = `<b>${pinMenulabels[i]}</b>`
@@ -4638,7 +4637,8 @@
                 ['generating', 'playing'].forEach(state => {
                     speakSVGs[state] = []
                     for (let i = 0 ; i < 2 ; i++) { // push/id 2 of each state icon for continuous scroll animation
-                        speakSVGs[state].push(icons.soundwave.create({ height: state == 'generating' ? 'short' : 'tall' }))
+                        speakSVGs[state].push(
+                            icons.soundwave.create({ height: state == 'generating' ? 'short' : 'tall' }))
                         speakSVGs[state][i].id = `${app.slug}-${state}-icon-${i+1}`
                         if (i == 1) // close gap of 2nd icon during scroll
                             speakSVGs[state][i].style.marginLeft = `-${ state == 'generating' ? 3 : 5 }px`

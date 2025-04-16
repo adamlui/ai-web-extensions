@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.14.2
+// @version                2025.4.15
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1498,11 +1498,12 @@
 
                 // Init elems
                 this.ul.textContent = ''
-                const apiMenuItems = [], apiMenuIcons = ['checkmark'].map(key => icons[key].create())
+                const apiMenuIcons = ['checkmark'].map(key => icons[key].create())
                 const apiMenuLabels = [
                     `${app.msgs.menuLabel_preferred} API:`, app.msgs.menuLabel_random,
                     ...Object.keys(apis).filter(api => api != 'OpenAI')
                 ]
+                const apiMenuItems = apiMenuLabels.map(() => dom.create.elem('li', { class: `${app.slug}-menu-item` }))
 
                 // Style icons
                 apiMenuIcons[0].style.cssText = ( // re-style checkmarks
@@ -1510,7 +1511,6 @@
 
                 // Fill menu UL
                 for (let i = 0 ; i < apiMenuLabels.length ; i++) {
-                    apiMenuItems.push(dom.create.elem('li', { class: `${app.slug}-menu-item` }))
                     apiMenuItems[i].textContent = apiMenuLabels[i]
                     if (i == 0) { // format header item
                         apiMenuItems[i].innerHTML = `<b>${apiMenuLabels[i]}</b>`
@@ -3511,7 +3511,8 @@
                 ['generating', 'playing'].forEach(state => {
                     speakSVGs[state] = []
                     for (let i = 0 ; i < 2 ; i++) { // push/id 2 of each state icon for continuous scroll animation
-                        speakSVGs[state].push(icons.soundwave.create({ height: state == 'generating' ? 'short' : 'tall' }))
+                        speakSVGs[state].push(
+                            icons.soundwave.create({ height: state == 'generating' ? 'short' : 'tall' }))
                         speakSVGs[state][i].id = `${app.slug}-${state}-icon-${i+1}`
                         if (i == 1) // close gap of 2nd icon during scroll
                             speakSVGs[state][i].style.marginLeft = `-${ state == 'generating' ? 3 : 5 }px`
