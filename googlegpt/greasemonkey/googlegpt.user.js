@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.16.14
+// @version                  2025.4.16.15
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -3566,8 +3566,8 @@
                         !streamingToggle.checked && config.proxyAPIenabled && !config.streamingDisabled)
                             modals.settings.toggle.switch(streamingToggle)
             }
-            const apiDot = appDiv.querySelector(`#${app.slug}-api-btn`)
-            if (apiDot) apiDot.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
+            const apiBeacon = appDiv.querySelector(`#${app.slug}-api-btn`)
+            if (apiBeacon) apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
             if (appDiv.querySelector(`.${app.slug}-alert`)) get.reply(msgChain) // re-send query if user alerted
         },
 
@@ -4374,12 +4374,12 @@
                 if (!show.reply.updatedAPIinHeader) {
                     show.reply.updatedAPIinHeader = true
                     const preHeaderLabel = appDiv.querySelector('.reply-header-text'),
-                          apiDot = dom.create.elem('span', { id: `${app.slug}-api-btn`, style: 'cursor: pointer' })
-                    apiDot.textContent = '⦿'
-                    apiDot.onmouseenter = apiDot.onmouseleave = apiDot.onclick = hoverMenus.toggle
-                    apiDot.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
+                          apiBeacon = dom.create.elem('span', { id: `${app.slug}-api-btn`, style: 'cursor: pointer' })
+                    apiBeacon.textContent = '⦿'
+                    apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = hoverMenus.toggle
+                    apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
                     preHeaderLabel.replaceChildren(
-                        apiDot, ` API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
+                        apiBeacon, ` API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
                     setTimeout(() => type(apiUsed, preHeaderLabel.lastChild, { speed: 1.5 }), 150)
                     function type(text, targetElem, { speed = 1 } = {}) {
                         targetElem.textContent = '' ; let i = 0;
