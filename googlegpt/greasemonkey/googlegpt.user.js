@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.15.3
+// @version                  2025.4.16
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -938,6 +938,7 @@
         if (mode && !/(?:pre|suf)fix/.test(mode)) {
             const modeIcon = icons[settings.controls[mode].icon].create()
             modeIcon.style.cssText = iconStyles
+                + ( /preferred/i.test(mode) ? 'top: 5.5px' : '' ) // lower Preferred API icon
                 + ( /autoget|debug|focus|scroll/i.test(mode) ? 'top: 0.5px' : '' ) // raise some icons
                 + ( /animation|debug/i.test(mode) ? 'width: 23px ; height: 23px' : '' ) // shrink some icon
             notif.append(modeIcon)
@@ -1058,10 +1059,8 @@
                             const preferredAPIstatus = document.querySelector('[id*=preferredAPI] > span')
                             if (preferredAPIstatus.textContent != api) preferredAPIstatus.textContent = api
                         }
-                        notify(`${ api == app.msgs.menuLabel_random ? app.msgs.state_no : api } ${
-                            app.msgs.menuLabel_preferred.toLowerCase()} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                            `${ config.anchored ? 'top' : 'bottom' }-right`
-                        )
+                        notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
+                            `${ config.anchored ? 'top' : 'bottom' }-right`)
                         if (appDiv.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
                             get.reply(msgChain) // re-send query if user alerted
                     }
@@ -1372,7 +1371,7 @@
                     const settingIcon = icons[setting.icon].create(/bg|fg/.exec(key)?.[0] ?? '')
                     settingIcon.style.cssText = 'position: relative ;' + (
                         /proxy/i.test(key) ? 'top: 3px ; left: -0.5px ; margin-right: 9px'
-                      : /preferred/i.test(key) ? 'top: 2px ; left: 1.5px ; margin-right: 7.5px'
+                      : /preferred/i.test(key) ? 'top: 3.5px ; margin-right: 7.5px'
                       : /streaming/i.test(key) ? 'top: 3px ; left: 0.5px ; margin-right: 9px'
                       : /auto(?:get|focus)/i.test(key) ? 'top: 4.5px ; margin-right: 7px'
                       : /summarize/i.test(key) ? 'top: 3.5px ; left: -5px ; margin-right: 3px ; height: 17.5px'
@@ -1845,6 +1844,8 @@
         stylize() {
             if (this.styles) return
             this.styles = dom.create.style(`
+                .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
+                    width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
                 .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }`)
             document.head.append(this.styles)
         },
@@ -1856,10 +1857,8 @@
 
                 // Switch preferred API
                 settings.save('preferredAPI', itemLabel == app.msgs.menuLabel_random ? false : itemLabel)
-                notify(`${ itemLabel == app.msgs.menuLabel_random ? app.msgs.state_no : itemLabel } ${
-                    app.msgs.menuLabel_preferred.toLowerCase()} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                    `${ config.anchored ? 'top' : 'bottom' }-right`
-                )
+                notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
+                    `${ config.anchored ? 'top' : 'bottom' }-right`)
 
                 // Close/update menu
                 if (appDiv.offsetTop != prevOffsetTop) hoverMenus.hide('api') // since app moved
@@ -1886,15 +1885,18 @@
                     apiMenuItems[i].textContent = apiMenuLabels[i]
                     if (i == 0) { // format header item
                         apiMenuItems[i].innerHTML = `<b>${apiMenuLabels[i]}</b>`
+                        apiMenuItems[i].prepend(icons.lightningBolt.create())
                         apiMenuItems[i].classList.add(`${app.slug}-menu-header`) // to not apply hover fx from app.styles
                         apiMenuItems[i].style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
                     } else if (i == 1) apiMenuItems[i].style.marginTop = '3px' // top-pad first non-header item
                     apiMenuItems[i].style.paddingRight = '24px' // make room for checkmark
-                    if (i > 0) apiMenuItems[i].style.paddingLeft = '11px' // indent non-header items
+                    if (i > 0) { // non-header items
+                        apiMenuItems[i].style.paddingLeft = '11px' // indent
+                        apiMenuItems[i].onclick = hoverMenus.api.clickHandler
+                    }
                     if (!config.preferredAPI && i == 1
                       || config.preferredAPI && apiMenuItems[i].textContent == config.preferredAPI
                     ) apiMenuItems[i].append(apiMenuIcons[0]) // append right checkmark
-                    apiMenuItems[i].onclick = hoverMenus.api.clickHandler
                     this.ul.append(apiMenuItems[i])
                 }
             },
@@ -1961,11 +1963,15 @@
                     pinMenuItems[i].textContent = pinMenulabels[i]
                     if (i == 0) { // format header item
                         pinMenuItems[i].innerHTML = `<b>${pinMenulabels[i]}</b>`
+                        pinMenuItems[i].prepend(icons.pin.create())
                         pinMenuItems[i].classList.add(`${app.slug}-menu-header`) // to not apply hover fx from app.styles
                         pinMenuItems[i].style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
                     } else if (i == 1) pinMenuItems[i].style.marginTop = '3px' // top-pad first non-header item
                     pinMenuItems[i].style.paddingRight = '24px' // make room for checkmark
-                    pinMenuItems[i].prepend(i > 0 ? pinMenuIcons[i -1] : '') // prepend left icon
+                    if (i > 0) { // non-header items
+                        pinMenuItems[i].prepend(pinMenuIcons[i -1]) // prepend left icon
+                        pinMenuItems[i].onclick = hoverMenus.pin.clickHandler
+                    }
                     if (i == 1 && config.stickySidebar // 'Top' item + Sticky mode on
                      || i == 2 && !config.stickySidebar && !config.anchored // 'Sidebar' item + no mode on
                      || i == 3 && config.anchored) // 'Bottom' item + Anchor mode on
@@ -2200,7 +2206,7 @@
 
         lightningBolt: {
             create() {
-                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 0 560.317 560.316' }),
+                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 43 430.317 545.316' }),
                       g = dom.create.svgElem('g', { style: 'transform: rotate(12deg)' })
                 g.append(
                     dom.create.svgElem('path', {
