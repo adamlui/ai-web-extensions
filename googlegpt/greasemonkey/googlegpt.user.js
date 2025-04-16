@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.16.3
+// @version                  2025.4.16.4
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -4075,7 +4075,7 @@
                 if (!/regen|summarize/i.test(src)) rqDiv?.remove() // clear RQs to re-get later
                 appDiv.querySelector('footer').textContent = '' // clear footer
                 loadingElem = appDiv.querySelector('section')
-                loadingElem.style.margin = `-13px 0 -10px`
+                loadingElem.style.margin = '3px 0 -10px'
                 loadingElem.innerText = app.alerts.waitingResponse
                 loadingSpinner.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)' // faster ver
             } else { // replace app div w/ alert
