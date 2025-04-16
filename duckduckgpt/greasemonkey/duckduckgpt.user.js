@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.16.8
+// @version                2025.4.16.9
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -784,8 +784,6 @@
         class: `${app.slug}-modal`,
 
         about() {
-            log.caller = 'modals.about()'
-            log.debug('Showing About modal...')
 
             // Show modal
             const labelStyles = 'text-transform: uppercase ; font-size: 16px ; font-weight: bold ;'
@@ -849,8 +847,6 @@
                 else btn.style.display = 'none'
             })
 
-            log.debug('Success! About Modal shown')
-
             return aboutModal
         },
 
@@ -898,8 +894,6 @@
         },
 
         feedback() {
-            log.caller = 'modals.feedback()'
-            log.debug('Showing Feedback modal...')
 
             // Init buttons
             let btns = [ function productHunt(){}, function g2(){}, function alternativeto() {} ]
@@ -931,8 +925,6 @@
                   : app.urls.discuss
                 )
             })
-
-            log.debug('Success! Feedback modal shown')
 
             return feedbackModal
         },
@@ -1068,7 +1060,6 @@
         },
 
         replyLang() {
-            log.caller = 'modals.replyLang()'
             while (true) {
                 let replyLang = prompt(
                     ( app.msgs.prompt_updateReplyLang ) + ':', config.replyLang)
@@ -1077,9 +1068,7 @@
                     replyLang = ( // auto-case for menu/alert aesthetics
                         replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
                             : log.toTitleCase(replyLang) )
-                    log.debug('Saving reply language...')
                     settings.save('replyLang', replyLang || env.browser.language)
-                    log.debug(`Success! config.replyLang = ${config.replyLang}`)
                     modals.alert(`${app.msgs.alert_langUpdated}!`, // title
                         `${app.name} ${app.msgs.alert_willReplyIn} ` // msg
                             + ( replyLang || app.msgs.alert_yourSysLang ) + '.',
@@ -1094,8 +1083,6 @@
         safeWinOpen(url) { open(url, '_blank', 'noopener') }, // to prevent backdoor vulnerabilities
 
         scheme() {
-            log.caller = 'modals.scheme()'
-            log.debug('Showing Scheme modal...')
 
             // Show modal
             const schemeModal = modals.alert(`${
@@ -1139,8 +1126,6 @@
                 }
             })
 
-            log.debug('Success! Scheme modal shown')
-
             function schemeNotify(scheme) {
 
                 // Show notification
@@ -1165,7 +1150,6 @@
         settings: {
 
             createAppend() {
-                log.caller = 'modals.settings.createAppend()'
 
                 // Init master elems
                 const settingsContainer = dom.create.elem('div'),
@@ -1173,11 +1157,9 @@
                       settingsContainer.append(settingsModal)
 
                 // Init settings keys
-                log.debug('Initializing settings keys...')
                 const settingsKeys = Object.keys(settings.controls).filter(key =>
                       !(env.browser.isMobile && settings.controls[key].mobile == false)
                    && !(env.ui.site.isCentered && settings.controls[key].centered == false))
-                log.debug(`Success! settingsKeys = ${log.prettifyObj(settingsKeys)}`)
 
                 // Init logo
                 const settingsIcon = icons.ddgpt.create()
@@ -1193,7 +1175,6 @@
                 settingsTitleH4.prepend(settingsTitleIcon) ; settingsTitleDiv.append(settingsTitleH4)
 
                 // Init settings lists
-                log.debug('Initializing settings lists...')
                 const settingsLists = [], middleGap = 30 // px
                 const settingsListContainer = dom.create.elem('div')
                 const settingsListCnt = (
@@ -1207,7 +1188,6 @@
                     settingsLists[0].style.cssText = ( // add vertical separator
                         `padding-right: ${ middleGap /2 }px` )
                 }
-                log.debug(`Success! settingsListCnt = ${settingsListCnt}`)
 
                 // Create/append setting icons/labels/toggles
                 settingsKeys.forEach((key, idx) => {
@@ -1297,13 +1277,9 @@
 
                             // ...or generically toggle/notify
                             else {
-                                log.caller = 'settings.createAppend()'
-                                log.debug(`Toggling ${settingItem.textContent} ${
-                                    key.includes('Disabled') ^ config[key] ? 'OFF' : 'ON' }...`)
                                 settings.save(key, !config[key]) // update config
                                 notify(`${settings.controls[key].label} ${
                                     toolbarMenu.state.words[+(key.includes('Disabled') ^ config[key])]}`)
-                                log[key.includes('debug') ? 'info' : 'debug'](`Success! config.${key} = ${config[key]}`)
                             }
                         }
 
@@ -1359,18 +1335,13 @@
             get() { return document.getElementById(`${app.slug}-settings`) },
 
             show() {
-                log.caller = 'modals.settings.show()'
-                log.debug('Showing Settings modal...')
                 const settingsContainer = modals.settings.get()?.parentNode || modals.settings.createAppend()
                 settingsContainer.style.display = '' // show modal
-                log.caller = 'modals.settings.show()'
                 if (env.browser.isMobile) { // scale 93% to viewport sides
-                    log.debug('Scaling 93% to viewport sides...')
                     const settingsModal = settingsContainer.querySelector(`#${app.slug}-settings`),
                           scaleRatio = 0.93 * innerWidth / settingsModal.offsetWidth
                     settingsModal.style.transform = `scale(${scaleRatio})`
                 }
-                log.debug('Success! Settings modal shown')
                 return settingsContainer.firstChild
             },
 
