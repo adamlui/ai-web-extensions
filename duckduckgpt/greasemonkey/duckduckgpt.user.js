@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.15
+// @version                2025.4.15.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -2517,13 +2517,13 @@
               // AI reply elem styles
               + `#${app.slug} .reply-tip {
                     content: "" ; position: relative ; border: 7px solid transparent ;
-                    float: left ; left: 9px ; margin: 33px -14px 0 0 ; /* positioning */
+                    float: left ; left: 9px ; margin: 1px -13px 0 -1px ; /* positioning */
                     border-bottom-style: solid ; border-bottom-width: 18px ; border-top: 0 ; border-bottom-color:
                         ${ // hide reply tip for terminal aesthetic
                             isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${env.ui.app.scheme}-scheme)` }}
                 #${app.slug} .reply-header {
-                    display: flex ; align-items: center ; position: relative ;
-                    top: 14px ; padding: 7px 14px ; height: 18px ; border-radius: 12px 12px 0 0 ;
+                    display: flex ; align-items: center ; position: relative ; box-sizing: border-box ; width: 100% ;
+                    top: 14px ; padding: 15px 14px ; height: 18px ; border-radius: 12px 12px 0 0 ;
                     ${ env.ui.app.scheme == 'light' ? 'border-bottom: 1px solid white'
                                  : isParticlizedDS ? 'border: 1px solid ; border-bottom-color: transparent' : '' };
                     background: var(--reply-header-bg-color-${env.ui.app.scheme}-scheme) ;
@@ -4108,17 +4108,21 @@
             if (!appDiv.querySelector('.reply-pre')) {
                 appDiv.textContent = '' ; dom.addRisingParticles(appDiv)
 
+                // Create/append header div
+                const appHeaderDiv = dom.create.elem('div', { class: 'app-header', style: 'margin: -3px 0 -7px' })
+                appDiv.append(appHeaderDiv)
+
                 // Create/append title
                 const appHeaderLogo = logos.ddgpt.create()
                 appHeaderLogo.width = 157 ; appHeaderLogo.style.margin = '-4px 0'
                 const appTitleAnchor = dom.create.anchor(app.urls.app, appHeaderLogo)
                 appTitleAnchor.classList.add(`${app.slug}-name`, 'no-user-select')
-                appDiv.append(appTitleAnchor)
+                appHeaderDiv.append(appTitleAnchor)
 
                 // Create/append header buttons div
                 const headerBtnsDiv = dom.create.elem('div', {
                     id: `${app.slug}-header-btns`, class: 'no-mobile-tap-outline' })
-                appDiv.append(headerBtnsDiv)
+                appHeaderDiv.append(headerBtnsDiv)
 
                 // Create/append Chevron button
                 if (!env.ui.site.isCentered && !env.browser.isMobile) {
@@ -4176,7 +4180,7 @@
                 const bylineSpan = dom.create.elem('span', { class: 'byline no-user-select' })
                 bylineSpan.textContent = 'by '
                 bylineSpan.append(dom.create.anchor(app.urls.publisher, 'KudoAI'))
-                appDiv.querySelector(`.${app.slug}-name`).insertAdjacentElement('afterend', bylineSpan)
+                appHeaderDiv.querySelector(`.${app.slug}-name`).insertAdjacentElement('afterend', bylineSpan)
                 update.bylineVisibility()
 
                 // Show standby state if prefix/suffix mode on

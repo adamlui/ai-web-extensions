@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.15
+// @version                  2025.4.15.1
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2688,14 +2688,14 @@
               // AI reply elem styles
               + `#${app.slug} .reply-tip {
                     content: "" ; position: relative ; border: 7px solid transparent ;
-                    float: left ; margin: ${ env.browser.isMobile ? 39 : 27 }px -15px 0 0 ;
+                    float: left ; margin: 4px -15px 0 0 ;
                     left: ${ env.browser.isMobile ? 12 : 6 }px ; /* positioning */
-                    border-bottom-style: solid ; border-bottom-width: 16px ; border-top: 0 ; border-bottom-color:
+                    border-bottom-style: solid ; border-bottom-width: 18px ; border-top: 0 ; border-bottom-color:
                         ${ // hide reply tip for terminal aesthetic
                             isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${env.ui.app.scheme}-scheme)` }}
                 #${app.slug} .reply-header {
-                    display: flex ; align-items: center ; position: relative ;
-                    top: 14px ; padding: 7px 14px ; height: 18px ; border-radius: 12px 12px 0 0 ;
+                    display: flex ; align-items: center ; position: relative ; box-sizing: border-box ; width: 100% ;
+                    top: 16px ; padding: 16px 14px ; height: 18px ; border-radius: 12px 12px 0 0 ;
                     ${ env.ui.app.scheme == 'light' ? 'border-bottom: 1px solid white'
                                  : isParticlizedDS ? 'border: 1px solid ; border-bottom-color: transparent' : '' };
                     background: var(--reply-header-bg-color-${env.ui.app.scheme}-scheme) ;
@@ -2708,7 +2708,7 @@
                     font-size: ${config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;
                     line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;
                     position: relative ; z-index: 1 ; /* allow top-margin to overlap header in light scheme */
-                    margin-top: ${ env.ui.app.scheme == 'light' ? 11 : 13 }px ; padding: 1em 1em 0 1em ;
+                    margin: ${ env.ui.app.scheme == 'light' ? 13 : 15 }px 0 0 0 ; padding: 1em 1em 0 1em ;
                     border-radius: 0 0 12px 12px ; overflow: auto ;
                     ${ config.bgAnimationsDisabled ? // classic opaque bg
                         `background: var(--pre-bg-color-${env.ui.app.scheme}-scheme) ;
@@ -4291,11 +4291,15 @@
             if (!appDiv.querySelector('.reply-pre')) {
                 appDiv.textContent = '' ; dom.addRisingParticles(appDiv)
 
+                // Create/append header div
+                const appHeaderDiv = dom.create.elem('div', { class: 'app-header', style: 'margin: -8px 0 -1px' })
+                appDiv.append(appHeaderDiv)
+
                 // Create/append title
                 const appPrefixSpan = dom.create.elem('span', {
                     id: 'app-prefix', class: 'no-user-select',
                     style: `margin-right: -2px ; font-size: ${ env.browser.isMobile ? '1.7rem' : '1.1rem' }` })
-                appPrefixSpan.innerText = '🤖 ' ; appDiv.append(appPrefixSpan)
+                appPrefixSpan.innerText = '🤖 ' ; appHeaderDiv.append(appPrefixSpan)
                 const appHeaderLogo = logos.googleGPT.create()
                 appHeaderLogo.width = env.browser.isMobile ? 177 : env.browser.isFF ? 124 : 122
                 appHeaderLogo.style.cssText = (
@@ -4303,12 +4307,12 @@
                   + ( env.browser.isMobile ? '; margin-left: 1px' : '' ))
                 const appTitleAnchor = dom.create.anchor(app.urls.app, appHeaderLogo)
                 appTitleAnchor.classList.add(`${app.slug}-name`, 'no-user-select')
-                appDiv.append(appTitleAnchor)
+                appHeaderDiv.append(appTitleAnchor)
 
                 // Create/append header buttons div
                 const headerBtnsDiv = dom.create.elem('div', {
-                    id: `${app.slug}-header-btns`, class: 'no-mobile-tap-outline' })
-                appDiv.append(headerBtnsDiv)
+                    id: `${app.slug}-header-btns`, class: 'no-mobile-tap-outline', style: 'margin-top: 1px' })
+                appHeaderDiv.append(headerBtnsDiv)
 
                 // Create/append Chevron button
                 if (!env.browser.isMobile) {
@@ -4367,7 +4371,7 @@
                     const bylineSpan = dom.create.elem('span', { class: 'byline no-user-select' })
                     bylineSpan.textContent = 'by '
                     bylineSpan.append(dom.create.anchor(app.urls.publisher, 'KudoAI'))
-                    appDiv.querySelector(`.${app.slug}-name`).insertAdjacentElement('afterend', bylineSpan)
+                    appHeaderDiv.querySelector(`.${app.slug}-name`).insertAdjacentElement('afterend', bylineSpan)
                     update.bylineVisibility()
                 }
 
