@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.16.1
+// @version                2025.4.16.2
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -1687,7 +1687,7 @@
             })
             this[menuType].ul = dom.create.elem('ul')
             this[menuType].div.append(this[menuType].ul) ; appDiv.append(this[menuType].div)
-            this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this[menuType].toggle
+            this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this.toggle
             this[menuType].update() ; this[menuType].status = 'hidden'
         },
 
@@ -1703,6 +1703,32 @@
                     width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
                 .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }`)
             document.head.append(this.styles)
+        },
+
+        toggle(event) { // visibility
+            const toggleElem = event.currentTarget, menuType = /-(\w+)-(?:btn|menu)$/.exec(toggleElem.id)[1]
+            clearTimeout(hoverMenus[menuType].hideTimeout) // in case rapid re-enter before ran
+            if (!hoverMenus[menuType].div) hoverMenus.createAppend(menuType)
+            if (hoverMenus[menuType].status == 'hidden' && (
+                event.type == 'mouseenter' && event.target != hoverMenus[menuType].div // btn hovered-on
+                || event.type == 'click' ) // btn clicked
+            ) { // show menu
+                hoverMenus[menuType].div.style.display = '' // for rects calc
+                const rects = {
+                    appDiv: appDiv.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
+                    hoverMenu: hoverMenus[menuType].div.getBoundingClientRect()
+                }
+                const appIsHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
+                hoverMenus[menuType].div.style.top = `${ rects.toggleBtn.top - rects.appDiv.top +(
+                    appIsHigh ? /* point down */ 29 : /* point up */ - rects.hoverMenu.height -13 )}px`
+                if (!hoverMenus[menuType].rightPos)
+                    hoverMenus[menuType].rightPos = (
+                        rects.appDiv.right - event.clientX - hoverMenus[menuType].div.offsetWidth/2 )
+                Object.assign(hoverMenus[menuType].div.style, {
+                    right: `${hoverMenus[menuType].rightPos}px`, opacity: 1 })
+                hoverMenus[menuType].status = 'visible'
+            } else if (/click|mouseleave/.test(event.type)) // menu/btn hovered-off or btn clicked, hide menu
+                return hoverMenus[menuType].hideTimeout = setTimeout(() => hoverMenus.hide(menuType), 55)
         },
 
         api: {
@@ -1754,30 +1780,6 @@
                     ) apiMenuItems[i].append(apiMenuIcons[0]) // append right checkmark
                     this.ul.append(apiMenuItems[i])
                 }
-            },
-
-            toggle(event) { // visibility
-                clearTimeout(hoverMenus.api.hideTimeout) // in case rapid re-enter before ran
-                if (!hoverMenus.api.div) hoverMenus.createAppend('api')
-                if (hoverMenus.api.status == 'hidden' && (
-                    event.type == 'mouseenter' && event.target != hoverMenus.api.div // API btn hovered-on
-                    || event.type == 'click' ) // API btn clicked
-                ) { // show menu
-                    hoverMenus.api.div.style.display = '' // for rects calc
-                    const apiBtn = appDiv.querySelector(`#${app.slug}-api-btn`)
-                    const rects = {
-                        appDiv: appDiv.getBoundingClientRect(), apiBtn: apiBtn.getBoundingClientRect(),
-                        apiMenu: hoverMenus.api.div.getBoundingClientRect()
-                    }
-                    const appIsHigh = rects.apiBtn.top < ( rects.apiMenu.height +15 )
-                    hoverMenus.api.div.style.top = `${ rects.apiBtn.top - rects.appDiv.top +(
-                        appIsHigh ? /* point down */ 29 : /* point up */ - rects.apiMenu.height -13 )}px`
-                    if (!hoverMenus.api.rightPos)
-                        hoverMenus.api.rightPos = rects.appDiv.right - event.clientX - hoverMenus.api.div.offsetWidth/2
-                    Object.assign(hoverMenus.api.div.style, { right: `${hoverMenus.api.rightPos}px`, opacity: 1 })
-                    hoverMenus.api.status = 'visible'
-                } else if (/click|mouseleave/.test(event.type)) // API menu/btn hovered-off or btn clicked, hide menu
-                    return hoverMenus.api.hideTimeout = setTimeout(() => hoverMenus.hide('api'), 55)
             }
         },
 
@@ -1834,30 +1836,6 @@
                     pinMenuItems[i].onclick = hoverMenus.pin.clickHandler
                     this.ul.append(pinMenuItems[i])
                 }
-            },
-
-            toggle(event) { // visibility
-                clearTimeout(hoverMenus.pin.hideTimeout) // in case rapid re-enter before ran
-                if (!hoverMenus.pin.div) hoverMenus.createAppend('pin')
-                if (hoverMenus.pin.status == 'hidden' && (
-                    event.type == 'mouseenter' && event.target != hoverMenus.pin.div // Pin btn hovered-on
-                    || event.type == 'click' ) // Pin btn clicked
-                ) { // show menu
-                    hoverMenus.pin.div.style.display = '' // for rects calc
-                    const pinBtn = appDiv.querySelector(`#${app.slug}-pin-btn`)
-                    const rects = {
-                        appDiv: appDiv.getBoundingClientRect(), pinBtn: pinBtn.getBoundingClientRect(),
-                        pinMenu: hoverMenus.pin.div.getBoundingClientRect()
-                    }
-                    const appIsHigh = rects.pinBtn.top < ( rects.pinMenu.height +15 )
-                    hoverMenus.pin.div.style.top = `${ rects.pinBtn.top - rects.appDiv.top +(
-                        appIsHigh ? /* point down */ 29 : /* point up */ - rects.pinMenu.height -13 )}px`
-                    if (!hoverMenus.pin.rightPos)
-                        hoverMenus.pin.rightPos = rects.appDiv.right - event.clientX - hoverMenus.pin.div.offsetWidth/2
-                    Object.assign(hoverMenus.pin.div.style, { right: `${hoverMenus.pin.rightPos}px`, opacity: 1 })
-                    hoverMenus.pin.status = 'visible'
-                } else if (/click|mouseleave/.test(event.type)) // Pin menu/btn hovered-off or btn clicked, hide menu
-                    return hoverMenus.pin.hideTimeout = setTimeout(() => hoverMenus.hide('pin'), 55)
             }
         }
     }
@@ -2920,7 +2898,7 @@
                     else if (btn.id.endsWith('settings-btn')) btn.onclick = () => modals.open('settings')
                     else if (btn.id.endsWith('font-size-btn')) btn.onclick = () => fontSizeSlider.toggle()
                     else if (btn.id.endsWith('pin-btn'))
-                        btn.onmouseenter = btn.onmouseleave = btn.onclick = hoverMenus.pin.toggle
+                        btn.onmouseenter = btn.onmouseleave = btn.onclick = hoverMenus.toggle
                     else if (btn.id.endsWith('wsb-btn'))
                         btn.onclick = () => { toggle.sidebar('wider') ; tooltip.update('wsb') }
                     else if (btn.id.endsWith('arrows-btn')) btn.onclick = () => toggle.expandedMode()
@@ -4271,7 +4249,7 @@
                     const preHeaderLabel = appDiv.querySelector('.reply-header-text'),
                           apiDot = dom.create.elem('span', { id: `${app.slug}-api-btn`, style: 'cursor: pointer' })
                     apiDot.textContent = '⦿'
-                    apiDot.onmouseenter = apiDot.onmouseleave = apiDot.onclick = hoverMenus.api.toggle
+                    apiDot.onmouseenter = apiDot.onmouseleave = apiDot.onclick = hoverMenus.toggle
                     apiDot.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
                     preHeaderLabel.replaceChildren(
                         apiDot, ` API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
