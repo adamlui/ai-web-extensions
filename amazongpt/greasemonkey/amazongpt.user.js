@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.16.4
+// @version                2025.4.16.5
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1474,9 +1474,11 @@
         stylize() {
             if (this.styles) return
             this.styles = dom.create.style(`
+                .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
                 .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
                     width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
-                .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
+                #${app.slug}-api-menu > ul > li:first-of-type > svg { /* API header entry icon */
+                    top: 3px ; margin: 0 1px 0 -4px } /* tighten pos */
                 .${app.slug}-menu-item #${app.slug}-checkmark-icon {
                     position: relative ; float: right ; margin-right: -16px ; top: 4px ; fill: #b3f96d }
                 .${app.slug}-menu-item:hover #${app.slug}-checkmark-icon { fill: green }`
