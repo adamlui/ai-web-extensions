@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.16.13
+// @version                2025.4.16.14
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -3261,7 +3261,7 @@
                 const anchorToggle = document.querySelector('[id*=anchor] input')
                 if (anchorToggle.checked != config.anchored) modals.settings.toggle.switch(anchorToggle)
             }
-            hoverMenus.api.rightPos = hoverMenus.pin.rightPos = null
+            Object.values(hoverMenus).forEach(menu => menu.rightPos = null)
             notify(`${app.msgs.mode_anchor} ${toolbarMenu.state.words[+config.anchored]}`,
                 null, sidebarModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
         },
