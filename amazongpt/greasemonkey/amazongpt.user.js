@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.16.3
+// @version                2025.4.16.4
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -691,7 +691,7 @@
             // Show modal
             const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
                 .map(api => { // to btn callback/label
-                    const cb = function() {
+                    const onclick = function() {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
                         if (modals.settings.get()) { // update status of Preferred API entry
                             const preferredAPIstatus = document.querySelector('[id*=preferredAPI] > span')
@@ -702,8 +702,8 @@
                         if (appDiv.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
                             get.reply(msgChain) // re-send query if user alerted
                     }
-                    Object.defineProperty(cb, 'name', { value: api.toLowerCase() })
-                    return cb
+                    Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
+                    return onclick
                 })
             const apiModal = modals.alert(`${app.msgs.menuLabel_preferred} API:`, '', modalBtns, '', 503)
 
@@ -1534,8 +1534,8 @@
                     if (entry.isActive?.()) item.append(icons.checkmark.create())
                 }
                 item.onclick = () => {
-                    if (!entry.cb) return
-                    const prevOffsetTop = appDiv.offsetTop ; entry.cb()
+                    if (!entry.onclick) return
+                    const prevOffsetTop = appDiv.offsetTop ; entry.onclick()
                     if (appDiv.offsetTop != prevOffsetTop) this.hide(menuType) // since app moved
                     this.update(menuType)
                 }
@@ -1548,7 +1548,7 @@
                 { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightningBolt' },
                 ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api !== 'OpenAI')].map(api => ({
                     label: api,
-                    cb: () => {
+                    onclick: () => {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
                         notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                                `${config.anchored ? 'top' : 'bottom'}-right`)
