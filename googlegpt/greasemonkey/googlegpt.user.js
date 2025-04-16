@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.16.2
+// @version                  2025.4.16.3
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1835,7 +1835,7 @@
             this[menuType].ul = dom.create.elem('ul')
             this[menuType].div.append(this[menuType].ul) ; appDiv.append(this[menuType].div)
             this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this.toggle
-            this[menuType].update() ; this[menuType].status = 'hidden'
+            this.update(menuType) ; this[menuType].status = 'hidden'
         },
 
         hide(menuType) {
@@ -1848,7 +1848,11 @@
             this.styles = dom.create.style(`
                 .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
                     width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
-                .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }`)
+                .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
+                .${app.slug}-menu-item #${app.slug}-checkmark-icon {
+                    position: relative ; float: right ; margin-right: -16px ; top: 4px ; fill: #b3f96d }
+                .${app.slug}-menu-item:hover #${app.slug}-checkmark-icon { fill: green }`
+            )
             document.head.append(this.styles)
         },
 
@@ -1878,112 +1882,67 @@
                 return hoverMenus[menuType].hideTimeout = setTimeout(() => hoverMenus.hide(menuType), 55)
         },
 
-        api: {
-
-            clickHandler(event) {
-                const itemLabel = event.target.textContent, prevOffsetTop = appDiv.offsetTop
-
-                // Switch preferred API
-                settings.save('preferredAPI', itemLabel == app.msgs.menuLabel_random ? false : itemLabel)
-                notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                    `${ config.anchored ? 'top' : 'bottom' }-right`)
-
-                // Close/update menu
-                if (appDiv.offsetTop != prevOffsetTop) hoverMenus.hide('api') // since app moved
-                hoverMenus.api.update()
-            },
-
-            update() {
-
-                // Init elems
-                this.ul.textContent = ''
-                const apiMenuIcons = ['checkmark'].map(key => icons[key].create())
-                const apiMenuLabels = [
-                    `${app.msgs.menuLabel_preferred} API:`, app.msgs.menuLabel_random,
-                    ...Object.keys(apis).filter(api => api != 'OpenAI')
-                ]
-                const apiMenuItems = apiMenuLabels.map(() => dom.create.elem('li', { class: `${app.slug}-menu-item` }))
-
-                // Style icons
-                apiMenuIcons[0].style.cssText = ( // re-style checkmarks
-                    'position: relative ; float: right ; margin-right: -16px ; top: 4px' )
-
-                // Fill menu UL
-                for (let i = 0 ; i < apiMenuLabels.length ; i++) {
-                    apiMenuItems[i].textContent = apiMenuLabels[i]
-                    if (i == 0) { // format header item
-                        apiMenuItems[i].innerHTML = `<b>${apiMenuLabels[i]}</b>`
-                        apiMenuItems[i].prepend(icons.lightningBolt.create())
-                        apiMenuItems[i].classList.add(`${app.slug}-menu-header`) // to not apply hover fx from app.styles
-                        apiMenuItems[i].style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
-                    } else if (i == 1) apiMenuItems[i].style.marginTop = '3px' // top-pad first non-header item
-                    apiMenuItems[i].style.paddingRight = '24px' // make room for checkmark
-                    if (i > 0) { // non-header items
-                        apiMenuItems[i].style.paddingLeft = '11px' // indent
-                        apiMenuItems[i].onclick = hoverMenus.api.clickHandler
-                    }
-                    if (!config.preferredAPI && i == 1
-                      || config.preferredAPI && apiMenuItems[i].textContent == config.preferredAPI
-                    ) apiMenuItems[i].append(apiMenuIcons[0]) // append right checkmark
-                    this.ul.append(apiMenuItems[i])
+        update(menuType) {
+            this[menuType].ul.textContent = ''
+            this[menuType].entries.forEach((entry, idx) => {
+                const item = dom.create.elem('li', { class: `${app.slug}-menu-item` })
+                if (idx == 0) { // header item
+                    item.innerHTML = `<b>${entry.label}</b>`
+                    item.classList.add(`${app.slug}-menu-header`)
+                    item.style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
+                    if (entry.iconType) item.prepend(icons[entry.iconType].create())
+                } else { // child items
+                    item.textContent = entry.label
+                    item.style.paddingRight = '24px' // make room for checkmark
+                    if (idx == 1) item.style.marginTop = '3px' // top-pad first non-header item
+                    if (entry.iconType) { // prepend it
+                        const icon = icons[entry.iconType].create()
+                        icon.style.cssText = `
+                            width: 12px ; height: 12px ; position: relative ; top: 1px ; right: 5px ; margin-left: 5px`
+                        if (entry.iconType == 'webCorner') icon.style.width = icon.style.height = '11px' // shrink it
+                        item.prepend(icon)
+                    } else // indent
+                        item.style.paddingLeft = '11px'
+                    if (entry.isActive?.()) item.append(icons.checkmark.create())
                 }
-            }
+                item.onclick = () => {
+                    if (!entry.cb) return
+                    const prevOffsetTop = appDiv.offsetTop ; entry.cb()
+                    if (appDiv.offsetTop != prevOffsetTop) this.hide(menuType) // since app moved
+                    this.update(menuType)
+                }
+                this[menuType].ul.append(item)
+            })
+        },
+
+        api: {
+            entries: [
+                { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightningBolt' },
+                ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api !== 'OpenAI')].map(api => ({
+                    label: api,
+                    cb: () => {
+                        settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
+                        notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
+                               `${config.anchored ? 'top' : 'bottom'}-right`)
+                    },
+                    isActive: () => !config.preferredAPI && api == app.msgs.menuLabel_random
+                                  || config.preferredAPI == api
+                }))
+            ]
         },
 
         pin: {
-
-            clickHandler(event) {
-                const itemLabel = event.target.textContent, prevOffsetTop = appDiv.offsetTop
-
-                // Switch mode
-                if (itemLabel == app.msgs.menuLabel_top) toggle.sidebar('sticky')
-                else if (itemLabel == app.msgs.menuLabel_sidebar) {
-                    toggle.sidebar('sticky', 'off') ; toggle.anchorMode('off') }
-                else if (itemLabel == app.msgs.menuLabel_bottom) toggle.anchorMode()
-
-                // Close/update menu
-                if (appDiv.offsetTop != prevOffsetTop) hoverMenus.hide('pin') // since app moved
-                hoverMenus.pin.update()
-            },
-
-            update() {
-
-                // Init elems
-                this.ul.textContent = ''
-                const pinMenuIcons = ['webCorner', 'sidebar', 'anchor', 'checkmark'].map(key => icons[key].create())
-                const pinMenulabels = [ `${app.msgs.menuLabel_pinTo}...`,
-                    app.msgs.menuLabel_top, app.msgs.menuLabel_sidebar, app.msgs.menuLabel_bottom ]
-                const pinMenuItems = pinMenulabels.map(() => dom.create.elem('li', { class: `${app.slug}-menu-item` }))
-
-                // Style icons
-                pinMenuIcons.forEach(icon => icon.style.cssText = (
-                    'width: 12px ; height: 12px ; position: relative ; top: 1px ; right: 5px ; margin-left: 5px'))
-                pinMenuIcons[0].style.width = pinMenuIcons[0].style.height = '11px' // shrink corner web icon
-                pinMenuIcons[3].style.cssText = ( // re-style checkmarks
-                    'position: relative ; float: right ; margin-right: -16px ; top: 4px' )
-
-                // Fill menu UL
-                for (let i = 0 ; i < 4 ; i++) {
-                    pinMenuItems[i].textContent = pinMenulabels[i]
-                    if (i == 0) { // format header item
-                        pinMenuItems[i].innerHTML = `<b>${pinMenulabels[i]}</b>`
-                        pinMenuItems[i].prepend(icons.pin.create())
-                        pinMenuItems[i].classList.add(`${app.slug}-menu-header`) // to not apply hover fx from app.styles
-                        pinMenuItems[i].style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
-                    } else if (i == 1) pinMenuItems[i].style.marginTop = '3px' // top-pad first non-header item
-                    pinMenuItems[i].style.paddingRight = '24px' // make room for checkmark
-                    if (i > 0) { // non-header items
-                        pinMenuItems[i].prepend(pinMenuIcons[i -1]) // prepend left icon
-                        pinMenuItems[i].onclick = hoverMenus.pin.clickHandler
-                    }
-                    if (i == 1 && config.stickySidebar // 'Top' item + Sticky mode on
-                     || i == 2 && !config.stickySidebar && !config.anchored // 'Sidebar' item + no mode on
-                     || i == 3 && config.anchored) // 'Bottom' item + Anchor mode on
-                            pinMenuItems[i].append(pinMenuIcons[pinMenuIcons.length -1]) // append right checkmark
-                    pinMenuItems[i].onclick = hoverMenus.pin.clickHandler
-                    this.ul.append(pinMenuItems[i])
-                }
-            }
+            entries: [
+                { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
+                { label: app.msgs.menuLabel_top, iconType: 'webCorner', cb: () => toggle.sidebar('sticky'),
+                    isActive: () => config.stickySidebar },
+                { label: app.msgs.menuLabel_sidebar, iconType: 'sidebar',
+                    cb: () => { toggle.sidebar('sticky', 'off') ; toggle.anchorMode('off') },
+                    isActive: () => !config.stickySidebar && !config.anchored
+                },
+                { label: app.msgs.menuLabel_bottom, iconType: 'anchor', cb: () => toggle.anchorMode(),
+                    isActive: () => config.anchored }
+            ]
         }
     }
 
@@ -2833,8 +2792,6 @@
               + `.${app.slug}-menu-item { padding: 0 5px ; line-height: 20.5px }`
               + `.${app.slug}-menu-item:not(.${app.slug}-menu-header):hover {`
                   + 'cursor: pointer ; background: white ; color: black ; fill: black }'
-              + `#${app.slug}-checkmark-icon { fill: #b3f96d }`
-              + `.${app.slug}-menu-item:hover #${app.slug}-checkmark-icon { fill: green }`
 
               // Wider Sidebar styles
               + `#${app.slug}.wider { min-width: 455px }

@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.16.2
+// @version                2025.4.16.3
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1463,7 +1463,7 @@
             this[menuType].ul = dom.create.elem('ul')
             this[menuType].div.append(this[menuType].ul) ; appDiv.append(this[menuType].div)
             this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this.toggle
-            this[menuType].update() ; this[menuType].status = 'hidden'
+            this.update(menuType) ; this[menuType].status = 'hidden'
         },
 
         hide(menuType) {
@@ -1476,7 +1476,11 @@
             this.styles = dom.create.style(`
                 .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
                     width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
-                .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }`)
+                .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
+                .${app.slug}-menu-item #${app.slug}-checkmark-icon {
+                    position: relative ; float: right ; margin-right: -16px ; top: 4px ; fill: #b3f96d }
+                .${app.slug}-menu-item:hover #${app.slug}-checkmark-icon { fill: green }`
+            )
             document.head.append(this.styles)
         },
 
@@ -1506,56 +1510,53 @@
                 return hoverMenus[menuType].hideTimeout = setTimeout(() => hoverMenus.hide(menuType), 55)
         },
 
-        api: {
-
-            clickHandler(event) {
-                const itemLabel = event.target.textContent, prevOffsetTop = appDiv.offsetTop
-
-                // Switch preferred API
-                settings.save('preferredAPI', itemLabel == app.msgs.menuLabel_random ? false : itemLabel)
-                notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                    `${ config.anchored ? 'top' : 'bottom' }-right`)
-
-                // Close/update menu
-                if (appDiv.offsetTop != prevOffsetTop) hoverMenus.hide('api') // since app moved
-                hoverMenus.api.update()
-            },
-
-            update() {
-
-                // Init elems
-                this.ul.textContent = ''
-                const apiMenuIcons = ['checkmark'].map(key => icons[key].create())
-                const apiMenuLabels = [
-                    `${app.msgs.menuLabel_preferred} API:`, app.msgs.menuLabel_random,
-                    ...Object.keys(apis).filter(api => api != 'OpenAI')
-                ]
-                const apiMenuItems = apiMenuLabels.map(() => dom.create.elem('li', { class: `${app.slug}-menu-item` }))
-
-                // Style icons
-                apiMenuIcons[0].style.cssText = ( // re-style checkmarks
-                    'position: relative ; float: right ; margin-right: -16px ; top: 4px' )
-
-                // Fill menu UL
-                for (let i = 0 ; i < apiMenuLabels.length ; i++) {
-                    apiMenuItems[i].textContent = apiMenuLabels[i]
-                    if (i == 0) { // format header item
-                        apiMenuItems[i].innerHTML = `<b>${apiMenuLabels[i]}</b>`
-                        apiMenuItems[i].prepend(icons.lightningBolt.create())
-                        apiMenuItems[i].classList.add(`${app.slug}-menu-header`) // to not apply hover fx from app.styles
-                        apiMenuItems[i].style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
-                    } else if (i == 1) apiMenuItems[i].style.marginTop = '3px' // top-pad first non-header item
-                    apiMenuItems[i].style.paddingRight = '24px' // make room for checkmark
-                    if (i > 0) { // non-header items
-                        apiMenuItems[i].style.paddingLeft = '11px' // indent
-                        apiMenuItems[i].onclick = hoverMenus.api.clickHandler
-                    }
-                    if (!config.preferredAPI && i == 1
-                      || config.preferredAPI && apiMenuItems[i].textContent == config.preferredAPI
-                    ) apiMenuItems[i].append(apiMenuIcons[0]) // append right checkmark
-                    this.ul.append(apiMenuItems[i])
+        update(menuType) {
+            this[menuType].ul.textContent = ''
+            this[menuType].entries.forEach((entry, idx) => {
+                const item = dom.create.elem('li', { class: `${app.slug}-menu-item` })
+                if (idx == 0) { // header item
+                    item.innerHTML = `<b>${entry.label}</b>`
+                    item.classList.add(`${app.slug}-menu-header`)
+                    item.style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
+                    if (entry.iconType) item.prepend(icons[entry.iconType].create())
+                } else { // child items
+                    item.textContent = entry.label
+                    item.style.paddingRight = '24px' // make room for checkmark
+                    if (idx == 1) item.style.marginTop = '3px' // top-pad first non-header item
+                    if (entry.iconType) { // prepend it
+                        const icon = icons[entry.iconType].create()
+                        icon.style.cssText = `
+                            width: 12px ; height: 12px ; position: relative ; top: 1px ; right: 5px ; margin-left: 5px`
+                        if (entry.iconType == 'webCorner') icon.style.width = icon.style.height = '11px' // shrink it
+                        item.prepend(icon)
+                    } else // indent
+                        item.style.paddingLeft = '11px'
+                    if (entry.isActive?.()) item.append(icons.checkmark.create())
                 }
-            }
+                item.onclick = () => {
+                    if (!entry.cb) return
+                    const prevOffsetTop = appDiv.offsetTop ; entry.cb()
+                    if (appDiv.offsetTop != prevOffsetTop) this.hide(menuType) // since app moved
+                    this.update(menuType)
+                }
+                this[menuType].ul.append(item)
+            })
+        },
+
+        api: {
+            entries: [
+                { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightningBolt' },
+                ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api !== 'OpenAI')].map(api => ({
+                    label: api,
+                    cb: () => {
+                        settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
+                        notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
+                               `${config.anchored ? 'top' : 'bottom'}-right`)
+                    },
+                    isActive: () => !config.preferredAPI && api == app.msgs.menuLabel_random
+                                  || config.preferredAPI == api
+                }))
+            ]
         }
     }
 
