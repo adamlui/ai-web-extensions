@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.16.9
+// @version                  2025.4.16.10
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1077,11 +1077,9 @@
                 margin: 18px 0px 14px !important ; display: grid ; grid-template-columns: repeat(3, 1fr) ; gap: 10px`
             btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
                 if (idx == 0) btn.style.display = 'none' // hide Dismiss button
-                btn.classList = ( // emphasize preferred API
+                else btn.classList.toggle('primary-modal-btn',
                     config.preferredAPI.toLowerCase() == btn.textContent.toLowerCase()
-                        || btn.textContent == app.msgs.menuLabel_random && !config.preferredAPI ? 'primary-modal-btn'
-                            : ''
-                )
+                        || btn.textContent == app.msgs.menuLabel_random && !config.preferredAPI)
             })
 
             return apiModal
@@ -1260,9 +1258,8 @@
                 const btnScheme = btn.textContent.toLowerCase()
 
                 // Emphasize active scheme
-                btn.classList = (
-                    config.scheme == btn.textContent.toLowerCase() || (btn.textContent == 'Auto' && !config.scheme)
-                      ? 'primary-modal-btn' : '' )
+                btn.classList.toggle('primary-modal-btn',
+                    config.scheme == btn.textContent.toLowerCase() || (btn.textContent == 'Auto' && !config.scheme))
 
                 // Prepend emoji + localize labels
                 if (Object.prototype.hasOwnProperty.call(schemeEmojis, btnScheme))
@@ -1277,8 +1274,8 @@
                     const newScheme = btnScheme == 'auto' ? getScheme() : btnScheme
                     settings.save('scheme', btnScheme == 'auto' ? false : newScheme)
                     schemeModal.querySelectorAll('button').forEach(btn =>
-                        btn.classList = '') // clear prev emphasized active scheme
-                    btn.classList = 'primary-modal-btn' // emphasize newly active scheme
+                        btn.classList.remove('primary-modal-btn')) // clear prev emphasized active scheme
+                    btn.classList.add('primary-modal-btn') // emphasize newly active scheme
                     btn.style.cssText = 'pointer-events: none' // disable hover fx to show emphasis
                     setTimeout(() => { btn.style.pointerEvents = 'auto' }, // re-enable hover fx
                         100) // ...after 100ms to flicker emphasis
