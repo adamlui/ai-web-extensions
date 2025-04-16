@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.16.11
+// @version                  2025.4.16.12
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1073,7 +1073,7 @@
                 margin: 18px 0px 14px !important ; display: grid ; grid-template-columns: repeat(3, 1fr) ; gap: 10px`
             btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
                 if (idx == 0) btn.style.display = 'none' // hide Dismiss button
-                else btn.classList.toggle('primary-modal-btn',
+                else btn.classList.toggle('primary-modal-btn', // emphasize preferred API
                     config.preferredAPI.toLowerCase() == btn.textContent.toLowerCase()
                         || btn.textContent == app.msgs.menuLabel_random && !config.preferredAPI)
             })
