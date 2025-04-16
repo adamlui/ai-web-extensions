@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.16.12
+// @version                  2025.4.16.13
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1236,7 +1236,7 @@
             // Show modal
             const schemeModal = modals.alert(`${
                 app.name } ${( app.msgs.menuLabel_colorScheme ).toLowerCase() }:`, '', // title
-                [ function auto() {}, function light() {}, function dark() {} ] // buttons
+                [ function auto(){}, function light(){}, function dark(){} ] // buttons
             )
 
             // Center title/button cluster

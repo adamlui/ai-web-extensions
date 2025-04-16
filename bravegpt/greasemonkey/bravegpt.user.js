@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.16.11
+// @version               2025.4.16.12
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1084,7 +1084,7 @@
             // Show modal
             const schemeModal = modals.alert(`${
                 app.name } ${( app.msgs.menuLabel_colorScheme ).toLowerCase() }:`, '', // title
-                [ function auto() {}, function light() {}, function dark() {} ], // buttons
+                [ function auto(){}, function light(){}, function dark(){} ], // buttons
                 '', 503 // px width
             )
 

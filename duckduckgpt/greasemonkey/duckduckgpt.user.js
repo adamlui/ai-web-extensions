@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.16.10
+// @version                2025.4.16.11
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -896,7 +896,7 @@
         feedback() {
 
             // Init buttons
-            let btns = [ function productHunt(){}, function g2(){}, function alternativeto() {} ]
+            let btns = [ function productHunt(){}, function g2(){}, function alternativeto(){} ]
             if (modals.stack[0] != 'about') btns.push(function github(){})
 
             // Show modal
@@ -1087,7 +1087,7 @@
             // Show modal
             const schemeModal = modals.alert(`${
                 app.name } ${( app.msgs.menuLabel_colorScheme ).toLowerCase() }:`, '', // title
-                [ function auto() {}, function light() {}, function dark() {} ] // buttons
+                [ function auto(){}, function light(){}, function dark(){} ] // buttons
             )
 
             // Center title/button cluster
