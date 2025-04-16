@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.13
+// @version             2025.4.15
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -688,7 +688,7 @@
                       sidebarToggle = document.querySelector(selectors.btns.sidebar)
                 if (sidebarToggle) {
                     const sidebars = { left: document.querySelector(selectors.sidebar) }, sidebarsToHide = []
-                    if (env.site === 'chatgpt') sidebars.right = document.querySelector(selectors.rightbar)
+                    if (env.site == 'chatgpt') sidebars.right = document.querySelector(selectors.rightbar)
                     Object.entries(sidebars).forEach(([side, bar]) => // push fat/visible ones to hide
                         bar && dom.get.computedWidth(bar) > 100 && sidebarsToHide.push({ side, bar }))
                     sidebarsToHide.forEach(({ side, bar }) => { // hide'em
@@ -883,7 +883,7 @@
     const hhStyle = sites[env.site].selectors.header + '{ display: none !important }' // hide header
                   + ( env.site == 'chatgpt' ? 'main { padding-top: 12px }' : '' ) // increase top-padding
     const hfStyle = `${sites[env.site].selectors.footer}${ // hide footer
-        env.site === 'perplexity' ? `, ${sites[env.site].selectors.btns.help}` : '' } { display: none }`
+        env.site == 'perplexity' ? `, ${sites[env.site].selectors.btns.help}` : '' } { display: none }`
 
     update.style.tweaks() ; document.head.append(tweaksStyle);
 
