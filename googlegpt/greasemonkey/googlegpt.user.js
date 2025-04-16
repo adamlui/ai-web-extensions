@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.15.1
+// @version                  2025.4.15.2
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -4292,7 +4292,7 @@
                 appDiv.textContent = '' ; dom.addRisingParticles(appDiv)
 
                 // Create/append header div
-                const appHeaderDiv = dom.create.elem('div', { class: 'app-header', style: 'margin: -8px 0 -1px' })
+                const appHeaderDiv = dom.create.elem('div', { class: 'app-header', style: 'margin: -8px 0 0 0' })
                 appDiv.append(appHeaderDiv)
 
                 // Create/append title
@@ -4387,7 +4387,7 @@
                         standbyBtn.prepend(icons[btnType == 'query' ? 'send' : 'summarize'].create())
                         standbyBtn.onclick = () => {
                             show.reply.userInteracted = true ; show.reply.chatbarFocused = false
-                            hoverMenus.api.rightPos = hoverMenus.pin.rightPos = null
+                            hoverMenus.api.rightPos = hoverMenus.pin.rightPos = hoverMenus.pin.div = null
                             msgChain.push({ role: 'user', content:
                                 btnType == 'summarize' ? prompts.create('summarizeResults')
                                                        : new URL(location.href).searchParams.get('q') })
