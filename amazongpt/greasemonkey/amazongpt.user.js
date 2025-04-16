@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.16.11
+// @version                2025.4.16.12
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -380,7 +380,7 @@
         proxyAPIenabled: { type: 'toggle', icon: 'sunglasses', defaultVal: false,
             label: app.msgs.menuLabel_proxyAPImode,
             helptip: app.msgs.helptip_proxyAPImode },
-        preferredAPI: { type: 'modal', icon: 'lightningBolt', defaultVal: false,
+        preferredAPI: { type: 'modal', icon: 'lightning', defaultVal: false,
             label: `${app.msgs.menuLabel_preferred} API`,
             helptip: app.msgs.helptip_preferredAPI },
         streamingDisabled: { type: 'toggle', icon: 'signalStream', defaultVal: false,
@@ -1518,7 +1518,7 @@
 
         api: {
             entries: [
-                { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightningBolt' },
+                { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
                 ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api !== 'OpenAI')].map(api => ({
                     label: api,
                     onclick: () => {
@@ -1710,7 +1710,7 @@
             }
         },
 
-        lightningBolt: {
+        lightning: {
             create() {
                 const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 43 430.317 545.316' }),
                       g = dom.create.svgElem('g', { style: 'transform: rotate(12deg)' })
