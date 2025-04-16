@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.16
+// @version               2025.4.16.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1318,6 +1318,8 @@
                         if (key.includes('preferredAPI')) {
                             configStatusSpan.textContent = config.preferredAPI || app.msgs.menuLabel_random
                             settingItem.onclick = () => modals.open('api')
+                            settingItem.classList.toggle('active', config.proxyAPIenabled)
+                            settingItem.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
                         } else if (key.includes('replyLang')) {
                             configStatusSpan.textContent = config.replyLang
                             settingItem.onclick = () => modals.open('replyLang')
@@ -3472,11 +3474,14 @@
                 if (proxyToggle.checked != config.proxyAPIenabled) // Proxy state out-of-sync (from using toolbar menu)
                     modals.settings.toggle.switch(proxyToggle)
                 preferredAPIentry.classList.toggle('active', config.proxyAPIenabled)
+                preferredAPIentry.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
                 if (streamingToggle.checked && !config.proxyAPIenabled // Streaming checked but OpenAI mode
                     || // ...or Streaming unchecked but enabled in Proxy mode
                         !streamingToggle.checked && config.proxyAPIenabled && !config.streamingDisabled)
                             modals.settings.toggle.switch(streamingToggle)
             }
+            const apiDot = appDiv.querySelector(`#${app.slug}-api-btn`)
+            if (apiDot) apiDot.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
             if (appDiv.querySelector(`.${app.slug}-alert`)) get.reply(msgChain) // re-send query if user alerted
         },
 
@@ -4279,6 +4284,7 @@
                           apiDot = dom.create.elem('span', { id: `${app.slug}-api-btn`, style: 'cursor: pointer' })
                     apiDot.textContent = '⦿'
                     apiDot.onmouseenter = apiDot.onmouseleave = apiDot.onclick = hoverMenus.api.toggle
+                    apiDot.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
                     preHeaderLabel.replaceChildren(
                         apiDot, ` API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
                     setTimeout(() => type(apiUsed, preHeaderLabel.lastChild, { speed: 1.5 }), 150)
