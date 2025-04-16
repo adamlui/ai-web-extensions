@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.16.6
+// @version                2025.4.16.7
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1502,9 +1502,8 @@
                 const appIsHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
                 hoverMenus[menuType].div.style.top = `${ rects.toggleBtn.top - rects.appDiv.top +(
                     appIsHigh ? /* point down */ 29 : /* point up */ - rects.hoverMenu.height -13 )}px`
-                if (!hoverMenus[menuType].rightPos)
-                    hoverMenus[menuType].rightPos = (
-                        rects.appDiv.right - event.clientX - hoverMenus[menuType].div.offsetWidth/2 )
+                hoverMenus[menuType].rightPos = hoverMenus[menuType].rightPos
+                    || rects.appDiv.right - event.clientX - hoverMenus[menuType].div.offsetWidth/2
                 Object.assign(hoverMenus[menuType].div.style, {
                     right: `${hoverMenus[menuType].rightPos}px`, opacity: 1 })
                 hoverMenus[menuType].status = 'visible'
@@ -2533,7 +2532,7 @@
 
         toggle(stateOrEvent) { // visibility
             if (env.browser.isMobile) return
-            if (!tooltip.div) tooltip.div = dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
+            tooltip.div = tooltip.div || dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
             if (!tooltip.div.isConnected) appDiv.append(tooltip.div)
             if (!tooltip.styles) tooltip.stylize()
             if (typeof stateOrEvent == 'object') // mouse event from btn hover, update text/pos
@@ -2998,7 +2997,7 @@
                             if (env.browser.isChromium) clearTimeout(this.timeout) // skip handleProcessCompletion()
                             if (caller.status != 'done' && !caller.sender) return api.tryNew(caller)
                         } else if (caller.status != 'done') { // app waiting or sending
-                            if (!caller.sender) caller.sender = callerAPI // app is waiting, become sender
+                            caller.sender = caller.sender || callerAPI // app is waiting, become sender
                             if (caller.sender == callerAPI // app is sending from this api
                                 && textToShow.trim() != '' // empty reply chunk not read
                             ) show.reply(textToShow, { apiUsed: callerAPI })
@@ -3164,8 +3163,8 @@
 
             // Init API attempt props
             get.reply.status = 'waiting'
-            if (!get.reply.triedAPIs) get.reply.triedAPIs = []
-            if (!get.reply.attemptCnt) get.reply.attemptCnt = 1
+            get.reply.triedAPIs = get.reply.triedAPIs || []
+            get.reply.attemptCnt = get.reply.attemptCnt || 1
 
             // Pick API
             get.reply.api = config.proxyAPIenabled ? api.pick(get.reply) : 'OpenAI'

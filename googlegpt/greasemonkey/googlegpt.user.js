@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.16.8
+// @version                  2025.4.16.9
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1875,9 +1875,8 @@
                 const appIsHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
                 hoverMenus[menuType].div.style.top = `${ rects.toggleBtn.top - rects.appDiv.top +(
                     appIsHigh ? /* point down */ 29 : /* point up */ - rects.hoverMenu.height -13 )}px`
-                if (!hoverMenus[menuType].rightPos)
-                    hoverMenus[menuType].rightPos = (
-                        rects.appDiv.right - event.clientX - hoverMenus[menuType].div.offsetWidth/2 )
+                hoverMenus[menuType].rightPos = hoverMenus[menuType].rightPos
+                    || rects.appDiv.right - event.clientX - hoverMenus[menuType].div.offsetWidth/2
                 Object.assign(hoverMenus[menuType].div.style, {
                     right: `${hoverMenus[menuType].rightPos}px`, opacity: 1 })
                 hoverMenus[menuType].status = 'visible'
@@ -3260,7 +3259,7 @@
 
         toggle(stateOrEvent) { // visibility
             if (env.browser.isMobile) return
-            if (!tooltip.div) tooltip.div = dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
+            tooltip.div = tooltip.div || dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
             if (!tooltip.div.isConnected) appDiv.append(tooltip.div)
             if (!tooltip.styles) tooltip.stylize()
             if (typeof stateOrEvent == 'object') // mouse event from btn hover, update text/pos
@@ -3861,7 +3860,7 @@
                             if (env.browser.isChromium) clearTimeout(this.timeout) // skip handleProcessCompletion()
                             if (caller.status != 'done' && !caller.sender) return api.tryNew(caller)
                         } else if (caller.status != 'done') { // app waiting or sending
-                            if (!caller.sender) caller.sender = callerAPI // app is waiting, become sender
+                            caller.sender = caller.sender || callerAPI // app is waiting, become sender
                             if (caller.sender == callerAPI // app is sending from this api
                                 && textToShow.trim() != '' // empty reply chunk not read
                             ) show.reply(textToShow, footerContent, { apiUsed: callerAPI })
@@ -4023,8 +4022,8 @@
 
             // Init API attempt props
             get.related.status = 'waiting'
-            if (!get.related.triedAPIs) get.related.triedAPIs = []
-            if (!get.related.attemptCnt) get.related.attemptCnt = 1
+            get.related.triedAPIs = get.related.triedAPIs || []
+            get.related.attemptCnt = get.related.attemptCnt || 1
 
             // Pick API
             get.related.api = api.pick(get.related)
@@ -4098,8 +4097,8 @@
 
             // Init API attempt props
             get.reply.status = 'waiting'
-            if (!get.reply.triedAPIs) get.reply.triedAPIs = []
-            if (!get.reply.attemptCnt) get.reply.attemptCnt = 1
+            get.reply.triedAPIs = get.reply.triedAPIs || []
+            get.reply.attemptCnt = get.reply.attemptCnt || 1
 
             // Pick API
             get.reply.api = config.proxyAPIenabled ? api.pick(get.reply) : 'OpenAI'

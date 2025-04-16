@@ -26,7 +26,7 @@ window.tooltip = {
     },
 
     toggle(event) {
-        if (!tooltip.div) tooltip.div = dom.create.elem('div', { class: 'cwm-tooltip' })
+        tooltip.div = tooltip.div || dom.create.elem('div', { class: 'cwm-tooltip' })
         if (!tooltip.div.isConnected) event.currentTarget?.before(tooltip.div)
         if (!tooltip.styles) tooltip.stylize()
         tooltip.update(event.currentTarget.id.replace(/-btn$/, ''))
