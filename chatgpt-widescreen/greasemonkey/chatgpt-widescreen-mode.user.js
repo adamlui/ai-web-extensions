@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.18.3
+// @version             2025.4.18.4
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -764,7 +764,7 @@
                     : env.site == 'perplexity' ?
                        `.max-w-threadWidth, .max-w-threadContentWidth { /* widen limiting Page/Answer containers */
                             max-width: 100% }
-                        .col-span-8 { width: 151% } /* widen inner-left container */
+                        @media (min-width: 769px) { .col-span-8 { width: 151% }} /* widen inner-left container */
                         .col-span-4:has([class*=sticky]) { display: none }` // hide right-bar
                     : env.site == 'poe' ?
                        `[class*=ChatMessagesView] { width: 100% !important } /* widen outer container */
@@ -978,7 +978,7 @@
             prevPath = location.pathname
             const attachFileBtn = await dom.get.loadedElem(sites.perplexity.selectors.btns.attachFile),
                   cwmActive = buttons.fullscreen?.isConnected
-            if (attachFileBtn['left-aligned'] ^ cwmActive) chatbar[cwmActive ? 'tweak' : 'reset']()
+            if (attachFileBtn['data-left-aligned'] ^ cwmActive) chatbar[cwmActive ? 'tweak' : 'reset']()
         }}).observe(document.body, { childList: true, subtree: true })
     }
 
