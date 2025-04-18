@@ -67,8 +67,8 @@ window.chatbar = {
             const modeDiv = chatbarDiv.querySelector('button').closest('div') ; if (!modeDiv) return
             const rightBtns = {} ; ['attachFile', 'searchSrcs'].forEach(btnType =>
                 rightBtns[btnType] = chatbarDiv.querySelector(selectors.btns[btnType]))
-            Object.values(rightBtns).forEach(btn => {
-                btn.style.marginTop = '2px' // lower new one
+            Object.values(rightBtns).forEach(btn => { if (!btn) return
+                btn.style.marginTop = '2px' // lower it
                 btn.setAttribute('left-aligned', true) // for this.reset()
                 modeDiv.after(btn) // move to right of selector
             })
