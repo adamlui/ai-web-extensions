@@ -184,7 +184,7 @@
                     : env.site == 'perplexity' ?
                        `.max-w-threadWidth, .max-w-threadContentWidth { /* widen limiting Page/Answer containers */
                             max-width: 100% }
-                        .col-span-8 { width: 151% } /* widen inner-left container */
+                        @media (min-width: 769px) { .col-span-8 { width: 151% }} /* widen inner-left container */
                         .col-span-4:has([class*=sticky]) { display: none }` // hide right-bar
                     : env.site == 'poe' ?
                        `[class*=ChatMessagesView] { width: 100% !important } /* widen outer container */
