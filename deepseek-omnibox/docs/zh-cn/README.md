@@ -16,7 +16,7 @@
 <br><br>
 
 <a href="#">
-    <img height=31 src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-153-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img height=31 src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-699-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="../LICENSE.md">
     <img alt="[许可证: MIT]" height=31 src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com">
