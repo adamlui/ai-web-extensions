@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.18
+// @version             2025.4.18.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -969,17 +969,6 @@
             sidebars.forEach(sidebar => sidebarObserver.observe(sidebar))
             sidebarObserver.targets = sidebars
         }
-    }
-
-    // Monitor PERPLEXITY NAV to update Attach File button alignment on delayed re-appearances
-    if (env.site == 'perplexity') {
-        let prevPath = location.pathname
-        new MutationObserver(async () => { if (location.pathname != prevPath) {
-            prevPath = location.pathname
-            const attachFileBtn = await dom.get.loadedElem(sites.perplexity.selectors.btns.attachFile),
-                  cwmActive = buttons.fullscreen?.isConnected
-            if (attachFileBtn['left-aligned'] ^ cwmActive) chatbar[cwmActive ? 'tweak' : 'reset']()
-        }}).observe(document.body, { childList: true, subtree: true })
     }
 
     // Add RESIZE LISTENER to update full screen setting/button + disable F11 flag
