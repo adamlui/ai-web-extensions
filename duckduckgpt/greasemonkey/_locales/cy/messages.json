@@ -2,7 +2,7 @@
   "appDesc": { "message": "Yn ychwanegu atebion ChatGPT i far ochr DuckDuckGo (wedi'i bweru gan GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Modd API Dirprwy" },
   "menuLabel_preferred": { "message": "_Hoffterau" },
-  "menuLabel_autoGetAnswers": { "message": "Atebion Auto - GET" },
+  "menuLabel_autoGetAnswers": { "message": "Awto-Cael Atebion" },
   "menuLabel_autoSummarizeResults": { "message": "Canlyniadau Hunan - Fformatio" },
   "menuLabel_autoFocusChatbar": { "message": "Bar Sgwrs Awtomatig - Ffocws" },
   "menuLabel_whenStreaming": { "message": "wrth ffrydio" },
