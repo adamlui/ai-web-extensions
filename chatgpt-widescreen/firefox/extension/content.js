@@ -381,7 +381,7 @@
             prevPath = location.pathname
             const attachFileBtn = await dom.get.loadedElem(sites.perplexity.selectors.btns.attachFile),
                   cwmActive = buttons.fullscreen?.isConnected
-            if (attachFileBtn['left-aligned'] ^ cwmActive) chatbar[cwmActive ? 'tweak' : 'reset']()
+            if (attachFileBtn['data-left-aligned'] ^ cwmActive) chatbar[cwmActive ? 'tweak' : 'reset']()
         }}).observe(document.body, { childList: true, subtree: true })
     }
 
