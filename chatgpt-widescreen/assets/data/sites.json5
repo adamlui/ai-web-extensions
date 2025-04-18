@@ -31,8 +31,8 @@
     "selectors": {
       "btns": {
         "attachFile": "button:has([class*=icon-paperclip])", "dictation": "button:has([class*=icon-microphone])",
-        "help": "button:has([data-icon=question])", "newChat": "div.sticky [class*=ring]",
-        "search": "button:has([class*=icon-world])",
+        "help": "button:has([data-icon=question])", "modelSelector": "button:has([class*=icon-cpu])",
+        "newChat": "div.sticky [class*=ring]", "search": "button:has([class*=icon-world])",
         "send": "button:has([class*=icon-arrow-], [class*=icon-git-fork])", // Send w/ up/right arrow or New Thread
         "settings": "button:has([data-icon=gear])",
         "sidebar": "button:has([data-icon=arrow-left-to-line], [data-icon=arrow-right-from-line])"
