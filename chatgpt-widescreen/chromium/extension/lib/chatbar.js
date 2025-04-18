@@ -26,7 +26,7 @@ window.chatbar = {
         if (site == 'chatgpt') { // restore chatbar inner width
             const inputArea = chatbarDiv.querySelector(selectors.input)
             if (inputArea) inputArea.style.width = inputArea.parentNode.style.width = 'initial'
-        } else if (site == 'perplexity') { // remove left-align Attach File + Search buttons
+        } else if (site == 'perplexity') { // remove left-align right buttons
             const leftAlignedBtns = chatbarDiv.querySelectorAll('[left-aligned]')
             if (leftAlignedBtns.length) {
                 const sendBtn = chatbarDiv.querySelector(selectors.btns.send) ; if (!sendBtn) return
@@ -63,18 +63,19 @@ window.chatbar = {
                     widths.chatbar - totalBtnWidths -43 }px`
                 inputArea.style.width = '100%' // rid h-scrollbar
             }
-        } else if (site == 'perplexity' && location.pathname == '/') { // left-align Attach File + Search buttons
-            const rightBtns = {} ; ['attachFile', 'search'].forEach(btnType =>
+        } else if (site == 'perplexity' && location.pathname == '/') { // left-align right buttons on homepage
+            const modeDiv = chatbarDiv.querySelector('button').closest('div') ; if (!modeDiv) return
+            const rightBtns = {} ; ['attachFile', 'searchSrcs'].forEach(btnType =>
                 rightBtns[btnType] = chatbarDiv.querySelector(selectors.btns[btnType]))
-            const modelSelectorDiv = chatbarDiv.querySelector('button').closest('div')
-            if (!modelSelectorDiv) return // in case of breaking DOM update
             Object.values(rightBtns).forEach(btn => {
-                if (!btn) return
-                modelSelectorDiv.after(btn.parentNode) // move to right of selector
-                btn.style.margin = '0 -5px' // close x-gap
+                btn.style.marginTop = '2px' // lower new one
                 btn.setAttribute('left-aligned', true) // for this.reset()
+                modeDiv.after(btn) // move to right of selector
             })
-            if (chatbarDiv.querySelector('[left-aligned]')) modelSelectorDiv.style.marginRight = '3px' // close gap
+            if (chatbarDiv.querySelector('[left-aligned]')) {
+                modeDiv.style.marginRight = '-6px' // close gap vs. right buttons
+                modeDiv.parentNode.style.paddingRight = '5px' // extend bg rightward
+            }
         } else if (site == 'poe') { // replace Attach File btn icon + move Mic btn closer to Send
             const btnLoadTimeout = 5000
             dom.get.loadedElem(selectors.btns.attachFile, { timeout: btnLoadTimeout }).then(btn => {
