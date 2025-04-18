@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.17
+// @version               2025.4.17.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1178,7 +1178,7 @@
                 const settingsListContainer = dom.create.elem('div')
                 const settingsListCnt = (
                     env.browser.isMobile && ( env.browser.isPortrait || settingsKeys.length < 8 )) ? 1 : 2
-                const settingItemCap = Math.floor(settingsKeys.length /2)
+                const settingEntryCap = Math.floor(settingsKeys.length /2)
                 for (let i = 0 ; i < settingsListCnt ; i++) settingsLists.push(dom.create.elem('ul'))
                 settingsListContainer.style.width = '95%' // pad vs. parent
                 if (settingsListCnt > 1) { // style multi-list landscape mode
@@ -1193,11 +1193,11 @@
                     const setting = settings.controls[key]
 
                     // Create/append item/label elems
-                    const settingItem = dom.create.elem('li',
+                    const settingEntry = dom.create.elem('li',
                         { id: `${key}-settings-entry`, title: setting.helptip || '' })
                     const settingLabel = dom.create.elem('label') ; settingLabel.textContent = setting.label
-                    settingItem.append(settingLabel);
-                    (settingsLists[env.browser.isPortrait ? 0 : +(idx >= settingItemCap)]).append(settingItem)
+                    settingEntry.append(settingLabel);
+                    (settingsLists[env.browser.isPortrait ? 0 : +(idx >= settingEntryCap)]).append(settingEntry)
 
                     // Create/prepend icons
                     const settingIcon = icons[setting.icon].create(/bg|fg/.exec(key)?.[0] ?? '')
@@ -1219,7 +1219,7 @@
                       : /debug/i.test(key) ? 'top: 3.5px ; left: -1.5px ; margin-right: 8px'
                       : /about/i.test(key) ? 'top: 3px ; left: -3px ; margin-right: 5.5px' : ''
                     )
-                    settingItem.prepend(settingIcon)
+                    settingEntry.prepend(settingIcon)
 
                     // Create/append toggles/listeners
                     if (setting.type == 'toggle') {
@@ -1249,13 +1249,13 @@
                         })
 
                         // Append elems
-                        switchSpan.append(knobSpan) ; settingItem.append(settingToggle, switchSpan)
+                        switchSpan.append(knobSpan) ; settingEntry.append(settingToggle, switchSpan)
 
                         // Update visual state w/ animation
                         setTimeout(() => modals.settings.toggle.updateStyles(settingToggle), 155)
 
                         // Add click listener
-                        settingItem.onclick = () => {
+                        settingEntry.onclick = () => {
                             if (!(key == 'streamingDisabled' // visually switch toggle if not Streaminng...
                                 && ( // ...in unsupported env...
                                     !env.scriptManager.supportsStreaming || !config.proxyAPIenabled )
@@ -1284,21 +1284,21 @@
 
                     // Add .active + config status + listeners to pop-up settings
                     } else {
-                        settingItem.classList.add('active')
+                        settingEntry.classList.add('active')
                         const configStatusSpan = dom.create.elem('span')
                         configStatusSpan.style.cssText = 'float: right ; font-size: 11px ; margin-top: 3px ;'
                             + ( !key.includes('about') ? 'text-transform: uppercase !important' : '' )
                         if (key.includes('preferredAPI')) {
                             configStatusSpan.textContent = config.preferredAPI || app.msgs.menuLabel_random
-                            settingItem.onclick = () => modals.open('api')
-                            settingItem.classList.toggle('active', config.proxyAPIenabled)
-                            settingItem.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
+                            settingEntry.onclick = () => modals.open('api')
+                            settingEntry.classList.toggle('active', config.proxyAPIenabled)
+                            settingEntry.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
                         } else if (key.includes('replyLang')) {
                             configStatusSpan.textContent = config.replyLang
-                            settingItem.onclick = () => modals.open('replyLang')
+                            settingEntry.onclick = () => modals.open('replyLang')
                         } else if (key.includes('scheme')) {
                             modals.settings.updateSchemeStatus(configStatusSpan)
-                            settingItem.onclick = () => modals.open('scheme')
+                            settingEntry.onclick = () => modals.open('scheme')
                         } else if (key.includes('about')) {
                             const innerDiv = dom.create.elem('div'),
                                   textGap = '&emsp;&emsp;&emsp;&emsp;&emsp;'
@@ -1313,8 +1313,8 @@
                             innerDiv.innerHTML = modals.settings.aboutContent[
                                 config.fgAnimationsDisabled ? 'short' : 'long']
                             innerDiv.style.float = config.fgAnimationsDisabled ? 'right' : ''
-                            configStatusSpan.append(innerDiv) ; settingItem.onclick = () => modals.open('about')
-                        } settingItem.append(configStatusSpan)
+                            configStatusSpan.append(innerDiv) ; settingEntry.onclick = () => modals.open('about')
+                        } settingEntry.append(configStatusSpan)
                     }
                 })
                 settingsListContainer.append(...settingsLists)
