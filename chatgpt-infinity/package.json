@@ -19,7 +19,6 @@
   "scripts": {
     "prepare": "husky",
     "dev:pages": "http-server pages",
-    "preview:pages": "http-server pages",
     "lint": "eslint . --cache",
     "lint:all": "eslint .",
     "lint:fix": "eslint . --fix --cache",
@@ -30,6 +29,7 @@
     "translate:firefox": "py firefox/utils/translate-en-messages.py",
     "build:js-pages": "minify-js pages --no-mangle",
     "build:pages-js": "minify-js pages --no-mangle",
+    "preview:pages": "http-server pages",
     "bump": "bash utils/bump/extension-manifests.sh",
     "bump:res": "node utils/bump/resources",
     "bump:resources": "node utils/bump/resources",
