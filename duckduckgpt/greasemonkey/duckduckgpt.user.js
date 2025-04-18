@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.17.1
+// @version                2025.4.17.2
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -260,7 +260,7 @@
     // Init APP data
     const app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: 'ad16dd2' // for cached app.json + messages.json
+        latestResourceCommitHash: '4d7954c' // for cached app.json + messages.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
