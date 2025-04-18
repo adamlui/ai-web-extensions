@@ -43,14 +43,12 @@ window.tooltip = {
         rects.tooltipDiv = this.div.getBoundingClientRect()
         this.div.style.right = `${
             rects.chatbar.right -( rects.btn?.left + rects.btn?.right )/2 - rects.tooltipDiv.width/2
-                +( site == 'perplexity' && location.pathname.startsWith('/search/') ?
-                    ( innerWidth - rects.chatbar.right -28 ) : 0 )
-                +( site == 'chatgpt' ? -9 : site == 'perplexity' ? 15 : /* poe */ 3 )}px` // site offset
+                +( site == 'chatgpt' ? -9 : site == 'perplexity' ? 19 : /* poe */ 3 )}px` // site offset
         this.div.style.bottom = ( // y-pos
             site == 'perplexity' ? (
                 location.pathname != '/' ? '64px' // not homepage
-                  : document.querySelector( // logged-in homepage
-                        this.imports.sites.perplexity.selectors.btns.settings) ? 'revert-layer'
+                  : document.querySelector( // logged-in homepage or viewport <769px
+                        this.imports.sites.perplexity.selectors.btns.settings) || innerWidth < 769 ? 'revert-layer'
                                          : '51vh' // logged-out homepage
             ) : site == 'poe' ? '50px' : '42px'
         )
