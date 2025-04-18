@@ -63,7 +63,7 @@ window.chatbar = {
                     widths.chatbar - totalBtnWidths -43 }px`
                 inputArea.style.width = '100%' // rid h-scrollbar
             }
-        } else if (site == 'perplexity' && location.pathname == '/') { // left-align right buttons on homepage
+        } else if (site == 'perplexity') { // left-align Attach File + Search src buttons
             const modeDiv = chatbarDiv.querySelector('button').closest('div') ; if (!modeDiv) return
             const rightBtns = {} ; ['attachFile', 'searchSrcs'].forEach(btnType =>
                 rightBtns[btnType] = chatbarDiv.querySelector(selectors.btns[btnType]))
