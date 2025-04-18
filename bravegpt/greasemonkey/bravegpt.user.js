@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.16.15
+// @version               2025.4.17
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -862,7 +862,7 @@
             // Show modal
             const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
                 .map(api => { // to btn callback/label
-                    const onclick = function() {
+                    function onclick() {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
                         if (modals.settings.get()) { // update status of Preferred API entry
                             const preferredAPIstatus = document.querySelector('[id*=preferredAPI] > span')
@@ -1745,7 +1745,7 @@
                     onclick: () => {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
                         notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                               `${config.anchored ? 'top' : 'bottom'}-right`)
+                               `${ config.anchored ? 'top' : 'bottom' }-right`)
                     },
                     isActive: () => !config.preferredAPI && api == app.msgs.menuLabel_random
                                   || config.preferredAPI == api
@@ -4112,7 +4112,7 @@
                         standbyBtn.textContent = app.msgs[
                             btnType == 'query' ? 'btnLabel_sendQueryToApp' : 'tooltip_summarizeResults']
                         standbyBtn.prepend(icons[btnType == 'query' ? 'send' : 'summarize'].create())
-                        show.reply[`${btnType}BtnClickHandler`] = function() {
+                        show.reply[`${btnType}BtnClickHandler`] = () => {
                             show.reply.userInteracted = true ; show.reply.chatbarFocused = false
                             hoverMenus.api.rightPos = hoverMenus.pin.rightPos = hoverMenus.pin.div = null
                             msgChain.push({ role: 'user', content:

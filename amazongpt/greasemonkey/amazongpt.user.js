@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.16.13
+// @version                2025.4.17
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -687,7 +687,7 @@
             // Show modal
             const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
                 .map(api => { // to btn callback/label
-                    const onclick = function() {
+                    function onclick() {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
                         if (modals.settings.get()) { // update status of Preferred API entry
                             const preferredAPIstatus = document.querySelector('[id*=preferredAPI] > span')
@@ -1524,7 +1524,7 @@
                     onclick: () => {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
                         notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                               `${config.anchored ? 'top' : 'bottom'}-right`)
+                               `${ config.anchored ? 'top' : 'bottom' }-right`)
                     },
                     isActive: () => !config.preferredAPI && api == app.msgs.menuLabel_random
                                   || config.preferredAPI == api

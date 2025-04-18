@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.16.14
+// @version                2025.4.17
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -862,7 +862,7 @@
             // Show modal
             const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
                 .map(api => { // to btn callback/label
-                    const onclick = function() {
+                    function onclick() {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
                         if (modals.settings.get()) { // update status of Preferred API entry
                             const preferredAPIstatus = document.querySelector('[id*=preferredAPI] > span')
@@ -1745,7 +1745,7 @@
                     onclick: () => {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
                         notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                               `${config.anchored ? 'top' : 'bottom'}-right`)
+                               `${ config.anchored ? 'top' : 'bottom' }-right`)
                     },
                     isActive: () => !config.preferredAPI && api == app.msgs.menuLabel_random
                                   || config.preferredAPI == api
