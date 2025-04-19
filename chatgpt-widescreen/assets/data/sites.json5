@@ -47,7 +47,10 @@
         "popups": {
           "googleLogin": "#credential_picker_container", // upper-right login popup
           "perplexityLogin": "div[class*=bottom]:has([data-testid*=login-modal])" // lower-right login/signup popup
-        }
+        },
+        "sideBlocks": {
+          // "You are missing out: Upgrade to Pro for more detailed answers powered by the top AI models"
+          "upgradeToPro": "div[class*=\"\:block\"]:has(button):has([data-icon*=arrow-up-right])" }
       }
     },
     "urls": { "homepage": "https://www.perplexity.ai" }
