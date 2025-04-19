@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.18.5
+// @version             2025.4.18.6
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -918,7 +918,7 @@
     new MutationObserver(async () => {
 
         // Maintain button visibility on nav
-        if (config[`${env.site}Disabled`] || !buttons.visible) return
+        if (config[`${env.site}Disabled`] || !config.btnsVisible) return
         else if (!buttons.fullscreen?.isConnected && !chatgpt.canvasIsOpen()
             && await chatbar.get() && buttons.state.status != 'inserting'
         ) { buttons.state.status = 'missing' ; buttons.insert() }
