@@ -202,6 +202,8 @@
             if (!extensionWasDisabled && ( config.extensionDisabled || config[`${env.site}Disabled`] )) { // reset UI
                 [widescreenStyle, fullWinStyle, buttons].forEach(target => target.remove())
                 tweaksStyle.innerText = '' ; chatbar.reset()
+                if (env.site == 'perplexity')
+                    document.body.removeEventListener('wheel', window._perplexityWheelListener)
             } else if (!config.extensionDisabled && !config[`${env.site}Disabled`]) { // sync modes/tweaks/btns
                 if (config.widescreen ^ document.head.contains(widescreenStyle)) { // sync Widescreen
                     supressNotifs() ; toggleMode('widescreen') }
@@ -217,6 +219,9 @@
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                     // ...to visually signal location + preview fx applied by Button Animations toggle-on
                     buttons.animate()
+                if (env.site == 'perplexity') // toggle free wheel locked in some Spam blocks
+                    document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
+                        'wheel', window._perplexityWheelListener)
             }
 
             function supressNotifs() {
@@ -314,6 +319,11 @@
                 sync.mode('fullWindow') // ...so sync w/ it
             else toggleMode('fullWindow', 'on') // otherwise self-toggle
         }
+        if (env.site == 'perplexity') { // toggle free wheel locked in some Spam blocks
+            window._perplexityWheelListener = event => event.stopPropagation()
+            document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
+                'wheel', window._perplexityWheelListener)
+        }
     }
 
     // Monitor NODE CHANGES to maintain button visibility + update colors
@@ -362,7 +372,6 @@
             const site = env.site, selectors = sites[site].selectors,
                   sidebars = [document.querySelector(selectors.sidebar)]
             if (site == 'chatgpt') sidebars.push(document.querySelector(selectors.rightbar))
-            else if (site == 'perplexity') sidebars[0] = sidebars[0]?.parentNode
             return sidebars.filter(Boolean)
         }
 
