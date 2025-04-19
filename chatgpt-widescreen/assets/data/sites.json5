@@ -51,7 +51,9 @@
         },
         "sideBlocks": {
           // "You are missing out: Upgrade to Pro for more detailed answers powered by the top AI models"
-          "upgradeToPro": "div[class*=\"\:block\"]:has(button):has([data-icon*=arrow-up-right])" }
+          "upgradeToPro": "div[class*=\"\:block\"]:has(button):has([data-icon*=arrow-up-right])" },
+        "slideUpCards": {
+          "getAndroidApp": "div[data-type=portal]:has([data-icon=android])" } // https://i.imgur.com/FZdDg6d.png
       }
     },
     "urls": { "homepage": "https://www.perplexity.ai" }
