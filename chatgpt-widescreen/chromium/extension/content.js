@@ -138,7 +138,7 @@
     }
 
     const tweaksStyle = dom.create.style() ; env.ui.hasTallChatbar = await chatbar.is.tall()
-    buttons.import({ appName: app.name, env, sites, toggleMode, tweaksStyle })
+    buttons.import({ app, env, sites, toggleMode, tweaksStyle })
 
     const update = {
 

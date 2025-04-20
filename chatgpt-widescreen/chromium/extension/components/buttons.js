@@ -1,11 +1,10 @@
-// Requires lib/<chatgpt|dom>.js + components/<chatbar|tooltip>.js
-//   + appName: app.name + env + sites + toggleMode + tweaksStyle
+// Requires lib/<chatgpt|dom>.js + components/<chatbar|tooltip>.js + app + env + sites + toggleMode + tweaksStyle
 
 window.buttons = {
     import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
 
     types: [ 'fullscreen', 'fullWindow', 'widescreen', 'newChat' ], // right-to-left
-    get class() { return `${this.imports.appName.replace(/ /g, '-').toLowerCase()}-btn` },
+    get class() { return `${this.imports.app.slug}-btn` },
 
     state: {
         status: 'missing', // or 'inserting', 'inserted'
@@ -46,7 +45,7 @@ window.buttons = {
     },
 
     animate() { // used in sync.configToUI() on Button Animations toggle-on
-        const btnHoverStyles = new RegExp(`.${this.class}:hover\\s*\\{([^}]*)\\}`, 'm')
+        const btnHoverStyles = new RegExp(`.${this.class}-btn:hover\\s*\\{([^}]*)\\}`, 'm')
             .exec(this.imports.tweaksStyle.innerText)?.[1].trim()
         this.types.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType] ; if (!btn) return
@@ -57,7 +56,22 @@ window.buttons = {
         })
     },
 
+    stylize() {
+        const site = this.imports.env.site
+        this.styles = dom.create.style(`.${this.class} {
+            cursor: pointer ;
+            position: ${ site == 'chatgpt' && this.imports.env.ui.hasTallChatbar ? 'absolute' : 'relative' };
+            --transition: transform 0.15s ease, opacity 0.5s ease ; /* for tweaksStyle's :hover + .insert()'s fade-in */
+                -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
+                -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
+            ${ /chatgpt|perplexity/.test(site) ? // remove dark mode overlay
+                'background-color: transparent ; border-color: transparent ;' : '' }`
+        )
+        document.head.append(this.styles)
+    },
+
     async create() {
+        if (!this.styles) this.stylize()
         const site = this.imports.env.site, hasTallChatbar = this.imports.env.ui.hasTallChatbar,
               btnSelectors = this.imports.sites[site].selectors.btns
         if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.get.rightBtn() // for rOffset + styles
@@ -66,28 +80,18 @@ window.buttons = {
         const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4 : hasTallChatbar ? (
             this.rightBtn.getBoundingClientRect().width +2 ) * (
                 document.querySelector(/\(([^()]+)\)$/.exec(btnSelectors.dictate)?.[1]) ? 2 : 1 ) : -0.25
-        const transitionStyles = 'transform 0.15s ease, opacity 0.5s ease'
 
         validBtnTypes.forEach(async (btnType, idx) => {
-            const btn = this[btnType] = dom.create.elem('div')
-            btn.id = `${btnType}-btn` // for tooltip.toggle()
-            btn.className = this.class // for update.style.tweaks()
-            Object.assign(btn.style, {
-                position: site == 'chatgpt' && hasTallChatbar ? 'absolute' : 'relative',
-                cursor: 'pointer',
-                right: `${ rOffset + idx * spreadFactor }px`, // position left of prev button
-                transition: transitionStyles, // for tweaksStyle's :hover + .insert()'s fade-in
-                    '-webkit-transition': transitionStyles, '-moz-transition': transitionStyles,
-                    '-o-transition': transitionStyles, '-ms-transition': transitionStyles
-            })
+            const btn = this[btnType] = dom.create.elem('div', { id: `${btnType}-btn`, class: this.class })
+
+            // Position
+            btn.style.right = `${ rOffset + idx * spreadFactor }px` // position left of prev button
             if (site == 'chatgpt' && hasTallChatbar) btn.style.bottom = '-0.5px'
             else btn.style.top = `${ site == 'chatgpt' ? -3.25
                                    : site == 'poe' ? ( btnType == 'newChat' ? 1 : 3 ) : 0 }px`
-            if (/chatgpt|perplexity/.test(site)) { // assign classes + tweak styles
+
+            if (/chatgpt|perplexity/.test(site)) // add site button classes
                 btn.classList.add(...(this.rightBtn?.classList || []))
-                Object.assign(btn.style, { // remove dark mode overlay
-                    backgroundColor: 'transparent', borderColor: 'transparent' })
-            }
 
             // Add hover/click listeners
             btn.onmouseenter = btn.onmouseleave = tooltip.toggle
