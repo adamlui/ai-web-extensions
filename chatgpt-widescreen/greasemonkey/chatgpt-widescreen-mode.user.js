@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.18.10
+// @version             2025.4.19
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -809,7 +809,7 @@
                 [widescreenStyle, fullWinStyle, buttons].forEach(target => target.remove())
                 tweaksStyle.innerText = '' ; chatbar.reset()
                 if (env.site == 'perplexity')
-                    document.body.removeEventListener('wheel', window._perplexityWheelListener)
+                    document.body.removeEventListener('wheel', window.enableWheelScroll)
             } else if (!config[`${env.site}Disabled`]) { // sync modes/tweaks/btns
                 if (config.widescreen ^ document.head.contains(widescreenStyle)) { // sync Widescreen
                     supressNotifs() ; toggleMode('widescreen') }
@@ -827,7 +827,7 @@
                     buttons.animate()
                 if (env.site == 'perplexity') // toggle free wheel locked in some Spam blocks
                     document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
-                        'wheel', window._perplexityWheelListener)
+                        'wheel', window.enableWheelScroll)
             }
             toolbarMenu.refresh() // to update state symbol/suffix + toggles visibility on site toggle
 
@@ -917,9 +917,9 @@
             else toggleMode('fullWindow', 'on') // otherwise self-toggle
         }
         if (env.site == 'perplexity') { // toggle free wheel locked in some Spam blocks
-            window._perplexityWheelListener = event => event.stopPropagation()
+            window.enableWheelScroll = event => event.stopPropagation()
             document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
-                'wheel', window._perplexityWheelListener)
+                'wheel', window.enableWheelScroll)
         }
     }
 

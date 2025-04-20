@@ -203,7 +203,7 @@
                 [widescreenStyle, fullWinStyle, buttons].forEach(target => target.remove())
                 tweaksStyle.innerText = '' ; chatbar.reset()
                 if (env.site == 'perplexity')
-                    document.body.removeEventListener('wheel', window._perplexityWheelListener)
+                    document.body.removeEventListener('wheel', window.enableWheelScroll)
             } else if (!config.extensionDisabled && !config[`${env.site}Disabled`]) { // sync modes/tweaks/btns
                 if (config.widescreen ^ document.head.contains(widescreenStyle)) { // sync Widescreen
                     supressNotifs() ; toggleMode('widescreen') }
@@ -221,7 +221,7 @@
                     buttons.animate()
                 if (env.site == 'perplexity') // toggle free wheel locked in some Spam blocks
                     document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
-                        'wheel', window._perplexityWheelListener)
+                        'wheel', window.enableWheelScroll)
             }
 
             function supressNotifs() {
@@ -320,9 +320,9 @@
             else toggleMode('fullWindow', 'on') // otherwise self-toggle
         }
         if (env.site == 'perplexity') { // toggle free wheel locked in some Spam blocks
-            window._perplexityWheelListener = event => event.stopPropagation()
+            window.enableWheelScroll = event => event.stopPropagation()
             document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
-                'wheel', window._perplexityWheelListener)
+                'wheel', window.enableWheelScroll)
         }
     }
 
