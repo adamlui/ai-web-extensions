@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.20.3
+// @version                2025.4.20.4
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1174,7 +1174,6 @@
                                     + '.html'
                                 document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download HTML
                                 URL.revokeObjectURL(dlLink.href) // prevent memory leaks
-                                notify(`${log.toTitleCase(app.msgs.btnLabel_convo)} ${app.msgs.notif_downloaded}`)
                             },
                             onerror: err => log.error('Failed to download chat:', err)
                         })
