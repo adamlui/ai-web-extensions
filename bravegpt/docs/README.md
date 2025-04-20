@@ -148,8 +148,8 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
         <tr> <!-- CHROME/CHROMIUM desktop -->
             <td> <!-- Browser -->
                 <a href="https://www.chrome.com" title="Chrome">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"
-                             width=16 alt="[Install]"></a>
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"
+                         width=16 alt="[Install]"></a>
                 Chrome, dev builds or Chromium-based browsers (Windows, macOS, Linux)
             </td>
             <td> <!-- Userscript manager -->
@@ -245,10 +245,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
         </tr>
         <tr> <!-- EDGE desktop -->
             <td> <!-- Browser -->
-                <a href="https://www.microsoft.com/edge"
-                   title="Edge">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
-                             width=16 alt="[Install]"></a>
+                <a href="https://www.microsoft.com/edge" title="Edge">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
+                         width=16 alt="[Install]"></a>
                 Edge or dev builds (Windows, macOS, Linux)
             </td>
             <td> <!-- Userscript manager -->
@@ -282,27 +281,26 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://www.microsoft.com/edge/download"
                    title="Edge">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
-                            width=16 alt="[Edge]"></a>
+                             width=16 alt="[Edge]"></a>
                 <a href="https://www.microsoft.com/edge/download/insider"
                    title="Edge Beta">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
-                            width=16 alt="[Edge Beta]"></a>
+                             width=16 alt="[Edge Beta]"></a>
                 <a href="https://www.microsoft.com/edge/download/insider"
                    title="Edge Dev">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
-                            width=16 alt="[Edge Dev]"></a>
+                             width=16 alt="[Edge Dev]"></a>
                 <a href="https://www.microsoft.com/edge/download/insider"
                    title="Edge Canary">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                            width=16 alt="[Edge Canary]"></a>
+                             width=16 alt="[Edge Canary]"></a>
             </td>
         </tr>
         <tr> <!-- EDGE Android -->
             <td> <!-- Browser -->
-                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
-                   title="Edge for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
-                             width=16 alt="[Install]"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx" title="Edge for Android">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
+                         width=16 alt="[Install]"></a>
                 Edge or dev builds (Android)
             </td>
             <td> <!-- Userscript manager -->
@@ -319,26 +317,26 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
                    title="Edge for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
-                            width=16 alt="[Edge for Android]"></a>
+                             width=16 alt="[Edge for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.beta"
                    title="Edge Beta for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
-                            width=16 alt="[Edge Beta for Android]"></a>
+                             width=16 alt="[Edge Beta for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.dev"
                    title="Edge Dev for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
-                            width=16 alt="[Edge Dev for Android]"></a>
+                             width=16 alt="[Edge Dev for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
                    title="Edge Canary for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                            width=16 alt="[Edge Canary for Android]"></a>
+                             width=16 alt="[Edge Canary for Android]"></a>
             </td>
         </tr>
         <tr> <!-- FIREFOX/GECKO desktop -->
             <td> <!-- Browser -->
                 <a href="https://www.firefox.com" title="Firefox">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
-                             width=16 alt="[Install]"></a>
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
+                         width=16 alt="[Install]"></a>
                 Firefox, dev builds or Gecko-based browsers (Windows, macOS, Linux)
             </td>
             <td> <!-- Userscript manager -->
@@ -383,8 +381,8 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
         <tr> <!-- FIREFOX/GECKO Android -->
             <td> <!-- Browser -->
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
-                             width=16 alt="[Install]"></a>
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
+                         width=16 alt="[Install]"></a>
                 Firefox, dev builds or Gecko-based browsers (Android)
             </td>
             <td> <!-- Userscript manager -->
@@ -409,25 +407,26 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                         ScriptCat</a>
             </td>
             <td> <!-- Install browser -->
-                <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
-                         width=16 alt="[Firefox]"></a>
+                <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox"
+                   title="Firefox for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
+                             width=16 alt="[Firefox for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta" title="Firefox Beta for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/beta/icon16.png"
-                         width=16 alt="[Firefox Beta]"></a>
+                         width=16 alt="[Firefox Beta for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.fenix" title="Firefox Nightly for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon16.png"
-                         width=16 alt="[Firefox Nightly]"></a>
+                         width=16 alt="[Firefox Nightly for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release" title="Waterfox for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
-                         width=16 alt="[Waterfox]"></a>
-                <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/" title="Fennec for Android">
+                         width=16 alt="[Waterfox for Android]"></a>
+                <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/" title="Fennec">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/fennec/icon16.png"
                          width=16 alt="[Fennec]"></a>
-                <a href="https://github.com/fork-maintainers/iceraven-browser/releases" title="Iceraven for Android">
+                <a href="https://github.com/fork-maintainers/iceraven-browser/releases" title="Iceraven">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/iceraven/icon16.png"
                          width=16 alt="[Iceraven]"></a>
-                <a href="https://gitlab.com/ironfox-oss/IronFox/-/releases" title="IronFox for Android">
+                <a href="https://gitlab.com/ironfox-oss/IronFox/-/releases" title="IronFox">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/ironfox/icon16.png"
                          width=16 alt="[IronFox]"></a>
             </td>
@@ -435,8 +434,8 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
         <tr> <!-- QQ BROWSER desktop -->
             <td> <!-- Browser -->
                 <a href="https://browser.qq.com" title="QQ Browser">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
-                             width=16 alt="[Install]"></a>
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/qq/gradient-bg/bluer/icon16.png"
+                         width=16 alt="[Install]"></a>
                 QQ Browser (Windows, macOS)
             </td>
             <td> <!-- Userscript manager -->
@@ -450,10 +449,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
         </tr>
         <tr> <!-- MISES mobile -->
             <td> <!-- Browser -->
-                <a href="https://www.mises.site"
-                   title="Mises">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/mises/icon16.png"
-                             width=16 alt="[Install]"></a>
+                <a href="https://www.mises.site" title="Mises">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/mises/icon16.png"
+                         width=16 alt="[Install]"></a>
                 Mises (Android, iOS, iPadOS)
             </td>
             <td> <!-- Userscript manager -->
@@ -489,10 +487,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
         </tr>
         <tr> <!-- LEMUR Android/iOS -->
             <td> <!-- Browser -->
-                <a href="https://www.lemurbrowser.com"
-                   title="Lemur">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/lemur/icon16.png"
-                             width=16 alt="[Install]"></a>
+                <a href="https://www.lemurbrowser.com" title="Lemur">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/lemur/icon16.png"
+                         width=16 alt="[Install]"></a>
                 Lemur (Android, iOS)
             </td>
             <td> <!-- Userscript manager -->
@@ -521,10 +518,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
         </tr>
         <tr> <!-- QUETTA mobile -->
             <td> <!-- Browser -->
-                <a href="https://www.quetta.net"
-                   title="Quetta">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/quetta/circled/icon16.png"
-                             width=16 alt="[Install]"></a>
+                <a href="https://www.quetta.net" title="Quetta">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/quetta/circled/icon16.png"
+                         width=16 alt="[Install]"></a>
                 Quetta (Android, iOS, iPadOS)
             </td>
             <td> <!-- Userscript manager -->
@@ -554,10 +550,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
         </tr>
         <tr> <!-- ORION iOS/iPadOS -->
             <td> <!-- Browser -->
-                <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
-                   title="Orion">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/orion/icon16.png"
-                             width=16 alt="[Install]"></a>
+                <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200" title="Orion">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/orion/icon16.png"
+                         width=16 alt="[Install]"></a>
                 Orion (iOS, iPadOS)
             </td>
             <td> <!-- Userscript manager -->
