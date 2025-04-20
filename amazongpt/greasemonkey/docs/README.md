@@ -469,7 +469,7 @@
                     <summary>Show QR code</summary>
                     <a href="https://www.mises.site/download" title="Download Mises">
                         <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/mises/download-page/with-icon/purple.png"
-                             width=125 alt="[Quetta]"></a>
+                             width=125 alt="[Mises]"></a>
                 </detail>
             </td>
         </tr>
