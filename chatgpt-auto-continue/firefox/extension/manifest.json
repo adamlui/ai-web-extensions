@@ -16,10 +16,7 @@
   },
   "permissions": [ "activeTab", "storage" ],
   "action": { "default_popup": "popup/index.html" },
-  "web_accessible_resources": [{
-    "matches": [ "<all_urls>" ],
-    "resources": [ "components/modals.js", "lib/chatgpt.js", "lib/dom.js", "lib/settings.js", "lib/ui.js" ]
-  }],
+  "web_accessible_resources": [{ "matches": [ "<all_urls>" ], "resources": [ "components/*", "lib/*" ]}],
   "content_scripts": [{ "matches": [ "https://chatgpt.com/*" ], "run_at": "document_end", "js": [ "content.js" ] }],
   "background": { "scripts": [ "background.js" ]},
   "browser_specific_settings": {
