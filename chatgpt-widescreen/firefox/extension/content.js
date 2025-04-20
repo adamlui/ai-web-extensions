@@ -180,7 +180,8 @@
             widescreen() {
                 widescreenStyle.innerText = (
                     env.site == 'chatgpt' ?
-                        '.text-base { max-width: 100% !important }' // widen outer container
+                       `.text-base { max-width: 100% !important } /* widen outer container */
+                        .tableContainer { min-width: 100% }` // widen tables
                     : env.site == 'perplexity' ?
                        `.max-w-threadWidth, .max-w-threadContentWidth { /* widen limiting Page/Answer containers */
                             max-width: 100% }
