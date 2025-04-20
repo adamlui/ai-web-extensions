@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.20.3
+// @version                2025.4.20.4
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -4004,14 +4004,16 @@
                     }, 1355)
 
                     // Init block's language data
-                    const lang = {},
+                    const blockLang = {},
                           codeBlock = downloadBtn.closest('code'),
                           hljsClass = Array.from(codeBlock.classList).find(cls => cls.startsWith('language-'))
                     if (hljsClass) {
-                        const hljsSlug = hljsClass.replace('language-', '')
+                        blockLang.hljsSlug = hljsClass.replace('language-', '')
                         for (const [langName, langEntry] of Object.entries(this.langData))
-                            if (langEntry.hljsSlug == hljsSlug) {
-                                [lang.name, lang.fileExtension] = [langName, langEntry?.fileExtension] ; break }
+                            if (langEntry.hljsSlug == blockLang.hljsSlug) {
+                                [blockLang.name, blockLang.fileExtension] = [langName, langEntry?.fileExtension]
+                                break
+                            }
                     }
 
                     // Download code
@@ -4023,9 +4025,9 @@
                         String(now.getDate()).padStart(2, '0')
                     ].join('-')
                     dlLink.href = URL.createObjectURL(new Blob([code], { type: 'text/plain' }))
-                    dlLink.download /* filename */ = `${app.slug}_${lang.name.toLowerCase() || 'code'}_${
+                    dlLink.download /* filename */ = `${app.slug}_${blockLang.name.toLowerCase() || 'code'}_${
                         formattedDate}_${Date.now().toString(36)}${
-                        lang.fileExtension ? '.' + lang.fileExtension : ''}`
+                        blockLang.fileExtension ? '.' + blockLang.fileExtension : ''}`
                     document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download code
                     URL.revokeObjectURL(dlLink.href) // prevent memory leaks
                 }
