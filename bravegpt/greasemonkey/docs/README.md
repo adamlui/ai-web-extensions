@@ -482,7 +482,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                     <summary>Show QR code</summary>
                     <a href="https://www.mises.site/download" title="Download Mises">
                         <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/mises/download-page/with-icon/purple.png"
-                             width=125 alt="[Mises]"></a>
+                             width=125 alt="[Download Mises]"></a>
                 </detail>
             </td>
         </tr>
@@ -588,7 +588,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                     <a href="https://apps.apple.com/app/orion-browser-by-kagi/id1484498200"
                        title="Orion on Apple App Store">
                             <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/orion/apple-app-store/with-icon/purple.png"
-                                 width=125 alt="[Orion]"></a>
+                                 width=125 alt="[Orion on Apple App Store]"></a>
                 </details>
             </td>
         </tr>
