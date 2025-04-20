@@ -362,8 +362,8 @@
 
     // Monitor SIDEBARS to update config.fullWindow for sites w/ native toggle
     if (sites[env.site].selectors.btns.sidebar && sites[env.site].hasSidebar) {
-        const sidebarObserver = new ResizeObserver(() => // sync config.fullWindow ⇆ sidebar width
-            (config.fullWindow ^ ui.isFullWin()) && !config.modeSynced && sync.mode('fullWindow'))
+        const sidebarObserver = new ResizeObserver( // sync config.fullWindow ⇆ sidebar width
+            () => (config.fullWindow ^ ui.isFullWin()) && !config.modeSynced && sync.mode('fullWindow'))
         observeSidebars()
         new MutationObserver( // re-observeSidebars() on disconnect
             () => getSidebars().some(bar => !sidebarObserver.targets?.includes(bar)) && observeSidebars()
