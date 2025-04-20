@@ -319,19 +319,19 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
                    title="Edge for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
-                            width=16 alt="[Edge]"></a>
+                            width=16 alt="[Edge for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.beta"
                    title="Edge Beta for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
-                            width=16 alt="[Edge Beta]"></a>
+                            width=16 alt="[Edge Beta for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.dev"
                    title="Edge Dev for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
-                            width=16 alt="[Edge Dev]"></a>
+                            width=16 alt="[Edge Dev for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
                    title="Edge Canary for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                            width=16 alt="[Edge Canary]"></a>
+                            width=16 alt="[Edge Canary for Android]"></a>
             </td>
         </tr>
         <tr> <!-- FIREFOX/GECKO desktop -->

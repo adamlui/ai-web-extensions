@@ -306,19 +306,19 @@
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx"
                    title="Edge for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
-                            width=16 alt="[Edge]"></a>
+                            width=16 alt="[Edge for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.beta"
                    title="Edge Beta for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
-                            width=16 alt="[Edge Beta]"></a>
+                            width=16 alt="[Edge Beta for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.dev"
                    title="Edge Dev for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
-                            width=16 alt="[Edge Dev]"></a>
+                            width=16 alt="[Edge Dev for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
                    title="Edge Canary for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                            width=16 alt="[Edge Canary]"></a>
+                            width=16 alt="[Edge Canary for Android]"></a>
             </td>
         </tr>
         <tr> <!-- FIREFOX/GECKO desktop -->
@@ -398,23 +398,23 @@
             <td> <!-- Install browser -->
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
-                         width=16 alt="[Firefox]"></a>
+                         width=16 alt="[Firefox for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta" title="Firefox Beta for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/beta/icon16.png"
-                         width=16 alt="[Firefox Beta]"></a>
+                         width=16 alt="[Firefox Beta for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.fenix" title="Firefox Nightly for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon16.png"
-                         width=16 alt="[Firefox Nightly]"></a>
+                         width=16 alt="[Firefox Nightly for Android]"></a>
                 <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release" title="Waterfox for Android">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
-                         width=16 alt="[Waterfox]"></a>
-                <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/" title="Fennec for Android">
+                         width=16 alt="[Waterfox for Android]"></a>
+                <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/" title="Fennec">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/fennec/icon16.png"
                          width=16 alt="[Fennec]"></a>
-                <a href="https://github.com/fork-maintainers/iceraven-browser/releases" title="Iceraven for Android">
+                <a href="https://github.com/fork-maintainers/iceraven-browser/releases" title="Iceraven">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/iceraven/icon16.png"
                          width=16 alt="[Iceraven]"></a>
-                <a href="https://gitlab.com/ironfox-oss/IronFox/-/releases" title="IronFox for Android">
+                <a href="https://gitlab.com/ironfox-oss/IronFox/-/releases" title="IronFox">
                     <img src="https://assets.aiwebextensions.com/images/icons/browsers/ironfox/icon16.png"
                          width=16 alt="[IronFox]"></a>
             </td>
