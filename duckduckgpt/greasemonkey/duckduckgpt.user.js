@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.19
+// @version                2025.4.19.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -2431,8 +2431,8 @@
               // AI reply elem styles
               + `#${app.slug} .reply-tip {
                     content: "" ; position: relative ; border: 7px solid transparent ;
-                    float: left ; left: 9px ; margin: 1px -13px 0 -1px ; /* positioning */
-                    border-bottom-style: solid ; border-bottom-width: 18px ; border-top: 0 ; border-bottom-color:
+                    float: left ; left: 9px ; margin: 2px -13px 0 -1px ; /* positioning */
+                    border-bottom-style: solid ; border-bottom-width: 20px ; border-top: 0 ; border-bottom-color:
                         ${ // hide reply tip for terminal aesthetic
                             isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${env.ui.app.scheme}-scheme)` }}
                 #${app.slug} .reply-header {
