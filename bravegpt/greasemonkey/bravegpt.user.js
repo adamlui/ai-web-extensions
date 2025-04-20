@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.18
+// @version               2025.4.19
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -3901,7 +3901,7 @@
                 config.openAIkey = await Promise.race(
                     [session.getOAItoken(), new Promise(reject => setTimeout(reject, 3000))])
 
-            // Try diff API after 7-20s of no response
+            // Try diff API after 7-14s of no response
             else {
                 const iniAPI = get.reply.api ; clearTimeout(get.reply.timeout)
                 get.reply.timeout = setTimeout(() => {
@@ -3910,7 +3910,7 @@
                         && get.reply.api == iniAPI // not already trying diff API from err
                         && get.reply.triedAPIs.length != Object.keys(apis).length -1 // untried APIs remain
                     ) { get.reply.src = src ; api.tryNew(get.reply, 'timeout') }
-                }, config.streamingDisabled ? 10000 : 7000 *( config.preferredAPI ? 2 : 1 ))
+                }, ( config.streamingDisabled ? 10 : 7 *( config.preferredAPI ? 2 : 1 )) *1000)
             }
 
             // Augment query

@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.18
+// @version                2025.4.19
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -3149,7 +3149,7 @@
                 config.openAIkey = await Promise.race(
                     [session.getOAItoken(), new Promise(reject => setTimeout(reject, 3000))])
 
-            // Try diff API after 7-20s of no response
+            // Try diff API after 7-14s of no response
             else {
                 const iniAPI = get.reply.api ; clearTimeout(get.reply.timeout)
                 get.reply.timeout = setTimeout(() => {
@@ -3158,7 +3158,7 @@
                         && get.reply.api == iniAPI // not already trying diff API from err
                         && get.reply.triedAPIs.length != Object.keys(apis).length -1 // untried APIs remain
                     ) api.tryNew(get.reply, 'timeout')
-                }, config.streamingDisabled ? 10000 : 7000 *( config.preferredAPI ? 2 : 1 ))
+                }, ( config.streamingDisabled ? 10 : 7 *( config.preferredAPI ? 2 : 1 )) *1000)
             }
 
             // Augment query
