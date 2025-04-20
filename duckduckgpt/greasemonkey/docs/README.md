@@ -246,22 +246,18 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                         OrangeMonkey</a><sup>1,2</sup>
             </td>
             <td> <!-- Install browser -->
-                <a href="https://www.microsoft.com/edge/download"
-                   title="Edge">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
-                             width=16 alt="[Edge]"></a>
-                <a href="https://www.microsoft.com/edge/download/insider"
-                   title="Edge Beta">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
-                             width=16 alt="[Edge Beta]"></a>
-                <a href="https://www.microsoft.com/edge/download/insider"
-                   title="Edge Dev">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
-                             width=16 alt="[Edge Dev]"></a>
-                <a href="https://www.microsoft.com/edge/download/insider"
-                   title="Edge Canary">
-                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
-                             width=16 alt="[Edge Canary]"></a>
+                <a href="https://www.microsoft.com/edge/download" title="Edge">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
+                         width=16 alt="[Edge]"></a>
+                <a href="https://www.microsoft.com/edge/download/insider" title="Edge Beta">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
+                         width=16 alt="[Edge Beta]"></a>
+                <a href="https://www.microsoft.com/edge/download/insider" title="Edge Dev">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
+                         width=16 alt="[Edge Dev]"></a>
+                <a href="https://www.microsoft.com/edge/download/insider" title="Edge Canary">
+                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/canary/icon16.png"
+                         width=16 alt="[Edge Canary]"></a>
             </td>
         </tr>
         <tr> <!-- EDGE Android -->
@@ -375,27 +371,34 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                         ScriptCat</a>
             </td>
             <td> <!-- Install browser -->
-                <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
-                         width=16 alt="[Firefox for Android]"></a>
-                <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta" title="Firefox Beta for Android">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/beta/icon16.png"
-                         width=16 alt="[Firefox Beta for Android]"></a>
-                <a href="https://play.google.com/store/apps/details?id=org.mozilla.fenix" title="Firefox Nightly for Android">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon16.png"
-                         width=16 alt="[Firefox Nightly for Android]"></a>
-                <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release" title="Waterfox for Android">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
-                         width=16 alt="[Waterfox for Android]"></a>
-                <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/" title="Fennec">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/fennec/icon16.png"
-                         width=16 alt="[Fennec]"></a>
-                <a href="https://github.com/fork-maintainers/iceraven-browser/releases" title="Iceraven">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/iceraven/icon16.png"
-                         width=16 alt="[Iceraven]"></a>
-                <a href="https://gitlab.com/ironfox-oss/IronFox/-/releases" title="IronFox">
-                    <img src="https://assets.aiwebextensions.com/images/icons/browsers/ironfox/icon16.png"
-                         width=16 alt="[IronFox]"></a>
+                <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox"
+                   title="Firefox for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"
+                             width=16 alt="[Firefox for Android]"></a>
+                <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta"
+                   title="Firefox Beta for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/beta/icon16.png"
+                             width=16 alt="[Firefox Beta for Android]"></a>
+                <a href="https://play.google.com/store/apps/details?id=org.mozilla.fenix"
+                   title="Firefox Nightly for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon16.png"
+                             width=16 alt="[Firefox Nightly for Android]"></a>
+                <a href="https://play.google.com/store/apps/details?id=net.waterfox.android.release"
+                   title="Waterfox for Android">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/waterfox/icon16.png"
+                             width=16 alt="[Waterfox for Android]"></a>
+                <a href="https://f-droid.org/packages/org.mozilla.fennec_fdroid/"
+                   title="Fennec">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/fennec/icon16.png"
+                             width=16 alt="[Fennec]"></a>
+                <a href="https://github.com/fork-maintainers/iceraven-browser/releases"
+                   title="Iceraven">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/iceraven/icon16.png"
+                             width=16 alt="[Iceraven]"></a>
+                <a href="https://gitlab.com/ironfox-oss/IronFox/-/releases"
+                   title="IronFox">
+                        <img src="https://assets.aiwebextensions.com/images/icons/browsers/ironfox/icon16.png"
+                             width=16 alt="[IronFox]"></a>
             </td>
         </tr>
         <tr> <!-- QQ BROWSER desktop -->
@@ -445,10 +448,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
             <td> <!-- Install browser -->
                 <details>
                     <summary>Show QR code</summary>
-                    <a href="https://www.mises.site/download"
-                       title="Download Mises">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/mises/download-page/with-icon/purple.png"
-                                 width=125 alt="[Quetta]"></a>
+                    <a href="https://www.mises.site/download" title="Download Mises">
+                        <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/mises/download-page/with-icon/purple.png"
+                             width=125 alt="[Quetta]"></a>
                 </detail>
             </td>
         </tr>
@@ -508,10 +510,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
             <td> <!-- Install browser -->
                 <details>
                     <summary>Show QR code</summary>
-                    <a href="https://www.quetta.net"
-                    title="Quetta">
-                            <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/quetta/homepage/with-icon/red.png"
-                                 width=125 alt="[Quetta]"></a>
+                    <a href="https://www.quetta.net" title="Quetta">
+                        <img src="https://assets.aiwebextensions.com/images/qr-codes/browsers/quetta/homepage/with-icon/red.png"
+                             width=125 alt="[Quetta]"></a>
                 </detail>
             </td>
         </tr>
