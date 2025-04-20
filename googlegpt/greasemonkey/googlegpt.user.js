@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.20.2
+// @version                  2025.4.20.3
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2070,6 +2070,22 @@
             }
         },
 
+        download: {
+            create() {
+                const svg = dom.create.svgElem('svg', { width: 16, height: 16, viewBox: '1 1 14 14' })
+                svg.append(
+                    dom.create.svgElem('path', { stroke: 'none',
+                        d: 'M8 2c.328 0 .595.26.595.579v7.892c0 .32-.267.578-.595.578a.587.587 0 0 1-.595-.578V2.579c0-.32.267-.579.595-.579z' }),
+                    dom.create.svgElem('path', { stroke: 'none',
+                        d: 'M12.489 6.393a.547.547 0 0 1-.016.805l-4.054 3.683a.63.63 0 0 1-.854-.015.547.547 0 0 1 .016-.806l4.054-3.683a.63.63 0 0 1 .854.016z' }),
+                    dom.create.svgElem('path', { stroke: 'none',
+                        d: 'M3.511 6.393a.63.63 0 0 1 .854-.016l4.054 3.683c.24.218.247.579.016.806a.63.63 0 0 1-.854.015L3.527 7.198a.547.547 0 0 1-.016-.805z' }),
+                    dom.create.svgElem('path', { stroke: 'none',
+                        d: 'M2.595 10.418c.328 0 .594.26.594.579v1.052a.48.48 0 0 0 .487.474h8.648a.48.48 0 0 0 .487-.474v-1.052c0-.32.266-.579.594-.579.329 0 .595.26.595.579v1.052c0 .9-.75 1.631-1.676 1.631H3.676C2.75 13.68 2 12.95 2 12.049v-1.052c0-.32.266-.579.595-.579z' }))
+                return svg
+            }
+        },
+
         fontSize: {
             create() {
                 const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 0 512 512' })
@@ -2640,8 +2656,11 @@
                             -ms-transition: var(--reply-pre-transition)` }}
                 #${app.slug} .reply-pre a, #${app.slug} .reply-pre a:visited { color: #4495d4 }
                 #${app.slug} .reply-pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#28a017' }}
-                code #${app.slug}-copy-btn { position: absolute ; top: 13px ; right: 14px }
-                code #${app.slug}-copy-btn > svg { height: 13px ; width: 13px ; fill: white }`
+                #${app.slug} .code-header {
+                    display: flex ; direction: rtl ; gap: 9px ; align-items: center ;
+                    height: 11px ; margin: 4px -2px 0 }
+                #${app.slug} .code-header btn { cursor: pointer }
+                #${app.slug} .code-header svg { height: 13px ; width: 13px ; fill: white }`
 
               // Rendered markdown styles
               + `#${app.slug} .reply-pre h1 { font-size: 1.25em }
@@ -3247,15 +3266,15 @@
                                     +  ( app.msgs.menuLabel_widerSidebar ))
                 : btnType == 'arrows' ? ( config.expanded ? `${app.msgs.tooltip_shrink}`
                                                           : `${app.msgs.tooltip_expand}` )
-                : btnType == 'share' ? (
-                    btn.style.animation ? `${app.msgs.tooltip_generating} HTML...`
-                        : `${app.msgs.tooltip_generate} ${app.msgs.btnLabel_convo} ${
-                                app.msgs.tooltip_page.toLowerCase()}` )
                 : btnType == 'copy' ? (
                     btn.firstChild.id.includes('-copy-') ?
                         `${app.msgs.tooltip_copy} ${
                             app.msgs[`tooltip_${ btn.closest('code') ? 'code' : 'reply' }`].toLowerCase()}`
                     : `${app.msgs.notif_copiedToClipboard}!` )
+                : btnType == 'share' ? (
+                    btn.style.animation ? `${app.msgs.tooltip_generating} HTML...`
+                        : `${app.msgs.tooltip_generate} ${app.msgs.btnLabel_convo} ${
+                                app.msgs.tooltip_page.toLowerCase()}` )
                 : btnType == 'regen' ? (
                     btn.firstChild.style.animation || btn.firstChild.style.transform ?
                         `${app.msgs.tooltip_regenerating} ${app.msgs.tooltip_reply.toLowerCase()}...`
@@ -3265,6 +3284,10 @@
                         `${app.msgs.tooltip_play} ${app.msgs.tooltip_reply.toLowerCase()}`
                     : btn.querySelector('svg').id.includes('generating-') ? `${app.msgs.tooltip_generatingAudio}...`
                     : `${app.msgs.tooltip_playing} ${app.msgs.tooltip_reply.toLowerCase()}...` )
+                : btnType == 'download' ? (
+                    btn.firstChild.id.includes('-download-') ?
+                        `${app.msgs.btnLabel_download} ${app.msgs.tooltip_code.toLowerCase()}`
+                            : `${app.msgs.tooltip_code} ${app.msgs.notif_downloaded}!` )
                 : btnType == 'send' ? app.msgs.tooltip_sendReply
                 : btnType == 'shuffle' ? app.msgs.tooltip_feelingLucky
                 : btnType == 'summarize' ? app.msgs.tooltip_summarizeResults : '' )
@@ -3838,7 +3861,7 @@
                         if (appDiv.querySelector('.loading')) // no text shown
                             api.tryNew(caller)
                         else { // text was shown
-                            show.codeCopyBtns()
+                            show.codeCornerBtns()
                             if (callerAPI == caller.sender) msgChain.push({
                                 time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
                                 regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
@@ -3916,7 +3939,8 @@
                                 api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
                                 textToShow = textToShow.replace(apis[callerAPI].respPatterns?.watermark, '').trim()
                                 if (caller == get.reply) {
-                                    show.reply(textToShow, footerContent, { apiUsed: callerAPI }) ; show.codeCopyBtns()
+                                    show.reply(textToShow, footerContent, { apiUsed: callerAPI })
+                                    show.codeCornerBtns()
                                     msgChain.push({
                                         time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
                                         regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
@@ -4126,15 +4150,79 @@
 
     const show = {
 
-        codeCopyBtns() {
+        async codeCornerBtns() {
             if (!appDiv.querySelector('code')) return
+
+            // Init general language data
+            this.langData = this.langData || Object.assign(Object.create(null), await new Promise(resolve => xhr({
+                method: 'GET',
+                url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@645dad3/assets/data/code-languages.json',
+                onload: resp => resolve(JSON.parse(resp.responseText))
+            })))
+
+            // Add buttons to every block
             appDiv.querySelectorAll('code').forEach(block => {
                 if (block.querySelector('[id$=copy-btn]')) return
-                const copyBtnDiv = dom.create.elem('div', { style: 'height: 11px ; margin: 4px 6px 0 0' })
-                copyBtnDiv.append(replyBubble.buttons.copy.cloneNode(true))
+                const codeBtnsDiv = dom.create.elem('div', { class: `code-header` })
+
+                // Create Copy button
+                const copyBtn = replyBubble.buttons.copy.cloneNode(true)
+                copyBtn.style.cssText = '' // clear app header btn styles
                 Object.entries(replyBubble.buttons.copy.listeners).forEach(
-                    ([eventType, handler]) => copyBtnDiv.firstChild[eventType] = handler)
-                block.prepend(copyBtnDiv)
+                    ([eventType, handler]) => copyBtn[eventType] = handler)
+
+                // Create Download button
+                const downloadBtn = dom.create.elem('btn', { id: `${app.slug}-download-btn` })
+                const downloadSVGs = { download: icons.download.create(), downloaded: icons.checkmarkDouble.create() }
+                Object.entries(downloadSVGs).forEach(([svgType, svg]) => {
+                    svg.id = `${app.slug}-${svgType}-icon`;
+                    ['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
+                })
+                downloadBtn.append(downloadSVGs.download)
+                downloadBtn.onclick = event => { // download code, update icon + tooltip status
+                    if (!downloadBtn.firstChild.matches('[id$=download-icon]')) return // since clicking on DL'd icon
+
+                    // Update cursor/icon/tooltip
+                    downloadBtn.style.cursor = 'default' // remove finger
+                    downloadBtn.firstChild.replaceWith(downloadSVGs.downloaded.cloneNode(true)) // change to DL'd icon
+                    tooltip.update(event) // to 'Code downloaded!'
+                    setTimeout(() => { // restore icon/cursor/tooltip after a bit
+                        downloadBtn.firstChild.replaceWith(downloadSVGs.download.cloneNode(true))
+                        downloadBtn.style.cursor = 'pointer'
+                        if (downloadBtn.matches(':hover')) // restore tooltip
+                            downloadBtn.dispatchEvent(new Event('mouseenter'))
+                    }, 1355)
+
+                    // Init block's language data
+                    const lang = {},
+                          codeBlock = downloadBtn.closest('code'),
+                          hljsClass = Array.from(codeBlock.classList).find(cls => cls.startsWith('language-'))
+                    if (hljsClass) {
+                        const hljsSlug = hljsClass.replace('language-', '')
+                        for (const [langName, langEntry] of Object.entries(this.langData))
+                            if (langEntry.hljsSlug == hljsSlug) {
+                                [lang.name, lang.fileExtension] = [langName, langEntry?.fileExtension] ; break }
+                    }
+
+                    // Download code
+                    const code = codeBlock.textContent.replace(/^>> /, '').trim() + '\n'
+                    const dlLink = dom.create.elem('a'), now = new Date()
+                    const formattedDate = [ // YYYY-MM-DD
+                        now.getFullYear(),
+                        String(now.getMonth() +1).padStart(2, '0'),
+                        String(now.getDate()).padStart(2, '0')
+                    ].join('-')
+                    dlLink.href = URL.createObjectURL(new Blob([code], { type: 'text/plain' }))
+                    dlLink.download /* filename */ = `${app.slug}_${lang.name.toLowerCase() || 'code'}_${
+                        formattedDate}_${Date.now().toString(36)}${
+                        lang.fileExtension ? '.' + lang.fileExtension : ''}`
+                    document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download code
+                    URL.revokeObjectURL(dlLink.href) // prevent memory leaks
+                }
+                downloadBtn.onmouseenter = downloadBtn.onmouseleave = tooltip.toggle
+
+                // Assemble elems
+                codeBtnsDiv.append(copyBtn, downloadBtn) ; block.prepend(codeBtnsDiv)
             })
         },
 
