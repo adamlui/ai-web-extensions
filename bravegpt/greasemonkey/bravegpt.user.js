@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.19.2
+// @version               2025.4.19.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1665,7 +1665,6 @@
         },
 
         stylize() {
-            if (this.styles) return
             this.styles = dom.create.style(`
                 .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
                 .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
@@ -3027,7 +3026,6 @@
     const tooltip = {
 
         stylize() {
-            if (this.styles) return
             this.styles = dom.create.style(`.${app.slug}-tooltip {
                 background-color: /* bubble style */
                     rgba(0,0,0,0.64) ; padding: 4px 6px 4px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;

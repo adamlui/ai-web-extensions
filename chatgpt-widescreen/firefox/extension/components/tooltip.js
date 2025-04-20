@@ -10,7 +10,6 @@ window.tooltip = {
     },
 
     stylize() {
-        if (this.styles) return
         this.styles = dom.create.style(`.${this.imports.app.slug}-tooltip {
             background-color: /* bubble style */
                 rgba(0,0,0,0.71) ; padding: 5px 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
