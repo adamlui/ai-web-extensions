@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.20.1
+// @version                2025.4.20.2
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -3441,7 +3441,7 @@
                 ['width', 'height'].forEach(attr => shareSVG.setAttribute(attr, 16))
                 this.share.append(shareSVG)
                 if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = tooltip.toggle
-                this.share.onclick = () => {
+                this.share.onclick = event => {
                     if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
                     this.share.style.cursor = 'default' // remove finger
                     if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'

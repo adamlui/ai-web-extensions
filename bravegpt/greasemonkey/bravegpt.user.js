@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.20.1
+// @version               2025.4.20.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -4316,7 +4316,7 @@
                 ['width', 'height'].forEach(attr => shareSVG.setAttribute(attr, 16))
                 this.share.append(shareSVG)
                 if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = tooltip.toggle
-                this.share.onclick = () => {
+                this.share.onclick = event => {
                     if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
                     this.share.style.cursor = 'default' // remove finger
                     if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'

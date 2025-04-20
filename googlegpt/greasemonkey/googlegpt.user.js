@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.20.1
+// @version                  2025.4.20.2
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -4505,7 +4505,7 @@
                 ['width', 'height'].forEach(attr => shareSVG.setAttribute(attr, 16))
                 this.share.append(shareSVG)
                 if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = tooltip.toggle
-                this.share.onclick = () => {
+                this.share.onclick = event => {
                     if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
                     this.share.style.cursor = 'default' // remove finger
                     if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
