@@ -52,8 +52,7 @@ window.toggles = {
         },
 
         stylize() {
-            this.styles = document.createElement('style') ; this.styles.id = `${this.class}-styles`
-            this.styles.innerText = (
+            this.styles = dom.create.style(
                 `:root { /* vars */
                     --switch-enabled-bg-color: #ad68ff ; --switch-disabled-bg-color: #ccc ;
                     --switch-enabled-box-shadow: 1px 2px 8px #d8a9ff ;
