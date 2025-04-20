@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.19.1
+// @version                  2025.4.19.2
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2427,19 +2427,19 @@
                     --app-hover-shadow-light-scheme: 0 9px 28px rgba(0,0,0,0.09) ;
                     --app-hover-shadow-dark-scheme: 0 9px 28px rgba(0,0,0,0.39) ;
                     --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
-                                                                                               : '11,0.22' }) ;`
-                  + '--app-transition: opacity 0.5s ease, transform 0.5s ease,' // for 1st fade-in
-                                    + 'bottom 0.1s cubic-bezier(0,0,0.2,1),' // smoothen Anchor Y min/restore
-                                    + 'width 0.167s cubic-bezier(0,0,0.2,1) ;' // smoothen Anchor X expand/shrink
-                  + '--app-shadow-transition: box-shadow 0.15s ease ;' // for app:hover to not trigger on hover-off
-                  + '--zoom-transition-more: transform 0.15s ease ;' // for button hover-zoom
-                  + '--zoom-transition-less: transform 0.1s ease ;' // for Settings entry hover-zoom
-                  + '--btn-transition: var(--zoom-transition-more),' // for hover-zoom
-                                    + 'opacity 0.25s ease-in-out ;' // + btn-zoom-fade-out + .app-hover-only shows
-                  + '--font-size-slider-thumb-transition: transform 0.05s ease ;' // for hover-zoom
-                  + '--reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ;' // for Anchor changes
-                  + '--rq-transition: opacity 0.55s ease, var(--zoom-transition-less) !important ;' // for fade-in + hover-zoom
-                  + '--fade-in-less-transition: opacity 0.2s ease }' // used by Font Size slider + Pin menu
+                                                                                               : '11,0.22' }) ;
+                    --app-transition: opacity 0.5s ease, transform 0.5s ease, /* for 1st fade-in */
+                                    + 'bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
+                                    + 'width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
+                    --app-shadow-transition: box-shadow 0.15s ease ; /* for app:hover to not trigger on hover-off */
+                    --zoom-transition-more: transform 0.15s ease ; /* for button hover-zoom */
+                    --zoom-transition-less: transform 0.1s ease ; /* for Settings entry hover-zoom */
+                    --btn-transition: var(--zoom-transition-more), /* for hover-zoom */
+                                      opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
+                    --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
+                    --reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ; /* for Anchor changes */
+                    --rq-transition: opacity 0.55s ease, var(--zoom-transition-less) !important ; /* for fade-in + hover-zoom */
+                    --fade-in-less-transition: opacity 0.2s ease } /* used by Font Size slider + Pin menu */`
 
                 // Animations
               + '.fade-in { opacity: 0 ; transform: translateY(10px) }'

@@ -1929,17 +1929,17 @@
                     --app-gradient-bg: linear-gradient(180deg, ${
                         env.ui.app.scheme == 'dark' ? '#99a8a6 -245px, black 185px' : '#b6ebff -163px, white 65px' }) ;
                     --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
-                                                                                               : '11,0.22' }) ;`
-                  + '--app-transition: opacity 0.5s ease, transform 0.5s ease,' // for 1st fade-in
-                                    + 'bottom 0.1s cubic-bezier(0,0,0.2,1),' // smoothen Anchor Y min/restore
-                                    + 'width 0.167s cubic-bezier(0,0,0.2,1) ;' // smoothen Anchor X expand/shrink
-                  + '--zoom-transition-more: transform 0.15s ease ;' // for button hover-zoom
-                  + '--zoom-transition-less: transform 0.1s ease ;' // for Settings entry hover-zoom
-                  + '--btn-transition: var(--zoom-transition-more),' // for hover-zoom
-                                    + 'opacity 0.25s ease-in-out ;' // + btn-zoom-fade-out + .app-hover-only shows
-                  + '--font-size-slider-thumb-transition: transform 0.05s ease ;' // for hover-zoom
-                  + '--reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ;' // for Anchor changes
-                  + '--fade-in-less-transition: opacity 0.2s ease }' // used by Font Size slider
+                                                                                               : '11,0.22' }) ;
+                    --app-transition: opacity 0.5s ease, transform 0.5s ease, /* for 1st fade-in */
+                                      bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
+                                      width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
+                    --zoom-transition-more: transform 0.15s ease ; /* for button hover-zoom */
+                    --zoom-transition-less: transform 0.1s ease ; /* for Settings entry hover-zoom */
+                    --btn-transition: var(--zoom-transition-more), /* for hover-zoom */
+                                      opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
+                    --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
+                    --reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ; /* for Anchor changes */
+                    --fade-in-less-transition: opacity 0.2s ease } /* used by Font Size slider */`
 
                 // Animations
               + '.fade-in { opacity: 0 ; transform: translateY(10px) }'
