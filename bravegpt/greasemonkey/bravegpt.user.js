@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.20.5
+// @version               2025.4.20.6
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -4011,8 +4011,7 @@
                     }, 1355)
 
                     // Init block's language data
-                    const blockLang = {},
-                          codeBlock = downloadBtn.closest('code'),
+                    const codeBlock = downloadBtn.closest('code'), blockLang = {},
                           hljsClass = Array.from(codeBlock.classList).find(cls => cls.startsWith('language-'))
                     if (hljsClass) {
                         blockLang.hljsSlug = hljsClass.replace('language-', '')

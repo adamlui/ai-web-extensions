@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.20.5
+// @version                2025.4.20.6
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -3249,8 +3249,7 @@
                     }, 1355)
 
                     // Init block's language data
-                    const blockLang = {},
-                          codeBlock = downloadBtn.closest('code'),
+                    const codeBlock = downloadBtn.closest('code'), blockLang = {},
                           hljsClass = Array.from(codeBlock.classList).find(cls => cls.startsWith('language-'))
                     if (hljsClass) {
                         blockLang.hljsSlug = hljsClass.replace('language-', '')
