@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.20
+// @version             2025.4.20.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -961,7 +961,7 @@
         const sidebarObserver = new ResizeObserver(() => // sync config.fullWindow ⇆ sidebar width
             (config.fullWindow ^ ui.isFullWin()) && !config.modeSynced && sync.mode('fullWindow'))
         observeSidebars()
-        if (env.site == 'chatgpt') new MutationObserver( // re-observeSidebars() on disconnect
+        new MutationObserver( // re-observeSidebars() on disconnect
             () => getSidebars().some(bar => !sidebarObserver.targets?.includes(bar)) && observeSidebars()
         ).observe(document.body, { childList: true, subtree: true })
 
