@@ -58,14 +58,20 @@ window.buttons = {
 
     stylize() {
         const site = this.imports.env.site
-        this.styles = dom.create.style(`.${this.class} {
-            cursor: pointer ;
-            position: ${ site == 'chatgpt' && this.imports.env.ui.hasTallChatbar ? 'absolute' : 'relative' };
-            --transition: transform 0.15s ease, opacity 0.5s ease ; /* for tweaksStyle's :hover + .insert()'s fade-in */
-                -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
-                -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
-            ${ /chatgpt|perplexity/.test(site) ? // remove dark mode overlay
-                'background-color: transparent ; border-color: transparent ;' : '' }`
+        this.styles = dom.create.style(`
+            .${this.class} {
+                cursor: pointer ; position: relative ;
+                --transition: transform 0.15s ease, opacity 0.5s ease ; /* for tweaksStyle's :hover + .insert()'s fade-in */
+                    -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
+                    -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
+                ${ /chatgpt|perplexity/.test(site) ? // remove overlay
+                    'background-color: transparent ; border-color: transparent ;' : '' }
+            }
+            ${ this.imports.sites[site].selectors.sidebar ? // hide FW btn when window skinny on sites where sync req'd
+                `@media (max-width: 768px) {
+                    #fullWindow-btn { display: none }
+                    #widescreen-btn { margin-right: ${ site == 'perplexity' ? 9 : 19 }px }}`
+                : '' }`
         )
         document.head.append(this.styles)
     },
@@ -76,10 +82,10 @@ window.buttons = {
               btnSelectors = this.imports.sites[site].selectors.btns
         if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.get.rightBtn() // for rOffset + styles
         const validBtnTypes = this.get.types.valid()
-        const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? 29 : -8.85
+        const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? -16.5 : -8.85
         const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4 : hasTallChatbar ? (
-            this.rightBtn.getBoundingClientRect().width +2 ) * (
-                document.querySelector(/\(([^()]+)\)$/.exec(btnSelectors.dictate)?.[1]) ? 2 : 1 ) : -0.25
+            this.rightBtn.getBoundingClientRect().width +2 ) *(
+                document.querySelector(/\(([^()]+)\)$/.exec(btnSelectors.dictate)?.[1]) ? 2 : 1 ) -84 : -0.25
 
         validBtnTypes.forEach(async (btnType, idx) => {
             const btn = this[btnType] = dom.create.elem('div', { id: `${btnType}-btn`, class: this.class })
