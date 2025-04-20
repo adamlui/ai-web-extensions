@@ -326,11 +326,11 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"
                             width=16 alt="[Edge]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.beta"
-                   title="Edge Beta">
+                   title="Edge Beta for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/beta/icon16.png"
                             width=16 alt="[Edge Beta]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.dev"
-                   title="Edge Dev">
+                   title="Edge Dev for Android">
                         <img src="https://assets.aiwebextensions.com/images/icons/browsers/edge/dev/icon16.png"
                             width=16 alt="[Edge Dev]"></a>
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx.canary"
