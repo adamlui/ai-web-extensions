@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.20
+// @version               2025.4.20.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -2817,8 +2817,9 @@
                     else if (btn.id.endsWith('pin-btn'))
                         btn.onmouseenter = btn.onmouseleave = btn.onclick = hoverMenus.toggle
                     else if (btn.id.endsWith('wsb-btn'))
-                        btn.onclick = () => { toggle.sidebar('wider') ; tooltip.update('wsb') }
-                    else if (btn.id.endsWith('arrows-btn')) btn.onclick = () => toggle.expandedMode()
+                        btn.onclick = event => { toggle.sidebar('wider') ; tooltip.update(event) }
+                    else if (btn.id.endsWith('arrows-btn'))
+                        btn.onclick = event => { toggle.expandedMode() ; tooltip.update(event) }
                     if (!env.browser.isMobile && !btn.id.endsWith('pin-btn')) // add hover listeners for tooltips
                         btn.onmouseenter = btn.onmouseleave = tooltip.toggle
                     if (/about|settings|speak/.test(btn.id)) btn.onmouseup = () => { // add zoom/fade-out to select buttons
@@ -3042,14 +3043,13 @@
             tooltip.div = tooltip.div || dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
             if (!tooltip.div.isConnected) appDiv.append(tooltip.div)
             if (!tooltip.styles) tooltip.stylize()
-            if (typeof stateOrEvent == 'object') // mouse event from btn hover, update text/pos
-                tooltip.update(new RegExp(`${app.slug}-([\\w-]+)-btn`).exec(stateOrEvent.currentTarget.id)[1])
+            if (typeof stateOrEvent == 'object') tooltip.update(stateOrEvent) // mouse event, update text/pos
             tooltip.div.style.opacity = +( stateOrEvent?.type == 'mouseenter' || stateOrEvent == 'on' )
         },
 
-        update(btnType) { // text & position
+        update({ currentTarget: btn }) { // text & position
             if (!this.div) return // since nothing to update
-            const btn = appDiv.querySelector(`[id*=${btnType}-btn]`)
+            const btnType = /-([\w-]+)-btn$/.exec(btn.id)[1]
             const baseText = (
                   btnType == 'chevron' ? ( config.minimized ? `${app.msgs.tooltip_restore}`
                                                             : `${app.msgs.tooltip_minimize}` )
@@ -3325,7 +3325,6 @@
                         update.bylineVisibility() ; appDiv.removeEventListener('transitionend', onTransitionEnd)
             }})
             icons.arrowsDiagonal.update() // toggle downwawrd/upward caret icons
-            tooltip.update('arrows') // toggle 'Minimize/Restore'
         },
 
         manualGen(mode) { // Prefix/Suffix modes
@@ -4298,7 +4297,7 @@
                     const textToCopy = textContainer.textContent.replace(/^>> /, '').trim()
                     copyBtn.style.cursor = 'default' // remove finger
                     copyBtn.firstChild.replaceWith(copySVGs.copied.cloneNode(true)) // change to Copied icon
-                    tooltip.update('copy') // to 'Copied to clipboard!'
+                    tooltip.update(event) // to 'Copied to clipboard!'
                     setTimeout(() => { // restore icon/cursor/tooltip after a bit
                         copyBtn.firstChild.replaceWith(copySVGs.copy.cloneNode(true))
                         copyBtn.style.cursor = 'pointer'
@@ -4321,7 +4320,7 @@
                     if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
                     this.share.style.cursor = 'default' // remove finger
                     if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
-                    tooltip.update('share') // to 'Generating HTML...'
+                    tooltip.update(event) // to 'Generating HTML...'
                     xhr({
                         method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
                         headers: { 'Content-Type': 'application/json', 'Referer': location.href },
@@ -4345,12 +4344,12 @@
                 ['width', 'height'].forEach(attr => regenSVG.setAttribute(attr, 14))
                 regenSVGwrapper.append(regenSVG) ; this.regen.append(regenSVGwrapper)
                 if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = tooltip.toggle
-                this.regen.onclick = () => {
+                this.regen.onclick = event => {
                     get.reply(msgChain, { src: 'regen' })
                     regenSVGwrapper.style.cursor = 'default' // remove finger
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
-                    tooltip.update('regen') // to 'Regenerating...'
+                    tooltip.update(event) // to 'Regenerating...'
                     show.reply.src = null ; show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
 
@@ -4378,7 +4377,7 @@
                 speakSVGscroller.append(speakSVGs.speak) ; speakSVGwrapper.append(speakSVGscroller)
                 this.speak.append(speakSVGwrapper)
                 if (!env.browser.isMobile) this.speak.onmouseenter = this.speak.onmouseleave = tooltip.toggle
-                this.speak.onclick = async () => {
+                this.speak.onclick = async event => {
                     if (!this.speak.contains(speakSVGs.speak)) return // since clicking on Generating or Playing icon
                     this.speak.style.cursor = 'default' // remove finger
 
@@ -4391,7 +4390,7 @@
                             'linear-gradient(to right, transparent, black 20%, black 81%, transparent)' )
                     }
 
-                    tooltip.update('speak') // to 'Generating audio...'
+                    tooltip.update(event) // to 'Generating audio...'
 
                     // Play reply
                     const wholeAnswer = appDiv.querySelector('.reply-pre').textContent
