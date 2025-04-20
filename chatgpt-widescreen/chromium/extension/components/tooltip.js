@@ -1,17 +1,17 @@
-// Requires lib/dom.js + components/buttons.js + env + msgs: app.msgs (Greasemonkey only) + sites
+// Requires lib/dom.js + components/buttons.js + app + env + sites
 
 window.tooltip = {
     import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
 
     getMsg(key) {
         return typeof GM_info != 'undefined' ?
-            this.imports.msgs[key] // from tooltip.import({ msgs: app.msgs }) in userscript
+            this.imports.app.msgs[key] // from tooltip.import({ app }) in userscript
                 : chrome.i18n.getMessage(key) // from ./_locales/*/messages.json
     },
 
     stylize() {
         if (this.styles) return
-        this.styles = dom.create.style(`.cwm-tooltip {
+        this.styles = dom.create.style(`.${this.imports.app.slug}-tooltip {
             background-color: /* bubble style */
                 rgba(0,0,0,0.71) ; padding: 5px 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
             font-size: 0.85rem ; color: white ; white-space: nowrap ; /* text style */
@@ -26,7 +26,7 @@ window.tooltip = {
     },
 
     toggle(event) {
-        tooltip.div = tooltip.div || dom.create.elem('div', { class: 'cwm-tooltip' })
+        tooltip.div = tooltip.div || dom.create.elem('div', { class: `${tooltip.imports.app.slug}-tooltip` })
         if (!tooltip.div.isConnected) event.currentTarget?.before(tooltip.div)
         if (!tooltip.styles) tooltip.stylize()
         tooltip.update(event.currentTarget.id.replace(/-btn$/, ''))

@@ -47,7 +47,7 @@
     dom.import({ scheme: env.ui.scheme }) // for dom.addRisingParticles()
     modals.import({ app, env }) // for app data + env['<browser|ui>'] flags
     settings.import({ site: env.site, sites }) // to load/save active tab's settings + `${site}Disabled`
-    tooltip.import({ env, sites }) // for tooltip.update() position logic
+    tooltip.import({ app, env, sites }) // for tooltip.stylize() class + tooltip.update() position logic
     ui.import({ sites }) // for ui.isFullWin() sidebar selector/flag
 
     // Init SETTINGS
