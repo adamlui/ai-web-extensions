@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.20.9
+// @version               2025.4.20.10
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -3989,8 +3989,8 @@
                     ([eventType, handler]) => copyBtn[eventType] = handler)
 
                 // Create Download button
-                const downloadBtn = dom.create.elem('btn', { id: `${app.slug}-download-btn` })
-                const downloadSVGs = { download: icons.download.create(), downloaded: icons.checkmarkDouble.create() }
+                const downloadBtn = dom.create.elem('btn', { id: `${app.slug}-download-btn` }),
+                      downloadSVGs = { download: icons.download.create(), downloaded: icons.checkmarkDouble.create() }
                 Object.entries(downloadSVGs).forEach(([svgType, svg]) => {
                     svg.id = `${app.slug}-${svgType}-icon`;
                     ['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
@@ -4033,7 +4033,7 @@
                     dlLink.href = URL.createObjectURL(new Blob([code], { type: 'text/plain' }))
                     dlLink.download /* filename */ = `${app.slug}_${blockLang.name.toLowerCase() || 'code'}_${
                         formattedDate}_${Date.now().toString(36)}${
-                        blockLang.fileExtension ? '.' + blockLang.fileExtension : ''}`
+                        blockLang.fileExtension ? '.' + blockLang.fileExtension : '' }`
                     document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download code
                     URL.revokeObjectURL(dlLink.href) // prevent memory leaks
                 }
