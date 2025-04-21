@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.21
+// @version               2025.4.21.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -4010,7 +4010,7 @@
                         downloadBtn.style.cursor = 'pointer'
                         if (downloadBtn.matches(':hover')) // restore tooltip
                             downloadBtn.dispatchEvent(new Event('mouseenter'))
-                    }, 1355)
+                    }, 15000)
 
                     // Init block's language data
                     const codeBlock = downloadBtn.closest('code'), blockLang = {},

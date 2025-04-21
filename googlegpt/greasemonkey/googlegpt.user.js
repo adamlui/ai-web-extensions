@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.21
+// @version                  2025.4.21.1
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -4192,7 +4192,7 @@
                         downloadBtn.style.cursor = 'pointer'
                         if (downloadBtn.matches(':hover')) // restore tooltip
                             downloadBtn.dispatchEvent(new Event('mouseenter'))
-                    }, 1355)
+                    }, 15000)
 
                     // Init block's language data
                     const codeBlock = downloadBtn.closest('code'), blockLang = {},
