@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.20.10
+// @version                2025.4.21
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1466,9 +1466,11 @@
                     appDiv: appDiv.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
                     hoverMenu: hoverMenus[menuType].div.getBoundingClientRect()
                 }
-                const appIsHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
+                const appIsHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 ),
+                      appIsLow = rects.hoverMenu.bottom > ( innerHeight -15 )
                 hoverMenus[menuType].div.style.top = `${ rects.toggleBtn.top - rects.appDiv.top +(
-                    appIsHigh ? /* point down */ 29 : /* point up */ - rects.hoverMenu.height -13 )}px`
+                    menuType == 'pin' && appIsHigh || menuType == 'api' && !appIsLow
+                        ? /* point down */ 29 : /* point up */ - rects.hoverMenu.height -13 )}px`
                 hoverMenus[menuType].rightPos = hoverMenus[menuType].rightPos
                     || rects.appDiv.right - event.clientX - hoverMenus[menuType].div.offsetWidth/2
                 Object.assign(hoverMenus[menuType].div.style, {

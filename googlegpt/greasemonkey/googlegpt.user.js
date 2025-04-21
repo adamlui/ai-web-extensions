@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.20.10
+// @version                  2025.4.21
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1839,9 +1839,11 @@
                     appDiv: appDiv.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
                     hoverMenu: hoverMenus[menuType].div.getBoundingClientRect()
                 }
-                const appIsHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
+                const appIsHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 ),
+                      appIsLow = rects.hoverMenu.bottom > ( innerHeight -15 )
                 hoverMenus[menuType].div.style.top = `${ rects.toggleBtn.top - rects.appDiv.top +(
-                    appIsHigh ? /* point down */ 29 : /* point up */ - rects.hoverMenu.height -13 )}px`
+                    menuType == 'pin' && appIsHigh || menuType == 'api' && !appIsLow
+                        ? /* point down */ 29 : /* point up */ - rects.hoverMenu.height -13 )}px`
                 hoverMenus[menuType].rightPos = hoverMenus[menuType].rightPos
                     || rects.appDiv.right - event.clientX - hoverMenus[menuType].div.offsetWidth/2
                 Object.assign(hoverMenus[menuType].div.style, {
