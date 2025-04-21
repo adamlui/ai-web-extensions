@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.20.6
+// @version                2025.4.20.7
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -310,7 +310,7 @@
         log[logType] = function() {
             if (logType == 'debug' && !config.debugMode) return
 
-            const args = Array.from(arguments).map(arg => typeof arg == 'object' ? JSON.stringify(arg) : arg)
+            const args = [...arguments].map(arg => typeof arg == 'object' ? JSON.stringify(arg) : arg)
             const msgType = args.some(arg => /\.{3}$/.test(arg)) ? 'working'
                           : args.some(arg => /\bsuccess\b|!$/i.test(arg)) ? 'success'
                           : args.some(arg => /\b(?:error|fail)\b/i.test(arg)) || logType == 'error' ? 'warning' : 'info'
@@ -3250,7 +3250,7 @@
 
                     // Init block's language data
                     const codeBlock = downloadBtn.closest('code'), blockLang = {},
-                          hljsClass = Array.from(codeBlock.classList).find(cls => cls.startsWith('language-'))
+                          hljsClass = [...codeBlock.classList].find(cls => cls.startsWith('language-'))
                     if (hljsClass) {
                         blockLang.hljsSlug = hljsClass.replace('language-', '')
                         for (const [langName, langEntry] of Object.entries(this.langData))

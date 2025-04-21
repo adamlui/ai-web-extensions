@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.20.6
+// @version               2025.4.20.7
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -470,7 +470,7 @@
         log[logType] = function() {
             if (logType == 'debug' && !config.debugMode) return
 
-            const args = Array.from(arguments).map(arg => typeof arg == 'object' ? JSON.stringify(arg) : arg)
+            const args = [...arguments].map(arg => typeof arg == 'object' ? JSON.stringify(arg) : arg)
             const msgType = args.some(arg => /\.{3}$/.test(arg)) ? 'working'
                           : args.some(arg => /\bsuccess\b|!$/i.test(arg)) ? 'success'
                           : args.some(arg => /\b(?:error|fail)\b/i.test(arg)) || logType == 'error' ? 'warning' : 'info'
@@ -4012,7 +4012,7 @@
 
                     // Init block's language data
                     const codeBlock = downloadBtn.closest('code'), blockLang = {},
-                          hljsClass = Array.from(codeBlock.classList).find(cls => cls.startsWith('language-'))
+                          hljsClass = [...codeBlock.classList].find(cls => cls.startsWith('language-'))
                     if (hljsClass) {
                         blockLang.hljsSlug = hljsClass.replace('language-', '')
                         for (const [langName, langEntry] of Object.entries(this.langData))

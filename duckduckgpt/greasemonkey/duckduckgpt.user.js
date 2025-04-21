@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.20.5
+// @version                2025.4.20.6
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -462,7 +462,7 @@
         log[logType] = function() {
             if (logType == 'debug' && !config.debugMode) return
 
-            const args = Array.from(arguments).map(arg => typeof arg == 'object' ? JSON.stringify(arg) : arg)
+            const args = [...arguments].map(arg => typeof arg == 'object' ? JSON.stringify(arg) : arg)
             const msgType = args.some(arg => /\.{3}$/.test(arg)) ? 'working'
                           : args.some(arg => /\bsuccess\b|!$/i.test(arg)) ? 'success'
                           : args.some(arg => /\b(?:error|fail)\b/i.test(arg)) || logType == 'error' ? 'warning' : 'info'
@@ -4005,7 +4005,7 @@
 
                     // Init block's language data
                     const codeBlock = downloadBtn.closest('code'), blockLang = {},
-                          hljsClass = Array.from(codeBlock.classList).find(cls => cls.startsWith('language-'))
+                          hljsClass = [...codeBlock.classList].find(cls => cls.startsWith('language-'))
                     if (hljsClass) {
                         blockLang.hljsSlug = hljsClass.replace('language-', '')
                         for (const [langName, langEntry] of Object.entries(this.langData))
