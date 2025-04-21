@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.21.1
+// @version                2025.4.21.2
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -1687,10 +1687,10 @@
                     appDiv: appDiv.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
                     hoverMenu: hoverMenus[menuType].div.getBoundingClientRect()
                 }
-                const appIsHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 ),
-                      appIsLow = rects.hoverMenu.bottom > ( innerHeight -15 )
+                const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 ),
+                      appIsTooLow = rects.hoverMenu.bottom > ( innerHeight -15 )
                 hoverMenus[menuType].div.style.top = `${ rects.toggleBtn.top - rects.appDiv.top +(
-                    menuType == 'pin' && appIsHigh || menuType == 'api' && !appIsLow
+                    menuType == 'pin' && appIsTooHigh || menuType == 'api' && !appIsTooLow
                         ? /* point down */ 29 : /* point up */ - rects.hoverMenu.height -13 )}px`
                 hoverMenus[menuType].rightPos = hoverMenus[menuType].rightPos
                     || rects.appDiv.right - event.clientX - hoverMenus[menuType].div.offsetWidth/2
