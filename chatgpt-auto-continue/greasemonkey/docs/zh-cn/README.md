@@ -144,12 +144,12 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 
 <div id="warp">
     <br><br>
-    <a href="https://www.warp.dev/chatgptjs" target="_blank">
+    <a href="https://www.warp.dev/chatgptjs">
         <img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">
     </a>
-    <h3><a href="https://www.warp.dev/chatgptjs" target="_blank">
+    <h3><a href="https://www.warp.dev/chatgptjs">
         Warp，存在于您的终端中的 AI Devtool</a></h3>
-    <i><a href="https://www.warp.dev/chatgptjs" target="_blank">
+    <i><a href="https://www.warp.dev/chatgptjs">
         适用于 MacOS、Linux 和 Windows</a></i>
 </div>
 <br><br>
