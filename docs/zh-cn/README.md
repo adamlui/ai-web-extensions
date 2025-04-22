@@ -72,7 +72,7 @@
 
 <blockquote>
     <a href="../../amazongpt/#-installation">
-        <img height=13 src="https://amazongpt.kudoai.com/assets/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://amazongpt.kudoai.com/assets/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../amazongpt/#-installation">
         Greasemonkey</a> /
     <a href="../../amazongpt/#readme">
@@ -105,7 +105,7 @@
 
 <blockquote>
     <a href="../autoclear-chatgpt-history/#-installation">
-        <img height=13 src="https://assets.autoclearchatgpt.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.autoclearchatgpt.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../autoclear-chatgpt-history/#-installation">
         Greasemonkey</a> /
     <a href="../autoclear-chatgpt-history/#readme">
@@ -179,7 +179,7 @@
 
 <blockquote>
     <a href="../../bravegpt/#-installation">
-        <img height=13 src="https://assets.bravegpt.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.bravegpt.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../bravegpt/#-installation">
         Greasemonkey</a> /
     <a href="../../bravegpt/#readme">
@@ -222,7 +222,7 @@
     <a href="https://edge.chatgptautocontinue.com">
         Edge</a> /
     <a href="https://gm.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=13 src="https://assets.chatgptautocontinue.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.chatgptautocontinue.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="https://gm.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Greasemonkey</a> /
     <a href="../chatgpt-auto-continue/docs/zh-cn/#readme">
@@ -259,7 +259,7 @@
 
 <blockquote>
     <a href="../../chatgpt-auto-refresh/docs/zh-cn/#-如何安装">
-        <img height=13 src="https://assets.chatgptautorefresh.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.chatgptautorefresh.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../chatgpt-auto-refresh/docs/zh-cn/#-如何安装">
         Greasemonkey</a> /
     <a href="../../chatgpt-auto-refresh/docs/zh-cn/#readme">
@@ -286,7 +286,7 @@
 
 <blockquote>
     <a href="../../chatgpt-auto-talk/docs/zh-cn/#-如何安装">
-        <img height=13 src="https://assets.chatgptautotalk.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.chatgptautotalk.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../chatgpt-auto-talk/docs/zh-cn/#-如何安装">
         Greasemonkey</a> /
     <a href="../../chatgpt-auto-talk/docs/zh-cn/#readme">
@@ -331,7 +331,7 @@
     <a href="https://edge.chatgptinfinity.com">
         Edge</a> /
     <a href="https://gm.chatgptinfinity.com">
-        <img height=13 src="https://assets.chatgptinfinity.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.chatgptinfinity.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="https://gm.chatgptinfinity.com">
         Greasemonkey</a> /
     <a href="../../chatgpt-infinity/docs/zh-cn/#readme">
@@ -402,7 +402,7 @@
     <a href="https://edge.chatgptwidescreen.com">
         Edge</a> /
     <a href="https://gm.chatgptwidescreen.com">
-        <img height=13 src="https://assets.chatgptwidescreen.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.chatgptwidescreen.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="https://gm.chatgptwidescreen.com">
         Greasemonkey</a> /
     <a href="../../chatgpt-widescreen/docs/zh-cn/#readme">
@@ -494,7 +494,7 @@
 
 <blockquote>
     <a href="../../duckduckgpt/#-installation">
-        <img height=13 src="https://assets.ddgpt.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.ddgpt.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../duckduckgpt/#-installation">
         Greasemonkey</a> /
     <a href="../../duckduckgpt/#readme">
@@ -527,7 +527,7 @@
 
 <blockquote>
     <a href="../../googlegpt/#-installation">
-        <img height=13 src="https://assets.googlegpt.io/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.googlegpt.io/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../googlegpt/#-installation">
         Greasemonkey</a> /
     <a href="../../googlegpt/#readme">
