@@ -15,8 +15,8 @@
       "rightbar": "div[class*=sidebar]:has([data-testid=screen-threadFlyOut])",
       "sidebar": "div[class*=sidebar]:not(:has([data-testid=screen-threadFlyOut]))",
       "spam": { "banners": {
-          "homepage": "[class*=bottom-full]:has(button[data-testid=close-button])",
-          "quota": "[class*=bottom-full]:has(button[data-testid=close-button]"
+          "dismissable": "div.bottom-full:has(button[data-testid=close-button])",
+          "tos": "div.bottom-full:has([href=\"https:\/\/openai.com/terms\"])" // https://i.imgur.com/8BUOhn1.png
       }},
       "footer": ".min-h-4"
     },
