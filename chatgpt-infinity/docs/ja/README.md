@@ -80,7 +80,7 @@
 
 ## 🚀 インストール方法
 
-### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"><img height=17 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"> ブラウザ拡張機能:
+### <a href="#" title="Chrome"><img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a><a href="#" title="Edge"><img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a><a href="#" title="Firefox"><img height=17 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a> ブラウザ拡張機能:
 
 1. ChatGPT Infinity 拡張機能をインストールします ([Chrome](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link), [Edge](https://edge.chatgptinfinity.com))
 
@@ -95,7 +95,7 @@
 
 </div>
 
-### <img height=17 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=17.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=18 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon32.png"><img height=17 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon32.png"> Greasemonkey ユーザースクリプト:
+### <a href="#" title="Tampermonkey"><img height=17 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a><a href="#" title="Violentmonkey"><img height=17.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a><a href="#" title="ScriptCat"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a><a href="#" title="OrangeMonkey"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"></a><a href="#" title="Stay"><img height=18 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon32.png"></a><a href="#" title="Userscripts"><img height=17 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon32.png"></a> Greasemonkey ユーザースクリプト:
 
 1. Tampermonkey ([Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/), [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)) または Violentmonkey ([Chrome](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag), [Firefox](https://addons.mozilla.org/firefox/addon/violentmonkey/), [Edge](https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao)) をインストールします
 
