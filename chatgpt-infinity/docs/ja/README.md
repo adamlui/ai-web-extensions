@@ -102,6 +102,7 @@
     - Violentmonkey 用 [Chrome](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag), [Firefox](https://addons.mozilla.org/firefox/addon/violentmonkey/) または [Edge](https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao)
     - OrangeMonkey 用 [Chrome](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf)
     - または Tampermonkey 用 [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) または [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
+    - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) または [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) 用 Safari
 
 2. [ChatGPT Infinity](https://gm.chatgptinfinity.com) ユーザースクリプトをインストールします（上記でインストールしたユーザースクリプトマネージャーで読み込まれます）
 

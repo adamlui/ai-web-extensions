@@ -53,6 +53,7 @@
     - Violentmonkey 为了 [Chrome](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag), [Firefox](https://addons.mozilla.org/firefox/addon/violentmonkey/) 或 [Edge](https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao)
     - OrangeMonkey 为了 [Chrome](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf)
     - Tampermonkey 为了 [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) 或 [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
+    - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) 或 [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) 为了 Safari
 
 2. 安装 [ChatGPT 自动谈话](https://gm.chatgptautotalk.com) 用户脚本（将在上面安装的管理器中加载）
 
