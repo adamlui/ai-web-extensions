@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.21.3
+// @version                2025.4.21.4
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -4013,7 +4013,7 @@
                         blockLang.hljsSlug = hljsClass.replace('language-', '')
                         for (const [langName, langEntry] of Object.entries(this.langData))
                             if (langEntry.hljsSlug == blockLang.hljsSlug) {
-                                [blockLang.name, blockLang.fileExtension] = [langName, langEntry?.fileExtension]
+                                [blockLang.name, blockLang.fileExtension] = [langName, langEntry.fileExtension]
                                 break
                             }
                     }
