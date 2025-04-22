@@ -93,7 +93,7 @@
 
 ## 🚀 Installation
 
-### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"> Browser extension:
+### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"><img height=17 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"> Browser extension:
 
 1. Install ChatGPT Widescreen Mode extension ([Chrome](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link), [Edge](https://edge.chatgptwidescreen.com), [Firefox](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
 
