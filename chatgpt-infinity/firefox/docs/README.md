@@ -4,6 +4,8 @@
 
 <div align="center">
 
+<a href="#">
+    <img height=31 src="https://img.shields.io/amo/users/chatgpt-infinity?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="../LICENSE.md">
     <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.chatgptinfinity.com">
