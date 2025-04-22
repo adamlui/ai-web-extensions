@@ -83,9 +83,13 @@ window.buttons = {
         if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.get.rightBtn() // for rOffset + styles
         const validBtnTypes = this.get.types.valid()
         const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? -16.5 : -8.85
-        const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4 : hasTallChatbar ? (
-            this.rightBtn.getBoundingClientRect().width +2 ) *(
-                document.querySelector(/\(([^()]+)\)$/.exec(btnSelectors.dictate)?.[1]) ? 2 : 1 ) -84 : -0.25
+        const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4
+            : hasTallChatbar ? ( this.rightBtn.getBoundingClientRect().width +2 ) *(
+                document.querySelector(/\(([^()]+)\)$/.exec(btnSelectors.dictate)?.[1]) // Dictate icon exists
+                    || btnSelectors.login && location.search.includes('temporary-chat=true') // or guest Temp chat
+                        ? 2 : 1 // double the offset, else don't
+                ) -84
+            : -0.25 // skinny ChatGPT chatbar
 
         validBtnTypes.forEach(async (btnType, idx) => {
             const btn = this[btnType] = dom.create.elem('div', { id: `${btnType}-btn`, class: this.class })
