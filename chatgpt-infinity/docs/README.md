@@ -79,7 +79,7 @@
 
 ## 🚀 Installation
 
-### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"> Browser extension:
+### <img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"><img height=17 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"> Browser extension:
 
 1. Install ChatGPT Infinity extension ([Chrome](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link), [Edge](https://edge.chatgptinfinity.com), [Firefox](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
 
@@ -94,7 +94,7 @@
 
 </div>
 
-### <img height=17 src="https://assets.chatgptinfinity.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=17.5 src="https://assets.chatgptinfinity.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"> Greasemonkey userscript:
+### <img height=17 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=17.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=18 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon32.png"><img height=17 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon32.png"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=18 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon32.png"><img height=17 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon32.png"> Greasemonkey userscript:
 
 1. Install a userscript manager:
     - ScriptCat for [Chrome](https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf), [Firefox](https://addons.mozilla.org/firefox/addon/scriptcat/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)
