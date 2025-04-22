@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.21.2
+// @version                2025.4.21.3
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -2842,9 +2842,9 @@
                     else if (btn.id.endsWith('pin-btn'))
                         btn.onmouseenter = btn.onmouseleave = btn.onclick = hoverMenus.toggle
                     else if (btn.id.endsWith('wsb-btn'))
-                        btn.onclick = event => { toggle.sidebar('wider') ; tooltip.update(event) }
+                        btn.onclick = event => { toggle.sidebar('wider') ; tooltip.update(event.currentTarget) }
                     else if (btn.id.endsWith('arrows-btn'))
-                        btn.onclick = event => { toggle.expandedMode() ; tooltip.update(event) }
+                        btn.onclick = event => { toggle.expandedMode() ; tooltip.update(event.currentTarget) }
                     if (!env.browser.isMobile && !btn.id.endsWith('pin-btn')) // add hover listeners for tooltips
                         btn.onmouseenter = btn.onmouseleave = tooltip.toggle
                     if (/about|settings|speak/.test(btn.id)) btn.onmouseup = () => { // add zoom/fade-out to select buttons
@@ -3070,11 +3070,12 @@
             tooltip.div = tooltip.div || dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
             if (!tooltip.div.isConnected) appDiv.append(tooltip.div)
             if (!tooltip.styles) tooltip.stylize()
-            if (typeof stateOrEvent == 'object') tooltip.update(stateOrEvent) // mouse event, update text/pos
+            if (typeof stateOrEvent == 'object') // mouse event, update text/pos
+                tooltip.update(stateOrEvent.currentTarget)
             tooltip.div.style.opacity = +( stateOrEvent?.type == 'mouseenter' || stateOrEvent == 'on' )
         },
 
-        update({ currentTarget: btn }) { // text & position
+        update(btn) { // text & position
             if (!this.div) return // since nothing to update
             const btnType = /-([\w-]+)-btn$/.exec(btn.id)[1]
             const baseText = (
@@ -3997,7 +3998,7 @@
                     // Update cursor/icon/tooltip
                     downloadBtn.style.cursor = 'default' // remove finger
                     downloadBtn.firstChild.replaceWith(downloadSVGs.downloaded.cloneNode(true)) // change to DL'd icon
-                    tooltip.update(event) // to 'Code downloaded!'
+                    tooltip.update(event.currentTarget) // to 'Code downloaded!'
                     setTimeout(() => { // restore icon/cursor/tooltip after a bit
                         downloadBtn.firstChild.replaceWith(downloadSVGs.download.cloneNode(true))
                         downloadBtn.style.cursor = 'pointer'
@@ -4374,7 +4375,7 @@
                     const textToCopy = textContainer.textContent.replace(/^>> /, '').trim()
                     copyBtn.style.cursor = 'default' // remove finger
                     copyBtn.firstChild.replaceWith(copySVGs.copied.cloneNode(true)) // change to Copied icon
-                    tooltip.update(event) // to 'Copied to clipboard!'
+                    tooltip.update(event.currentTarget) // to 'Copied to clipboard!'
                     setTimeout(() => { // restore icon/cursor/tooltip after a bit
                         copyBtn.firstChild.replaceWith(copySVGs.copy.cloneNode(true))
                         copyBtn.style.cursor = 'pointer'
@@ -4397,7 +4398,7 @@
                     if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
                     this.share.style.cursor = 'default' // remove finger
                     if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
-                    tooltip.update(event) // to 'Generating HTML...'
+                    tooltip.update(event.currentTarget) // to 'Generating HTML...'
                     xhr({
                         method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
                         headers: { 'Content-Type': 'application/json', 'Referer': location.href },
@@ -4426,7 +4427,7 @@
                     regenSVGwrapper.style.cursor = 'default' // remove finger
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
-                    tooltip.update(event) // to 'Regenerating...'
+                    tooltip.update(event.currentTarget) // to 'Regenerating...'
                     show.reply.src = null ; show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
 
@@ -4467,7 +4468,7 @@
                             'linear-gradient(to right, transparent, black 20%, black 81%, transparent)' )
                     }
 
-                    tooltip.update(event) // to 'Generating audio...'
+                    tooltip.update(event.currentTarget) // to 'Generating audio...'
 
                     // Play reply
                     const wholeAnswer = appDiv.querySelector('.reply-pre').textContent

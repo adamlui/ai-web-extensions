@@ -242,11 +242,11 @@
             }}
         },
 
-        async mode(mode) { // setting + icon + tooltip + chatbar
+        async mode(mode) { // setting + icon + chatbar
             const state = ( mode == 'widescreen' ? !!document.getElementById('widescreen-mode')
                           : mode == 'fullWindow' ? ui.isFullWin()
                                                  : chatgpt.isFullScreen() )
-            settings.save(mode, state) ; buttons.update.svg(mode) ; tooltip.update(mode)
+            settings.save(mode, state) ; buttons.update.svg(mode)
             if (!config.extensionDisabled && !config[`${env.site}Disabled`]) { // tweak UI
                 if (mode == 'fullWindow') sync.fullerWin()
                 if (env.site == 'chatgpt') setTimeout(() => chatbar.tweak(), // update inner width

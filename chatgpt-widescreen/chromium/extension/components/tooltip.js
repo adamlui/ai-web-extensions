@@ -28,13 +28,13 @@ window.tooltip = {
         tooltip.div = tooltip.div || dom.create.elem('div', { class: `${tooltip.imports.app.slug}-tooltip` })
         if (!tooltip.div.isConnected) event.currentTarget?.before(tooltip.div)
         if (!tooltip.styles) tooltip.stylize()
-        tooltip.update(event.currentTarget.id.replace(/-btn$/, ''))
+        tooltip.update(event.currentTarget)
         tooltip.div.style.opacity = +(event.type == 'mouseenter')
     },
 
-    async update(btnType) { // text & position
+    async update(btn) { // text & position
         if (!this.div) return // since nothing to update
-        const site = this.imports.env.site
+        const btnType = btn.id.replace(/-btn$/, ''), site = this.imports.env.site
         const rects = {
             btn: buttons[btnType]?.getBoundingClientRect(), chatbar: (await chatbar.get())?.getBoundingClientRect() }
         this.div.innerText = this.getMsg(`tooltip_${btnType}${

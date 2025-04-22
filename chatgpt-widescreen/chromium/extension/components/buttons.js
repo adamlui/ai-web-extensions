@@ -121,6 +121,7 @@ window.buttons = {
                         })
                     }
                 }
+                tooltip.update(btn)
             }
         })
     },
