@@ -87,7 +87,7 @@
 
 3. Visit [**duckduckgo.com**](https://duckduckgo.com), type your search, engage bot!
 
-##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey, so are not recommended_
+##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey_
 
 <br>
 

@@ -117,7 +117,7 @@
 
 3. Visit [**Amazon.com**](https://amazon.com), engage bot!
 
-##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey, so are not recommended_
+##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey_
 
 <br><a href="https://github.com/sponsors/KudoAI"><img src="https://amazongpt.kudoai.com/assets/images/banners/sponsor/$10/banner1660x260.png?v=dc250b9"></a>
 

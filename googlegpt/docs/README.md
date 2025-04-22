@@ -120,7 +120,7 @@
 
 3. Visit [**google.com**](https://google.com), type your search, engage bot!
 
-##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey, so are not recommended_
+##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey_
 
 <br><a href="https://github.com/sponsors/KudoAI"><img src="https://assets.googlegpt.io/images/banners/sponsor/$10/banner1660x260.png"></a>
 

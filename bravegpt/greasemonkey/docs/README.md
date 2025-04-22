@@ -113,7 +113,7 @@
 
 3. Visit [**search.brave.com**](https://search.brave.com), type your search, engage bot!
 
-##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey, so are not recommended_
+##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey_
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
