@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.23
+// @version               2025.4.23.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1689,7 +1689,7 @@
                     appDiv: appDiv.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
                     hoverMenu: menu.div.getBoundingClientRect()
                 }
-                const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +103 )
+                const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
                 const appIsTooLow = rects.toggleBtn.bottom + rects.hoverMenu.height > ( innerHeight -15 )
                 const pointDirection = menu.defaultDirection == 'up' && appIsTooHigh
                                     || menu.defaultDirection == 'down' && !appIsTooLow ? 'down' : 'up'
@@ -1756,7 +1756,7 @@
         },
 
         pin: {
-            defaultDirection: 'up',
+            defaultDirection: 'down',
             entries: [
                 { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
                 { label: app.msgs.menuLabel_top, iconType: 'webCorner', onclick: () => toggle.sidebar('sticky'),
