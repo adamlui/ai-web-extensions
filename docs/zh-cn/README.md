@@ -63,7 +63,7 @@
 </h3>
 
 <details>
-    <summary>在亚马逊购物中添加人工智能。</summary>
+    <summary>在亚马逊购物中添加 AI 聊天和产品/类别摘要，由最新的法学硕士提供支持！</summary>
     <br><blockquote>
         <a href="../../amazongpt">
             <img width=511 src="https://amazongpt.kudoai.com/assets/images/screenshots/desktop/mice-md-reply-darkmode.png"></a>
@@ -170,7 +170,7 @@
 </h3>
 
 <details>
-    <summary>将 AI 的魔力带入 Brave Search（由 GPT-4o 提供支持!）</summary>
+    <summary>在 Brave 搜索中添加 AI 聊天和搜索摘要，由最新的法学硕士提供支持！</summary>
     <br><blockquote>
         <a href="../../bravegpt">
             <img width=511 src="https://assets.bravegpt.com/images/screenshots/desktop/bitcoin-query/darkmode.png"></a>
@@ -485,7 +485,7 @@
 </h3>
 
 <details>
-    <summary>将 AI 的魔力带到 DuckDuckGo（由 GPT-4o 提供支持!）</summary>
+    <summary>在 DuckDuckGo 中添加 AI 聊天和搜索摘要，由最新的法学硕士提供支持！</summary>
     <br><blockquote>
         <a href="../../duckduckgpt">
             <img width=511 src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png"></a>
@@ -518,7 +518,7 @@
 </h3>
 
 <details>
-    <summary>将 AI 的魔力带入 Google 搜索（由 Google Gemma + GPT-4o 提供支持!）</summary>
+    <summary>在 Google 搜索中添加 AI 聊天和搜索摘要，由最新的法学硕士提供支持！</summary>
     <br><blockquote>
         <a href="../../googlegpt">
             <img width=511 src="https://assets.googlegpt.io/images/screenshots/desktop/javascript-arrays-query/darkmode.png"></a>

@@ -63,7 +63,7 @@
 </h3>
 
 <details>
-    <summary>Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!</summary>
+    <summary>Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs!</summary>
     <br><blockquote>
         <a href="../amazongpt">
             <img width=511 src="https://amazongpt.kudoai.com/assets/images/screenshots/desktop/mice-md-reply-darkmode.png"></a>
@@ -168,7 +168,7 @@
 </h3>
 
 <details>
-    <summary>Bring the magic of AI to Brave Search (powered by GPT-4o!)</summary>
+    <summary>Add AI chat & search summaries to Brave Search, powered by the latest LLMs!</summary>
     <br><blockquote>
         <a href="../bravegpt">
             <img width=511 src="https://assets.bravegpt.com/images/screenshots/desktop/bitcoin-query/darkmode.png"></a>
@@ -484,7 +484,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
 </h3>
 
 <details>
-    <summary>Bring the magic of AI to DuckDuckGo (powered by GPT-4o!)</summary>
+    <summary>Add AI chat & search summaries to DuckDuckGo, powered by the latest LLMs! </summary>
     <br><blockquote>
         <a href="../duckduckgpt">
             <img width=511 src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png"></a>
@@ -517,7 +517,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
 </h3>
 
 <details>
-    <summary>Bring the magic of AI to Google Search (powered by Google Gemma + GPT-4o!)</summary>
+    <summary>Add AI chat & search summaries to Google Search, powered by the latest LLMs!</summary>
     <br><blockquote>
         <a href="../googlegpt">
             <img width=511 src="https://assets.googlegpt.io/images/screenshots/desktop/javascript-arrays-query/darkmode.png"></a>
