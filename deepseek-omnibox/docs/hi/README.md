@@ -20,7 +20,7 @@
 <a href="https://ff.deepseekomnibox.com">
     <img alt="[Mozilla Firefox]" height=31 src="https://img.shields.io/amo/rating/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="../LICENSE.md">
-    <img alt="[लाइसेंस: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[लाइसेंस: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-913e4c.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/deepseek-omnibox">
     <img alt="[CodeFactor ग्रेड]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/deepseek-omnibox?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b5fc7b&style=for-the-badge"></img></a>
 <a href="https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=adamlui_deepseek-omnibox">
