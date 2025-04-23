@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.23.1
+// @version               2025.4.23.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1691,8 +1691,8 @@
                 }
                 const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
                 const appIsTooLow = rects.toggleBtn.bottom + rects.hoverMenu.height > ( innerHeight -15 )
-                const pointDirection = menu.defaultDirection == 'up' && appIsTooHigh
-                                    || menu.defaultDirection == 'down' && !appIsTooLow ? 'down' : 'up'
+                const pointDirection = menu.preferredDirection == 'up' && appIsTooHigh
+                                    || menu.preferredDirection == 'down' && !appIsTooLow ? 'down' : 'up'
                 Object.assign(menu.div.style, {
                     top: `${ rects.toggleBtn.top - rects.appDiv.top +(
                         pointDirection == 'down' ? 24.5 : -rects.hoverMenu.height -13 )}px`,
@@ -1739,7 +1739,7 @@
         },
 
         api: {
-            defaultDirection: 'down',
+            preferredDirection: 'down',
             entries: [
                 { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
                 ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api !== 'OpenAI')].map(api => ({
@@ -1756,7 +1756,7 @@
         },
 
         pin: {
-            defaultDirection: 'down',
+            preferredDirection: 'down',
             entries: [
                 { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
                 { label: app.msgs.menuLabel_top, iconType: 'webCorner', onclick: () => toggle.sidebar('sticky'),

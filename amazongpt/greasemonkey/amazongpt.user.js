@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.23
+// @version                2025.4.23.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1470,8 +1470,8 @@
                 }
                 const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
                 const appIsTooLow = rects.toggleBtn.bottom + rects.hoverMenu.height > ( innerHeight -15 )
-                const pointDirection = menu.defaultDirection == 'up' && appIsTooHigh
-                                    || menu.defaultDirection == 'down' && !appIsTooLow ? 'down' : 'up'
+                const pointDirection = menu.preferredDirection == 'up' && appIsTooHigh
+                                    || menu.preferredDirection == 'down' && !appIsTooLow ? 'down' : 'up'
                 Object.assign(menu.div.style, {
                     top: `${ rects.toggleBtn.top - rects.appDiv.top +(
                         pointDirection == 'down' ? 24.5 : -rects.hoverMenu.height -13 )}px`,
@@ -1518,7 +1518,7 @@
         },
 
         api: {
-            defaultDirection: 'down',
+            preferredDirection: 'down',
             entries: [
                 { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
                 ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api !== 'OpenAI')].map(api => ({
