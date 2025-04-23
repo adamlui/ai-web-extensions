@@ -5,7 +5,7 @@
 <div align="center">
 
 <a href="../LICENSE.md">
-    <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-c40018.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-fc4f2d.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://github.com/adamlui/chatgpt-infinity/blob/main/greasemonkey/chatgpt-infinity.user.js">
     <img height=32 src="https://img.shields.io/github/size/adamlui/chatgpt-infinity/greasemonkey/chatgpt-infinity.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></img></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-infinity">
