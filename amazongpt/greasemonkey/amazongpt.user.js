@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.21.4
+// @version                2025.4.23
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@0fddfc7/assets/images/icons/amazongpt/black-gold-teal/icon64.png
@@ -1454,28 +1454,32 @@
         },
 
         toggle(event) { // visibility
-            const toggleElem = event.currentTarget, menuType = /-(\w+)-(?:btn|menu)$/.exec(toggleElem.id)[1]
-            clearTimeout(hoverMenus[menuType].hideTimeout) // in case rapid re-enter before ran
-            if (!hoverMenus[menuType].div) hoverMenus.createAppend(menuType)
-            if (hoverMenus[menuType].status == 'hidden' && (
-                event.type == 'mouseenter' && event.target != hoverMenus[menuType].div // btn hovered-on
-                || event.type == 'click' ) // btn clicked
+            const toggleElem = event.currentTarget,
+                  menuType = /-(\w+)-(?:btn|menu)$/.exec(toggleElem.id)[1],
+                  menu = hoverMenus[menuType]
+            clearTimeout(menu.hideTimeout) // in case rapid re-enter before ran
+            if (!menu.div?.isConnected) hoverMenus.createAppend(menuType)
+            if (menu.status == 'hidden' && (
+                event.type == 'mouseenter' && event.target != menu.div // btn hovered-on
+                    || event.type == 'click' ) // btn clicked
             ) { // show menu
-                hoverMenus[menuType].div.style.display = '' // for rects calc
+                menu.div.style.display = '' // for rects calc
                 const rects = {
                     appDiv: appDiv.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
-                    hoverMenu: hoverMenus[menuType].div.getBoundingClientRect()
+                    hoverMenu: menu.div.getBoundingClientRect()
                 }
-                const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 ),
-                      appIsTooLow = rects.hoverMenu.bottom > ( innerHeight -15 )
-                hoverMenus[menuType].div.style.top = `${ rects.toggleBtn.top - rects.appDiv.top +(
-                    menuType == 'pin' && appIsTooHigh || menuType == 'api' && !appIsTooLow
-                        ? /* point down */ 29 : /* point up */ - rects.hoverMenu.height -13 )}px`
-                hoverMenus[menuType].rightPos = hoverMenus[menuType].rightPos
-                    || rects.appDiv.right - event.clientX - hoverMenus[menuType].div.offsetWidth/2
-                Object.assign(hoverMenus[menuType].div.style, {
-                    right: `${hoverMenus[menuType].rightPos}px`, opacity: 1 })
-                hoverMenus[menuType].status = 'visible'
+                const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
+                const appIsTooLow = rects.toggleBtn.bottom + rects.hoverMenu.height > ( innerHeight -15 )
+                const pointDirection = menu.defaultDirection == 'up' && appIsTooHigh
+                                    || menu.defaultDirection == 'down' && !appIsTooLow ? 'down' : 'up'
+                Object.assign(menu.div.style, {
+                    top: `${ rects.toggleBtn.top - rects.appDiv.top +(
+                        pointDirection == 'down' ? 24.5 : -rects.hoverMenu.height -13 )}px`,
+                    right: `${ rects.appDiv.right - event.clientX - menu.div.offsetWidth
+                        / ( pointDirection == 'up' ? /* center */ 2 : /* leftish-aligned */ 1.25 )}px`,
+                    opacity: 1
+                })
+                menu.status = 'visible'
             } else if (/click|mouseleave/.test(event.type)) // menu/btn hovered-off or btn clicked, hide menu
                 return hoverMenus[menuType].hideTimeout = setTimeout(() => hoverMenus.hide(menuType), 55)
         },
@@ -1514,6 +1518,7 @@
         },
 
         api: {
+            defaultDirection: 'down',
             entries: [
                 { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
                 ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api !== 'OpenAI')].map(api => ({
