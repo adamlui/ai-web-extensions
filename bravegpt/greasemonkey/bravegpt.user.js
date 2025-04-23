@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.23.2
+// @version               2025.4.23.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -197,6 +197,7 @@
 // @connect               raw.githubusercontent.com
 // @require               https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.7.1/dist/chatgpt.min.js#sha256-uv1k2VxGy+ri3+2C+D/kTYSBCom5JzvrNCLxzItgD6M=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
+// @require               https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@37e0d7d/assets/lib/crypto-utils.js/dist/crypto-utils.min.js#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@dde859d/assets/lib/dom.js/dist/dom.min.js#sha256-p8+Cxb2EvM4F4H7nZbljakpZ+8H9wAgj6++MRErdXe8=
 // @require               https://cdn.jsdelivr.net/npm/generate-ip@2.4.4/dist/generate-ip.min.js#sha256-aQQKAQcMgCu8IpJp9HKs387x0uYxngO+Fb4pc5nSF4I=
@@ -3820,17 +3821,27 @@
 
         json(url) {
             log.caller = `get.json('${url}')`
-            return new Promise((resolve, reject) =>
-                xhr({ method: 'GET', url: url, onload: resp => {
+            return new Promise((resolve, reject) => {
+                let retryCnt = 0;
+                (function getData(url) { xhr({
+                    method: 'GET', url: url, onload: resp => {
+                        if (resp.status == 404 && retryCnt < 1) { // try other format
+                            retryCnt++ ; getData(url.endsWith('.json') ? url + '5' : url.slice(0, -1))
+                        } else handleResp(resp, resolve, reject)
+                    },
+                    onerror: err => reject(new Error(`LOAD ERROR: ${err.message}`))
+                })})(url)
+
+                function handleResp(resp, resolve, reject) {
                     if (resp.status >= 300) { // status error
                         const errType = resp.status >= 300 && resp.status < 400 ? 'REDIRECT'
                                       : resp.status >= 400 && resp.status < 500 ? 'CLIENT' : 'SERVER'
-                        reject(new Error(`${errType} ERROR: ${resp.status}`))
+                        return reject(new Error(`${errType} ERROR: ${resp.status}`))
                     }
-                    try { resolve(JSON.parse(resp.responseText)) }
+                    try { resolve(JSON5.parse(resp.responseText)) }
                     catch (err) { reject(new Error(`PARSE ERROR: ${err.message}`)) }
-                }})
-            )
+                }
+            })
         },
 
         async related(query) {
