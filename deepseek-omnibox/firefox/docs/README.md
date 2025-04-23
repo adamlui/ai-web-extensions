@@ -19,6 +19,8 @@
     <img height=31 src="https://img.shields.io/amo/users/deepseek-omnibox?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com">
     <img alt="[Mozilla Firefox]" height=31 src="https://img.shields.io/amo/rating/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></img></a>
+<a href="https://ff.deepseekomnibox.com">
+    <img height=31 alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/deepseek-omnibox?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="../LICENSE.md">
     <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-fc4f2d.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="#">

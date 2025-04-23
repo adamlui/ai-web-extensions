@@ -3,6 +3,8 @@
 <img width="100%" src="https://assets.braveomnibox.com/images/tiles/marquee/edge/tile1400x560.png">
 <br><br>
 
+<a href="https://ff.braveomnibox.com">
+    <img height=31 alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/brave-omnibox?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="../LICENSE.md">
     <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-fc4f2d.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="#">
