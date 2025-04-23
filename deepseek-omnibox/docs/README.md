@@ -18,7 +18,7 @@
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/Users-238-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com">
-    <img alt="[Mozilla Firefox]" height=31 src="https://img.shields.io/amo/rating/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[Mozilla Firefox]" height=31 src="https://img.shields.io/amo/rating/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></img></a>
 <a href="../LICENSE.md">
     <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-c40018.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/deepseek-omnibox">
