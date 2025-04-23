@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.23.2
+// @version                  2025.4.23.3
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -4002,7 +4002,6 @@
     const get = {
 
         json(url) {
-            log.caller = `get.json('${url}')`
             return new Promise((resolve, reject) => {
                 let retryCnt = 0;
                 (function getData(url) { xhr({
