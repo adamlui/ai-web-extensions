@@ -16,7 +16,7 @@
 <div align="center">
 
 <a href="LICENSE.md">
-    <img height=31 alt="[许可证: MIT]" src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-913e4c.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img height=31 alt="[许可证: MIT]" src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-c40018.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/adamlui/chatgpt-auto-continue/blob/main/greasemonkey/chatgpt-auto-continue.user.js">
     <img height=32 src="https://img.shields.io/github/size/adamlui/chatgpt-auto-continue/greasemonkey/chatgpt-auto-continue.user.js?label=%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></img></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-auto-continue">
