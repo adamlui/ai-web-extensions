@@ -671,6 +671,7 @@ This app exists thanks to code, translations, issues & ideas from the following 
 <a href="https://github.com/vchong"><img width=50 title="@vchong" src="https://avatars.githubusercontent.com/u/7334750?first-contrib=2025.2.25-manual-get-mode-stopped-working-report"></img></a>
 <a href="https://github.com/cyber-sec0"><img width=50 title="@cyber-sec0" src="https://avatars.githubusercontent.com/u/91571849?first-contrib=2025.4.1-reported-kiwi-browser-no-longer-maintained"></img></a>
 <a href="https://github.com/carterlion13sAltAcc"><img width=50 title="@carterlion13sAltAcc" src="https://avatars.githubusercontent.com/u/181794823?first-contrib=2025.4.13-api-selector-feat-request"></img></a>
+<a href="https://github.com/ExQueueSee"><img width=50 title="@ExQueueSee" src="https://avatars.githubusercontent.com/u/128906531?first-contrib=2025.4.23-reported-blank-page-on-load-in-violentmonkey"></img></a>
 <a href="https://github.com/ImgBotApp"><img width=50 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></img></a>
 <a href="https://github.com/dependabot"><img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://chatgpt.com"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/icons/chatgpt/black-on-white/icon50.png"><img title="ChatGPT" src="https://assets.bravegpt.com/images/icons/chatgpt/white-on-gray/icon50.png"></img></picture></a>
