@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.24
+// @version             2025.4.24.1
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -440,7 +440,7 @@
                 const menuLabel = `${
                     ctrl.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${ctrl.label} ${
                         ctrl.type == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
-                                              : ctrl.status ? `— ${ctrl.status}` : '' }`
+                                              : ctrl.status ? ` — ${ctrl.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     if (ctrl.type == 'toggle') {
                         settings.save(key, !config[key])

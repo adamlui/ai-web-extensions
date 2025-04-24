@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.24
+// @version             2025.4.24.1
 // @license             MIT
 // @icon                https://assets.chatgptautotalk.com/images/icons/openai/black/icon48.png?v=9f1ed3c
 // @icon64              https://assets.chatgptautotalk.com/images/icons/openai/black/icon64.png?v=9f1ed3c
@@ -417,7 +417,7 @@
                 const menuLabel = `${
                     ctrl.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${ctrl.label} ${
                         ctrl.type == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
-                                              : ctrl.status ? `— ${ctrl.status}` : '' }`
+                                              : ctrl.status ? ` — ${ctrl.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     settings.save(key, !config[key]) ; syncConfigToUI({ updatedKey: key })
                     notify(`${ctrl.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)

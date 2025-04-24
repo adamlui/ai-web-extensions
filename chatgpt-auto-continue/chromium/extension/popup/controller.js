@@ -92,7 +92,7 @@
                 entry.leftElem.classList.toggle('on', settings.typeIsEnabled(key))
             } else { // add symbol to left, append status to right
                 entry.leftElem.innerText = ctrl.symbol
-                entry.label.innerText += ctrl.status ? `— ${ctrl.status }` : ''
+                entry.label.innerText += ctrl.status ? ` — ${ctrl.status}` : ''
             }
 
             entry.div.onclick = () => {

@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.24
+// @version             2025.4.24.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -483,7 +483,7 @@
                             ctrl.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${ctrl.label} ${
                                 ctrl.type == 'toggle' ? this.state.separator
                                                       + this.state.words[+settings.typeIsEnabled(key)]
-                                                      : ctrl.status ? `— ${ctrl.status}` : '' }`
+                                                      : ctrl.status ? ` — ${ctrl.status}` : '' }`
                         return GM_registerMenuCommand(menuLabel, () => {
                             settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
                             notify(`${ctrl.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)

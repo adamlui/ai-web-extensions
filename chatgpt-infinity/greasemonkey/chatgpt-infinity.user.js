@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.24
+// @version             2025.4.24.1
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -418,7 +418,7 @@
                 const menuLabel = `${
                     ctrl.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${ctrl.label} ${
                         ctrl.type == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
-                                              : ctrl.status ? `— ${ctrl.status}` : '' }`
+                                              : ctrl.status ? ` — ${ctrl.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     if (ctrl.type == 'toggle') {
                         settings.save(key, !config[key])
