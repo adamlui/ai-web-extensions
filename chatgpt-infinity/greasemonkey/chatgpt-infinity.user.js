@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.20
+// @version             2025.4.24
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -414,17 +414,15 @@
 
             // ...or add settings entries
             : Object.keys(settings.controls).map(key => {
-                const ctrlType = settings.controls[key].type
-                const ctrlStatus = settings.controls[key].status
+                const ctrl = settings.controls[key]
                 const menuLabel = `${
-                    settings.controls[key].symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${
-                    settings.controls[key].label} ${
-                        ctrlType == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
-                                             : ctrlStatus ? `— ${ctrlStatus}` : '' }`
+                    ctrl.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${ctrl.label} ${
+                        ctrl.type == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
+                                              : ctrl.status ? `— ${ctrl.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
-                    if (ctrlType == 'toggle') {
+                    if (ctrl.type == 'toggle') {
                         settings.save(key, !config[key])
-                        notify(`${settings.controls[key].label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
+                        notify(`${ctrl.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
                     } else if (key == 'replyLanguage') {
                         while (true) {
                             let replyLang = prompt(
@@ -474,7 +472,7 @@
                         }
                     }
                     syncConfigToUI({ updatedKey: key })
-                }, env.scriptManager.supportsTooltips ? { title: settings.controls[key].helptip || ' ' } : undefined)
+                }, env.scriptManager.supportsTooltips ? { title: ctrl.helptip || ' ' } : undefined)
             });
 
             // Add About/Donate entries

@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.20
+// @version             2025.4.24
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -436,17 +436,15 @@
 
             // Add toggles
             this.entryIDs = Object.keys(settings.controls).map(key => {
-                const ctrlType = settings.controls[key].type
-                const ctrlStatus = settings.controls[key].status
+                const ctrl = settings.controls[key]
                 const menuLabel = `${
-                    settings.controls[key].symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${
-                    settings.controls[key].label} ${
-                        ctrlType == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
-                                             : ctrlStatus ? `— ${ctrlStatus}` : '' }`
+                    ctrl.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${ctrl.label} ${
+                        ctrl.type == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
+                                              : ctrl.status ? `— ${ctrl.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
-                    if (ctrlType == 'toggle') {
+                    if (ctrl.type == 'toggle') {
                         settings.save(key, !config[key])
-                        notify(`${settings.controls[key].label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
+                        notify(`${ctrl.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
                     } else { // Refresh Interval prompt
                         while (true) {
                             const refreshInterval = prompt(
@@ -467,7 +465,7 @@
                         }}
                     }
                     syncConfigToUI({ updatedKey: key })
-                }, env.scriptManager.supportsTooltips ? { title: settings.controls[key].helptip || ' ' } : undefined)
+                }, env.scriptManager.supportsTooltips ? { title: ctrl.helptip || ' ' } : undefined)
             });
 
             // Add About/Donate entries

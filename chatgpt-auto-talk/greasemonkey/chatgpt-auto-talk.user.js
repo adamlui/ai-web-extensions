@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.20
+// @version             2025.4.24
 // @license             MIT
 // @icon                https://assets.chatgptautotalk.com/images/icons/openai/black/icon48.png?v=9f1ed3c
 // @icon64              https://assets.chatgptautotalk.com/images/icons/openai/black/icon64.png?v=9f1ed3c
@@ -413,17 +413,15 @@
 
             // Add toggles
             this.entryIDs = Object.keys(settings.controls).map(key => {
-                const ctrlType = settings.controls[key].type
-                const ctrlStatus = settings.controls[key].status
+                const ctrl = settings.controls[key]
                 const menuLabel = `${
-                    settings.controls[key].symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${
-                    settings.controls[key].label} ${
-                        ctrlType == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
-                                             : ctrlStatus ? `— ${ctrlStatus}` : '' }`
+                    ctrl.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${ctrl.label} ${
+                        ctrl.type == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
+                                              : ctrl.status ? `— ${ctrl.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     settings.save(key, !config[key]) ; syncConfigToUI({ updatedKey: key })
-                    notify(`${settings.controls[key].label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
-                }, env.scriptManager.supportsTooltips ? { title: settings.controls[key].helptip || ' ' } : undefined)
+                    notify(`${ctrl.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
+                }, env.scriptManager.supportsTooltips ? { title: ctrl.helptip || ' ' } : undefined)
             });
 
             // Add About/Donate entries

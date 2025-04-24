@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.21.2
+// @version             2025.4.24
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -478,19 +478,16 @@
             : !config[`${env.site}Disabled`] ?
                 Object.keys(settings.controls).map(key => {
                     if (sites[env.site].availFeatures.includes(key)) {
-                        const ctrlType = settings.controls[key].type
-                        const ctrlStatus = settings.controls[key].status
+                        const ctrl = settings.controls[key]
                         const menuLabel = `${
-                            settings.controls[key].symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${
-                            settings.controls[key].label} ${
-                                ctrlType == 'toggle' ? this.state.separator
-                                                     + this.state.words[+settings.typeIsEnabled(key)]
-                                                     : ctrlStatus ? `— ${ctrlStatus}` : '' }`
+                            ctrl.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${ctrl.label} ${
+                                ctrl.type == 'toggle' ? this.state.separator
+                                                      + this.state.words[+settings.typeIsEnabled(key)]
+                                                      : ctrl.status ? `— ${ctrl.status}` : '' }`
                         return GM_registerMenuCommand(menuLabel, () => {
                             settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
-                            notify(`${settings.controls[key].label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
-                        }, env.scriptManager.supportsTooltips ?
-                            { title: settings.controls[key].helptip || ' ' } : undefined )
+                            notify(`${ctrl.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
+                        }, env.scriptManager.supportsTooltips ? { title: ctrl.helptip || ' ' } : undefined )
                     }
                 })
             : []
