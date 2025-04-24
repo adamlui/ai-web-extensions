@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.23.4
+// @version                2025.4.24
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -3099,8 +3099,8 @@
                                                           : `${app.msgs.tooltip_expand}` )
                 : btnType == 'copy' ? (
                     btn.firstChild.id.includes('-copy-') ?
-                        `${app.msgs.tooltip_copy} ${
-                            app.msgs[`tooltip_${ btn.closest('code') ? 'code' : 'reply' }`].toLowerCase()}`
+                        `${app.msgs.tooltip_copy}${ btn.closest('code') ? ''
+                            : ` ${app.msgs.tooltip_reply.toLowerCase()}`}`
                     : `${app.msgs.notif_copiedToClipboard}!` )
                 : btnType == 'share' ? (
                     btn.style.animation ? `${app.msgs.tooltip_generating} HTML...`
@@ -3116,9 +3116,8 @@
                     : btn.querySelector('svg').id.includes('generating-') ? `${app.msgs.tooltip_generatingAudio}...`
                     : `${app.msgs.tooltip_playing} ${app.msgs.tooltip_reply.toLowerCase()}...` )
                 : btnType == 'download' ? (
-                    btn.firstChild.id.includes('-download-') ?
-                        `${app.msgs.btnLabel_download} ${app.msgs.tooltip_code.toLowerCase()}`
-                            : `${app.msgs.tooltip_code} ${app.msgs.notif_downloaded}!` )
+                    btn.firstChild.id.includes('-download-') ? app.msgs.btnLabel_download
+                        : `${app.msgs.tooltip_code} ${app.msgs.notif_downloaded}!` )
                 : btnType == 'send' ? app.msgs.tooltip_sendReply
                 : btnType == 'shuffle' ? app.msgs.tooltip_askRandQuestion
                 : btnType == 'summarize' ? app.msgs.tooltip_summarizeResults : '' )

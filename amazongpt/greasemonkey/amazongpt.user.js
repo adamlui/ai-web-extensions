@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.23.2
+// @version                2025.4.24
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2545,8 +2545,8 @@
                                                           : `${app.msgs.tooltip_expand}` )
                 : btnType == 'copy' ? (
                     btn.firstChild.id.includes('-copy-') ?
-                        `${app.msgs.tooltip_copy} ${
-                            app.msgs[`tooltip_${ btn.closest('code') ? 'code' : 'reply' }`].toLowerCase()}`
+                        `${app.msgs.tooltip_copy}${ btn.closest('code') ? ''
+                            : ` ${app.msgs.tooltip_reply.toLowerCase()}`}`
                     : `${app.msgs.notif_copiedToClipboard}!` )
                 : btnType == 'share' ? (
                     btn.style.animation ? `${app.msgs.tooltip_generating} HTML...`
@@ -2562,9 +2562,8 @@
                     : btn.querySelector('svg').id.includes('generating-') ? `${app.msgs.tooltip_generatingAudio}...`
                     : `${app.msgs.tooltip_playing} ${app.msgs.tooltip_reply.toLowerCase()}...` )
                 : btnType == 'download' ? (
-                    btn.firstChild.id.includes('-download-') ?
-                        `${app.msgs.btnLabel_download} ${app.msgs.tooltip_code.toLowerCase()}`
-                            : `${app.msgs.tooltip_code} ${app.msgs.notif_downloaded}!` )
+                    btn.firstChild.id.includes('-download-') ? app.msgs.btnLabel_download
+                        : `${app.msgs.tooltip_code} ${app.msgs.notif_downloaded}!` )
                 : btnType == 'send' ? app.msgs.tooltip_sendReply
                 : btnType == 'shuffle' ? app.msgs.tooltip_askRandQuestion : '' )
 
