@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.23.4
+// @version               2025.4.24
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -4619,8 +4619,11 @@
             if (appDivParent) { obs.disconnect() ; resolve(appDivParent) }
         }).observe(document.body, { childList: true, subtree: true })
     })
-    appDivParent.prepend(appDiv) ; visibilizeOverflow()
-    setTimeout(() => appDiv.classList.add('active'), 100) // fade in
+    setTimeout(() => {
+        appDivParent.prepend(appDiv) ; visibilizeOverflow()
+        setTimeout(() => appDiv.classList.add('active'), 100) // fade in
+    }, env.scriptManager.name == 'Violentmonkey' ?
+        1000 : 0) // delay in VM to avoid mutation bug https://github.com/KudoAI/bravegpt/issues/123
 
     // Init footer CTA to share feedback
     const braveClassList = 'feedback svelte-8js1iq'
