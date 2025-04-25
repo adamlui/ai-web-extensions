@@ -171,7 +171,7 @@
                         `.${buttons.class} { will-change: transform } /* prevent wobble */
                          .${buttons.class}:hover { transform: scale(${ env.site == 'poe' ? 1.15 : 1.285 }) }` )
                   + ( config.blockSpamDisabled ? ''
-                        : getAllSelectors(selectors.spam).join(',') + `{ display: none !important }
+                        : `${getAllSelectors(selectors.spam).join(',')} { display: none !important }
                           body { pointer-events: unset !important }` /* free click lock from blocking modals */ )
                 )
                 function getAllSelectors(obj) {
