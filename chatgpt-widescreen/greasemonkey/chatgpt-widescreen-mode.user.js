@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.24.1
+// @version             2025.4.25
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -318,7 +318,7 @@
     const app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '3db886b' // for cached app.json + sites.json5 + messages.json
+        latestResourceCommitHash: 'bd9da79' // for cached app.json + sites.json5 + messages.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -748,7 +748,8 @@
                         `.${buttons.class} { will-change: transform } /* prevent wobble */
                          .${buttons.class}:hover { transform: scale(${ env.site == 'poe' ? 1.15 : 1.285 }) }` )
                   + ( config.blockSpamDisabled ? ''
-                        : getAllSelectors(selectors.spam).join(',') + ' { display: none !important }' )
+                        : getAllSelectors(selectors.spam).join(',') + `{ display: none !important }
+                          body { pointer-events: unset !important }` /* free click lock from blocking modals */ )
                 )
                 function getAllSelectors(obj) {
                     return Object.values(obj).flatMap(val => typeof val == 'object' ? getAllSelectors(val) : val) }
@@ -806,7 +807,7 @@
             if (!scriptWasDisabled && config[`${env.site}Disabled`]) { // reset UI
                 [widescreenStyle, fullWinStyle, buttons].forEach(target => target.remove())
                 tweaksStyle.innerText = '' ; chatbar.reset()
-                if (env.site == 'perplexity')
+                if (/chatgpt|perplexity/.test(env.site))
                     document.body.removeEventListener('wheel', window.enableWheelScroll)
             } else if (!config[`${env.site}Disabled`]) { // sync modes/tweaks/btns
                 if (config.widescreen ^ document.head.contains(widescreenStyle)) { // sync Widescreen
@@ -823,7 +824,7 @@
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                     // ...to visually signal location + preview fx applied by Button Animations toggle-on
                     buttons.animate()
-                if (env.site == 'perplexity') // toggle free wheel locked in some Spam blocks
+                if (/chatgpt|perplexity/.test(env.site)) // toggle free wheel locked in some Spam blocks
                     document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                         'wheel', window.enableWheelScroll)
             }
@@ -914,7 +915,7 @@
                 sync.mode('fullWindow') // ...so sync w/ it
             else toggleMode('fullWindow', 'on') // otherwise self-toggle
         }
-        if (env.site == 'perplexity') { // toggle free wheel locked in some Spam blocks
+        if (/chatgpt|perplexity/.test(env.site)) { // toggle free wheel locked in some Spam blocks
             window.enableWheelScroll = event => event.stopPropagation()
             document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                 'wheel', window.enableWheelScroll)
