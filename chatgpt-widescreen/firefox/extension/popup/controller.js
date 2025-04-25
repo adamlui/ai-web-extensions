@@ -161,7 +161,7 @@
                   catChildrenDiv = dom.create.elem('div', { class: 'categorized-entries' })
             if (catData.color) // color the stripe
                 catChildrenDiv.style.borderImage = `linear-gradient(transparent, #${catData.color}) 30 100%`
-            menuEntriesDiv.append(createMenuEntry(category, catData, { isCategory: true }), catChildrenDiv)
+            menuEntriesDiv.append(createMenuEntry(category, catData, { isCategory: true }))
             Object.entries(ctrls).forEach(ctrl => catChildrenDiv.append(createMenuEntry(...ctrl)))
         })
     }
