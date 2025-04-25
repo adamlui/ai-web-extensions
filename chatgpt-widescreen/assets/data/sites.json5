@@ -21,7 +21,7 @@
         },
         "modals": { "login": "div[data-testid=modal-no-auth-rate-limit]" } // https://i.imgur.com/ItLsJLT.png
       },
-      "footer": ".text-sm.leading-none"
+      "footer": "div#thread-bottom-container > div:last-of-type > div, span.text-sm.leading-none"
     },
     "urls": { "homepage": "https://chatgpt.com" }
   },
