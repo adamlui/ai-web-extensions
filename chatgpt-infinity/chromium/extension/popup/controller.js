@@ -17,6 +17,85 @@
 
     // Define FUNCTIONS
 
+    function createMenuEntry(entryData, { isCategory = false } = {}) {
+        const entry = {
+            div: dom.create.elem('div', {
+                id: entryData.key, class: 'menu-entry highlight-on-hover', title: entryData.helptip || '' }),
+            leftElem: dom.create.elem('div', { class: `menu-icon ${ entryData.type || '' }` }),
+            label: dom.create.elem('span')
+        }
+        entry.label.textContent = entryData.label
+        if (entryData.type == 'toggle') { // add track to left, init knob pos
+            entry.leftElem.append(dom.create.elem('span', { class: 'track' }))
+            entry.leftElem.classList.toggle('on', settings.typeIsEnabled(entryData.key))
+        } else { // add symbol to left, append status to right
+            entry.leftElem.innerText = entryData.symbol || '⚙️'
+            if (entryData.status) entry.label.textContent += ` — ${entryData.status}`
+        }
+        if (isCategory) entry.div.append(icons.create('caretDown', { size: 11, class: 'caret',
+            style: 'position: absolute ; right: 14px ; transform: rotate(-90deg)' }))
+        entry.div.onclick = () => {
+            if (isCategory) toggleCategorySettingsVisiblity(entryData.key)
+            else if (entryData.type == 'toggle') {
+                entry.leftElem.classList.toggle('on')
+                settings.save(entryData.key, !config[entryData.key]) ; sync.configToUI({ updatedKey: entryData.key })
+                notify(`${entryData.label} ${chrome.i18n.getMessage(`state_${
+                    settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`)
+            } else {
+                const re_all = new RegExp(`^(${getMsg('menuLabel_all')}|all|any|every)$`, 'i')
+                if (entryData.key == 'replyLanguage') {
+                    while (true) {
+                        let replyLang = prompt(`${getMsg('prompt_updateReplyLang')}:`, config.replyLanguage)
+                        if (replyLang == null) break // user cancelled so do nothing
+                        else if (!/\d/.test(replyLang)) { // valid reply language set
+                            replyLang = ( // auto-case for menu/alert aesthetics
+                                replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
+                                    : toTitleCase(replyLang) )
+                            settings.save('replyLanguage', replyLang || chrome.i18n.getUILanguage())
+                            siteAlert(getMsg('alert_replyLangUpdated') + '!',
+                                `${getMsg('appName')} ${getMsg('alert_willReplyIn')} `
+                                  + `${ replyLang || getMsg('alert_yourSysLang') }.`
+                            )
+                            break
+                        }
+                    }
+                } else if (entryData.key == 'replyTopic') {
+                    let replyTopic = prompt(getMsg('prompt_updateReplyTopic')
+                        + ' (' + getMsg('prompt_orEnter') + ' \'ALL\'):', config.replyTopic)
+                    if (replyTopic != null) { // user didn't cancel
+                        replyTopic = toTitleCase(replyTopic.toString()) // for menu/alert aesthetics
+                        settings.save('replyTopic',
+                            !replyTopic || re_all.test(replyTopic) ? getMsg('menuLabel_all')
+                                                                   : replyTopic)
+                        siteAlert(`${getMsg('alert_replyTopicUpdated')}!`,
+                            `${getMsg('appName')} ${getMsg('alert_willAnswer')} `
+                                + ( !replyTopic || re_all.test(replyTopic) ?
+                                         getMsg('alert_onAllTopics')
+                                    : `${getMsg('alert_onTopicOf')} ${replyTopic}`
+                                ) + '!'
+                        )
+                    }
+                } else if (entryData.key == 'replyInterval') {
+                    while (true) {
+                        const replyInterval = prompt(
+                            `${getMsg('prompt_updateReplyInt')}:`, config.replyInterval)
+                        if (replyInterval == null) break // user cancelled so do nothing
+                        else if (!isNaN(parseInt(replyInterval, 10)) && parseInt(replyInterval, 10) > 4) {
+                            settings.save('replyInterval', parseInt(replyInterval, 10))
+                            siteAlert(getMsg('alert_replyIntUpdated') + '!',
+                                getMsg('appName') + ' ' + getMsg('alert_willReplyEvery')
+                                + ' ' + replyInterval + ' ' + getMsg('unit_seconds') + '.')
+                            break
+                        }
+                    }
+                }
+                sync.configToUI({ updatedKey: entryData.key }) ; close() // popup
+            }
+        }
+        entry.div.append(entry.leftElem, entry.label)
+        return entry.div
+    }
+
     function getMsg(key) { return chrome.i18n.getMessage(key) }
 
     function notify(msg, pos = 'bottom-right') {
@@ -49,6 +128,32 @@
         },
 
         configToUI(options) { return sendMsgToActiveTab('syncConfigToUI', options) }
+    }
+
+    function toggleCategorySettingsVisiblity(category, { transitions = true, action } = {}) {
+        const transitionDuration = 350, // ms
+              categoryDiv = document.getElementById(category),
+              caret = categoryDiv.querySelector('.caret'),
+              catChildrenDiv = categoryDiv.nextSibling,
+              catChild = catChildrenDiv.querySelectorAll('.menu-entry')
+        if (action != 'hide' && dom.get.computedHeight(catChildrenDiv) == 0) { // show category settings
+            Object.assign(catChildrenDiv.style, { height: `${dom.get.computedHeight(catChild)}px`,
+                transition: transitions && !env.browser.isFF ? 'height 0.25s' : '' })
+            Object.assign(caret.style, { transform: '',
+                transition: transitions ? 'transform 0.15s ease-out' : '' })
+            catChild.forEach(row => { // reset styles to support continuous transition on rapid show/hide
+                row.style.transition = 'none' ; row.style.opacity = 0 })
+            catChildrenDiv.offsetHeight // force reflow to insta-apply reset
+            catChild.forEach((row, idx) => { // fade-in staggered
+                if (transitions) row.style.transition = `opacity ${ transitionDuration /1000 }s ease-in-out`
+                setTimeout(() => row.style.opacity = 1, transitions ? idx * transitionDuration /10 : 0)
+            })
+            document.querySelectorAll(`.menu-entry:has(.caret):not(#${category})`).forEach(otherCategoryDiv =>
+                toggleCategorySettingsVisiblity(otherCategoryDiv.id, { action: 'hide' }))
+        } else { // hide category settings
+            Object.assign(catChildrenDiv.style, { height: 0, transition: '' })
+            Object.assign(caret.style, { transform: 'rotate(-90deg)', transition: '' })
+        }
     }
 
     function toTitleCase(str) {
@@ -84,86 +189,32 @@
     if (env.site == 'chatgpt') {
         await settings.load(Object.keys(settings.controls))
         const menuEntriesDiv = dom.create.elem('div') ; document.body.append(menuEntriesDiv)
-        const re_all = new RegExp(`^(${getMsg('menuLabel_all')}|all|any|every)$`, 'i')
-        Object.keys(settings.controls).forEach(key => {
-            const ctrl = settings.controls[key]
 
-            // Init entry's elems
-            const entry = {
-                div: dom.create.elem('div', {
-                    class: 'menu-entry highlight-on-hover', title: ctrl.helptip || '' }),
-                leftElem: dom.create.elem('div', { class: `menu-icon ${ ctrl.type || '' }` }),
-                label: dom.create.elem('span')
-            }
-            entry.label.textContent = ctrl.label
-            entry.div.append(entry.leftElem, entry.label) ; menuEntriesDiv.append(entry.div)
-            if (ctrl.type == 'toggle') { // add track to left, init knob pos
-                entry.leftElem.append(dom.create.elem('span', { class: 'track' }))
-                entry.leftElem.classList.toggle('on', settings.typeIsEnabled(key))
-            } else { // add symbol to left, append status to right
-                entry.leftElem.innerText = ctrl.symbol
-                entry.label.innerText += ctrl.status ? ` — ${ctrl.status}` : ''
-            }
+        // Group controls by category
+        const categorizedCtrls = {}
+        Object.entries(settings.controls).forEach(([key, ctrl]) =>
+            ( categorizedCtrls[ctrl.category || 'general'] ??= {} )[key] = { ...ctrl, key: key })
 
-            // Add listener
-            entry.div.onclick = () => {
-                if (ctrl.type == 'toggle') {
-                    entry.leftElem.classList.toggle('on')
-                    settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
-                    notify(`${ctrl.label} ${chrome.i18n.getMessage(`state_${
-                        settings.typeIsEnabled(key) ? 'on' : 'off' }`).toUpperCase()}`)
-                } else {
-                    if (key == 'replyLanguage') {
-                        while (true) {
-                            let replyLang = prompt(`${getMsg('prompt_updateReplyLang')}:`, config.replyLanguage)
-                            if (replyLang == null) break // user cancelled so do nothing
-                            else if (!/\d/.test(replyLang)) { // valid reply language set
-                                replyLang = ( // auto-case for menu/alert aesthetics
-                                    replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
-                                        : toTitleCase(replyLang) )
-                                settings.save('replyLanguage', replyLang || chrome.i18n.getUILanguage())
-                                siteAlert(getMsg('alert_replyLangUpdated') + '!',
-                                    `${getMsg('appName')} ${getMsg('alert_willReplyIn')} `
-                                      + `${ replyLang || getMsg('alert_yourSysLang') }.`
-                                )
-                                break
-                            }
-                        }
-                    } else if (key == 'replyTopic') {
-                        let replyTopic = prompt(getMsg('prompt_updateReplyTopic')
-                            + ' (' + getMsg('prompt_orEnter') + ' \'ALL\'):', config.replyTopic)
-                        if (replyTopic != null) { // user didn't cancel
-                            replyTopic = toTitleCase(replyTopic.toString()) // for menu/alert aesthetics
-                            settings.save('replyTopic',
-                                !replyTopic || re_all.test(replyTopic) ? getMsg('menuLabel_all')
-                                                                       : replyTopic)
-                            siteAlert(`${getMsg('alert_replyTopicUpdated')}!`,
-                                `${getMsg('appName')} ${getMsg('alert_willAnswer')} `
-                                    + ( !replyTopic || re_all.test(replyTopic) ?
-                                             getMsg('alert_onAllTopics')
-                                        : `${getMsg('alert_onTopicOf')} ${replyTopic}`
-                                    ) + '!'
-                            )
-                        }
-                    } else if (key == 'replyInterval') {
-                        while (true) {
-                            const replyInterval = prompt(
-                                `${getMsg('prompt_updateReplyInt')}:`, config.replyInterval)
-                            if (replyInterval == null) break // user cancelled so do nothing
-                            else if (!isNaN(parseInt(replyInterval, 10)) && parseInt(replyInterval, 10) > 4) {
-                                settings.save('replyInterval', parseInt(replyInterval, 10))
-                                siteAlert(getMsg('alert_replyIntUpdated') + '!',
-                                    getMsg('appName') + ' ' + getMsg('alert_willReplyEvery')
-                                    + ' ' + replyInterval + ' ' + getMsg('unit_seconds') + '.')
-                                break
-                            }
-                        }
-                    }
-                    sync.configToUI({ updatedKey: key }) ; close() // popup
-                }
-            }
+        // Create/append general controls
+        Object.values(categorizedCtrls.general || {}).forEach(ctrl => menuEntriesDiv.append(createMenuEntry(ctrl)))
+
+        // Create/append categorized controls
+        Object.entries(categorizedCtrls).forEach(([category, ctrls]) => {
+            if (category == 'general') return
+            const catData = { ...settings.categories[category], key: category },
+                  catChildrenDiv = dom.create.elem('div', { class: 'categorized-entries' })
+            if (catData.color) // color the stripe
+                catChildrenDiv.style.borderImage = `linear-gradient(transparent, #${catData.color}) 30 100%`
+            menuEntriesDiv.append(createMenuEntry(catData, { isCategory: true }), catChildrenDiv)
+            Object.values(ctrls).forEach(ctrl => catChildrenDiv.append(createMenuEntry(ctrl)))
         })
     }
+
+    // AUTO-EXPAND categories
+    document.querySelectorAll('.menu-entry:has(.caret)').forEach(categoryDiv => {
+        if (settings.categories[categoryDiv.id]?.autoExpand)
+            toggleCategorySettingsVisiblity(categoryDiv.id, { transitions: false })
+    })
 
     sync.fade() // based on master toggle
 
