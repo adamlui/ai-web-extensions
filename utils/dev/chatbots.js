@@ -21,5 +21,5 @@ const filePaths = projects.map(
 ).filter(path => require('fs').existsSync(path))
 
 // OPEN files
-spawn('code', [repoRoot, ...filePaths], { stdio: 'inherit' })
+spawn('code', ['-r', repoRoot, ...filePaths], { stdio: 'inherit' })
     .on('error', err => console.error(`${br}Failed to open VS Code: ${err.message}${nc}`))
