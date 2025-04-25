@@ -25,17 +25,17 @@
 
     // Define FUNCTIONS
 
-    function createMenuEntry(key, entryData, { isCategory = false } = {}) {
+    function createMenuEntry(entryData, { isCategory = false } = {}) {
         const entry = {
             div: dom.create.elem('div', {
-                id: key, class: 'menu-entry highlight-on-hover', title: entryData.helptip || '' }),
+                id: entryData.key, class: 'menu-entry highlight-on-hover', title: entryData.helptip || '' }),
             leftElem: dom.create.elem('div', { class: `menu-icon ${ entryData.type || '' }` }),
             label: dom.create.elem('span')
         }
         entry.label.textContent = entryData.label
         if (entryData.type == 'toggle') { // add track to left, init knob pos
             entry.leftElem.append(dom.create.elem('span', { class: 'track' }))
-            entry.leftElem.classList.toggle('on', settings.typeIsEnabled(key))
+            entry.leftElem.classList.toggle('on', settings.typeIsEnabled(entryData.key))
         } else { // add symbol to left, append status to right
             entry.leftElem.innerText = entryData.symbol || '⚙️'
             if (entryData.status) entry.label.textContent += ` — ${entryData.status}`
@@ -43,12 +43,12 @@
         if (isCategory) entry.div.append(icons.create('caretDown', { size: 11, class: 'caret',
             style: 'position: absolute ; right: 14px ; transform: rotate(-90deg)' }))
         entry.div.onclick = () => {
-            if (isCategory) toggleCategorySettingsVisiblity(key)
+            if (isCategory) toggleCategorySettingsVisiblity(entryData.key)
             else if (entryData.type == 'toggle') {
                 entry.leftElem.classList.toggle('on')
-                settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
+                settings.save(entryData.key, !config[entryData.key]) ; sync.configToUI({ updatedKey: entryData.key })
                 notify(`${entryData.label} ${chrome.i18n.getMessage(`state_${
-                    settings.typeIsEnabled(key) ? 'on' : 'off' }`).toUpperCase()}`)
+                    settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`)
             }
         }
         entry.div.append(entry.leftElem, entry.label)
@@ -152,22 +152,23 @@
         })
 
         // Create/append general controls
-        Object.entries(categorizedCtrls.general || {}).forEach(ctrl => menuEntriesDiv.append(createMenuEntry(...ctrl)))
+        Object.values(categorizedCtrls.general || {}).forEach(ctrl => menuEntriesDiv.append(createMenuEntry(ctrl)))
 
         // Create/append categorized controls
         Object.entries(categorizedCtrls).forEach(([category, ctrls]) => {
             if (category == 'general') return
-            const catData = settings.categories[category],
+            const catData = { ...settings.categories[category], key: category },
                   catChildrenDiv = dom.create.elem('div', { class: 'categorized-entries' })
             if (catData.color) // color the stripe
                 catChildrenDiv.style.borderImage = `linear-gradient(transparent, #${catData.color}) 30 100%`
-            menuEntriesDiv.append(createMenuEntry(category, catData, { isCategory: true }))
-            Object.entries(ctrls).forEach(ctrl => catChildrenDiv.append(createMenuEntry(...ctrl)))
+            menuEntriesDiv.append(createMenuEntry(catData, { isCategory: true }), catChildrenDiv)
+            Object.values(ctrls).forEach(ctrl => catChildrenDiv.append(createMenuEntry(ctrl)))
         })
     }
 
     // Create SITE SETTINGS
-    document.body.append(createMenuEntry('siteSettings', settings.categories.siteSettings, { isCategory: true }))
+    document.body.append(createMenuEntry(
+        { ...settings.categories.siteSettings, key: 'siteSettings' }, { isCategory: true }))
     const ssTogglesDiv = dom.create.elem('div', { class: 'categorized-entries' })
     document.body.append(ssTogglesDiv)
     for (const site of Object.keys(sites)) { // create toggle per site
