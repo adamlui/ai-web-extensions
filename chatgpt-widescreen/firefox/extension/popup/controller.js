@@ -25,6 +25,36 @@
 
     // Define FUNCTIONS
 
+    function createMenuEntry(key, entryData, { isCategory = false } = {}) {
+        const entry = {
+            div: dom.create.elem('div', {
+                id: key, class: 'menu-entry highlight-on-hover', title: entryData.helptip || '' }),
+            leftElem: dom.create.elem('div', { class: `menu-icon ${ entryData.type || '' }` }),
+            label: dom.create.elem('span')
+        }
+        entry.label.textContent = entryData.label
+        if (entryData.type == 'toggle') { // add track to left, init knob pos
+            entry.leftElem.append(dom.create.elem('span', { class: 'track' }))
+            entry.leftElem.classList.toggle('on', settings.typeIsEnabled(key))
+        } else { // add symbol to left, append status to right
+            entry.leftElem.innerText = entryData.symbol || '⚙️'
+            if (entryData.status) entry.label.textContent += ` — ${entryData.status}`
+        }
+        if (isCategory) entry.div.append(icons.create('caretDown', { size: 11, class: 'caret',
+            style: 'position: absolute ; right: 14px ; transform: rotate(-90deg)' }))
+        entry.div.onclick = () => {
+            if (isCategory) toggleCategorySettingsVisiblity(key)
+            else if (entryData.type == 'toggle') {
+                entry.leftElem.classList.toggle('on')
+                settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
+                notify(`${entryData.label} ${chrome.i18n.getMessage(`state_${
+                    settings.typeIsEnabled(key) ? 'on' : 'off' }`).toUpperCase()}`)
+            }
+        }
+        entry.div.append(entry.leftElem, entry.label)
+        return entry.div
+    }
+
     function extensionIsDisabled() { return config.extensionDisabled || !!config[`${env.site}Disabled`] }
     function getMsg(key) { return chrome.i18n.getMessage(key) }
 
@@ -48,8 +78,8 @@
             ))})
 
             // Menu elems
-            document.querySelectorAll('.logo, .menu-title, .menu-entry').forEach((elem, idx) => {
-                if (elem.id == 'site-settings' || elem.parentElement?.previousElementSibling?.id == 'site-settings')
+            document.querySelectorAll('.logo, .menu-title, .menu-entry, .categorized-entries').forEach((elem, idx) => {
+                if (elem.id == 'siteSettings' || elem.closest('.categorized-entries')?.previousElementSibling?.id == 'siteSettings')
                     return // never potentially disable important Site Settings
                 elem.style.transition = extensionIsDisabled() ? '' : 'opacity 0.15s ease-in'
                 setTimeout(() => elem.classList.toggle('disabled', extensionIsDisabled()),
@@ -60,24 +90,29 @@
         configToUI(options) { return sendMsgToActiveTab('syncConfigToUI', options) }
     }
 
-    function toggleSiteSettingsVisibility({ transitions = true } = {}) {
+    function toggleCategorySettingsVisiblity(category, { transitions = true, action } = {}) {
         const transitionDuration = 350, // ms
-              toggleRows = ssTogglesDiv.querySelectorAll('.menu-entry')
-        if (ssTogglesDiv.style.height == '0px') { // show toggles
-            Object.assign(ssTogglesDiv.style, { height: `${dom.get.computedHeight(toggleRows)}px`,
+              categoryDiv = document.getElementById(category),
+              caret = categoryDiv.querySelector('.caret'),
+              catChildrenDiv = categoryDiv.nextSibling,
+              catChild = catChildrenDiv.querySelectorAll('.menu-entry')
+        if (action != 'hide' && dom.get.computedHeight(catChildrenDiv) == 0) { // show category settings
+            Object.assign(catChildrenDiv.style, { height: `${dom.get.computedHeight(catChild)}px`,
                 transition: transitions && !env.browser.isFF ? 'height 0.25s' : '' })
-            Object.assign(ssLabel.caret.style, { transform: '',
+            Object.assign(caret.style, { transform: '',
                 transition: transitions ? 'transform 0.15s ease-out' : '' })
-            toggleRows.forEach(row => { // reset styles to support continuous transition on rapid show/hide
+            catChild.forEach(row => { // reset styles to support continuous transition on rapid show/hide
                 row.style.transition = 'none' ; row.style.opacity = 0 })
-            ssTogglesDiv.offsetHeight // force reflow to insta-apply reset
-            toggleRows.forEach((row, idx) => { // fade-in staggered
+                catChildrenDiv.offsetHeight // force reflow to insta-apply reset
+            catChild.forEach((row, idx) => { // fade-in staggered
                 if (transitions) row.style.transition = `opacity ${ transitionDuration /1000 }s ease-in-out`
                 setTimeout(() => row.style.opacity = 1, transitions ? idx * transitionDuration /10 : 0)
             })
-        } else { // hide toggles
-            Object.assign(ssTogglesDiv.style, { height: 0, transition: '' })
-            Object.assign(ssLabel.caret.style, { transform: 'rotate(-90deg)', transition: '' })
+            document.querySelectorAll(`.menu-entry:has(.caret):not(#${category})`).forEach(otherCategoryDiv =>
+                toggleCategorySettingsVisiblity(otherCategoryDiv.id, { action: 'hide' }))
+        } else { // hide category settings
+            Object.assign(catChildrenDiv.style, { height: 0, transition: '' })
+            Object.assign(caret.style, { transform: 'rotate(-90deg)', transition: '' })
         }
     }
 
@@ -107,57 +142,33 @@
     // Create CHILD menu entries on matched pages
     if (chrome.runtime.getManifest().content_scripts[0].matches.some(match => match.includes(env.site))) {
         await settings.load(sites[env.site].availFeatures)
-        const childEntriesDiv = dom.create.elem('div') ; document.body.append(childEntriesDiv)
-        Object.keys(settings.controls).forEach(key => {
+        const menuEntriesDiv = dom.create.elem('div') ; document.body.append(menuEntriesDiv)
+
+        // Group controls by category
+        const categorizedCtrls = {}
+        Object.entries(settings.controls).forEach(([key, ctrl]) => {
             if (!sites[env.site].availFeatures.includes(key)) return
-            const ctrl = settings.controls[key]
+            ( categorizedCtrls[ctrl.category || 'general'] ??= {} )[key] = { ...ctrl, key: key }
+        })
 
-            // Init entry's elems
-            const entry = {
-                div: dom.create.elem('div', {
-                    class: 'menu-entry highlight-on-hover', title: ctrl.helptip || '' }),
-                leftElem: dom.create.elem('div', { class: `menu-icon ${ ctrl.type || '' }` }),
-                label: dom.create.elem('span')
-            }
-            entry.label.textContent = ctrl.label
-            entry.div.append(entry.leftElem, entry.label) ; childEntriesDiv.append(entry.div)
-            if (ctrl.type == 'toggle') { // add track to left, init knob pos
-                entry.leftElem.append(dom.create.elem('span', { class: 'track' }))
-                entry.leftElem.classList.toggle('on', settings.typeIsEnabled(key))
-            } else { // add symbol to left, append status to right
-                entry.leftElem.innerText = ctrl.symbol
-                entry.label.innerText += ctrl.status ? ` — ${ctrl.status}` : ''
-            }
+        // Create/append general controls
+        Object.entries(categorizedCtrls.general || {}).forEach(ctrl => menuEntriesDiv.append(createMenuEntry(...ctrl)))
 
-            entry.div.onclick = () => {
-                if (ctrl.type == 'toggle') {
-                    entry.leftElem.classList.toggle('on')
-                    settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
-                    notify(`${ctrl.label} ${chrome.i18n.getMessage(`state_${
-                        settings.typeIsEnabled(key) ? 'on' : 'off' }`).toUpperCase()}`)
-                }
-            }
+        // Create/append categorized controls
+        Object.entries(categorizedCtrls).forEach(([category, ctrls]) => {
+            if (category == 'general') return
+            const catData = settings.categories[category],
+                  catChildrenDiv = dom.create.elem('div', { class: 'categorized-entries' })
+            if (catData.color) // color the stripe
+                catChildrenDiv.style.borderImage = `linear-gradient(transparent, #${catData.color}) 30 100%`
+            menuEntriesDiv.append(createMenuEntry(category, catData, { isCategory: true }), catChildrenDiv)
+            Object.entries(ctrls).forEach(ctrl => catChildrenDiv.append(createMenuEntry(...ctrl)))
         })
     }
 
-    // Create SITE SETTINGS label
-    const ssLabel = { // category label row
-        div: dom.create.elem('div', { id: 'site-settings', class: 'menu-entry highlight-on-hover',
-            title: settings.categories.siteSettings.helptip }),
-        label: dom.create.elem('label', { class: 'menu-icon' }), labelSpan: dom.create.elem('span'),
-        caret: icons.create('caretDown', { size: 11, class: 'caret',
-            style: 'position: absolute ; right: 14px ; transform: rotate(-90deg)' })
-    }
-    ssLabel.label.innerText = '🌐' ; ssLabel.labelSpan.textContent = settings.categories.siteSettings.label
-    ssLabel.div.onclick = toggleSiteSettingsVisibility;
-    ['label', 'labelSpan', 'caret'].forEach(elemType => ssLabel.div.append(ssLabel[elemType]))
-    document.body.append(ssLabel.div)
-
-    // Create SITE SETTINGS toggles
-    const ssTogglesDiv = dom.create.elem('div', {
-        style: `border-left: 4px solid transparent ; height: 0 ; overflow: hidden ;
-                border-image: linear-gradient(transparent, rgb(161 161 161)) 30 100%`
-    })
+    // Create SITE SETTINGS
+    document.body.append(createMenuEntry('siteSettings', settings.categories.siteSettings, { isCategory: true }))
+    const ssTogglesDiv = dom.create.elem('div', { class: 'categorized-entries' })
     document.body.append(ssTogglesDiv)
     for (const site of Object.keys(sites)) { // create toggle per site
 
@@ -200,11 +211,16 @@
         ssEntry.faviconDiv.onclick = () => { open(`https://${sites[site].urls.homepage}`) ; close() }
     }
 
-    // Auto-expand SITE SETTINGS conditionally
+    // AUTO-EXPAND categories
+    document.querySelectorAll('.menu-entry:has(.caret)').forEach(categoryDiv => {
+        if (settings.categories[categoryDiv.id]?.autoExpand)
+            toggleCategorySettingsVisiblity(categoryDiv.id, { transitions: false })
+    })
     const onMatchedPage = chrome.runtime.getManifest().content_scripts[0].matches.toString().includes(env.site)
     if (!onMatchedPage || config[`${env.site}Disabled`]) { // auto-expand Site Settings
-        if (!onMatchedPage) ssLabel.div.style.pointerEvents = 'none' // disable label from triggering unneeded collapse
-        setTimeout(() => toggleSiteSettingsVisibility({ transitions: onMatchedPage }),
+        if (!onMatchedPage) // disable label from triggering unneeded collapse
+            document.getElementById('siteSettings').style.pointerEvents = 'none'
+        setTimeout(() => toggleCategorySettingsVisiblity('siteSettings', { transitions: onMatchedPage }),
             !onMatchedPage ? 0 // no delay since emptyish already
           : !env.browser.isFF ? 250 // some delay since other settings appear
           : 335 // more in FF since no transition
@@ -221,21 +237,19 @@
         title: env.browser.displaysEnglish ? '' : `${getMsg('about_poweredBy')} chatgpt.js` })
     const cjsLogo = dom.create.elem('img', {
         src: `${app.urls.cjsAssetHost.replace('@latest', '@745f0ca')}/images/badges/powered-by-chatgpt.js.png` })
-    cjsSpan.onclick = () => { open(app.urls.chatgptJS) ; close() }
+    cjsLogo.onclick = () => { open(app.urls.chatgptJS) ; close() }
     cjsSpan.append(cjsLogo) ; footer.append(cjsSpan)
 
     // Create/append ABOUT footer button
     const aboutSpan = dom.create.elem('span', {
-        title: `${getMsg('menuLabel_about')} ${getMsg('app.name')}`,
-        class: 'menu-icon highlight-on-hover', style: 'right:30px ; padding-top: 2px' })
-    const aboutIcon = icons.create('questionMark', { width: 15, height: 13, style: 'margin-bottom: 0.04rem' })
+        title: `${getMsg('menuLabel_about')} ${getMsg('app.name')}`, class: 'menu-icon highlight-on-hover' })
+    const aboutIcon = icons.create('questionMark', { width: 15, height: 13 })
     aboutSpan.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
     aboutSpan.append(aboutIcon) ; footer.append(aboutSpan)
 
     // Create/append RELATED EXTENSIONS footer button
     const moreExtensionsSpan = dom.create.elem('span', {
-        title:  getMsg('btnLabel_moreAIextensions'),
-        class: 'menu-icon highlight-on-hover', style: 'right:2px ; padding-top: 2px' })
+        title:  getMsg('btnLabel_moreAIextensions'), class: 'menu-icon highlight-on-hover' })
     const moreExtensionsIcon = icons.create('plus')
     moreExtensionsSpan.onclick = () => { open(app.urls.relatedExtensions) ; close() }
     moreExtensionsSpan.append(moreExtensionsIcon) ; footer.append(moreExtensionsSpan)

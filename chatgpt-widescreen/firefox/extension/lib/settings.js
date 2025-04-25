@@ -9,54 +9,88 @@ window.settings = {
             ...Object.keys(this.imports.sites).map(site => `${site}Disabled`) ]
     },
 
-    controls: { // displays top-to-bottom in toolbar menu
-        get fullerWindows() { return { type: 'toggle', defaultVal: false,
-            label: settings.getMsg('menuLabel_fullerWins'),
-            helptip: settings.getMsg('helptip_fullerWins')
+    categories: {
+        get btnSettings() { return {
+            symbol: '🔘',
+            color: '94fca2', // green
+            label: `${settings.getMsg(`menuLabel_btn`)} ${settings.getMsg(`menuLabel_settings`)}`,
+            helptip: `${settings.getMsg('helptip_adjustSettingsRelatedTo')} ${
+                        settings.getMsg('helptip_btns').toLowerCase()}`
         }},
-        get tcbDisabled() { return { type: 'toggle', symbol: '↕️', defaultVal: false,
-            label: settings.getMsg('menuLabel_tallerChatbox'),
-            helptip: settings.getMsg('helptip_tallerChatbox')
+        get chatboxSettings() { return {
+            symbol: '📤',
+            color: 'd9e886', // yellow
+            label: `${settings.getMsg(`menuLabel_chatbox`)} ${settings.getMsg(`menuLabel_settings`)}`,
+            helptip: `${settings.getMsg('helptip_adjustSettingsRelatedTo')} ${
+                        settings.getMsg('helptip_the').toLowerCase()} ${
+                        settings.getMsg('menuLabel_chatbox').toLowerCase()}`
         }},
-        get widerChatbox() { return { type: 'toggle', symbol: '↔️', defaultVal: false,
-            label: settings.getMsg('menuLabel_widerChatbox'),
-            helptip: settings.getMsg('helptip_widerChatbox')
+        get displaySettings() { return {
+            symbol: '🖥️', autoExpand: true,
+            color: '856cb7', // purple
+            label: `${settings.getMsg(`menuLabel_display`)} ${settings.getMsg(`menuLabel_settings`)}`,
+            helptip: `${settings.getMsg('helptip_adjustSettingsRelatedTo')} ${
+                        settings.getMsg('helptip_the').toLowerCase()} ${
+                        settings.getMsg('menuLabel_display').toLowerCase()}`
         }},
-        get ncbDisabled() { return { type: 'toggle', defaultVal: false,
-            label: settings.getMsg('menuLabel_newChatBtn'),
-            helptip: settings.getMsg('helptip_newChatBtn')
-        }},
-        get hiddenHeader() { return { type: 'toggle', defaultVal: false,
-            label: settings.getMsg('menuLabel_hiddenHeader'),
-            helptip: settings.getMsg('helptip_hiddenHeader')
-        }},
-        get hiddenFooter() { return { type: 'toggle', defaultVal: false,
-            label: settings.getMsg('menuLabel_hiddenFooter'),
-            helptip: settings.getMsg('helptip_hiddenFooter')
-        }},
-        get btnAnimationsDisabled() { return { type: 'toggle', defaultVal: false,
-            label: settings.getMsg('menuLabel_btnAnimations'),
-            helptip: settings.getMsg('helptip_btnAnimations')
-        }},
-        get btnsVisible() { return { type: 'toggle', defaultVal: true,
-            label: settings.getMsg('menuLabel_btnVisibility'),
-            helptip: settings.getMsg('helptip_btnVisibility')
-        }},
-        get notifDisabled() { return { type: 'toggle', defaultVal: false,
-            label: settings.getMsg('menuLabel_modeNotifs'),
-            helptip: settings.getMsg('helptip_modeNotifs')
-        }},
-        get blockSpamDisabled() { return { type: 'toggle', defaultVal: false,
-            label: settings.getMsg('menuLabel_blockSpam'),
-            helptip: settings.getMsg('helptip_blockSpam')
+        get siteSettings() { return {
+            symbol: '🌐',
+            label: settings.getMsg('menuLabel_siteSettings'),
+            helptip: `${settings.getMsg('helptip_enableDisable')} ${settings.getMsg('appName')} ${
+                        settings.getMsg('helptip_perSite')}`
         }}
     },
 
-    categories: {
-        get siteSettings() { return {
-            label: settings.getMsg('menuLabel_siteSettings'),
-            helptip: `${settings.getMsg('helptip_enableDisable')} ${settings.getMsg('appName')} `
-                      + settings.getMsg('helptip_perSite')
+    controls: { // displays top-to-bottom in toolbar menu
+        get fullerWindows() { return {
+            type: 'toggle', defaultVal: false, category: 'displaySettings',
+            label: settings.getMsg('menuLabel_fullerWins'),
+            helptip: settings.getMsg('helptip_fullerWins')
+        }},
+        get tcbDisabled() { return {
+            type: 'toggle', symbol: '↕️', defaultVal: false, category: 'chatboxSettings',
+            label: settings.getMsg('menuLabel_tallerChatbox'),
+            helptip: settings.getMsg('helptip_tallerChatbox')
+        }},
+        get widerChatbox() { return {
+            type: 'toggle', symbol: '↔️', defaultVal: false, category: 'chatboxSettings',
+            label: settings.getMsg('menuLabel_widerChatbox'),
+            helptip: settings.getMsg('helptip_widerChatbox')
+        }},
+        get ncbDisabled() { return {
+            type: 'toggle', defaultVal: false, category: 'btnSettings',
+            label: settings.getMsg('menuLabel_newChatBtn'),
+            helptip: settings.getMsg('helptip_newChatBtn')
+        }},
+        get hiddenHeader() { return {
+            type: 'toggle', defaultVal: false, category: 'displaySettings',
+            label: settings.getMsg('menuLabel_hiddenHeader'),
+            helptip: settings.getMsg('helptip_hiddenHeader')
+        }},
+        get hiddenFooter() { return {
+            type: 'toggle', defaultVal: false, category: 'displaySettings',
+            label: settings.getMsg('menuLabel_hiddenFooter'),
+            helptip: settings.getMsg('helptip_hiddenFooter')
+        }},
+        get btnAnimationsDisabled() { return {
+            type: 'toggle', defaultVal: false, category: 'btnSettings',
+            label: settings.getMsg('menuLabel_btnAnimations'),
+            helptip: settings.getMsg('helptip_btnAnimations')
+        }},
+        get btnsVisible() { return {
+            type: 'toggle', defaultVal: true, category: 'btnSettings',
+            label: settings.getMsg('menuLabel_btnVisibility'),
+            helptip: settings.getMsg('helptip_btnVisibility')
+        }},
+        get notifDisabled() { return {
+            type: 'toggle', defaultVal: false, category: 'displaySettings',
+            label: settings.getMsg('menuLabel_modeNotifs'),
+            helptip: settings.getMsg('helptip_modeNotifs')
+        }},
+        get blockSpamDisabled() { return {
+            type: 'toggle', defaultVal: false, category: 'displaySettings',
+            label: settings.getMsg('menuLabel_blockSpam'),
+            helptip: settings.getMsg('helptip_blockSpam')
         }}
     },
 
