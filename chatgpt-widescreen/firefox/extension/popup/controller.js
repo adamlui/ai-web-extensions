@@ -103,7 +103,7 @@
                 transition: transitions ? 'transform 0.15s ease-out' : '' })
             catChild.forEach(row => { // reset styles to support continuous transition on rapid show/hide
                 row.style.transition = 'none' ; row.style.opacity = 0 })
-                catChildrenDiv.offsetHeight // force reflow to insta-apply reset
+            catChildrenDiv.offsetHeight // force reflow to insta-apply reset
             catChild.forEach((row, idx) => { // fade-in staggered
                 if (transitions) row.style.transition = `opacity ${ transitionDuration /1000 }s ease-in-out`
                 setTimeout(() => row.style.opacity = 1, transitions ? idx * transitionDuration /10 : 0)
