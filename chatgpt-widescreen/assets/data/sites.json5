@@ -36,7 +36,7 @@
       "btns": {
         "attachFile": "button:has([class*=icon-paperclip])", "dictation": "button:has([class*=icon-microphone])",
         "help": "button:has([data-icon=question])", "modelSelector": "button:has([class*=icon-cpu])",
-        "newChat": "div.sticky [class*=ring]", "research": "button:has([d*=\"M5.047 5.15c.122\"])",
+        "newChat": "div:has(> span > a[href=\"/\"] svg) + div", "research": "button:has([d*=\"M5.047 5.15c.122\"])",
         "search": "button:has([d*=\"M3.752 9.895a6.145\"])", "searchSrcs": "button:has([class*=icon-world])",
         "send": "button:has([class*=icon-arrow-], [class*=icon-git-fork])", // Send w/ up/right arrow or New Thread
         "settings": "button:has([data-icon=gear])",
