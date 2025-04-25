@@ -83,7 +83,7 @@
 
     // Create CHILD menu entries on chatgpt.com
     if (env.site == 'chatgpt') {
-        const childEntriesDiv = dom.create.elem('div') ; document.body.append(childEntriesDiv)
+        const menuEntriesDiv = dom.create.elem('div') ; document.body.append(menuEntriesDiv)
         const re_all = new RegExp(`^(${getMsg('menuLabel_all')}|all|any|every)$`, 'i')
         await settings.load(Object.keys(settings.controls))
         Object.keys(settings.controls).forEach(key => {
@@ -97,7 +97,7 @@
                 label: dom.create.elem('span')
             }
             entry.label.textContent = ctrl.label
-            entry.div.append(entry.leftElem, entry.label) ; childEntriesDiv.append(entry.div)
+            entry.div.append(entry.leftElem, entry.label) ; menuEntriesDiv.append(entry.div)
             if (ctrl.type == 'toggle') { // add track to left, init knob pos
                 entry.leftElem.append(dom.create.elem('span', { class: 'track' }))
                 entry.leftElem.classList.toggle('on', settings.typeIsEnabled(key))
