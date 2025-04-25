@@ -32,8 +32,7 @@
             entry.leftElem.innerText = entryData.symbol || '⚙️'
             if (entryData.status) entry.label.textContent += ` — ${entryData.status}`
         }
-        if (entryData.type == 'category') entry.div.append(icons.create('caretDown', {
-            size: 11, class: 'caret', style: 'position: absolute ; right: 14px ; transform: rotate(-90deg)' }))
+        if (entryData.type == 'category') entry.div.append(icons.create('caretDown', { size: 11, class: 'caret' }))
         entry.div.onclick = () => {
             if (entryData.type == 'category') toggleCategorySettingsVisiblity(entryData.key)
             else if (entryData.type == 'toggle') {
@@ -88,8 +87,8 @@
         if (action != 'hide' && dom.get.computedHeight(catChildrenDiv) == 0) { // show category settings
             Object.assign(catChildrenDiv.style, { height: `${dom.get.computedHeight(catChild)}px`,
                 transition: transitions && !env.browser.isFF ? 'height 0.25s' : '' })
-            Object.assign(caret.style, { transform: '',
-                transition: transitions ? 'transform 0.15s ease-out' : '' })
+            Object.assign(caret.style, { // point it down
+                transform: 'rotate(0deg)', transition: transitions ? 'transform 0.15s ease-out' : '' })
             catChild.forEach(row => { // reset styles to support continuous transition on rapid show/hide
                 row.style.transition = 'none' ; row.style.opacity = 0 })
             catChildrenDiv.offsetHeight // force reflow to insta-apply reset
@@ -101,7 +100,7 @@
                 toggleCategorySettingsVisiblity(otherCategoryDiv.id, { action: 'hide' }))
         } else { // hide category settings
             Object.assign(catChildrenDiv.style, { height: 0, transition: '' })
-            Object.assign(caret.style, { transform: 'rotate(-90deg)', transition: '' })
+            Object.assign(caret.style, { transform: 'rotate(-90deg)', transition: '' }) // point it right
         }
     }
 
