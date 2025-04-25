@@ -14,10 +14,13 @@
       "header": "main .sticky:first-of-type", "input": "#prompt-textarea",
       "rightbar": "div[class*=sidebar]:has([data-testid=screen-threadFlyOut])",
       "sidebar": "div[class*=sidebar]:not(:has([data-testid=screen-threadFlyOut]))",
-      "spam": { "banners": {
+      "spam": {
+        "banners": {
           "dismissable": "div.bottom-full:has(button[data-testid=close-button])",
           "tos": "div.bottom-full:has([href=\"https:\/\/openai.com/terms\"])" // https://i.imgur.com/8BUOhn1.png
-      }},
+        },
+        "modals": { "login": "div[data-testid=modal-no-auth-rate-limit]" } // https://i.imgur.com/ItLsJLT.png
+      },
       "footer": ".min-h-4"
     },
     "urls": { "homepage": "https://chatgpt.com" }
