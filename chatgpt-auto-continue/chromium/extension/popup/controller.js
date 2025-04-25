@@ -168,21 +168,19 @@
         title: env.browser.displaysEnglish ? '' : `${getMsg('about_poweredBy')} chatgpt.js` })
     const cjsLogo = dom.create.elem('img', {
         src: `${app.urls.cjsAssetHost.replace('@latest', '@745f0ca')}/images/badges/powered-by-chatgpt.js.png` })
-    cjsSpan.onclick = () => { open(app.urls.chatgptJS) ; close() }
+    cjsLogo.onclick = () => { open(app.urls.chatgptJS) ; close() }
     cjsSpan.append(cjsLogo) ; footer.append(cjsSpan)
 
     // Create/append ABOUT footer button
     const aboutSpan = dom.create.elem('span', {
-        title: `${getMsg('menuLabel_about')} ${getMsg('appName')}`,
-        class: 'menu-icon highlight-on-hover', style: 'right:30px ; padding-top: 2px' })
-    const aboutIcon = icons.create('questionMark', { width: 15, height: 13, style: 'margin-bottom: 0.04rem' })
+        title: `${getMsg('menuLabel_about')} ${getMsg('app.name')}`, class: 'menu-icon highlight-on-hover' })
+    const aboutIcon = icons.create('questionMark', { width: 15, height: 13 })
     aboutSpan.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
     aboutSpan.append(aboutIcon) ; footer.append(aboutSpan)
 
     // Create/append RELATED EXTENSIONS footer button
     const moreExtensionsSpan = dom.create.elem('span', {
-        title:  getMsg('btnLabel_moreAIextensions'),
-        class: 'menu-icon highlight-on-hover', style: 'right:2px ; padding-top: 2px' })
+        title:  getMsg('btnLabel_moreAIextensions'), class: 'menu-icon highlight-on-hover' })
     const moreExtensionsIcon = icons.create('plus')
     moreExtensionsSpan.onclick = () => { open(app.urls.relatedExtensions) ; close() }
     moreExtensionsSpan.append(moreExtensionsIcon) ; footer.append(moreExtensionsSpan)
