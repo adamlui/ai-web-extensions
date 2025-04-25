@@ -12,14 +12,14 @@ window.settings = {
     categories: {
         get btnSettings() { return {
             symbol: '🔘',
-            color: '94fca2', // green
+            color: 'a80104', // red
             label: `${settings.getMsg(`menuLabel_btn`)} ${settings.getMsg(`menuLabel_settings`)}`,
             helptip: `${settings.getMsg('helptip_adjustSettingsRelatedTo')} ${
                         settings.getMsg('helptip_btns').toLowerCase()}`
         }},
         get chatboxSettings() { return {
             symbol: '📤',
-            color: 'd9e886', // yellow
+            color: '1e5919', // green
             label: `${settings.getMsg(`menuLabel_chatbox`)} ${settings.getMsg(`menuLabel_settings`)}`,
             helptip: `${settings.getMsg('helptip_adjustSettingsRelatedTo')} ${
                         settings.getMsg('helptip_the').toLowerCase()} ${
