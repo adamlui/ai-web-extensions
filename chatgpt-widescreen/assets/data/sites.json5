@@ -6,19 +6,19 @@
     ],
     "selectors": {
       "btns": {
-        "dictate": "button:has([d*=\"M18.9953\"])", "help": "div.lg\\:bottom-3 > button",
-        "login": "[data-testid*=login]",
-        "newChat": "button[data-testid*=new-chat-button], button:has([d^=\"M3.06957\"]), button:has([d^=\"M15.6729\"])",
+        "dictate": "button:has(path[d*=\"M18.9953\"])", "help": "div.lg\\:bottom-3 > button",
+        "login": "button[data-testid*=login]",
+        "newChat": "button[data-testid*=new-chat-button], button:has(path[d^=\"M3.06957\"]), button:has(path[d^=\"M15.6729\"])",
         "send": "button[data-testid=send-button]", "sidebar": "button[data-testid*=sidebar-button]",
         "stop": "button[data-testid=stop-button]", "voice": "button[data-testid*=composer-speech-button]"
       },
-      "header": "main .sticky:first-of-type", "input": "#prompt-textarea",
-      "rightbar": "div[class*=sidebar]:has([data-testid=screen-threadFlyOut])",
-      "sidebar": "div[class*=sidebar]:not(:has([data-testid=screen-threadFlyOut]))",
+      "header": "main div.sticky:first-of-type", "input": "div#prompt-textarea",
+      "rightbar": "div[class*=sidebar]:has(div[data-testid=screen-threadFlyOut])",
+      "sidebar": "div[class*=sidebar]:not(:has(div[data-testid=screen-threadFlyOut]))",
       "spam": {
         "banners": {
           "dismissable": "div.bottom-full:has(button[data-testid=close-button])",
-          "tos": "div.bottom-full:has([href=\"https:\/\/openai.com/terms\"])" // https://i.imgur.com/8BUOhn1.png
+          "tos": "div.bottom-full:has(a[href=\"https:\/\/openai.com/terms\"])" // https://i.imgur.com/8BUOhn1.png
         },
         "modals": { "login": "div[data-testid=modal-no-auth-rate-limit]" } // https://i.imgur.com/ItLsJLT.png
       },
@@ -34,30 +34,30 @@
     "hasSidebar": true,
     "selectors": {
       "btns": {
-        "attachFile": "button:has([class*=icon-paperclip])", "dictation": "button:has([class*=icon-microphone])",
-        "help": "button:has([data-icon=question])", "modelSelector": "button:has([class*=icon-cpu])",
-        "newChat": "div:has(> span > a[href=\"/\"] svg) + div", "research": "button:has([d*=\"M5.047 5.15c.122\"])",
-        "search": "button:has([d*=\"M3.752 9.895a6.145\"])", "searchSrcs": "button:has([class*=icon-world])",
-        "send": "button:has([class*=icon-arrow-], [class*=icon-git-fork])", // Send w/ up/right arrow or New Thread
-        "settings": "button:has([data-icon=gear])",
-        "sidebar": "button:has([data-icon=arrow-left-to-line], [data-icon=arrow-right-from-line])"
+        "attachFile": "button:has(svg[class*=icon-paperclip])", "dictation": "button:has(svg[class*=icon-microphone])",
+        "help": "button:has(svg[data-icon=question])", "modelSelector": "button:has(svg[class*=icon-cpu])",
+        "newChat": "div:has(> span > a[href=\"/\"] svg) + div", "research": "button:has(path[d*=\"M5.047 5.15c.122\"])",
+        "search": "button:has(path[d*=\"M3.752 9.895a6.145\"])", "searchSrcs": "button:has(svg[class*=icon-world])",
+        "send": "button:has(svg[class*=icon-arrow-], svg[class*=icon-git-fork])", // Send w/ ↑/→ or New Thread
+        "settings": "button:has(svg[data-icon=gear])",
+        "sidebar": "button:has(svg[data-icon=arrow-left-to-line], svg[data-icon=arrow-right-from-line])"
       },
       "header": "div[class*=header].sticky:nth-of-type(2)", "input": "textarea[placeholder]",
-      "sidebar": "[data-testid=sidebar]",
+      "sidebar": "div[data-testid=sidebar]",
       "spam": {
         "banners": {
           "homepage": "div.absolute.w-full:has(svg[data-icon=xmark])",
           "apps": "div[class*=col-span]:has(a[href*=\"perplexity.ai\"])" // like Comet waitlist + Windows app
         },
         "popups": {
-          "googleLogin": "#credential_picker_container", // upper-right login popup
-          "perplexityLogin": "div[class*=bottom]:has([data-testid*=login-modal])" // lower-right login/signup popup
+          "googleLogin": "div#credential_picker_container", // upper-right login popup
+          "perplexityLogin": "div[class*=bottom]:has(div[data-testid*=login-modal])" // lower-right login/signup popup
         },
         "sideBlocks": {
           // "You are missing out: Upgrade to Pro for more detailed answers powered by the top AI models"
-          "upgradeToPro": "div[class*=\"\:block\"]:has(button):has([data-icon*=arrow-up-right])" },
+          "upgradeToPro": "div[class*=\"\:block\"]:has(button):has(svg[data-icon*=arrow-up-right])" },
         "slideUpCards": {
-          "getAndroidApp": "div[data-type=portal]:has([data-icon=android])" } // https://i.imgur.com/FZdDg6d.png
+          "getAndroidApp": "div[data-type=portal]:has(svg[data-icon=android])" } // https://i.imgur.com/FZdDg6d.png
       }
     },
     "urls": { "homepage": "https://www.perplexity.ai" }
@@ -71,12 +71,12 @@
     "selectors": {
       "btns": {
         "attachFile": "button[data-button-file-input]", "mic": "button[data-button-voice-input=true]",
-        "newChat": "header a[class*=button]", "send": "[data-button-send]"
+        "newChat": "header a[class*=button]", "send": "button[data-button-send]"
       },
       "header": "header, div[class*=CanvasHeader_header]",
-      "input": "[class*=InputContainer_textArea] textarea, [class*=InputContainer_textArea]::after",
+      "input": "div[class*=InputContainer_textArea] > textarea, div[class*=InputContainer_textArea]::after",
       "sidebar": "menu[class*=sidebar], aside[class*=sidebar]",
-      "spam": { "cards": { "newFeature": "[class*=NewFeatureCard]" }}
+      "spam": { "cards": { "newFeature": "div[class*=NewFeatureCard]" }}
     },
     "urls": { "homepage": "https://poe.com" }
   }
