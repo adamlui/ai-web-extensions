@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.25
+// @version                2025.4.25.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -2427,10 +2427,10 @@
               + `.${app.slug}-standby-btns { margin: 14px 0 5px }`
               + `.${app.slug}-standby-btn {`
                   + `--content-color: ${ isParticlizedDS ? 'white' : 'black' };`
-                  + 'width: 100% ; margin-bottom: 9px ; padding: 11px 0 ; cursor: pointer ;'
+                  + 'width: 100% ; margin-bottom: 9px ; padding: 10px 0 ; cursor: pointer ;'
                   + `background-color: #f0f0f0${ config.bgAnimationsDisabled ? '' : '00' };`
                   + 'color: var(--content-color) ;'
-                  + `border-radius: 10px ; border: 1px solid ${ isParticlizedDS ? '#fff' : '#888' };`
+                  + `border-radius: 11px ; border: 1px solid ${ isParticlizedDS ? '#fff' : '#888' };`
                   + `transition: var(--btn-transition) ;
                         -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
                         -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }`
