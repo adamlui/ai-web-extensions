@@ -10,13 +10,13 @@
     })
 
     // Add CHROME MSG listener for background/popup requests to sync modes/settings
-    chrome.runtime.onMessage.addListener(req => {
-        if (req.action == 'notify')
-            notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => req.options[arg]))
-        else if (req.action == 'alert')
-            modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => req.options[arg]))
-        else if (req.action == 'showAbout') chatgpt.isLoaded().then(() => modals.open('about'))
-        else if (req.action == 'syncConfigToUI') syncConfigToUI(req.options)
+    chrome.runtime.onMessage.addListener(({ action, options }) => {
+        ({
+            notify: () => notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
+            alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
+            showAbout: () => chatgpt.isLoaded().then(() => modals.open('about')),
+            syncConfigToUI: () => syncConfigToUI(options)
+        }[action]?.())
     })
 
     // Import JS resources

@@ -10,20 +10,20 @@
     })
 
     // Add CHROME MSG listener for background/popup requests to sync modes/settings
-    chrome.runtime.onMessage.addListener((req, _, sendResp) => {
-        if (req.action == 'notify')
-            notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => req.options[arg]))
-        else if (req.action == 'alert')
-            modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => req.options[arg]))
-        else if (req.action == 'showAbout') chatgpt.isLoaded().then(() => modals.open('about'))
-        else if (req.action == 'prompt') {
-            const userInput = prompt(req.options.msg || 'Please enter your input:', req.options.defaultVal || '')
-            sendResp({ input: userInput })
-        } else if (req.action == 'syncConfigToUI') {
-            if (req.fromBG) // disable Infinity mode 1st to not transfer between tabs
-                settings.save('infinityMode', false)
-            syncConfigToUI(req.options)
-        }
+    chrome.runtime.onMessage.addListener(({ action, options, fromBG }, _, sendResp) => {
+        ({
+            notify: () => notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
+            alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
+            showAbout: () => chatgpt.isLoaded().then(() => modals.open('about')),
+            prompt: () => {
+                const userInput = prompt(options.msg || 'Please enter your input:', options.defaultVal || '')
+                sendResp({ input: userInput })
+            },
+            syncConfigToUI: () => {
+                fromBG && settings.save('infinityMode', false) // disable Infinity mode 1st to not transfer between tabs
+                syncConfigToUI(options)
+            }
+        }[action]?.())
     })
 
     // Import JS resources
