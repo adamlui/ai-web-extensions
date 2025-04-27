@@ -88,7 +88,8 @@
         setTimeout(checkBtnsToClick, continueBtnClicked ? 5000 : 500)
     }
 
-    async function syncConfigToUI() { // on toolbar popup toggles + ChatGPT tab activations
+    async function syncConfigToUI(options) {  // eslint-disable-line
+    // on toolbar popup toggles + ChatGPT tab activations
         await settings.load('extensionDisabled', ...Object.keys(settings.controls))
         if (!config.extensionDisabled && !checkBtnsToClick.active) checkBtnsToClick()
     }
