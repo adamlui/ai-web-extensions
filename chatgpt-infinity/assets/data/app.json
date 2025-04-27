@@ -5,7 +5,6 @@
   "urls": {
     "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@latest/assets",
     "chatgptJS": "https://chatgpt.js.org",
-    "cjsAssetHost": "https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@latest/assets",
     "contributors": "https://docs.chatgptautorefresh.com/#-contributors",
     "discuss": "https://github.com/adamlui/chatgpt-infinity /discussions",
     "donate": {

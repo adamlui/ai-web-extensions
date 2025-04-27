@@ -5,7 +5,6 @@
   "urls": {
     "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@latest/assets",
     "chatgptJS": "https://chatgpt.js.org",
-    "cjsAssetHost": "https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@latest/assets",
     "contributors": "https://docs.autoclearchatgpt.com/#-contributors",
     "discuss": "https://github.com/adamlui/autoclear-chatgpt-history/discussions",
     "donate": {

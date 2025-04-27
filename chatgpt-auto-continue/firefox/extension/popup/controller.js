@@ -164,7 +164,7 @@
     const cjsSpan = footer.querySelector('.cjs-span'),
           cjsLogo = footer.querySelector('.cjs-logo')
     cjsSpan.title = env.browser.displaysEnglish ? '' : `${getMsg('about_poweredBy')} chatgpt.js`
-    cjsLogo.src = `${app.urls.cjsAssetHost.replace('@latest', '@745f0ca')}/images/badges/powered-by-chatgpt.js.png`
+    cjsLogo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca/assets/images/badges/powered-by-chatgpt.js.png'
     cjsLogo.onclick = () => { open(app.urls.chatgptJS) ; close() }
 
     // Init ABOUT footer button
