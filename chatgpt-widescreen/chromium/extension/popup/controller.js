@@ -183,11 +183,11 @@
             track: dom.create.elem('span', { class: 'track' }), label: dom.create.elem('span'),
             faviconDiv: dom.create.elem('div', {
                 title: `${getMsg('tooltip_goto')} https://${sites[site].urls.homepage}`,
-                style: `display: flex ; height: 33px ; align-items: center ;
+                style: `display: flex ; height: 33px ; align-items: center ; cursor: none ;
                         padding: 0 11.5px ; /* create padded rectangle for .highlight-on-hover */
                         margin-right: -14px /* fill .menu-entry right-padding */` }),
             favicon: dom.create.elem('img', { src: sites[site].urls.favicon, width: 15 }),
-            openIcon: icons.create('open', { size: 16, fill: 'white' })
+            openIcon: icons.create('open', { size: 18, fill: 'white' })
         }
         ssEntry.switch.append(ssEntry.track) ; ssEntry.label.textContent = sites[site].urls.homepage
         ssEntry.switchLabelDiv.append(ssEntry.switch, ssEntry.label) ; ssEntry.faviconDiv.append(ssEntry.favicon)
@@ -206,8 +206,8 @@
                     getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
             }
         }
-        ssEntry.faviconDiv.onmouseenter = ssEntry.faviconDiv.onmouseleave = ({ type }) =>
-            ssEntry.faviconDiv.firstChild.replaceWith(ssEntry[type == 'mouseenter' ? 'openIcon' : 'favicon'])
+        ssEntry.faviconDiv.onmouseenter = ssEntry.faviconDiv.onmouseleave = event =>
+            ssEntry.faviconDiv.firstChild.replaceWith(ssEntry[event.type == 'mouseenter' ? 'openIcon' : 'favicon'])
         ssEntry.faviconDiv.onclick = () => { open(`https://${sites[site].urls.homepage}`) ; close() }
     }
 
