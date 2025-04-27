@@ -626,8 +626,10 @@ This app exists thanks to code, translations, issues & ideas from the following 
 <a href="https://github.com/dependabot">
     <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://chatgpt.com">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatgpt/black-on-white/icon50.png">
-    <img title="ChatGPT" src="https://assets.aiwebextensions.com/images/icons/chatgpt/white-on-gray/icon50.png"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatgpt/black-on-white/icon50.png">
+        <img title="ChatGPT" src="https://assets.aiwebextensions.com/images/icons/chatgpt/white-on-gray/icon50.png">
+    </picture></a>
 <br><br>
 
 <img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">

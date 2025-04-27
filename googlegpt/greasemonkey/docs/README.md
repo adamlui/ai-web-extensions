@@ -618,7 +618,10 @@ This app exists thanks to code, testing, issues, translations & ideas from the f
 <a href="https://github.com/adamlui">
     <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.9.23"></img></a>
 <a href="https://greasyfork.org/users/1213283-c3tacea">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.11.08-mobile-support-request" title="C3tacea"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.11.08-mobile-support-request" title="C3tacea">
+    </picture></a>
 <a href="https://github.com/Vozf">
     <img width=50 title="@Vozf" src="https://avatars.githubusercontent.com/u/22998537?first-contrib=2023.11.25-related-queries-do-not-show-in-openai-mode-bug-report"></img></a>
 <a href="https://github.com/T1mL3arn">
@@ -634,23 +637,38 @@ This app exists thanks to code, testing, issues, translations & ideas from the f
 <a href="https://github.com/Cozy888">
     <img width=50 title="@Cozy888" src="https://avatars.githubusercontent.com/u/95589456?first-contrib=2024.3.20-proxy-mode-broken-confirmation"></img></a>
 <a href="https://greasyfork.org/users/1288434-gchen">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.4.14-proxy-mode-broken-alert" title="Gchen"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.4.14-proxy-mode-broken-alert" title="Gchen">
+    </picture></a>
 <a href="https://github.com/wizpizz">
     <img width=50 title="@wizpizz" src="https://avatars.githubusercontent.com/u/76851476?first-contrib=2024.5.1-proxy-mode-broken-confirmation"></img></a>
 <a href="https://greasyfork.org/users/580718-dong-wei">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.5.3-ios-broken-alert" title="dong wei"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.5.3-ios-broken-alert" title="dong wei">
+    </picture></a>
 <a href="https://github.com/amamelia">
     <img width=50 title="@amamelia" src="https://avatars.githubusercontent.com/u/40690639?first-contrib=2024.5.15-proxy-mode-broken-confirmation"></img></a>
 <a href="https://github.com/bbradleyjoness">
     <img width=50 title="@bbradleyjoness" src="https://avatars.githubusercontent.com/u/30918938?first-contrib=2024.5.30-added-safari-to-readme-compatibility"></img></a>
 <a href="https://greasyfork.org/users/670188-hacker09">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.5.30-render-markdown-idea" title="hacker09"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.5.30-render-markdown-idea" title="hacker09">
+    </picture></a>
 <a href="https://github.com/sshiva01">
     <img width=50 title="@sshiva01" src="https://avatars.githubusercontent.com/u/122478157?first-contrib=2024.6.4-safari-macos-not-working-report"></img></a>
 <a href="https://greasyfork.org/users/1318541-kalopsia">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.16-region-stripping-broken-alert" title="Kalopsia"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.16-region-stripping-broken-alert" title="Kalopsia">
+    </picture></a>
 <a href="https://greasyfork.org/users/27097-grisipisimisi">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.20-asktip-disabled-localstorage-setting-not-sticky" title="GrisiPisiMisi"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.20-asktip-disabled-localstorage-setting-not-sticky" title="GrisiPisiMisi">
+    </picture></a>
 <a href="https://github.com/Mrhazed">
     <img width=50 title="@Mrhazed" src="https://avatars.githubusercontent.com/u/149096330?first-contrib=2024.6.20-streaming-mode-unsupported-by-brave"></img></a>
 <a href="https://github.com/ChinaGodMan">
@@ -660,9 +678,15 @@ This app exists thanks to code, testing, issues, translations & ideas from the f
 <a href="https://github.com/bao3">
     <img width=50 title="@bao3" src="https://avatars.githubusercontent.com/u/499205?first-contrib=2024.11.24-safari-ios-compatible-report"></img></a>
 <a href="https://greasyfork.org/users/1030895-universedev">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.12.12-support-3rd-party-sidebars-request" title="UniverseDev"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.12.12-support-3rd-party-sidebars-request" title="UniverseDev">
+    </picture></a>
 <a href="https://greasyfork.org/users/1406320-happyhojjat">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2025.1.12-reported-googlegpt-reply-lang-setting-stopped-persisting" title="happyhojjat"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2025.1.12-reported-googlegpt-reply-lang-setting-stopped-persisting" title="happyhojjat">
+    </picture></a>
 <a href="https://github.com/vchong">
     <img width=50 title="@vchong" src="https://avatars.githubusercontent.com/u/7334750?first-contrib=2025.2.25-manual-get-mode-stopped-working-report"></img></a>
 <a href="https://github.com/cyber-sec0">

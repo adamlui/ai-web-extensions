@@ -171,16 +171,22 @@ This script exists thanks to code, translations, issues & ideas from the followi
 <a href="https://github.com/Aubermean">
     <img width=46 title="@Aubermean" src="https://avatars.githubusercontent.com/u/58298118?first-contrib=2023.09.23-wider-chatbox-idea"></img></a>
 <a href="https://greasyfork.org/users/1210535-%E5%A4%A7%E8%81%AA%E6%98%8E-h4ha">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
-    <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.11.5-plus-buttons-distorted-bug-report" title="大聪明 (H4Ha)"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.11.5-plus-buttons-distorted-bug-report" title="大聪明 (H4Ha)">
+    </picture></a>
 <a href="https://github.com/comonetso">
     <img width=46 title="@comonetso" src="https://avatars.githubusercontent.com/u/76943037?first-contrib=2023.11.10-gizmo-ui-dark-mode-button-colors-broken-bug-report"></img></a>
 <a href="https://greasyfork.org/users/1220444-some-guy-9283">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
-    <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.11.19-hide-chat-btn-request" title="Some Guy 9283"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.11.19-hide-chat-btn-request" title="Some Guy 9283">
+    </picture></a>
 <a href="https://greasyfork.org/users/1182535-jianmin-liang">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
-    <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.11.27-new-ui-report" title="jianmin liang"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.11.27-new-ui-report" title="jianmin liang">
+    </picture></a>
 <a href="https://github.com/jaysqvl">
     <img width=46 title="@jaysqvl" src="https://avatars.githubusercontent.com/u/67295085?first-contrib=2023.11.28-new-ui-report"></img></a>
 <a href="https://github.com/KamiyaMinoru">
@@ -198,11 +204,15 @@ This script exists thanks to code, translations, issues & ideas from the followi
 <a href="https://github.com/OhneNot">
     <img width=46 title="@OhneNot" src="https://avatars.githubusercontent.com/u/14350406?first-contrib=2024.5.3-update-manifest-to-match-new-chatgpt.com-domain-alert"></img></a>
 <a href="https://greasyfork.org/users/1296464-brian-fennell">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
-    <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.5.3-new-chatgpt.com-domain-alert" title="Brian Fennell"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.5.3-new-chatgpt.com-domain-alert" title="Brian Fennell">
+    </picture></a>
 <a href="https://greasyfork.org/users/1009954-syz0528">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
-    <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.5.5-poe-widescreen-stopped-working-alert" title="syz0528"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.5.5-poe-widescreen-stopped-working-alert" title="syz0528">
+    </picture></a>
 <a href="https://github.com/urorwell">
     <img width=46 title="@urorwell" src="https://avatars.githubusercontent.com/u/22183609?first-contrib=2024.5.15-stopped-working-in-chatgpt-4o-alert"></img></a>
 <a href="https://github.com/l-jessie">
@@ -216,8 +226,10 @@ This script exists thanks to code, translations, issues & ideas from the followi
 <a href="https://github.com/auxten">
     <img width=46 title="@auxten" src="https://avatars.githubusercontent.com/u/240147?first-contrib=2024.6.14-auto-focus-chatbar-idea"></img></a>
 <a href="https://greasyfork.org/users/670188-hacker09">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
-    <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.27-portuguese-translation-corrections" title="hacker09"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=46 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.27-portuguese-translation-corrections" title="hacker09">
+    </picture></a>
 <a href="#">
     <img width=46 title="哦妈咪唛唛哄" src="https://lh3.googleusercontent.com/a-/ALV-UjXXqPAjJZb584F0VxUThtrsaOVBZCjODpY-zUNZIQWTyU9Lsns=s46-w46-h46?first-contrib=2024.8.26-stopped-working-on-chatgpt.com-alert"></img></a>
 <a href="https://github.com/svan-b">
@@ -241,7 +253,8 @@ This script exists thanks to code, translations, issues & ideas from the followi
 <a href="https://github.com/AliasUruz">
     <img width=46 title="@AliasUruz" src="https://avatars.githubusercontent.com/u/130197125?first-contrib=2024.12.1-new-chat-btn-stopped-working-bug-report"></img></a>
 <img title="Chrome Web Store Team" src="https://assets.chatgptwidescreen.com/images/icons/web-stores/chrome-web-store/icon48.png?e2a66b7&first-contrib=2024.12.7-hidden-footer-stopped-working-email">
-<a href="#"><img width=47 title="Copilot Autofix" src="https://github.githubassets.com/favicons/favicon.svg?first-contrib=2024.12.9-cmd-injection-autofix"></a>
+<a href="#">
+    <img width=47 title="Copilot Autofix" src="https://github.githubassets.com/favicons/favicon.svg?first-contrib=2024.12.9-cmd-injection-autofix"></a>
 <a href="https://github.com/wobfan">
     <img width=46 title="@wobfan" src="https://avatars.githubusercontent.com/u/30731925?first-contrib=2025.1.11-enable-widescreen-by-default-suggestion"></img></a>
 <a href="https://github.com/cleuton4k">

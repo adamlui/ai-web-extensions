@@ -645,9 +645,15 @@ This app exists thanks to code, translations, issues & ideas from the following 
 <a href="https://github.com/YashSoPro">
     <img width=50 title="@YashSoPro" src="https://avatars.githubusercontent.com/u/105553471?first-contrib=2024.02.15-openai-endpoint-broke-report"></img></a>
 <a href="https://greasyfork.org/users/670188-hacker09">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.5.30-render-markdown-idea" title="hacker09"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.5.30-render-markdown-idea" title="hacker09">
+    </picture></a>
 <a href="https://greasyfork.org/users/27097-grisipisimisi">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.20-asktip-disabled-localstorage-setting-not-sticky" title="GrisiPisiMisi"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.20-asktip-disabled-localstorage-setting-not-sticky" title="GrisiPisiMisi">
+    </picture></a>
 <a href="https://github.com/ChinaGodMan">
     <img width=50 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2024.9.7-improved-chinese-msgs"></img></a>
 <a href="https://github.com/pasThal">
@@ -655,7 +661,10 @@ This app exists thanks to code, translations, issues & ideas from the following 
 <a href="https://github.com/bao3">
     <img width=50 title="@bao3" src="https://avatars.githubusercontent.com/u/499205?first-contrib=2024.11.24-safari-ios-compatible-report"></img></a>
 <a href="https://greasyfork.org/users/1406320-happyhojjat">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2025.1.12-reported-googlegpt-reply-lang-setting-stopped-persisting" title="happyhojjat"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.bravegpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2025.1.12-reported-googlegpt-reply-lang-setting-stopped-persisting" title="happyhojjat">
+    </picture></a>
 <a href="https://github.com/vchong">
     <img width=50 title="@vchong" src="https://avatars.githubusercontent.com/u/7334750?first-contrib=2025.2.25-manual-get-mode-stopped-working-report"></img></a>
 <a href="https://github.com/cyber-sec0">

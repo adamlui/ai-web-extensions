@@ -124,9 +124,15 @@ This project exists thanks to code, testing, issues, translations & ideas from t
 <a href="https://github.com/sanchomuzax">
     <img width=50 title="@sanchomuzax" src="https://avatars.githubusercontent.com/u/2911588?first-contrib=2023.2.26-truncate-toggle-label-idea"></img></a>
 <a href="https://greasyfork.org/users/670188-hacker09">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.6.7-toggle-unreliable-alert" title="hacker09"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.6.7-toggle-unreliable-alert" title="hacker09">
+    </picture></a>
 <a href="https://greasyfork.org/users/9946-boris-2">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=50 src="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.6.17-bitdefender-false-positive-alert" title="boris 2"></picture></a>
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.6.17-bitdefender-false-positive-alert" title="boris 2">
+    </picture></a>
 <a href="https://github.com/schmorp">
     <img width=50 title="@schmorp" src="https://avatars.githubusercontent.com/u/42950150?first-contrib=2024.8.30-stopped-working-bug-report"></img></a>
 <a href="https://github.com/dliedke">
