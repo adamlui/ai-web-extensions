@@ -1,7 +1,7 @@
 // Requires lib/dom.js + site: env.site + sites
 
 window.ui = {
-    import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
+    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     async getScheme() {
         const site = this.imports.site,

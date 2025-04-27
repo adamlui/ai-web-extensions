@@ -1,7 +1,7 @@
 // Requires components/chatbar.js + lib/dom.js + site: env.site + sites
 
 window.styles = {
-    import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
+    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     getAllSelectors(obj) { // used in this.tweaks.update() for spam selectors
         return Object.values(obj).flatMap(val => typeof val == 'object' ? this.getAllSelectors(val) : val) },

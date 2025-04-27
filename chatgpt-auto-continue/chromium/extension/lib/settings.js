@@ -2,7 +2,7 @@
 
 window.config = {}
 window.settings = {
-    import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
+    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     controls: { // displays top-to-bottom in toolbar menu
         get autoScroll() { return { type: 'toggle', defaultVal: false,

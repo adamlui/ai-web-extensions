@@ -1,7 +1,7 @@
 // Requires lib/dom.js + components/buttons.js + app + env + sites
 
 window.tooltip = {
-    import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
+    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     getMsg(key) {
         return typeof GM_info != 'undefined' ?

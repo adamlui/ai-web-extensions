@@ -1,7 +1,7 @@
 // Requires app + env + notify + syncConfigToUI
 
 window.toggles = {
-    import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
+    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     getMsg(key) {
         return typeof GM_info != 'undefined' ?

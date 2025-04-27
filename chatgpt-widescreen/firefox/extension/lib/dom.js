@@ -1,5 +1,5 @@
 window.dom = {
-    import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
+    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     addRisingParticles(targetNode, { lightScheme = 'gray', darkScheme = 'white' } = {}) {
     // * Requires https://assets.aiwebextensions.com/styles/rising-particles/dist/<lightScheme>.min.css

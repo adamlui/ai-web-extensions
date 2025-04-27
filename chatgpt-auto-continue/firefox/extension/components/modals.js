@@ -1,7 +1,7 @@
 // Requires lib/chatgpt.js + lib/dom.js + app + env + updateCheck (Greasemonkey only)
 
 window.modals = {
-    import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
+    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     stack: [], // of types of undismissed modals
     get class() { return `${this.imports.app.slug}-modal` },

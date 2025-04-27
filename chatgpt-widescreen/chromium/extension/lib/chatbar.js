@@ -1,7 +1,7 @@
 // Requires lib/dom.js + components/<buttons|icons>.js + site: env.site + sites
 
 window.chatbar = {
-    import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
+    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     async get() {
         const site = this.imports.site

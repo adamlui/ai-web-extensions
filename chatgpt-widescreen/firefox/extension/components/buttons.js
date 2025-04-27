@@ -1,7 +1,7 @@
 // Requires lib/<chatgpt|dom|styles>.js + components/<chatbar|tooltip>.js + app + env + sites + toggleMode
 
 window.buttons = {
-    import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
+    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     types: [ 'fullscreen', 'fullWindow', 'widescreen', 'newChat' ], // right-to-left
     get class() { return `${this.imports.app.slug}-btn` },

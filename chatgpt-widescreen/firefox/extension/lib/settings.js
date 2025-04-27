@@ -2,7 +2,7 @@
 
 window.config = {}
 window.settings = {
-    import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
+    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     get browserwideKeys() {
         return [ 'extensionDisabled', 'fullscreen',

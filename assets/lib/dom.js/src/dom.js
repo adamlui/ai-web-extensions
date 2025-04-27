@@ -2,7 +2,7 @@
 // Source: https://github.com/adamlui/ai-web-extensions/blob/main/assets/lib/dom.js/src/dom.js
 
 window.dom = {
-    import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
+    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     addRisingParticles(targetNode, { lightScheme = 'gray', darkScheme = 'white' } = {}) {
     // * Requires https://assets.aiwebextensions.com/styles/rising-particles/dist/<lightScheme>.min.css
