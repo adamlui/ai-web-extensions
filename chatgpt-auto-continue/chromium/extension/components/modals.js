@@ -190,8 +190,9 @@ window.modals = {
     safeWinOpen(url) { open(url, '_blank', 'noopener') }, // to prevent backdoor vulnerabilities
 
     stylize() {
-        document.head.append(this.styles = dom.create.style(
-            `.${this.class} {` // modals
+        if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
+        this.styles.innerText = (
+                `.${this.class} {` // modals
               + 'user-select: none ; -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ;'
               + 'font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,'
                   + 'Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif ;'
@@ -230,7 +231,7 @@ window.modals = {
           + ( !this.imports.env.browser.isMobile ?
                 `.${this.class} .modal-buttons { margin-left: -13px !important }` : '' )
           + `.about-em { color: ${ this.imports.env.ui.scheme == 'dark' ? 'white' : 'green' } !important }`
-        ))
+        )
     },
 
     update: {

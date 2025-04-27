@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.27
+// @version             2025.4.27.1
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -696,7 +696,8 @@
         safeWinOpen(url) { open(url, '_blank', 'noopener') }, // to prevent backdoor vulnerabilities
 
         stylize() {
-            document.head.append(this.styles = dom.create.style(
+        if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
+        this.styles.innerText = (
                 `.${this.class} {` // modals
                   + 'user-select: none ; -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ;'
                   + 'font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,'
@@ -732,7 +733,7 @@
                   + `background-color: #${ env.ui.scheme == 'dark' ? '00cfff' : '9cdaff' } !important }`
               + ( !env.browser.isMobile ? `.${this.class} .modal-buttons { margin-left: -13px !important }` : '' )
               + `.about-em { color: ${ env.ui.scheme == 'dark' ? 'white' : 'green' } !important }`
-            ))
+            )
         },
 
         update: {
