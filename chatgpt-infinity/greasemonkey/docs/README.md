@@ -137,20 +137,25 @@ This project exists thanks to code, testing, issues, translations & ideas from t
 <a href="https://github.com/xspeed1989"><img width=47 title="@xspeed1989" src="https://avatars.githubusercontent.com/u/5162926?first-contrib=2023.11.27-ui-change-report"></img></a>
 <a href="https://github.com/Chipsum"><img width=47 title="@Chipsum" src="https://avatars.githubusercontent.com/u/37517008?first-contrib=2023.12.05-first-button-bug-report"></img></a>
 <a href="https://github.com/sanchomuzax"><img width=47 title="@sanchomuzax" src="https://avatars.githubusercontent.com/u/2911588?first-contrib=2023.2.26-truncate-toggle-label-idea"></img></a>
-<a href="https://greasyfork.org/users/1000404-misspent"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=47 src="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.7.29-share-box-popup-bug-alert" title="misspent"></picture></a>
+<a href="https://greasyfork.org/users/1000404-misspent">
+    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=47 src="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.7.29-share-box-popup-bug-alert" title="misspent"></picture></a>
 <a href="https://github.com/eltociear"><img width=47 title="@eltociear" src="https://avatars.githubusercontent.com/u/22633385?first-contrib=2024.6.22-add-japanese-readme"></img></a>
-<a href="https://greasyfork.org/users/936309-kskwin123"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=47 src="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.4-auto-start-feature-request" title="KSKwin123"></picture></a>
+<a href="https://greasyfork.org/users/936309-kskwin123">
+    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=47 src="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.4-auto-start-feature-request" title="KSKwin123"></picture></a>
 <a href="#"><img width=47 title="free palestine" src="https://lh3.googleusercontent.com/a/ACg8ocKGoXwUzABUkuXPI3tc-sMOrziK_6dyr1M7sPYOF54zfZcDFA=s50-w50-h50?first-contrib=2024.6.25-custom-gpt-support-request"></img></a>
-<a href="https://greasyfork.org/users/670188-hacker09"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=47 src="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.27-portuguese-translation-corrections" title="hacker09"></picture></a>
+<a href="https://greasyfork.org/users/670188-hacker09">
+    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=47 src="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.27-portuguese-translation-corrections" title="hacker09"></picture></a>
 <a href="https://github.com/Ivanaix"><img width=47 title="@Ivanaix" src="https://avatars.githubusercontent.com/u/175084540?first-contrib=2024.9.2-chat-reset-bug-alert"></img></a>
 <a href="https://github.com/ChinaGodMan"><img width=47 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2024.9.7-improved-chinese-msgs"></img></a>
 <a href="https://github.com/adityadeshmukh10"><img width=47 title="@adityadeshmukh10" src="https://avatars.githubusercontent.com/u/110899566?first-contrib=2024.10.15-doc-typo-fix"></img></a>
 <a href="#"><img width=47 title="Copilot Autofix" src="https://github.githubassets.com/favicons/favicon.svg?first-contrib=2024.12.9-cmd-injection-autofix"></a>
 <a href="https://github.com/9romise"><img width=47 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></img></a>
-<a href="https://github.com/cyber-sec0"><img width=50 title="@cyber-sec0" src="https://avatars.githubusercontent.com/u/91571849?first-contrib=2025.4.1-reported-kiwi-browser-no-longer-maintained"></img></a>
+<a href="https://github.com/cyber-sec0">
+    <img width=50 title="@cyber-sec0" src="https://avatars.githubusercontent.com/u/91571849?first-contrib=2025.4.1-reported-kiwi-browser-no-longer-maintained"></img></a>
 <a href="https://github.com/dependabot"><img width=47 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp"><img width=47 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></img></a>
-<a href="https://chatgpt.com"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/chatgpt/black-on-white/icon50.png"><img width=47 title="ChatGPT" src="https://assets.chatgptinfinity.com/images/icons/chatgpt/white-on-gray/icon50.png" title="ChatGPT"></picture></a>
+<a href="https://chatgpt.com">
+    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/chatgpt/black-on-white/icon50.png"><img width=47 title="ChatGPT" src="https://assets.chatgptinfinity.com/images/icons/chatgpt/white-on-gray/icon50.png" title="ChatGPT"></picture></a>
 
 <img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 

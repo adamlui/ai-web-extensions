@@ -106,7 +106,8 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 <a href="https://github.com/SapitoSucio"><img width=47 title="@SapitoSucio" src="https://avatars.githubusercontent.com/u/7357354?first-contrib=2023.10.31-observer-freeze-bug-report"></img></a>
 <a href="https://github.com/whz-pku"><img width=47 title="@whz-pku" src="https://avatars.githubusercontent.com/u/158176338?first-contrib=2024.3.1-button-click-fails-bug-report"></img></a>
 <a href="https://github.com/vw911"><img width=47 title="@vw911" src="https://avatars.githubusercontent.com/u/144692196?first-contrib=2024.5.14-post-gpt-4o-ui-update-broke-script-alert"></img></a>
-<a href="https://greasyfork.org/users/670188-hacker09"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=47 src="https://assets.chatgptautocontinue.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.27-portuguese-translation-corrections" title="hacker09"></picture></a>
+<a href="https://greasyfork.org/users/670188-hacker09">
+    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/web-stores/greasy-fork/white/icon50.png"><img width=47 src="https://assets.chatgptautocontinue.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.27-portuguese-translation-corrections" title="hacker09"></picture></a>
 <a href="https://github.com/ChinaGodMan"><img width=47 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2024.9.7-improved-chinese-msgs"></img></a>
 <a href="https://github.com/Mailootje"><img width=47 title="@Mailootje" src="https://avatars.githubusercontent.com/u/69102590?first-contrib=2024.9.15-stopped-working-alert"></img></a>
 <a href="https://github.com/andrew-bierman"><img width=47 title="@andrew-bierman" src="https://avatars.githubusercontent.com/u/94939237?first-contrib=2024.9.25-dark-reader-interference-alert"></img></a>
@@ -115,7 +116,11 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 <a href="https://github.com/9romise"><img width=47 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></img></a>
 <a href="https://github.com/ImgBotApp"><img width=47 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></img></a>
 <a href="https://github.com/dependabot"><img width=47 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
-<a href="https://chatgpt.com"><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/chatgpt/black-on-white/icon50.png"><img width=47 title="ChatGPT" src="https://assets.chatgptautocontinue.com/images/icons/chatgpt/white-on-gray/icon50.png"></img></picture></a>
+<a href="https://chatgpt.com">
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/chatgpt/black-on-white/icon50.png">
+        <img width=47 title="ChatGPT" src="https://assets.chatgptautocontinue.com/images/icons/chatgpt/white-on-gray/icon50.png"></img>
+    </picture></a>
 
 #
 
