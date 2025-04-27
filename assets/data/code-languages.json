@@ -231,9 +231,11 @@
   "TOML": { "hljsSlug": "toml", "fileExtension": "toml" },
   "TP": { "hljsSlug": "tp", "fileExtension": "tp" },
   "Transact-SQL": { "hljsSlug": "tsql", "fileExtension": "sql" },
+  "TTCN-3": { "hljsSlug": "ttcn", "fileExtension": "ttcn" },
   "Twig": { "hljsSlug": "twig", "fileExtension": "twig" },
   "TypeScript": { "hljsSlug": "typescript", "fileExtension": "ts" },
   "Unicorn Rails log": { "hljsSlug": "unicorn-rails-log", "fileExtension": "log" },
+  "Unison": { "hljsSlug": "unison", "fileExtension": "unison" },
   "Vala": { "hljsSlug": "vala", "fileExtension": "vala" },
   "VB.Net": { "hljsSlug": "vbnet", "fileExtension": "vb" },
   "VBA": { "hljsSlug": "vba", "fileExtension": "vba" },
@@ -241,6 +243,8 @@
   "Verilog": { "hljsSlug": "verilog", "fileExtension": "v" },
   "VHDL": { "hljsSlug": "vhdl", "fileExtension": "vhdl" },
   "Vim Script": { "hljsSlug": "vim", "fileExtension": "vim" },
+  "VoltScript": { "hljsSlug": "voltscript", "fileExtension": "volt" },
+  "WGSL": { "hljsSlug": "wgsl", "fileExtension": "wgsl" },
   "X#": { "hljsSlug": "xsharp", "fileExtension": "prg" },
   "X++": { "hljsSlug": "xpp", "fileExtension": "xpp" },
   "x86 Assembly": { "hljsSlug": "x86asm", "fileExtension": "asm" },
@@ -250,5 +254,6 @@
   "XQuery": { "hljsSlug": "xquery", "fileExtension": "xq" },
   "YAML": { "hljsSlug": "yaml", "fileExtension": "yml" },
   "ZenScript": { "hljsSlug": "zenscript", "fileExtension": "zs" },
-  "Zephir": { "hljsSlug": "zephir", "fileExtension": "zep" }
+  "Zephir": { "hljsSlug": "zephir", "fileExtension": "zep" },
+  "Zig": { "hljsSlug": "zig", "fileExtension": "zig" }
 }
