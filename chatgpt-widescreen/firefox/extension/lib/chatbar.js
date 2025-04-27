@@ -4,9 +4,9 @@ window.chatbar = {
     import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     async get() {
-        const site = this.imports.site
+        const { site, sites: { [site]: { selectors }}} = this.imports
         return site == 'chatgpt' ? document.querySelector('form[data-type=unified-composer] > div')
-             : (await dom.get.loadedElem(this.imports.sites[site].selectors.input)).parentNode.parentNode
+             : (await dom.get.loadedElem(selectors.input)).parentNode.parentNode
     },
 
     is: {
@@ -20,9 +20,8 @@ window.chatbar = {
     },
 
     async reset() { // all tweaks for popup master toggle-off
-        const site = this.imports.site
         const chatbarDiv = await this.get() ; if (!chatbarDiv) return
-        const selectors = this.imports.sites[site].selectors
+        const { site, sites: { [site]: { selectors }}} = this.imports
         if (site == 'chatgpt') { // restore chatbar inner width
             const inputArea = chatbarDiv.querySelector(selectors.input)
             if (inputArea) inputArea.style.width = inputArea.parentNode.style.width = 'initial'
@@ -47,9 +46,8 @@ window.chatbar = {
     },
 
     async tweak() { // update ChatGPT chatbar inner width or hack Perplexity/Poe buttons
-        const site = this.imports.site
         const chatbarDiv = await this.get() ; if (!chatbarDiv) return
-        const selectors = this.imports.sites[site].selectors
+        const { site, sites: { [site]: { selectors }}} = this.imports
         if (site == 'chatgpt') { // update chatbar inner width
             const inputArea = chatbarDiv.querySelector(selectors.input) ; if (!inputArea) return
             if (chatgpt.canvasIsOpen()) inputArea.parentNode.style.width = '100%'

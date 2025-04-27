@@ -13,6 +13,7 @@ window.toggles = {
         get class() { return `${toggles.imports.app.slug}-sidebar-toggle` },
 
         create() {
+            const { env: { ui: { firstLink }}, notify, syncConfigToUI } = toggles.imports
 
             // Init toggle elems
             this.div = document.createElement('div') ; this.div.className = this.class
@@ -28,11 +29,10 @@ window.toggles = {
 
             // Stylize elems
             this.stylize() // create/append stylesheet
-            if (toggles.imports.env.ui.firstLink) { // borrow/assign classes from sidebar elems
-                const firstIcon = toggles.imports.env.ui.firstLink.querySelector('div:first-child'),
-                      firstLabel = toggles.imports.env.ui.firstLink.querySelector('div:nth-child(2)')
-                this.div.classList.add(
-                    ...toggles.imports.env.ui.firstLink.classList, ...(firstLabel?.classList || []))
+            if (firstLink) { // borrow/assign classes from sidebar elems
+                const firstIcon = firstLink.querySelector('div:first-child'),
+                      firstLabel = firstLink.querySelector('div:nth-child(2)')
+                this.div.classList.add(...firstLink.classList, ...(firstLabel?.classList || []))
                 this.div.querySelector('img')?.classList.add(...(firstIcon?.classList || []))
             }
 
@@ -45,13 +45,14 @@ window.toggles = {
                     `var(--sidebar-surface-${ type == 'mouseover' ? 'secondary' : 'primary' })`)
             this.div.onclick = () => { // toggle Infinity mode
                 settings.save('infinityMode', !this.toggleInput.checked)
-                toggles.imports.syncConfigToUI({ updatedKey: 'infinityMode' })
-                toggles.imports.notify(`${toggles.getMsg('menuLabel_infinityMode')}: ${
+                syncConfigToUI({ updatedKey: 'infinityMode' })
+                notify(`${toggles.getMsg('menuLabel_infinityMode')}: ${
                     toggles.getMsg(`state_${ config.infinityMode ? 'on' : 'off' }`).toUpperCase()}`)
             }
         },
 
         stylize() {
+            const { env: { browser: { isMobile }, ui: { firstLink }}} = toggles.imports
             document.head.append(this.styles = dom.create.style(
                 `:root { /* vars */
                     --switch-enabled-bg-color: #ad68ff ; --switch-disabled-bg-color: #ccc ;
@@ -71,9 +72,7 @@ window.toggles = {
                 .${this.class} > span { /* switch span */
                     position: relative ; width: 30px ; height: 15px ; border-radius: 28px ;
                     background-color: var(--switch-disabled-bg-color) ;
-                    bottom: ${ toggles.imports.env.ui.firstLink ? 0 : -0.15 }em ;
-                    left: ${ toggles.imports.env.browser.isMobile ? 169
-                           : toggles.imports.env.ui.firstLink ? 154 : 160 }px ;
+                    bottom: ${ firstLink ? 0 : -0.15 }em ; left: ${ isMobile ? 169 : firstLink ? 154 : 160 }px ;
                     transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
                         -o-transition: 0.4s ; -ms-transition: 0.4s }
                 .${this.class} > span.enabled { /* switch on */
@@ -97,10 +96,9 @@ window.toggles = {
                     transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
                         -o-transition: 0.4s ; -ms-transition: 0.4s }
                 .${this.class} > label { /* toggle label */
-                    cursor: pointer ; overflow: hidden ; text-overflow: ellipsis ;
-                    width: ${ toggles.imports.env.browser.isMobile ? 201 : 148 }px ;
-                    margin-left: -${ toggles.imports.env.ui.firstLink ? 41 : 23 }px ; /* left-shift to navicon */
-                    ${ toggles.imports.env.ui.firstLink ? '' : 'font-size: 0.875rem ; font-weight: 600' }}`
+                    cursor: pointer ; overflow: hidden ; text-overflow: ellipsis ; width: ${ isMobile ? 201 : 148 }px ;
+                    margin-left: -${ firstLink ? 41 : 23 }px ; /* left-shift to navicon */
+                    ${ firstLink ? '' : 'font-size: 0.875rem ; font-weight: 600' }}`
 
                 // Dark scheme mods
               + `.${this.class}.dark > span.enabled { /* switch on */

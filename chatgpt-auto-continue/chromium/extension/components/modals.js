@@ -15,6 +15,7 @@ window.modals = {
     },
 
     about() {
+        const { app, env: { browser: { isPortrait }, ui: { scheme }}} = this.imports
 
         // Init buttons
         const modalBtns = [ function getSupport(){}, function moreAIextensions(){} ]
@@ -26,29 +27,28 @@ window.modals = {
 
         // Show modal
         const labelStyles = 'text-transform: uppercase ; font-size: 17px ; font-weight: bold ;'
-                          + `color: ${ this.imports.env.ui.scheme == 'dark' ? 'white' : '#494141' }`
+                          + `color: ${ scheme == 'dark' ? 'white' : '#494141' }`
         const aboutModal = modals.alert(
-            `${this.imports.app.symbol} ${this.getMsg('appName')}`, // title
+            `${app.symbol} ${this.getMsg('appName')}`, // title
             `<span style="${labelStyles}">🧠 ${this.getMsg('about_author')}:</span> `
-                + `<a href="${this.imports.app.author.url}">${this.getMsg('appAuthor')}</a> ${this.getMsg('about_and')}`
-                    + ` <a href="${this.imports.app.urls.contributors}">${this.getMsg('about_contributors')}</a>\n`
+                + `<a href="${app.author.url}">${this.getMsg('appAuthor')}</a> ${this.getMsg('about_and')}`
+                    + ` <a href="${app.urls.contributors}">${this.getMsg('about_contributors')}</a>\n`
             + `<span style="${labelStyles}">🏷️ ${this.getMsg('about_version')}:</span> `
-                + `<span class="about-em">${this.imports.app.version}</span>\n`
+                + `<span class="about-em">${app.version}</span>\n`
             + `<span style="${labelStyles}">📜 ${this.getMsg('about_openSourceCode')}:</span> `
-                + `<a href="${this.imports.app.urls.gitHub}" target="_blank" rel="nopener">`
-                    + this.imports.app.urls.gitHub + '</a>\n'
+                + `<a href="${app.urls.gitHub}" target="_blank" rel="nopener">`
+                    + app.urls.gitHub + '</a>\n'
             + `<span style="${labelStyles}">⚡ ${this.getMsg('about_poweredBy')}:</span> `
-                + `<a href="${this.imports.app.urls.chatgptJS}" target="_blank" rel="noopener">chatgpt.js</a>`
-                    + ` v${this.imports.app.chatgptJSver}`,
+                + `<a href="${app.urls.chatgptJS}" target="_blank" rel="noopener">chatgpt.js</a>`
+                    + ` v${app.chatgptJSver}`,
             modalBtns, '', 701
         )
 
         // Format text
         aboutModal.querySelector('h2').style.cssText = (
             'text-align: center ; font-size: 51px ; line-height: 46px ; padding: 15px 0' )
-        aboutModal.querySelector('p').style.cssText = (
-            'text-align: center ; overflow-wrap: anywhere ;'
-          + `margin: ${ this.imports.env.browser.isPortrait ? '6px 0 -16px' : '3px 0 21px' }` )
+        aboutModal.querySelector('p').style.cssText = `
+            text-align: center ; overflow-wrap: anywhere ; margin: ${ isPortrait ? '6px 0 -16px' : '3px 0 29px' }`
 
         // Hack buttons
         aboutModal.querySelector('.modal-buttons').style.justifyContent = 'center'
@@ -60,12 +60,12 @@ window.modals = {
             if (/support|rate|discuss|extensions/i.test(btn.textContent)) {
                 btn.replaceWith(btn = btn.cloneNode(true))
                 btn.onclick = () => this.safeWinOpen(
-                    btn.textContent.includes(this.getMsg('btnLabel_getSupport')) ? this.imports.app.urls.support
-                  : btn.textContent.includes(this.getMsg('btnLabel_rateUs')) ? this.imports.app.urls.review[
+                    btn.textContent.includes(this.getMsg('btnLabel_getSupport')) ? app.urls.support
+                  : btn.textContent.includes(this.getMsg('btnLabel_rateUs')) ? app.urls.review[
                         this.runtime.includes('Edge') ? 'edge'
                       : this.runtime.includes('Firefox') ? 'firefox' : 'chrome']
-                  : btn.textContent.includes(this.getMsg('btnLabel_discuss')) ? this.imports.app.urls.discuss
-                  : this.imports.app.urls.relatedExtensions
+                  : btn.textContent.includes(this.getMsg('btnLabel_discuss')) ? app.urls.discuss
+                  : app.urls.relatedExtensions
                 )
             }
 
@@ -96,6 +96,7 @@ window.modals = {
     },
 
     donate() {
+        const { app, env: { ui: { scheme }}} = this.imports
 
         // Show modal
         const donateModal = modals.alert(
@@ -109,9 +110,9 @@ window.modals = {
                     + `${this.getMsg('alert_directlySupports')}.</p>`
                 + `<p>${this.getMsg('alert_tyForSupport')}!</p>`
                 + '<img src="https://cdn.jsdelivr.net/gh/adamlui/adamlui/images/siggie/'
-                    + `${ this.imports.env.ui.scheme == 'dark' ? 'white' : 'black' }.png" `
+                    + `${ scheme == 'dark' ? 'white' : 'black' }.png" `
                     + 'style="height: 54px ; margin: 5px 0 -2px 5px"></img>'
-                + `<p>—<b><a target="_blank" rel="noopener" href="${this.imports.app.author.url}">`
+                + `<p>—<b><a target="_blank" rel="noopener" href="${app.author.url}">`
                     + `${this.getMsg('appAuthor')}</a></b>, ${this.getMsg('about_author').toLowerCase()}</p>`,
             [ // buttons
                 function paypal(){},
@@ -131,7 +132,7 @@ window.modals = {
             // Replace link buttons w/ clones that don't dismiss modal
             if (!/dismiss/i.test(btn.textContent)) {
                 btn.replaceWith(btn = btn.cloneNode(true))
-                btn.onclick = () => this.safeWinOpen(this.imports.app.urls.donate[
+                btn.onclick = () => this.safeWinOpen(app.urls.donate[
                     btn.textContent == 'Cash App' ? 'cashApp'
                   : btn.textContent == 'Github Sponsors' ? 'gitHub' : 'payPal'
                 ])
@@ -190,30 +191,28 @@ window.modals = {
     safeWinOpen(url) { open(url, '_blank', 'noopener') }, // to prevent backdoor vulnerabilities
 
     stylize() {
+        const { env: { browser: { isMobile }, ui: { scheme }}} = this.imports
         if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
         this.styles.innerText = (
-                `.${this.class} {` // modals
+            `.${this.class} {` // modals
               + 'user-select: none ; -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ;'
               + 'font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,'
                   + 'Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif ;'
               + 'padding: 20px 25px 24px 25px !important ; font-size: 20px ;'
-              + `color: ${ this.imports.env.ui.scheme == 'dark' ? 'white' : 'black' } !important ;`
+              + `color: ${ scheme == 'dark' ? 'white' : 'black' } !important ;`
               + `background-image: linear-gradient(180deg, ${
-                     this.imports.env.ui.scheme == 'dark' ? '#99a8a6 -200px, black 200px'
-                                                               : '#b6ebff -296px, white 171px' }) }`
+                     scheme == 'dark' ? '#99a8a6 -200px, black 200px' : '#b6ebff -296px, white 171px' }) }`
           + `.${this.class} [class*=modal-close-btn] {`
               + 'position: absolute !important ; float: right ; top: 14px !important ; right: 16px !important ;'
               + 'cursor: pointer ; width: 33px ; height: 33px ; border-radius: 20px }'
           + `.${this.class} [class*=modal-close-btn] svg { height: 10px }`
           + `.${this.class} [class*=modal-close-btn] path {`
-              + `${ this.imports.env.ui.scheme == 'dark' ? 'stroke: white ; fill: white'
-                                                              : 'stroke: #9f9f9f ; fill: #9f9f9f' }}`
-          + ( this.imports.env.ui.scheme == 'dark' ?  // invert dark mode hover paths
+              + `${ scheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: #9f9f9f ; fill: #9f9f9f' }}`
+          + ( scheme == 'dark' ?  // invert dark mode hover paths
                 `.${this.class} [class*=modal-close-btn]:hover path { stroke: black ; fill: black }` : '' )
           + `.${this.class} [class*=modal-close-btn]:hover { background-color: #f2f2f2 }` // hover underlay
           + `.${this.class} [class*=modal-close-btn] svg { margin: 11.5px }` // center SVG for hover underlay
-          + `.${this.class} a {`
-              + `color: #${ this.imports.env.ui.scheme == 'dark' ? '00cfff' : '1e9ebb' } !important }`
+          + `.${this.class} a { color: #${ scheme == 'dark' ? '00cfff' : '1e9ebb' } !important }`
           + `.${this.class} h2 { font-weight: bold }`
           + `.${this.class} button {`
               + '--btn-transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out ;'
@@ -223,14 +222,13 @@ window.modals = {
                   + '-webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;'
                   + '-o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) ;'
               + 'cursor: pointer !important ;' // add finger cursor
-              + `border: 1px solid ${ this.imports.env.ui.scheme == 'dark' ? 'white' : 'black' } !important ;`
+              + `border: 1px solid ${ scheme == 'dark' ? 'white' : 'black' } !important ;`
               + 'padding: 8px !important ; min-width: 102px }' // resize
           + `.${this.class} button:hover {` // add zoom, re-scheme
               + 'transform: scale(1.055) ; color: black !important ;'
-              + `background-color: #${ this.imports.env.ui.scheme == 'dark' ? '00cfff' : '9cdaff' } !important }`
-          + ( !this.imports.env.browser.isMobile ?
-                `.${this.class} .modal-buttons { margin-left: -13px !important }` : '' )
-          + `.about-em { color: ${ this.imports.env.ui.scheme == 'dark' ? 'white' : 'green' } !important }`
+              + `background-color: #${ scheme == 'dark' ? '00cfff' : '9cdaff' } !important }`
+          + ( !isMobile ? `.${this.class} .modal-buttons { margin-left: -13px !important }` : '' )
+          + `.about-em { color: ${ scheme == 'dark' ? 'white' : 'green' } !important }`
         )
     },
 

@@ -57,7 +57,7 @@ window.buttons = {
     },
 
     stylize() {
-        const site = this.imports.env.site
+        const { env: { site }, sites: { [site]: { selectors }}} = this.imports
         document.head.append(this.styles = dom.create.style(`
             .${this.class} {
                 cursor: pointer ; position: relative ;
@@ -67,7 +67,7 @@ window.buttons = {
                 ${ /chatgpt|perplexity/.test(site) ? // remove overlay
                     'background-color: transparent ; border-color: transparent ;' : '' }
             }
-            ${ this.imports.sites[site].selectors.sidebar ? // hide FW btn when window skinny on sites where sync req'd
+            ${ selectors.sidebar ? // hide FW btn when window skinny on sites where sync req'd
                 `@media (max-width: 768px) {
                     #fullWindow-btn { display: none }
                     #widescreen-btn { margin-right: ${ site == 'perplexity' ? 9 : 19 }px }}`
@@ -77,15 +77,14 @@ window.buttons = {
 
     async create() {
         if (!this.styles) this.stylize()
-        const site = this.imports.env.site, hasTallChatbar = this.imports.env.ui.hasTallChatbar,
-              btnSelectors = this.imports.sites[site].selectors.btns
+        const { env: { site, ui: { hasTallChatbar }}, sites: { [site]: { selectors }}, toggleMode } = this.imports
         if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.get.rightBtn() // for rOffset + styles
         const validBtnTypes = this.get.types.valid()
         const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? -16.5 : -8.85
         const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4
             : hasTallChatbar ? ( this.rightBtn.getBoundingClientRect().width +2 ) *(
-                document.querySelector(/\(([^()]+)\)$/.exec(btnSelectors.dictate)?.[1]) // Dictate icon exists
-                    || btnSelectors.login && location.search.includes('temporary-chat=true') // or guest Temp chat
+                document.querySelector(/\(([^()]+)\)$/.exec(selectors.btns.dictate)?.[1]) // Dictate icon exists
+                    || selectors.btns.login && location.search.includes('temporary-chat=true') // or guest Temp chat
                         ? 2 : 1 // double the offset, else don't
                 ) -84
             : -0.25 // skinny ChatGPT chatbar
@@ -106,16 +105,16 @@ window.buttons = {
             btn.onmouseenter = btn.onmouseleave = tooltip.toggle
             btn.onclick = () => {
                 if (btnType == 'newChat') {
-                    document.querySelector(this.imports.sites[site].selectors.btns.newChat)?.click()
+                    document.querySelector(selectors.btns.newChat)?.click()
                     btn.style.cursor = 'default' ; btn.dispatchEvent(new Event('mouseleave')) // disable finger/tooltip
                     setTimeout(() => { // restore finger/tooltip after 1s
                         btn.style.cursor = 'pointer'
                         if (btn.matches(':hover')) btn.dispatchEvent(new Event('mouseenter'))
                     }, 1000)
                 } else { // toggle mode
-                    this.imports.toggleMode(btnType)
+                    toggleMode(btnType)
                     if (btnType == 'fullWindow' // disable right btn tooltips on Perplexity homepage to avoid v-flicker
-                            && this.imports.env.site == 'perplexity' && location.pathname == '/') {
+                            && site == 'perplexity' && location.pathname == '/') {
                         tooltip.div.style.opacity = 0;
                         ['fullWindow', 'fullscreen'].forEach(btnType => {
                             const btn = this[btnType]
@@ -131,8 +130,9 @@ window.buttons = {
 
     get: {
         async rightBtn() {
-            const btnSelectors = buttons.imports.sites[buttons.imports.env.site].selectors.btns
-            return await dom.get.loadedElem(`${btnSelectors.send}, ${ btnSelectors.voice || btnSelectors.dictation }`)
+            const { env: { site }, sites: { [site]: { selectors }}} = buttons.imports
+            return await dom.get.loadedElem(
+                `${selectors.btns.send}, ${ selectors.btns.voice || selectors.btns.dictation }`)
         },
 
         types: {

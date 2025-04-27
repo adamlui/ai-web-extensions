@@ -34,7 +34,8 @@ window.tooltip = {
 
     async update(btn) { // text & position
         if (!this.div) return // since nothing to update
-        const btnType = btn.id.replace(/-btn$/, ''), site = this.imports.env.site
+        const { env: { site }, sites: { [site]: { selectors }}} = this.imports
+        const btnType = btn.id.replace(/-btn$/, '')
         const rects = {
             btn: buttons[btnType]?.getBoundingClientRect(), chatbar: (await chatbar.get())?.getBoundingClientRect() }
         this.div.innerText = this.getMsg(`tooltip_${btnType}${
@@ -47,7 +48,7 @@ window.tooltip = {
             site == 'perplexity' ? (
                 location.pathname != '/' ? '64px' // not homepage
                   : document.querySelector( // logged-in homepage or viewport <769px
-                        this.imports.sites.perplexity.selectors.btns.settings) || innerWidth < 769 ? 'revert-layer'
+                        selectors.btns.settings) || innerWidth < 769 ? 'revert-layer'
                                          : '51vh' // logged-out homepage
             ) : site == 'poe' ? '50px' : '42px'
         )

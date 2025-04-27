@@ -27,7 +27,7 @@ window.styles = {
 
     tweaks: {
         update() {
-            const { site, sites: { [site]: { selectors }}} = styles.imports;
+            const { site, sites: { [site]: { selectors }}} = styles.imports
             if (!this.node) document.head.append(this.node = dom.create.style())
             this.node.innerText = `
                 ${ site == 'chatgpt' ?
