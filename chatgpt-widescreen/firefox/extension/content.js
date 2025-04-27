@@ -9,16 +9,13 @@
         postMessage({ source: 'chatgpt-widescreen/*/extension/content.js' }, location.origin)
     })
 
-    // Add CHROME MSG listener for background/popup requests to sync modes/settings
-    chrome.runtime.onMessage.addListener(async req => {
-        if (req.action == 'notify')
-            notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => req.options[arg]))
-        else if (req.action == 'alert')
-            modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => req.options[arg]))
-        else if (req.action == 'showAbout') {
-            if (env.site == 'chatgpt') await chatgpt.isLoaded()
-            modals.open('about')
-        } else if (req.action == 'syncConfigToUI') sync.configToUI(req.options)
+    chrome.runtime.onMessage.addListener(({ action, options }) => {
+        ({
+            notify: () => notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
+            alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
+            showAbout: async () => { if (env.site == 'chatgpt') await chatgpt.isLoaded() ; modals.open('about') },
+            syncConfigToUI: () => sync.configToUI(options)
+        }[action]?.())
     })
 
     // Import JS resources
