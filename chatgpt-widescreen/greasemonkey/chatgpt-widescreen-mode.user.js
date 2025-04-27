@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.26.3
+// @version             2025.4.27
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -717,59 +717,56 @@
     const tweaksStyle = dom.create.style() ; env.ui.hasTallChatbar = await chatbar.is.tall()
     buttons.import({ app, env, sites, toggleMode, tweaksStyle })
 
-    const update = {
+    const stylize = {
 
-        style: {
+        chatbar() {
+            chatbarStyle.innerText = (
+                env.site == 'chatgpt' ? ( config.widerChatbox ? ''
+                        : `main form { max-width: ${chatbar.nativeWidth}px !important ; margin: auto }`
+                ) : env.site == 'poe' ? ( config.widerChatbox && config.widescreen ?
+                        '[class^=ChatPageMainFooter_footerInner] { width: 98% ; margin-right: 15px }' : ''
+                ) : ''
+            )
+        },
 
-            chatbar() {
-                chatbarStyle.innerText = (
-                    env.site == 'chatgpt' ? ( config.widerChatbox ? ''
-                          : `main form { max-width: ${chatbar.nativeWidth}px !important ; margin: auto }`
-                    ) : env.site == 'poe' ? ( config.widerChatbox && config.widescreen ?
-                          '[class^=ChatPageMainFooter_footerInner] { width: 98% ; margin-right: 15px }' : ''
-                    ) : ''
-                )
-            },
+        tweaks() {
+            const selectors = sites[env.site].selectors
+            tweaksStyle.innerText = (
+                ( env.site == 'chatgpt' ?
+                        `[id$=-btn]:hover { opacity: 100% !important } /* prevent chatbar btn dim on hover */
+                        main { overflow: clip !important }` // prevent h-scrollbar...
+                            // ...on sync.mode('fullWindow) => delayed chatbar.tweak()
+                : env.site == 'perplexity' ? '[id$=-btn]:hover { background: none !important }' // prevent overlay
+                : '' )
+                + ( config.tcbDisabled == false ? tcbStyle : '' ) // expand text input vertically
+                + ( config.hiddenHeader ? hhStyle : '' ) // hide header
+                + ( config.hiddenFooter ? hfStyle : '' ) // hide footer
+                + `#newChat-btn { display: ${ config.ncbDisabled == true ? 'none' : 'flex' }}`
+                + ( config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
+                    `.${buttons.class} { will-change: transform } /* prevent wobble */
+                        .${buttons.class}:hover { transform: scale(${ env.site == 'poe' ? 1.15 : 1.285 }) }` )
+                + ( config.blockSpamDisabled ? ''
+                    : `${getAllSelectors(selectors.spam).join(',')} { display: none !important }
+                        body { pointer-events: unset !important }` /* free click lock from blocking modals */ )
+            )
+            function getAllSelectors(obj) {
+                return Object.values(obj).flatMap(val => typeof val == 'object' ? getAllSelectors(val) : val) }
+        },
 
-            tweaks() {
-                const selectors = sites[env.site].selectors
-                tweaksStyle.innerText = (
-                    ( env.site == 'chatgpt' ?
-                           `[id$=-btn]:hover { opacity: 100% !important } /* prevent chatbar btn dim on hover */
-                            main { overflow: clip !important }` // prevent h-scrollbar...
-                                // ...on sync.mode('fullWindow) => delayed chatbar.tweak()
-                    : env.site == 'perplexity' ? '[id$=-btn]:hover { background: none !important }' // prevent overlay
-                    : '' )
-                  + ( config.tcbDisabled == false ? tcbStyle : '' ) // expand text input vertically
-                  + ( config.hiddenHeader ? hhStyle : '' ) // hide header
-                  + ( config.hiddenFooter ? hfStyle : '' ) // hide footer
-                  + `#newChat-btn { display: ${ config.ncbDisabled == true ? 'none' : 'flex' }}`
-                  + ( config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
-                        `.${buttons.class} { will-change: transform } /* prevent wobble */
-                         .${buttons.class}:hover { transform: scale(${ env.site == 'poe' ? 1.15 : 1.285 }) }` )
-                  + ( config.blockSpamDisabled ? ''
-                        : `${getAllSelectors(selectors.spam).join(',')} { display: none !important }
-                          body { pointer-events: unset !important }` /* free click lock from blocking modals */ )
-                )
-                function getAllSelectors(obj) {
-                    return Object.values(obj).flatMap(val => typeof val == 'object' ? getAllSelectors(val) : val) }
-            },
-
-            widescreen() {
-                widescreenStyle.innerText = (
-                    env.site == 'chatgpt' ?
-                       `.text-base { max-width: 100% !important } /* widen outer container */
-                        .tableContainer { min-width: 100% }` // widen tables
-                    : env.site == 'perplexity' ?
-                       `.max-w-threadWidth, .max-w-threadContentWidth { /* widen limiting Page/Answer containers */
-                            max-width: 100% }
-                        @media (min-width: 769px) { .col-span-8 { width: 151% }} /* widen inner-left container */
-                        .col-span-4:has([class*=sticky]) { display: none }` // hide right-bar
-                    : env.site == 'poe' ?
-                       `[class*=ChatMessagesView] { width: 100% !important } /* widen outer container */
-                        [class^=Message] { max-width: 100% !important }` // widen speech bubbles
-                  : '' )
-            }
+        widescreen() {
+            widescreenStyle.innerText = (
+                env.site == 'chatgpt' ?
+                    `.text-base { max-width: 100% !important } /* widen outer container */
+                    .tableContainer { min-width: 100% }` // widen tables
+                : env.site == 'perplexity' ?
+                    `.max-w-threadWidth, .max-w-threadContentWidth { /* widen limiting Page/Answer containers */
+                        max-width: 100% }
+                    @media (min-width: 769px) { .col-span-8 { width: 151% }} /* widen inner-left container */
+                    .col-span-4:has([class*=sticky]) { display: none }` // hide right-bar
+                : env.site == 'poe' ?
+                    `[class*=ChatMessagesView] { width: 100% !important } /* widen outer container */
+                    [class^=Message] { max-width: 100% !important }` // widen speech bubbles
+                : '' )
         }
     }
 
@@ -796,7 +793,7 @@
                     mode == 'fullWindow' && ( config.widescreen || config.fullerWindows )
                         && config.widerChatbox ? 111 : 0) // delay if toggled to/from active WCB to avoid wrong width
                 else if (env.site == 'perplexity' || env.site == 'poe' && config.widerChatbox)
-                    update.style.chatbar() // toggle full-width Perplexity chatbar or sync Poe WCB
+                    stylize.chatbar() // toggle full-width Perplexity chatbar or sync Poe WCB
                 notify(`${app.msgs[`mode_${mode}`]} ${app.msgs[`state_${ state ? 'on' : 'off' }`].toUpperCase()}`)
             }
             config.modeSynced = true ; setTimeout(() => config.modeSynced = false, 100) // prevent repetition
@@ -817,8 +814,8 @@
                         supressNotifs() ; toggleMode('fullWindow') }
                     sync.fullerWin() // sync Fuller Windows
                 }
-                update.style.tweaks() // sync TCB/NCB/HH/HF/BA
-                update.style.chatbar() // sync WCB
+                stylize.tweaks() // sync TCB/NCB/HH/HF/BA
+                stylize.chatbar() // sync WCB
                 chatbar.tweak() // update ChatGPT chatbar inner width or hack other sites' button positions
                 buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
@@ -889,14 +886,14 @@
     const hfStyle = `${sites[env.site].selectors.footer}${ // hide footer
         /chatgpt|perplexity/.test(env.site) ? `, ${sites[env.site].selectors.btns.help}` : '' } { display: none }`
 
-    update.style.tweaks() ; document.head.append(tweaksStyle);
+    stylize.tweaks() ; document.head.append(tweaksStyle);
 
     // Add RISING PARTICLES styles
     ['rpg', 'rpw'].forEach(cssType => document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
     // Create WIDESCREEN style
     const widescreenStyle = dom.create.style(null, { id: 'widescreen-mode' })
-    update.style.widescreen()
+    stylize.widescreen()
 
     // Create FULL-WINDOW style
     const fullWinStyle = dom.create.style(
@@ -904,7 +901,7 @@
 
     // Create/append CHATBAR style
     const chatbarStyle = dom.create.style()
-    update.style.chatbar() ; document.head.append(chatbarStyle)
+    stylize.chatbar() ; document.head.append(chatbarStyle)
 
     // Restore PREV SESSION's state
     if (!config[`${env.site}Disabled`]) {
