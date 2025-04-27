@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.26
+// @version               2025.4.26.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -410,6 +410,13 @@
         onload: resp => resolve(JSON.parse(resp.responseText))
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()
+
+    // Init KATEX delimiters
+    const katexDelimiters = await new Promise(resolve => xhr({
+        method: 'GET',
+        url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@18fd04e/assets/data/katex-delimiters.json',
+        onload: resp => resolve(JSON.parse(resp.responseText))
+    }))
 
     // Init DEBUG mode
     const config = {}
@@ -4298,33 +4305,18 @@
                     }
                 }
 
-                // Render MD, highlight JS
+                // Render MD, highlight code
                 const replyPre = appDiv.querySelector('.reply-pre')
                 try { // to render markdown
                     replyPre.innerHTML = marked.parse(answer) } catch (err) { log.error(err.message) }
                 hljs.highlightAll() // highlight code
-                update.replyPrefix() // prepend '>> ' if dark scheme w/ bg animations to emulate terminal
-
-                // Typeset math
                 replyPre.querySelectorAll('code').forEach(codeBlock => { // add linebreaks after semicolons
                     codeBlock.innerHTML = codeBlock.innerHTML.replace(/;\s*/g, ';<br>') })
-                const elemsToRenderMathIn = [replyPre, ...replyPre.querySelectorAll('*')]
-                elemsToRenderMathIn.forEach(elem => {
-                    renderMathInElement(elem, { // typeset math
-                        delimiters: [
-                            { left: '$$', right: '$$', display: true },
-                            { left: '$', right: '$', display: false },
-                            { left: '\\(', right: '\\)', display: false },
-                            { left: '\\[', right: '\\]', display: true },
-                            { left: '\\begin{equation}', right: '\\end{equation}', display: true },
-                            { left: '\\begin{align}', right: '\\end{align}', display: true },
-                            { left: '\\begin{alignat}', right: '\\end{alignat}', display: true },
-                            { left: '\\begin{gather}', right: '\\end{gather}', display: true },
-                            { left: '\\begin{CD}', right: '\\end{CD}', display: true },
-                            { left: '\\[', right: '\\]', display: true }
-                        ],
-                        throwOnError: false
-                })})
+                update.replyPrefix(); // prepend '>> ' if dark scheme w/ bg animations to emulate terminal
+
+                // Typeset math
+                [replyPre, ...replyPre.querySelectorAll('*')].forEach(elem =>
+                    renderMathInElement(elem, { delimiters: katexDelimiters, throwOnError: false }))
 
                 if (config.stickySidebar) update.replyPreMaxHeight()
                 saveAppDiv() // to fight Brave mutations

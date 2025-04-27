@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.24
+// @version                2025.4.26
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -258,6 +258,13 @@
         onload: resp => resolve(JSON.parse(resp.responseText))
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()
+
+    // Init KATEX delimiters
+    const katexDelimiters = await new Promise(resolve => xhr({
+        method: 'GET',
+        url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@18fd04e/assets/data/katex-delimiters.json',
+        onload: resp => resolve(JSON.parse(resp.responseText))
+    }))
 
     // Init DEBUG mode
     const config = {}
@@ -3424,32 +3431,18 @@
                 }
             }
 
-            // Render MD, highlight JS
+            // Render MD, highlight code
             const replyPre = appDiv.querySelector('.reply-pre')
             try { // to render markdown
                 replyPre.innerHTML = marked.parse(answer) } catch (err) { log.error(err.message) }
             hljs.highlightAll() // highlight code
-            update.replyPrefix() // prepend '>> ' if dark scheme w/ bg animations to emulate terminal
-
-            // Typeset math
             replyPre.querySelectorAll('code').forEach(codeBlock => // add linebreaks after semicolons
                 codeBlock.innerHTML = codeBlock.innerHTML.replace(/;\s*/g, ';<br>'))
-            const elemsToRenderMathIn = [replyPre, ...replyPre.querySelectorAll('*')]
-            elemsToRenderMathIn.forEach(elem => { renderMathInElement(elem, {
-                delimiters: [
-                    { left: '$$', right: '$$', display: true },
-                    { left: '$', right: '$', display: false },
-                    { left: '\\(', right: '\\)', display: false },
-                    { left: '\\[', right: '\\]', display: true },
-                    { left: '\\begin{equation}', right: '\\end{equation}', display: true },
-                    { left: '\\begin{align}', right: '\\end{align}', display: true },
-                    { left: '\\begin{alignat}', right: '\\end{alignat}', display: true },
-                    { left: '\\begin{gather}', right: '\\end{gather}', display: true },
-                    { left: '\\begin{CD}', right: '\\end{CD}', display: true },
-                    { left: '\\[', right: '\\]', display: true }
-                ],
-                throwOnError: false
-            })})
+            update.replyPrefix(); // prepend '>> ' if dark scheme w/ bg animations to emulate terminal
+
+            // Typeset math
+            [replyPre, ...replyPre.querySelectorAll('*')].forEach(elem =>
+                renderMathInElement(elem, { delimiters: katexDelimiters, throwOnError: false }))
 
             // Auto-scroll if active
             if (config.autoScroll && !env.browser.isMobile && config.proxyAPIenabled && !config.streamingDisabled)
