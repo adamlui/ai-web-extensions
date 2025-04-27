@@ -21,7 +21,7 @@ const br = '\x1b[91m', // bright red
 // Init FILES to open
 const availFiles = ['controller.js', 'index.html', 'style.css']
 const filesToOpen = /--all/i.test(args) ? availFiles
-    : [availFiles[ /--(?:css|style)/i.test(args) ? 2 : /--(?:html|index)/i.test(args) ? 1 : 0 ]]
+    : [availFiles[/--(?:css|style)/i.test(args) ? 2 : +/--(?:html|index)/i.test(args)]]
 
 // Filter PROJECTS
 const availProjects = require('./projects.json')
