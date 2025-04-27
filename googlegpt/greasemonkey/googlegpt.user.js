@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.26.1
+// @version                  2025.4.27
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -4178,7 +4178,7 @@
             // Init general language data
             this.langData = this.langData || Object.assign(Object.create(null), await new Promise(resolve => xhr({
                 method: 'GET',
-                url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@645dad3/assets/data/code-languages.json',
+                url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@760af42/assets/data/code-languages.json',
                 onload: resp => resolve(JSON.parse(resp.responseText))
             })))
 
