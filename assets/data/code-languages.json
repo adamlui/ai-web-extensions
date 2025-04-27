@@ -212,7 +212,7 @@
   "Smalltalk": { "hljsSlug": "smalltalk", "fileExtension": "st" },
   "SML": { "hljsSlug": "sml", "fileExtension": "sml" },
   "Solidity": { "hljsSlug": "solidity", "fileExtension": "sol" },
-  "Splunk": { "hljsSlug": "splunk", "fileExtension": "spl" },
+  "Splunk SPL": { "hljsSlug": "splunk", "fileExtension": "spl" },
   "SQL": { "hljsSlug": "sql", "fileExtension": "sql" },
   "Stan": { "hljsSlug": "stan", "fileExtension": "stan" },
   "Stata": { "hljsSlug": "stata", "fileExtension": "do" },
