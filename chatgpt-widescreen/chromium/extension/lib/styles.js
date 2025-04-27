@@ -8,8 +8,8 @@ window.styles = {
 
     chatbar: {
         update() {
-            if (!this.styles) document.head.append(this.styles = dom.create.style())
-            this.styles.innerText = ({
+            if (!this.node) document.head.append(this.node = dom.create.style())
+            this.node.innerText = ({
                 chatgpt: !config.widerChatbox &&
                     `main form { max-width: ${chatbar.nativeWidth}px !important ; margin: auto }`,
                 poe: config.widerChatbox && config.widescreen &&
