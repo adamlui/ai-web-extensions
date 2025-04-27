@@ -252,7 +252,8 @@ This script exists thanks to code, translations, issues & ideas from the followi
     <img width=46 title="@mrbacky" src="https://avatars.githubusercontent.com/u/55503325?first-contrib=2024.9.11-button-css-bug-report"></img></a>
 <a href="https://github.com/AliasUruz">
     <img width=46 title="@AliasUruz" src="https://avatars.githubusercontent.com/u/130197125?first-contrib=2024.12.1-new-chat-btn-stopped-working-bug-report"></img></a>
-<img title="Chrome Web Store Team" src="https://assets.chatgptwidescreen.com/images/icons/web-stores/chrome-web-store/icon48.png?e2a66b7&first-contrib=2024.12.7-hidden-footer-stopped-working-email">
+<a href="#">
+    <img title="Chrome Web Store Team" src="https://assets.chatgptwidescreen.com/images/icons/web-stores/chrome-web-store/icon48.png?e2a66b7&first-contrib=2024.12.7-hidden-footer-stopped-working-email"></a>
 <a href="#">
     <img width=47 title="Copilot Autofix" src="https://github.githubassets.com/favicons/favicon.svg?first-contrib=2024.12.9-cmd-injection-autofix"></a>
 <a href="https://github.com/wobfan">
