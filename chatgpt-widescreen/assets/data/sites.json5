@@ -8,7 +8,9 @@
       "btns": {
         "dictate": "button:has(path[d*=\"M18.9953\"])", "help": "div.lg\\:bottom-3 > button",
         "login": "button[data-testid*=login]",
-        "newChat": "button[data-testid*=new-chat-button], button:has(path[d^=\"M3.06957\"]), button:has(path[d^=\"M15.6729\"])",
+        "newChat":
+          // sidebar button (when logged in), Cycle Arrows icon (Temp chat mode), Pencil icon (recorded chat mode)
+          "a[data-testid=create-new-chat-button], button:has(path[d^=\"M3.06957\"]), a:has(> svg > path[d^=\"M15.6729\"])",
         "send": "button[data-testid=send-button]", "sidebar": "button[data-testid*=sidebar-button]",
         "stop": "button[data-testid=stop-button]", "voice": "button[data-testid*=composer-speech-button]"
       },
