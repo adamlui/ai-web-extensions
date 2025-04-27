@@ -20,7 +20,7 @@
 
     // Import JS resources
     for (const resource of [
-        'lib/chatbar.js', 'lib/chatgpt.js', 'lib/dom.js', 'lib/settings.js', 'lib/ui.js',
+        'lib/chatbar.js', 'lib/chatgpt.js', 'lib/dom.js', 'lib/settings.js', 'lib/styles.js', 'lib/ui.js',
         'components/buttons.js', 'components/icons.js', 'components/modals.js', 'components/tooltip.js'
     ]) await import(chrome.runtime.getURL(resource))
 
@@ -44,6 +44,7 @@
     dom.import({ scheme: env.ui.scheme }) // for dom.addRisingParticles()
     modals.import({ app, env }) // for app data + env['<browser|ui>'] flags
     settings.import({ site: env.site, sites }) // to load/save active tab's settings + `${site}Disabled`
+    styles.import({ site: env.site, sites }) // for conditional logic + sites.selectors
     tooltip.import({ app, env, sites }) // for tooltip class + .update() position logic
     ui.import({ sites }) // for ui.isFullWin() sidebar selector/flag
 
@@ -93,13 +94,13 @@
         switch (state.toUpperCase()) {
             case 'ON' : activateMode(mode) ; break
             case 'OFF' : deactivateMode(mode) ; break
-            default : ( mode == 'widescreen' ? document.head.contains(widescreenStyle)
+            default : ( mode == 'widescreen' ? styles.widescreen.node.isConnected
                       : mode == 'fullWindow' ? ui.isFullWin() : chatgpt.isFullScreen() ) ? deactivateMode(mode)
                                                                                          : activateMode(mode)
         }
 
         function activateMode(mode) {
-            if (mode == 'widescreen') { document.head.append(widescreenStyle) ; sync.mode('widescreen') }
+            if (mode == 'widescreen') { document.head.append(styles.widescreen.node) ; sync.mode('widescreen') }
             else if (mode == 'fullWindow') {
                 const selectors = sites[env.site].selectors,
                       sidebarToggle = document.querySelector(selectors.btns.sidebar)
@@ -110,12 +111,12 @@
                         bar && dom.get.computedWidth(bar) > 100 && sidebarsToHide.push({ side, bar }))
                     sidebarsToHide.forEach(({ side, bar }) => { // hide'em
                         if (side == 'left') sidebarToggle.click() ; else bar.style.display = 'none' })
-                } else { document.head.append(fullWinStyle) ; sync.mode('fullWindow') }
+                } else { document.head.append(styles.fullWin.node) ; sync.mode('fullWindow') }
             } else if (mode == 'fullscreen') document.documentElement.requestFullscreen()
         }
 
         function deactivateMode(mode) {
-            if (mode == 'widescreen') { widescreenStyle.remove() ; sync.mode('widescreen') }
+            if (mode == 'widescreen') { styles.widescreen.node.remove() ; sync.mode('widescreen') }
             else if (mode == 'fullWindow') {
                 const selectors = sites[env.site].selectors,
                       sidebarToggle = document.querySelector(selectors.btns.sidebar)
@@ -125,7 +126,7 @@
                         const rightbar = document.querySelector(selectors.rightbar)
                         if (rightbar) rightbar.style.display = ''
                     }
-                } else { fullWinStyle.remove() ; sync.mode('fullWindow') }
+                } else { styles.fullWin.node.remove() ; sync.mode('fullWindow') }
             } else if (mode == 'fullscreen') {
                 if (config.f11) modals.alert(getMsg('alert_pressF11'), `${getMsg('alert_f11reason')}.`)
                 else document.exitFullscreen()
@@ -134,51 +135,8 @@
         }
     }
 
-    const tweaksStyle = dom.create.style() ; env.ui.hasTallChatbar = await chatbar.is.tall()
-    buttons.import({ app, env, sites, toggleMode, tweaksStyle })
-
-    const stylize = {
-
-        tweaks() {
-            const selectors = sites[env.site].selectors
-            tweaksStyle.innerText = (
-                ( env.site == 'chatgpt' ?
-                        `[id$=-btn]:hover { opacity: 100% !important } /* prevent chatbar btn dim on hover */
-                        main { overflow: clip !important }` // prevent h-scrollbar...
-                            // ...on sync.mode('fullWindow) => delayed chatbar.tweak()
-                : env.site == 'perplexity' ? '[id$=-btn]:hover { background: none !important }' // prevent overlay
-                : '' )
-                + ( config.tcbDisabled == false ? tcbStyle : '' ) // expand text input vertically
-                + ( config.hiddenHeader ? hhStyle : '' ) // hide header
-                + ( config.hiddenFooter ? hfStyle : '' ) // hide footer
-                + `#newChat-btn { display: ${ config.ncbDisabled == true ? 'none' : 'flex' }}`
-                + ( config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
-                    `.${buttons.class} { will-change: transform } /* prevent wobble */
-                        .${buttons.class}:hover { transform: scale(${ env.site == 'poe' ? 1.15 : 1.285 }) }` )
-                + ( config.blockSpamDisabled ? ''
-                    : `${getAllSelectors(selectors.spam).join(',')} { display: none !important }
-                        body { pointer-events: unset !important }` /* free click lock from blocking modals */ )
-            )
-            function getAllSelectors(obj) {
-                return Object.values(obj).flatMap(val => typeof val == 'object' ? getAllSelectors(val) : val) }
-        },
-
-        widescreen() {
-            widescreenStyle.innerText = (
-                env.site == 'chatgpt' ?
-                    `.text-base { max-width: 100% !important } /* widen outer container */
-                    .tableContainer { min-width: 100% }` // widen tables
-                : env.site == 'perplexity' ?
-                    `.max-w-threadWidth, .max-w-threadContentWidth { /* widen limiting Page/Answer containers */
-                        max-width: 100% }
-                    @media (min-width: 769px) { .col-span-8 { width: 151% }} /* widen inner-left container */
-                    .col-span-4:has([class*=sticky]) { display: none }` // hide right-bar
-                : env.site == 'poe' ?
-                    `[class*=ChatMessagesView] { width: 100% !important } /* widen outer container */
-                    [class^=Message] { max-width: 100% !important }` // widen speech bubbles
-                : '' )
-        }
-    }
+    env.ui.hasTallChatbar = await chatbar.is.tall()
+    buttons.import({ app, env, sites, toggleMode })
 
     const sync = {
 
@@ -186,20 +144,21 @@
             const extensionWasDisabled = config.extensionDisabled || config[`${env.site}Disabled`]
             await settings.load('extensionDisabled', ...settings.siteDisabledKeys, ...sites[env.site].availFeatures)
             if (!extensionWasDisabled && ( config.extensionDisabled || config[`${env.site}Disabled`] )) { // reset UI
-                [widescreenStyle, fullWinStyle, buttons].forEach(target => target.remove())
-                tweaksStyle.innerText = '' ; chatbar.reset()
+                [styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
+                    .forEach(target => target.remove())
+                chatbar.reset()
                 if (/chatgpt|perplexity/.test(env.site))
                     document.body.removeEventListener('wheel', window.enableWheelScroll)
             } else if (!config.extensionDisabled && !config[`${env.site}Disabled`]) { // sync modes/tweaks/btns
-                if (config.widescreen ^ document.head.contains(widescreenStyle)) { // sync Widescreen
+                if (config.widescreen ^ styles.widescreen.node.isConnected) { // sync Widescreen
                     supressNotifs() ; toggleMode('widescreen') }
                 if (sites[env.site].hasSidebar) {
                     if (config.fullWindow ^ ui.isFullWin()) { // sync Full-Window
                         supressNotifs() ; toggleMode('fullWindow') }
                     sync.fullerWin() // sync Fuller Windows
                 }
-                stylize.tweaks() // sync TCB/NCB/HH/HF/BA
-                chatbar.stylize() // sync WCB
+                styles.tweaks.update() // sync TCB/NCB/HH/HF/BA
+                styles.chatbar.update() // sync WCB
                 chatbar.tweak() // update ChatGPT chatbar inner width or hack other sites' button positions
                 buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
@@ -219,16 +178,16 @@
 
         fullerWin() {
             if (config.fullWindow && config.fullerWindows && !config.widescreen) { // activate fuller windows
-                document.head.append(widescreenStyle) ; buttons.update.svg('widescreen', 'on')
+                document.head.append(styles.widescreen.node) ; buttons.update.svg('widescreen', 'on')
             } else if (!config.fullWindow) { // de-activate fuller windows
-                fullWinStyle.remove() // to remove style too so sidebar shows
+                styles.fullWin.node.remove() // to remove style too so sidebar shows
                 if (!config.widescreen) { // disable widescreen if result of fuller window
-                    widescreenStyle.remove() ; buttons.update.svg('widescreen', 'off')
+                    styles.widescreen.node.remove() ; buttons.update.svg('widescreen', 'off')
             }}
         },
 
         async mode(mode) { // setting + icon + chatbar
-            const state = ( mode == 'widescreen' ? !!document.getElementById('widescreen-mode')
+            const state = ( mode == 'widescreen' ? styles.widescreen.node.isConnected
                           : mode == 'fullWindow' ? ui.isFullWin()
                                                  : chatgpt.isFullScreen() )
             settings.save(mode, state) ; buttons.update.svg(mode)
@@ -238,7 +197,7 @@
                     mode == 'fullWindow' && ( config.widescreen || config.fullerWindows )
                         && config.widerChatbox ? 111 : 0) // delay if toggled to/from active WCB to avoid wrong width
                 else if (env.site == 'perplexity' || env.site == 'poe' && config.widerChatbox)
-                    chatbar.stylize() // toggle full-width Perplexity chatbar or sync Poe WCB
+                    styles.chatbar.update() // toggle full-width Perplexity chatbar or sync Poe WCB
                 notify(`${getMsg('mode_' + mode)} ${getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
             }
             config.modeSynced = true ; setTimeout(() => config.modeSynced = false, 100) // prevent repetition
@@ -263,37 +222,15 @@
     config.fullscreen = chatgpt.isFullScreen()
     if (sites[env.site].selectors.btns.sidebar) // site has native FW state
          config.fullWindow = ui.isFullWin() // ...so match it
-    else await settings.load('fullWindow') // otherwise load CWM's saved state
+    else await settings.load('fullWindow'); // otherwise load CWM's saved state
 
-    // Apply general style TWEAKS
-    const tcbStyle = ( // heighten chatbox
-        env.site == 'chatgpt' ? `div[class*=prose]:has(${sites.chatgpt.selectors.input})`
-                              : sites[env.site].selectors.input )
-                  + '{ max-height: 68vh }'
-    const hhStyle = sites[env.site].selectors.header + '{ display: none !important }' // hide header
-                  + ( env.site == 'chatgpt' ? 'main { padding-top: 12px }' : '' ) // increase top-padding
-    const hfStyle = `${sites[env.site].selectors.footer}${ // hide footer
-        /chatgpt|perplexity/.test(env.site) ? `, ${sites[env.site].selectors.btns.help}` : '' } { display: none }`
-
-    stylize.tweaks() ; document.head.append(tweaksStyle);
-
-    // Add RISING PARTICLES styles
-    ['gray', 'white'].forEach(color => document.head.append(
+    // Create/append STYLES
+    ['chatbar', 'fullWin', 'tweaks', 'widescreen'].forEach(style => styles[style].update());
+    ['gray', 'white'].forEach(color => document.head.append( // Rising Particles styles
         dom.create.elem('link', { rel: 'stylesheet',
             href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/${
                 color}.min.css`
     })))
-
-    // Create WIDESCREEN style
-    const widescreenStyle = dom.create.style(null, { id: 'widescreen-mode' })
-    stylize.widescreen()
-
-    // Create FULL-WINDOW style
-    const fullWinStyle = dom.create.style(
-        sites[env.site].selectors.sidebar + '{ display: none }', { id: 'fullWindow-mode' })
-
-    // Create/append CHATBAR style
-    chatbar.stylize()
 
     // Restore PREV SESSION's state
     if (!config.extensionDisabled && !config[`${env.site}Disabled`]) {

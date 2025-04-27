@@ -20,7 +20,7 @@ export default [
                 ...globals.browser, ...globals.greasemonkey, ...globals.node, buttons: 'writable', chatbar: 'writable',
                 chatgpt: 'readonly', chrome: 'readonly', config: 'writable', dom: 'readonly', icons: 'writable',
                 importScripts: 'readonly', JSON5: 'readonly', modals: 'readonly', settings: 'writable',
-                tooltip: 'writable', ui: 'readonly'
+                styles: 'readonly', tooltip: 'writable', ui: 'readonly'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
