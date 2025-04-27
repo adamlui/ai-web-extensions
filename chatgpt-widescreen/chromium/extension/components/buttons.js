@@ -1,4 +1,4 @@
-// Requires lib/<chatgpt|dom>.js + components/<chatbar|tooltip>.js + app + env + sites + toggleMode + tweaksStyle
+// Requires lib/<chatgpt|dom|styles>.js + components/<chatbar|tooltip>.js + app + env + sites + toggleMode
 
 window.buttons = {
     import(deps) { Object.assign(this.imports = this.imports || {}, deps) },
@@ -46,7 +46,7 @@ window.buttons = {
 
     animate() { // used in sync.configToUI() on Button Animations toggle-on
         const btnHoverStyles = new RegExp(`.${this.class}:hover\\s*\\{([^}]*)\\}`, 'm')
-            .exec(this.imports.tweaksStyle.innerText)?.[1].trim()
+            .exec(styles.tweaks.node.innerText)?.[1].trim()
         this.types.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType] ; if (!btn) return
             setTimeout(() => { // apply/remove fx
