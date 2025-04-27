@@ -46,6 +46,16 @@ window.chatbar = {
             })
     },
 
+    stylize() {
+        if (!this.styles) { this.styles = dom.create.style() ; document.head.append(this.styles) }
+        this.styles.innerText = ({
+            chatgpt: !config.widerChatbox &&
+                `main form { max-width: ${this.nativeWidth}px !important ; margin: auto }`,
+            poe: config.widerChatbox && config.widescreen &&
+                '[class^=ChatPageMainFooter_footerInner] { width: 98% ; margin-right: 15px }'
+        })[this.imports.site]
+    },
+
     async tweak() { // update ChatGPT chatbar inner width or hack Perplexity/Poe buttons
         const site = this.imports.site
         const chatbarDiv = await this.get() ; if (!chatbarDiv) return

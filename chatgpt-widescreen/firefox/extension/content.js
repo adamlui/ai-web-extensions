@@ -139,16 +139,6 @@
 
     const stylize = {
 
-        chatbar() {
-            chatbarStyle.innerText = (
-                env.site == 'chatgpt' ? ( config.widerChatbox ? ''
-                        : `main form { max-width: ${chatbar.nativeWidth}px !important ; margin: auto }`
-                ) : env.site == 'poe' ? ( config.widerChatbox && config.widescreen ?
-                        '[class^=ChatPageMainFooter_footerInner] { width: 98% ; margin-right: 15px }' : ''
-                ) : ''
-            )
-        },
-
         tweaks() {
             const selectors = sites[env.site].selectors
             tweaksStyle.innerText = (
@@ -209,7 +199,7 @@
                     sync.fullerWin() // sync Fuller Windows
                 }
                 stylize.tweaks() // sync TCB/NCB/HH/HF/BA
-                stylize.chatbar() // sync WCB
+                chatbar.stylize() // sync WCB
                 chatbar.tweak() // update ChatGPT chatbar inner width or hack other sites' button positions
                 buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
@@ -248,7 +238,7 @@
                     mode == 'fullWindow' && ( config.widescreen || config.fullerWindows )
                         && config.widerChatbox ? 111 : 0) // delay if toggled to/from active WCB to avoid wrong width
                 else if (env.site == 'perplexity' || env.site == 'poe' && config.widerChatbox)
-                    stylize.chatbar() // toggle full-width Perplexity chatbar or sync Poe WCB
+                    chatbar.stylize() // toggle full-width Perplexity chatbar or sync Poe WCB
                 notify(`${getMsg('mode_' + mode)} ${getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
             }
             config.modeSynced = true ; setTimeout(() => config.modeSynced = false, 100) // prevent repetition
@@ -303,8 +293,7 @@
         sites[env.site].selectors.sidebar + '{ display: none }', { id: 'fullWindow-mode' })
 
     // Create/append CHATBAR style
-    const chatbarStyle = dom.create.style()
-    stylize.chatbar() ; document.head.append(chatbarStyle)
+    chatbar.stylize()
 
     // Restore PREV SESSION's state
     if (!config.extensionDisabled && !config[`${env.site}Disabled`]) {
