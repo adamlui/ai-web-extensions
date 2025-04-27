@@ -20,7 +20,14 @@
           "tos": "div.bottom-full:has(a[href=\"https:\/\/openai.com/terms\"])", // https://i.imgur.com/8BUOhn1.png
           "withButton": "div.bottom-full:has(button[data-testid=close-button])" // https://i.imgur.com/5dGYD42.png
         },
-        "modals": { "login": "div[data-testid=modal-no-auth-rate-limit]" } // https://i.imgur.com/ItLsJLT.png
+        "modals": {
+          "deepResearch": "div[data-testid=modal-deep-research-mini-nux]", // https://i.imgur.com/3GLab1m.png
+          "login": "div[data-testid=modal-no-auth-rate-limit]" // https://i.imgur.com/ItLsJLT.png
+        },
+        "popups": {
+          "announcement": // https://i.imgur.com/zT98IJN.png
+            "div[data-radix-popper-content-wrapper]:has(button[data-testid=announcement-tooltip-close-btn])"
+        }
       },
       "footer": "div#thread-bottom-container > div:last-of-type > div, span.text-sm.leading-none"
     },
@@ -47,8 +54,10 @@
       "spam": {
         "banners": {
           "homepage": "div.absolute.w-full:has(svg[data-icon=xmark])",
-          "apps": "div[class*=col-span]:has(a[href*=\"perplexity.ai\"])" // like Comet waitlist + Windows app
+          "apps": "div.col-span-6:has(a[href*=\"perplexity.ai\"])" // http://i.imgur.com/ewit7S6.png
         },
+        "modals": {
+          "privateThread": "div[data-type=portal]:has(svg[data-icon=google])" }, // https://i.imgur.com/n3BPf56.png
         "popups": {
           "googleLogin": "div#credential_picker_container", // upper-right login popup
           "perplexityLogin": "div[class*=bottom]:has(div[data-testid*=login-modal])" // lower-right login/signup popup
