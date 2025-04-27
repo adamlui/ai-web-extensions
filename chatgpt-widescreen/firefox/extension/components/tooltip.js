@@ -10,7 +10,7 @@ window.tooltip = {
     },
 
     stylize() {
-        this.styles = dom.create.style(`.${this.imports.app.slug}-tooltip {
+        document.head.append(this.styles = dom.create.style(`.${this.imports.app.slug}-tooltip {
             background-color: /* bubble style */
                 rgba(0,0,0,0.71) ; padding: 5px 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
             font-size: 0.85rem ; color: white ; white-space: nowrap ; /* text style */
@@ -20,8 +20,7 @@ window.tooltip = {
             transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
                 -ms-transition: opacity 0.15s ; -o-transition: opacity 0.15s ;
             user-select: none ; webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none }`
-        )
-        document.head.append(this.styles)
+        ))
     },
 
     toggle(event) {

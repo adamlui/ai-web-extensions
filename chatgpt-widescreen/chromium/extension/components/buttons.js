@@ -58,7 +58,7 @@ window.buttons = {
 
     stylize() {
         const site = this.imports.env.site
-        this.styles = dom.create.style(`
+        document.head.append(this.styles = dom.create.style(`
             .${this.class} {
                 cursor: pointer ; position: relative ;
                 --transition: transform 0.15s ease, opacity 0.5s ease ; /* for tweaksStyle's :hover + .insert()'s fade-in */
@@ -72,8 +72,7 @@ window.buttons = {
                     #fullWindow-btn { display: none }
                     #widescreen-btn { margin-right: ${ site == 'perplexity' ? 9 : 19 }px }}`
                 : '' }`
-        )
-        document.head.append(this.styles)
+        ))
     },
 
     async create() {

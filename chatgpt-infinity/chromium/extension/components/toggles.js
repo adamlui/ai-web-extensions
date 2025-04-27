@@ -52,7 +52,7 @@ window.toggles = {
         },
 
         stylize() {
-            this.styles = dom.create.style(
+            document.head.append(this.styles = dom.create.style(
                 `:root { /* vars */
                     --switch-enabled-bg-color: #ad68ff ; --switch-disabled-bg-color: #ccc ;
                     --switch-enabled-box-shadow: 1px 2px 8px #d8a9ff ;
@@ -116,8 +116,7 @@ window.toggles = {
                     box-shadow: var(--knob-box-shadow-dark) ; /* make 3D-er */*
                         -webkit-box-shadow: var(--knob-box-shadow-dark) ;
                         -moz-box-shadow: var(--knob-box-shadow-dark) }`
-            )
-            document.head.append(this.styles)
+            ))
         },
 
         insert() {

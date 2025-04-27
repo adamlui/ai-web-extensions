@@ -190,7 +190,7 @@ window.modals = {
     safeWinOpen(url) { open(url, '_blank', 'noopener') }, // to prevent backdoor vulnerabilities
 
     stylize() {
-        this.styles = dom.create.style(
+        document.head.append(this.styles = dom.create.style(
             `.${this.class} {` // modals
               + 'user-select: none ; -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ;'
               + 'font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,'
@@ -230,8 +230,7 @@ window.modals = {
           + ( !this.imports.env.browser.isMobile ?
                 `.${this.class} .modal-buttons { margin-left: -13px !important }` : '' )
           + `.about-em { color: ${ this.imports.env.ui.scheme == 'dark' ? 'white' : 'green' } !important }`
-        )
-        document.head.append(this.styles)
+        ))
     },
 
     update: {

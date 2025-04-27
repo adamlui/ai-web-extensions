@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.26
+// @version             2025.4.27
 // @license             MIT
 // @icon                https://assets.autoclearchatgpt.com/images/icons/openai/black/icon48.png?v=f461c06
 // @icon64              https://assets.autoclearchatgpt.com/images/icons/openai/black/icon64.png?v=f461c06
@@ -675,7 +675,7 @@
         safeWinOpen(url) { open(url, '_blank', 'noopener') }, // to prevent backdoor vulnerabilities
 
         stylize() {
-            this.styles = dom.create.style(
+            document.head.append(this.styles = dom.create.style(
                 `.${this.class} {` // modals
                   + 'user-select: none ; -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ;'
                   + 'font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,'
@@ -711,8 +711,7 @@
                   + `background-color: #${ env.ui.scheme == 'dark' ? '00cfff' : '9cdaff' } !important }`
               + ( !env.browser.isMobile ? `.${this.class} .modal-buttons { margin-left: -13px !important }` : '' )
               + `.about-em { color: ${ env.ui.scheme == 'dark' ? 'white' : 'green' } !important }`
-            )
-            document.head.append(this.styles)
+            ))
         },
 
         update: {
@@ -837,7 +836,7 @@
             },
 
             stylize() {
-                this.styles = dom.create.style(
+                document.head.append(this.styles = dom.create.style(
                     `:root { /* vars */
                         --switch-enabled-bg-color: #ad68ff ; --switch-disabled-bg-color: #ccc ;
                         --switch-enabled-box-shadow: 1px 2px 8px #d8a9ff ;
@@ -900,8 +899,7 @@
                         box-shadow: var(--knob-box-shadow-dark) ; /* make 3D-er */
                             -webkit-box-shadow: var(--knob-box-shadow-dark) ;
                             -moz-box-shadow: var(--knob-box-shadow-dark) }`
-                )
-                document.head.append(this.styles)
+                ))
             },
 
             update: {

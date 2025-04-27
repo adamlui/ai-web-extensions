@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.27
+// @version                  2025.4.27.1
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1593,7 +1593,7 @@
         },
 
         stylize() {
-            this.styles = dom.create.style(
+            document.head.append(this.styles = dom.create.style(
 
                 // Vars
                 `:root {
@@ -1759,8 +1759,7 @@
                         config.fgAnimationsDisabled ? '' : 'animation: ticker linear 60s infinite' }}`
               + '@keyframes ticker { 0% { transform: translateX(100%) } 100% { transform: translateX(-2000%) }}'
               + `.about-em { color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'green' } !important }`
-            )
-            document.head.append(this.styles)
+            ))
         },
 
         update: {
@@ -1821,7 +1820,7 @@
         },
 
         stylize() {
-            this.styles = dom.create.style(`
+            document.head.append(this.styles = dom.create.style(`
                 .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
                 .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
                     width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
@@ -1830,8 +1829,7 @@
                 .${app.slug}-menu-item #${app.slug}-checkmark-icon {
                     position: relative ; float: right ; margin-right: -16px ; top: 4px ; fill: #b3f96d }
                 .${app.slug}-menu-item:hover #${app.slug}-checkmark-icon { fill: green }`
-            )
-            document.head.append(this.styles)
+            ))
         },
 
         toggle(event) { // visibility
@@ -3244,7 +3242,7 @@
     const tooltip = {
 
         stylize() {
-            this.styles = dom.create.style(`.${app.slug}-tooltip {
+            document.head.append(this.styles = dom.create.style(`.${app.slug}-tooltip {
                 background-color: /* bubble style */
                     rgba(0,0,0,0.64) ; padding: 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
                 font-size: 0.75rem ; color: white ; fill: white ; stroke: white ; /* font/icon style */
@@ -3254,8 +3252,7 @@
                 opacity: 0 ; height: fit-content ; z-index: 1250 ; /* visibility */
                 transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
                     -o-transition: opacity 0.15s ; -ms-transition: opacity 0.15s }`
-            )
-            document.head.append(this.styles)
+            ))
         },
 
         toggle(stateOrEvent) { // visibility
@@ -4782,7 +4779,7 @@
     const appDiv = dom.create.elem('div', { id: app.slug, class: 'fade-in' }) ; addListeners.appDiv();
     ['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
         (config[mode] || config[`${mode}Sidebar`]) && appDiv.classList.add(mode))
-    app.styles = dom.create.style() ; update.appStyle() ; document.head.append(app.styles);
+    document.head.append(app.styles = dom.create.style()) ; update.appStyle();
     ['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
