@@ -45,7 +45,7 @@ window.buttons = {
     },
 
     animate() { // used in sync.configToUI() on Button Animations toggle-on
-        const btnHoverStyles = new RegExp(`.${this.class}-btn:hover\\s*\\{([^}]*)\\}`, 'm')
+        const btnHoverStyles = new RegExp(`.${this.class}:hover\\s*\\{([^}]*)\\}`, 'm')
             .exec(this.imports.tweaksStyle.innerText)?.[1].trim()
         this.types.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType] ; if (!btn) return
