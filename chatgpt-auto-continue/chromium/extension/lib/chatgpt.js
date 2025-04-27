@@ -4,8 +4,6 @@
 // Source: https://github.com/KudoAI/chatgpt.js
 // User guide: https://chatgptjs.org/userguide
 // Latest minified release: https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js/chatgpt.min.js
-// --------------------------------------------------------
-//
 
 // Init feedback props
 localStorage.alertQueue = JSON.stringify([])
