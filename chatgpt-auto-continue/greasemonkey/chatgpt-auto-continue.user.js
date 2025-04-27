@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.24.1
+// @version             2025.4.27
 // @license             MIT
 // @icon                https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon48.png?v=a8c9387
 // @icon64              https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon64.png?v=a8c9387
@@ -229,9 +229,9 @@
 // @connect             gm.chatgptautocontinue.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.7.1/dist/chatgpt.min.js#sha256-uv1k2VxGy+ri3+2C+D/kTYSBCom5JzvrNCLxzItgD6M=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@603dfe6/chromium/extension/components/modals.js#sha256-cf9hveJ7M+5QJkeMCaa8xQdha64PI+0T+3JHwwhAFXk=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@762a364/chromium/extension/lib/dom.js#sha256-U+SUWAkqLIY6krdR2WPhVy5/f+cTV03n3F8b+Y+/Py0=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@9f4e5b1/chromium/extension/lib/settings.js#sha256-lwjhc3z5/1zCooHxCyaf+BlVJqkBwf26kLfkddHWiLs=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@01495f8/chromium/extension/components/modals.js#sha256-tdsoqPkfGUmwo4I1oRT+jG3u7aBPwjMPy6Llb00gm7k=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@01495f8/chromium/extension/lib/dom.js#sha256-wX79+SnP3dPYqz9x9bfyZKz+yIJYLIgrUP+8Fa6Ckwg=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@01495f8/chromium/extension/lib/settings.js#sha256-pix/GpGmMPMUpCb6JWEVTG7sHAmRVCkHw/5ZTegs4t4=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@80e800c/chromium/extension/lib/ui.js#sha256-/szI0bDpLL1aVTrc29iyToff58VMfeM/lSyjHWTipt0=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
