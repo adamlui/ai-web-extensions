@@ -610,6 +610,30 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
+<!-- CLOUDFLARE FUNDING -->
+
+<div align="center">
+
+<br>
+
+<h3>Serverless computing generously funded by:</h3>
+
+<br>
+
+<a href="https://www.cloudflare.com/?utm_source=bravegpt-github&utm_medium=referral&utm_content=partner-logo"
+   target="_blank" rel="noopener">
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)"
+                srcset="https://assets.chatgptjs.org/images/logos/partners/cloudflare/white.png?v=962dcd1">
+        <img width=288 src="https://assets.chatgptjs.org/images/logos/partners/cloudflare/black.png?v=962dcd1">
+    </picture></a>
+
+<br>
+
+</div>
+
+<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+
 <!-- CONTRIBUTORS -->
 
 ## 🧠 Contributors
@@ -682,6 +706,7 @@ This app exists thanks to code, translations, issues & ideas from the following 
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/icons/chatgpt/black-on-white/icon50.png">
         <img title="ChatGPT" src="https://assets.bravegpt.com/images/icons/chatgpt/white-on-gray/icon50.png"></img>
     </picture></a>
+<br><br>
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
