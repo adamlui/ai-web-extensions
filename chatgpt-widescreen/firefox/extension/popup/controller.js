@@ -189,7 +189,7 @@
             track: dom.create.elem('span', { class: 'track' }), label: dom.create.elem('span'),
             faviconDiv: dom.create.elem('div', {
                 title: `${getMsg('tooltip_goto')} https://${sites[site].urls.homepage}`,
-                style: `display: flex ; height: 33px ; align-items: center ; cursor: none ;
+                style: `display: flex ; height: 33px ; align-items: center ;
                         padding: 0 11.5px ; /* create padded rectangle for .highlight-on-hover */
                         margin-right: -14px /* fill .menu-entry right-padding */` }),
             favicon: dom.create.elem('img', { src: sites[site].urls.favicon, width: 15 }),
