@@ -110,7 +110,7 @@
     document.querySelectorAll('[data-locale-text-content], [data-locale-title]').forEach(elemToLocalize =>
         Object.entries(elemToLocalize.dataset).forEach(([dataAttr, dataVal]) => {
             if (!dataAttr.startsWith('locale')) return
-            const propToLocalize = dataAttr // convert e.g. localeTextContent => valid DOM prop textContent
+            const propToLocalize = dataAttr // convert to valid DOM prop e.g. localeTextContent => textContent
                 .replace(/^locale/, '')[0].toLowerCase() + dataAttr.slice(7)
             const localizedTxt = dataVal.split(' ').map(key => getMsg(key) || key).join(' ')
             elemToLocalize[propToLocalize] = localizedTxt
