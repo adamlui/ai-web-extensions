@@ -27,7 +27,7 @@
           "login": "div[data-testid=modal-no-auth-rate-limit]" // https://i.imgur.com/ItLsJLT.png
         },
         "popups": {
-          "announcement": // https://i.imgur.com/zT98IJN.png
+          "announcement": // https://imgur.com/a/TIKFbeA
             "div[data-radix-popper-content-wrapper]:has(button[data-testid=announcement-tooltip-close-btn])"
         }
       }
