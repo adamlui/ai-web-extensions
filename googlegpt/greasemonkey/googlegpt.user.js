@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.28.5
+// @version                  2025.4.28.6
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2779,12 +2779,11 @@
                     stroke: var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) }`
 
               // Footer styles
-              + `#${app.slug} footer {`
-                  + 'position: relative ; text-align: right ; font-size: 0.75rem ; line-height: 1.43em ;'
-                  + `right: ${ env.browser.isFF ? -54 : -93 }px ;`
-                  + `margin: ${ env.browser.isFF ? 1 : -2 }px -32px 12px }`
-              + `#${app.slug} footer * { color: #aaa ; text-decoration: none }`
-              + `#${app.slug} footer a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}`
+              + `#${app.slug} footer {
+                    position: relative ; text-align: right ; font-size: 0.75rem ; line-height: 1.43em ;
+                    right: -54px ; margin: ${ env.browser.isFF ? 1 : -2 }px -32px 12px }
+                #${app.slug} footer * { color: #aaa ; text-decoration: none }
+                #${app.slug} footer a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}`
 
               // Notif styles
               + '.chatgpt-notif { fill: white ; stroke: white ; font-size: 25px !important ; padding: 13px 14px 13px 13px !important }'
