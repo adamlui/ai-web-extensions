@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.28.6
+// @version               2025.4.28.7
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -2602,13 +2602,13 @@
                     color: ${ env.ui.app.scheme == 'dark' ? '#aaa' : '#c1c1c1' }}`
 
               // Footer styles
-              + `#${app.slug} .feedback {`
-                  + 'float: right ; font-family: var(--brand-font) ; font-size: .55rem; color: #aaa ;'
-                  + 'letter-spacing: .02em ; position: relative ; right: -18px ; bottom: 15px }'
-              + `#${app.slug} footer {
-                    text-align: right ; margin: ${ env.browser.isFF ? 32 : 27 }px 18px -26px 0 ; padding-bottom: 12px }`
-              + `#${app.slug} footer a:hover {`
-                  + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' } ; text-decoration: none }`
+              + `#${app.slug} .feedback {
+                    float: right ; font-family: var(--brand-font) ; font-size: .55rem; color: #aaa ;
+                    letter-spacing: .02em ; position: relative ; right: -18px ; bottom: 15px }
+                 #${app.slug} footer {
+                    text-align: right ; margin: ${ env.browser.isFF ? 32 : 27 }px 18px -26px 0 ; padding-bottom: 12px }
+                 #${app.slug} footer a:hover {
+                    color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' } ; text-decoration: none }`
 
               // Notif styles
               + '.chatgpt-notif {'
