@@ -2,7 +2,7 @@
   "chatgpt": {
     "availFeatures": [
       "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenFooter",
-      "hiddenHeader", "notifDisabled", "ncbDisabled", "tcbDisabled", "widerChatbox", "widescreen"
+      "hiddenHeader", "ncbDisabled", "notifDisabled", "tcbDisabled", "widerChatbox", "widescreen"
     ],
     "selectors": {
       "btns": {
@@ -14,6 +14,7 @@
         "send": "button[data-testid=send-button]", "sidebar": "button[data-testid*=sidebar-button]",
         "stop": "button[data-testid=stop-button]", "voice": "button[data-testid*=composer-speech-button]"
       },
+      "footer": "div#thread-bottom-container > div:last-of-type > div, span.text-sm.leading-none",
       "header": "main div.sticky:first-of-type", "input": "div#prompt-textarea",
       "rightbar": "div[class*=sidebar]:has(div[data-testid=screen-threadFlyOut])",
       "sidebar": "div[class*=sidebar]:not(:has(div[data-testid=screen-threadFlyOut]))",
@@ -30,15 +31,14 @@
           "announcement": // https://i.imgur.com/zT98IJN.png
             "div[data-radix-popper-content-wrapper]:has(button[data-testid=announcement-tooltip-close-btn])"
         }
-      },
-      "footer": "div#thread-bottom-container > div:last-of-type > div, span.text-sm.leading-none"
+      }
     },
     "urls": { "homepage": "https://chatgpt.com" }
   },
   "perplexity": {
     "availFeatures": [
       "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenFooter",
-      "hiddenHeader", "notifDisabled", "ncbDisabled", "tcbDisabled", "widescreen"
+      "hiddenHeader", "ncbDisabled", "notifDisabled", "tcbDisabled", "widescreen"
     ],
     "hasSidebar": true,
     "selectors": {
@@ -55,8 +55,8 @@
       "sidebar": "div[data-testid=sidebar]",
       "spam": {
         "banners": {
-          "homepage": "div.absolute.w-full:has(svg[data-icon=xmark])",
-          "apps": "div.col-span-6:has(a[href*=\"perplexity.ai\"])" // http://i.imgur.com/ewit7S6.png
+          "apps": "div.col-span-6:has(a[href*=\"perplexity.ai\"])", // http://i.imgur.com/ewit7S6.png
+          "homepage": "div.absolute.w-full:has(svg[data-icon=xmark])"
         },
         "modals": {
           "privateThread": "div[data-type=portal]:has(svg[data-icon=google])" }, // https://i.imgur.com/n3BPf56.png
@@ -76,7 +76,7 @@
   "poe": {
     "availFeatures": [
       "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenHeader",
-      "notifDisabled", "ncbDisabled", "tcbDisabled", "widerChatbox", "widescreen"
+      "ncbDisabled", "notifDisabled", "tcbDisabled", "widerChatbox", "widescreen"
     ],
     "hasSidebar": true,
     "selectors": {
