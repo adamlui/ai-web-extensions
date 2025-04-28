@@ -642,6 +642,8 @@ This app exists thanks to code, translations, issues & ideas from the following 
 
 <a href="https://github.com/adamlui">
     <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.03.23"></img></a>
+<a href="https://github.com/piederecho">
+    <img width=50 title="@piederecho" src="https://avatars.githubusercontent.com/u/5135365?first-contrib=2017.12.21-published-btn-w-diagonal-borders-to-codepen-used-in-standby-btns-and-chatbar"></img></a>
 <a href="https://github.com/Delamcode">
     <img width=50 title="@Delamcode" src="https://avatars.githubusercontent.com/u/68170410?first-contrib=2023.02.19-unproxied-buggy-report-lead-to-proxied-mode"></img></a>
 <a href="https://github.com/Quoid">
