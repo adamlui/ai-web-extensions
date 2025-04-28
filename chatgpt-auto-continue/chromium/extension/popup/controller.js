@@ -168,19 +168,18 @@
     sync.fade() // based on master toggle
 
     // Init CHATGPT.JS footer tooltip/logo/listener
-    const cjsSpan = footer.querySelector('.cjs-span'),
-          cjsLogo = footer.querySelector('.cjs-logo')
-    cjsSpan.title = env.browser.displaysEnglish ? '' : `${getMsg('about_poweredBy')} chatgpt.js`
+    const cjsLogo = footer.querySelector('.cjs-logo')
+    cjsLogo.parentNode.title = env.browser.displaysEnglish ? '' : `${getMsg('about_poweredBy')} chatgpt.js`
     cjsLogo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca/assets/images/badges/powered-by-chatgpt.js.png'
     cjsLogo.onclick = () => { open(app.urls.chatgptJS) ; close() }
 
     // Init ABOUT footer icon/listener
-    const aboutSpan = footer.querySelector('.about-span')
+    const aboutSpan = footer.querySelector('span[data-locale-title="menuLabel_about appName"]')
     aboutSpan.append(icons.create('questionMark', { width: 15, height: 13 }))
     aboutSpan.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
 
     // Init MORE EXTENSIONS footer icon/listener
-    const moreExtensionsSpan = footer.querySelector('.more-extensions-span')
+    const moreExtensionsSpan = footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]')
     moreExtensionsSpan.append(icons.create('plus'))
     moreExtensionsSpan.onclick = () => { open(app.urls.relatedExtensions) ; close() }
 
