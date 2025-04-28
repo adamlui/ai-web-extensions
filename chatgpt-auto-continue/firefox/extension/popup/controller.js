@@ -106,9 +106,16 @@
 
     // Run MAIN routine
 
-    // LOCALIZE extension title, set document lang
-    const menuTitle = document.querySelector('.menu-title')
-    menuTitle.innerText = getMsg(menuTitle.dataset.locale)
+    // LOCALIZE text/titles, set document lang
+    document.querySelectorAll('[data-locale-text-content], [data-locale-title]').forEach(elemToLocalize =>
+        Object.entries(elemToLocalize.dataset).forEach(([dataAttr, dataVal]) => {
+            if (!dataAttr.startsWith('locale')) return
+            const propToLocalize = dataAttr // convert e.g. localeTextContent => valid DOM prop textContent
+                .replace(/^locale/, '')[0].toLowerCase() + dataAttr.slice(7)
+            const localizedTxt = dataVal.split(' ').map(key => getMsg(key) || key).join(' ')
+            elemToLocalize[propToLocalize] = localizedTxt
+        })
+    )
     document.documentElement.lang = chrome.i18n.getUILanguage().split('-')[0]
 
     // Init MASTER TOGGLE
@@ -160,7 +167,7 @@
 
     sync.fade() // based on master toggle
 
-    // Init CHATGPT.JS footer logo
+    // Init CHATGPT.JS footer tooltip/logo/listener
     const cjsSpan = footer.querySelector('.cjs-span'),
           cjsLogo = footer.querySelector('.cjs-logo')
     cjsSpan.title = env.browser.displaysEnglish ? '' : `${getMsg('about_poweredBy')} chatgpt.js`
@@ -169,13 +176,11 @@
 
     // Init ABOUT footer button
     const aboutSpan = footer.querySelector('.about-span')
-    aboutSpan.title = `${getMsg('menuLabel_about')} ${getMsg('app.name')}`
     aboutSpan.append(icons.create('questionMark', { width: 15, height: 13 }))
     aboutSpan.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
 
-    // Init MORE EXTENSIONS footer button
+    // Init MORE EXTENSIONS footer icon/listener
     const moreExtensionsSpan = footer.querySelector('.more-extensions-span')
-    moreExtensionsSpan.title = getMsg('btnLabel_moreAIextensions')
     moreExtensionsSpan.append(icons.create('plus'))
     moreExtensionsSpan.onclick = () => { open(app.urls.relatedExtensions) ; close() }
 
