@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.27.2
+// @version                2025.4.28
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2673,9 +2673,8 @@
             base: 'Generate a single random question on any topic then answer it',
             mods: [
                 { formatting: [
-                    'Try to give an answer that is 50-100 words',
                     'Do not type anything but the question and answer',
-                    'Reply in markdown'
+                    'Reply in markdown w/ bullets if it makes sense in relation to the question'
                 ]},
                 { variety: [
                     'Don\'t provide a question you generated before',
