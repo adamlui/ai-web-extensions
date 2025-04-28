@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.28.5
+// @version                2025.4.28.6
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2674,7 +2674,7 @@
             mods: [
                 { formatting: [
                     'Do not type anything but the question and answer',
-                    'Reply in markdown w/ bullets if it makes sense in relation to the question'
+                    'Format the answer in markdown w/ bullets if it makes sense in relation to the question'
                 ]},
                 { variety: [
                     'Don\'t provide a question you generated before',

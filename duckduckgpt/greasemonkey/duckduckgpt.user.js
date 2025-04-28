@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.28.6
+// @version                2025.4.28.7
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -3221,7 +3221,7 @@
             mods: [
                 { formatting: [
                     'Do not type anything but the question and answer',
-                    'Reply in markdown w/ bullets if it makes sense in relation to the question'
+                    'Format the answer in markdown w/ bullets if it makes sense in relation to the question'
                 ]},
                 { variety: [
                     'Don\'t provide a question you generated before',

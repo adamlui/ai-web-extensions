@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.28.7
+// @version               2025.4.28.8
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -3220,7 +3220,7 @@
             mods: [
                 { formatting: [
                     'Do not type anything but the question and answer',
-                    'Reply in markdown w/ bullets if it makes sense in relation to the question'
+                    'Format the answer in markdown w/ bullets if it makes sense in relation to the question'
                 ]},
                 { variety: [
                     'Don\'t provide a question you generated before',
