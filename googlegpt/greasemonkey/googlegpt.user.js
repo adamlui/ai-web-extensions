@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.28.4
+// @version                  2025.4.28.5
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2617,9 +2617,8 @@
                         -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }
                 .${app.slug}-standby-btn:hover {
                     --content-color: ${ env.ui.app.scheme == 'dark' ? 'black' : 'white' };
-                    fill: var(--content-color) ; stroke: var(--content-color) ;
-                    ${ env.ui.app.scheme == 'dark' ? 'background: white ; color: var(--content-color)'
-                                                   : 'background: black ; color: var(--content-color)' };
+                    color: var(--content-color) ; fill: var(--content-color) ; stroke: var(--content-color) ;
+                    background: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
                     ${ config.fgAnimationsDisabled || env.browser.isMobile ? ''
                         : 'transform: scale(1.055) skew(-13deg)' }}
                 .${app.slug}-standby-btn > svg {
