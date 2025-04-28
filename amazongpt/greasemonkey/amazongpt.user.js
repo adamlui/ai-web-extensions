@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.28.3
+// @version                2025.4.28.4
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2145,14 +2145,15 @@
               + '.katex-html { display: none } /* hide unrendered math */'
 
               // Chatbar styles
-              + `#${app.slug}-chatbar {`
-                  + `border: solid 1px ${ isParticlizedDS ? '#aaa' : env.ui.app.scheme == 'dark' ? '#777' : '#555' };`
-                  + 'border-radius: 12px 13px 12px 0 ; margin: 3px 0 15px 0 ; padding: 13px 57px 9px 10px ;'
-                  + 'font-size: 14.5px ; height: 46px ; width: 100% ; max-height: 200px ; resize: none ; '
-                  + `position: relative ; z-index: 555 ; color: #${ env.ui.app.scheme == 'dark' ? 'eee' : '222' } ;`
-                  + `background: ${ env.ui.app.scheme == 'light' ? '#eeeeee9e'
-                        : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }` } ;`
-                  + `${ env.ui.app.scheme == 'dark' ? '' :
+              + `#${app.slug}-chatbar {
+                    border: solid 1px ${ isParticlizedDS ? '#aaa' : env.ui.app.scheme == 'dark' ? '#777' : '#555' };
+                    border-radius: 12px 13px 12px 0 ; margin: 3px 0 15px 0 ; padding: 13px 57px 9px 10px ;
+                    font-size: 14.5px ; height: 46px ; width: 100% ; max-height: 200px ; resize: none ;
+                    position: relative ; z-index: 555 ; color: #${ env.ui.app.scheme == 'dark' ? 'eee' : '222' } ;
+                    background: ${ env.ui.app.scheme == 'light' ? '#eeeeee9e'
+                        : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }` };
+                    transform: skew(-3deg) ;
+                    ${ env.ui.app.scheme == 'dark' ? '' :
                         `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
                         box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
                         -moz-box-shadow: var(--chatbar-inset-shadow) ;` }
