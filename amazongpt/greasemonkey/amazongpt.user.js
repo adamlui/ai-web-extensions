@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.28
+// @version                2025.4.28.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2329,16 +2329,15 @@
             },
 
             chatbar() {
-                const chatTextarea = appDiv.querySelector(`#${app.slug}-chatbar`)
-                appDiv.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn =>{
+                appDiv.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
                     btn.onclick = () => {
                         tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
                         const btnType = /-(\w+)-btn$/.exec(btn.id)[1]
                         if (btnType == 'send') return // since handled by form submit
-                        show.reply.src = btnType
-                        chatTextarea.value = prompts.create('randomQA', { mods: 'all' })
-                        chatTextarea.dispatchEvent(new KeyboardEvent('keydown', {
-                            key: 'Enter', bubbles: true, cancelable: true }))
+                        msgChain.push({ time: Date.now(), role: 'user',
+                            content: prompts.create('randomQA', { mods: 'all' })})
+                        get.reply(msgChain, { src: btnType })
+                        show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                     }
                     if (!env.browser.isMobile) // add hover listener for tooltips
                         btn.onmouseenter = btn.onmouseleave = tooltip.toggle
@@ -2376,7 +2375,7 @@
                 // Yes reply, submit it + transform to loading UI
                 } else {
                     msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
-                    get.reply(msgChain)
+                    get.reply(msgChain, { src: 'submit' })
                     show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
             }
@@ -2936,7 +2935,7 @@
                         && ( // exclude unstreamable APIs if !config.streamingDisabled
                             config.streamingDisabled || apis[api].streamable)
                         && !( // exclude GET APIs if msg history established while not shuffling
-                            apis[api].method == 'GET' && show.reply.src != 'shuffle' && msgChain.length > 2)))
+                            apis[api].method == 'GET' && get.reply.src != 'shuffle' && msgChain.length > 2)))
             const chosenAPI = untriedAPIs[ // pick random array entry
                 Math.floor(chatgpt.randomFloat() * untriedAPIs.length)]
             if (!chosenAPI) { return log.error('No proxy APIs left untried') || null }
@@ -3134,8 +3133,8 @@
             }})
         },
 
-        async reply(msgChain) {
-            show.reply.updatedAPIinHeader = false
+        async reply(msgChain, { src = null } = {}) {
+            get.reply.src = src ; show.reply.updatedAPIinHeader = false
 
             // Show loading status
             const loadingSpinner = icons.arrowsCyclic.create() ; let loadingElem
@@ -3559,7 +3558,7 @@
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
                     tooltip.update(event.currentTarget) // to 'Regenerating...'
-                    show.reply.src = null ; show.reply.chatbarFocused = false ; show.reply.userInteracted = true
+                    show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
 
                 // Speak button

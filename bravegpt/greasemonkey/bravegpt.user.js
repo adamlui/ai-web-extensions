@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.28
+// @version               2025.4.28.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -2870,17 +2870,15 @@
             },
 
             chatbar() {
-                const chatTextarea = appDiv.querySelector(`#${app.slug}-chatbar`)
-                appDiv.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn =>{
+                appDiv.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
                     btn.onclick = () => {
                         tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
                         const btnType = /-(\w+)-btn$/.exec(btn.id)[1]
                         if (btnType == 'send') return // since handled by form submit
-                        show.reply.src = btnType
-                        chatTextarea.value = prompts.create(
-                            btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })
-                        chatTextarea.dispatchEvent(new KeyboardEvent('keydown', {
-                            key: 'Enter', bubbles: true, cancelable: true }))
+                        msgChain.push({ time: Date.now(), role: 'user', content: prompts.create(
+                            btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })})
+                        get.reply(msgChain, { src: btnType })
+                        show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                     }
                     if (!env.browser.isMobile) // add hover listener for tooltips
                         btn.onmouseenter = btn.onmouseleave = tooltip.toggle
@@ -2918,8 +2916,8 @@
                 // Yes reply, submit it + transform to loading UI
                 } else {
                     msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
-                    get.reply(msgChain)
-                    show.reply.src = null ; show.reply.chatbarFocused = false ; show.reply.userInteracted = true
+                    get.reply(msgChain, { src: 'submit' })
+                    show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
             }
             replyForm.onsubmit = addListeners.replySection.submitHandler
@@ -3614,9 +3612,9 @@
                         && ( // exclude unstreamable APIs if !config.streamingDisabled
                             config.streamingDisabled || apis[api].streamable)
                         && !( // exclude GET APIs if msg history established while not shuffling
-                            apis[api].method == 'GET' && show.reply.src != 'shuffle' && msgChain.length > 2)
+                            apis[api].method == 'GET' && get.reply.src != 'shuffle' && msgChain.length > 2)
                         && !( // exclude APIs that don't support long prompts while summarizing
-                            show.reply.src == 'summarize' && apis[api].supportsLongPrompts == false)
+                            get.reply.src == 'summarize' && apis[api].supportsLongPrompts == false)
                     ))
             )
             const chosenAPI = untriedAPIs[ // pick random array entry
@@ -3893,7 +3891,7 @@
         },
 
         async reply(msgChain, { src = null } = {}) {
-            show.reply.updatedAPIinHeader = false
+            get.reply.src = src ; show.reply.updatedAPIinHeader = false
 
             // Show loading status
             const rqDiv = appDiv.querySelector(`.${app.slug}-related-queries`),
@@ -3946,7 +3944,7 @@
                         && get.reply.status != 'done' && !get.reply.sender // still no reply received
                         && get.reply.api == iniAPI // not already trying diff API from err
                         && get.reply.triedAPIs.length != Object.keys(apis).length -1 // untried APIs remain
-                    ) { get.reply.src = src ; api.tryNew(get.reply, 'timeout') }
+                    ) api.tryNew(get.reply, 'timeout')
                 }, ( config.streamingDisabled ? 10 : 7 *( config.preferredAPI ? 2 : 1 )) *1000)
             }
 
@@ -4071,7 +4069,7 @@
 
             // Re-get.related() if current reply is question to suggest answers
             const currentReply = appDiv.querySelector(`#${app.slug} .reply-pre`)?.textContent.trim()
-            if (!/shuffle|summarize/i.test(show.reply.src)
+            if (!/shuffle|summarize/i.test(get.reply.src)
                     && !get.related.replyIsQuestion && /[?？]/.test(currentReply)) {
                 log.debug('Re-getting related queries to answer reply question...')
                 get.related.replyIsQuestion = true
@@ -4442,7 +4440,7 @@
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
                     tooltip.update(event.currentTarget) // to 'Regenerating...'
-                    show.reply.src = null ; show.reply.chatbarFocused = false ; show.reply.userInteracted = true
+                    show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
 
                 // Speak button
