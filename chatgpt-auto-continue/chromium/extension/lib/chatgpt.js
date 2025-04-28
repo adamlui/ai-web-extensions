@@ -1,4 +1,4 @@
-// This library is a condensed version of chatgpt.js v3.7.1
+// This library is a condensed version of chatgpt.js v3.8.0
 // © 2023–2025 KudoAI & contributors under the MIT license.
 // --------------------------------------------------------
 // Source: https://github.com/KudoAI/chatgpt.js
@@ -14,25 +14,34 @@ const chatgpt = {
 
     selectors: {
         btns: {
-            continue: 'button:has([class*=rotate] [d^="M4.47189"])', login: '[data-testid*=login]',
-            newChat: 'button[data-testid*=new-chat-button],' // sidebar button (when logged in)
-                   + 'button:has([d^="M3.06957"]),' // Cycle Arrows icon (Temp chat mode)
-                   + 'button:has([d^="M15.6729"])', // Pencil icon (recorded chat mode)
-            regen: 'button[data-testid*="regenerate"],' // oval button in place of chatbar on errors
-                 + 'div[role=menuitem]:has([d^="M3.06957"])', // 'Try Again' entry of model selector below msg
-            send: '[data-testid=send-button]', sidebar: 'button[data-testid*=sidebar-button]',
-            stop: 'button[data-testid=stop-button]', voice: 'button[data-testid*=composer-speech-button]'
+            continue: 'button:has(svg[class*=rotate] > path[d^="M4.47189"])',
+            createImage: 'button[data-testid="composer-create-image"]',
+            deepResearch: 'button[data-testid="composer-deep-research"]',
+            login: 'button[data-testid*=login]',
+            newChat: 'a[href="/"]:has(svg),' // Pencil button (when logged in)
+                   + 'button:has([d^="M3.06957"])', // Cycle Arrows button (in temp chat logged out)
+            regen: 'button[data-testid*=regenerate],' // oval button in place of chatbar on errors
+                    // 'Try Again' entry of model selector below msg
+                 + 'div[role=menuitem] div:has(svg):has(path[d^="M3.06957"])',
+            scroll: 'button:has(> svg > path[d^="M12 21C11.7348"])',
+            search: 'button[data-testid="composer-button-search"]',
+            reason: 'button[data-testid="composer-button-reason"]',
+            send: 'button[data-testid=send-button]',
+            sidebar: 'button[data-testid*=sidebar-button]',
+            stop: 'button[data-testid=stop-button]',
+            upload: 'button:has(> svg > path[d^="M12 3C12.5523"])',
+            voice: 'button[data-testid*=composer-speech-button]'
         },
         chatDivs: {
-            convo: 'main > div > div > div > div > div > div[class*=group]',
-            msg: 'div[data-message-author-role]', reply: 'div[data-message-author-role=assistant]'
+            convo: 'div[class*=thread]', msg: 'div[data-message-author-role]',
+            reply: 'div[data-message-author-role=assistant]'
         },
-        chatHistory: 'nav',
-        errors: { txt: '[class*=text-error]' },
-        footer: '.min-h-4',
-        header: 'main .sticky',
+        chatHistory: 'div#history',
+        errors: { toast: 'div.toast-root', txt: 'div[class*=text-error]' },
+        footer: 'div#thread-bottom-container > div:last-of-type > div, span.text-sm.leading-none',
+        header: 'div#page-header, main div.sticky:first-of-type',
         links: { newChat: 'nav a[href="/"]', sidebarItem: 'nav a' },
-        sidebar: 'div[class*=sidebar]',
+        sidebar: 'div[class*=sidebar]:has(nav > div#sidebar-header)',
         ssgManifest: 'script[src*="_ssgManifest.js"]'
     },
 
@@ -75,7 +84,8 @@ const chatgpt = {
                     chatgpt.draggingModal = event.currentTarget
                     event.preventDefault() // prevent sub-elems like icons being draggable
                     Object.assign(chatgpt.draggingModal.style, {
-                        cursor: 'grabbing', transition: '0.1s', willChange: 'transform', transform: 'scale(1.05)' });
+                        transition: '0.1s', willChange: 'transform', transform: 'scale(1.05)' })
+                    document.body.style.cursor = 'grabbing'; // update cursor
                     [...chatgpt.draggingModal.children] // prevent hover FX if drag lags behind cursor
                         .forEach(child => child.style.pointerEvents = 'none');
                     ['mousemove', 'mouseup'].forEach(eventType => // add listeners
@@ -94,7 +104,8 @@ const chatgpt = {
 
                 mouseup() { // restore styles/pointer events, remove listeners, reset chatgpt.draggingModal
                     Object.assign(chatgpt.draggingModal.style, { // restore styles
-                        cursor: 'inherit', transition: 'inherit', willChange: 'auto', transform: 'scale(1)' });
+                        cursor: 'inherit', transition: 'inherit', willChange: 'auto', transform: 'scale(1)' })
+                    document.body.style.cursor = ''; // restore cursor
                     [...chatgpt.draggingModal.children] // restore pointer events
                         .forEach(child => child.style.pointerEvents = '');
                     ['mousemove', 'mouseup'].forEach(eventType => // remove listeners
@@ -248,7 +259,7 @@ const chatgpt = {
             // Create/show label
             const checkboxLabel = document.createElement('label')
             checkboxLabel.onclick = () => { checkboxInput.checked = !checkboxInput.checked ; checkboxFn() }
-            checkboxLabel.textContent = checkboxFn.name.charAt(0).toUpperCase() // capitalize first char
+            checkboxLabel.textContent = checkboxFn.name[0].toUpperCase() // capitalize first char
                 + checkboxFn.name.slice(1) // format remaining chars
                     .replace(/([A-Z])/g, (match, letter) => ' ' + letter.toLowerCase()) // insert spaces, convert to lowercase
                     .replace(/\b(\w+)nt\b/gi, '$1n\'t') // insert apostrophe in 'nt' suffixes
@@ -332,7 +343,7 @@ const chatgpt = {
     getNewChatButton() { return document.querySelector(chatgpt.selectors.btns.newChat) },
     getScrollToBottomButton() { return document.querySelector(chatgpt.selectors.btns.scroll) },
     getStopButton() { return document.querySelector(chatgpt.selectors.btns.stop) },
-    isDarkMode() { return document.documentElement.className.includes('dark') },
+    isDarkMode() { return document.documentElement.classList.contains('dark') },
     isTyping() { return !!this.getStopButton() },
 
     async isLoaded(timeout = null) {
@@ -431,7 +442,7 @@ const chatgpt = {
                 for (const divId of thisQuadrantQueue.slice(0, -1)) { // exclude new div
                     const oldDiv = document.getElementById(divId),
                           offsetProp = oldDiv.style.top ? 'top' : 'bottom', // pick property to change
-                          vOffset = +/\d+/.exec(oldDiv.style[offsetProp])[0] + 5 + oldDiv.getBoundingClientRect().height
+                          vOffset = +parseInt(oldDiv.style[offsetProp]) +5 + oldDiv.getBoundingClientRect().height
                     oldDiv.style[offsetProp] = `${ vOffset }px` // change prop
                 }
             } catch (err) {}
@@ -490,7 +501,7 @@ const chatgpt = {
             // Process text node
             if (childNode.nodeType == Node.TEXT_NODE) {
                 const text = childNode.nodeValue,
-                      elems = Array.from(text.matchAll(reTags))
+                      elems = [...text.matchAll(reTags)]
 
                 // Process 1st element to render
                 if (elems.length > 0) {
@@ -499,7 +510,7 @@ const chatgpt = {
                           tagNode = document.createElement(tagName) ; tagNode.textContent = tagText
 
                     // Extract/set attributes
-                    const attrs = Array.from(tagAttrs.matchAll(reAttrs))
+                    const attrs = [...tagAttrs.matchAll(reAttrs)]
                     attrs.forEach(attr => {
                         const name = attr[1], value = attr[2].replace(/['"]/g, '')
                         tagNode.setAttribute(name, value)
@@ -635,7 +646,7 @@ const cjsFuncSynonyms = [
 // Define HELPER functions
 
 function toCamelCase(words) {
-    return words.map((word, idx) => idx == 0 ? word : word.charAt(0).toUpperCase() + word.slice(1)).join('') }
+    return words.map((word, idx) => idx == 0 ? word : word[0].toUpperCase() + word.slice(1)).join('') }
 
 // Prefix console logs w/ '🤖 chatgpt.js >> '
 const consolePrefix = '🤖 chatgpt.js >> ', ogError = console.error, ogInfo = console.info
