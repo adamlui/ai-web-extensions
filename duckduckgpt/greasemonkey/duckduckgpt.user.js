@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.28.3
+// @version                2025.4.28.4
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -2430,26 +2430,30 @@
                         -ms-transition: var(--font-size-slider-thumb-transition) }`
               + ( config.fgAnimationsDisabled || env.browser.isMobile ?
                     '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }` )
-              + `.${app.slug}-standby-btns { margin: 14px 0 5px }`
-              + `.${app.slug}-standby-btn {`
-                  + `--content-color: ${ isParticlizedDS ? 'white' : 'black' };`
-                  + 'width: 100% ; margin-bottom: 9px ; padding: 10px 0 ; cursor: pointer ;'
-                  + `background-color: #f0f0f0${ config.bgAnimationsDisabled ? '' : '00' };`
-                  + 'color: var(--content-color) ;'
-                  + `border: 1px solid ${ isParticlizedDS ? '#fff' : '#888' };`
-                  + `transition: var(--btn-transition) ;
+              + `.${app.slug}-standby-btns { margin: 17px 0 5px }
+                .${app.slug}-standby-btn {
+                    --content-color: ${ isParticlizedDS ? 'white' : 'black' };
+                    width: 95% ; margin-bottom: 9px ; padding: 13px 0 ; cursor: pointer ; transform: skew(-13deg) ;
+                    background-color: #f0f0f0${ config.bgAnimationsDisabled ? '' : '00' };
+                    color: var(--content-color) ; border: 1px solid ${ isParticlizedDS ? '#fff' : '#888' };
+                    transition: var(--btn-transition) ;
                         -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }`
-              + `.${app.slug}-standby-btn:hover {`
-                  + `--content-color: ${ env.ui.app.scheme == 'dark' ? 'black' : 'white' };`
-                  + 'fill: var(--content-color) ; stroke: var(--content-color) ;'
-                  + `${ env.ui.app.scheme == 'dark' ? 'background: white ; color: var(--content-color)'
-                                                    : 'background: black ; color: var(--content-color)' };`
-                  + `${ config.fgAnimationsDisabled || env.browser.isMobile ? '' : 'transform: scale(1.055)' }}`
-              + `.${app.slug}-standby-btn svg {
-                    position: relative ; fill: var(--content-color) ; stroke: var(--content-color) }
+                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }
+                .${app.slug}-standby-btn:hover {
+                    --content-color: ${ env.ui.app.scheme == 'dark' ? 'black' : 'white' };
+                    fill: var(--content-color) ; stroke: var(--content-color) ;
+                    ${ env.ui.app.scheme == 'dark' ? 'background: white ; color: var(--content-color)'
+                                                   : 'background: black ; color: var(--content-color)' };
+                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? ''
+                        : 'transform: scale(1.055) skew(-13deg)' }}
+                .${app.slug}-standby-btn > svg {
+                    position: relative ; stroke: var(--content-color) ; transform: skew(13deg) }
+                .${app.slug}-standby-btn > span { /* text, counter btn skew */
+                    display: inline-block ; transform: skew(13deg) }
                 .${app.slug}-standby-btn:first-of-type svg { /* Query button icon */
                     width: 11px ; height: 11px ; margin-right: 4px ; top: -1px }
+                .${app.slug}-standby-btn:first-of-type { margin-right: 5% }
+                .${app.slug}-standby-btn:nth-of-type(2) { margin-left: 5% }
                 .${app.slug}-standby-btn:nth-of-type(2) svg { /* Summarize button icon */
                     width: 12.5px ; height: 12.5px ; margin-right: 6px ; top: 1px }`
 
@@ -2522,14 +2526,15 @@
               + '.katex-html { display: none } /* hide unrendered math */'
 
               // Chatbar styles
-              + `#${app.slug}-chatbar {`
-                  + `border: solid 1px ${ isParticlizedDS ? '#aaa' : env.ui.app.scheme == 'dark' ? '#777' : '#555' };`
-                  + 'border-radius: 12px 13px 12px 0 ; margin: 3px 0 15px 0 ; padding: 13px 57px 9px 10px ;'
-                  + 'font-size: 0.92rem ; height: 19px ; width: 82.6% ; max-height: 200px ; resize: none ; '
-                  + `position: relative ; z-index: 555 ; color: #${ env.ui.app.scheme == 'dark' ? 'eee' : '222' } ;`
-                  + `background: ${ env.ui.app.scheme == 'light' ? '#eeeeee9e'
-                        : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }` } ;`
-                  + `${ env.ui.app.scheme == 'dark' ? '' :
+              + `#${app.slug}-chatbar {
+                    border: solid 1px ${ isParticlizedDS ? '#aaa' : env.ui.app.scheme == 'dark' ? '#777' : '#555' };
+                    border-radius: 12px 13px 12px 0 ; margin: 3px 0 15px 0 ; padding: 13px 57px 9px 10px ;
+                    font-size: 0.92rem ; height: 19px ; width: 82.6% ; max-height: 200px ; resize: none ;
+                    position: relative ; z-index: 555 ; color: #${ env.ui.app.scheme == 'dark' ? 'eee' : '222' } ;
+                    background: ${ env.ui.app.scheme == 'light' ? '#eeeeee9e'
+                        : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }` };
+                    transform: skew(-3deg) ;
+                    ${ env.ui.app.scheme == 'dark' ? '' :
                         `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
                         box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
                         -moz-box-shadow: var(--chatbar-inset-shadow) ;` }
@@ -2546,7 +2551,7 @@
                         transition: box-shadow 0.25s ease ;
                             -webkit-transition: box-shadow 0.25s ease ; -moz-transition: box-shadow 0.25s ease ;
                             -o-transition: box-shadow 0.25s ease ; -ms-transition: box-shadow 0.25s ease }` }
-                 #${app.slug}-chatbar:focus-visible { /* fallback outline chatbar + reduce inset shadow on focus */
+                #${app.slug}-chatbar:focus-visible { /* fallback outline chatbar + reduce inset shadow on focus */
                     outline: -webkit-focus-ring-color auto 1px ;
                     ${ isParticlizedDS ? '' :
                         `--inset-shadow: 0 ${
@@ -4206,19 +4211,21 @@
                     const standbyBtnsDiv = dom.create.elem('div', {
                         class: `${app.slug}-standby-btns`, style: 'will-change: transform' });
                     ['query', 'summarize'].forEach(btnType => {
-                        const standbyBtn = dom.create.elem('button', {
-                            class: `${app.slug}-standby-btn no-mobile-tap-outline` })
-                        standbyBtn.textContent = app.msgs[
+                        const btn = {
+                            node: dom.create.elem('button', { class: `${app.slug}-standby-btn no-mobile-tap-outline` }),
+                            icon: icons[btnType == 'query' ? 'send' : 'summarize'].create(),
+                            textSpan: dom.create.elem('span')
+                        }
+                        btn.textSpan.textContent = app.msgs[
                             btnType == 'query' ? 'btnLabel_sendQueryToApp' : 'tooltip_summarizeResults']
-                        standbyBtn.prepend(icons[btnType == 'query' ? 'send' : 'summarize'].create())
-                        standbyBtn.onclick = () => {
+                        btn.node.onclick = () => {
                             show.reply.userInteracted = true ; show.reply.chatbarFocused = false
                             msgChain.push({ role: 'user', content:
                                 btnType == 'summarize' ? prompts.create('summarizeResults')
                                                        : new URL(location.href).searchParams.get('q') })
                             get.reply(msgChain, { src: btnType })
                         }
-                        standbyBtnsDiv.append(standbyBtn)
+                        btn.node.append(btn.icon, btn.textSpan) ; standbyBtnsDiv.append(btn.node)
                     })
                     appDiv.append(standbyBtnsDiv)
 
