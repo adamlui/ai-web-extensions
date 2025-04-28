@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.28.2
+// @version                  2025.4.28.3
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1067,7 +1067,7 @@
                         notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`)
                         if (appDiv.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
-                            get.reply(msgChain) // re-send query if user alerted
+                            get.reply(msgChain, { src: get.reply.src }) // re-send query if user alerted
                     }
                     Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
                     return onclick
@@ -3594,7 +3594,8 @@
             }
             const apiBeacon = appDiv.querySelector(`#${app.slug}-api-btn`)
             if (apiBeacon) apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
-            if (appDiv.querySelector(`.${app.slug}-alert`)) get.reply(msgChain) // re-send query if user alerted
+            if (appDiv.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
+                get.reply(msgChain, { src: get.reply.src })
         },
 
         relatedQueries() {
@@ -4858,7 +4859,7 @@
             time: Date.now(), role: 'user',
             content: config.autoSummarize ? prompts.create('summarizeResults') : searchQuery
         })
-        get.reply(msgChain)
+        get.reply(msgChain, { src: 'query' })
     } else { // show Standby mode
         show.reply('standby', footerContent)
         if (!config.rqDisabled)

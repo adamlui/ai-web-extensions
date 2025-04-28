@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.28.2
+// @version                2025.4.28.3
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -703,7 +703,7 @@
                         notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`)
                         if (appDiv.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
-                            get.reply(msgChain) // re-send query if user alerted
+                            get.reply(msgChain, { src: get.reply.src }) // re-send query if user alerted
                     }
                     Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
                     return onclick
@@ -2773,7 +2773,8 @@
             }
             const apiBeacon = appDiv.querySelector(`#${app.slug}-api-btn`)
             if (apiBeacon) apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
-            if (appDiv.querySelector(`.${app.slug}-alert`)) get.reply(msgChain) // re-send query if user alerted
+            if (appDiv.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
+                get.reply(msgChain, { src: get.reply.src })
         },
 
         streaming() {
@@ -3722,8 +3723,8 @@
     // Get/show FIRST REPLY
     const pageType = /\/(?:dp|product)\//.test(location.href) ? 'Product'
                    : /\/b\//.test(location.href) ? 'Category' : 'Other'
-    const firstQuery = pageType == 'Other' ? 'Hi there' : prompts.create(`inform${pageType}`, { mods: 'all' })
-    const msgChain = [{ time: Date.now(), role: 'user', content: firstQuery }]
-    get.reply(msgChain)
+    const firstQuery = pageType == 'Other' ? 'Hi there' : prompts.create(`inform${pageType}`, { mods: 'all' }),
+          msgChain = [{ time: Date.now(), role: 'user', content: firstQuery }]
+    get.reply(msgChain, { src: 'firstQuery' })
 
 })()
