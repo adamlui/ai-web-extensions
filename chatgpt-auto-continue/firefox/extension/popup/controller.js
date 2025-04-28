@@ -174,7 +174,7 @@
     cjsLogo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca/assets/images/badges/powered-by-chatgpt.js.png'
     cjsLogo.onclick = () => { open(app.urls.chatgptJS) ; close() }
 
-    // Init ABOUT footer button
+    // Init ABOUT footer icon/listener
     const aboutSpan = footer.querySelector('.about-span')
     aboutSpan.append(icons.create('questionMark', { width: 15, height: 13 }))
     aboutSpan.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
