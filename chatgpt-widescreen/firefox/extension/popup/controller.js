@@ -54,7 +54,7 @@
         return entry.div
     }
 
-    function extensionIsDisabled() { return config.extensionDisabled || !!config[`${env.site}Disabled`] }
+    function extensionIsDisabled() { return !!( config.extensionDisabled || config[`${env.site}Disabled`] )}
     function getMsg(key) { return chrome.i18n.getMessage(key) }
 
     function notify(msg, pos = 'bottom-right') {
