@@ -24,12 +24,12 @@
       "is_default": false
     }
   },
-  "web_accessible_resources": [{ "matches": [ "<all_urls>" ], "resources": [ "lib/deepseek.js", "lib/dom.js" ]}],
+  "web_accessible_resources": [{ "matches": ["<all_urls>"], "resources": ["lib/deepseek.js", "lib/dom.js"] }],
   "content_scripts": [{
-    "matches": [ "https://chat.deepseek.com/*" ], "run_at": "document_end", "js": [ "content.js" ]}],
-  "background": { "scripts": [ "background.js" ]},
+    "matches": ["https://chat.deepseek.com/*"], "run_at": "document_end", "js": ["content.js"] }],
+  "background": { "scripts": ["background.js"] },
   "browser_specific_settings": {
-    "gecko": { 
+    "gecko": {
       "id": "deepseek.omnibox@adamlui.com",
       "strict_min_version": "109.0"
     }
