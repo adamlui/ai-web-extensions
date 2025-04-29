@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.28.10
+// @version                2025.4.29
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -1209,7 +1209,7 @@
                     (settingsLists[env.browser.isPortrait ? 0 : +(idx >= settingEntryCap)]).append(settingEntry)
 
                     // Create/prepend icons
-                    const settingIcon = icons[setting.icon].create(/bg|fg/.exec(key)?.[0] ?? '')
+                    const settingIcon = icons[setting.icon].create(/bg|fg/.exec(key)?.[0] || '')
                     settingIcon.style.cssText = 'position: relative ;' + (
                         /proxy/i.test(key) ? 'top: 3px ; left: -0.5px ; margin-right: 9px'
                       : /preferred/i.test(key) ? 'top: 3.5px ; margin-right: 7.5px'
