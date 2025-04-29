@@ -1,6 +1,6 @@
 window.ui = {
     getScheme() {
-        return document.documentElement.className
-          || ( window.matchMedia?.('(prefers-color-scheme: dark)')?.matches ? 'dark' : 'light' )
+        return /\b(light|dark)\b/.exec(document.documentElement.className)?.[1]
+            || ( window.matchMedia?.('(prefers-color-scheme: dark)')?.matches ? 'dark' : 'light' )
     }
 };
