@@ -16,16 +16,16 @@ window.settings = {
     },
 
     getMsg(key) {
-        this._msgKeys ??= new Map() // to cache keys for this.isEnabled() inversion logic
+        this.msgKeys ??= new Map() // to cache keys for this.isEnabled() inversion logic
         const msg = typeof GM_info != 'undefined' ? this.imports.app.msgs[key] : chrome.i18n.getMessage(key)
-        this._msgKeys.set(msg, key)
+        this.msgKeys.set(msg, key)
         return msg
     },
 
     typeIsEnabled(key) { // for menu labels + notifs to return ON/OFF for type w/o suffix
         const reInvertFlags = /disabled|hidden/i
         return reInvertFlags.test(key) // flag in control key name
-            && !reInvertFlags.test(this._msgKeys.get(this.controls[key]?.label) || '') // but not in label msg key name
+            && !reInvertFlags.test(this.msgKeys.get(this.controls[key]?.label) || '') // but not in label msg key name
                 ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
     },
 
