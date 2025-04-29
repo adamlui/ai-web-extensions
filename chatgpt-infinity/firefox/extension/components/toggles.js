@@ -52,6 +52,13 @@ window.toggles = {
             }
         },
 
+        insert() {
+            const sidebar = document.querySelector(chatgpt.selectors.sidebar)
+            if (!sidebar || this.status?.startsWith('insert') || document.querySelector(`.${this.class}`)) return
+            this.status = 'inserting' ; if (!this.div) this.create()
+            sidebar.querySelector('div#sidebar-header').after(this.div) ; this.status = 'inserted'
+        },
+
         stylize() {
             const { env: { browser: { isMobile }}} = toggles.imports,
                   firstLink = chatgpt.getNewChatLink()
@@ -119,13 +126,6 @@ window.toggles = {
                         -moz-box-shadow: var(--knob-box-shadow-dark) }
                 .${this.class}.dark > label { color: white } /* toggle label */`
             ))
-        },
-
-        insert() {
-            const sidebar = document.querySelector(chatgpt.selectors.sidebar)
-            if (!sidebar || this.status?.startsWith('insert') || document.querySelector(`.${this.class}`)) return
-            this.status = 'inserting' ; if (!this.div) this.create()
-            sidebar.querySelector('div#sidebar-header').after(this.div) ; this.status = 'inserted'
         },
 
         update: {
