@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.28
+// @version             2025.4.28.1
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -221,10 +221,10 @@
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.0/dist/chatgpt.min.js#sha256-Xg6XXZ7kcc/MTdlKwUq1rc41WiEwuqhl7DxIjIkzRhc=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@11b40c3/chromium/extension/components/modals.js#sha256-MPZK5PlZQhCIgSRwiKrfq8v0vklmSm6rwlyrqs2YX80=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@11b40c3/chromium/extension/components/toggles.js#sha256-4gzrZ0g/S9LVdJw/EDsAvFQXrHe/IYLSla00kuVCyQs=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@14a206c/chromium/extension/components/toggles.js#sha256-GuF5iJO5vWEn/dWCzb0kPNJBqIMju8LCyDG+C41Z3dc=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@11b40c3/chromium/extension/lib/dom.js#sha256-wX79+SnP3dPYqz9x9bfyZKz+yIJYLIgrUP+8Fa6Ckwg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@11b40c3/chromium/extension/lib/settings.js#sha256-xXVVeRerxLKR8Q8Nakh9nDVEMOm5GzCn1P3GYkgeJSc=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@6089211/chromium/extension/lib/ui.js#sha256-/szI0bDpLL1aVTrc29iyToff58VMfeM/lSyjHWTipt0=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@14a206c/chromium/extension/lib/ui.js#sha256-H5ipBYjHNhKZ9xNRBboq2eZs1usmzXTYvuWtop+1AGU=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant               GM_setValue
@@ -635,8 +635,6 @@
 
     // Init BROWSER/UI props
     await Promise.race([chatgpt.isLoaded(), new Promise(resolve => setTimeout(resolve, 5000))]) // initial UI loaded
-    await chatgpt.sidebar.isLoaded()
-    env.ui.firstLink = chatgpt.getNewChatLink()
 
     // Add LISTENER to auto-disable Infinity Mode
     if ('hidden' in document) // ...if Page Visibility API supported
@@ -658,9 +656,10 @@
 
     // Monitor NODE CHANGES to maintain sidebar toggle visibility
     new MutationObserver(() => {
-        if (!config.toggleHidden && !document.querySelector(`.${toggles.sidebar.class}`)
-            && toggles.sidebar.status != 'inserting') {
-                toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }
+        if (!config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
+            && !document.querySelector(`.${toggles.sidebar.class}`)
+            && toggles.sidebar.status != 'inserting'
+        ) { toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }
     }).observe(document.body, { attributes: true, subtree: true })
 
     // Monitor SCHEME PREF changes to update sidebar toggle + modal colors
