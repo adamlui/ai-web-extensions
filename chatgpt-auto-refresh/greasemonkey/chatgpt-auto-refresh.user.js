@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.28.1
+// @version             2025.4.28.2
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -791,6 +791,7 @@
             class: `${app.slug}-sidebar-toggle`,
 
             create() {
+                const firstLink = chatgpt.getNewChatLink()
 
                 // Init toggle elems
                 this.div = dom.create.elem('div', { class: this.class })
@@ -806,11 +807,11 @@
 
                 // Stylize elems
                 this.stylize() // create/append stylesheet
-                if (env.ui.firstLink) { // borrow/assign classes from sidebar elems
-                    const firstIcon = env.ui.firstLink.querySelector('div:first-child'),
-                          firstLabel = env.ui.firstLink.querySelector('div:nth-child(2)')
+                if (firstLink) { // borrow/assign classes from sidebar elems
+                    const firstIcon = firstLink.querySelector('div:first-child'),
+                          firstLabel = firstLink.querySelector('div:nth-child(2)')
                     this.div.classList.add(
-                        ...env.ui.firstLink.classList, ...(firstLabel?.classList || []))
+                        ...firstLink.classList, ...(firstLabel?.classList || []))
                     this.div.querySelector('img')?.classList.add(...(firstIcon?.classList || []))
                 }
 
@@ -828,6 +829,7 @@
             },
 
             stylize() {
+                const firstLink = chatgpt.getNewChatLink()
                 document.head.append(this.styles = dom.create.style(
                     `:root { /* vars */
                         --switch-enabled-bg-color: #ad68ff ; --switch-disabled-bg-color: #ccc ;
@@ -840,6 +842,7 @@
                   + `.${this.class} { /* parent div */
                         max-height: 37px ; margin: 2px 0 ; user-select: none ; cursor: pointer ;
                         opacity: 1 !important ; /* overcome OpenAI click-dim */
+                        justify-content: unset ; /* overcome OpenAI .justify-center */
                         flex-grow: unset } /* overcome OpenAI .grow */
                     .${this.class} > img { /* navicon */
                         width: 1.25rem ; height: 1.25rem ; margin-left: 2px ; margin-right: 4px }
@@ -847,8 +850,8 @@
                     .${this.class} > span { /* switch span */
                         position: relative ; width: 30px ; height: 15px ; border-radius: 28px ;
                         background-color: var(--switch-disabled-bg-color) ;
-                        bottom: ${ env.ui.firstLink ? 0 : -0.15 }em ;
-                        left: ${ env.browser.isMobile ? 169 : env.ui.firstLink ? 154 : 160 }px ;
+                        bottom: ${ firstLink ? '0.5px' : '-0.15em' } ;
+                        left: ${ env.browser.isMobile || firstLink ? 169 : 160 }px ;
                         transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
                             -o-transition: 0.4s ; -ms-transition: 0.4s }
                     .${this.class} > span.enabled { /* switch on */
@@ -872,10 +875,9 @@
                         transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
                             -o-transition: 0.4s ; -ms-transition: 0.4s }
                     .${this.class} > label { /* toggle label */
-                        cursor: pointer ; overflow: hidden ; text-overflow: ellipsis ;
-                        width: ${ env.browser.isMobile ? 201 : 148 }px ;
-                        margin-left: -${ env.ui.firstLink ? 41 : 23 }px ; /* left-shift to navicon */
-                        ${ env.ui.firstLink ? '' : 'font-size: 0.875rem ; font-weight: 600' }}`
+                        cursor: pointer ; overflow: hidden ; text-overflow: ellipsis ; white-space: nowrap ;
+                        color: black ; width: 153px ; margin-left: -22px ;
+                        ${ firstLink ? 'font-size: var(--text-sm)' : 'font-size: 0.875rem ; font-weight: 600' }}`
 
                     // Dark scheme mods
                   + `.${this.class}.dark > span.enabled { /* switch on */
@@ -890,15 +892,16 @@
                     .${this.class}.dark > span > span { /* knob span */
                         box-shadow: var(--knob-box-shadow-dark) ; /* make 3D-er */
                             -webkit-box-shadow: var(--knob-box-shadow-dark) ;
-                            -moz-box-shadow: var(--knob-box-shadow-dark) }`
+                            -moz-box-shadow: var(--knob-box-shadow-dark) }
+                    .${this.class}.dark > label { color: white } /* toggle label */`
                 ))
             },
 
             insert() {
-                if (this.status?.startsWith('insert') || document.querySelector(`.${this.class}`)) return
-                const sidebar = document.querySelectorAll('nav')[+env.browser.isMobile] ; if (!sidebar) return
+                const sidebar = document.querySelector(chatgpt.selectors.sidebar)
+                if (!sidebar || this.status?.startsWith('insert') || document.querySelector(`.${this.class}`)) return
                 this.status = 'inserting' ; if (!this.div) this.create()
-                sidebar.children[1].before(this.div) ; this.status = 'inserted'
+                sidebar.querySelector('div#sidebar-header').after(this.div) ; this.status = 'inserted'
             },
 
             update: {
@@ -951,9 +954,7 @@
     toggles.sidebar.update.navicon({ preload: true }) // preload sidebar NAVICON variants
 
     // Init UI props
-    await Promise.race([chatgpt.isLoaded(), new Promise(resolve => setTimeout(resolve, 5000))]) // initial UI loaded
-    await chatgpt.sidebar.isLoaded()
-    env.ui.firstLink = chatgpt.getNewChatLink();
+    await Promise.race([chatgpt.isLoaded(), new Promise(resolve => setTimeout(resolve, 5000))]); // initial UI loaded
 
     // Add RISING PARTICLES styles
     ['rpg', 'rpw'].forEach(cssType => document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
@@ -984,9 +985,10 @@
 
     // Monitor NODE CHANGES to maintain sidebar toggle visibility
     new MutationObserver(() => {
-        if (!config.toggleHidden && !document.querySelector(`.${toggles.sidebar.class}`)
-            && toggles.sidebar.status != 'inserting') {
-                toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }
+        if (!config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
+            && !document.querySelector(`.${toggles.sidebar.class}`)
+            && toggles.sidebar.status != 'inserting'
+        ) { toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }
     }).observe(document.body, { attributes: true, subtree: true })
 
     // Monitor SCHEME PREF changes to update sidebar toggle + modal colors

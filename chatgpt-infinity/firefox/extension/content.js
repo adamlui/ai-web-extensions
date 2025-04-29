@@ -10,15 +10,11 @@
     })
 
     // Add CHROME MSG listener for background/popup requests to sync modes/settings
-    chrome.runtime.onMessage.addListener(({ action, options, fromBG }, _, sendResp) => {
+    chrome.runtime.onMessage.addListener(({ action, options, fromBG }) => {
         ({
             notify: () => notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
             showAbout: () => chatgpt.isLoaded().then(() => modals.open('about')),
-            prompt: () => {
-                const userInput = prompt(options.msg || 'Please enter your input:', options.defaultVal || '')
-                sendResp({ input: userInput })
-            },
             syncConfigToUI: () => {
                 fromBG && settings.save('infinityMode', false) // disable Infinity mode 1st to not transfer between tabs
                 syncConfigToUI(options)
@@ -158,8 +154,6 @@
 
     // Init BROWSER/UI props
     await Promise.race([chatgpt.isLoaded(), new Promise(resolve => setTimeout(resolve, 5000))]) // initial UI loaded
-    await chatgpt.sidebar.isLoaded()
-    env.ui.firstLink = chatgpt.getNewChatLink()
 
     // Add LISTENER to auto-disable Infinity Mode
     document.onvisibilitychange = () => {
@@ -184,9 +178,10 @@
 
     // Monitor NODE CHANGES to maintain sidebar toggle visibility
     new MutationObserver(() => {
-        if (!config.toggleHidden && !document.querySelector(`.${toggles.sidebar.class}`)
-            && toggles.sidebar.status != 'inserting') {
-                toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }
+        if (!config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
+            && !document.querySelector(`.${toggles.sidebar.class}`)
+            && toggles.sidebar.status != 'inserting'
+        ) { toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }
     }).observe(document.body, { attributes: true, subtree: true })
 
     // Monitor SCHEME PREF changes to update sidebar toggle + modal colors

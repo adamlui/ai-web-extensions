@@ -154,8 +154,6 @@
 
     // Init BROWSER/UI props
     await Promise.race([chatgpt.isLoaded(), new Promise(resolve => setTimeout(resolve, 5000))]) // initial UI loaded
-    await chatgpt.sidebar.isLoaded()
-    env.ui.firstLink = chatgpt.getNewChatLink()
 
     // Add LISTENER to auto-disable Infinity Mode
     document.onvisibilitychange = () => {
@@ -180,9 +178,10 @@
 
     // Monitor NODE CHANGES to maintain sidebar toggle visibility
     new MutationObserver(() => {
-        if (!config.toggleHidden && !document.querySelector(`.${toggles.sidebar.class}`)
-            && toggles.sidebar.status != 'inserting') {
-                toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }
+        if (!config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
+            && !document.querySelector(`.${toggles.sidebar.class}`)
+            && toggles.sidebar.status != 'inserting'
+        ) { toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }
     }).observe(document.body, { attributes: true, subtree: true })
 
     // Monitor SCHEME PREF changes to update sidebar toggle + modal colors

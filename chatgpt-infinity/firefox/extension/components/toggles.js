@@ -1,4 +1,4 @@
-// Requires app + env + notify + syncConfigToUI
+// Requires lib/chatgpt.js + app + env + notify + syncConfigToUI
 
 window.toggles = {
     import(deps) { Object.assign(this.imports ||= {}, deps) },
@@ -13,7 +13,8 @@ window.toggles = {
         get class() { return `${toggles.imports.app.slug}-sidebar-toggle` },
 
         create() {
-            const { env: { ui: { firstLink }}, notify, syncConfigToUI } = toggles.imports
+            const { notify, syncConfigToUI } = toggles.imports,
+                  firstLink = chatgpt.getNewChatLink()
 
             // Init toggle elems
             this.div = document.createElement('div') ; this.div.className = this.class
@@ -52,7 +53,8 @@ window.toggles = {
         },
 
         stylize() {
-            const { env: { browser: { isMobile }, ui: { firstLink }}} = toggles.imports
+            const { env: { browser: { isMobile }}} = toggles.imports,
+                  firstLink = chatgpt.getNewChatLink()
             document.head.append(this.styles = dom.create.style(
                 `:root { /* vars */
                     --switch-enabled-bg-color: #ad68ff ; --switch-disabled-bg-color: #ccc ;
@@ -65,6 +67,7 @@ window.toggles = {
               + `.${this.class} { /* parent div */
                     max-height: 37px ; margin: 2px 0 ; user-select: none ; cursor: pointer ;
                     opacity: 1 !important ; /* overcome OpenAI click-dim */
+                    justify-content: unset ; /* overcome OpenAI .justify-center */
                     flex-grow: unset } /* overcome OpenAI .grow */
                 .${this.class} > img { /* navicon */
                     width: 1.25rem ; height: 1.25rem ; margin-left: 2px ; margin-right: 4px }
@@ -72,7 +75,7 @@ window.toggles = {
                 .${this.class} > span { /* switch span */
                     position: relative ; width: 30px ; height: 15px ; border-radius: 28px ;
                     background-color: var(--switch-disabled-bg-color) ;
-                    bottom: ${ firstLink ? 0 : -0.15 }em ; left: ${ isMobile ? 169 : firstLink ? 154 : 160 }px ;
+                    bottom: ${ firstLink ? '0.5px' : '-0.15em' } ; left: ${ isMobile || firstLink ? 169 : 160 }px ;
                     transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
                         -o-transition: 0.4s ; -ms-transition: 0.4s }
                 .${this.class} > span.enabled { /* switch on */
@@ -96,9 +99,9 @@ window.toggles = {
                     transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
                         -o-transition: 0.4s ; -ms-transition: 0.4s }
                 .${this.class} > label { /* toggle label */
-                    cursor: pointer ; overflow: hidden ; text-overflow: ellipsis ; width: ${ isMobile ? 201 : 148 }px ;
-                    margin-left: -${ firstLink ? 41 : 23 }px ; /* left-shift to navicon */
-                    ${ firstLink ? '' : 'font-size: 0.875rem ; font-weight: 600' }}`
+                    cursor: pointer ; overflow: hidden ; text-overflow: ellipsis ; white-space: nowrap ;
+                    color: black ; width: 153px ; margin-left: -22px ;
+                    ${ firstLink ? 'font-size: var(--text-sm)' : 'font-size: 0.875rem ; font-weight: 600' }}`
 
                 // Dark scheme mods
               + `.${this.class}.dark > span.enabled { /* switch on */
@@ -113,16 +116,16 @@ window.toggles = {
                 .${this.class}.dark > span > span { /* knob span */
                     box-shadow: var(--knob-box-shadow-dark) ; /* make 3D-er */*
                         -webkit-box-shadow: var(--knob-box-shadow-dark) ;
-                        -moz-box-shadow: var(--knob-box-shadow-dark) }`
+                        -moz-box-shadow: var(--knob-box-shadow-dark) }
+                .${this.class}.dark > label { color: white } /* toggle label */`
             ))
         },
 
         insert() {
-            if (this.status?.startsWith('insert') || document.querySelector(`.${this.class}`)) return
-            const sidebar = document.querySelectorAll('nav')[+toggles.imports.env.browser.isMobile]
-            if (!sidebar) return
+            const sidebar = document.querySelector(chatgpt.selectors.sidebar)
+            if (!sidebar || this.status?.startsWith('insert') || document.querySelector(`.${this.class}`)) return
             this.status = 'inserting' ; if (!this.div) this.create()
-            sidebar.children[1].before(this.div) ; this.status = 'inserted'
+            sidebar.querySelector('div#sidebar-header').after(this.div) ; this.status = 'inserted'
         },
 
         update: {
