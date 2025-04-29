@@ -20,10 +20,7 @@
   "content_scripts": [{ "matches": ["https://chatgpt.com/*"], "run_at": "document_end", "js": ["content.js"] }],
   "background": { "scripts": ["background.js"] },
   "browser_specific_settings": {
-    "gecko": { 
-      "id": "chatgpt.auto.continue@chatgptevo.com",
-      "strict_min_version": "109.0"
-    },
+    "gecko": { "id": "chatgpt.auto.continue@chatgptevo.com", "strict_min_version": "109.0" },
     "gecko_android": { "strict_min_version": "120.0" }
   }
 }

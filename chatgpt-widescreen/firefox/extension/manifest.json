@@ -23,10 +23,7 @@
   }],
   "background": { "scripts": ["background.js", "lib/json5.min.js"] },
   "browser_specific_settings": {
-    "gecko": { 
-      "id": "chatgpt.widescreen@chatgptevo.com",
-      "strict_min_version": "109.0"
-    },
+    "gecko": { "id": "chatgpt.widescreen@chatgptevo.com", "strict_min_version": "109.0" },
     "gecko_android": { "strict_min_version": "120.0" }
   }
 }
