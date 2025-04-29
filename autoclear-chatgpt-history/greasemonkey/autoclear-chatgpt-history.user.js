@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.29
+// @version             2025.4.29.1
 // @license             MIT
 // @icon                https://assets.autoclearchatgpt.com/images/icons/openai/black/icon48.png?v=f461c06
 // @icon64              https://assets.autoclearchatgpt.com/images/icons/openai/black/icon64.png?v=f461c06
@@ -945,8 +945,6 @@
 
     toolbarMenu.register() // create browser toolbar menu
     toggles.sidebar.update.navicon({ preload: true }) // preload sidebar NAVICON variants
-
-    // Init UI props
     await Promise.race([chatgpt.isLoaded(), new Promise(resolve => setTimeout(resolve, 5000))]); // initial UI loaded
 
     // Add RISING PARTICLES styles

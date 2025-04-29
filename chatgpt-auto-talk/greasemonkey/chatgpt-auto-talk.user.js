@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.29
+// @version             2025.4.29.1
 // @license             MIT
 // @icon                https://assets.chatgptautotalk.com/images/icons/openai/black/icon48.png?v=9f1ed3c
 // @icon64              https://assets.chatgptautotalk.com/images/icons/openai/black/icon64.png?v=9f1ed3c
@@ -902,8 +902,6 @@
 
     toolbarMenu.register() // create browser toolbar menu
     toggles.sidebar.update.navicon({ preload: true }) // preload sidebar NAVICON variants
-
-    // Init BROWSER/UI props
     await Promise.race([chatgpt.isLoaded(), new Promise(resolve => setTimeout(resolve, 5000))]); // initial UI loaded
 
     // Add RISING PARTICLES styles
