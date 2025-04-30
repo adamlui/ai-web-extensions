@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.29.3
+// @version                2025.4.30
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -703,7 +703,7 @@
                         notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`)
                         if (appDiv.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
-                            get.reply(msgChain, { src: get.reply.src }) // re-send query if user alerted
+                            get.reply({ msgs: msgChain, src: get.reply.src }) // re-send query if user alerted
                     }
                     Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
                     return onclick
@@ -2335,7 +2335,7 @@
                         if (btnType == 'send') return // since handled by form submit
                         msgChain.push({ time: Date.now(), role: 'user',
                             content: prompts.create('randomQA', { mods: 'all' })})
-                        get.reply(msgChain, { src: btnType })
+                        get.reply({ msgs: msgChain, src: btnType })
                         show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                     }
                     if (!env.browser.isMobile) // add hover listener for tooltips
@@ -2374,7 +2374,7 @@
                 // Yes reply, submit it + transform to loading UI
                 } else {
                     msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
-                    get.reply(msgChain, { src: 'submit' })
+                    get.reply({ msgs: msgChain, src: 'submit' })
                     show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
             }
@@ -2772,7 +2772,7 @@
             const apiBeacon = appDiv.querySelector(`#${app.slug}-api-btn`)
             if (apiBeacon) apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
             if (appDiv.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
-                get.reply(msgChain, { src: get.reply.src })
+                get.reply({ msgs: msgChain, src: get.reply.src })
         },
 
         streaming() {
@@ -2997,7 +2997,7 @@
                             caller.sender = caller.sender || callerAPI // app is waiting, become sender
                             if (caller.sender == callerAPI // app is sending from this api
                                 && textToShow.trim() != '' // empty reply chunk not read
-                            ) show.reply(textToShow, { apiUsed: callerAPI })
+                            ) show.reply({ content: textToShow, apiUsed: callerAPI })
                         }
                     } catch (err) { log.error('Error showing stream', err.message) }
 
@@ -3083,7 +3083,7 @@
                                 caller.status = 'done' ; caller.attemptCnt = null
                                 api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
                                 textToShow = textToShow.replace(apis[callerAPI].respPatterns?.watermark, '').trim()
-                                show.reply(textToShow, { apiUsed: callerAPI }) ; show.codeCornerBtns()
+                                show.reply({ content: textToShow, apiUsed: callerAPI }) ; show.codeCornerBtns()
                                 msgChain.push({
                                     time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
                                     regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
@@ -3133,7 +3133,7 @@
             }})
         },
 
-        async reply(msgChain, { src = null } = {}) {
+        async reply({ msgs, src = null }) {
             get.reply.src = src ; show.reply.updatedAPIinHeader = false
 
             // Show loading status
@@ -3152,7 +3152,7 @@
             loadingElem.prepend(loadingSpinner)
 
             // Init msgs
-            let msgs = structuredClone(msgChain) // deep copy to not affect global chain
+            msgs = structuredClone(msgs) // deep copy to not affect global chain
             if (msgs.length > 3) msgs = msgs.slice(-3) // keep last 3 only
             msgs.forEach(msg => { // trim agent msgs
                 if (msg.role == 'assistant' && msg.content.length > 250)
@@ -3292,7 +3292,7 @@
             })
         },
 
-        reply(answer, { apiUsed = null } = {}) {
+        reply({ content, apiUsed = null }) {
             show.reply.shareURL = null // reset to regen using longer msgChain
             tooltip.toggle('off') // hide lingering tooltip if cursor was on corner button
             const regenSVGwrapper = appDiv.querySelector('[id$=regen-btn]')?.firstChild
@@ -3430,7 +3430,7 @@
             // Render MD, highlight code
             const replyPre = appDiv.querySelector('.reply-pre')
             try { // to render markdown
-                replyPre.innerHTML = marked.parse(answer) } catch (err) { log.error(err.message) }
+                replyPre.innerHTML = marked.parse(content) } catch (err) { log.error(err.message) }
             hljs.highlightAll() // highlight code
             replyPre.querySelectorAll('code').forEach(codeBlock => // add linebreaks after semicolons
                 codeBlock.innerHTML = codeBlock.innerHTML.replace(/;\s*/g, ';<br>'))
@@ -3553,7 +3553,7 @@
                 regenSVGwrapper.append(regenSVG) ; this.regen.append(regenSVGwrapper)
                 if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = tooltip.toggle
                 this.regen.onclick = event => {
-                    get.reply(msgChain, { src: 'regen' })
+                    get.reply({ msgs: msgChain, src: 'regen' })
                     regenSVGwrapper.style.cursor = 'default' // remove finger
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
@@ -3723,6 +3723,6 @@
                    : /\/b\//.test(location.href) ? 'Category' : 'Other'
     const firstQuery = pageType == 'Other' ? 'Hi there' : prompts.create(`inform${pageType}`, { mods: 'all' }),
           msgChain = [{ time: Date.now(), role: 'user', content: firstQuery }]
-    get.reply(msgChain, { src: 'firstQuery' })
+    get.reply({ msgs: msgChain, src: 'firstQuery' })
 
 })()

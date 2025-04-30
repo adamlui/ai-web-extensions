@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.30
+// @version                  2025.4.30.1
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1067,7 +1067,7 @@
                         notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`)
                         if (appDiv.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
-                            get.reply(msgChain, { src: get.reply.src }) // re-send query if user alerted
+                            get.reply({ msgs: msgChain, src: get.reply.src }) // re-send query if user alerted
                     }
                     Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
                     return onclick
@@ -3065,7 +3065,7 @@
                         if (btnType == 'send') return // since handled by form submit
                         msgChain.push({ time: Date.now(), role: 'user', content: prompts.create(
                             btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })})
-                        get.reply(msgChain, { src: btnType })
+                        get.reply({ msgs: msgChain, src: btnType })
                         show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                     }
                     if (!env.browser.isMobile) // add hover listener for tooltips
@@ -3104,7 +3104,7 @@
                 // Yes reply, submit it + transform to loading UI
                 } else {
                     msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
-                    get.reply(msgChain, { src: 'submit' })
+                    get.reply({ msgs: msgChain, src: 'submit' })
                     show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
             }
@@ -3598,7 +3598,7 @@
             const apiBeacon = appDiv.querySelector(`#${app.slug}-api-btn`)
             if (apiBeacon) apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
             if (appDiv.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
-                get.reply(msgChain, { src: get.reply.src })
+                get.reply({ msgs: msgChain, src: get.reply.src })
         },
 
         relatedQueries() {
@@ -3865,7 +3865,7 @@
                             caller.sender = caller.sender || callerAPI // app is waiting, become sender
                             if (caller.sender == callerAPI // app is sending from this api
                                 && textToShow.trim() != '' // empty reply chunk not read
-                            ) show.reply(textToShow, footerContent, { apiUsed: callerAPI })
+                            ) show.reply({ content: textToShow, footerContent: footerContent, apiUsed: callerAPI })
                         }
                     } catch (err) { log.error('Error showing stream', err.message) }
 
@@ -3952,7 +3952,8 @@
                                 api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
                                 textToShow = textToShow.replace(apis[callerAPI].respPatterns?.watermark, '').trim()
                                 if (caller == get.reply) {
-                                    show.reply(textToShow, footerContent, { apiUsed: callerAPI })
+                                    show.reply({
+                                        content: textToShow, footerContent: footerContent, apiUsed: callerAPI })
                                     show.codeCornerBtns()
                                     msgChain.push({
                                         time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
@@ -4077,7 +4078,7 @@
             })
         },
 
-        async reply(msgChain, { src = null } = {}) {
+        async reply({ msgs, src = null }) {
             get.reply.src = src ; show.reply.updatedAPIinHeader = false
 
             // Show loading status
@@ -4101,7 +4102,7 @@
             loadingElem.prepend(loadingSpinner)
 
             // Init msgs
-            let msgs = structuredClone(msgChain) // deep copy to not affect global chain
+            msgs = structuredClone(msgs) // deep copy to not affect global chain
             if (msgs.length > 3) msgs = msgs.slice(-3) // keep last 3 only
             msgs.forEach(msg => { // trim agent msgs
                 if (msg.role == 'assistant' && msg.content.length > 250)
@@ -4301,7 +4302,7 @@
             }
         },
 
-        reply(answer, footerContent, { apiUsed = null } = {}) {
+        reply({ content, footerContent, standby = false, apiUsed = null }) {
             show.reply.shareURL = null // reset to regen using longer msgChain
             tooltip.toggle('off') // hide lingering tooltip if cursor was on corner button
             const regenSVGwrapper = appDiv.querySelector('[id$=regen-btn]')?.firstChild
@@ -4361,7 +4362,7 @@
                 settingsBtn.append(icons.sliders.create()) ; headerBtnsDiv.append(settingsBtn)
 
                 // Create/append Font Size button
-                if (answer != 'standby') {
+                if (!standby) {
                     var fontSizeBtn = dom.create.elem('btn', {
                         id: `${app.slug}-font-size-btn`, class: `${app.slug}-header-btn app-hover-only`,
                         style: `margin: ${ env.browser.isMobile ? 5 : -2 }px 9px 0 0` })
@@ -4401,7 +4402,7 @@
                 }
 
                 // Show standby state if prefix/suffix mode on
-                if (answer == 'standby') {
+                if (standby) {
                     const standbyBtnsDiv = dom.create.elem('div', {
                         class: `${app.slug}-standby-btns`, style: 'will-change: transform' });
                     ['query', 'summarize'].forEach(btnType => {
@@ -4417,7 +4418,7 @@
                             msgChain.push({ role: 'user', content:
                                 btnType == 'summarize' ? prompts.create('summarizeResults')
                                                        : new URL(location.href).searchParams.get('q') })
-                            get.reply(msgChain, { src: btnType })
+                            get.reply({ msgs: msgChain, src: btnType })
                         }
                         btn.node.append(btn.icon, btn.textSpan) ; standbyBtnsDiv.append(btn.node)
                     })
@@ -4440,7 +4441,7 @@
                 const continueChatDiv = dom.create.elem('div')
                 const chatTextarea = dom.create.elem('textarea', {
                     id: `${app.slug}-chatbar`, rows: 1,
-                    placeholder: `${app.msgs[answer == 'standby' ? 'placeholder_askSomethingElse'
+                    placeholder: `${app.msgs[standby ? 'placeholder_askSomethingElse'
                                                                  : 'tooltip_sendReply']}...`
                 })
                 continueChatDiv.append(chatTextarea)
@@ -4474,7 +4475,7 @@
             }
 
             // Render/show answer if query sent
-            if (answer != 'standby') {
+            if (!standby) {
 
                 // Show API used in bubble header
                 if (!show.reply.updatedAPIinHeader) {
@@ -4499,7 +4500,7 @@
                 // Render MD, highlight code
                 const replyPre = appDiv.querySelector('.reply-pre')
                 try { // to render markdown
-                    replyPre.innerHTML = marked.parse(answer) } catch (err) { log.error(err.message) }
+                    replyPre.innerHTML = marked.parse(content) } catch (err) { log.error(err.message) }
                 hljs.highlightAll() // highlight code
                 replyPre.querySelectorAll('code').forEach(codeBlock => { // add linebreaks after semicolons
                     codeBlock.innerHTML = codeBlock.innerHTML.replace(/;\s*/g, ';<br>') })
@@ -4631,7 +4632,7 @@
                 regenSVGwrapper.append(regenSVG) ; this.regen.append(regenSVGwrapper)
                 if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = tooltip.toggle
                 this.regen.onclick = event => {
-                    get.reply(msgChain, { src: 'regen' })
+                    get.reply({ msgs: msgChain, src: 'regen' })
                     regenSVGwrapper.style.cursor = 'default' // remove finger
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
@@ -4864,9 +4865,9 @@
             time: Date.now(), role: 'user',
             content: config.autoSummarize ? prompts.create('summarizeResults') : searchQuery
         })
-        get.reply(msgChain, { src: 'query' })
+        get.reply({ msgs: msgChain, src: 'query' })
     } else { // show Standby mode
-        show.reply('standby', footerContent)
+        show.reply({ standby: true, footerContent: footerContent })
         if (!config.rqDisabled)
             get.related(searchQuery)
                 .then(queries => show.related(queries))
