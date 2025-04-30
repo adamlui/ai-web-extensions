@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.29.4
+// @version               2025.4.29.5
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -2405,7 +2405,7 @@
                 .${app.slug}-header-btn:active {
                     ${ env.ui.app.scheme == 'dark' ? 'fill: #999999 ; stroke: #999999'
                                                    : 'fill: #638ed4 ; stroke: #638ed4' }}
-                #${app.slug}-logo, .${app.slug}-header-btn svg, .${app.slug}-standby-btn {
+                #${app.slug}-logo, .${app.slug}-header-btn svg {
                     filter: drop-shadow(${ env.ui.app.scheme == 'dark' ? '#7171714d 10px' : '#aaaaaa21 7px' } 7px 3px) }
                 #${app.slug} .loading {
                     margin-bottom: -55px ; /* offset vs. app div bottom-padding footer accomodation */
@@ -2439,7 +2439,7 @@
                 .${app.slug}-standby-btn {
                     --content-color: ${ isParticlizedDS ? 'white' : 'black' };
                     width: 95% ; margin-bottom: 9px ; padding: 12px 0 ; cursor: pointer ; transform: skew(-13deg) ;
-                    background-color: #f0f0f0${ config.bgAnimationsDisabled ? '' : '00' };
+                    background: none ; box-shadow: #aaaaaa12 7px 7px 3px 0px ;
                     color: var(--content-color) ; border: 1px solid ${ isParticlizedDS ? '#fff' : '#888' };
                     transition: var(--btn-transition) ;
                         -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
@@ -2449,7 +2449,7 @@
                     color: var(--content-color) ; fill: var(--content-color) ; stroke: var(--content-color) ;
                     background: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
                     ${ config.fgAnimationsDisabled || env.browser.isMobile ? ''
-                        : 'transform: scale(1.055) skew(-13deg)' }}
+                        : 'transform: scale(1.035) skew(-13deg)' }}
                 .${app.slug}-standby-btn > svg {
                     position: relative ; stroke: var(--content-color) ; transform: skew(13deg) }
                 .${app.slug}-standby-btn > span { /* text, counter btn skew */
