@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.4.30.1
+// @version               2025.4.30.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -4248,8 +4248,7 @@
                 const continueChatDiv = dom.create.elem('div')
                 const chatTextarea = dom.create.elem('textarea', {
                     id: `${app.slug}-chatbar`, rows: 1,
-                    placeholder: `${app.msgs[standby ? 'placeholder_askSomethingElse'
-                                                                 : 'tooltip_sendReply']}...`
+                    placeholder: `${app.msgs[standby ? 'placeholder_askSomethingElse' : 'tooltip_sendReply']}...`
                 })
                 continueChatDiv.append(chatTextarea)
                 replyForm.append(continueChatDiv) ; replySection.append(replyForm)

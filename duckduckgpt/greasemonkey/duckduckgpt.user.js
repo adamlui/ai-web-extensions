@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.30.1
+// @version                2025.4.30.2
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -4244,8 +4244,7 @@
                 const continueChatDiv = dom.create.elem('div')
                 const chatTextarea = dom.create.elem('textarea', {
                     id: `${app.slug}-chatbar`, rows: 1,
-                    placeholder: `${app.msgs[standby ? 'placeholder_askSomethingElse'
-                                                                 : 'tooltip_sendReply']}...`
+                    placeholder: `${app.msgs[standby ? 'placeholder_askSomethingElse' : 'tooltip_sendReply']}...`
                 })
                 continueChatDiv.append(chatTextarea)
                 replyForm.append(continueChatDiv) ; replySection.append(replyForm)
