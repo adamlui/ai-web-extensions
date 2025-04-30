@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.4.29.5
+// @version                  2025.4.30
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2606,7 +2606,7 @@
                 .${app.slug}-standby-btns { margin: 17px 0 -7px }
                 .${app.slug}-standby-btn {
                     --content-color: ${ isParticlizedDS ? 'white' : 'black' };
-                    width: 95% ; margin-bottom: 9px ; padding: 13px 0 ; cursor: pointer ; transform: skew(-13deg) ;
+                    width: 90% ; margin-bottom: 9px ; padding: 13px 0 ; cursor: pointer ; transform: skew(-13deg) ;
                     background: none ; box-shadow: #aaaaaa12 7px 7px 3px 0px ;
                     color: var(--content-color) ; border: 1px solid ${ isParticlizedDS ? '#fff' : '#888' };
                     transition: var(--btn-transition) ;
@@ -2617,15 +2617,15 @@
                     color: var(--content-color) ; fill: var(--content-color) ; stroke: var(--content-color) ;
                     background: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
                     ${ config.fgAnimationsDisabled || env.browser.isMobile ? ''
-                        : 'transform: scale(1.035) skew(-13deg)' }}
+                        : 'transform: scale(1.055) skew(-13deg)' }}
                 .${app.slug}-standby-btn > svg {
                     position: relative ; stroke: var(--content-color) ; transform: skew(13deg) }
                 .${app.slug}-standby-btn > span { /* text, counter btn skew */
                     display: inline-block ; transform: skew(13deg) }
                 .${app.slug}-standby-btn:first-of-type svg { /* Query button icon */
                     width: 11px ; height: 11px ; margin-right: 4px ; top: -1px }
-                .${app.slug}-standby-btn:first-of-type { margin-right: 5% }
-                .${app.slug}-standby-btn:nth-of-type(2) { margin-left: 5% }
+                .${app.slug}-standby-btn:first-of-type { margin-right: 10% }
+                .${app.slug}-standby-btn:nth-of-type(2) { margin-left: 10% }
                 .${app.slug}-standby-btn:nth-of-type(2) svg { /* Summarize button icon */
                     width: 12.5px ; height: 12.5px ; margin-right: 6px ; top: 1px }`
 
