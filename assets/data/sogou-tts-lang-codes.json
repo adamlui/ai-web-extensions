@@ -1,9 +1,9 @@
 {
-  "en": { "isoOrNamePattern": "^(eng(lish)?|en(-\\w\\w)?)$" },
   "ar": { "isoOrNamePattern": "^(ara?(bic)?|اللغة العربية)$" },
   "cs": { "isoOrNamePattern": "^(cze(ch)?|[cč]e[sš].*|cs)$" },
   "da": { "isoOrNamePattern": "^dan?(ish|sk)?$" },
   "de": { "isoOrNamePattern": "^(german|deu?(tsch)?)$" },
+  "en": { "isoOrNamePattern": "^(eng(lish)?|en(-\\w\\w)?)$" },
   "es": { "isoOrNamePattern": "^(spa(nish)?|espa.*|es(-\\w\\w)?)$" },
   "fi": { "isoOrNamePattern": "^(fin?(nish)?|suom.*)$" },
   "fr": { "isoOrNamePattern": "^fr" },
