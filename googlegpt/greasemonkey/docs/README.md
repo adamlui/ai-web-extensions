@@ -717,6 +717,8 @@ This app exists thanks to code, testing, issues, translations & ideas from the f
     <img width=50 title="@cyber-sec0" src="https://avatars.githubusercontent.com/u/91571849?first-contrib=2025.4.1-reported-kiwi-browser-no-longer-maintained"></img></a>
 <a href="https://github.com/carterlion13sAltAcc">
     <img width=50 title="@carterlion13sAltAcc" src="https://avatars.githubusercontent.com/u/181794823?first-contrib=2025.4.13-api-selector-feat-request"></img></a>
+<a href="https://github.com/Marwan087">
+    <img width=50 title="@Marwan087" src="https://avatars.githubusercontent.com/u/81267128?first-contrib=2025.4.30-reported-standby-btn-content-illegible-when-bg-anim-off-in-googlegpt-dark-scheme"></img></a>
 <a href="https://github.com/ImgBotApp">
     <img width=50 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></img></a>
 <a href="https://github.com/dependabot">
