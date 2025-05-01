@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.4.30
+// @version                2025.5.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -3385,7 +3385,7 @@
                     id: `${app.slug}-chatbar`, rows: 1, placeholder: `${app.msgs.tooltip_sendReply}...` })
                 continueChatDiv.append(chatTextarea)
                 replyForm.append(continueChatDiv) ; replySection.append(replyForm)
-                appDiv.querySelector('.reply-bubble, [class*=standby-btns]').after(replySection);
+                appDiv.querySelector('.reply-bubble').after(replySection);
 
                 // Create/append chatbar buttons
                 ['send', 'shuffle'].forEach(btnType => {
