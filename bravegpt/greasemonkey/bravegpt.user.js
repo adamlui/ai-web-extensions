@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.1
+// @version               2025.5.1.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -4489,42 +4489,37 @@
 
                     tooltip.update(event.currentTarget) // to 'Generating audio...'
 
-                    // Play reply
+                    // Init Sogou TTS dialect map
+                    window.sgtDialectMap ||= await get.json(
+                        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@10af83c/assets/data/sogou-tts-lang-codes.json'
+                    ).catch(err => log.error(err.message)) ; if (!window.sgtDialectMap) return
+                    const sgtSpeakRates = {
+                        en: 2, ar: 1.5, cs: 1.4, da: 1.3, de: 1.5, es: 1.5, fi: 1.4, fr: 1.2, hu: 1.5, it: 1.4, ja: 1.5,
+                        nl: 1.3, pl: 1.4, pt: 1.5, ru: 1.3, sv: 1.4, tr: 1.6, vi: 1.5, 'zh-CHS': 2
+                    }
+                    Object.entries(window.sgtDialectMap).forEach(([sgtCode, langData]) => {
+                        langData.isoOrNamePattern = new RegExp(langData.isoOrNamePattern, 'i')
+                        langData.rate = sgtSpeakRates[sgtCode] ; langData.sgtCode = sgtCode
+                    })
+
+                    // Init other config/data
                     const wholeAnswer = appDiv.querySelector('.reply-pre').textContent
                     const cjsSpeakConfig = { voice: 2, pitch: 1, speed: 1.5, onend: handleAudioEnded }
-                    const sgtDialectMap = [
-                        { code: 'en', regex: /^(eng(lish)?|en(-\w\w)?)$/i, rate: 2 },
-                        { code: 'ar', regex: /^(ara?(bic)?|اللغة العربية)$/i, rate: 1.5 },
-                        { code: 'cs', regex: /^(cze(ch)?|[cč]e[sš].*|cs)$/i, rate: 1.4 },
-                        { code: 'da', regex: /^dan?(ish|sk)?$/i, rate: 1.3 },
-                        { code: 'de', regex: /^(german|deu?(tsch)?)$/i, rate: 1.5 },
-                        { code: 'es', regex: /^(spa(nish)?|espa.*|es(-\w\w)?)$/i, rate: 1.5 },
-                        { code: 'fi', regex: /^(fin?(nish)?|suom.*)$/i, rate: 1.4 },
-                        { code: 'fr', regex: /^fr/i, rate: 1.2 },
-                        { code: 'hu', regex: /^(hun?(garian)?|magyar)$/i, rate: 1.5 },
-                        { code: 'it', regex: /^ita?(lian[ao]?)?$/i, rate: 1.4 },
-                        { code: 'ja', regex: /^(ja?pa?n(ese)?|日本語|ja)$/i, rate: 1.5 },
-                        { code: 'nl', regex: /^(dut(ch)?|flemish|nederlandse?|vlaamse?|nld?)$/i, rate: 1.3 },
-                        { code: 'pl', regex: /^po?l(ish|ski)?$/i, rate: 1.4 },
-                        { code: 'pt', regex: /^(por(tugu[eê]se?)?|pt(-\w\w)?)$/i, rate: 1.5 },
-                        { code: 'ru', regex: /^(rus?(sian)?|русский)$/i, rate: 1.3 },
-                        { code: 'sv', regex: /^(swe?(dish)?|sv(enska)?)$/i, rate: 1.4 },
-                        { code: 'tr', regex: /^t[uü]?r(k.*)?$/i, rate: 1.6 },
-                        { code: 'vi', regex: /^vi[eệ]?t?(namese)?$/i, rate: 1.5 },
-                        { code: 'zh-CHS', regex: /^(chi(nese)?|zh|中[国國])/i, rate: 2 }
-                    ]
-                    const sgtReplyDialect = sgtDialectMap.find(entry =>
-                        entry.regex.test(config.replyLang)) || sgtDialectMap[0]
+                    const sgtDialectData = Object.values(window.sgtDialectMap).find(langData =>
+                        langData.isoOrNamePattern.test(config.replyLang)
+                    ) || window.sgtDialectMap.en
                     const payload = {
-                        text: wholeAnswer, curTime: Date.now(), spokenDialect: sgtReplyDialect.code,
-                        rate: sgtReplyDialect.rate.toString()
+                        text: wholeAnswer, curTime: Date.now(), spokenDialect: sgtDialectData.sgtCode,
+                        rate: sgtDialectData.rate.toString()
                     }
                     const key = CryptoJS.enc.Utf8.parse('76350b1840ff9832eb6244ac6d444366')
                     const iv = CryptoJS.enc.Utf8.parse(
                         atob('AAAAAAAAAAAAAAAAAAAAAA==') || '76350b1840ff9832eb6244ac6d444366')
                     const securePayload = CryptoJS.AES.encrypt(JSON.stringify(payload), key, {
                         iv: iv, mode: CryptoJS.mode.CBC, pad: CryptoJS.pad.Pkcs7 }).toString()
-                    xhr({ // audio from Sogou TTS
+
+                    // Play reply
+                    xhr({
                         url: 'https://fanyi.sogou.com/openapi/external/getWebTTS?S-AppId=102356845&S-Param='
                             + encodeURIComponent(securePayload),
                         method: 'GET', responseType: 'arraybuffer',
