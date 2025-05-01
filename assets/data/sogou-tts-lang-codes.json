@@ -1,0 +1,21 @@
+[
+  { "code": "en", "isoOrNamePattern": "^(eng(lish)?|en(-\\w\\w)?)$" },
+  { "code": "ar", "isoOrNamePattern": "^(ara?(bic)?|اللغة العربية)$" },
+  { "code": "cs", "isoOrNamePattern": "^(cze(ch)?|[cč]e[sš].*|cs)$" },
+  { "code": "da", "isoOrNamePattern": "^dan?(ish|sk)?$" },
+  { "code": "de", "isoOrNamePattern": "^(german|deu?(tsch)?)$" },
+  { "code": "es", "isoOrNamePattern": "^(spa(nish)?|espa.*|es(-\\w\\w)?)$" },
+  { "code": "fi", "isoOrNamePattern": "^(fin?(nish)?|suom.*)$" },
+  { "code": "fr", "isoOrNamePattern": "^fr" },
+  { "code": "hu", "isoOrNamePattern": "^(hun?(garian)?|magyar)$" },
+  { "code": "it", "isoOrNamePattern": "^ita?(lian[ao]?)?$" },
+  { "code": "ja", "isoOrNamePattern": "^(ja?pa?n(ese)?|日本語|ja)$" },
+  { "code": "nl", "isoOrNamePattern": "^(dut(ch)?|flemish|nederlandse?|vlaamse?|nld?)$" },
+  { "code": "pl", "isoOrNamePattern": "^po?l(ish|ski)?$" },
+  { "code": "pt", "isoOrNamePattern": "^(por(tugu[eê]se?)?|pt(-\\w\\w)?)$" },
+  { "code": "ru", "isoOrNamePattern": "^(rus?(sian)?|русский)$" },
+  { "code": "sv", "isoOrNamePattern": "^(swe?(dish)?|sv(enska)?)$" },
+  { "code": "tr", "isoOrNamePattern": "^t[uü]?r(k.*)?$" },
+  { "code": "vi", "isoOrNamePattern": "^vi[eệ]?t?(namese)?$" },
+  { "code": "zh-CHS", "isoOrNamePattern": "^(chi(nese)?|zh|中[国國])" }
+]
