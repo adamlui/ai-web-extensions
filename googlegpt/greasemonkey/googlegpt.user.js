@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.1.1
+// @version                  2025.5.1.2
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -3865,7 +3865,7 @@
                             caller.sender = caller.sender || callerAPI // app is waiting, become sender
                             if (caller.sender == callerAPI // app is sending from this api
                                 && textToShow.trim() != '' // empty reply chunk not read
-                            ) show.reply({ content: textToShow, footerContent: footerContent, apiUsed: callerAPI })
+                            ) show.reply({ content: textToShow, footerContent, apiUsed: callerAPI })
                         }
                     } catch (err) { log.error('Error showing stream', err.message) }
 
@@ -3952,8 +3952,7 @@
                                 api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
                                 textToShow = textToShow.replace(apis[callerAPI].respPatterns?.watermark, '').trim()
                                 if (caller == get.reply) {
-                                    show.reply({
-                                        content: textToShow, footerContent: footerContent, apiUsed: callerAPI })
+                                    show.reply({ content: textToShow, footerContent, apiUsed: callerAPI })
                                     show.codeCornerBtns()
                                     msgChain.push({
                                         time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
@@ -4861,7 +4860,7 @@
         })
         get.reply({ msgs: msgChain, src: 'query' })
     } else { // show Standby mode
-        show.reply({ standby: true, footerContent: footerContent })
+        show.reply({ standby: true, footerContent })
         if (!config.rqDisabled)
             get.related(searchQuery)
                 .then(queries => show.related(queries))
