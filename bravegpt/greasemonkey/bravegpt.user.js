@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.1.2
+// @version               2025.5.1.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -3994,11 +3994,9 @@
             if (!appDiv.querySelector('code')) return
 
             // Init general language data
-            this.langData = this.langData || Object.assign(Object.create(null), await new Promise(resolve => xhr({
-                method: 'GET',
-                url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@645dad3/assets/data/code-languages.json',
-                onload: resp => resolve(JSON.parse(resp.responseText))
-            })))
+            window.codeLangData ||= await get.json(
+                'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@760af42/assets/data/code-languages.json'
+            ).catch(err => log.error(err.message))
 
             // Add buttons to every block
             appDiv.querySelectorAll('code').forEach(block => {
@@ -4036,9 +4034,9 @@
                     // Init block's language data
                     const codeBlock = downloadBtn.closest('code'), blockLang = {},
                           hljsClass = [...codeBlock.classList].find(cls => cls.startsWith('language-'))
-                    if (hljsClass) {
+                    if (hljsClass && window.codeLangData) {
                         blockLang.hljsSlug = hljsClass.replace('language-', '')
-                        for (const [langName, langEntry] of Object.entries(this.langData))
+                        for (const [langName, langEntry] of Object.entries(window.codeLangData))
                             if (langEntry.hljsSlug == blockLang.hljsSlug) {
                                 [blockLang.name, blockLang.fileExtension] = [langName, langEntry.fileExtension]
                                 break
