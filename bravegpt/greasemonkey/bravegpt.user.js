@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.1.9
+// @version               2025.5.1.10
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -2358,7 +2358,7 @@
                         -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
                         -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
                 .byline a { color: #aaa ; text-decoration: none !important }
-                .kudoai a:hover {
+                .byline a:hover {
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
                     transition: var(--byline-transition) ;
                         -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
@@ -2621,7 +2621,7 @@
                         ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${env.ui.app.scheme}-scheme)`
                                                        : 'background-image: var(--app-gradient-bg)' }}
                     #${app.slug} #${app.slug}-logo { width: calc(100% - 118px) } /* widen logo till btns */
-                    #${app.slug} .kudoai { display: none !important } /* hide byline */
+                    #${app.slug} .byline { display: none !important } /* hide byline */
                     #${app.slug} .reply-tip { display: none } /* hide reply tip */
                     .${app.slug}-related-queries { padding: 0 } /* remove RQ parent padding */
                 }`

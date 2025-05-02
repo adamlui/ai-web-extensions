@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.1.9
+// @version                  2025.5.1.10
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2528,8 +2528,8 @@
                     --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
                         -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
                         -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
-                .byline a, .kudoai a:visited { color: #aaa ; text-decoration: none !important }
-                .kudoai a:hover {
+                .byline a, .byline a:visited { color: #aaa ; text-decoration: none !important }
+                .byline a:hover {
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
                     transition: var(--byline-transition) ;
                         -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
@@ -2798,7 +2798,7 @@
              + `@media screen and (max-width: 480px) {
                     #${app.slug} #${app.slug}-logo { /* header logo... */
                         top: 0 ; width: calc(100% - 154px) } /* remove y-pos, widen till btns */
-                    #${app.slug} .kudoai { display: none !important } /* hide byline */
+                    #${app.slug} .byline { display: none !important } /* hide byline */
                     #${app.slug} [class*=reply-tip] { display: none } /* hide reply tip */
                     .${app.slug}-related-queries { padding: 0 } /* remove RQ parent padding */
                 }`

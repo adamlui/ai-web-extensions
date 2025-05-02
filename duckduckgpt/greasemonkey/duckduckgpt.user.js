@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.1.8
+// @version                2025.5.1.9
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -2352,8 +2352,8 @@
                     --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
                         -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
                         -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
-                .byline a, .kudoai a:visited { color: #aaa ; text-decoration: none !important }
-                .kudoai a:hover {
+                .byline a, .byline a:visited { color: #aaa ; text-decoration: none !important }
+                .byline a:hover {
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
                     transition: var(--byline-transition) ;
                         -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
@@ -2622,7 +2622,7 @@
                         ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${env.ui.app.scheme}-scheme)`
                                                        : 'background-image: var(--app-gradient-bg)' }}
                     #${app.slug} #${app.slug}-logo { width: calc(100% - 118px) } /* widen logo till btns */
-                    #${app.slug} .kudoai { display: none !important } /* hide byline */
+                    #${app.slug} .byline { display: none !important } /* hide byline */
                     #${app.slug} .reply-tip { display: none } /* hide reply tip */
                     .${app.slug}-related-queries { padding: 0 } /* remove RQ parent padding */
                 }`
