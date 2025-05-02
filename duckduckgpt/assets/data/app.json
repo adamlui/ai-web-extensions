@@ -1,5 +1,5 @@
 {
-  "name": "DuckDuckGPT", "symbol": "🐤", "slug": "duckduckgpt", "configKeyPrefix": "duckDuckGPT",
+  "name": "DuckDuckGPT", "symbol": "🐤", "shortName": "ddgpt", "slug": "duckduckgpt", "configKeyPrefix": "duckDuckGPT",
   "author": [
     { "name": "Adam Lui", "url": "https://github.com/adamlui" }, { "name": "KudoAI", "url": "https://www.kudoai.com" }],
   "urls": {
