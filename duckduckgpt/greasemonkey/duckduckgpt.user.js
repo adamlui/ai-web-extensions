@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.2.4
+// @version                2025.5.2.5
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -4279,7 +4279,8 @@
                             textSpan: dom.create.elem('span')
                         }
                         btn.textSpan.textContent = btnType == 'query' ?
-                            `${app.msgs.btnLabel_sendSearchQueryTo} ${app.name}` : app.msgs.tooltip_summarizeResults
+                            `${app.msgs.btnLabel_sendSearchQueryTo} ${app.shortName}`
+                                : app.msgs.tooltip_summarizeResults
                         btn.node.onclick = () => {
                             show.reply.userInteracted = true ; show.reply.chatbarFocused = false
                             msgChain.push({ role: 'user', content:
