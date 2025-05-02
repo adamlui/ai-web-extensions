@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.1.12
+// @version               2025.5.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1389,8 +1389,8 @@
                         xhr({
                             method: 'GET', url: shareURL,
                             onload: resp => {
-                                const html = resp.responseText, dlLink = dom.create.elem('a')
-                                dlLink.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }))
+                                const html = resp.responseText, dlLink = dom.create.anchor(
+                                    URL.createObjectURL(new Blob([html], { type: 'text/html' })))
                                 dlLink.download /* filename */ = html.match(/<title>([^<]+)<\/title>/i)[1] // page title
                                     .replace(/\s*[—|/]+\s*/g, ' ') // convert symbols to space for hyphen-casing
                                     .replace(/\.{2,}/g, '') // strip ellipsis
@@ -4097,26 +4097,23 @@
                     }, 15000)
 
                     // Init block's language data
-                    const codeBlock = downloadBtn.closest('code'), blockLang = {},
-                          hljsClass = [...codeBlock.classList].find(cls => cls.startsWith('language-'))
-                    if (hljsClass && window.codeLangData) {
-                        blockLang.hljsSlug = hljsClass.replace('language-', '')
+                    const codeBlock = downloadBtn.closest('code'),
+                          blockLang = { hljsSlug: /language-(\w+)/.exec(codeBlock.className)?.[1] }
+                    if (blockLang.hljsSlug && window.codeLangData)
                         for (const [langName, langEntry] of Object.entries(window.codeLangData))
                             if (langEntry.hljsSlug == blockLang.hljsSlug) {
                                 [blockLang.name, blockLang.fileExtension] = [langName, langEntry.fileExtension]
                                 break
                             }
-                    }
 
                     // Download code
                     const code = codeBlock.textContent.replace(/^>> /, '').trim() + '\n'
-                    const dlLink = dom.create.elem('a'), now = new Date()
-                    const formattedDate = [ // YYYY-MM-DD
+                    const dlLink = dom.create.anchor(URL.createObjectURL(new Blob([code], { type: 'text/plain' })))
+                    const now = new Date(), formattedDate = [ // YYYY-MM-DD
                         now.getFullYear(),
                         String(now.getMonth() +1).padStart(2, '0'),
                         String(now.getDate()).padStart(2, '0')
                     ].join('-')
-                    dlLink.href = URL.createObjectURL(new Blob([code], { type: 'text/plain' }))
                     dlLink.download /* filename */ = `${app.slug}_${blockLang.name.toLowerCase() || 'code'}_${
                         formattedDate}_${Date.now().toString(36)}${
                         blockLang.fileExtension ? '.' + blockLang.fileExtension : '' }`
