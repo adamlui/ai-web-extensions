@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.1.6
+// @version                2025.5.1.7
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -2838,8 +2838,8 @@
                     if (!env.browser.isMobile)
                         btn.onmouseenter = btn.onmouseleave = btnType == 'pin' ? hoverMenus.toggle : tooltip.toggle
 
-                     // Add zoom/fade-out to select buttons
-                    if (/about|settings|speak/.test(btn.id)) btn.onmouseup = () => {
+                     // Add zoom/fade-out to corner buttons
+                    if (/about|settings/.test(btn.id)) btn.onmouseup = () => {
                         if (config.fgAnimationsDisabled) return
                         btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
                         if (env.browser.isFF) // end animation 0.08s early to avoid icon overgrowth
