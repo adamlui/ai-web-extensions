@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.1.3
+// @version                  2025.5.1.4
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -785,7 +785,8 @@
         about: { type: 'modal', icon: 'questionMarkCircle',
             label: `${app.msgs.menuLabel_about} ${app.name}...` }
     }})
-    Object.assign(config, { minFontSize: 11, maxFontSize: 24, lineHeightRatio: env.browser.isMobile ? 1.357 : 1.375 })
+    Object.assign(config, {
+        lineHeightRatio: env.browser.isMobile ? 1.357 : 1.375, maxFontSize: 24, minFontSize: 11, theme: 'lines' })
     settings.load([...Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized', 'notFirstRun'])
     if (!config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!config.fontSize) settings.save('fontSize', env.browser.isMobile ? 14 : 14.0423) // init reply font size if unset
@@ -1049,7 +1050,7 @@
         alert(title = '', msg = '', btns = '', checkbox = '', width = '') { // generic one from chatgpt.alert()
             const alertID = chatgpt.alert(title, msg, btns, checkbox, width),
                   alert = document.getElementById(alertID).firstChild
-            this.init(alert) // add classes/listeners/hack bg/glowup btns
+            this.init(alert) // add classes/listeners/hack bg
             return alert
         },
 
@@ -1108,7 +1109,8 @@
 
                 mousedown(event) { // find modal, update styles, attach listeners, init XY offsets
                     if (event.button != 0) return // prevent non-left-click drag
-                    if (getComputedStyle(event.target).cursor == 'pointer') return // prevent drag on interactive elems
+                    if (!/auto|default/.test(getComputedStyle(event.target).cursor))
+                        return // prevent drag on interactive elems
                     modals.draggingModal = event.currentTarget
                     event.preventDefault() // prevent sub-elems like icons being draggable
                     Object.assign(modals.draggingModal.style, { // update styles
@@ -1179,8 +1181,9 @@
                 modal.parentNode.classList.add('animated')
             }, 100) // delay for transition fx
 
-            // Glowup btns
-            if (env.ui.app.scheme == 'dark' && !config.fgAnimationsDisabled) toggle.btnGlow()
+            // Wrap button contents in span to counter-skew vs. themes that skew
+            modal.querySelectorAll('button:not(:has(> span))').forEach(spanlessBtn =>
+                spanlessBtn.innerHTML = `<span>${spanlessBtn.innerHTML}</span>`)
         },
 
         observeRemoval(modal, modalType, modalSubType) { // to maintain stack for proper nav
@@ -1208,7 +1211,7 @@
                 this.stack.unshift(modalSubType ? `${modalType}_${modalSubType}` : modalType)
                 log.debug(`Modal stack: ${JSON.stringify(modals.stack)}`)
             }
-            this.init(modal) // add classes/listeners/hack bg/glowup btns
+            this.init(modal) // add classes/listeners/hack bg
             this.observeRemoval(modal, modalType, modalSubType) // to maintain stack for proper nav
             if (!modals.handlers.dismiss.key.added) { // add key listener to dismiss modals
                 document.addEventListener('keydown', modals.handlers.dismiss.key)
@@ -1383,28 +1386,14 @@
                     if (setting.type == 'toggle') {
 
                         // Init toggle input
-                        const settingToggle = dom.create.elem('input',
-                            { type: 'checkbox', disabled: true, style: 'display: none' })
+                        const settingToggle = dom.create.elem('input', {
+                            type: 'checkbox', disabled: true, style: 'display: none' })
                         settingToggle.checked = config[key] ^ key.includes('Disabled') // init based on config/name
                             && !(key == 'streamingDisabled' && !config.proxyAPIenabled) // uncheck Streaming in OAI mode
 
-                        // Create/stylize switch
-                        const switchSpan = dom.create.elem('span')
-                        Object.assign(switchSpan.style, {
-                            position: 'relative', left: '-1px', bottom:'-5.5px', float: 'right',
-                            backgroundColor: '#ccc', width: '26px', height: '13px', borderRadius: '28px',
-                            transition: '0.4s', '-webkit-transition': '0.4s', '-moz-transition': '0.4s',
-                                '-o-transition': '0.4s', '-ms-transition': '0.4s'
-                        })
-
-                        // Create/stylize knob
-                        const knobSpan = dom.create.elem('span')
-                        Object.assign(knobSpan.style, {
-                            position: 'absolute', left: '1px', bottom: '1px', content: '""',
-                            backgroundColor: 'white', width: '11px', height: '11px', borderRadius: '28px',
-                            transition: '0.2s', '-webkit-transition': '0.2s', '-moz-transition': '0.2s',
-                                '-o-transition': '0.2s', '-ms-transition': '0.2s'
-                        })
+                        // Create/classify switch
+                        const switchSpan = dom.create.elem('span', { class: 'track' }),
+                              knobSpan = dom.create.elem('span', { class: 'knob' })
 
                         // Append elems
                         switchSpan.append(knobSpan) ; settingEntry.append(settingToggle, switchSpan)
@@ -1598,6 +1587,8 @@
 
                 // Vars
                 `:root {
+                    --modal-btn-zoom: scale(1.055) ; --modal-btn-transition: transform 0.15s ease ;
+                    --settings-li-transition: transform 0.1s ease ; /* for Settings entry hover-zoom */
                     --fg-transition: opacity 0.65s cubic-bezier(0.165,0.84,0.44,1), /* fade-in */
                                      transform 0.55s cubic-bezier(0.165,0.84,0.44,1) !important ; /* move-in */
                     --bg-transition: background-color 0.25s ease !important } /* dim */`
@@ -1662,44 +1653,15 @@
                   + 'transform: translateX(-3px) translateY(7px) ;' // offset to move-in from
                   + `transition: var(--fg-transition) ; /* fade-in + move-in */
                         -webkit-transition: var(--fg-transition) ; -moz-transition: var(--fg-transition) ;
-                        -o-transition: var(--fg-transition) ; -ms-transition:  var(--fg-transition) }`
-              + ( config.fgAnimationsDisabled || env.browser.isMobile ? '' : `
-                    [class$=-modal] button:hover { transform: scale(1.055) }
-                    [class$=-modal] button { transition: var(--zoom-transition-more) ;
-                        -webkit-transition: var(--zoom-transition-more) ; -moz-transition: var(--zoom-transition-more) ;
-                        -o-transition: var(--zoom-transition-more) ; -ms-transition: var(--zoom-transition-more) }` )
-
-              // Glowing modal btns
-              + ':root { --glow-color: hsl(186 100% 69%) }'
-              + `.glowing-btn {
-                    perspective: 2em ; font-weight: 900 ; animation: border-flicker 2s linear infinite ;
-                    --shadow: inset 0 0 0.5em 0 var(--glow-color), 0 0 0.5em 0 var(--glow-color) ;
-                        box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) }`
-              + '.glowing-txt {'
-                  + 'animation: text-flicker 3s linear infinite ;'
-                  + '-webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color) ;'
-                  + '-moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color) ;'
-                  + 'text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color) }'
-              + '.faulty-letter {'
-                  + 'opacity: 0.5 ; animation: faulty-flicker 2s linear infinite }'
-                  + ( !env.browser.isMobile ? 'background: var(--glow-color) ;'
-                        + 'transform: translateY(120%) rotateX(95deg) scale(1, 0.35)' : '' ) + '}'
-              + '.glowing-btn:hover { color: rgba(0,0,0,0.8) ; text-shadow: none ; animation: none }'
-              + '.glowing-btn:hover .glowing-txt { animation: none }'
-              + '.glowing-btn:hover .faulty-letter { animation: none ; text-shadow: none ; opacity: 1 }'
-              + '.glowing-btn:hover:before { filter: blur(1.5em) ; opacity: 1 }'
-              + '.glowing-btn:hover:after { opacity: 1 }'
-              + '@keyframes faulty-flicker {'
-                  + '0% { opacity: 0.1 } 2% { opacity: 0.1 } 4% { opacity: 0.5 } 19% { opacity: 0.5 }'
-                  + '21% { opacity: 0.1 } 23% { opacity: 1 } 80% { opacity: 0.5 } 83% { opacity: 0.4 }'
-                  + '87% { opacity: 1 }}'
-              + '@keyframes text-flicker {'
-                  + '0% { opacity: 0.1 } 2% { opacity: 1 } 8% { opacity: 0.1 } 9% { opacity: 1 }'
-                  + '12% { opacity: 0.1 } 20% { opacity: 1 } 25% { opacity: 0.3 } 30% { opacity: 1 }'
-                  + '70% { opacity: 0.7 } 72% { opacity: 0.2 } 77% { opacity: 0.9 } 100% { opacity: 0.9 }}'
-              + '@keyframes border-flicker {'
-                  + '0% { opacity: 0.1 } 2% { opacity: 1 } 4% { opacity: 0.1 } 8% { opacity: 1 }'
-                  + '70% { opacity: 0.7 } 100% { opacity: 1 }}'
+                        -o-transition: var(--fg-transition) ; -ms-transition:  var(--fg-transition) }
+                    ${ env.browser.isMobile ? '' : `[class$=-modal] button:hover { transform: var(--modal-btn-zoom) }` }
+                    ${ config.fgAnimationsDisabled ? '' : `[class$=-modal] button {
+                        ${ env.browser.isMobile ? '' : 'will-change: transform ;' }
+                        transition: var(--modal-btn-transition) ;
+                            -webkit-transition: var(--modal-btn-transition) ;
+                            -moz-transition: var(--modal-btn-transition) ;
+                            -o-transition: var(--modal-btn-transition) ;
+                            -ms-transition: var(--modal-btn-transition) }` }`
 
               // Settings modal
               + `#${app.slug}-settings {
@@ -1726,9 +1688,12 @@
                   + 'height: 24px ; padding: 6px 10px ; font-size: 13.5px ;'
                   + `border-bottom: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };` // add separators
                   + 'border-radius: 3px ;' // slightly round highlight strip
-                  + `transition: var(--zoom-transition-less) ;
-                        -webkit-transition: var(--zoom-transition-less) ; -moz-transition: var(--zoom-transition-less) ;
-                        -o-transition: var(--zoom-transition-less) ; -ms-transition: var(--zoom-transition-less) }`
+                  + `${ config.fgAnimationsDisabled || env.browser.isMobile ? '' :
+                        `transition: var(--settings-li-transition) ;
+                            -webkit-transition: var(--settings-li-transition) ;
+                            -moz-transition: var(--settings-li-transition) ;
+                            -o-transition: var(--settings-li-transition) ;
+                            -ms-transition: var(--settings-li-transition)` }}`
               + `#${app.slug}-settings li.active {`
                   + `color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };` // for text
                   + `fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };` // for icons
@@ -1738,8 +1703,20 @@
               + `#${app.slug}-settings li, #${app.slug}-settings li label { cursor: pointer }` // add finger on hover
               + `#${app.slug}-settings li:hover {`
                   + 'background: rgba(100,149,237,0.88) ; color: white ; fill: white ; stroke: white ;'
-                  + `${ config.fgAnimationsDisabled || env.browser.isMobile ? '' : 'transform: scale(1.15)' }}`
-              + `#${app.slug}-settings li > input { float: right }` // pos toggles
+                  + `${ env.browser.isMobile ? '' : 'transform: scale(1.15)' }}`
+              + `#${app.slug}-settings li > input { float: right } /* pos toggles */
+                 #${app.slug}-settings li > .track {
+                    position: relative ; left: -1px ; bottom: -5.5px ; float: right ;
+                    background-color: #ccc ; width: 26px ; height: 13px ; border-radius: 28px ;
+                    ${ config.fgAnimationsDisabled ? '' :
+                        `transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
+                            -o-transition: 0.4s ; -ms-transition: 0.4s` }}
+                 #${app.slug}-settings li .knob {
+                    position: absolute ; left: 1px ; bottom: 1px ; content: "" ;
+                    background-color: white ; width: 11px ; height: 11px ; border-radius: 28px ;
+                    ${ config.fgAnimationsDisabled ? '' :
+                        `transition: 0.2s ; -webkit-transition: 0.2s ; -moz-transition: 0.2s ;
+                            -o-transition: 0.2s ; -ms-transition: 0.2s` }}`
               + '#scheme-settings-entry > span { margin: 0 -2px !important }' // align Scheme status
               + '#scheme-settings-entry > span > svg {' // v-align/left-pad Scheme status icon
                   + 'position: relative ; top: 3px ; margin-left: 4px }'
@@ -2455,16 +2432,15 @@
                     --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
                                                                                                : '11,0.22' }) ;
                     --app-transition: opacity 0.5s ease, transform 0.5s ease, /* for 1st fade-in */
-                                    + 'bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
-                                    + 'width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
+                                      bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
+                                      width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
                     --app-shadow-transition: box-shadow 0.15s ease ; /* for app:hover to not trigger on hover-off */
-                    --zoom-transition-more: transform 0.15s ease ; /* for button hover-zoom */
-                    --zoom-transition-less: transform 0.1s ease ; /* for Settings entry hover-zoom */
-                    --btn-transition: var(--zoom-transition-more), /* for hover-zoom */
+                    --standby-btn-zoom: scale(1.055) ; --standby-btn-transition: all 0.25s ease ;
+                    --btn-transition: transform 0.15s ease, /* for hover-zoom */
                                       opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
                     --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
                     --reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ; /* for Anchor changes */
-                    --rq-transition: opacity 0.55s ease, var(--zoom-transition-less) !important ; /* for fade-in + hover-zoom */
+                    --rq-transition: opacity 0.55s ease, transform 0.1s ease !important ; /* for fade-in + hover-zoom */
                     --fade-in-less-transition: opacity 0.2s ease } /* used by Font Size slider + Pin menu */`
 
                 // Animations
@@ -2562,14 +2538,15 @@
                     float: right ; cursor: pointer ; position: relative ; top: 6px ;
                     ${ env.ui.app.scheme == 'dark' ? 'fill: white ; stroke: white'
                                                    : 'fill: #adadad ; stroke: #adadad' }}
-                .${app.slug}-header-btn:hover svg { /* zoom header button on hover */
+                .${app.slug}-header-btn:hover svg { /* highlight/zoom header button on hover */
                     ${ env.ui.app.scheme == 'dark' ? 'fill: #d9d9d9 ; stroke: #d9d9d9'
                                                    : 'fill: black ; stroke: black' };
-                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' : 'transform: scale(1.285)' }}
-                .${app.slug}-header-btn, .${app.slug}-header-btn svg { /* smooth header button fade-in + hover-zoom */
+                    ${ env.browser.isMobile ? '' : 'transform: scale(1.285)' }}
+                ${ config.fgAnimationsDisabled ? '' :
+                   `.${app.slug}-header-btn, .${app.slug}-header-btn svg { /* smooth header button fade-in + hover-zoom */
                     transition: var(--btn-transition) ;
                         -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }
+                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }` }
                 .${app.slug}-header-btn:active {
                     ${ env.ui.app.scheme == 'dark' ? 'fill: #999999 ; stroke: #999999'
                                                    : 'fill: #638ed4 ; stroke: #638ed4' }}
@@ -2596,38 +2573,30 @@
                     background-color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#4a4a4a' };
                     --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
-                    transition: var(--font-size-slider-thumb-transition) ;
-                        -webkit-transition: var(--font-size-slider-thumb-transition) ;
-                        -moz-transition: var(--font-size-slider-thumb-transition) ;
-                        -o-transition: var(--font-size-slider-thumb-transition) ;
-                        -ms-transition: var(--font-size-slider-thumb-transition) }
-                ${ config.fgAnimationsDisabled || env.browser.isMobile ? ''
-                    : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }` }
+                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' :
+                        `transition: var(--font-size-slider-thumb-transition) 
+                            -webkit-transition: var(--font-size-slider-thumb-transition) ;
+                            -moz-transition: var(--font-size-slider-thumb-transition) ;
+                            -o-transition: var(--font-size-slider-thumb-transition) ;
+                            -ms-transition: var(--font-size-slider-thumb-transition)` }}
+                ${ env.browser.isMobile ? '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }` }
                 .${app.slug}-standby-btns { margin: 17px 0 -7px }
                 .${app.slug}-standby-btn {
-                    --content-color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
-                    width: 90% ; margin-bottom: 9px ; padding: 13px 0 ; cursor: pointer ; transform: skew(-13deg) ;
-                    background: none ; box-shadow: #aaaaaa12 7px 7px 3px 0px ;
-                    color: var(--content-color) ; border: 1px solid ${ isParticlizedDS ? '#fff' : '#888' };
-                    transition: var(--btn-transition) ;
-                        -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }
-                .${app.slug}-standby-btn:hover {
-                    --content-color: ${ env.ui.app.scheme == 'dark' ? 'black' : 'white' };
-                    color: var(--content-color) ; fill: var(--content-color) ; stroke: var(--content-color) ;
-                    background: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
-                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? ''
-                        : 'transform: scale(1.055) skew(-13deg)' }}
-                .${app.slug}-standby-btn > svg {
-                    position: relative ; stroke: var(--content-color) ; transform: skew(13deg) }
-                .${app.slug}-standby-btn > span { /* text, counter btn skew */
-                    display: inline-block ; transform: skew(13deg) }
+                    display: flex ; align-items: center ; justify-content: center ; gap: 8px ;
+                    cursor: pointer ; background: none ; color: rgb(var(--content-color)) ;
+                    ${ config.fgAnimationsDisabled ? ''
+                        : `will-change: transform ;
+                           transition: var(--standby-btn-transition) ;
+                                -webkit-transition: var(--standby-btn-transition) ;
+                                -moz-transition: var(--standby-btn-transition) ;
+                                -o-transition: var(--standby-btn-transition) ;
+                                -ms-transition: var(--standby-btn-transition)` }}
+                .${app.slug}-standby-btn:hover { color: rgb(var(--content-color)) ; transform: var(--standby-btn-zoom) }
+                .${app.slug}-standby-btn > svg { position: relative ; stroke: rgb(var(--content-color)) }
                 .${app.slug}-standby-btn:first-of-type svg { /* Query button icon */
-                    width: 11px ; height: 11px ; margin-right: 4px ; top: -1px }
-                .${app.slug}-standby-btn:first-of-type { margin-right: 10% }
-                .${app.slug}-standby-btn:nth-of-type(2) { margin-left: 10% }
+                    width: 11px ; height: 11px ; top: -1.5px ; right: -1.5px }
                 .${app.slug}-standby-btn:nth-of-type(2) svg { /* Summarize button icon */
-                    width: 12.5px ; height: 12.5px ; margin-right: 6px ; top: 1px }`
+                    width: 17.5px ; height: 17.5px }`
 
               // AI reply elem styles
              + `#${app.slug} .reply-tip {
@@ -2754,13 +2723,12 @@
                     border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;
                     --rq-shadow: 1px 4px 8px -6px rgba(169,169,169,0.75) ; box-shadow: var(--rq-shadow) ;
                         -webkit-box-shadow: var(--rq-shadow) ; -moz-box-shadow: var(--rq-shadow) ;
-                    ${ config.fgAnimationsDisabled ? '' : // smoothen hover-zoom
+                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' : // smoothen hover-zoom
                         `transition: var(--rq-transition) ;
                             -webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;
                             -o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)` }}
                 .${app.slug}-related-query:hover, .${app.slug}-related-query:focus {
-                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? ''
-                        : 'transform: scale(1.055) !important ;' }
+                    ${ config.fgAnimationsDisabled ? '' : 'transform: scale(1.055) !important ;' }
                     background: ${ env.ui.app.scheme == 'dark' ? '#a2a2a270'
                         : '#dae5ffa3 ; color: #000000a8 ; border-color: #a3c9ff' }}
                 .${app.slug}-related-query svg { /* related query icon */
@@ -2836,6 +2804,7 @@
                     .${app.slug}-related-queries { padding: 0 } /* remove RQ parent padding */
                 }`
             )
+            themes.apply(config.theme)
         },
 
         bylineVisibility() {
@@ -3003,7 +2972,7 @@
             log.caller = `update.scheme('${newScheme}')`
             log.debug(`Updating ${app.name} scheme to ${log.toTitleCase(newScheme)}...`)
             env.ui.app.scheme = newScheme ; logos.googleGPT.update() ; icons.googleGPT.update() ; update.appStyle()
-            update.risingParticles() ; update.replyPrefix() ; toggle.btnGlow() ; modals.settings.updateSchemeStatus()
+            update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
             log.debug(`Success! ${app.name} updated to ${log.toTitleCase(newScheme)} scheme`)
         }
     }
@@ -3042,7 +3011,7 @@
                         btn.onclick = event => { toggle.expandedMode() ; tooltip.update(event.currentTarget) }
                     if (!env.browser.isMobile && !btn.id.endsWith('pin-btn')) // add hover listeners for tooltips
                         btn.onmouseenter = btn.onmouseleave = tooltip.toggle
-                    if (/about|settings|speak/.test(btn.id)) btn.onmouseup = () => { // add zoom/fade-out to select buttons
+                    if (/about|settings|speak/.test(btn.id)) btn.onmouseup = () => { // add zoom/fade-out to select btns
                         if (config.fgAnimationsDisabled) return
                         btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
                         if (env.browser.isFF) // end animation 0.08s early to avoid icon overgrowth
@@ -3238,6 +3207,119 @@
             } else if (state == 'off' || (!state && slider.style.display != 'none')) {
                 slider.classList.remove('active') ; if (replyTip) replyTip.style.display = ''
                 sliderTip.style.display = slider.style.display = 'none'
+            }
+        }
+    }
+
+    const themes = {
+        apply(theme) {
+            if (!this.styleNode) document.head.append(this.styleNode = dom.create.style())
+            this.styleNode.textContent = this.styles[theme]
+        },
+
+        selectors: {
+            btn: {
+                get after() { return this.shared.split(',').map(sel => `${sel}::after`).join(', ') },
+                get before() { return this.shared.split(',').map(sel => `${sel}::before`).join(', ') },
+                get hover() { return this.shared.split(',').map(sel => `${sel}:hover`).join(', ') },
+                get hoverAfter() { return this.hover.split(',').map(sel => `${sel}::after`).join(', ') },
+                get hoverBefore() { return this.hover.split(',').map(sel => `${sel}::before`).join(', ') },
+                get hoverSVG() { return this.hover.split(',').map(sel => `${sel} svg`).join(', ') },
+                modal: `body:has(#${app.slug}) .modal-buttons button`,
+                modalPrimary: `body:has(#${app.slug}) .primary-modal-btn`,
+                get shared() { return `${this.modal},${this.standby}` },
+                get span() { return this.shared.split(',').map(sel => `${sel} span`).join(', ') },
+                standby: `button.${app.slug}-standby-btn`,
+                get svg() { return this.shared.split(',').map(sel => `${sel} svg`).join(', ') }
+            }
+        },
+
+        styles: {
+            get lines() { const { selectors } = themes ; return `
+
+                /* General button styles */
+                ${selectors.btn.shared} {
+                    --content-color: ${ env.ui.app.scheme == 'light' ? '0,0,0' : '255,255,255' };
+                    --side-line-fill: linear-gradient(rgb(var(--content-color)), rgb(var(--content-color))) ;
+                    --skew: skew(-13deg) ; --counter-skew: skew(13deg) ; --btn-svg-zoom: scale(1.2) ;
+                    --btn-transition: 0.1s ease all ;
+                    position: relative ; border-width: 1px ; cursor: crosshair ;
+                    border: 1px solid rgb(var(--content-color)) ;
+                    background: /* side lines */
+                        var(--side-line-fill) left / 2px 50% no-repeat,
+                        var(--side-line-fill) right / 2px 50% no-repeat ;
+                    background-position-y: 81% ;
+                    color: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.65 : 1 }) ;
+                    font-size: 0.8em ; font-family: "Roboto", sans-serif ; text-transform: uppercase ;
+                    transform: var(--skew)  }
+                ${selectors.btn.svg} {
+                    stroke: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.65 : 1 }) ;
+                    transform: var(--counter-skew) ;
+                    ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
+                          -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
+                          -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
+                ${selectors.btn.span} { /* text */
+                    font-weight: 600 ; display: inline-block ; transform: var(--counter-skew) }
+                ${selectors.btn.before}, ${selectors.btn.after} { /* top/bottom lines */
+                    content: "" ; position: absolute ; background: rgb(var(--content-color)) ;
+                    ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
+                          -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
+                          -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
+                ${selectors.btn.before} { top: 0 ; left: 10% ; width: 65% ; height: 1px } /* top line */
+                ${selectors.btn.after} { bottom: 0 ; right: 10% ; width: 80% ; height: 1px } /* bottom line */
+                ${selectors.btn.hover} {
+                    color: rgb(var(--content-color)) ;
+                    background: /* extend side lines */
+                        var(--side-line-fill) left / 2px 100% no-repeat,
+                        var(--side-line-fill) right / 2px 100% no-repeat !important }                    
+                ${selectors.btn.hoverBefore} { left: 0 ; width: 20px } /* top line on hover */
+                ${selectors.btn.hoverAfter} { right: 0 ; width: 20px } /* bottom line on hover */
+                ${selectors.btn.hoverSVG} {
+                    transform: var(--counter-skew) var(--btn-svg-zoom) ; stroke: rgba(var(--content-color),1) }
+
+                /* Modal button styles */
+                ${selectors.btn.modal} {
+                    --modal-btn-y-offset: 2px ; --glow-color: #a0fdff ;
+                    --modal-btn-zoom: scale(1.075) ; --modal-btn-transition: transform 0.1s ease, background 0.2s ease ;
+                    ${ config.fgAnimationsDisabled ? /* override chatgpt.js transitions */
+                        `transition: none ;
+                            -webkit-transition: none ; -moz-transition: none ;
+                            -o-transition: none ; -ms-transition: none`
+                      : `transition: var(--modal-btn-transition) ;
+                            -webkit-transition: var(--modal-btn-transition) ;
+                            -moz-transition: var(--modal-btn-transition) ;
+                            -o-transition: var(--modal-btn-transition) ;
+                            -ms-transition: var(--modal-btn-transition)` }}
+                ${selectors.btn.modalPrimary} {
+                    ${ env.ui.app.scheme == 'dark' ? 'background: white !important ; color: black'
+                                                   : 'background: black !important ; color: white' }}
+                ${selectors.btn.modal}:nth-child(odd) {
+                    transform: var(--skew) translateY(calc(-1 * var(--modal-btn-y-offset))) }
+                ${selectors.btn.modal}:nth-child(even) {
+                    transform: var(--skew) translateY(var(--modal-btn-y-offset)) }
+                ${selectors.btn.modal}:nth-child(odd):hover {
+                    transform: var(--skew) translateY(calc(-1 * var(--modal-btn-y-offset))) ${
+                        env.browser.isMobile ? '' : 'var(--modal-btn-zoom)' }}
+                ${selectors.btn.modal}:nth-child(even):hover {
+                    transform: var(--skew) translateY(var(--modal-btn-y-offset)) ${
+                        env.browser.isMobile ? '' : 'var(--modal-btn-zoom)' }}
+                ${selectors.btn.modal}:hover { /* add glow */
+                    background-color: var(--glow-color) !important ;
+                    box-shadow: 2px 1px 30px var(--glow-color) ;
+                        -webkit-box-shadow: 2px 1px 30px var(--glow-color) ;
+                        -moz-box-shadow: 2px 1px 30px var(--glow-color) }
+
+                /* Standby button styles */
+                ${selectors.btn.standby} {
+                    --standby-btn-zoom: scale(1.055) ;
+                    --standby-btn-transition: transform 0.18s ease, background 0.2s ease ;
+                    font-size: 11px ; width: 80% ; height: 51px ; margin-bottom: 16px }
+                ${selectors.btn.standby}:nth-child(odd) { margin-right: 20% ; margin-left: 15px }
+                ${selectors.btn.standby}:nth-child(even) { margin-left: 20% ; margin-bottom: 19px }
+                ${selectors.btn.standby}:hover {
+                    border : 1px rgba(var(--content-color), ${
+                        env.ui.app.scheme == 'dark' ? '1) solid' : '0.6) dotted' };
+                    transform: var(--skew) ${ env.browser.isMobile ? '' : 'var(--standby-btn-zoom)' }}`
             }
         }
     }
@@ -3485,16 +3567,11 @@
             const configKey = `${layer}AnimationsDisabled`
             settings.save(configKey, !config[configKey])
             update.appStyle() ; if (layer == 'bg') { update.risingParticles() ; update.replyPrefix() }
-            if (layer == 'fg' && modals.settings.get()) {
-
-                // Toggle ticker-scroll of About status label
+            if (layer == 'fg' && modals.settings.get()) { // toggle ticker-scroll of About status label
                 const aboutStatusLabel = document.querySelector('#about-settings-entry > span > div')
                 aboutStatusLabel.innerHTML = modals.settings.aboutContent[
                     config.fgAnimationsDisabled ? 'short' : 'long']
                 aboutStatusLabel.style.float = config.fgAnimationsDisabled ? 'right' : ''
-
-                // Toggle button glow
-                if (env.ui.app.scheme == 'dark') toggle.btnGlow()
             }
             notify(`${settings.controls[configKey].label} ${toolbarMenu.state.words[+!config[configKey]]}`)
         },
@@ -3516,21 +3593,6 @@
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
                 if (modeToggle.checked != config[modeKey]) modals.settings.toggle.switch(modeToggle)
             }
-        },
-
-        btnGlow(state = '') {
-            const toRemove = state == 'off' || env.ui.app.scheme != 'dark' || config.fgAnimationsDisabled
-            document.querySelectorAll('[class*=-modal] button').forEach((btn, idx) => {
-                setTimeout(() => btn.classList.toggle('glowing-btn', !toRemove),
-                    (idx +1) *50 *chatgpt.randomFloat()) // to unsync flickers
-                let btnTextSpan = btn.querySelector('span')
-                if (!btnTextSpan) { // wrap btn.textContent for .glowing-txt
-                    btnTextSpan = dom.create.elem('span')
-                    btnTextSpan.textContent = btn.textContent ; btn.textContent = ''
-                    btn.append(btnTextSpan)
-                }
-                btnTextSpan.classList.toggle('glowing-txt', !toRemove)
-            })
         },
 
         expandedMode(state = '') {
@@ -4404,7 +4466,8 @@
                         class: `${app.slug}-standby-btns`, style: 'will-change: transform' });
                     ['query', 'summarize'].forEach(btnType => {
                         const btn = {
-                            node: dom.create.elem('button', { class: `${app.slug}-standby-btn no-mobile-tap-outline` }),
+                            node: dom.create.elem('button', {
+                                class: `${app.slug}-standby-btn no-mobile-tap-outline` }),
                             icon: icons[btnType == 'query' ? 'send' : 'summarize'].create(),
                             textSpan: dom.create.elem('span')
                         }
@@ -4773,7 +4836,8 @@
     }
 
     // Create/ID/classify/listenerize/stylize APP container
-    const appDiv = dom.create.elem('div', { id: app.slug, class: 'fade-in' }) ; addListeners.appDiv();
+    const appDiv = dom.create.elem('div', { id: app.slug, class: 'fade-in' })
+    themes.apply(config.theme) ; addListeners.appDiv();
     ['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
         (config[mode] || config[`${mode}Sidebar`]) && appDiv.classList.add(mode))
     document.head.append(app.styles = dom.create.style()) ; update.appStyle();
