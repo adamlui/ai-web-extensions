@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.2.3
+// @version                2025.5.2.4
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -261,7 +261,7 @@
     // Init APP data
     const app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '4d7954c' // for cached app.json + messages.json
+        latestResourceCommitHash: 'c1553df' // for cached app.json + messages.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -386,7 +386,7 @@
         alert_generated: 'Generated',
         notif_copiedToClipboard: 'Copied to clipboard',
         notif_downloaded: 'downloaded',
-        btnLabel_sendQueryToApp: 'Send search query to DuckDuckGPT',
+        btnLabel_sendSearchQueryTo: 'Send search query to',
         btnLabel_moreAIextensions: 'More AI Extensions',
         btnLabel_rateUs: 'Rate Us',
         btnLabel_getSupport: 'Get Support',
@@ -4278,8 +4278,8 @@
                             icon: icons[btnType == 'query' ? 'send' : 'summarize'].create(),
                             textSpan: dom.create.elem('span')
                         }
-                        btn.textSpan.textContent = app.msgs[
-                            btnType == 'query' ? 'btnLabel_sendQueryToApp' : 'tooltip_summarizeResults']
+                        btn.textSpan.textContent = btnType == 'query' ?
+                            `${app.msgs.btnLabel_sendSearchQueryTo} ${app.name}` : app.msgs.tooltip_summarizeResults
                         btn.node.onclick = () => {
                             show.reply.userInteracted = true ; show.reply.chatbarFocused = false
                             msgChain.push({ role: 'user', content:
