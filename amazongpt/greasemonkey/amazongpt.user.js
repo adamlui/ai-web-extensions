@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.1.10
+// @version                2025.5.1.11
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1912,7 +1912,7 @@
 
         appStyle() { // used in toggle.animations() + update.scheme() + main's app init
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled,
-                  willZoom = config.fgAnimationsDisabled || env.browser.isMobile
+                  willNotZoom = config.fgAnimationsDisabled || env.browser.isMobile
             modals.stylize() // update modal styles
             app.styles.innerText = (
 
@@ -2001,7 +2001,7 @@
                         -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
                         -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
                 #${app.slug}-header-btns {
-                    float: right ; margin-top: -2px ; ${ willZoom ? '' : 'will-change: transform' }}
+                    float: right ; margin-top: -2px ; ${ willNotZoom ? '' : 'will-change: transform' }}
                 .${app.slug}-header-btn {
                     float: right ; cursor: pointer ; position: relative ; top: 4px ;
                     ${ env.ui.app.scheme == 'dark' ? 'fill: white ; stroke: white'
@@ -2040,7 +2040,7 @@
                     background-color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#4a4a4a' };
                     --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
-                    ${ willZoom ? '' : `transition: var(--font-size-slider-thumb-transition) 
+                    ${ willNotZoom ? '' : `transition: var(--font-size-slider-thumb-transition) 
                         -webkit-transition: var(--font-size-slider-thumb-transition) ;
                         -moz-transition: var(--font-size-slider-thumb-transition) ;
                         -o-transition: var(--font-size-slider-thumb-transition) ;
