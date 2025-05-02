@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.1.8
+// @version               2025.5.1.9
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -2808,7 +2808,7 @@
         btns: {
             appHeader() {
                 appDiv.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
-                    const btnType = btn.id.match(/-([\w-]+)-btn$/)?.[1]
+                    const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
 
                     // Add click listener
                     btn.onclick = {
@@ -2849,7 +2849,7 @@
                 appDiv.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
                     btn.onclick = () => {
                         tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
-                        const btnType = /-(\w+)-btn$/.exec(btn.id)[1]
+                        const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
                         if (btnType == 'send') return // since handled by form submit
                         msgChain.push({ time: Date.now(), role: 'user', content: prompts.create(
                             btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })})
@@ -3168,7 +3168,7 @@
 
         update(btn) { // text & position
             if (!this.div) return // since nothing to update
-            const btnType = /-([\w-]+)-btn$/.exec(btn.id)[1]
+            const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
             const baseText = (
                   btnType == 'chevron' ? ( config.minimized ? `${app.msgs.tooltip_restore}`
                                                             : `${app.msgs.tooltip_minimize}` )

@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.1.8
+// @version                2025.5.1.9
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2278,7 +2278,7 @@
         btns: {
             appHeader() {
                 appDiv.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
-                    const btnType = btn.id.match(/-([\w-]+)-btn$/)?.[1]
+                    const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
 
                     // Add click listener
                     btn.onclick = {
@@ -2316,7 +2316,7 @@
                 appDiv.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
                     btn.onclick = () => {
                         tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
-                        const btnType = /-(\w+)-btn$/.exec(btn.id)[1]
+                        const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
                         if (btnType == 'send') return // since handled by form submit
                         msgChain.push({ time: Date.now(), role: 'user',
                             content: prompts.create('randomQA', { mods: 'all' })})
@@ -2622,7 +2622,7 @@
 
         update(btn) { // text & position
             if (!this.div) return // since nothing to update
-            const btnType = /-([\w-]+)-btn$/.exec(btn.id)[1]
+            const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
             const baseText = (
                   btnType == 'chevron' ? ( config.minimized ? `${app.msgs.tooltip_restore}`
                                                             : `${app.msgs.tooltip_minimize}` )
