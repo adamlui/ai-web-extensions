@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.1.6
+// @version                2025.5.1.7
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2278,18 +2278,26 @@
         btns: {
             appHeader() {
                 appDiv.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
-                    if (btn.id.endsWith('chevron-btn')) btn.onclick = () => {
-                        if (appDiv.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
-                            fontSizeSlider.toggle('off')
-                        toggle.minimized()
-                    }
-                    else if (btn.id.endsWith('about-btn')) btn.onclick = () => modals.open('about')
-                    else if (btn.id.endsWith('settings-btn')) btn.onclick = () => modals.open('settings')
-                    else if (btn.id.endsWith('font-size-btn')) btn.onclick = () => fontSizeSlider.toggle()
-                    else if (btn.id.endsWith('arrows-btn')) btn.onclick = () => toggle.expandedMode()
-                    if (!env.browser.isMobile) // add hover listeners for tooltips
-                        btn.onmouseenter = btn.onmouseleave = tooltip.toggle
-                    if (/about|settings|speak/.test(btn.id)) btn.onmouseup = () => { // add zoom/fade-out to select btns
+                    const btnType = btn.id.match(/-([\w-]+)-btn$/)?.[1]
+
+                    // Add click listener
+                    btn.onclick = {
+                        about: () => modals.open('about'),
+                        arrows: event => { toggle.expandedMode() ; tooltip.update(event.currentTarget) },
+                        chevron: () => {
+                            if (appDiv.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
+                                fontSizeSlider.toggle('off')
+                            toggle.minimized()
+                        },
+                        settings: () => modals.open('settings'),
+                        'font-size': () => fontSizeSlider.toggle()
+                    }[btnType]
+
+                    // Add hover listener
+                    if (!env.browser.isMobile) btn.onmouseenter = btn.onmouseleave = tooltip.toggle
+
+                     // Add zoom/fade-out to select buttons
+                    if (/about|settings|speak/.test(btn.id)) btn.onmouseup = () => {
                         if (config.fgAnimationsDisabled) return
                         btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
                         if (env.browser.isFF) // end animation 0.08s early to avoid icon overgrowth
