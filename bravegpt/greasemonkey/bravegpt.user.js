@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.2.5
+// @version               2025.5.2.6
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -2410,7 +2410,7 @@
                         -o-transition: var(--font-size-slider-thumb-transition) ;
                         -ms-transition: var(--font-size-slider-thumb-transition)` }}
                 ${ env.browser.isMobile ? '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }` }
-                .${app.slug}-standby-btns { margin: 17px 0 12px }
+                .${app.slug}-standby-btns { margin: 14px 0 22px }
                 .${app.slug}-standby-btn {
                     display: flex ; align-items: center ; justify-content: center ; gap: 8px ;
                     cursor: pointer ; background: none ; color: rgb(var(--content-color)) ;
@@ -3133,7 +3133,7 @@
                 ${selectors.btn.standby} {
                     --standby-btn-zoom: scale(1.055) ;
                     --standby-btn-transition: transform 0.18s ease, background 0.2s ease ;
-                    font-size: 10px ; width: 80% ; height: 43px ; margin-bottom: 16px }
+                    font-size: 10px ; width: 80% ; height: 43px ; margin-bottom: 13px }
                 ${selectors.btn.standby}:nth-child(odd) { margin-right: 20% ; margin-left: 15px }
                 ${selectors.btn.standby}:nth-child(even) { margin-left: 20% ; margin-bottom: 19px }
                 ${selectors.btn.standby}:hover {
