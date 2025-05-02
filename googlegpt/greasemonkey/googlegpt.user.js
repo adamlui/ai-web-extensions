@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.1.5
+// @version                  2025.5.1.6
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2409,7 +2409,8 @@
         appBottomPos() { appDiv.style.bottom = `${ config.minimized ? 35 - appDiv.offsetHeight : -33 }px` },
 
         appStyle() { // used in toggle.animations() + update.scheme() + main's app init
-            const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled
+            const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled,
+                  willZoom = config.fgAnimationsDisabled || env.browser.isMobile
             modals.stylize() // update modal styles
             app.styles.innerText = (
 
@@ -2533,9 +2534,7 @@
                     transition: var(--byline-transition) ;
                         -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
                         -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
-                #${app.slug}-header-btns {
-                    float: right ;
-                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' : 'will-change: transform' }}
+                #${app.slug}-header-btns { float: right ; ${ willZoom ? '' : 'will-change: transform' }}
                 .${app.slug}-header-btn {
                     float: right ; cursor: pointer ; position: relative ; top: 6px ;
                     ${ env.ui.app.scheme == 'dark' ? 'fill: white ; stroke: white'
@@ -2575,12 +2574,11 @@
                     background-color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#4a4a4a' };
                     --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
-                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' :
-                        `transition: var(--font-size-slider-thumb-transition) 
-                            -webkit-transition: var(--font-size-slider-thumb-transition) ;
-                            -moz-transition: var(--font-size-slider-thumb-transition) ;
-                            -o-transition: var(--font-size-slider-thumb-transition) ;
-                            -ms-transition: var(--font-size-slider-thumb-transition)` }}
+                    ${ willZoom ? '' : `transition: var(--font-size-slider-thumb-transition) 
+                        -webkit-transition: var(--font-size-slider-thumb-transition) ;
+                        -moz-transition: var(--font-size-slider-thumb-transition) ;
+                        -o-transition: var(--font-size-slider-thumb-transition) ;
+                        -ms-transition: var(--font-size-slider-thumb-transition)` }}
                 ${ env.browser.isMobile ? '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }` }
                 .${app.slug}-standby-btns { margin: 17px 0 -7px }
                 .${app.slug}-standby-btn {
@@ -2725,10 +2723,9 @@
                     border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;
                     --rq-shadow: 1px 4px 8px -6px rgba(169,169,169,0.75) ; box-shadow: var(--rq-shadow) ;
                         -webkit-box-shadow: var(--rq-shadow) ; -moz-box-shadow: var(--rq-shadow) ;
-                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' : // smoothen hover-zoom
-                        `transition: var(--rq-transition) ;
-                            -webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;
-                            -o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)` }}
+                    ${ willZoom ? '' : `transition: var(--rq-transition) ;
+                        -webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;
+                        -o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)` }}
                 .${app.slug}-related-query:hover, .${app.slug}-related-query:focus {
                     ${ config.fgAnimationsDisabled ? '' : 'transform: scale(1.055) !important ;' }
                     background: ${ env.ui.app.scheme == 'dark' ? '#a2a2a270'
