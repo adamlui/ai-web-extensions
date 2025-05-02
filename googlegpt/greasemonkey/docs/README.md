@@ -640,7 +640,7 @@ This app exists thanks to code, testing, issues, translations & ideas from the f
 <a href="https://github.com/adamlui">
     <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.9.23"></img></a>
 <a href="https://github.com/piederecho">
-    <img width=50 title="@piederecho" src="https://avatars.githubusercontent.com/u/5135365?first-contrib=2017.12.21-published-btn-w-diagonal-borders-to-codepen-used-in-standby-btns-and-chatbar"></img></a>
+    <img width=50 title="@piederecho" src="https://avatars.githubusercontent.com/u/5135365?first-contrib=2017.12.21-published-btn-w-diagonal-borders-to-codepen-adapted-in-standby-btns-and-chatbar"></img></a>
 <a href="https://greasyfork.org/users/1213283-c3tacea">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png">
