@@ -630,6 +630,8 @@ This app exists thanks to code, translations, issues & ideas from the following 
     <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554"></img></a>
 <a href="https://github.com/piederecho">
     <img width=50 title="@piederecho" src="https://avatars.githubusercontent.com/u/5135365?first-contrib=2017.12.21-published-btn-w-diagonal-borders-to-codepen-adapted-in-standby-btns-and-chatbar"></img></a>
+<a href="https://github.com/shawnrossouw">
+    <img width=50 title="@shawnrossouw" src="https://avatars.githubusercontent.com/u/46893447?first-contrib=2019.7.18-published-btn-w-futuristic-btn-to-codepen-adapted-in-modal-btns"></img></a>
 <a href="https://github.com/pasThal">
     <img width=50 title="@pasThal" src="https://avatars.githubusercontent.com/u/175899275?first-contrib=2024.10.6-opera-gx-compatible-report"></img></a>
 <a href="https://github.com/mberetvas">
