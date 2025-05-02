@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.2.4
+// @version                  2025.5.2.5
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1611,7 +1611,7 @@
               + '.chatgpt-modal button:hover { background-color: #9cdaff !important ; color: black !important }'
               + ( env.ui.app.scheme == 'dark' ? // darkmode chatgpt.alert() styles
                   ( '.chatgpt-modal > div, .chatgpt-modal button:not(.primary-modal-btn) {'
-                      + 'background-color: black !important ; color: white !important }'
+                      + 'color: white !important }'
                   + '.primary-modal-btn { background: hsl(186 100% 69%) !important ; color: black !important }'
                   + '.chatgpt-modal a { color: #00cfff !important }'
                   + '.chatgpt-modal button:hover {'
@@ -3254,6 +3254,7 @@
                         var(--side-line-fill) left / 2px 50% no-repeat,
                         var(--side-line-fill) right / 2px 50% no-repeat ;
                     background-position-y: 81% ;
+                    background-color: #ffffff00 ; /* clear bg */
                     color: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.65 : 1 }) ;
                     font-size: 0.8em ; font-family: "Roboto", sans-serif ; text-transform: uppercase ;
                     transform: var(--skew)  }
@@ -3299,8 +3300,8 @@
                             -o-transition: var(--modal-btn-transition) ;
                             -ms-transition: var(--modal-btn-transition)` }}
                 ${selectors.btn.modalPrimary} {
-                    ${ env.ui.app.scheme == 'dark' ? 'background: white !important ; color: black'
-                                                   : 'background: black !important ; color: white' }}
+                    ${ env.ui.app.scheme == 'dark' ? 'background-color: white !important ; color: black'
+                                                   : 'background-color: black !important ; color: white' }}
                 ${selectors.btn.modal}:nth-child(odd) {
                     transform: var(--skew) translateY(calc(-1 * var(--modal-btn-y-offset))) }
                 ${selectors.btn.modal}:nth-child(even) {
