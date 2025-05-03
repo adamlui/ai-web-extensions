@@ -47,7 +47,7 @@
         "newChat": "div:has(> span > a[href=\"/\"] svg) + div", "research": "button:has(path[d*=\"M5.047 5.15c.122\"])",
         "search": "button:has(path[d*=\"M3.752 9.895a6.145\"])", "searchSrcs": "button:has(svg[class*=icon-world])",
         "send": "button:has(svg[class*=icon-arrow-], svg[class*=icon-git-fork])", // Send w/ ↑/→ or New Thread
-        "settings": "button:has(svg[data-icon=gear])", "sidebar": "button[data-testid=sidebar-pin-sidebar]"
+        "settings": "button:has(svg[data-icon=user])", "sidebar": "button[data-testid=sidebar-pin-sidebar]"
       },
       "footer": "div:has(> a[href=\"https://www.perplexity.ai/hub/careers\"])",
       "header": "div[class*=header].sticky:nth-of-type(2)", "input": "textarea[placeholder]",
