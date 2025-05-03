@@ -16,7 +16,7 @@ window.tooltip = {
             font-size: 0.85rem ; color: white ; white-space: nowrap ; /* text style */
             --shadow: 4px 6px 16px 0 rgb(0 0 0 / 38%) ;
                 box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
-            position: absolute ; bottom: 58px ; opacity: 0 ; z-index: 99999 ; /* visibility */
+            position: fixed ; opacity: 0 ; z-index: 99999 ; /* visibility */
             transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
                 -ms-transition: opacity 0.15s ; -o-transition: opacity 0.15s ;
             user-select: none ; webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none }`
@@ -32,25 +32,17 @@ window.tooltip = {
         tooltip.div.style.opacity = +(event.type == 'mouseenter')
     },
 
-    async update(btn) { // text & position
-        if (!this.div) return // since nothing to update
-        const { env: { site }, sites: { [site]: { selectors }}} = this.imports
+    update(btn) {
+        if (!this.div) return
         const btnType = btn.id.replace(/-btn$/, '')
-        const rects = {
-            btn: buttons[btnType]?.getBoundingClientRect(), chatbar: (await chatbar.get())?.getBoundingClientRect() }
+        const btnRect = btn.getBoundingClientRect()
+        const btnTransform = getComputedStyle(btn).transform
+        const btnScale = btnTransform == 'none' ? 1
+            : parseFloat(/matrix\(([^)]+)\)/.exec(btnTransform)[1].split(',')[0])
+        const unscaledTop = btnRect.top +( btnRect.height - btnRect.height / btnScale )/2
         this.div.innerText = this.getMsg(`tooltip_${btnType}${
             !/full|wide/i.test(btnType) ? '' : (config[btnType] ? 'OFF' : 'ON')}`)
-        rects.tooltipDiv = this.div.getBoundingClientRect()
-        this.div.style.right = `${
-            rects.chatbar.right -( rects.btn?.left + rects.btn?.right )/2 - rects.tooltipDiv.width/2
-                +( site == 'chatgpt' ? -9 : site == 'perplexity' ? 19 : /* poe */ 3 )}px` // site offset
-        this.div.style.bottom = ( // y-pos
-            site == 'perplexity' ? (
-                location.pathname != '/' ? '64px' // not homepage
-                  : document.querySelector( // logged-in homepage or viewport <769px
-                        selectors.btns.settings) || innerWidth < 769 ? 'revert-layer'
-                                         : '51vh' // logged-out homepage
-            ) : site == 'poe' ? '50px' : '42px'
-        )
+        this.div.style.left = `${ btnRect.left +( btnRect.width /2 ) -( this.div.offsetWidth /2 )}px`
+        this.div.style.top = `${ unscaledTop - this.div.offsetHeight -( this.imports.env.site == 'poe' ? 19 : 11 )}px`
     }
 };
