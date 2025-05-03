@@ -82,10 +82,9 @@ window.buttons = {
         const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? -16.5 : -8.85
         const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4
             : hasTallChatbar ? ( this.rightBtn.getBoundingClientRect().width +2 ) *(
-                document.querySelector(/\(([^()]+)\)$/.exec(selectors.btns.dictate)?.[1]) // Dictate icon exists
-                    || selectors.btns.login && location.search.includes('temporary-chat=true') // or guest Temp chat
-                        ? 2 : 1 // double the offset, else don't
-                ) -84
+                document.querySelector(/\(([^()]+)\)$/.exec(selectors.btns.dictate)?.[1]) ? 2 // Dictate icon exists
+              : selectors.btns.login && location.search.includes('temporary-chat=true') ? 1/4 // guest Temp Chat
+              : 1 ) -84
             : -0.25 // skinny ChatGPT chatbar
 
         validBtnTypes.forEach(async (btnType, idx) => {
