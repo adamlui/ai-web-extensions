@@ -76,11 +76,12 @@ window.buttons = {
 
     async create() {
         if (!this.styles) this.stylize()
-        const { env: { site, ui: { hasTallChatbar }}, sites: { [site]: { selectors }}, toggleMode } = this.imports,
-              hasDictateBtn = document.querySelector(/\(([^()]+)\)$/.exec(selectors.btns.dictate)?.[1]),
-              isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true'),
-              validBtnTypes = this.get.types.valid(),
-              spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? -16.5 : -8.85
+        const { env: { site, ui: { hasTallChatbar }}, sites: { [site]: { selectors }}, toggleMode } = this.imports
+        const hasDictateBtn = document.querySelector(/\(([^()]+)\)$/.exec(selectors.btns.dictate)?.[1])
+                          && !document.querySelector(selectors.btns.login)
+        const isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true')
+        const validBtnTypes = this.get.types.valid()
+        const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? -16.5 : -8.85
         if (isGuestTempChat) // wait for arrow Send button after black chatbar loads or rOffset inaccurate
             await dom.get.loadedElem(selectors.btns.send, { timeout: 1000 })
         if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.get.rightBtn() // for rOffset + styles
