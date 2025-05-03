@@ -13,7 +13,7 @@ window.ui = {
 
     isFullWin() {
         const { site, sites } = this.imports
-        if (site == 'poe') return !!document.getElementById('fullWindow-mode')
+        if (site == 'poe') return styles.fullWin.node.isConnected
         else if (!sites[site].hasSidebar) return true
         else { // calc widths to determine on sites w/ native toggle
             const barWidths = {} ; ['left', 'right'].forEach(side => {
