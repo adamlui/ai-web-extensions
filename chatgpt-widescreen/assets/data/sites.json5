@@ -24,7 +24,7 @@
         },
         "modals": {
           "deepResearch": "div[data-testid=modal-deep-research-mini-nux]", // https://i.imgur.com/3GLab1m.png
-          "login": "div[data-testid=modal-no-auth-rate-limit]" // https://i.imgur.com/ItLsJLT.png
+          "guest": "div[data-testid^=modal-no-auth]" // https://i.imgur.com/ItLsJLT.png
         },
         "popups": {
           "announcement": // https://imgur.com/a/TIKFbeA
