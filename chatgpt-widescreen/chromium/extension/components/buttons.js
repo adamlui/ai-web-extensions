@@ -76,15 +76,17 @@ window.buttons = {
 
     async create() {
         if (!this.styles) this.stylize()
-        const { env: { site, ui: { hasTallChatbar }}, sites: { [site]: { selectors }}, toggleMode } = this.imports
+        const { env: { site, ui: { hasTallChatbar }}, sites: { [site]: { selectors }}, toggleMode } = this.imports,
+              hasDictateBtn = document.querySelector(/\(([^()]+)\)$/.exec(selectors.btns.dictate)?.[1]),
+              isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true'),
+              validBtnTypes = this.get.types.valid(),
+              spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? -16.5 : -8.85
+        if (isGuestTempChat) // wait for arrow Send button after black chatbar loads or rOffset inaccurate
+            await dom.get.loadedElem(selectors.btns.send, { timeout: 1000 })
         if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.get.rightBtn() // for rOffset + styles
-        const validBtnTypes = this.get.types.valid()
-        const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? -16.5 : -8.85
         const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4
-            : hasTallChatbar ? ( this.rightBtn.getBoundingClientRect().width +2 ) *(
-                document.querySelector(/\(([^()]+)\)$/.exec(selectors.btns.dictate)?.[1]) ? 2 // Dictate icon exists
-              : selectors.btns.login && location.search.includes('temporary-chat=true') ? 1/4 // guest Temp Chat
-              : 1 ) -84
+            : hasTallChatbar ? (
+                this.rightBtn.getBoundingClientRect().width +2 ) *( hasDictateBtn || isGuestTempChat ? 2 : 1 ) -84
             : -0.25 // skinny ChatGPT chatbar
 
         validBtnTypes.forEach(async (btnType, idx) => {
