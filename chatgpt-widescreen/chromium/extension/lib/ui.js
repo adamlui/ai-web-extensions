@@ -11,10 +11,13 @@ window.ui = {
                 || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
     },
 
-    isFullWin() {
+    async isFullWin() {
         const { site, sites } = this.imports
         if (site == 'poe') return styles.fullWin.node.isConnected
-        else if (!sites[site].hasSidebar) return true
+        else if (site == 'perplexity') {
+            await new Promise(requestAnimationFrame)
+            return !document.querySelector('svg.tabler-icon-pinned-filled')
+        } else if (!sites[site].hasSidebar) return true
         else { // calc widths to determine on sites w/ native toggle
             const barWidths = {} ; ['left', 'right'].forEach(side => {
                 const barSelector = sites[site].selectors[`${ side == 'left' ? 'side' : 'right' }bar`],
