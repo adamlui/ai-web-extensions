@@ -94,7 +94,10 @@ window.buttons = {
 
             // Position
             btn.style.right = `${ rOffset + idx * spreadFactor }px` // position left of prev button
-            if (site == 'chatgpt' && hasTallChatbar) btn.style.bottom = '-0.5px'
+            if (site == 'chatgpt' && hasTallChatbar) {
+                btn.style.bottom = '-0.5px'
+                if (isGuestTempChat && btnType == 'widescreen') btn.style.marginRight = '3px'
+            }
             else btn.style.top = `${ site == 'chatgpt' ? -3.25
                                    : site == 'poe' ? ( btnType == 'newChat' ? 1 : 3 ) : 0 }px`
 
