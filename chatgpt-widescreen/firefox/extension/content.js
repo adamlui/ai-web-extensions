@@ -90,43 +90,50 @@
         }
     }
 
-    function toggleMode(mode, state = '') {
+    async function toggleMode(mode, state = '') {
         switch (state.toUpperCase()) {
             case 'ON' : activateMode(mode) ; break
             case 'OFF' : deactivateMode(mode) ; break
-            default : ( mode == 'widescreen' ? styles.widescreen.node.isConnected
-                      : mode == 'fullWindow' ? ui.isFullWin() : chatgpt.isFullScreen() ) ? deactivateMode(mode)
-                                                                                         : activateMode(mode)
+            default : (
+                mode == 'widescreen' ? styles.widescreen.node.isConnected
+              : mode == 'fullWindow' ? await ui.isFullWin() : chatgpt.isFullScreen()
+            ) ? deactivateMode(mode) : activateMode(mode)
         }
 
-        function activateMode(mode) {
+        async function activateMode(mode) {
             if (mode == 'widescreen') { document.head.append(styles.widescreen.node) ; sync.mode('widescreen') }
             else if (mode == 'fullWindow') {
-                const selectors = sites[env.site].selectors,
+                const { site } = env, { selectors } = sites[site],
                       sidebarToggle = document.querySelector(selectors.btns.sidebar)
-                if (sidebarToggle) {
-                    const sidebars = { left: document.querySelector(selectors.sidebar) }, sidebarsToHide = []
-                    if (env.site == 'chatgpt') sidebars.right = document.querySelector(selectors.rightbar)
+                if (site == 'chatgpt') {
+                    const sidebars = {
+                        left: document.querySelector(selectors.sidebar),
+                        right: document.querySelector(selectors.rightbar)
+                    }
+                    const sidebarsToHide = []
                     Object.entries(sidebars).forEach(([side, bar]) => // push fat/visible ones to hide
                         bar && dom.get.computedWidth(bar) > 100 && sidebarsToHide.push({ side, bar }))
                     sidebarsToHide.forEach(({ side, bar }) => { // hide'em
                         if (side == 'left') sidebarToggle.click() ; else bar.style.display = 'none' })
-                } else { document.head.append(styles.fullWin.node) ; sync.mode('fullWindow') }
+                } else if (site == 'perplexity') sidebarToggle.click()
+                else /* poe */ document.head.append(styles.fullWin.node)
+                if (site != 'chatgpt') sync.mode('fullWindow') // since they don't monitor sidebar
             } else if (mode == 'fullscreen') document.documentElement.requestFullscreen()
         }
 
         function deactivateMode(mode) {
             if (mode == 'widescreen') { styles.widescreen.node.remove() ; sync.mode('widescreen') }
             else if (mode == 'fullWindow') {
-                const selectors = sites[env.site].selectors,
+                const { site } = env, { selectors } = sites[site],
                       sidebarToggle = document.querySelector(selectors.btns.sidebar)
                 if (sidebarToggle) {
                     sidebarToggle.click()
-                    if (env.site == 'chatgpt') {
+                    if (site == 'chatgpt') {
                         const rightbar = document.querySelector(selectors.rightbar)
                         if (rightbar) rightbar.style.display = ''
                     }
-                } else { styles.fullWin.node.remove() ; sync.mode('fullWindow') }
+                } else styles.fullWin.node.remove()
+                if (site != 'chatgpt') sync.mode('fullWindow') // since they don't monitor sidebar
             } else if (mode == 'fullscreen') {
                 if (config.f11) modals.alert(getMsg('alert_pressF11'), `${getMsg('alert_f11reason')}.`)
                 else document.exitFullscreen()
@@ -153,7 +160,7 @@
                 if (config.widescreen ^ styles.widescreen.node.isConnected) { // sync Widescreen
                     supressNotifs() ; toggleMode('widescreen') }
                 if (sites[env.site].hasSidebar) {
-                    if (config.fullWindow ^ ui.isFullWin()) { // sync Full-Window
+                    if (config.fullWindow ^ await ui.isFullWin()) { // sync Full-Window
                         supressNotifs() ; toggleMode('fullWindow') }
                     sync.fullerWin() // sync Fuller Windows
                 }
@@ -188,7 +195,7 @@
 
         async mode(mode) { // setting + icon + chatbar
             const state = ( mode == 'widescreen' ? styles.widescreen.node.isConnected
-                          : mode == 'fullWindow' ? ui.isFullWin()
+                          : mode == 'fullWindow' ? await ui.isFullWin()
                                                  : chatgpt.isFullScreen() )
             settings.save(mode, state) ; buttons.update.svg(mode)
             if (!config.extensionDisabled && !config[`${env.site}Disabled`]) { // tweak UI
@@ -221,7 +228,7 @@
     // Init FULL-MODE states
     config.fullscreen = chatgpt.isFullScreen()
     if (sites[env.site].selectors.btns.sidebar) // site has native FW state
-         config.fullWindow = ui.isFullWin() // ...so match it
+         config.fullWindow = await ui.isFullWin() // ...so match it
     else await settings.load('fullWindow'); // otherwise load CWM's saved state
 
     // Create/append STYLES
@@ -284,7 +291,7 @@
     // Monitor SIDEBARS to update config.fullWindow for sites w/ native toggle
     if (sites[env.site].selectors.btns.sidebar && sites[env.site].hasSidebar) {
         const sidebarObserver = new ResizeObserver( // sync config.fullWindow ⇆ sidebar width
-            () => (config.fullWindow ^ ui.isFullWin()) && !config.modeSynced && sync.mode('fullWindow'))
+            async () => (config.fullWindow ^ await ui.isFullWin()) && !config.modeSynced && sync.mode('fullWindow'))
         observeSidebars()
         new MutationObserver( // re-observeSidebars() on disconnect
             () => getSidebars().some(bar => !sidebarObserver.targets?.includes(bar)) && observeSidebars()
