@@ -46,6 +46,7 @@ window.chatbar = {
     },
 
     async tweak() { // update ChatGPT chatbar inner width or hack Perplexity/Poe buttons
+        console.log('chatbar tweaking')
         const chatbarDiv = await this.get() ; if (!chatbarDiv) return
         const { site, sites: { [site]: { selectors }}} = this.imports
         if (site == 'chatgpt') { // update chatbar inner width
