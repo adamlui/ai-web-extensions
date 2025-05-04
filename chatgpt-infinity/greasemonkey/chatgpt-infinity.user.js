@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.4.28.2
+// @version             2025.5.3
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -222,9 +222,9 @@
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.0/dist/chatgpt.min.js#sha256-Xg6XXZ7kcc/MTdlKwUq1rc41WiEwuqhl7DxIjIkzRhc=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@11b40c3/chromium/extension/components/modals.js#sha256-MPZK5PlZQhCIgSRwiKrfq8v0vklmSm6rwlyrqs2YX80=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@ba8976b/chromium/extension/components/toggles.js#sha256-GG+5LBC31qKwqjqfOKloujfAh+gO8Ket9hmCO+6TA4M=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@11b40c3/chromium/extension/lib/dom.js#sha256-wX79+SnP3dPYqz9x9bfyZKz+yIJYLIgrUP+8Fa6Ckwg=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@11b40c3/chromium/extension/lib/settings.js#sha256-xXVVeRerxLKR8Q8Nakh9nDVEMOm5GzCn1P3GYkgeJSc=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@14a206c/chromium/extension/lib/ui.js#sha256-H5ipBYjHNhKZ9xNRBboq2eZs1usmzXTYvuWtop+1AGU=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8156513/chromium/extension/lib/dom.js#sha256-9j5yyofJkGS2kECx8q4KalwRZdz4yaZClS0xAe2YhvY=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8156513/chromium/extension/lib/settings.js#sha256-EO1vtcY71CGtGZeiSMXxzXJ+U+hoYVnbdCs8ZPvQVuo=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8156513/chromium/extension/lib/ui.js#sha256-2yuQbliwz+uaCxUIEeTMWIH5JADHgjDBZD4/8I2T8rE=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant               GM_setValue
