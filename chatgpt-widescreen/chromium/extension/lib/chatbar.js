@@ -25,17 +25,6 @@ window.chatbar = {
         if (site == 'chatgpt') { // restore chatbar inner width
             const inputArea = chatbarDiv.querySelector(selectors.input)
             if (inputArea) inputArea.style.width = inputArea.parentNode.style.width = 'initial'
-        } else if (site == 'perplexity') { // restore left-align right buttons
-            const leftAlignedBtns = chatbarDiv.querySelectorAll('[data-left-aligned]')
-            if (leftAlignedBtns.length) {
-                const ogBtnParents = [...chatbarDiv.querySelectorAll('[data-btn-moved]')].reverse()
-                leftAlignedBtns.forEach((btn, idx) => {
-                    ogBtnParents[idx].append(btn) ; ogBtnParents[idx].removeAttribute('data-btn-moved')
-                    btn.style.margin = '' ; btn.removeAttribute('data-left-aligned') // reset margins/attr
-                })
-                const modeDiv = chatbarDiv.querySelector('button').closest('div')
-                modeDiv.style.marginRight = modeDiv.parentNode.style.paddingRight = '' // reset gap x-hacks
-            }
         } else if (site == 'poe') // restore Attach File button icon + Poe Mic button position
             ['attachFile', 'mic'].forEach(btnType => {
                 const btn = chatbarDiv.querySelector(selectors.btns[btnType]) ; if (!btn) return
@@ -45,7 +34,7 @@ window.chatbar = {
             })
     },
 
-    async tweak() { // update ChatGPT chatbar inner width or hack Perplexity/Poe buttons
+    async tweak() { // update ChatGPT chatbar inner width or hack Poe buttons
         const chatbarDiv = await this.get() ; if (!chatbarDiv) return
         const { site, sites: { [site]: { selectors }}} = this.imports
         if (site == 'chatgpt') { // update chatbar inner width
@@ -61,19 +50,6 @@ window.chatbar = {
                 inputArea.parentNode.style.width = `${ // expand to close gap w/ buttons
                     widths.chatbar - totalBtnWidths -43 }px`
                 inputArea.style.width = '100%' // rid h-scrollbar
-            }
-        } else if (site == 'perplexity') { // left-align Attach File + Search src buttons
-            const modeDiv = chatbarDiv.querySelector('button').closest('div') ; if (!modeDiv) return
-            const rightBtns = {} ; ['attachFile', 'searchSrcs'].forEach(btnType =>
-                rightBtns[btnType] = chatbarDiv.querySelector(selectors.btns[btnType]))
-            Object.values(rightBtns).forEach(btn => { if (!btn) return
-                btn.style.marginTop = '2px' // lower it
-                btn.dataset.leftAligned = true ; btn.parentNode.dataset.btnMoved = true // for this.reset()
-                modeDiv.after(btn) // move to right of selector
-            })
-            if (chatbarDiv.querySelector('[data-left-aligned]')) {
-                modeDiv.style.marginRight = '-2px' // close gap vs. right buttons
-                modeDiv.parentNode.style.paddingRight = '5px' // extend bg rightward
             }
         } else if (site == 'poe') { // replace Attach File btn icon + move Mic btn closer to Send
             const btnLoadTimeout = 5000

@@ -70,7 +70,9 @@ window.buttons = {
                 `@media (max-width: 768px) {
                     #fullWindow-btn { display: none }
                     #widescreen-btn { margin-right: ${ site == 'perplexity' ? 9 : 19 }px }}`
-                : '' }`
+                : '' }
+            ${ site == 'perplexity' ? // hide native tooltip that persists for being in same parent
+                `body:not(:has(button[role=radio]:hover)) ${selectors.tooltip} { display: none !important }` : '' }`
         ))
     },
 
@@ -152,23 +154,31 @@ window.buttons = {
 
     async insert() {
         if (!config.btnsVisible || this.state.status == 'inserting' || this.fullscreen?.isConnected) return
+        const { site } = this.imports.env
         this.state.status = 'inserting' ; if (!this.fullscreen) await this.create()
 
         // Init elems
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
         const btnTypesToInsert = this.get.types.valid()
-        const parentToInsertInto = (
-            this.imports.env.site == 'chatgpt' ? (await this.get.rightBtn()).closest('[class*=bottom]') // right btn div
-          : chatbarDiv.lastChild ) // parent of [Perplexity right btns or Poe Mic/Send btns]
+        let parentToInsertInto = (
+            site == 'chatgpt' ? (await this.get.rightBtn()).closest('[class*=bottom]') // right btn div
+          : site == 'perplexity' ? chatbarDiv.querySelector('div[role=radiogroup]') // left mode btns div
+          : /* poe */ chatbarDiv.lastChild ) // parent of Mic/Send btns
+        if (site == 'perplexity') { // wrap in div to tweak side-gaps
+            parentToInsertInto.append(this.btnsDiv = dom.create.elem('div', {
+                style: 'display: flex ; margin-left: -36px ; margin-right: 9px ; align-items: center' }))
+            parentToInsertInto = this.btnsDiv
+        }
         const elemToInsertBefore = parentToInsertInto[
-            this.imports.env.site == 'chatgpt' ? 'lastChild' // right btn
-          : 'firstChild'] // Perplexity Pro spam toggle or Poe Mic btn
+            site == 'poe' ? 'firstChild' // Mic btn
+          : 'lastChild'] // right btn
 
         // Insert buttons
+
         btnTypesToInsert.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType]
             this.update.svg(btnType) // update icon
-            elemToInsertBefore.before(btn) // insert button
+            parentToInsertInto.insertBefore(btn, elemToInsertBefore) // insert button
             if (!this.state.hasFadedIn) { // fade-in
                 btn.style.opacity = 0 ; setTimeout(() => btn.style.opacity = 1, (idx +1) *30)
                 if (idx == btnTypesToInsert.length -1) // final button scheduled for fade-in
@@ -181,7 +191,7 @@ window.buttons = {
 
     async remove() {
         if (!await chatbar.get() || !this.fullscreen?.isConnected) return
-        this.types.forEach(type => this[type]?.remove()) ; tooltip.div?.remove()
+        ['btnsDiv', ...this.types].filter(Boolean).forEach(type => this[type]?.remove()) ; tooltip.div?.remove()
         this.state.status = 'missing' // ensure next .insert() doesn't return early
         this.state.hasFadedIn = false // ensure next .insert() fades in buttons
     },

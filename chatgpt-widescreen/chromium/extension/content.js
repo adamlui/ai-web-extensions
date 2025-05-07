@@ -166,7 +166,7 @@
                 }
                 styles.tweaks.update() // sync TCB/NCB/HH/HF/BA
                 styles.chatbar.update() // sync WCB
-                chatbar.tweak() // update ChatGPT chatbar inner width or hack other sites' button positions
+                if (env.site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
                 buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                     // ...to visually signal location + preview fx applied by Button Animations toggle-on
