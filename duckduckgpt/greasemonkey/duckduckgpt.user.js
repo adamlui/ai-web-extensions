@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.7.2
+// @version                2025.5.7.3
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -3099,7 +3099,7 @@
                     color: rgb(var(--content-color)) ;
                     background: /* extend side lines */
                         var(--side-line-fill) left / 2px 100% no-repeat,
-                        var(--side-line-fill) right / 2px 100% no-repeat !important }                    
+                        var(--side-line-fill) right / 2px 100% no-repeat !important }
                 ${selectors.btn.hoverBefore} { left: 0 ; width: 20px } /* top line on hover */
                 ${selectors.btn.hoverAfter} { right: 0 ; width: 20px } /* bottom line on hover */
                 ${selectors.btn.hoverSVG} {
@@ -3111,7 +3111,8 @@
                 /* Modal button styles */
                 ${selectors.btn.modal} {
                     --modal-btn-y-offset: 2px ; --glow-color: #a0fdff ;
-                    --modal-btn-zoom: scale(1.075) ; --modal-btn-transition: transform 0.1s ease, background 0.2s ease ;
+                    --modal-btn-zoom: scale(1.075) ;
+                    --modal-btn-transition: transform 0.1s ease, background 0.2s ease, box-shadow 0.5s ease ;
                     ${ config.fgAnimationsDisabled ? /* override chatgpt.js transitions */
                         `transition: none ;
                             -webkit-transition: none ; -moz-transition: none ;
