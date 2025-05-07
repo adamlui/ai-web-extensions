@@ -174,7 +174,6 @@ window.buttons = {
           : 'lastChild'] // right btn
 
         // Insert buttons
-
         btnTypesToInsert.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType]
             this.update.svg(btnType) // update icon
@@ -190,7 +189,7 @@ window.buttons = {
     },
 
     async remove() {
-        if (!await chatbar.get() || !this.fullscreen?.isConnected) return
+        if ( !await chatbar.get() || !this.fullscreen?.isConnected ) return
         ['btnsDiv', ...this.types].forEach(type => this[type]?.remove()) ; tooltip.div?.remove()
         this.state.status = 'missing' // ensure next .insert() doesn't return early
         this.state.hasFadedIn = false // ensure next .insert() fades in buttons
