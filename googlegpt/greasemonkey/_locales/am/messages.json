@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "ለGoogle ፍለጋ (በGoogle Gemma + GPT-4o የተጎላበተው" },
-  "menuLabel_autoGetAnswers": { "message": "ራስ-ጌ መልሶች" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-Summarize ውጤቶች" },
   "menuLabel_autoFocusChatbar": { "message": "ራስ-ፎኩስ ቻትባር" },
   "menuLabel_whenStreaming": { "message": "ዥረት ጊዜ" },

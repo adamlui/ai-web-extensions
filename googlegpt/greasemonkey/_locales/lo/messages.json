@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "ເພີ່ມ ຄໍາ ຕອບ AI ເຂົ້າໃນ Google Search (ຂັບເຄື່ອນໂດຍ Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "ຄໍາຕອບອັດຕະໂນມັດ" },
+  "menuLabel_autoAnswer": { "message": "ຄຳຕອບອັດຕະໂນມັດ" },
   "menuLabel_autoSummarizeResults": { "message": "ສະຫຼຸບຜົນໂດຍອັດຕະໂນມັດ" },
   "menuLabel_autoFocusChatbar": { "message": "ແຖບສົນທະນາໂຟກັສອັດຕະໂນມັດ" },
   "menuLabel_whenStreaming": { "message": "ເມື່ອການຖ່າຍທອດ" },

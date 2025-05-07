@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Přidává odpovědi AI do Vyhledávání Google (s podporou Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Automatické získávání odpovědí" },
+  "menuLabel_autoAnswer": { "message": "Automatická odpověď" },
   "menuLabel_autoSummarizeResults": { "message": "Automaticky shrnout výsledky" },
   "menuLabel_autoFocusChatbar": { "message": "Chatovací panel s automatickým zaostřováním" },
   "menuLabel_whenStreaming": { "message": "při streamování" },

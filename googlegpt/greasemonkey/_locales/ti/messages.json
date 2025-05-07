@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "መልሲ AI ንGoogle Search (ብGoogle Gemma + GPT-4o ዝተሰርሐ!)" },
-  "menuLabel_autoGetAnswers": { "message": "ናይ ኣውቶ-ጀት መልሲ" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "ውጽኢት ናይ ኣውቶማቲክ ሱማሪዝ" },
   "menuLabel_autoFocusChatbar": { "message": "ናይ ኣውቶ-ፎኩስ ቻትባር" },
   "menuLabel_whenStreaming": { "message": "ምስ ዥረት" },

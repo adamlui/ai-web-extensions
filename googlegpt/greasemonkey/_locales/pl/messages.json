@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Dodaje odpowiedzi sztucznej inteligencji do wyszukiwarki Google (obsługiwanej przez Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Automatyczne uzyskiwanie odpowiedzi" },
+  "menuLabel_autoAnswer": { "message": "Automatyczna odpowiedź" },
   "menuLabel_autoSummarizeResults": { "message": "Automatycznie podsumuj wyniki" },
   "menuLabel_autoFocusChatbar": { "message": "Automatycznie ustawiaj ostrość na czacie" },
   "menuLabel_whenStreaming": { "message": "podczas przesyłania strumieniowego" },

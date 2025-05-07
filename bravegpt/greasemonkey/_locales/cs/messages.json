@@ -2,7 +2,7 @@
   "appDesc": { "message": "Přidá odpovědi ChatGPT na boční panel Brave Search (poháněný GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Režim proxy API" },
   "menuLabel_preferred": { "message": "Preference" },
-  "menuLabel_autoGetAnswers": { "message": "Automatické získávání odpovědí" },
+  "menuLabel_autoAnswer": { "message": "Automatická odpověď" },
   "menuLabel_autoSummarizeResults": { "message": "Automaticky shrnout výsledky" },
   "menuLabel_autoFocusChatbar": { "message": "Chatovací panel s automatickým zaostřováním" },
   "menuLabel_whenStreaming": { "message": "při streamování" },

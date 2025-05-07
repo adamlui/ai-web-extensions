@@ -2,7 +2,7 @@
   "appDesc": { "message": "DuckDuckGo பக்கப்பட்டியில் ChatGPT பதில்களைச் சேர்க்கிறது (GPT-4o ஆல் இயக்கப்படுகிறது!)" },
   "menuLabel_proxyAPImode": { "message": "ப்ராக்ஸி API பயன்முறை" },
   "menuLabel_preferred": { "message": "விருப்பமானது" },
-  "menuLabel_autoGetAnswers": { "message": "தானாகப் பெறப்பட்ட பதில்கள்" },
+  "menuLabel_autoAnswer": { "message": "தானாக பதிலளிக்கவும்" },
   "menuLabel_autoSummarizeResults": { "message": "தானியங்கு சுருக்க முடிவுகள்" },
   "menuLabel_autoFocusChatbar": { "message": "ஆட்டோ-ஃபோகஸ் சாட்பார்" },
   "menuLabel_whenStreaming": { "message": "ஸ்ட்ரீமிங் செய்யும் போது" },

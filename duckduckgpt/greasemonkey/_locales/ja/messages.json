@@ -2,7 +2,7 @@
   "appDesc": { "message": "DuckDuckGo サイドバーに ChatGPT 回答を追加 (GPT-4o 搭載!)" },
   "menuLabel_proxyAPImode": { "message": "プロキシ API モード" },
   "menuLabel_preferred": { "message": "推奨" },
-  "menuLabel_autoGetAnswers": { "message": "回答を自動取得" },
+  "menuLabel_autoAnswer": { "message": "自動応答" },
   "menuLabel_autoSummarizeResults": { "message": "結果を要約する" },
   "menuLabel_autoFocusChatbar": { "message": "オートフォーカスチャットバー" },
   "menuLabel_whenStreaming": { "message": "ストリーミング時" },

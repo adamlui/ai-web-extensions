@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Inowedzera AI mhinduro kuGoogle Search (inofambiswa neGoogle Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Auto-Kuwana Mhinduro" },
+  "menuLabel_autoAnswer": { "message": "Auto-kupindura" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-Summarize Zvabuda" },
   "menuLabel_autoFocusChatbar": { "message": "Taura nesu" },
   "menuLabel_whenStreaming": { "message": "apo kudirana" },

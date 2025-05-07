@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Isefru d yidles n AI deg yiched n Google Search (aql s Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Iderwa d yidles" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Affiner la recherche pour auto-summarize results" },
   "menuLabel_autoFocusChatbar": { "message": "Aderwa d anukkat n tchatbar" },
   "menuLabel_whenStreaming": { "message": "mi ttwali" },

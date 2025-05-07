@@ -2,7 +2,7 @@
   "appDesc": { "message": "Aggiunge le risposte ChatGPT alla barra laterale DuckDuckGo (con tecnologia GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Modalità API proxy" },
   "menuLabel_preferred": { "message": "Preferito" },
-  "menuLabel_autoGetAnswers": { "message": "Ottieni automaticamente risposte" },
+  "menuLabel_autoAnswer": { "message": "Risposta automatica" },
   "menuLabel_autoSummarizeResults": { "message": "Riepiloga automaticamente i risultati" },
   "menuLabel_autoFocusChatbar": { "message": "Messa a fuoco automatica della barra di chat" },
   "menuLabel_whenStreaming": { "message": "durante lo streaming" },

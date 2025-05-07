@@ -2,7 +2,7 @@
   "appDesc": { "message": "Nagdugang mga tubag sa ChatGPT sa Brave Search sidebar (gipadagan sa GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Modo sa Proxy API" },
   "menuLabel_preferred": { "message": "Mas gipalabi" },
-  "menuLabel_autoGetAnswers": { "message": "Mga Tubag sa Auto-Get" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Mga Resulta sa Auto-Summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Awtomatikong Pag-focus sa Chatbar" },
   "menuLabel_whenStreaming": { "message": "kon streaming" },

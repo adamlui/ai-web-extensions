@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google Qidiruvga AI javoblarini qo'shadi (Google Gemma + GPT-4o tomonidan quvvatlanadi!)" },
-  "menuLabel_autoGetAnswers": { "message": "Javoblarni avtomatik olish" },
+  "menuLabel_autoAnswer": { "message": "Avtomatik javob" },
   "menuLabel_autoSummarizeResults": { "message": "Natijalarni avtomatik umumlashtirish" },
   "menuLabel_autoFocusChatbar": { "message": "Avtofokusli suhbat paneli" },
   "menuLabel_whenStreaming": { "message": "oqim paytida" },

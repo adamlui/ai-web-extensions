@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Add AI answers to Google Search (powered by Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Ol bekim bilong ol askim" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Ol samting i kamap long ol samting bilong ol yet" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "taim Streaming" },

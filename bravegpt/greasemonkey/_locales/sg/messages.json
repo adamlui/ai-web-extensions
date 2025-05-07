@@ -2,7 +2,7 @@
   "appDesc": { "message": "Add ChatGPT answers to Brave Search sidebar (so GPT-4o ayeke sara kua na ni!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API mode na na na" },
   "menuLabel_preferred": { "message": "Mbi ye ni mingi" },
-  "menuLabel_autoGetAnswers": { "message": "Auto-Get Réponses" },
+  "menuLabel_autoAnswer": { "message": "Auto article" },
   "menuLabel_autoSummarizeResults": { "message": "Aye so asi na yâ ti oto-summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar Anglais" },
   "menuLabel_whenStreaming": { "message": "na ngoi so a yeke pika" },

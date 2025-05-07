@@ -2,7 +2,7 @@
   "appDesc": { "message": "Menambah jawapan ChatGPT ke bar sisi Carian Berani (dikuasakan oleh GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Mod api Proksi" },
   "menuLabel_preferred": { "message": "projek penyelidika" },
-  "menuLabel_autoGetAnswers": { "message": "Dapatkan Jawapan Secara Automatik" },
+  "menuLabel_autoAnswer": { "message": "Jawapan Automatik" },
   "menuLabel_autoSummarizeResults": { "message": "Hasil Ringkasan Automatik" },
   "menuLabel_autoFocusChatbar": { "message": "Bar Sembang Fokus Automatik" },
   "menuLabel_whenStreaming": { "message": "apabila penstriman" },

@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Добавя AI отговори в Google Търсене (поддържа се от Google Gemma + GPT -4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Автоматично получаване на отговори" },
+  "menuLabel_autoAnswer": { "message": "Auto Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Автоматично обобщаване на резултатите" },
   "menuLabel_autoFocusChatbar": { "message": "Чат лента за автоматично фокусиране" },
   "menuLabel_whenStreaming": { "message": "при стрийминг" },

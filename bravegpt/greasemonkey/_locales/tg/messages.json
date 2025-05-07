@@ -2,7 +2,7 @@
   "appDesc": { "message": "Ҷавоби ChatGPT-ро ба панели паҳлӯии ҷасуронаи ҷустуҷӯ илова мекунад (бо GPT-4o идора карда мешавад!)" },
   "menuLabel_proxyAPImode": { "message": "Усули API Proxy" },
   "menuLabel_preferred": { "message": "Size Policy" },
-  "menuLabel_autoGetAnswers": { "message": "Ҷавоби худкор" },
+  "menuLabel_autoAnswer": { "message": "Ð  Ð ° Ð ¼ Ð ¾ Ð ¸" },
   "menuLabel_autoSummarizeResults": { "message": "Худмаблағгузорӣ кардани натиҷаҳо" },
   "menuLabel_autoFocusChatbar": { "message": "Пайраҳаи чат бо фокуси худкор" },
   "menuLabel_whenStreaming": { "message": "ҳангоми ҷараён" },

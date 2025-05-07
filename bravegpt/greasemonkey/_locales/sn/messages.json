@@ -2,7 +2,7 @@
   "appDesc": { "message": "Inowedzera mhinduro dzeChatGPT kune Brave Search sidebar (inofambiswa neGPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
   "menuLabel_preferred": { "message": "Zvinodiwa" },
-  "menuLabel_autoGetAnswers": { "message": "Auto-Kuwana Mhinduro" },
+  "menuLabel_autoAnswer": { "message": "Auto-kupindura" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-Summarize Zvabuda" },
   "menuLabel_autoFocusChatbar": { "message": "Taura nesu" },
   "menuLabel_whenStreaming": { "message": "apo kudirana" },

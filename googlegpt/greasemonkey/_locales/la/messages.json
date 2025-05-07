@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Adicit responsa AI ad Google Search lateram (a Google Gemma + GPT-4o sustentata!)" },
-  "menuLabel_autoGetAnswers": { "message": "Responsa Automatice Accipere" },
+  "menuLabel_autoAnswer": { "message": "Autocatus" },
   "menuLabel_autoSummarizeResults": { "message": "Accummarize Resultses" },
   "menuLabel_autoFocusChatbar": { "message": "Automatica Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "cum streaming" },

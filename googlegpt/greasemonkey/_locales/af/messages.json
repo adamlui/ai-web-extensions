@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Voeg AI antwoorde op Google Search (aangedryf deur Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Outo-Kry Antwoorde" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Outo-Opsomming Resultate" },
   "menuLabel_autoFocusChatbar": { "message": "Outo-fokus kletsbalk" },
   "menuLabel_whenStreaming": { "message": "wanneer om te stroom" },

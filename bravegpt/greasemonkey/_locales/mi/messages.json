@@ -2,7 +2,7 @@
   "appDesc": { "message": "Tāpiri ChatGPT whakautu ki Brave Search sidebar (e whakahaerehia ana e GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Aratau API Proxy" },
   "menuLabel_preferred": { "message": "He pai ake" },
-  "menuLabel_autoGetAnswers": { "message": "Whakautu Auto-Get" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Ngā hua Auto-Summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "i te wa e rere ana" },

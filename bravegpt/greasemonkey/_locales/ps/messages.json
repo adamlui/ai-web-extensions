@@ -2,7 +2,7 @@
   "appDesc": { "message": "ChatGPT جوابونه اضافه کول Brave Search په پهړه کې (GPT-4o! لخوا)" },
   "menuLabel_proxyAPImode": { "message": "د پراکسي API حالت" },
   "menuLabel_preferred": { "message": "غوراوي" },
-  "menuLabel_autoGetAnswers": { "message": "په اوتومات ډول ځوابونه ورکړئ" },
+  "menuLabel_autoAnswer": { "message": "اتوماتیک ډول" },
   "menuLabel_autoSummarizeResults": { "message": "په اتومات ډول د جمع کولو پایلې" },
   "menuLabel_autoFocusChatbar": { "message": "اتومات فوکس چیټبار" },
   "menuLabel_whenStreaming": { "message": "کله چې بهیر روان وي" },

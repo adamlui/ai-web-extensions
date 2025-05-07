@@ -2,7 +2,7 @@
   "appDesc": { "message": "Dodaje ChatGPT odgovore na bočnu traku Hrabrog pretraživanja (pokreće GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API režim" },
   "menuLabel_preferred": { "message": "Poželjno" },
-  "menuLabel_autoGetAnswers": { "message": "Automatsko dobijanje odgovora" },
+  "menuLabel_autoAnswer": { "message": "Automatski odgovor" },
   "menuLabel_autoSummarizeResults": { "message": "Automatski sažmi rezultate" },
   "menuLabel_autoFocusChatbar": { "message": "Traka za razgovor s automatskim fokusiranjem" },
   "menuLabel_whenStreaming": { "message": "prilikom strimovanja" },

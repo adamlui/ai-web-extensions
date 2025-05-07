@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Agregá una foto_Promocioná Google Gemma + GPT-4o" },
-  "menuLabel_autoGetAnswers": { "message": "Solucion Auto-Get" },
+  "menuLabel_autoAnswer": { "message": "Auto Trader" },
   "menuLabel_autoSummarizeResults": { "message": "Resultado Autoevaluacion" },
   "menuLabel_autoFocusChatbar": { "message": "Auto Trader Chatbar" },
   "menuLabel_whenStreaming": { "message": "ora Streaming" },

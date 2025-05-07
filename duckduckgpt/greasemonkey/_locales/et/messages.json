@@ -2,7 +2,7 @@
   "appDesc": { "message": "Lisab ChatGPT vastused DuckDuckGo külgribale (powered by GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Puhverserveri API-režiim" },
   "menuLabel_preferred": { "message": "Eelistatud" },
-  "menuLabel_autoGetAnswers": { "message": "Automaatne vastuste hankimine" },
+  "menuLabel_autoAnswer": { "message": "Automaatvastus" },
   "menuLabel_autoSummarizeResults": { "message": "Tulemuste automaatne summeerimine" },
   "menuLabel_autoFocusChatbar": { "message": "Automaatse teravustamise vestlusriba" },
   "menuLabel_whenStreaming": { "message": "voogesituse ajal" },

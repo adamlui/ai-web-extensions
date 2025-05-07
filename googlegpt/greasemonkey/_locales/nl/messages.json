@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Voegt AI-antwoorden toe aan Google Zoeken (mogelijk gemaakt door Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Automatisch antwoorden krijgen" },
+  "menuLabel_autoAnswer": { "message": "Automatisch oppakken" },
   "menuLabel_autoSummarizeResults": { "message": "Automatisch samenvattende resultaten" },
   "menuLabel_autoFocusChatbar": { "message": "Chatbalk met automatische focus" },
   "menuLabel_whenStreaming": { "message": "bij het streamen" },

@@ -2,7 +2,7 @@
   "appDesc": { "message": "ChatGPT መልሲ ናብ Brave Search sidebar (ብ GPT-4o ዝተሰርሐ) ኣክሎ" },
   "menuLabel_proxyAPImode": { "message": "ፕሮክሲ ኤፒአይ ሞድ" },
   "menuLabel_preferred": { "message": "እተመርጸ" },
-  "menuLabel_autoGetAnswers": { "message": "ናይ ኣውቶ-ጀት መልሲ" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "ውጽኢት ናይ ኣውቶማቲክ ሱማሪዝ" },
   "menuLabel_autoFocusChatbar": { "message": "ናይ ኣውቶ-ፎኩስ ቻትባር" },
   "menuLabel_whenStreaming": { "message": "ምስ ዥረት" },

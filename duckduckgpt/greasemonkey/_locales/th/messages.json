@@ -2,7 +2,7 @@
   "appDesc": { "message": "เพิ่มคำตอบ ChatGPT ในแถบด้านข้าง DuckDuckGo (ขับเคลื่อนโดย GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "โหมด API พร็อกซี" },
   "menuLabel_preferred": { "message": "ค่าที่ควรใช้Size Policy" },
-  "menuLabel_autoGetAnswers": { "message": "รับคำตอบอัตโนมัติ" },
+  "menuLabel_autoAnswer": { "message": "รับสายอัตโนมัติ" },
   "menuLabel_autoSummarizeResults": { "message": "สรุปผลลัพธ์อัตโนมัติ" },
   "menuLabel_autoFocusChatbar": { "message": "แถบสนทนาโฟกัสอัตโนมัติ" },
   "menuLabel_whenStreaming": { "message": "เมื่อสตรีมมิ่ง" },

@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Menambah jawapan AI ke Carian Google (dikuasakan oleh Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Dapatkan Jawapan Secara Automatik" },
+  "menuLabel_autoAnswer": { "message": "Jawapan Automatik" },
   "menuLabel_autoSummarizeResults": { "message": "Hasil Ringkasan Automatik" },
   "menuLabel_autoFocusChatbar": { "message": "Bar Sembang Fokus Automatik" },
   "menuLabel_whenStreaming": { "message": "apabila penstriman" },

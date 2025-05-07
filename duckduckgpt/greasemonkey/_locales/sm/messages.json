@@ -2,7 +2,7 @@
   "appDesc": { "message": "Faaopoopo ChatGPT tali i DuckDuckGo sidebar (faagaoioia e GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Mode" },
   "menuLabel_preferred": { "message": "E sili ona fiafia i ai" },
-  "menuLabel_autoGetAnswers": { "message": "Tali Auto-Get" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Faaiuga Auto-Summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "pe a tafe" },

@@ -2,7 +2,7 @@
   "appDesc": { "message": "將 ChatGPT 答案添加到 DuckDuckGo 側邊欄 (由 GPT-4o 提供支持!)" },
   "menuLabel_proxyAPImode": { "message": "代理 API 模式" },
   "menuLabel_preferred": { "message": "優先選用" },
-  "menuLabel_autoGetAnswers": { "message": "自動取得答案" },
+  "menuLabel_autoAnswer": { "message": "自動接聽" },
   "menuLabel_autoSummarizeResults": { "message": "自動摘要結果" },
   "menuLabel_autoFocusChatbar": { "message": "自動對焦聊天列" },
   "menuLabel_whenStreaming": { "message": "串流時" },

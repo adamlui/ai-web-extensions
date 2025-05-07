@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Lisää tekoälyvastaukset Google-hakuun (tarjoaa Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Automaattinen vastausten haku" },
+  "menuLabel_autoAnswer": { "message": "Automaattinen vastaus" },
   "menuLabel_autoSummarizeResults": { "message": "Automaattinen yhteenveto tuloksista" },
   "menuLabel_autoFocusChatbar": { "message": "Automaattitarkennuksen keskustelupalkki" },
   "menuLabel_whenStreaming": { "message": "kun suoratoistat" },

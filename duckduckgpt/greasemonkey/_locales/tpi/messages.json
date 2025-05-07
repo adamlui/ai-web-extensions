@@ -2,7 +2,7 @@
   "appDesc": { "message": "Ol i save putim ol bekim bilong ChatGPT long DuckDuckGo sidebar (GPT-4o i save mekim wok long en!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API mode" },
   "menuLabel_preferred": { "message": "Mi laikim tumas" },
-  "menuLabel_autoGetAnswers": { "message": "Ol bekim bilong ol askim" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Ol samting i kamap long ol samting bilong ol yet" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "taim Streaming" },

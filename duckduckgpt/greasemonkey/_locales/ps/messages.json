@@ -2,7 +2,7 @@
   "appDesc": { "message": "د DuckDuckGo سایډ بار ته د ChatGPT ځوابونه اضافه کوي (د GPT-4o لخوا پرمخ وړل شوی!)" },
   "menuLabel_proxyAPImode": { "message": "د پراکسي API حالت" },
   "menuLabel_preferred": { "message": "غوراوي" },
-  "menuLabel_autoGetAnswers": { "message": "په اوتومات ډول ځوابونه ورکړئ" },
+  "menuLabel_autoAnswer": { "message": "اتوماتیک ډول" },
   "menuLabel_autoSummarizeResults": { "message": "په اتومات ډول د جمع کولو پایلې" },
   "menuLabel_autoFocusChatbar": { "message": "اتومات فوکس چیټبار" },
   "menuLabel_whenStreaming": { "message": "کله چې بهیر روان وي" },

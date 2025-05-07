@@ -2,7 +2,7 @@
   "appDesc": { "message": "ເພີ່ມຄໍາຕອບ ChatGPT ກັບແຖບຂ້າງ DuckDuckGo (ຂັບເຄື່ອນໂດຍ GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "ໂໝດໂປຣແກຣມ API" },
   "menuLabel_preferred": { "message": "ມັກ" },
-  "menuLabel_autoGetAnswers": { "message": "ຄໍາຕອບອັດຕະໂນມັດ" },
+  "menuLabel_autoAnswer": { "message": "ຄຳຕອບອັດຕະໂນມັດ" },
   "menuLabel_autoSummarizeResults": { "message": "ສະຫຼຸບຜົນໂດຍອັດຕະໂນມັດ" },
   "menuLabel_autoFocusChatbar": { "message": "ແຖບສົນທະນາໂຟກັສອັດຕະໂນມັດ" },
   "menuLabel_whenStreaming": { "message": "ເມື່ອການຖ່າຍທອດ" },

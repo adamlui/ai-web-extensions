@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Tanaki atu ʻa e ngaahi tali ki he Google Search (fakamisini ʻe he Google Gemma + G-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Ngaahi tali ki he meʻalele" },
+  "menuLabel_autoAnswer": { "message": "Tali ʻOtometiki" },
   "menuLabel_autoSummarizeResults": { "message": "Ngaahi ola ʻo e meʻalele-fakamatalaʻi fakanounou" },
   "menuLabel_autoFocusChatbar": { "message": "Tokanga taha ki he meʻalele Chatbar" },
   "menuLabel_whenStreaming": { "message": "ʻi he taimi ʻoku stream ai" },

@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google 検索に AI の回答を追加（ Google Gemma + GPT-4o 搭載！）" },
-  "menuLabel_autoGetAnswers": { "message": "回答を自動取得" },
+  "menuLabel_autoAnswer": { "message": "自動応答" },
   "menuLabel_autoSummarizeResults": { "message": "結果を要約する" },
   "menuLabel_autoFocusChatbar": { "message": "オートフォーカスチャットバー" },
   "menuLabel_whenStreaming": { "message": "ストリーミング時" },

@@ -2,7 +2,7 @@
   "appDesc": { "message": "Додає відповіді ChatGPT до бічної панелі Brave Search (працює на GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Режим API проксі-сервера" },
   "menuLabel_preferred": { "message": "Улюблене" },
-  "menuLabel_autoGetAnswers": { "message": "Автоматичне отримання відповідей" },
+  "menuLabel_autoAnswer": { "message": "Автовідповідь" },
   "menuLabel_autoSummarizeResults": { "message": "Підсумуйте свої результати." },
   "menuLabel_autoFocusChatbar": { "message": "Панель чату з автофокусом" },
   "menuLabel_whenStreaming": { "message": "під час потокової передачі" },

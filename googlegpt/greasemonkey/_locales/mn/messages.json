@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google-ийн хайлтанд AI-ийг нэмнэ (Google Gemma + GPT-4o зайтай!)" },
-  "menuLabel_autoGetAnswers": { "message": "Авто-Орлогийн хариултууд" },
+  "menuLabel_autoAnswer": { "message": "Автоматаар нэмэх" },
   "menuLabel_autoSummarizeResults": { "message": "Автоматаар хураангуйлах үр дүн" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "урсгал хийх үед" },

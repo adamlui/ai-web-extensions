@@ -2,7 +2,7 @@
   "appDesc": { "message": "Füügt ChatGPT Äntwerten op Brave Search Sidebar (ugedriwwe vu GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy-API-Modus" },
   "menuLabel_preferred": { "message": "Am léifsten" },
-  "menuLabel_autoGetAnswers": { "message": "Auto-Get Äntwerten" },
+  "menuLabel_autoAnswer": { "message": "CAA -" },
   "menuLabel_autoSummarizeResults": { "message": "Fakten an Erënnerungen" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "wann streamen" },

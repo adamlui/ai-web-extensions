@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google gözlegine AI jogaplaryny goş (Google Gemma + GPT-4o bilen işleýär!)" },
-  "menuLabel_autoGetAnswers": { "message": "Auto-Get jogaplary" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-Summarize netijeleri" },
   "menuLabel_autoFocusChatbar": { "message": "Awto-Fokus Çatbary" },
   "menuLabel_whenStreaming": { "message": "ötýänçä" },

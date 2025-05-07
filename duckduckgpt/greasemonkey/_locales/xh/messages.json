@@ -2,7 +2,7 @@
   "appDesc": { "message": "Ifaka iimpendulo ze-ChatGPT kwibar esecaleni yeDuckDuckGo (exhaswa yi-GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Imowudi ye-API ye-proxy" },
   "menuLabel_preferred": { "message": "Okukhethwayo" },
-  "menuLabel_autoGetAnswers": { "message": "Fumana Iimpendulo Ngokuzenzekelayo" },
+  "menuLabel_autoAnswer": { "message": "Ukuphendula ngokuzenzekelayo" },
   "menuLabel_autoSummarizeResults": { "message": "Zixabise Ngokuzenzekelayo Iziphumo" },
   "menuLabel_autoFocusChatbar": { "message": "I-Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "xa kusasazwa" },

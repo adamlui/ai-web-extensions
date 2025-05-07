@@ -2,7 +2,7 @@
   "appDesc": { "message": "Adicit responsa ChatGPT ad DuckDuckGo lateram (a GPT-4o sustentata!)" },
   "menuLabel_proxyAPImode": { "message": "Modus API Proxy" },
   "menuLabel_preferred": { "message": "Praeficere" },
-  "menuLabel_autoGetAnswers": { "message": "Responsa Automatice Accipere" },
+  "menuLabel_autoAnswer": { "message": "Autocatus" },
   "menuLabel_autoSummarizeResults": { "message": "Accummarize Resultses" },
   "menuLabel_autoFocusChatbar": { "message": "Automatica Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "cum streaming" },

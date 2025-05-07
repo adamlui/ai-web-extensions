@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "A' cur freagairtean AI ris a' bhàr-taobh Google Search (air a chumail le Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Freagairtean fèin-ghnìomhach" },
+  "menuLabel_autoAnswer": { "message": "Auto - Inswer" },
   "menuLabel_autoSummarizeResults": { "message": "Suimich toraidhean gu fèin - obrachail" },
   "menuLabel_autoFocusChatbar": { "message": "Fèin-ghnìomhach Fòcas Chatbar" },
   "menuLabel_whenStreaming": { "message": "nuair a tha thu a' sruthadh" },

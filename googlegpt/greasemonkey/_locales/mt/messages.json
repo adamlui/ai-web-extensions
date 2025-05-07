@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Iżżid tweġibiet tal-IA ma' Google Search (imħaddma minn Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Ikseb Tweġibiet Awtomatiċi" },
+  "menuLabel_autoAnswer": { "message": "Tweġiba Awtomatika" },
   "menuLabel_autoSummarizeResults": { "message": "Awtomatizza r-Riżultati" },
   "menuLabel_autoFocusChatbar": { "message": "Fokus Awtomatiku fuq iċ-chatbar" },
   "menuLabel_whenStreaming": { "message": "waqt l-istreaming" },

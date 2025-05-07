@@ -2,7 +2,7 @@
   "appDesc": { "message": "Ajoute repons ChatGPT nan ankadre rechèch brav (patrone pa GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Mòd API proxy" },
   "menuLabel_preferred": { "message": "Li pi bon" },
-  "menuLabel_autoGetAnswers": { "message": "Repons Auto-Get" },
+  "menuLabel_autoAnswer": { "message": "Repons Otomatik" },
   "menuLabel_autoSummarizeResults": { "message": "Rezilta Auto-Summerize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "lè difizyon" },

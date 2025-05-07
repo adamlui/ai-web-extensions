@@ -2,7 +2,7 @@
   "appDesc": { "message": "Დაამატეთ ChatGPT-ის პასუხები DuckDuckGo-ს გვერდით ზოლში (GPT-4o-ის მეშვეობით!)" },
   "menuLabel_proxyAPImode": { "message": "Პროქსი API რეჟიმი" },
   "menuLabel_preferred": { "message": "მირჩევნია" },
-  "menuLabel_autoGetAnswers": { "message": "Პასუხების ავტომატური მიღება" },
+  "menuLabel_autoAnswer": { "message": "Ავტომატური პასუხი" },
   "menuLabel_autoSummarizeResults": { "message": "Შედეგების ავტომატური შეჯამება" },
   "menuLabel_autoFocusChatbar": { "message": "Ავტომატურად ფოკუსირებული ჩატების ზოლი" },
   "menuLabel_whenStreaming": { "message": "სტრიმინგისას" },

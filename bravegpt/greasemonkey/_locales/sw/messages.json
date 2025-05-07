@@ -2,7 +2,7 @@
   "appDesc": { "message": "Inaongeza majibu ya ChatGPT kwenye upau wa kando wa Utafutaji wa Ujasiri (unaendeshwa na GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Hali Mbadala ya API" },
   "menuLabel_preferred": { "message": "inayopendelewa" },
-  "menuLabel_autoGetAnswers": { "message": "Pata Majibu Kiotomatiki" },
+  "menuLabel_autoAnswer": { "message": "Mjibuji Kiotomatiki" },
   "menuLabel_autoSummarizeResults": { "message": "Tumia Matokeo Kiotomatiki" },
   "menuLabel_autoFocusChatbar": { "message": "Baa ya Gumzo la Kuzingatia Kiotomatiki" },
   "menuLabel_whenStreaming": { "message": "wakati wa kutiririsha" },

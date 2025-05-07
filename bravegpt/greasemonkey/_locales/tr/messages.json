@@ -2,7 +2,7 @@
   "appDesc": { "message": "ChatGPT cevapları, Brave Search kenar çubuğuna ekler (GPT-4o! tarafından desteklenmektedir)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Modu" },
   "menuLabel_preferred": { "message": "Tercih ettiğiniz SMS Ağ Geçidini seçin." },
-  "menuLabel_autoGetAnswers": { "message": "Otomatik Yanıt Al" },
+  "menuLabel_autoAnswer": { "message": "otomatik yanıt" },
   "menuLabel_autoSummarizeResults": { "message": "Sonuçları Otomatik Özetle" },
   "menuLabel_autoFocusChatbar": { "message": "Otomatik Odaklanma Sohbet Çubuğu" },
   "menuLabel_whenStreaming": { "message": "akış sırasında" },

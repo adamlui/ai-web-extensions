@@ -2,7 +2,7 @@
   "appDesc": { "message": "Tilføjer ChatGPT-svar til Brave Search-sidebjælken (drevet af GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API-tilstand" },
   "menuLabel_preferred": { "message": "foretrukken" },
-  "menuLabel_autoGetAnswers": { "message": "Hent svar automatisk" },
+  "menuLabel_autoAnswer": { "message": "Auto-svar" },
   "menuLabel_autoSummarizeResults": { "message": "Automatisk opsummering af resultater" },
   "menuLabel_autoFocusChatbar": { "message": "Chatbar med autofokus" },
   "menuLabel_whenStreaming": { "message": "når du streamer" },

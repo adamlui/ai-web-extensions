@@ -2,7 +2,7 @@
   "appDesc": { "message": "DuckDuckGo хажуугийн мөрөнд ChatGPT хариулт нэмнэ (GPT-4o зайтай!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API горим" },
   "menuLabel_preferred": { "message": "Эрхэмлэвэл зохих" },
-  "menuLabel_autoGetAnswers": { "message": "Авто-Орлогийн хариултууд" },
+  "menuLabel_autoAnswer": { "message": "Автоматаар нэмэх" },
   "menuLabel_autoSummarizeResults": { "message": "Автоматаар хураангуйлах үр дүн" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "урсгал хийх үед" },

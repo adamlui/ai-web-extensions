@@ -2,7 +2,7 @@
   "appDesc": { "message": "إضافة إجابات ChatGPT إلى الشريط الجانبي للبحث الشجاع (مدعوم من GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "وضع واجهة برمجة التطبيقات للوكيل" },
   "menuLabel_preferred": { "message": "مفضل ، مميز ، ممتاز" },
-  "menuLabel_autoGetAnswers": { "message": "الحصول على الإجابات تلقائيًا" },
+  "menuLabel_autoAnswer": { "message": "رد تلقائي (رد المودم على المكالمات الواردة تلقائيا)" },
   "menuLabel_autoSummarizeResults": { "message": "لخص النتائج" },
   "menuLabel_autoFocusChatbar": { "message": "شريط دردشة التركيز التلقائي" },
   "menuLabel_whenStreaming": { "message": "عند البث" },

@@ -2,7 +2,7 @@
   "appDesc": { "message": "Добавя ChatGPT отговори към страничната лента на DuckDuckGo (захранва се от GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Режим на прокси API" },
   "menuLabel_preferred": { "message": "Предпочитано" },
-  "menuLabel_autoGetAnswers": { "message": "Автоматично получаване на отговори" },
+  "menuLabel_autoAnswer": { "message": "Auto Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Автоматично обобщаване на резултатите" },
   "menuLabel_autoFocusChatbar": { "message": "Чат лента за автоматично фокусиране" },
   "menuLabel_whenStreaming": { "message": "при стрийминг" },

@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Pievieno AI atbildes Google meklēšanai (nodrošina Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Automātiski saņemt atbildes" },
+  "menuLabel_autoAnswer": { "message": "Automātiska atbilde" },
   "menuLabel_autoSummarizeResults": { "message": "Apkopot rezultātus" },
   "menuLabel_autoFocusChatbar": { "message": "Automātiskās fokusēšanas tērzēšanas josla" },
   "menuLabel_whenStreaming": { "message": "straumējot" },

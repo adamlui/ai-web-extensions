@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google శోధనకు AI సమాధానాలను జోడిస్తుంది (Google Gemma + GPT-4o ద్వారా ఆధారితం!)" },
-  "menuLabel_autoGetAnswers": { "message": "ఆటో-గెట్ సమాధానాలు" },
+  "menuLabel_autoAnswer": { "message": "స్వయంచాలక జవాబుదారు" },
   "menuLabel_autoSummarizeResults": { "message": "ఆటో-సారాంశం ఫలితాలు" },
   "menuLabel_autoFocusChatbar": { "message": "ఆటో-ఫోకస్ చాట్ ‌ బార్" },
   "menuLabel_whenStreaming": { "message": "ప్రసారం చేసేటప్పుడు" },

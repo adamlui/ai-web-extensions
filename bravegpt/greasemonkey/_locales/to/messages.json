@@ -2,7 +2,7 @@
   "appDesc": { "message": "Toka'anga 'a e ngaahi fakamatala 'o e ChatGPT ki he saiti fakafonua 'o e Brave Search (pau'i 'i he GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "API Mode fakafofonga" },
   "menuLabel_preferred": { "message": "Fie maʻu" },
-  "menuLabel_autoGetAnswers": { "message": "Ngaahi tali ki he meʻalele" },
+  "menuLabel_autoAnswer": { "message": "Tali ʻOtometiki" },
   "menuLabel_autoSummarizeResults": { "message": "Ngaahi ola ʻo e meʻalele-fakamatalaʻi fakanounou" },
   "menuLabel_autoFocusChatbar": { "message": "Tokanga taha ki he meʻalele Chatbar" },
   "menuLabel_whenStreaming": { "message": "ʻi he taimi ʻoku stream ai" },

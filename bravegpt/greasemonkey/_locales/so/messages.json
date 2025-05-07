@@ -2,7 +2,7 @@
   "appDesc": { "message": "Ku darso Jawaabaha ChatGPT ee Brave Search sidebar (oo ay ku shaqeyso GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Qaabka API Proxy" },
   "menuLabel_preferred": { "message": "La Doorbiday" },
-  "menuLabel_autoGetAnswers": { "message": "Jawaabaha Auto-Get" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Natiijooyinka Auto-Summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "marka qulqulaya" },

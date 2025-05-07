@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google தேடலுக்கு AI பதில்களைச் சேர்க்கிறது (Google Gemma + GPT-4o மூலம் இயக்கப்படுகிறது!)" },
-  "menuLabel_autoGetAnswers": { "message": "தானாகப் பெறப்பட்ட பதில்கள்" },
+  "menuLabel_autoAnswer": { "message": "தானாக பதிலளிக்கவும்" },
   "menuLabel_autoSummarizeResults": { "message": "தானியங்கு சுருக்க முடிவுகள்" },
   "menuLabel_autoFocusChatbar": { "message": "ஆட்டோ-ஃபோகஸ் சாட்பார்" },
   "menuLabel_whenStreaming": { "message": "ஸ்ட்ரீமிங் செய்யும் போது" },

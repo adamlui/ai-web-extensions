@@ -2,7 +2,7 @@
   "appDesc": { "message": "Afegeix les respostes de ChatGPT a la barra lateral de Brave Search (amb tecnologia GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Mode API de servidor intermediari" },
   "menuLabel_preferred": { "message": "Preferència" },
-  "menuLabel_autoGetAnswers": { "message": "Obtenir respostes automàticament" },
+  "menuLabel_autoAnswer": { "message": "Resposta automàtica" },
   "menuLabel_autoSummarizeResults": { "message": "Resum automàtic dels resultats" },
   "menuLabel_autoFocusChatbar": { "message": "Barra de xat amb enfocament automàtic" },
   "menuLabel_whenStreaming": { "message": "en transmetre" },

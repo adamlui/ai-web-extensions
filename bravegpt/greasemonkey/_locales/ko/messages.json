@@ -2,7 +2,7 @@
   "appDesc": { "message": "Brave Search 사이드바에 ChatGPT 답변 추가 (GPT-4o 제공!)" },
   "menuLabel_proxyAPImode": { "message": "프록시 API 모드" },
   "menuLabel_preferred": { "message": "선호" },
-  "menuLabel_autoGetAnswers": { "message": "답변 자동 가져오기" },
+  "menuLabel_autoAnswer": { "message": "자동 답변" },
   "menuLabel_autoSummarizeResults": { "message": "자동 요약 결과" },
   "menuLabel_autoFocusChatbar": { "message": "자동 초점 채팅창" },
   "menuLabel_whenStreaming": { "message": "스트리밍할 때" },

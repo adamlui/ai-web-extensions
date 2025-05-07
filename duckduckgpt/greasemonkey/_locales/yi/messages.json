@@ -2,7 +2,7 @@
   "appDesc": { "message": "לייגט ChatGPT ענטפֿערס צו DuckDuckGo סיידבאַר (פּאַוערד דורך GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "פּראָקסי אַפּי מאָדע" },
   "menuLabel_preferred": { "message": "בילכער" },
-  "menuLabel_autoGetAnswers": { "message": "אַוטאָ-באַקומען ענטפֿערס" },
+  "menuLabel_autoAnswer": { "message": "אויטאָ-ענטפֿער" },
   "menuLabel_autoSummarizeResults": { "message": "אַוטאָ סאַמערייז רעזולטאַטן" },
   "menuLabel_autoFocusChatbar": { "message": "אַוטאָ-פאָקוס טשאַטבאַר" },
   "menuLabel_whenStreaming": { "message": "ווען סטרימינג" },

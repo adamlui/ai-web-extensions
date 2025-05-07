@@ -2,7 +2,7 @@
   "appDesc": { "message": "Кошуу ChatGPT Brave Издөө капталында жооп (GPT-4o менен иштейт!)" },
   "menuLabel_proxyAPImode": { "message": "Прокси API режими" },
   "menuLabel_preferred": { "message": "Сүйүктүү" },
-  "menuLabel_autoGetAnswers": { "message": "Жоопторду автоматтык түрдө алуу" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Undo-type" },
   "menuLabel_autoFocusChatbar": { "message": "Undo-type" },
   "menuLabel_whenStreaming": { "message": "агым учурунда" },

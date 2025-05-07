@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Tāpirihia nga whakautu AI ki a Google Search (e whakahaerehia ana e Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Whakautu Auto-Get" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Ngā hua Auto-Summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "i te wa e rere ana" },

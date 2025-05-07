@@ -2,7 +2,7 @@
   "appDesc": { "message": "Amawonjezera mayankho a ChatGPT ku Brave Search sidebar (yoyendetsedwa ndi GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Njira ya Proxy API" },
   "menuLabel_preferred": { "message": "Wokondedwa" },
-  "menuLabel_autoGetAnswers": { "message": "Auto-Get Mayankho" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Zotsatira za Auto-Summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "pamene akukhamukira" },

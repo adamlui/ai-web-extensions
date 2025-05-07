@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Manampy ny valin-tenin'i AI amin'ny sisin'ny Google Search (azo avy amin'ny Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Mahazo Valiny ho azy" },
+  "menuLabel_autoAnswer": { "message": "Pejy automatique" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-Mamaritra ny Vokatra" },
   "menuLabel_autoFocusChatbar": { "message": "Mifantoka ho azy amin'ny Chatbar" },
   "menuLabel_whenStreaming": { "message": "rehefa mikoriana" },

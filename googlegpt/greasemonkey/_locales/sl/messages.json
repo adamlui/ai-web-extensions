@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Dodaja odgovore umetne inteligence v Google Iskanje (poganja Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Samodejno pridobi odgovore" },
+  "menuLabel_autoAnswer": { "message": "Samodejni odgovor" },
   "menuLabel_autoSummarizeResults": { "message": "Seštej rezultate" },
   "menuLabel_autoFocusChatbar": { "message": "Vrstica za klepet s samodejnim ostrenjem" },
   "menuLabel_whenStreaming": { "message": "pri pretočnem predvajanju" },

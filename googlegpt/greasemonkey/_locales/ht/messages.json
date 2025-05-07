@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Ajoute repons AI nan Google Search (patrone pa Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Repons Auto-Get" },
+  "menuLabel_autoAnswer": { "message": "Repons Otomatik" },
   "menuLabel_autoSummarizeResults": { "message": "Rezilta Auto-Summerize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "lè difizyon" },

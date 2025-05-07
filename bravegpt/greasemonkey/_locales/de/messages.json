@@ -2,7 +2,7 @@
   "appDesc": { "message": "Fügt ChatGPT-Antworten zur Brave Search-Seitenleiste hinzu (unterstützt von GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy-API-Modus" },
   "menuLabel_preferred": { "message": "Vorzugsweise" },
-  "menuLabel_autoGetAnswers": { "message": "Antworten automatisch abrufen" },
+  "menuLabel_autoAnswer": { "message": "Auto Answer/Autom. Annahme" },
   "menuLabel_autoSummarizeResults": { "message": "Ergebnisse zusammenfassen" },
   "menuLabel_autoFocusChatbar": { "message": "Autofokus-Chatbar" },
   "menuLabel_whenStreaming": { "message": "beim Streaming" },

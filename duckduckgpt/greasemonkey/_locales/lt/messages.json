@@ -2,7 +2,7 @@
   "appDesc": { "message": "Prideda ChatGPT atsakymus į DuckDuckGo šoninę juostą (sukurta GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Tarpinio serverio API režimas" },
   "menuLabel_preferred": { "message": "Naglazyme" },
-  "menuLabel_autoGetAnswers": { "message": "Automatiškai gauti atsakymus" },
+  "menuLabel_autoAnswer": { "message": "Automatinis atsiliepimas" },
   "menuLabel_autoSummarizeResults": { "message": "Automatiškai apibendrinti rezultatus" },
   "menuLabel_autoFocusChatbar": { "message": "Automatinio fokusavimo pokalbių juosta" },
   "menuLabel_whenStreaming": { "message": "srautinio perdavimo metu" },

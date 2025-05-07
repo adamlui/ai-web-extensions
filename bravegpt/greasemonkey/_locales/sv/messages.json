@@ -2,7 +2,7 @@
   "appDesc": { "message": "Lägger till ChatGPT-svar i sidofältet Brave Search (drivs av GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API-läge" },
   "menuLabel_preferred": { "message": "Prioriterad" },
-  "menuLabel_autoGetAnswers": { "message": "Få svar automatiskt" },
+  "menuLabel_autoAnswer": { "message": "Autosvar" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-sammanfatta resultat" },
   "menuLabel_autoFocusChatbar": { "message": "Chatbar med autofokus" },
   "menuLabel_whenStreaming": { "message": "vid streaming" },

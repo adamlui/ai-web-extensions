@@ -2,7 +2,7 @@
   "appDesc": { "message": "ChatGPT جوابات کو Brave Search کی سائیڈبار میں شامل کرتا ہے (GPT-4o! کی طاقت سے)" },
   "menuLabel_proxyAPImode": { "message": "پراکسی API موڈ" },
   "menuLabel_preferred": { "message": "ترجیحی" },
-  "menuLabel_autoGetAnswers": { "message": "خودکار جوابات حاصل کریں" },
+  "menuLabel_autoAnswer": { "message": "خود بخود جواب دیں" },
   "menuLabel_autoSummarizeResults": { "message": "نتائج کا خود بخود خلاصہ کریں" },
   "menuLabel_autoFocusChatbar": { "message": "آٹو فوکس چیٹ بار" },
   "menuLabel_whenStreaming": { "message": "اسٹریم کرتے وقت" },

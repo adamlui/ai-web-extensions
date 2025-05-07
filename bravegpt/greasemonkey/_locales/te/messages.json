@@ -2,7 +2,7 @@
   "appDesc": { "message": "బ్రేవ్ సెర్చ్ సైడ్ ‌ బార్ ‌ కు ChatGPT సమాధానాలను జోడిస్తుంది (GPT-4o ద్వారా ఆధారితం!)" },
   "menuLabel_proxyAPImode": { "message": "ప్రాక్సీ API మోడ్" },
   "menuLabel_preferred": { "message": "ప్రాధాన్యత ఇవ్వబడింది" },
-  "menuLabel_autoGetAnswers": { "message": "ఆటో-గెట్ సమాధానాలు" },
+  "menuLabel_autoAnswer": { "message": "స్వయంచాలక జవాబుదారు" },
   "menuLabel_autoSummarizeResults": { "message": "ఆటో-సారాంశం ఫలితాలు" },
   "menuLabel_autoFocusChatbar": { "message": "ఆటో-ఫోకస్ చాట్ ‌ బార్" },
   "menuLabel_whenStreaming": { "message": "ప్రసారం చేసేటప్పుడు" },

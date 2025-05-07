@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "AI válaszokat ad a Google Kereséshez (a Google Gemma + GPT-4o segítségével!)" },
-  "menuLabel_autoGetAnswers": { "message": "Válaszok automatikus lekérése" },
+  "menuLabel_autoAnswer": { "message": "Automatikus válasz" },
   "menuLabel_autoSummarizeResults": { "message": "Eredmények automatikus összegzése" },
   "menuLabel_autoFocusChatbar": { "message": "Automatikus fókuszálás a csevegősávon" },
   "menuLabel_whenStreaming": { "message": "streaming közben" },

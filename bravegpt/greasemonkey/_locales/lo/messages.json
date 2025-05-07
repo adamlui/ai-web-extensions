@@ -2,7 +2,7 @@
   "appDesc": { "message": "ເພີ່ມ ຄໍາ ຕອບ ChatGPT ໃສ່ແຖບຂ້າງ Brave Search (ຂັບເຄື່ອນໂດຍ GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "ໂໝດໂປຣແກຣມ API" },
   "menuLabel_preferred": { "message": "ມັກ" },
-  "menuLabel_autoGetAnswers": { "message": "ຄໍາຕອບອັດຕະໂນມັດ" },
+  "menuLabel_autoAnswer": { "message": "ຄຳຕອບອັດຕະໂນມັດ" },
   "menuLabel_autoSummarizeResults": { "message": "ສະຫຼຸບຜົນໂດຍອັດຕະໂນມັດ" },
   "menuLabel_autoFocusChatbar": { "message": "ແຖບສົນທະນາໂຟກັສອັດຕະໂນມັດ" },
   "menuLabel_whenStreaming": { "message": "ເມື່ອການຖ່າຍທອດ" },

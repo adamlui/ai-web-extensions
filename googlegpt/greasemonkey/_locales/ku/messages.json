@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Bersivên AI-ê li Lêgerîna Google-ê zêde dike (ji hêla Google Gemma + GPT-4o ve hatî hêz kirin!)" },
-  "menuLabel_autoGetAnswers": { "message": "خۆکارانە وەڵامەکان وەربگرە" },
+  "menuLabel_autoAnswer": { "message": "خو وەڵام دەرەوە" },
   "menuLabel_autoSummarizeResults": { "message": "Encamên Xweser Bi Kurte Bikin" },
   "menuLabel_autoFocusChatbar": { "message": "Oto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "dema streaming" },

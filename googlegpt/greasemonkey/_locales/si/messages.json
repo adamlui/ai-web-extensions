@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google සෙවුම් සඳහා AI පිළිතුරු එක් කරයි (Google Gemma + GPT-4o විසින් බල ගැන්වේ!)" },
-  "menuLabel_autoGetAnswers": { "message": "ස්වයංක් ‍ රීය පිළිතුරු ලබා ගන්න" },
+  "menuLabel_autoAnswer": { "message": "ස්වයංක් ‍ රීය ප් ‍ රතිචාරය" },
   "menuLabel_autoSummarizeResults": { "message": "ප් ‍ රතිඵල ස්වයංක් ‍ රීයව සාරාංශ කරන්න" },
   "menuLabel_autoFocusChatbar": { "message": "ස්වයංක් ‍ රීය නාභිගත සංවාද තීරුව" },
   "menuLabel_whenStreaming": { "message": "ප් ‍ රවාහනය කරන විට" },

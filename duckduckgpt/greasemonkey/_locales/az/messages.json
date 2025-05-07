@@ -2,7 +2,7 @@
   "appDesc": { "message": "DuckDuckGo sidebarına ChatGPT cavabları əlavə edir (GPT-4o ilə təchiz edilmişdir!)" },
   "menuLabel_proxyAPImode": { "message": "Proksi API Rejimi" },
   "menuLabel_preferred": { "message": "Qurğular" },
-  "menuLabel_autoGetAnswers": { "message": "Avtomatik verilən cavablar" },
+  "menuLabel_autoAnswer": { "message": "Avto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Nəticələri Avtomatik Sümükləndirin" },
   "menuLabel_autoFocusChatbar": { "message": "Avtomatik Fokus Çatbarı" },
   "menuLabel_whenStreaming": { "message": "axın zamanı" },

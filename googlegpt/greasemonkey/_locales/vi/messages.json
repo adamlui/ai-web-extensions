@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Thêm câu trả lời AI vào Tìm kiếm của Google (được hỗ trợ bởi Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Tự động nhận câu trả lời" },
+  "menuLabel_autoAnswer": { "message": "Tự động trả lời" },
   "menuLabel_autoSummarizeResults": { "message": "Tự động tóm tắt kết quả" },
   "menuLabel_autoFocusChatbar": { "message": "Tự động lấy nét Chatbar" },
   "menuLabel_whenStreaming": { "message": "khi phát trực tuyến" },

@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "ގޫގުލް ސަރޗަށް އެއައި ޖަވާބުތައް އިތުރުކުރެއެވެ (ގޫގުލް ޖެމާ + ޖީޕީޓީ-4އޯ އިން ޕަވަރޑް!)" },
-  "menuLabel_autoGetAnswers": { "message": "އޮޓޯ-ގެޓް ޖަވާބު" },
+  "menuLabel_autoAnswer": { "message": "އޮޓޯ ޖަވާބު ދިނުން" },
   "menuLabel_autoSummarizeResults": { "message": "އޮޓޯ-ސަމާރައިޒް ނަތީޖާ" },
   "menuLabel_autoFocusChatbar": { "message": "އޮޓޯ ފޯކަސް ޗެޓްބާރ އެވެ" },
   "menuLabel_whenStreaming": { "message": "ސްޓްރީމް ކުރާއިރު" },

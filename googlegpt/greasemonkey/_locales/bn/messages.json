@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google Search-এ AI উত্তর যোগ করে (Google Gemma + GPT-4o দ্বারা চালিত!)" },
-  "menuLabel_autoGetAnswers": { "message": "স্বয়ংক্রিয়ভাবে উত্তর পান" },
+  "menuLabel_autoAnswer": { "message": "অটো-অনুরোধ" },
   "menuLabel_autoSummarizeResults": { "message": "স্বতঃস্ফূর্ত ফলাফল" },
   "menuLabel_autoFocusChatbar": { "message": "অটো-ফোকাস চ্যাটবার" },
   "menuLabel_whenStreaming": { "message": "স্ট্রিমিং করার সময়" },

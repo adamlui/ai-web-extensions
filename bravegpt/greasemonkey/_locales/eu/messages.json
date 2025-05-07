@@ -2,7 +2,7 @@
   "appDesc": { "message": "ChatGPT erantzunak gehitzen ditu Brave Search alboko barran (GPT-4o-k bultzatuta!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API modua" },
   "menuLabel_preferred": { "message": "hobetsia" },
-  "menuLabel_autoGetAnswers": { "message": "Lortu erantzunak automatikoki" },
+  "menuLabel_autoAnswer": { "message": "Erantzun automatikoa" },
   "menuLabel_autoSummarizeResults": { "message": "Emaitzak automatikoki laburtu" },
   "menuLabel_autoFocusChatbar": { "message": "Foku automatikoko txat-barra" },
   "menuLabel_whenStreaming": { "message": "erreproduzitzean" },

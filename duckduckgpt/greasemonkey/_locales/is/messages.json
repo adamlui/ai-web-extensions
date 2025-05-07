@@ -2,7 +2,7 @@
   "appDesc": { "message": "Bætir ChatGPT svörum við DuckDuckGo hliðarstiku (keyrð af GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API hamur" },
   "menuLabel_preferred": { "message": "Æskilegt" },
-  "menuLabel_autoGetAnswers": { "message": "Sjálfvirk svör" },
+  "menuLabel_autoAnswer": { "message": "Sjálfvirkt svar" },
   "menuLabel_autoSummarizeResults": { "message": "Sjálfvirk samantekt niðurstaðna" },
   "menuLabel_autoFocusChatbar": { "message": "Spjallslá með sjálfvirkum fókus" },
   "menuLabel_whenStreaming": { "message": "þegar streymt er" },

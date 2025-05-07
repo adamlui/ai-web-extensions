@@ -2,7 +2,7 @@
   "appDesc": { "message": "A' cur freagairtean ChatGPT ris a' bhàr-taobh Brave Search (air a chumail le GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Modh API Proxy" },
   "menuLabel_preferred": { "message": "An roghainn as fheàrr leat" },
-  "menuLabel_autoGetAnswers": { "message": "Freagairtean fèin-ghnìomhach" },
+  "menuLabel_autoAnswer": { "message": "Auto - Inswer" },
   "menuLabel_autoSummarizeResults": { "message": "Suimich toraidhean gu fèin - obrachail" },
   "menuLabel_autoFocusChatbar": { "message": "Fèin-ghnìomhach Fòcas Chatbar" },
   "menuLabel_whenStreaming": { "message": "nuair a tha thu a' sruthadh" },

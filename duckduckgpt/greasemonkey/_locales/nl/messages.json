@@ -2,7 +2,7 @@
   "appDesc": { "message": "Voegt ChatGPT-antwoorden toe aan de DuckDuckGo-zijbalk (mogelijk gemaakt door GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy-API-modus" },
   "menuLabel_preferred": { "message": "Voorkeur" },
-  "menuLabel_autoGetAnswers": { "message": "Automatisch antwoorden krijgen" },
+  "menuLabel_autoAnswer": { "message": "Automatisch oppakken" },
   "menuLabel_autoSummarizeResults": { "message": "Automatisch samenvattende resultaten" },
   "menuLabel_autoFocusChatbar": { "message": "Chatbalk met automatische focus" },
   "menuLabel_whenStreaming": { "message": "bij het streamen" },

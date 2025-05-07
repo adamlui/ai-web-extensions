@@ -2,7 +2,7 @@
   "appDesc": { "message": "DuckDuckGo ਸਾਈਡਬਾਰ ਵਿੱਚ ChatGPT ਜਵਾਬ ਸ਼ਾਮਲ ਕਰਦਾ ਹੈ (GPT-4o ਦੁਆਰਾ ਸੰਚਾਲਿਤ!)" },
   "menuLabel_proxyAPImode": { "message": "ਪਰਾਕਸੀ API ਮੋਡ" },
   "menuLabel_preferred": { "message": "ਪਸੰਦੀਦਾHome phone" },
-  "menuLabel_autoGetAnswers": { "message": "ਆਟੋ-ਗੇਟ ਜਵਾਬ" },
+  "menuLabel_autoAnswer": { "message": "ਆਟੋ-ਜਵਾਬ" },
   "menuLabel_autoSummarizeResults": { "message": "ਆਟੋ- ਸੰਖੇਪ ਨਤੀਜੇ" },
   "menuLabel_autoFocusChatbar": { "message": "ਆਟੋ-ਫੋਕਸ ਚੈਟਬਾਰ" },
   "menuLabel_whenStreaming": { "message": "ਜਦੋਂ ਸਟ੍ਰੀਮਿੰਗ ਹੋਵੇ" },

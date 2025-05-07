@@ -2,7 +2,7 @@
   "appDesc": { "message": "Żid it-tweġibiet taċ-ChatGPT mal-ġenb ta' DuckDuckGo (imħaddem minn GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Modalità API Proxy" },
   "menuLabel_preferred": { "message": "Preferut" },
-  "menuLabel_autoGetAnswers": { "message": "Ikseb Tweġibiet Awtomatiċi" },
+  "menuLabel_autoAnswer": { "message": "Tweġiba Awtomatika" },
   "menuLabel_autoSummarizeResults": { "message": "Awtomatizza r-Riżultati" },
   "menuLabel_autoFocusChatbar": { "message": "Fokus Awtomatiku fuq iċ-chatbar" },
   "menuLabel_whenStreaming": { "message": "waqt l-istreaming" },

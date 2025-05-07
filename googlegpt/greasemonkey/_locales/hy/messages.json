@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Ավելացնում է AI - ի պատասխանները Google Search - ում (սնուցվում է Google Gemma + GPT -4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Ավտոմատ պատասխաններ" },
+  "menuLabel_autoAnswer": { "message": "Ավտոմատ պատասխան" },
   "menuLabel_autoSummarizeResults": { "message": "Ավտոմատ ամփոփել արդյունքները" },
   "menuLabel_autoFocusChatbar": { "message": "Ավտոմատ կենտրոնացման զրույցի վահանակ" },
   "menuLabel_whenStreaming": { "message": "հոսքի ժամանակ" },

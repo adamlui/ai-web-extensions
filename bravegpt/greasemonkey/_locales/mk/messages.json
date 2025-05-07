@@ -2,7 +2,7 @@
   "appDesc": { "message": "Додава одговори на ChatGPT на страничната лента за храбро пребарување (напојува со GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Режим на прокси API" },
   "menuLabel_preferred": { "message": "Претпочитано" },
-  "menuLabel_autoGetAnswers": { "message": "Автоматско добивање одговори" },
+  "menuLabel_autoAnswer": { "message": "Автоматски одговор" },
   "menuLabel_autoSummarizeResults": { "message": "Автоматско сумирање на резултатите" },
   "menuLabel_autoFocusChatbar": { "message": "Лента за разговор за автоматско фокусирање" },
   "menuLabel_whenStreaming": { "message": "при преносот" },

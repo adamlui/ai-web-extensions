@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Legg AI svar til Google Search (drivið av Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Auto-Get Svar" },
+  "menuLabel_autoAnswer": { "message": "Sjálvansvarið" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-Summarize Úrslit" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "tá ið tað verður streymt" },

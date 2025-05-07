@@ -2,7 +2,7 @@
   "appDesc": { "message": "Legg ChatGPT svar til Brave Search sidebar (drivið av GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API standi" },
   "menuLabel_preferred": { "message": "Vælkomin" },
-  "menuLabel_autoGetAnswers": { "message": "Auto-Get Svar" },
+  "menuLabel_autoAnswer": { "message": "Sjálvansvarið" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-Summarize Úrslit" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "tá ið tað verður streymt" },

@@ -2,7 +2,7 @@
   "appDesc": { "message": "Menambahkan jawaban ChatGPT ke bilah sisi DuckDuckGo (didukung oleh GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Mode api Proxy" },
   "menuLabel_preferred": { "message": "Disukai" },
-  "menuLabel_autoGetAnswers": { "message": "Dapatkan Jawaban Otomatis" },
+  "menuLabel_autoAnswer": { "message": "Jawaban Otomatis" },
   "menuLabel_autoSummarizeResults": { "message": "Hasil Ringkasan Otomatis" },
   "menuLabel_autoFocusChatbar": { "message": "Bilah Obrolan Fokus Otomatis" },
   "menuLabel_whenStreaming": { "message": "saat streaming" },

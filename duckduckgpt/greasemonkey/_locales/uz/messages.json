@@ -2,7 +2,7 @@
   "appDesc": { "message": "DuckDuckGo yon paneliga ChatGPT javoblarini qo'shadi (GPT-4o tomonidan quvvatlanadi!)" },
   "menuLabel_proxyAPImode": { "message": "Proksi API rejimi" },
   "menuLabel_preferred": { "message": "Afzal" },
-  "menuLabel_autoGetAnswers": { "message": "Javoblarni avtomatik olish" },
+  "menuLabel_autoAnswer": { "message": "Avtomatik javob" },
   "menuLabel_autoSummarizeResults": { "message": "Natijalarni avtomatik umumlashtirish" },
   "menuLabel_autoFocusChatbar": { "message": "Avtofokusli suhbat paneli" },
   "menuLabel_whenStreaming": { "message": "oqim paytida" },

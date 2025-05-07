@@ -2,7 +2,7 @@
   "appDesc": { "message": "Isefru d yidles n ChatGPT deg yiched n Brave Search (aql s GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Tanmirt n API Proxy" },
   "menuLabel_preferred": { "message": "imsenyafen" },
-  "menuLabel_autoGetAnswers": { "message": "Iderwa d yidles" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Affiner la recherche pour auto-summarize results" },
   "menuLabel_autoFocusChatbar": { "message": "Aderwa d anukkat n tchatbar" },
   "menuLabel_whenStreaming": { "message": "mi ttwali" },

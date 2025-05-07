@@ -2,7 +2,7 @@
   "appDesc": { "message": "ChatGPT जवाबों को Brave Search साइडबार में जोड़ता है (GPT-4o! द्वारा संचालित)" },
   "menuLabel_proxyAPImode": { "message": "प्रॉक्सी एपीआई मोड" },
   "menuLabel_preferred": { "message": "पसंदीदा" },
-  "menuLabel_autoGetAnswers": { "message": "अपने आप जवाब पाएँ" },
+  "menuLabel_autoAnswer": { "message": "ऑटो - उत्तर" },
   "menuLabel_autoSummarizeResults": { "message": "ऑटो - समराइज़ के नतीजे" },
   "menuLabel_autoFocusChatbar": { "message": "ऑटो - फ़ोकस चैटबार" },
   "menuLabel_whenStreaming": { "message": "स्ट्रीमिंग करते समय" },

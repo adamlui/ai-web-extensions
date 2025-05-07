@@ -2,7 +2,7 @@
   "appDesc": { "message": "ÇatGPT jogaplaryny goş (GPT-4o bilen işleýän!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API tertibi" },
   "menuLabel_preferred": { "message": "Terbiýe" },
-  "menuLabel_autoGetAnswers": { "message": "Auto-Get jogaplary" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Auto-Summarize netijeleri" },
   "menuLabel_autoFocusChatbar": { "message": "Awto-Fokus Çatbary" },
   "menuLabel_whenStreaming": { "message": "ötýänçä" },

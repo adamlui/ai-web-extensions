@@ -2,7 +2,7 @@
   "appDesc": { "message": "Ավելացնում է ChatGPT պատասխանները Brave Search կողմից աջ կողմանց (GPT-4o! զինվորված)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API ռեժիմ" },
   "menuLabel_preferred": { "message": "Նախընտրելի" },
-  "menuLabel_autoGetAnswers": { "message": "Ավտոմատ պատասխաններ" },
+  "menuLabel_autoAnswer": { "message": "Ավտոմատ պատասխան" },
   "menuLabel_autoSummarizeResults": { "message": "Ավտոմատ ամփոփել արդյունքները" },
   "menuLabel_autoFocusChatbar": { "message": "Ավտոմատ կենտրոնացման զրույցի վահանակ" },
   "menuLabel_whenStreaming": { "message": "հոսքի ժամանակ" },

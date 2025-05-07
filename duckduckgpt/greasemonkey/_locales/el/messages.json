@@ -2,7 +2,7 @@
   "appDesc": { "message": "Προσθέτει απαντήσεις ChatGPT στην πλαϊνή μπάρα DuckDuckGo (τροφοδοτείται από GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Λειτουργία API διακομιστή μεσολάβησης" },
   "menuLabel_preferred": { "message": "Προτιμώμενη" },
-  "menuLabel_autoGetAnswers": { "message": "Αυτόματη λήψη απαντήσεων" },
+  "menuLabel_autoAnswer": { "message": "Αυτόματη απάντηση" },
   "menuLabel_autoSummarizeResults": { "message": "Αυτόματη σύνοψη αποτελεσμάτων" },
   "menuLabel_autoFocusChatbar": { "message": "Γραμμή συνομιλίας αυτόματης εστίασης" },
   "menuLabel_whenStreaming": { "message": "κατά τη ροή" },

@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "បន្ថែមចម្លើយ AI ទៅ Google Search (ដំណើរការដោយ Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "ចម្លើយស្វ័យប្រវត្តិកម្ម" },
+  "menuLabel_autoAnswer": { "message": "ឆ្លើយដោយស្វ័យប្រវត្តិ" },
   "menuLabel_autoSummarizeResults": { "message": "សង្ខេបលទ្ធផលដោយស្វ័យប្រវត្តិ" },
   "menuLabel_autoFocusChatbar": { "message": "របារជជែកផ្តោតអារម្មណ៍ដោយស្វ័យប្រវត្តិ" },
   "menuLabel_whenStreaming": { "message": "នៅពេលស្ទ្រីម" },

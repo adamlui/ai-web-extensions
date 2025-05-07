@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google Arama'ya yapay zeka yanıtları ekler (Google Gemma + GPT -4o tarafından desteklenmektedir!)" },
-  "menuLabel_autoGetAnswers": { "message": "Otomatik Yanıt Al" },
+  "menuLabel_autoAnswer": { "message": "otomatik yanıt" },
   "menuLabel_autoSummarizeResults": { "message": "Sonuçları Otomatik Özetle" },
   "menuLabel_autoFocusChatbar": { "message": "Otomatik Odaklanma Sohbet Çubuğu" },
   "menuLabel_whenStreaming": { "message": "akış sırasında" },

@@ -2,7 +2,7 @@
   "appDesc": { "message": "បន្ថែមចម្លើយ ChatGPT ទៅរបារចំហៀង DuckDuckGo (ដំណើរការដោយ GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "ម៉ូដប្រូកស៊ី API" },
   "menuLabel_preferred": { "message": "Size Policy" },
-  "menuLabel_autoGetAnswers": { "message": "ចម្លើយស្វ័យប្រវត្តិកម្ម" },
+  "menuLabel_autoAnswer": { "message": "ឆ្លើយដោយស្វ័យប្រវត្តិ" },
   "menuLabel_autoSummarizeResults": { "message": "សង្ខេបលទ្ធផលដោយស្វ័យប្រវត្តិ" },
   "menuLabel_autoFocusChatbar": { "message": "របារជជែកផ្តោតអារម្មណ៍ដោយស្វ័យប្រវត្តិ" },
   "menuLabel_whenStreaming": { "message": "នៅពេលស្ទ្រីម" },

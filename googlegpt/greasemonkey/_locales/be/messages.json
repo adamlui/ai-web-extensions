@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Дадае адказы на штучны інтэлект у пошук Google (на базе Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Аўтаматычнае атрыманне адказаў" },
+  "menuLabel_autoAnswer": { "message": "Аўтаматычны адказ" },
   "menuLabel_autoSummarizeResults": { "message": "Аўтаматычнае аб 'яднанне вынікаў" },
   "menuLabel_autoFocusChatbar": { "message": "Аўтаматычная фокусная панель чата" },
   "menuLabel_whenStreaming": { "message": "пры струменевай перадачы" },

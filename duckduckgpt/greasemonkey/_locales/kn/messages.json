@@ -2,7 +2,7 @@
   "appDesc": { "message": "DuckDuckGo ಸೈಡ್ ಬಾರ್ ಗೆ ChatGPT ಉತ್ತರಗಳನ್ನು ಸೇರಿಸುತ್ತದೆ (GPT-4o ನಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ!)" },
   "menuLabel_proxyAPImode": { "message": "ಪ್ರಾಕ್ಸಿ API ಮೋಡ್" },
   "menuLabel_preferred": { "message": "ಆದ್ಯತೆಗಳು" },
-  "menuLabel_autoGetAnswers": { "message": "ಸ್ವಯಂ-ಗೆಟ್ ಉತ್ತರಗಳು" },
+  "menuLabel_autoAnswer": { "message": "ಸ್ವಯಂ-ಉತ್ತರ" },
   "menuLabel_autoSummarizeResults": { "message": "ಸ್ವಯಂಚಾಲಿತ ಸಾರಾಂಶ ಫಲಿತಾಂಶಗಳು" },
   "menuLabel_autoFocusChatbar": { "message": "ಆಟೋ-ಫೋಕಸ್ ಚಾಟ್ ‌ ಬಾರ್" },
   "menuLabel_whenStreaming": { "message": "ಸ್ಟ್ರೀಮ್ ಮಾಡುವಾಗ" },

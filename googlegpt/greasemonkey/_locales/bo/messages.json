@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google Search སྒྲིག་འཇུག་བྱས་ཚད ། ཐེངས་10 ལས་ཉུང་བ ། ཐོན་རིམ་5.7.1 ནང་དུ་ཚོད་ལྟ་བྱས་ཟིན ། ཟླ 4 སྔོན་ལ་གསར་བཅོས་བྱས །" },
-  "menuLabel_autoGetAnswers": { "message": "རང་འགུལ་གྱི་ལན་ཐོ །" },
+  "menuLabel_autoAnswer": { "message": "རང་འགུལ་ཞིབ་འཇུག" },
   "menuLabel_autoSummarizeResults": { "message": "རང་མོས་རང་མོས་རང་མོས་རང་མོས་ཀྱི་གྲུབ་འབྲས་" },
   "menuLabel_autoFocusChatbar": { "message": "རང་མོས་རང་མོས་རང་མོས་ཀྱི་གླེང་མོལ །" },
   "menuLabel_whenStreaming": { "message": "གློག་ཀླད་དང་ཁ་པར །" },

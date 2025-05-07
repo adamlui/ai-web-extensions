@@ -2,7 +2,7 @@
   "appDesc": { "message": "Dodaje odpowiedzi ChatGPT do paska bocznego DuckDuckGo (obsługiwanego przez GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Tryb proxy API" },
   "menuLabel_preferred": { "message": "Preferowane" },
-  "menuLabel_autoGetAnswers": { "message": "Automatyczne uzyskiwanie odpowiedzi" },
+  "menuLabel_autoAnswer": { "message": "Automatyczna odpowiedź" },
   "menuLabel_autoSummarizeResults": { "message": "Automatycznie podsumuj wyniki" },
   "menuLabel_autoFocusChatbar": { "message": "Automatycznie ustawiaj ostrość na czacie" },
   "menuLabel_whenStreaming": { "message": "podczas przesyłania strumieniowego" },

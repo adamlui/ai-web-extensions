@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Tilføjer AI-svar til Google Søgning (drevet af Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Hent svar automatisk" },
+  "menuLabel_autoAnswer": { "message": "Auto-svar" },
   "menuLabel_autoSummarizeResults": { "message": "Automatisk opsummering af resultater" },
   "menuLabel_autoFocusChatbar": { "message": "Chatbar med autofokus" },
   "menuLabel_whenStreaming": { "message": "når du streamer" },

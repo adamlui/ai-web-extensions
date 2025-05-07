@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google ಹುಡುಕಾಟಕ್ಕೆ AI ಉತ್ತರಗಳನ್ನು ಸೇರಿಸುತ್ತದೆ (Google Gemma + GPT-4o ನಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ!)" },
-  "menuLabel_autoGetAnswers": { "message": "ಸ್ವಯಂ-ಗೆಟ್ ಉತ್ತರಗಳು" },
+  "menuLabel_autoAnswer": { "message": "ಸ್ವಯಂ-ಉತ್ತರ" },
   "menuLabel_autoSummarizeResults": { "message": "ಸ್ವಯಂಚಾಲಿತ ಸಾರಾಂಶ ಫಲಿತಾಂಶಗಳು" },
   "menuLabel_autoFocusChatbar": { "message": "ಆಟೋ-ಫೋಕಸ್ ಚಾಟ್ ‌ ಬಾರ್" },
   "menuLabel_whenStreaming": { "message": "ಸ್ಟ್ರೀಮ್ ಮಾಡುವಾಗ" },

@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Google Search သို့ AI အဖြေများကို ပေါင်းထည့်သည် (Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "အလိုအလျောက်-အဖြေများရယူပါ" },
+  "menuLabel_autoAnswer": { "message": "အလိုအလျောက်ဖြေဆိုခြင်း" },
   "menuLabel_autoSummarizeResults": { "message": "အလိုအလျောက် အကျဉ်းချုပ်ရလဒ်များ" },
   "menuLabel_autoFocusChatbar": { "message": "အလိုအလျောက်အာရုံစူးစိုက်မှု စကားပြောဘား" },
   "menuLabel_whenStreaming": { "message": "စီးဆင်းနေချိန်တွင်" },

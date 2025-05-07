@@ -2,7 +2,7 @@
   "appDesc": { "message": "Hoʻohui i nā pane ChatGPT i ka ʻaoʻao ʻaoʻao Brave Search (hoʻohana ʻia e GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Kūlana API Kūlana" },
   "menuLabel_preferred": { "message": "Makemake ‘ia" },
-  "menuLabel_autoGetAnswers": { "message": "Loaʻa i nā pane" },
+  "menuLabel_autoAnswer": { "message": "Pane-Aunoa" },
   "menuLabel_autoSummarizeResults": { "message": "Hōʻuluʻulu 'akomi i nā hopena" },
   "menuLabel_autoFocusChatbar": { "message": "Kūkākūkā Kūkākūkā-Aunoa" },
   "menuLabel_whenStreaming": { "message": "i ke kahe ana" },

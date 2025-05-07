@@ -2,7 +2,7 @@
   "appDesc": { "message": "מוסיף תשובות ChatGPT לסרגל הצדדי של DuckDuckGo (מופעל על ידי GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "מצב API של שרת Proxy" },
   "menuLabel_preferred": { "message": "מועדף" },
-  "menuLabel_autoGetAnswers": { "message": "קבל תשובות אוטומטיות" },
+  "menuLabel_autoAnswer": { "message": "מענה אוטומטי" },
   "menuLabel_autoSummarizeResults": { "message": "סיכום אוטומטי של התוצאות" },
   "menuLabel_autoFocusChatbar": { "message": "פוקוס אוטומטי של סרגל הצ'אט" },
   "menuLabel_whenStreaming": { "message": "בזמן סטרימינג" },

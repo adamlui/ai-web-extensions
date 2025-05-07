@@ -2,7 +2,7 @@
   "appDesc": { "message": "Doda odgovore ChatGPT v stransko vrstico pogumnega iskanja (poganja GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy API način" },
   "menuLabel_preferred": { "message": "Prednostno" },
-  "menuLabel_autoGetAnswers": { "message": "Samodejno pridobi odgovore" },
+  "menuLabel_autoAnswer": { "message": "Samodejni odgovor" },
   "menuLabel_autoSummarizeResults": { "message": "Seštej rezultate" },
   "menuLabel_autoFocusChatbar": { "message": "Vrstica za klepet s samodejnim ostrenjem" },
   "menuLabel_whenStreaming": { "message": "pri pretočnem predvajanju" },

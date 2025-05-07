@@ -2,7 +2,7 @@
   "appDesc": { "message": "Ku dar ChatGPT jawaabaha DuckDuckGo sidebar (waxaa ku shaqeeya GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Qaabka API Proxy" },
   "menuLabel_preferred": { "message": "La Doorbiday" },
-  "menuLabel_autoGetAnswers": { "message": "Jawaabaha Auto-Get" },
+  "menuLabel_autoAnswer": { "message": "Auto-Answer" },
   "menuLabel_autoSummarizeResults": { "message": "Natiijooyinka Auto-Summarize" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "marka qulqulaya" },

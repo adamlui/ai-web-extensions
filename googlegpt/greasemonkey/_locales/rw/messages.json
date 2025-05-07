@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Yongeraho ibisubizo bya AI ku ruhande rwa Google Search (bikoresha Google Gemma + GPT-4o!)" },
-  "menuLabel_autoGetAnswers": { "message": "Kubona Ibisubizo byikora" },
+  "menuLabel_autoAnswer": { "message": "Subiza mu buryo bwikora" },
   "menuLabel_autoSummarizeResults": { "message": "Ibisubizo byikora" },
   "menuLabel_autoFocusChatbar": { "message": "Kwitaho Chatbar byikora" },
   "menuLabel_whenStreaming": { "message": "igihe utanga ibitekerezo byihuse" },

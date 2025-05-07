@@ -2,7 +2,7 @@
   "appDesc": { "message": "Добавляет ответы ChatGPT на боковую панель DuckDuckGo (работает на GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Режим API прокси-сервера" },
   "menuLabel_preferred": { "message": "Предпочтительно" },
-  "menuLabel_autoGetAnswers": { "message": "Ответы с автоматическим получением" },
+  "menuLabel_autoAnswer": { "message": "автоответ" },
   "menuLabel_autoSummarizeResults": { "message": "Автоматическое суммирование результатов" },
   "menuLabel_autoFocusChatbar": { "message": "Панель чата с автофокусом" },
   "menuLabel_whenStreaming": { "message": "при потоковой передаче" },

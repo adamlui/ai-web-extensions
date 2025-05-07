@@ -2,7 +2,7 @@
   "appDesc": { "message": "ChatGPT އަށްނަންވެސް Brave Search ގެ ސައިޒްފުޅުމުގެ ކެކު (ގަބައި GPT-4o! އަށް)" },
   "menuLabel_proxyAPImode": { "message": "ޕްރޮކްސީ އެޕީއައި މޯޑެވެ" },
   "menuLabel_preferred": { "message": "އިސްކަންދެއެވެ" },
-  "menuLabel_autoGetAnswers": { "message": "އޮޓޯ-ގެޓް ޖަވާބު" },
+  "menuLabel_autoAnswer": { "message": "އޮޓޯ ޖަވާބު ދިނުން" },
   "menuLabel_autoSummarizeResults": { "message": "އޮޓޯ-ސަމާރައިޒް ނަތީޖާ" },
   "menuLabel_autoFocusChatbar": { "message": "އޮޓޯ ފޯކަސް ޗެޓްބާރ އެވެ" },
   "menuLabel_whenStreaming": { "message": "ސްޓްރީމް ކުރާއިރު" },

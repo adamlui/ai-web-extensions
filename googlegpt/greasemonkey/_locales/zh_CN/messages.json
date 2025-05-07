@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "将 AI 答案添加到 Google 搜索（由 Google Gemma + GPT-4o 提供支持！）" },
-  "menuLabel_autoGetAnswers": { "message": "自动获取答案" },
+  "menuLabel_autoAnswer": { "message": "自动应答" },
   "menuLabel_autoSummarizeResults": { "message": "自动总结结果" },
   "menuLabel_autoFocusChatbar": { "message": "自动对焦聊天栏" },
   "menuLabel_whenStreaming": { "message": "流式传输时" },

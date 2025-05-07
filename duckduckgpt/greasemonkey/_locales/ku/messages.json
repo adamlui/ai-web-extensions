@@ -2,7 +2,7 @@
   "appDesc": { "message": "زیاد کردنی وەرزی ChatGPT بۆ تایبەتی DuckDuckGo (پارێزراوە لەلایەن GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "شێوەی ڕاپرسی ئەپی" },
   "menuLabel_preferred": { "message": "Vebijêrk" },
-  "menuLabel_autoGetAnswers": { "message": "خۆکارانە وەڵامەکان وەربگرە" },
+  "menuLabel_autoAnswer": { "message": "خو وەڵام دەرەوە" },
   "menuLabel_autoSummarizeResults": { "message": "Encamên Xweser Bi Kurte Bikin" },
   "menuLabel_autoFocusChatbar": { "message": "Oto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "dema streaming" },

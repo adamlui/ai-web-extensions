@@ -2,7 +2,7 @@
   "appDesc": { "message": "پاسخ‌های ChatGPT را به نوار کناری Brave Search اضافه می‌کند (با GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "حالت API پروکسی" },
   "menuLabel_preferred": { "message": "ارجح" },
-  "menuLabel_autoGetAnswers": { "message": "دریافت خودکار پاسخ" },
+  "menuLabel_autoAnswer": { "message": "پاسخ خودکار" },
   "menuLabel_autoSummarizeResults": { "message": "خلاصه خودکار نتایج" },
   "menuLabel_autoFocusChatbar": { "message": "نوار چت فوکوس خودکار" },
   "menuLabel_whenStreaming": { "message": "هنگام پخش جریانی" },
