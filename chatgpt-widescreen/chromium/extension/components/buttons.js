@@ -191,7 +191,7 @@ window.buttons = {
 
     async remove() {
         if (!await chatbar.get() || !this.fullscreen?.isConnected) return
-        ['btnsDiv', ...this.types].filter(Boolean).forEach(type => this[type]?.remove()) ; tooltip.div?.remove()
+        ['btnsDiv', ...this.types].forEach(type => this[type]?.remove()) ; tooltip.div?.remove()
         this.state.status = 'missing' // ensure next .insert() doesn't return early
         this.state.hasFadedIn = false // ensure next .insert() fades in buttons
     },
