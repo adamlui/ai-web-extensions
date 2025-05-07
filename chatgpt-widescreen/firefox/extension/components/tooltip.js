@@ -25,7 +25,7 @@ window.tooltip = {
 
     toggle(event) {
         if (tooltip.imports.env.browser.isMobile) return
-        tooltip.div = tooltip.div || dom.create.elem('div', { class: `${tooltip.imports.app.slug}-tooltip` })
+        tooltip.div ||= dom.create.elem('div', { class: `${tooltip.imports.app.slug}-tooltip` })
         if (!tooltip.div.isConnected) event.currentTarget?.after(tooltip.div)
         if (!tooltip.styles) tooltip.stylize()
         tooltip.update(event.currentTarget)

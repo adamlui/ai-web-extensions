@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.6
+// @version                2025.5.7
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2616,7 +2616,7 @@
 
         toggle(stateOrEvent) { // visibility
             if (env.browser.isMobile) return
-            tooltip.div = tooltip.div || dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
+            tooltip.div ||= dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
             if (!tooltip.div.isConnected) appDiv.append(tooltip.div)
             if (!tooltip.styles) tooltip.stylize()
             if (typeof stateOrEvent == 'object') // mouse event, update text/pos

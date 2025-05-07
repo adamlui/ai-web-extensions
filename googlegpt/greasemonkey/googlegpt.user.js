@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.6
+// @version                  2025.5.7
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -3351,7 +3351,7 @@
 
         toggle(stateOrEvent) { // visibility
             if (env.browser.isMobile) return
-            tooltip.div = tooltip.div || dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
+            tooltip.div ||= dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
             if (!tooltip.div.isConnected) appDiv.append(tooltip.div)
             if (!tooltip.styles) tooltip.stylize()
             if (typeof stateOrEvent == 'object') // mouse event, update text/pos
