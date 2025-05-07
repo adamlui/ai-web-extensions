@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.3.6
+// @version             2025.5.7
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -257,15 +257,15 @@
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.0/dist/chatgpt.min.js#sha256-Xg6XXZ7kcc/MTdlKwUq1rc41WiEwuqhl7DxIjIkzRhc=
 // @require             https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@428d766/chromium/extension/lib/chatbar.js#sha256-dOQ+IkzzPztLgLoiVSzGiROhcBliZM0lMwXF6M4K+CU=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@08e72f4/chromium/extension/lib/chatbar.js#sha256-dQgUD9PbQsjyePD5paZAN1X+9G22rWYkLHSl8JGDeKk=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@18e7761/chromium/extension/lib/dom.js#sha256-rP6JUMICp0FsCFfrNN76ywu64oxM8vfbkI7pB0nQ/iM=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f5d7836/chromium/extension/lib/settings.js#sha256-dCeRO2Su7atg+DzVFKLt+kc+MM2kzb1pC3dSilmnp1k=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ef624b2/chromium/extension/lib/styles.js#sha256-q6ZSwsPUyIxhI9xyPPrj91b2pK6bCoBM6m23z2xTB3k=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@455c4f4/chromium/extension/lib/ui.js#sha256-rzAeaLiz0XTgJ3nYypW87DWB2vq7FZ8OlzjBYJulu6o=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@455c4f4/chromium/extension/components/buttons.js#sha256-dMvZtnBWkfXoZhr5WTS+RPcaUKYr+HOGH9qy7wiUmhI=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@08e72f4/chromium/extension/components/buttons.js#sha256-3e/pyyCpMmbUtxxUMEUKldfhEuXfdPQYmbfwSLs/vZI=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@428d766/chromium/extension/components/icons.js#sha256-w3zANZpb+eBEyTdFehaYG5va5HfdPCbbHPED50hnbRg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@428d766/chromium/extension/components/modals.js#sha256-FyXQwy7yk5XgI8tAYQrq4rVBzMgB+5W2ktYtULiahfI=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@bceee58/chromium/extension/components/tooltip.js#sha256-vs8vWb1hWEbIrHQoHW4kjeuLamZPdmGz5bbK3iCj8GM=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@08e72f4/chromium/extension/components/tooltip.js#sha256-sOQURwz5NH8IDO0DkHHjfw7vznGPv7qCVzs66oc4wjc=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant               GM_setValue
@@ -319,7 +319,7 @@
     const app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '196be4d' // for cached app.json + sites.json5 + messages.json
+        latestResourceCommitHash: '50c7504' // for cached app.json + sites.json5 + messages.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -773,7 +773,7 @@
                 }
                 styles.tweaks.update() // sync TCB/NCB/HH/HF/BA
                 styles.chatbar.update() // sync WCB
-                chatbar.tweak() // update ChatGPT chatbar inner width or hack other sites' button positions
+                if (env.site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
                 buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                     // ...to visually signal location + preview fx applied by Button Animations toggle-on
