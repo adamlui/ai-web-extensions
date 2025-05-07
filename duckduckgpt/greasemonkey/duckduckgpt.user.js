@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.7
+// @version                2025.5.7.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -546,7 +546,7 @@
         streamingDisabled: { type: 'toggle', icon: 'signalStream', defaultVal: false,
             label: app.msgs.mode_streaming,
             helptip: app.msgs.helptip_streamingMode },
-        autoGet: { type: 'toggle', icon: 'speechBalloonLasso', defaultVal: false,
+        autoGet: { type: 'toggle', icon: 'speechBalloonLasso', defaultVal: true,
             label: app.msgs.menuLabel_autoGetAnswers,
             helptip: app.msgs.helptip_autoGetAnswers },
         autoSummarize: { type: 'toggle', icon: 'summarize', defaultVal: false,
