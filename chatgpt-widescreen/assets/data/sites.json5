@@ -67,7 +67,8 @@
           "upgradeToPro": "div[class*=\"\:block\"]:has(button):has(svg[data-icon*=arrow-up-right])" },
         "slideUpCards": {
           "getAndroidApp": "div[data-type=portal]:has(svg[data-icon=android])" } // https://i.imgur.com/FZdDg6d.png
-      }
+      },
+      "tooltip": "div[data-radix-popper-content-wrapper]:has(> div[class*=tooltip])"
     },
     "urls": { "homepage": "https://www.perplexity.ai" }
   },
