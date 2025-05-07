@@ -190,7 +190,7 @@ window.buttons = {
         async color() {
             const { site, ui: { scheme }} = buttons.imports.env
             buttons.color = (
-                site == 'chatgpt' ? await chatbar.is.dark() || scheme == 'dark' ? 'white' : '#202123'
+                site == 'chatgpt' ? ( await chatbar.is.dark() || scheme == 'dark' ? 'white' : '#202123' )
               : site == 'perplexity' ?
                     `oklch(var(--${ scheme == 'dark' ? 'dark' : '' }text-color-100)/var(--tw-text-opacity))`
               : 'currentColor'
