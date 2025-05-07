@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.3
+// @version                  2025.5.6
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -3832,7 +3832,7 @@
 
         createReqData(api, msgs) { // returns payload for POST / query string for GET
             log.caller = `api.createReqData('${api}', msgs)`
-            msgs = msgs.map(({ api, regenerated, ...rest }) => rest) // eslint-disable-line no-unused-vars
+            msgs = msgs.map(({ api, regenerated, time, ...rest }) => rest) // eslint-disable-line no-unused-vars
             const time = Date.now(), lastUserMsg = msgs[msgs.length - 1]
             const reqData = api == 'OpenAI' ? { messages: msgs, model: 'gpt-3.5-turbo', max_tokens: 4000 }
               : api == 'AIchatOS' ? {
