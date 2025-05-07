@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.7.1
+// @version                2025.5.7.2
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -261,7 +261,7 @@
     // Init APP data
     const app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: 'e86f9f9' // for cached app.json + messages.json
+        latestResourceCommitHash: 'fc84782' // for cached app.json + messages.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -273,7 +273,7 @@
         appDesc: 'Adds ChatGPT answers to DuckDuckGo sidebar (powered by GPT-4o!)',
         menuLabel_proxyAPImode: 'Proxy API Mode',
         menuLabel_preferred: 'Preferred',
-        menuLabel_autoGetAnswers: 'Auto-Get Answers',
+        menuLabel_autoAnswer: 'Auto-Answer',
         menuLabel_autoSummarizeResults: 'Auto-Summarize Results',
         menuLabel_autoFocusChatbar: 'Auto-Focus Chatbar',
         menuLabel_whenStreaming: 'when streaming',
@@ -547,7 +547,7 @@
             label: app.msgs.mode_streaming,
             helptip: app.msgs.helptip_streamingMode },
         autoGet: { type: 'toggle', icon: 'speechBalloonLasso', defaultVal: true,
-            label: app.msgs.menuLabel_autoGetAnswers,
+            label: app.msgs.menuLabel_autoAnswer,
             helptip: app.msgs.helptip_autoGetAnswers },
         autoSummarize: { type: 'toggle', icon: 'summarize', defaultVal: false,
             label: app.msgs.menuLabel_autoSummarizeResults,

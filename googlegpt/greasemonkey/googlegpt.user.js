@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.7.1
+// @version                  2025.5.7.2
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -451,7 +451,7 @@
     // Init APP data
     const app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '50e1797' // for cached app.json + messages.json
+        latestResourceCommitHash: 'f58dbed' // for cached app.json + messages.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -461,7 +461,7 @@
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     app.msgs = {
         appDesc: 'Add AI answers to Google Search (powered by Google Gemma + GPT-4o!)',
-        menuLabel_autoGetAnswers: 'Auto-Get Answers',
+        menuLabel_autoAnswer: 'Auto-Answer',
         menuLabel_autoSummarizeResults: 'Auto-Summarize Results',
         menuLabel_autoFocusChatbar: 'Auto-Focus Chatbar',
         menuLabel_whenStreaming: 'when streaming',
@@ -738,7 +738,7 @@
             label: app.msgs.mode_streaming,
             helptip: app.msgs.helptip_streamingMode },
         autoGet: { type: 'toggle', icon: 'speechBalloonLasso', defaultVal: true,
-            label: app.msgs.menuLabel_autoGetAnswers,
+            label: app.msgs.menuLabel_autoAnswer,
             helptip: app.msgs.helptip_autoGetAnswers },
         autoSummarize: { type: 'toggle', icon: 'summarize', defaultVal: false,
             label: app.msgs.menuLabel_autoSummarizeResults,
