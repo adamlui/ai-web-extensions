@@ -98,9 +98,8 @@ window.buttons = {
             if (site == 'chatgpt' && hasTallChatbar) {
                 btn.style.bottom = '-0.5px'
                 if (isGuestTempChat && btnType == 'widescreen') btn.style.marginRight = '3px'
-            }
-            else btn.style.top = `${ site == 'chatgpt' ? -3.25
-                                   : site == 'poe' ? ( btnType == 'newChat' ? 1 : 3 ) : 0 }px`
+            } else btn.style.top = `${ site == 'chatgpt' ? -3.25
+                                     : site == 'poe' ? ( btnType == 'newChat' ? 1 : 3 ) : 0 }px`
 
             if (/chatgpt|perplexity/.test(site)) // add site button classes
                 btn.classList.add(...(this.rightBtn?.classList || []))
@@ -189,14 +188,12 @@ window.buttons = {
 
     update: {
         async color() {
+            const { site, ui: { scheme }} = buttons.imports.env
             buttons.color = (
-                buttons.imports.env.site == 'chatgpt' ? (
-                    await chatbar.is.dark() || buttons.imports.env.ui.scheme == 'dark' ? 'white' : '#202123'
-                ) : buttons.imports.env.site == 'perplexity' ? (
-                    buttons.imports.env.ui.scheme == 'dark' ?
-                        'oklch(var(--dark-text-color-100)/var(--tw-text-opacity))'
-                      : 'oklch(var(--text-color-100)/var(--tw-text-opacity))'
-                ) : 'currentColor'
+                site == 'chatgpt' ? await chatbar.is.dark() || scheme == 'dark' ? 'white' : '#202123'
+              : site == 'perplexity' ?
+                    `oklch(var(--${ scheme == 'dark' ? 'dark' : '' }text-color-100)/var(--tw-text-opacity))`
+              : 'currentColor'
             )
             if (buttons.widescreen?.style.fill != buttons.color)
                 buttons.types.forEach(type => {
