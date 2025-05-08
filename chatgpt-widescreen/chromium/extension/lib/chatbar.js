@@ -28,8 +28,8 @@ window.chatbar = {
         } else if (site == 'poe') // restore Attach File button icon + Poe Mic button position
             ['attachFile', 'mic'].forEach(btnType => {
                 const btn = chatbarDiv.querySelector(selectors.btns[btnType]) ; if (!btn) return
-                if (btnType == 'attachFile')
-                    btn.querySelector('svg').replaceWith(buttons.poe.attachFile.icon.cloneNode(true))
+                if (btnType == 'attachFile' && buttons.poe.attachFile.plusIcon)
+                    btn.querySelector('svg').replaceWith(buttons.poe.attachFile.plusIcon.cloneNode(true))
                 else /* Mic */ btn.style.marginRight = ''
             })
     },
@@ -40,23 +40,24 @@ window.chatbar = {
         if (site == 'chatgpt') { // update chatbar inner width
             const inputArea = chatbarDiv.querySelector(selectors.input) ; if (!inputArea) return
             if (chatgpt.canvasIsOpen()) inputArea.parentNode.style.width = '100%'
-            else if (!await this.is.tall()) { // narrow it to not clash w/ buttons
-                const widths = { chatbar: chatbarDiv.getBoundingClientRect().width },
+            else if (await this.is.tall()) { // narrow it to not clash w/ buttons
+                const widths = { chatbar: dom.get.computedWidth(chatbarDiv) },
                       visibleBtnTypes = [...buttons.get.types.visible(), 'end']
-                visibleBtnTypes.forEach(type => widths[type] = buttons[type]?.getBoundingClientRect().width
-                  || document.querySelector(`${selectors.btns.send}, ${selectors.btns.stop}, ${selectors.btns.voice}`)
-                        ?.getBoundingClientRect().width || 0 )
+                visibleBtnTypes.forEach(type => widths[type] = (
+                    dom.get.computedWidth(buttons[type] || chatbarDiv.querySelector(
+                        `${selectors.btns.send}, ${selectors.btns.stop}, ${selectors.btns.voice}`))
+                ))
                 const totalBtnWidths = visibleBtnTypes.reduce((sum, btnType) => sum + widths[btnType], 0)
                 inputArea.parentNode.style.width = `${ // expand to close gap w/ buttons
-                    widths.chatbar - totalBtnWidths -43 }px`
+                    widths.chatbar - totalBtnWidths -40 }px`
                 inputArea.style.width = '100%' // rid h-scrollbar
             }
         } else if (site == 'poe') { // replace Attach File btn icon + move Mic btn closer to Send
             const btnLoadTimeout = 5000 // ms
             dom.get.loadedElem(selectors.btns.attachFile, { timeout: btnLoadTimeout }).then(btn => {
                 if (!btn) return
-                const plusIcon = btn.querySelector('svg')
-                buttons.poe ||= { attachFile: { icon: plusIcon }} // cache for this.reset()
+                const plusIcon = btn.querySelector('svg:has(> path[d^="M13 4.5a1"])')
+                buttons.poe ||= { attachFile: { plusIcon }} // cache for this.reset()
                 plusIcon?.replaceWith(icons.create('paperclip', {
                     style: 'height: 15px !important ; width: 15px !important' }))
             })
