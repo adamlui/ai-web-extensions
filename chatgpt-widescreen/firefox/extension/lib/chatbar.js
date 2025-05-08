@@ -41,8 +41,8 @@ window.chatbar = {
             const inputArea = chatbarDiv.querySelector(selectors.input) ; if (!inputArea) return
             if (chatgpt.canvasIsOpen()) inputArea.parentNode.style.width = '100%'
             else if (!await this.is.tall()) { // narrow it to not clash w/ buttons
-                const widths = { chatbar: chatbarDiv.getBoundingClientRect().width }
-                const visibleBtnTypes = [...buttons.get.types.visible(), 'end']
+                const widths = { chatbar: chatbarDiv.getBoundingClientRect().width },
+                      visibleBtnTypes = [...buttons.get.types.visible(), 'end']
                 visibleBtnTypes.forEach(type => widths[type] = buttons[type]?.getBoundingClientRect().width
                   || document.querySelector(`${selectors.btns.send}, ${selectors.btns.stop}, ${selectors.btns.voice}`)
                         ?.getBoundingClientRect().width || 0 )
