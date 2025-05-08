@@ -20,7 +20,7 @@
         browser: { isFF: navigator.userAgent.includes('Firefox'), isMobile: chatgpt.browser.isMobile() },
         site: location.hostname.split('.').slice(-2, -1)[0], ui: {}
     }
-    env.browser.isPortrait = env.browser.isMobile && (innerWidth < innerHeight)
+    env.browser.isPortrait = env.browser.isMobile && ( innerWidth < innerHeight )
     ui.getScheme().then(scheme => env.ui.scheme = scheme)
     if (env.site == 'chatgpt') // store native chatbar width for Wider Chatbox style
         chatbar.nativeWidth = dom.get.computedWidth(document.querySelector('main form'))
