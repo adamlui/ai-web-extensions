@@ -83,7 +83,7 @@ window.buttons = {
                           && !document.querySelector(selectors.btns.login)
         const isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true')
         const validBtnTypes = this.get.types.valid()
-        const spreadFactor = site == 'poe' ? 1.1 : site == 'perplexity' ? -7 : hasTallChatbar ? -16.5 : -8.85
+        const spreadFactor = site == 'poe' ? 7.25 : site == 'perplexity' ? -11 : hasTallChatbar ? -16.5 : -8.85
         if (isGuestTempChat) // wait for arrow Send button after black chatbar loads or rOffset inaccurate
             await dom.get.loadedElem(selectors.btns.send, { timeout: 1000 })
         if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.get.rightBtn() // for rOffset + styles
@@ -164,16 +164,22 @@ window.buttons = {
             site == 'chatgpt' ? (await this.get.rightBtn()).closest('[class*=bottom]') // right btn div
           : site == 'perplexity' ? chatbarDiv.querySelector('div[role=radiogroup]') // left mode btns div
           : /* poe */ chatbarDiv.lastChild ) // parent of Mic/Send btns
-        if (site == 'perplexity') { // wrap in div to tweak side-gaps
-            parentToInsertInto.append(this.btnsDiv = dom.create.elem('div', {
-                style: 'display: flex ; margin: 0 9px 0 -36px ; align-items: center' }))
+
+        // Wrap buttons in flexbox for more control
+        if (site != 'chatgpt') { // wrap in div to tweak side-gaps
+            parentToInsertInto[site == 'perplexity' ? 'append' : 'prepend'](
+                this.btnsDiv = dom.create.elem('div', {
+                    style: `display: flex ; align-items: center ;
+                            margin: ${ site == 'perplexity' ? '0 9px 0 -49px' : '0 -2px 0 0' }`
+            }))
             parentToInsertInto = this.btnsDiv
         }
-        const elemToInsertBefore = parentToInsertInto[
-            site == 'poe' ? 'firstChild' // Mic btn
-          : 'lastChild'] // right btn
 
         // Insert buttons
+        const elemToInsertBefore = (
+            site == 'poe' ? parentToInsertInto.firstChild // Mic btn
+          : parentToInsertInto.lastChild // right btn
+        )
         btnTypesToInsert.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType]
             this.update.svg(btnType) // update icon
@@ -184,8 +190,7 @@ window.buttons = {
                     this.state.hasFadedIn = true // ...so disable fade-in on subsequent .insert()s till .remove()
             }
         })
-        setTimeout(() => chatbar.tweak(), 1) ; this.update.color()
-        this.state.status = 'inserted'
+        setTimeout(() => chatbar.tweak(), 1) ; this.update.color() ; this.state.status = 'inserted'
     },
 
     async remove() {
