@@ -5,7 +5,7 @@ window.buttons = {
 
     types: [ 'fullscreen', 'fullWindow', 'widescreen', 'newChat' ], // right-to-left
     get class() { return `${this.imports.app.slug}-btn` },
-    get opacity() { return this.imports.env.site == 'perplexity' ? 0.8 : 1 },
+    get opacity() { return this.imports.env.site == 'perplexity' ? 0.65 : 1 },
 
     state: {
         status: 'missing', // or 'inserting', 'inserted'
@@ -73,8 +73,7 @@ window.buttons = {
                     #widescreen-btn { margin-right: ${ site == 'perplexity' ? 9 : 19 }px }}`
                 : '' }
             ${ site == 'perplexity' ? // hide native tooltip that persists for being in same parent, max hover opacity
-                    `body:not(:has(button[role=radio]:hover)) ${selectors.tooltip} { display: none !important }
-                    .${this.class}:hover { opacity: 1 }`
+                    `body:not(:has(button[role=radio]:hover)) ${selectors.tooltip} { display: none !important }`
                 : '' }`
         ))
     },

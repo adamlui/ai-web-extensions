@@ -31,10 +31,11 @@ window.styles = {
             if (!this.node) document.head.append(this.node = dom.create.style())
             this.node.innerText = `
                 ${ site == 'chatgpt' ?
-                `[id$=-btn]:hover { opacity: 100% !important } /* prevent chatbar btn dim on hover */
-                    main { overflow: clip !important }` // prevent h-scrollbar...
-                        // ...on sync.mode('fullWindow) => delayed chatbar.tweak()
-                : site == 'perplexity' ? '[id$=-btn]:hover { background: none !important }' // prevent overlay
+                    `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
+                        overflow: clip !important }`
+                : site == 'perplexity' ?
+                    `.${buttons.class}:hover { /* prevent overlay, max opacity */
+                        background: none !important ; opacity: 1 !important }`
                 : '' }
                 ${ config.tcbDisabled ? '' // heighten chatbox
                     : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
@@ -47,7 +48,7 @@ window.styles = {
                         { display: none }` }
                 #newChat-btn { display: ${ config.ncbDisabled ? 'none' : 'flex' }}
                 ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
-                `.${buttons.class} { will-change: transform } /* prevent wobble */
+                   `.${buttons.class} { will-change: transform } /* prevent wobble */
                     .${buttons.class}:hover { transform: scale(${ site == 'poe' ? 1.15 : 1.285 }) }` }
                 ${ config.blockSpamDisabled ? ''
                     : `${styles.getAllSelectors(selectors.spam).join(',')} { display: none !important }
