@@ -1,11 +1,10 @@
-// Requires lib/<chatgpt|dom|styles>.js + components/<chatbar|tooltip>.js + app + env + sites + toggleMode
+// Requires components/<chatbar|tooltip>.js + lib/<chatgpt|dom|styles>.js + app + env + sites + toggleMode()
 
 window.buttons = {
-    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     types: [ 'fullscreen', 'fullWindow', 'widescreen', 'newChat' ], // right-to-left
-    get class() { return `${this.imports.app.slug}-btn` },
-    get opacity() { return { active: 1, inactive: this.imports.env.site == 'perplexity' ? 0.85 : 1 }},
+    get class() { return `${app.slug}-btn` },
+    get opacity() { return { active: 1, inactive: env.site == 'perplexity' ? 0.85 : 1 }},
 
     state: {
         status: 'missing', // or 'inserting', 'inserted'
@@ -57,7 +56,7 @@ window.buttons = {
     },
 
     stylize() {
-        const { env: { site }, sites: { [site]: { selectors }}} = this.imports
+        const { site } = env, { [site]: { selectors }} = sites
         document.head.append(this.styles = dom.create.style(`
             .${this.class} {
                 cursor: pointer ; position: relative ;
@@ -81,7 +80,7 @@ window.buttons = {
 
     async create() {
         if (!this.styles) this.stylize()
-        const { env: { site, ui: { hasTallChatbar }}, sites: { [site]: { selectors }}, toggleMode } = this.imports
+        const { site, ui: { hasTallChatbar }} = env, { [site]: { selectors }} = sites
         const hasDictateBtn = document.querySelector(/\(([^()]+)\)$/.exec(selectors.btns.dictate)?.[1])
                           && !document.querySelector(selectors.btns.login)
         const isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true')
@@ -139,7 +138,7 @@ window.buttons = {
 
     get: {
         async rightBtn() {
-            const { env: { site }, sites: { [site]: { selectors }}} = buttons.imports
+            const { [env.site]: { selectors }} = sites
             return await dom.get.loadedElem(
                 `${selectors.btns.send}, ${ selectors.btns.voice || selectors.btns.dictation }`)
         },
@@ -147,7 +146,7 @@ window.buttons = {
         types: {
             valid() { // used in buttons.<create|insert>()
                 return buttons.types.filter(type =>
-                    !(type == 'fullWindow' && !buttons.imports.sites[buttons.imports.env.site].hasSidebar)
+                    !(type == 'fullWindow' && !sites[env.site].hasSidebar)
                  && !(type == 'widescreen' && chatgpt.canvasIsOpen()))
             },
 
@@ -158,7 +157,7 @@ window.buttons = {
 
     async insert() {
         if (!config.btnsVisible || this.state.status == 'inserting' || this.fullscreen?.isConnected) return
-        const { site } = this.imports.env
+        const { site } = env
         this.state.status = 'inserting' ; if (!this.fullscreen) await this.create()
 
         // Init elems
@@ -209,7 +208,7 @@ window.buttons = {
 
     update: {
         async color() {
-            const { site, ui: { scheme }} = buttons.imports.env
+            const { site, ui: { scheme }} = env
             buttons.color = (
                 site == 'chatgpt' ? ( await chatbar.is.dark() || scheme == 'dark' ? 'white' : '#202123' )
               : site == 'perplexity' ? ( scheme == 'dark' ? 'white' : '#39545a' )
@@ -221,6 +220,7 @@ window.buttons = {
         },
 
         svg(mode, state = '') {
+            const { site } = env
             if (!buttons.widescreen) buttons.create()
 
             // Pick appropriate button/elements
@@ -237,7 +237,7 @@ window.buttons = {
             const btnSVG = btn?.querySelector('svg') || dom.create.svgElem('svg')
             if (mode == 'fullWindow') { // stylize full-window button
                 btnSVG.setAttribute('stroke-width', '2')
-                const btnSize = buttons.imports.env.site == 'chatgpt' ? 17 : 18
+                const btnSize = site == 'chatgpt' ? 17 : 18
                 btnSVG.setAttribute('height', btnSize) ; btnSVG.setAttribute('width', btnSize)
             }
             btnSVG.setAttribute('viewBox', (
@@ -245,8 +245,7 @@ window.buttons = {
             + ( mode == 'newChat' ? '13 13' : mode == 'fullWindow' ? '24 24' : '20 20' )
             )
             btnSVG.style.pointerEvents = 'none' // prevent triggering tooltips twice
-            btnSVG.style.height = btnSVG.style.width = ( // override button resizing
-                buttons.imports.env.site == 'chatgpt' ? '1.3rem' : '18px' )
+            btnSVG.style.height = btnSVG.style.width = site == 'chatgpt' ? '1.3rem' : '18px' // override button resizing
 
             // Update SVG elements
             btnSVG.textContent = ''

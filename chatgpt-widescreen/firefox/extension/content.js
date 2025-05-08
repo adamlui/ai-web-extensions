@@ -16,12 +16,12 @@
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
-    const env = {
+    window.env = {
         browser: { isFF: navigator.userAgent.includes('Firefox'), isMobile: chatgpt.browser.isMobile() },
         site: location.hostname.split('.').slice(-2, -1)[0], ui: {}
     }
     env.browser.isPortrait = env.browser.isMobile && (innerWidth < innerHeight)
-    ui.import({ site: env.site }) ; ui.getScheme().then(scheme => env.ui.scheme = scheme)
+    ui.getScheme().then(scheme => env.ui.scheme = scheme)
     if (env.site == 'chatgpt') // store native chatbar width for Wider Chatbox style
         chatbar.nativeWidth = dom.get.computedWidth(document.querySelector('main form'))
 
@@ -36,17 +36,8 @@
     })
 
     // Import DATA
-    const { app } = await chrome.storage.local.get('app'),
-          { sites } = await chrome.storage.local.get('sites')
-
-    // Export DEPENDENCIES to imported resources
-    chatbar.import({ site: env.site, sites }) // for conditional logic + sites.selectors
-    dom.import({ scheme: env.ui.scheme }) // for dom.addRisingParticles()
-    modals.import({ app, env }) // for app data + env['<browser|ui>'] flags
-    settings.import({ site: env.site, sites }) // to load/save active tab's settings + `${site}Disabled`
-    styles.import({ site: env.site, sites }) // for conditional logic + sites.selectors
-    tooltip.import({ app, env, sites }) // for tooltip class + .update() position logic
-    ui.import({ sites }) // for ui.isFullWin() sidebar selector/flag
+    ;({ app: window.app } = await chrome.storage.local.get('app'))
+    ;({ sites: window.sites } = await chrome.storage.local.get('sites'))
 
     // Init SETTINGS
     const firstRunKey = `${env.site}_isFirstRun`
@@ -90,7 +81,7 @@
         }
     }
 
-    async function toggleMode(mode, state = '') {
+    window.toggleMode = async (mode, state = '') => {
         switch (state.toUpperCase()) {
             case 'ON' : activateMode(mode) ; break
             case 'OFF' : deactivateMode(mode) ; break
@@ -143,7 +134,6 @@
     }
 
     env.ui.hasTallChatbar = await chatbar.is.tall()
-    buttons.import({ app, env, sites, toggleMode })
 
     const sync = {
 

@@ -5,15 +5,14 @@
         await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
-    const env = {
+    window.env = {
         site: new URL((await chrome.tabs.query({ active: true, currentWindow: true }))[0].url)
             .hostname.split('.').slice(-2, -1)[0], // extract 2nd-level domain
         browser: { displaysEnglish: chrome.i18n.getUILanguage().startsWith('en') }
     }
 
     // Import APP data
-    const { app } = await chrome.storage.local.get('app')
-    icons.import({ app }) // for src's using app.urls.assetHost
+    ;({ app: window.app } = await chrome.storage.local.get('app'))
 
     // Define FUNCTIONS
 

@@ -1,7 +1,6 @@
-// Requires components/chatbar.js + lib/dom.js + site: env.site + sites
+// Requires components/chatbar.js + lib/dom.js + env.site + sites
 
 window.styles = {
-    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     getAllSelectors(obj) { // used in this.tweaks.update() for spam selectors
         return Object.values(obj).flatMap(val => typeof val == 'object' ? this.getAllSelectors(val) : val) },
@@ -14,20 +13,20 @@ window.styles = {
                     `main form { max-width: ${chatbar.nativeWidth}px !important ; margin: auto }`,
                 poe: config.widerChatbox && config.widescreen &&
                     '[class^=ChatPageMainFooter_footerInner] { width: 98% ; margin-right: 15px }'
-            })[styles.imports.site]
+            })[env.site]
         }
     },
 
     fullWin: {
         update() {
-            const { site, sites: { [site]: { selectors }}} = styles.imports;
+            const { [env.site]: { selectors }} = sites;
             (this.node ||= dom.create.style()).innerText = selectors.sidebar + '{ display: none }'
         }
     },
 
     tweaks: {
         update() {
-            const { site, sites: { [site]: { selectors }}} = styles.imports
+            const { site } = env, { [site]: { selectors }} = sites;
             this.node ||= dom.create.style(`
                 ${ site == 'chatgpt' ?
                     `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
@@ -69,7 +68,7 @@ window.styles = {
                 poe: `
                     [class*=ChatMessagesView] { width: 100% !important } /* widen outer container */
                     [class^=Message] { max-width: 100% !important }` // widen speech bubbles
-            })[styles.imports.site]
+            })[env.site]
         }
     }
 };

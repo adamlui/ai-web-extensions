@@ -1,10 +1,8 @@
-// Requires lib/dom.js + site: env.site + sites
+// Requires lib/dom.js + env.site + sites
 
 window.ui = {
-    import(deps) { Object.assign(this.imports ||= {}, deps) },
-
     async getScheme() {
-        const site = this.imports.site,
+        const { site } = env,
               rootElem = await dom.get.loadedElem(`html${ site == 'perplexity' ? '[data-color-scheme]' : '' }`)
         return site == 'perplexity' ? rootElem.dataset.colorScheme
             : /\b(light|dark)\b/.exec(document.documentElement.className)?.[1]
@@ -12,7 +10,7 @@ window.ui = {
     },
 
     async isFullWin() {
-        const { site, sites } = this.imports
+        const { site } = env
         if (site == 'poe') return styles.fullWin.node.isConnected
         else if (site == 'perplexity') {
             await new Promise(requestAnimationFrame)

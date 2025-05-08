@@ -28,15 +28,11 @@
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
-    const env = { browser: { isMobile: chatgpt.browser.isMobile() }, ui: { scheme: ui.getScheme() }}
+    window.env = { browser: { isMobile: chatgpt.browser.isMobile() }, ui: { scheme: ui.getScheme() }}
     env.browser.isPortrait = env.browser.isMobile && (innerWidth < innerHeight)
 
     // Import APP data
-    const { app } = await chrome.storage.local.get('app')
-
-    // Export DEPENDENCIES to imported resources
-    dom.import({ scheme: env.ui.scheme }) // for dom.addRisingParticles()
-    modals.import({ app, env }) // for app data + env['<browser|ui>'] flags
+    ;({ app: window.app } = await chrome.storage.local.get('app'))
 
     // Init SETTINGS
     await settings.load('extensionDisabled', ...Object.keys(settings.controls)
@@ -52,7 +48,7 @@
 
     function getMsg(key) { return chrome.i18n.getMessage(key) }
 
-    function notify(msg, pos = '', notifDuration = '', shadow = '') {
+    window.notify = (msg, pos = '', notifDuration = '', shadow = '') => {
         if (config.notifDisabled && !msg.includes(getMsg('menuLabel_modeNotifs'))) return
 
         // Strip state word to append colored one later
@@ -83,7 +79,7 @@
         }
     }
 
-    async function syncConfigToUI(options) { // on toolbar popup toggles + ChatGPT tab activations
+    window.syncConfigToUI = async options => { // on toolbar popup toggles + ChatGPT tab activations
         await settings.load('extensionDisabled', ...Object.keys(settings.controls))
         toggles.sidebar.update.state() // from extension/IM/TV toggled or tab newly active
         if (options?.updatedKey == 'infinityMode') infinity[config.infinityMode ? 'activate' : 'deactivate']()
@@ -149,7 +145,6 @@
     // Run MAIN routine
 
     // Preload sidebar NAVICON variants
-    toggles.import({ app, env, notify, syncConfigToUI })
     toggles.sidebar.update.navicon({ preload: true })
 
     // Init BROWSER/UI props

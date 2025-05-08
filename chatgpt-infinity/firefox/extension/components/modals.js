@@ -1,10 +1,9 @@
 // Requires lib/chatgpt.js + lib/dom.js + app + env + updateCheck (Greasemonkey only)
 
 window.modals = {
-    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     stack: [], // of types of undismissed modals
-    get class() { return `${this.imports.app.slug}-modal` },
+    get class() { return `${app.slug}-modal` },
 
     get runtime() {
         if (typeof GM_info != 'undefined') return 'Greasemonkey userscript'
@@ -15,7 +14,7 @@ window.modals = {
     },
 
     about() {
-        const { app, env: { browser: { isPortrait }, ui: { scheme }}} = this.imports
+        const { browser: { isPortrait }, ui: { scheme }} = env
 
         // Init buttons
         const modalBtns = [
@@ -24,7 +23,7 @@ window.modals = {
             function moreAIextensions(){}
         ]
         if (this.runtime.includes('Greasemonkey')) // add Check for Updates
-            modalBtns.unshift(function checkForUpdates(){ modals.imports.updateCheck() })
+            modalBtns.unshift(function checkForUpdates(){ updateCheck() })
 
         // Show modal
         const labelStyles = 'text-transform: uppercase ; font-size: 17px ; font-weight: bold ;'
@@ -89,7 +88,7 @@ window.modals = {
     },
 
     donate() {
-        const { app, env: { ui: { scheme }}} = this.imports
+        const { ui: { scheme }} = env
 
         // Show modal
         const donateModal = modals.alert(
@@ -163,7 +162,7 @@ window.modals = {
 
             // Replace buttons w/ clones that don't dismiss modal
             btn.replaceWith(btn = btn.cloneNode(true))
-            btn.onclick = () => this.safeWinOpen(this.imports.app.urls.review[
+            btn.onclick = () => this.safeWinOpen(app.urls.review[
                 btn.textContent == 'Alternativeto' ? 'alternativeTo'
               : btn.textContent == 'Chrome Web Store' ? 'chrome'
               : btn.textContent == 'Edge Addons' ? 'edge'
@@ -178,7 +177,7 @@ window.modals = {
     getMsg(key) {
         return /Chromium|Firefox/.test(this.runtime) ?
             chrome.i18n.getMessage(key) // from ./_locales/*/messages.json
-                : this.imports.app.msgs[key] // from modals.import({ app }) in userscript
+                : app.msgs[key] // from userscript
     },
 
     init(modal) {
@@ -215,7 +214,7 @@ window.modals = {
     safeWinOpen(url) { open(url, '_blank', 'noopener') }, // to prevent backdoor vulnerabilities
 
     stylize() {
-        const { env: { browser: { isMobile }, ui: { scheme }}} = this.imports
+        const { browser: { isMobile }, ui: { scheme }} = env
         if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
         this.styles.innerText = (
             `.${this.class} {` // modals
@@ -264,18 +263,17 @@ window.modals = {
             // Show modal
             const updateAvailModal = modals.alert(`🚀 ${modals.getMsg('alert_updateAvail')}!`, // title
                 `${modals.getMsg('alert_newerVer')} ${modals.getMsg('appName')} ` // msg
-                    + `(v${modals.imports.app.latestVer}) ${modals.getMsg('alert_isAvail')}!  `
+                    + `(v${app.latestVer}) ${modals.getMsg('alert_isAvail')}!  `
                     + '<a target="_blank" rel="noopener" style="font-size: 0.7rem" href="'
-                        + `${modals.imports.app.urls.gitHub}/commits/main/greasemonkey/${
-                             modals.imports.app.slug}.user.js`
+                        + `${app.urls.gitHub}/commits/main/greasemonkey/${app.slug}.user.js`
                     + `">${modals.getMsg('link_viewChanges')}</a>`,
                 function update() { // button
-                    modals.safeWinOpen(`${modals.imports.app.urls.update.gm}?t=${Date.now()}`)
+                    modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
                 }, '', modals.update.width
             )
 
             // Localize button labels if needed
-            if (!modals.imports.env.browser.language.startsWith('en')) {
+            if (!env.browser.language.startsWith('en')) {
                 const updateBtns = updateAvailModal.querySelectorAll('button')
                 updateBtns[1].textContent = modals.getMsg('btnLabel_update')
                 updateBtns[0].textContent = modals.getMsg('btnLabel_dismiss')
@@ -286,7 +284,7 @@ window.modals = {
 
         unavailable() {
             return modals.alert(`${modals.getMsg('alert_upToDate')}!`, // title
-                `${modals.getMsg('appName')} (v${modals.imports.app.version}) ${ // msg
+                `${modals.getMsg('appName')} (v${app.version}) ${ // msg
                     modals.getMsg('alert_isUpToDate')}!`,
                 '', '', modals.update.width
             )

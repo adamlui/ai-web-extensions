@@ -24,15 +24,11 @@
         await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
-    const env = { browser: { isMobile: chatgpt.browser.isMobile() }, ui: { scheme: ui.getScheme() }}
+    window.env = { browser: { isMobile: chatgpt.browser.isMobile() }, ui: { scheme: ui.getScheme() }}
     env.browser.isPortrait = env.browser.isMobile && (innerWidth < innerHeight)
 
     // Import APP data
-    const { app } = await chrome.storage.local.get('app')
-
-    // Export DEPENDENCIES to imported resources
-    dom.import({ scheme: env.ui.scheme }) // for dom.addRisingParticles()
-    modals.import({ app, env }) // for app data + env['<browser|ui>'] flags
+    ;({ app: window.app } = await chrome.storage.local.get('app'))
 
     // Init SETTINGS
     await settings.load('extensionDisabled', ...Object.keys(settings.controls))

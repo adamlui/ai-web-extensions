@@ -1,12 +1,11 @@
-// Requires app (Greasemonkey only) + site: env.site + sites
+// Requires app (Greasemonkey only) + env.site + sites
 
 window.config = {}
 window.settings = {
-    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     get browserwideKeys() {
         return [ 'extensionDisabled', 'fullscreen',
-            ...Object.keys(this.imports.sites).map(site => `${site}Disabled`) ]
+            ...Object.keys(sites).map(site => `${site}Disabled`) ]
     },
 
     categories: {
@@ -96,7 +95,7 @@ window.settings = {
 
     getMsg(key) {
         this.msgKeys ??= new Map() // to cache keys for this.isEnabled() inversion logic
-        const msg = typeof GM_info != 'undefined' ? this.imports.app.msgs[key] : chrome.i18n.getMessage(key)
+        const msg = typeof GM_info != 'undefined' ? app.msgs[key] : chrome.i18n.getMessage(key)
         this.msgKeys.set(msg, key)
         return msg
     },
@@ -112,24 +111,24 @@ window.settings = {
         keys = keys.flat() // flatten array args nested by spread operator
         if (typeof GM_info != 'undefined') // synchronously load from userscript manager storage
             keys.forEach(key => config[key] = GM_getValue(
-                !this.browserwideKeys.includes(key) ? `${this.imports.app.configKeyPrefix}_${key}` : key,
+                !this.browserwideKeys.includes(key) ? `${app.configKeyPrefix}_${key}` : key,
                 this.controls[key]?.defaultVal ?? this.controls[key]?.type == 'toggle'
             ))
         else // asynchronously load from browser extension storage
             return Promise.all(keys.map(async key => { // resolve promise when all keys load
                 const result = await chrome.storage.local.get(
-                    !this.browserwideKeys.includes(key) ? `${this.imports.site}_${key}` : key )
-                config[key] = result[`${this.imports.site}_${key}`] ?? result[key]
+                    !this.browserwideKeys.includes(key) ? `${env.site}_${key}` : key )
+                config[key] = result[`${env.site}_${key}`] ?? result[key]
                     ?? this.controls[key]?.defaultVal ?? this.controls[key]?.type == 'toggle'
         }))
     },
 
     save(key, val) {
         if (typeof GM_info != 'undefined') // save to userscript manager storage
-            GM_setValue(!this.browserwideKeys.includes(key) ? `${this.imports.app.configKeyPrefix}_${key}` : key, val)
+            GM_setValue(!this.browserwideKeys.includes(key) ? `${app.configKeyPrefix}_${key}` : key, val)
         else // save to browser extension storage
             chrome.storage.local.set({
-                [ !this.browserwideKeys.includes(key) ? `${this.imports.site}_${key}` : key ] : val })
+                [ !this.browserwideKeys.includes(key) ? `${env.site}_${key}` : key ] : val })
         config[key] = val // save to memory
     }
 };

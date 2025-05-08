@@ -1,7 +1,6 @@
 // Requires lib/dom.js + app
 
 window.icons = {
-    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     create(name, { size = 16, width, height, ...additionalAttrs } = {}) {
         const iconData = icons[name],
@@ -28,6 +27,6 @@ window.icons = {
 
     questionMark: {
         type: 'png',
-        get src() { return `${icons.imports.app.urls.assetHost}/images/icons/question-mark/icon16.png` }
+        get src() { return `${app.urls.assetHost}/images/icons/question-mark/icon16.png` }
     }
 };

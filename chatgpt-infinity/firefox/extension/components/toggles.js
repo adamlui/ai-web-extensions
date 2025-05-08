@@ -1,20 +1,18 @@
 // Requires lib/chatgpt.js + app + env + notify + syncConfigToUI
 
 window.toggles = {
-    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     getMsg(key) {
         return typeof GM_info != 'undefined' ?
-            this.imports.app.msgs[key] // from toggles.import({ app }) in userscript
+            app.msgs[key] // from userscript
                 : chrome.i18n.getMessage(key) // from ./_locales/*/messages.json
     },
 
     sidebar: {
-        get class() { return `${toggles.imports.app.slug}-sidebar-toggle` },
+        get class() { return `${app.slug}-sidebar-toggle` },
 
         create() {
-            const { notify, syncConfigToUI } = toggles.imports,
-                  firstLink = chatgpt.getNewChatLink()
+            const firstLink = chatgpt.getNewChatLink()
 
             // Init toggle elems
             this.div = document.createElement('div') ; this.div.className = this.class
@@ -60,8 +58,7 @@ window.toggles = {
         },
 
         stylize() {
-            const { env: { browser: { isMobile }}} = toggles.imports,
-                  firstLink = chatgpt.getNewChatLink()
+            const firstLink = chatgpt.getNewChatLink()
             document.head.append(this.styles = dom.create.style(
                 `:root { /* vars */
                     --switch-enabled-bg-color: #ad68ff ; --switch-disabled-bg-color: #ccc ;
@@ -82,7 +79,8 @@ window.toggles = {
                 .${this.class} > span { /* switch span */
                     position: relative ; width: 30px ; height: 15px ; border-radius: 28px ;
                     background-color: var(--switch-disabled-bg-color) ;
-                    bottom: ${ firstLink ? '0.5px' : '-0.15em' } ; left: ${ isMobile || firstLink ? 169 : 160 }px ;
+                    bottom: ${ firstLink ? '0.5px' : '-0.15em' } ;
+                    left: ${ env.browser.isMobile || firstLink ? 169 : 160 }px ;
                     transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
                         -o-transition: 0.4s ; -ms-transition: 0.4s }
                 .${this.class} > span.enabled { /* switch on */
@@ -131,18 +129,18 @@ window.toggles = {
         update: {
 
             navicon({ preload = false } = {}) {
-                const baseURL = `${toggles.imports.app.urls.assetHost}/images/icons/infinity-symbol`,
+                const baseURL = `${app.urls.assetHost}/images/icons/infinity-symbol`,
                       schemeMap = { light: 'black', dark: 'white' },
                       fileName = 'icon32.png'
                 if (preload)
                     Object.keys(schemeMap).forEach(scheme =>
                         new Image().src = `${baseURL}/${schemeMap[scheme]}/${fileName}`)
-                else toggles.sidebar.navicon.src = `${baseURL}/${schemeMap[toggles.imports.env.ui.scheme]}/${fileName}`
+                else toggles.sidebar.navicon.src = `${baseURL}/${schemeMap[env.ui.scheme]}/${fileName}`
             },
 
             scheme() { // to match UI scheme
                 toggles.sidebar.div.classList.remove('dark', 'light')
-                toggles.sidebar.div.classList.add(toggles.imports.env.ui.scheme)
+                toggles.sidebar.div.classList.add(env.ui.scheme)
                 toggles.sidebar.update.navicon()
             },
 

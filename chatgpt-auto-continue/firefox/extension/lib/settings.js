@@ -2,7 +2,6 @@
 
 window.config = {}
 window.settings = {
-    import(deps) { Object.assign(this.imports ||= {}, deps) },
 
     controls: { // displays top-to-bottom in toolbar menu
         get autoScroll() { return { type: 'toggle', defaultVal: false,
@@ -17,7 +16,7 @@ window.settings = {
 
     getMsg(key) {
         this.msgKeys ??= new Map() // to cache keys for this.isEnabled() inversion logic
-        const msg = typeof GM_info != 'undefined' ? this.imports.app.msgs[key] : chrome.i18n.getMessage(key)
+        const msg = typeof GM_info != 'undefined' ? app.msgs[key] : chrome.i18n.getMessage(key)
         this.msgKeys.set(msg, key)
         return msg
     },
@@ -33,7 +32,7 @@ window.settings = {
         keys = keys.flat() // flatten array args nested by spread operator
         if (typeof GM_info != 'undefined') // synchronously load from userscript manager storage
             keys.forEach(key => config[key] = GM_getValue(
-                `${this.imports.app.configKeyPrefix}_${key}`,
+                `${app.configKeyPrefix}_${key}`,
                 this.controls[key]?.defaultVal ?? this.controls[key]?.type == 'toggle')
             )
         else // asynchronously load from browser extension storage
@@ -45,7 +44,7 @@ window.settings = {
 
     save(key, val) {
         if (typeof GM_info != 'undefined') // save to userscript manager storage
-            GM_setValue(`${this.imports.app.configKeyPrefix}_${key}`, val)
+            GM_setValue(`${app.configKeyPrefix}_${key}`, val)
         else // save to browser extension storage
             chrome.storage.local.set({ [key]: val })
         config[key] = val // save to memory

@@ -5,7 +5,7 @@
         await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
-    const env = {
+    window.env = {
         site: new URL((await chrome.tabs.query({ active: true, currentWindow: true }))[0].url)
             .hostname.split('.').slice(-2, -1)[0], // extract 2nd-level domain
         browser: {
@@ -15,13 +15,9 @@
     }
 
     // Import DATA
-    const { app } = await chrome.storage.local.get('app'),
-          { sites } = await chrome.storage.local.get('sites')
+    ;({ app: window.app } = await chrome.storage.local.get('app'))
+    ;({ sites: window.sites } = await chrome.storage.local.get('sites'))
     app.name = env.browser.displaysEnglish ? app.name : getMsg('appName') // for shorter notifs
-
-    // Export DEPENDENCIES to imported resources
-    icons.import({ app }) // for src's using app.urls.assetHost
-    settings.import({ site: env.site, sites }) // to load/save active tab's settings + `${site}Disabled`
 
     // Define FUNCTIONS
 
