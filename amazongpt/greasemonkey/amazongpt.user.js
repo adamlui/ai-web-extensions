@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.7.2
+// @version                2025.5.7.3
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -137,7 +137,7 @@
     // Init APP data
     const app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '63aa021' // for cached app.json + messages.json
+        latestResourceCommitHash: '63aa021' // for cached <app|messages>.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
