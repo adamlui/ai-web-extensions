@@ -67,6 +67,7 @@ window.buttons = {
                 ${ site != 'poe' ? // remove overlay
                     'background-color: transparent ; border-color: transparent ;' : '' }
             }
+            .${this.class}:hover { opacity: ${buttons.opacity.active} !important }
             ${ selectors.sidebar ? // hide FW btn when window skinny on sites where sync req'd
                 `@media (max-width: 768px) {
                     #fullWindow-btn { display: none }

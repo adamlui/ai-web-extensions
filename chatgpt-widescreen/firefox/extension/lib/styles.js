@@ -45,9 +45,8 @@ window.styles = {
                 ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
                    `.${buttons.class} { will-change: transform } /* prevent wobble */
                     .${buttons.class}:hover { transform: scale(${ site == 'poe' ? 1.15 : 1.285 }) }` }
-                ${ site == 'perplexity' ?
-                    `.${buttons.class} { background: none !important } /* prevent overlay */
-                     .${buttons.class}:hover { opacity: ${buttons.opacity.active} !important }` : '' }
+                ${ site == 'perplexity' ? // prevent overlay
+                    `.${buttons.class} { background: none !important }` : '' }
                 ${ config.blockSpamDisabled ? ''
                     : `${styles.getAllSelectors(selectors.spam).join(',')} { display: none !important }
                         body { pointer-events: unset !important }` /* free click lock from blocking modals */ }`
