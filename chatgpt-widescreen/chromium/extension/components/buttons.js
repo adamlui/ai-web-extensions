@@ -194,10 +194,6 @@ window.buttons = {
         })
         setTimeout(() => chatbar.tweak(), 1) ; this.update.color()
 
-        // Reset Poe New Chat button top-offset
-        if (site == 'poe' && this.state.insertedBefore && this.newChat.style.top != '3px')
-            this.newChat.style.top = '3px'
-
         this.state.status = 'inserted' ; this.state.insertedBefore ||= true
     },
 
