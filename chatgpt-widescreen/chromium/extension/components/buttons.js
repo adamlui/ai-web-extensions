@@ -180,10 +180,10 @@ window.buttons = {
         }
 
         // Insert buttons
-        const elemToInsertBefore = (
-            site == 'poe' ? parentToInsertInto.firstChild // Mic btn
-          : parentToInsertInto.lastChild // right btn
-        )
+        const elemToInsertBefore = parentToInsertInto[
+            site == 'poe' ? 'firstChild' // Mic btn
+          : 'lastChild' // right btn
+        ]
         btnTypesToInsert.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType]
             this.update.svg(btnType) // update icon
