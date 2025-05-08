@@ -52,11 +52,12 @@ window.chatbar = {
                 inputArea.style.width = '100%' // rid h-scrollbar
             }
         } else if (site == 'poe') { // replace Attach File btn icon + move Mic btn closer to Send
-            const btnLoadTimeout = 5000
+            const btnLoadTimeout = 5000 // ms
             dom.get.loadedElem(selectors.btns.attachFile, { timeout: btnLoadTimeout }).then(btn => {
                 if (!btn) return
-                buttons.poe = buttons.poe || { attachFile: { icon: btn.querySelector('svg') }} // cache for this.reset()
-                btn.querySelector('svg').replaceWith(icons.create('paperclip', {
+                const plusIcon = btn.querySelector('svg')
+                buttons.poe ||= { attachFile: { icon: plusIcon }} // cache for this.reset()
+                plusIcon?.replaceWith(icons.create('paperclip', {
                     style: 'height: 15px !important ; width: 15px !important' }))
             })
             dom.get.loadedElem(selectors.btns.mic, { timeout: btnLoadTimeout })
