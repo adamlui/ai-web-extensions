@@ -5,7 +5,7 @@ window.buttons = {
 
     types: [ 'fullscreen', 'fullWindow', 'widescreen', 'newChat' ], // right-to-left
     get class() { return `${this.imports.app.slug}-btn` },
-    get opacity() { return this.imports.env.site == 'perplexity' ? 0.65 : 1 },
+    get opacity() { return this.imports.env.site == 'perplexity' ? 0.85 : 1 },
 
     state: {
         status: 'missing', // or 'inserting', 'inserted'
@@ -213,8 +213,7 @@ window.buttons = {
             const { site, ui: { scheme }} = buttons.imports.env
             buttons.color = (
                 site == 'chatgpt' ? ( await chatbar.is.dark() || scheme == 'dark' ? 'white' : '#202123' )
-              : site == 'perplexity' ?
-                    `oklch(var(--${ scheme == 'dark' ? 'dark' : '' }text-color-100)/var(--tw-text-opacity))`
+              : site == 'perplexity' ? ( scheme == 'dark' ? 'white' : '#39545a' )
               : 'currentColor'
             )
             if (buttons.widescreen?.style.fill != buttons.color)

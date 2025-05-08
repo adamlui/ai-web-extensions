@@ -28,14 +28,13 @@ window.styles = {
     tweaks: {
         update() {
             const { site, sites: { [site]: { selectors }}} = styles.imports
-            if (!this.node) document.head.append(this.node = dom.create.style())
-            this.node.innerText = `
+            this.node ||= dom.create.style(`
                 ${ site == 'chatgpt' ?
                     `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
                         overflow: clip !important }`
                 : site == 'perplexity' ?
-                    `.${buttons.class}:hover { /* prevent overlay, max opacity */
-                        background: none !important ; opacity: 1 !important }`
+                   `.${buttons.class} { background: none !important } /* prevent overlay */
+                    .${buttons.class}:hover { opacity: 1 !important }`
                 : '' }
                 ${ config.tcbDisabled ? '' // heighten chatbox
                     : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
@@ -53,6 +52,8 @@ window.styles = {
                 ${ config.blockSpamDisabled ? ''
                     : `${styles.getAllSelectors(selectors.spam).join(',')} { display: none !important }
                         body { pointer-events: unset !important }` /* free click lock from blocking modals */ }`
+            )
+            if (!this.node.isConnected) document.head.append(this.node)
         }
     },
 
