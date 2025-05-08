@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.7.7
+// @version             2025.5.8
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -257,15 +257,15 @@
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.0/dist/chatgpt.min.js#sha256-Xg6XXZ7kcc/MTdlKwUq1rc41WiEwuqhl7DxIjIkzRhc=
 // @require             https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@b682199/chromium/extension/lib/chatbar.js#sha256-HXe75oUB7ns4CZvrwTXpjbv2YD9qzxdkQ9JFPGlhMvc=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@18e7761/chromium/extension/lib/dom.js#sha256-rP6JUMICp0FsCFfrNN76ywu64oxM8vfbkI7pB0nQ/iM=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f5d7836/chromium/extension/lib/settings.js#sha256-dCeRO2Su7atg+DzVFKLt+kc+MM2kzb1pC3dSilmnp1k=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@b682199/chromium/extension/lib/styles.js#sha256-9nRJMAW3NMgyz0Y8HESn7y+6atJ+a0Fq5tiqmws/row=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@455c4f4/chromium/extension/lib/ui.js#sha256-rzAeaLiz0XTgJ3nYypW87DWB2vq7FZ8OlzjBYJulu6o=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@b682199/chromium/extension/components/buttons.js#sha256-rCXzsEC/JZrCBadyDMCBVFiRCvCJsT1UvTiYsmeD0AM=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@428d766/chromium/extension/components/icons.js#sha256-w3zANZpb+eBEyTdFehaYG5va5HfdPCbbHPED50hnbRg=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@428d766/chromium/extension/components/modals.js#sha256-FyXQwy7yk5XgI8tAYQrq4rVBzMgB+5W2ktYtULiahfI=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@95eb223/chromium/extension/components/tooltip.js#sha256-NMrj2+Er7By2iFS3UqdWxuKdoXa1s2YciQZxm4RlUxY=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/chatbar.js#sha256-u5yVcYiKiFVBDdi4JfI/DF/hG3K2pRbTjBfdREDiLgE=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/dom.js#sha256-x/I3nd7u8wB8t0QwFG/xVMVqJ1uT+aHSXxe+By4Tr8E=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/settings.js#sha256-HPmy19ZsTSIz256qBkNi1irHMiF/2SAwm7wu9B759Ic=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/styles.js#sha256-hFf/SEVllh99zOvsSlsT/IJGaraiF4VbP7iFz1IB95s=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/ui.js#sha256-9ZQ8DyJvJ5YSuOGhmdqofNMT/QJGs5uhej0DmvH0g/k=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/components/buttons.js#sha256-Doo/zGzgP7mGoclOAlfx17FtSuuFfJ31BHh4Dfvy8Vk=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/components/icons.js#sha256-lkP9UmXwHCXpd69MNqzY6tj6PfFMAQ7s8BfR/+sCtrw=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/components/modals.js#sha256-g4qF+5jM8+VTZnnO9mNe3nTY730NkyM6HYxXyuqFvas=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/components/tooltip.js#sha256-CQcqBCEVRBJQtCdFU8f3FoDXo8321RZ7s+QN+whIeh8=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant               GM_setValue
@@ -297,7 +297,7 @@
     }
 
     // Init ENV context
-    const env = {
+    window.env = {
         browser: {
             language: chatgpt.getUserLanguage(), isFF: chatgpt.browser.isFirefox(), isMobile: chatgpt.browser.isMobile()
         },
@@ -310,13 +310,13 @@
     env.browser.isPortrait = env.browser.isMobile && (innerWidth < innerHeight)
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
                                       && parseInt(env.scriptManager.version.split('.')[0]) >= 5
-    ui.import({ site: env.site }) ; ui.getScheme().then(scheme => env.ui.scheme = scheme)
+    ui.getScheme().then(scheme => env.ui.scheme = scheme)
     if (env.site == 'chatgpt') // store native chatbar width for Wider Chatbox style
         chatbar.nativeWidth = dom.get.computedWidth(document.querySelector('main form'))
     const xhr = typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
 
     // Init APP data
-    const app = {
+    window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
         latestResourceCommitHash: 'd56177b' // for cached <app|messages>.json + sites.json5
@@ -434,19 +434,10 @@
     }
 
     // Init SITE profiles
-    const sites = Object.assign(Object.create(null), await new Promise(resolve => xhr({
+    window.sites = Object.assign(Object.create(null), await new Promise(resolve => xhr({
         method: 'GET', url: `${app.urls.resourceHost}/assets/data/sites.json5`,
         onload: resp => resolve(JSON5.parse(resp.responseText))
     })))
-
-    // Export DEPENDENCIES to imported resources
-    chatbar.import({ site: env.site, sites }) // for conditional logic + sites.selectors
-    dom.import({ scheme: env.ui.scheme }) // for dom.addRisingParticles()
-    modals.import({ app, env, updateCheck }) // for app data + env['<browser|ui>'] flags + modals.about() update btn
-    settings.import({ app, site: env.site, sites }) // for app.configKeyPrefix + to load/save `${site}Disabled`
-    styles.import({ site: env.site, sites }) // for conditional logic + sites.selectors
-    tooltip.import({ app, env, sites }) // for tooltip class + .update() i18n + position logic
-    ui.import({ sites }) // for ui.isFullWin() sidebar selector/flag
 
     // Init SETTINGS
     if (GM_getValue(`${app.configKeyPrefix}_isFirstRun`) == undefined) { // activate widescreen on install
@@ -608,26 +599,24 @@
         }
     }
 
-    function updateCheck() {
-        xhr({
-            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
-            headers: { 'Cache-Control': 'no-cache' },
-            onload: resp => {
+    window.updateCheck = () => xhr({
+        method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
+        headers: { 'Cache-Control': 'no-cache' },
+        onload: resp => {
 
-                // Compare versions, alert if update found
-                app.latestVer = /@version +(.*)/.exec(resp.responseText)?.[1]
-                if (app.latestVer) for (let i = 0 ; i < 4 ; i++) { // loop thru subver's
-                    const currentSubVer = parseInt(app.version.split('.')[i], 10) || 0,
-                          latestSubVer = parseInt(app.latestVer.split('.')[i], 10) || 0
-                    if (currentSubVer > latestSubVer) break // out of comparison since not outdated
-                    else if (latestSubVer > currentSubVer) // if outdated
-                        return modals.open('update', 'available')
-                }
+            // Compare versions, alert if update found
+            app.latestVer = /@version +(.*)/.exec(resp.responseText)?.[1]
+            if (app.latestVer) for (let i = 0 ; i < 4 ; i++) { // loop thru subver's
+                const currentSubVer = parseInt(app.version.split('.')[i], 10) || 0,
+                        latestSubVer = parseInt(app.latestVer.split('.')[i], 10) || 0
+                if (currentSubVer > latestSubVer) break // out of comparison since not outdated
+                else if (latestSubVer > currentSubVer) // if outdated
+                    return modals.open('update', 'available')
+            }
 
-                // Alert to no update found, nav back to About
-                modals.open('update', 'unavailable')
-        }})
-    }
+            // Alert to no update found, nav back to About
+            modals.open('update', 'unavailable')
+    }})
 
     function toTitleCase(str) {
         if (!str) return ''
@@ -671,7 +660,7 @@
 
     // Define UI functions
 
-    async function toggleMode(mode, state = '') {
+    window.toggleMode = async (mode, state = '') => {
         switch (state.toUpperCase()) {
             case 'ON' : activateMode(mode) ; break
             case 'OFF' : deactivateMode(mode) ; break
@@ -724,7 +713,6 @@
     }
 
     env.ui.hasTallChatbar = await chatbar.is.tall()
-    buttons.import({ app, env, sites, toggleMode })
 
     const sync = {
 

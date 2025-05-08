@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.7
+// @version             2025.5.8
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -220,10 +220,10 @@
 // @connect             gm.chatgptinfinity.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.0/dist/chatgpt.min.js#sha256-Xg6XXZ7kcc/MTdlKwUq1rc41WiEwuqhl7DxIjIkzRhc=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@11b40c3/chromium/extension/components/modals.js#sha256-MPZK5PlZQhCIgSRwiKrfq8v0vklmSm6rwlyrqs2YX80=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@ba8976b/chromium/extension/components/toggles.js#sha256-GG+5LBC31qKwqjqfOKloujfAh+gO8Ket9hmCO+6TA4M=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8156513/chromium/extension/lib/dom.js#sha256-9j5yyofJkGS2kECx8q4KalwRZdz4yaZClS0xAe2YhvY=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8156513/chromium/extension/lib/settings.js#sha256-EO1vtcY71CGtGZeiSMXxzXJ+U+hoYVnbdCs8ZPvQVuo=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3a39a39/chromium/extension/components/modals.js#sha256-yMOfK84w4L1KoTSHnNyLcVw4WY85D/QhdY6qHWG2tr8=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3a39a39/chromium/extension/components/toggles.js#sha256-9iEnQe3q+Xr0EirfjKZWxgkEPKSBcYDknP4guB99Qqg=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3a39a39/chromium/extension/lib/dom.js#sha256-2oisZjtBjYCUrGSPdABjeC1y0KgN2ZHfRC19zNazOL4=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3a39a39/chromium/extension/lib/settings.js#sha256-5H7cm0js+LPaFJPxWDl5iLS36eQkTuMo9fH7Gn7rAtg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8156513/chromium/extension/lib/ui.js#sha256-2yuQbliwz+uaCxUIEeTMWIH5JADHgjDBZD4/8I2T8rE=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
@@ -256,7 +256,7 @@
     }
 
     // Init ENV context
-    const env = {
+    window.env = {
         browser: {
             language: chatgpt.getUserLanguage(), isFF: chatgpt.browser.isFirefox(), isMobile: chatgpt.browser.isMobile()
         },
@@ -272,7 +272,7 @@
     const xhr = typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
 
     // Init APP data
-    const app = {
+    window.app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
         latestResourceCommitHash: '6cf8038' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
     }
@@ -376,11 +376,6 @@
         })
         Object.assign(app.msgs, localizedMsgs)
     }
-
-    // Export DEPENDENCIES to imported resources
-    dom.import({ scheme: env.ui.scheme }) // for dom.addRisingParticles()
-    modals.import({ app, env, updateCheck }) // for app data + env['<browser|ui>'] flags + modals.about() update btn
-    settings.import({ app }) // for app.configKeyPrefix
 
     // Init SETTINGS
     settings.load(Object.keys(settings.controls).filter(key => key != 'infinityMode')) // exclude infinityMode...
@@ -488,26 +483,24 @@
         }
     }
 
-    function updateCheck() {
-        xhr({
-            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
-            headers: { 'Cache-Control': 'no-cache' },
-            onload: resp => {
+    window.updateCheck = () => xhr({
+        method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
+        headers: { 'Cache-Control': 'no-cache' },
+        onload: resp => {
 
-                // Compare versions, alert if update found
-                app.latestVer = /@version +(.*)/.exec(resp.responseText)?.[1]
-                if (app.latestVer) for (let i = 0 ; i < 4 ; i++) { // loop thru subver's
-                    const currentSubVer = parseInt(app.version.split('.')[i], 10) || 0,
-                          latestSubVer = parseInt(app.latestVer.split('.')[i], 10) || 0
-                    if (currentSubVer > latestSubVer) break // out of comparison since not outdated
-                    else if (latestSubVer > currentSubVer) // if outdated
-                        return modals.open('update', 'available')
-                }
+            // Compare versions, alert if update found
+            app.latestVer = /@version +(.*)/.exec(resp.responseText)?.[1]
+            if (app.latestVer) for (let i = 0 ; i < 4 ; i++) { // loop thru subver's
+                const currentSubVer = parseInt(app.version.split('.')[i], 10) || 0,
+                        latestSubVer = parseInt(app.latestVer.split('.')[i], 10) || 0
+                if (currentSubVer > latestSubVer) break // out of comparison since not outdated
+                else if (latestSubVer > currentSubVer) // if outdated
+                    return modals.open('update', 'available')
+            }
 
-                // Alert to no update found, nav back to About
-                modals.open('update', 'unavailable')
-        }})
-    }
+            // Alert to no update found, nav back to About
+            modals.open('update', 'unavailable')
+    }})
 
     function toTitleCase(str) {
         if (!str) return ''
@@ -519,7 +512,7 @@
 
     // Define FEEDBACK functions
 
-    function notify(msg, pos = '', notifDuration = '', shadow = '') {
+    window.notify = (msg, pos = '', notifDuration = '', shadow = '') => {
 
         // Strip state word to append colored one later
         const foundState = toolbarMenu.state.words.find(word => msg.includes(word))
@@ -558,7 +551,7 @@
         })
     }
 
-    function syncConfigToUI(options) {
+    window.syncConfigToUI = options => {
         if (options?.updatedKey == 'infinityMode') infinity[config.infinityMode ? 'activate' : 'deactivate']()
         else if (settings.controls[options?.updatedKey].type == 'prompt' && config.infinityMode)
             infinity.restart({ target: options?.updatedKey == 'replyInterval' ? 'self' : 'new' })
@@ -616,7 +609,6 @@
     // Run MAIN routine
 
     // Preload sidebar NAVICON variants
-    toggles.import({ app, env, notify, syncConfigToUI })
     toggles.sidebar.update.navicon({ preload: true })
 
     // Init EXTENSION ACTIVE state

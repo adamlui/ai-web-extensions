@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.7.5
+// @version                  2025.5.8
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -389,7 +389,7 @@
 // @require                  https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require                  https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@37e0d7d/assets/lib/crypto-utils.js/dist/crypto-utils.min.js#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
-// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@20cf5cb/assets/lib/dom.js/dist/dom.min.js#sha256-WSJefD1UHMYD5nKTtRsws4aVKluCwNA9mGEDS0EVsvU=
+// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9944142/assets/lib/dom.js/dist/dom.min.js#sha256-l6sk1LFd2/ARQJaQBp9exGIryp2HSWsfS069SqmvGHg=
 // @require                  https://cdn.jsdelivr.net/npm/generate-ip@2.4.4/dist/generate-ip.min.js#sha256-aQQKAQcMgCu8IpJp9HKs387x0uYxngO+Fb4pc5nSF4I=
 // @require                  https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js#sha256-g3pvpbDHNrUrveKythkPMF2j/J7UFoHbUyFQcFe1yEY=
 // @require                  https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js#sha256-n0UwfFeU7SR6DQlfOmLlLvIhWmeyMnIDp/2RmVmuedE=
@@ -431,7 +431,7 @@
 (async () => {
 
     // Init ENV context
-    const env = {
+    window.env = {
         browser: { language: chatgpt.getUserLanguage() },
         scriptManager: {
             name: (() => { try { return GM_info.scriptHandler } catch (err) { return 'unknown' }})(),
@@ -611,7 +611,7 @@
     }))
 
     // Init DEBUG mode
-    const config = {}
+    window.config = {}
     const settings = {
         load(...keys) {
             keys.flat().forEach(key => {
@@ -812,9 +812,6 @@
         suggestDiffAPI:   `${app.msgs.alert_try} ${app.msgs.alert_selectingDiff} API`,
         suggestOpenAI:    `${app.msgs.alert_try} ${app.msgs.alert_switchingOff} ${app.msgs.mode_proxy}`
     }})
-
-    // Export DEPENDENCIES to dom.js
-    dom.import({ config, env }) // for config.bgAnimationsDisabled + env.ui.app.scheme in addRisingParticles()
 
     // Define MENU functions
 

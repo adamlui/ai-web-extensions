@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.7
+// @version             2025.5.8
 // @license             MIT
 // @icon                https://assets.autoclearchatgpt.com/images/icons/openai/black/icon48.png?v=f461c06
 // @icon64              https://assets.autoclearchatgpt.com/images/icons/openai/black/icon64.png?v=f461c06
@@ -244,7 +244,7 @@
 // @connect             gm.autoclearchatgpt.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.0/dist/chatgpt.min.js#sha256-Xg6XXZ7kcc/MTdlKwUq1rc41WiEwuqhl7DxIjIkzRhc=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@20cf5cb/assets/lib/dom.js/dist/dom.min.js#sha256-WSJefD1UHMYD5nKTtRsws4aVKluCwNA9mGEDS0EVsvU=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9944142/assets/lib/dom.js/dist/dom.min.js#sha256-l6sk1LFd2/ARQJaQBp9exGIryp2HSWsfS069SqmvGHg=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant               GM_setValue
@@ -276,7 +276,7 @@
     }
 
     // Init ENV context
-    const env = {
+    window.env = {
         browser: { language: chatgpt.getUserLanguage(), isMobile: chatgpt.browser.isMobile() },
         scriptManager: {
             name: (() => { try { return GM_info.scriptHandler } catch (err) { return 'unknown' }})(),
@@ -380,11 +380,8 @@
         Object.assign(app.msgs, localizedMsgs)
     }
 
-    // Export DEPENDENCIES to imported resources
-    dom.import({ env }) // for dom.addRisingParticles()
-
     // Init SETTINGS
-    const config = {}
+    window.config = {}
     const settings = {
 
         controls: { // displays top-to-bottom in toolbar menu
