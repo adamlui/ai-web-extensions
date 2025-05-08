@@ -48,34 +48,12 @@ window.buttons = {
             .exec(styles.tweaks.node.innerText)?.[1].trim()
         this.types.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType] ; if (!btn) return
+            const staggerInt = 75 // ms
             setTimeout(() => { // apply/remove fx
                 btn.style.cssText += btnHoverStyles
                 setTimeout(() => btn.style.cssText = btn.style.cssText.replace(btnHoverStyles, ''), 150)
-            }, idx *75) // ...staggered @ 75ms interval
+            }, idx * staggerInt)
         })
-    },
-
-    stylize() {
-        const { site } = env, { [site]: { selectors }} = sites
-        document.head.append(this.styles = dom.create.style(`
-            .${this.class} {
-                cursor: pointer ; position: relative ;
-                --transition: transform 0.15s ease, opacity 0.5s ease ; /* for tweaksStyle's :hover + .insert()'s fade-in */
-                    -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
-                    -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
-                ${ site != 'poe' ? // remove overlay
-                    'background-color: transparent ; border-color: transparent ;' : '' }
-            }
-            .${this.class}:hover { opacity: ${this.opacity.active} !important }
-            ${ selectors.sidebar ? // hide FW btn when window skinny on sites where sync req'd
-                `@media (max-width: 768px) {
-                    #fullWindow-btn { display: none }
-                    #widescreen-btn { margin-right: ${ site == 'perplexity' ? 9 : 19 }px }}`
-                : '' }
-            ${ site == 'perplexity' ? // hide native tooltip that persists for being in same parent, max hover opacity
-                    `body:not(:has(button[role=radio]:hover)) ${selectors.tooltip} { display: none !important }`
-                : '' }`
-        ))
     },
 
     async create() {
@@ -204,6 +182,29 @@ window.buttons = {
         ['btnsDiv', ...this.types].forEach(type => this[type]?.remove()) ; tooltip.div?.remove()
         this.state.status = 'missing' // ensure next .insert() doesn't return early
         this.state.hasFadedIn = false // ensure next .insert() fades in buttons
+    },
+
+    stylize() {
+        const { site } = env, { [site]: { selectors }} = sites
+        document.head.append(this.styles = dom.create.style(`
+            .${this.class} {
+                cursor: pointer ; position: relative ;
+                --transition: transform 0.15s ease, opacity 0.5s ease ; /* for tweaksStyle's :hover + .insert()'s fade-in */
+                    -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
+                    -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
+                ${ site != 'poe' ? // remove overlay
+                    'background-color: transparent ; border-color: transparent ;' : '' }
+            }
+            .${this.class}:hover { opacity: ${this.opacity.active} !important }
+            ${ selectors.sidebar ? // hide FW btn when window skinny on sites where sync req'd
+                `@media (max-width: 768px) {
+                    #fullWindow-btn { display: none }
+                    #widescreen-btn { margin-right: ${ site == 'perplexity' ? 9 : 19 }px }}`
+                : '' }
+            ${ site == 'perplexity' ? // hide native tooltip that persists for being in same parent, max hover opacity
+                    `body:not(:has(button[role=radio]:hover)) ${selectors.tooltip} { display: none !important }`
+                : '' }`
+        ))
     },
 
     update: {
