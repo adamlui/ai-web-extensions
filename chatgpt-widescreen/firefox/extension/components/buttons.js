@@ -5,6 +5,7 @@ window.buttons = {
 
     types: [ 'fullscreen', 'fullWindow', 'widescreen', 'newChat' ], // right-to-left
     get class() { return `${this.imports.app.slug}-btn` },
+    get opacity() { return this.imports.env.site == 'perplexity' ? 0.8 : 1 },
 
     state: {
         status: 'missing', // or 'inserting', 'inserted'
@@ -71,8 +72,10 @@ window.buttons = {
                     #fullWindow-btn { display: none }
                     #widescreen-btn { margin-right: ${ site == 'perplexity' ? 9 : 19 }px }}`
                 : '' }
-            ${ site == 'perplexity' ? // hide native tooltip that persists for being in same parent
-                `body:not(:has(button[role=radio]:hover)) ${selectors.tooltip} { display: none !important }` : '' }`
+            ${ site == 'perplexity' ? // hide native tooltip that persists for being in same parent, max hover opacity
+                    `body:not(:has(button[role=radio]:hover)) ${selectors.tooltip} { display: none !important }
+                    .${this.class}:hover { opacity: 1 }`
+                : '' }`
         ))
     },
 
@@ -185,7 +188,7 @@ window.buttons = {
             this.update.svg(btnType) // update icon
             parentToInsertInto.insertBefore(btn, elemToInsertBefore) // insert button
             if (!this.state.hasFadedIn) { // fade-in
-                btn.style.opacity = 0 ; setTimeout(() => btn.style.opacity = 1, (idx +1) *30)
+                btn.style.opacity = 0 ; setTimeout(() => btn.style.opacity = this.opacity, (idx +1) *30)
                 if (idx == btnTypesToInsert.length -1) // final button scheduled for fade-in
                     this.state.hasFadedIn = true // ...so disable fade-in on subsequent .insert()s till .remove()
             }
