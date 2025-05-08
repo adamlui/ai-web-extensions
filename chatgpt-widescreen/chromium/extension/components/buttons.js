@@ -193,7 +193,13 @@ window.buttons = {
                     this.state.hasFadedIn = true // ...so disable fade-in on subsequent .insert()s till .remove()
             }
         })
-        setTimeout(() => chatbar.tweak(), 1) ; this.update.color() ; this.state.status = 'inserted'
+        setTimeout(() => chatbar.tweak(), 1) ; this.update.color()
+
+        // Reset Poe New Chat button top-offset
+        if (site == 'poe' && this.state.insertedBefore && this.newChat.style.top != '3px')
+            this.newChat.style.top = '3px'
+
+        this.state.status = 'inserted' ; this.state.insertedBefore ||= true
     },
 
     async remove() {
