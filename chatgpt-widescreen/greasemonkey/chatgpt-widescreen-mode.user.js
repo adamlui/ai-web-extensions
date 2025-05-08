@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.7.5
+// @version             2025.5.7.6
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -761,8 +761,7 @@
                 [styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
                     .forEach(target => target.remove())
                 chatbar.reset()
-                if (/chatgpt|perplexity/.test(env.site))
-                    document.body.removeEventListener('wheel', window.enableWheelScroll)
+                if (env.site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
             } else if (!config[`${env.site}Disabled`]) { // sync modes/tweaks/btns
                 if (config.widescreen ^ styles.widescreen.node.isConnected) { // sync Widescreen
                     supressNotifs() ; toggleMode('widescreen') }
@@ -778,7 +777,7 @@
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                     // ...to visually signal location + preview fx applied by Button Animations toggle-on
                     buttons.animate()
-                if (/chatgpt|perplexity/.test(env.site)) // toggle free wheel locked in some Spam blocks
+                if (env.site != 'poe') // toggle free wheel locked in some Spam blocks
                     document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                         'wheel', window.enableWheelScroll)
             }
@@ -843,7 +842,7 @@
                 sync.mode('fullWindow') // ...so sync w/ it
             else toggleMode('fullWindow', 'on') // otherwise self-toggle
         }
-        if (/chatgpt|perplexity/.test(env.site)) { // toggle free wheel locked in some Spam blocks
+        if (env.site != 'poe') { // toggle free wheel locked in some Spam blocks
             window.enableWheelScroll = event => event.stopPropagation()
             document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                 'wheel', window.enableWheelScroll)

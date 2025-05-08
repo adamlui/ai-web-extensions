@@ -39,7 +39,7 @@ window.styles = {
                     : `${selectors.header} { display: none !important }
                        ${ site == 'chatgpt' ? 'main { padding-top: 12px }' : '' }` }
                 ${ !config.hiddenFooter ? ''
-                    : `${selectors.footer}${ /chatgpt|perplexity/.test(site) ? `, ${selectors.btns.help}` : '' }
+                    : `${selectors.footer}${ site != 'poe' ? `, ${selectors.btns.help}` : '' }
                         { display: none }` }
                 #newChat-btn { display: ${ config.ncbDisabled ? 'none' : 'flex' }}
                 ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover

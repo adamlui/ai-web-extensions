@@ -64,7 +64,7 @@ window.buttons = {
                 --transition: transform 0.15s ease, opacity 0.5s ease ; /* for tweaksStyle's :hover + .insert()'s fade-in */
                     -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
                     -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
-                ${ /chatgpt|perplexity/.test(site) ? // remove overlay
+                ${ site != 'poe' ? // remove overlay
                     'background-color: transparent ; border-color: transparent ;' : '' }
             }
             ${ selectors.sidebar ? // hide FW btn when window skinny on sites where sync req'd
@@ -88,7 +88,7 @@ window.buttons = {
         const spreadFactor = site == 'poe' ? 7.25 : site == 'perplexity' ? -11 : hasTallChatbar ? -16.5 : -8.85
         if (isGuestTempChat) // wait for arrow Send button after black chatbar loads or rOffset inaccurate
             await dom.get.loadedElem(selectors.btns.send, { timeout: 1000 })
-        if (/chatgpt|perplexity/.test(site)) this.rightBtn = await this.get.rightBtn() // for rOffset + styles
+        if (site != 'poe') this.rightBtn = await this.get.rightBtn() // for rOffset + styles
         const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4
             : hasTallChatbar ? (
                 this.rightBtn.getBoundingClientRect().width +2 ) *( hasDictateBtn || isGuestTempChat ? 2 : 1 ) -84
@@ -105,7 +105,7 @@ window.buttons = {
             } else btn.style.top = `${ site == 'chatgpt' ? -3.25
                                      : site == 'poe' ? ( btnType == 'newChat' ? 1 : 3 ) : 0 }px`
 
-            if (/chatgpt|perplexity/.test(site)) // add site button classes
+            if (site != 'poe') // add site button classes
                 btn.classList.add(...(this.rightBtn?.classList || []))
 
             // Add hover/click listeners
