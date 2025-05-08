@@ -9,15 +9,6 @@
         postMessage({ source: 'chatgpt-widescreen/*/extension/content.js' }, location.origin)
     })
 
-    chrome.runtime.onMessage.addListener(({ action, options }) => {
-        ({
-            notify: () => notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
-            alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
-            showAbout: async () => { if (env.site == 'chatgpt') await chatgpt.isLoaded() ; modals.open('about') },
-            syncConfigToUI: () => sync.configToUI(options)
-        }[action]?.())
-    })
-
     // Import JS resources
     for (const resource of [
         'lib/chatbar.js', 'lib/chatgpt.js', 'lib/dom.js', 'lib/settings.js', 'lib/styles.js', 'lib/ui.js',
@@ -29,11 +20,20 @@
         browser: { isFF: navigator.userAgent.includes('Firefox'), isMobile: chatgpt.browser.isMobile() },
         site: location.hostname.split('.').slice(-2, -1)[0], ui: {}
     }
-
     env.browser.isPortrait = env.browser.isMobile && (innerWidth < innerHeight)
     ui.import({ site: env.site }) ; ui.getScheme().then(scheme => env.ui.scheme = scheme)
     if (env.site == 'chatgpt') // store native chatbar width for Wider Chatbox style
         chatbar.nativeWidth = dom.get.computedWidth(document.querySelector('main form'))
+
+    // Add CHROME MSG listener for background/popup requests to sync modes/settings
+    chrome.runtime.onMessage.addListener(({ action, options }) => {
+        ({
+            notify: () => notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
+            alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
+            showAbout: async () => { if (env.site == 'chatgpt') await chatgpt.isLoaded() ; modals.open('about') },
+            syncConfigToUI: () => sync.configToUI(options)
+        }[action]?.())
+    })
 
     // Import DATA
     const { app } = await chrome.storage.local.get('app'),
