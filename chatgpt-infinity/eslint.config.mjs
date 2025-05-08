@@ -17,9 +17,10 @@ export default [
         languageOptions: {
             ecmaVersion: 'latest', sourceType: 'script',
             globals: {
-                ...globals.browser, ...globals.greasemonkey, ...globals.node, chatgpt: 'readonly', chrome: 'readonly',
-                config: 'writable', dom: 'readonly', icons: 'writable', modals: 'writable', settings: 'writable',
-                toggles: 'writable', ui: 'readonly'
+                ...globals.browser, ...globals.greasemonkey, ...globals.node, app: 'writable', chatgpt: 'readonly',
+                chrome: 'readonly', config: 'writable', dom: 'readonly', env: 'writable', icons: 'writable',
+                modals: 'writable', notify: 'readonly', settings: 'writable', syncConfigToUI: 'readonly',
+                toggles: 'writable', ui: 'readonly', updateCheck: 'readonly'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
