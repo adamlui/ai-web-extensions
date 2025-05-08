@@ -5,7 +5,7 @@ window.buttons = {
 
     types: [ 'fullscreen', 'fullWindow', 'widescreen', 'newChat' ], // right-to-left
     get class() { return `${this.imports.app.slug}-btn` },
-    get opacity() { return this.imports.env.site == 'perplexity' ? 0.85 : 1 },
+    get opacity() { return { active: 1, inactive: this.imports.env.site == 'perplexity' ? 0.85 : 1 }},
 
     state: {
         status: 'missing', // or 'inserting', 'inserted'
@@ -121,7 +121,8 @@ window.buttons = {
                 } else { // toggle mode
                     toggleMode(btnType)
                     if (btnType == 'fullWindow' // disable right btn tooltips on Perplexity homepage to avoid v-flicker
-                            && site == 'perplexity' && location.pathname == '/') {
+                        && site == 'perplexity' && location.pathname == '/'
+                    ) {
                         tooltip.div.style.opacity = 0;
                         ['fullWindow', 'fullscreen'].forEach(btnType => {
                             const btn = this[btnType]
@@ -165,7 +166,8 @@ window.buttons = {
         let parentToInsertInto = (
             site == 'chatgpt' ? (await this.get.rightBtn()).closest('[class*=bottom]') // right btn div
           : site == 'perplexity' ? chatbarDiv.querySelector('div[role=radiogroup]') // left mode btns div
-          : /* poe */ chatbarDiv.lastChild ) // parent of Mic/Send btns
+          : /* poe */ chatbarDiv.lastChild // parent of Mic/Send btns
+        )
 
         // Wrap buttons in flexbox for more control
         if (site != 'chatgpt') { // wrap in div to tweak side-gaps
@@ -187,7 +189,7 @@ window.buttons = {
             this.update.svg(btnType) // update icon
             parentToInsertInto.insertBefore(btn, elemToInsertBefore) // insert button
             if (!this.state.hasFadedIn) { // fade-in
-                btn.style.opacity = 0 ; setTimeout(() => btn.style.opacity = this.opacity, (idx +1) *30)
+                btn.style.opacity = 0 ; setTimeout(() => btn.style.opacity = this.opacity.inactive, (idx +1) *30)
                 if (idx == btnTypesToInsert.length -1) // final button scheduled for fade-in
                     this.state.hasFadedIn = true // ...so disable fade-in on subsequent .insert()s till .remove()
             }

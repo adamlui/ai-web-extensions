@@ -47,7 +47,7 @@ window.styles = {
                     .${buttons.class}:hover { transform: scale(${ site == 'poe' ? 1.15 : 1.285 }) }` }
                 ${ site == 'perplexity' ?
                     `.${buttons.class} { background: none !important } /* prevent overlay */
-                     .${buttons.class}:hover { opacity: 1 !important }` : '' }
+                     .${buttons.class}:hover { opacity: ${buttons.opacity.active} !important }` : '' }
                 ${ config.blockSpamDisabled ? ''
                     : `${styles.getAllSelectors(selectors.spam).join(',')} { display: none !important }
                         body { pointer-events: unset !important }` /* free click lock from blocking modals */ }`
