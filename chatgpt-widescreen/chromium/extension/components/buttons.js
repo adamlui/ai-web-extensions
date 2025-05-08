@@ -166,7 +166,7 @@ window.buttons = {
           : /* poe */ chatbarDiv.lastChild ) // parent of Mic/Send btns
         if (site == 'perplexity') { // wrap in div to tweak side-gaps
             parentToInsertInto.append(this.btnsDiv = dom.create.elem('div', {
-                style: 'display: flex ; margin-left: -36px ; margin-right: 9px ; align-items: center' }))
+                style: 'display: flex ; margin: 0 9px 0 -36px ; align-items: center' }))
             parentToInsertInto = this.btnsDiv
         }
         const elemToInsertBefore = parentToInsertInto[
