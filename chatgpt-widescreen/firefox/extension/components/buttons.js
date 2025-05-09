@@ -140,7 +140,6 @@ window.buttons = {
         // Init elems
         const { site } = env
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
-        const btnTypesToInsert = this.get.types.valid()
         const parentToInsertInto = (
             site == 'chatgpt' ? (await this.get.rightBtn()).closest('[class*=bottom]') // right btn div
           : site == 'perplexity' ? chatbarDiv.querySelector('div[role=radiogroup]') // left mode btns div
@@ -153,6 +152,7 @@ window.buttons = {
         }))
 
         // Insert buttons
+        const btnTypesToInsert = this.get.types.valid()
         btnTypesToInsert.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType]
             this.update.svg(btnType) // update icon
