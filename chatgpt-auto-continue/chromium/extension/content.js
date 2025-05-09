@@ -16,7 +16,7 @@
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
             showAbout: () => chatgpt.isLoaded().then(() => modals.open('about')),
             syncConfigToUI: () => syncConfigToUI(options)
-        }[action]?.())
+        }[action]?.() || console.warn(`Received unsupported action: "${action}"`))
     })
 
     // Import JS resources

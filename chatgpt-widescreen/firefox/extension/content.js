@@ -32,7 +32,7 @@
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
             showAbout: async () => { if (env.site == 'chatgpt') await chatgpt.isLoaded() ; modals.open('about') },
             syncConfigToUI: () => sync.configToUI(options)
-        }[action]?.())
+        }[action]?.() || console.warn(`Received unsupported action: "${action}"`))
     })
 
     // Import DATA
