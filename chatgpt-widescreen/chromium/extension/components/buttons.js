@@ -63,7 +63,7 @@ window.buttons = {
                           && !document.querySelector(selectors.btns.login)
         const isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true')
         const validBtnTypes = this.get.types.valid()
-        const spreadFactor = site == 'poe' ? 1 : site == 'perplexity' ? -16 : hasTallChatbar ? -16.5 : -8.85
+        const spreadFactor = site == 'poe' ? 1 : site == 'perplexity' ? -16 : hasTallChatbar ? -15.5 : -8.85
         if (isGuestTempChat) // wait for arrow Send button after black chatbar loads or rOffset inaccurate
             await dom.get.loadedElem(selectors.btns.send, { timeout: 1000 })
         if (site != 'poe') this.rightBtn = await this.get.rightBtn() // for rOffset + styles
