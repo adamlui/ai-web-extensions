@@ -74,8 +74,9 @@
 
             // Menu elems
             document.querySelectorAll('.logo, .menu-title, .menu-entry, .categorized-entries').forEach((elem, idx) => {
-                if (elem.id == 'siteSettings' || elem.closest('.categorized-entries')?.previousElementSibling?.id == 'siteSettings')
-                    return // never potentially disable important Site Settings
+                if (elem.id == 'siteSettings'
+                    || elem.closest('.categorized-entries')?.previousElementSibling?.id == 'siteSettings'
+                ) return // never potentially disable important Site Settings
                 elem.style.transition = extensionIsDisabled() ? '' : 'opacity 0.15s ease-in'
                 setTimeout(() => elem.classList.toggle('disabled', extensionIsDisabled()),
                     extensionIsDisabled() ? 0 : idx *10) // fade-out abruptly, fade-in staggered
