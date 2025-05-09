@@ -9,6 +9,16 @@
         postMessage({ source: 'chatgpt-infinity/*/extension/content.js' }, location.origin)
     })
 
+    // Import JS resources
+    for (const resource of [
+        'components/modals.js', 'components/toggles.js',
+        'lib/chatgpt.js', 'lib/dom.js', 'lib/infinity.js', 'lib/settings.js', 'lib/ui.js'
+    ]) await import(chrome.runtime.getURL(resource))
+
+    // Init ENV context
+    window.env = { browser: { isMobile: chatgpt.browser.isMobile() }, ui: { scheme: ui.getScheme() }}
+    env.browser.isPortrait = env.browser.isMobile && ( innerWidth < innerHeight )
+
     // Add CHROME MSG listener for background/popup requests to sync modes/settings
     chrome.runtime.onMessage.addListener(({ action, options, fromBG }) => {
         ({
@@ -21,16 +31,6 @@
             }
         }[action]?.())
     })
-
-    // Import JS resources
-    for (const resource of [
-        'components/modals.js', 'components/toggles.js',
-        'lib/chatgpt.js', 'lib/dom.js', 'lib/infinity.js', 'lib/settings.js', 'lib/ui.js'
-    ]) await import(chrome.runtime.getURL(resource))
-
-    // Init ENV context
-    window.env = { browser: { isMobile: chatgpt.browser.isMobile() }, ui: { scheme: ui.getScheme() }}
-    env.browser.isPortrait = env.browser.isMobile && ( innerWidth < innerHeight )
 
     // Import APP data
     ;({ app: window.app } = await chrome.storage.local.get('app'))
