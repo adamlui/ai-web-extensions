@@ -8,7 +8,7 @@ window.buttons = {
 
     state: {
         status: 'missing', // or 'inserting', 'inserted'
-        hasFadedIn: false // to prevent fade-in on subsequent .insert()s till .remove()
+        hasFadedIn: false // to prevent fade-in on 2nd+ .insert()s till .remove()
     },
 
     svgElems: {
@@ -63,7 +63,7 @@ window.buttons = {
                           && !document.querySelector(selectors.btns.login)
         const isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true')
         const validBtnTypes = this.get.types.valid()
-        const spreadFactor = site == 'poe' ? 7.25 : site == 'perplexity' ? -11 : hasTallChatbar ? -16.5 : -8.85
+        const spreadFactor = site == 'poe' ? 1 : site == 'perplexity' ? -16 : hasTallChatbar ? -16.5 : -8.85
         if (isGuestTempChat) // wait for arrow Send button after black chatbar loads or rOffset inaccurate
             await dom.get.loadedElem(selectors.btns.send, { timeout: 1000 })
         if (site != 'poe') this.rightBtn = await this.get.rightBtn() // for rOffset + styles
@@ -146,26 +146,18 @@ window.buttons = {
           : site == 'perplexity' ? chatbarDiv.querySelector('div[role=radiogroup]') // left mode btns div
           : /* poe */ chatbarDiv.lastChild // parent of Mic/Send btns
         )
-
-        // Wrap buttons in flexbox for more control
-        if (site != 'chatgpt') { // wrap in div to tweak side-gaps
-            parentToInsertInto[site == 'perplexity' ? 'append' : 'prepend'](
-                this.btnsDiv = dom.create.elem('div', {
-                    style: `display: flex ; align-items: center ;
-                            margin: ${ site == 'perplexity' ? '0 9px 0 -49px' : '0 -2px 0 0' }`
-            }))
-            parentToInsertInto = this.btnsDiv
-        }
+        parentToInsertInto[site == 'perplexity' ? 'append' : 'prepend']( // wrap btns in flexbox for better control
+            this.btnsDiv = dom.create.elem('div', {
+                style: `display: flex ; align-items: center ; gap: 6px ;
+                        margin: ${ site == 'perplexity' ? '0 9px 0 -61px' : '0 -2px 0 0' }`
+        }))
+        parentToInsertInto = this.btnsDiv
 
         // Insert buttons
-        const elemToInsertBefore = parentToInsertInto[
-            site == 'poe' ? 'firstChild' // Mic btn
-          : 'lastChild' // right btn
-        ]
         btnTypesToInsert.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType]
             this.update.svg(btnType) // update icon
-            parentToInsertInto.insertBefore(btn, elemToInsertBefore) // insert button
+            parentToInsertInto.append(btn) // insert button
             if (!this.state.hasFadedIn) { // fade-in
                 btn.style.opacity = 0 ; setTimeout(() => btn.style.opacity = this.opacity.inactive, (idx +1) *30)
                 if (idx == btnTypesToInsert.length -1) // final button scheduled for fade-in
