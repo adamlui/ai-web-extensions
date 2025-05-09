@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.8.2
+// @version             2025.5.9
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -223,6 +223,7 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3a39a39/chromium/extension/components/modals.js#sha256-yMOfK84w4L1KoTSHnNyLcVw4WY85D/QhdY6qHWG2tr8=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3a39a39/chromium/extension/components/toggles.js#sha256-9iEnQe3q+Xr0EirfjKZWxgkEPKSBcYDknP4guB99Qqg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3a39a39/chromium/extension/lib/dom.js#sha256-2oisZjtBjYCUrGSPdABjeC1y0KgN2ZHfRC19zNazOL4=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@5d9d2c1/chromium/extension/lib/infinity.js#sha256-vFN9aTmdbKiDqjOSXGfZYUoAZLlsnEn6Mb581IyqVaM=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3a39a39/chromium/extension/lib/settings.js#sha256-5H7cm0js+LPaFJPxWDl5iLS36eQkTuMo9fH7Gn7rAtg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8156513/chromium/extension/lib/ui.js#sha256-2yuQbliwz+uaCxUIEeTMWIH5JADHgjDBZD4/8I2T8rE=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
@@ -557,53 +558,6 @@
             infinity.restart({ target: options?.updatedKey == 'replyInterval' ? 'self' : 'new' })
         if (/infinityMode|toggleHidden/.test(options?.updatedKey)) toggles.sidebar.update.state()
         toolbarMenu.refresh() // prefixes/suffixes
-    }
-
-    // Define INFINITY MODE functions
-
-    const infinity = {
-
-        async activate() {
-            const activatePrompt = 'Generate a single random question'
-                + ( config.replyLanguage ? ( ' in ' + config.replyLanguage ) : '' )
-                + ( ' on ' + ( config.replyTopic == 'ALL' ? 'ALL topics' : 'the topic of ' + config.replyTopic ))
-                + ' then answer it. Don\'t type anything else.'
-            if (env.browser.isMobile && chatgpt.sidebar.isOn()) chatgpt.sidebar.hide()
-            if (!new URL(location).pathname.startsWith('/g/')) // not on GPT page
-                try { chatgpt.startNewChat() } catch (err) { return } // start new chat
-            await new Promise(resolve => setTimeout(resolve, 500)) // sleep 500ms
-            chatgpt.send(activatePrompt)
-            await new Promise(resolve => setTimeout(resolve, 3000)) // sleep 3s
-            if (!document.querySelector('[data-message-author-role]') // new chat reset due to OpenAI bug
-                && config.infinityMode) // ...and toggle still active
-                    chatgpt.send(activatePrompt) // ...so prompt again
-            await chatgpt.isIdle()
-            if (config.infinityMode && !infinity.isActive) // double-check in case de-activated before scheduled
-                infinity.isActive = setTimeout(infinity.continue, parseInt(config.replyInterval, 10) * 1000)
-        },
-
-        async continue() {
-            if (!config.autoScrollDisabled) try { chatgpt.scrollToBottom() } catch(err) {}
-            chatgpt.send('Do it again.')
-            await chatgpt.isIdle() // before starting delay till next iteration
-            if (infinity.isActive) // replace timer
-                infinity.isActive = setTimeout(infinity.continue, parseInt(config.replyInterval, 10) * 1000)
-        },
-
-        deactivate() {
-            if (chatgpt.getStopBtn()) chatgpt.stop()
-            clearTimeout(infinity.isActive) ; infinity.isActive = null
-        },
-
-        async restart(options = { target: 'new' }) {
-            if (options.target == 'new') {
-                infinity.deactivate() ; setTimeout(() => infinity.activate(), 750)
-            } else {
-                clearTimeout(infinity.isActive) ; infinity.isActive = null ; await chatgpt.isIdle()
-                if (config.infinityMode && !infinity.isActive) // double-check in case de-activated before scheduled
-                    infinity.isActive = setTimeout(infinity.continue, parseInt(config.replyInterval, 10) * 1000)
-            }
-        }
     }
 
     // Run MAIN routine
