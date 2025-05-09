@@ -24,7 +24,8 @@
 
     // Import JS resources
     for (const resource of [
-        'components/modals.js', 'components/toggles.js', 'lib/chatgpt.js', 'lib/dom.js', 'lib/settings.js', 'lib/ui.js'
+        'components/modals.js', 'components/toggles.js',
+        'lib/chatgpt.js', 'lib/dom.js', 'lib/infinity.js', 'lib/settings.js', 'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -93,53 +94,6 @@
                 if (!chatgpt.getStopBtn()) { obs.disconnect(); resolve() }
             }).observe(document.body, { childList: true, subtree: true })
         })
-    }
-
-    const infinity = {
-
-        async activate() {
-            const activatePrompt = 'Generate a single random question'
-                + ( config.replyLanguage ? ( ' in ' + config.replyLanguage ) : '' )
-                + ( ' on ' + ( config.replyTopic == 'ALL' ? 'ALL topics' : 'the topic of ' + config.replyTopic ))
-                + ' then answer it. Don\'t type anything else.'
-            if (env.browser.isMobile && chatgpt.sidebar.isOn()) chatgpt.sidebar.hide()
-            if (!new URL(location).pathname.startsWith('/g/')) // not on GPT page
-                try { chatgpt.startNewChat() } catch (err) { return } // start new chat
-            await new Promise(resolve => setTimeout(resolve, 500)) // sleep 500ms
-            chatgpt.send(activatePrompt)
-            await new Promise(resolve => setTimeout(resolve, 3000)) // sleep 3s
-            if (!document.querySelector('[data-message-author-role]') // new chat reset due to OpenAI bug
-                && config.infinityMode) // ...and toggle still active
-                    chatgpt.send(activatePrompt) // ...so prompt again
-            await chatgpt.isIdle()
-            if (config.infinityMode && !infinity.isActive) // double-check in case de-activated before scheduled
-                infinity.isActive = setTimeout(infinity.continue, parseInt(config.replyInterval, 10) * 1000)
-        },
-
-        async continue() {
-            if (!config.autoScrollDisabled) try { chatgpt.scrollToBottom() } catch(err) {}
-            chatgpt.send('Do it again.')
-            await chatgpt.isIdle() // before starting delay till next iteration
-            if (infinity.isActive) // replace timer
-                infinity.isActive = setTimeout(infinity.continue, parseInt(config.replyInterval, 10) * 1000)
-        },
-
-        deactivate() {
-            if (chatgpt.getStopBtn()) chatgpt.stop()
-            clearTimeout(infinity.isActive) ; infinity.isActive = null
-        },
-
-        async restart(options = { target: 'new' }) {
-            if (options.target == 'new') {
-                infinity.deactivate() ; setTimeout(() => infinity.activate(), 750)
-            } else {
-                clearTimeout(infinity.isActive) ; infinity.isActive = null ; await chatgpt.isIdle()
-                if (config.infinityMode && !infinity.isActive) { // double-check in case de-activated before scheduled
-                    await settings.load('replyInterval')
-                    infinity.isActive = setTimeout(infinity.continue, parseInt(config.replyInterval, 10) * 1000)
-                }
-            }
-        }
     }
 
     // Run MAIN routine
