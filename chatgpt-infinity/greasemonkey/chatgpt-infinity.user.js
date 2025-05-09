@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.8.1
+// @version             2025.5.8.2
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -274,7 +274,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '6cf8038' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
+        latestResourceCommitHash: '35b1339' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -476,7 +476,7 @@
                 this.entryIDs.push(GM_registerMenuCommand(
                     `${ entryType == 'about' ? '💡' : '💖' } ${
                         app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
-                    () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate.gitHub),
+                    () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate.koFi),
                     env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
                 ))
             })

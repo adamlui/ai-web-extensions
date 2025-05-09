@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.8.2
+// @version             2025.5.8.3
 // @license             MIT
 // @icon                https://assets.chatgptautotalk.com/images/icons/openai/black/icon48.png?v=9f1ed3c
 // @icon64              https://assets.chatgptautotalk.com/images/icons/openai/black/icon64.png?v=9f1ed3c
@@ -284,7 +284,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '861ee4d' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
+        latestResourceCommitHash: 'de7948b' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -425,7 +425,7 @@
             ['about', 'donate'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
                 `${ entryType == 'about' ? '💡' : '💖' } ${
                     app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
-                () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate.gitHub),
+                () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate.koFi),
                 env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
             )))
         }

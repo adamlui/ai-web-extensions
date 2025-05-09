@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.8.1
+// @version             2025.5.8.2
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -319,7 +319,7 @@
     window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: 'd56177b' // for cached <app|messages>.json + sites.json5
+        latestResourceCommitHash: '12b6968' // for cached <app|messages>.json + sites.json5
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -592,7 +592,7 @@
                 this.entryIDs.push(GM_registerMenuCommand(
                     `${ entryType == 'about' ? '💡' : '💖' } ${
                         app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
-                    () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate.gitHub),
+                    () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate.koFi),
                     env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
                 ))
             })
