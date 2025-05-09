@@ -43,7 +43,7 @@ window.buttons = {
         }
     },
 
-    animate() { // used in sync.configToUI() on Button Animations toggle-on
+    animate() { // used in content.js > sync.configToUI() on Button Animations toggle-on
         const btnHoverStyles = new RegExp(`.${this.class}:hover\\s*\\{([^}]*)\\}`, 'm')
             .exec(styles.tweaks.node.innerText)?.[1].trim()
         this.types.slice().reverse().forEach((btnType, idx) => {
@@ -96,7 +96,7 @@ window.buttons = {
                         btn.style.cursor = 'pointer'
                         if (btn.matches(':hover')) btn.dispatchEvent(new Event('mouseenter'))
                     }, 1000)
-                } else { // toggle mode
+                } else {
                     toggleMode(btnType)
                     if (btnType == 'fullWindow' // disable right btn tooltips on Perplexity homepage to avoid v-flicker
                         && site == 'perplexity' && location.pathname == '/'
@@ -135,13 +135,13 @@ window.buttons = {
 
     async insert() {
         if (!config.btnsVisible || this.state.status == 'inserting' || this.fullscreen?.isConnected) return
-        const { site } = env
         this.state.status = 'inserting' ; if (!this.fullscreen) await this.create()
 
         // Init elems
+        const { site } = env
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
         const btnTypesToInsert = this.get.types.valid()
-        let parentToInsertInto = (
+        const parentToInsertInto = (
             site == 'chatgpt' ? (await this.get.rightBtn()).closest('[class*=bottom]') // right btn div
           : site == 'perplexity' ? chatbarDiv.querySelector('div[role=radiogroup]') // left mode btns div
           : /* poe */ chatbarDiv.lastChild // parent of Mic/Send btns
@@ -151,13 +151,12 @@ window.buttons = {
                 style: `display: flex ; align-items: center ; gap: 6px ;
                         margin: ${ site == 'perplexity' ? '0 9px 0 -61px' : '0 -2px 0 0' }`
         }))
-        parentToInsertInto = this.btnsDiv
 
         // Insert buttons
         btnTypesToInsert.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType]
             this.update.svg(btnType) // update icon
-            parentToInsertInto.append(btn) // insert button
+            this.btnsDiv.append(btn) // insert button
             if (!this.state.hasFadedIn) { // fade-in
                 btn.style.opacity = 0 ; setTimeout(() => btn.style.opacity = this.opacity.inactive, (idx +1) *30)
                 if (idx == btnTypesToInsert.length -1) // final button scheduled for fade-in
