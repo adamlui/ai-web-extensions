@@ -6,9 +6,9 @@ window.styles = {
         return Object.values(obj).flatMap(val => typeof val == 'object' ? this.getAllSelectors(val) : val) },
 
     chatbar: {
-        update() {
-            if (!this.node) document.head.append(this.node = dom.create.style())
-            this.node.innerText = ({
+        update() { // auto-appends to <head>
+            if (!this.node?.isConnected) document.head.append(this.node ||= dom.create.style())
+            this.node.textContent = ({
                 chatgpt: !config.widerChatbox &&
                     `main form { max-width: ${chatbar.nativeWidth}px !important ; margin: auto }`,
                 poe: config.widerChatbox && config.widescreen &&
@@ -19,15 +19,14 @@ window.styles = {
 
     fullWin: {
         update() {
-            const { [env.site]: { selectors }} = sites;
-            (this.node ||= dom.create.style()).innerText = selectors.sidebar + '{ display: none }'
-        }
+            (this.node ||= dom.create.style()).textContent = sites[env.site].selectors.sidebar + '{ display: none }' }
     },
 
     tweaks: {
-        update() {
+        update() { // auto-appends to <head>
             const { site } = env, { [site]: { selectors }} = sites;
-            this.node ||= dom.create.style(`
+            if (!this.node?.isConnected) document.head.append(this.node ||= dom.create.style())
+            this.node.textContent = `
                 ${ site == 'chatgpt' ?
                     `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
                         overflow: clip !important }` : '' }
@@ -49,14 +48,12 @@ window.styles = {
                 ${ config.blockSpamDisabled ? ''
                     : `${styles.getAllSelectors(selectors.spam).join(',')} { display: none !important }
                         body { pointer-events: unset !important }` /* free click lock from blocking modals */ }`
-            )
-            if (!this.node.isConnected) document.head.append(this.node)
         }
     },
 
     widescreen: {
         update() {
-            (this.node ||= dom.create.style()).innerText = ({
+            (this.node ||= dom.create.style()).textContent = ({
                 chatgpt: `
                     .text-base { max-width: 100% !important } /* widen outer container */
                     .tableContainer { min-width: 100% }`, // widen tables
