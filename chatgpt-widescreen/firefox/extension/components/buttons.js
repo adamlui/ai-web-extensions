@@ -166,7 +166,7 @@ window.buttons = {
         })
         setTimeout(() => chatbar.tweak(), 1) ; this.update.color()
 
-        this.state.status = 'inserted' ; this.state.insertedBefore ||= true
+        this.state.status = 'inserted'
     },
 
     async remove() {
