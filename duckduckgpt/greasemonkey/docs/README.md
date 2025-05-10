@@ -28,7 +28,7 @@
 <a href="https://www.jsdelivr.com/package/gh/KudoAI/duckduckgpt?tab=stats">
     <img height=31 alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/duckduckgpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></img></a>
 
-<h3><b>DuckDuckGPT</b> brings the magic of ChatGPT to DDG (powered by GPT-4o!)</h3>
+<h3>Enhance DuckDuckGo w/ AI chat & search summaries, powered by the latest LLMs</h3>
 
 > [!IMPORTANT]
 > _**Greasy Fork users:** If you installed DuckDuckGPT **before January 18, 2025**, auto-updates no longer work because the script's update mechanism has migrated to GitHub. To continue receiving updates, click the green 'Install this script' button below (once) or click [this link](https://gm.ddgpt.com) (once)_
