@@ -40,7 +40,7 @@ window.tooltip = {
         const btnScale = btnTransform == 'none' ? 1
             : parseFloat(/matrix\(([^)]+)\)/.exec(btnTransform)[1].split(',')[0])
         const unscaledTop = btnRect.top +( btnRect.height - btnRect.height / btnScale )/2
-        this.div.innerText = this.getMsg(`tooltip_${btnType}${
+        this.div.textContent = this.getMsg(`tooltip_${btnType}${
             !/full|wide/i.test(btnType) ? '' : (config[btnType] ? 'OFF' : 'ON')}`)
         this.div.style.left = `${ btnRect.left +( btnRect.width /2 ) -( this.div.offsetWidth /2 )}px`
         this.div.style.top = `${ unscaledTop - this.div.offsetHeight -(

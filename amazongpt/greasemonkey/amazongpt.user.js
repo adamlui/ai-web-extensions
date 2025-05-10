@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.9.1
+// @version                2025.5.9.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1200,7 +1200,7 @@
 
         stylize() {
             if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
-            this.styles.innerText = (
+            this.styles.textContent = (
 
                 // Vars
                 `:root {
@@ -1910,7 +1910,7 @@
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled,
                   willNotZoom = config.fgAnimationsDisabled || env.browser.isMobile
             modals.stylize() // update modal styles
-            app.styles.innerText = (
+            app.styles.textContent = (
 
                 // Init vars
                `:root {
@@ -2656,7 +2656,7 @@
             }[btnType]
 
             // Update text
-            tooltip.div.innerText = baseText
+            tooltip.div.textContent = baseText
             tooltip.nativeRpadding = tooltip.nativeRpadding
                 || parseFloat(window.getComputedStyle(tooltip.div).paddingRight)
             clearInterval(tooltip.dotCycler)
@@ -2664,7 +2664,7 @@
                 const noDotText = baseText.slice(0, -3), dotWidth = 2.75 ; let dotCnt = 3
                 tooltip.dotCycler = setInterval(() => {
                     dotCnt = (dotCnt % 3) + 1 // cycle thru 1 → 2 → 3
-                    tooltip.div.innerText = noDotText + '.'.repeat(dotCnt)
+                    tooltip.div.textContent = noDotText + '.'.repeat(dotCnt)
                     tooltip.div.style.paddingRight = `${ // adjust based on dotCnt
                         tooltip.nativeRpadding + (3 - dotCnt) * dotWidth }px`
                 }, 350)
@@ -2927,7 +2927,7 @@
             try {
                 const html = new DOMParser().parseFromString(resp, 'text/html'),
                       title = html.querySelector('title')
-                if (title.innerText == 'Just a moment...') {
+                if (title.textContent == 'Just a moment...') {
                     log.caller = 'session.isBlockedByCF'
                     return log.debug('Blocked by CloudFlare') || true
                 }
@@ -3206,7 +3206,7 @@
             loadingSpinner.style.cssText = 'position: relative ; top: 2px ; margin-right: 6px'
             if (appDiv.querySelector('.reply-pre')) { // reply exists, show where chatbar was
                 loadingElem = appDiv.querySelector('section')
-                loadingElem.innerText = app.alerts.waitingResponse
+                loadingElem.textContent = app.alerts.waitingResponse
                 loadingSpinner.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)' // faster ver
             } else { // replace app div w/ alert
                 appAlert('waitingResponse')

@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.9.1
+// @version             2025.5.9.2
 // @license             MIT
 // @icon                https://assets.autoclearchatgpt.com/images/icons/openai/black/icon48.png?v=f461c06
 // @icon64              https://assets.autoclearchatgpt.com/images/icons/openai/black/icon64.png?v=f461c06
@@ -673,7 +673,7 @@
 
         stylize() {
             if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
-            this.styles.innerText = (
+            this.styles.textContent = (
                 `.${this.class} {` // modals
                   + 'user-select: none ; -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ;'
                   + 'font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,'
@@ -925,7 +925,7 @@
                     if (!toggles.sidebar.div) return // since toggle never created = sidebar missing
                     toggles.sidebar.div.style.display = config.toggleHidden ? 'none' : 'flex'
                     toggles.sidebar.toggleInput.checked = config.autoclear
-                    toggles.sidebar.toggleLabel.innerText = `${app.msgs.mode_autoclear} `
+                    toggles.sidebar.toggleLabel.textContent = `${app.msgs.mode_autoclear} `
                         + app.msgs[`state_${ toggles.sidebar.toggleInput.checked ? 'enabled' : 'disabled' }`]
                     requestAnimationFrame(() => {
                         toggles.sidebar.switchSpan.className = toggles.sidebar.toggleInput.checked ? 'enabled'

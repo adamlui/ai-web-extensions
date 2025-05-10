@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.9.1
+// @version               2025.5.9.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1429,7 +1429,7 @@
 
         stylize() {
             if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
-            this.styles.innerText = (
+            this.styles.textContent = (
 
                 // Vars
                 `:root {
@@ -2243,7 +2243,7 @@
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled,
                   willNotZoom = config.fgAnimationsDisabled || env.browser.isMobile
             modals.stylize() // update modal styles
-            app.styles.innerText = (
+            app.styles.textContent = (
 
                 // Init vars
                `:root {
@@ -3204,7 +3204,7 @@
             }[btnType]
 
             // Update text
-            tooltip.div.innerText = baseText
+            tooltip.div.textContent = baseText
             tooltip.nativeRpadding = tooltip.nativeRpadding
                 || parseFloat(window.getComputedStyle(tooltip.div).paddingRight)
             clearInterval(tooltip.dotCycler)
@@ -3212,7 +3212,7 @@
                 const noDotText = baseText.slice(0, -3), dotWidth = 2.75 ; let dotCnt = 3
                 tooltip.dotCycler = setInterval(() => {
                     dotCnt = (dotCnt % 3) + 1 // cycle thru 1 → 2 → 3
-                    tooltip.div.innerText = noDotText + '.'.repeat(dotCnt)
+                    tooltip.div.textContent = noDotText + '.'.repeat(dotCnt)
                     tooltip.div.style.paddingRight = `${ // adjust based on dotCnt
                         tooltip.nativeRpadding + (3 - dotCnt) * dotWidth }px`
                 }, 350)
@@ -3608,7 +3608,7 @@
             try {
                 const html = new DOMParser().parseFromString(resp, 'text/html'),
                       title = html.querySelector('title')
-                if (title.innerText == 'Just a moment...') {
+                if (title.textContent == 'Just a moment...') {
                     log.caller = 'session.isBlockedByCF'
                     return log.debug('Blocked by CloudFlare') || true
                 }
@@ -3972,7 +3972,7 @@
                 appDiv.querySelector('footer').textContent = '' // clear footer
                 loadingElem = appDiv.querySelector('section')
                 loadingElem.style.margin = `13px 0 ${ rqDiv?.isConnected ? ( env.browser.isFF ? -19 : -10 ) : -55 }px`
-                loadingElem.innerText = app.alerts.waitingResponse
+                loadingElem.textContent = app.alerts.waitingResponse
                 loadingSpinner.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)' // faster ver
             } else { // replace app div w/ alert
                 appAlert('waitingResponse')

@@ -148,7 +148,7 @@ window.toggles = {
                 if (!toggles.sidebar.div) return // since toggle never created = sidebar missing
                 toggles.sidebar.div.style.display = config.toggleHidden || config.extensionDisabled ? 'none' : 'flex'
                 toggles.sidebar.toggleInput.checked = config.infinityMode
-                toggles.sidebar.toggleLabel.innerText = `${toggles.getMsg('menuLabel_infinityMode')} `
+                toggles.sidebar.toggleLabel.textContent = `${toggles.getMsg('menuLabel_infinityMode')} `
                     + toggles.getMsg(`state_${ toggles.sidebar.toggleInput.checked ? 'enabled' : 'disabled' }`)
                 requestAnimationFrame(() => {
                     toggles.sidebar.switchSpan.className = toggles.sidebar.toggleInput.checked ? 'enabled' : 'disabled'
