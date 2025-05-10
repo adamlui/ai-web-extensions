@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.9.6
+// @version                  2025.5.10
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -4774,7 +4774,7 @@
                         url: 'https://fanyi.sogou.com/openapi/external/getWebTTS?S-AppId=102356845&S-Param='
                             + encodeURIComponent(securePayload),
                         method: 'GET', responseType: 'arraybuffer',
-                        onload: async resp => {
+                        onload: resp => {
 
                             // Update icons to Playing ones
                             speakSVGscroller.textContent = '' // rid Generating icons
