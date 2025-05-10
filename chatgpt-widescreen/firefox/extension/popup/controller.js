@@ -178,7 +178,7 @@
     for (const site of Object.keys(sites)) { // create toggle per site
 
         // Init entry's elems
-        ss.entry = {
+        const ssEntry = {
             div: dom.create.elem('div', { class: 'menu-entry highlight-on-hover' }),
             switchLabelDiv: dom.create.elem('div', {
                 title: `${getMsg('helptip_run')} ${app.name} on ${sites[site].urls.homepage}`,
@@ -194,19 +194,19 @@
             favicon: dom.create.elem('img', { src: sites[site].urls.favicon, width: 15 }),
             openIcon: icons.create('open', { size: 18, fill: 'white' })
         }
-        ss.entry.switch.append(ss.entry.track) ; ss.entry.label.textContent = sites[site].urls.homepage
-        ss.entry.switchLabelDiv.append(ss.entry.switch, ss.entry.label) ; ss.entry.faviconDiv.append(ss.entry.favicon)
-        ss.entry.div.append(ss.entry.switchLabelDiv, ss.entry.faviconDiv) ; ss.entriesDiv.append(ss.entry.div)
-        await settings.load(`${site}Disabled`) ; ss.entry.switch.classList.toggle('on', !config[`${site}Disabled`])
+        ssEntry.switch.append(ssEntry.track) ; ssEntry.label.textContent = sites[site].urls.homepage
+        ssEntry.switchLabelDiv.append(ssEntry.switch, ssEntry.label) ; ssEntry.faviconDiv.append(ssEntry.favicon)
+        ssEntry.div.append(ssEntry.switchLabelDiv, ssEntry.faviconDiv) ; ss.entriesDiv.append(ssEntry.div)
+        await settings.load(`${site}Disabled`) ; ssEntry.switch.classList.toggle('on', !config[`${site}Disabled`])
         if (env.site == site) {
             env.siteDisabled = config[`${site}Disabled`] // to auto-expand toggles later if true
             if (config[`${site}Disabled`]) ss.labelDiv.classList.add('anchored')
         }
 
         // Add listeners
-        ss.entry.switchLabelDiv.onclick = () => { // toggle site setting
+        ssEntry.switchLabelDiv.onclick = () => { // toggle site setting
             env.extensionWasDisabled = extensionIsDisabled()
-            ss.entry.switch.classList.toggle('on')
+            ssEntry.switch.classList.toggle('on')
             settings.save(`${site}Disabled`, !config[`${site}Disabled`]) ; sync.configToUI()
             ss.labelDiv.classList.toggle('anchored', env.site == site && config[`${site}Disabled`])
             if (env.site == site) { // fade/notify if setting of active site toggled
@@ -215,9 +215,9 @@
                     getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
             }
         }
-        ss.entry.faviconDiv.onmouseenter = ss.entry.faviconDiv.onmouseleave = event =>
-            ss.entry.faviconDiv.firstChild.replaceWith(ss.entry[event.type == 'mouseenter' ? 'openIcon' : 'favicon'])
-        ss.entry.faviconDiv.onclick = () => { open(`https://${sites[site].urls.homepage}`) ; close() }
+        ssEntry.faviconDiv.onmouseenter = ssEntry.faviconDiv.onmouseleave = event =>
+            ssEntry.faviconDiv.firstChild.replaceWith(ssEntry[event.type == 'mouseenter' ? 'openIcon' : 'favicon'])
+        ssEntry.faviconDiv.onclick = () => { open(`https://${sites[site].urls.homepage}`) ; close() }
     }
 
     // AUTO-EXPAND categories
