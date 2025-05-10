@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.9
+// @version             2025.5.9.1
 // @license             MIT
 // @icon                https://assets.chatgptautotalk.com/images/icons/openai/black/icon48.png?v=9f1ed3c
 // @icon64              https://assets.chatgptautotalk.com/images/icons/openai/black/icon64.png?v=9f1ed3c
@@ -419,10 +419,10 @@
                     settings.save(key, !config[key]) ; syncConfigToUI({ updatedKey: key })
                     notify(`${ctrl.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
                 }, env.scriptManager.supportsTooltips ? { title: ctrl.helptip || ' ' } : undefined)
-            });
+            })
 
             // Add About/Donate entries
-            ['about', 'donate'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
+            ;['about', 'donate'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
                 `${ entryType == 'about' ? '💡' : '💖' } ${
                     app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
                 () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate['ko-fi']),
@@ -899,11 +899,9 @@
 
     toolbarMenu.register() // create browser toolbar menu
     toggles.sidebar.update.navicon({ preload: true }) // preload sidebar NAVICON variants
-    await Promise.race([chatgpt.isLoaded(), new Promise(resolve => setTimeout(resolve, 5000))]); // initial UI loaded
-
-    // Add RISING PARTICLES styles
-    ['rpg', 'rpw'].forEach(cssType => document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
-
+    await Promise.race([chatgpt.isLoaded(), new Promise(resolve => setTimeout(resolve, 5000))]) // initial UI loaded
+    ;['rpg', 'rpw'].forEach(cssType => // add Rising Particles styles
+        document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
     toggles.sidebar.insert()
 
     // Observe <main> for need to AUTO-PLAY response

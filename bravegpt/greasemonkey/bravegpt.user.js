@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.9
+// @version               2025.5.9.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -246,8 +246,7 @@
             name: (() => { try { return GM_info.scriptHandler } catch (err) { return 'unknown' }})(),
             version: (() => { try { return GM_info.version } catch (err) { return 'unknown' }})()
         }
-    };
-    ['Chromium', 'Firefox', 'Chrome', 'Edge', 'Brave', 'Mobile'].forEach(platform =>
+    } ; ['Chromium', 'Firefox', 'Chrome', 'Edge', 'Brave', 'Mobile'].forEach(platform =>
         env.browser[`is${ platform == 'Firefox' ? 'FF' : platform }`] = chatgpt.browser['is' + platform]())
     env.browser.isPortrait = env.browser.isMobile && ( innerWidth < innerHeight )
     env.browser.isPhone = env.browser.isMobile && innerWidth <= 480
@@ -648,10 +647,10 @@
                           + settings.controls.proxyAPIenabled.label + ' '
                           + this.state.separator + this.state.words[+config.proxyAPIenabled]
             this.entryIDs = [GM_registerMenuCommand(pmLabel, toggle.proxyMode,
-                env.scriptManager.supportsTooltips ? { title: settings.controls.proxyAPIenabled.helptip } : undefined)];
+                env.scriptManager.supportsTooltips ? { title: settings.controls.proxyAPIenabled.helptip } : undefined)]
 
             // Add About/Settings entries
-            ['about', 'settings'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
+            ;['about', 'settings'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
                 entryType == 'about' ? `💡 ${settings.controls.about.label}` : `⚙️ ${app.msgs.menuLabel_settings}`,
                 () => modals.open(entryType), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
             )))
@@ -962,10 +961,10 @@
                         transition: '0.1s', '-webkit-transition': '0.1s', '-moz-transition': '0.1s',
                             '-o-transition': '0.1s', '-ms-transition': '0.1s'
                     })
-                    document.body.style.cursor = 'grabbing'; // update cursor
-                    [...modals.draggingModal.children] // prevent hover FX if drag lags behind cursor
-                        .forEach(child => child.style.pointerEvents = 'none');
-                    ['mousemove', 'mouseup'].forEach(eventType => // add listeners
+                    document.body.style.cursor = 'grabbing' // update cursor
+                    ;[...modals.draggingModal.children] // prevent hover FX if drag lags behind cursor
+                        .forEach(child => child.style.pointerEvents = 'none')
+                    ;['mousemove', 'mouseup'].forEach(eventType => // add listeners
                         document.addEventListener(eventType, modals.handlers.drag[eventType]))
                     const draggingModalRect = modals.draggingModal.getBoundingClientRect()
                     modals.handlers.drag.offsetX = event.clientX - draggingModalRect.left +21
@@ -986,10 +985,10 @@
                         transition: 'inherit', '-webkit-transition': 'inherit', '-moz-transition': 'inherit',
                             '-o-transition': 'inherit', '-ms-transition': 'inherit'
                     })
-                    document.body.style.cursor = ''; // restore cursor
-                    [...modals.draggingModal.children] // restore pointer events
-                        .forEach(child => child.style.pointerEvents = '');
-                    ['mousemove', 'mouseup'].forEach(eventType => // remove listeners
+                    document.body.style.cursor = '' // restore cursor
+                    ;[...modals.draggingModal.children] // restore pointer events
+                        .forEach(child => child.style.pointerEvents = '')
+                    ;['mousemove', 'mouseup'].forEach(eventType => // remove listeners
                         document.removeEventListener(eventType, modals.handlers.drag[eventType]))
                     modals.draggingModal = null
                 }
@@ -3362,8 +3361,8 @@
 
             // Save new state + disable incompatible Sidebar modes
             if (state == 'on' || !state && !config.anchored) {
-                settings.save('anchored', true);
-                ['sticky', 'wider'].forEach(mode => {
+                settings.save('anchored', true)
+                ;['sticky', 'wider'].forEach(mode => {
                     if (config[`${mode}Sidebar`]) { toggle.sidebar(mode) ; sidebarModeToggled = true }})
             } else {
                 settings.save('anchored', false)
@@ -4078,8 +4077,8 @@
                 const downloadBtn = dom.create.elem('btn', { id: `${app.slug}-download-btn` }),
                       downloadSVGs = { download: icons.download.create(), downloaded: icons.checkmarkDouble.create() }
                 Object.entries(downloadSVGs).forEach(([svgType, svg]) => {
-                    svg.id = `${app.slug}-${svgType}-icon`;
-                    ['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
+                    svg.id = `${app.slug}-${svgType}-icon`
+                    ;['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
                 })
                 downloadBtn.append(downloadSVGs.download)
                 downloadBtn.onclick = event => { // download code, update icon + tooltip status
@@ -4270,8 +4269,8 @@
                 // Show standby state if prefix/suffix mode on
                 if (standby) {
                     const standbyBtnsDiv = dom.create.elem('div', {
-                        class: `${app.slug}-standby-btns`, style: 'will-change: transform' });
-                    ['query', 'summarize'].forEach(btnType => {
+                        class: `${app.slug}-standby-btns`, style: 'will-change: transform' })
+                    ;['query', 'summarize'].forEach(btnType => {
                         const btn = {
                             node: dom.create.elem('button', {
                                 class: `${app.slug}-standby-btn no-mobile-tap-outline` }),
@@ -4312,11 +4311,11 @@
                 })
                 continueChatDiv.append(chatTextarea)
                 replyForm.append(continueChatDiv) ; replySection.append(replyForm)
-                appDiv.querySelector('.reply-bubble, [class*=standby-btns]').after(replySection);
+                appDiv.querySelector('.reply-bubble, [class*=standby-btns]').after(replySection)
 
                 // Create/append chatbar buttons
-                const rOffset = 12, spreadFactor = 7.5;
-                ['send', 'shuffle', 'summarize'].forEach((btnType, idx) => {
+                const rOffset = 12, spreadFactor = 7.5
+                ;['send', 'shuffle', 'summarize'].forEach((btnType, idx) => {
                     if (btnType == 'summarize' && appDiv.querySelector('[class*=standby-btn]'))
                         return // since big Summarize button exists
                     const btn = dom.create.elem('button', {
@@ -4374,10 +4373,10 @@
                 hljs.highlightAll() // highlight code
                 replyPre.querySelectorAll('code').forEach(codeBlock => { // add linebreaks after semicolons
                     codeBlock.innerHTML = codeBlock.innerHTML.replace(/;\s*/g, ';<br>') })
-                update.replyPrefix(); // prepend '>> ' if dark scheme w/ bg animations to emulate terminal
+                update.replyPrefix() // prepend '>> ' if dark scheme w/ bg animations to emulate terminal
 
                 // Typeset math
-                [replyPre, ...replyPre.querySelectorAll('*')].forEach(elem =>
+                ;[replyPre, ...replyPre.querySelectorAll('*')].forEach(elem =>
                     renderMathInElement(elem, { delimiters: katexDelimiters, throwOnError: false }))
 
                 if (config.stickySidebar) update.replyPreMaxHeight()
@@ -4435,8 +4434,8 @@
                 })
                 const copySVGs = { copy: icons.copy.create(), copied: icons.checkmarkDouble.create() }
                 Object.entries(copySVGs).forEach(([svgType, svg]) => {
-                    svg.id = `${app.slug}-${svgType}-icon`;
-                    ['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
+                    svg.id = `${app.slug}-${svgType}-icon`
+                    ;['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
                 })
                 this.copy.append(copySVGs.copy)
                 this.copy.listeners = {}
@@ -4469,8 +4468,8 @@
                     id: `${app.slug}-share-btn`, class: 'no-mobile-tap-outline',
                     style: this.styles + 'margin-right: 10px ; position: relative ; bottom: 2px'
                 })
-                const shareSVG = icons.arrowShare.create();
-                ['width', 'height'].forEach(attr => shareSVG.setAttribute(attr, 16))
+                const shareSVG = icons.arrowShare.create()
+                ;['width', 'height'].forEach(attr => shareSVG.setAttribute(attr, 16))
                 this.share.append(shareSVG)
                 if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = tooltip.toggle
                 this.share.onclick = event => {
@@ -4497,8 +4496,8 @@
                 })
                 const regenSVGwrapper = dom.create.elem('div', { // to spin while respecting ini icon tilt
                     style: 'display: flex' }) // wrap the icon tightly
-                const regenSVG = icons.arrowsCyclic.create();
-                ['width', 'height'].forEach(attr => regenSVG.setAttribute(attr, 14))
+                const regenSVG = icons.arrowsCyclic.create()
+                ;['width', 'height'].forEach(attr => regenSVG.setAttribute(attr, 14))
                 regenSVGwrapper.append(regenSVG) ; this.regen.append(regenSVGwrapper)
                 if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = tooltip.toggle
                 this.regen.onclick = event => {
@@ -4520,8 +4519,8 @@
                 const speakSVGscroller = dom.create.elem('div', { // to scroll the icons
                     style: `display: flex ; /* align the SVGs horizontally */
                             width: 41px ; height: 22px /* rectangle to fit both icons */` })
-                const speakSVGs = { speak: icons.soundwave.create() } ; speakSVGs.speak.id = `${app.slug}-speak-icon`;
-                ['generating', 'playing'].forEach(state => {
+                const speakSVGs = { speak: icons.soundwave.create() } ; speakSVGs.speak.id = `${app.slug}-speak-icon`
+                ;['generating', 'playing'].forEach(state => {
                     speakSVGs[state] = []
                     for (let i = 0 ; i < 2 ; i++) { // push/id 2 of each state icon for continuous scroll animation
                         speakSVGs[state].push(
@@ -4643,11 +4642,11 @@
 
     // Create/ID/classify/listenerize/stylize APP container
     let appDiv = dom.create.elem('div', { id: app.slug, class: 'fade-in snippet' })
-    themes.apply(config.theme) ; addListeners.appDiv();
-    ['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
+    themes.apply(config.theme) ; addListeners.appDiv()
+    ;['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
         (config[mode] || config[`${mode}Sidebar`]) && appDiv.classList.add(mode))
-    document.head.append(app.styles = dom.create.style()) ; update.appStyle();
-    ['rpg', 'rpw'].forEach(cssType => // rising particles
+    document.head.append(app.styles = dom.create.style()) ; update.appStyle()
+    ;['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
     // Hide GF alert on GitHub if found
@@ -4726,8 +4725,8 @@
     function restoreAppDiv() {
         log.caller = 'restoreAppDiv()'
         log.debug(`Restoring ${app.name} from mutation...`)
-        appDiv = dom.create.elem('div', { id: app.slug, class: 'fade-in active snippet' }) ; addListeners.appDiv();
-        ['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
+        appDiv = dom.create.elem('div', { id: app.slug, class: 'fade-in active snippet' }) ; addListeners.appDiv()
+        ;['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
             (config[mode] || config[`${mode}Sidebar`]) && appDiv.classList.add(mode))
         appDiv.innerHTML = saveAppDiv.html
         if (appDiv.querySelector(`.${app.slug}-header-btn`)) addListeners.btns.appHeader()

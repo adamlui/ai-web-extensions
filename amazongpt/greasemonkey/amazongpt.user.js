@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.9
+// @version                2025.5.9.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -124,8 +124,7 @@
             name: (() => { try { return GM_info.scriptHandler } catch (err) { return 'unknown' }})(),
             version: (() => { try { return GM_info.version } catch (err) { return 'unknown' }})()
         }
-    };
-    ['Chromium', 'Firefox', 'Chrome', 'Edge', 'Brave', 'Mobile'].forEach(platform =>
+    } ; ['Chromium', 'Firefox', 'Chrome', 'Edge', 'Brave', 'Mobile'].forEach(platform =>
         env.browser[`is${ platform == 'Firefox' ? 'FF' : platform }`] = chatgpt.browser['is' + platform]())
     env.browser.isPortrait = env.browser.isMobile && ( innerWidth < innerHeight )
     env.browser.isPhone = env.browser.isMobile && innerWidth <= 480
@@ -466,10 +465,10 @@
                           + settings.controls.proxyAPIenabled.label + ' '
                           + this.state.separator + this.state.words[+config.proxyAPIenabled]
             this.entryIDs = [GM_registerMenuCommand(pmLabel, toggle.proxyMode,
-                env.scriptManager.supportsTooltips ? { title: settings.controls.proxyAPIenabled.helptip } : undefined)];
+                env.scriptManager.supportsTooltips ? { title: settings.controls.proxyAPIenabled.helptip } : undefined)]
 
             // Add About/Settings entries
-            ['about', 'settings'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
+            ;['about', 'settings'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
                 entryType == 'about' ? `💡 ${settings.controls.about.label}` : `⚙️ ${app.msgs.menuLabel_settings}`,
                 () => modals.open(entryType), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
             )))
@@ -750,10 +749,10 @@
                         transition: '0.1s', '-webkit-transition': '0.1s', '-moz-transition': '0.1s',
                             '-o-transition': '0.1s', '-ms-transition': '0.1s'
                     })
-                    document.body.style.cursor = 'grabbing'; // update cursor
-                    [...modals.draggingModal.children] // prevent hover FX if drag lags behind cursor
-                        .forEach(child => child.style.pointerEvents = 'none');
-                    ['mousemove', 'mouseup'].forEach(eventType => // add listeners
+                    document.body.style.cursor = 'grabbing' // update cursor
+                    ;[...modals.draggingModal.children] // prevent hover FX if drag lags behind cursor
+                        .forEach(child => child.style.pointerEvents = 'none')
+                    ;['mousemove', 'mouseup'].forEach(eventType => // add listeners
                         document.addEventListener(eventType, modals.handlers.drag[eventType]))
                     const draggingModalRect = modals.draggingModal.getBoundingClientRect()
                     modals.handlers.drag.offsetX = event.clientX - draggingModalRect.left +21
@@ -774,10 +773,10 @@
                         transition: 'inherit', '-webkit-transition': 'inherit', '-moz-transition': 'inherit',
                             '-o-transition': 'inherit', '-ms-transition': 'inherit'
                     })
-                    document.body.style.cursor = ''; // restore cursor
-                    [...modals.draggingModal.children] // restore pointer events
-                        .forEach(child => child.style.pointerEvents = '');
-                    ['mousemove', 'mouseup'].forEach(eventType => // remove listeners
+                    document.body.style.cursor = '' // restore cursor
+                    ;[...modals.draggingModal.children] // restore pointer events
+                        .forEach(child => child.style.pointerEvents = '')
+                    ;['mousemove', 'mouseup'].forEach(eventType => // remove listeners
                         document.removeEventListener(eventType, modals.handlers.drag[eventType]))
                     modals.draggingModal = null
                 }
@@ -3304,8 +3303,8 @@
                 const downloadBtn = dom.create.elem('btn', { id: `${app.slug}-download-btn` }),
                       downloadSVGs = { download: icons.download.create(), downloaded: icons.checkmarkDouble.create() }
                 Object.entries(downloadSVGs).forEach(([svgType, svg]) => {
-                    svg.id = `${app.slug}-${svgType}-icon`;
-                    ['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
+                    svg.id = `${app.slug}-${svgType}-icon`
+                    ;['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
                 })
                 downloadBtn.append(downloadSVGs.download)
                 downloadBtn.onclick = event => { // download code, update icon + tooltip status
@@ -3446,10 +3445,10 @@
                     id: `${app.slug}-chatbar`, rows: 1, placeholder: `${app.msgs.tooltip_sendReply}...` })
                 continueChatDiv.append(chatTextarea)
                 replyForm.append(continueChatDiv) ; replySection.append(replyForm)
-                appDiv.querySelector('.reply-bubble').after(replySection);
+                appDiv.querySelector('.reply-bubble').after(replySection)
 
                 // Create/append chatbar buttons
-                ['send', 'shuffle'].forEach(btnType => {
+                ;['send', 'shuffle'].forEach(btnType => {
                     const btn = dom.create.elem('button', {
                         id: `${app.slug}-${btnType}-btn`, class: `${app.slug}-chatbar-btn no-mobile-tap-outline` })
                     btn.style.right = `${ btnType == 'send' ? ( env.browser.isFF ? 12 : 9 )
@@ -3495,10 +3494,10 @@
             hljs.highlightAll() // highlight code
             replyPre.querySelectorAll('code').forEach(codeBlock => // add linebreaks after semicolons
                 codeBlock.innerHTML = codeBlock.innerHTML.replace(/;\s*/g, ';<br>'))
-            update.replyPrefix(); // prepend '>> ' if dark scheme w/ bg animations to emulate terminal
+            update.replyPrefix() // prepend '>> ' if dark scheme w/ bg animations to emulate terminal
 
             // Typeset math
-            [replyPre, ...replyPre.querySelectorAll('*')].forEach(elem =>
+            ;[replyPre, ...replyPre.querySelectorAll('*')].forEach(elem =>
                 renderMathInElement(elem, { delimiters: katexDelimiters, throwOnError: false }))
 
             // Auto-scroll if active
@@ -3547,8 +3546,8 @@
                 })
                 const copySVGs = { copy: icons.copy.create(), copied: icons.checkmarkDouble.create() }
                 Object.entries(copySVGs).forEach(([svgType, svg]) => {
-                    svg.id = `${app.slug}-${svgType}-icon`;
-                    ['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
+                    svg.id = `${app.slug}-${svgType}-icon`
+                    ;['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
                 })
                 this.copy.append(copySVGs.copy)
                 this.copy.listeners = {}
@@ -3581,8 +3580,8 @@
                     id: `${app.slug}-share-btn`, class: 'no-mobile-tap-outline',
                     style: this.styles + 'margin-right: 10px'
                 })
-                const shareSVG = icons.arrowShare.create();
-                ['width', 'height'].forEach(attr => shareSVG.setAttribute(attr, 16))
+                const shareSVG = icons.arrowShare.create()
+                ;['width', 'height'].forEach(attr => shareSVG.setAttribute(attr, 16))
                 this.share.append(shareSVG)
                 if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = tooltip.toggle
                 this.share.onclick = event => {
@@ -3609,8 +3608,8 @@
                 })
                 const regenSVGwrapper = dom.create.elem('div', { // to spin while respecting ini icon tilt
                     style: 'display: flex' }) // wrap the icon tightly
-                const regenSVG = icons.arrowsCyclic.create();
-                ['width', 'height'].forEach(attr => regenSVG.setAttribute(attr, 14))
+                const regenSVG = icons.arrowsCyclic.create()
+                ;['width', 'height'].forEach(attr => regenSVG.setAttribute(attr, 14))
                 regenSVGwrapper.append(regenSVG) ; this.regen.append(regenSVGwrapper)
                 if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = tooltip.toggle
                 this.regen.onclick = event => {
@@ -3632,8 +3631,8 @@
                 const speakSVGscroller = dom.create.elem('div', { // to scroll the icons
                     style: `display: flex ; /* align the SVGs horizontally */
                             width: 41px ; height: 22px /* rectangle to fit both icons */` })
-                const speakSVGs = { speak: icons.soundwave.create() } ; speakSVGs.speak.id = `${app.slug}-speak-icon`;
-                ['generating', 'playing'].forEach(state => {
+                const speakSVGs = { speak: icons.soundwave.create() } ; speakSVGs.speak.id = `${app.slug}-speak-icon`
+                ;['generating', 'playing'].forEach(state => {
                     speakSVGs[state] = []
                     for (let i = 0 ; i < 2 ; i++) { // push/id 2 of each state icon for continuous scroll animation
                         speakSVGs[state].push(
@@ -3759,8 +3758,8 @@
     // Create/ID/classify/listenerize/stylize APP container
     const appDiv = dom.create.elem('div', { id: app.slug, class: 'anchored fade-in' })
     addListeners.appDiv() ; if (config.expanded) appDiv.classList.add('expanded')
-    document.head.append(app.styles = dom.create.style()) ; update.appStyle();
-    ['rpg', 'rpw'].forEach(cssType => // rising particles
+    document.head.append(app.styles = dom.create.style()) ; update.appStyle()
+    ;['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
     // Hide GF alert on GitHub if found
