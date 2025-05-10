@@ -187,6 +187,7 @@ window.buttons = {
                     'background-color: transparent ; border-color: transparent ;' : '' }
             }
             .${this.class}:hover { opacity: ${this.opacity.active} !important }
+            #fullWindow-btn { margin-right: 1px }
             ${ selectors.sidebar ? // hide FW btn when window skinny on sites where sync req'd
                 `@media (max-width: 768px) {
                     #fullWindow-btn { display: none }
