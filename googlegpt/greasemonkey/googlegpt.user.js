@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.10.3
+// @version                  2025.5.10.4
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1808,7 +1808,8 @@
 
         toggle(event) { // visibility
             const toggleElem = event.currentTarget,
-                  menuType = /-(\w+)-(?:btn|menu)$/.exec(toggleElem.id)[1],
+                  reMenuType = /-?(\w+)-(?:btn|menu)$/,
+                  menuType = reMenuType.exec(toggleElem.id)?.[1] || reMenuType.exec(toggleElem.className)?.[1],
                   menu = hoverMenus[menuType]
             clearTimeout(menu.hideTimeout) // in case rapid re-enter before ran
             if (!menu.div?.isConnected) hoverMenus.createAppend(menuType)

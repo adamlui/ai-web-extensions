@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.10.3
+// @version               2025.5.10.4
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1654,7 +1654,8 @@
 
         toggle(event) { // visibility
             const toggleElem = event.currentTarget,
-                  menuType = /-(\w+)-(?:btn|menu)$/.exec(toggleElem.id)[1],
+                  reMenuType = /-?(\w+)-(?:btn|menu)$/,
+                  menuType = reMenuType.exec(toggleElem.id)?.[1] || reMenuType.exec(toggleElem.className)?.[1],
                   menu = hoverMenus[menuType]
             clearTimeout(menu.hideTimeout) // in case rapid re-enter before ran
             if (!menu.div?.isConnected) hoverMenus.createAppend(menuType)
