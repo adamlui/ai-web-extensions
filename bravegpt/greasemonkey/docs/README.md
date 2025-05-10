@@ -37,7 +37,7 @@
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
-<h3>Bring the magic of ChatGPT to Brave Search</h3>
+<h3>AI chat & search summaries in Brave Search, powered by the latest LLMs</h3>
 
 <a href="https://gm.bravegpt.com"><img height=50 alt="[Install this script]" src="https://assets.bravegpt.com/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://assets.bravegpt.com/images/buttons/greasy-fork/help.svg"></a>
 <br>
