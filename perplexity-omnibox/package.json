@@ -7,14 +7,10 @@
   "homepage": "https://www.perplexityomnibox.com",
   "license": "MIT",
   "funding": [
-    {
-      "type": "github",
-      "url": "http://github.com/sponsors/adamlui"
-    },
-    {
-      "type": "ko-fi",
-      "url": "https://ko-fi.com/adamlui"
-    }
+    { "type": "cashapp", "url": "https://cash.app/$AdamLui" },
+    { "type": "github", "url": "http://github.com/sponsors/adamlui" },
+    { "type": "ko-fi", "url": "https://ko-fi.com/adamlui" },
+    { "type": "paypal", "url": "https://paypal.me/adamlui" }
   ],
   "scripts": {
     "prepare": "husky",
