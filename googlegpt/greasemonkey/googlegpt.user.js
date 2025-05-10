@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.10.1
+// @version                  2025.5.10.2
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2611,9 +2611,8 @@
                     color:      var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) ;
                     fill:       var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) ;
                     stroke:     var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) }
-                #${app.slug} .reply-header-text { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
+                #${app.slug} .reply-header-txt { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
                 #${app.slug} .reply-header-btns { margin: 3.5px -5px 0 }
-                #${app.slug} .api-btn { cursor: pointer ; padding: 5px ; margin: 0 -4px 0 -7px }
                 #${app.slug} .reply-pre {
                     font-size: ${config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;
                     line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;
@@ -4536,7 +4535,7 @@
                 // Show API used in bubble header
                 if (!show.reply.updatedAPIinHeader) {
                     show.reply.updatedAPIinHeader = true
-                    const preHeaderLabel = appDiv.querySelector('.reply-header-text'),
+                    const preHeaderLabel = appDiv.querySelector('.reply-header-txt'),
                           apiBeacon = dom.create.elem('span', { class: 'api-btn' })
                     apiBeacon.textContent = '⦿'
                     apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = hoverMenus.toggle
@@ -4601,7 +4600,7 @@
             this.replyTip = dom.create.elem('span', { class: 'reply-tip' })
             this.bubbleDiv = dom.create.elem('div', { class: 'reply-bubble bubble-elem' })
             this.preHeader = dom.create.elem('div', { class: 'reply-header bubble-elem' })
-            this.preHeader.append(dom.create.elem('span', { class: 'reply-header-text no-user-select' }))
+            this.preHeader.append(dom.create.elem('span', { class: 'reply-header-txt no-user-select' }))
             this.buttons.insert()
             this.replyPre = dom.create.elem('pre', { class: 'reply-pre bubble-elem' })
             this.bubbleDiv.append(this.preHeader, this.replyPre)
