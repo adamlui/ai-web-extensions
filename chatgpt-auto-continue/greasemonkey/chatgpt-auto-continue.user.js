@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.9.2
+// @version             2025.5.9.3
 // @license             MIT
 // @icon                https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon48.png?v=a8c9387
 // @icon64              https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon64.png?v=a8c9387
@@ -229,8 +229,8 @@
 // @connect             gm.chatgptautocontinue.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.0/dist/chatgpt.min.js#sha256-Xg6XXZ7kcc/MTdlKwUq1rc41WiEwuqhl7DxIjIkzRhc=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@cacfc11/chromium/extension/components/modals.js#sha256-yXq8Ti/3drCq/VVKfFniQABh2P+9gG3xYxoXrePqG9Y=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@9070468/chromium/extension/lib/dom.js#sha256-2oisZjtBjYCUrGSPdABjeC1y0KgN2ZHfRC19zNazOL4=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@df66b49/chromium/extension/components/modals.js#sha256-Nj/NrIa9+sLZH4eqCMckX4u7bvTBeHzoX0MPnHwfB5A=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@df66b49/chromium/extension/lib/dom.js#sha256-kiKOn4x4hom5TRyrda7YqUNkq+s/JYgnFDQiWrR8ffk=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@9070468/chromium/extension/lib/settings.js#sha256-rsHjP3SqLH9R5IeKBl+8+tebbSXt8nE6VjLLVbyy+Vo=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@78d7214/chromium/extension/lib/ui.js#sha256-2yuQbliwz+uaCxUIEeTMWIH5JADHgjDBZD4/8I2T8rE=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
