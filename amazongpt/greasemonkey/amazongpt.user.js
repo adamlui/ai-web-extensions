@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.10.2
+// @version                2025.5.10.3
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -3169,7 +3169,7 @@
             if (caller.attemptCnt < Object.keys(apis).length -+(caller == get.reply)) {
                 log.debug('Trying another endpoint...')
                 caller.attemptCnt++
-                caller(caller == get.reply ? msgChain : prompts.stripAugments(msgChain)[msgChain.length - 1].content)
+                caller({ msgs: msgChain, src: caller.src })
             } else {
                 log.debug('No remaining untried endpoints')
                 if (caller == get.reply)

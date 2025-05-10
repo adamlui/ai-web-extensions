@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.10.2
+// @version                  2025.5.10.3
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -4052,7 +4052,7 @@
             if (caller.attemptCnt < Object.keys(apis).length -+(caller == get.reply)) {
                 log.debug('Trying another endpoint...')
                 caller.attemptCnt++
-                caller(caller == get.reply ? msgChain : get.related.query, caller.src ? { src: caller.src } : undefined)
+                caller(caller == get.reply ? { msgs: msgChain, src: caller.src } : get.related.query)
                     .then(result => { if (caller == get.related) show.related(result) ; else return })
             } else {
                 log.debug('No remaining untried endpoints')
