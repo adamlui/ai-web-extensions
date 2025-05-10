@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.10
+// @version                2025.5.10.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -2788,11 +2788,8 @@
         },
 
         scheme(newScheme) {
-            log.caller = `update.scheme('${newScheme}')`
-            log.debug(`Updating ${app.name} scheme to ${log.toTitleCase(newScheme)}...`)
             env.ui.app.scheme = newScheme ; logos.ddgpt.update() ; update.appStyle()
             update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
-            log.debug(`Success! ${app.name} updated to ${log.toTitleCase(newScheme)} scheme`)
         }
     }
 
@@ -2931,8 +2928,6 @@
         hWheelDistance: 10, // px
 
         createAppend() {
-            log.caller = 'fontSizeSlider.createAppend()'
-            log.debug('Creating/appending Font Size slider...')
 
             // Create/ID/classify slider elems
             fontSizeSlider.cursorOverlay = dom.create.elem('div', { class: 'cursor-overlay' })

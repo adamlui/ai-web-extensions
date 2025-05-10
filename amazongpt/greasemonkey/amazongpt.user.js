@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.10
+// @version                2025.5.10.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1083,7 +1083,6 @@
                 settingsListContainer.append(...settingsLists)
 
                 // Create close button
-                log.debug('Creating Close button...')
                 const closeBtn = dom.create.elem('div',
                     { title: app.msgs.tooltip_close, class: `${app.slug}-modal-close-btn no-mobile-tap-outline` })
                 closeBtn.append(icons.x.create())
@@ -2249,11 +2248,8 @@
         },
 
         scheme(newScheme) {
-            log.caller = `update.scheme('${newScheme}')`
-            log.debug(`Updating ${app.name} scheme to ${log.toTitleCase(newScheme)}...`)
             env.ui.app.scheme = newScheme ; logos.amzgpt.update() ; icons.amzgpt.update() ; update.appStyle()
             update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
-            log.debug(`Success! ${app.name} updated to ${log.toTitleCase(newScheme)} scheme`)
         }
     }
 
@@ -2388,8 +2384,6 @@
         hWheelDistance: 10, // px
 
         createAppend() {
-            log.caller = 'fontSizeSlider.createAppend()'
-            log.debug('Creating/appending Font Size slider...')
 
             // Create/ID/classify slider elems
             fontSizeSlider.cursorOverlay = dom.create.elem('div', { class: 'cursor-overlay' })

@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.10
+// @version               2025.5.10.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1312,7 +1312,6 @@
                 settingsListContainer.append(...settingsLists)
 
                 // Create close button
-                log.debug('Creating Close button...')
                 const closeBtn = dom.create.elem('div',
                     { title: app.msgs.tooltip_close, class: `${app.slug}-modal-close-btn no-mobile-tap-outline` })
                 closeBtn.append(icons.x.create())
@@ -2779,11 +2778,8 @@
         },
 
         scheme(newScheme) {
-            log.caller = `update.scheme('${newScheme}')`
-            log.debug(`Updating ${app.name} scheme to ${log.toTitleCase(newScheme)}...`)
             env.ui.app.scheme = newScheme ; logos.braveGPT.update() ; update.appStyle()
             update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
-            log.debug(`Success! ${app.name} updated to ${log.toTitleCase(newScheme)} scheme`)
         }
     }
 
@@ -2921,8 +2917,6 @@
         hWheelDistance: 10, // px
 
         createAppend() {
-            log.caller = 'fontSizeSlider.createAppend()'
-            log.debug('Creating/appending Font Size slider...')
 
             // Create/ID/classify slider elems
             fontSizeSlider.cursorOverlay = dom.create.elem('div', { class: 'cursor-overlay' })
