@@ -5,11 +5,11 @@
   "urls": {
     "app": "https://www.duckduckgpt.com",
     "assetHost": "https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@latest/assets",
-    "chatgptJS": "https://chatgpt.js.org",
+    "chatgptjs": "https://chatgpt.js.org",
     "contributors": "https://docs.duckduckgpt.com/#-contributors",
     "discuss": "https://github.com/KudoAI/duckduckgpt/discussions",
-    "donate": { "gitHub": "https://github.com/sponsors/KudoAI" },
-    "gitHub": "https://github.com/KudoAI/duckduckgpt",
+    "donate": { "github": "https://github.com/sponsors/KudoAI" },
+    "github": "https://github.com/KudoAI/duckduckgpt",
     "publisher": "https://www.kudoai.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {

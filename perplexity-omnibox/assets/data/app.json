@@ -5,12 +5,12 @@
     "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@latest/assets",
     "discuss": "https://github.com/adamlui/perplexity-omnibox/discussions",
     "donate": {
-      "cashApp": "https://cash.app/$adamlui",
-      "gitHub": "https://github.com/sponsors/adamlui",
-      "koFi": "https://ko-fi.com/adamlui",
-      "payPal": "https://paypal.me/adamlui"
+      "cashapp": "https://cash.app/$adamlui",
+      "github": "https://github.com/sponsors/adamlui",
+      "ko-fi": "https://ko-fi.com/adamlui",
+      "paypal": "https://paypal.me/adamlui"
     },
-    "gitHub": "https://github.com/adamlui/perplexity-omnibox",
+    "github": "https://github.com/adamlui/perplexity-omnibox",
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
