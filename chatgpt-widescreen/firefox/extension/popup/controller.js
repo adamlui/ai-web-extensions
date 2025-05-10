@@ -236,7 +236,7 @@
     const cjsLogo = footer.querySelector('.cjs-logo')
     cjsLogo.parentNode.title = env.browser.displaysEnglish ? '' : `${getMsg('about_poweredBy')} chatgpt.js`
     cjsLogo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca/assets/images/badges/powered-by-chatgpt.js.png'
-    cjsLogo.onclick = () => { open(app.urls.chatgptJS) ; close() }
+    cjsLogo.onclick = () => { open(app.urls.chatgptjs) ; close() }
 
     // Init ABOUT footer icon/listener
     const aboutSpan = footer.querySelector('span[data-locale-title="menuLabel_about appName"]')

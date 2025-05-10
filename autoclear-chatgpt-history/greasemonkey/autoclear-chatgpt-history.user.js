@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.8.3
+// @version             2025.5.9
 // @license             MIT
 // @icon                https://assets.autoclearchatgpt.com/images/icons/openai/black/icon48.png?v=f461c06
 // @icon64              https://assets.autoclearchatgpt.com/images/icons/openai/black/icon64.png?v=f461c06
@@ -292,7 +292,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '1cb1776' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
+        latestResourceCommitHash: 'f7d9eee' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = 'https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history'
                           + `@${app.latestResourceCommitHash}`
@@ -448,7 +448,7 @@
             ['about', 'donate'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
                 `${ entryType == 'about' ? '💡' : '💖' } ${
                     app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
-                () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate.koFi),
+                () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate['ko-fi']),
                 env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
             )))
         }
@@ -526,10 +526,10 @@
                 + `<span style="${labelStyles}">🏷️ ${app.msgs.about_version}:</span> `
                     + `<span class="about-em">${app.version}</span>\n`
                 + `<span style="${labelStyles}">📜 ${app.msgs.about_openSourceCode}:</span> `
-                    + `<a href="${app.urls.gitHub}" target="_blank" rel="nopener">`
-                        + app.urls.gitHub + '</a>\n'
+                    + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
+                        + app.urls.github + '</a>\n'
                 + `<span style="${labelStyles}">⚡ ${app.msgs.about_poweredBy}:</span> `
-                    + `<a href="${app.urls.chatgptJS}" target="_blank" rel="noopener">chatgpt.js</a>`
+                    + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
                         + ` v${app.chatgptJSver}`,
                 [ // buttons
                     function checkForUpdates() { updateCheck() },
@@ -620,8 +620,8 @@
                 if (!/dismiss/i.test(btn.textContent)) {
                     btn.replaceWith(btn = btn.cloneNode(true))
                     btn.onclick = () => modals.safeWinOpen(app.urls.donate[
-                        btn.textContent == 'Cash App' ? 'cashApp'
-                      : btn.textContent == 'Github Sponsors' ? 'gitHub' : 'payPal'
+                        btn.textContent == 'Cash App' ? 'cashapp'
+                      : btn.textContent == 'Github Sponsors' ? 'github' : 'paypal'
                     ])
                 }
 
@@ -722,7 +722,7 @@
                     `${app.msgs.alert_newerVer} ${app.msgs.appName} ` // msg
                         + `(v${app.latestVer}) ${app.msgs.alert_isAvail}!  `
                         + '<a target="_blank" rel="noopener" style="font-size: 0.7rem" href="'
-                            + `${app.urls.gitHub}/commits/main/greasemonkey/${app.slug}.user.js`
+                            + `${app.urls.github}/commits/main/greasemonkey/${app.slug}.user.js`
                         + `">${app.msgs.link_viewChanges}</a>`,
                     function update() { // button
                         modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)

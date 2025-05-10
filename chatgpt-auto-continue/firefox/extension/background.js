@@ -4,7 +4,7 @@ const chatgptURL = 'https://chatgpt.com/';
 (async () => {
     const app = {
         version: chrome.runtime.getManifest().version,
-        latestResourceCommitHash: '4439735', // for cached app.json + icons.questionMark.src
+        latestResourceCommitHash: 'c7c27ae', // for cached app.json + icons.questionMark.src
         urls: {},
         chatgptJSver: /v(\d+\.\d+\.\d+)/.exec(await (await fetch(chrome.runtime.getURL('lib/chatgpt.js'))).text())[1]
     }

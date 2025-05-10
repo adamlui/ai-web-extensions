@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.8.2
+// @version             2025.5.9
 // @license             MIT
 // @icon                https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon48.png?v=a8c9387
 // @icon64              https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon64.png?v=a8c9387
@@ -282,7 +282,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: 'd530749' // for cached <app|messages>.json
+        latestResourceCommitHash: 'c7c27ae' // for cached <app|messages>.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -408,7 +408,7 @@
                 this.entryIDs.push(GM_registerMenuCommand(
                     `${ entryType == 'about' ? '💡' : '💖' } ${
                         app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
-                    () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate.koFi),
+                    () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate['ko-fi']),
                     env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
                 ))
             })

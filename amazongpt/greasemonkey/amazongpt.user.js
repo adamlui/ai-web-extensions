@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.8.2
+// @version                2025.5.9
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -137,7 +137,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '63aa021' // for cached <app|messages>.json
+        latestResourceCommitHash: 'dd80f92' // for cached <app|messages>.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -625,10 +625,10 @@
                 + `<span style="${labelStyles}">🏷️ ${app.msgs.about_version}:</span> `
                     + `<span class="about-em">${app.version}</span>\n`
                 + `<span style="${labelStyles}">📜 ${app.msgs.about_openSourceCode}:</span> `
-                    + `<a href="${app.urls.gitHub}" target="_blank" rel="nopener">`
-                        + app.urls.gitHub + '</a>\n'
+                    + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
+                        + app.urls.github + '</a>\n'
                 + `<span style="${labelStyles}">⚡ ${app.msgs.about_poweredBy}:</span> `
-                    + `<a href="${app.urls.chatgptJS}" target="_blank" rel="noopener">chatgpt.js</a>`
+                    + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
                         + ` v${app.chatgptJSver}`,
                 [ // buttons
                     function checkForUpdates() { updateCheck() },
@@ -1370,7 +1370,7 @@
                     `${app.msgs.alert_newerVer} ${app.name} ` // msg
                         + `(v${app.latestVer}) ${app.msgs.alert_isAvail}!  `
                         + '<a target="_blank" rel="noopener" style="font-size: 1.1rem" href="'
-                            + `${app.urls.gitHub}/commits/main/greasemonkey/${app.slug}.user.js`
+                            + `${app.urls.github}/commits/main/greasemonkey/${app.slug}.user.js`
                         + `">${app.msgs.link_viewChanges}</a>`,
                     function update() { // button
                         modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)

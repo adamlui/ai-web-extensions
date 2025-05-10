@@ -36,10 +36,10 @@ window.modals = {
             + `<span style="${labelStyles}">🏷️ ${this.getMsg('about_version')}:</span> `
                 + `<span class="about-em">${app.version}</span>\n`
             + `<span style="${labelStyles}">📜 ${this.getMsg('about_openSourceCode')}:</span> `
-                + `<a href="${app.urls.gitHub}" target="_blank" rel="nopener">`
-                    + app.urls.gitHub + '</a>\n'
+                + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
+                    + app.urls.github + '</a>\n'
             + `<span style="${labelStyles}">⚡ ${this.getMsg('about_poweredBy')}:</span> `
-                + `<a href="${app.urls.chatgptJS}" target="_blank" rel="noopener">chatgpt.js</a>`
+                + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
                     + ` v${app.chatgptJSver}`,
             modalBtns, '', 730
         )
@@ -125,8 +125,8 @@ window.modals = {
             if (!/dismiss/i.test(btn.textContent)) {
                 btn.replaceWith(btn = btn.cloneNode(true))
                 btn.onclick = () => this.safeWinOpen(app.urls.donate[
-                    btn.textContent == 'Cash App' ? 'cashApp'
-                  : btn.textContent == 'Github Sponsors' ? 'gitHub' : 'payPal'
+                    btn.textContent == 'Cash App' ? 'cashapp'
+                  : btn.textContent == 'Github Sponsors' ? 'github' : 'paypal'
                 ])
             }
 
@@ -264,7 +264,7 @@ window.modals = {
                 `${modals.getMsg('alert_newerVer')} ${modals.getMsg('appName')} ` // msg
                     + `(v${app.latestVer}) ${modals.getMsg('alert_isAvail')}!  `
                     + '<a target="_blank" rel="noopener" style="font-size: 0.7rem" href="'
-                        + `${app.urls.gitHub}/commits/main/greasemonkey/${app.slug}-mode.user.js`
+                        + `${app.urls.github}/commits/main/greasemonkey/${app.slug}-mode.user.js`
                     + `">${modals.getMsg('link_viewChanges')}</a>`,
                 function update() { // button
                     modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)

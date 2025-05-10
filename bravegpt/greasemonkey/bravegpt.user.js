@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.8.2
+// @version               2025.5.9
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -260,7 +260,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '9b3a2cc' // for cached <app|messages>.json
+        latestResourceCommitHash: '1b5e016' // for cached <app|messages>.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -802,10 +802,10 @@
                 + `<span style="${labelStyles}">🏷️ ${app.msgs.about_version}:</span> `
                     + `<span class="about-em">${app.version}</span>\n`
                 + `<span style="${labelStyles}">📜 ${app.msgs.about_openSourceCode}:</span> `
-                    + `<a href="${app.urls.gitHub}" target="_blank" rel="nopener">`
-                        + app.urls.gitHub + '</a>\n'
+                    + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
+                        + app.urls.github + '</a>\n'
                 + `<span style="${labelStyles}">⚡ ${app.msgs.about_poweredBy}:</span> `
-                    + `<a href="${app.urls.chatgptJS}" target="_blank" rel="noopener">chatgpt.js</a>`
+                    + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
                         + ` v${app.chatgptJSver}`,
                 [ // buttons
                     function checkForUpdates() { updateCheck() },
@@ -1594,7 +1594,7 @@
                     `${app.msgs.alert_newerVer} ${app.name} ` // msg
                         + `(v${app.latestVer}) ${app.msgs.alert_isAvail}!  `
                         + '<a target="_blank" rel="noopener" style="font-size: 0.93rem" href="'
-                            + `${app.urls.gitHub}/commits/main/greasemonkey/${app.slug}.user.js`
+                            + `${app.urls.github}/commits/main/greasemonkey/${app.slug}.user.js`
                         + `">${app.msgs.link_viewChanges}</a>`,
                     function update() { // button
                         modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)

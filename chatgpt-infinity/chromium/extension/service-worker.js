@@ -2,7 +2,7 @@
 const appReady = (async () => {
     const app = {
         version: chrome.runtime.getManifest().version,
-        latestResourceCommitHash: '6cf8038', // for cached app.json...
+        latestResourceCommitHash: 'fd6a32d', // for cached app.json...
             // ... + navicon in toggles.sidebar.insert() + icons.questionMark.src
         urls: {},
         chatgptJSver: /v(\d+\.\d+\.\d+)/.exec(await (await fetch(chrome.runtime.getURL('lib/chatgpt.js'))).text())[1]
