@@ -2061,7 +2061,7 @@
                     stroke:     var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) }
                 #${app.slug} .reply-header-text { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
                 #${app.slug} .reply-header-btns { margin: 7.5px -5px 0 }
-                #${app.slug}-api-btn { cursor: pointer ; padding: 5px ; margin: 0 -4px 0 -7px }
+                #${app.slug} .api-btn { cursor: pointer ; padding: 5px ; margin: 0 -4px 0 -7px }
                 #${app.slug} .reply-pre {
                     font-size: ${config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;
                     line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;
@@ -2835,7 +2835,7 @@
                         !streamingToggle.checked && config.proxyAPIenabled && !config.streamingDisabled)
                             modals.settings.toggle.switch(streamingToggle)
             }
-            const apiBeacon = appDiv.querySelector(`#${app.slug}-api-btn`)
+            const apiBeacon = appDiv.querySelector(`#${app.slug} .api-btn`)
             if (apiBeacon) apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
             if (appDiv.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
                 get.reply({ msgs: msgChain, src: get.reply.src })
@@ -3472,7 +3472,7 @@
             if (!show.reply.updatedAPIinHeader) {
                 show.reply.updatedAPIinHeader = true
                 const preHeaderLabel = appDiv.querySelector('.reply-header-text'),
-                      apiBeacon = dom.create.elem('span', { id: `${app.slug}-api-btn` })
+                      apiBeacon = dom.create.elem('span', { class: 'api-btn' })
                 apiBeacon.textContent = '⦿'
                 apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = hoverMenus.toggle
                 apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
