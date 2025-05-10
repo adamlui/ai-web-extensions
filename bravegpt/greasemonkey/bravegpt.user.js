@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.9.3
+// @version               2025.5.9.5
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -258,7 +258,7 @@
 
     // Init APP data
     window.app = {
-        version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
+        version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
         latestResourceCommitHash: '1b5e016' // for cached <app|messages>.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@${app.latestResourceCommitHash}`
@@ -805,7 +805,7 @@
                         + app.urls.github + '</a>\n'
                 + `<span style="${labelStyles}">⚡ ${app.msgs.about_poweredBy}:</span> `
                     + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
-                        + ` v${app.chatgptJSver}`,
+                        + ` v${app.chatgptjsVer}`,
                 [ // buttons
                     function checkForUpdates() { updateCheck() },
                     function getSupport(){},

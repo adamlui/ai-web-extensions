@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.9.3
+// @version                  2025.5.9.4
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -449,7 +449,7 @@
 
     // Init APP data
     window.app = {
-        version: GM_info.script.version, chatgptJSver: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
+        version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
         latestResourceCommitHash: '567a3d9' // for cached <app|messages>.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@${app.latestResourceCommitHash}`
@@ -992,7 +992,7 @@
                         + app.urls.github + '</a>\n'
                 + `<span style="${labelStyles}">⚡ ${app.msgs.about_poweredBy}:</span> `
                     + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
-                        + ` v${app.chatgptJSver}`,
+                        + ` v${app.chatgptjsVer}`,
                 [ // buttons
                     function checkForUpdates() { updateCheck() },
                     function getSupport(){},
