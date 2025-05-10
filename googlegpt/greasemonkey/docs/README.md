@@ -42,7 +42,7 @@
 
 <img height=6px width="100%" src="https://assets.googlegpt.io/images/separators/gradient-aqua.png">
 
-<h3>🤖 Bring the magic of AI to Google Search (powered by Google Gemma + GPT-4o!)</h3>
+<h3>🤖 Bring AI chat & search summaries to Google Search, powered by the latest LLMs</h3>
 
 <a href="https://gm.googlegpt.io"><img height=50 alt="[Install this script]" src="https://assets.googlegpt.io/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://assets.googlegpt.io/images/buttons/greasy-fork/help.svg"></a>
 <br>
