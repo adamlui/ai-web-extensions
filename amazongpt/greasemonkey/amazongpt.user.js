@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.9.2
+// @version                2025.5.9.3
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1452,7 +1452,7 @@
                                     || menu.preferredDirection == 'down' && !appIsTooLow ? 'down' : 'up'
                 Object.assign(menu.div.style, {
                     top: `${ rects.toggleBtn.top - rects.appDiv.top +(
-                        pointDirection == 'down' ? 24.5 : -rects.hoverMenu.height -13 )}px`,
+                        pointDirection == 'down' ? 30.5 : -rects.hoverMenu.height -13 )}px`,
                     right: `${ rects.appDiv.right - event.clientX - menu.div.offsetWidth
                         / ( pointDirection == 'up' ? /* center */ 2 : /* leftish-aligned */ 1.25 )}px`,
                     opacity: 1
@@ -2061,6 +2061,7 @@
                     stroke:     var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) }
                 #${app.slug} .reply-header-text { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
                 #${app.slug} .reply-header-btns { margin: 7.5px -5px 0 }
+                #${app.slug}-api-btn { cursor: pointer ; padding: 5px ; margin: 0 -4px 0 -7px }
                 #${app.slug} .reply-pre {
                     font-size: ${config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;
                     line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;
@@ -3471,7 +3472,7 @@
             if (!show.reply.updatedAPIinHeader) {
                 show.reply.updatedAPIinHeader = true
                 const preHeaderLabel = appDiv.querySelector('.reply-header-text'),
-                      apiBeacon = dom.create.elem('span', { id: `${app.slug}-api-btn`, style: 'cursor: pointer' })
+                      apiBeacon = dom.create.elem('span', { id: `${app.slug}-api-btn` })
                 apiBeacon.textContent = '⦿'
                 apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = hoverMenus.toggle
                 apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
