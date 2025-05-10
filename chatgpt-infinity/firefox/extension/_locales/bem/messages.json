@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ONSE" },
   "menuLabel_replyInt": { "message": "Eposya Intervali" },
   "menuLabel_about": { "message": "Mwezabukali" },
+  "menuLabel_buyMeAcoffee": { "message": "Yulanda Cafe" },
   "menuLabel_donate": { "message": "Napapata Uletuma Ubupe" },
   "menuLabel_extensionActive": { "message": "ukufutukishiwa" },
   "about_author": { "message": "Kalemba" },

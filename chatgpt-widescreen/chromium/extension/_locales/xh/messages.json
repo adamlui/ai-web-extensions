@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Iisetingi Zamaqhosha" },
   "menuLabel_siteSettings": { "message": "Iisetingi Zesayithi" },
   "menuLabel_about": { "message": "Malunga" },
+  "menuLabel_buyMeAcoffee": { "message": "Ndithengele Ikofu" },
   "menuLabel_donate": { "message": "Nceda uthumele umnikelo" },
   "menuLabel_extensionActive": { "message": "ukongezwa kuyasebenza" },
   "about_author": { "message": "Inkcazelo ngombhali" },

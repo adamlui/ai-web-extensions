@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Nastavitve gumbov" },
   "menuLabel_siteSettings": { "message": "Nastavitve strani" },
   "menuLabel_about": { "message": "Vizitka" },
+  "menuLabel_buyMeAcoffee": { "message": "Kupi mi kavo" },
   "menuLabel_donate": { "message": "Pošljite donacijo" },
   "menuLabel_extensionActive": { "message": "razširitev je aktivna" },
   "about_author": { "message": "Avtor" },

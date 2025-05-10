@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Automātiskā ritināšana" },
   "menuLabel_modeNotifs": { "message": "Režīma paziņojumi" },
   "menuLabel_about": { "message": "Par produktu" },
+  "menuLabel_buyMeAcoffee": { "message": "Nopērciet man kafiju" },
   "menuLabel_donate": { "message": "Lūdzu, nosūtiet ziedojumu" },
   "menuLabel_extensionActive": { "message": "paplašinājums ir aktīvs" },
   "about_author": { "message": "Autors" },

@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Automatinė slinktis" },
   "menuLabel_modeNotifs": { "message": "Pranešimai apie režimą" },
   "menuLabel_about": { "message": "Apie" },
+  "menuLabel_buyMeAcoffee": { "message": "Nupirk man kavos" },
   "menuLabel_donate": { "message": "Siųskite auką" },
   "menuLabel_extensionActive": { "message": "plėtinys aktyvus" },
   "about_author": { "message": "Autorius" },

@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ALLT" },
   "menuLabel_replyInt": { "message": "Svarsintervall" },
   "menuLabel_about": { "message": "Om" },
+  "menuLabel_buyMeAcoffee": { "message": "Skänk mig en slant :)" },
   "menuLabel_donate": { "message": "Vänligen skicka en donation" },
   "menuLabel_extensionActive": { "message": "SOAP Extension aktiv." },
   "about_author": { "message": "Författare" },

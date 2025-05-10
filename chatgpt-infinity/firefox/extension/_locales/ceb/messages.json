@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "TANAN" },
   "menuLabel_replyInt": { "message": "Interval sa Tubag" },
   "menuLabel_about": { "message": "Mga Bahin" },
+  "menuLabel_buyMeAcoffee": { "message": "Palita Ako Usa ka Kape" },
   "menuLabel_donate": { "message": "Palihug ipadala ang usa ka donasyon" },
   "menuLabel_extensionActive": { "message": "aktibo ang extension" },
   "about_author": { "message": "Awtor" },

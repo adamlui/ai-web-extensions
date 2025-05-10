@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "按钮设置" },
   "menuLabel_siteSettings": { "message": "站点设置" },
   "menuLabel_about": { "message": "关于" },
+  "menuLabel_buyMeAcoffee": { "message": "赠我杯咖啡" },
   "menuLabel_donate": { "message": "请捐款" },
   "menuLabel_extensionActive": { "message": "扩展活动" },
   "about_author": { "message": "作者" },

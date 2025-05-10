@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "বোতাম সেটিংস" },
   "menuLabel_siteSettings": { "message": "সাইট সেটিংস" },
   "menuLabel_about": { "message": "সম্বন্ধে" },
+  "menuLabel_buyMeAcoffee": { "message": "আমাকে একটি কফি কিনে দিন" },
   "menuLabel_donate": { "message": "অনুগ্রহ করে একটি অনুদান পাঠান" },
   "menuLabel_extensionActive": { "message": "এক্সটেনশান সক্রিয়" },
   "about_author": { "message": "রচয়িতা" },

@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Кнопканын параметрлери" },
   "menuLabel_siteSettings": { "message": "Сайттын параметрлери" },
   "menuLabel_about": { "message": "Апплет жөнүндө" },
+  "menuLabel_buyMeAcoffee": { "message": "Мага Coffee сатып алуу" },
   "menuLabel_donate": { "message": "Сураныч, кайрымдуулук жөнөтүңүз" },
   "menuLabel_extensionActive": { "message": "кеңейтүү активдүү" },
   "about_author": { "message": "Автору:" },

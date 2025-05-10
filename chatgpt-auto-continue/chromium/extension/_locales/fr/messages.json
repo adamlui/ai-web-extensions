@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Défilement automatique" },
   "menuLabel_modeNotifs": { "message": "Notifications de mode" },
   "menuLabel_about": { "message": "À propos de" },
+  "menuLabel_buyMeAcoffee": { "message": "Offrez-moi un café" },
   "menuLabel_donate": { "message": "Veuillez envoyer un don" },
   "menuLabel_extensionActive": { "message": "l’extension est active" },
   "about_author": { "message": "Auteur" },

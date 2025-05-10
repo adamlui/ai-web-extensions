@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Nastavení tlačítek" },
   "menuLabel_siteSettings": { "message": "Umělec Nastavení" },
   "menuLabel_about": { "message": "O" },
+  "menuLabel_buyMeAcoffee": { "message": "Kupte mi kafe :)" },
   "menuLabel_donate": { "message": "Prosíme o zaslání daru" },
   "menuLabel_extensionActive": { "message": "rozšíření aktivní" },
   "about_author": { "message": "Autor" },

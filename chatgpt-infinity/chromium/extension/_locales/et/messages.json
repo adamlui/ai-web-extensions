@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "KÕIK" },
   "menuLabel_replyInt": { "message": "Vastuse intervall" },
   "menuLabel_about": { "message": "Umbes" },
+  "menuLabel_buyMeAcoffee": { "message": "Osta mulle kohv" },
   "menuLabel_donate": { "message": "Saada annetus" },
   "menuLabel_extensionActive": { "message": "laiendus aktiivne" },
   "about_author": { "message": "Autor" },

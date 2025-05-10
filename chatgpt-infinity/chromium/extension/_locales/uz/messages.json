@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "HAMMASI" },
   "menuLabel_replyInt": { "message": "Javob Oraliqi" },
   "menuLabel_about": { "message": "Dastur haqida" },
+  "menuLabel_buyMeAcoffee": { "message": "Menga qahva sotib ol" },
   "menuLabel_donate": { "message": "Iltimos, xayriya yuboring" },
   "menuLabel_extensionActive": { "message": "kengaytma faol" },
   "about_author": { "message": "Muallif" },

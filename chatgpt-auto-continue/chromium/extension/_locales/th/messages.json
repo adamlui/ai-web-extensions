@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "เลื่อนอัตโนมัติ" },
   "menuLabel_modeNotifs": { "message": "การแจ้งเตือนโหมด" },
   "menuLabel_about": { "message": "เกี่ยวกับ" },
+  "menuLabel_buyMeAcoffee": { "message": "ซื้อกาแฟให้ฉัน" },
   "menuLabel_donate": { "message": "โปรดส่งเงินบริจาค" },
   "menuLabel_extensionActive": { "message": "ส่วนขยายใช้งานอยู่" },
   "about_author": { "message": "ผู้เขียน" },

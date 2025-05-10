@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Configuración do botón" },
   "menuLabel_siteSettings": { "message": "Configuración do sitio" },
   "menuLabel_about": { "message": "Acerca de" },
+  "menuLabel_buyMeAcoffee": { "message": "Cómprame un café" },
   "menuLabel_donate": { "message": "Por favor, envíe unha doazón" },
   "menuLabel_extensionActive": { "message": "extensión activa" },
   "about_author": { "message": "Autor" },

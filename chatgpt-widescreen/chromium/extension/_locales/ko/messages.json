@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "버튼 설정" },
   "menuLabel_siteSettings": { "message": "사이트 설정" },
   "menuLabel_about": { "message": "소개" },
+  "menuLabel_buyMeAcoffee": { "message": "커피를 사주세요" },
   "menuLabel_donate": { "message": "기부금을 보내주세요" },
   "menuLabel_extensionActive": { "message": "확장 활성" },
   "about_author": { "message": "작성자" },

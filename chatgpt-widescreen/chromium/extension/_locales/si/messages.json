@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "බොත්තම් සැකසුම්" },
   "menuLabel_siteSettings": { "message": "අඩවි සැකසුම්" },
   "menuLabel_about": { "message": "සම්බන්ධව" },
+  "menuLabel_buyMeAcoffee": { "message": "මට කෝපි එකක් මිල දී ගන්න" },
   "menuLabel_donate": { "message": "කරුණාකර පරිත් ‍ යාගයක් යවන්න" },
   "menuLabel_extensionActive": { "message": "දිගුව සක් ‍ රීයයි" },
   "about_author": { "message": "කතෘ" },

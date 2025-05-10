@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "बटन सेटिंग" },
   "menuLabel_siteSettings": { "message": "समायोजना" },
   "menuLabel_about": { "message": "परिचय" },
+  "menuLabel_buyMeAcoffee": { "message": "मेरे लिए एक कॉफ़ी खरीदें" },
   "menuLabel_donate": { "message": "कृपया दान भेजें" },
   "menuLabel_extensionActive": { "message": "एक्सटेंशन सक्रिय है" },
   "about_author": { "message": "लेखक" },

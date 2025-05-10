@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Rul display automatisk (autorul)" },
   "menuLabel_modeNotifs": { "message": "Tilstandsmeddelelser" },
   "menuLabel_about": { "message": "Om" },
+  "menuLabel_buyMeAcoffee": { "message": "Køb en kop kaffe til mig" },
   "menuLabel_donate": { "message": "Send en donation" },
   "menuLabel_extensionActive": { "message": "udvidelse aktiv" },
   "about_author": { "message": "Forfatter" },

@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "ການຕັ້ງຄ່າປຸ່ມ" },
   "menuLabel_siteSettings": { "message": "ການຕັ້ງຄ່າເວັບໄຊ" },
   "menuLabel_about": { "message": "ກ່ຽວກັບ" },
+  "menuLabel_buyMeAcoffee": { "message": "ຊື້ກາເຟໃຫ້ຂ້ອຍ" },
   "menuLabel_donate": { "message": "ສະນັ້ນ ໃຫ້ບໍລິຈາກ" },
   "menuLabel_extensionActive": { "message": "ການຂະຫຍາຍທີ່ໃຊ້ງານ" },
   "about_author": { "message": "ຜູ້ຂຽນ" },

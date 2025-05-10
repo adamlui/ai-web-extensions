@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ALLT" },
   "menuLabel_replyInt": { "message": "Bilið á milli svara" },
   "menuLabel_about": { "message": "Um" },
+  "menuLabel_buyMeAcoffee": { "message": "Kauptu kaffi fyrir mig" },
   "menuLabel_donate": { "message": "Vinsamlegast sendu styrk" },
   "menuLabel_extensionActive": { "message": "viðbót virk" },
   "about_author": { "message": "Author" },

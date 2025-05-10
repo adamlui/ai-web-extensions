@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Automatisches Scrollen" },
   "menuLabel_modeNotifs": { "message": "Modus-Benachrichtigungen" },
   "menuLabel_about": { "message": "Über" },
+  "menuLabel_buyMeAcoffee": { "message": "Kauf mir einen Kaffee" },
   "menuLabel_donate": { "message": "Bitte spenden Sie" },
   "menuLabel_extensionActive": { "message": "verlängerung aktiv" },
   "about_author": { "message": "Verfasser" },

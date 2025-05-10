@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Auto-scroll" },
   "menuLabel_modeNotifs": { "message": "Mode Notifications" },
   "menuLabel_about": { "message": "Nezvedu" },
+  "menuLabel_buyMeAcoffee": { "message": "Nditengere Kofi" },
   "menuLabel_donate": { "message": "Ndapota tumira mupiro" },
   "menuLabel_extensionActive": { "message": "chiwedzerwa chinoshanda" },
   "about_author": { "message": "Munyori" },

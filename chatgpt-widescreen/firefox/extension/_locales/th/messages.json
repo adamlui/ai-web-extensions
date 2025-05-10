@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "\"การตั้งค่าปุ่ม\": \"\"," },
   "menuLabel_siteSettings": { "message": "การตั้งค่าเว็บไซต์" },
   "menuLabel_about": { "message": "เกี่ยวกับ" },
+  "menuLabel_buyMeAcoffee": { "message": "ซื้อกาแฟให้ฉัน" },
   "menuLabel_donate": { "message": "โปรดส่งเงินบริจาค" },
   "menuLabel_extensionActive": { "message": "ส่วนขยายใช้งานอยู่" },
   "about_author": { "message": "ผู้เขียน" },

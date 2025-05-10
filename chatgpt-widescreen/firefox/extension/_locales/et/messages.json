@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Nupu seaded" },
   "menuLabel_siteSettings": { "message": "Saidi seaded" },
   "menuLabel_about": { "message": "Info" },
+  "menuLabel_buyMeAcoffee": { "message": "Osta mulle kohv" },
   "menuLabel_donate": { "message": "Saada annetus" },
   "menuLabel_extensionActive": { "message": "laiendus aktiivne" },
   "about_author": { "message": "Autor" },

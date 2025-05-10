@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Mipangilio ya Kitufe" },
   "menuLabel_siteSettings": { "message": "Mipangilio ya Tovuti" },
   "menuLabel_about": { "message": "Kuhusu" },
+  "menuLabel_buyMeAcoffee": { "message": "Ninunulie Kahawa" },
   "menuLabel_donate": { "message": "Tafadhali tuma mchango" },
   "menuLabel_extensionActive": { "message": "kiendelezi kinatumika" },
   "about_author": { "message": "Mwandishi" },

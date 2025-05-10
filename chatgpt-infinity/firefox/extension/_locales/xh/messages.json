@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "Konke" },
   "menuLabel_replyInt": { "message": "Ikhefu lokuphendula" },
   "menuLabel_about": { "message": "Malunga" },
+  "menuLabel_buyMeAcoffee": { "message": "Ndithengele Ikofu" },
   "menuLabel_donate": { "message": "Nceda uthumele umnikelo" },
   "menuLabel_extensionActive": { "message": "ukongezwa kuyasebenza" },
   "about_author": { "message": "Inkcazelo ngombhali" },

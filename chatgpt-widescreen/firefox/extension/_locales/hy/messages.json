@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Կոճակի կարգավորումներ" },
   "menuLabel_siteSettings": { "message": "Կայքի կարգավորումներ" },
   "menuLabel_about": { "message": "Մանրամասն" },
+  "menuLabel_buyMeAcoffee": { "message": "Գնեք սուրճ" },
   "menuLabel_donate": { "message": "Խնդրում ենք նվիրատվություն ուղարկել" },
   "menuLabel_extensionActive": { "message": "երկարաձգումը ակտիվ է" },
   "about_author": { "message": "Հեղինակ" },

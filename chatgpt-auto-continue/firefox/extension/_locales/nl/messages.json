@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Automatisch Scrollen" },
   "menuLabel_modeNotifs": { "message": "Modusmeldingen" },
   "menuLabel_about": { "message": "Over" },
+  "menuLabel_buyMeAcoffee": { "message": "Koop een kopje koffie voor mij :)" },
   "menuLabel_donate": { "message": "Stuur een donatie" },
   "menuLabel_extensionActive": { "message": "SOAP Extensie actief." },
   "about_author": { "message": "Auteur" },

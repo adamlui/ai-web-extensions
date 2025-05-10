@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "الكل" },
   "menuLabel_replyInt": { "message": "فترة الرد" },
   "menuLabel_about": { "message": "عن وزارة الثقافة" },
+  "menuLabel_buyMeAcoffee": { "message": "-أستشتري ليّ قهوة؟" },
   "menuLabel_donate": { "message": "يرجى إرسال تبرع" },
   "menuLabel_extensionActive": { "message": "الامتداد نشط" },
   "about_author": { "message": "مؤلف" },

@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Nastavenia tlačidla pomoci" },
   "menuLabel_siteSettings": { "message": "Umelec Nastaveia" },
   "menuLabel_about": { "message": "O nás" },
+  "menuLabel_buyMeAcoffee": { "message": "Kúpte mi kávu :)" },
   "menuLabel_donate": { "message": "Pošlite dar" },
   "menuLabel_extensionActive": { "message": "rozšírenie aktívne" },
   "about_author": { "message": "Autor" },

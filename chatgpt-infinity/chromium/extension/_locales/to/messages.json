@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "KOTOA" },
   "menuLabel_replyInt": { "message": "Taimi fakautu" },
   "menuLabel_about": { "message": "Fai 'a e" },
+  "menuLabel_buyMeAcoffee": { "message": "fakatau mai ha kofi" },
   "menuLabel_donate": { "message": "Kātaki ʻo ʻave ha foaki" },
   "menuLabel_extensionActive": { "message": "fakalahi ki he malohi" },
   "about_author": { "message": "Tokotaha Faʻu Tohí" },

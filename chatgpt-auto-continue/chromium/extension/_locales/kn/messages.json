@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "ಸ್ವಯಂ-ಸ್ಕ್ರೋಲ್ ಮಾಡಿ" },
   "menuLabel_modeNotifs": { "message": "ಮೋಡ್ ಅಧಿಸೂಚನೆಗಳು" },
   "menuLabel_about": { "message": "ಕುರಿತಾಗಿ" },
+  "menuLabel_buyMeAcoffee": { "message": "ನನಗೆ ಕಾಫಿ ಖರೀದಿಸಿ" },
   "menuLabel_donate": { "message": "ದಯವಿಟ್ಟು ದೇಣಿಗೆ ಕಳುಹಿಸಿ" },
   "menuLabel_extensionActive": { "message": "ವಿಸ್ತರಣೆ ಸಕ್ರಿಯವಾಗಿದೆ" },
   "about_author": { "message": "ಲೇಖಕ" },

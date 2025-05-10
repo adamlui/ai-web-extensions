@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "הגדרות כפתור" },
   "menuLabel_siteSettings": { "message": "הגדרות האתר" },
   "menuLabel_about": { "message": "אודות" },
+  "menuLabel_buyMeAcoffee": { "message": "קנו לי קפה" },
   "menuLabel_donate": { "message": "יש לשלוח תרומה" },
   "menuLabel_extensionActive": { "message": "תוסף פעיל" },
   "about_author": { "message": "מחבר" },

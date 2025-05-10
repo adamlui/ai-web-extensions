@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Автоматско поместување" },
   "menuLabel_modeNotifs": { "message": "Известувања за режимот" },
   "menuLabel_about": { "message": "За" },
+  "menuLabel_buyMeAcoffee": { "message": "Купи ми кафе" },
   "menuLabel_donate": { "message": "Испратете донација" },
   "menuLabel_extensionActive": { "message": "продолжението е активно" },
   "about_author": { "message": "Автор" },

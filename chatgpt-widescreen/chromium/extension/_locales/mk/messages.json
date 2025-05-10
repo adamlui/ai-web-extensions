@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Подесувања на копчето" },
   "menuLabel_siteSettings": { "message": "Подесувања на страницата" },
   "menuLabel_about": { "message": "За" },
+  "menuLabel_buyMeAcoffee": { "message": "Купи ми кафе" },
   "menuLabel_donate": { "message": "Испратете донација" },
   "menuLabel_extensionActive": { "message": "продолжението е активно" },
   "about_author": { "message": "Автор" },

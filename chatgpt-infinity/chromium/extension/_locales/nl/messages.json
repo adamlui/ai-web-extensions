@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ALLE" },
   "menuLabel_replyInt": { "message": "Antwoordinterval" },
   "menuLabel_about": { "message": "Over" },
+  "menuLabel_buyMeAcoffee": { "message": "Koop een kopje koffie voor mij :)" },
   "menuLabel_donate": { "message": "Stuur een donatie" },
   "menuLabel_extensionActive": { "message": "SOAP Extensie actief." },
   "about_author": { "message": "Auteur" },

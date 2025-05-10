@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "ခလုတ် ဆက်တင်များ" },
   "menuLabel_siteSettings": { "message": "လုပ်ငန်းခွင် ဆက်တင်များ" },
   "menuLabel_about": { "message": "အကြောင်း" },
+  "menuLabel_buyMeAcoffee": { "message": "ငါ့ကိုကော်ဖီတစ်ခွက်ဝယ်ပါ" },
   "menuLabel_donate": { "message": "ကျေးဇူးပြု ၍ လှူဒါန်းမှုတစ်ခု ပေးပို့ပါ" },
   "menuLabel_extensionActive": { "message": "သက်ဝင်နေသော တိုးချဲ့မှု" },
   "about_author": { "message": "ရေးသူ" },

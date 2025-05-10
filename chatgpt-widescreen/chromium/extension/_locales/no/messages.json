@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Knappeinnstillinger" },
   "menuLabel_siteSettings": { "message": "Nettstedsinnstillinger" },
   "menuLabel_about": { "message": "Om" },
+  "menuLabel_buyMeAcoffee": { "message": "Kjøp meg en kaffe" },
   "menuLabel_donate": { "message": "Vennligst send en donasjon" },
   "menuLabel_extensionActive": { "message": "utvidelse aktiv" },
   "about_author": { "message": "Forfatter" },

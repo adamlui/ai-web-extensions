@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Hnappastillingar" },
   "menuLabel_siteSettings": { "message": "Vefsíðustillingar" },
   "menuLabel_about": { "message": "Um" },
+  "menuLabel_buyMeAcoffee": { "message": "Kauptu kaffi fyrir mig" },
   "menuLabel_donate": { "message": "Vinsamlegast sendu styrk" },
   "menuLabel_extensionActive": { "message": "viðbót virk" },
   "about_author": { "message": "Author" },

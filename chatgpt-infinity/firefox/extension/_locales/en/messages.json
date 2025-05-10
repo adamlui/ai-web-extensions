@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ALL" },
   "menuLabel_replyInt": { "message": "Reply Interval" },
   "menuLabel_about": { "message": "About" },
+  "menuLabel_buyMeAcoffee": { "message": "Buy Me a Coffee" },
   "menuLabel_donate": { "message": "Please send a donation" },
   "menuLabel_extensionActive": { "message": "extension active" },
   "about_author": { "message": "Author" },

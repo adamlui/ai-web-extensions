@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "自动滚动" },
   "menuLabel_modeNotifs": { "message": "运行提示" },
   "menuLabel_about": { "message": "关于" },
+  "menuLabel_buyMeAcoffee": { "message": "赠我杯咖啡" },
   "menuLabel_donate": { "message": "请捐款" },
   "menuLabel_extensionActive": { "message": "扩展活动" },
   "about_author": { "message": "作者" },

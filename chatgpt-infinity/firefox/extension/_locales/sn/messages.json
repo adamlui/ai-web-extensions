@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "Zvese" },
   "menuLabel_replyInt": { "message": "Nguva yekupindura" },
   "menuLabel_about": { "message": "Nezvedu" },
+  "menuLabel_buyMeAcoffee": { "message": "Nditengere Kofi" },
   "menuLabel_donate": { "message": "Ndapota tumira mupiro" },
   "menuLabel_extensionActive": { "message": "chiwedzerwa chinoshanda" },
   "about_author": { "message": "Munyori" },

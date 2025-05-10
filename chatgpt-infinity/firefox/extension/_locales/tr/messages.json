@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "TÜMÜ" },
   "menuLabel_replyInt": { "message": "Cevap Aralığı" },
   "menuLabel_about": { "message": "Hakkımızda" },
+  "menuLabel_buyMeAcoffee": { "message": "Bana bir kahve alın :)" },
   "menuLabel_donate": { "message": "Lütfen bağış gönderin" },
   "menuLabel_extensionActive": { "message": "eklenti etkin" },
   "about_author": { "message": "Yazar" },

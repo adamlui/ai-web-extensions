@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Knoppie Instellings" },
   "menuLabel_siteSettings": { "message": "Nuwe webwerf-instellings" },
   "menuLabel_about": { "message": "Omtrent" },
+  "menuLabel_buyMeAcoffee": { "message": "Koop vir my 'n koppie koffie" },
   "menuLabel_donate": { "message": "Stuur asseblief 'n donasie" },
   "menuLabel_extensionActive": { "message": "uitbreiding aktief" },
   "about_author": { "message": "Outeur" },

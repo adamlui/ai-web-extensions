@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ØLL" },
   "menuLabel_replyInt": { "message": "Svar Bili" },
   "menuLabel_about": { "message": "Um" },
+  "menuLabel_buyMeAcoffee": { "message": "Gev mær eina kopp av kaffi" },
   "menuLabel_donate": { "message": "Send okkum eina gávu" },
   "menuLabel_extensionActive": { "message": "útbygging virkin" },
   "about_author": { "message": "Høvundur" },

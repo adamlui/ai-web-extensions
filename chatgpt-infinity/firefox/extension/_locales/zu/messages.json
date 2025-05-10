@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "Bonke" },
   "menuLabel_replyInt": { "message": "Phendula Isikhathi" },
   "menuLabel_about": { "message": "Mayelana" },
+  "menuLabel_buyMeAcoffee": { "message": "Ngithengele Ikhofi" },
   "menuLabel_donate": { "message": "Sicela uthumele umnikelo" },
   "menuLabel_extensionActive": { "message": "isandiso siyasebenza" },
   "about_author": { "message": "Ukhetho" },

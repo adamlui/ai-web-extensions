@@ -244,6 +244,11 @@
     cjsLogo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca/assets/images/badges/powered-by-chatgpt.js.png'
     cjsLogo.onclick = () => { open(app.urls.chatgptjs) ; close() }
 
+    // Init COFFEE footer icon/listener
+    const coffeeSpan = footer.querySelector('span[data-locale-title="menuLabel_buyMeAcoffee"]')
+    coffeeSpan.append(icons.create('coffeeCup', { size: 23 }))
+    coffeeSpan.onclick = () => { open(app.urls.donate['ko-fi']) ; close() }
+
     // Init ABOUT footer icon/listener
     const aboutSpan = footer.querySelector('span[data-locale-title="menuLabel_about appName"]')
     aboutSpan.append(icons.create('questionMark', { width: 15, height: 13 }))

@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Автопрокрутка" },
   "menuLabel_modeNotifs": { "message": "Уведомления о режиме" },
   "menuLabel_about": { "message": "Шифр" },
+  "menuLabel_buyMeAcoffee": { "message": "Купи мне кофе" },
   "menuLabel_donate": { "message": "Пожалуйста, отправьте пожертвование" },
   "menuLabel_extensionActive": { "message": "Расширение SOAP активно." },
   "about_author": { "message": "Автор" },

@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "ღილაკის მორგება" },
   "menuLabel_siteSettings": { "message": "Საიტის პარამეტრები" },
   "menuLabel_about": { "message": "პროგრამის შესახებ" },
+  "menuLabel_buyMeAcoffee": { "message": "Ყავის ყიდვა" },
   "menuLabel_donate": { "message": "Გაიღეთ შემოწირულობა" },
   "menuLabel_extensionActive": { "message": "გახანგრძლივება აქტიურია" },
   "about_author": { "message": "ავტორი" },

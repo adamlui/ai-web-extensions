@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Setări buton" },
   "menuLabel_siteSettings": { "message": "Setări site" },
   "menuLabel_about": { "message": "Despre" },
+  "menuLabel_buyMeAcoffee": { "message": "Cumpără-mi o cafea" },
   "menuLabel_donate": { "message": "Te rugăm să trimiți o donație" },
   "menuLabel_extensionActive": { "message": "extensie activă" },
   "about_author": { "message": "Autor" },

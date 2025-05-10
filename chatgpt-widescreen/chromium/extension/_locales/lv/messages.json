@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Pogas iestatījumi" },
   "menuLabel_siteSettings": { "message": "Majas lapas iestatījumi." },
   "menuLabel_about": { "message": "Par produktu" },
+  "menuLabel_buyMeAcoffee": { "message": "Nopērciet man kafiju" },
   "menuLabel_donate": { "message": "Lūdzu, nosūtiet ziedojumu" },
   "menuLabel_extensionActive": { "message": "paplašinājums ir aktīvs" },
   "about_author": { "message": "Autors" },

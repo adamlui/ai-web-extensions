@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Gomb beállítások" },
   "menuLabel_siteSettings": { "message": "Webhelybeállítások" },
   "menuLabel_about": { "message": "A" },
+  "menuLabel_buyMeAcoffee": { "message": "Vegyél nekem egy kávét" },
   "menuLabel_donate": { "message": "Kérjük, küldjön adományt" },
   "menuLabel_extensionActive": { "message": "kiterjesztés aktív" },
   "about_author": { "message": "Szerző" },

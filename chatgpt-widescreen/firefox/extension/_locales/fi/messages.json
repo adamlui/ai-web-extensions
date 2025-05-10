@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Painikkeen asetukset" },
   "menuLabel_siteSettings": { "message": "Sivuston lisäasetukset" },
   "menuLabel_about": { "message": "Tietoa" },
+  "menuLabel_buyMeAcoffee": { "message": "Osta minulle kahvi!" },
   "menuLabel_donate": { "message": "Lähetä lahjoitus" },
   "menuLabel_extensionActive": { "message": "laajennus aktiivinen" },
   "about_author": { "message": "Tekijä" },

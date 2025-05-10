@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Ol sait bilong bot" },
   "menuLabel_siteSettings": { "message": "Ol sait bilong dispela hap" },
   "menuLabel_about": { "message": "Long" },
+  "menuLabel_buyMeAcoffee": { "message": "Mi laik kisim wanpela ka" },
   "menuLabel_donate": { "message": "Plis salim wanpela donesen" },
   "menuLabel_extensionActive": { "message": "eksensensen i wok strong" },
   "about_author": { "message": "Man bilong raitim" },

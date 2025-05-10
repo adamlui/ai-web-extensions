@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Cài đặt nút" },
   "menuLabel_siteSettings": { "message": "Cài đặt Trang web" },
   "menuLabel_about": { "message": "Giới thiệu" },
+  "menuLabel_buyMeAcoffee": { "message": "Mua cho tôi một ly cà phê" },
   "menuLabel_donate": { "message": "Vui lòng gửi khoản quyên góp" },
   "menuLabel_extensionActive": { "message": "kích hoạt tiện ích mở rộng" },
   "about_author": { "message": "Tác giả" },

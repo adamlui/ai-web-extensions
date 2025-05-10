@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Mygtuko nustatymai" },
   "menuLabel_siteSettings": { "message": "Svetainės nustatymai" },
   "menuLabel_about": { "message": "Apie" },
+  "menuLabel_buyMeAcoffee": { "message": "Nupirk man kavos" },
   "menuLabel_donate": { "message": "Siųskite auką" },
   "menuLabel_extensionActive": { "message": "plėtinys aktyvus" },
   "about_author": { "message": "Autorius" },

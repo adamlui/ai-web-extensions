@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "பொத்தான் அமைப்புகள்" },
   "menuLabel_siteSettings": { "message": "தள அமைப்புகள்" },
   "menuLabel_about": { "message": "பற்றி" },
+  "menuLabel_buyMeAcoffee": { "message": "எனக்கு ஒரு காபி வாங்குங்கள்" },
   "menuLabel_donate": { "message": "நன்கொடை அனுப்பவும்" },
   "menuLabel_extensionActive": { "message": "நீட்டிப்பு செயலில் உள்ளது" },
   "about_author": { "message": "நூலாசிரியர்" },

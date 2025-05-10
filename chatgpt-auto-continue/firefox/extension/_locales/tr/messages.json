@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Otomatik kaydırma" },
   "menuLabel_modeNotifs": { "message": "Mod Bildirimleri" },
   "menuLabel_about": { "message": "Hakkımızda" },
+  "menuLabel_buyMeAcoffee": { "message": "Bana bir kahve alın :)" },
   "menuLabel_donate": { "message": "Lütfen bağış gönderin" },
   "menuLabel_extensionActive": { "message": "eklenti etkin" },
   "about_author": { "message": "Yazar" },

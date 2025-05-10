@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "إعدادات الزر" },
   "menuLabel_siteSettings": { "message": "إعدادات الموقع" },
   "menuLabel_about": { "message": "عن وزارة الثقافة" },
+  "menuLabel_buyMeAcoffee": { "message": "-أستشتري ليّ قهوة؟" },
   "menuLabel_donate": { "message": "يرجى إرسال تبرع" },
   "menuLabel_extensionActive": { "message": "الامتداد نشط" },
   "about_author": { "message": "مؤلف" },

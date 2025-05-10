@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "SVE" },
   "menuLabel_replyInt": { "message": "Интервал одговора" },
   "menuLabel_about": { "message": "O nama" },
+  "menuLabel_buyMeAcoffee": { "message": "Kupi mi kavu." },
   "menuLabel_donate": { "message": "Pošaljite donaciju" },
   "menuLabel_extensionActive": { "message": "dodatak je aktivan" },
   "about_author": { "message": "Autor" },

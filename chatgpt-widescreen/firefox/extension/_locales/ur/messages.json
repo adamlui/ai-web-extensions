@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "بٹن کی ترتیبات" },
   "menuLabel_siteSettings": { "message": "سائٹ کی ترتیبات" },
   "menuLabel_about": { "message": "متعلق" },
+  "menuLabel_buyMeAcoffee": { "message": "میرے لئے کافی خریدیں" },
   "menuLabel_donate": { "message": "براہ کرم ایک عطیہ بھیجیں" },
   "menuLabel_extensionActive": { "message": "توسیع فعال ہے" },
   "about_author": { "message": "مصنف" },

@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Налаштування кнопки" },
   "menuLabel_siteSettings": { "message": "Налаштування сайту" },
   "menuLabel_about": { "message": "Про нас" },
+  "menuLabel_buyMeAcoffee": { "message": "Купити мені каву" },
   "menuLabel_donate": { "message": "Будь ласка, надішліть пожертву" },
   "menuLabel_extensionActive": { "message": "розширення активне" },
   "about_author": { "message": "Автор" },

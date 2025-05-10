@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Scripta Edere" },
   "menuLabel_siteSettings": { "message": "Site Settings" },
   "menuLabel_about": { "message": "De Hac Re" },
+  "menuLabel_buyMeAcoffee": { "message": "Vide me a cafe" },
   "menuLabel_donate": { "message": "Mandefa fanomezana azafady" },
   "menuLabel_extensionActive": { "message": "extensionis" },
   "about_author": { "message": "auctor" },

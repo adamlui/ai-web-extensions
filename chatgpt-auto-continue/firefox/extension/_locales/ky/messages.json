@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Автоматтык каттоо" },
   "menuLabel_modeNotifs": { "message": "Режим билдирүүлөрү" },
   "menuLabel_about": { "message": "Апплет жөнүндө" },
+  "menuLabel_buyMeAcoffee": { "message": "Мага Coffee сатып алуу" },
   "menuLabel_donate": { "message": "Сураныч, кайрымдуулук жөнөтүңүз" },
   "menuLabel_extensionActive": { "message": "кеңейтүү активдүү" },
   "about_author": { "message": "Автору:" },

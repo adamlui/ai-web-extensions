@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Botoien ezarpenak" },
   "menuLabel_siteSettings": { "message": "Gunearen ezarpenak" },
   "menuLabel_about": { "message": "Egileari Buruz" },
+  "menuLabel_buyMeAcoffee": { "message": "Erosi kafe bat" },
   "menuLabel_donate": { "message": "Mesedez, bidali dohaintza" },
   "menuLabel_extensionActive": { "message": "luzapena aktiboa" },
   "about_author": { "message": "Egilea" },

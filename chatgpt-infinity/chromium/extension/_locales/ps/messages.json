@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ټول" },
   "menuLabel_replyInt": { "message": "جواب وقت" },
   "menuLabel_about": { "message": "په اړه" },
+  "menuLabel_buyMeAcoffee": { "message": "ماته یوه کافي وپیرئ" },
   "menuLabel_donate": { "message": "مهرباني وکړئ یوه بسپنه ولیږئ" },
   "menuLabel_extensionActive": { "message": "شاتاړي فعال ده" },
   "about_author": { "message": "لیکونکی" },

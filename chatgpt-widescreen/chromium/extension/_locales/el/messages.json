@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Ρυθμίσεις κουμπιού" },
   "menuLabel_siteSettings": { "message": "Ρυθμίσεις ιστότοπου" },
   "menuLabel_about": { "message": "Σχετικά" },
+  "menuLabel_buyMeAcoffee": { "message": "Αγόρασέ μου έναν καφέ" },
   "menuLabel_donate": { "message": "Στείλτε μια δωρεά" },
   "menuLabel_extensionActive": { "message": "επέκταση ενεργή" },
   "about_author": { "message": "Συντάκτης" },

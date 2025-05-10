@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Knappuskifti" },
   "menuLabel_siteSettings": { "message": "Heimasíða innstillingar" },
   "menuLabel_about": { "message": "Um" },
+  "menuLabel_buyMeAcoffee": { "message": "Gev mær eina kopp av kaffi" },
   "menuLabel_donate": { "message": "Send okkum eina gávu" },
   "menuLabel_extensionActive": { "message": "útbygging virkin" },
   "about_author": { "message": "Høvundur" },

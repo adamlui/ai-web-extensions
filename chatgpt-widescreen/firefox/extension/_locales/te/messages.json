@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "బటన్ సెట్టింగ్ ‌ లు" },
   "menuLabel_siteSettings": { "message": "సైట్ సెట్టింగ్ ‌ లు" },
   "menuLabel_about": { "message": "గురించి" },
+  "menuLabel_buyMeAcoffee": { "message": "నాకు కాఫీ కొనండి" },
   "menuLabel_donate": { "message": "దయచేసి విరాళం పంపండి" },
   "menuLabel_extensionActive": { "message": "పొడిగింపు యాక్టివ్ ‌ గా ఉంది" },
   "about_author": { "message": "రచయిత" },

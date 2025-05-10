@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Düymə Parametrləri" },
   "menuLabel_siteSettings": { "message": "Sayt Parametrləri" },
   "menuLabel_about": { "message": "Haqqında" },
+  "menuLabel_buyMeAcoffee": { "message": "Mənə Qəhvə Al" },
   "menuLabel_donate": { "message": "İanə göndərin" },
   "menuLabel_extensionActive": { "message": "uzatma aktivdir" },
   "about_author": { "message": "Müəllif" },

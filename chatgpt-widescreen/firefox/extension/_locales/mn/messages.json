@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Товчлуурын тохиргоо" },
   "menuLabel_siteSettings": { "message": "Сайтын Тохиргоо" },
   "menuLabel_about": { "message": "Бидний тухай" },
+  "menuLabel_buyMeAcoffee": { "message": "Надад кофе худалдаж аваарай" },
   "menuLabel_donate": { "message": "Хандив илгээнэ үү" },
   "menuLabel_extensionActive": { "message": "өргөтгөл идэвхтэй" },
   "about_author": { "message": "Зохиогч" },

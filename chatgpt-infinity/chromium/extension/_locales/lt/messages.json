@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "VISI" },
   "menuLabel_replyInt": { "message": "Atsakymų intervalas" },
   "menuLabel_about": { "message": "Apie" },
+  "menuLabel_buyMeAcoffee": { "message": "Nupirk man kavos" },
   "menuLabel_donate": { "message": "Siųskite auką" },
   "menuLabel_extensionActive": { "message": "plėtinys aktyvus" },
   "about_author": { "message": "Autorius" },

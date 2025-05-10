@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ALL" },
   "menuLabel_replyInt": { "message": "Pane Interval" },
   "menuLabel_about": { "message": "Ho‘ākāka" },
+  "menuLabel_buyMeAcoffee": { "message": "E kuai ia'u i kofe" },
   "menuLabel_donate": { "message": "E ʻoluʻolu e hoʻouna i haʻawina" },
   "menuLabel_extensionActive": { "message": "hoʻonui hana" },
   "about_author": { "message": "Mea kākau" },

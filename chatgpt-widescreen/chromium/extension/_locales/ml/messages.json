@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "ബട്ടൺ ക്രമീകരണങ്ങൾ" },
   "menuLabel_siteSettings": { "message": "സൈറ്റ് ക്രമീകരണങ്ങൾ" },
   "menuLabel_about": { "message": "സംബന്ധിച്ച്" },
+  "menuLabel_buyMeAcoffee": { "message": "എനിക്ക് ഒരു കോഫി വാങ്ങുക" },
   "menuLabel_donate": { "message": "ദയവായി ഒരു സംഭാവന അയയ്ക്കുക" },
   "menuLabel_extensionActive": { "message": "വിപുലീകരണം സജീവമാണ്" },
   "about_author": { "message": "രചയിതാവ്" },

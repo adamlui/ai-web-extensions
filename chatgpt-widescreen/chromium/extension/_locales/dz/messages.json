@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "སེལ་འཐུ་འབད།" },
   "menuLabel_siteSettings": { "message": "Site Settings" },
   "menuLabel_about": { "message": "སྐོར་ལས་" },
+  "menuLabel_buyMeAcoffee": { "message": "ཁོ་གིས་ང་ལུ་ ཀ་ཕི་གཅིག་བྱིན་ཡི།" },
   "menuLabel_donate": { "message": "དེ་འབདཝ་ལས་ ཁྱོད་ཀྱིས་གྲོགས་རམ་བྱིན་" },
   "menuLabel_extensionActive": { "message": "སྒྲིག་འཇུག་བྱས་ཚད། ཐེངས་" },
   "about_author": { "message": "རྩོམ་པ་པོ།" },

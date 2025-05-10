@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Tugma sozlamalari" },
   "menuLabel_siteSettings": { "message": "Sayt sozlamalari" },
   "menuLabel_about": { "message": "Qisqacha ma'lumot" },
+  "menuLabel_buyMeAcoffee": { "message": "Menga qahva sotib ol" },
   "menuLabel_donate": { "message": "Iltimos, xayriya yuboring" },
   "menuLabel_extensionActive": { "message": "kengaytma faol" },
   "about_author": { "message": "Muallif" },

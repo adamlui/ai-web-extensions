@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "स्वत: स्क्रोल गर्नुहोस्" },
   "menuLabel_modeNotifs": { "message": "मोड सूचनाहरू" },
   "menuLabel_about": { "message": "बारेमा" },
+  "menuLabel_buyMeAcoffee": { "message": "मेरो लागि कफी किन्नुहोस्" },
   "menuLabel_donate": { "message": "कृपया दान पठाउनुहोस्" },
   "menuLabel_extensionActive": { "message": "विस्तार सक्रिय" },
   "about_author": { "message": "लेखक" },

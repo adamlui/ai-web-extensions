@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "අනේ" },
   "menuLabel_replyInt": { "message": "ප්‍රතිචාර අන්තර්ගතය" },
   "menuLabel_about": { "message": "සම්බන්ධව" },
+  "menuLabel_buyMeAcoffee": { "message": "මට කෝපි එකක් මිල දී ගන්න" },
   "menuLabel_donate": { "message": "කරුණාකර පරිත් ‍ යාගයක් යවන්න" },
   "menuLabel_extensionActive": { "message": "දිගුව සක් ‍ රීයයි" },
   "about_author": { "message": "කතෘ" },

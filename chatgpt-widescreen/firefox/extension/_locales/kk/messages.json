@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "Түймешік параметрлері" },
   "menuLabel_siteSettings": { "message": "Сайт параметрлері" },
   "menuLabel_about": { "message": "Туралы" },
+  "menuLabel_buyMeAcoffee": { "message": "Маған кофе сатып алыңыз" },
   "menuLabel_donate": { "message": "Қайырымдылық жасауыңызды сұраймыз" },
   "menuLabel_extensionActive": { "message": "белсенді кеңейтім" },
   "about_author": { "message": "Авторы" },

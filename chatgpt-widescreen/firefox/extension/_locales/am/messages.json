@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "አዝራር ቅንብሮች" },
   "menuLabel_siteSettings": { "message": "የጣቢያ ቅንብሮች" },
   "menuLabel_about": { "message": "ስለ" },
+  "menuLabel_buyMeAcoffee": { "message": "ቡና ይግዙኝ" },
   "menuLabel_donate": { "message": "እባክዎን ልገሳ ይላኩ" },
   "menuLabel_extensionActive": { "message": "ቅጥያ ንቁ" },
   "about_author": { "message": "ደራሲ" },

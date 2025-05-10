@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "OLGETA" },
   "menuLabel_replyInt": { "message": "Taim bilong Toktok" },
   "menuLabel_about": { "message": "Long Toktok" },
+  "menuLabel_buyMeAcoffee": { "message": "Mi laik kisim wanpela ka" },
   "menuLabel_donate": { "message": "Plis salim wanpela donesen" },
   "menuLabel_extensionActive": { "message": "eksensensen i wok strong" },
   "about_author": { "message": "Man bilong raitim" },

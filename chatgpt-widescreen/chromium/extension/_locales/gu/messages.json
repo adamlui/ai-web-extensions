@@ -21,6 +21,7 @@
   "menuLabel_buttonSettings": { "message": "બટન સેટિંગ્સ" },
   "menuLabel_siteSettings": { "message": "સાઇટ સેટિંગ્સ" },
   "menuLabel_about": { "message": "માહિતી" },
+  "menuLabel_buyMeAcoffee": { "message": "મારા માટે કોફી ખરીદો" },
   "menuLabel_donate": { "message": "કૃપા કરીને દાન મોકલો" },
   "menuLabel_extensionActive": { "message": "એક્સ્ટેંશન સક્રિય" },
   "about_author": { "message": "લેખક" },

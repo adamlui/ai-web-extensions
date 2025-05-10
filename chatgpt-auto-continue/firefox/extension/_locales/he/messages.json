@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "גלילה אוטומטית" },
   "menuLabel_modeNotifs": { "message": "התראות מצב" },
   "menuLabel_about": { "message": "אודות" },
+  "menuLabel_buyMeAcoffee": { "message": "קנו לי קפה" },
   "menuLabel_donate": { "message": "יש לשלוח תרומה" },
   "menuLabel_extensionActive": { "message": "תוסף פעיל" },
   "about_author": { "message": "מחבר" },
