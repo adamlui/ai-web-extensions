@@ -243,7 +243,7 @@
         document.querySelectorAll('.menu-entry:has(.menu-caret)').forEach(categoryDiv => {
             if (settings.categories[categoryDiv.id]?.autoExpand)
                 toggleCategorySettingsVisiblity(categoryDiv.id, { transitions: false })
-    })
+        })
 
     sync.fade() // based on master/site toggle
 
