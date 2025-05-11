@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.11.7
+// @version             2025.5.11.8
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -783,13 +783,13 @@
                     sync.fullerWin() // sync Fuller Windows
                 }
                 styles.tweaks.update() // sync HH/HF/TCB/NCB/BA
-                styles.toast.update() // sync TM
                 styles.chatbar.update() // sync WCB
                 if (env.site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
                 buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                     // ...to visually signal location + preview fx applied by Button Animations toggle-on
                     buttons.animate()
+                else if (options?.updatedKey == 'toastMode') styles.toast.update() // sync TM
                 if (env.site != 'poe') // toggle free wheel locked in some Spam blocks
                     document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                         'wheel', window.enableWheelScroll)
