@@ -203,13 +203,13 @@ window.buttons = {
         async color() {
             const { site, ui: { scheme }} = env
             buttons.color = (
-                site == 'chatgpt' ? ( await chatbar.is.dark() || scheme == 'dark' ? 'white' : 'var(--text-secondary)' )
+                site == 'chatgpt' ? 'var(--text-secondary)'
               : site == 'perplexity' ? ( scheme == 'dark' ? 'white' : '#39545a' )
-              : 'currentColor'
+              : /* poe */ 'currentColor'
             )
             if (buttons.widescreen?.style.fill != buttons.color)
-                buttons.types.forEach(type => {
-                    if (buttons[type]) buttons[type].style.fill = buttons[type].style.stroke = buttons.color })
+                buttons.types.forEach(type => { if (buttons[type])
+                    buttons[type].style.fill = buttons[type].style.stroke = buttons.color })
         },
 
         svg(mode, state = '') {
