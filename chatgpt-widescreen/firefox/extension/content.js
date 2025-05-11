@@ -51,7 +51,7 @@
     function getMsg(key) { return chrome.i18n.getMessage(key) }
 
     function notify(msg, pos = '', notifDuration = '', shadow = '') {
-        if (config.notifDisabled && !msg.includes(getMsg('menuLabel_modeNotifs'))) return
+        if (config.notifDisabled && !msg.includes(getMsg('menuLabel_notifs'))) return
 
         // Strip state word to append colored one later
         const foundState = [

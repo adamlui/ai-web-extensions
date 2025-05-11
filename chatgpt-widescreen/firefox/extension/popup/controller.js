@@ -54,7 +54,7 @@
     function getMsg(key) { return chrome.i18n.getMessage(key) }
 
     function notify(msg, pos = 'bottom-right') {
-        if (config.notifDisabled && !msg.includes(getMsg('menuLabel_modeNotifs'))) return
+        if (config.notifDisabled && !msg.includes(getMsg('menuLabel_notifs'))) return
         sendMsgToActiveTab('notify', { msg, pos })
     }
 
