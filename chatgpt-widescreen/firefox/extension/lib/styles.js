@@ -26,7 +26,7 @@ window.styles = {
         update() { // auto-appends to <head>
             if (!this.node?.isConnected) document.head.append(this.node ||= dom.create.style())
             this.node.textContent = `        
-                ${ !config.toastMode ? '' : // shrink/center notifs into toast bubbles
+                ${ !config.toastMode ? '' : // flatten notifs into toast alerts
                     `div.${app.slug}.chatgpt-notif {
                         position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;
                         transform: translate(-50%, -50%) scale(0.6) !important }
