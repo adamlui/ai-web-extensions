@@ -266,6 +266,8 @@ This script exists thanks to code, translations, issues & ideas from the followi
     <img width=46 title="RandomFayerFoksUser" src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.4.19-reported-chatgpt-tables-dont-stretch"></img></a>
 <a href="https://github.com/AnglusWang">
     <img width=46 title="@AnglusWang" src="https://avatars.githubusercontent.com/u/17423592?first-contrib=2025.4.26-reported-new-chat-btn-stopped-working"></img></a>
+<a href="https://addons.mozilla.org/firefox/user/17585562/">
+    <img width=46 title="Aria Dahl" src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.5.10-requested-show-notifs-at-bottom"></img></a>
 <a href="https://github.com/dependabot">
     <img width=46 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp">
