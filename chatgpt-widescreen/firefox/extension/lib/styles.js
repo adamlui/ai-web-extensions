@@ -22,6 +22,19 @@ window.styles = {
             (this.node ||= dom.create.style()).textContent = sites[env.site].selectors.sidebar + '{ display: none }' }
     },
 
+    toast: {
+        update() { // auto-appends to <head>
+            if (!this.node?.isConnected) document.head.append(this.node ||= dom.create.style())
+            this.node.textContent = `        
+                ${ !config.toastMode ? '' : // shrink/center notifs into toast bubbles
+                    `div.${app.slug}.chatgpt-notif {
+                        position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;
+                        transform: translate(-50%, -50%) scale(0.6) !important }
+                    div.${app.slug}.chatgpt-notif > div.notif-close-btn {
+                        top: 18px ; right: 7px ; transform: scale(2) }` }`
+        }
+    },
+
     tweaks: {
         update() { // auto-appends to <head>
             const { site } = env, { [site]: { selectors }} = sites;
@@ -43,12 +56,6 @@ window.styles = {
                 ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
                    `.${buttons.class} { will-change: transform } /* prevent wobble */
                     .${buttons.class}:hover { transform: scale(${ site == 'poe' ? 1.15 : 1.285 }) }` }
-                ${ !config.toastMode ? '' : // shrink/center notifs into toast bubbles
-                   `div.${app.slug}.chatgpt-notif {
-                        position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;
-                        transform: translate(-50%, -50%) scale(0.6) !important }
-                    div.${app.slug}.chatgpt-notif > div.notif-close-btn {
-                        top: 18px ; right: 7px ; transform: scale(2) }` }
                 ${ site == 'perplexity' ? // prevent overlay
                     `.${buttons.class} { background: none !important }` : '' }
                 ${ config.blockSpamDisabled ? ''

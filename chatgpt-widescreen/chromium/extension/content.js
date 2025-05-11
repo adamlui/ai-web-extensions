@@ -51,6 +51,7 @@
     function getMsg(key) { return chrome.i18n.getMessage(key) }
 
     function notify(msg, pos = '', notifDuration = '', shadow = '') {
+        if (!styles.toast.node) styles.toast.update()
         if (config.notifDisabled && !new RegExp(`${getMsg('menuLabel_notifs')}|${getMsg('mode_toast')}`).test(msg))
             return
 
@@ -158,7 +159,8 @@
                         supressNotifs() ; toggleMode('fullWindow') }
                     sync.fullerWin() // sync Fuller Windows
                 }
-                styles.tweaks.update() // sync HH/HF/TCB/NCB/BA/TM
+                styles.tweaks.update() // sync HH/HF/TCB/NCB/BA
+                styles.toast.update() // sync TM
                 styles.chatbar.update() // sync WCB
                 if (env.site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
                 buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
