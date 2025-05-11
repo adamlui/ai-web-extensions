@@ -44,7 +44,7 @@
                 settings.save(entryData.key, !config[entryData.key]) ; sync.configToUI({ updatedKey: entryData.key })
                 notify(`${entryData.label} ${chrome.i18n.getMessage(`state_${
                     settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`)
-            }
+            } else if (entryData.type == 'link') { open(entryData.url) ; close() }
         }
         entry.div.append(entry.leftElem, entry.label)
         return entry.div
@@ -221,6 +221,11 @@
             ssEntry.faviconDiv.firstChild.replaceWith(ssEntry[event.type == 'mouseenter' ? 'openIcon' : 'favicon'])
         ssEntry.faviconDiv.onclick = () => { open(`https://${sites[site].urls.homepage}`) ; close() }
     }
+
+    // Create/append COFEE entry
+    const coffeeEntry = createMenuEntry({
+        type: 'link', symbol: '☕', label: settings.getMsg('menuLabel_buyMeAcoffee'), url: app.urls.donate['ko-fi'] })
+    footer.before(coffeeEntry)
 
     // AUTO-EXPAND categories
     document.querySelectorAll('.menu-entry:has(.menu-caret)').forEach(categoryDiv => {

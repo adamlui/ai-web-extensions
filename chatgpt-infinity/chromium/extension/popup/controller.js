@@ -39,7 +39,8 @@
                 settings.save(entryData.key, !config[entryData.key]) ; sync.configToUI({ updatedKey: entryData.key })
                 notify(`${entryData.label} ${chrome.i18n.getMessage(`state_${
                     settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`)
-            } else {
+            } else if (entryData.type == 'link') { open(entryData.url) ; close() }
+            else {
                 const re_all = new RegExp(`^(${getMsg('menuLabel_all')}|all|any|every)$`, 'i')
                 if (entryData.key == 'replyLanguage') {
                     while (true) {
@@ -216,6 +217,11 @@
             Object.values(ctrls).forEach(ctrl => catChildrenDiv.append(createMenuEntry(ctrl)))
         })
     }
+
+    // Create/append COFEE entry
+    const coffeeEntry = createMenuEntry({
+        type: 'link', symbol: '☕', label: settings.getMsg('menuLabel_buyMeAcoffee'), url: app.urls.donate['ko-fi'] })
+    footer.before(coffeeEntry)
 
     // AUTO-EXPAND categories
     document.querySelectorAll('.menu-entry:has(.menu-caret)').forEach(categoryDiv => {
