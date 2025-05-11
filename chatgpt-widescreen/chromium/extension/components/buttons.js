@@ -200,7 +200,7 @@ window.buttons = {
     },
 
     update: {
-        async color() {
+        color() {
             const { site, ui: { scheme }} = env
             buttons.color = (
                 site == 'chatgpt' ? 'var(--text-secondary)'
