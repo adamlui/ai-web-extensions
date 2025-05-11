@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.10.1
+// @version             2025.5.10.2
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -331,7 +331,12 @@
         appName: app.name,
         appAuthor: app.author.name,
         appDesc: 'Adds Widescreen + Fullscreen modes to ChatGPT for enhanced viewing + reduced scrolling',
+        menuLabel_settings: 'Settings',
+        menuLabel_notif: 'Notification',
         menuLabel_notifs: 'Notifications',
+        menuLabel_btn: 'Button',
+        menuLabel_chatbox: 'Chatbox',
+        menuLabel_display: 'Display',
         menuLabel_fullerWins: 'Fuller Windows',
         menuLabel_tallerChatbox: 'Taller Chatbox',
         menuLabel_widerChatbox: 'Wider Chatbox',
@@ -346,6 +351,7 @@
         menuLabel_blockSpam: 'Spam Block',
         menuLabel_siteSettings: 'Site Settings',
         menuLabel_about: 'About',
+        menuLabel_buyMeAcoffee: 'Buy Me a Coffee',
         menuLabel_donate: 'Please send a donation',
         menuLabel_extensionActive: 'extension active',
         about_author: 'Author',
@@ -364,6 +370,10 @@
         tooltip_fullscreenON: 'Full screen',
         tooltip_fullscreenOFF: 'Exit full screen',
         tooltip_newChat: 'New chat',
+        tooltip_goto: 'Go to',
+        helptip_adjustSettingsRelatedTo: 'Adjust settings related to',
+        helptip_the: 'The',
+        helptip_btns: 'Buttons',
         helptip_fullerWins: 'Also activate Wide Screen when activating Full-Window',
         helptip_tallerChatbox: 'Expand the chatbox vertically',
         helptip_widerChatbox: 'Expand the chatbox horizontally in Wide Screen mode',
@@ -375,6 +385,9 @@
         helptip_modeNotifs: 'Show notifications when toggling modes/settings',
         helptip_notifBottom: 'Anchor notifications to bottom of screen',
         helptip_blockSpam: 'Hide spam banners from cluttering the page',
+        helptip_pageSettings: 'Control the appearance of the page',
+        helptip_chatbarSettings: 'Control the appearance of the chatbar',
+        helptip_buttonSettings: 'Adjust settings related to buttons',
         helptip_enableDisable: 'Enable/disable',
         helptip_perSite: 'per site',
         helptip_run: 'Run',
@@ -398,6 +411,7 @@
         alert_f11reason: 'F11 was used to enter full screen, and due to browser security reasons, the same key must be used to exit it',
         notif_chatStopped: 'Chat stopped',
         btnLabel_moreAIextensions: 'More AI Extensions',
+        btnLabel_leaveReview: 'Leave Review',
         btnLabel_rateUs: 'Rate Us',
         btnLabel_discuss: 'Discuss',
         btnLabel_getSupport: 'Get Support',
