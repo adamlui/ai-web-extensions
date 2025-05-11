@@ -37,8 +37,8 @@
             entry.leftElem.textContent = entryData.symbol || '⚙️' ; entry.label.style.flexGrow = 1
             if (entryData.status) entry.label.textContent += ` — ${entryData.status}`
             if (entryData.type == 'link') {
-                entry.label.after(entry.rightIcon = dom.create.elem('div', { class: 'menu-right-icon' }))
-                entry.rightIcon.append(icons.create('open', { size: 18, fill: 'black' }))
+                entry.label.after(entry.rightElem = dom.create.elem('div', { class: 'menu-right-elem' }))
+                entry.rightElem.append(icons.create('open', { size: 18, fill: 'black' }))
             }
         }
         if (entryData.type == 'category') entry.div.append(icons.create('caretDown', { size: 11, class: 'menu-caret' }))
@@ -195,7 +195,7 @@
             track: dom.create.elem('span', { class: 'track' }), label: dom.create.elem('span'),
             faviconDiv: dom.create.elem('div', {
                 title: `${getMsg('tooltip_goto')} https://${sites[site].urls.homepage}`,
-                class: 'menu-right-icon' }),
+                class: 'menu-right-elem' }),
             favicon: dom.create.elem('img', { src: sites[site].urls.favicon, width: 15 }),
             openIcon: icons.create('open', { size: 18, fill: 'white' })
         }
