@@ -16,7 +16,7 @@
       "footer": "div#thread-bottom-container > div:last-of-type > div, span.text-sm.leading-none",
       "header": "div#page-header, main div.sticky:first-of-type", "input": "div#prompt-textarea",
       "rightbar": "div[class*=sidebar]:has(div[data-testid=screen-threadFlyOut])",
-      "sidebar": "div[class*=sidebar]:has(nav > div#sidebar-header)",
+      "sidebar": "div.bg-token-sidebar-surface-primary",
       "spam": {
         "banners": {
           "tos": "div.bottom-full:has(a[href=\"https://openai.com/terms\"])", // https://i.imgur.com/8BUOhn1.png
