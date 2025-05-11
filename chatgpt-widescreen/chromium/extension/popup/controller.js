@@ -230,10 +230,6 @@
     footer.before(coffeeEntry)
 
     // AUTO-EXPAND categories
-    document.querySelectorAll('.menu-entry:has(.menu-caret)').forEach(categoryDiv => {
-        if (settings.categories[categoryDiv.id]?.autoExpand)
-            toggleCategorySettingsVisiblity(categoryDiv.id, { transitions: false })
-    })
     const onMatchedPage = chrome.runtime.getManifest().content_scripts[0].matches.toString().includes(env.site)
     if (!onMatchedPage || config[`${env.site}Disabled`]) { // auto-expand Site Settings
         if (!onMatchedPage) // disable label from triggering unneeded collapse
@@ -243,7 +239,11 @@
           : !env.browser.isFF ? 250 // some delay since other settings appear
           : 335 // more in FF since no transition
         )
-    }
+    } else // auto-expand flagged categories
+        document.querySelectorAll('.menu-entry:has(.menu-caret)').forEach(categoryDiv => {
+            if (settings.categories[categoryDiv.id]?.autoExpand)
+                toggleCategorySettingsVisiblity(categoryDiv.id, { transitions: false })
+    })
 
     sync.fade() // based on master/site toggle
 
