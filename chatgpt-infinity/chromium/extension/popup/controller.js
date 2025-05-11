@@ -24,12 +24,18 @@
             label: dom.create.elem('span')
         }
         entry.label.textContent = entryData.label
+        entry.div.append(entry.leftElem, entry.label)
         if (entryData.type == 'toggle') { // add track to left, init knob pos
             entry.leftElem.append(dom.create.elem('span', { class: 'track' }))
             entry.leftElem.classList.toggle('on', settings.typeIsEnabled(entryData.key))
         } else { // add symbol to left, append status to right
             entry.leftElem.textContent = entryData.symbol || '⚙️'
             if (entryData.status) entry.label.textContent += ` — ${entryData.status}`
+            if (entryData.type == 'link') {
+                entry.label.after(entry.rightIcon = dom.create.elem('div', { class: 'menu-right-icon' }))
+                entry.rightIcon.append(icons.create('open', { size: 18, fill: 'black' }))
+                entry.label.style.flexGrow = 1
+            }
         }
         if (entryData.type == 'category') entry.div.append(icons.create('caretDown', { size: 11, class: 'menu-caret' }))
         entry.div.onclick = () => {
@@ -91,7 +97,6 @@
                 sync.configToUI({ updatedKey: entryData.key }) ; close() // popup
             }
         }
-        entry.div.append(entry.leftElem, entry.label)
         return entry.div
     }
 

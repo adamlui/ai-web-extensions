@@ -29,12 +29,18 @@
             label: dom.create.elem('span')
         }
         entry.label.textContent = entryData.label
+        entry.div.append(entry.leftElem, entry.label)
         if (entryData.type == 'toggle') { // add track to left, init knob pos
             entry.leftElem.append(dom.create.elem('span', { class: 'track' }))
             entry.leftElem.classList.toggle('on', settings.typeIsEnabled(entryData.key))
         } else { // add symbol to left, append status to right
             entry.leftElem.textContent = entryData.symbol || '⚙️'
             if (entryData.status) entry.label.textContent += ` — ${entryData.status}`
+            if (entryData.type == 'link') {
+                entry.label.after(entry.rightIcon = dom.create.elem('div', { class: 'menu-right-icon' }))
+                entry.rightIcon.append(icons.create('open', { size: 18, fill: 'black' }))
+                entry.label.style.flexGrow = 1
+            }
         }
         if (entryData.type == 'category') entry.div.append(icons.create('caretDown', { size: 11, class: 'menu-caret' }))
         entry.div.onclick = () => {
@@ -46,7 +52,6 @@
                     settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`)
             } else if (entryData.type == 'link') { open(entryData.url) ; close() }
         }
-        entry.div.append(entry.leftElem, entry.label)
         return entry.div
     }
 
@@ -191,9 +196,7 @@
             track: dom.create.elem('span', { class: 'track' }), label: dom.create.elem('span'),
             faviconDiv: dom.create.elem('div', {
                 title: `${getMsg('tooltip_goto')} https://${sites[site].urls.homepage}`,
-                style: `display: flex ; height: 33px ; align-items: center ;
-                        padding: 0 11.5px ; /* create padded rectangle for .highlight-on-hover */
-                        margin-right: -14px /* fill .menu-entry right-padding */` }),
+                class: 'menu-right-icon' }),
             favicon: dom.create.elem('img', { src: sites[site].urls.favicon, width: 15 }),
             openIcon: icons.create('open', { size: 18, fill: 'white' })
         }
