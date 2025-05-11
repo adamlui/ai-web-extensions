@@ -34,12 +34,11 @@
             entry.leftElem.append(dom.create.elem('span', { class: 'track' }))
             entry.leftElem.classList.toggle('on', settings.typeIsEnabled(entryData.key))
         } else { // add symbol to left, append status to right
-            entry.leftElem.textContent = entryData.symbol || '⚙️'
+            entry.leftElem.textContent = entryData.symbol || '⚙️' ; entry.label.style.flexGrow = 1
             if (entryData.status) entry.label.textContent += ` — ${entryData.status}`
             if (entryData.type == 'link') {
                 entry.label.after(entry.rightIcon = dom.create.elem('div', { class: 'menu-right-icon' }))
                 entry.rightIcon.append(icons.create('open', { size: 18, fill: 'black' }))
-                entry.label.style.flexGrow = 1
             }
         }
         if (entryData.type == 'category') entry.div.append(icons.create('caretDown', { size: 11, class: 'menu-caret' }))
@@ -80,7 +79,7 @@
 
             // Menu elems
             document.querySelectorAll('.logo, .menu-title, .menu-entry, .categorized-entries').forEach((elem, idx) => {
-                if (/coffeeLink|siteSettings/.test(elem.id)
+                if (/about|coffeeLink|siteSettings/.test(elem.id)
                     || elem.closest('.categorized-entries')?.previousElementSibling?.id == 'siteSettings'
                 ) return // never disable Site Settings + Coffee link
                 elem.style.transition = extensionIsDisabled() ? '' : 'opacity 0.15s ease-in'
@@ -225,6 +224,23 @@
             ssEntry.faviconDiv.firstChild.replaceWith(ssEntry[event.type == 'mouseenter' ? 'openIcon' : 'favicon'])
         ssEntry.faviconDiv.onclick = () => { open(`https://${sites[site].urls.homepage}`) ; close() }
     }
+
+    // Create/append ABOUT entry
+    const about = {
+        entryDiv: createMenuEntry({ key: 'about', symbol: '💡', label: `${settings.getMsg('menuLabel_about')}...` }),
+        ticker: {
+            textGap: '&emsp;&emsp;&emsp;',
+            span: dom.create.elem('span', { class: 'ticker' }), innerDiv: dom.create.elem('div')
+        }
+    }
+    about.ticker.content = `${
+        settings.getMsg('about_version')}: <span class="ticker-em">v${ app.version + about.ticker.textGap }</span>${
+        settings.getMsg('about_poweredBy')} <span class="ticker-em">chatgpt.js</span>${about.ticker.textGap}`
+    for (let i = 0 ; i < 7 ; i++) about.ticker.content += about.ticker.content // make long af
+    about.ticker.innerDiv.innerHTML = about.ticker.content
+    about.ticker.span.append(about.ticker.innerDiv)
+    about.entryDiv.append(about.ticker.span) ; footer.before(about.entryDiv)
+    about.entryDiv.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
 
     // Create/append COFEE entry
     const coffeeEntry = createMenuEntry({
