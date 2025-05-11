@@ -90,12 +90,12 @@ window.settings = {
         }},
         get notifDisabled() { return {
             type: 'toggle', defaultVal: false, category: 'notifSettings',
-            label: `${settings.getMsg('menuLabel_show')} ${settings.getMsg('menuLabel_modeNotifs')}`,
+            label: `${settings.getMsg('menuLabel_show')} ${settings.getMsg('menuLabel_notifs')}`,
             helptip: settings.getMsg('helptip_modeNotifs')
         }},
         get notifBottom() { return {
             type: 'toggle', defaultVal: false, category: 'notifSettings',
-            label: `${settings.getMsg('menuLabel_anchor')} ${settings.getMsg('menuLabel_modeNotifs')}`,
+            label: `${settings.getMsg('menuLabel_anchor')} ${settings.getMsg('menuLabel_notifs')}`,
             helptip: settings.getMsg('helptip_notifBottom')
         }},
         get blockSpamDisabled() { return {
