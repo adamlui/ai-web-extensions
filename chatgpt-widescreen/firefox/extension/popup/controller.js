@@ -74,9 +74,9 @@
 
             // Menu elems
             document.querySelectorAll('.logo, .menu-title, .menu-entry, .categorized-entries').forEach((elem, idx) => {
-                if (elem.id == 'siteSettings'
+                if (/coffeeLink|siteSettings/.test(elem.id)
                     || elem.closest('.categorized-entries')?.previousElementSibling?.id == 'siteSettings'
-                ) return // never potentially disable important Site Settings
+                ) return // never disable Site Settings + Coffee link
                 elem.style.transition = extensionIsDisabled() ? '' : 'opacity 0.15s ease-in'
                 setTimeout(() => elem.classList.toggle('disabled', extensionIsDisabled()),
                     extensionIsDisabled() ? 0 : idx *10) // fade-out abruptly, fade-in staggered
@@ -224,7 +224,9 @@
 
     // Create/append COFEE entry
     const coffeeEntry = createMenuEntry({
-        type: 'link', symbol: '☕', label: settings.getMsg('menuLabel_buyMeAcoffee'), url: app.urls.donate['ko-fi'] })
+        key: 'coffeeLink', type: 'link', symbol: '☕',
+        label: settings.getMsg('menuLabel_buyMeAcoffee'), url: app.urls.donate['ko-fi']
+    })
     footer.before(coffeeEntry)
 
     // AUTO-EXPAND categories

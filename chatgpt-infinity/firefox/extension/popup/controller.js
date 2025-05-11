@@ -122,6 +122,7 @@
 
             // Menu elems
             document.querySelectorAll('.logo, .menu-title, .menu-entry').forEach((elem, idx) => {
+                if (elem.id == 'coffeeLink') return // never disable Coffee link
                 elem.style.transition = config.extensionDisabled ? '' : 'opacity 0.15s ease-in'
                 setTimeout(() => elem.classList.toggle('disabled', config.extensionDisabled),
                     config.extensionDisabled ? 0 : idx *10) // fade-out abruptly, fade-in staggered
@@ -222,7 +223,9 @@
 
     // Create/append COFEE entry
     const coffeeEntry = createMenuEntry({
-        type: 'link', symbol: '☕', label: settings.getMsg('menuLabel_buyMeAcoffee'), url: app.urls.donate['ko-fi'] })
+        key: 'coffeeLink', type: 'link', symbol: '☕',
+        label: settings.getMsg('menuLabel_buyMeAcoffee'), url: app.urls.donate['ko-fi']
+    })
     footer.before(coffeeEntry)
 
     // AUTO-EXPAND categories
