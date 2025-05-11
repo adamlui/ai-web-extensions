@@ -12,7 +12,7 @@
     // Import JS resources
     for (const resource of [
         'components/modals.js', 'components/toggles.js',
-        'lib/chatgpt.js', 'lib/dom.js', 'lib/infinity.js', 'lib/settings.js', 'lib/ui.js'
+        'lib/chatgpt.min.js', 'lib/dom.js', 'lib/infinity.js', 'lib/settings.js', 'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context

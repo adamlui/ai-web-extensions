@@ -1,4 +1,4 @@
-// Requires lib/chatgpt.js
+// Requires lib/chatgpt.min.js
 
 window.infinity = {
 

@@ -1,4 +1,4 @@
-// Requires lib/chatgpt.js + app + env + notify + syncConfigToUI
+// Requires lib/chatgpt.min.js + app + env + notify + syncConfigToUI
 
 window.toggles = {
 
