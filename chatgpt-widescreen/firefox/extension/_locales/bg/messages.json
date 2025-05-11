@@ -4,6 +4,7 @@
   "appDesc": { "message": "Подобрява ChatGPT с режими на широк/цял/висок екран + блокиране на спам. Работи и на perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Настройки" },
   "menuLabel_notif": { "message": "Уведомяване" },
+  "menuLabel_notifs": { "message": "Уведомления" },
   "menuLabel_btn": { "message": "Бутон" },
   "menuLabel_chatbox": { "message": "Чат кутия" },
   "menuLabel_display": { "message": "Дисплей" },

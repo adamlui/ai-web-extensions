@@ -4,6 +4,7 @@
   "appDesc": { "message": "Plibonigas ChatGPT per larĝa/plena/alta ekrano + spambloka reĝimoj. Ankaŭ funkcias ĉe perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Agordoj" },
   "menuLabel_notif": { "message": "Atentigo" },
+  "menuLabel_notifs": { "message": "Atentigoj" },
   "menuLabel_btn": { "message": "Audio Interface device type" },
   "menuLabel_chatbox": { "message": "Babilejo" },
   "menuLabel_display": { "message": "Montri" },

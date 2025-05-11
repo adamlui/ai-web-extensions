@@ -4,6 +4,7 @@
   "appDesc": { "message": "Amelyore ChatGPT ak lajè/plen/ekran wo + mòd bloke spam. Epitou travay sou perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Reglaj" },
   "menuLabel_notif": { "message": "Notifikasyon" },
+  "menuLabel_notifs": { "message": "notifikasyon/notifications" },
   "menuLabel_btn": { "message": "Bouton" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Ekspozisyon" },

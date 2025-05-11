@@ -4,6 +4,7 @@
   "appDesc": { "message": "Ag àrdachadh ChatGPT le modhan spama bacaidh farsaing / làn / làn-sgrìn +. Cuideachd ag obair air perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Roghainnean" },
   "menuLabel_notif": { "message": "Notification" },
+  "menuLabel_notifs": { "message": "Notifications" },
   "menuLabel_btn": { "message": "Button" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Taisbean" },

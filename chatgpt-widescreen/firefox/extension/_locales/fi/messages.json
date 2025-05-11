@@ -4,6 +4,7 @@
   "appDesc": { "message": "Parantaa ChatGPT:tä laaja/koko/korkea näyttö + roskapostitiloilla. Toimii myös sivustolla perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Asetukset" },
   "menuLabel_notif": { "message": "Tiedoksianto" },
+  "menuLabel_notifs": { "message": "Ilmoitukset" },
   "menuLabel_btn": { "message": "Painike" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Näyttö" },

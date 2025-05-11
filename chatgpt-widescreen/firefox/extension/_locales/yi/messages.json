@@ -4,6 +4,7 @@
   "appDesc": { "message": "ימפּרוווז ChatGPT מיט ברייט / פול / הויך פאַרשטעלן + ספּאַמבלאָקק מאָדעס. אַרבעט אויך אויף perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "סעטטינגס" },
   "menuLabel_notif": { "message": "אַנימאַציע" },
+  "menuLabel_notifs": { "message": "נאָטיפיקאַציעס" },
   "menuLabel_btn": { "message": "קנעפּל" },
   "menuLabel_chatbox": { "message": "טשאַטבאָקס" },
   "menuLabel_display": { "message": "אַרויסווייַזן" },

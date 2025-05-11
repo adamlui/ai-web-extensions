@@ -4,6 +4,7 @@
   "appDesc": { "message": "Izboljša ChatGPT z načini širokega/celozaslonskega/visokega zaslona. Deluje tudi na perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Nastavitve" },
   "menuLabel_notif": { "message": "Vročitev" },
+  "menuLabel_notifs": { "message": "Obvestila" },
   "menuLabel_btn": { "message": "Gumb" },
   "menuLabel_chatbox": { "message": "Polje za klepet" },
   "menuLabel_display": { "message": "Prikazovalnik (Display)" },

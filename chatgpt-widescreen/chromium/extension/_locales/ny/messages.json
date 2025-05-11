@@ -4,6 +4,7 @@
   "appDesc": { "message": "Imakulitsa ChatGPT yokhala ndimitundu yayikulu/yathunthu/yatali. Komanso imagwira ntchito pa perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Zikhazikiko" },
   "menuLabel_notif": { "message": "Chidziwitso" },
+  "menuLabel_notifs": { "message": "Zidziwitso" },
   "menuLabel_btn": { "message": "Batani" },
   "menuLabel_chatbox": { "message": "Lumikizanani nafe" },
   "menuLabel_display": { "message": "Onetsani" },

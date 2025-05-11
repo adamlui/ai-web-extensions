@@ -4,6 +4,7 @@
   "appDesc": { "message": "Patobulina ChatGPT plataus / viso / aukšto ekrano + spambloko režimais. Taip pat veikia perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Nustatymai" },
   "menuLabel_notif": { "message": "Pranešimu" },
+  "menuLabel_notifs": { "message": "Pranešimai" },
   "menuLabel_btn": { "message": "Mygtukas " },
   "menuLabel_chatbox": { "message": "Pokalbių dėžutė" },
   "menuLabel_display": { "message": "Ekranas" },

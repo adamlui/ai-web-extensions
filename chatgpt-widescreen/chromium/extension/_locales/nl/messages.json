@@ -4,6 +4,7 @@
   "appDesc": { "message": "Verbetert ChatGPT met breed/volledig/hoog-scherm + spamblock-modi. Werkt ook op perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Instellingen" },
   "menuLabel_notif": { "message": "Kennisgeving" },
+  "menuLabel_notifs": { "message": "Meldingen" },
   "menuLabel_btn": { "message": "Knop" },
   "menuLabel_chatbox": { "message": "Postvak in" },
   "menuLabel_display": { "message": "Weergave" },

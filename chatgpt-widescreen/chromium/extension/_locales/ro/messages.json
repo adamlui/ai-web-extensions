@@ -4,6 +4,7 @@
   "appDesc": { "message": "Îmbunătățește ChatGPT cu moduri cu ecran lat/plin/înalt + blocare spam. Funcționează și pe perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Setări" },
   "menuLabel_notif": { "message": "Notificare" },
+  "menuLabel_notifs": { "message": "Notificări" },
   "menuLabel_btn": { "message": "Buton" },
   "menuLabel_chatbox": { "message": "Casetă de chat" },
   "menuLabel_display": { "message": "Ecran" },

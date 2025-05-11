@@ -4,6 +4,7 @@
   "appDesc": { "message": "Geniş/tam/hündür ekran + spam bloklama rejimləri ilə ChatGPT-ni təkmilləşdirir. Həmçinin perplexity.ai + poe.com üzərində işləyir!" },
   "menuLabel_settings": { "message": "Parametrlər" },
   "menuLabel_notif": { "message": "Bildiriş" },
+  "menuLabel_notifs": { "message": "Bildirişlər" },
   "menuLabel_btn": { "message": "Düymə" },
   "menuLabel_chatbox": { "message": "Söhbət qutusu" },
   "menuLabel_display": { "message": "Ekran" },

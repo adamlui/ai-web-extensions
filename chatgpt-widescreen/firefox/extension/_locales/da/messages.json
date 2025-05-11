@@ -4,6 +4,7 @@
   "appDesc": { "message": "Forbedrer ChatGPT med bred/fuld/høj skærm + spamblokeringstilstande. Virker også på perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Indstillinger" },
   "menuLabel_notif": { "message": "Meddelelse" },
+  "menuLabel_notifs": { "message": "Notifikationer" },
   "menuLabel_btn": { "message": "Knap" },
   "menuLabel_chatbox": { "message": "Chatboks" },
   "menuLabel_display": { "message": "Skærm" },

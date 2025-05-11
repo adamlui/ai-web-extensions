@@ -4,6 +4,7 @@
   "appDesc": { "message": "Ukuwamya ChatGPT ne misango iyakulisha/iyakumanina/iyakulisha + iyakucingilila. Kabili ilabomba pa perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Ifilundwa" },
   "menuLabel_notif": { "message": "Ishiwi" },
+  "menuLabel_notifs": { "message": "Ifyebo" },
   "menuLabel_btn": { "message": "Button" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Ifilangililo" },

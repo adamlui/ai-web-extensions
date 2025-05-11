@@ -4,6 +4,7 @@
   "appDesc": { "message": "A yeke sara si ChatGPT ayeke na a-écran ti kota/ti-écran/ti-écran. A yeke nga na ndo ti perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Akpengba ye so a leke na yâ ti Bible" },
   "menuLabel_notif": { "message": "A yeke wara tënë ti fango tënë" },
+  "menuLabel_notifs": { "message": "A yeke wara tënë ti fango tënë" },
   "menuLabel_btn": { "message": "Mbi Button" },
   "menuLabel_chatbox": { "message": "Tapande: Chatbox" },
   "menuLabel_display": { "message": "Yângâ tî kodoro ti É" },

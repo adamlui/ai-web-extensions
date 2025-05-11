@@ -4,6 +4,7 @@
   "appDesc": { "message": "يعزز ChatGPT مع أوضاع واسعة/كاملة/طويلة الشاشة + كتل السبام. يعمل أيضًا على perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "الإعدادات" },
   "menuLabel_notif": { "message": "الإخطار" },
+  "menuLabel_notifs": { "message": "الإشعارات" },
   "menuLabel_btn": { "message": "الزر" },
   "menuLabel_chatbox": { "message": "صندوق المحادثة" },
   "menuLabel_display": { "message": "--" },

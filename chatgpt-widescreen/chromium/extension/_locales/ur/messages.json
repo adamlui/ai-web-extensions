@@ -4,6 +4,7 @@
   "appDesc": { "message": "وسیع/مکمل/لمبی اسکرین + اسپیم لاک طریقوں کے ساتھ چیٹ جی پی ٹی کو بڑھاتا ہے ۔ perplexity.ai + poe.com پر بھی کام کرتا ہے!" },
   "menuLabel_settings": { "message": "ترتیبات" },
   "menuLabel_notif": { "message": "اطلاع" },
+  "menuLabel_notifs": { "message": "اطلاعات" },
   "menuLabel_btn": { "message": "بٹن" },
   "menuLabel_chatbox": { "message": "چیٹ باکس" },
   "menuLabel_display": { "message": "ڈسپلے" },

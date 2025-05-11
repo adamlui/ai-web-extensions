@@ -4,6 +4,7 @@
   "appDesc": { "message": "Өргөн/бүрэн/өндөр дэлгэц + спамблок горимоор ChatGPT-ийг сайжруулдаг. Мөн perplexity.ai + poe.com дээр ажилладаг!" },
   "menuLabel_settings": { "message": "Системийн тохиргоо" },
   "menuLabel_notif": { "message": "Сонордуулга" },
+  "menuLabel_notifs": { "message": "Мэдэгдлүүд" },
   "menuLabel_btn": { "message": "Товч" },
   "menuLabel_chatbox": { "message": "Чатбокс" },
   "menuLabel_display": { "message": "Дэлгэц" },

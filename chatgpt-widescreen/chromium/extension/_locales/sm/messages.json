@@ -4,6 +4,7 @@
   "appDesc": { "message": "Faʻaleleia ChatGPT ma lautele/atoa/maualuga lau + spamblock auala. E galue foi i le perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Faʻatulagaina" },
   "menuLabel_notif": { "message": "Faasilasilaga" },
+  "menuLabel_notifs": { "message": "Faasilasilaga" },
   "menuLabel_btn": { "message": "Button" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Faaali atu" },

@@ -4,6 +4,7 @@
   "appDesc": { "message": "ChatGPT-ро бо режимҳои васеъ/пурра/баланд-экран + спамблок такмил медиҳад. Инчунин дар perplexity.ai + poe.com кор мекунад!" },
   "menuLabel_settings": { "message": "Танзимот" },
   "menuLabel_notif": { "message": "ОгоҳиномаComment" },
+  "menuLabel_notifs": { "message": "Огоҳиҳо" },
   "menuLabel_btn": { "message": "guibutton" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "& Муҳаррир" },

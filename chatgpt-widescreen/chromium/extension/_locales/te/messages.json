@@ -4,6 +4,7 @@
   "appDesc": { "message": "విస్తృత/పూర్తి/పొడవైన స్క్రీన్ + స్పాంబ్‌లాక్ మోడ్‌లతో ChatGPT ని మెరుగుపరుస్తుంది. perplexity.ai + poe.com లో కూడా పని చేస్తుంది!" },
   "menuLabel_settings": { "message": "అమర్పులు" },
   "menuLabel_notif": { "message": "నోటిఫికేషన్" },
+  "menuLabel_notifs": { "message": "నోటిఫికేషన్‌లు" },
   "menuLabel_btn": { "message": "బొత్తం" },
   "menuLabel_chatbox": { "message": "చాట్ ‌ బాక్స్" },
   "menuLabel_display": { "message": "QShortcut" },

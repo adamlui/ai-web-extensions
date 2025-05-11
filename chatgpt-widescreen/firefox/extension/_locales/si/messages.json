@@ -4,6 +4,7 @@
   "appDesc": { "message": "පුළුල්/පූර්ණ/උස තිරය + spamblock මාතයන් සමග ChatGPT වැඩි දියුණු කරයි. perplexity.ai + poe.com හි ද ක් ‍ රියා කරයි!" },
   "menuLabel_settings": { "message": "සැකසුම්" },
   "menuLabel_notif": { "message": "දැනුම්දීම" },
+  "menuLabel_notifs": { "message": "නිෙව්දන" },
   "menuLabel_btn": { "message": "An SVG themable clockComment" },
   "menuLabel_chatbox": { "message": "චැට්බොක්ස්" },
   "menuLabel_display": { "message": "සංදර්ශකය" },

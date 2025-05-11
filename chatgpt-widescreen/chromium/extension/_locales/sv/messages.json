@@ -4,6 +4,7 @@
   "appDesc": { "message": "Förbättrar ChatGPT med lägen för bred/hel/hög skärm + spamblock. Fungerar även på perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Inställningar" },
   "menuLabel_notif": { "message": "Meddelande" },
+  "menuLabel_notifs": { "message": "Aviseringar" },
   "menuLabel_btn": { "message": "Knapp" },
   "menuLabel_chatbox": { "message": "Chattruta" },
   "menuLabel_display": { "message": "Display" },

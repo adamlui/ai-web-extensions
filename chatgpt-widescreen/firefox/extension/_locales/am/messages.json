@@ -4,6 +4,7 @@
   "appDesc": { "message": "ChatGPTን በሰፊ/ሙሉ/ረጅም ስክሪን + አይፈለጌ መልእክት ማገድን ያሻሽላል። እንዲሁም perplexity.ai + poe.com ላይ ይሰራል!" },
   "menuLabel_settings": { "message": "ቅንብሮች" },
   "menuLabel_notif": { "message": "ማሳወቂያ" },
+  "menuLabel_notifs": { "message": "ማሳወቅያዎች" },
   "menuLabel_btn": { "message": "ቁልፍ" },
   "menuLabel_chatbox": { "message": "ቻትቦክስ" },
   "menuLabel_display": { "message": "ማሳያ" },

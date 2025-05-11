@@ -4,6 +4,7 @@
   "appDesc": { "message": "ވައިޑް/ފުލް/ޓޯލް-ސްކްރީން މޯޑްތަކާއެކު ޗެޓްޖީޕީޓީ އިތުރުކޮށްދެއެވެ. އަދި perplexity.ai + poe.com ގައި ވެސް މަސައްކަތް ކުރެއެވެ!" },
   "menuLabel_settings": { "message": "ސެޓިންގސް" },
   "menuLabel_notif": { "message": "ނޮޓިފިކޭޝަން" },
+  "menuLabel_notifs": { "message": "notifications" },
   "menuLabel_btn": { "message": "ގޮށް" },
   "menuLabel_chatbox": { "message": "ޗެޓްބޮކްސް އެވެ" },
   "menuLabel_display": { "message": "ޑިސްޕްލޭ" },

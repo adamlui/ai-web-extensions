@@ -4,6 +4,7 @@
   "appDesc": { "message": "Mejora ChatGPT con modos de pantalla ancha, completa y alta y bloqueo de spam. ¡También funciona en perplexity.ai y poe.com!" },
   "menuLabel_settings": { "message": "Ajustes" },
   "menuLabel_notif": { "message": "Notificación" },
+  "menuLabel_notifs": { "message": "Notificaciones" },
   "menuLabel_btn": { "message": "Botón" },
   "menuLabel_chatbox": { "message": "Ventana de chat" },
   "menuLabel_display": { "message": "Pantalla" },

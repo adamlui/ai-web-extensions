@@ -4,6 +4,7 @@
   "appDesc": { "message": "ChatGPT د پراخه/بشپړ/اوچت سکرین + سپمبلاک حالتونو سره وده کوي. په perplexity.ai + poe.com کې هم کار کوي!" },
   "menuLabel_settings": { "message": "تنظیمات" },
   "menuLabel_notif": { "message": "خبرتیا" },
+  "menuLabel_notifs": { "message": "خبرتياوې " },
   "menuLabel_btn": { "message": "تڼۍ" },
   "menuLabel_chatbox": { "message": "چیټ باکس" },
   "menuLabel_display": { "message": "سکرين" },

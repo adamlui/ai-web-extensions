@@ -4,6 +4,7 @@
   "appDesc": { "message": "Manamafy ny ChatGPT amin'ny fomba malalaka/feno/avo-efijery + spamblock. Koa miasa amin'ny perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Fandrindrana" },
   "menuLabel_notif": { "message": "Fampahafantarana" },
+  "menuLabel_notifs": { "message": "Fampahafantarana" },
   "menuLabel_btn": { "message": "Tsindry" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Fiseho" },

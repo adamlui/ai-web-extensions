@@ -4,6 +4,7 @@
   "appDesc": { "message": "ਚੌੜਾ/ਪੂਰੀ/ਲੰਬੀ-ਸਕ੍ਰੀਨ + ਸਪੈਮਬਲਾਕ ਮੋਡਾਂ ਨਾਲ ਚੈਟਜੀਪੀਟੀ ਨੂੰ ਵਧਾਉਂਦਾ ਹੈ। perplexity.ai + poe.com 'ਤੇ ਵੀ ਕੰਮ ਕਰਦਾ ਹੈ!" },
   "menuLabel_settings": { "message": "GConf ਸੈਟਿੰਗ" },
   "menuLabel_notif": { "message": "ਕੋਈ ਅਨੁਕੂਲਤਾ ਨਹੀਂ" },
+  "menuLabel_notifs": { "message": "ਨੋਟੀਫਿਕੇਸ਼ਨ" },
   "menuLabel_btn": { "message": "ਬਟਨ" },
   "menuLabel_chatbox": { "message": "ਗੱਲਬਾਤ ਬਾਕਸ" },
   "menuLabel_display": { "message": "ਡਿਸਪਲੇਅ" },

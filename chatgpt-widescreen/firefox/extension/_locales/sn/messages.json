@@ -4,6 +4,7 @@
   "appDesc": { "message": "Inovandudza ChatGPT nehupamhi/izere/yakareba-screen + spamblock modes. Zvakare inoshanda pa perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Masetingi" },
   "menuLabel_notif": { "message": "Chiziviso" },
+  "menuLabel_notifs": { "message": "Zviziviso" },
   "menuLabel_btn": { "message": "Bhatani" },
   "menuLabel_chatbox": { "message": "Taura nesu" },
   "menuLabel_display": { "message": "Ratidza" },

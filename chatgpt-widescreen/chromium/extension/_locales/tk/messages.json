@@ -4,6 +4,7 @@
   "appDesc": { "message": "Giň / doly / uzyn ekranly + spamblok rejeleri bilen ChatGPT-i güýçlendirýär. Şeýle hem perplexity.ai + poe.com-da işleýär!" },
   "menuLabel_settings": { "message": "Saýlamalar" },
   "menuLabel_notif": { "message": "janlaşdyrma" },
+  "menuLabel_notifs": { "message": "Haýdalylar" },
   "menuLabel_btn": { "message": "Buton" },
   "menuLabel_chatbox": { "message": "Çat kutusu" },
   "menuLabel_display": { "message": "Göster" },

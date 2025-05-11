@@ -4,6 +4,7 @@
   "appDesc": { "message": "Кең/толук/бийик экран + спам-блок режимдери менен ChatGPT жакшыртат. Ошондой эле perplexity.ai + poe.com боюнча иштейт!" },
   "menuLabel_settings": { "message": "Чычканды ырастоо" },
   "menuLabel_notif": { "message": "Кабарландыруу" },
+  "menuLabel_notifs": { "message": "Билдирүүлөр" },
   "menuLabel_btn": { "message": "Кнопка" },
   "menuLabel_chatbox": { "message": "Сүйлөшүү кутучасы" },
   "menuLabel_display": { "message": "Дисплей" },

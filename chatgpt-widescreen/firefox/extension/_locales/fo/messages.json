@@ -4,6 +4,7 @@
   "appDesc": { "message": "Tað bøtir um ChatGPT við breiðum/fullum/høgum skermum + spamblock-tilgongdum. Arbeiði eisini á perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Stillingar" },
   "menuLabel_notif": { "message": "Fráboðan" },
+  "menuLabel_notifs": { "message": "Kunningar" },
   "menuLabel_btn": { "message": "Knappur" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Vís" },

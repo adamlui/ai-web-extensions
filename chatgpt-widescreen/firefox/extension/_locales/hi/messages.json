@@ -4,6 +4,7 @@
   "appDesc": { "message": "विस्तृत/पूर्ण/लम्बी - स्क्रीन + स्पैमब्लॉक मोड के साथ चैटजीपीटी को बढ़ाता है। Perplexity.ai + poe.com पर भी काम करता है!" },
   "menuLabel_settings": { "message": "सेटिंग्स" },
   "menuLabel_notif": { "message": "अधिसूचना" },
+  "menuLabel_notifs": { "message": "नोटिफ़िकेशन" },
   "menuLabel_btn": { "message": "बटन" },
   "menuLabel_chatbox": { "message": "चैटबॉक्स" },
   "menuLabel_display": { "message": "प्रदर्श" },

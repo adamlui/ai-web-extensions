@@ -4,6 +4,7 @@
   "appDesc": { "message": "Vylepšuje ChatGPT o režimy širokou/celá/vysoká obrazovka + spamblok. Funguje aj na perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Nastavenia" },
   "menuLabel_notif": { "message": "Oznámenie" },
+  "menuLabel_notifs": { "message": "Oznamy" },
   "menuLabel_btn": { "message": "Tlačidlo" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Displej" },

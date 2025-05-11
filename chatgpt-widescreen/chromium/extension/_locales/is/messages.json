@@ -4,6 +4,7 @@
   "appDesc": { "message": "Bætir ChatGPT með breiðum/fullum/háum skjá + ruslpóstsstillingum. Virkar einnig á perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Stillingar" },
   "menuLabel_notif": { "message": "Tilkynning" },
+  "menuLabel_notifs": { "message": "Tilkynningar" },
   "menuLabel_btn": { "message": "Hnappur" },
   "menuLabel_chatbox": { "message": "Spjallhólf" },
   "menuLabel_display": { "message": "Skjár" },

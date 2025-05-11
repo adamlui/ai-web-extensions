@@ -4,6 +4,7 @@
   "appDesc": { "message": "ปรับปรุง ChatGPT ด้วยโหมดหน้าจอกว้าง/เต็ม/สูง + สแปมบล็อค นอกจากนี้ยังใช้งานได้กับ perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "การตั้งค่า" },
   "menuLabel_notif": { "message": "การแจ้งเตือน" },
+  "menuLabel_notifs": { "message": "ประกาศ" },
   "menuLabel_btn": { "message": "ปุ่ม" },
   "menuLabel_chatbox": { "message": "แชทบ็อกซ์" },
   "menuLabel_display": { "message": "จอแสดงผล" },

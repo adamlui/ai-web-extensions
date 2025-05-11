@@ -4,6 +4,7 @@
   "appDesc": { "message": "Huboresha ChatGPT kwa kutumia skrini pana/iliyojaa/refu + na njia za kuzuia taka. Pia hufanya kazi kwenye perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Mipangilio" },
   "menuLabel_notif": { "message": "Arifa" },
+  "menuLabel_notifs": { "message": "Arifa" },
   "menuLabel_btn": { "message": "Kitufe" },
   "menuLabel_chatbox": { "message": "Sanduku la gumzo" },
   "menuLabel_display": { "message": "Display" },

@@ -4,6 +4,7 @@
   "appDesc": { "message": "फराकिलो/पूर्ण/अग्लो-स्क्रिन + स्प्यामब्लक मोडहरूसँग ChatGPT बढाउँछ। perplexity.ai + poe.com मा पनि काम गर्दछ!" },
   "menuLabel_settings": { "message": "सेटिङहरू" },
   "menuLabel_notif": { "message": "सूचना" },
+  "menuLabel_notifs": { "message": "सूचनाहरू" },
   "menuLabel_btn": { "message": "टाँकstructural navigation" },
   "menuLabel_chatbox": { "message": "च्याटबक्स" },
   "menuLabel_display": { "message": "प्रदर्शक" },

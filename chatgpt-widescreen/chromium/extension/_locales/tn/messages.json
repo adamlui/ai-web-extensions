@@ -4,6 +4,7 @@
   "appDesc": { "message": "E tokafatsa ChatGPT ka mekgwa ya sekerini se se bulegileng/se se tletseng/se seleele. Gape e dira mo perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Diseting" },
   "menuLabel_notif": { "message": "KITSISO" },
+  "menuLabel_notifs": { "message": "Dikitsiso" },
   "menuLabel_btn": { "message": "Konopo" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Display" },

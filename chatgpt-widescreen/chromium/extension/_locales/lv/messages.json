@@ -4,6 +4,7 @@
   "appDesc": { "message": "Uzlabo ChatGPT ar plata/pilna/augsta ekrāna + surogātpasta bloķēšanas režīmiem. Darbojas arī vietnē perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Iestatījumi" },
   "menuLabel_notif": { "message": "Paziņojums" },
+  "menuLabel_notifs": { "message": "Ziņojumi" },
   "menuLabel_btn": { "message": "Poga" },
   "menuLabel_chatbox": { "message": "Tērzētava" },
   "menuLabel_display": { "message": "Displejs" },

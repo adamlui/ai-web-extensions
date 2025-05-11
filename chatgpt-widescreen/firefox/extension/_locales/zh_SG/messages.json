@@ -4,6 +4,7 @@
   "appDesc": { "message": "通过宽屏/全屏/高屏+垃圾邮件块模式增强 ChatGPT。也可以在 perplexity.ai + poe.com 上使用！" },
   "menuLabel_settings": { "message": "设置" },
   "menuLabel_notif": { "message": "通知" },
+  "menuLabel_notifs": { "message": "通知" },
   "menuLabel_btn": { "message": "按钮" },
   "menuLabel_chatbox": { "message": "聊天室" },
   "menuLabel_display": { "message": "显示" },

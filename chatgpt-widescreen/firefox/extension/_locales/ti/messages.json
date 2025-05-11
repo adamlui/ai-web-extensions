@@ -4,6 +4,7 @@
   "appDesc": { "message": "ChatGPT ብሰፊሕ/ምሉእ/ነዊሕ ማያ + ስፓምቦክ ሞድታት የደልድሎ ። ኣብ perplexity.ai + poe.com እውን ይሰርሕ!" },
   "menuLabel_settings": { "message": "መቓናት" },
   "menuLabel_notif": { "message": "ኣፍልጦ" },
+  "menuLabel_notifs": { "message": "ኣፍልጦታት" },
   "menuLabel_btn": { "message": "መተርኣስ" },
   "menuLabel_chatbox": { "message": "ቻትቦክስ" },
   "menuLabel_display": { "message": "ኣርኢ" },

@@ -4,6 +4,7 @@
   "appDesc": { "message": "Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Settings" },
   "menuLabel_notif": { "message": "Notification" },
+  "menuLabel_notifs": { "message": "Notifications" },
   "menuLabel_btn": { "message": "Button" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Display" },

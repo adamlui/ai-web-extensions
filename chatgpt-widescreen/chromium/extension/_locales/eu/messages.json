@@ -4,6 +4,7 @@
   "appDesc": { "message": "ChatGPT hobetzen du pantaila zabal/osoa/altuko + spamblokeatzeko moduekin. Perplexity.ai + poe.com-en ere lan egiten du!" },
   "menuLabel_settings": { "message": "Ezarpenak" },
   "menuLabel_notif": { "message": "Abisua" },
+  "menuLabel_notifs": { "message": "Jakinarazpenak" },
   "menuLabel_btn": { "message": "Botoia" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Erakutsi" },

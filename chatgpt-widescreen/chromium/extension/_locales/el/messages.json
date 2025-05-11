@@ -4,6 +4,7 @@
   "appDesc": { "message": "Βελτιώνει το ChatGPT με λειτουργίες ευρείας/πλήρης/ψηλής οθόνης. Λειτουργεί επίσης στο perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Ρυθμίσεις" },
   "menuLabel_notif": { "message": "Κοινοποίηση" },
+  "menuLabel_notifs": { "message": "Ειδοποιήσεις" },
   "menuLabel_btn": { "message": "Κουμπί" },
   "menuLabel_chatbox": { "message": "Κουτί συνομιλίας" },
   "menuLabel_display": { "message": "Πιατέλες" },

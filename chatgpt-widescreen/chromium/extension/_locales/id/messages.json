@@ -4,6 +4,7 @@
   "appDesc": { "message": "Meningkatkan ChatGPT dengan mode layar lebar/penuh/tinggi + spamblock. Juga berfungsi di perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Pengaturan" },
   "menuLabel_notif": { "message": "Notifikasi" },
+  "menuLabel_notifs": { "message": "Notifikasi" },
   "menuLabel_btn": { "message": "Tombol" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Tampilkan" },

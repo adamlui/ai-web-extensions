@@ -4,6 +4,7 @@
   "appDesc": { "message": "Gutezimbere ChatGPT hamwe nubugari / bwuzuye / muremure-muremure + uburyo bwa spamblock. Ikora kandi perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Amagenamiterere" },
   "menuLabel_notif": { "message": "Imenyesha" },
+  "menuLabel_notifs": { "message": "Amamenyesha" },
   "menuLabel_btn": { "message": "Akabuto" },
   "menuLabel_chatbox": { "message": "Agasanduku k'ikiganiro" },
   "menuLabel_display": { "message": "Kugaragaza" },

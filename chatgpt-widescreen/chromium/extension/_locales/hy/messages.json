@@ -4,6 +4,7 @@
   "appDesc": { "message": "Ընդլայնում է ChatGPT-ն լայն/ամբողջական/բարձր էկրանով + սպամբլոկ ռեժիմներով: Նաև աշխատում է perplexity.ai + poe.com-ում" },
   "menuLabel_settings": { "message": "Կարգավորումներ" },
   "menuLabel_notif": { "message": "Ծանուցում" },
+  "menuLabel_notifs": { "message": "Նույնականացվել համակարգում" },
   "menuLabel_btn": { "message": "Կոճակ" },
   "menuLabel_chatbox": { "message": "Չաթբոքս" },
   "menuLabel_display": { "message": "Ցուցադրել" },

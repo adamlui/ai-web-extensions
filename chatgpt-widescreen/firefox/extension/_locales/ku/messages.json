@@ -4,6 +4,7 @@
   "appDesc": { "message": "ChatGPT bi awayên berfire/tevaj/bilind + modên spamblokê zêde dike. Di heman demê de li ser perplexity.ai + poe.com jî dixebite!" },
   "menuLabel_settings": { "message": "Mîheng" },
   "menuLabel_notif": { "message": "AgahdarîComment" },
+  "menuLabel_notifs": { "message": "Hişyarî" },
   "menuLabel_btn": { "message": "Bişkok" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Nîşandan" },

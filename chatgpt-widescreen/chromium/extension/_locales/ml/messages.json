@@ -4,6 +4,7 @@
   "appDesc": { "message": "വൈഡ്/ഫുൾ/ടോൾ-സ്‌ക്രീൻ + സ്പാംബ്ലോക്ക് മോഡുകൾ ഉപയോഗിച്ച് ChatGPT മെച്ചപ്പെടുത്തുന്നു. perplexity.ai + poe.com-ലും പ്രവർത്തിക്കുന്നു!" },
   "menuLabel_settings": { "message": "സെറ്റിങ്സ്" },
   "menuLabel_notif": { "message": "അറിയിപ്പ്" },
+  "menuLabel_notifs": { "message": "അറിയിപ്പുകള്‍" },
   "menuLabel_btn": { "message": "ബട്ടണ്‍" },
   "menuLabel_chatbox": { "message": "ചാറ്റ്ബോക്സ്" },
   "menuLabel_display": { "message": "പ്രദര്‍ശനം" },

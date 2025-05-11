@@ -4,6 +4,7 @@
   "appDesc": { "message": "ವೈಡ್/ಫುಲ್/ಟಾಲ್-ಸ್ಕ್ರೀನ್ ಮೋಡ್‌ಗಳೊಂದಿಗೆ ChatGPT ಅನ್ನು ವರ್ಧಿಸುತ್ತದೆ. perplexity.ai + poe.com ನಲ್ಲಿ ಸಹ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ!" },
   "menuLabel_settings": { "message": "ಸೆಟ್ಟಿಂಗ್‍ಗಳು" },
   "menuLabel_notif": { "message": "ಸೂಚನೆ" },
+  "menuLabel_notifs": { "message": "ಸೂಚನೆಗಳುName" },
   "menuLabel_btn": { "message": "à²à²¨à³à²µà²¯à²à²³à²¨à³à²¨à³ à²ªà³à²°à²¾à²°à²à²­à²¿à²¸à²²à³ à²à²à²¦à³ à²ªà³à²°à²à³à²·à³à²ªà² (à²²à²¾à²à²à²°à³) Name" },
   "menuLabel_chatbox": { "message": "ಚಾಟ್‌ಬಾಕ್ಸ್" },
   "menuLabel_display": { "message": "ಪ್ರದರ್ಶಕComment" },

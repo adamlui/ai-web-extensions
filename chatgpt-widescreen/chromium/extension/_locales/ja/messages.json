@@ -4,6 +4,7 @@
   "appDesc": { "message": "ワイド/フル/トールスクリーン+スパンブロックモードで ChatGPT を強化します。perplexity.ai + poe.com でも動作します！" },
   "menuLabel_settings": { "message": "設定" },
   "menuLabel_notif": { "message": "通知" },
+  "menuLabel_notifs": { "message": "通知" },
   "menuLabel_btn": { "message": "ボタン" },
   "menuLabel_chatbox": { "message": "チャットボックス" },
   "menuLabel_display": { "message": "ディスプレイ" },

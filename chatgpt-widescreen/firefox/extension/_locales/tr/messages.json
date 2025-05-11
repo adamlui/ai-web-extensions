@@ -4,6 +4,7 @@
   "appDesc": { "message": "ChatGPT'yi geniş/tam/uzun ekran + spamblock modlarıyla geliştirir. Ayrıca perplexity.ai + poe.com üzerinde de çalışır!" },
   "menuLabel_settings": { "message": "Ayarlar" },
   "menuLabel_notif": { "message": "Bildirim" },
+  "menuLabel_notifs": { "message": "Bildirimler" },
   "menuLabel_btn": { "message": "Buton" },
   "menuLabel_chatbox": { "message": "Sohbet kutusu" },
   "menuLabel_display": { "message": "Ekran" },

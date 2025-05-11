@@ -4,6 +4,7 @@
   "appDesc": { "message": "ChatGPT را با حالت های عریض/تمام/صفحه بلند + هرزنامه بهبود می بخشد. همچنین روی perplexity.ai + poe.com کار می کند!" },
   "menuLabel_settings": { "message": "تنظیمات" },
   "menuLabel_notif": { "message": "اطلاعیه" },
+  "menuLabel_notifs": { "message": "اعلان‌ها" },
   "menuLabel_btn": { "message": "دکمه" },
   "menuLabel_chatbox": { "message": "چت باکس" },
   "menuLabel_display": { "message": "صفحه نمایش" },

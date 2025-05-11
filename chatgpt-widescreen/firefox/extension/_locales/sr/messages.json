@@ -4,6 +4,7 @@
   "appDesc": { "message": "Poboljšava ChatGPT sa režimima širokog/punog/visokog ekrana + spamblok. Radi i na perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Podešavanja" },
   "menuLabel_notif": { "message": "Obaveštenje" },
+  "menuLabel_notifs": { "message": "Obaveštenja" },
   "menuLabel_btn": { "message": "Taster" },
   "menuLabel_chatbox": { "message": "Ćaskanje" },
   "menuLabel_display": { "message": "Ekran" },

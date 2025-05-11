@@ -4,6 +4,7 @@
   "appDesc": { "message": "Verbeter ChatGPT met wye/vol/hoë skerm + spamblok-modusse. Werk ook op perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "bevel" },
   "menuLabel_notif": { "message": "Kennisgewing" },
+  "menuLabel_notifs": { "message": "Kennisgewings" },
   "menuLabel_btn": { "message": "Knopie" },
   "menuLabel_chatbox": { "message": "Gesels-boks" },
   "menuLabel_display": { "message": "Vertoon" },

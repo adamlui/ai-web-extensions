@@ -4,6 +4,7 @@
   "appDesc": { "message": "Täiustab ChatGPT-d lai/täis-/kõrgekraaniga + rämpspostiblokeeringu režiimidega. Töötab ka saidil perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Seaded" },
   "menuLabel_notif": { "message": "Teatamine" },
+  "menuLabel_notifs": { "message": "Teated" },
   "menuLabel_btn": { "message": "Nupp " },
   "menuLabel_chatbox": { "message": "Vestluskast" },
   "menuLabel_display": { "message": "Ekraan" },

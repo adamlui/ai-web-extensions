@@ -4,6 +4,7 @@
   "appDesc": { "message": "Cải thiện ChatGPT với chế độ màn hình rộng/toàn màn hình/cao + chế độ chặn thư rác. Cũng hoạt động trên perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Cài đặt" },
   "menuLabel_notif": { "message": "Thông báo" },
+  "menuLabel_notifs": { "message": "Thông báo" },
   "menuLabel_btn": { "message": "Nút" },
   "menuLabel_chatbox": { "message": "Hộp trò chuyện" },
   "menuLabel_display": { "message": "Hiển thị" },

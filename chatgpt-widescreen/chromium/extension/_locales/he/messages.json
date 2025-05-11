@@ -4,6 +4,7 @@
   "appDesc": { "message": "משפר את  ChatGPT עם מצבי מסך רחב/מלא/גבוה + חסימת ספאם. עובד גם על  perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "הגדרות" },
   "menuLabel_notif": { "message": "התראה" },
+  "menuLabel_notifs": { "message": "התראות" },
   "menuLabel_btn": { "message": "כפתור" },
   "menuLabel_chatbox": { "message": "תיבת צ'אט" },
   "menuLabel_display": { "message": "תצוגה" },

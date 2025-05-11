@@ -4,6 +4,7 @@
   "appDesc": { "message": "使用寬/全/高螢幕+垃圾郵件區塊模式增強 ChatGPT。也可以在 perplexity.ai + poe.com 上使用！" },
   "menuLabel_settings": { "message": "設定" },
   "menuLabel_notif": { "message": "通知" },
+  "menuLabel_notifs": { "message": "推送通知" },
   "menuLabel_btn": { "message": "按鈕" },
   "menuLabel_chatbox": { "message": "聊天室" },
   "menuLabel_display": { "message": "顯示器" },

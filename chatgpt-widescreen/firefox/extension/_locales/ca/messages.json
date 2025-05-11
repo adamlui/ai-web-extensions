@@ -4,6 +4,7 @@
   "appDesc": { "message": "Millora ChatGPT amb modes de pantalla ampla/completa/alta i de bloqueig de correu brossa. També funciona a perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Configuració" },
   "menuLabel_notif": { "message": "Notificacions" },
+  "menuLabel_notifs": { "message": "Notificacions" },
   "menuLabel_btn": { "message": "Botó" },
   "menuLabel_chatbox": { "message": "Bústia de xat" },
   "menuLabel_display": { "message": "Pantalla" },

@@ -4,6 +4,7 @@
   "appDesc": { "message": "Whakapai ake ChatGPT ki whānui/tonu/mata teitei + aratau spamblock. Mahi hoki i runga i perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Ngā Tautuhinga" },
   "menuLabel_notif": { "message": "Whakapuakanga" },
+  "menuLabel_notifs": { "message": "notifications" },
   "menuLabel_btn": { "message": "Pātene" },
   "menuLabel_chatbox": { "message": "Pouaka kōrerorero" },
   "menuLabel_display": { "message": "Pane whakaata" },

@@ -4,6 +4,7 @@
   "appDesc": { "message": "பரந்த/முழு/உயரமான திரை + ஸ்பேம்லாக் பயன்முறைகளுடன் ChatGPT ஐ மேம்படுத்துகிறது. மேலும் perplexity.ai + poe.com இல் வேலை செய்கிறது!" },
   "menuLabel_settings": { "message": "அமைப்புகள்" },
   "menuLabel_notif": { "message": "அறிவிப்பு" },
+  "menuLabel_notifs": { "message": "அறிவிப்புகள்" },
   "menuLabel_btn": { "message": "தெறி" },
   "menuLabel_chatbox": { "message": "அரட்டைப்பெட்டி" },
   "menuLabel_display": { "message": "காட்சி" },
