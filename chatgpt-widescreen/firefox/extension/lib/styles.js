@@ -43,6 +43,10 @@ window.styles = {
                 ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
                    `.${buttons.class} { will-change: transform } /* prevent wobble */
                     .${buttons.class}:hover { transform: scale(${ site == 'poe' ? 1.15 : 1.285 }) }` }
+                ${ !config.toastMode ? '' : // shrink/center notifs into toast bubbles
+                   `div.${app.slug}.chatgpt-notif {
+                        position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;
+                        transform: translate(-50%, -50%) scale(0.6) !important }` }
                 ${ site == 'perplexity' ? // prevent overlay
                     `.${buttons.class} { background: none !important }` : '' }
                 ${ config.blockSpamDisabled ? ''

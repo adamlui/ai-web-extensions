@@ -64,6 +64,7 @@
             notifDuration, shadow || env.ui.scheme == 'dark' ? '' : 'shadow'
         )
         const notif = document.querySelector('.chatgpt-notif:last-child')
+        notif.classList.add(app.slug)
 
         // Append styled state word
         if (foundState) {
@@ -156,7 +157,7 @@
                         supressNotifs() ; toggleMode('fullWindow') }
                     sync.fullerWin() // sync Fuller Windows
                 }
-                styles.tweaks.update() // sync TCB/NCB/HH/HF/BA
+                styles.tweaks.update() // sync HH/HF/TCB/NCB/BA/TM
                 styles.chatbar.update() // sync WCB
                 if (env.site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
                 buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility

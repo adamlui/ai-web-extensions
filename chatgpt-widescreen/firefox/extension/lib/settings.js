@@ -98,6 +98,11 @@ window.settings = {
             label: `${settings.getMsg('menuLabel_anchor')} ${settings.getMsg('menuLabel_notifs')}`,
             helptip: settings.getMsg('helptip_notifBottom')
         }},
+        get toastMode() { return {
+            type: 'toggle', defaultVal: false, category: 'notifSettings',
+            label: settings.getMsg('mode_toast'),
+            helptip: settings.getMsg('helptip_toastMode')
+        }},
         get blockSpamDisabled() { return {
             type: 'toggle', defaultVal: false, category: 'displaySettings',
             label: settings.getMsg('menuLabel_blockSpam'),
