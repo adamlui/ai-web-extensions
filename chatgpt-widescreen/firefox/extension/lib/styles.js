@@ -46,7 +46,9 @@ window.styles = {
                 ${ !config.toastMode ? '' : // shrink/center notifs into toast bubbles
                    `div.${app.slug}.chatgpt-notif {
                         position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;
-                        transform: translate(-50%, -50%) scale(0.6) !important }` }
+                        transform: translate(-50%, -50%) scale(0.6) !important }
+                    div.${app.slug}.chatgpt-notif > div.notif-close-btn {
+                        top: 18px ; right: 7px ; transform: scale(2) }` }
                 ${ site == 'perplexity' ? // prevent overlay
                     `.${buttons.class} { background: none !important }` : '' }
                 ${ config.blockSpamDisabled ? ''
