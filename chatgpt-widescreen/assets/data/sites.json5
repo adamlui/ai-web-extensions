@@ -6,7 +6,7 @@
     ],
     "selectors": {
       "btns": {
-        "dictate": "button:has(path[d*=\"M18.9953\"])", "help": "div.lg\\:bottom-3 > button",
+        "dictate": "button:has(path[d*=\"M18.9953\"], path[d*=\"M11.165\"])", "help": "div.lg\\:bottom-3 > button",
         "login": "button[data-testid*=login]",
         "newChat": // Pencil button (when logged in), Cycle Arrows button (in temp chat logged out)
           "a[href=\"/\"]:has(svg), button:has([d^=\"M3.06957\"])",
