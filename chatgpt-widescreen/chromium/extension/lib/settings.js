@@ -32,6 +32,13 @@ window.settings = {
                         settings.getMsg('helptip_the').toLowerCase()} ${
                         settings.getMsg('menuLabel_display').toLowerCase()}`
         }},
+        get notifSettings() { return {
+            symbol: '📣',
+            color: 'cdf7f3', // teal
+            label: `${settings.getMsg(`menuLabel_notif`)} ${settings.getMsg(`menuLabel_settings`)}`,
+            helptip: `${settings.getMsg('helptip_adjustSettingsRelatedTo')} ${
+                        settings.getMsg('menuLabel_modeNotifs').toLowerCase()}`
+        }},
         get siteSettings() { return {
             symbol: '🌐',
             label: settings.getMsg('menuLabel_siteSettings'),
@@ -82,9 +89,14 @@ window.settings = {
             helptip: settings.getMsg('helptip_btnVisibility')
         }},
         get notifDisabled() { return {
-            type: 'toggle', defaultVal: false, category: 'displaySettings',
-            label: settings.getMsg('menuLabel_modeNotifs'),
+            type: 'toggle', defaultVal: false, category: 'notifSettings',
+            label: `${settings.getMsg('menuLabel_show')} ${settings.getMsg('menuLabel_modeNotifs')}`,
             helptip: settings.getMsg('helptip_modeNotifs')
+        }},
+        get notifBottom() { return {
+            type: 'toggle', defaultVal: false, category: 'notifSettings',
+            label: `${settings.getMsg('menuLabel_anchor')} ${settings.getMsg('menuLabel_modeNotifs')}`,
+            helptip: settings.getMsg('helptip_notifBottom')
         }},
         get blockSpamDisabled() { return {
             type: 'toggle', defaultVal: false, category: 'displaySettings',
