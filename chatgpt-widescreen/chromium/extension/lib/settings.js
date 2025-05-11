@@ -34,7 +34,7 @@ window.settings = {
         }},
         get notifSettings() { return {
             symbol: '📣',
-            color: 'cdf7f3', // teal
+            color: '16e4f7', // teal
             label: `${settings.getMsg(`menuLabel_notif`)} ${settings.getMsg(`menuLabel_settings`)}`,
             helptip: `${settings.getMsg('helptip_adjustSettingsRelatedTo')} ${
                         settings.getMsg('menuLabel_modeNotifs').toLowerCase()}`
