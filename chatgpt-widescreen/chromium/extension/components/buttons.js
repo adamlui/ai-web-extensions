@@ -203,7 +203,7 @@ window.buttons = {
         async color() {
             const { site, ui: { scheme }} = env
             buttons.color = (
-                site == 'chatgpt' ? ( await chatbar.is.dark() || scheme == 'dark' ? 'white' : '#202123' )
+                site == 'chatgpt' ? ( await chatbar.is.dark() || scheme == 'dark' ? 'white' : 'var(--text-secondary)' )
               : site == 'perplexity' ? ( scheme == 'dark' ? 'white' : '#39545a' )
               : 'currentColor'
             )
