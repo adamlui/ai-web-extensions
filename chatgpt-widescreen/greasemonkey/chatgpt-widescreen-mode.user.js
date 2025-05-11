@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.9.4
+// @version             2025.5.10
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -259,11 +259,11 @@
 // @require             https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/chatbar.js#sha256-u5yVcYiKiFVBDdi4JfI/DF/hG3K2pRbTjBfdREDiLgE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ac383f2/chromium/extension/lib/dom.js#sha256-QAHZ9hlWeLvunZtEt2z34mKhvdg71RhGBlxfMljIBPU=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/settings.js#sha256-HPmy19ZsTSIz256qBkNi1irHMiF/2SAwm7wu9B759Ic=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@27d0add/chromium/extension/lib/settings.js#sha256-kjVqJxZbOdodov7NJ46++VFyxjwvIYUKriXnflEhK7E=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@6b70bd1/chromium/extension/lib/styles.js#sha256-TOLf8gYflvNJDC8AnwGBLpHnRpVmjzePNAoIbIJg/yY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/ui.js#sha256-9ZQ8DyJvJ5YSuOGhmdqofNMT/QJGs5uhej0DmvH0g/k=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ac383f2/chromium/extension/components/buttons.js#sha256-CGdPfMNu0OtEXp3wEJ5t2yNJFUG4i9hMUUZJ7MAQqEY=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/components/icons.js#sha256-lkP9UmXwHCXpd69MNqzY6tj6PfFMAQ7s8BfR/+sCtrw=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@27d0add/chromium/extension/components/icons.js#sha256-nfDo9F4UNTyDvM++uImwVn7xzbJlTYWz+J3FMPBde7s=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ac383f2/chromium/extension/components/modals.js#sha256-m+YcQHWkAYZd9VFZJod9HAJ7DKEq0GiLjpDGIQRK+fE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ac383f2/chromium/extension/components/tooltip.js#sha256-A3e6aHivpvxa/Fqao3LkMLpTSt2+NIBbJZkTaqpN1IU=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
@@ -319,7 +319,7 @@
     window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '2055dcf' // for cached <app|messages>.json + sites.json5
+        latestResourceCommitHash: 'eb37954' // for cached <app|messages>.json + sites.json5
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -339,6 +339,8 @@
         menuLabel_hiddenFooter: 'Hidden Footer',
         menuLabel_btnAnimations: 'Button Animations',
         menuLabel_btnVisibility: 'Button Visibility',
+        menuLabel_show: 'Show',
+        menuLabel_anchor: 'Anchor',
         menuLabel_modeNotifs: 'Mode Notifications',
         menuLabel_blockSpam: 'Spam Block',
         menuLabel_siteSettings: 'Site Settings',
@@ -370,6 +372,7 @@
         helptip_btnAnimations: 'Animate chatbar buttons on hover',
         helptip_btnVisibility: 'Show custom buttons in chatbar',
         helptip_modeNotifs: 'Show notifications when toggling modes/settings',
+        helptip_notifBottom: 'Anchor notifications to bottom of screen',
         helptip_blockSpam: 'Hide spam banners from cluttering the page',
         helptip_enableDisable: 'Enable/disable',
         helptip_perSite: 'per site',
@@ -636,7 +639,10 @@
         if (foundState) msg = msg.replace(foundState, '')
 
         // Show notification
-        chatgpt.notify(`${app.symbol} ${msg}`, pos, notifDuration, shadow || env.ui.scheme == 'dark' ? '' : 'shadow')
+        chatgpt.notify(
+            `${app.symbol} ${msg}`, pos || config.notifBottom ? 'bottom' : '',
+            notifDuration, shadow || env.ui.scheme == 'dark' ? '' : 'shadow'
+        )
         const notif = document.querySelector('.chatgpt-notif:last-child')
 
         // Append styled state word
