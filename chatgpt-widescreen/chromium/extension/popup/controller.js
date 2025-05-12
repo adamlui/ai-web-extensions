@@ -281,34 +281,35 @@
     sync.fade() // based on master/site toggle
 
     // Init CHATGPT.JS footer tooltip/logo/listener
-    const cjsLogo = footer.querySelector('.cjs-logo')
-    cjsLogo.parentNode.title = env.browser.displaysEnglish ? '' : `${getMsg('about_poweredBy')} chatgpt.js`
-    cjsLogo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca/assets/images/badges/powered-by-chatgpt.js.png'
-    cjsLogo.onclick = () => { open(app.urls.chatgptjs) ; close() }
+    const footerElems = { chatgptJS: { logo: footer.querySelector('.cjs-logo') }}
+    footerElems.chatgptJS.logo.parentNode.title = env.browser.displaysEnglish ? ''
+        : `${getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
+    footerElems.chatgptJS.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca'
+                                   + '/assets/images/badges/powered-by-chatgpt.js.png'
+    footerElems.chatgptJS.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
 
     // Init REVIEW footer icon/listener
-    const reviewSpan = footer.querySelector('span[data-locale-title="btnLabel_leaveReview"]'),
-          reviewIcon = icons.create('star')
-    reviewSpan.append(reviewIcon)
-    reviewIcon.style.cssText = 'position: relative ; top: 1px ; width: 13px ; height: 13px'
-    reviewSpan.onclick = () => {
+    footerElems.review = { span: footer.querySelector('span[data-locale-title="btnLabel_leaveReview"]') }
+    footerElems.review.span.append(footerElems.review.icon = icons.create('star'))
+    footerElems.review.icon.style.cssText = 'position: relative ; top: 1px ; width: 13px ; height: 13px'
+    footerElems.review.span.onclick = () => {
         open(app.urls.review[app.runtime.startsWith('Firefox') ? 'firefox'
                            : app.runtime.startsWith('Edge') ? 'edge' : 'chrome']) ; close() }
 
     // Init COFFEE footer icon/listener
-    const coffeeSpan = footer.querySelector('span[data-locale-title="menuLabel_buyMeAcoffee"]')
-    coffeeSpan.append(icons.create('coffeeCup', { size: 23 }))
-    coffeeSpan.onclick = () => { open(app.urls.donate['ko-fi']) ; close() }
+    footerElems.coffee = { span: footer.querySelector('span[data-locale-title="menuLabel_buyMeAcoffee"]') }
+    footerElems.coffee.span.append(icons.create('coffeeCup', { size: 23 }))
+    footerElems.coffee.span.onclick = () => { open(app.urls.donate['ko-fi']) ; close() }
 
     // Init ABOUT footer icon/listener
-    const aboutSpan = footer.querySelector('span[data-locale-title="menuLabel_about appName"]')
-    aboutSpan.append(icons.create('questionMark', { width: 15, height: 13 }))
-    aboutSpan.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
+    footerElems.about = { span: footer.querySelector('span[data-locale-title="menuLabel_about appName"]') }
+    footerElems.about.span.append(icons.create('questionMark', { width: 15, height: 13 }))
+    footerElems.about.span.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
 
     // Init MORE EXTENSIONS footer icon/listener
-    const moreExtensionsSpan = footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]')
-    moreExtensionsSpan.append(icons.create('plus'))
-    moreExtensionsSpan.onclick = () => { open(app.urls.relatedExtensions) ; close() }
+    footerElems.moreExtensions = { span: footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]') }
+    footerElems.moreExtensions.span.append(icons.create('plus'))
+    footerElems.moreExtensions.span.onclick = () => { open(app.urls.relatedExtensions) ; close() }
 
     // Remove LOADING SPINNER after imgs load
     Promise.all([...document.querySelectorAll('img')].map(img =>
