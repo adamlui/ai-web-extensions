@@ -1,4 +1,4 @@
-// Requires components/buttons.js + lib/dom.js + app + env + sites
+// Requires components/buttons.js + lib/dom.js + <app|env|sites>
 
 window.tooltip = {
 
