@@ -5,6 +5,13 @@ const chatgptURL = 'https://chatgpt.com/';
     const app = {
         version: chrome.runtime.getManifest().version,
         latestResourceCommitHash: 'c7c27ae', // for cached app.json + icons.questionMark.src
+        runtime: (() => {
+            if (typeof GM_info != 'undefined') return 'Greasemonkey userscript'
+            else if (typeof chrome != 'undefined' && chrome.runtime) {
+                if (typeof browser != 'undefined') return 'Firefox add-on'
+                else return `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
+            } else return 'Unknown'
+        })(),
         urls: {}
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@${app.latestResourceCommitHash}`

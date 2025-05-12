@@ -4,6 +4,13 @@ const appReady = (async () => {
         version: chrome.runtime.getManifest().version,
         latestResourceCommitHash: 'fd6a32d', // for cached app.json...
             // ... + navicon in toggles.sidebar.insert() + icons.questionMark.src
+        runtime: (() => {
+            if (typeof GM_info != 'undefined') return 'Greasemonkey userscript'
+            else if (typeof chrome != 'undefined' && chrome.runtime) {
+                if (typeof browser != 'undefined') return 'Firefox add-on'
+                else return `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
+            } else return 'Unknown'
+        })(),
         urls: {}
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@${app.latestResourceCommitHash}`

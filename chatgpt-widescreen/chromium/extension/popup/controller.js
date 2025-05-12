@@ -250,6 +250,15 @@
     })
     footer.before(coffeeEntry)
 
+    // Create/append REVIEW entry
+    const reviewEntry = createMenuEntry({
+        key: 'reviewLink', type: 'link', symbol: '⭐',
+        label: settings.getMsg('btnLabel_leaveReview'),
+        url: app.urls.review[app.runtime.startsWith('Firefox') ? 'firefox'
+                           : app.runtime.startsWith('Edge') ? 'edge' : 'chrome']
+    })
+    footer.before(reviewEntry)
+
     // AUTO-EXPAND categories
     const onMatchedPage = chrome.runtime.getManifest().content_scripts[0].matches.toString().includes(env.site)
     if (!onMatchedPage || config[`${env.site}Disabled`]) { // auto-expand Site Settings
@@ -273,6 +282,15 @@
     cjsLogo.parentNode.title = env.browser.displaysEnglish ? '' : `${getMsg('about_poweredBy')} chatgpt.js`
     cjsLogo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca/assets/images/badges/powered-by-chatgpt.js.png'
     cjsLogo.onclick = () => { open(app.urls.chatgptjs) ; close() }
+
+    // Init REVIEW footer icon/listener
+    const reviewSpan = footer.querySelector('span[data-locale-title="btnLabel_leaveReview"]'),
+          reviewIcon = icons.create('star')
+    reviewSpan.append(reviewIcon)
+    reviewIcon.style.cssText = 'position: relative ; top: 1px ; width: 13px ; height: 13px'
+    reviewSpan.onclick = () => {
+        open(app.urls.review[app.runtime.startsWith('Firefox') ? 'firefox'
+                           : app.runtime.startsWith('Edge') ? 'edge' : 'chrome']) ; close() }
 
     // Init COFFEE footer icon/listener
     const coffeeSpan = footer.querySelector('span[data-locale-title="menuLabel_buyMeAcoffee"]')
