@@ -6,8 +6,7 @@
         version: chrome.runtime.getManifest().version,
         latestResourceCommitHash: '7108680', // for cached app.json + sites.json5
         runtime: (() => {
-            if (typeof GM_info != 'undefined') return 'Greasemonkey userscript'
-            else if (typeof chrome != 'undefined' && chrome.runtime) {
+            if (typeof chrome != 'undefined' && chrome.runtime) {
                 if (typeof browser != 'undefined') return 'Firefox add-on'
                 else return `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
             } else return 'Unknown'
