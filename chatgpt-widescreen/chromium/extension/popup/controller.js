@@ -41,7 +41,8 @@
                 entry.rightElem.append(icons.create('open', { size: 18, fill: 'black' }))
             }
         }
-        if (entryData.type == 'category') entry.div.append(icons.create('caretDown', { size: 11, class: 'menu-caret' }))
+        if (entryData.type == 'category')
+            entry.div.append(icons.create('caretDown', { size: 11, class: 'menu-caret menu-right-elem' }))
         entry.div.onclick = () => {
             if (entryData.type == 'category') toggleCategorySettingsVisiblity(entryData.key)
             else if (entryData.type == 'toggle') {
@@ -197,7 +198,7 @@
                 title: `${getMsg('tooltip_goto')} https://${sites[site].urls.homepage}`,
                 class: 'menu-right-elem' }),
             favicon: dom.create.elem('img', { src: sites[site].urls.favicon, width: 15 }),
-            openIcon: icons.create('open', { size: 18, fill: 'white' })
+            openIcon: icons.create('open', { size: 18, fill: 'black' })
         }
         ssEntry.switch.append(ssEntry.track) ; ssEntry.label.textContent = sites[site].urls.homepage
         ssEntry.switchLabelDiv.append(ssEntry.switch, ssEntry.label) ; ssEntry.faviconDiv.append(ssEntry.favicon)
