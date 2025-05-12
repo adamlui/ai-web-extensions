@@ -286,7 +286,7 @@
         : `${getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
     footerElems.chatgptJS.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca'
                                    + '/assets/images/badges/powered-by-chatgpt.js.png'
-    footerElems.chatgptJS.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
+    footerElems.chatgptJS.logo.onclick = () => { open(app.urls.chatgptJS) ; close() }
 
     // Init REVIEW footer icon/listener
     footerElems.review = { span: footer.querySelector('span[data-locale-title="btnLabel_leaveReview"]') }
