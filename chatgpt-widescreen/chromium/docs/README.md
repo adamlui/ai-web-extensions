@@ -9,7 +9,7 @@
 <a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-shield">
     <img alt="[Featured by Google]" height=31 src="https://img.shields.io/badge/Featured_by-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=rating-shield">
-    <img alt="[Google Chrome]" height=31 src="https://img.shields.io/chrome-web-store/rating/jgnjpnmofkalfliddjelaciggjgnphgm?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></img></a>
+    <img alt="[Google Chrome]" height=31 src="https://img.shields.io/chrome-web-store/stars/jgnjpnmofkalfliddjelaciggjgnphgm?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></img></a>
 <a href="https://chrome.chatgptwidescreen.com">
     <img height=31 alt="[Chrome Web Store]" src="https://img.shields.io/chrome-web-store/v/jgnjpnmofkalfliddjelaciggjgnphgm?label=Latest+Release&logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></a>
 <a href="https://edge.chatgptwidescreen.com">

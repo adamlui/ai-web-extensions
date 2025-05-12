@@ -18,7 +18,7 @@
 <a href="#">
     <img height=31 src="https://img.shields.io/amo/users/deepseek-omnibox?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge&label=%E7%94%A8%E6%88%B7"></img></a>
 <a href="https://ff.deepseekomnibox.com">
-    <img alt="[Mozilla Firefox]" height=31 src="https://img.shields.io/amo/rating/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E8%AF%84%E5%88%86"></img></a>
+    <img alt="[Mozilla Firefox]" height=31 src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E8%AF%84%E5%88%86"></img></a>
 <a href="https://ff.deepseekomnibox.com">
     <img height=31 alt="[Mozilla 附加组件商店]" src="https://img.shields.io/amo/v/deepseek-omnibox?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="../LICENSE.md">
