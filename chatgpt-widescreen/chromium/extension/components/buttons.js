@@ -238,7 +238,7 @@ window.buttons = {
              +( mode == 'newChat' ? '13 13' : mode == 'fullWindow' ? '24 24' : '20 20' )
             )
             btnSVG.style.pointerEvents = 'none' // prevent triggering tooltips twice
-            btnSVG.style.height = btnSVG.style.width = site == 'chatgpt' ? '1.3rem' : '18px' // override button resizing
+            btnSVG.style.height = btnSVG.style.width = '18px' // override button resizing
 
             // Update SVG elements
             btnSVG.textContent = ''
