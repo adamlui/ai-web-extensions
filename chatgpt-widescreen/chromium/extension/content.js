@@ -229,7 +229,7 @@
     ;['chatbar', 'fullWin', 'tweaks', 'widescreen'].forEach(style => styles[style].update())
     ;['gray', 'white'].forEach(color => document.head.append( // Rising Particles styles
         dom.create.elem('link', { rel: 'stylesheet',
-            href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/${
+            href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@71695ca/assets/styles/rising-particles/dist/${
                 color}.min.css`
     })))
 
