@@ -307,9 +307,9 @@
     footerElems.about.span.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
 
     // Init MORE EXTENSIONS footer icon/listener
-    footerElems.moreExtensions = { span: footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]') }
-    footerElems.moreExtensions.span.append(icons.create('plus'))
-    footerElems.moreExtensions.span.onclick = () => { open(app.urls.relatedExtensions) ; close() }
+    footerElems.moreExt = { span: footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]') }
+    footerElems.moreExt.span.append(icons.create('plus'))
+    footerElems.moreExt.span.onclick = () => { open(app.urls.relatedExtensions) ; close() }
 
     // Remove LOADING SPINNER after imgs load
     Promise.all([...document.querySelectorAll('img')].map(img =>
