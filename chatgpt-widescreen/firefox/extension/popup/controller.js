@@ -290,8 +290,8 @@
 
     // Init REVIEW footer icon/listener
     footerElems.review = { span: footer.querySelector('span[data-locale-title="btnLabel_leaveReview"]') }
-    footerElems.review.span.append(footerElems.review.icon = icons.create('star'))
-    footerElems.review.icon.style.cssText = 'position: relative ; top: 1px ; width: 13px ; height: 13px'
+    footerElems.review.span.append(footerElems.review.icon = icons.create('star', {
+        style: 'position: relative ; top: 1px ; width: 13px ; height: 13px' }))
     footerElems.review.span.onclick = () => {
         open(app.urls.review[/edge|firefox/.exec(app.runtime.toLowerCase())?.[0] || 'chrome']) ; close() }
 
