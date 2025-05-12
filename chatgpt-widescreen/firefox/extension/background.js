@@ -6,10 +6,10 @@
         version: chrome.runtime.getManifest().version,
         latestResourceCommitHash: '7108680', // for cached app.json + sites.json5
         runtime: (() => {
-            if (typeof chrome != 'undefined' && chrome.runtime) {
-                if (typeof browser != 'undefined') return 'Firefox add-on'
-                else return `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
-            } else return 'Unknown'
+            return typeof chrome != 'undefined' && chrome.runtime ? (
+                  typeof browser != 'undefined' ? 'Firefox add-on'
+                : `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
+            ) : 'Unknown'
         })(),
         urls: {}
     }

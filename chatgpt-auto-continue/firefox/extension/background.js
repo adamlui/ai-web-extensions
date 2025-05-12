@@ -6,10 +6,10 @@ const chatgptURL = 'https://chatgpt.com/';
         version: chrome.runtime.getManifest().version,
         latestResourceCommitHash: 'c7c27ae', // for cached app.json
         runtime: (() => {
-            if (typeof chrome != 'undefined' && chrome.runtime) {
-                if (typeof browser != 'undefined') return 'Firefox add-on'
-                else return `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
-            } else return 'Unknown'
+            return typeof chrome != 'undefined' && chrome.runtime ? (
+                  typeof browser != 'undefined' ? 'Firefox add-on'
+                : `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
+            ) : 'Unknown'
         })(),
         urls: {}
     }
