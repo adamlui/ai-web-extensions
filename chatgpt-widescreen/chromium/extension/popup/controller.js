@@ -281,12 +281,12 @@
     sync.fade() // based on master/site toggle
 
     // Init CHATGPT.JS footer tooltip/logo/listener
-    const footerElems = { chatgptJS: { logo: footer.querySelector('.cjs-logo') }}
-    footerElems.chatgptJS.logo.parentNode.title = env.browser.displaysEnglish ? ''
+    const footerElems = { chatgptjs: { logo: footer.querySelector('.cjs-logo') }}
+    footerElems.chatgptjs.logo.parentNode.title = env.browser.displaysEnglish ? ''
         : `${getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
-    footerElems.chatgptJS.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca'
+    footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca'
                                    + '/assets/images/badges/powered-by-chatgpt.js.png'
-    footerElems.chatgptJS.logo.onclick = () => { open(app.urls.chatgptJS) ; close() }
+    footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
 
     // Init REVIEW footer icon/listener
     footerElems.review = { span: footer.querySelector('span[data-locale-title="btnLabel_leaveReview"]') }
