@@ -15,7 +15,7 @@ const appReady = (async () => {
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     chrome.storage.local.set({ app }) // save to browser storage
-    return app
+    return app // to install listener
 })()
 
 // Launch WELCOME PAGE on install

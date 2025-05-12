@@ -29,7 +29,7 @@ const appReady = (async () => {
     })
     chrome.storage.local.set({ sites })
 
-    return { app, sites }
+    return { app, sites } // to install listener
 })()
 
 // Launch WELCOME PAGE on install
