@@ -227,8 +227,8 @@
     }
 
     // Create/append ABOUT entry
-    const about = {
-        entryDiv: createMenuEntry({
+    const aboutEntry = {
+        div: createMenuEntry({
             key: 'about', symbol: '💡',
             label: `${settings.getMsg('menuLabel_about')}...`,
             helptip: `${settings.getMsg('menuLabel_about')} ${settings.getMsg('appName')}`
@@ -238,14 +238,14 @@
             span: dom.create.elem('span', { class: 'ticker' }), innerDiv: dom.create.elem('div')
         }
     }
-    about.ticker.content = `${
-        settings.getMsg('about_version')}: <span class="ticker-em">v${ app.version + about.ticker.textGap }</span>${
-        settings.getMsg('about_poweredBy')} <span class="ticker-em">chatgpt.js</span>${about.ticker.textGap}`
-    for (let i = 0 ; i < 7 ; i++) about.ticker.content += about.ticker.content // make long af
-    about.ticker.innerDiv.innerHTML = about.ticker.content
-    about.ticker.span.append(about.ticker.innerDiv)
-    about.entryDiv.append(about.ticker.span) ; footer.before(about.entryDiv)
-    about.entryDiv.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
+    aboutEntry.ticker.content = `${
+        settings.getMsg('about_version')}: <span class="ticker-em">v${ app.version + aboutEntry.ticker.textGap }</span>${
+        settings.getMsg('about_poweredBy')} <span class="ticker-em">chatgpt.js</span>${aboutEntry.ticker.textGap}`
+    for (let i = 0 ; i < 7 ; i++) aboutEntry.ticker.content += aboutEntry.ticker.content // make long af
+    aboutEntry.ticker.innerDiv.innerHTML = aboutEntry.ticker.content
+    aboutEntry.ticker.span.append(aboutEntry.ticker.innerDiv)
+    aboutEntry.div.append(aboutEntry.ticker.span) ; footer.before(aboutEntry.div)
+    aboutEntry.div.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
 
     // Create/append COFEE entry
     const coffeeEntry = createMenuEntry({
