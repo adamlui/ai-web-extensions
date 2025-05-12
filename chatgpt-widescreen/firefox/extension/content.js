@@ -223,11 +223,11 @@
     config.fullscreen = chatgpt.isFullScreen()
     if (sites[env.site].selectors.btns.sidebar) // site has native FW state
          config.fullWindow = await ui.isFullWin() // ...so match it
-    else await settings.load('fullWindow'); // otherwise load CWM's saved state
+    else await settings.load('fullWindow') // otherwise load CWM's saved state
 
     // Create/append STYLES
-    ['chatbar', 'fullWin', 'tweaks', 'widescreen'].forEach(style => styles[style].update());
-    ['gray', 'white'].forEach(color => document.head.append( // Rising Particles styles
+    ;['chatbar', 'fullWin', 'tweaks', 'widescreen'].forEach(style => styles[style].update())
+    ;['gray', 'white'].forEach(color => document.head.append( // Rising Particles styles
         dom.create.elem('link', { rel: 'stylesheet',
             href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/${
                 color}.min.css`
