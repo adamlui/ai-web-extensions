@@ -258,8 +258,7 @@
     const reviewEntry = createMenuEntry({
         key: 'reviewLink', type: 'link', symbol: '⭐',
         label: settings.getMsg('btnLabel_leaveReview'),
-        url: app.urls.review[app.runtime.startsWith('Firefox') ? 'firefox'
-                           : app.runtime.startsWith('Edge') ? 'edge' : 'chrome']
+        url: app.urls.review[/edge|firefox/.exec(app.runtime.toLowerCase())?.[1] || 'chrome']
     })
     footer.before(reviewEntry)
 
