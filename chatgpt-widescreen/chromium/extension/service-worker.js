@@ -6,7 +6,7 @@ const appReady = (async () => {
     // Init APP data
     const app = {
         version: chrome.runtime.getManifest().version,
-        latestResourceCommitHash: '7108680', // for cached app.json + sites.json5 + icons.questionMark.src
+        latestResourceCommitHash: '7108680', // for cached app.json + sites.json5
         runtime: (() => {
             if (typeof GM_info != 'undefined') return 'Greasemonkey userscript'
             else if (typeof chrome != 'undefined' && chrome.runtime) {

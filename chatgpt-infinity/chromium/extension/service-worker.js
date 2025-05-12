@@ -2,8 +2,7 @@
 const appReady = (async () => {
     const app = {
         version: chrome.runtime.getManifest().version,
-        latestResourceCommitHash: 'fd6a32d', // for cached app.json...
-            // ... + navicon in toggles.sidebar.insert() + icons.questionMark.src
+        latestResourceCommitHash: 'fd6a32d', // for cached app.json
         runtime: (() => {
             if (typeof GM_info != 'undefined') return 'Greasemonkey userscript'
             else if (typeof chrome != 'undefined' && chrome.runtime) {
