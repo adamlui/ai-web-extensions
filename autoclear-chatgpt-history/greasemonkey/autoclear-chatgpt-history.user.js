@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.12.1
+// @version             2025.5.12.2
 // @license             MIT
 // @icon                https://assets.autoclearchatgpt.com/images/icons/openai/black/icon48.png?v=f461c06
 // @icon64              https://assets.autoclearchatgpt.com/images/icons/openai/black/icon64.png?v=f461c06
@@ -904,7 +904,7 @@
 
             update: {
 
-                navicon({ preload = false } = {}) {
+                navicon({ preload } = {}) {
                     const baseURL = 'https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@4a52452/assets/images/icons/incognito',
                           schemeMap = { light: 'black', dark: 'white' },
                           fileName = 'icon32.png'

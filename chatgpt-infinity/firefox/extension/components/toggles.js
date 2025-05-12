@@ -128,7 +128,7 @@ window.toggles = {
 
         update: {
 
-            navicon({ preload = false } = {}) {
+            navicon({ preload } = {}) {
                 const baseURL = 'https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@f54b2cf/assets/images/icons/infinity-symbol',
                       schemeMap = { light: 'black', dark: 'white' },
                       fileName = 'icon32.png'
