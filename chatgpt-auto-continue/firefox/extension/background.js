@@ -17,7 +17,6 @@ const chatgptURL = 'https://chatgpt.com/';
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@${app.latestResourceCommitHash}`
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
-    app.urls.assetHost = app.urls.assetHost.replace('@latest', `@${app.latestResourceCommitHash}`)
     chrome.storage.local.set({ app }) // save to browser storage
 })()
 

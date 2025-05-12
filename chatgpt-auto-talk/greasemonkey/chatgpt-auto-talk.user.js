@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.12
+// @version             2025.5.12.1
 // @license             MIT
 // @icon                https://assets.chatgptautotalk.com/images/icons/openai/black/icon48.png?v=9f1ed3c
 // @icon64              https://assets.chatgptautotalk.com/images/icons/openai/black/icon64.png?v=9f1ed3c
@@ -292,7 +292,6 @@
         onload: resp => resolve(JSON.parse(resp.responseText))
     }))
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
-    app.urls.assetHost = app.urls.assetHost.replace('@latest', `@${app.latestResourceCommitHash}`)
     app.msgs = {
         appName: app.name,
         appAuthor: app.author.name,
@@ -859,7 +858,7 @@
             update: {
 
                 navicon({ preload = false } = {}) {
-                    const baseURL = `${app.urls.assetHost}/images/icons/soundwave`,
+                    const baseURL = 'https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@397297d/assets/images/icons/soundwave',
                           stateMap = { enabled: 'tall', disabled: '' },
                           schemeMap = { light: 'black', dark: 'white' }
                     if (preload)

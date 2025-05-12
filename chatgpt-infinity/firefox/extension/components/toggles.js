@@ -1,4 +1,4 @@
-// Requires lib/chatgpt.min.js + app + env + notify + syncConfigToUI
+// Requires lib/chatgpt.min.js + app + env + notify() + syncConfigToUI()
 
 window.toggles = {
 
@@ -129,7 +129,7 @@ window.toggles = {
         update: {
 
             navicon({ preload = false } = {}) {
-                const baseURL = `${app.urls.assetHost}/images/icons/infinity-symbol`,
+                const baseURL = 'https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@f54b2cf/assets/images/icons/infinity-symbol',
                       schemeMap = { light: 'black', dark: 'white' },
                       fileName = 'icon32.png'
                 if (preload)

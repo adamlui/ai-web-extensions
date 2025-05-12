@@ -18,7 +18,6 @@ const chatgptURL = 'https://chatgpt.com';
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     chrome.storage.local.set({ app }) // save to browser storage
-    app.urls.assetHost = app.urls.assetHost.replace('@latest', `@${app.latestResourceCommitHash}`)
 })()
 
 // Launch CHATGPT on install
