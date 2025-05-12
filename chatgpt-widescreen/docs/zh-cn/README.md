@@ -28,8 +28,6 @@
     <img alt="[SonarCloud 漏洞]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-widescreen%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonarcloud&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=gold"></img></a>
 <a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt">
     <img alt="[在 Awesome 中提及]" height=31 src="https://img.shields.io/badge/%E6%8F%90%E5%8F%8A%E4%BA%8E-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
-<a href="https://www.producthunt.com/products/chatgpt-widescreen-mode#chatgpt-widescreen-mode">
-    <img alt="[Product Hunt 本周最佳用户体验产品排名第二]" height=31 src="https://img.shields.io/badge/Product_Hunt-%E6%9C%AC%E5%91%A8%E6%9C%80%E4%BD%B3%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E4%BA%A7%E5%93%81%E6%8E%92%E5%90%8D%E7%AC%AC%E4%BA%8C-fc801b?logo=producthunt&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-widescreen?tab=stats">
     <img alt="[jsDelivr 统计数据]" height=31 src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-widescreen?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20%E8%AF%B7%E6%B1%82&labelColor=464646&color=2bbbd8"></img></a>
 <a href="https://chatgptwidescreen.com?utm_source=chatgpt_widescreen&utm_content=github_shield">

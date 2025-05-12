@@ -16,8 +16,6 @@
     <img alt="[SonarCloud vulnerabilities]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-widescreen%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonarcloud&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></img></a>
 <a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt">
     <img alt="[Mentioned in Awesome]" height=31 src="https://img.shields.io/badge/Mentioned_in-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
-<a href="https://www.producthunt.com/products/chatgpt-widescreen-mode#chatgpt-widescreen-mode">
-    <img alt="[Product Hunt #2 UX Product of the Week]" height=31 src="https://img.shields.io/badge/Product_Hunt-%232_UX_Product_of_the_Week-fc801b?logo=producthunt&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-widescreen?tab=stats">
     <img alt="jsDelivr stats" height=31 src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-widescreen?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></img></a>
 <a href="https://chatgptwidescreen.com?utm_source=chatgpt_widescreen&utm_content=github_shield">
