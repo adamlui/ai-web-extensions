@@ -9,9 +9,9 @@ const appReady = (async () => {
         latestResourceCommitHash: '7108680', // for cached app.json + sites.json5
         runtime: (() => {
             return typeof chrome != 'undefined' && chrome.runtime ? (
-                  typeof browser != 'undefined' ? 'Firefox add-on'
-                : `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
-            ) : 'Unknown'
+                typeof browser != 'undefined' ? 'Firefox add-on'
+                    : `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
+            ) : 'unknown'
         })(),
         urls: {}
     }
