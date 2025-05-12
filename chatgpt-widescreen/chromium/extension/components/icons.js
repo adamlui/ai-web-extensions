@@ -1,4 +1,4 @@
-// Requires lib/dom.js + app
+// Requires lib/dom.js
 
 window.icons = {
 
@@ -49,7 +49,7 @@ window.icons = {
 
     questionMark: {
         type: 'png',
-        get src() { return `${app.urls.assetHost}/images/icons/question-mark/icon16.png` }
+        src: 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js-chrome-starter@8a59f80/images/icons/question-mark/icon16.png'
     },
 
     star: {
