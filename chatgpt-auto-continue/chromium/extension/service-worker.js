@@ -3,8 +3,7 @@ const appReady = (async () => {
     const app = {
         version: chrome.runtime.getManifest().version,
         latestResourceCommitHash: 'c7c27ae', // for cached app.json + icons.questionMark.src
-        urls: {},
-        chatgptjsVer: /v(\d+\.\d+\.\d+)/.exec(await (await fetch(chrome.runtime.getURL('lib/chatgpt.min.js'))).text())[1]
+        urls: {}
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@${app.latestResourceCommitHash}`
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()

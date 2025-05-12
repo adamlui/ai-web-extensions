@@ -4,8 +4,7 @@ const appReady = (async () => {
         version: chrome.runtime.getManifest().version,
         latestResourceCommitHash: 'fd6a32d', // for cached app.json...
             // ... + navicon in toggles.sidebar.insert() + icons.questionMark.src
-        urls: {},
-        chatgptjsVer: /v(\d+\.\d+\.\d+)/.exec(await (await fetch(chrome.runtime.getURL('lib/chatgpt.min.js'))).text())[1]
+        urls: {}
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@${app.latestResourceCommitHash}`
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()

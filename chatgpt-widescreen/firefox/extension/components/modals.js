@@ -39,8 +39,7 @@ window.modals = {
                 + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
                     + app.urls.github + '</a>\n'
             + `<span style="${labelStyles}">⚡ ${this.getMsg('about_poweredBy')}:</span> `
-                + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
-                    + ` v${app.chatgptjsVer}`,
+                + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`,
             modalBtns, '', 730
         )
 
