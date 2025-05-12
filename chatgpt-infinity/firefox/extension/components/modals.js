@@ -1,4 +1,4 @@
-// Requires lib/chatgpt.min.js + lib/dom.js + <app|env> + updateCheck() (Greasemonkey only)
+// Requires lib<chatgpt.min|dom>.js + <app|env> + updateCheck() (Greasemonkey only)
 
 window.modals = {
 

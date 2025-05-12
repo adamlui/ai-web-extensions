@@ -1,4 +1,4 @@
-// Requires components/<chatbar|tooltip>.js + lib/<chatgpt|dom|styles>.js + <app|env|sites> + toggleMode()
+// Requires components/<chatbar|tooltip>.js + lib/<chatgpt.min|dom|styles>.js + <app|env|sites> + toggleMode()
 
 window.buttons = {
 
