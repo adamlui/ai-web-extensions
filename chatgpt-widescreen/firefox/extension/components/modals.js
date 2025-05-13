@@ -38,9 +38,12 @@ window.modals = {
             + `<span style="${labelStyles}">📜 ${this.getMsg('about_openSourceCode')}:</span> `
                 + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
                     + app.urls.github + '</a>\n'
+            + `<span style="${labelStyles}">🚀 ${this.getMsg('about_latestChanges')}:</span> `
+                + `<a href="${app.urls.github}/commits" target="_blank" rel="nopener">`
+                    + `${app.urls.github}/commits</a>\n`
             + `<span style="${labelStyles}">⚡ ${this.getMsg('about_poweredBy')}:</span> `
                 + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`,
-            modalBtns, '', 730
+            modalBtns, '', 747
         )
 
         // Format text

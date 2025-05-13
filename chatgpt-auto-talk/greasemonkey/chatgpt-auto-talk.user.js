@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.12.2
+// @version             2025.5.13
 // @license             MIT
 // @icon                https://assets.chatgptautotalk.com/images/icons/openai/black/icon48.png?v=9f1ed3c
 // @icon64              https://assets.chatgptautotalk.com/images/icons/openai/black/icon64.png?v=9f1ed3c
@@ -284,7 +284,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '680b4b7' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
+        latestResourceCommitHash: '02c13af' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -305,6 +305,7 @@
         about_version: 'Version',
         about_poweredBy: 'Powered by',
         about_openSourceCode: 'Open source code',
+        about_latestChanges: 'Latest changes',
         mode_autoTalk: 'Auto-Talk',
         helptip_toggleVis: 'Show Auto-Talk toggle in sidebar',
         alert_updateAvail: 'Update available',
@@ -503,6 +504,9 @@
                 + `<span style="${labelStyles}">📜 ${app.msgs.about_openSourceCode}:</span> `
                     + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
                         + app.urls.github + '</a>\n'
+                + `<span style="${labelStyles}">🚀 ${app.msgs.about_latestChanges}:</span> `
+                    + `<a href="${app.urls.github}/commits" target="_blank" rel="nopener">`
+                        + `${app.urls.github}/commits</a>\n`
                 + `<span style="${labelStyles}">⚡ ${app.msgs.about_poweredBy}:</span> `
                     + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
                         + ` v${app.chatgptjsVer}`,

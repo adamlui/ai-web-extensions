@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.12.2
+// @version             2025.5.13
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -290,7 +290,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '030bf6d' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
+        latestResourceCommitHash: '84f2ea3' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -314,6 +314,7 @@
         about_version: 'Version',
         about_poweredBy: 'Powered by',
         about_openSourceCode: 'Open source code',
+        about_latestChanges: 'Latest changes',
         prompt_updateInt: 'Update refresh interval (in secs)',
         helptip_toggleVis: 'Show Auto-Refresh toggle in sidebar',
         helptip_modeNotifs: 'Show notifications when toggling modes/settings',
@@ -548,6 +549,9 @@
                 + `<span style="${labelStyles}">📜 ${app.msgs.about_openSourceCode}:</span> `
                     + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
                         + app.urls.github + '</a>\n'
+                + `<span style="${labelStyles}">🚀 ${app.msgs.about_latestChanges}:</span> `
+                    + `<a href="${app.urls.github}/commits" target="_blank" rel="nopener">`
+                        + `${app.urls.github}/commits</a>\n`
                 + `<span style="${labelStyles}">⚡ ${app.msgs.about_poweredBy}:</span> `
                     + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
                         + ` v${app.chatgptjsVer}`,

@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.11
+// @version                  2025.5.13
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -450,7 +450,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '567a3d9' // for cached <app|messages>.json
+        latestResourceCommitHash: '8b85d27' // for cached <app|messages>.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -494,6 +494,7 @@
         about_version: 'Version',
         about_poweredBy: 'Powered by',
         about_openSourceCode: 'Open source code',
+        about_latestChanges: 'Latest changes',
         scheme_light: 'Light',
         scheme_dark: 'Dark',
         mode_proxy: 'Proxy Mode',
@@ -990,6 +991,9 @@
                 + `<span style="${labelStyles}">📜 ${app.msgs.about_openSourceCode}:</span> `
                     + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
                         + app.urls.github + '</a>\n'
+                + `<span style="${labelStyles}">🚀 ${app.msgs.about_latestChanges}:</span> `
+                    + `<a href="${app.urls.github}/commits" target="_blank" rel="nopener">`
+                        + `${app.urls.github}/commits</a>\n`
                 + `<span style="${labelStyles}">⚡ ${app.msgs.about_poweredBy}:</span> `
                     + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
                         + ` v${app.chatgptjsVer}`,
