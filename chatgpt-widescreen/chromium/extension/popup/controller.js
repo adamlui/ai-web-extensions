@@ -262,6 +262,30 @@
     })
     footer.before(reviewEntry)
 
+    // Init FOOTER
+    const footerElems = { // left-to-right
+        chatgptjs: { logo: footer.querySelector('.cjs-logo') },
+        review: { span: footer.querySelector('span[data-locale-title="btnLabel_leaveReview"]') },
+        coffee: { span: footer.querySelector('span[data-locale-title="menuLabel_buyMeAcoffee"]') },
+        about: { span: footer.querySelector('span[data-locale-title="menuLabel_about appName"]') },
+        moreExt: { span: footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]') }
+    }
+    footerElems.chatgptjs.logo.parentNode.title = env.browser.displaysEnglish ? ''
+        : `${getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
+    footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca'
+                                   + '/assets/images/badges/powered-by-chatgpt.js.png'
+    footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
+    footerElems.review.span.append(icons.create('star', {
+        style: 'position: relative ; top: 1px ; width: 13px ; height: 13px' }))
+    footerElems.review.span.onclick = () => {
+        open(app.urls.review[/edge|firefox/.exec(app.runtime.toLowerCase())?.[0] || 'chrome']) ; close() }
+    footerElems.coffee.span.append(icons.create('coffeeCup', { size: 23 }))
+    footerElems.coffee.span.onclick = () => { open(app.urls.donate['ko-fi']) ; close() }
+    footerElems.about.span.append(icons.create('questionMark', { width: 15, height: 13 }))
+    footerElems.about.span.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
+    footerElems.moreExt.span.append(icons.create('plus'))
+    footerElems.moreExt.span.onclick = () => { open(app.urls.relatedExtensions) ; close() }
+
     // AUTO-EXPAND categories
     const onMatchedPage = chrome.runtime.getManifest().content_scripts[0].matches.toString().includes(env.site)
     if (!onMatchedPage || config[`${env.site}Disabled`]) { // auto-expand Site Settings
@@ -278,37 +302,7 @@
                 toggleCategorySettingsVisiblity(categoryDiv.id, { transitions: false })
         })
 
-    sync.fade() // based on master/site toggle
-
-    // Init CHATGPT.JS footer tooltip/logo/listener
-    const footerElems = { chatgptjs: { logo: footer.querySelector('.cjs-logo') }}
-    footerElems.chatgptjs.logo.parentNode.title = env.browser.displaysEnglish ? ''
-        : `${getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
-    footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca'
-                                   + '/assets/images/badges/powered-by-chatgpt.js.png'
-    footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
-
-    // Init REVIEW footer icon/listener
-    footerElems.review = { span: footer.querySelector('span[data-locale-title="btnLabel_leaveReview"]') }
-    footerElems.review.span.append(icons.create('star', {
-        style: 'position: relative ; top: 1px ; width: 13px ; height: 13px' }))
-    footerElems.review.span.onclick = () => {
-        open(app.urls.review[/edge|firefox/.exec(app.runtime.toLowerCase())?.[0] || 'chrome']) ; close() }
-
-    // Init COFFEE footer icon/listener
-    footerElems.coffee = { span: footer.querySelector('span[data-locale-title="menuLabel_buyMeAcoffee"]') }
-    footerElems.coffee.span.append(icons.create('coffeeCup', { size: 23 }))
-    footerElems.coffee.span.onclick = () => { open(app.urls.donate['ko-fi']) ; close() }
-
-    // Init ABOUT footer icon/listener
-    footerElems.about = { span: footer.querySelector('span[data-locale-title="menuLabel_about appName"]') }
-    footerElems.about.span.append(icons.create('questionMark', { width: 15, height: 13 }))
-    footerElems.about.span.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
-
-    // Init MORE EXTENSIONS footer icon/listener
-    footerElems.moreExt = { span: footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]') }
-    footerElems.moreExt.span.append(icons.create('plus'))
-    footerElems.moreExt.span.onclick = () => { open(app.urls.relatedExtensions) ; close() }
+    sync.fade() // based on master/site toggle state
 
     // Remove LOADING SPINNER after imgs load
     Promise.all([...document.querySelectorAll('img')].map(img =>
