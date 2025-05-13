@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13
+// @version             2025.5.13.1
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -290,7 +290,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '84f2ea3' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
+        latestResourceCommitHash: '14e2cd8' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
