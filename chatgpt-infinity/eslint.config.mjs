@@ -17,9 +17,9 @@ export default [
         languageOptions: {
             ecmaVersion: 'latest', sourceType: 'script',
             globals: {
-                ...globals.browser, ...globals.greasemonkey, ...globals.node, app: 'writable', chatgpt: 'readonly',
-                chrome: 'readonly', config: 'writable', dom: 'readonly', env: 'writable', icons: 'writable',
-                infinity: 'readonly', modals: 'writable', notify: 'readonly', settings: 'writable',
+                ...globals.browser, ...globals.greasemonkey, ...globals.node, app: 'writable', browserAPI: 'readonly',
+                chatgpt: 'readonly', chrome: 'readonly', config: 'writable', dom: 'readonly', env: 'writable',
+                icons: 'writable', infinity: 'readonly', modals: 'writable', notify: 'readonly', settings: 'writable',
                 syncConfigToUI: 'readonly', toggles: 'writable', ui: 'readonly', updateCheck: 'readonly'
             }
         },
