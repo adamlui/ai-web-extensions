@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ALL" },
   "menuLabel_replyInt": { "message": "જવાબ અંતરાલ" },
   "menuLabel_about": { "message": "માહિતી" },
+  "menuLabel_open": { "message": "ઓપન\t" },
   "menuLabel_buyMeAcoffee": { "message": "મારા માટે કોફી ખરીદો" },
   "menuLabel_donate": { "message": "કૃપા કરીને દાન મોકલો" },
   "menuLabel_extensionActive": { "message": "એક્સ્ટેંશન સક્રિય" },

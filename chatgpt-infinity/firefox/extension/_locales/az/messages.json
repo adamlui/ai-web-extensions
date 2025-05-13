@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "Hamısı" },
   "menuLabel_replyInt": { "message": "Cavab ver İnterval" },
   "menuLabel_about": { "message": "Haqqında" },
+  "menuLabel_open": { "message": "Açıqdır" },
   "menuLabel_buyMeAcoffee": { "message": "Mənə Qəhvə Al" },
   "menuLabel_donate": { "message": "İanə göndərin" },
   "menuLabel_extensionActive": { "message": "uzatma aktivdir" },

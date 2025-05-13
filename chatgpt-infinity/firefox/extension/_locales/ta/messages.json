@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "Please, specify two different languages" },
   "menuLabel_replyInt": { "message": "பதில் இடைவெளி" },
   "menuLabel_about": { "message": "பற்றி" },
+  "menuLabel_open": { "message": "திற" },
   "menuLabel_buyMeAcoffee": { "message": "எனக்கு ஒரு காபி வாங்குங்கள்" },
   "menuLabel_donate": { "message": "நன்கொடை அனுப்பவும்" },
   "menuLabel_extensionActive": { "message": "நீட்டிப்பு செயலில் உள்ளது" },

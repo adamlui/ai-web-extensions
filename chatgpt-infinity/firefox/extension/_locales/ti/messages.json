@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ኵሉ" },
   "menuLabel_replyInt": { "message": "ናይ መልሲ ፍልልይ" },
   "menuLabel_about": { "message": "ብዛዕባ" },
+  "menuLabel_open": { "message": "འབྱེད" },
   "menuLabel_buyMeAcoffee": { "message": "ቡን ሃበኒ" },
   "menuLabel_donate": { "message": "ብኽብረትካ በጃኻ ውህበት ልኢኽካ" },
   "menuLabel_extensionActive": { "message": "ንጡፍ ምስፍሕፋሕ" },

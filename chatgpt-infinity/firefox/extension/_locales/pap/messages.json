@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "TUR" },
   "menuLabel_replyInt": { "message": "Intervalo di Contestá" },
   "menuLabel_about": { "message": "Tocante" },
+  "menuLabel_open": { "message": "Habri" },
   "menuLabel_buyMeAcoffee": { "message": "Recibí un café" },
   "menuLabel_donate": { "message": "Por fabor haci un donacion" },
   "menuLabel_extensionActive": { "message": "ekspanshon aktivo" },

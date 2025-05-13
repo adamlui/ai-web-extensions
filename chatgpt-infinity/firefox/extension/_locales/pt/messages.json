@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "TODOS" },
   "menuLabel_replyInt": { "message": "Intervalo de Resposta" },
   "menuLabel_about": { "message": "Quem somos" },
+  "menuLabel_open": { "message": "Abrir" },
   "menuLabel_buyMeAcoffee": { "message": "Compre-me um café" },
   "menuLabel_donate": { "message": "Envie um donativo" },
   "menuLabel_extensionActive": { "message": "Extensão SOAP ativa." },

@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "SEMUA" },
   "menuLabel_replyInt": { "message": "Selang Balas" },
   "menuLabel_about": { "message": "Tentang" },
+  "menuLabel_open": { "message": "Buka" },
   "menuLabel_buyMeAcoffee": { "message": "Belikan Saya Kopi" },
   "menuLabel_donate": { "message": "Sila hantar derma" },
   "menuLabel_extensionActive": { "message": "sambungan aktif" },

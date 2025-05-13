@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ВСЕ" },
   "menuLabel_replyInt": { "message": "Интервал ответа" },
   "menuLabel_about": { "message": "Шифр" },
+  "menuLabel_open": { "message": "Открыть" },
   "menuLabel_buyMeAcoffee": { "message": "Купи мне кофе" },
   "menuLabel_donate": { "message": "Пожалуйста, отправьте пожертвование" },
   "menuLabel_extensionActive": { "message": "Расширение SOAP активно." },

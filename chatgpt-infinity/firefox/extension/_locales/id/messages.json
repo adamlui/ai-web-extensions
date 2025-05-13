@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ALL" },
   "menuLabel_replyInt": { "message": "Interval Balasan" },
   "menuLabel_about": { "message": "Ihwal" },
+  "menuLabel_open": { "message": "Buka" },
   "menuLabel_buyMeAcoffee": { "message": "Buy me a Coffee!" },
   "menuLabel_donate": { "message": "Kirimkan donasi" },
   "menuLabel_extensionActive": { "message": "ekstensi aktif" },

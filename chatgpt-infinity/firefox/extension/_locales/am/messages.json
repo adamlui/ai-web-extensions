@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ሁሉም" },
   "menuLabel_replyInt": { "message": "የምላሽ ክፍተት" },
   "menuLabel_about": { "message": "ስለ" },
+  "menuLabel_open": { "message": "ifata" },
   "menuLabel_buyMeAcoffee": { "message": "ቡና ይግዙኝ" },
   "menuLabel_donate": { "message": "እባክዎን ልገሳ ይላኩ" },
   "menuLabel_extensionActive": { "message": "ቅጥያ ንቁ" },

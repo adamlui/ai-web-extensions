@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "VISS" },
   "menuLabel_replyInt": { "message": "Atbildes intervāls" },
   "menuLabel_about": { "message": "Par produktu" },
+  "menuLabel_open": { "message": "Atvērt" },
   "menuLabel_buyMeAcoffee": { "message": "Nopērciet man kafiju" },
   "menuLabel_donate": { "message": "Lūdzu, nosūtiet ziedojumu" },
   "menuLabel_extensionActive": { "message": "paplašinājums ir aktīvs" },

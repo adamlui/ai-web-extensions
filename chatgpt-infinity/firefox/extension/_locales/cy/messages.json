@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "I BAWB" },
   "menuLabel_replyInt": { "message": "Ysbaid Ateb" },
   "menuLabel_about": { "message": "Gwybodaeth" },
+  "menuLabel_open": { "message": "Agored" },
   "menuLabel_buyMeAcoffee": { "message": "Prynu Coffi i Mi" },
   "menuLabel_donate": { "message": "Anfonwch rodd os gwelwch yn dda" },
   "menuLabel_extensionActive": { "message": "estyniad ar waith" },

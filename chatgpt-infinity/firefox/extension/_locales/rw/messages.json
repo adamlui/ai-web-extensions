@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "BYOSE" },
   "menuLabel_replyInt": { "message": "Intaremuco yo Guhindura" },
   "menuLabel_about": { "message": "Ku Bimenyetso" },
+  "menuLabel_open": { "message": "<B B" },
   "menuLabel_buyMeAcoffee": { "message": "Reka nkugurire ikofi" },
   "menuLabel_donate": { "message": "Yohereze Yohereze Impano" },
   "menuLabel_extensionActive": { "message": "umugereka Gikora" },

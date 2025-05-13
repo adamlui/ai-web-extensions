@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "سب" },
   "menuLabel_replyInt": { "message": "جواب کا وقفہ" },
   "menuLabel_about": { "message": "معلومات" },
+  "menuLabel_open": { "message": "کھولیں" },
   "menuLabel_buyMeAcoffee": { "message": "میرے لئے کافی خریدیں" },
   "menuLabel_donate": { "message": "براہ کرم ایک عطیہ بھیجیں" },
   "menuLabel_extensionActive": { "message": "توسیع فعال ہے" },

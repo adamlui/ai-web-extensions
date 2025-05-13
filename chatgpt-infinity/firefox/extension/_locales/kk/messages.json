@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "Барлығы" },
   "menuLabel_replyInt": { "message": "Жауап беру аралығы" },
   "menuLabel_about": { "message": "Туралы" },
+  "menuLabel_open": { "message": "Ашу" },
   "menuLabel_buyMeAcoffee": { "message": "Маған кофе сатып алыңыз" },
   "menuLabel_donate": { "message": "Қайырымдылық жасауыңызды сұраймыз" },
   "menuLabel_extensionActive": { "message": "белсенді кеңейтім" },

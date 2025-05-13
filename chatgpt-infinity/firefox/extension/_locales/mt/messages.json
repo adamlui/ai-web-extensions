@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "Kollha" },
   "menuLabel_replyInt": { "message": "Intervall ta' Risposta" },
   "menuLabel_about": { "message": "Dwar" },
+  "menuLabel_open": { "message": "Miftuħa" },
   "menuLabel_buyMeAcoffee": { "message": "Ixtri Jien Kafè" },
   "menuLabel_donate": { "message": "Jekk jogħġbok ibgħat donazzjoni" },
   "menuLabel_extensionActive": { "message": "estensjoni attiva" },

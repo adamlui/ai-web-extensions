@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "VSE" },
   "menuLabel_replyInt": { "message": "Interval odgovora" },
   "menuLabel_about": { "message": "Vizitka" },
+  "menuLabel_open": { "message": "Odpri" },
   "menuLabel_buyMeAcoffee": { "message": "Kupi mi kavo" },
   "menuLabel_donate": { "message": "Pošljite donacijo" },
   "menuLabel_extensionActive": { "message": "razširitev je aktivna" },

@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "REHETRA" },
   "menuLabel_replyInt": { "message": "Antsoina ny fanamafisana" },
   "menuLabel_about": { "message": "Momba" },
+  "menuLabel_open": { "message": "Hafaingana" },
   "menuLabel_buyMeAcoffee": { "message": "Mividiana kafe iray" },
   "menuLabel_donate": { "message": "AZAFADY, alefaso amin'ny" },
   "menuLabel_extensionActive": { "message": "miasa fanitarana" },

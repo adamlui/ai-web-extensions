@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ALLE" },
   "menuLabel_replyInt": { "message": "Svar Interval" },
   "menuLabel_about": { "message": "Om" },
+  "menuLabel_open": { "message": "Åbn" },
   "menuLabel_buyMeAcoffee": { "message": "Køb en kop kaffe til mig" },
   "menuLabel_donate": { "message": "Send en donation" },
   "menuLabel_extensionActive": { "message": "udvidelse aktiv" },

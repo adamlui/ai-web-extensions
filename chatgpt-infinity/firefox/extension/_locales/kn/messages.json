@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ಎಲ್ಲಾ" },
   "menuLabel_replyInt": { "message": "ಉತ್ತರ ಅಂತರಾಲ" },
   "menuLabel_about": { "message": "ಕುರಿತಾಗಿ" },
+  "menuLabel_open": { "message": "ತೆರೆ" },
   "menuLabel_buyMeAcoffee": { "message": "ನನಗೆ ಕಾಫಿ ಖರೀದಿಸಿ" },
   "menuLabel_donate": { "message": "ದಯವಿಟ್ಟು ದೇಣಿಗೆ ಕಳುಹಿಸಿ" },
   "menuLabel_extensionActive": { "message": "ವಿಸ್ತರಣೆ ಸಕ್ರಿಯವಾಗಿದೆ" },

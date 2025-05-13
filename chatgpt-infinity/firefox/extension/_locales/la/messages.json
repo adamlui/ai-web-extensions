@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "OMNIA" },
   "menuLabel_replyInt": { "message": "Intervalum Responsionis" },
   "menuLabel_about": { "message": "De" },
+  "menuLabel_open": { "message": "" },
   "menuLabel_buyMeAcoffee": { "message": "Vide me a cafe" },
   "menuLabel_donate": { "message": "Mandefa fanomezana azafady" },
   "menuLabel_extensionActive": { "message": "extensionis" },
