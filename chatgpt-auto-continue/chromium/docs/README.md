@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<a href="https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=chrome-rating-shield">
+<a href="https://chrome.chatgptautocontinue.com/reviews?utm_source=github&utm_medium=referral&utm_content=chrome-rating-shield">
     <img alt="[Google Chrome]" height=31 src="https://img.shields.io/chrome-web-store/stars/lbojnhaafilddefkdgmbplkafnckaoga?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></img></a>
 <a href="https://chrome.chatgptautocontinue.com">
     <img height=31 alt="[Chrome Web Store]" src="https://img.shields.io/chrome-web-store/v/lbojnhaafilddefkdgmbplkafnckaoga?label=Latest+Release&logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></a>
