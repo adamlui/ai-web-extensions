@@ -1,4 +1,4 @@
-// Requires lib/<chatgpt.min|dom>.js + <app|env> + updateCheck() (Greasemonkey only)
+// Requires lib/<browser|chatgpt.min|dom>.js + <app|env> + updateCheck() (Greasemonkey only)
 
 window.modals = {
 
@@ -22,26 +22,26 @@ window.modals = {
             function rateUs() { modals.open('feedback') },
             function moreAIextensions(){}
         ]
-        if (this.runtime.includes('Greasemonkey')) // add Check for Updates
+        if (browserAPI.runtime.includes('Greasemonkey')) // add Check for Updates
             modalBtns.unshift(function checkForUpdates(){ updateCheck() })
 
         // Show modal
         const labelStyles = 'text-transform: uppercase ; font-size: 17px ; font-weight: bold ;'
                           + `color: ${ scheme == 'dark' ? 'white' : '#494141' }`
         const aboutModal = modals.alert(
-            `${app.symbol} ${this.getMsg('appName')}`, // title
-            `<span style="${labelStyles}">🧠 ${this.getMsg('about_author')}:</span> `
-                + `<a href="${app.author.url}">${this.getMsg('appAuthor')}</a> ${this.getMsg('about_and')}`
-                    + ` <a href="${app.urls.contributors}">${this.getMsg('about_contributors')}</a>\n`
-            + `<span style="${labelStyles}">🏷️ ${this.getMsg('about_version')}:</span> `
+            `${app.symbol} ${browserAPI.getMsg('appName')}`, // title
+            `<span style="${labelStyles}">🧠 ${browserAPI.getMsg('about_author')}:</span> `
+                + `<a href="${app.author.url}">${browserAPI.getMsg('appAuthor')}</a> ${browserAPI.getMsg('about_and')}`
+                    + ` <a href="${app.urls.contributors}">${browserAPI.getMsg('about_contributors')}</a>\n`
+            + `<span style="${labelStyles}">🏷️ ${browserAPI.getMsg('about_version')}:</span> `
                 + `<span class="about-em">${app.version}</span>\n`
-            + `<span style="${labelStyles}">📜 ${this.getMsg('about_openSourceCode')}:</span> `
+            + `<span style="${labelStyles}">📜 ${browserAPI.getMsg('about_openSourceCode')}:</span> `
                 + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
                     + app.urls.github + '</a>\n'
-            + `<span style="${labelStyles}">🚀 ${this.getMsg('about_latestChanges')}:</span> `
+            + `<span style="${labelStyles}">🚀 ${browserAPI.getMsg('about_latestChanges')}:</span> `
                 + `<a href="${app.urls.github}/commits" target="_blank" rel="nopener">`
                     + `${app.urls.github}/commits</a>\n`
-            + `<span style="${labelStyles}">⚡ ${this.getMsg('about_poweredBy')}:</span> `
+            + `<span style="${labelStyles}">⚡ ${browserAPI.getMsg('about_poweredBy')}:</span> `
                 + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`,
             modalBtns, '', 747
         )
@@ -56,24 +56,24 @@ window.modals = {
         aboutModal.querySelector('.modal-buttons').style.justifyContent = 'center'
         aboutModal.querySelectorAll('button').forEach(btn => {
             btn.style.cssText = 'min-width: 136px ; text-align: center ;'
-                + `height: ${ this.runtime.includes('Greasemonkey') ? 58 : 55 }px`
+                + `height: ${ browserAPI.runtime.includes('Greasemonkey') ? 58 : 55 }px`
 
             // Replace link buttons w/ clones that don't dismiss modal
             if (/support|extensions/i.test(btn.textContent)) {
                 btn.replaceWith(btn = btn.cloneNode(true))
                 btn.onclick = () => this.safeWinOpen(app.urls[
-                    btn.textContent.includes(this.getMsg('btnLabel_getSupport')) ? 'support' : 'relatedExtensions' ])
+                    btn.textContent.includes(browserAPI.getMsg('btnLabel_getSupport')) ? 'support' : 'relatedExtensions' ])
             }
 
             // Prepend emoji + localize labels
             if (/updates/i.test(btn.textContent))
-                btn.textContent = `🚀 ${this.getMsg('btnLabel_checkForUpdates')}`
+                btn.textContent = `🚀 ${browserAPI.getMsg('btnLabel_checkForUpdates')}`
             else if (/support/i.test(btn.textContent))
-                btn.textContent = `🧠 ${this.getMsg('btnLabel_getSupport')}`
+                btn.textContent = `🧠 ${browserAPI.getMsg('btnLabel_getSupport')}`
             else if (/rate/i.test(btn.textContent))
-                btn.textContent = `⭐ ${this.getMsg('btnLabel_rateUs')}`
+                btn.textContent = `⭐ ${browserAPI.getMsg('btnLabel_rateUs')}`
             else if (/extensions/i.test(btn.textContent))
-                btn.textContent = `🤖 ${this.getMsg('btnLabel_moreAIextensions')}`
+                btn.textContent = `🤖 ${browserAPI.getMsg('btnLabel_moreAIextensions')}`
 
             // Hide Dismiss button
             else btn.style.display = 'none'
@@ -94,20 +94,20 @@ window.modals = {
 
         // Show modal
         const donateModal = modals.alert(
-            `💖 ${this.getMsg('alert_showYourSupport')}`, // title
-                `<p>${this.getMsg('appName')} ${this.getMsg('alert_isOSS')}.</p>` // msg
-                + `<p>${this.getMsg('alert_despiteAffliction')} `
+            `💖 ${browserAPI.getMsg('alert_showYourSupport')}`, // title
+                `<p>${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_isOSS')}.</p>` // msg
+                + `<p>${browserAPI.getMsg('alert_despiteAffliction')} `
                     + '<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Long_COVID">'
-                        + `${this.getMsg('alert_longCOVID')}</a> `
-                    + `${this.getMsg('alert_since2020')}, ${this.getMsg('alert_byDonatingResults')}.</p>`
-                + `<p>${this.getMsg('alert_yourContrib')}, <b>${this.getMsg('alert_noMatterSize')}</b>, `
-                    + `${this.getMsg('alert_directlySupports')}.</p>`
-                + `<p>${this.getMsg('alert_tyForSupport')}!</p>`
+                        + `${browserAPI.getMsg('alert_longCOVID')}</a> `
+                    + `${browserAPI.getMsg('alert_since2020')}, ${browserAPI.getMsg('alert_byDonatingResults')}.</p>`
+                + `<p>${browserAPI.getMsg('alert_yourContrib')}, <b>${browserAPI.getMsg('alert_noMatterSize')}</b>, `
+                    + `${browserAPI.getMsg('alert_directlySupports')}.</p>`
+                + `<p>${browserAPI.getMsg('alert_tyForSupport')}!</p>`
                 + '<img src="https://cdn.jsdelivr.net/gh/adamlui/adamlui/images/siggie/'
                     + `${ scheme == 'dark' ? 'white' : 'black' }.png" `
                     + 'style="height: 54px ; margin: 5px 0 -2px 5px"></img>'
                 + `<p>—<b><a target="_blank" rel="noopener" href="${app.author.url}">`
-                    + `${this.getMsg('appAuthor')}</a></b>, ${this.getMsg('about_author').toLowerCase()}</p>`,
+                    + `${browserAPI.getMsg('appAuthor')}</a></b>, ${browserAPI.getMsg('about_author').toLowerCase()}</p>`,
             [ // buttons
                 function paypal(){},
                 function githubSponsors(){},
@@ -149,14 +149,14 @@ window.modals = {
 
         // Init buttons
         const modalBtns = [ function productHunt(){} ]
-        if (!this.runtime.includes('Greasemonkey')) modalBtns.unshift(
-            this.runtime.includes('Firefox') ? function firefoxAddons(){}
-          : this.runtime.includes('Edge') ? function edgeAddons(){}
+        if (!browserAPI.runtime.includes('Greasemonkey')) modalBtns.unshift(
+            browserAPI.runtime.includes('Firefox') ? function firefoxAddons(){}
+          : browserAPI.runtime.includes('Edge') ? function edgeAddons(){}
           : function chromeWebStore(){}
         )
 
         // Show modal
-        const feedbackModal = modals.alert(`${this.getMsg('alert_choosePlatform')}:`, '', modalBtns)
+        const feedbackModal = modals.alert(`${browserAPI.getMsg('alert_choosePlatform')}:`, '', modalBtns)
 
         // Hack buttons
         feedbackModal.querySelectorAll('button').forEach((btn, idx) => {
@@ -173,12 +173,6 @@ window.modals = {
         })
 
         return feedbackModal
-    },
-
-    getMsg(key) {
-        return /Chromium|Firefox/.test(this.runtime) ?
-            chrome.i18n.getMessage(key) // from ./_locales/*/messages.json
-                : app.msgs[key] // from userscript
     },
 
     init(modal) {
@@ -262,12 +256,12 @@ window.modals = {
         available() {
 
             // Show modal
-            const updateAvailModal = modals.alert(`🚀 ${modals.getMsg('alert_updateAvail')}!`, // title
-                `${modals.getMsg('alert_newerVer')} ${modals.getMsg('appName')} ` // msg
-                    + `(v${app.latestVer}) ${modals.getMsg('alert_isAvail')}!  `
+            const updateAvailModal = modals.alert(`🚀 ${browserAPI.getMsg('alert_updateAvail')}!`, // title
+                `${browserAPI.getMsg('alert_newerVer')} ${browserAPI.getMsg('appName')} ` // msg
+                    + `(v${app.latestVer}) ${browserAPI.getMsg('alert_isAvail')}!  `
                     + '<a target="_blank" rel="noopener" style="font-size: 0.7rem" href="'
                         + `${app.urls.github}/commits/main/greasemonkey/${app.slug}-mode.user.js`
-                    + `">${modals.getMsg('link_viewChanges')}</a>`,
+                    + `">${browserAPI.getMsg('link_viewChanges')}</a>`,
                 function update() { // button
                     modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
                 }, '', modals.update.width
@@ -276,16 +270,16 @@ window.modals = {
             // Localize button labels if needed
             if (!env.browser.language.startsWith('en')) {
                 const updateBtns = updateAvailModal.querySelectorAll('button')
-                updateBtns[1].textContent = modals.getMsg('btnLabel_update')
-                updateBtns[0].textContent = modals.getMsg('btnLabel_dismiss')
+                updateBtns[1].textContent = browserAPI.getMsg('btnLabel_update')
+                updateBtns[0].textContent = browserAPI.getMsg('btnLabel_dismiss')
             }
 
             return updateAvailModal
         },
 
         unavailable() {
-            return modals.alert(`${modals.getMsg('alert_upToDate')}!`, // title
-                `${modals.getMsg('appName')} (v${app.version}) ${modals.getMsg('alert_isUpToDate')}!`, // msg
+            return modals.alert(`${browserAPI.getMsg('alert_upToDate')}!`, // title
+                `${browserAPI.getMsg('appName')} (v${app.version}) ${browserAPI.getMsg('alert_isUpToDate')}!`, // msg
                 '', '', modals.update.width
             )
         }

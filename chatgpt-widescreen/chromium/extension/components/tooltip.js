@@ -1,12 +1,6 @@
-// Requires components/buttons.js + lib/dom.js + <app|env|sites>
+// Requires components/buttons.js + lib/<browserAPI|dom>.js + <app|env|sites>
 
 window.tooltip = {
-
-    getMsg(key) {
-        return typeof GM_info != 'undefined' ?
-            app.msgs[key] // from userscript
-                : chrome.i18n.getMessage(key) // from ./_locales/*/messages.json
-    },
 
     stylize() {
         document.head.append(this.styles = dom.create.style(`.${app.slug}-tooltip {
@@ -40,7 +34,7 @@ window.tooltip = {
         const btnScale = btnTransform == 'none' ? 1
             : parseFloat(/matrix\(([^)]+)\)/.exec(btnTransform)[1].split(',')[0])
         const unscaledTop = btnRect.top +( btnRect.height - btnRect.height / btnScale )/2
-        this.div.textContent = this.getMsg(`tooltip_${btnType}${
+        this.div.textContent = browserAPI.getMsg(`tooltip_${btnType}${
             !/full|wide/i.test(btnType) ? '' : (config[btnType] ? 'OFF' : 'ON')}`)
         this.div.style.left = `${ btnRect.left +( btnRect.width /2 ) -( this.div.offsetWidth /2 )}px`
         this.div.style.top = `${ unscaledTop - this.div.offsetHeight -(

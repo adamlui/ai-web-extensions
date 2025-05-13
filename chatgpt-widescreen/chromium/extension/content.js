@@ -11,8 +11,8 @@
 
     // Import JS resources
     for (const resource of [
-        'lib/chatbar.js', 'lib/chatgpt.min.js', 'lib/dom.js', 'lib/settings.js', 'lib/styles.js', 'lib/ui.js',
-        'components/buttons.js', 'components/icons.js', 'components/modals.js', 'components/tooltip.js'
+        'lib/browser.js', 'lib/chatbar.js', 'lib/chatgpt.min.js', 'lib/dom.js', 'lib/settings.js', 'lib/styles.js',
+        'lib/ui.js', 'components/buttons.js', 'components/icons.js', 'components/modals.js', 'components/tooltip.js'
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -48,16 +48,16 @@
 
     // Define FUNCTIONS
 
-    function getMsg(key) { return chrome.i18n.getMessage(key) }
-
     function notify(msg, pos = '', notifDuration = '', shadow = '') {
         if (!styles.toast.node) styles.toast.update()
-        if (config.notifDisabled && !new RegExp(`${getMsg('menuLabel_notifs')}|${getMsg('mode_toast')}`).test(msg))
-            return
+        if (config.notifDisabled &&
+            !new RegExp(`${browserAPI.getMsg('menuLabel_notifs')}|${browserAPI.getMsg('mode_toast')}`).test(msg))
+                return
 
         // Strip state word to append colored one later
         const foundState = [
-            getMsg('state_on').toUpperCase(), getMsg('state_off').toUpperCase() ].find(word => msg.includes(word))
+            browserAPI.getMsg('state_on').toUpperCase(), browserAPI.getMsg('state_off').toUpperCase()
+        ].find(word => msg.includes(word))
         if (foundState) msg = msg.replace(foundState, '')
 
         // Show notification
@@ -80,7 +80,7 @@
             }
             const styledStateSpan = dom.create.elem('span')
             styledStateSpan.style.cssText = stateStyles[
-                foundState == getMsg('state_off').toUpperCase() ? 'off' : 'on'][env.ui.scheme]
+                foundState == browserAPI.getMsg('state_off').toUpperCase() ? 'off' : 'on'][env.ui.scheme]
             styledStateSpan.append(foundState) ; notif.append(styledStateSpan)
         }
     }
@@ -130,7 +130,7 @@
                 } else styles.fullWin.node.remove()
                 if (site != 'chatgpt') sync.mode('fullWindow') // since they don't monitor sidebar
             } else if (mode == 'fullscreen') {
-                if (config.f11) modals.alert(getMsg('alert_pressF11'), `${getMsg('alert_f11reason')}.`)
+                if (config.f11) modals.alert(browserAPI.getMsg('alert_pressF11'), `${browserAPI.getMsg('alert_f11reason')}.`)
                 else document.exitFullscreen()
                     .catch(err => console.error(app.symbol + ' » Failed to exit fullscreen', err))
             }
@@ -199,7 +199,7 @@
                         && config.widerChatbox ? 111 : 0) // delay if toggled to/from active WCB to avoid wrong width
                 else if (env.site == 'perplexity' || env.site == 'poe' && config.widerChatbox)
                     styles.chatbar.update() // toggle full-width Perplexity chatbar or sync Poe WCB
-                notify(`${getMsg('mode_' + mode)} ${getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
+                notify(`${browserAPI.getMsg('mode_' + mode)} ${browserAPI.getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
             }
             config.modeSynced = true ; setTimeout(() => config.modeSynced = false, 100) // prevent repetition
         }
@@ -321,7 +321,7 @@
         if ((event.key == 'F11' || event.keyCode == 122) && !config.fullscreen) config.f11 = true
         else if ((event.key.startsWith('Esc') || event.keyCode == 27) && chatgpt.isTyping())
             try { chatgpt.stop() ; requestAnimationFrame(() => !chatgpt.isTyping() &&
-                    notify(getMsg('notif_chatStopped'), 'bottom-right')) } catch (err) {}
+                    notify(browserAPI.getMsg('notif_chatStopped'), 'bottom-right')) } catch (err) {}
     })
 
 })()

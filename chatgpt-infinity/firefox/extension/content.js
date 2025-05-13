@@ -12,7 +12,7 @@
     // Import JS resources
     for (const resource of [
         'components/modals.js', 'components/toggles.js',
-        'lib/chatgpt.min.js', 'lib/dom.js', 'lib/infinity.js', 'lib/settings.js', 'lib/ui.js'
+        'lib/browser.js', 'lib/chatgpt.min.js', 'lib/dom.js', 'lib/infinity.js', 'lib/settings.js', 'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -42,19 +42,18 @@
     if (!config.replyLanguage) // init reply language if unset
         settings.save('replyLanguage', chrome.i18n.getUILanguage())
     if (!config.replyTopic) // init reply topic if unset
-        settings.save('replyTopic', getMsg('menuLabel_all'))
+        settings.save('replyTopic', browserAPI.getMsg('menuLabel_all'))
     if (!config.replyInterval) settings.save('replyInterval', 7) // init refresh interval to 7 secs if unset
 
     // Define FUNCTIONS
 
-    function getMsg(key) { return chrome.i18n.getMessage(key) }
-
     window.notify = (msg, pos = '', notifDuration = '', shadow = '') => {
-        if (config.notifDisabled && !msg.includes(getMsg('menuLabel_modeNotifs'))) return
+        if (config.notifDisabled && !msg.includes(browserAPI.getMsg('menuLabel_modeNotifs'))) return
 
         // Strip state word to append colored one later
         const foundState = [
-            getMsg('state_on').toUpperCase(), getMsg('state_off').toUpperCase() ].find(word => msg.includes(word))
+            browserAPI.getMsg('state_on').toUpperCase(), browserAPI.getMsg('state_off').toUpperCase()
+        ].find(word => msg.includes(word))
         if (foundState) msg = msg.replace(foundState, '')
 
         // Show notification
@@ -75,7 +74,7 @@
             }
             const styledStateSpan = dom.create.elem('span')
             styledStateSpan.style.cssText = stateStyles[
-                foundState == getMsg('state_off').toUpperCase() ? 'off' : 'on'][env.ui.scheme]
+                foundState == browserAPI.getMsg('state_off').toUpperCase() ? 'off' : 'on'][env.ui.scheme]
             styledStateSpan.append(foundState) ; notif.append(styledStateSpan)
         }
     }
@@ -122,7 +121,7 @@
     // Auto-start if enabled
     if (config.autoStart) {
         settings.save('infinityMode', true) ; syncConfigToUI({ updatedKey: 'infinityMode' })
-        notify(`${getMsg('menuLabel_autoStart')}: ${getMsg('state_on').toUpperCase()}`)
+        notify(`${browserAPI.getMsg('menuLabel_autoStart')}: ${browserAPI.getMsg('state_on').toUpperCase()}`)
     }
 
     // Monitor NODE CHANGES to maintain sidebar toggle visibility

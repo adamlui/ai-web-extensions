@@ -20,8 +20,9 @@
     })
 
     // Import JS resources
-    for (const resource of ['components/modals.js', 'lib/chatgpt.min.js', 'lib/dom.js', 'lib/settings.js', 'lib/ui.js'])
-        await import(chrome.runtime.getURL(resource))
+    for (const resource of [
+        'components/modals.js', 'lib/browser.js', 'lib/chatgpt.min.js', 'lib/dom.js', 'lib/settings.js', 'lib/ui.js'
+    ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
     window.env = { browser: { isMobile: chatgpt.browser.isMobile() }, ui: { scheme: ui.getScheme() }}
@@ -35,14 +36,13 @@
 
     // Define FUNCTIONS
 
-    function getMsg(key) { return chrome.i18n.getMessage(key) }
-
     function notify(msg, pos = '', notifDuration = '', shadow = '') {
-        if (config.notifDisabled && !msg.includes(getMsg('menuLabel_modeNotifs'))) return
+        if (config.notifDisabled && !msg.includes(browserAPI.getMsg('menuLabel_modeNotifs'))) return
 
         // Strip state word to append colored one later
         const foundState = [
-            getMsg('state_on').toUpperCase(), getMsg('state_off').toUpperCase() ].find(word => msg.includes(word))
+            browserAPI.getMsg('state_on').toUpperCase(), browserAPI.getMsg('state_off').toUpperCase()
+        ].find(word => msg.includes(word))
         if (foundState) msg = msg.replace(foundState, '')
 
         // Show notification
@@ -63,7 +63,7 @@
             }
             const styledStateSpan = dom.create.elem('span')
             styledStateSpan.style.cssText = stateStyles[
-                foundState == getMsg('state_off').toUpperCase() ? 'off' : 'on'][env.ui.scheme]
+                foundState == browserAPI.getMsg('state_off').toUpperCase() ? 'off' : 'on'][env.ui.scheme]
             styledStateSpan.append(foundState) ; notif.append(styledStateSpan)
         }
     }
@@ -78,7 +78,7 @@
             btn.click()
             if (btnType == 'Continue') {
                 continueBtnClicked = true
-                notify(getMsg('notif_chatAutoContinued'), 'bottom-right')
+                notify(browserAPI.getMsg('notif_chatAutoContinued'), 'bottom-right')
                 if (config.autoScroll) try { chatgpt.scrollToBottom() } catch(err) {}
         }})
         setTimeout(checkBtnsToClick, continueBtnClicked ? 5000 : 500)
@@ -104,7 +104,7 @@
         checkBtnsToClick()
 
     // NOTIFY of status on load
-        notify(`${getMsg('mode_autoContinue')}: ${ getMsg('state_on').toUpperCase()}`)
+        notify(`${browserAPI.getMsg('mode_autoContinue')}: ${ browserAPI.getMsg('state_on').toUpperCase()}`)
     }
 
     // Monitor SCHEME PREF changes to update sidebar toggle + modal colors

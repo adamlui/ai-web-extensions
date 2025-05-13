@@ -1,12 +1,6 @@
-// Requires lib/chatgpt.min.js + <app|env> + <notify|syncConfigToUI>()
+// Requires lib/<browser|chatgpt.min>.js + <app|env> + <notify|syncConfigToUI>()
 
 window.toggles = {
-
-    getMsg(key) {
-        return typeof GM_info != 'undefined' ?
-            app.msgs[key] // from userscript
-                : chrome.i18n.getMessage(key) // from ./_locales/*/messages.json
-    },
 
     sidebar: {
         get class() { return `${app.slug}-sidebar-toggle` },
@@ -45,8 +39,8 @@ window.toggles = {
             this.div.onclick = () => { // toggle Infinity mode
                 settings.save('infinityMode', !this.toggleInput.checked)
                 syncConfigToUI({ updatedKey: 'infinityMode' })
-                notify(`${toggles.getMsg('menuLabel_infinityMode')}: ${
-                    toggles.getMsg(`state_${ config.infinityMode ? 'on' : 'off' }`).toUpperCase()}`)
+                notify(`${browserAPI.getMsg('menuLabel_infinityMode')}: ${
+                    browserAPI.getMsg(`state_${ config.infinityMode ? 'on' : 'off' }`).toUpperCase()}`)
             }
         },
 
@@ -148,8 +142,8 @@ window.toggles = {
                 if (!toggles.sidebar.div) return // since toggle never created = sidebar missing
                 toggles.sidebar.div.style.display = config.toggleHidden || config.extensionDisabled ? 'none' : 'flex'
                 toggles.sidebar.toggleInput.checked = config.infinityMode
-                toggles.sidebar.toggleLabel.textContent = `${toggles.getMsg('menuLabel_infinityMode')} `
-                    + toggles.getMsg(`state_${ toggles.sidebar.toggleInput.checked ? 'enabled' : 'disabled' }`)
+                toggles.sidebar.toggleLabel.textContent = `${browserAPI.getMsg('menuLabel_infinityMode')} `
+                    + browserAPI.getMsg(`state_${ toggles.sidebar.toggleInput.checked ? 'enabled' : 'disabled' }`)
                 requestAnimationFrame(() => {
                     toggles.sidebar.switchSpan.className = toggles.sidebar.toggleInput.checked ? 'enabled' : 'disabled'
                     toggles.sidebar.knobSpan.style.transform = `translateX(${

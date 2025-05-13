@@ -1,7 +1,7 @@
 (async () => {
 
     // Import JS resources
-    for (const resource of ['components/icons.js', 'lib/dom.js', 'lib/settings.js'])
+    for (const resource of ['components/icons.js', 'lib/browser.js', 'lib/dom.js', 'lib/settings.js'])
         await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -47,11 +47,11 @@
                     settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`)
             } else if (entryData.type == 'link') { open(entryData.url) ; close() }
             else {
-                const re_all = new RegExp(`^(${getMsg('menuLabel_all')}|all|any|every)$`, 'i')
+                const re_all = new RegExp(`^(${browserAPI.getMsg('menuLabel_all')}|all|any|every)$`, 'i')
                 if (entryData.key == 'replyLanguage') {
                     while (true) {
                         let replyLang = await (await sitePrompt(
-                            `${getMsg('prompt_updateReplyLang')}:`, config.replyLanguage)).input
+                            `${browserAPI.getMsg('prompt_updateReplyLang')}:`, config.replyLanguage)).input
                         if (replyLang == null) break // user cancelled so do nothing
                         else if (!/\d/.test(replyLang)) { // valid reply language set
                             replyLang = ( // auto-case for menu/alert aesthetics
@@ -59,38 +59,38 @@
                                     : toTitleCase(replyLang) )
                             settings.save('replyLanguage', replyLang || chrome.i18n.getUILanguage())
                             siteAlert(getMsg('alert_replyLangUpdated') + '!',
-                                `${getMsg('appName')} ${getMsg('alert_willReplyIn')} `
-                                  + `${ replyLang || getMsg('alert_yourSysLang') }.`
+                                `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willReplyIn')} `
+                                  + `${ replyLang || browserAPI.getMsg('alert_yourSysLang') }.`
                             )
                             break
                         }
                     }
                 } else if (entryData.key == 'replyTopic') {
                     let replyTopic = await (await sitePrompt(getMsg('prompt_updateReplyTopic')
-                        + ' (' + getMsg('prompt_orEnter') + ' \'ALL\'):', config.replyTopic)).input
+                        + ' (' + browserAPI.getMsg('prompt_orEnter') + ' \'ALL\'):', config.replyTopic)).input
                     if (replyTopic != null) { // user didn't cancel
                         replyTopic = toTitleCase(replyTopic.toString()) // for menu/alert aesthetics
                         settings.save('replyTopic',
-                            !replyTopic || re_all.test(replyTopic) ? getMsg('menuLabel_all')
+                            !replyTopic || re_all.test(replyTopic) ? browserAPI.getMsg('menuLabel_all')
                                                                    : replyTopic)
-                        siteAlert(`${getMsg('alert_replyTopicUpdated')}!`,
-                            `${getMsg('appName')} ${getMsg('alert_willAnswer')} `
+                        siteAlert(`${browserAPI.getMsg('alert_replyTopicUpdated')}!`,
+                            `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willAnswer')} `
                                 + ( !replyTopic || re_all.test(replyTopic) ?
-                                         getMsg('alert_onAllTopics')
-                                    : `${getMsg('alert_onTopicOf')} ${replyTopic}`
+                                         browserAPI.getMsg('alert_onAllTopics')
+                                    : `${browserAPI.getMsg('alert_onTopicOf')} ${replyTopic}`
                                 ) + '!'
                         )
                     }
                 } else if (entryData.key == 'replyInterval') {
                     while (true) {
                         const replyInterval = await (await sitePrompt(
-                            `${getMsg('prompt_updateReplyInt')}:`, config.replyInterval)).input
+                            `${browserAPI.getMsg('prompt_updateReplyInt')}:`, config.replyInterval)).input
                         if (replyInterval == null) break // user cancelled so do nothing
                         else if (!isNaN(parseInt(replyInterval, 10)) && parseInt(replyInterval, 10) > 4) {
                             settings.save('replyInterval', parseInt(replyInterval, 10))
                             siteAlert(getMsg('alert_replyIntUpdated') + '!',
-                                getMsg('appName') + ' ' + getMsg('alert_willReplyEvery')
-                                + ' ' + replyInterval + ' ' + getMsg('unit_seconds') + '.')
+                                browserAPI.getMsg('appName') + ' ' + browserAPI.getMsg('alert_willReplyEvery')
+                                + ' ' + replyInterval + ' ' + browserAPI.getMsg('unit_seconds') + '.')
                             break
                         }
                     }
@@ -101,7 +101,6 @@
         return entry.div
     }
 
-    function getMsg(key) { return chrome.i18n.getMessage(key) }
 
     function notify(msg, pos = 'bottom-right') {
         if (config.notifDisabled && !msg.includes(getMsg('menuLabel_modeNotifs'))) return
@@ -180,7 +179,7 @@
         Object.entries(elemToLocalize.dataset).forEach(([dataAttr, dataVal]) => {
             if (!dataAttr.startsWith('locale')) return
             const propToLocalize = dataAttr[6].toLowerCase() + dataAttr.slice(7), // convert to valid DOM prop
-                  localizedTxt = dataVal.split(' ').map(key => getMsg(key) || key).join(' ')
+                  localizedTxt = dataVal.split(' ').map(key => browserAPI.getMsg(key) || key).join(' ')
             elemToLocalize[propToLocalize] = localizedTxt
         })
     )
@@ -198,7 +197,7 @@
         env.extensionWasDisabled = config.extensionDisabled
         masterToggle.switch.classList.toggle('on') ; settings.save('extensionDisabled', !config.extensionDisabled)
         Object.keys(sync).forEach(key => sync[key]()) // sync fade + storage to UI
-        notify(`${getMsg('appName')} 🧩 ${getMsg(`state_${ config.extensionDisabled ? 'off' : 'on' }`).toUpperCase()}`)
+        notify(`${browserAPI.getMsg('appName')} 🧩 ${browserAPI.getMsg(`state_${ config.extensionDisabled ? 'off' : 'on' }`).toUpperCase()}`)
     }
 
     // Create CHILD menu entries on chatgpt.com
@@ -279,7 +278,7 @@
         moreExt: { span: footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]') }
     }
     footerElems.chatgptjs.logo.parentNode.title = env.browser.displaysEnglish ? ''
-        : `${getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
+        : `${browserAPI.getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
     footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca'
                                    + '/assets/images/badges/powered-by-chatgpt.js.png'
     footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }

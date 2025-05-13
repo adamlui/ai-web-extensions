@@ -1,7 +1,7 @@
 (async () => {
 
     // Import JS resources
-    for (const resource of ['components/icons.js', 'lib/dom.js', 'lib/settings.js'])
+    for (const resource of ['components/icons.js', 'lib/browser.js', 'lib/dom.js', 'lib/settings.js'])
         await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -50,7 +50,6 @@
         return entry.div
     }
 
-    function getMsg(key) { return chrome.i18n.getMessage(key) }
 
     function notify(msg, pos = 'bottom-right') {
         if (config.notifDisabled && !msg.includes(getMsg('menuLabel_modeNotifs'))) return
@@ -119,7 +118,7 @@
         Object.entries(elemToLocalize.dataset).forEach(([dataAttr, dataVal]) => {
             if (!dataAttr.startsWith('locale')) return
             const propToLocalize = dataAttr[6].toLowerCase() + dataAttr.slice(7), // convert to valid DOM prop
-                  localizedTxt = dataVal.split(' ').map(key => getMsg(key) || key).join(' ')
+                  localizedTxt = dataVal.split(' ').map(key => browserAPI.getMsg(key) || key).join(' ')
             elemToLocalize[propToLocalize] = localizedTxt
         })
     )
@@ -137,7 +136,7 @@
         env.extensionWasDisabled = config.extensionDisabled
         masterToggle.switch.classList.toggle('on') ; settings.save('extensionDisabled', !config.extensionDisabled)
         Object.keys(sync).forEach(key => sync[key]()) // sync fade + storage to UI
-        notify(`${getMsg('appName')} 🧩 ${ getMsg(`state_${ config.extensionDisabled ? 'off' : 'on' }`).toUpperCase()}`)
+        notify(`${browserAPI.getMsg('appName')} 🧩 ${ browserAPI.getMsg(`state_${ config.extensionDisabled ? 'off' : 'on' }`).toUpperCase()}`)
     }
 
     // Create CHILD menu entries on chatgpt.com
@@ -218,7 +217,7 @@
         moreExt: { span: footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]') }
     }
     footerElems.chatgptjs.logo.parentNode.title = env.browser.displaysEnglish ? ''
-        : `${getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
+        : `${browserAPI.getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
     footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca'
                                    + '/assets/images/badges/powered-by-chatgpt.js.png'
     footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }

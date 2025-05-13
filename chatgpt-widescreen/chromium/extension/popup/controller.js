@@ -1,7 +1,7 @@
 (async () => {
 
     // Import JS resources
-    for (const resource of ['components/icons.js', 'lib/dom.js', 'lib/settings.js'])
+    for (const resource of ['components/icons.js', 'lib/browser.js', 'lib/dom.js', 'lib/settings.js'])
         await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -17,7 +17,7 @@
     // Import DATA
     ;({ app: window.app } = await chrome.storage.local.get('app'))
     ;({ sites: window.sites } = await chrome.storage.local.get('sites'))
-    app.name = env.browser.displaysEnglish ? app.name : getMsg('appName') // for shorter notifs
+    app.name = env.browser.displaysEnglish ? app.name : browserAPI.getMsg('appName') // for shorter notifs
 
     // Define FUNCTIONS
 
@@ -56,11 +56,11 @@
     }
 
     function extensionIsDisabled() { return !!( config.extensionDisabled || config[`${env.site}Disabled`] )}
-    function getMsg(key) { return chrome.i18n.getMessage(key) }
 
     function notify(msg, pos = 'bottom-right') {
-        if (config.notifDisabled && !new RegExp(`${getMsg('menuLabel_notifs')}|${getMsg('mode_toast')}`).test(msg))
-            return
+        if (config.notifDisabled &&
+            !new RegExp(`${browserAPI.getMsg('menuLabel_notifs')}|${browserAPI.getMsg('mode_toast')}`).test(msg))
+                return
         sendMsgToActiveTab('notify', { msg, pos })
     }
 
@@ -127,7 +127,7 @@
         Object.entries(elemToLocalize.dataset).forEach(([dataAttr, dataVal]) => {
             if (!dataAttr.startsWith('locale')) return
             const propToLocalize = dataAttr[6].toLowerCase() + dataAttr.slice(7), // convert to valid DOM prop
-                  localizedTxt = dataVal.split(' ').map(key => getMsg(key) || key).join(' ')
+                  localizedTxt = dataVal.split(' ').map(key => browserAPI.getMsg(key) || key).join(' ')
             elemToLocalize[propToLocalize] = localizedTxt
         })
     )
@@ -146,7 +146,7 @@
         masterToggle.switch.classList.toggle('on') ; settings.save('extensionDisabled', !config.extensionDisabled)
         Object.keys(sync).forEach(key => sync[key]()) // sync fade + storage to UI
         if (env.extensionWasDisabled ^ extensionIsDisabled()) notify(`${app.name} 🧩 ${
-            getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
+            browserAPI.getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
     }
 
     // Create CHILD menu entries on matched pages
@@ -189,13 +189,13 @@
         const ssEntry = {
             div: dom.create.elem('div', { class: 'menu-entry highlight-on-hover' }),
             switchLabelDiv: dom.create.elem('div', {
-                title: `${getMsg('helptip_run')} ${app.name} on ${sites[site].urls.homepage}`,
+                title: `${browserAPI.getMsg('helptip_run')} ${app.name} on ${sites[site].urls.homepage}`,
                 style: `display: flex ; height: 33px ; align-items: center ; flex-grow: 1 ;
                         margin-left: -2px ; padding-left: 2px /* fill .menu-entry left-padding */` }),
             switch: dom.create.elem('div', { class: 'toggle menu-icon' }),
             track: dom.create.elem('span', { class: 'track' }), label: dom.create.elem('span'),
             faviconDiv: dom.create.elem('div', {
-                title: `${getMsg('tooltip_goto')} https://${sites[site].urls.homepage}`,
+                title: `${browserAPI.getMsg('tooltip_goto')} https://${sites[site].urls.homepage}`,
                 class: 'menu-right-elem' }),
             favicon: dom.create.elem('img', { src: sites[site].urls.favicon, width: 15 }),
             openIcon: icons.create('open', { size: 18, fill: 'black' })
@@ -218,7 +218,7 @@
             if (env.site == site) { // fade/notify if setting of active site toggled
                 sync.fade()
                 if (env.extensionWasDisabled ^ extensionIsDisabled()) notify(`${app.name} 🧩 ${
-                    getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
+                    browserAPI.getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
             }
         }
         ssEntry.faviconDiv.onmouseenter = ssEntry.faviconDiv.onmouseleave = event =>
@@ -269,7 +269,7 @@
         moreExt: { span: footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]') }
     }
     footerElems.chatgptjs.logo.parentNode.title = env.browser.displaysEnglish ? ''
-        : `${getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
+        : `${browserAPI.getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
     footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca'
                                    + '/assets/images/badges/powered-by-chatgpt.js.png'
     footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
