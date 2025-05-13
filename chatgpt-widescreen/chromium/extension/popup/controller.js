@@ -231,7 +231,7 @@
         div: createMenuEntry({
             key: 'aboutEntry', symbol: '💡',
             label: `${settings.getMsg('menuLabel_about')}...`,
-            helptip: `${settings.getMsg('menuLabel_about')} ${settings.getMsg('appName')}`
+            helptip: `${settings.getMsg('menuLabel_about')} ${app.name}`
         }),
         ticker: {
             textGap: '&emsp;&emsp;&emsp;',
