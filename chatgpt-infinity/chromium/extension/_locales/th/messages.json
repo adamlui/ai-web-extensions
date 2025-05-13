@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ทั้งหมด" },
   "menuLabel_replyInt": { "message": "ช่วงเวลาตอบกลับ" },
   "menuLabel_about": { "message": "เกี่ยวกับ" },
+  "menuLabel_open": { "message": "เปิด" },
   "menuLabel_buyMeAcoffee": { "message": "ซื้อกาแฟให้ฉัน" },
   "menuLabel_donate": { "message": "โปรดส่งเงินบริจาค" },
   "menuLabel_extensionActive": { "message": "ส่วนขยายใช้งานอยู่" },

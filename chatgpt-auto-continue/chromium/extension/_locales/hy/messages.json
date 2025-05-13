@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Ավտոսանդուղք" },
   "menuLabel_modeNotifs": { "message": "Ծանուցումներ ռեժիմի մասին" },
   "menuLabel_about": { "message": "Մանրամասն" },
+  "menuLabel_open": { "message": "Բաց" },
   "menuLabel_buyMeAcoffee": { "message": "Գնեք սուրճ" },
   "menuLabel_donate": { "message": "Խնդրում ենք նվիրատվություն ուղարկել" },
   "menuLabel_extensionActive": { "message": "երկարաձգումը ակտիվ է" },

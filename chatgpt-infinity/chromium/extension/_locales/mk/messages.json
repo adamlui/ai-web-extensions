@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "СИТЕ" },
   "menuLabel_replyInt": { "message": "Интервал на одговор" },
   "menuLabel_about": { "message": "За" },
+  "menuLabel_open": { "message": "Отворен" },
   "menuLabel_buyMeAcoffee": { "message": "Купи ми кафе" },
   "menuLabel_donate": { "message": "Испратете донација" },
   "menuLabel_extensionActive": { "message": "продолжението е активно" },

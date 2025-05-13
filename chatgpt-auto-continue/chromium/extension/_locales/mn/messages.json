@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Авто-ролл" },
   "menuLabel_modeNotifs": { "message": "Горимын мэдэгдэл" },
   "menuLabel_about": { "message": "Бидний тухай" },
+  "menuLabel_open": { "message": "Нээлттэй" },
   "menuLabel_buyMeAcoffee": { "message": "Надад кофе худалдаж аваарай" },
   "menuLabel_donate": { "message": "Хандив илгээнэ үү" },
   "menuLabel_extensionActive": { "message": "өргөтгөл идэвхтэй" },

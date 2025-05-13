@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ÖSSZES" },
   "menuLabel_replyInt": { "message": "Válaszidőköz" },
   "menuLabel_about": { "message": "Ról ről" },
+  "menuLabel_open": { "message": "Nyitva" },
   "menuLabel_buyMeAcoffee": { "message": "Vegyél nekem egy kávét" },
   "menuLabel_donate": { "message": "Kérjük, küldjön adományt" },
   "menuLabel_extensionActive": { "message": "kiterjesztés aktív" },

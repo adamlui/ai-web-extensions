@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "ཆད་དུས་" },
   "menuLabel_replyInt": { "message": "ལོ་ལུགས་སྟོན་པ་དེའང་ནི་སྐྱེལ་བ་བཞག་སྟོན་" },
   "menuLabel_about": { "message": "ཐོབ་རྗེས་བཤེགས་གཉེན་" },
+  "menuLabel_open": { "message": "ཁ་ཕྱེ་བ" },
   "menuLabel_buyMeAcoffee": { "message": "ང་ལ་ཀོ་ཕི་ཞིག་གནང་རོགས་གནང་།" },
   "menuLabel_donate": { "message": "ཁྱོད་ཀྱིས་སྦྱིན་པ་གཏོང་འདོད་དམ །" },
   "menuLabel_extensionActive": { "message": "ལས་བྱེད་པའི་རིང་ཐུང་།" },

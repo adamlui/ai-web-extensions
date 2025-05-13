@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "자동스크롤" },
   "menuLabel_modeNotifs": { "message": "모드 알림" },
   "menuLabel_about": { "message": "소개" },
+  "menuLabel_open": { "message": "열기" },
   "menuLabel_buyMeAcoffee": { "message": "커피를 사주세요" },
   "menuLabel_donate": { "message": "기부금을 보내주세요" },
   "menuLabel_extensionActive": { "message": "확장 활성" },

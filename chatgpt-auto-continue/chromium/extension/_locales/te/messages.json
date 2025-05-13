@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "ఆటో-స్క్రోల్" },
   "menuLabel_modeNotifs": { "message": "మోడ్ నోటిఫికేషన్ ‌ లు" },
   "menuLabel_about": { "message": "గురించి" },
+  "menuLabel_open": { "message": "తెరువు" },
   "menuLabel_buyMeAcoffee": { "message": "నాకు కాఫీ కొనండి" },
   "menuLabel_donate": { "message": "దయచేసి విరాళం పంపండి" },
   "menuLabel_extensionActive": { "message": "పొడిగింపు యాక్టివ్ ‌ గా ఉంది" },

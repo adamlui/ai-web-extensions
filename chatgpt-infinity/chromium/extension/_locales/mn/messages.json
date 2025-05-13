@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "Бүгд" },
   "menuLabel_replyInt": { "message": "Хариултын интервал" },
   "menuLabel_about": { "message": "Тухай" },
+  "menuLabel_open": { "message": "Нээлттэй" },
   "menuLabel_buyMeAcoffee": { "message": "Надад кофе худалдаж аваарай" },
   "menuLabel_donate": { "message": "Хандив илгээнэ үү" },
   "menuLabel_extensionActive": { "message": "өргөтгөл идэвхтэй" },

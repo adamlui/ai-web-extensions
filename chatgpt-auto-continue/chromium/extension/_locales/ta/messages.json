@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "தானாக உருட்டவும்" },
   "menuLabel_modeNotifs": { "message": "பயன்முறை அறிவிப்புகள்" },
   "menuLabel_about": { "message": "பற்றி" },
+  "menuLabel_open": { "message": "திற" },
   "menuLabel_buyMeAcoffee": { "message": "எனக்கு ஒரு காபி வாங்குங்கள்" },
   "menuLabel_donate": { "message": "நன்கொடை அனுப்பவும்" },
   "menuLabel_extensionActive": { "message": "நீட்டிப்பு செயலில் உள்ளது" },

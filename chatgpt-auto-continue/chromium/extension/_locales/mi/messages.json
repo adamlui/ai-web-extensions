@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Auto-Scroll" },
   "menuLabel_modeNotifs": { "message": "Ngā tohu aratau" },
   "menuLabel_about": { "message": "Mō" },
+  "menuLabel_open": { "message": "Huaki" },
   "menuLabel_buyMeAcoffee": { "message": "Hokona mai he kawhe ki ahau" },
   "menuLabel_donate": { "message": "Tukua mai he takoha" },
   "menuLabel_extensionActive": { "message": "te whakawhānui i te mahi" },

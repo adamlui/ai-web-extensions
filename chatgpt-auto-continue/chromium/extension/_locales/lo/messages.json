@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "ສະເກຣມອັດຕະໂນມັດ" },
   "menuLabel_modeNotifs": { "message": "ການແຈ້ງເຕືອນໂໝດ" },
   "menuLabel_about": { "message": "ກ່ຽວກັບ" },
+  "menuLabel_open": { "message": "ເປີດ" },
   "menuLabel_buyMeAcoffee": { "message": "ຊື້ກາເຟໃຫ້ຂ້ອຍ" },
   "menuLabel_donate": { "message": "ສະນັ້ນ ໃຫ້ບໍລິຈາກ" },
   "menuLabel_extensionActive": { "message": "ການຂະຫຍາຍທີ່ໃຊ້ງານ" },

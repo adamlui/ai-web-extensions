@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Автоматично превъртане" },
   "menuLabel_modeNotifs": { "message": "Известия в режим" },
   "menuLabel_about": { "message": "Относно" },
+  "menuLabel_open": { "message": "Отворен" },
   "menuLabel_buyMeAcoffee": { "message": "Купи ми кафе" },
   "menuLabel_donate": { "message": "Моля, изпратете дарение" },
   "menuLabel_extensionActive": { "message": "разширението е активно" },

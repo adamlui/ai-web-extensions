@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "ഓട്ടോ-സ്ക്രോൾ" },
   "menuLabel_modeNotifs": { "message": "മോഡ് അറിയിപ്പുകൾ" },
   "menuLabel_about": { "message": "സംബന്ധിച്ച്" },
+  "menuLabel_open": { "message": "തുറക്കുക" },
   "menuLabel_buyMeAcoffee": { "message": "എനിക്ക് ഒരു കോഫി വാങ്ങുക" },
   "menuLabel_donate": { "message": "ദയവായി ഒരു സംഭാവന അയയ്ക്കുക" },
   "menuLabel_extensionActive": { "message": "വിപുലീകരണം സജീവമാണ്" },

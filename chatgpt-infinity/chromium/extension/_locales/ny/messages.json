@@ -11,6 +11,7 @@
   "menuLabel_all": { "message": "Zonse" },
   "menuLabel_replyInt": { "message": "Yankhani Interval" },
   "menuLabel_about": { "message": "Zokhudza" },
+  "menuLabel_open": { "message": "Tsegulani" },
   "menuLabel_buyMeAcoffee": { "message": "Ndigulireni Khofi" },
   "menuLabel_donate": { "message": "Chonde tumizani zopereka" },
   "menuLabel_extensionActive": { "message": "kukulitsa yogwira" },

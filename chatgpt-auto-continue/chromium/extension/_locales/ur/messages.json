@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "خود بخود اسکرول کریں" },
   "menuLabel_modeNotifs": { "message": "موڈ نوٹیفکیشنز" },
   "menuLabel_about": { "message": "متعلق" },
+  "menuLabel_open": { "message": "کھولیں" },
   "menuLabel_buyMeAcoffee": { "message": "میرے لئے کافی خریدیں" },
   "menuLabel_donate": { "message": "براہ کرم ایک عطیہ بھیجیں" },
   "menuLabel_extensionActive": { "message": "توسیع فعال ہے" },

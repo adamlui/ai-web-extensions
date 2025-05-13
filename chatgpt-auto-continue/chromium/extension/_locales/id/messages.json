@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Gulir Otomatis" },
   "menuLabel_modeNotifs": { "message": "Pemberitahuan Mode" },
   "menuLabel_about": { "message": "Ihwal" },
+  "menuLabel_open": { "message": "Buka" },
   "menuLabel_buyMeAcoffee": { "message": "Buy me a Coffee!" },
   "menuLabel_donate": { "message": "Kirimkan donasi" },
   "menuLabel_extensionActive": { "message": "ekstensi aktif" },

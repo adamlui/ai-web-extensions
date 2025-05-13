@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "自動スクロール" },
   "menuLabel_modeNotifs": { "message": "モード通知" },
   "menuLabel_about": { "message": "詳細" },
+  "menuLabel_open": { "message": "開く" },
   "menuLabel_buyMeAcoffee": { "message": "コーヒーをおごる" },
   "menuLabel_donate": { "message": "寄付を送ってください" },
   "menuLabel_extensionActive": { "message": "有効な内線番号" },
