@@ -257,19 +257,17 @@
         }))
 
     // Create/append COFEE entry
-    const coffeeEntry = createMenuEntry({
+    footer.before(createMenuEntry({
         key: 'coffeeEntry', type: 'link', symbol: '☕',
         label: settings.getMsg('menuLabel_buyMeAcoffee'), url: app.urls.donate['ko-fi']
-    })
-    footer.before(coffeeEntry)
+    }))
 
     // Create/append REVIEW entry
-    const reviewEntry = createMenuEntry({
+    footer.before(createMenuEntry({
         key: 'reviewEntry', type: 'link', symbol: '⭐',
         label: settings.getMsg('btnLabel_leaveReview'),
         url: app.urls.review[/edge|firefox/.exec(app.runtime.toLowerCase())?.[0] || 'chrome']
-    })
-    footer.before(reviewEntry)
+    }))
 
     // Init FOOTER
     const footerElems = { // left-to-right
