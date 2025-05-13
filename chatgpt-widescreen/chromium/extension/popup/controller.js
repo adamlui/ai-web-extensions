@@ -247,15 +247,6 @@
     aboutEntry.div.append(aboutEntry.ticker.span) ; footer.before(aboutEntry.div)
     aboutEntry.div.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
 
-    // Create/append CHATGPT entry
-    const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
-          chatgptURL = chrome.runtime.getManifest().content_scripts[0].matches.map(url => url.replace(/\/\*$/, ''))
-    if (!activeTab.url.includes(chatgptURL))
-        footer.before(createMenuEntry({
-            key: 'chatgptEntry', type: 'link', symbol: '🤖', url: chatgptURL, helptip: chatgptURL,
-            label: `${settings.getMsg('menuLabel_open')} ChatGPT`
-        }))
-
     // Create/append COFEE entry
     footer.before(createMenuEntry({
         key: 'coffeeEntry', type: 'link', symbol: '☕',
