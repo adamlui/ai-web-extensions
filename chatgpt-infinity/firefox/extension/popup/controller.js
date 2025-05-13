@@ -66,7 +66,7 @@
                         }
                     }
                 } else if (entryData.key == 'replyTopic') {
-                    let replyTopic = await (await siteprompt(browserAPI.getMsg('prompt_updateReplyTopic')
+                    let replyTopic = await (await sitePrompt(browserAPI.getMsg('prompt_updateReplyTopic')
                         + ' (' + browserAPI.getMsg('prompt_orEnter') + ' \'ALL\'):', config.replyTopic)).input
                     if (replyTopic != null) { // user didn't cancel
                         replyTopic = toTitleCase(replyTopic.toString()) // for menu/alert aesthetics
