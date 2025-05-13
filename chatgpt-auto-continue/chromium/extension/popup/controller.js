@@ -52,7 +52,7 @@
 
 
     function notify(msg, pos = 'bottom-right') {
-        if (config.notifDisabled && !msg.includes(getMsg('menuLabel_modeNotifs'))) return
+        if (config.notifDisabled && !msg.includes(browserAPI.getMsg('menuLabel_modeNotifs'))) return
         sendMsgToActiveTab('notify', { msg, pos })
     }
 

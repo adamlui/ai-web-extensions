@@ -58,7 +58,7 @@
                                 replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
                                     : toTitleCase(replyLang) )
                             settings.save('replyLanguage', replyLang || chrome.i18n.getUILanguage())
-                            siteAlert(getMsg('alert_replyLangUpdated') + '!',
+                            siteAlert(browserAPI.getMsg('alert_replyLangUpdated') + '!',
                                 `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willReplyIn')} `
                                   + `${ replyLang || browserAPI.getMsg('alert_yourSysLang') }.`
                             )
@@ -66,7 +66,7 @@
                         }
                     }
                 } else if (entryData.key == 'replyTopic') {
-                    let replyTopic = await (await sitePrompt(getMsg('prompt_updateReplyTopic')
+                    let replyTopic = await (await siteprompt(browserAPI.getMsg('prompt_updateReplyTopic')
                         + ' (' + browserAPI.getMsg('prompt_orEnter') + ' \'ALL\'):', config.replyTopic)).input
                     if (replyTopic != null) { // user didn't cancel
                         replyTopic = toTitleCase(replyTopic.toString()) // for menu/alert aesthetics
@@ -88,7 +88,7 @@
                         if (replyInterval == null) break // user cancelled so do nothing
                         else if (!isNaN(parseInt(replyInterval, 10)) && parseInt(replyInterval, 10) > 4) {
                             settings.save('replyInterval', parseInt(replyInterval, 10))
-                            siteAlert(getMsg('alert_replyIntUpdated') + '!',
+                            siteAlert(browserAPI.getMsg('alert_replyIntUpdated') + '!',
                                 browserAPI.getMsg('appName') + ' ' + browserAPI.getMsg('alert_willReplyEvery')
                                 + ' ' + replyInterval + ' ' + browserAPI.getMsg('unit_seconds') + '.')
                             break
@@ -103,7 +103,7 @@
 
 
     function notify(msg, pos = 'bottom-right') {
-        if (config.notifDisabled && !msg.includes(getMsg('menuLabel_modeNotifs'))) return
+        if (config.notifDisabled && !msg.includes(browserAPI.getMsg('menuLabel_modeNotifs'))) return
         sendMsgToActiveTab('notify', { msg, pos })
     }
 
