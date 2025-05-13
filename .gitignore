@@ -1,4 +1,4 @@
 .cache/
 node_modules/
-.eslintcache
 *.css.map
+.eslintcache
