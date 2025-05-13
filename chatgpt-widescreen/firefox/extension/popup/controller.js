@@ -264,7 +264,7 @@
 
     // Init FOOTER
     const footerElems = { // left-to-right
-        chatgptjs: { logo: footer.querySelector('.cjs-logo') },
+        chatgptjs: { logo: footer.querySelector('.chatgptjs-logo') },
         review: { span: footer.querySelector('span[data-locale-title="btnLabel_leaveReview"]') },
         coffee: { span: footer.querySelector('span[data-locale-title="menuLabel_buyMeAcoffee"]') },
         about: { span: footer.querySelector('span[data-locale-title="menuLabel_about appName"]') },
