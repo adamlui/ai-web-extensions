@@ -5,7 +5,7 @@
 <div align="center">
 
 <a href="https://ff.chatgptwidescreen.com/reviews">
-    <img alt="[Mozilla Firefox]" height=31 src="https://img.shields.io/amo/stars/chatgpt-widescreen?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></img></a>
+    <img alt="[Mozilla Add-ons Ratings]" height=31 src="https://img.shields.io/amo/stars/chatgpt-widescreen?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></img></a>
 <a href="https://ff.chatgptwidescreen.com">
     <img height=31 alt="[Mozilla Add-ons Store]" src="https://img.shields.io/amo/v/chatgpt-widescreen?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="../LICENSE.md">

@@ -18,7 +18,7 @@
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/Users-10,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.chatgptautocontinue.com/reviews?utm_source=github&utm_medium=referral&utm_content=chrome-rating-shield">
-    <img alt="[Google Chrome]" height=31 src="https://img.shields.io/chrome-web-store/stars/lbojnhaafilddefkdgmbplkafnckaoga?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></img></a>
+    <img alt="[Chrome Web Store Ratings]" height=31 src="https://img.shields.io/chrome-web-store/stars/lbojnhaafilddefkdgmbplkafnckaoga?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></img></a>
 <a href="../LICENSE.md">
     <img height=31 alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-fc4f2d.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-auto-continue">
