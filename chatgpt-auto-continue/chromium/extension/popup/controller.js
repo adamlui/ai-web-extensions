@@ -73,7 +73,7 @@
 
             // Menu elems
             document.querySelectorAll('.logo, .menu-title, .menu-entry').forEach((elem, idx) => {
-                if (/about|coffeeLink/.test(elem.id)) return // never disable About/Coffee entries
+                if (/about|coffee|review/.test(elem.id)) return // never disable link entries
                 elem.style.transition = config.extensionDisabled ? '' : 'opacity 0.15s ease-in'
                 setTimeout(() => elem.classList.toggle('disabled', config.extensionDisabled),
                     config.extensionDisabled ? 0 : idx *10) // fade-out abruptly, fade-in staggered
