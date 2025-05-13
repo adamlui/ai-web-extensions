@@ -80,7 +80,7 @@
 
             // Menu elems
             document.querySelectorAll('.logo, .menu-title, .menu-entry, .categorized-entries').forEach((elem, idx) => {
-                if (elem.id && ( document.querySelector(`#${elem.id}:has(> div.link)`) || elem.id == 'aboutEntry' )
+                if (elem.id && ( elem.matches(`#${elem.id}:has(> div.link)`) || elem.id == 'aboutEntry' )
                     || elem.closest('.categorized-entries')?.previousElementSibling?.id == 'siteSettings'
                 ) return // never disable Site Settings + link/About entries
                 elem.style.transition = extensionIsDisabled() ? '' : 'opacity 0.15s ease-in'
