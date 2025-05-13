@@ -101,7 +101,7 @@
   "btnLabel_download": { "message": "ኣውርድ" },
   "btnLabel_convo": { "message": "ዝርርብ " },
   "link_viewChanges": { "message": "ለውጢ ርኣዮ" },
-  "state_on": { "message": "o" },
+  "state_on": { "message": "דאָס" },
   "state_off": { "message": "ዝወጽ" },
   "state_no": { "message": "ኣይፋል" }
 }

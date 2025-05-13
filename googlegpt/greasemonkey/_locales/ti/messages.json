@@ -131,7 +131,7 @@
   "link_viewChanges": { "message": "ለውጢ ርአ" },
   "link_shareFeedback": { "message": "ግብረ መልሲ ምዝርጋሕ" },
   "prefix_exit": { "message": "ውጻእ" },
-  "state_on": { "message": "o" },
+  "state_on": { "message": "דאָס" },
   "state_off": { "message": "ዝወጽ" },
   "state_no": { "message": "ኣይፋል" }
 }

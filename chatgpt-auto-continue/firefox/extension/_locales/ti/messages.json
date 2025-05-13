@@ -2,7 +2,7 @@
   "appName": { "message": "ChatGPT Auto-Continue" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "መልሲ ChatGPT ምስ ተቛረጸ ፡ ብገዛእ ርእሱ መልሲ ምፍጣር ይቕጽል" },
-  "menuLabel_autoScroll": { "message": "Auto-Scroll" },
+  "menuLabel_autoScroll": { "message": "אויטאָ-סקראָל" },
   "menuLabel_modeNotifs": { "message": "ናይ ሞድ ኣፍልጦታት" },
   "menuLabel_about": { "message": "ብዛዕባ" },
   "menuLabel_open": { "message": "འབྱེད" },
@@ -16,7 +16,7 @@
   "about_poweredBy": { "message": "ብ" },
   "about_openSourceCode": { "message": "ክፉት ምንጪ ኮድ" },
   "about_latestChanges": { "message": "ናይ መወዳእታ ለውጥታት" },
-  "mode_autoContinue": { "message": "Auto-Continue" },
+  "mode_autoContinue": { "message": "אויטאָ-פאָרזעצן" },
   "helptip_autoScroll": { "message": "መልሲ ስለ ዝፈጥር ፡ ብገዛእ ርእሱ ናብ ታሕቲ ይሽየጥ" },
   "helptip_modeNotifs": { "message": "ኣብ እዋን ምትሕልላፍ ኣገባባት/ኣቀማምጣታት ኣፍልጦታት ኣርኢ" },
   "alert_updateAvail": { "message": "ዝዘመነ" },
@@ -46,6 +46,6 @@
   "btnLabel_dismiss": { "message": "ምጥፋእ" },
   "link_viewChanges": { "message": "ለውጢ ርአ" },
   "state_disabled": { "message": "ከምዘይሰርሕ ዝተገብረ" },
-  "state_on": { "message": "o" },
+  "state_on": { "message": "דאָס" },
   "state_off": { "message": "ዝወጽ" }
 }

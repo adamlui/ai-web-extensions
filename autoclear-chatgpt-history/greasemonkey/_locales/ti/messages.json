@@ -48,6 +48,6 @@
   "link_viewChanges": { "message": "ለውጢ ርአ" },
   "state_enabled": { "message": "ከምዝሰርሕ ዝተገብረ" },
   "state_disabled": { "message": "ከምዘይሰርሕ ዝተገብረ" },
-  "state_on": { "message": "o" },
+  "state_on": { "message": "דאָס" },
   "state_off": { "message": "ዝወጽ" }
 }
