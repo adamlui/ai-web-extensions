@@ -223,7 +223,6 @@
     footerElems.coffee.span.onclick = () => { open(app.urls.donate['ko-fi']) ; close() }
     footerElems.about.span.append(icons.create('questionMark', { width: 15, height: 13 }))
     footerElems.about.span.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
-    footerElems.moreExt = { span: footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]') }
     footerElems.moreExt.span.append(icons.create('plus'))
     footerElems.moreExt.span.onclick = () => { open(app.urls.relatedExtensions) ; close() }
 
