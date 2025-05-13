@@ -73,7 +73,8 @@
 
             // Menu elems
             document.querySelectorAll('.logo, .menu-title, .menu-entry').forEach((elem, idx) => {
-                if (/about|coffee|review/.test(elem.id)) return // never disable link entries
+                if (elem.id && ( document.querySelector(`#${elem.id}:has(> div.link)`) || elem.id == 'aboutEntry' ))
+                    return // never disable link/About entries
                 elem.style.transition = config.extensionDisabled ? '' : 'opacity 0.15s ease-in'
                 setTimeout(() => elem.classList.toggle('disabled', config.extensionDisabled),
                     config.extensionDisabled ? 0 : idx *10) // fade-out abruptly, fade-in staggered
@@ -168,7 +169,7 @@
     // Create/append ABOUT entry
     const aboutEntry = {
         div: createMenuEntry({
-            key: 'about', symbol: '💡',
+            key: 'aboutEntry', symbol: '💡',
             label: `${settings.getMsg('menuLabel_about')}...`,
             helptip: `${settings.getMsg('menuLabel_about')} ${settings.getMsg('appName')}`
         }),
@@ -188,14 +189,14 @@
 
     // Create/append COFEE entry
     const coffeeEntry = createMenuEntry({
-        key: 'coffeeLink', type: 'link', symbol: '☕',
+        key: 'coffeeEntry', type: 'link', symbol: '☕',
         label: settings.getMsg('menuLabel_buyMeAcoffee'), url: app.urls.donate['ko-fi']
     })
     footer.before(coffeeEntry)
 
     // Create/append REVIEW entry
     const reviewEntry = createMenuEntry({
-        key: 'reviewLink', type: 'link', symbol: '⭐',
+        key: 'reviewEntry', type: 'link', symbol: '⭐',
         label: settings.getMsg('btnLabel_leaveReview'),
         url: app.urls.review[/edge|firefox/.exec(app.runtime.toLowerCase())?.[0] || 'chrome']
     })
