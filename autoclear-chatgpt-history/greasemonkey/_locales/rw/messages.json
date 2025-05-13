@@ -14,6 +14,7 @@
   "about_version": { "message": "Umukoro" },
   "about_poweredBy": { "message": "Ku" },
   "about_openSourceCode": { "message": "Inkomoko Inyandikoporogaramu" },
+  "about_latestChanges": { "message": "Amahinduka" },
   "mode_autoclear": { "message": "&lt; Uburemere UTSINDAGIYE" },
   "helptip_clearNow": { "message": "Urutonde NONEAHA" },
   "helptip_toggleVis": { "message": "Mukomatanya in Umurongo wo ku mpande" },

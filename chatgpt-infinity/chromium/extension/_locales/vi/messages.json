@@ -20,6 +20,7 @@
   "about_version": { "message": "Phiên bản" },
   "about_poweredBy": { "message": "Cung cấp bởi" },
   "about_openSourceCode": { "message": "Nguồn mở" },
+  "about_latestChanges": { "message": "Thay đổi mới nhất" },
   "prompt_updateReplyLang": { "message": "Cập nhật ngôn ngữ trả lời" },
   "prompt_updateReplyTopic": { "message": "Cập nhật chủ đề trả lời" },
   "prompt_orEnter": { "message": "hoặc nhập" },

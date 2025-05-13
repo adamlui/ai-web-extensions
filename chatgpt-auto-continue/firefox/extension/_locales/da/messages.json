@@ -14,6 +14,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Drevet af" },
   "about_openSourceCode": { "message": "åben kilde" },
+  "about_latestChanges": { "message": "Seneste ændringer" },
   "mode_autoContinue": { "message": "Automatisk fortsætte" },
   "helptip_autoScroll": { "message": "Rul automatisk til bunden, efterhånden som svarene genereres" },
   "helptip_modeNotifs": { "message": "Vis meddelelser, når du skifter tilstande/indstillinger" },

@@ -21,6 +21,7 @@
   "about_version": { "message": "Versi" },
   "about_poweredBy": { "message": "Didukung oleh" },
   "about_openSourceCode": { "message": "Sumber Terbuka" },
+  "about_latestChanges": { "message": "Perubahan terbaru" },
   "scheme_light": { "message": "Lampu" },
   "scheme_dark": { "message": "Gelap" },
   "mode_proxy": { "message": "Mode Proxy" },

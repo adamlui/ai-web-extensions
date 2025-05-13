@@ -14,6 +14,7 @@
   "about_version": { "message": "Версиясы" },
   "about_poweredBy": { "message": "Тарабынан иштелип чыккан" },
   "about_openSourceCode": { "message": "Баштапкы код" },
+  "about_latestChanges": { "message": "Акыркы өзгөртүүлөр" },
   "prompt_updateInt": { "message": "Жаңыртуу интервалын жаңыртуу (секундада)" },
   "helptip_toggleVis": { "message": "Жанындагы тилкеде Auto-Refresh өтмөктү көрсөтүү" },
   "helptip_modeNotifs": { "message": "Режимдерди/параметрлерди алмаштырганда эскертүүлөрдү көрсөтүү" },

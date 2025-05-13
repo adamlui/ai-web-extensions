@@ -21,6 +21,7 @@
   "about_version": { "message": "Versiya" },
   "about_poweredBy": { "message": "Tomonidan qo'llab-quvvatlanadi" },
   "about_openSourceCode": { "message": "Ochiq kod" },
+  "about_latestChanges": { "message": "Eng so'nggi o'zgarishlar" },
   "scheme_light": { "message": "Yorqin" },
   "scheme_dark": { "message": "Qorong'u" },
   "mode_proxy": { "message": "Proksi rejimi" },

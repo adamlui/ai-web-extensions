@@ -14,6 +14,7 @@
   "about_version": { "message": "Versioon" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "lähtekood" },
+  "about_latestChanges": { "message": "Viimased muudatused" },
   "mode_autoclear": { "message": "Automaatne tühjendamine" },
   "helptip_clearNow": { "message": "Tühjenda kohe vestluse ajalugu" },
   "helptip_toggleVis": { "message": "Kuva külgribal lüliti Auto-Clear" },

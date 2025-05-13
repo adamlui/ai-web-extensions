@@ -21,6 +21,7 @@
   "about_version": { "message": "Versio" },
   "about_poweredBy": { "message": "funkciigita de" },
   "about_openSourceCode": { "message": "Fontkodo" },
+  "about_latestChanges": { "message": "Lastaj ŝanĝoj" },
   "scheme_light": { "message": "Lumiloj" },
   "scheme_dark": { "message": "Malhela" },
   "mode_proxy": { "message": "Prokurila moduso" },

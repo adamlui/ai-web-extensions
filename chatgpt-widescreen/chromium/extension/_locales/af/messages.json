@@ -31,6 +31,7 @@
   "about_version": { "message": "Weergawe" },
   "about_poweredBy": { "message": "Aangedryf deur" },
   "about_openSourceCode": { "message": "Oopbronkode" },
+  "about_latestChanges": { "message": "Jongste veranderinge" },
   "mode_widescreen": { "message": "Wye skerm" },
   "mode_fullWindow": { "message": "Vol-venster" },
   "mode_fullscreen": { "message": "Volskerm" },

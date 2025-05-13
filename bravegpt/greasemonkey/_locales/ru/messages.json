@@ -34,6 +34,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "На базе технологии" },
   "about_openSourceCode": { "message": "Открытый исходный код" },
+  "about_latestChanges": { "message": "Последние изменения" },
   "scheme_light": { "message": "Светлая" },
   "scheme_dark": { "message": "Тёмная" },
   "mode_proxy": { "message": "режим прокси" },

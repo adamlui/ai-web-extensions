@@ -31,6 +31,7 @@
   "about_version": { "message": "Vesen" },
   "about_poweredBy": { "message": "Ran long" },
   "about_openSourceCode": { "message": "Open sos kod" },
+  "about_latestChanges": { "message": "Ol nupela senis" },
   "mode_widescreen": { "message": "Bikpela skrin" },
   "mode_fullWindow": { "message": "Ful-Windo" },
   "mode_fullscreen": { "message": "Ful skrin" },

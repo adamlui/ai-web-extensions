@@ -14,6 +14,7 @@
   "about_version": { "message": "Bertsioa" },
   "about_poweredBy": { "message": "Teknologia" },
   "about_openSourceCode": { "message": "Kode ireki" },
+  "about_latestChanges": { "message": "Azken aldaketak" },
   "mode_autoContinue": { "message": "Jarraitu automatikoki" },
   "helptip_autoScroll": { "message": "Joan automatikoki behealdera erantzunak sortzen ari diren heinean" },
   "helptip_modeNotifs": { "message": "Erakutsi jakinarazpenak moduak/ezarpenak aldatzean" },

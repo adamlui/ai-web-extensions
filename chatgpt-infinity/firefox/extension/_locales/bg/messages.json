@@ -20,6 +20,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "Създадено от" },
   "about_openSourceCode": { "message": "Отворен код" },
+  "about_latestChanges": { "message": "Последни промени" },
   "prompt_updateReplyLang": { "message": "Актуализиране на езика за отговор" },
   "prompt_updateReplyTopic": { "message": "Актуализиране на темата за отговор" },
   "prompt_orEnter": { "message": "или въведете" },

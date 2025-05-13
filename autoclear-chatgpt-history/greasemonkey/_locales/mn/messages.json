@@ -14,6 +14,7 @@
   "about_version": { "message": "Хувилбар" },
   "about_poweredBy": { "message": "ИЛЧЛЭГЧ" },
   "about_openSourceCode": { "message": "Нээлттэй Эх сурвалж" },
+  "about_latestChanges": { "message": "Сүүлийн өөрчлөлтүүд" },
   "mode_autoclear": { "message": "Авто Авто" },
   "helptip_clearNow": { "message": "Чатын түүхийг одоо арилгах" },
   "helptip_toggleVis": { "message": "Хажуугийн цонхонд авто машины шилжилтийг харуулах" },

@@ -21,6 +21,7 @@
   "about_version": { "message": "ვერსია" },
   "about_poweredBy": { "message": "აგებულია KDE-ზე" },
   "about_openSourceCode": { "message": "საწყისი კოდი" },
+  "about_latestChanges": { "message": "Ბოლო ცვლილებები" },
   "scheme_light": { "message": "მცირედი" },
   "scheme_dark": { "message": "ბნელი" },
   "mode_proxy": { "message": "Პროქსი რეჟიმი" },

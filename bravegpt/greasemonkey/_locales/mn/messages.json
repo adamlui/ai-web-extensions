@@ -34,6 +34,7 @@
   "about_version": { "message": "Хувилбар" },
   "about_poweredBy": { "message": "ИЛЧЛЭГЧ" },
   "about_openSourceCode": { "message": "Нээлттэй Эх сурвалж" },
+  "about_latestChanges": { "message": "Сүүлийн өөрчлөлтүүд" },
   "scheme_light": { "message": "гэрэл" },
   "scheme_dark": { "message": "Харанхуй" },
   "mode_proxy": { "message": "Proxy Горим" },

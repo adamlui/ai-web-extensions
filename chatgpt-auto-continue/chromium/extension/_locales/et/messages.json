@@ -14,6 +14,7 @@
   "about_version": { "message": "Versioon" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "lähtekood" },
+  "about_latestChanges": { "message": "Viimased muudatused" },
   "mode_autoContinue": { "message": "Automaatne jätkamine" },
   "helptip_autoScroll": { "message": "Kui vastuseid genereeritakse, keri automaatselt alla" },
   "helptip_modeNotifs": { "message": "Kuva teated režiimide/seadete vahetamisel" },

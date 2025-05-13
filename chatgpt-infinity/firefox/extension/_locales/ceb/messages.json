@@ -20,6 +20,7 @@
   "about_version": { "message": "Bersyon" },
   "about_poweredBy": { "message": "Gipadagan sa" },
   "about_openSourceCode": { "message": "Gigikana sa kodigo" },
+  "about_latestChanges": { "message": "Pinakabag-o nga mga pagbag-o" },
   "prompt_updateReplyLang": { "message": "Usbongi ang lengguwahe sa tubag" },
   "prompt_updateReplyTopic": { "message": "Usbongi ang topiko sa tubag" },
   "prompt_orEnter": { "message": "o isulat" },

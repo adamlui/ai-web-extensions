@@ -11,6 +11,7 @@
   "about_version": { "message": "ಆವೃತ್ತಿ" },
   "about_poweredBy": { "message": "ಸಾಮರ್ಥ್ಯ ಇವರಿಂದ" },
   "about_openSourceCode": { "message": "ಓಪನ್ ಸೋರ್ಸ್ ಕೋಡ್" },
+  "about_latestChanges": { "message": "ಇತ್ತೀಚಿನ ಬದಲಾವಣೆಗಳು" },
   "mode_autoTalk": { "message": "ಆಟೋ-ಟಾಕ್" },
   "helptip_toggleVis": { "message": "ಸೈಡ್‌ಬಾರ್‌ನಲ್ಲಿ ಆಟೋ-ಟಾಕ್ ಟಾಗಲ್ ತೋರಿಸಿ" },
   "alert_updateAvail": { "message": "ಹೊಸ ಅಪ್ಡೇಟ್ ಲಭ್ಯವಿದೆ" },

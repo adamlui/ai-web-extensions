@@ -20,6 +20,7 @@
   "about_version": { "message": "པར་གཞི།" },
   "about_poweredBy": { "message": "དྲ་ཚིག་བཟོ་མཁན།" },
   "about_openSourceCode": { "message": "ཁ་ཕྱེ་བའི་ཁ་བྱང་།" },
+  "about_latestChanges": { "message": "མཐའ་མའི་འགྱུར་ཁུངས །" },
   "prompt_updateReplyLang": { "message": "ལོ་ལུགས་ཀླད་གྲིས་སྟོན་པ་བཞག་སྟོན་" },
   "prompt_updateReplyTopic": { "message": "ལོ་ལུགས་སྟོན་པ་གསར་འོས་བཞག་སྟོན་" },
   "prompt_orEnter": { "message": "ངེས་དོན་པ་ལེགས་ཀྱང་ནི་ཐུགས་སྒྲིགས་" },

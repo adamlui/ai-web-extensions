@@ -11,6 +11,7 @@
   "about_version": { "message": "പതിപ്പ്" },
   "about_poweredBy": { "message": "പിന്തുണയ്ക്കുന്നത്" },
   "about_openSourceCode": { "message": "ഓപ്പൺ സോഴ്സ് കോഡ്" },
+  "about_latestChanges": { "message": "ഏറ്റവും പുതിയ മാറ്റങ്ങൾ" },
   "mode_autoTalk": { "message": "ഓട്ടോ-ടോക്ക്" },
   "helptip_toggleVis": { "message": "സൈഡ്ബാറിൽ ഓട്ടോ-ടോക്ക് ടോഗിൾ കാണിക്കുക" },
   "alert_updateAvail": { "message": " അപ്‌ഡേറ്റ് ലഭ്യമാണ്" },

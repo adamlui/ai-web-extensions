@@ -34,6 +34,7 @@
   "about_version": { "message": "Верзија" },
   "about_poweredBy": { "message": "Поддржано од" },
   "about_openSourceCode": { "message": "Код со отворен код" },
+  "about_latestChanges": { "message": "Најнови промени" },
   "scheme_light": { "message": "Светлина" },
   "scheme_dark": { "message": "Темна" },
   "mode_proxy": { "message": "Режим на прокси" },

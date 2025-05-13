@@ -14,6 +14,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "На базе технологии" },
   "about_openSourceCode": { "message": "Открытый исходный код" },
+  "about_latestChanges": { "message": "Последние изменения" },
   "mode_autoContinue": { "message": "Автопродление" },
   "helptip_autoScroll": { "message": "Автоматически прокручивать вниз по мере генерации ответов" },
   "helptip_modeNotifs": { "message": "Показывать уведомления при переключении режимов/настроек" },

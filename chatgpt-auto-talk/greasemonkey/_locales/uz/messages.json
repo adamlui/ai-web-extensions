@@ -11,6 +11,7 @@
   "about_version": { "message": "Versiya" },
   "about_poweredBy": { "message": "Tomonidan qo'llab-quvvatlanadi" },
   "about_openSourceCode": { "message": "Ochiq kod" },
+  "about_latestChanges": { "message": "Eng so'nggi o'zgarishlar" },
   "mode_autoTalk": { "message": "Avtomatik suhbat" },
   "helptip_toggleVis": { "message": "Yon panelda avtomatik gaplashish tugmachasini ko'rsatish" },
   "alert_updateAvail": { "message": "Mavjud yangilanishlar" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "ຮຸ່ນ" },
   "about_poweredBy": { "message": "ຂັບເຄື່ອນໂດຍ" },
   "about_openSourceCode": { "message": "ລະຫັດແຫຼ່ງເປີດ" },
+  "about_latestChanges": { "message": "ການປ່ຽນແປງຫຼ້າສຸດ" },
   "prompt_updateInt": { "message": "ອັບເດດໄລຍະເວລາໂຫຼດຂໍ້ມູນຄືນໃໝ່ (ເປັນວິນາທີ)" },
   "helptip_toggleVis": { "message": "ສະແດງ Auto-Refresh toggle ໃນແຖບດ້ານຂ້າງ" },
   "helptip_modeNotifs": { "message": "ສະແດງການແຈ້ງເຕືອນເມື່ອປິດການໃຊ້ງານໂໝດ/ການຕັ້ງຄ່າ" },

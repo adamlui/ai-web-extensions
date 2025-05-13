@@ -21,6 +21,7 @@
   "about_version": { "message": "Uhlelo" },
   "about_poweredBy": { "message": "Ixhaswa yi" },
   "about_openSourceCode": { "message": "Vula ikhodi yomthombo" },
+  "about_latestChanges": { "message": "Izinguquko zakamuva" },
   "scheme_light": { "message": "ngihamba ekukhanyeni kukankulunkulu" },
   "scheme_dark": { "message": "Okumnyama" },
   "mode_proxy": { "message": "Imodi Yombambeli" },

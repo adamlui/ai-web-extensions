@@ -31,6 +31,7 @@
   "about_version": { "message": "Uhlelo" },
   "about_poweredBy": { "message": "Ixhaswa yi" },
   "about_openSourceCode": { "message": "Vula ikhodi yomthombo" },
+  "about_latestChanges": { "message": "Izinguquko zakamuva" },
   "mode_widescreen": { "message": "Ubuso besiga-nyezi obubanzi" },
   "mode_fullWindow": { "message": "Iwindi eligcwele" },
   "mode_fullscreen": { "message": "Isihenqo esigcwele" },

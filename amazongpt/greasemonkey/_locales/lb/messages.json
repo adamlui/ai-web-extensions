@@ -21,6 +21,7 @@
   "about_version": { "message": "Versioun" },
   "about_poweredBy": { "message": "Bereetgestallt vun" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "Neist Ännerungen" },
   "scheme_light": { "message": "Liicht" },
   "scheme_dark": { "message": "Däischter" },
   "mode_proxy": { "message": "Proxy- Modus" },

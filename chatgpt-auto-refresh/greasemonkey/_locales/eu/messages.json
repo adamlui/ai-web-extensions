@@ -14,6 +14,7 @@
   "about_version": { "message": "Bertsioa" },
   "about_poweredBy": { "message": "Teknologia" },
   "about_openSourceCode": { "message": "Kode ireki" },
+  "about_latestChanges": { "message": "Azken aldaketak" },
   "prompt_updateInt": { "message": "Eguneratu freskatze tartea (segundotan)" },
   "helptip_toggleVis": { "message": "Erakutsi Freskatze automatikoa etengailua alboko barran" },
   "helptip_modeNotifs": { "message": "Erakutsi jakinarazpenak moduak/ezarpenak aldatzean" },

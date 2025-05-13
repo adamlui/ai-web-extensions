@@ -14,6 +14,7 @@
   "about_version": { "message": "Verze" },
   "about_poweredBy": { "message": "Běží na" },
   "about_openSourceCode": { "message": "Otevřený zdrojový kód." },
+  "about_latestChanges": { "message": "Poslední změny" },
   "prompt_updateInt": { "message": "Aktualizovat interval obnovování (v sekundách)" },
   "helptip_toggleVis": { "message": "Zobrazit přepínač Automatické obnovení v postranním panelu" },
   "helptip_modeNotifs": { "message": "Zobrazit oznámení při přepínání režimů/nastavení" },

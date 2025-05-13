@@ -14,6 +14,7 @@
   "about_version": { "message": "Phiên bản" },
   "about_poweredBy": { "message": "Được hỗ trợ bởi" },
   "about_openSourceCode": { "message": "Nguồn mở" },
+  "about_latestChanges": { "message": "Thay đổi mới nhất" },
   "prompt_updateInt": { "message": "Cập nhật khoảng thời gian làm mới (tính bằng giây)" },
   "helptip_toggleVis": { "message": "Hiển thị chuyển đổi Tự động làm mới trong thanh bên" },
   "helptip_modeNotifs": { "message": "Hiển thị thông báo khi chuyển đổi chế độ/cài đặt" },

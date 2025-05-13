@@ -20,6 +20,7 @@
   "about_version": { "message": "Versioun" },
   "about_poweredBy": { "message": "Bereetgestallt vun" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "Neist Ännerungen" },
   "prompt_updateReplyLang": { "message": "Äntwertsprooch aktualiséieren" },
   "prompt_updateReplyTopic": { "message": "Äntwerten op d'Thema aktualiséieren" },
   "prompt_orEnter": { "message": "oder aginn" },

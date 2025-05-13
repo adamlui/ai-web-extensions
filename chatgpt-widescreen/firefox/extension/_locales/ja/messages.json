@@ -31,6 +31,7 @@
   "about_version": { "message": "バージョン" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "最新の変更" },
   "mode_widescreen": { "message": "ワイドスクリーンモード" },
   "mode_fullWindow": { "message": "フルウィンドウモード" },
   "mode_fullscreen": { "message": "フルスクリーンモード" },

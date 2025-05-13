@@ -31,6 +31,7 @@
   "about_version": { "message": "Versiyon" },
   "about_poweredBy": { "message": "Destek" },
   "about_openSourceCode": { "message": "Açık kaynak kodu" },
+  "about_latestChanges": { "message": "Son Değişiklikler:" },
   "mode_widescreen": { "message": "-Geniş ekran" },
   "mode_fullWindow": { "message": "Tam Pencere" },
   "mode_fullscreen": { "message": "Tam ekran" },

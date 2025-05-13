@@ -34,6 +34,7 @@
   "about_version": { "message": "Asent" },
   "about_poweredBy": { "message": "S-aql s" },
   "about_openSourceCode": { "message": "Tangalt taɣbalut" },
+  "about_latestChanges": { "message": "Isbeddilen aneggaru" },
   "scheme_light": { "message": "Ayyur" },
   "scheme_dark": { "message": "Tajlilit" },
   "mode_proxy": { "message": "Tanmirt Proxy" },

@@ -31,6 +31,7 @@
   "about_version": { "message": "Fersiwn" },
   "about_poweredBy": { "message": "Wedi'i gynnal gan" },
   "about_openSourceCode": { "message": "Cod ffynhonnell" },
+  "about_latestChanges": { "message": "Newidiadau diweddaraf" },
   "mode_widescreen": { "message": "Sgrîn lydan" },
   "mode_fullWindow": { "message": "Ffenestr - lawn" },
   "mode_fullscreen": { "message": "Sgrin llawn" },

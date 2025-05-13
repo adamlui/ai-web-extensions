@@ -34,6 +34,7 @@
   "about_version": { "message": "වෙළුම" },
   "about_poweredBy": { "message": "විසින් බල ගැන්වී ඇත" },
   "about_openSourceCode": { "message": "විවෘත කේතය" },
+  "about_latestChanges": { "message": "නවතම වෙනස්කම්" },
   "scheme_light": { "message": "ආලෝකය" },
   "scheme_dark": { "message": "අඳුරු" },
   "mode_proxy": { "message": "ප් ‍ රොක්සි ප් ‍ රකාරය" },

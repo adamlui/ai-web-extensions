@@ -20,6 +20,7 @@
   "about_version": { "message": "وەشان" },
   "about_poweredBy": { "message": "پشتگیریکراو لە لایەن" },
   "about_openSourceCode": { "message": "Koda çavkanî" },
+  "about_latestChanges": { "message": "Guhertinên dawî" },
   "prompt_updateReplyLang": { "message": "نوێکردنەوەی زمانی وەرزیی پاسخ" },
   "prompt_updateReplyTopic": { "message": "نوێکردنەوەی بابەتی وەرزیی پاسخ" },
   "prompt_orEnter": { "message": "یان تایبەتی بکە" },

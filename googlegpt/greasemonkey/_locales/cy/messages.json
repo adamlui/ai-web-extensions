@@ -34,6 +34,7 @@
   "about_version": { "message": "Fersiwn" },
   "about_poweredBy": { "message": "Wedi'i gynnal gan" },
   "about_openSourceCode": { "message": "Cod ffynhonnell" },
+  "about_latestChanges": { "message": "Newidiadau diweddaraf" },
   "scheme_light": { "message": "Ysgafn" },
   "scheme_dark": { "message": "Tywyll" },
   "mode_proxy": { "message": "Modd Dirprwy" },

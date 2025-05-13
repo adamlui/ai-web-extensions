@@ -20,6 +20,7 @@
   "about_version": { "message": "Tatau" },
   "about_poweredBy": { "message": "Fakalele ʻe he" },
   "about_openSourceCode": { "message": "Fakaava ʻa e kouti maʻuʻanga tokoni" },
+  "about_latestChanges": { "message": "Ngaahi liliu fakamuimuitaha" },
   "prompt_updateReplyLang": { "message": "Fakapau'i lea fakautu" },
   "prompt_updateReplyTopic": { "message": "Fakapau'i lea faka'ilo" },
   "prompt_orEnter": { "message": "pe fakahu heni" },

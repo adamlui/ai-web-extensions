@@ -11,6 +11,7 @@
   "about_version": { "message": "Tionndadh" },
   "about_poweredBy": { "message": "Le cumhachd" },
   "about_openSourceCode": { "message": "Bun-tùs a' chod" },
+  "about_latestChanges": { "message": "Na h - atharraichean as ùire" },
   "mode_autoTalk": { "message": "A 'bruidhinn gu fèin - obrachail" },
   "helptip_toggleVis": { "message": "Seall toglaig gu fèin - obrachail sa bhàr - taoibh" },
   "alert_updateAvail": { "message": "Chan eil ùrachadh ri fhaighinn" },

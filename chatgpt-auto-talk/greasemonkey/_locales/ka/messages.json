@@ -11,6 +11,7 @@
   "about_version": { "message": "ვერსია" },
   "about_poweredBy": { "message": "აგებულია KDE-ზე" },
   "about_openSourceCode": { "message": "საწყისი კოდი" },
+  "about_latestChanges": { "message": "Ბოლო ცვლილებები" },
   "mode_autoTalk": { "message": "Ავტომატური საუბარი" },
   "helptip_toggleVis": { "message": "Გვერდითა ზოლში ავტომატური საუბრის გადართვის ჩვენება" },
   "alert_updateAvail": { "message": "ხელმისაწვდომია განახლება" },

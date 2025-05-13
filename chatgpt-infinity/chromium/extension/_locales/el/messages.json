@@ -20,6 +20,7 @@
   "about_version": { "message": "Έκδοση" },
   "about_poweredBy": { "message": "Με την υποστήριξη" },
   "about_openSourceCode": { "message": "Ανοιχτός κώδικας." },
+  "about_latestChanges": { "message": "Τελευταίες αλλαγές" },
   "prompt_updateReplyLang": { "message": "Ενημέρωση γλώσσας απάντησης" },
   "prompt_updateReplyTopic": { "message": "Ενημέρωση θέματος απάντησης" },
   "prompt_orEnter": { "message": "ή εισάγετε" },

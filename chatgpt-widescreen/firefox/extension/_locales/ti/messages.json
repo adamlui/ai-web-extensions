@@ -31,6 +31,7 @@
   "about_version": { "message": "መበል" },
   "about_poweredBy": { "message": "ብ" },
   "about_openSourceCode": { "message": "ክፉት ምንጪ ኮድ" },
+  "about_latestChanges": { "message": "ናይ መወዳእታ ለውጥታት" },
   "mode_widescreen": { "message": "ሰፊሕ ስክሪን" },
   "mode_fullWindow": { "message": "ምሉእ ዊንዶው" },
   "mode_fullscreen": { "message": "ምሉእ ስክሪን" },

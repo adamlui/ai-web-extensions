@@ -14,6 +14,7 @@
   "about_version": { "message": "આવૃત્તિ" },
   "about_poweredBy": { "message": "દ્વારા સંચાલિત" },
   "about_openSourceCode": { "message": "સ્ત્રોત કોડ" },
+  "about_latestChanges": { "message": "તાજેતરના ફેરફારો" },
   "prompt_updateInt": { "message": "રિફ્રેશ અંતરાળ અપડેટ કરો (સેકન્ડમાં)" },
   "helptip_toggleVis": { "message": "સાઇડબારમાં આપોઆપ-રિફ્રેશ ટૉગલ બતાવો" },
   "helptip_modeNotifs": { "message": "જ્યારે ટૉગલિંગ મોડ્સ/સેટિંગ્સ હોય ત્યારે સૂચનાઓ બતાવો" },

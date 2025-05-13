@@ -31,6 +31,7 @@
   "about_version": { "message": "Versión" },
   "about_poweredBy": { "message": "Desarrollado por" },
   "about_openSourceCode": { "message": "Cola ciega" },
+  "about_latestChanges": { "message": "Últimos cambios" },
   "mode_widescreen": { "message": "Pantalla amplia" },
   "mode_fullWindow": { "message": "Modo de ventana completa" },
   "mode_fullscreen": { "message": "Pantalla completa" },

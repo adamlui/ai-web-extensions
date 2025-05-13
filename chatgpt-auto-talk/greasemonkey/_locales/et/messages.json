@@ -11,6 +11,7 @@
   "about_version": { "message": "Versioon" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "lähtekood" },
+  "about_latestChanges": { "message": "Viimased muudatused" },
   "mode_autoTalk": { "message": "Automaatne rääkimine" },
   "helptip_toggleVis": { "message": "Näita külgribal automaatse rääkimise lülitit" },
   "alert_updateAvail": { "message": "Saadaval on uuendus" },

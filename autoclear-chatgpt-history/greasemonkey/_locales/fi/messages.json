@@ -14,6 +14,7 @@
   "about_version": { "message": "Versio" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "avoin lähdekoodi" },
+  "about_latestChanges": { "message": "Viimeisimmät muutokset" },
   "mode_autoclear": { "message": "Automaattinen tyhjennys" },
   "helptip_clearNow": { "message": "Tyhjennä chat-historia nyt" },
   "helptip_toggleVis": { "message": "Näytä Automaattinen tyhjennys -kytkin sivupalkissa" },

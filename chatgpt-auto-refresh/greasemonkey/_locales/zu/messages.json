@@ -14,6 +14,7 @@
   "about_version": { "message": "Uhlelo" },
   "about_poweredBy": { "message": "Ixhaswa yi" },
   "about_openSourceCode": { "message": "Vula ikhodi yomthombo" },
+  "about_latestChanges": { "message": "Izinguquko zakamuva" },
   "prompt_updateInt": { "message": "Buyekeza isikhawu sokuvuselela (ngemizuzwana)" },
   "helptip_toggleVis": { "message": "Bonisa Ukuguqula kabusha okuzenzakalelayo kubha eseceleni" },
   "helptip_modeNotifs": { "message": "Bonisa izaziso lapho kuguqulwa izindlela/amasethingi" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "Versija" },
   "about_poweredBy": { "message": "Izstrādāts" },
   "about_openSourceCode": { "message": "Atklātais pirmkods" },
+  "about_latestChanges": { "message": "Jaunākās izmaiņas" },
   "mode_autoclear": { "message": "Automātiskā dzēšana" },
   "helptip_clearNow": { "message": "Notīrīt tērzēšanas vēsturi tūlīt" },
   "helptip_toggleVis": { "message": "Rādīt automātiskās notīrīšanas pārslēgu sānjoslā" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "الإصدار" },
   "about_poweredBy": { "message": "يستخدم" },
   "about_openSourceCode": { "message": "الشفرة المفتوحة المصدر" },
+  "about_latestChanges": { "message": "آخر التغييرات" },
   "prompt_updateInt": { "message": "تحديث فاصل التحديث (بالثواني)" },
   "helptip_toggleVis": { "message": "عرض تبديل التحديث التلقائي في الشريط الجانبي" },
   "helptip_modeNotifs": { "message": "عرض الإشعارات عند تبديل الأوضاع/الإعدادات" },

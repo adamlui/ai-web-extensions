@@ -14,6 +14,7 @@
   "about_version": { "message": "Tok Pisin" },
   "about_poweredBy": { "message": "Em i gat bikpela strong" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Ol nupela senis" },
   "mode_autoclear": { "message": "Autoklear" },
   "helptip_clearNow": { "message": "Toksave long ol samting i bin kamap long bipo" },
   "helptip_toggleVis": { "message": "Toksave long ol samting i kamap long hap bilong en" },

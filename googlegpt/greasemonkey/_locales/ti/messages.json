@@ -34,6 +34,7 @@
   "about_version": { "message": "መበል" },
   "about_poweredBy": { "message": "ብ" },
   "about_openSourceCode": { "message": "ክፉት ምንጪ ኮድ" },
+  "about_latestChanges": { "message": "ናይ መወዳእታ ለውጥታት" },
   "scheme_light": { "message": "ብርሃን" },
   "scheme_dark": { "message": "ጸሊም" },
   "mode_proxy": { "message": "ፕሮክሲ ሞድ" },

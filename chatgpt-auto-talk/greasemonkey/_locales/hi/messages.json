@@ -11,6 +11,7 @@
   "about_version": { "message": "संस्करण" },
   "about_poweredBy": { "message": "...द्वारा पावरशुदा" },
   "about_openSourceCode": { "message": "सोर्स कोड" },
+  "about_latestChanges": { "message": "ताज़ा बदलाव" },
   "mode_autoTalk": { "message": "ऑटो - टॉक" },
   "helptip_toggleVis": { "message": "साइडबार में ऑटो - टॉक टॉगल दिखाएँ" },
   "alert_updateAvail": { "message": "अद्यतन उपलब्ध है" },

@@ -11,6 +11,7 @@
   "about_version": { "message": "Versiune" },
   "about_poweredBy": { "message": "Operat de" },
   "about_openSourceCode": { "message": "Cod cu sursă deschisă." },
+  "about_latestChanges": { "message": "Cele mai recente modificări" },
   "mode_autoTalk": { "message": "Vorbire automată" },
   "helptip_toggleVis": { "message": "Afișați comutarea Auto-Talk în bara laterală" },
   "alert_updateAvail": { "message": "Actualizare disponibilă" },

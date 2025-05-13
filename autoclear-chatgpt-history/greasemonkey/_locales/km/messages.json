@@ -14,6 +14,7 @@
   "about_version": { "message": "លេខជំនាន់កម្មវិធី" },
   "about_poweredBy": { "message": "ដំណើរការដោយ" },
   "about_openSourceCode": { "message": "កូដ​ដើម" },
+  "about_latestChanges": { "message": "ការផ្លាស់ប្តូរចុងក្រោយបំផុត" },
   "mode_autoclear": { "message": "រៀនដោយស្វ័យប្រវត្តិ" },
   "helptip_clearNow": { "message": "សម្អាតប្រវត្តិនៃការជជែកកំសាន្តឥឡូវនេះ" },
   "helptip_toggleVis": { "message": "បង្ហាញប៊ូតុងបិទបើកដោយស្វ័យប្រវត្តិនៅក្នុងរបារចំហៀង" },

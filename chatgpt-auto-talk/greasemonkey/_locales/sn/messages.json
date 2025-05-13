@@ -11,6 +11,7 @@
   "about_version": { "message": "Vhezheni" },
   "about_poweredBy": { "message": "Inofambiswa ne" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Shanduko dzichangoburwa" },
   "mode_autoTalk": { "message": "Auto-Kutaura" },
   "helptip_toggleVis": { "message": "Ratidza Auto-Talk toggle mu sidebar" },
   "alert_updateAvail": { "message": "Zadzisa zviripo" },

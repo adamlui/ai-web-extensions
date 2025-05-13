@@ -14,6 +14,7 @@
   "about_version": { "message": "Tatau" },
   "about_poweredBy": { "message": "Fakalele ʻe he" },
   "about_openSourceCode": { "message": "Fakaava ʻa e kouti maʻuʻanga tokoni" },
+  "about_latestChanges": { "message": "Ngaahi liliu fakamuimuitaha" },
   "mode_autoContinue": { "message": "Hoko atu e meʻalele" },
   "helptip_autoScroll": { "message": "ʻOtometiki pe hono scroll ki lalo ʻo hange ko hono faʻu ʻo e tali" },
   "helptip_modeNotifs": { "message": "Fakaʻasi ʻa e fanongonongo ʻi he taimi ʻoku toggling ai ʻa e ngaahi founga/fokotuʻutuʻu" },

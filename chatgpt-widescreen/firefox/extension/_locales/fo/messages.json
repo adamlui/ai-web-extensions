@@ -31,6 +31,7 @@
   "about_version": { "message": "Útgáva" },
   "about_poweredBy": { "message": "Powered by SFX" },
   "about_openSourceCode": { "message": "Opna keldukota" },
+  "about_latestChanges": { "message": "Nýggju broytingarnar" },
   "mode_widescreen": { "message": "Breiddarskrá" },
   "mode_fullWindow": { "message": "Full-window" },
   "mode_fullscreen": { "message": "Fult skjal" },

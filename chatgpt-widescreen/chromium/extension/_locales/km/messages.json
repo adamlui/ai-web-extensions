@@ -31,6 +31,7 @@
   "about_version": { "message": "លេខជំនាន់កម្មវិធី" },
   "about_poweredBy": { "message": "ដំណើរការដោយ" },
   "about_openSourceCode": { "message": "កូដ​ដើម" },
+  "about_latestChanges": { "message": "ការផ្លាស់ប្តូរចុងក្រោយបំផុត" },
   "mode_widescreen": { "message": "អេក្រង់ធំទូលាយ" },
   "mode_fullWindow": { "message": "បង្អួច ពេញ" },
   "mode_fullscreen": { "message": "ពេញអេក្រង់" },

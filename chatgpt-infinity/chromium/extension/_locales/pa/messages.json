@@ -20,6 +20,7 @@
   "about_version": { "message": "ਵਰਜਨ" },
   "about_poweredBy": { "message": "ਦੁਆਰਾ ਸੰਚਾਲਿਤ" },
   "about_openSourceCode": { "message": "ਓਪਨ ਸੋਰਸ ਕੋਡ" },
+  "about_latestChanges": { "message": "ਨਵੀਨਤਮ ਤਬਦੀਲੀਆਂ" },
   "prompt_updateReplyLang": { "message": "ਜਵਾਬ ਭਾਸ਼ਾ ਅਪਡੇਟ ਕਰੋ" },
   "prompt_updateReplyTopic": { "message": "ਜਵਾਬ ਵਿਸ਼ਾ ਅੱਪਡੇਟ ਕਰੋ" },
   "prompt_orEnter": { "message": "ਜਾਂ ਦਾਖਲ ਕਰੋ" },

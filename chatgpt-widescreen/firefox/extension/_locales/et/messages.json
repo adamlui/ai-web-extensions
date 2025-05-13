@@ -31,6 +31,7 @@
   "about_version": { "message": "Versioon" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "lähtekood" },
+  "about_latestChanges": { "message": "Viimased muudatused" },
   "mode_widescreen": { "message": "Laiekraan" },
   "mode_fullWindow": { "message": "Täisaken" },
   "mode_fullscreen": { "message": "Täisekraan" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "संस्करण" },
   "about_poweredBy": { "message": "...द्वारा पावरशुदा" },
   "about_openSourceCode": { "message": "सोर्स कोड" },
+  "about_latestChanges": { "message": "ताज़ा बदलाव" },
   "prompt_updateInt": { "message": "रिफ्रेश अंतराल अपडेट करें (सेकंड में)" },
   "helptip_toggleVis": { "message": "साइडबार में ऑटो - रिफ़्रेश टॉगल दिखाएँ" },
   "helptip_modeNotifs": { "message": "मोड/सेटिंग टॉगल करते समय नोटिफ़िकेशन दिखाएँ" },

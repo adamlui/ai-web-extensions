@@ -14,6 +14,7 @@
   "about_version": { "message": "نسخه برنامه" },
   "about_poweredBy": { "message": "قدرت گرفته توسط" },
   "about_openSourceCode": { "message": "سورس کد" },
+  "about_latestChanges": { "message": "آخرین تغییرات" },
   "mode_autoclear": { "message": "پاک کردن خودکار" },
   "helptip_clearNow": { "message": "اکنون سابقه چت را پاک کنید" },
   "helptip_toggleVis": { "message": "نمایش کلید پاکسازی خودکار در نوار کناری" },

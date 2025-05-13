@@ -14,6 +14,7 @@
   "about_version": { "message": "Versiya" },
   "about_poweredBy": { "message": "Tomonidan qo'llab-quvvatlanadi" },
   "about_openSourceCode": { "message": "Ochiq kod" },
+  "about_latestChanges": { "message": "Eng so'nggi o'zgarishlar" },
   "mode_autoContinue": { "message": "Avtomatik Davom etish" },
   "helptip_autoScroll": { "message": "Javoblar yaratilayotganda avtomatik ravishda pastga aylantiring" },
   "helptip_modeNotifs": { "message": "Rejimlar/sozlamalarni almashtirishda bildirishnomalarni ko'rsatish" },

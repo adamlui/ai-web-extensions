@@ -31,6 +31,7 @@
   "about_version": { "message": "संस्करण" },
   "about_poweredBy": { "message": "...द्वारा पावरशुदा" },
   "about_openSourceCode": { "message": "सोर्स कोड" },
+  "about_latestChanges": { "message": "ताज़ा बदलाव" },
   "mode_widescreen": { "message": "वाइडस्क्रीन मोड" },
   "mode_fullWindow": { "message": "फुल विंडो मोड" },
   "mode_fullscreen": { "message": "फुलस्क्रीन मोड" },

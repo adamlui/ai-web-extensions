@@ -31,6 +31,7 @@
   "about_version": { "message": "Versió" },
   "about_poweredBy": { "message": "Desenvolupat per" },
   "about_openSourceCode": { "message": "Codi obert" },
+  "about_latestChanges": { "message": "Últims canvis" },
   "mode_widescreen": { "message": "Pantalla ampla" },
   "mode_fullWindow": { "message": "Finestra completa" },
   "mode_fullscreen": { "message": "Pantalla completa" },

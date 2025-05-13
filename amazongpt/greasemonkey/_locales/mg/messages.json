@@ -21,6 +21,7 @@
   "about_version": { "message": "Kinova" },
   "about_poweredBy": { "message": "Ampandehanin'i" },
   "about_openSourceCode": { "message": "Kaody niaingana" },
+  "about_latestChanges": { "message": "Fiovana farany" },
   "scheme_light": { "message": "Fahazavana" },
   "scheme_dark": { "message": "Maizina" },
   "mode_proxy": { "message": "Proxy Mode" },

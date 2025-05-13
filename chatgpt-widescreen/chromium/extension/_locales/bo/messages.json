@@ -31,6 +31,7 @@
   "about_version": { "message": "པར་གཞི།" },
   "about_poweredBy": { "message": "དྲ་ཚིག་བཟོ་མཁན།" },
   "about_openSourceCode": { "message": "ཁ་ཕྱེ་བའི་ཁ་བྱང་།" },
+  "about_latestChanges": { "message": "མཐའ་མའི་འགྱུར་ཁུངས །" },
   "mode_widescreen": { "message": "བརྙན་གཟུགས །" },
   "mode_fullWindow": { "message": "ཡོངས་རྫོགས །" },
   "mode_fullscreen": { "message": "འོད་སྡེར་ཨང་།" },

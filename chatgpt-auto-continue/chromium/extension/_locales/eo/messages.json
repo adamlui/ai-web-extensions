@@ -14,6 +14,7 @@
   "about_version": { "message": "Versio" },
   "about_poweredBy": { "message": "funkciigita de" },
   "about_openSourceCode": { "message": "Fontkodo" },
+  "about_latestChanges": { "message": "Lastaj ŝanĝoj" },
   "mode_autoContinue": { "message": "Daŭrigi aŭtomate" },
   "helptip_autoScroll": { "message": "Aŭtomate rulumi al fundo kiel respondoj generas" },
   "helptip_modeNotifs": { "message": "Montri sciigojn kiam ŝanĝi reĝimojn/agordojn" },

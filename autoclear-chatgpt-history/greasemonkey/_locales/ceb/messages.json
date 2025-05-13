@@ -14,6 +14,7 @@
   "about_version": { "message": "Bersyon" },
   "about_poweredBy": { "message": "Gipadagan sa" },
   "about_openSourceCode": { "message": "Gigikana sa kodigo" },
+  "about_latestChanges": { "message": "Pinakabag-o nga mga pagbag-o" },
   "mode_autoclear": { "message": "Autoplay Loop" },
   "helptip_clearNow": { "message": "Tin-aw nga chat kasaysayan karon" },
   "helptip_toggleVis": { "message": "Ipakita ang Auto-Clear toggle sa sidebar" },

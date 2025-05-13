@@ -14,6 +14,7 @@
   "about_version": { "message": "Versi" },
   "about_poweredBy": { "message": "Dijana oleh" },
   "about_openSourceCode": { "message": "Sumber Terbuka" },
+  "about_latestChanges": { "message": "Perubahan terkini" },
   "mode_autoContinue": { "message": "Teruskan Secara Automatik" },
   "helptip_autoScroll": { "message": "Tatal ke bawah secara automatik ketika jawapan dijana" },
   "helptip_modeNotifs": { "message": "Tunjukkan pemberitahuan apabila menogol mod/tetapan" },

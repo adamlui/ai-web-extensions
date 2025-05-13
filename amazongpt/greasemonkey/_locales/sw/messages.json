@@ -21,6 +21,7 @@
   "about_version": { "message": "Toleo" },
   "about_poweredBy": { "message": "Imewezeshwa na" },
   "about_openSourceCode": { "message": "Msimbo wa chanzo wazi" },
+  "about_latestChanges": { "message": "Mabadiliko ya hivi karibuni" },
   "scheme_light": { "message": "Nuru" },
   "scheme_dark": { "message": "Giza" },
   "mode_proxy": { "message": "Hali ya Wakala" },

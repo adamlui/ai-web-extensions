@@ -20,6 +20,7 @@
   "about_version": { "message": "Bertsioa" },
   "about_poweredBy": { "message": "Teknologia" },
   "about_openSourceCode": { "message": "Kode ireki" },
+  "about_latestChanges": { "message": "Azken aldaketak" },
   "prompt_updateReplyLang": { "message": "Eguneratu erantzunen hizkuntza" },
   "prompt_updateReplyTopic": { "message": "Eguneratu erantzunen gaia" },
   "prompt_orEnter": { "message": "edo sartu" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "Yângâ tî kodoro" },
   "about_poweredBy": { "message": "A yeke sara kua na ni" },
   "about_openSourceCode": { "message": "Création d 'une brochure open source" },
+  "about_latestChanges": { "message": "Ndangba changement" },
   "mode_autoContinue": { "message": "Auto article" },
   "helptip_autoScroll": { "message": "Na ngoi so azo ayeke kiri tënë na ala, ala yeke kiri tënë na ala" },
   "helptip_modeNotifs": { "message": "Fa awango na ngoi so mo yeke toggling mode/settings" },

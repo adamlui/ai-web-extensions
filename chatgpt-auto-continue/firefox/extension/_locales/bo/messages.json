@@ -14,6 +14,7 @@
   "about_version": { "message": "པར་གཞི།" },
   "about_poweredBy": { "message": "དྲ་ཚིག་བཟོ་མཁན།" },
   "about_openSourceCode": { "message": "ཁ་ཕྱེ་བའི་ཁ་བྱང་།" },
+  "about_latestChanges": { "message": "མཐའ་མའི་འགྱུར་ཁུངས །" },
   "mode_autoContinue": { "message": "རང་འགུལ་དུ་འཇུག་པ" },
   "helptip_autoScroll": { "message": "ལན་འདེབས་ཀྱིས་རང་བཞིན་གཤེགས་ནས་མར་གཤེགས་པ" },
   "helptip_modeNotifs": { "message": "Toggling Mode/Settings" },

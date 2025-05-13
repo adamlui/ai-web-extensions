@@ -11,6 +11,7 @@
   "about_version": { "message": "Verżjoni" },
   "about_poweredBy": { "message": "Imħaddem minn" },
   "about_openSourceCode": { "message": "sors miftuħ" },
+  "about_latestChanges": { "message": "L-aħħar bidliet" },
   "mode_autoTalk": { "message": "Taħdit Awtomatiku" },
   "helptip_toggleVis": { "message": "Uri l-bidla fit-Taħdit Awtomatiku fil-ġenb" },
   "alert_updateAvail": { "message": "Aġġornament ġdid disponibbli" },

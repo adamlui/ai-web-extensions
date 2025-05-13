@@ -11,6 +11,7 @@
   "about_version": { "message": "Manao" },
   "about_poweredBy": { "message": "Hoʻāmana ʻia e" },
   "about_openSourceCode": { "message": "Wehe kumu kumu" },
+  "about_latestChanges": { "message": "Nā hoʻololi hou" },
   "mode_autoTalk": { "message": "Kamaʻilio ʻOkoʻa" },
   "helptip_toggleVis": { "message": "E hōʻike i ka hoʻololi ʻokoʻa kamaʻilio ma ka ʻaoʻao ʻaoʻao" },
   "alert_updateAvail": { "message": "Loaʻa ka hōʻano hou" },

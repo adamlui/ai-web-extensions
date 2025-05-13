@@ -11,6 +11,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Waxa fudaydiyay" },
   "about_openSourceCode": { "message": "Koodhka ilaha furan" },
+  "about_latestChanges": { "message": "Isbedelada ugu dambeeyay" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "Show Auto-Talk toggle in sidebar" },
   "alert_updateAvail": { "message": "Cusboonaysiinta App La heli karo" },

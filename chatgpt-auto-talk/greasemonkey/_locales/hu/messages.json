@@ -11,6 +11,7 @@
   "about_version": { "message": "Verió" },
   "about_poweredBy": { "message": "Kiszolgálja" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "Legutóbbi módosítások" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "Automatikus beszédváltás megjelenítése az oldalsávban" },
   "alert_updateAvail": { "message": "Frissítés érhető el" },

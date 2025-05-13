@@ -31,6 +31,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "Създадено от" },
   "about_openSourceCode": { "message": "Отворен код" },
+  "about_latestChanges": { "message": "Последни промени" },
   "mode_widescreen": { "message": "Широк екран" },
   "mode_fullWindow": { "message": "Цял прозорец" },
   "mode_fullscreen": { "message": "На цял екран" },

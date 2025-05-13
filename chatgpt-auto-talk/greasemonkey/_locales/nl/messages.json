@@ -11,6 +11,7 @@
   "about_version": { "message": "Versie" },
   "about_poweredBy": { "message": "Ondersteund door" },
   "about_openSourceCode": { "message": "open bron" },
+  "about_latestChanges": { "message": "Laatste wijzigingen" },
   "mode_autoTalk": { "message": "AUTOMATISCH BEANTWOORDEN" },
   "helptip_toggleVis": { "message": "Toon Auto-Talk-schakelaar in zijbalk" },
   "alert_updateAvail": { "message": "Güncelleme uygun" },

@@ -20,6 +20,7 @@
   "about_version": { "message": "Útgáva" },
   "about_poweredBy": { "message": "Powered by SFX" },
   "about_openSourceCode": { "message": "Opna keldukota" },
+  "about_latestChanges": { "message": "Nýggju broytingarnar" },
   "prompt_updateReplyLang": { "message": "Uppdater svar máli" },
   "prompt_updateReplyTopic": { "message": "Uppdater svar evni" },
   "prompt_orEnter": { "message": "ella skriva inn" },

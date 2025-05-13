@@ -21,6 +21,7 @@
   "about_version": { "message": "バージョン" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "最新の変更" },
   "scheme_light": { "message": "白" },
   "scheme_dark": { "message": "黒" },
   "mode_proxy": { "message": "プロキシモード" },

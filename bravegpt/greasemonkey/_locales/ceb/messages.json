@@ -34,6 +34,7 @@
   "about_version": { "message": "Bersyon" },
   "about_poweredBy": { "message": "Gipadagan sa" },
   "about_openSourceCode": { "message": "Gigikana sa kodigo" },
+  "about_latestChanges": { "message": "Pinakabag-o nga mga pagbag-o" },
   "scheme_light": { "message": "kainit" },
   "scheme_dark": { "message": "Ngitngit" },
   "mode_proxy": { "message": "Proxy Mode" },

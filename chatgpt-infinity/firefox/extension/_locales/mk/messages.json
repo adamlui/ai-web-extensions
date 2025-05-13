@@ -20,6 +20,7 @@
   "about_version": { "message": "Верзија" },
   "about_poweredBy": { "message": "Поддржано од" },
   "about_openSourceCode": { "message": "Код со отворен код" },
+  "about_latestChanges": { "message": "Најнови промени" },
   "prompt_updateReplyLang": { "message": "Ажурирај јазик за одговор" },
   "prompt_updateReplyTopic": { "message": "Ажурирај ја темата за одговор" },
   "prompt_orEnter": { "message": "или внесете" },

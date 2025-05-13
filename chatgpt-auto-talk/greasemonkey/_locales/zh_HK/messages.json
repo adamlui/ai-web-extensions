@@ -11,6 +11,7 @@
   "about_version": { "message": "版本" },
   "about_poweredBy": { "message": "技術提供" },
   "about_openSourceCode": { "message": "開放原始碼" },
+  "about_latestChanges": { "message": "最新變更" },
   "mode_autoTalk": { "message": "自動對話" },
   "helptip_toggleVis": { "message": "在側邊欄中顯示自動對話切換" },
   "alert_updateAvail": { "message": "有可用更新" },

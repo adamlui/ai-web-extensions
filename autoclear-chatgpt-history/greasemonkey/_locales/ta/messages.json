@@ -14,6 +14,7 @@
   "about_version": { "message": "பதிப்பு" },
   "about_poweredBy": { "message": "மூலம் இயக்கப்படுகிறது" },
   "about_openSourceCode": { "message": "திறந்த மூலக் குறியீடு" },
+  "about_latestChanges": { "message": "சமீபத்திய மாற்றங்கள்" },
   "mode_autoclear": { "message": "தானியங்கு கிளியர்" },
   "helptip_clearNow": { "message": "அரட்டை வரலாற்றை இப்போது அழிக்கவும்" },
   "helptip_toggleVis": { "message": "பக்கப்பட்டியில் தானியங்கு கிளியர் மாற்றத்தைக் காட்டவும்" },

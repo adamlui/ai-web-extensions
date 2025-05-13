@@ -14,6 +14,7 @@
   "about_version": { "message": "Različica" },
   "about_poweredBy": { "message": "Poganja" },
   "about_openSourceCode": { "message": "Odprta koda" },
+  "about_latestChanges": { "message": "Najnovejše spremembe" },
   "mode_autoclear": { "message": "Samodejno čiščenje" },
   "helptip_clearNow": { "message": "Izbriši zgodovino iskanja" },
   "helptip_toggleVis": { "message": "Prikaži preklop samodejnega čiščenja v stranski vrstici" },

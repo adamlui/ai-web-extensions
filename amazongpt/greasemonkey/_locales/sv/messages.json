@@ -21,6 +21,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Drivs av" },
   "about_openSourceCode": { "message": "öppen källkod" },
+  "about_latestChanges": { "message": "Latest changes" },
   "scheme_light": { "message": "Lätt" },
   "scheme_dark": { "message": "Mörk" },
   "mode_proxy": { "message": "Proxy-läge" },

@@ -20,6 +20,7 @@
   "about_version": { "message": "Yângâ tî kodoro" },
   "about_poweredBy": { "message": "A yeke sara kua na ni" },
   "about_openSourceCode": { "message": "Création d 'une brochure open source" },
+  "about_latestChanges": { "message": "Ndangba changement" },
   "prompt_updateReplyLang": { "message": "Sé àtúmọ̀ lálẹ̀ lángá tí ìyọ̀nù" },
   "prompt_updateReplyTopic": { "message": "Sé àtúmọ̀ ìyọ̀nù tí ìyọ̀nù" },
   "prompt_orEnter": { "message": "tabi pẹlu" },

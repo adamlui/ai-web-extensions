@@ -34,6 +34,7 @@
   "about_version": { "message": "ވާރޝަން" },
   "about_poweredBy": { "message": "ބާރުވެރި ކުރުވާފައިވަނީ" },
   "about_openSourceCode": { "message": "އޮޕަން ސޯސް ކޯޑެވެ" },
+  "about_latestChanges": { "message": "އެންމެ ފަހުގެ ބަދަލުތަކެވެ" },
   "scheme_light": { "message": "އަލި" },
   "scheme_dark": { "message": "އަނދިރި" },
   "mode_proxy": { "message": "ޕްރޮކްސީ މޯޑް" },

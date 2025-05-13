@@ -14,6 +14,7 @@
   "about_version": { "message": "Whakaaturanga" },
   "about_poweredBy": { "message": "Te mana o te mana" },
   "about_openSourceCode": { "message": "Waehere puna tuwhera" },
+  "about_latestChanges": { "message": "Ngā huringa hou" },
   "mode_autoclear": { "message": "Auto-Clear" },
   "helptip_clearNow": { "message": "He kōrerorero mārama inaianei" },
   "helptip_toggleVis": { "message": "Whakaatuhia te toggle Auto-Clear i te taha o te taha" },

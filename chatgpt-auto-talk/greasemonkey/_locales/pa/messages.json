@@ -11,6 +11,7 @@
   "about_version": { "message": "ਵਰਜਨ" },
   "about_poweredBy": { "message": "ਦੁਆਰਾ ਸੰਚਾਲਿਤ" },
   "about_openSourceCode": { "message": "ਓਪਨ ਸੋਰਸ ਕੋਡ" },
+  "about_latestChanges": { "message": "ਨਵੀਨਤਮ ਤਬਦੀਲੀਆਂ" },
   "mode_autoTalk": { "message": "ਆਟੋ- ਗੱਲ-ਬਾਤ" },
   "helptip_toggleVis": { "message": "ਬਾਹੀ ਵਿੱਚ ਆਟੋ-ਬੋਲੀ ਟੌਗਲ ਵੇਖੋ" },
   "alert_updateAvail": { "message": "ਕੋਈ ਵੇਰਵਾ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ" },

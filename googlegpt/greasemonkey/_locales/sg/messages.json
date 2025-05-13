@@ -34,6 +34,7 @@
   "about_version": { "message": "Yângâ tî kodoro" },
   "about_poweredBy": { "message": "A yeke sara kua na ni" },
   "about_openSourceCode": { "message": "Création d 'une brochure open source" },
+  "about_latestChanges": { "message": "Ndangba changement" },
   "scheme_light": { "message": "Light am na" },
   "scheme_dark": { "message": "Yeke got, dark" },
   "mode_proxy": { "message": "Mbi Proxy Mode" },

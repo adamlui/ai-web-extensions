@@ -14,6 +14,7 @@
   "about_version": { "message": "Verzija" },
   "about_poweredBy": { "message": "omogućio" },
   "about_openSourceCode": { "message": "Izvorni kod" },
+  "about_latestChanges": { "message": "Najnovije izmjene" },
   "prompt_updateInt": { "message": "Ažuriraj interval osvježavanja (u sekundama)" },
   "helptip_toggleVis": { "message": "Prikaži automatsko osvježavanje u bočnoj traci" },
   "helptip_modeNotifs": { "message": "Prikaži obavještenja prilikom prebacivanja režima/postavki" },

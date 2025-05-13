@@ -31,6 +31,7 @@
   "about_version": { "message": "Whakaaturanga" },
   "about_poweredBy": { "message": "Te mana o te mana" },
   "about_openSourceCode": { "message": "Waehere puna tuwhera" },
+  "about_latestChanges": { "message": "Ngā huringa hou" },
   "mode_widescreen": { "message": "Mata Whānui" },
   "mode_fullWindow": { "message": "Whakakiia i roto i te katoa" },
   "mode_fullscreen": { "message": "Mata tonu" },

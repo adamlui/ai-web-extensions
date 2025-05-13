@@ -14,6 +14,7 @@
   "about_version": { "message": "Versão" },
   "about_poweredBy": { "message": "Alimentado por" },
   "about_openSourceCode": { "message": "Código-fonte aberto" },
+  "about_latestChanges": { "message": "Últimas modificações" },
   "mode_autoclear": { "message": "Limpeza Automática" },
   "helptip_clearNow": { "message": "Limpar o histórico das mensagens" },
   "helptip_toggleVis": { "message": "Mostrar alternância de limpeza automática na barra lateral" },

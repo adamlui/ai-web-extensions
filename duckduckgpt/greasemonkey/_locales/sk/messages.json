@@ -34,6 +34,7 @@
   "about_version": { "message": "Verzia" },
   "about_poweredBy": { "message": "Beží na" },
   "about_openSourceCode": { "message": "Otvorený zdrojový kód" },
+  "about_latestChanges": { "message": "Najnovšie zmeny" },
   "scheme_light": { "message": "Svetlo" },
   "scheme_dark": { "message": "Tmavá" },
   "mode_proxy": { "message": "Režim proxy" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "Versio" },
   "about_poweredBy": { "message": "funkciigita de" },
   "about_openSourceCode": { "message": "Fontkodo" },
+  "about_latestChanges": { "message": "Lastaj ŝanĝoj" },
   "mode_autoclear": { "message": "Aŭtomate purigi" },
   "helptip_clearNow": { "message": "Forviŝi babilhistorion nun" },
   "helptip_toggleVis": { "message": "Montri aŭtomate malplenan ŝnurstangeton en flankobreto" },

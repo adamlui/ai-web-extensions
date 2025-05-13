@@ -14,6 +14,7 @@
   "about_version": { "message": "Útgáfa" },
   "about_poweredBy": { "message": "Knúið af" },
   "about_openSourceCode": { "message": "Opinn kóðalisti" },
+  "about_latestChanges": { "message": "Nýjustu breytingar" },
   "mode_autoContinue": { "message": "Sjálfvirk stöðvun" },
   "helptip_autoScroll": { "message": "Flettu sjálfkrafa neðst þegar svör eru að myndast" },
   "helptip_modeNotifs": { "message": "Sýna tilkynningar þegar skipt er um ham/stillingar" },

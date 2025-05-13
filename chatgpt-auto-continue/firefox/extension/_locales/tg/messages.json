@@ -14,6 +14,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "Нерӯмандшуда аз тарафи" },
   "about_openSourceCode": { "message": "Рамзи кушодаасос" },
+  "about_latestChanges": { "message": "Mga pinakabagong pagbabago" },
   "mode_autoContinue": { "message": "Пайвастшавии худкор" },
   "helptip_autoScroll": { "message": "Ба таври худкор ба поён ҳаракат кунед, вақте ки ҷавобҳо тавлид мешаванд" },
   "helptip_modeNotifs": { "message": "Намоиши огоҳиҳо ҳангоми гузаштан аз режимҳо/танзимотҳо" },

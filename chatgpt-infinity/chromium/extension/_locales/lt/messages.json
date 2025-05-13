@@ -20,6 +20,7 @@
   "about_version": { "message": "Versija" },
   "about_poweredBy": { "message": "Įgalino Proneta" },
   "about_openSourceCode": { "message": "Pradinis kodas" },
+  "about_latestChanges": { "message": "Naujausi pakeitimai" },
   "prompt_updateReplyLang": { "message": "Atnaujinti atsakymo kalbą" },
   "prompt_updateReplyTopic": { "message": "Atnaujinti atsakymo temą" },
   "prompt_orEnter": { "message": "arba įveskite" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "వివరణం" },
   "about_poweredBy": { "message": "ద్వారా ఆధారితం" },
   "about_openSourceCode": { "message": "ఓపెన్ సోర్స్ కోడ్" },
+  "about_latestChanges": { "message": "తాజా మార్పులు" },
   "prompt_updateInt": { "message": "రిఫ్రెష్ విరామం అప్ ‌ డేట్ చేయండి (సెకన్లలో)" },
   "helptip_toggleVis": { "message": "సైడ్ ‌ బార్ ‌ లో ఆటో-రిఫ్రెష్ టోగుల్ ‌ ను చూపించండి" },
   "helptip_modeNotifs": { "message": "మోడ్ ‌ లు/సెట్టింగ్ ‌ లను టోగుల్ చేసేటప్పుడు నోటిఫికేషన్ ‌ లను చూపించండి" },

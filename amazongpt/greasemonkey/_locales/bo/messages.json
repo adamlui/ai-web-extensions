@@ -21,6 +21,7 @@
   "about_version": { "message": "པར་གཞི།" },
   "about_poweredBy": { "message": "དྲ་ཚིག་བཟོ་མཁན།" },
   "about_openSourceCode": { "message": "ཁ་ཕྱེ་བའི་ཁ་བྱང་།" },
+  "about_latestChanges": { "message": "མཐའ་མའི་འགྱུར་ཁུངས །" },
   "scheme_light": { "message": "མདོག་སྐྱ།" },
   "scheme_dark": { "message": "མུན་ནག" },
   "mode_proxy": { "message": "པརོཀསི་རྣམ་གཞག" },

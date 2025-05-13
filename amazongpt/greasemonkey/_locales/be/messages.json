@@ -21,6 +21,7 @@
   "about_version": { "message": "Версія" },
   "about_poweredBy": { "message": "Пры падтрымцы" },
   "about_openSourceCode": { "message": "Зыходнікі" },
+  "about_latestChanges": { "message": "Апошнія змены" },
   "scheme_light": { "message": "Святло" },
   "scheme_dark": { "message": "Цёмная" },
   "mode_proxy": { "message": "Рэжым проксі" },

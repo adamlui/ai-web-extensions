@@ -14,6 +14,7 @@
   "about_version": { "message": "Bersyon" },
   "about_poweredBy": { "message": "Gipadagan sa" },
   "about_openSourceCode": { "message": "Gigikana sa kodigo" },
+  "about_latestChanges": { "message": "Pinakabag-o nga mga pagbag-o" },
   "mode_autoContinue": { "message": "Awtomatikong Pagpadayon" },
   "helptip_autoScroll": { "message": "Awtomatikong pag-scroll sa ilawom samtang ang mga tubag nagmugna" },
   "helptip_modeNotifs": { "message": "Ipakita ang mga pahibalo kung ang mga mode/setting sa pag-toggle" },

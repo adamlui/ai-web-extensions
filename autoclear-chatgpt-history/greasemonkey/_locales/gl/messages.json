@@ -14,6 +14,7 @@
   "about_version": { "message": "Versión" },
   "about_poweredBy": { "message": "Fornecido por" },
   "about_openSourceCode": { "message": "Código fonte" },
+  "about_latestChanges": { "message": "Últimos cambios" },
   "mode_autoclear": { "message": "Aceleración automática" },
   "helptip_clearNow": { "message": "Limpar o historial de chat agora" },
   "helptip_toggleVis": { "message": "Mostrar a opción Limpar automaticamente na barra lateral" },

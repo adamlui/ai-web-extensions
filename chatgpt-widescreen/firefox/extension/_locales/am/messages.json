@@ -31,6 +31,7 @@
   "about_version": { "message": "እትም" },
   "about_poweredBy": { "message": "የተጎለበተው በ" },
   "about_openSourceCode": { "message": "የምንጭ ኮድ" },
+  "about_latestChanges": { "message": "የቅርብ ጊዜ ለውጦች" },
   "mode_widescreen": { "message": "ሰፊ ማያ ገጽ" },
   "mode_fullWindow": { "message": "ሙሉ መስኮት" },
   "mode_fullscreen": { "message": "ሙሉ እስክሪን" },

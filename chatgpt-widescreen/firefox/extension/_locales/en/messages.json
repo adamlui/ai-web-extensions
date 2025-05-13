@@ -31,6 +31,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Latest changes" },
   "mode_widescreen": { "message": "Wide screen" },
   "mode_fullWindow": { "message": "Full-window" },
   "mode_fullscreen": { "message": "Full screen" },

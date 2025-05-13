@@ -14,6 +14,7 @@
   "about_version": { "message": "גירסה" },
   "about_poweredBy": { "message": "באמצעות" },
   "about_openSourceCode": { "message": "קוד מקור" },
+  "about_latestChanges": { "message": "שינויים אחרונים" },
   "mode_autoclear": { "message": "ניקוי אוטומטי" },
   "helptip_clearNow": { "message": "נקה את היסטוריית הצ'אט עכשיו" },
   "helptip_toggleVis": { "message": "הצג את הלחצן הדו - מצבי 'מחיקה אוטומטית' בסרגל הצידי" },

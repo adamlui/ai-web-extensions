@@ -14,6 +14,7 @@
   "about_version": { "message": "Vershon" },
   "about_poweredBy": { "message": "Potenciá por" },
   "about_openSourceCode": { "message": "Codigo Fuente Abierto" },
+  "about_latestChanges": { "message": "Último kambionan" },
   "mode_autoContinue": { "message": "Kontinuashon di outo" },
   "helptip_autoScroll": { "message": "SimpanSimpan Ejercicios Automáticos Untuk Nanti" },
   "helptip_modeNotifs": { "message": "Ver Informe Ampliado de Modalidad E Instalacion Sl" },

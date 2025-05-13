@@ -14,6 +14,7 @@
   "about_version": { "message": "版本" },
   "about_poweredBy": { "message": "技術支持" },
   "about_openSourceCode": { "message": "開放原始碼" },
+  "about_latestChanges": { "message": "最新變更" },
   "mode_autoContinue": { "message": "自動繼續" },
   "helptip_autoScroll": { "message": "回覆產生時自動捲動到底部" },
   "helptip_modeNotifs": { "message": "切換模式/設定時顯示通知" },

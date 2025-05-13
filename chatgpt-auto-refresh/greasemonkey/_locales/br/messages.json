@@ -14,6 +14,7 @@
   "about_version": { "message": "Handelv" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Kod tarzh digor" },
+  "about_latestChanges": { "message": "Kemmoù diwezhañ" },
   "prompt_updateInt": { "message": "Update refresh interval (in secs)" },
   "helptip_toggleVis": { "message": "Diskouez an alc'hwez Freskaat emgefre er varrenn gostez" },
   "helptip_modeNotifs": { "message": "Diskouez ar c'hemennadennoù pa vez kemmet ar modoù/arventennoù" },

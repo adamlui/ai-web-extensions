@@ -21,6 +21,7 @@
   "about_version": { "message": "גירסה" },
   "about_poweredBy": { "message": "באמצעות" },
   "about_openSourceCode": { "message": "קוד מקור" },
+  "about_latestChanges": { "message": "שינויים אחרונים" },
   "scheme_light": { "message": "בהיר" },
   "scheme_dark": { "message": "כהה" },
   "mode_proxy": { "message": "מצב מתווך" },

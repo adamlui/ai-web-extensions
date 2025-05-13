@@ -14,6 +14,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Waxa fudaydiyay" },
   "about_openSourceCode": { "message": "Koodhka ilaha furan" },
+  "about_latestChanges": { "message": "Isbedelada ugu dambeeyay" },
   "prompt_updateInt": { "message": "Cusbooneysii waqtiga cusboonaysiinta (ee SECs)" },
   "helptip_toggleVis": { "message": "Show Auto-Refresh toggle in sidebar" },
   "helptip_modeNotifs": { "message": "Muuji ogeysiisyada marka hababka toggling/dejinta" },

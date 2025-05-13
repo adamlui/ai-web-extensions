@@ -31,6 +31,7 @@
   "about_version": { "message": "版本" },
   "about_poweredBy": { "message": "技術支持" },
   "about_openSourceCode": { "message": "開放原始碼" },
+  "about_latestChanges": { "message": "最新變更" },
   "mode_widescreen": { "message": "寬螢幕" },
   "mode_fullWindow": { "message": "全視窗" },
   "mode_fullscreen": { "message": "全螢幕" },

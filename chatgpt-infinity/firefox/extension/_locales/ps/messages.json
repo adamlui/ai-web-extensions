@@ -20,6 +20,7 @@
   "about_version": { "message": ":نسخه" },
   "about_poweredBy": { "message": "طراحی شده توسط" },
   "about_openSourceCode": { "message": "سرچينه كوډه" },
+  "about_latestChanges": { "message": "وروستي بدلونونه" },
   "prompt_updateReplyLang": { "message": "جواب ژبه اوسمهالول" },
   "prompt_updateReplyTopic": { "message": "جواب موضوع اوسمهالول" },
   "prompt_orEnter": { "message": "یا داخل شئ" },

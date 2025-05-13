@@ -14,6 +14,7 @@
   "about_version": { "message": "Версія" },
   "about_poweredBy": { "message": "Пры падтрымцы" },
   "about_openSourceCode": { "message": "Зыходнікі" },
+  "about_latestChanges": { "message": "Апошнія змены" },
   "mode_autoclear": { "message": "Аўтаачыстка" },
   "helptip_clearNow": { "message": "Ачысціць гісторыю чата зараз" },
   "helptip_toggleVis": { "message": "Паказваць аўтаматычную ачыстку перамыкача ў бакавой панэлі" },

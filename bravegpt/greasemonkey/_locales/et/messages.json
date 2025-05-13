@@ -34,6 +34,7 @@
   "about_version": { "message": "Versioon" },
   "about_poweredBy": { "message": "Toiteallikaks" },
   "about_openSourceCode": { "message": "lähtekood" },
+  "about_latestChanges": { "message": "Viimased muudatused" },
   "scheme_light": { "message": "Hele" },
   "scheme_dark": { "message": "Tume" },
   "mode_proxy": { "message": "Puhverrežiim" },

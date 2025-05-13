@@ -14,6 +14,7 @@
   "about_version": { "message": "Različica" },
   "about_poweredBy": { "message": "Poganja" },
   "about_openSourceCode": { "message": "Odprta koda" },
+  "about_latestChanges": { "message": "Najnovejše spremembe" },
   "prompt_updateInt": { "message": "Posodobite interval osveževanja (v sekundah)" },
   "helptip_toggleVis": { "message": "Prikaži preklop samodejnega osveževanja v stranski vrstici" },
   "helptip_modeNotifs": { "message": "Prikaži obvestila pri preklopu načinov/nastavitev" },

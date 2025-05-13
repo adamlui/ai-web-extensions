@@ -31,6 +31,7 @@
   "about_version": { "message": "ვერსია" },
   "about_poweredBy": { "message": "აგებულია KDE-ზე" },
   "about_openSourceCode": { "message": "საწყისი კოდი" },
+  "about_latestChanges": { "message": "Ბოლო ცვლილებები" },
   "mode_widescreen": { "message": "Ფართო ეკრანი" },
   "mode_fullWindow": { "message": "Სრული ფანჯარა" },
   "mode_fullscreen": { "message": "მთელ ეკრანზე" },

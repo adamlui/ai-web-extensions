@@ -20,6 +20,7 @@
   "about_version": { "message": "આવૃત્તિ" },
   "about_poweredBy": { "message": "દ્વારા સંચાલિત" },
   "about_openSourceCode": { "message": "સ્ત્રોત કોડ" },
+  "about_latestChanges": { "message": "તાજેતરના ફેરફારો" },
   "prompt_updateReplyLang": { "message": "જવાબ ભાષા અપડેટ કરો" },
   "prompt_updateReplyTopic": { "message": "જવાબનો વિષય સુધારો" },
   "prompt_orEnter": { "message": "અથવા દાખલ કરો" },

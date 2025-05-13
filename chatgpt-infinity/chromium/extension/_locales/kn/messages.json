@@ -20,6 +20,7 @@
   "about_version": { "message": "ಆವೃತ್ತಿ" },
   "about_poweredBy": { "message": "ಸಾಮರ್ಥ್ಯ ಇವರಿಂದ" },
   "about_openSourceCode": { "message": "ಓಪನ್ ಸೋರ್ಸ್ ಕೋಡ್" },
+  "about_latestChanges": { "message": "ಇತ್ತೀಚಿನ ಬದಲಾವಣೆಗಳು" },
   "prompt_updateReplyLang": { "message": "ಉತ್ತರ ಭಾಷೆಯನ್ನು ಅದಾಯವಿಸಿ" },
   "prompt_updateReplyTopic": { "message": "ಪ್ರತಿಕ್ರಿಯೆಯ ವಿಷಯವನ್ನು ನವೀಕರಿಸಿ" },
   "prompt_orEnter": { "message": "ಅಥವಾ ನಮೂದಿಸಿ" },

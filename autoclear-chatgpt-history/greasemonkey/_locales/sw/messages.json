@@ -14,6 +14,7 @@
   "about_version": { "message": "Toleo" },
   "about_poweredBy": { "message": "Imewezeshwa na" },
   "about_openSourceCode": { "message": "Msimbo wa chanzo wazi" },
+  "about_latestChanges": { "message": "Mabadiliko ya hivi karibuni" },
   "mode_autoclear": { "message": "Zima Kiotomatiki" },
   "helptip_clearNow": { "message": "Futa historia ya gumzo sasa" },
   "helptip_toggleVis": { "message": "Onyesha swichi ya Zima Kiotomatiki kwenye upau wa pembeni" },

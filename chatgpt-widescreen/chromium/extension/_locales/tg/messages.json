@@ -31,6 +31,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "Нерӯмандшуда аз тарафи" },
   "about_openSourceCode": { "message": "Рамзи кушодаасос" },
+  "about_latestChanges": { "message": "Mga pinakabagong pagbabago" },
   "mode_widescreen": { "message": "Экрани васеъ" },
   "mode_fullWindow": { "message": "Равзанаи пурра" },
   "mode_fullscreen": { "message": "Ð¡Ð¾Ð´Ð´Ð°" },

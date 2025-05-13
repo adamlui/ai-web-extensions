@@ -21,6 +21,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Waxa fudaydiyay" },
   "about_openSourceCode": { "message": "Koodhka ilaha furan" },
+  "about_latestChanges": { "message": "Isbedelada ugu dambeeyay" },
   "scheme_light": { "message": "Iftiinka" },
   "scheme_dark": { "message": "Madow" },
   "mode_proxy": { "message": "Qaabka Proxy" },

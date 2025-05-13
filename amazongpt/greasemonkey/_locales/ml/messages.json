@@ -21,6 +21,7 @@
   "about_version": { "message": "പതിപ്പ്" },
   "about_poweredBy": { "message": "പിന്തുണയ്ക്കുന്നത്" },
   "about_openSourceCode": { "message": "ഓപ്പൺ സോഴ്സ് കോഡ്" },
+  "about_latestChanges": { "message": "ഏറ്റവും പുതിയ മാറ്റങ്ങൾ" },
   "scheme_light": { "message": "പ്രകാശം" },
   "scheme_dark": { "message": "ഇരുട്ട്" },
   "mode_proxy": { "message": "പ്രോക്സി മോഡ്" },

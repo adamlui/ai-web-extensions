@@ -14,6 +14,7 @@
   "about_version": { "message": "版本" },
   "about_poweredBy": { "message": "技术支持方" },
   "about_openSourceCode": { "message": "开源代码" },
+  "about_latestChanges": { "message": "新版变化" },
   "mode_autoclear": { "message": "自动清除" },
   "helptip_clearNow": { "message": "清空聊天记录" },
   "helptip_toggleVis": { "message": "在侧边栏中显示自动清除切换" },

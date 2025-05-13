@@ -11,6 +11,7 @@
   "about_version": { "message": "Ukupilibula" },
   "about_poweredBy": { "message": "Amapola by Amapola" },
   "about_openSourceCode": { "message": "Ilembo lya pa kompyuta ilyaba pa kompyuta" },
+  "about_latestChanges": { "message": "Ukucinja kwa nomba line" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "Show Auto Talk Toggle in Bali Bali Bali Bali Bali Bali" },
   "alert_updateAvail": { "message": "Update Pali Pali" },

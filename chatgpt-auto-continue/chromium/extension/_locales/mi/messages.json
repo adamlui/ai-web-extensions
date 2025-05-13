@@ -14,6 +14,7 @@
   "about_version": { "message": "Whakaaturanga" },
   "about_poweredBy": { "message": "Te mana o te mana" },
   "about_openSourceCode": { "message": "Waehere puna tuwhera" },
+  "about_latestChanges": { "message": "Ngā huringa hou" },
   "mode_autoContinue": { "message": "Auto-Continue" },
   "helptip_autoScroll": { "message": "Tikiake aunoa ki raro no te mea ko nga whakautu e whakaputa ana" },
   "helptip_modeNotifs": { "message": "Whakaatuhia nga panui i te wa e whakakakahu ana i nga tikanga/tautuhinga" },

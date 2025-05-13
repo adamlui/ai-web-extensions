@@ -14,6 +14,7 @@
   "about_version": { "message": "Версія" },
   "about_poweredBy": { "message": "Пры падтрымцы" },
   "about_openSourceCode": { "message": "Зыходнікі" },
+  "about_latestChanges": { "message": "Апошнія змены" },
   "mode_autoContinue": { "message": "Аўтаматычны працяг" },
   "helptip_autoScroll": { "message": "Аўтаматычна пракручваць уніз, калі генеруюцца адказы" },
   "helptip_modeNotifs": { "message": "Паказваць апавяшчэнні пры пераключэнні рэжымаў/налад" },

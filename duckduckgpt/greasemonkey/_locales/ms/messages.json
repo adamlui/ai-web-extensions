@@ -34,6 +34,7 @@
   "about_version": { "message": "Versi" },
   "about_poweredBy": { "message": "Dijana oleh" },
   "about_openSourceCode": { "message": "Sumber Terbuka" },
+  "about_latestChanges": { "message": "Perubahan terkini" },
   "scheme_light": { "message": "Cerah" },
   "scheme_dark": { "message": "Gelap" },
   "mode_proxy": { "message": "Mod Proksi" },

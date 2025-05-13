@@ -31,6 +31,7 @@
   "about_version": { "message": "نسخه برنامه" },
   "about_poweredBy": { "message": "قدرت گرفته توسط" },
   "about_openSourceCode": { "message": "سورس کد" },
+  "about_latestChanges": { "message": "آخرین تغییرات" },
   "mode_widescreen": { "message": "تمام صفحه" },
   "mode_fullWindow": { "message": "تمام پنجره" },
   "mode_fullscreen": { "message": "تمام صفحه" },

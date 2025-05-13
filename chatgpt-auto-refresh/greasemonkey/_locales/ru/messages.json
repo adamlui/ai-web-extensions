@@ -14,6 +14,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "На базе технологии" },
   "about_openSourceCode": { "message": "Открытый исходный код" },
+  "about_latestChanges": { "message": "Последние изменения" },
   "prompt_updateInt": { "message": "Обновить интервал обновления (в секундах)" },
   "helptip_toggleVis": { "message": "Показать переключатель автообновления на боковой панели" },
   "helptip_modeNotifs": { "message": "Показывать уведомления при переключении режимов/настроек" },

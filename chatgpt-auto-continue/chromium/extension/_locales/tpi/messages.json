@@ -14,6 +14,7 @@
   "about_version": { "message": "Tok Pisin" },
   "about_poweredBy": { "message": "Em i gat bikpela strong" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Ol nupela senis" },
   "mode_autoContinue": { "message": "Autokontinu" },
   "helptip_autoScroll": { "message": "Ol bekim i save kamap long rot bilong ol yet" },
   "helptip_modeNotifs": { "message": "Toksave taim yu senisim ol modus/sait" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "Tūtaki" },
   "about_poweredBy": { "message": "I whakahohehia e" },
   "about_openSourceCode": { "message": "Waehere puna tuwhera" },
+  "about_latestChanges": { "message": "Ngā huringa hou" },
   "prompt_updateInt": { "message": "Whakahōu i te iahiko whakahōu (i ngā hēkona)" },
   "helptip_toggleVis": { "message": "Whakaatuhia te toggle Auto-Refresh i te taha o te taha" },
   "helptip_modeNotifs": { "message": "Whakaatuhia nga panui i te wa e whakakakahu ana i nga tikanga/tautuhinga" },

@@ -21,6 +21,7 @@
   "about_version": { "message": "Ukupilibula" },
   "about_poweredBy": { "message": "Amapola by Amapola" },
   "about_openSourceCode": { "message": "Ilembo lya pa kompyuta ilyaba pa kompyuta" },
+  "about_latestChanges": { "message": "Ukucinja kwa nomba line" },
   "scheme_light": { "message": "Ulubuuto" },
   "scheme_dark": { "message": "Mu mfifi" },
   "mode_proxy": { "message": "Proxy Mode" },

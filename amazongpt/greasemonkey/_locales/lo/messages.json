@@ -21,6 +21,7 @@
   "about_version": { "message": "ຮຸ່ນ" },
   "about_poweredBy": { "message": "ຂັບເຄື່ອນໂດຍ" },
   "about_openSourceCode": { "message": "ລະຫັດແຫຼ່ງເປີດ" },
+  "about_latestChanges": { "message": "ການປ່ຽນແປງຫຼ້າສຸດ" },
   "scheme_light": { "message": "ແສງສະຫວ່າງ" },
   "scheme_dark": { "message": "ສີມືດ" },
   "mode_proxy": { "message": "ໂໝດໂປຣແກຣມ" },

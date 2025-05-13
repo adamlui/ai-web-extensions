@@ -14,6 +14,7 @@
   "about_version": { "message": "버전" },
   "about_poweredBy": { "message": "제공" },
   "about_openSourceCode": { "message": "오픈소스" },
+  "about_latestChanges": { "message": "최근 변경된 페이지" },
   "mode_autoContinue": { "message": "자동 계속" },
   "helptip_autoScroll": { "message": "응답이 생성될 때 자동으로 맨 아래로 스크롤" },
   "helptip_modeNotifs": { "message": "모드/설정을 전환할 때 알림 표시" },

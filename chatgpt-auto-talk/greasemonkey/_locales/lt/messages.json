@@ -11,6 +11,7 @@
   "about_version": { "message": "Versija" },
   "about_poweredBy": { "message": "Įgalino Proneta" },
   "about_openSourceCode": { "message": "Pradinis kodas" },
+  "about_latestChanges": { "message": "Naujausi pakeitimai" },
   "mode_autoTalk": { "message": "Automatinis kalbėjimas" },
   "helptip_toggleVis": { "message": "Rodyti automatinio kalbėjimo perjungimą šoninėje juostoje" },
   "alert_updateAvail": { "message": "Yra naujinys" },

@@ -31,6 +31,7 @@
   "about_version": { "message": "Wersja" },
   "about_poweredBy": { "message": "Obsługiwane przez" },
   "about_openSourceCode": { "message": "Otwarty kod PHP" },
+  "about_latestChanges": { "message": "Najnowsze zmiany" },
   "mode_widescreen": { "message": "Ekran panoramiczny" },
   "mode_fullWindow": { "message": "Pełne okno" },
   "mode_fullscreen": { "message": "Pełny ekran" },

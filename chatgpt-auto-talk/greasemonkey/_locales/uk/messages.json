@@ -11,6 +11,7 @@
   "about_version": { "message": "Версія" },
   "about_poweredBy": { "message": "Працює на" },
   "about_openSourceCode": { "message": "Джерельний код" },
+  "about_latestChanges": { "message": "Останні зміни" },
   "mode_autoTalk": { "message": "Авторозмова" },
   "helptip_toggleVis": { "message": "Показати перемикач автообговорення на бічній панелі" },
   "alert_updateAvail": { "message": "Доступне оновлення" },

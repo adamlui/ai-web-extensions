@@ -21,6 +21,7 @@
   "about_version": { "message": "Umukoro" },
   "about_poweredBy": { "message": "Ku" },
   "about_openSourceCode": { "message": "Inkomoko Inyandikoporogaramu" },
+  "about_latestChanges": { "message": "Amahinduka" },
   "scheme_light": { "message": "Cyeruruka" },
   "scheme_dark": { "message": "Igicucu" },
   "mode_proxy": { "message": "Ubwoko" },

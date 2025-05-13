@@ -14,6 +14,7 @@
   "about_version": { "message": "Versiya" },
   "about_poweredBy": { "message": "Tomonidan qo'llab-quvvatlanadi" },
   "about_openSourceCode": { "message": "Ochiq kod" },
+  "about_latestChanges": { "message": "Eng so'nggi o'zgarishlar" },
   "mode_autoclear": { "message": "Avtomatik tozalash" },
   "helptip_clearNow": { "message": "Chat tarixini hozir tozalang" },
   "helptip_toggleVis": { "message": "Yon panelda Avtomatik tozalashni ko'rsatish" },

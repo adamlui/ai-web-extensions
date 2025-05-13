@@ -14,6 +14,7 @@
   "about_version": { "message": "نسخه برنامه" },
   "about_poweredBy": { "message": "قدرت گرفته توسط" },
   "about_openSourceCode": { "message": "سورس کد" },
+  "about_latestChanges": { "message": "آخرین تغییرات" },
   "mode_autoContinue": { "message": "ادامه خودکار" },
   "helptip_autoScroll": { "message": "همزمان با ایجاد پاسخ، به صورت خودکار به پایین بروید" },
   "helptip_modeNotifs": { "message": "نمایش اعلان‌ها هنگام تغییر حالت‌ها/تنظیمات" },

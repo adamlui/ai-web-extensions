@@ -14,6 +14,7 @@
   "about_version": { "message": "版本" },
   "about_poweredBy": { "message": "技術提供" },
   "about_openSourceCode": { "message": "開放源代碼" },
+  "about_latestChanges": { "message": "最新變更" },
   "prompt_updateInt": { "message": "更新重新整理間隔（以秒為單位）" },
   "helptip_toggleVis": { "message": "在側邊欄中顯示自動刷新切換" },
   "helptip_modeNotifs": { "message": "切換模式/設定時顯示通知" },

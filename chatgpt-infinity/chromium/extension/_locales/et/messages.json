@@ -20,6 +20,7 @@
   "about_version": { "message": "Versioon" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "lähtekood" },
+  "about_latestChanges": { "message": "Viimased muudatused" },
   "prompt_updateReplyLang": { "message": "Uuenda vastuse keelt" },
   "prompt_updateReplyTopic": { "message": "Uuenda vastuse teemat" },
   "prompt_orEnter": { "message": "või sisesta" },

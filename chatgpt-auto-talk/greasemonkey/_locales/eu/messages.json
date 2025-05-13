@@ -11,6 +11,7 @@
   "about_version": { "message": "Bertsioa" },
   "about_poweredBy": { "message": "Teknologia:" },
   "about_openSourceCode": { "message": "Kode ireki" },
+  "about_latestChanges": { "message": "Azken aldaketak" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "Erakutsi Auto-Talk etengailua alboko barran" },
   "alert_updateAvail": { "message": "Ez dago azalpenik erabilgarri" },

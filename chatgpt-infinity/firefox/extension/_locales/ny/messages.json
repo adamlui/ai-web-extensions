@@ -20,6 +20,7 @@
   "about_version": { "message": "Lumikizanani nafe" },
   "about_poweredBy": { "message": "Mothandizidwa ndi" },
   "about_openSourceCode": { "message": "Open gwero kachidindo" },
+  "about_latestChanges": { "message": "Zosintha zaposachedwa" },
   "prompt_updateReplyLang": { "message": "Sinthani Chilankhulo cha Yankho" },
   "prompt_updateReplyTopic": { "message": "Sinthani reply nkhani" },
   "prompt_orEnter": { "message": "kapena kulowa" },

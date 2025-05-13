@@ -34,6 +34,7 @@
   "about_version": { "message": "Версія" },
   "about_poweredBy": { "message": "Працює на" },
   "about_openSourceCode": { "message": "Джерельний код" },
+  "about_latestChanges": { "message": "Останні зміни" },
   "scheme_light": { "message": "Невеликий" },
   "scheme_dark": { "message": "Темна" },
   "mode_proxy": { "message": "Режим проксі-сервера" },

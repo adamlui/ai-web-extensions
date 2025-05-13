@@ -20,6 +20,7 @@
   "about_version": { "message": "Weergawe" },
   "about_poweredBy": { "message": "Aangedryf deur" },
   "about_openSourceCode": { "message": "Oopbronkode" },
+  "about_latestChanges": { "message": "Jongste veranderinge" },
   "prompt_updateReplyLang": { "message": "Dateer antwoordtaal op" },
   "prompt_updateReplyTopic": { "message": "Dateer antwoordonderwerp op" },
   "prompt_orEnter": { "message": "of gaan in" },

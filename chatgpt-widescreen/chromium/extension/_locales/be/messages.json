@@ -31,6 +31,7 @@
   "about_version": { "message": "Версія" },
   "about_poweredBy": { "message": "Пры падтрымцы" },
   "about_openSourceCode": { "message": "Зыходнікі" },
+  "about_latestChanges": { "message": "Апошнія змены" },
   "mode_widescreen": { "message": "Шырокі экран" },
   "mode_fullWindow": { "message": "Поўнае акно" },
   "mode_fullscreen": { "message": "Увесь экран" },

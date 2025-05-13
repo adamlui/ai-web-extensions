@@ -34,6 +34,7 @@
   "about_version": { "message": "பதிப்பு" },
   "about_poweredBy": { "message": "மூலம் இயக்கப்படுகிறது" },
   "about_openSourceCode": { "message": "திறந்த மூலக் குறியீடு" },
+  "about_latestChanges": { "message": "சமீபத்திய மாற்றங்கள்" },
   "scheme_light": { "message": "ஒளி" },
   "scheme_dark": { "message": "இருள்" },
   "mode_proxy": { "message": "ப்ராக்ஸி பயன்முறை" },

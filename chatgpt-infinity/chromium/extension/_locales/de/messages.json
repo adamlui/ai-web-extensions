@@ -20,6 +20,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Unterstützt von" },
   "about_openSourceCode": { "message": "Quellcodeoffen" },
+  "about_latestChanges": { "message": "Letzte Änderungen" },
   "prompt_updateReplyLang": { "message": "Antwortsprache aktualisieren" },
   "prompt_updateReplyTopic": { "message": "Antwort-Thema aktualisieren" },
   "prompt_orEnter": { "message": "oder eintreten" },

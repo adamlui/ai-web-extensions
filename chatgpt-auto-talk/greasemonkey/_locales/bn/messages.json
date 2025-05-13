@@ -11,6 +11,7 @@
   "about_version": { "message": "সংস্করণ" },
   "about_poweredBy": { "message": "নিবেদন করছেন" },
   "about_openSourceCode": { "message": "সোর্স কোড" },
+  "about_latestChanges": { "message": "সর্বশেষ পরিবর্তনসমূহ" },
   "mode_autoTalk": { "message": "অটো-টক" },
   "helptip_toggleVis": { "message": "সাইডবারে অটো-টক টগল দেখান" },
   "alert_updateAvail": { "message": "আপডেট উপলব্ধ" },

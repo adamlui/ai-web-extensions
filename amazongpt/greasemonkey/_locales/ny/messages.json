@@ -21,6 +21,7 @@
   "about_version": { "message": "Lumikizanani nafe" },
   "about_poweredBy": { "message": "Mothandizidwa ndi" },
   "about_openSourceCode": { "message": "Open gwero kachidindo" },
+  "about_latestChanges": { "message": "Zosintha zaposachedwa" },
   "scheme_light": { "message": "Kuwala" },
   "scheme_dark": { "message": "Mdima" },
   "mode_proxy": { "message": "Mchitidwe wa Proxy" },

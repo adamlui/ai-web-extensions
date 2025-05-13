@@ -11,6 +11,7 @@
   "about_version": { "message": "Yângâ tî kodoro" },
   "about_poweredBy": { "message": "A yeke sara kua na ni" },
   "about_openSourceCode": { "message": "Création d 'une brochure open source" },
+  "about_latestChanges": { "message": "Ndangba changement" },
   "mode_autoTalk": { "message": "Auto Tale ti" },
   "helptip_toggleVis": { "message": "Show Auto-talk toggle na sidebar" },
   "alert_updateAvail": { "message": "Nduru tënë so ayeke dä" },

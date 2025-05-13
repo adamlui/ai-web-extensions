@@ -11,6 +11,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Odprta koda" },
+  "about_latestChanges": { "message": "Najnovejše spremembe" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "Prikaži preklop samodejnega pogovora v stranski vrstici" },
   "alert_updateAvail": { "message": "Update available" },

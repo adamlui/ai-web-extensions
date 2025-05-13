@@ -11,6 +11,7 @@
   "about_version": { "message": "Lumikizanani nafe" },
   "about_poweredBy": { "message": "Mothandizidwa ndi" },
   "about_openSourceCode": { "message": "Open gwero kachidindo" },
+  "about_latestChanges": { "message": "Zosintha zaposachedwa" },
   "mode_autoTalk": { "message": "ZOKHUDZA" },
   "helptip_toggleVis": { "message": "Onetsani Auto-Talk toggle mu sidebar" },
   "alert_updateAvail": { "message": "Sinthani likupezeka" },

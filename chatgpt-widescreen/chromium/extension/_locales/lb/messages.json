@@ -31,6 +31,7 @@
   "about_version": { "message": "Versioun" },
   "about_poweredBy": { "message": "Bereetgestallt vun" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "Neist Ännerungen" },
   "mode_widescreen": { "message": "Breet Bildschierm" },
   "mode_fullWindow": { "message": "Full-Window" },
   "mode_fullscreen": { "message": "Vollbildmodus" },

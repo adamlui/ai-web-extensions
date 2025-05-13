@@ -20,6 +20,7 @@
   "about_version": { "message": "Нұсқа" },
   "about_poweredBy": { "message": "Сайтты жасаған" },
   "about_openSourceCode": { "message": "Ашық бастапқы код" },
+  "about_latestChanges": { "message": "Соңғы өзгерістер" },
   "prompt_updateReplyLang": { "message": "Жауап беру тілін жаңарту" },
   "prompt_updateReplyTopic": { "message": "Жауап беру тақырыбын жаңарту" },
   "prompt_orEnter": { "message": "немесе кіріңіз" },

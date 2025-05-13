@@ -21,6 +21,7 @@
   "about_version": { "message": "Wersja" },
   "about_poweredBy": { "message": "Obsługiwane przez" },
   "about_openSourceCode": { "message": "Otwarty kod PHP" },
+  "about_latestChanges": { "message": "Najnowsze zmiany" },
   "scheme_light": { "message": "Jasny" },
   "scheme_dark": { "message": "Ciemny" },
   "mode_proxy": { "message": "Tryb proxy" },

@@ -11,6 +11,7 @@
   "about_version": { "message": "པར་གཞི།" },
   "about_poweredBy": { "message": "དྲ་ཚིག་བཟོ་མཁན།" },
   "about_openSourceCode": { "message": "ཁ་ཕྱེ་བའི་ཁ་བྱང་།" },
+  "about_latestChanges": { "message": "མཐའ་མའི་འགྱུར་ཁུངས །" },
   "mode_autoTalk": { "message": "རང་མོས་གླེང་མོལ །" },
   "helptip_toggleVis": { "message": "ཟུར་པང་དུ་རང་མོས་གཏམ་གླེང་སྒྲིག་བཀོད །" },
   "alert_updateAvail": { "message": "རིམ་སྤར་བྱེད་རྒྱུ་འདུག" },

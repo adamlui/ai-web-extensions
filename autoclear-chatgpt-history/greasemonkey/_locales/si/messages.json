@@ -14,6 +14,7 @@
   "about_version": { "message": "වෙළුම" },
   "about_poweredBy": { "message": "විසින් බල ගැන්වී ඇත" },
   "about_openSourceCode": { "message": "විවෘත කේතය" },
+  "about_latestChanges": { "message": "නවතම වෙනස්කම්" },
   "mode_autoclear": { "message": "ස්වයංක් ‍ රීය ක්ලියර්" },
   "helptip_clearNow": { "message": "සල්ලාප ඉතිහාසය දැන් හිස් කරන්න" },
   "helptip_toggleVis": { "message": "පැති තීරුවේ ස්වයංක් ‍ රීය-ක් ‍ රිය ටොගලය පෙන්වන්න" },

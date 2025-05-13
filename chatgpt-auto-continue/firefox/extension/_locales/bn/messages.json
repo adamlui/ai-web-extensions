@@ -14,6 +14,7 @@
   "about_version": { "message": "সংস্করণ" },
   "about_poweredBy": { "message": "নিবেদন করছেন" },
   "about_openSourceCode": { "message": "সোর্স কোড" },
+  "about_latestChanges": { "message": "সর্বশেষ পরিবর্তনসমূহ" },
   "mode_autoContinue": { "message": "স্বয়ংক্রিয়ভাবে চালিয়ে যান" },
   "helptip_autoScroll": { "message": "উত্তরগুলি তৈরি হওয়ার সাথে সাথে স্বয়ংক্রিয়ভাবে নীচে স্ক্রোল করুন" },
   "helptip_modeNotifs": { "message": "মোড/সেটিংস টগল করার সময় বিজ্ঞপ্তিগুলি দেখান" },

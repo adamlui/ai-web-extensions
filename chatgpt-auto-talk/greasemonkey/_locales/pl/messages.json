@@ -11,6 +11,7 @@
   "about_version": { "message": "Wersja" },
   "about_poweredBy": { "message": "Obsługiwane przez" },
   "about_openSourceCode": { "message": "Otwarty kod PHP" },
+  "about_latestChanges": { "message": "Najnowsze zmiany" },
   "mode_autoTalk": { "message": "Automatyczna rozmowa" },
   "helptip_toggleVis": { "message": "Pokaż przełącznik automatycznej rozmowy na pasku bocznym" },
   "alert_updateAvail": { "message": "Dostępna jest aktualizacja" },

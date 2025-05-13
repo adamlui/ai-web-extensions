@@ -14,6 +14,7 @@
   "about_version": { "message": "Versio" },
   "about_poweredBy": { "message": "Motum per" },
   "about_openSourceCode": { "message": "Codex Próxus" },
+  "about_latestChanges": { "message": "QUAE QUAE" },
   "prompt_updateInt": { "message": "Intervalum Renovationis (in secundis)" },
   "helptip_toggleVis": { "message": "Show Auto-Refresh toggle in sidebar" },
   "helptip_modeNotifs": { "message": "Notificationes quod toggling modes/settings" },

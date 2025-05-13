@@ -14,6 +14,7 @@
   "about_version": { "message": "وەرژن" },
   "about_poweredBy": { "message": "ڕاگرتن لە لای" },
   "about_openSourceCode": { "message": "Koda çavkanî" },
+  "about_latestChanges": { "message": "Guhertinên dawî" },
   "prompt_updateInt": { "message": "هەنگاوی نوێکردنەوە بگۆڕە (لە چرکەکان)" },
   "helptip_toggleVis": { "message": "Veguheztina Xweser-Nûvekirinê li darika kêlekê nîşan bide" },
   "helptip_modeNotifs": { "message": "Dema ku modên / mîhengan biguherînin, agahdariyan nîşan bidin" },

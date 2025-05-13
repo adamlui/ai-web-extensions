@@ -14,6 +14,7 @@
   "about_version": { "message": "ਵਰਜਨ" },
   "about_poweredBy": { "message": "ਦੁਆਰਾ ਸੰਚਾਲਿਤ" },
   "about_openSourceCode": { "message": "ਓਪਨ ਸੋਰਸ ਕੋਡ" },
+  "about_latestChanges": { "message": "ਨਵੀਨਤਮ ਤਬਦੀਲੀਆਂ" },
   "mode_autoclear": { "message": "ਆਟੋ - ਸਾਫ਼" },
   "helptip_clearNow": { "message": "ਹੁਣ ਚੈਟ ਦਾ ਇਤਿਹਾਸ ਸਾਫ਼ ਕਰੋ" },
   "helptip_toggleVis": { "message": "ਬਾਹੀ ਵਿੱਚ ਆਟੋ- ਕਲੀਅਰ ਟੌਗਲ ਵੇਖੋ" },

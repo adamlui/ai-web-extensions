@@ -11,6 +11,7 @@
   "about_version": { "message": "ຮຸ່ນ" },
   "about_poweredBy": { "message": "ຂັບເຄື່ອນໂດຍ" },
   "about_openSourceCode": { "message": "ລະຫັດແຫຼ່ງເປີດ" },
+  "about_latestChanges": { "message": "ການປ່ຽນແປງຫຼ້າສຸດ" },
   "mode_autoTalk": { "message": "ການເວົ້າແບບອັດຕະໂນມັດ" },
   "helptip_toggleVis": { "message": "ສະແດງອັດຕະໂນມັດການເວົ້າ toggle ໃນແຖບຂ້າງ" },
   "alert_updateAvail": { "message": "ອັບເດດທີ່ມີຢູ່" },

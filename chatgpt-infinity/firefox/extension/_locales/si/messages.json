@@ -20,6 +20,7 @@
   "about_version": { "message": "වෙළුම" },
   "about_poweredBy": { "message": "විසින් බල ගැන්වී ඇත" },
   "about_openSourceCode": { "message": "විවෘත කේතය" },
+  "about_latestChanges": { "message": "නවතම වෙනස්කම්" },
   "prompt_updateReplyLang": { "message": "ප්‍රතිචාර භාෂාව යාවත්කාලීන කරන්න" },
   "prompt_updateReplyTopic": { "message": "ප්‍රතිචාර මාතෘකාව යාවත්කාලීන කරන්න" },
   "prompt_orEnter": { "message": "හෝ ඇතුල් වන්න" },

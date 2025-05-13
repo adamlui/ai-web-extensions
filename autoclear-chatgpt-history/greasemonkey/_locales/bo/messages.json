@@ -14,6 +14,7 @@
   "about_version": { "message": "པར་གཞི།" },
   "about_poweredBy": { "message": "དྲ་ཚིག་བཟོ་མཁན།" },
   "about_openSourceCode": { "message": "ཁ་ཕྱེ་བའི་ཁ་བྱང་།" },
+  "about_latestChanges": { "message": "མཐའ་མའི་འགྱུར་ཁུངས །" },
   "mode_autoclear": { "message": "རང་མོས་སྒྲིག་བཀོད ། (_O)" },
   "helptip_clearNow": { "message": "Chat History Now སྒྲིག་འཇུག་བྱས་ཚད ། ཐེངས་10 ལས་ཉུང་བ ། ཐོན་" },
   "helptip_toggleVis": { "message": "ཟུར་པང་དུ་རང་ལུས་སློབ་སྦྱོང་སྒྲིག་འཇུག་བྱེད་པ་སྟོན་པ" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "መበል" },
   "about_poweredBy": { "message": "ብ" },
   "about_openSourceCode": { "message": "ክፉት ምንጪ ኮድ" },
+  "about_latestChanges": { "message": "ናይ መወዳእታ ለውጥታት" },
   "mode_autoclear": { "message": "ኣውቶ-ትምህርቲ" },
   "helptip_clearNow": { "message": "ንጹህ ታሪኽ ቻት ሕጂ" },
   "helptip_toggleVis": { "message": "ኣብ ጎኒ ባር ናይ ኣውቶ-ትምህርቲ መትረብ ኣርኢ" },

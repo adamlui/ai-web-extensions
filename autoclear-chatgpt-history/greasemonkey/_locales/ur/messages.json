@@ -14,6 +14,7 @@
   "about_version": { "message": "ورژن" },
   "about_poweredBy": { "message": "تقویت یافتہ از" },
   "about_openSourceCode": { "message": "کۆسی سەرچاوە" },
+  "about_latestChanges": { "message": "تازہ ترین تبدیلیاں" },
   "mode_autoclear": { "message": "خود بخود صاف کریں" },
   "helptip_clearNow": { "message": "ابھی چیٹ کی سرگزشت صاف کریں" },
   "helptip_toggleVis": { "message": "سائڈبار میں آٹو کلیئر ٹوگل دکھائیں" },

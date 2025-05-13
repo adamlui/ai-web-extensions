@@ -14,6 +14,7 @@
   "about_version": { "message": "Lumikizanani nafe" },
   "about_poweredBy": { "message": "Mothandizidwa ndi" },
   "about_openSourceCode": { "message": "Open gwero kachidindo" },
+  "about_latestChanges": { "message": "Zosintha zaposachedwa" },
   "mode_autoclear": { "message": "Auto-Clear" },
   "helptip_clearNow": { "message": "Mbiri yowoneka bwino ya macheza tsopano" },
   "helptip_toggleVis": { "message": "Onetsani Auto-Clear toggle mu sidebar" },

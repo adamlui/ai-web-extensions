@@ -14,6 +14,7 @@
   "about_version": { "message": "Версія" },
   "about_poweredBy": { "message": "Пры падтрымцы" },
   "about_openSourceCode": { "message": "Зыходнікі" },
+  "about_latestChanges": { "message": "Апошнія змены" },
   "prompt_updateInt": { "message": "Абнавіць інтэрвал абнаўлення (у сек)" },
   "helptip_toggleVis": { "message": "Паказваць перамыкач аўтазагрузкі ў бакавой панэлі" },
   "helptip_modeNotifs": { "message": "Паказваць апавяшчэнні пры пераключэнні рэжымаў/налад" },

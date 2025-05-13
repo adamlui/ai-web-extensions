@@ -20,6 +20,7 @@
   "about_version": { "message": "Verzija" },
   "about_poweredBy": { "message": "omogućio" },
   "about_openSourceCode": { "message": "Izvorni kod" },
+  "about_latestChanges": { "message": "Najnovije izmjene" },
   "prompt_updateReplyLang": { "message": "Ažuriraj jezik odgovora" },
   "prompt_updateReplyTopic": { "message": "Ažurirajte temu odgovora" },
   "prompt_orEnter": { "message": "ili unesite" },

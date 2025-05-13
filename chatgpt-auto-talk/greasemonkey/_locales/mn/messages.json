@@ -11,6 +11,7 @@
   "about_version": { "message": "Хувилбар" },
   "about_poweredBy": { "message": "ИЛЧЛЭГЧ" },
   "about_openSourceCode": { "message": "Нээлттэй Эх сурвалж" },
+  "about_latestChanges": { "message": "Сүүлийн өөрчлөлтүүд" },
   "mode_autoTalk": { "message": "Автоматаар яриа хийх" },
   "helptip_toggleVis": { "message": "Автоматаар аялахыг хажуу цэс рүү зөөх" },
   "alert_updateAvail": { "message": "Шинэчлэх (update) боломжтой" },

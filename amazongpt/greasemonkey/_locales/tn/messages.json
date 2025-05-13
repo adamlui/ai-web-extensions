@@ -21,6 +21,7 @@
   "about_version": { "message": "Thanolo" },
   "about_poweredBy": { "message": "E tsamaisiwa ke" },
   "about_openSourceCode": { "message": "Khoutu ya motswedi o o bulegileng" },
+  "about_latestChanges": { "message": "Diphetogo tsa sesweng" },
   "scheme_light": { "message": "Ga e bofefo" },
   "scheme_dark": { "message": "Letobo" },
   "mode_proxy": { "message": "Proxy Mode" },

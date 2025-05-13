@@ -20,6 +20,7 @@
   "about_version": { "message": "Wersja" },
   "about_poweredBy": { "message": "Obsługiwane przez" },
   "about_openSourceCode": { "message": "Otwarty kod PHP" },
+  "about_latestChanges": { "message": "Najnowsze zmiany" },
   "prompt_updateReplyLang": { "message": "Zaktualizuj język odpowiedzi" },
   "prompt_updateReplyTopic": { "message": "Zaktualizuj temat odpowiedzi" },
   "prompt_orEnter": { "message": "lub wpisz z" },

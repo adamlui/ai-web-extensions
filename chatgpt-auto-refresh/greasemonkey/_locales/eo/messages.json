@@ -14,6 +14,7 @@
   "about_version": { "message": "Versio" },
   "about_poweredBy": { "message": "funkciigita de" },
   "about_openSourceCode": { "message": "Fontkodo" },
+  "about_latestChanges": { "message": "Lastaj ŝanĝoj" },
   "prompt_updateInt": { "message": "Ĝisdatigu la intervalon de reŝarĝado (en sekundoj)" },
   "helptip_toggleVis": { "message": "Montri aŭtomatan refreŝigan ŝaltilon en flankobreto" },
   "helptip_modeNotifs": { "message": "Montri sciigojn kiam ŝanĝi reĝimojn/agordojn" },

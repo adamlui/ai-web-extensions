@@ -14,6 +14,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Latest changes" },
   "prompt_updateInt": { "message": "Update refresh interval (in secs)" },
   "helptip_toggleVis": { "message": "Show Auto-Refresh toggle in sidebar" },
   "helptip_modeNotifs": { "message": "Show notifications when toggling modes/settings" },

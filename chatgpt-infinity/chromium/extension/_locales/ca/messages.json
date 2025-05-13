@@ -20,6 +20,7 @@
   "about_version": { "message": "Versió" },
   "about_poweredBy": { "message": "Desenvolupat per" },
   "about_openSourceCode": { "message": "Codi obert" },
+  "about_latestChanges": { "message": "Últims canvis" },
   "prompt_updateReplyLang": { "message": "Actualitza l'idioma de resposta" },
   "prompt_updateReplyTopic": { "message": "Actualitza el tema de la resposta" },
   "prompt_orEnter": { "message": "o introduïu" },

@@ -11,6 +11,7 @@
   "about_version": { "message": "Kinova" },
   "about_poweredBy": { "message": "Ampandehanin'i" },
   "about_openSourceCode": { "message": "Kaody niaingana" },
+  "about_latestChanges": { "message": "Fiovana farany" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "Asehoy ny tolotry ny Auto-Talk eo amin'ny tsipiky ny sisiny" },
   "alert_updateAvail": { "message": "Ny fanavaozana azo alaina" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "Inguqulelo" },
   "about_poweredBy": { "message": "Ixhaswa ngu" },
   "about_openSourceCode": { "message": "Vula iKhowudi yoMthombo" },
+  "about_latestChanges": { "message": "Izinto ezitshintshiweyo zakutsh" },
   "mode_autoclear": { "message": "Zikhuphe Ngokuzenzekelayo" },
   "helptip_clearNow": { "message": "Susa ingxelo yencoko ngoku" },
   "helptip_toggleVis": { "message": "Bonisa i-auto-Clear toggle kwibar esecaleni" },

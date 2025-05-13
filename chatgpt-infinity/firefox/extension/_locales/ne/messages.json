@@ -20,6 +20,7 @@
   "about_version": { "message": "संस्करण" },
   "about_poweredBy": { "message": "समर्थनकर्ता" },
   "about_openSourceCode": { "message": "स्रोत सङ्केत" },
+  "about_latestChanges": { "message": "भर्खरका परिवर्तनहरू" },
   "prompt_updateReplyLang": { "message": "जवाफ भाषा अद्यावधिक गर्नुहोस्" },
   "prompt_updateReplyTopic": { "message": "जवाफ विषय अद्यावधिक गर्नुहोस्" },
   "prompt_orEnter": { "message": "वा प्रविष्ट गर्नुहोस्" },

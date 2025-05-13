@@ -31,6 +31,7 @@
   "about_version": { "message": "Bersyon" },
   "about_poweredBy": { "message": "Gipadagan sa" },
   "about_openSourceCode": { "message": "Gigikana sa kodigo" },
+  "about_latestChanges": { "message": "Pinakabag-o nga mga pagbag-o" },
   "mode_widescreen": { "message": "Hapit nalukop sa kaumahan ang" },
   "mode_fullWindow": { "message": "Bug-os nga bintana" },
   "mode_fullscreen": { "message": "Tibuok screen" },

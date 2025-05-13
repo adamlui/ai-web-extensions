@@ -31,6 +31,7 @@
   "about_version": { "message": "גירסה" },
   "about_poweredBy": { "message": "באמצעות" },
   "about_openSourceCode": { "message": "קוד מקור" },
+  "about_latestChanges": { "message": "שינויים אחרונים" },
   "mode_widescreen": { "message": "מסך רחב" },
   "mode_fullWindow": { "message": "חלון מלא" },
   "mode_fullscreen": { "message": "מסך מלא" },

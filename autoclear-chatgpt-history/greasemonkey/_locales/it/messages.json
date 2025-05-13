@@ -14,6 +14,7 @@
   "about_version": { "message": "Versione" },
   "about_poweredBy": { "message": "Alimentato da" },
   "about_openSourceCode": { "message": "Codice open source" },
+  "about_latestChanges": { "message": "Ultimi cambiamenti" },
   "mode_autoclear": { "message": "Cancellazione automatica" },
   "helptip_clearNow": { "message": "Cancella ora la cronologia chat" },
   "helptip_toggleVis": { "message": "Mostra attivazione/disattivazione automatica nella barra laterale" },

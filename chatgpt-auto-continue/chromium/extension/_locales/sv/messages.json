@@ -14,6 +14,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Drivs av" },
   "about_openSourceCode": { "message": "öppen källkod" },
+  "about_latestChanges": { "message": "Latest changes" },
   "mode_autoContinue": { "message": "Auto-Continue" },
   "helptip_autoScroll": { "message": "Bläddra automatiskt till botten när svaren genereras" },
   "helptip_modeNotifs": { "message": "Visa aviseringar när du växlar lägen/inställningar" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "সংস্করণ" },
   "about_poweredBy": { "message": "নিবেদন করছেন" },
   "about_openSourceCode": { "message": "সোর্স কোড" },
+  "about_latestChanges": { "message": "সর্বশেষ পরিবর্তনসমূহ" },
   "mode_autoclear": { "message": "অটো- ক্লিয়ার" },
   "helptip_clearNow": { "message": "এখনই চ্যাটের ইতিহাস সাফ করুন" },
   "helptip_toggleVis": { "message": "সাইডবারে অটো-ক্লিয়ার টগল দেখান" },

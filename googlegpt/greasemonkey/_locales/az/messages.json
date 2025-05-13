@@ -34,6 +34,7 @@
   "about_version": { "message": "Versiya" },
   "about_poweredBy": { "message": "Ərsəyə gətirən" },
   "about_openSourceCode": { "message": "Mənbə kodunu açın" },
+  "about_latestChanges": { "message": "Son dəyişikliklər" },
   "scheme_light": { "message": "İşıqlı" },
   "scheme_dark": { "message": "Qaranlıq" },
   "mode_proxy": { "message": "Proksi Rejimi" },

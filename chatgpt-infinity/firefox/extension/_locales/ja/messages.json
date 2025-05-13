@@ -20,6 +20,7 @@
   "about_version": { "message": "バージョン" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "最新の変更" },
   "prompt_updateReplyLang": { "message": "返信言語を更新する" },
   "prompt_updateReplyTopic": { "message": "返信トピックを更新" },
   "prompt_orEnter": { "message": "または入力してください" },

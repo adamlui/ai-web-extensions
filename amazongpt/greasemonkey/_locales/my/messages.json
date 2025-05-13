@@ -21,6 +21,7 @@
   "about_version": { "message": "မူ" },
   "about_poweredBy": { "message": "စွမ်းဆောင်ရည်" },
   "about_openSourceCode": { "message": "ပွင့်လင်းအရင်းအမြစ်ကုဒ်" },
+  "about_latestChanges": { "message": "နောက်ဆုံးအပြောင်းအလဲများ" },
   "scheme_light": { "message": "အလင်း" },
   "scheme_dark": { "message": "အမှောင်" },
   "mode_proxy": { "message": "Proxy မုဒ်" },

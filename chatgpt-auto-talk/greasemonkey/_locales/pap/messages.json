@@ -11,6 +11,7 @@
   "about_version": { "message": "Vershon" },
   "about_poweredBy": { "message": "Potenciá por" },
   "about_openSourceCode": { "message": "Codigo Fuente Abierto" },
+  "about_latestChanges": { "message": "Último kambionan" },
   "mode_autoTalk": { "message": "Papiamentu outomátiko" },
   "helptip_toggleVis": { "message": "Show Auto-Talk Toggle Into Sidebar Traduccion" },
   "alert_updateAvail": { "message": "Actualizacion Disponible" },

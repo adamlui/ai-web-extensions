@@ -14,6 +14,7 @@
   "about_version": { "message": "Bersyon" },
   "about_poweredBy": { "message": "Gipadagan sa" },
   "about_openSourceCode": { "message": "Gigikana sa kodigo" },
+  "about_latestChanges": { "message": "Pinakabag-o nga mga pagbag-o" },
   "prompt_updateInt": { "message": "Awhag sa Intibalo sa Pag-refresh (sa segundos)" },
   "helptip_toggleVis": { "message": "Ipakita ang Auto-Refresh toggle sa sidebar" },
   "helptip_modeNotifs": { "message": "Ipakita ang mga pahibalo kung ang mga mode/setting sa pag-toggle" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "ווערסיע" },
   "about_poweredBy": { "message": "פּאַוערד דורך" },
   "about_openSourceCode": { "message": "עפֿענען מקור קאָד" },
+  "about_latestChanges": { "message": "לעצטע ענדערונגען" },
   "mode_autoclear": { "message": "אַוטאָ-קלאָר" },
   "helptip_clearNow": { "message": "איצט ויסמעקן שמועס געשיכטע" },
   "helptip_toggleVis": { "message": "ווייַזן אַוטאָ-קלאָר טאַגאַל אין סיידבאַר" },

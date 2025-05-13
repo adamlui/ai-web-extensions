@@ -14,6 +14,7 @@
   "about_version": { "message": "Verzija" },
   "about_poweredBy": { "message": "omogućio" },
   "about_openSourceCode": { "message": "Izvorni kod" },
+  "about_latestChanges": { "message": "Najnovije izmjene" },
   "mode_autoContinue": { "message": "Automatski nastavi" },
   "helptip_autoScroll": { "message": "Automatski se pomičite na dno dok se generišu odgovori" },
   "helptip_modeNotifs": { "message": "Prikaži obavještenja prilikom prebacivanja režima/postavki" },

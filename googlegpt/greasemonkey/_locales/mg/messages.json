@@ -34,6 +34,7 @@
   "about_version": { "message": "Dika" },
   "about_poweredBy": { "message": "Tantanin'ny" },
   "about_openSourceCode": { "message": "Kaody niaingana" },
+  "about_latestChanges": { "message": "Fiovana farany" },
   "scheme_light": { "message": "Mazava" },
   "scheme_dark": { "message": "Maizina" },
   "mode_proxy": { "message": "Fomba Proxy" },

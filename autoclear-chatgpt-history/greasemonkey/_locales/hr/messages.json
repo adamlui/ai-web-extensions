@@ -14,6 +14,7 @@
   "about_version": { "message": "Verzija" },
   "about_poweredBy": { "message": "Pokreće" },
   "about_openSourceCode": { "message": "Izvorni kod" },
+  "about_latestChanges": { "message": "Najnovije promjene" },
   "mode_autoclear": { "message": "automatsko �i��enje" },
   "helptip_clearNow": { "message": "Odmah izbriši povijest razgovora" },
   "helptip_toggleVis": { "message": "Prikaži prekidač automatskog čišćenja u bočnoj traci" },

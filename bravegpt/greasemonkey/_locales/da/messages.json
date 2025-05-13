@@ -34,6 +34,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Drevet af" },
   "about_openSourceCode": { "message": "åben kilde" },
+  "about_latestChanges": { "message": "Seneste ændringer" },
   "scheme_light": { "message": "Lys" },
   "scheme_dark": { "message": "Mørk" },
   "mode_proxy": { "message": "Proxy-tilstand" },

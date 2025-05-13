@@ -11,6 +11,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Latest changes" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "Show Auto-Talk toggle in sidebar" },
   "alert_updateAvail": { "message": "Update available" },

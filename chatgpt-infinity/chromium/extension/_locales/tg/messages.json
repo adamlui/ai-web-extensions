@@ -20,6 +20,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "Нерӯмандшуда аз тарафи" },
   "about_openSourceCode": { "message": "Рамзи кушодаасос" },
+  "about_latestChanges": { "message": "Mga pinakabagong pagbabago" },
   "prompt_updateReplyLang": { "message": "Забони ҷавобро навсозӣ кунед" },
   "prompt_updateReplyTopic": { "message": "Мавзӯъи ҷавобро навсозӣ кунед" },
   "prompt_orEnter": { "message": "ё ворид кунед" },

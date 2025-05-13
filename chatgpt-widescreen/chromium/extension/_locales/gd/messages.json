@@ -31,6 +31,7 @@
   "about_version": { "message": "Tionndadh" },
   "about_poweredBy": { "message": "Le cumhachd" },
   "about_openSourceCode": { "message": "Bun-tùs a' chod" },
+  "about_latestChanges": { "message": "Na h - atharraichean as ùire" },
   "mode_widescreen": { "message": "Sgrìn fharsaing" },
   "mode_fullWindow": { "message": "Làn - uinneag" },
   "mode_fullscreen": { "message": "Sgrìn slàn" },

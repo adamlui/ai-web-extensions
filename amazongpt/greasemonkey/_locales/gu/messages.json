@@ -21,6 +21,7 @@
   "about_version": { "message": "આવૃત્તિ" },
   "about_poweredBy": { "message": "દ્વારા સંચાલિત" },
   "about_openSourceCode": { "message": "સ્ત્રોત કોડ" },
+  "about_latestChanges": { "message": "તાજેતરના ફેરફારો" },
   "scheme_light": { "message": "લાઈટ" },
   "scheme_dark": { "message": "કાળો" },
   "mode_proxy": { "message": "પ્રોક્સી મોડ" },

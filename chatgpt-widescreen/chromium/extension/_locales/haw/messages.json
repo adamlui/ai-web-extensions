@@ -31,6 +31,7 @@
   "about_version": { "message": "Manao" },
   "about_poweredBy": { "message": "Hoʻāmana ʻia e" },
   "about_openSourceCode": { "message": "Wehe kumu kumu" },
+  "about_latestChanges": { "message": "Nā hoʻololi hou" },
   "mode_widescreen": { "message": "Palena laula" },
   "mode_fullWindow": { "message": "pukaaniani piha" },
   "mode_fullscreen": { "message": "Paʻa piha" },

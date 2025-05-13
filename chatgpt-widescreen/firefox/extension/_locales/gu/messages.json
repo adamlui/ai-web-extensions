@@ -31,6 +31,7 @@
   "about_version": { "message": "આવૃત્તિ" },
   "about_poweredBy": { "message": "દ્વારા સંચાલિત" },
   "about_openSourceCode": { "message": "સ્ત્રોત કોડ" },
+  "about_latestChanges": { "message": "તાજેતરના ફેરફારો" },
   "mode_widescreen": { "message": "વિશાળ સ્ક્રીન" },
   "mode_fullWindow": { "message": "પૂર્ણ - વિન્ડો" },
   "mode_fullscreen": { "message": "પૂર્ણ સ્ક્રીન" },

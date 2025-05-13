@@ -31,6 +31,7 @@
   "about_version": { "message": "Verze" },
   "about_poweredBy": { "message": "Běží na" },
   "about_openSourceCode": { "message": "Otevřený zdrojový kód." },
+  "about_latestChanges": { "message": "Poslední změny" },
   "mode_widescreen": { "message": "Širokoúhlá obrazovka" },
   "mode_fullWindow": { "message": "Celé okno" },
   "mode_fullscreen": { "message": "Celá obrazovka" },

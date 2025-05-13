@@ -14,6 +14,7 @@
   "about_version": { "message": "Versija" },
   "about_poweredBy": { "message": "Įgalino Proneta" },
   "about_openSourceCode": { "message": "Pradinis kodas" },
+  "about_latestChanges": { "message": "Naujausi pakeitimai" },
   "mode_autoclear": { "message": "Automatinis valymas" },
   "helptip_clearNow": { "message": "Išvalyti pokalbių istoriją dabar" },
   "helptip_toggleVis": { "message": "Rodyti automatinio išvalymo perjungimą šoninėje juostoje" },

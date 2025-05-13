@@ -14,6 +14,7 @@
   "about_version": { "message": "እትም" },
   "about_poweredBy": { "message": "የተጎለበተው በ" },
   "about_openSourceCode": { "message": "የምንጭ ኮድ" },
+  "about_latestChanges": { "message": "የቅርብ ጊዜ ለውጦች" },
   "prompt_updateInt": { "message": "ዳግም አስገባ (ወዲህም የሚያያዝ_አርም)" },
   "helptip_toggleVis": { "message": "የጎን አሞሌ ውስጥ Auto-Refresh toggle አሳይ" },
   "helptip_modeNotifs": { "message": "ሁነቶችን/ቅንብሮችን በሚገፉበት ጊዜ ማሳወቂያዎችን ያሳዩ" },

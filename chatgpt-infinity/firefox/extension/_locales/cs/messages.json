@@ -20,6 +20,7 @@
   "about_version": { "message": "Verze" },
   "about_poweredBy": { "message": "Běží na" },
   "about_openSourceCode": { "message": "Otevřený zdrojový kód." },
+  "about_latestChanges": { "message": "Poslední změny" },
   "prompt_updateReplyLang": { "message": "Aktualizovat jazyk odpovědi" },
   "prompt_updateReplyTopic": { "message": "Aktualizovat téma odpovědi" },
   "prompt_orEnter": { "message": "nebo zadat URL" },

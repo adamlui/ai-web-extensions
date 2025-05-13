@@ -20,6 +20,7 @@
   "about_version": { "message": "መበል" },
   "about_poweredBy": { "message": "ብ" },
   "about_openSourceCode": { "message": "ክፉት ምንጪ ኮድ" },
+  "about_latestChanges": { "message": "ናይ መወዳእታ ለውጥታት" },
   "prompt_updateReplyLang": { "message": "ቋንቋ መልሲ ኣመሓይሽ" },
   "prompt_updateReplyTopic": { "message": "ኣርእስቲ መልሲ ኣመሓይሽ" },
   "prompt_orEnter": { "message": "ወይ ኣእቱ" },

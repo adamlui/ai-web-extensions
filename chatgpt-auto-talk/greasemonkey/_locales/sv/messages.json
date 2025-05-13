@@ -11,6 +11,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Drivs av" },
   "about_openSourceCode": { "message": "öppen källkod" },
+  "about_latestChanges": { "message": "Latest changes" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "Visa Auto-Talk växling i sidofältet" },
   "alert_updateAvail": { "message": "Uppdatering tillgänglig" },

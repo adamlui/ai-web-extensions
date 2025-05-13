@@ -34,6 +34,7 @@
   "about_version": { "message": "Versión" },
   "about_poweredBy": { "message": "Desarrollado por" },
   "about_openSourceCode": { "message": "Cola ciega" },
+  "about_latestChanges": { "message": "Últimos cambios" },
   "scheme_light": { "message": "Claro" },
   "scheme_dark": { "message": "Oscuro" },
   "mode_proxy": { "message": "Modo Proxy" },

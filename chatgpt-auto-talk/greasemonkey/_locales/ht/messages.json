@@ -11,6 +11,7 @@
   "about_version": { "message": "Vèsyon" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Kòd sous louvri" },
+  "about_latestChanges": { "message": "Dènye chanjman yo" },
   "mode_autoTalk": { "message": "Oto-Pale" },
   "helptip_toggleVis": { "message": "Montre Oto-Pale aktive nan ankadre" },
   "alert_updateAvail": { "message": "Mizajou ki disponib" },

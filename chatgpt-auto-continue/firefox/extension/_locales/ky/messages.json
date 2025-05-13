@@ -14,6 +14,7 @@
   "about_version": { "message": "Версиясы" },
   "about_poweredBy": { "message": "Тарабынан иштелип чыккан" },
   "about_openSourceCode": { "message": "Баштапкы код" },
+  "about_latestChanges": { "message": "Акыркы өзгөртүүлөр" },
   "mode_autoContinue": { "message": "Undo-type" },
   "helptip_autoScroll": { "message": "Жооптор түзүлүп жаткандыктан, автоматтык түрдө түбүнө жылдыруу" },
   "helptip_modeNotifs": { "message": "Режимдерди/параметрлерди алмаштырганда эскертүүлөрдү көрсөтүү" },

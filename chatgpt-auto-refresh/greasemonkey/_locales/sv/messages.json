@@ -14,6 +14,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Drivs av" },
   "about_openSourceCode": { "message": "öppen källkod" },
+  "about_latestChanges": { "message": "Latest changes" },
   "prompt_updateInt": { "message": "Uppdatera uppdateringsintervall (i sekunder)" },
   "helptip_toggleVis": { "message": "Visa automatisk uppdatering växla i sidofältet" },
   "helptip_modeNotifs": { "message": "Visa aviseringar när du växlar lägen/inställningar" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Latest changes" },
   "mode_autoclear": { "message": "Auto-Clear" },
   "helptip_clearNow": { "message": "Clear chat history now" },
   "helptip_toggleVis": { "message": "Show Auto-Clear toggle in sidebar" },

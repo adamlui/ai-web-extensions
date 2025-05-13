@@ -21,6 +21,7 @@
   "about_version": { "message": "ਵਰਜਨ" },
   "about_poweredBy": { "message": "ਦੁਆਰਾ ਸੰਚਾਲਿਤ" },
   "about_openSourceCode": { "message": "ਓਪਨ ਸੋਰਸ ਕੋਡ" },
+  "about_latestChanges": { "message": "ਨਵੀਨਤਮ ਤਬਦੀਲੀਆਂ" },
   "scheme_light": { "message": "ਪ੍ਰਕਾਸ਼" },
   "scheme_dark": { "message": "ਗੂੜਾ" },
   "mode_proxy": { "message": "ਪਰਾਕਸੀ ਮੋਡ" },

@@ -31,6 +31,7 @@
   "about_version": { "message": "ਵਰਜਨ" },
   "about_poweredBy": { "message": "ਦੁਆਰਾ ਸੰਚਾਲਿਤ" },
   "about_openSourceCode": { "message": "ਓਪਨ ਸੋਰਸ ਕੋਡ" },
+  "about_latestChanges": { "message": "ਨਵੀਨਤਮ ਤਬਦੀਲੀਆਂ" },
   "mode_widescreen": { "message": "ਚੌੜੀ ਸਕਰੀਨ" },
   "mode_fullWindow": { "message": "ਪੂਰੀ ਵਿੰਡੋ" },
   "mode_fullscreen": { "message": "ਪੂਰੀ ਸਕਰੀਨ" },

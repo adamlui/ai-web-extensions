@@ -14,6 +14,7 @@
   "about_version": { "message": "Versija" },
   "about_poweredBy": { "message": "Darbināts ar" },
   "about_openSourceCode": { "message": "Atklātais pirmkods" },
+  "about_latestChanges": { "message": "Jaunākās izmaiņas" },
   "prompt_updateInt": { "message": "Atjaunināt atjaunināšanas intervālu (sekundēs)" },
   "helptip_toggleVis": { "message": "Rādīt automātiskās atsvaidzināšanas pārslēgu sānjoslā" },
   "helptip_modeNotifs": { "message": "Rādīt paziņojumus, pārslēdzot režīmus/iestatījumus" },

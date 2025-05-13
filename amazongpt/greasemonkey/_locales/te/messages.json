@@ -21,6 +21,7 @@
   "about_version": { "message": "వివరణం" },
   "about_poweredBy": { "message": "ద్వారా ఆధారితం" },
   "about_openSourceCode": { "message": "ఓపెన్ సోర్స్ కోడ్" },
+  "about_latestChanges": { "message": "తాజా మార్పులు" },
   "scheme_light": { "message": "లైట్" },
   "scheme_dark": { "message": "చీకటి" },
   "mode_proxy": { "message": "ప్రాక్సీ మోడ్" },

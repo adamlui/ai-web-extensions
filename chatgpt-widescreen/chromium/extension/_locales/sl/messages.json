@@ -31,6 +31,7 @@
   "about_version": { "message": "Različica" },
   "about_poweredBy": { "message": "Poganja" },
   "about_openSourceCode": { "message": "Odprta koda" },
+  "about_latestChanges": { "message": "Najnovejše spremembe" },
   "mode_widescreen": { "message": "Širok zaslon" },
   "mode_fullWindow": { "message": "Celotno okno" },
   "mode_fullscreen": { "message": "Cel zaslon" },

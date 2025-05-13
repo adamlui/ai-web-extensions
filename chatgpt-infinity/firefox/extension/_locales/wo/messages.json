@@ -20,6 +20,7 @@
   "about_version": { "message": "Sumb" },
   "about_poweredBy": { "message": "Xët yi lëkkalook wii \"'Powers by\"" },
   "about_openSourceCode": { "message": "Xët yi lëkkalook wii \"'Open Source\"'" },
+  "about_latestChanges": { "message": "Latest yi" },
   "prompt_updateReplyLang": { "message": "Noppa xët yi jëm ci kat" },
   "prompt_updateReplyTopic": { "message": "Noppa xët yi tema" },
   "prompt_orEnter": { "message": "am mënu" },

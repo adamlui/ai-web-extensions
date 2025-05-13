@@ -20,6 +20,7 @@
   "about_version": { "message": "Хувилбар" },
   "about_poweredBy": { "message": "ИЛЧЛЭГЧ" },
   "about_openSourceCode": { "message": "Нээлттэй Эх сурвалж" },
+  "about_latestChanges": { "message": "Сүүлийн өөрчлөлтүүд" },
   "prompt_updateReplyLang": { "message": "Хариултын хэл шинэчлэх" },
   "prompt_updateReplyTopic": { "message": "Хариултын сэдэв шинэчлэх" },
   "prompt_orEnter": { "message": "эсвэл оруул" },

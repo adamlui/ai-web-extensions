@@ -21,6 +21,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "Създадено от" },
   "about_openSourceCode": { "message": "Отворен код" },
+  "about_latestChanges": { "message": "Последни промени" },
   "scheme_light": { "message": "Лампа" },
   "scheme_dark": { "message": "Тъмен" },
   "mode_proxy": { "message": "Режим на прокси сървър" },

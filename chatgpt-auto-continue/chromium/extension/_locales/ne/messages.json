@@ -14,6 +14,7 @@
   "about_version": { "message": "संस्करण" },
   "about_poweredBy": { "message": "समर्थनकर्ता" },
   "about_openSourceCode": { "message": "स्रोत सङ्केत" },
+  "about_latestChanges": { "message": "भर्खरका परिवर्तनहरू" },
   "mode_autoContinue": { "message": "स्वत: जारी राख्नुहोस्" },
   "helptip_autoScroll": { "message": "जवाफहरू उत्पन्न हुँदै गर्दा स्वचालित रूपमा तल स्क्रोल गर्नुहोस्" },
   "helptip_modeNotifs": { "message": "मोडहरू/सेटिङहरू टगल गर्दा सूचनाहरू देखाउनुहोस्" },

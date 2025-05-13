@@ -14,6 +14,7 @@
   "about_version": { "message": "Versiya" },
   "about_poweredBy": { "message": "Ərsəyə gətirən" },
   "about_openSourceCode": { "message": "Mənbə kodunu açın" },
+  "about_latestChanges": { "message": "Son dəyişikliklər" },
   "mode_autoclear": { "message": "Auto-Clear" },
   "helptip_clearNow": { "message": "Söhbət tarixçəsini indi təmizlə" },
   "helptip_toggleVis": { "message": "Yan paneldə avtomatik sil keçidini göstər" },

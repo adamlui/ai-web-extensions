@@ -34,6 +34,7 @@
   "about_version": { "message": "ಆವೃತ್ತಿ" },
   "about_poweredBy": { "message": "ಸಾಮರ್ಥ್ಯ ಇವರಿಂದ" },
   "about_openSourceCode": { "message": "ಓಪನ್ ಸೋರ್ಸ್ ಕೋಡ್" },
+  "about_latestChanges": { "message": "ಇತ್ತೀಚಿನ ಬದಲಾವಣೆಗಳು" },
   "scheme_light": { "message": "ಬೆಳಕು" },
   "scheme_dark": { "message": "ಗಾಢ" },
   "mode_proxy": { "message": "ಪ್ರಾಕ್ಸಿ ಮೋಡ್" },

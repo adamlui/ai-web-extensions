@@ -34,6 +34,7 @@
   "about_version": { "message": ":نسخه" },
   "about_poweredBy": { "message": "طراحی شده توسط" },
   "about_openSourceCode": { "message": "سرچينه كوډه" },
+  "about_latestChanges": { "message": "وروستي بدلونونه" },
   "scheme_light": { "message": "روشن" },
   "scheme_dark": { "message": "تاریک" },
   "mode_proxy": { "message": "ګوډاګی اکر" },

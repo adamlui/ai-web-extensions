@@ -14,6 +14,7 @@
   "about_version": { "message": "Верзија" },
   "about_poweredBy": { "message": "Овозможено од" },
   "about_openSourceCode": { "message": "Код со отворен код" },
+  "about_latestChanges": { "message": "Најнови промени" },
   "prompt_updateInt": { "message": "Ажурирајте го интервалот за освежување (во секунди)" },
   "helptip_toggleVis": { "message": "Прикажи автоматско освежување во страничната лента" },
   "helptip_modeNotifs": { "message": "Прикажи известувања кога се префрлаат режимите/подесувањата" },

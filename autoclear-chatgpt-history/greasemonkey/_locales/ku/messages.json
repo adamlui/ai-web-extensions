@@ -14,6 +14,7 @@
   "about_version": { "message": "وەرژن" },
   "about_poweredBy": { "message": "ڕاگرتن لە لای" },
   "about_openSourceCode": { "message": "Koda çavkanî" },
+  "about_latestChanges": { "message": "Guhertinên dawî" },
   "mode_autoclear": { "message": "خۆکارانە پاک بکە" },
   "helptip_clearNow": { "message": "Naha dîroka chatê paqij bike" },
   "helptip_toggleVis": { "message": "Veguheztina Oto-Paqijkirina li kêlekê nîşan bide" },

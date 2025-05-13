@@ -11,6 +11,7 @@
   "about_version": { "message": "Umukoro" },
   "about_poweredBy": { "message": "Ku" },
   "about_openSourceCode": { "message": "Inkomoko Inyandikoporogaramu" },
+  "about_latestChanges": { "message": "Amahinduka" },
   "mode_autoTalk": { "message": "Kuganira mu buryo bwikora" },
   "helptip_toggleVis": { "message": "Mukomatanya in Umurongo wo ku mpande" },
   "alert_updateAvail": { "message": "Bihari" },

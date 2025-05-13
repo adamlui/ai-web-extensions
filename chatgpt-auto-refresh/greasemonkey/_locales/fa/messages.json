@@ -14,6 +14,7 @@
   "about_version": { "message": "نسخه برنامه" },
   "about_poweredBy": { "message": "قدرت گرفته توسط" },
   "about_openSourceCode": { "message": "سورس کد" },
+  "about_latestChanges": { "message": "آخرین تغییرات" },
   "prompt_updateInt": { "message": "فاصله بازخوانی به‌روزرسانی (در ثانیه)" },
   "helptip_toggleVis": { "message": "نمایش ضامن بازخوانی خودکار در نوار کناری" },
   "helptip_modeNotifs": { "message": "نمایش اعلان‌ها هنگام تغییر حالت‌ها/تنظیمات" },

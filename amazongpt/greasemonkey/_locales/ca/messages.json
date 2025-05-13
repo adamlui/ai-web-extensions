@@ -21,6 +21,7 @@
   "about_version": { "message": "Versió" },
   "about_poweredBy": { "message": "Desenvolupat per" },
   "about_openSourceCode": { "message": "Codi obert" },
+  "about_latestChanges": { "message": "Últims canvis" },
   "scheme_light": { "message": "Clar" },
   "scheme_dark": { "message": "Fosc" },
   "mode_proxy": { "message": "Mode de servidor intermediari" },

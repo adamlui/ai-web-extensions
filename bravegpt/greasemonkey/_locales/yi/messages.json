@@ -34,6 +34,7 @@
   "about_version": { "message": "ווערסיע" },
   "about_poweredBy": { "message": "פּאַוערד דורך" },
   "about_openSourceCode": { "message": "עפֿענען מקור קאָד" },
+  "about_latestChanges": { "message": "לעצטע ענדערונגען" },
   "scheme_light": { "message": "ליכט" },
   "scheme_dark": { "message": "טונקל" },
   "mode_proxy": { "message": "פּראָקסי מאָדע" },

@@ -31,6 +31,7 @@
   "about_version": { "message": "Нұсқа" },
   "about_poweredBy": { "message": "Сайтты жасаған" },
   "about_openSourceCode": { "message": "Ашық бастапқы код" },
+  "about_latestChanges": { "message": "Соңғы өзгерістер" },
   "mode_widescreen": { "message": "Кең экран" },
   "mode_fullWindow": { "message": "Толық терезе" },
   "mode_fullscreen": { "message": "Толық экранға" },

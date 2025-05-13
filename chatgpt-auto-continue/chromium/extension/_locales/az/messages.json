@@ -14,6 +14,7 @@
   "about_version": { "message": "Versiya" },
   "about_poweredBy": { "message": "Ərsəyə gətirən" },
   "about_openSourceCode": { "message": "Mənbə kodunu açın" },
+  "about_latestChanges": { "message": "Son dəyişikliklər" },
   "mode_autoContinue": { "message": "Avtomatik Davam Et" },
   "helptip_autoScroll": { "message": "Cavablar yaranarkən avtomatik olaraq aşağıya sürüşdürün" },
   "helptip_modeNotifs": { "message": "Rejimləri/parametrləri dəyişdikdə bildirişləri göstər" },

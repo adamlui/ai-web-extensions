@@ -14,6 +14,7 @@
   "about_version": { "message": "ਵਰਜਨ" },
   "about_poweredBy": { "message": "ਦੁਆਰਾ ਸੰਚਾਲਿਤ" },
   "about_openSourceCode": { "message": "ਓਪਨ ਸੋਰਸ ਕੋਡ" },
+  "about_latestChanges": { "message": "ਨਵੀਨਤਮ ਤਬਦੀਲੀਆਂ" },
   "prompt_updateInt": { "message": "ਰੀਫਰੈਸ਼ ਅੰਤਰਾਲ ਅੱਪਡੇਟ ਕਰੋ (ਸਕਿੰਟਾਂ ਵਿੱਚ)" },
   "helptip_toggleVis": { "message": "ਬਾਹੀ ਵਿੱਚ ਆਟੋ-ਰਿਫਰੈਸ਼ ਟੌਗਲ ਵੇਖੋ" },
   "helptip_modeNotifs": { "message": "ਜਦੋਂ ਟੌਗਲਿੰਗ ਮੋਡ/ਸੈਟਿੰਗ ਹੋਵੇ ਤਾਂ ਨੋਟੀਫਿਕੇਸ਼ਨ ਵੇਖੋ" },

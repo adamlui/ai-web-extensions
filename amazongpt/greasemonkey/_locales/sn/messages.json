@@ -21,6 +21,7 @@
   "about_version": { "message": "Vhezheni" },
   "about_poweredBy": { "message": "Inofambiswa ne" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Shanduko dzichangoburwa" },
   "scheme_light": { "message": "Chiedza" },
   "scheme_dark": { "message": "Rima" },
   "mode_proxy": { "message": "Proxy Mode" },

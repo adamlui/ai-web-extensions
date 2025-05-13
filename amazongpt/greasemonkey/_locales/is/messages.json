@@ -21,6 +21,7 @@
   "about_version": { "message": "Útgáfa" },
   "about_poweredBy": { "message": "Knúið af" },
   "about_openSourceCode": { "message": "Opinn kóðalisti" },
+  "about_latestChanges": { "message": "Nýjustu breytingar" },
   "scheme_light": { "message": "Ljóst" },
   "scheme_dark": { "message": "Dökkt" },
   "mode_proxy": { "message": "Milliþjónshamur" },

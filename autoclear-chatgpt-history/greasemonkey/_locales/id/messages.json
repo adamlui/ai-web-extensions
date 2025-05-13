@@ -14,6 +14,7 @@
   "about_version": { "message": "Versi" },
   "about_poweredBy": { "message": "Didukung oleh" },
   "about_openSourceCode": { "message": "Sumber Terbuka" },
+  "about_latestChanges": { "message": "Perubahan terbaru" },
   "mode_autoclear": { "message": "Bersihkan Otomatis" },
   "helptip_clearNow": { "message": "Hapus riwayat obrolan sekarang" },
   "helptip_toggleVis": { "message": "Tampilkan Auto - Clear toggle di bilah sisi" },

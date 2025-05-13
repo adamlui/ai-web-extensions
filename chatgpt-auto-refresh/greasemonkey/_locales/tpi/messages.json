@@ -14,6 +14,7 @@
   "about_version": { "message": "Tok Pisin" },
   "about_poweredBy": { "message": "Em i gat bikpela strong" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Ol nupela senis" },
   "prompt_updateInt": { "message": "Wokim nupela taim (long seken)" },
   "helptip_toggleVis": { "message": "Toksave long ol samting i stap long sait bilong yu" },
   "helptip_modeNotifs": { "message": "Toksave taim yu senisim ol modus/sait" },

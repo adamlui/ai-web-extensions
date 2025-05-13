@@ -14,6 +14,7 @@
   "about_version": { "message": "Версиясы" },
   "about_poweredBy": { "message": "Тарабынан иштелип чыккан" },
   "about_openSourceCode": { "message": "Баштапкы код" },
+  "about_latestChanges": { "message": "Акыркы өзгөртүүлөр" },
   "mode_autoclear": { "message": "Auto-Clear" },
   "helptip_clearNow": { "message": "Чат тарыхын азыр тазалоо" },
   "helptip_toggleVis": { "message": "Бет тилкесинде Авто тазалоо өтмөгүн көрсөтүү" },

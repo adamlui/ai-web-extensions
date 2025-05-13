@@ -14,6 +14,7 @@
   "about_version": { "message": "Ukupilibula" },
   "about_poweredBy": { "message": "Amapola by Amapola" },
   "about_openSourceCode": { "message": "Ilembo lya pa kompyuta ilyaba pa kompyuta" },
+  "about_latestChanges": { "message": "Ukucinja kwa nomba line" },
   "prompt_updateInt": { "message": "Update refresh interval (in kulyashi)" },
   "helptip_toggleVis": { "message": "Tukwila Auto-Refresh Toggle in Sidebar" },
   "helptip_modeNotifs": { "message": "Ukulele Tabs/Ukulele Tabs" },

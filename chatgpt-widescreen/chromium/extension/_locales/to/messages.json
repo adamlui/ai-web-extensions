@@ -31,6 +31,7 @@
   "about_version": { "message": "Tatau" },
   "about_poweredBy": { "message": "Fakalele ʻe he" },
   "about_openSourceCode": { "message": "Fakaava ʻa e kouti maʻuʻanga tokoni" },
+  "about_latestChanges": { "message": "Ngaahi liliu fakamuimuitaha" },
   "mode_widescreen": { "message": "Screen falahi" },
   "mode_fullWindow": { "message": "Matapa sioʻata kakato" },
   "mode_fullscreen": { "message": "Screen kakato" },

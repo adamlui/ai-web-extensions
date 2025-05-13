@@ -11,6 +11,7 @@
   "about_version": { "message": "Weergawe" },
   "about_poweredBy": { "message": "Aangedryf deur" },
   "about_openSourceCode": { "message": "Oopbronkode" },
+  "about_latestChanges": { "message": "Jongste veranderinge" },
   "mode_autoTalk": { "message": "Outo-Praat" },
   "helptip_toggleVis": { "message": "Vertoon Outo-Talk skakel in sybalk" },
   "alert_updateAvail": { "message": "Opdatering beskikbaar" },

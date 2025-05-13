@@ -20,6 +20,7 @@
   "about_version": { "message": "সংস্করণ" },
   "about_poweredBy": { "message": "নিবেদন করছেন" },
   "about_openSourceCode": { "message": "সোর্স কোড" },
+  "about_latestChanges": { "message": "সর্বশেষ পরিবর্তনসমূহ" },
   "prompt_updateReplyLang": { "message": "জবাব ভাষা আপডেট করুন" },
   "prompt_updateReplyTopic": { "message": "উত্তর সংক্রান্ত বিষয় হালনাগাদ করুন" },
   "prompt_orEnter": { "message": "অথবা প্রবেশ করুন" },

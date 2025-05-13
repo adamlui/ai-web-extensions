@@ -14,6 +14,7 @@
   "about_version": { "message": "Vèsyon" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Kòd sous louvri" },
+  "about_latestChanges": { "message": "Dènye chanjman yo" },
   "mode_autoclear": { "message": "Auto-Klear" },
   "helptip_clearNow": { "message": "Klè istwa chat kounye a" },
   "helptip_toggleVis": { "message": "Montre Oto-Klè aktive nan ankadre" },

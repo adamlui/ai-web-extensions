@@ -14,6 +14,7 @@
   "about_version": { "message": "Versiune" },
   "about_poweredBy": { "message": "Operat de" },
   "about_openSourceCode": { "message": "Cod cu sursă deschisă." },
+  "about_latestChanges": { "message": "Cele mai recente modificări" },
   "mode_autoclear": { "message": "Curățare automată" },
   "helptip_clearNow": { "message": "Ștergeți acum istoricul conversațiilor prin chat" },
   "helptip_toggleVis": { "message": "Afișare comutare Ștergere automată în bara laterală" },

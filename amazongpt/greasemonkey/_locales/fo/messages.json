@@ -21,6 +21,7 @@
   "about_version": { "message": "Útgáva" },
   "about_poweredBy": { "message": "Powered by SFX" },
   "about_openSourceCode": { "message": "Opna keldukota" },
+  "about_latestChanges": { "message": "Nýggju broytingarnar" },
   "scheme_light": { "message": "Ljós" },
   "scheme_dark": { "message": "Myrkt" },
   "mode_proxy": { "message": "Proxy mode" },

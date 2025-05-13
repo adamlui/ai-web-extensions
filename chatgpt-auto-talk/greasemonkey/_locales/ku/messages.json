@@ -11,6 +11,7 @@
   "about_version": { "message": "وەشان" },
   "about_poweredBy": { "message": "پشتگیریکراو لە لایەن" },
   "about_openSourceCode": { "message": "Koda çavkanî" },
+  "about_latestChanges": { "message": "Guhertinên dawî" },
   "mode_autoTalk": { "message": "Auto-Takk" },
   "helptip_toggleVis": { "message": "Veguheztina Oto-Axaftina li kêlekê nîşan bide" },
   "alert_updateAvail": { "message": "نوێکردنەوە بەردەستە" },

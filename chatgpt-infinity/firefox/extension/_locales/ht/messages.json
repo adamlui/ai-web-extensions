@@ -20,6 +20,7 @@
   "about_version": { "message": "Vèsyon" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Kòd sous louvri" },
+  "about_latestChanges": { "message": "Dènye chanjman yo" },
   "prompt_updateReplyLang": { "message": "MIZAJOU REPONS LANG" },
   "prompt_updateReplyTopic": { "message": "Mizajou sijè repons" },
   "prompt_orEnter": { "message": "oswa antre/ou antre/ou antre" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "പതിപ്പ്" },
   "about_poweredBy": { "message": "നയിച്ചത്" },
   "about_openSourceCode": { "message": "ഓപ്പൺ സോഴ്സ് കോഡ്" },
+  "about_latestChanges": { "message": "ഏറ്റവും പുതിയ മാറ്റങ്ങൾ" },
   "prompt_updateInt": { "message": "പുതുക്കം ഇൻറർവൽ അപ്ഡേറ്റ് ചെയ്യുക (സെക്കന്റുകൾക്ക്)" },
   "helptip_toggleVis": { "message": "സൈഡ്ബാറിൽ ഓട്ടോ-റിഫ്രഷ് ടോഗിൾ കാണിക്കുക" },
   "helptip_modeNotifs": { "message": "മോഡുകൾ/ക്രമീകരണങ്ങൾ ടോഗിൾ ചെയ്യുമ്പോൾ അറിയിപ്പുകൾ കാണിക്കുക" },

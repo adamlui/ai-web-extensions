@@ -14,6 +14,7 @@
   "about_version": { "message": "Uhlelo" },
   "about_poweredBy": { "message": "Ixhaswa yi" },
   "about_openSourceCode": { "message": "Vula ikhodi yomthombo" },
+  "about_latestChanges": { "message": "Izinguquko zakamuva" },
   "mode_autoclear": { "message": "I-Automatic-Clear" },
   "helptip_clearNow": { "message": "Sula umlando wengxoxo manje" },
   "helptip_toggleVis": { "message": "Bonisa i-auto-Clear toggle kubha eseceleni" },

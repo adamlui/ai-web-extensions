@@ -14,6 +14,7 @@
   "about_version": { "message": ":نسخه" },
   "about_poweredBy": { "message": "طراحی شده توسط" },
   "about_openSourceCode": { "message": "سرچينه كوډه" },
+  "about_latestChanges": { "message": "وروستي بدلونونه" },
   "prompt_updateInt": { "message": "د تازه کولو وقفه تازه کړئ (په ثانیو کې)" },
   "helptip_toggleVis": { "message": "په اړخپټه کې د اتومات بیا تازه کولو څرنګتياونج ښکاره کړئ" },
   "helptip_modeNotifs": { "message": "خبرتیاوې وښایاست کله چې د حالتونو/ترتیباتو ته اشاره وکړئ" },

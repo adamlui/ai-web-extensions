@@ -31,6 +31,7 @@
   "about_version": { "message": "ווערסיע" },
   "about_poweredBy": { "message": "פּאַוערד דורך" },
   "about_openSourceCode": { "message": "עפֿענען מקור קאָד" },
+  "about_latestChanges": { "message": "לעצטע ענדערונגען" },
   "mode_widescreen": { "message": "ברייט פאַרשטעלן" },
   "mode_fullWindow": { "message": "גאַנץ-פֿענצטער" },
   "mode_fullscreen": { "message": "גאנצע סקרין" },

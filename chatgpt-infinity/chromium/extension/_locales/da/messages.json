@@ -20,6 +20,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Drevet af" },
   "about_openSourceCode": { "message": "åben kilde" },
+  "about_latestChanges": { "message": "Seneste ændringer" },
   "prompt_updateReplyLang": { "message": "Opdater svar sprog" },
   "prompt_updateReplyTopic": { "message": "Opdater emne for svar" },
   "prompt_orEnter": { "message": "eller indtast" },

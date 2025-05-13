@@ -14,6 +14,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "Създадено от" },
   "about_openSourceCode": { "message": "Отворен код" },
+  "about_latestChanges": { "message": "Последни промени" },
   "prompt_updateInt": { "message": "Актуализиране на интервала на опресняване (в секунди)" },
   "helptip_toggleVis": { "message": "Показване на превключвателя за автоматично опресняване в страничната лента" },
   "helptip_modeNotifs": { "message": "Показване на известия при превключване на режими/настройки" },

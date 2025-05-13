@@ -11,6 +11,7 @@
   "about_version": { "message": "Versioun" },
   "about_poweredBy": { "message": "Bereetgestallt vun" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "Neist Ännerungen" },
   "mode_autoTalk": { "message": "CAA" },
   "helptip_toggleVis": { "message": "Auto-Talk wiesselen an der Säitbar uweisen" },
   "alert_updateAvail": { "message": "Aktualiséierung verfügbar" },

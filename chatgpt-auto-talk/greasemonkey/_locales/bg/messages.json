@@ -11,6 +11,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "Създадено от" },
   "about_openSourceCode": { "message": "Отворен код" },
+  "about_latestChanges": { "message": "Последни промени" },
   "mode_autoTalk": { "message": "Автоматично говорене" },
   "helptip_toggleVis": { "message": "Показване на превключвателя за автоматично говорене в страничната лента" },
   "alert_updateAvail": { "message": "Налице е актуализация" },

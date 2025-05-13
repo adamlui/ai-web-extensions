@@ -20,6 +20,7 @@
   "about_version": { "message": "Versija" },
   "about_poweredBy": { "message": "Izstrādāts" },
   "about_openSourceCode": { "message": "Atklātais pirmkods" },
+  "about_latestChanges": { "message": "Jaunākās izmaiņas" },
   "prompt_updateReplyLang": { "message": "Atjaunināt atbildes valodu" },
   "prompt_updateReplyTopic": { "message": "Atjaunināt atbildes tēmu" },
   "prompt_orEnter": { "message": "vai ievadiet" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "వివరణం" },
   "about_poweredBy": { "message": "ద్వారా ఆధారితం" },
   "about_openSourceCode": { "message": "ఓపెన్ సోర్స్ కోడ్" },
+  "about_latestChanges": { "message": "తాజా మార్పులు" },
   "mode_autoContinue": { "message": "స్వయంచాలకంగా కొనసాగించు" },
   "helptip_autoScroll": { "message": "ప్రత్యుత్తరాలు ఉత్పత్తి అవుతున్నందున ఆటోమేటిక్ ‌ గా దిగువకు స్క్రోల్ చేయండి" },
   "helptip_modeNotifs": { "message": "మోడ్ ‌ లు/సెట్టింగ్ ‌ లను టోగుల్ చేసేటప్పుడు నోటిఫికేషన్ ‌ లను చూపించండి" },

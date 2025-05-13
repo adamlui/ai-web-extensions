@@ -20,6 +20,7 @@
   "about_version": { "message": "Vhezheni" },
   "about_poweredBy": { "message": "Inofambiswa ne" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Shanduko dzichangoburwa" },
   "prompt_updateReplyLang": { "message": "Kuvandudza mutauro wekupindura" },
   "prompt_updateReplyTopic": { "message": "Gadzirisa nyaya yemhinduro" },
   "prompt_orEnter": { "message": "kana kupinda" },

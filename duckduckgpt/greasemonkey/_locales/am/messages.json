@@ -34,6 +34,7 @@
   "about_version": { "message": "እትም" },
   "about_poweredBy": { "message": "የተጎለበተው በ" },
   "about_openSourceCode": { "message": "የምንጭ ኮድ" },
+  "about_latestChanges": { "message": "የቅርብ ጊዜ ለውጦች" },
   "scheme_light": { "message": "ብርሃን" },
   "scheme_dark": { "message": "ጥቁር" },
   "mode_proxy": { "message": "Proxy ሁነታ" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "バージョン" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "最新の変更" },
   "prompt_updateInt": { "message": "更新間隔を更新してください（秒単位）" },
   "helptip_toggleVis": { "message": "サイドバーに自動更新トグルを表示する" },
   "helptip_modeNotifs": { "message": "モード/設定の切り替え時に通知を表示する" },

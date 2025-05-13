@@ -34,6 +34,7 @@
   "about_version": { "message": "نسخه برنامه" },
   "about_poweredBy": { "message": "قدرت گرفته توسط" },
   "about_openSourceCode": { "message": "سورس کد" },
+  "about_latestChanges": { "message": "آخرین تغییرات" },
   "scheme_light": { "message": "روشن" },
   "scheme_dark": { "message": "تیره" },
   "mode_proxy": { "message": "حالت پروکسی" },

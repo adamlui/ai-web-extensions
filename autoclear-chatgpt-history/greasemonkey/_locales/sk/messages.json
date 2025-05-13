@@ -14,6 +14,7 @@
   "about_version": { "message": "Verzia" },
   "about_poweredBy": { "message": "Beží na" },
   "about_openSourceCode": { "message": "Otvorený zdrojový kód" },
+  "about_latestChanges": { "message": "Najnovšie zmeny" },
   "mode_autoclear": { "message": "Automatické vymazanie" },
   "helptip_clearNow": { "message": "Vymazať históriu chatu teraz" },
   "helptip_toggleVis": { "message": "Zobraziť prepínač Automatické vymazanie v bočnom paneli" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "Útgáfa" },
   "about_poweredBy": { "message": "Knúið af" },
   "about_openSourceCode": { "message": "Opinn kóðalisti" },
+  "about_latestChanges": { "message": "Nýjustu breytingar" },
   "mode_autoclear": { "message": "Auto-Clear" },
   "helptip_clearNow": { "message": "Hreinsa spjallferil núna" },
   "helptip_toggleVis": { "message": "Sýna sjálfvirkan tæringarhnapp í hliðarstiku" },

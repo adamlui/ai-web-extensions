@@ -14,6 +14,7 @@
   "about_version": { "message": "Verzia" },
   "about_poweredBy": { "message": "Beží na" },
   "about_openSourceCode": { "message": "Otvorený zdrojový kód" },
+  "about_latestChanges": { "message": "Najnovšie zmeny" },
   "mode_autoContinue": { "message": "Automatické pokračovanie" },
   "helptip_autoScroll": { "message": "Počas generovania odpovedí sa automaticky posúvajte nadol" },
   "helptip_modeNotifs": { "message": "Zobraziť upozornenia pri prepínaní režimov/nastavení" },

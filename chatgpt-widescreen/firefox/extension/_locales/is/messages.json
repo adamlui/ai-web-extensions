@@ -31,6 +31,7 @@
   "about_version": { "message": "Útgáfa" },
   "about_poweredBy": { "message": "Knúið af" },
   "about_openSourceCode": { "message": "Opinn kóðalisti" },
+  "about_latestChanges": { "message": "Nýjustu breytingar" },
   "mode_widescreen": { "message": "Breiður skjár" },
   "mode_fullWindow": { "message": "Heill gluggi" },
   "mode_fullscreen": { "message": "Heilskjár" },

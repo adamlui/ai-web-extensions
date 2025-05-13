@@ -14,6 +14,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Propulsé par" },
   "about_openSourceCode": { "message": "Création d 'une brochure open source" },
+  "about_latestChanges": { "message": "Ndangba changement" },
   "prompt_updateInt": { "message": "Mettre à jour l'intervalle de rafraîchissement (en secondes)" },
   "helptip_toggleVis": { "message": "Show Auto-Refresh Toggle na sidebar" },
   "helptip_modeNotifs": { "message": "Fa awango na ngoi so mo yeke toggling mode/settings" },

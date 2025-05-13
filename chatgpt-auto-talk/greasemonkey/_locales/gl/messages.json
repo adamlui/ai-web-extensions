@@ -11,6 +11,7 @@
   "about_version": { "message": "Versión" },
   "about_poweredBy": { "message": "Fornecido por" },
   "about_openSourceCode": { "message": "Código fonte" },
+  "about_latestChanges": { "message": "Últimos cambios" },
   "mode_autoTalk": { "message": "Conversa automática" },
   "helptip_toggleVis": { "message": "Mostrar a opción de conversa automática na barra lateral" },
   "alert_updateAvail": { "message": "Actualización dispoñible" },

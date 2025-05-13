@@ -31,6 +31,7 @@
   "about_version": { "message": "Версиясы" },
   "about_poweredBy": { "message": "Тарабынан иштелип чыккан" },
   "about_openSourceCode": { "message": "Баштапкы код" },
+  "about_latestChanges": { "message": "Акыркы өзгөртүүлөр" },
   "mode_widescreen": { "message": "Кең экран" },
   "mode_fullWindow": { "message": "Толук терезе" },
   "mode_fullscreen": { "message": "Толук экран" },

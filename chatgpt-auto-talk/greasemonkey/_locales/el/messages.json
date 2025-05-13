@@ -11,6 +11,7 @@
   "about_version": { "message": "Έκδοση" },
   "about_poweredBy": { "message": "Με την υποστήριξη" },
   "about_openSourceCode": { "message": "Ανοιχτός κώδικας." },
+  "about_latestChanges": { "message": "Τελευταίες αλλαγές" },
   "mode_autoTalk": { "message": "Αυτόματη συνομιλία" },
   "helptip_toggleVis": { "message": "Εμφάνιση εναλλαγής αυτόματης ομιλίας στην πλαϊνή γραμμή" },
   "alert_updateAvail": { "message": "Υπάρχει διαθέσιμη ενημέρωση" },

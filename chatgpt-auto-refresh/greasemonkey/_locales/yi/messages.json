@@ -14,6 +14,7 @@
   "about_version": { "message": "ווערסיע" },
   "about_poweredBy": { "message": "פּאַוערד דורך" },
   "about_openSourceCode": { "message": "עפֿענען מקור קאָד" },
+  "about_latestChanges": { "message": "לעצטע ענדערונגען" },
   "prompt_updateInt": { "message": "דערהייַנטיקן דערפרישן מעהאַלעך (אין סעק)" },
   "helptip_toggleVis": { "message": "ווייַזן אַוטאָ-דערפרישן טאַגאַל אין סיידבאַר" },
   "helptip_modeNotifs": { "message": "ווייַזן נאָוטאַפאַקיישאַנז ווען טאַגאַלינג מאָדעס / סעטטינגס" },

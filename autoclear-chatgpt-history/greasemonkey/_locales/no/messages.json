@@ -14,6 +14,7 @@
   "about_version": { "message": "Versjon" },
   "about_poweredBy": { "message": "Drevet av" },
   "about_openSourceCode": { "message": "åpen kilde" },
+  "about_latestChanges": { "message": "Siste endringer" },
   "mode_autoclear": { "message": "Auto-tøm" },
   "helptip_clearNow": { "message": "Tøm chatloggen nå" },
   "helptip_toggleVis": { "message": "Vis Auto-slett-bryteren i sidefeltet" },

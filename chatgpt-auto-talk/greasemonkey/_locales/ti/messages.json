@@ -11,6 +11,7 @@
   "about_version": { "message": "መበል" },
   "about_poweredBy": { "message": "ብ" },
   "about_openSourceCode": { "message": "ክፉት ምንጪ ኮድ" },
+  "about_latestChanges": { "message": "ናይ መወዳእታ ለውጥታት" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "ኣብ ጎኒ ባር ናይ ኣውቶ ታክ ቶግሌ ኣርኢ" },
   "alert_updateAvail": { "message": "ዝዘመነ" },

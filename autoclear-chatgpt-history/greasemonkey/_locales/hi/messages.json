@@ -14,6 +14,7 @@
   "about_version": { "message": "संस्करण" },
   "about_poweredBy": { "message": "...द्वारा पावरशुदा" },
   "about_openSourceCode": { "message": "सोर्स कोड" },
+  "about_latestChanges": { "message": "ताज़ा बदलाव" },
   "mode_autoclear": { "message": "ऑटो - क्लियर" },
   "helptip_clearNow": { "message": "चैट का इतिहास अभी साफ़ करें" },
   "helptip_toggleVis": { "message": "साइडबार में ऑटो - क्लियर टॉगल दिखाएँ" },

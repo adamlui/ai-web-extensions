@@ -21,6 +21,7 @@
   "about_version": { "message": "ورژن" },
   "about_poweredBy": { "message": "تقویت یافتہ از" },
   "about_openSourceCode": { "message": "کۆسی سەرچاوە" },
+  "about_latestChanges": { "message": "تازہ ترین تبدیلیاں" },
   "scheme_light": { "message": "روشنی" },
   "scheme_dark": { "message": "تاریک" },
   "mode_proxy": { "message": "پراکسی موڈ" },

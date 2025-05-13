@@ -14,6 +14,7 @@
   "about_version": { "message": "Veržen" },
   "about_poweredBy": { "message": "Güýçli" },
   "about_openSourceCode": { "message": "Açyk manyly kod" },
+  "about_latestChanges": { "message": "Soňky özgerişler" },
   "mode_autoclear": { "message": "Ehlisini Saýla" },
   "helptip_clearNow": { "message": "Söhbet taryhyny indi ewez et" },
   "helptip_toggleVis": { "message": "Saýt zolakda Awto-Saýt togglesini görkez" },

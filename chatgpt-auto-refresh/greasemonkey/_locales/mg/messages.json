@@ -14,6 +14,7 @@
   "about_version": { "message": "Teny malalaka" },
   "about_poweredBy": { "message": "Manolotra ny herinandro" },
   "about_openSourceCode": { "message": "Kaody niaingana" },
+  "about_latestChanges": { "message": "Fiovana farany" },
   "prompt_updateInt": { "message": "Hanavao ny antso amin'ny famindrampotoana (ahoana ny segondra)" },
   "helptip_toggleVis": { "message": "Asehoy eo amin'ny tsipiky ny fivoarana ny fomba famelomana hoazy" },
   "helptip_modeNotifs": { "message": "Maneho ny fampahafantarana rehefa mampiova fomba/fandrindrana" },

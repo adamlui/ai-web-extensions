@@ -14,6 +14,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Réaliser par" },
   "about_openSourceCode": { "message": "Code source ouvert" },
+  "about_latestChanges": { "message": "Latest changes" },
   "mode_autoclear": { "message": "Effacement automatique" },
   "helptip_clearNow": { "message": "Effacez l'histoire de la conversation" },
   "helptip_toggleVis": { "message": "Afficher la bascule de suppression automatique dans la barre latérale" },

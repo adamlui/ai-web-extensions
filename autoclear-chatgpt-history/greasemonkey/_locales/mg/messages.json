@@ -14,6 +14,7 @@
   "about_version": { "message": "Kinova" },
   "about_poweredBy": { "message": "Ampandehanin'i" },
   "about_openSourceCode": { "message": "Kaody niaingana" },
+  "about_latestChanges": { "message": "Fiovana farany" },
   "mode_autoclear": { "message": "Auto Auto Auto" },
   "helptip_clearNow": { "message": "Foano ny tantaran'ny chat amin'izao fotoana izao" },
   "helptip_toggleVis": { "message": "Asehoy eo amin'ny tsipiky ny fivoarana ny fanalehibiazana hoazy" },

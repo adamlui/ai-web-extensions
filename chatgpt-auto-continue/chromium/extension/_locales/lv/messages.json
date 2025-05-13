@@ -14,6 +14,7 @@
   "about_version": { "message": "Versija" },
   "about_poweredBy": { "message": "Izstrādāts" },
   "about_openSourceCode": { "message": "Atklātais pirmkods" },
+  "about_latestChanges": { "message": "Jaunākās izmaiņas" },
   "mode_autoContinue": { "message": "Automātiski turpināt" },
   "helptip_autoScroll": { "message": "Automātiski ritiniet līdz apakšai, jo tiek ģenerētas atbildes" },
   "helptip_modeNotifs": { "message": "Rādīt paziņojumus, pārslēdzot režīmus/iestatījumus" },

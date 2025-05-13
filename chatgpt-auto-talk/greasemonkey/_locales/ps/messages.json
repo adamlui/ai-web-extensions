@@ -11,6 +11,7 @@
   "about_version": { "message": ":نسخه" },
   "about_poweredBy": { "message": "طراحی شده توسط" },
   "about_openSourceCode": { "message": "سرچينه كوډه" },
+  "about_latestChanges": { "message": "وروستي بدلونونه" },
   "mode_autoTalk": { "message": "خپلکاره خبرې کول" },
   "helptip_toggleVis": { "message": "په اړخپټه کې د اتوماتیک خبرو ټګل وښایاست" },
   "alert_updateAvail": { "message": "اوسمهالیزې شته" },

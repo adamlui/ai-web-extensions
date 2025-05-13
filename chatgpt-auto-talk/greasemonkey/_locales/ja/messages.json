@@ -11,6 +11,7 @@
   "about_version": { "message": "バージョン" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "最新の変更" },
   "mode_autoTalk": { "message": "オートトーク" },
   "helptip_toggleVis": { "message": "サイドバーにオートトークトグルを表示" },
   "alert_updateAvail": { "message": "利用可能なアップデート" },

@@ -34,6 +34,7 @@
   "about_version": { "message": "Verżjoni" },
   "about_poweredBy": { "message": "Imħaddem minn" },
   "about_openSourceCode": { "message": "sors miftuħ" },
+  "about_latestChanges": { "message": "L-aħħar bidliet" },
   "scheme_light": { "message": "Dawl" },
   "scheme_dark": { "message": "Skur" },
   "mode_proxy": { "message": "Modalità Proxy" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "Versi" },
   "about_poweredBy": { "message": "Dijana oleh" },
   "about_openSourceCode": { "message": "Sumber Terbuka" },
+  "about_latestChanges": { "message": "Perubahan terkini" },
   "mode_autoclear": { "message": "Kosongkan-sendiri" },
   "helptip_clearNow": { "message": "Kosongkan sejarah sembang sekarang" },
   "helptip_toggleVis": { "message": "Tunjukkan togol Kosong Automatik dalam bar sisi" },

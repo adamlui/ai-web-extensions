@@ -31,6 +31,7 @@
   "about_version": { "message": "ဗားရှင်း" },
   "about_poweredBy": { "message": "မှပံ့ပိုးသည်" },
   "about_openSourceCode": { "message": "ပွင့်လင်းအရင်းအမြစ်ကုဒ်" },
+  "about_latestChanges": { "message": "နောက်ဆုံးအပြောင်းအလဲများ" },
   "mode_widescreen": { "message": "ကျယ်ပြန့်သောမျက်နှာပြင်" },
   "mode_fullWindow": { "message": "Window အပြည့်အစုံ" },
   "mode_fullscreen": { "message": "မျက်နှာပြင်အပြည့်အစုံ" },

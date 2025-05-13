@@ -20,6 +20,7 @@
   "about_version": { "message": "ຮຸ່ນ" },
   "about_poweredBy": { "message": "ຂັບເຄື່ອນໂດຍ" },
   "about_openSourceCode": { "message": "ລະຫັດແຫຼ່ງເປີດ" },
+  "about_latestChanges": { "message": "ການປ່ຽນແປງຫຼ້າສຸດ" },
   "prompt_updateReplyLang": { "message": "ອັບເດດພາສາຕອບ" },
   "prompt_updateReplyTopic": { "message": "ອັບເດດຫົວຂໍ້ຕອບ" },
   "prompt_orEnter": { "message": "ຫຼື ເຂົ້າໄປ" },

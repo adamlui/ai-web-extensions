@@ -21,6 +21,7 @@
   "about_version": { "message": "Tionndadh" },
   "about_poweredBy": { "message": "Le cumhachd" },
   "about_openSourceCode": { "message": "Bun-tùs a' chod" },
+  "about_latestChanges": { "message": "Na h - atharraichean as ùire" },
   "scheme_light": { "message": "Solas" },
   "scheme_dark": { "message": "Dorcha" },
   "mode_proxy": { "message": "Modh an ionaid" },

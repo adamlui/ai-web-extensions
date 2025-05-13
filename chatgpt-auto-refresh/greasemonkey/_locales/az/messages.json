@@ -14,6 +14,7 @@
   "about_version": { "message": "Versiya" },
   "about_poweredBy": { "message": "Ərsəyə gətirən" },
   "about_openSourceCode": { "message": "Mənbə kodunu açın" },
+  "about_latestChanges": { "message": "Son dəyişikliklər" },
   "prompt_updateInt": { "message": "Yenilənmə intervalını yeniləyin (saniyə ilə)" },
   "helptip_toggleVis": { "message": "Yan paneldə Avtomatik Yenilə keçidini göstər" },
   "helptip_modeNotifs": { "message": "Rejimləri/parametrləri dəyişdikdə bildirişləri göstər" },

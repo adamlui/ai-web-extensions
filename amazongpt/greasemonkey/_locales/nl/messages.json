@@ -21,6 +21,7 @@
   "about_version": { "message": "Versie" },
   "about_poweredBy": { "message": "Ondersteund door" },
   "about_openSourceCode": { "message": "open bron" },
+  "about_latestChanges": { "message": "Laatste wijzigingen" },
   "scheme_light": { "message": "Licht" },
   "scheme_dark": { "message": "Donker" },
   "mode_proxy": { "message": "Proxymodus" },

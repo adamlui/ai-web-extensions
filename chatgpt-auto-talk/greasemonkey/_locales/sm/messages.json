@@ -11,6 +11,7 @@
   "about_version": { "message": "Faaliliuga" },
   "about_poweredBy": { "message": "Malosiaga e ala i" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Suiga mulimuli" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "Faaali atu Auto-Talk toggle i sidebar" },
   "alert_updateAvail": { "message": "Faʻafouga o loʻo avanoa" },

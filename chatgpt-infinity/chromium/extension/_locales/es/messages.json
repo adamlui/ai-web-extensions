@@ -20,6 +20,7 @@
   "about_version": { "message": "Versión" },
   "about_poweredBy": { "message": "Desarrollado por" },
   "about_openSourceCode": { "message": "Cola ciega" },
+  "about_latestChanges": { "message": "Últimos cambios" },
   "prompt_updateReplyLang": { "message": "Actualizar idioma de respuesta" },
   "prompt_updateReplyTopic": { "message": "Actualizar tema de respuesta" },
   "prompt_orEnter": { "message": "o acceda a" },

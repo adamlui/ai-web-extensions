@@ -11,6 +11,7 @@
   "about_version": { "message": "Versió" },
   "about_poweredBy": { "message": "Desenvolupat per" },
   "about_openSourceCode": { "message": "Codi obert" },
+  "about_latestChanges": { "message": "Últims canvis" },
   "mode_autoTalk": { "message": "Conversació automàtica" },
   "helptip_toggleVis": { "message": "Mostra el commutador de diàleg automàtic a la barra lateral" },
   "alert_updateAvail": { "message": "Nova versió disponible" },

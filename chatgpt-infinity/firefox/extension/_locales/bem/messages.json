@@ -20,6 +20,7 @@
   "about_version": { "message": "Ukupilibula" },
   "about_poweredBy": { "message": "Amapola by Amapola" },
   "about_openSourceCode": { "message": "Ilembo lya pa kompyuta ilyaba pa kompyuta" },
+  "about_latestChanges": { "message": "Ukucinja kwa nomba line" },
   "prompt_updateReplyLang": { "message": "Kulanda lusani lwama wafwile" },
   "prompt_updateReplyTopic": { "message": "Kulanda lusani lwamukanda" },
   "prompt_orEnter": { "message": "kamfumu" },

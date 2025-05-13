@@ -14,6 +14,7 @@
   "about_version": { "message": "ვერსია" },
   "about_poweredBy": { "message": "აგებულია KDE-ზე" },
   "about_openSourceCode": { "message": "საწყისი კოდი" },
+  "about_latestChanges": { "message": "Ბოლო ცვლილებები" },
   "mode_autoContinue": { "message": "Ავტომატური გაგრძელება" },
   "helptip_autoScroll": { "message": "Ავტომატურად გადადით ბოლოში, რადგან პასუხები გენერირდება" },
   "helptip_modeNotifs": { "message": "Გაფრთხილებების ჩვენება რეჟიმების/პარამეტრების გადართვისას" },

@@ -20,6 +20,7 @@
   "about_version": { "message": "Toleo" },
   "about_poweredBy": { "message": "Imewezeshwa na" },
   "about_openSourceCode": { "message": "Msimbo wa chanzo wazi" },
+  "about_latestChanges": { "message": "Mabadiliko ya hivi karibuni" },
   "prompt_updateReplyLang": { "message": "Sasisha lugha ya kujibu" },
   "prompt_updateReplyTopic": { "message": "Sasisha mada ya jibu" },
   "prompt_orEnter": { "message": "au ingiza" },

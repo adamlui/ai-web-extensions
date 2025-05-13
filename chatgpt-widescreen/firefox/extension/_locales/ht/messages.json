@@ -31,6 +31,7 @@
   "about_version": { "message": "Vèsyon" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Kòd sous louvri" },
+  "about_latestChanges": { "message": "Dènye chanjman yo" },
   "mode_widescreen": { "message": "Wide ekran" },
   "mode_fullWindow": { "message": "Plen-fenèt" },
   "mode_fullscreen": { "message": "Tout ekran" },

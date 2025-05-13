@@ -20,6 +20,7 @@
   "about_version": { "message": "Tionndadh" },
   "about_poweredBy": { "message": "Le cumhachd" },
   "about_openSourceCode": { "message": "Bun-tùs a' chod" },
+  "about_latestChanges": { "message": "Na h - atharraichean as ùire" },
   "prompt_updateReplyLang": { "message": "Ùrachadh air cànan freagairt" },
   "prompt_updateReplyTopic": { "message": "Ùrachadh air àbhaist freagairt" },
   "prompt_orEnter": { "message": "no sgrìobh a-steach" },

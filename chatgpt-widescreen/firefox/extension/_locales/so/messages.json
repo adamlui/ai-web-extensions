@@ -31,6 +31,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Waxa fudaydiyay" },
   "about_openSourceCode": { "message": "Koodhka ilaha furan" },
+  "about_latestChanges": { "message": "Isbedelada ugu dambeeyay" },
   "mode_widescreen": { "message": "Shaashad ballaaran" },
   "mode_fullWindow": { "message": "Daaqad buuxda" },
   "mode_fullscreen": { "message": "Shaashad buuxda" },

@@ -21,6 +21,7 @@
   "about_version": { "message": "সংস্করণ" },
   "about_poweredBy": { "message": "নিবেদন করছেন" },
   "about_openSourceCode": { "message": "সোর্স কোড" },
+  "about_latestChanges": { "message": "সর্বশেষ পরিবর্তনসমূহ" },
   "scheme_light": { "message": "আলো" },
   "scheme_dark": { "message": "অন্ধকার" },
   "mode_proxy": { "message": "প্রক্সি মোড" },

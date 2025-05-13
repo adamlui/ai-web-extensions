@@ -14,6 +14,7 @@
   "about_version": { "message": "Yângâ tî kodoro" },
   "about_poweredBy": { "message": "A yeke sara kua na ni" },
   "about_openSourceCode": { "message": "Création d 'une brochure open source" },
+  "about_latestChanges": { "message": "Ndangba changement" },
   "mode_autoclear": { "message": "Auto brochure" },
   "helptip_clearNow": { "message": "L 'histoire de la chanson ayeke polele fadeso" },
   "helptip_toggleVis": { "message": "Show Auto-Clear Toggle na sidebar" },

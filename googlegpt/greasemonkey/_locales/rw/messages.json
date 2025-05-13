@@ -34,6 +34,7 @@
   "about_version": { "message": "Inyandiko" },
   "about_poweredBy": { "message": "Bikozwe na" },
   "about_openSourceCode": { "message": "Inkomoko Inyandikoporogaramu" },
+  "about_latestChanges": { "message": "Amahinduka" },
   "scheme_light": { "message": "Urumuri" },
   "scheme_dark": { "message": "Umwijima" },
   "mode_proxy": { "message": "Uburyo bwa Proxy" },

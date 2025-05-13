@@ -14,6 +14,7 @@
   "about_version": { "message": "Weergawe" },
   "about_poweredBy": { "message": "Aangedryf deur" },
   "about_openSourceCode": { "message": "Oopbronkode" },
+  "about_latestChanges": { "message": "Jongste veranderinge" },
   "mode_autoclear": { "message": "Auto-Clear" },
   "helptip_clearNow": { "message": "Maak kletsgeskiedenis nou skoon" },
   "helptip_toggleVis": { "message": "Vertoon Outo-Leier skakelaar in sybalk" },

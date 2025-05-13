@@ -14,6 +14,7 @@
   "about_version": { "message": "వివరణం" },
   "about_poweredBy": { "message": "ద్వారా ఆధారితం" },
   "about_openSourceCode": { "message": "ఓపెన్ సోర్స్ కోడ్" },
+  "about_latestChanges": { "message": "తాజా మార్పులు" },
   "mode_autoclear": { "message": "ఆటో-క్లియర్" },
   "helptip_clearNow": { "message": "చాట్ చరిత్రను ఇప్పుడే క్లియర్ చేయండి" },
   "helptip_toggleVis": { "message": "సైడ్ ‌ బార్ ‌ లో ఆటో-క్లీర్ టోగుల్ ‌ ను చూపించండి" },

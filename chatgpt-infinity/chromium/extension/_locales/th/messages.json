@@ -20,6 +20,7 @@
   "about_version": { "message": "เวอร์ชัน" },
   "about_poweredBy": { "message": "สนับสนุนโดย" },
   "about_openSourceCode": { "message": "โปรแกรมโอเพนซอร์ซ" },
+  "about_latestChanges": { "message": "การเปลี่ยนแปลงล่าสุด" },
   "prompt_updateReplyLang": { "message": "อัปเดตภาษาตอบกลับ" },
   "prompt_updateReplyTopic": { "message": "ปรับปรุงหัวข้อการตอบกลับ" },
   "prompt_orEnter": { "message": "หรือเข้า" },

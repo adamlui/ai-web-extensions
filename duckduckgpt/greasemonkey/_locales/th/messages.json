@@ -34,6 +34,7 @@
   "about_version": { "message": "เวอร์ชัน" },
   "about_poweredBy": { "message": "สนับสนุนโดย" },
   "about_openSourceCode": { "message": "โปรแกรมโอเพนซอร์ซ" },
+  "about_latestChanges": { "message": "การเปลี่ยนแปลงล่าสุด" },
   "scheme_light": { "message": "บาง" },
   "scheme_dark": { "message": "มืด" },
   "mode_proxy": { "message": "โหมดพร็อกซี" },

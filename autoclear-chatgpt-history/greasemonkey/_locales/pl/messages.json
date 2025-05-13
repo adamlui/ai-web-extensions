@@ -14,6 +14,7 @@
   "about_version": { "message": "Wersja" },
   "about_poweredBy": { "message": "Obsługiwane przez" },
   "about_openSourceCode": { "message": "Otwarty kod PHP" },
+  "about_latestChanges": { "message": "Najnowsze zmiany" },
   "mode_autoclear": { "message": "Automatyczne czyszczenie" },
   "helptip_clearNow": { "message": "Wyczyść historię czatu" },
   "helptip_toggleVis": { "message": "Pokaż przełącznik automatycznego czyszczenia na pasku bocznym" },

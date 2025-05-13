@@ -14,6 +14,7 @@
   "about_version": { "message": "Версія" },
   "about_poweredBy": { "message": "Працює на" },
   "about_openSourceCode": { "message": "Джерельний код" },
+  "about_latestChanges": { "message": "Останні зміни" },
   "mode_autoContinue": { "message": "Автопродовження" },
   "helptip_autoScroll": { "message": "Автоматично прокручувати вниз, коли генеруються відповіді" },
   "helptip_modeNotifs": { "message": "Показувати сповіщення при перемиканні режимів/налаштувань" },

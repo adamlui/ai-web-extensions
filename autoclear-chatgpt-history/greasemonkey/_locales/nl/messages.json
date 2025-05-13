@@ -14,6 +14,7 @@
   "about_version": { "message": "Versie" },
   "about_poweredBy": { "message": "Ondersteund door" },
   "about_openSourceCode": { "message": "open bron" },
+  "about_latestChanges": { "message": "Laatste wijzigingen" },
   "mode_autoclear": { "message": "Auto-opruiming" },
   "helptip_clearNow": { "message": "Chatgeschiedenis nu wissen" },
   "helptip_toggleVis": { "message": "Schakelen automatisch wissen in zijbalk weergeven" },

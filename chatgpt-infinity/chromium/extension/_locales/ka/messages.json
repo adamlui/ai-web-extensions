@@ -20,6 +20,7 @@
   "about_version": { "message": "ვერსია" },
   "about_poweredBy": { "message": "აგებულია KDE-ზე" },
   "about_openSourceCode": { "message": "საწყისი კოდი" },
+  "about_latestChanges": { "message": "Ბოლო ცვლილებები" },
   "prompt_updateReplyLang": { "message": "განახლება პასუხის ენა" },
   "prompt_updateReplyTopic": { "message": "Პასუხის თემის განახლება" },
   "prompt_orEnter": { "message": "ან შეიყვანეთ" },

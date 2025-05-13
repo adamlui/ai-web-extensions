@@ -14,6 +14,7 @@
   "about_version": { "message": "Versie" },
   "about_poweredBy": { "message": "Ondersteund door" },
   "about_openSourceCode": { "message": "open bron" },
+  "about_latestChanges": { "message": "Laatste wijzigingen" },
   "prompt_updateInt": { "message": "Verversingsinterval bijwerken (in seconden)" },
   "helptip_toggleVis": { "message": "Schakelaar Automatisch vernieuwen weergeven in zijbalk" },
   "helptip_modeNotifs": { "message": "Meldingen weergeven bij schakelen tussen modi/instellingen" },

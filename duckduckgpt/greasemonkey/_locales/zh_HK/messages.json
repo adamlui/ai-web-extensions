@@ -34,6 +34,7 @@
   "about_version": { "message": "版本" },
   "about_poweredBy": { "message": "技術支持" },
   "about_openSourceCode": { "message": "開放原始碼" },
+  "about_latestChanges": { "message": "最新變更" },
   "scheme_light": { "message": "光芒" },
   "scheme_dark": { "message": "黑暗" },
   "mode_proxy": { "message": "代理模式" },

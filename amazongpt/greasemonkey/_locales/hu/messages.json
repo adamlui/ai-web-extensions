@@ -21,6 +21,7 @@
   "about_version": { "message": "Verió" },
   "about_poweredBy": { "message": "Kiszolgálja" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "Legutóbbi módosítások" },
   "scheme_light": { "message": "Világos" },
   "scheme_dark": { "message": "Sötét" },
   "mode_proxy": { "message": "Proxy mód" },

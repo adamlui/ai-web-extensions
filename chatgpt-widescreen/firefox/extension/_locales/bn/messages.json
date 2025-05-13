@@ -31,6 +31,7 @@
   "about_version": { "message": "সংস্করণ" },
   "about_poweredBy": { "message": "নিবেদন করছেন" },
   "about_openSourceCode": { "message": "সোর্স কোড" },
+  "about_latestChanges": { "message": "সর্বশেষ পরিবর্তনসমূহ" },
   "mode_widescreen": { "message": "ওয়াইড স্ক্রিন" },
   "mode_fullWindow": { "message": "সম্পূর্ণ উইণ্ডো" },
   "mode_fullscreen": { "message": "পুরো স্ক্রীন জুড়ে" },

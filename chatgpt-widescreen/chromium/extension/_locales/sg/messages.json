@@ -31,6 +31,7 @@
   "about_version": { "message": "Yângâ tî kodoro" },
   "about_poweredBy": { "message": "A yeke sara kua na ni" },
   "about_openSourceCode": { "message": "Création d 'une brochure open source" },
+  "about_latestChanges": { "message": "Ndangba changement" },
   "mode_widescreen": { "message": "Wide Image brochure" },
   "mode_fullWindow": { "message": "A yeke na yâ ti fenêtre kue" },
   "mode_fullscreen": { "message": "A yeke na yâ ti écran ni kue" },

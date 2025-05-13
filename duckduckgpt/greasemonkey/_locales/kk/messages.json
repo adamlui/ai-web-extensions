@@ -34,6 +34,7 @@
   "about_version": { "message": "Нұсқа" },
   "about_poweredBy": { "message": "Сайтты жасаған" },
   "about_openSourceCode": { "message": "Ашық бастапқы код" },
+  "about_latestChanges": { "message": "Соңғы өзгерістер" },
   "scheme_light": { "message": "Жарық" },
   "scheme_dark": { "message": "Қараңғы" },
   "mode_proxy": { "message": "Прокси режимі" },

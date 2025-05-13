@@ -14,6 +14,7 @@
   "about_version": { "message": "እትም" },
   "about_poweredBy": { "message": "የተጎለበተው በ" },
   "about_openSourceCode": { "message": "የምንጭ ኮድ" },
+  "about_latestChanges": { "message": "የቅርብ ጊዜ ለውጦች" },
   "mode_autoContinue": { "message": "Auto-Continue" },
   "helptip_autoScroll": { "message": "መልሶች እንደሚያመነጩት በራስ-ሰር ወደ ታች ይሸብልሉ" },
   "helptip_modeNotifs": { "message": "ሁነቶችን/ቅንብሮችን በሚገፉበት ጊዜ ማሳወቂያዎችን ያሳዩ" },

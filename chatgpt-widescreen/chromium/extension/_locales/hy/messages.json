@@ -31,6 +31,7 @@
   "about_version": { "message": "Ստանալ պրեմիում տարբերակը" },
   "about_poweredBy": { "message": "🇦🇲" },
   "about_openSourceCode": { "message": "Ծրագրային կոդ" },
+  "about_latestChanges": { "message": "Վերջին փոփոխությունները" },
   "mode_widescreen": { "message": "Լայն էկրան" },
   "mode_fullWindow": { "message": "Լրիվ պատուհան" },
   "mode_fullscreen": { "message": "Լրիվ Ցուցանակը" },

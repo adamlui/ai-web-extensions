@@ -31,6 +31,7 @@
   "about_version": { "message": "Versija" },
   "about_poweredBy": { "message": "Izstrādāts" },
   "about_openSourceCode": { "message": "Atklātais pirmkods" },
+  "about_latestChanges": { "message": "Jaunākās izmaiņas" },
   "mode_widescreen": { "message": "Platekrāns" },
   "mode_fullWindow": { "message": "Pilns logs" },
   "mode_fullscreen": { "message": "Pilnekrāna režīms" },

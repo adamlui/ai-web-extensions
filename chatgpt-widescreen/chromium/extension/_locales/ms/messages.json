@@ -31,6 +31,7 @@
   "about_version": { "message": "Versi" },
   "about_poweredBy": { "message": "Dijana oleh" },
   "about_openSourceCode": { "message": "Sumber Terbuka" },
+  "about_latestChanges": { "message": "Perubahan terkini" },
   "mode_widescreen": { "message": "Skrin lebar" },
   "mode_fullWindow": { "message": "Tetingkap penuh" },
   "mode_fullscreen": { "message": "Skrin Penuh" },

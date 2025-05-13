@@ -14,6 +14,7 @@
   "about_version": { "message": "Fersiwn" },
   "about_poweredBy": { "message": "Wedi'i gynnal gan" },
   "about_openSourceCode": { "message": "Cod ffynhonnell" },
+  "about_latestChanges": { "message": "Newidiadau diweddaraf" },
   "mode_autoContinue": { "message": "Parhau'n Awtomatig" },
   "helptip_autoScroll": { "message": "Sgroliwch i'r gwaelod yn awtomatig gan fod yr atebion yn cynhyrchu" },
   "helptip_modeNotifs": { "message": "Dangos hysbysiadau wrth toglo moddau/gosodiadau" },

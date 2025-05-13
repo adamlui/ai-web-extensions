@@ -14,6 +14,7 @@
   "about_version": { "message": "Phiên bản" },
   "about_poweredBy": { "message": "Cung cấp bởi" },
   "about_openSourceCode": { "message": "Nguồn mở" },
+  "about_latestChanges": { "message": "Thay đổi mới nhất" },
   "mode_autoclear": { "message": "Tự động xóa" },
   "helptip_clearNow": { "message": "Xóa lịch sử trò chuyện ngay bây giờ" },
   "helptip_toggleVis": { "message": "Hiển thị chuyển đổi Tự động xóa trong thanh bên" },

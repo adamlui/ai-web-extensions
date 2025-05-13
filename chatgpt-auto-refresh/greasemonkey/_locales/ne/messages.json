@@ -14,6 +14,7 @@
   "about_version": { "message": "संस्करण" },
   "about_poweredBy": { "message": "द्वारा संचालित" },
   "about_openSourceCode": { "message": "स्रोत सङ्केत" },
+  "about_latestChanges": { "message": "भर्खरका परिवर्तनहरू" },
   "prompt_updateInt": { "message": "रिफ्रेश अन्तराल अपडेट गर्नुहोस् (सेकेन्डमा)" },
   "helptip_toggleVis": { "message": "साइडबारमा स्वत: रिफ्रेस टगल देखाउनुहोस्" },
   "helptip_modeNotifs": { "message": "मोडहरू/सेटिङहरू टगल गर्दा सूचनाहरू देखाउनुहोस्" },

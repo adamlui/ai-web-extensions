@@ -31,6 +31,7 @@
   "about_version": { "message": "Bertsioa" },
   "about_poweredBy": { "message": "Teknologia" },
   "about_openSourceCode": { "message": "Kode ireki" },
+  "about_latestChanges": { "message": "Azken aldaketak" },
   "mode_widescreen": { "message": "Pantaila zabala" },
   "mode_fullWindow": { "message": "Leiho osoa" },
   "mode_fullscreen": { "message": "Pantaila osoa" },

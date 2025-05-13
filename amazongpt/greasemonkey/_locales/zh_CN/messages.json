@@ -21,6 +21,7 @@
   "about_version": { "message": "版本" },
   "about_poweredBy": { "message": "技术支持方" },
   "about_openSourceCode": { "message": "开源代码" },
+  "about_latestChanges": { "message": "新版变化" },
   "scheme_light": { "message": "浅色" },
   "scheme_dark": { "message": "深色" },
   "mode_proxy": { "message": "代理模式" },

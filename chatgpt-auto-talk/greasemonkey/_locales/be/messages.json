@@ -11,6 +11,7 @@
   "about_version": { "message": "Версія" },
   "about_poweredBy": { "message": "Пры падтрымцы" },
   "about_openSourceCode": { "message": "Зыходнікі" },
+  "about_latestChanges": { "message": "Апошнія змены" },
   "mode_autoTalk": { "message": "Аўтаматычная размова" },
   "helptip_toggleVis": { "message": "Паказваць перамыкач аўтаматычнай прамовы ў бакавой панэлі" },
   "alert_updateAvail": { "message": "Ёсць абнаўленне" },

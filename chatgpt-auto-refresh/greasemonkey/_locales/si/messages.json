@@ -14,6 +14,7 @@
   "about_version": { "message": "වෙළුම" },
   "about_poweredBy": { "message": "විසින් බල ගැන්වී ඇත" },
   "about_openSourceCode": { "message": "විවෘත කේතය" },
+  "about_latestChanges": { "message": "නවතම වෙනස්කම්" },
   "prompt_updateInt": { "message": "නැවුම් කිරීමේ පරතරය යාවත්කාලීන කරන්න (තත්පර වලින්)" },
   "helptip_toggleVis": { "message": "පැති තීරුවේ ස්වයංක් ‍ රීය- නැවුම් කිරීමේ ටොගල් පෙන්වන්න" },
   "helptip_modeNotifs": { "message": "ප් ‍ රකාර/සැකසුම් ටොගල් කිරීමේදී දැනුම්දීම් පෙන්වන්න" },

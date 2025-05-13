@@ -11,6 +11,7 @@
   "about_version": { "message": "ווערסיע" },
   "about_poweredBy": { "message": "פּאַוערד דורך" },
   "about_openSourceCode": { "message": "עפֿענען מקור קאָד" },
+  "about_latestChanges": { "message": "לעצטע ענדערונגען" },
   "mode_autoTalk": { "message": "אַוטאָ-רעדן" },
   "helptip_toggleVis": { "message": "ווייַזן אַוטאָ-רעדן טאַגאַל אין סיידבאַר" },
   "alert_updateAvail": { "message": "דערהייַנטיקן בנימצא" },

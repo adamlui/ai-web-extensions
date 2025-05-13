@@ -14,6 +14,7 @@
   "about_version": { "message": "Versioon" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "lähtekood" },
+  "about_latestChanges": { "message": "Viimased muudatused" },
   "prompt_updateInt": { "message": "Värskendusintervalli värskendamine (sekundites)" },
   "helptip_toggleVis": { "message": "Kuva külgribal lüliti Auto-Refresh" },
   "helptip_modeNotifs": { "message": "Kuva teated režiimide/seadete vahetamisel" },

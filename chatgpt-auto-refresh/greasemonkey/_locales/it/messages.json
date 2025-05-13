@@ -14,6 +14,7 @@
   "about_version": { "message": "Versione" },
   "about_poweredBy": { "message": "Alimentato da" },
   "about_openSourceCode": { "message": "Codice open source" },
+  "about_latestChanges": { "message": "Ultimi cambiamenti" },
   "prompt_updateInt": { "message": "Aggiorna l'intervallo di aggiornamento (in secondi)" },
   "helptip_toggleVis": { "message": "Mostra l'opzione di aggiornamento automatico nella barra laterale" },
   "helptip_modeNotifs": { "message": "Mostra notifiche quando si attivano modalità/impostazioni" },

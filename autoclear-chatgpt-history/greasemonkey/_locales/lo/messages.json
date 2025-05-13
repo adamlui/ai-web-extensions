@@ -14,6 +14,7 @@
   "about_version": { "message": "ຮຸ່ນ" },
   "about_poweredBy": { "message": "ຂັບເຄື່ອນໂດຍ" },
   "about_openSourceCode": { "message": "ລະຫັດແຫຼ່ງເປີດ" },
+  "about_latestChanges": { "message": "ການປ່ຽນແປງຫຼ້າສຸດ" },
   "mode_autoclear": { "message": "ອັດຕະໂນມັດ-ການຮຽນຮູ້" },
   "helptip_clearNow": { "message": "ລ້າງປະຫວັດການສົນທະນາຕອນນີ້" },
   "helptip_toggleVis": { "message": "ສະແດງອັດຕະໂນມັດ-Clear toggle ໃນແຖບຂ້າງ" },

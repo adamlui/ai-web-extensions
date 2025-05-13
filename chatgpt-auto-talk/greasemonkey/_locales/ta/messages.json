@@ -11,6 +11,7 @@
   "about_version": { "message": "பதிப்பு" },
   "about_poweredBy": { "message": "மூலம் இயக்கப்படுகிறது" },
   "about_openSourceCode": { "message": "திறந்த மூலக் குறியீடு" },
+  "about_latestChanges": { "message": "சமீபத்திய மாற்றங்கள்" },
   "mode_autoTalk": { "message": "தானியங்கு பேச்சு" },
   "helptip_toggleVis": { "message": "பக்கப்பட்டியில் தானியங்கு பேச்சு நிலைமாற்றியைக் காட்டவும்" },
   "alert_updateAvail": { "message": "புதிய புதுப்பிப்பு கிடைக்கிறது" },

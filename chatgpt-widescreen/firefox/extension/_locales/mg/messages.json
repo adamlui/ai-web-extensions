@@ -31,6 +31,7 @@
   "about_version": { "message": "Kinova" },
   "about_poweredBy": { "message": "Ampandehanin'i" },
   "about_openSourceCode": { "message": "Kaody niaingana" },
+  "about_latestChanges": { "message": "Fiovana farany" },
   "mode_widescreen": { "message": "Screen efijery" },
   "mode_fullWindow": { "message": "Full feno" },
   "mode_fullscreen": { "message": "Mameno efijery" },

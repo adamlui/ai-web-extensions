@@ -11,6 +11,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "විවෘත කේතය" },
+  "about_latestChanges": { "message": "නවතම වෙනස්කම්" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "පැති තීරුවේ ස්වයංක් ‍ රීය සංවාද ටොගලය පෙන්වන්න" },
   "alert_updateAvail": { "message": "Update available" },

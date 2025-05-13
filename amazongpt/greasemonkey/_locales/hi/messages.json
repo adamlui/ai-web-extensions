@@ -21,6 +21,7 @@
   "about_version": { "message": "संस्करण" },
   "about_poweredBy": { "message": "...द्वारा पावरशुदा" },
   "about_openSourceCode": { "message": "सोर्स कोड" },
+  "about_latestChanges": { "message": "ताज़ा बदलाव" },
   "scheme_light": { "message": "हल्का" },
   "scheme_dark": { "message": "गहरा" },
   "mode_proxy": { "message": "प्रॉक्सी मोड" },

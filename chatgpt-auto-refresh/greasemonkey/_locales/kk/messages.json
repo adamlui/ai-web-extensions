@@ -14,6 +14,7 @@
   "about_version": { "message": "Нұсқа" },
   "about_poweredBy": { "message": "Сайтты жасаған" },
   "about_openSourceCode": { "message": "Ашық бастапқы код" },
+  "about_latestChanges": { "message": "Соңғы өзгерістер" },
   "prompt_updateInt": { "message": "Жаңарту аралығы (секундтарда)" },
   "helptip_toggleVis": { "message": "Бүйірлік тақтада Автоматты түрде қалпына келтіру қосқышын көрсету" },
   "helptip_modeNotifs": { "message": "Режимдерді/параметрлерді ауыстыру кезінде хабарландыруларды көрсету" },

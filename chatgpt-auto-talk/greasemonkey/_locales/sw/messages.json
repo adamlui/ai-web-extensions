@@ -11,6 +11,7 @@
   "about_version": { "message": "Toleo" },
   "about_poweredBy": { "message": "Imewezeshwa na" },
   "about_openSourceCode": { "message": "Msimbo wa chanzo wazi" },
+  "about_latestChanges": { "message": "Mabadiliko ya hivi karibuni" },
   "mode_autoTalk": { "message": "Mazungumzo ya Kiotomatiki" },
   "helptip_toggleVis": { "message": "Onyesha swichi ya Mazungumzo ya Kiotomatiki kwenye upau wa pembeni" },
   "alert_updateAvail": { "message": "Sasisho lipo" },

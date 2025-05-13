@@ -31,6 +31,7 @@
   "about_version": { "message": "ಆವೃತ್ತಿ" },
   "about_poweredBy": { "message": "ಸಾಮರ್ಥ್ಯ ಇವರಿಂದ" },
   "about_openSourceCode": { "message": "ಓಪನ್ ಸೋರ್ಸ್ ಕೋಡ್" },
+  "about_latestChanges": { "message": "ಇತ್ತೀಚಿನ ಬದಲಾವಣೆಗಳು" },
   "mode_widescreen": { "message": "ಅಗಲ ಸ್ಕ್ರೀನ್" },
   "mode_fullWindow": { "message": "ಪೂರ್ಣ ವಿಂಡೋ" },
   "mode_fullscreen": { "message": "ಪೂರ್ಣ ಸ್ಕ್ರೀನ್" },

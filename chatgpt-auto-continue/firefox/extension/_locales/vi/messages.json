@@ -14,6 +14,7 @@
   "about_version": { "message": "Phiên bản" },
   "about_poweredBy": { "message": "Cung cấp bởi" },
   "about_openSourceCode": { "message": "Nguồn mở" },
+  "about_latestChanges": { "message": "Thay đổi mới nhất" },
   "mode_autoContinue": { "message": "Tự động tiếp tục" },
   "helptip_autoScroll": { "message": "Tự động cuộn xuống dưới cùng khi thư trả lời được tạo" },
   "helptip_modeNotifs": { "message": "Hiển thị thông báo khi chuyển đổi chế độ/cài đặt" },

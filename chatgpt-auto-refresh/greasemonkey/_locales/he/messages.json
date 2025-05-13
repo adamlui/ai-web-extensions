@@ -14,6 +14,7 @@
   "about_version": { "message": "גירסה" },
   "about_poweredBy": { "message": "באמצעות" },
   "about_openSourceCode": { "message": "קוד מקור" },
+  "about_latestChanges": { "message": "שינויים אחרונים" },
   "prompt_updateInt": { "message": "מרווח רענון עדכון (בשניות)" },
   "helptip_toggleVis": { "message": "הצג את הלחצן הדו - מצבי 'רענון אוטומטי' בסרגל הצדדי" },
   "helptip_modeNotifs": { "message": "הצג התראות בעת החלפת מצבים/הגדרות" },

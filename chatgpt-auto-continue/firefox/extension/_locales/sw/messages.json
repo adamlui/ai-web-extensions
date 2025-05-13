@@ -14,6 +14,7 @@
   "about_version": { "message": "Toleo" },
   "about_poweredBy": { "message": "Imewezeshwa na" },
   "about_openSourceCode": { "message": "Msimbo wa chanzo wazi" },
+  "about_latestChanges": { "message": "Mabadiliko ya hivi karibuni" },
   "mode_autoContinue": { "message": "Endelea Kiotomatiki" },
   "helptip_autoScroll": { "message": "Sogeza moja kwa moja hadi chini kwani majibu yanazalisha" },
   "helptip_modeNotifs": { "message": "Onyesha arifa wakati wa kugeuza modi/mipangilio" },

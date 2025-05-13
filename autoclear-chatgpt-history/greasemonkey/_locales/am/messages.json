@@ -14,6 +14,7 @@
   "about_version": { "message": "እትም" },
   "about_poweredBy": { "message": "የተጎለበተው በ" },
   "about_openSourceCode": { "message": "የምንጭ ኮድ" },
+  "about_latestChanges": { "message": "የቅርብ ጊዜ ለውጦች" },
   "mode_autoclear": { "message": "ራስ-ግልጽ" },
   "helptip_clearNow": { "message": "ግልጽ የውይይት ታሪክ አሁን" },
   "helptip_toggleVis": { "message": "የጎን አሞሌ ውስጥ ራስ-ሰር-ንባብ toggle አሳይ" },

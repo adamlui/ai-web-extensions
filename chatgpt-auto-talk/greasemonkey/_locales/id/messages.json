@@ -11,6 +11,7 @@
   "about_version": { "message": "Versi" },
   "about_poweredBy": { "message": "Didukung oleh" },
   "about_openSourceCode": { "message": "Sumber Terbuka" },
+  "about_latestChanges": { "message": "Perubahan terbaru" },
   "mode_autoTalk": { "message": "Auto - Talk" },
   "helptip_toggleVis": { "message": "Tampilkan toggle Bicara Otomatis di bilah sisi" },
   "alert_updateAvail": { "message": "Pembaruan tersedia" },

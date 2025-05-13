@@ -31,6 +31,7 @@
   "about_version": { "message": "เวอร์ชัน" },
   "about_poweredBy": { "message": "สนับสนุนโดย" },
   "about_openSourceCode": { "message": "โปรแกรมโอเพนซอร์ซ" },
+  "about_latestChanges": { "message": "การเปลี่ยนแปลงล่าสุด" },
   "mode_widescreen": { "message": "หน้าจอกว้าง" },
   "mode_fullWindow": { "message": "หน้าต่างเต็มบาน" },
   "mode_fullscreen": { "message": "เต็มหน้าจอ" },

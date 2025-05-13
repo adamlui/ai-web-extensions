@@ -14,6 +14,7 @@
   "about_version": { "message": "Versjon" },
   "about_poweredBy": { "message": "Drevet av" },
   "about_openSourceCode": { "message": "åpen kilde" },
+  "about_latestChanges": { "message": "Siste endringer" },
   "prompt_updateInt": { "message": "Oppdater oppdateringsintervallet (i sekunder)" },
   "helptip_toggleVis": { "message": "Vis bryteren for automatisk oppdatering i sidefeltet" },
   "helptip_modeNotifs": { "message": "Vis varsler når du bytter moduser/innstillinger" },

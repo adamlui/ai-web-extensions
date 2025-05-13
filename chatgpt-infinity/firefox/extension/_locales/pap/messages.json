@@ -20,6 +20,7 @@
   "about_version": { "message": "Vershon" },
   "about_poweredBy": { "message": "Potenciá por" },
   "about_openSourceCode": { "message": "Codigo Fuente Abierto" },
+  "about_latestChanges": { "message": "Último kambionan" },
   "prompt_updateReplyLang": { "message": "Actualisá idioma di contestá" },
   "prompt_updateReplyTopic": { "message": "Actualisá tema di contestá" },
   "prompt_orEnter": { "message": "òf drenta" },

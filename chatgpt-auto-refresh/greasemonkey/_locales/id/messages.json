@@ -14,6 +14,7 @@
   "about_version": { "message": "Versi" },
   "about_poweredBy": { "message": "Didukung oleh" },
   "about_openSourceCode": { "message": "Sumber Terbuka" },
+  "about_latestChanges": { "message": "Perubahan terbaru" },
   "prompt_updateInt": { "message": "Perbarui interval penyegaran (dalam hitungan detik)" },
   "helptip_toggleVis": { "message": "Tampilkan Auto - Refresh toggle di bilah sisi" },
   "helptip_modeNotifs": { "message": "Tampilkan pemberitahuan saat mengaktifkan mode/pengaturan" },

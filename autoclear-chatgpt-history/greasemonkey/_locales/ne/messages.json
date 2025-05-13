@@ -14,6 +14,7 @@
   "about_version": { "message": "संस्करण" },
   "about_poweredBy": { "message": "समर्थनकर्ता" },
   "about_openSourceCode": { "message": "स्रोत सङ्केत" },
+  "about_latestChanges": { "message": "भर्खरका परिवर्तनहरू" },
   "mode_autoclear": { "message": "स्वत: खाली गर्नुहोस्" },
   "helptip_clearNow": { "message": "अब च्याट इतिहास खाली गर्नुहोस्" },
   "helptip_toggleVis": { "message": "छेउपट्टीमा स्वत: क्लियर टगल देखाउनुहोस्" },

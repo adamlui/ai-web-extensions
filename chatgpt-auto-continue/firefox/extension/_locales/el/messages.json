@@ -14,6 +14,7 @@
   "about_version": { "message": "Έκδοση" },
   "about_poweredBy": { "message": "Με την υποστήριξη" },
   "about_openSourceCode": { "message": "Ανοιχτός κώδικας." },
+  "about_latestChanges": { "message": "Τελευταίες αλλαγές" },
   "mode_autoContinue": { "message": "Αυτόματη συνέχιση" },
   "helptip_autoScroll": { "message": "Αυτόματη κύλιση στο κάτω μέρος καθώς δημιουργούνται απαντήσεις" },
   "helptip_modeNotifs": { "message": "Εμφάνιση ειδοποιήσεων κατά την εναλλαγή λειτουργιών/ρυθμίσεων" },

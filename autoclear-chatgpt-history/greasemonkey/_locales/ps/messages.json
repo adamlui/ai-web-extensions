@@ -14,6 +14,7 @@
   "about_version": { "message": ":نسخه" },
   "about_poweredBy": { "message": "طراحی شده توسط" },
   "about_openSourceCode": { "message": "سرچينه كوډه" },
+  "about_latestChanges": { "message": "وروستي بدلونونه" },
   "mode_autoclear": { "message": "اتومات لارموندنه" },
   "helptip_clearNow": { "message": "اوس د خبرو مخینه پاکه کړئ" },
   "helptip_toggleVis": { "message": "په اړخپټه کې د اتومات - پلنوالي څرنګتياونج ښکاره کړئ" },

@@ -11,6 +11,7 @@
   "about_version": { "message": "မူ" },
   "about_poweredBy": { "message": "စွမ်းဆောင်ရည်" },
   "about_openSourceCode": { "message": "ပွင့်လင်းအရင်းအမြစ်ကုဒ်" },
+  "about_latestChanges": { "message": "နောက်ဆုံးအပြောင်းအလဲများ" },
   "mode_autoTalk": { "message": "အလိုအလျောက်စကားပြော" },
   "helptip_toggleVis": { "message": "ဘေးဘားတွင် အလိုအလျောက် စကားပြောခလုတ်ကို ပြပါ" },
   "alert_updateAvail": { "message": "အသစ်မထွက်သေး" },

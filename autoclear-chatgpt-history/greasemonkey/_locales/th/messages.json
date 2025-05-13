@@ -14,6 +14,7 @@
   "about_version": { "message": "เวอร์ชัน" },
   "about_poweredBy": { "message": "สนับสนุนโดย" },
   "about_openSourceCode": { "message": "โปรแกรมโอเพนซอร์ซ" },
+  "about_latestChanges": { "message": "การเปลี่ยนแปลงล่าสุด" },
   "mode_autoclear": { "message": "ล้างอัตโนมัติ" },
   "helptip_clearNow": { "message": "ล้างประวัติการแชทเลย" },
   "helptip_toggleVis": { "message": "แสดงการสลับการล้างอัตโนมัติในแถบด้านข้าง" },

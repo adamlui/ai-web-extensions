@@ -31,6 +31,7 @@
   "about_version": { "message": "ވާރޝަން" },
   "about_poweredBy": { "message": "ބާރުވެރި ކުރުވާފައިވަނީ" },
   "about_openSourceCode": { "message": "އޮޕަން ސޯސް ކޯޑެވެ" },
+  "about_latestChanges": { "message": "އެންމެ ފަހުގެ ބަދަލުތަކެވެ" },
   "mode_widescreen": { "message": "ފުޅާ ސްކްރީން" },
   "mode_fullWindow": { "message": "ފުލް ވިންޑޯ" },
   "mode_fullscreen": { "message": "ފުލް ސްކްރީން" },

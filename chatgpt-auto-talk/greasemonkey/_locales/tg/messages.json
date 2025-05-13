@@ -11,6 +11,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "Нерӯмандшуда аз тарафи" },
   "about_openSourceCode": { "message": "Рамзи кушодаасос" },
+  "about_latestChanges": { "message": "Mga pinakabagong pagbabago" },
   "mode_autoTalk": { "message": "Ð  Ð ° Ð ¼ Ð ¾ Ð" },
   "helptip_toggleVis": { "message": "Намоиши тугмаи гуфтугӯи худкор дар панели канорӣ" },
   "alert_updateAvail": { "message": "I-update ang magagamit" },

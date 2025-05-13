@@ -20,6 +20,7 @@
   "about_version": { "message": "Ստանալ պրեմիում տարբերակը" },
   "about_poweredBy": { "message": "🇦🇲" },
   "about_openSourceCode": { "message": "Ծրագրային կոդ" },
+  "about_latestChanges": { "message": "Վերջին փոփոխությունները" },
   "prompt_updateReplyLang": { "message": "Թարմացնել պատասխանի լեզուն" },
   "prompt_updateReplyTopic": { "message": "Թարմացնել պատասխանի թեման" },
   "prompt_orEnter": { "message": "կամ մուտքագրեք" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Inoratidzwa na" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Shanduko dzichangoburwa" },
   "prompt_updateInt": { "message": "Kuchengetedza kupinda kwemaitiro (mumasekondi)" },
   "helptip_toggleVis": { "message": "Ratidza Auto-Refresh toggle mu sidebar" },
   "helptip_modeNotifs": { "message": "Ratidza zviziviso kana toggling modes/marongero" },

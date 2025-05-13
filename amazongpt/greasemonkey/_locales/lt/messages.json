@@ -21,6 +21,7 @@
   "about_version": { "message": "Versija" },
   "about_poweredBy": { "message": "Įgalino Proneta" },
   "about_openSourceCode": { "message": "Pradinis kodas" },
+  "about_latestChanges": { "message": "Naujausi pakeitimai" },
   "scheme_light": { "message": "Nedidelis" },
   "scheme_dark": { "message": "Tamsi" },
   "mode_proxy": { "message": "Tarpinio serverio režimas" },

@@ -20,6 +20,7 @@
   "about_version": { "message": "Verżjoni" },
   "about_poweredBy": { "message": "Imħaddem minn" },
   "about_openSourceCode": { "message": "sors miftuħ" },
+  "about_latestChanges": { "message": "L-aħħar bidliet" },
   "prompt_updateReplyLang": { "message": "Aġġorna l-lingwa tat-tweġibiet" },
   "prompt_updateReplyTopic": { "message": "Aġġorna s-suġġett tat-tweġiba" },
   "prompt_orEnter": { "message": "jew daħħal" },

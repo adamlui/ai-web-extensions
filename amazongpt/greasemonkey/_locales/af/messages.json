@@ -21,6 +21,7 @@
   "about_version": { "message": "Weergawe" },
   "about_poweredBy": { "message": "Aangedryf deur" },
   "about_openSourceCode": { "message": "Oopbronkode" },
+  "about_latestChanges": { "message": "Jongste veranderinge" },
   "scheme_light": { "message": "Lig" },
   "scheme_dark": { "message": "Donker" },
   "mode_proxy": { "message": "Volmagmodus" },

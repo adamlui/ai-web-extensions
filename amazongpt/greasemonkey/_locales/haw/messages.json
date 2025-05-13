@@ -21,6 +21,7 @@
   "about_version": { "message": "Manao" },
   "about_poweredBy": { "message": "Hoʻāmana ʻia e" },
   "about_openSourceCode": { "message": "Wehe kumu kumu" },
+  "about_latestChanges": { "message": "Nā hoʻololi hou" },
   "scheme_light": { "message": "ʻuhane ʻuhane" },
   "scheme_dark": { "message": "Poʻeleʻele" },
   "mode_proxy": { "message": "Kūlana Kūlana" },

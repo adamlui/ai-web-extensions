@@ -14,6 +14,7 @@
   "about_version": { "message": "ಆವೃತ್ತಿ" },
   "about_poweredBy": { "message": "ಸಾಮರ್ಥ್ಯ ಇವರಿಂದ" },
   "about_openSourceCode": { "message": "ಓಪನ್ ಸೋರ್ಸ್ ಕೋಡ್" },
+  "about_latestChanges": { "message": "ಇತ್ತೀಚಿನ ಬದಲಾವಣೆಗಳು" },
   "mode_autoContinue": { "message": "ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮುಂದುವರಿಸಿ" },
   "helptip_autoScroll": { "message": "ಪ್ರತ್ಯುತ್ತರಗಳು ಉತ್ಪತ್ತಿಯಾಗುತ್ತಿರುವುದರಿಂದ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಕೆಳಕ್ಕೆ ಸ್ಕ್ರಾಲ್ ಮಾಡಿ" },
   "helptip_modeNotifs": { "message": "ಮೋಡ್‌ಗಳು/ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಟಾಗಲ್ ಮಾಡುವಾಗ ಅಧಿಸೂಚನೆಗಳನ್ನು ತೋರಿಸಿ" },

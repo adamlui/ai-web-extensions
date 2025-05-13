@@ -21,6 +21,7 @@
   "about_version": { "message": "Verzija" },
   "about_poweredBy": { "message": "Pokreće" },
   "about_openSourceCode": { "message": "Izvorni kod" },
+  "about_latestChanges": { "message": "Najnovije promjene" },
   "scheme_light": { "message": "Svjetlo" },
   "scheme_dark": { "message": "Tamno" },
   "mode_proxy": { "message": "Proxy način rada" },

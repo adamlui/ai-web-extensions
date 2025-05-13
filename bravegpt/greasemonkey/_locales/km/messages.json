@@ -34,6 +34,7 @@
   "about_version": { "message": "លេខជំនាន់កម្មវិធី" },
   "about_poweredBy": { "message": "ដំណើរការដោយ" },
   "about_openSourceCode": { "message": "កូដ​ដើម" },
+  "about_latestChanges": { "message": "ការផ្លាស់ប្តូរចុងក្រោយបំផុត" },
   "scheme_light": { "message": "ពន្លឺ" },
   "scheme_dark": { "message": "ពតិ៍ចាស់" },
   "mode_proxy": { "message": "ម៉ូដប្រូកស៊ី" },

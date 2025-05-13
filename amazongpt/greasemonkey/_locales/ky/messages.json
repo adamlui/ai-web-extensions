@@ -21,6 +21,7 @@
   "about_version": { "message": "Версиясы" },
   "about_poweredBy": { "message": "Тарабынан иштелип чыккан" },
   "about_openSourceCode": { "message": "Баштапкы код" },
+  "about_latestChanges": { "message": "Акыркы өзгөртүүлөр" },
   "scheme_light": { "message": "Жарык" },
   "scheme_dark": { "message": "Караңгы" },
   "mode_proxy": { "message": "Прокси режими" },

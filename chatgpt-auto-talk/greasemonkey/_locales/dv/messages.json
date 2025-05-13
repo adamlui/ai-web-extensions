@@ -11,6 +11,7 @@
   "about_version": { "message": "ވާރޝަން" },
   "about_poweredBy": { "message": "ޕަވަރޑް ބައި" },
   "about_openSourceCode": { "message": "އޮޕަން ސޯސް ކޯޑެވެ" },
+  "about_latestChanges": { "message": "އެންމެ ފަހުގެ ބަދަލުތަކެވެ" },
   "mode_autoTalk": { "message": "އޮޓޯ ޓޯކް" },
   "helptip_toggleVis": { "message": "ސައިޑްބާރ ގައި އޮޓޯ-ޓޯކް ޓޮގްލް ދައްކާށެވެ" },
   "alert_updateAvail": { "message": "އަޕްޑޭޓް ލިބެން ހުރެއެވެ" },

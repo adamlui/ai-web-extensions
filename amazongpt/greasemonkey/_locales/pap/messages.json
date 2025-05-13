@@ -21,6 +21,7 @@
   "about_version": { "message": "Vershon" },
   "about_poweredBy": { "message": "Potenciá por" },
   "about_openSourceCode": { "message": "Codigo Fuente Abierto" },
+  "about_latestChanges": { "message": "Último kambionan" },
   "scheme_light": { "message": "Lus" },
   "scheme_dark": { "message": "Skuridat" },
   "mode_proxy": { "message": "Propiedad Moda" },

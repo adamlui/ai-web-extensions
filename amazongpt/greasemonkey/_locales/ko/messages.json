@@ -21,6 +21,7 @@
   "about_version": { "message": "버전" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "오픈소스" },
+  "about_latestChanges": { "message": "최근 변경된 페이지" },
   "scheme_light": { "message": "라이트" },
   "scheme_dark": { "message": "다크" },
   "mode_proxy": { "message": "프록시 모드" },

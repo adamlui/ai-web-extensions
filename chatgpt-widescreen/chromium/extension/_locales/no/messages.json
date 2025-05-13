@@ -31,6 +31,7 @@
   "about_version": { "message": "Versjon" },
   "about_poweredBy": { "message": "Drevet av" },
   "about_openSourceCode": { "message": "åpen kilde" },
+  "about_latestChanges": { "message": "Siste endringer" },
   "mode_widescreen": { "message": "Bred skjerm" },
   "mode_fullWindow": { "message": "Fullvindu" },
   "mode_fullscreen": { "message": "Fullskjerm" },

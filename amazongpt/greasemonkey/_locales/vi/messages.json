@@ -21,6 +21,7 @@
   "about_version": { "message": "Phiên bản" },
   "about_poweredBy": { "message": "Cung cấp bởi" },
   "about_openSourceCode": { "message": "Nguồn mở" },
+  "about_latestChanges": { "message": "Thay đổi mới nhất" },
   "scheme_light": { "message": "Hạng nhẹ" },
   "scheme_dark": { "message": "Tối" },
   "mode_proxy": { "message": "Chế độ proxy IP" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "መበል" },
   "about_poweredBy": { "message": "ብ" },
   "about_openSourceCode": { "message": "ክፉት ምንጪ ኮድ" },
+  "about_latestChanges": { "message": "ናይ መወዳእታ ለውጥታት" },
   "prompt_updateInt": { "message": "ዝተሓድሶ ግዜ (ኣብ SECs)" },
   "helptip_toggleVis": { "message": "Auto-Refresh Toggle ኣብ ጎኒ ባር ኣርኢ" },
   "helptip_modeNotifs": { "message": "ኣብ እዋን ምትሕልላፍ ኣገባባት/ኣቀማምጣታት ኣፍልጦታት ኣርኢ" },

@@ -31,6 +31,7 @@
   "about_version": { "message": "Lumikizanani nafe" },
   "about_poweredBy": { "message": "Mothandizidwa ndi" },
   "about_openSourceCode": { "message": "Open gwero kachidindo" },
+  "about_latestChanges": { "message": "Zosintha zaposachedwa" },
   "mode_widescreen": { "message": "Chithunzi chazitali" },
   "mode_fullWindow": { "message": "Zambiri zaife" },
   "mode_fullscreen": { "message": "Chithunzi Chokwanira" },

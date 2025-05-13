@@ -14,6 +14,7 @@
   "about_version": { "message": "Faaliliuga" },
   "about_poweredBy": { "message": "Malosiaga e ala i" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Suiga mulimuli" },
   "prompt_updateInt": { "message": "Faʻafouina taimi faʻafouina (i SECS)" },
   "helptip_toggleVis": { "message": "Faaali atu Auto-Refresh toggle i sidebar" },
   "helptip_modeNotifs": { "message": "Faaali atu faasilasilaga pe a toggling auala/faatulagaga" },

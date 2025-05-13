@@ -14,6 +14,7 @@
   "about_version": { "message": "Verzió" },
   "about_poweredBy": { "message": "Kiszolgálja" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "Legutóbbi módosítások" },
   "mode_autoclear": { "message": "Automatikus törlés" },
   "helptip_clearNow": { "message": "Csevegési előzmények törlése most" },
   "helptip_toggleVis": { "message": "Automatikus törlés kapcsoló megjelenítése az oldalsávban" },

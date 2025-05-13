@@ -14,6 +14,7 @@
   "about_version": { "message": "Versioun" },
   "about_poweredBy": { "message": "Bereetgestallt vun" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "Neist Ännerungen" },
   "mode_autoContinue": { "message": "Auto-Kontinuitéit" },
   "helptip_autoScroll": { "message": "Automatesch no ënnen scrollen wéi d'Äntwerten generéieren" },
   "helptip_modeNotifs": { "message": "Notifikatiounen uweisen wann Dir Modi/Astellunge wiesselt" },

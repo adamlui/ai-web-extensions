@@ -34,6 +34,7 @@
   "about_version": { "message": "Faaliliuga" },
   "about_poweredBy": { "message": "Malosiaga e ala i" },
   "about_openSourceCode": { "message": "Open source code" },
+  "about_latestChanges": { "message": "Suiga mulimuli" },
   "scheme_light": { "message": "Malamalama" },
   "scheme_dark": { "message": "Pogisa" },
   "mode_proxy": { "message": "Proxy Mode" },

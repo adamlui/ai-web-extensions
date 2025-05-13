@@ -14,6 +14,7 @@
   "about_version": { "message": "Tionndadh" },
   "about_poweredBy": { "message": "Le cumhachd" },
   "about_openSourceCode": { "message": "Bun-tùs a' chod" },
+  "about_latestChanges": { "message": "Na h - atharraichean as ùire" },
   "mode_autoclear": { "message": "Glan gu fèin - obrachail" },
   "helptip_clearNow": { "message": "Falamhaich eachdraidh a 'chabadaich a - nis" },
   "helptip_toggleVis": { "message": "Seall toglaig gu fèin - obrachail sa bhàr - taoibh" },

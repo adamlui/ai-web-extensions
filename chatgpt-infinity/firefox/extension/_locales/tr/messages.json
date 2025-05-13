@@ -20,6 +20,7 @@
   "about_version": { "message": "Versiyon" },
   "about_poweredBy": { "message": "Destek" },
   "about_openSourceCode": { "message": "Açık kaynak kodu" },
+  "about_latestChanges": { "message": "Son Değişiklikler:" },
   "prompt_updateReplyLang": { "message": "Cevap dili güncelle" },
   "prompt_updateReplyTopic": { "message": "Yanıt konusunu güncelle" },
   "prompt_orEnter": { "message": "veya girin" },

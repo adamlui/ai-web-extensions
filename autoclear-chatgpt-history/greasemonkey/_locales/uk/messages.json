@@ -14,6 +14,7 @@
   "about_version": { "message": "Версія" },
   "about_poweredBy": { "message": "Працює на" },
   "about_openSourceCode": { "message": "Джерельний код" },
+  "about_latestChanges": { "message": "Останні зміни" },
   "mode_autoclear": { "message": "Автоматичне очищення" },
   "helptip_clearNow": { "message": "Очистити історію чату зараз" },
   "helptip_toggleVis": { "message": "Показати перемикач автоматичного очищення на бічній панелі" },

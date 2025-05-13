@@ -34,6 +34,7 @@
   "about_version": { "message": "Vèsyon" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Kòd sous louvri" },
+  "about_latestChanges": { "message": "Dènye chanjman yo" },
   "scheme_light": { "message": "Limyè" },
   "scheme_dark": { "message": "Fè nwa" },
   "mode_proxy": { "message": "Mòd Prokurasyon" },

@@ -20,6 +20,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Waxa fudaydiyay" },
   "about_openSourceCode": { "message": "Koodhka ilaha furan" },
+  "about_latestChanges": { "message": "Isbedelada ugu dambeeyay" },
   "prompt_updateReplyLang": { "message": "Cusbooneysii luqadda jawaabta" },
   "prompt_updateReplyTopic": { "message": "Cusbooneysii mawduuca jawaabta" },
   "prompt_orEnter": { "message": "ama soo galiya" },

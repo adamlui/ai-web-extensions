@@ -14,6 +14,7 @@
   "about_version": { "message": "Versió" },
   "about_poweredBy": { "message": "Desenvolupat per" },
   "about_openSourceCode": { "message": "Codi obert" },
+  "about_latestChanges": { "message": "Últims canvis" },
   "mode_autoContinue": { "message": "Continua automàticament" },
   "helptip_autoScroll": { "message": "Desplaça't automàticament a la part inferior a mesura que es generen les respostes" },
   "helptip_modeNotifs": { "message": "Mostra les notificacions quan es canvien els modes o la configuració" },

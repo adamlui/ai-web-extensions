@@ -14,6 +14,7 @@
   "about_version": { "message": "Verzió" },
   "about_poweredBy": { "message": "Kiszolgálja" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "Legutóbbi módosítások" },
   "prompt_updateInt": { "message": "Frissítési időköz frissítése (másodpercben)" },
   "helptip_toggleVis": { "message": "Automatikus frissítés kapcsoló megjelenítése az oldalsávban" },
   "helptip_modeNotifs": { "message": "Értesítések megjelenítése üzemmódok/beállítások közötti váltáskor" },

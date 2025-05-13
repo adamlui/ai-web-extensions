@@ -34,6 +34,7 @@
   "about_version": { "message": "संस्करण" },
   "about_poweredBy": { "message": "समर्थनकर्ता" },
   "about_openSourceCode": { "message": "स्रोत सङ्केत" },
+  "about_latestChanges": { "message": "भर्खरका परिवर्तनहरू" },
   "scheme_light": { "message": "उज्यालो" },
   "scheme_dark": { "message": "अँध्यारो" },
   "mode_proxy": { "message": "प्रोक्सी मोड" },

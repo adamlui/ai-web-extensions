@@ -14,6 +14,7 @@
   "about_version": { "message": "Verzió" },
   "about_poweredBy": { "message": "Kiszolgálja" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "Legutóbbi módosítások" },
   "mode_autoContinue": { "message": "Automatikus folytatás" },
   "helptip_autoScroll": { "message": "Automatikus görgetés az aljára a válaszok generálásakor" },
   "helptip_modeNotifs": { "message": "Értesítések megjelenítése üzemmódok/beállítások közötti váltáskor" },

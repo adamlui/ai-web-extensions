@@ -14,6 +14,7 @@
   "about_version": { "message": "Fersiwn" },
   "about_poweredBy": { "message": "Wedi'i gynnal gan" },
   "about_openSourceCode": { "message": "Cod ffynhonnell" },
+  "about_latestChanges": { "message": "Newidiadau diweddaraf" },
   "mode_autoclear": { "message": "Clirio 'n Awtomatig" },
   "helptip_clearNow": { "message": "Clirio'r hanes sgwrsio nawr" },
   "helptip_toggleVis": { "message": "Dangos togl Auto - Cegin yn y bar ochr" },

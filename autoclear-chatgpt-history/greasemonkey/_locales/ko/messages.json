@@ -14,6 +14,7 @@
   "about_version": { "message": "버전" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "오픈소스" },
+  "about_latestChanges": { "message": "최근 변경된 페이지" },
   "mode_autoclear": { "message": "자동 삭제 모드" },
   "helptip_clearNow": { "message": "채팅 기록 삭제" },
   "helptip_toggleVis": { "message": "사이드바에 자동 지우기 토글 표시" },

@@ -14,6 +14,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Drivs av" },
   "about_openSourceCode": { "message": "öppen källkod" },
+  "about_latestChanges": { "message": "Latest changes" },
   "mode_autoclear": { "message": "Automatisk rensning" },
   "helptip_clearNow": { "message": "Rensa chatthistoriken nu" },
   "helptip_toggleVis": { "message": "Visa Auto-Clear växling i sidofältet" },

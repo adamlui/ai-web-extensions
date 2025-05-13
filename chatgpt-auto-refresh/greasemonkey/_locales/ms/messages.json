@@ -14,6 +14,7 @@
   "about_version": { "message": "Versi" },
   "about_poweredBy": { "message": "Dijana oleh" },
   "about_openSourceCode": { "message": "Sumber Terbuka" },
+  "about_latestChanges": { "message": "Perubahan terkini" },
   "prompt_updateInt": { "message": "Kemas kini selang penyegaran (dalam saat)" },
   "helptip_toggleVis": { "message": "Tunjukkan togol Muat Semula Automatik dalam bar sisi" },
   "helptip_modeNotifs": { "message": "Tunjukkan pemberitahuan apabila menogol mod/tetapan" },

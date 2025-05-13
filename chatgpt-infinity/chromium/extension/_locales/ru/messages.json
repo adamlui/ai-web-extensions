@@ -20,6 +20,7 @@
   "about_version": { "message": "Версия" },
   "about_poweredBy": { "message": "На базе технологии" },
   "about_openSourceCode": { "message": "Открытый исходный код" },
+  "about_latestChanges": { "message": "Последние изменения" },
   "prompt_updateReplyLang": { "message": "Обновить язык ответа" },
   "prompt_updateReplyTopic": { "message": "Обновить тему ответа" },
   "prompt_orEnter": { "message": "или введите сумму" },

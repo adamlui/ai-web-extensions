@@ -11,6 +11,7 @@
   "about_version": { "message": "Versión" },
   "about_poweredBy": { "message": "Con la tecnología de" },
   "about_openSourceCode": { "message": "Cola ciega" },
+  "about_latestChanges": { "message": "Últimos cambios" },
   "mode_autoTalk": { "message": "Diálogo automático" },
   "helptip_toggleVis": { "message": "Mostrar alternancia de diálogo automático en la barra lateral" },
   "alert_updateAvail": { "message": "Actualización disponible" },

@@ -31,6 +31,7 @@
   "about_version": { "message": "Toleo" },
   "about_poweredBy": { "message": "Imewezeshwa na" },
   "about_openSourceCode": { "message": "Msimbo wa chanzo wazi" },
+  "about_latestChanges": { "message": "Mabadiliko ya hivi karibuni" },
   "mode_widescreen": { "message": "Skrini pana" },
   "mode_fullWindow": { "message": "Dirisha kamili" },
   "mode_fullscreen": { "message": "Skrini kamili" },

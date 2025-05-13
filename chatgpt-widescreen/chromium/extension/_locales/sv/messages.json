@@ -31,6 +31,7 @@
   "about_version": { "message": "Version" },
   "about_poweredBy": { "message": "Drivs av" },
   "about_openSourceCode": { "message": "öppen källkod" },
+  "about_latestChanges": { "message": "Latest changes" },
   "mode_widescreen": { "message": "bredbildsformat" },
   "mode_fullWindow": { "message": "Fullfönster" },
   "mode_fullscreen": { "message": "Fullskärm" },

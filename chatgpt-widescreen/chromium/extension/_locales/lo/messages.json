@@ -31,6 +31,7 @@
   "about_version": { "message": "ຮຸ່ນ" },
   "about_poweredBy": { "message": "ຂັບເຄື່ອນໂດຍ" },
   "about_openSourceCode": { "message": "ລະຫັດແຫຼ່ງເປີດ" },
+  "about_latestChanges": { "message": "ການປ່ຽນແປງຫຼ້າສຸດ" },
   "mode_widescreen": { "message": "ຫນ້າຈໍກວ້າງ" },
   "mode_fullWindow": { "message": "ປ່ອງຢ້ຽມເຕັມ" },
   "mode_fullscreen": { "message": "ຫນ້າ ຈໍເຕັມ" },

@@ -31,6 +31,7 @@
   "about_version": { "message": "Phiên bản" },
   "about_poweredBy": { "message": "Cung cấp bởi" },
   "about_openSourceCode": { "message": "Nguồn mở" },
+  "about_latestChanges": { "message": "Thay đổi mới nhất" },
   "mode_widescreen": { "message": "Màn Hình Rộng" },
   "mode_fullWindow": { "message": "Cửa sổ đầy đủ" },
   "mode_fullscreen": { "message": "Toàn màn hình" },

@@ -11,6 +11,7 @@
   "about_version": { "message": "Útgáfa" },
   "about_poweredBy": { "message": "Knúið af" },
   "about_openSourceCode": { "message": "Opinn kóðalisti" },
+  "about_latestChanges": { "message": "Nýjustu breytingar" },
   "mode_autoTalk": { "message": "Sjálfvirkt tal" },
   "helptip_toggleVis": { "message": "Sýna sjálfvirkan valtakka í hliðarstiku" },
   "alert_updateAvail": { "message": "Ný uppfærsla í boði" },

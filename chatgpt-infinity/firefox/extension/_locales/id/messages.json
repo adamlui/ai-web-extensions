@@ -20,6 +20,7 @@
   "about_version": { "message": "Versi" },
   "about_poweredBy": { "message": "Didukung oleh" },
   "about_openSourceCode": { "message": "Sumber Terbuka" },
+  "about_latestChanges": { "message": "Perubahan terbaru" },
   "prompt_updateReplyLang": { "message": "Perbarui bahasa balasan" },
   "prompt_updateReplyTopic": { "message": "Perbarui topik balasan" },
   "prompt_orEnter": { "message": "atau masukkan" },

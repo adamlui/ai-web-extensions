@@ -11,6 +11,7 @@
   "about_version": { "message": "Версиясы" },
   "about_poweredBy": { "message": "Тарабынан иштелип чыккан" },
   "about_openSourceCode": { "message": "Баштапкы код" },
+  "about_latestChanges": { "message": "Акыркы өзгөртүүлөр" },
   "mode_autoTalk": { "message": "Авто-сүйлөшүү" },
   "helptip_toggleVis": { "message": "Dialogs-action" },
   "alert_updateAvail": { "message": "Баяндалмасы табылган жок" },

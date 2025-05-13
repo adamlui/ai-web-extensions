@@ -34,6 +34,7 @@
   "about_version": { "message": "Verzija" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Izvorni kod" },
+  "about_latestChanges": { "message": "Najnovije promene" },
   "scheme_light": { "message": "Mala" },
   "scheme_dark": { "message": "Tamno" },
   "mode_proxy": { "message": "Režim proksija" },

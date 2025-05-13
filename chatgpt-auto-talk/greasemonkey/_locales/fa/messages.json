@@ -11,6 +11,7 @@
   "about_version": { "message": "نسخه برنامه" },
   "about_poweredBy": { "message": "قدرت گرفته توسط" },
   "about_openSourceCode": { "message": "سورس کد" },
+  "about_latestChanges": { "message": "آخرین تغییرات" },
   "mode_autoTalk": { "message": "صحبت خودکار" },
   "helptip_toggleVis": { "message": "نمایش تغییر حالت Auto-Talk در نوار کناری" },
   "alert_updateAvail": { "message": "آپدیت موجود است" },

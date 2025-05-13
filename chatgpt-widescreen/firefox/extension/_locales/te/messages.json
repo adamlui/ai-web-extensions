@@ -31,6 +31,7 @@
   "about_version": { "message": "వివరణం" },
   "about_poweredBy": { "message": "ద్వారా ఆధారితం" },
   "about_openSourceCode": { "message": "ఓపెన్ సోర్స్ కోడ్" },
+  "about_latestChanges": { "message": "తాజా మార్పులు" },
   "mode_widescreen": { "message": "వెడల్పు స్క్రీన్" },
   "mode_fullWindow": { "message": "పూర్తి-వైన్ ‌ డో" },
   "mode_fullscreen": { "message": "పూర్తి తెర" },

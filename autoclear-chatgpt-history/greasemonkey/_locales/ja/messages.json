@@ -14,6 +14,7 @@
   "about_version": { "message": "バージョン" },
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Open Source" },
+  "about_latestChanges": { "message": "最新の変更" },
   "mode_autoclear": { "message": "自動クリアモード" },
   "helptip_clearNow": { "message": "今すぐチャット履歴を消去" },
   "helptip_toggleVis": { "message": "サイドバーに自動クリア切り替えを表示" },

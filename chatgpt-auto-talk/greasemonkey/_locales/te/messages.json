@@ -11,6 +11,7 @@
   "about_version": { "message": "వివరణం" },
   "about_poweredBy": { "message": "ద్వారా ఆధారితం" },
   "about_openSourceCode": { "message": "ఓపెన్ సోర్స్ కోడ్" },
+  "about_latestChanges": { "message": "తాజా మార్పులు" },
   "mode_autoTalk": { "message": "ఆటో-టాక్" },
   "helptip_toggleVis": { "message": "సైడ్ ‌ బార్ ‌ లో ఆటో-టాక్ టోగుల్ ‌ ను చూపించండి" },
   "alert_updateAvail": { "message": "ఎటువంటి నవీకరణ అందుబాటులోలేదు" },

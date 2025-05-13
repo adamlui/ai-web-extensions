@@ -11,6 +11,7 @@
   "about_version": { "message": "संस्करण" },
   "about_poweredBy": { "message": "समर्थनकर्ता" },
   "about_openSourceCode": { "message": "स्रोत सङ्केत" },
+  "about_latestChanges": { "message": "भर्खरका परिवर्तनहरू" },
   "mode_autoTalk": { "message": "अटो - टक" },
   "helptip_toggleVis": { "message": "साइडबारमा अटो - टक टगल देखाउनुहोस्" },
   "alert_updateAvail": { "message": "कुनै अपडेट उपलब्ध छैन।" },

@@ -31,6 +31,7 @@
   "about_version": { "message": "Umukoro" },
   "about_poweredBy": { "message": "Ku" },
   "about_openSourceCode": { "message": "Inkomoko Inyandikoporogaramu" },
+  "about_latestChanges": { "message": "Amahinduka" },
   "mode_widescreen": { "message": "Mugaragaza" },
   "mode_fullWindow": { "message": "Idirishya" },
   "mode_fullscreen": { "message": "Mugaragaza Yuzuye" },

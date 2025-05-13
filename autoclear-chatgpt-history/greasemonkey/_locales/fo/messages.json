@@ -14,6 +14,7 @@
   "about_version": { "message": "Útgáva" },
   "about_poweredBy": { "message": "Powered by SFX" },
   "about_openSourceCode": { "message": "Opna keldukota" },
+  "about_latestChanges": { "message": "Nýggju broytingarnar" },
   "mode_autoclear": { "message": "Auto-Clear" },
   "helptip_clearNow": { "message": "Rætta samrøðuhistoria nú" },
   "helptip_toggleVis": { "message": "Vís automatisk-klárar skifting í síðubarn" },

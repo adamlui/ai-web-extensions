@@ -20,6 +20,7 @@
   "about_version": { "message": "Manao" },
   "about_poweredBy": { "message": "Hoʻāmana ʻia e" },
   "about_openSourceCode": { "message": "Wehe kumu kumu" },
+  "about_latestChanges": { "message": "Nā hoʻololi hou" },
   "prompt_updateReplyLang": { "message": "Hōʻano hou i ka ʻōlelo pane" },
   "prompt_updateReplyTopic": { "message": "Hōʻano hou i ke kumuhana pane" },
   "prompt_orEnter": { "message": "a komo" },

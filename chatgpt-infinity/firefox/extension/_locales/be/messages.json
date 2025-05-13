@@ -20,6 +20,7 @@
   "about_version": { "message": "Версія" },
   "about_poweredBy": { "message": "Пры падтрымцы" },
   "about_openSourceCode": { "message": "Зыходнікі" },
+  "about_latestChanges": { "message": "Апошнія змены" },
   "prompt_updateReplyLang": { "message": "Абнавіць мову адказу" },
   "prompt_updateReplyTopic": { "message": "Абнавіць тэму адказу" },
   "prompt_orEnter": { "message": "або ўвесці" },

@@ -34,6 +34,7 @@
   "about_version": { "message": "Traduzione" },
   "about_poweredBy": { "message": "Yashizwe mu ngiro na" },
   "about_openSourceCode": { "message": "Ikodero ry'isôko r" },
+  "about_latestChanges": { "message": "Ihinduka rya vuba" },
   "scheme_light": { "message": "Umuco" },
   "scheme_dark": { "message": "Umwiza" },
   "mode_proxy": { "message": "Proxy Mode None None" },

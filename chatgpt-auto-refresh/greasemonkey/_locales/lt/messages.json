@@ -14,6 +14,7 @@
   "about_version": { "message": "Versija" },
   "about_poweredBy": { "message": "Įgalino Proneta" },
   "about_openSourceCode": { "message": "Pradinis kodas" },
+  "about_latestChanges": { "message": "Naujausi pakeitimai" },
   "prompt_updateInt": { "message": "Atnaujinimo atnaujinimo intervalas (sekundėmis)" },
   "helptip_toggleVis": { "message": "Rodyti automatinio atnaujinimo perjungimą šoninėje juostoje" },
   "helptip_modeNotifs": { "message": "Rodyti pranešimus, kai perjungiami režimai/nustatymai" },
