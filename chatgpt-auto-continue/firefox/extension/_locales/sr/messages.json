@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Automatsko pomeranje" },
   "menuLabel_modeNotifs": { "message": "Obaveštenja o režimu" },
   "menuLabel_about": { "message": "O nama" },
+  "menuLabel_open": { "message": "Otvorena" },
   "menuLabel_buyMeAcoffee": { "message": "Kupi mi kavu." },
   "menuLabel_donate": { "message": "Pošaljite donaciju" },
   "menuLabel_extensionActive": { "message": "dodatak je aktivan" },

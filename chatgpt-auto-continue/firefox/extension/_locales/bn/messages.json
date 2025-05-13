@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "অটো স্ক্রল" },
   "menuLabel_modeNotifs": { "message": "মোড বিজ্ঞপ্তি" },
   "menuLabel_about": { "message": "সম্বন্ধে" },
+  "menuLabel_open": { "message": "খুলুন" },
   "menuLabel_buyMeAcoffee": { "message": "আমাকে একটি কফি কিনে দিন" },
   "menuLabel_donate": { "message": "অনুগ্রহ করে একটি অনুদান পাঠান" },
   "menuLabel_extensionActive": { "message": "এক্সটেনশান সক্রিয়" },

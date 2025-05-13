@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "རང་འགུལ་ལྟ་ཀློག" },
   "menuLabel_modeNotifs": { "message": "བཟོ་རྣམ་བརྡ་སྤྲོད་" },
   "menuLabel_about": { "message": "མྱུར་ཨང་སྐོར།" },
+  "menuLabel_open": { "message": "ཁ་ཕྱེ་བ" },
   "menuLabel_buyMeAcoffee": { "message": "ང་ལ་ཀོ་ཕི་ཞིག་གནང་རོགས་གནང་།" },
   "menuLabel_donate": { "message": "ཁྱོད་ཀྱིས་སྦྱིན་པ་གཏོང་འདོད་དམ །" },
   "menuLabel_extensionActive": { "message": "ལས་བྱེད་པའི་རིང་ཐུང་།" },

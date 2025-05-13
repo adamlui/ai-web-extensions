@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Skráset teg sjálv/ur" },
   "menuLabel_modeNotifs": { "message": "Modus kunningar" },
   "menuLabel_about": { "message": "Um" },
+  "menuLabel_open": { "message": "Opna" },
   "menuLabel_buyMeAcoffee": { "message": "Gev mær eina kopp av kaffi" },
   "menuLabel_donate": { "message": "Send okkum eina gávu" },
   "menuLabel_extensionActive": { "message": "útbygging virkin" },

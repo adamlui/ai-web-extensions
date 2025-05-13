@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Korritu automatikoki" },
   "menuLabel_modeNotifs": { "message": "Moduaren jakinarazpenak" },
   "menuLabel_about": { "message": "Egileari Buruz" },
+  "menuLabel_open": { "message": "Ireki" },
   "menuLabel_buyMeAcoffee": { "message": "Erosi kafe bat" },
   "menuLabel_donate": { "message": "Mesedez, bidali dohaintza" },
   "menuLabel_extensionActive": { "message": "luzapena aktiboa" },

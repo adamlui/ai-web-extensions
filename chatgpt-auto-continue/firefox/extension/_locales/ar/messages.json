@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "تمرير تلقائي" },
   "menuLabel_modeNotifs": { "message": "إشعارات الوضع" },
   "menuLabel_about": { "message": "عن وزارة الثقافة" },
+  "menuLabel_open": { "message": "مفتوح" },
   "menuLabel_buyMeAcoffee": { "message": "-أستشتري ليّ قهوة؟" },
   "menuLabel_donate": { "message": "يرجى إرسال تبرع" },
   "menuLabel_extensionActive": { "message": "الامتداد نشط" },

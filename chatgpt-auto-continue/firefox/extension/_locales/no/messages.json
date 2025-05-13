@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Bla automatisk" },
   "menuLabel_modeNotifs": { "message": "Modusvarsler" },
   "menuLabel_about": { "message": "Om" },
+  "menuLabel_open": { "message": "Åpne" },
   "menuLabel_buyMeAcoffee": { "message": "Kjøp meg en kaffe" },
   "menuLabel_donate": { "message": "Vennligst send en donasjon" },
   "menuLabel_extensionActive": { "message": "utvidelse aktiv" },

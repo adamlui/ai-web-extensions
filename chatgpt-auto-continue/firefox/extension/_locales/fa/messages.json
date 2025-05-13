@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "اسکرول خودکار" },
   "menuLabel_modeNotifs": { "message": "اعلان‌های حالت" },
   "menuLabel_about": { "message": "درباره" },
+  "menuLabel_open": { "message": "باز کردن" },
   "menuLabel_buyMeAcoffee": { "message": "برای من قهوه بخر" },
   "menuLabel_donate": { "message": "لطفا کمک مالی بفرستید" },
   "menuLabel_extensionActive": { "message": "افزونه فعال است" },

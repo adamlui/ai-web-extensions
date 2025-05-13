@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "އޮޓޯ ސްކްރޯލް ކޮށްލާށެވެ" },
   "menuLabel_modeNotifs": { "message": "މޯޑް ނޮޓިފިކޭޝަންސް" },
   "menuLabel_about": { "message": "މިއާއި ބެހޭ" },
+  "menuLabel_open": { "message": "ހުޅުވުން" },
   "menuLabel_buyMeAcoffee": { "message": "ބައި މީ އަ ކޮފީ" },
   "menuLabel_donate": { "message": "ހަދިޔާ ފޮނުއްވުން އެދެމެވެ" },
   "menuLabel_extensionActive": { "message": "އެކްސްޓެންޝަން އެކްޓިވް" },

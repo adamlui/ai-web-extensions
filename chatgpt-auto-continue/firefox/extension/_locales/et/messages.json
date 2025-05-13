@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Automaatne kerimine" },
   "menuLabel_modeNotifs": { "message": "Režiimi teavitused" },
   "menuLabel_about": { "message": "Info" },
+  "menuLabel_open": { "message": "Avatud" },
   "menuLabel_buyMeAcoffee": { "message": "Osta mulle kohv" },
   "menuLabel_donate": { "message": "Saada annetus" },
   "menuLabel_extensionActive": { "message": "laiendus aktiivne" },

@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "ऑटो - स्क्रॉल" },
   "menuLabel_modeNotifs": { "message": "मोड नोटिफ़िकेशन" },
   "menuLabel_about": { "message": "परिचय" },
+  "menuLabel_open": { "message": "खोलें" },
   "menuLabel_buyMeAcoffee": { "message": "मेरे लिए एक कॉफ़ी खरीदें" },
   "menuLabel_donate": { "message": "कृपया दान भेजें" },
   "menuLabel_extensionActive": { "message": "एक्सटेंशन सक्रिय है" },

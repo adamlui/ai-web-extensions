@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "自動捲動" },
   "menuLabel_modeNotifs": { "message": "模式通知" },
   "menuLabel_about": { "message": "關於" },
+  "menuLabel_open": { "message": "開啟" },
   "menuLabel_buyMeAcoffee": { "message": "給我買杯咖啡" },
   "menuLabel_donate": { "message": "請發送捐款" },
   "menuLabel_extensionActive": { "message": "擴展活動" },

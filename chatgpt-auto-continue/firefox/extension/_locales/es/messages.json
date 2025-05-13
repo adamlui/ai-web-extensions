@@ -5,6 +5,7 @@
   "menuLabel_autoScroll": { "message": "Auto Scroll" },
   "menuLabel_modeNotifs": { "message": "Notificaciones de modo" },
   "menuLabel_about": { "message": "Acerca de" },
+  "menuLabel_open": { "message": "Abrir" },
   "menuLabel_buyMeAcoffee": { "message": "Invítame a una caña" },
   "menuLabel_donate": { "message": "Por favor, envíe una donación" },
   "menuLabel_extensionActive": { "message": "La extensión está activa" },
