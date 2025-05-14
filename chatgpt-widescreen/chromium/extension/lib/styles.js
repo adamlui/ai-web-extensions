@@ -6,8 +6,7 @@ window.styles = {
         return Object.values(obj).flatMap(val => typeof val == 'object' ? this.getAllSelectors(val) : val) },
 
     update(styleType, { autoAppend = true } = {}) {
-        const style = this[styleType]
-        style.node ||= dom.create.style()
+        const style = this[styleType] ; style.node ||= dom.create.style()
         if (autoAppend && !style.node?.isConnected) document.head.append(style.node)
         style.node.textContent = style.styles
     },
