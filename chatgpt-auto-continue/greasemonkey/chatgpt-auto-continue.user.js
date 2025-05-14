@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13.7
+// @version             2025.5.13.8
 // @license             MIT
 // @icon                https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon48.png?v=a8c9387
 // @icon64              https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon64.png?v=a8c9387
@@ -504,7 +504,10 @@
         setTimeout(checkBtnsToClick, continueBtnClicked ? 5000 : 500)
     }
 
-    function syncConfigToUI() { toolbarMenu.refresh() /* prefixes/suffixes */ }
+    function syncConfigToUI(options) {
+        toolbarMenu.refresh() // prefixes/suffixes
+        if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.toast.update() // sync TM
+    }
 
     // Run MAIN routine
 
