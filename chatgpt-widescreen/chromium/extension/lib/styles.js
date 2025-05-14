@@ -14,7 +14,7 @@ window.styles = {
 
     chatbar: {
         autoAppend: true,
-        get css() { // requires <config|env>
+        get css() { // requires components/chatbar.js + <config|env>
             return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : {
                 chatgpt: !config.widerChatbox &&
                     `main form { max-width: ${chatbar.nativeWidth}px !important ; margin: auto }`,
