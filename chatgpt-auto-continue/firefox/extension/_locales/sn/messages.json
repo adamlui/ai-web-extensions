@@ -20,7 +20,7 @@
   "about_poweredBy": { "message": "Inofambiswa ne" },
   "about_openSourceCode": { "message": "Open source code" },
   "about_latestChanges": { "message": "Shanduko dzichangoburwa" },
-  "mode_autoContinue": { "message": "Auto-Continue" },
+  "mode_autoContinue": { "message": "Auto-Enderera mberi" },
   "mode_toast": { "message": "Toast Mode" },
   "helptip_autoScroll": { "message": "Otomatiki fambisa kusvika pasi sezvo mhinduro dziri kugadzira" },
   "helptip_modeNotifs": { "message": "Ratidza zviziviso kana toggling modes/marongero" },

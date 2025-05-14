@@ -20,7 +20,7 @@
   "about_poweredBy": { "message": "Mothandizidwa ndi" },
   "about_openSourceCode": { "message": "Open gwero kachidindo" },
   "about_latestChanges": { "message": "Zosintha zaposachedwa" },
-  "mode_autoContinue": { "message": "Auto-Continue" },
+  "mode_autoContinue": { "message": "Pitirizani Zokha" },
   "mode_toast": { "message": "Mchitidwe wa Toast" },
   "helptip_autoScroll": { "message": "Makinawa mpukutu pansi monga mayankho akupanga" },
   "helptip_modeNotifs": { "message": "Onetsani zidziwitso pamene toggling modes/zoikamo" },
