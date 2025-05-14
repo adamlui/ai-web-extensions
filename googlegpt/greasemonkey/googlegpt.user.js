@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.13.3
+// @version                  2025.5.14
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -449,10 +449,10 @@
 
     // Init APP data
     window.app = {
-        version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
+        version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         latestResourceCommitHash: 'f3e537d' // for cached <app|messages>.json
     }
-    app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@${app.latestResourceCommitHash}`
+    app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@${app.latestResourceCommitHash}` }
     const remoteAppData = await new Promise(resolve => xhr({
         method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
         onload: resp => resolve(JSON.parse(resp.responseText))
