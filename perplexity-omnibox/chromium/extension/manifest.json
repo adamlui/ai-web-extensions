@@ -3,7 +3,7 @@
   "name": "__MSG_appName__",
   "short_name": "__MSG_prefix_ask__ Perplexity.ai",
   "description": "__MSG_appDesc__",
-  "version": "2025.3.9",
+  "version": "2025.5.13",
   "author": "Adam Lui",
   "homepage_url": "https://www.perplexityomnibox.com",
   "default_locale": "en",
