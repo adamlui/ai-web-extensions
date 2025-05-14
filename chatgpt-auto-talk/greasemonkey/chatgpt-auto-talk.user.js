@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13.3
+// @version             2025.5.13.4
 // @license             MIT
 // @icon                https://assets.chatgptautotalk.com/images/icons/openai/black/icon48.png?v=9f1ed3c
 // @icon64              https://assets.chatgptautotalk.com/images/icons/openai/black/icon64.png?v=9f1ed3c
@@ -750,14 +750,14 @@
                 // Init toggle elems
                 this.div = dom.create.elem('div', { class: this.class })
                 this.navicon = dom.create.elem('img')
-                this.toggleLabel = dom.create.elem('label')
                 this.toggleInput = dom.create.elem('input')
+                this.toggleLabel = dom.create.elem('label')
                 this.switchSpan = dom.create.elem('span')
                 this.knobSpan = dom.create.elem('span')
 
                 // Assemble elems into parent div
                 this.switchSpan.append(this.knobSpan)
-                this.div.append(this.navicon, this.toggleInput, this.switchSpan, this.toggleLabel)
+                this.div.append(this.navicon, this.toggleInput, this.toggleLabel, this.switchSpan)
 
                 // Stylize elems
                 this.stylize() // create/append stylesheet
@@ -806,7 +806,6 @@
                         position: relative ; width: 30px ; height: 15px ; border-radius: 28px ;
                         background-color: var(--switch-disabled-bg-color) ;
                         bottom: ${ firstLink ? '0.5px' : '-0.15em' } ;
-                        left: ${ env.browser.isMobile || firstLink ? 169 : 160 }px ;
                         transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
                             -o-transition: 0.4s ; -ms-transition: 0.4s }
                     .${this.class} > span.enabled { /* switch on */
@@ -824,14 +823,14 @@
                         background-color: var(--switch-disabled-bg-color) ; box-shadow: none }
                     .${this.class} > span > span { /* knob span */
                         position: absolute ; width: 12px ; height: 12px ; content: "" ; border-radius: 28px ;
-                        background-color: white ; left: 3px ; bottom: 1.25px ;
+                        background-color: white ; left: -3px ; bottom: 1.25px ;
                         box-shadow: var(--knob-box-shadow) ;
                             -webkit-box-shadow: var(--knob-box-shadow) ; -moz-box-shadow: var(--knob-box-shadow) ;
                         transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
                             -o-transition: 0.4s ; -ms-transition: 0.4s }
                     .${this.class} > label { /* toggle label */
                         cursor: pointer ; overflow: hidden ; text-overflow: ellipsis ; white-space: nowrap ;
-                        color: black ; width: 153px ; margin-left: -22px ;
+                        color: black ; padding: 0 12px ; flex-grow: 1 ;
                         ${ firstLink ? 'font-size: var(--text-sm)' : 'font-size: 0.875rem ; font-weight: 600' }}`
 
                     // Dark scheme mods
