@@ -30,6 +30,7 @@ window.styles = {
                     `div.${app.slug}.chatgpt-notif {
                         position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;
                         ${ env.ui.scheme == 'dark' ? 'border: 2px solid white ;' : '' }
+                        margin-${ config.notifBottom ? 'bottom: 105px' : 'top: 42px' };
                         transform: translate(-50%, -50%) scale(0.6) !important }
                     div.${app.slug}.chatgpt-notif > div.notif-close-btn {
                         top: 18px ; right: 7px ; transform: scale(2) }` }`
