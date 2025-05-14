@@ -5,14 +5,15 @@ window.styles = {
     getAllSelectors(obj) { // used in this.tweaks.styles for spam selectors
         return Object.values(obj).flatMap(val => typeof val == 'object' ? this.getAllSelectors(val) : val) },
 
-    update({ key, autoAppend = true }) { // requires lib/dom.js
+    update({ key, autoAppend }) { // requires lib/dom.js
         if (!key) return console.error('Option \'key\' required by styles.update()')
         const style = this[key] ; style.node ||= dom.create.style()
-        if (autoAppend && !style.node.isConnected) document.head.append(style.node)
+        if (( autoAppend || style.autoAppend ) && !style.node.isConnected) document.head.append(style.node)
         style.node.textContent = style.styles
     },
 
     chatbar: {
+        autoAppend: true,
         get styles() { // requires <config|env>
             return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : {
                 chatgpt: !config.widerChatbox &&
@@ -24,9 +25,12 @@ window.styles = {
     },
 
     fullWin: { // requires <env|sites>
-        get styles() { return sites[env.site].selectors.sidebar + '{ display: none }' }},
+        autoAppend: false,
+        get styles() { return sites[env.site].selectors.sidebar + '{ display: none }' }
+    },
 
     toast: {
+        autoAppend: true,
         get styles() { // requires <app|config|env>
             return !config.toastMode ? '' : // flatten notifs into toast alerts
                 `div.${app.slug}.chatgpt-notif {
@@ -40,6 +44,7 @@ window.styles = {
     },
 
     tweaks: {
+        autoAppend: true,
         get styles() { // requires <config|env|sites>
             const { site } = env, { [site]: { selectors }} = sites
             return config.extensionDisabled || !config[`${env.site}Disabled`] ? '' : `
@@ -68,6 +73,7 @@ window.styles = {
     },
 
     widescreen: {
+        autoAppend: false,
         get styles() { // requires <config|env>
             return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : {
                 chatgpt: `
