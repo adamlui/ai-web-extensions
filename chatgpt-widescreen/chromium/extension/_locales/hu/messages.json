@@ -44,7 +44,7 @@
   "tooltip_fullscreenOFF": { "message": "Kilépés a teljes nézetből" },
   "tooltip_newChat": { "message": "Új csevegés" },
   "tooltip_goto": { "message": "Ugrás" },
-  "helptip_adjustSettingsRelatedTo": { "message": "A következőhöz kapcsolódó beállítások módosítása:" },
+  "helptip_adjustSettingsRelatedTo": { "message": "A következőhöz kapcsolódó beállítások módosítása" },
   "helptip_the": { "message": "A" },
   "helptip_btns": { "message": "Gombok" },
   "helptip_fullerWins": { "message": "A teljes ablak aktiválásakor aktiválja a széles képernyőt is" },

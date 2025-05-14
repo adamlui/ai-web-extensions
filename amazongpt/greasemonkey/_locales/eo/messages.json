@@ -14,7 +14,7 @@
   "menuLabel_settings": { "message": "Agordoj" },
   "menuLabel_random": { "message": "Hazarde" },
   "menuLabel_saved": { "message": "Konservu bildon" },
-  "componentLabel_used": { "message": "uzate:" },
+  "componentLabel_used": { "message": "uzate" },
   "about_author": { "message": "Aŭtoro" },
   "about_and": { "message": "kaj" },
   "about_contributors": { "message": "Kontribuantoj" },

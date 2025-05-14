@@ -2,5 +2,5 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Nitendry @deepseek tao amin'ny adiresy bar mba hahazoana valiny avy amin'ny DeepSeek" },
-  "prefix_ask": { "message": "Manontania hoe :" }
+  "prefix_ask": { "message": "Manontania hoe " }
 }

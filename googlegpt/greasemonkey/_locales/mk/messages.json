@@ -27,7 +27,7 @@
   "menuLabel_settings": { "message": "Поставки" },
   "menuLabel_random": { "message": "По случаен избор" },
   "menuLabel_saved": { "message": "Вовлекување" },
-  "componentLabel_used": { "message": "- користен:" },
+  "componentLabel_used": { "message": "- користен" },
   "about_author": { "message": "Автор" },
   "about_and": { "message": "и" },
   "about_contributors": { "message": "Придонесувачи" },

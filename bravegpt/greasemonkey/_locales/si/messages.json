@@ -27,7 +27,7 @@
   "menuLabel_settings": { "message": "සැකසුම්" },
   "menuLabel_random": { "message": "අහබු ලෙස" },
   "menuLabel_saved": { "message": "ඉතිරි කරන ලදී" },
-  "componentLabel_used": { "message": "භාවිතය:" },
+  "componentLabel_used": { "message": "භාවිතය" },
   "about_author": { "message": "කතෘ" },
   "about_and": { "message": "සහ" },
   "about_contributors": { "message": "දායකයින්" },

@@ -43,7 +43,7 @@
   "tooltip_fullscreenON": { "message": "フルスクリーンモード" },
   "tooltip_fullscreenOFF": { "message": "フルスクリーンモードを終了する" },
   "tooltip_newChat": { "message": "新しいチャット" },
-  "tooltip_goto": { "message": "次に移動：" },
+  "tooltip_goto": { "message": "次に移動" },
   "helptip_adjustSettingsRelatedTo": { "message": "に関連する設定を調整する" },
   "helptip_the": { "message": "このボタンの" },
   "helptip_btns": { "message": "ボタン" },

@@ -115,7 +115,7 @@
   "alert_selectingDiff": { "message": "একটি ভিন্ন নির্বাচন করা" },
   "alert_generated": { "message": "উৎপন্ন হয়েছে" },
   "notif_copiedToClipboard": { "message": "ক্লিপবোর্ড-এ কপি করা হয়েছে" },
-  "notif_downloaded": { "message": "ডাউনলোড করা হয়েছে:" },
+  "notif_downloaded": { "message": "ডাউনলোড করা হয়েছে" },
   "btnLabel_sendSearchQueryTo": { "message": "অনুসন্ধানের ক্যোয়ারী এখানে পাঠান" },
   "btnLabel_moreAIextensions": { "message": "আরও AI এক্সটেনশন" },
   "btnLabel_leaveReview": { "message": "একটি রিভিউ লিখুন" },

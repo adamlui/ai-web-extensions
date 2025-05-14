@@ -45,7 +45,7 @@
   "tooltip_newChat": { "message": "Txat berria" },
   "tooltip_goto": { "message": "Anda era" },
   "helptip_adjustSettingsRelatedTo": { "message": "Egokitu ezarpenak" },
-  "helptip_the": { "message": "hauxe:" },
+  "helptip_the": { "message": "hauxe" },
   "helptip_btns": { "message": "Botoiak" },
   "helptip_fullerWins": { "message": "Era berean, aktibatu Pantaila zabala Leiho osoa aktibatzen duzunean" },
   "helptip_tallerChatbox": { "message": "Zabaldu txat-koadroa bertikalki" },

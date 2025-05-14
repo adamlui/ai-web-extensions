@@ -21,7 +21,7 @@
   "about_version": { "message": "Versiyon" },
   "about_poweredBy": { "message": "Destek" },
   "about_openSourceCode": { "message": "Açık kaynak kodu" },
-  "about_latestChanges": { "message": "Son Değişiklikler:" },
+  "about_latestChanges": { "message": "Son Değişiklikler" },
   "scheme_light": { "message": "Açık" },
   "scheme_dark": { "message": "Karanlık" },
   "mode_proxy": { "message": "Proxy Modu" },

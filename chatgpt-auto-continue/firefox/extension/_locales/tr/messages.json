@@ -19,7 +19,7 @@
   "about_version": { "message": "Versiyon" },
   "about_poweredBy": { "message": "Destek" },
   "about_openSourceCode": { "message": "Açık kaynak kodu" },
-  "about_latestChanges": { "message": "Son Değişiklikler:" },
+  "about_latestChanges": { "message": "Son Değişiklikler" },
   "mode_autoContinue": { "message": "Otomatik Devam" },
   "mode_toast": { "message": "Tost Modu" },
   "helptip_autoScroll": { "message": "Yanıtlar oluşturulurken otomatik olarak en alta kaydır" },

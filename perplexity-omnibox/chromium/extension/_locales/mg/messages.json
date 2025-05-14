@@ -2,5 +2,5 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Soraty eo amin'ny adiresy bara ny @perplexity mba hahazoana ny vokatra avy amin'ny Perplexity AI" },
-  "prefix_ask": { "message": "Manontania hoe :" }
+  "prefix_ask": { "message": "Manontania hoe " }
 }

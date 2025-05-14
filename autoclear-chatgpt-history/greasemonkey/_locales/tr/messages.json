@@ -14,7 +14,7 @@
   "about_version": { "message": "Versiyon" },
   "about_poweredBy": { "message": "Destek" },
   "about_openSourceCode": { "message": "Açık kaynak kodu" },
-  "about_latestChanges": { "message": "Son Değişiklikler:" },
+  "about_latestChanges": { "message": "Son Değişiklikler" },
   "mode_autoclear": { "message": "Otomatik Temizle" },
   "helptip_clearNow": { "message": "Sohbet geçmişini şimdi temizle" },
   "helptip_toggleVis": { "message": "Kenar çubuğunda Otomatik Temizle geçişini göster" },

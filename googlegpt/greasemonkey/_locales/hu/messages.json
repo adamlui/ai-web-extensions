@@ -116,7 +116,7 @@
   "alert_generated": { "message": "Létrehozott" },
   "notif_copiedToClipboard": { "message": "Vágólapra másolva" },
   "notif_downloaded": { "message": "letöltve" },
-  "btnLabel_sendSearchQueryTo": { "message": "Keresési lekérdezés küldése ide:" },
+  "btnLabel_sendSearchQueryTo": { "message": "Keresési lekérdezés küldése ide" },
   "btnLabel_moreAIextensions": { "message": "További MI-kiterjesztések" },
   "btnLabel_leaveReview": { "message": "Írj értékelést" },
   "btnLabel_rateUs": { "message": "Értékeljen minket" },

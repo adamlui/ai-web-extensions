@@ -11,7 +11,7 @@
   "about_version": { "message": "Versiyon" },
   "about_poweredBy": { "message": "Destek" },
   "about_openSourceCode": { "message": "Açık kaynak kodu" },
-  "about_latestChanges": { "message": "Son Değişiklikler:" },
+  "about_latestChanges": { "message": "Son Değişiklikler" },
   "mode_autoTalk": { "message": "Otomatik Konuşma" },
   "helptip_toggleVis": { "message": "Kenar çubuğunda Otomatik Konuşma geçişini göster" },
   "alert_updateAvail": { "message": "Güncelleme uygun" },

@@ -43,7 +43,7 @@
   "tooltip_fullscreenON": { "message": "འོད་སྡེར་ཨང་།" },
   "tooltip_fullscreenOFF": { "message": "འོད་སྡེར་ཕྱིར་འདོན །" },
   "tooltip_newChat": { "message": "གསར་ཤོས །" },
-  "tooltip_goto": { "message": "སྐྱོད་ཡུལ：" },
+  "tooltip_goto": { "message": "སྐྱོད་ཡུལ" },
   "helptip_adjustSettingsRelatedTo": { "message": "འབྲེལ་བའི་སྒྲིག་འཛུགས །" },
   "helptip_the": { "message": "འདི་" },
   "helptip_btns": { "message": "སྦྲེལ་མཐུད །" },

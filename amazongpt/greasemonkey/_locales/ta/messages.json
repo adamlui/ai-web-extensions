@@ -14,7 +14,7 @@
   "menuLabel_settings": { "message": "அமைப்புகள்" },
   "menuLabel_random": { "message": "சீரற்ற" },
   "menuLabel_saved": { "message": "சேமிக்கப்பட்டது" },
-  "componentLabel_used": { "message": "பயன்படுத்தப்பட்டதா:" },
+  "componentLabel_used": { "message": "பயன்படுத்தப்பட்டதா" },
   "about_author": { "message": "நூலாசிரியர்" },
   "about_and": { "message": "மற்றும்" },
   "about_contributors": { "message": "பங்களிப்போர்" },

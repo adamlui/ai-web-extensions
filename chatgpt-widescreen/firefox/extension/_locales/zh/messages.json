@@ -44,7 +44,7 @@
   "tooltip_fullscreenOFF": { "message": "退出全屏模式" },
   "tooltip_newChat": { "message": "新对话" },
   "tooltip_goto": { "message": "转到" },
-  "helptip_adjustSettingsRelatedTo": { "message": "调整与以下内容相关的设置：" },
+  "helptip_adjustSettingsRelatedTo": { "message": "调整与以下内容相关的设置" },
   "helptip_the": { "message": "在2025年2月1日之前已启运的货物，" },
   "helptip_btns": { "message": "纽扣" },
   "helptip_fullerWins": { "message": "激活全窗口时也激活宽屏幕" },
