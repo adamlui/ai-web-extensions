@@ -21,7 +21,7 @@
   "about_openSourceCode": { "message": "ཁ་ཕྱེ་བའི་ཁ་བྱང་།" },
   "about_latestChanges": { "message": "མཐའ་མའི་འགྱུར་ཁུངས །" },
   "mode_autoContinue": { "message": "རང་འགུལ་དུ་འཇུག་པ" },
-  "mode_toast": { "message": "Toast Mode" },
+  "mode_toast": { "message": "བག་ལེབ་བག་ལེབ་ཀྱི་ཐབས་ལམ།" },
   "helptip_autoScroll": { "message": "ལན་འདེབས་ཀྱིས་རང་བཞིན་གཤེགས་ནས་མར་གཤེགས་པ" },
   "helptip_modeNotifs": { "message": "Toggling Mode/Settings" },
   "helptip_notifBottom": { "message": "སྐར་ཁུང་རྩོམ་སྒྲིག་པ །_སྐར་ཁུང་རྩོམ་སྒྲིག་པ །_11/06/2013 - 10:15 am" },

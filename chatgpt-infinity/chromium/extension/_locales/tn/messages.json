@@ -27,7 +27,7 @@
   "about_poweredBy": { "message": "E tsamaisiwa ke" },
   "about_openSourceCode": { "message": "Khoutu ya motswedi o o bulegileng" },
   "about_latestChanges": { "message": "Diphetogo tsa sesweng" },
-  "mode_toast": { "message": "Toast Mode" },
+  "mode_toast": { "message": "Mokgwa wa Toast" },
   "prompt_updateReplyLang": { "message": "Leetiša puo ya go dira" },
   "prompt_updateReplyTopic": { "message": "Leetiša selo sa go dira" },
   "prompt_orEnter": { "message": "pele le tla" },

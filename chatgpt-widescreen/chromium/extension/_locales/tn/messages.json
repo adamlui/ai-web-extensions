@@ -35,7 +35,7 @@
   "mode_widescreen": { "message": "Sekirini se segolo" },
   "mode_fullWindow": { "message": "Mo fensetereng e e tletseng" },
   "mode_fullscreen": { "message": "Sekerini se se tletseng" },
-  "mode_toast": { "message": "Toast Mode" },
+  "mode_toast": { "message": "Mokgwa wa Toast" },
   "tooltip_widescreenON": { "message": "Sekirini se segolo" },
   "tooltip_widescreenOFF": { "message": "Go tswa mo sekerining se se atlhameng" },
   "tooltip_fullWindowON": { "message": "Total Modèle Modèle" },

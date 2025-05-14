@@ -21,7 +21,7 @@
   "about_openSourceCode": { "message": "ပွင့်လင်းအရင်းအမြစ်ကုဒ်" },
   "about_latestChanges": { "message": "နောက်ဆုံးအပြောင်းအလဲများ" },
   "mode_autoContinue": { "message": "အော်တို-ဆက်ရန်" },
-  "mode_toast": { "message": "Toast Mode" },
+  "mode_toast": { "message": "Toast မုဒ်" },
   "helptip_autoScroll": { "message": "အေျဖမ်ား ထုတ္ေပးေနသျဖင့္ အလိုအေလ်ာက္ ေအာက္ေျခသို႔ ေလွ်ာက္ပါ" },
   "helptip_modeNotifs": { "message": "မုဒ်များ/ဆက်တင်များကို ပြောင်းလဲချိန်တွင် အသိပေးချက်များကို ပြသပါ" },
   "helptip_notifBottom": { "message": "မျက်နှာပြင် ၏ အောက်ခြေရှိ အန်စာတုံး အသိပေးချက်များ" },

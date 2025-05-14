@@ -35,7 +35,7 @@
   "mode_widescreen": { "message": "ကျယ်ပြန့်သောမျက်နှာပြင်" },
   "mode_fullWindow": { "message": "Window အပြည့်အစုံ" },
   "mode_fullscreen": { "message": "မျက်နှာပြင်အပြည့်အစုံ" },
-  "mode_toast": { "message": "Toast Mode" },
+  "mode_toast": { "message": "Toast မုဒ်" },
   "tooltip_widescreenON": { "message": "ကျယ်ပြန့်သောမျက်နှာပြင်" },
   "tooltip_widescreenOFF": { "message": "ကျယ်ပြန့်သောမျက်နှာပြင်မှ ထွက်ပါ" },
   "tooltip_fullWindowON": { "message": "ဝင်းဒိုးအပြည့်မုဒ်" },

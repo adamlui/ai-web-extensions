@@ -35,7 +35,7 @@
   "mode_widescreen": { "message": "བརྙན་གཟུགས །" },
   "mode_fullWindow": { "message": "ཡོངས་རྫོགས །" },
   "mode_fullscreen": { "message": "འོད་སྡེར་ཨང་།" },
-  "mode_toast": { "message": "Toast Mode" },
+  "mode_toast": { "message": "བག་ལེབ་བག་ལེབ་ཀྱི་ཐབས་ལམ།" },
   "tooltip_widescreenON": { "message": "བརྙན་གཟུགས །" },
   "tooltip_widescreenOFF": { "message": "ཁྱབ་ཚད་མཐོ་ཤོས །" },
   "tooltip_fullWindowON": { "message": "ཀུན་ཏུ་བརྟགས་པའི་མ་རིག་པ་(links)" },

@@ -27,7 +27,7 @@
   "about_poweredBy": { "message": "မှပံ့ပိုးသည်" },
   "about_openSourceCode": { "message": "ပွင့်လင်းအရင်းအမြစ်ကုဒ်" },
   "about_latestChanges": { "message": "နောက်ဆုံးအပြောင်းအလဲများ" },
-  "mode_toast": { "message": "Toast Mode" },
+  "mode_toast": { "message": "Toast မုဒ်" },
   "prompt_updateReplyLang": { "message": "ပြန်ကြားရေးဘာသာစကားကို အပ်ဒိတ်လုပ်ပါ" },
   "prompt_updateReplyTopic": { "message": "ပြန်ကြားချက် ခေါင်းစဉ်ကို အပ်ဒိတ်လုပ်ပါ" },
   "prompt_orEnter": { "message": "သို့မဟုတ် ထည့်သွင်းပါ" },

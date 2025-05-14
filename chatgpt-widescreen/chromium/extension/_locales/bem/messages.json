@@ -35,7 +35,7 @@
   "mode_widescreen": { "message": "Wide screen ukulele" },
   "mode_fullWindow": { "message": "Iwindo lyonse" },
   "mode_fullscreen": { "message": "Icikope conse" },
-  "mode_toast": { "message": "Toast Mode" },
+  "mode_toast": { "message": "Umusango wa Kukasha" },
   "tooltip_widescreenON": { "message": "Icikope icakulisha" },
   "tooltip_widescreenOFF": { "message": "Fumeni pa cibuno icikulu" },
   "tooltip_fullWindowON": { "message": "Umusango wa windo lyonse" },
