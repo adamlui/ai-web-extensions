@@ -2,30 +2,32 @@
 
 window.styles = {
 
-    getAllSelectors(obj) { // used in this.tweaks.update() for spam selectors
+    getAllSelectors(obj) { // used in this.update('tweaks') for spam selectors
         return Object.values(obj).flatMap(val => typeof val == 'object' ? this.getAllSelectors(val) : val) },
 
+    update(styleType, { autoAppend = true } = {}) {
+        const style = this[styleType]
+        style.node ||= dom.create.style()
+        if (autoAppend && !style.node?.isConnected) document.head.append(style.node)
+        style.node.textContent = style.styles
+    },
+
     chatbar: {
-        update() { // auto-appends to <head>
-            if (!this.node?.isConnected) document.head.append(this.node ||= dom.create.style())
-            this.node.textContent = ({
+        get styles() {
+            return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : {
                 chatgpt: !config.widerChatbox &&
                     `main form { max-width: ${chatbar.nativeWidth}px !important ; margin: auto }`,
                 poe: config.widerChatbox && config.widescreen &&
                     '[class^=ChatPageMainFooter_footerInner] { width: 98% ; margin-right: 15px }'
-            })[env.site]
+            }[env.site]
         }
     },
 
-    fullWin: {
-        update() {
-            (this.node ||= dom.create.style()).textContent = sites[env.site].selectors.sidebar + '{ display: none }' }
-    },
+    fullWin: { get styles() { return sites[env.site].selectors.sidebar + '{ display: none }' }},
 
     toast: {
-        update() { // auto-appends to <head>
-            if (!this.node?.isConnected) document.head.append(this.node ||= dom.create.style())
-            this.node.textContent = !config.toastMode ? '' : // flatten notifs into toast alerts
+        get styles() {
+            return !config.toastMode ? '' : // flatten notifs into toast alerts
                 `div.${app.slug}.chatgpt-notif {
                     position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;
                     ${ env.ui.scheme == 'dark' ? 'border: 2px solid white ;' : '' }
@@ -37,10 +39,9 @@ window.styles = {
     },
 
     tweaks: {
-        update() { // auto-appends to <head>
-            const { site } = env, { [site]: { selectors }} = sites;
-            if (!this.node?.isConnected) document.head.append(this.node ||= dom.create.style())
-            this.node.textContent = `
+        get styles() { // auto-appends to <head>
+            const { site } = env, { [site]: { selectors }} = sites
+            return config.extensionDisabled || !config[`${env.site}Disabled`] ? '' : `
                 ${ site == 'chatgpt' ?
                     `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
                         overflow: clip !important }` : '' }
@@ -66,8 +67,8 @@ window.styles = {
     },
 
     widescreen: {
-        update() {
-            (this.node ||= dom.create.style()).textContent = ({
+        get styles() {
+            return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : {
                 chatgpt: `
                     .text-base { max-width: 100% !important } /* widen outer container */
                     .tableContainer { min-width: 100% }`, // widen tables
@@ -79,7 +80,7 @@ window.styles = {
                 poe: `
                     [class*=ChatMessagesView] { width: 100% !important } /* widen outer container */
                     [class^=Message] { max-width: 100% !important }` // widen speech bubbles
-            })[env.site]
+            }[env.site]
         }
     }
 };

@@ -38,7 +38,7 @@
     // Define FUNCTIONS
 
     function notify(msg, pos = '', notifDuration = '', shadow = '') {
-        if (!styles.toast.node) styles.toast.update()
+        if (!styles.toast.node) styles.update('toast')
         if (config.notifDisabled &&
             !new RegExp(`${browserAPI.getMsg('menuLabel_notifs')}|${browserAPI.getMsg('mode_toast')}`).test(msg))
                 return
@@ -74,7 +74,7 @@
         }
     }
 
-    function checkBtnsToClick() {
+    window.checkBtnsToClick = () => {
         checkBtnsToClick.active = !config.extensionDisabled ; if (!checkBtnsToClick.active) return
         let continueBtnClicked = false // to increase delay before next check if true to avoid repeated clicks
         const btnTypesToCheck = ['Continue'] ; if (config.autoScroll) btnTypesToCheck.push('Scroll')

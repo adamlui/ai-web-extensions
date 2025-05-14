@@ -7,7 +7,7 @@ window.sync = {
         if (options?.updatedKey == 'infinityMode') infinity[config.infinityMode ? 'activate' : 'deactivate']()
         else if (settings.controls[options?.updatedKey]?.type == 'prompt' && config.infinityMode)
             infinity.restart({ target: options?.updatedKey == 'replyInterval' ? 'self' : 'new' })
-        else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.toast.update() // sync TM
+        else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.update('toast')
         if (typeof GM_info != 'undefined') toolbarMenu.refresh() // prefixes/suffixes
     }
 };

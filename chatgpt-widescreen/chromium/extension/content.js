@@ -50,7 +50,7 @@
     // Define FUNCTIONS
 
     window.notify = function(msg, pos = '', notifDuration = '', shadow = '') {
-        if (!styles.toast.node) styles.toast.update()
+        if (!styles.toast.node) styles.update('toast')
         if (config.notifDisabled &&
             !new RegExp(`${browserAPI.getMsg('menuLabel_notifs')}|${browserAPI.getMsg('mode_toast')}`).test(msg))
                 return
@@ -91,7 +91,7 @@
             case 'ON' : activateMode(mode) ; break
             case 'OFF' : deactivateMode(mode) ; break
             default : (
-                mode == 'widescreen' ? styles.widescreen.node.isConnected
+                mode == 'widescreen' ? styles.widescreen.node?.isConnected
               : mode == 'fullWindow' ? await ui.isFullWin() : chatgpt.isFullScreen()
             ) ? deactivateMode(mode) : activateMode(mode)
         }
@@ -161,7 +161,8 @@
     else await settings.load('fullWindow') // otherwise load CWM's saved state
 
     // Create/append STYLES
-    ;['chatbar', 'fullWin', 'tweaks', 'widescreen'].forEach(style => styles[style].update())
+    ;['chatbar', 'fullWin', 'tweaks', 'widescreen'].forEach(styleType =>
+        styles.update(styleType, { autoAppend: !/fullWin|widescreen/.test(styleType) }))
     ;['gray', 'white'].forEach(color => document.head.append( // Rising Particles styles
         dom.create.elem('link', { rel: 'stylesheet',
             href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@71695ca/assets/styles/rising-particles/dist/${
