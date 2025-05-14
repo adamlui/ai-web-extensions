@@ -90,7 +90,7 @@
         if (options?.updatedKey == 'infinityMode') infinity[config.infinityMode ? 'activate' : 'deactivate']()
         else if (settings.controls[options?.updatedKey]?.type == 'prompt' && config.infinityMode)
             infinity.restart({ target: options?.updatedKey == 'replyInterval' ? 'self' : 'new' })
-        else if (options?.updatedKey == 'toastMode') styles.toast.update() // sync TM
+        else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.toast.update() // sync TM
     }
 
     chatgpt.isIdle = function() { // replace waiting for chat to start in case of interrupts

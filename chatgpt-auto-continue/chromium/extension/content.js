@@ -94,7 +94,7 @@
     // on toolbar popup toggles + ChatGPT tab activations
         await settings.load('extensionDisabled', ...Object.keys(settings.controls))
         if (!config.extensionDisabled && !checkBtnsToClick.active) checkBtnsToClick()
-        if (options?.updatedKey == 'toastMode') styles.toast.update() // sync TM
+        if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.toast.update() // sync TM
     }
 
     // Run MAIN routine

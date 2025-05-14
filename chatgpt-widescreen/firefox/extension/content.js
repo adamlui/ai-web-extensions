@@ -166,7 +166,7 @@
                 if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                     // ...to visually signal location + preview fx applied by Button Animations toggle-on
                     buttons.animate()
-                else if (options?.updatedKey == 'toastMode') styles.toast.update() // sync TM
+                else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.toast.update() // sync TM
                 if (env.site != 'poe') // toggle free wheel locked in some Spam blocks
                     document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                         'wheel', window.enableWheelScroll)
