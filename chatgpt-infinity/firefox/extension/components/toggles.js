@@ -91,7 +91,7 @@ window.toggles = {
                     background-color: var(--switch-disabled-bg-color) ; box-shadow: none }
                 .${this.class} > span > span { /* knob span */
                     position: absolute ; width: 12px ; height: 12px ; content: "" ; border-radius: 28px ;
-                    background-color: white ; left: -3px ; bottom: 1.25px ;
+                    background-color: white ; left: 2px; bottom: 1.25px ;
                     box-shadow: var(--knob-box-shadow) ;
                         -webkit-box-shadow: var(--knob-box-shadow) ; -moz-box-shadow: var(--knob-box-shadow) ;
                     transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
