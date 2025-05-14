@@ -3,6 +3,16 @@
 window.config = {}
 window.settings = {
 
+    categories: {
+        get notifSettings() { return {
+            symbol: '📣',
+            color: '16e4f7', // teal
+            label: `${settings.getMsg(`menuLabel_notif`)} ${settings.getMsg(`menuLabel_settings`)}`,
+            helptip: `${settings.getMsg('helptip_adjustSettingsRelatedTo')} ${
+                        settings.getMsg('menuLabel_modeNotifs').toLowerCase()}`
+        }}
+    },
+
     controls: { // displays top-to-bottom in toolbar menu
         get infinityMode() { return { type: 'toggle', defaultVal: false,
             label: settings.getMsg('menuLabel_infinityMode')
@@ -33,6 +43,16 @@ window.settings = {
             label: settings.getMsg('menuLabel_replyInt'),
             helptip: settings.getMsg('prompt_updateReplyInt'),
             status: `${config.replyInterval}s`
+        }},
+        get notifBottom() { return {
+            type: 'toggle', defaultVal: false, category: 'notifSettings',
+            label: `${settings.getMsg('menuLabel_anchor')} ${settings.getMsg('menuLabel_notifs')}`,
+            helptip: settings.getMsg('helptip_notifBottom')
+        }},
+        get toastMode() { return {
+            type: 'toggle', defaultVal: false, category: 'notifSettings',
+            label: settings.getMsg('mode_toast'),
+            helptip: settings.getMsg('helptip_toastMode')
         }}
     },
 

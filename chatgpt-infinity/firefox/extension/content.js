@@ -11,8 +11,8 @@
 
     // Import JS resources
     for (const resource of [
-        'components/modals.js', 'components/toggles.js',
-        'lib/browser.js', 'lib/chatgpt.min.js', 'lib/dom.js', 'lib/infinity.js', 'lib/settings.js', 'lib/ui.js'
+        'components/modals.js', 'components/toggles.js', 'lib/browser.js', 'lib/chatgpt.min.js',
+        'lib/dom.js', 'lib/infinity.js', 'lib/settings.js', 'lib/styles.js', 'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -48,7 +48,10 @@
     // Define FUNCTIONS
 
     window.notify = (msg, pos = '', notifDuration = '', shadow = '') => {
-        if (config.notifDisabled && !msg.includes(browserAPI.getMsg('menuLabel_modeNotifs'))) return
+        if (!styles.toast.node) styles.toast.update()
+        if (config.notifDisabled &&
+            !new RegExp(`${browserAPI.getMsg('menuLabel_notifs')}|${browserAPI.getMsg('mode_toast')}`).test(msg))
+                return
 
         // Strip state word to append colored one later
         const foundState = [
@@ -57,8 +60,10 @@
         if (foundState) msg = msg.replace(foundState, '')
 
         // Show notification
-        chatgpt.notify(`${app.symbol} ${msg}`, pos, notifDuration, shadow || env.ui.scheme == 'light')
+        chatgpt.notify(`${app.symbol} ${msg}`, pos ||( config.notifBottom ? 'bottom' : '' ),
+            notifDuration, shadow || env.ui.scheme == 'light')
         const notif = document.querySelector('.chatgpt-notif:last-child')
+        notif.classList.add(app.slug) // for styles.toast
 
         // Append styled state word
         if (foundState) {
@@ -85,6 +90,7 @@
         if (options?.updatedKey == 'infinityMode') infinity[config.infinityMode ? 'activate' : 'deactivate']()
         else if (settings.controls[options?.updatedKey]?.type == 'prompt' && config.infinityMode)
             infinity.restart({ target: options?.updatedKey == 'replyInterval' ? 'self' : 'new' })
+        else if (options?.updatedKey == 'toastMode') styles.toast.update() // sync TM
     }
 
     chatgpt.isIdle = function() { // replace waiting for chat to start in case of interrupts

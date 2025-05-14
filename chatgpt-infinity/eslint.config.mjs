@@ -20,7 +20,8 @@ export default [
                 ...globals.browser, ...globals.greasemonkey, ...globals.node, app: 'writable', browserAPI: 'readonly',
                 chatgpt: 'readonly', chrome: 'readonly', config: 'writable', dom: 'readonly', env: 'writable',
                 icons: 'writable', infinity: 'readonly', modals: 'writable', notify: 'readonly', settings: 'writable',
-                syncConfigToUI: 'readonly', toggles: 'writable', ui: 'readonly', updateCheck: 'readonly'
+                syncConfigToUI: 'readonly', styles: 'writable', toggles: 'writable', ui: 'readonly',
+                updateCheck: 'readonly'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },

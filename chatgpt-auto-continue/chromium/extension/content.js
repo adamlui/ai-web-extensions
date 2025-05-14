@@ -21,7 +21,8 @@
 
     // Import JS resources
     for (const resource of [
-        'components/modals.js', 'lib/browser.js', 'lib/chatgpt.min.js', 'lib/dom.js', 'lib/settings.js', 'lib/ui.js'
+        'components/modals.js', 'lib/browser.js', 'lib/chatgpt.min.js',
+        'lib/dom.js', 'lib/settings.js', 'lib/styles.js', 'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -37,7 +38,10 @@
     // Define FUNCTIONS
 
     function notify(msg, pos = '', notifDuration = '', shadow = '') {
-        if (config.notifDisabled && !msg.includes(browserAPI.getMsg('menuLabel_modeNotifs'))) return
+        if (!styles.toast.node) styles.toast.update()
+        if (config.notifDisabled &&
+            !new RegExp(`${browserAPI.getMsg('menuLabel_notifs')}|${browserAPI.getMsg('mode_toast')}`).test(msg))
+                return
 
         // Strip state word to append colored one later
         const foundState = [
@@ -46,8 +50,10 @@
         if (foundState) msg = msg.replace(foundState, '')
 
         // Show notification
-        chatgpt.notify(`${app.symbol} ${msg}`, pos, notifDuration, shadow || env.ui.scheme == 'light')
+        chatgpt.notify(`${app.symbol} ${msg}`, pos ||( config.notifBottom ? 'bottom' : '' ),
+            notifDuration, shadow || env.ui.scheme == 'light')
         const notif = document.querySelector('.chatgpt-notif:last-child')
+        notif.classList.add(app.slug) // for styles.toast
 
         // Append styled state word
         if (foundState) {
@@ -84,10 +90,11 @@
         setTimeout(checkBtnsToClick, continueBtnClicked ? 5000 : 500)
     }
 
-    async function syncConfigToUI(options) {  // eslint-disable-line
+    async function syncConfigToUI(options) {
     // on toolbar popup toggles + ChatGPT tab activations
         await settings.load('extensionDisabled', ...Object.keys(settings.controls))
         if (!config.extensionDisabled && !checkBtnsToClick.active) checkBtnsToClick()
+        if (options?.updatedKey == 'toastMode') styles.toast.update() // sync TM
     }
 
     // Run MAIN routine
