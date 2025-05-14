@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13.3
+// @version             2025.5.13.4
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -320,7 +320,7 @@
     window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '11ab3d0' // for cached <app|messages>.json + sites.json5
+        latestResourceCommitHash: '2572ae9' // for cached <app|messages>.json + sites.json5
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -365,6 +365,7 @@
         mode_widescreen: 'Wide screen',
         mode_fullWindow: 'Full-window',
         mode_fullscreen: 'Full screen',
+        mode_toast: 'Toast Mode',
         tooltip_widescreenON: 'Wide screen',
         tooltip_widescreenOFF: 'Exit wide screen',
         tooltip_fullWindowON: 'Full-window mode',
@@ -386,6 +387,7 @@
         helptip_btnVisibility: 'Show custom buttons in chatbar',
         helptip_modeNotifs: 'Show notifications when toggling modes/settings',
         helptip_notifBottom: 'Anchor notifications to bottom of screen',
+        helptip_toastMode: 'Shrink/center notifications into toast bubbles',
         helptip_blockSpam: 'Hide spam banners from cluttering the page',
         helptip_pageSettings: 'Control the appearance of the page',
         helptip_chatbarSettings: 'Control the appearance of the chatbar',
