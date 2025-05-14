@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.14.3
+// @version             2025.5.14.4
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -687,10 +687,10 @@
 
     // Define UI functions
 
-    window.toggleMode = async (mode, state = '') => {
-        switch (state.toUpperCase()) {
-            case 'ON' : activateMode(mode) ; break
-            case 'OFF' : deactivateMode(mode) ; break
+    window.toggleMode = async (mode, state) => {
+        switch (state) {
+            case true : activateMode(mode) ; break
+            case false : deactivateMode(mode) ; break
             default : (
                 mode == 'widescreen' ? styles.widescreen.node?.isConnected
               : mode == 'fullWindow' ? await ui.isFullWin() : chatgpt.isFullScreen()
@@ -822,11 +822,11 @@
     // Restore PREV SESSION's state
     if (!config[`${env.site}Disabled`]) {
         if (config.btnsVisible) buttons.insert()
-        if (config.widescreen) toggleMode('widescreen', 'ON')
+        if (config.widescreen) toggleMode('widescreen', true)
         if (config.fullWindow && sites[env.site].hasSidebar) {
             if (sites[env.site].selectors.btns.sidebar) // site has own FW config
                 sync.mode('fullWindow') // ...so sync w/ it
-            else toggleMode('fullWindow', 'on') // otherwise self-toggle
+            else toggleMode('fullWindow', true) // otherwise self-toggle
         }
         if (env.site != 'poe') { // toggle free wheel locked in some Spam blocks
             window.enableWheelScroll = event => event.stopPropagation()
