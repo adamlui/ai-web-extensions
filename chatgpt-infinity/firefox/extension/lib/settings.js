@@ -4,6 +4,13 @@ window.config = {}
 window.settings = {
 
     categories: {
+        get replySettings() { return {
+            symbol: '💬',
+            color: '856cb7', // purple
+            label: `${settings.getMsg(`menuLabel_reply`)} ${settings.getMsg(`menuLabel_settings`)}`,
+            helptip: `${settings.getMsg('helptip_adjustSettingsRelatedTo')} ${
+                        settings.getMsg('menuLabel_reply').toLowerCase()}`
+        }},
         get notifSettings() { return {
             symbol: '📣',
             color: '16e4f7', // teal
@@ -29,17 +36,17 @@ window.settings = {
             label: settings.getMsg('menuLabel_autoScroll'),
             helptip: settings.getMsg('helptip_autoScroll')
         }},
-        get replyLanguage() { return { type: 'prompt', symbol: '🌐',
+        get replyLanguage() { return { type: 'prompt', symbol: '🌐', category: 'replySettings',
             label: settings.getMsg('menuLabel_replyLang'),
             helptip: settings.getMsg('prompt_updateReplyLang'),
             status: config.replyLanguage
         }},
-        get replyTopic() { return { type: 'prompt', symbol: '🧠',
+        get replyTopic() { return { type: 'prompt', symbol: '🧠', category: 'replySettings',
             label: settings.getMsg('menuLabel_replyTopic'),
             helptip: settings.getMsg('prompt_updateReplyTopic'),
             status: config.replyTopic
         }},
-        get replyInterval() { return { type: 'prompt', symbol: '⌚',
+        get replyInterval() { return { type: 'prompt', symbol: '⌚', category: 'replySettings',
             label: settings.getMsg('menuLabel_replyInt'),
             helptip: settings.getMsg('prompt_updateReplyInt'),
             status: `${config.replyInterval}s`
