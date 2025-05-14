@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.14.1
+// @version             2025.5.14.2
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -293,12 +293,11 @@
         latestResourceCommitHash: 'a912724' // for cached <app|messages>.json + navicon in toggles.sidebar.insert()
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@${app.latestResourceCommitHash}`
-    const remoteAppData = await new Promise(resolve => xhr({
-        method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
-        onload: resp => resolve(JSON.parse(resp.responseText))
-    }))
-    Object.assign(app, {
-        ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls },
+    const remoteData = {
+        app: await new Promise(resolve => xhr({
+            method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
+            onload: resp => resolve(JSON.parse(resp.responseText))
+        })),
         msgs: await new Promise(resolve => {
             const msgHostDir = app.urls.resourceHost + '/greasemonkey/_locales/',
                   msgLocaleDir = ( env.browser.language ? env.browser.language.replace('-', '_') : 'en' ) + '/'
@@ -321,7 +320,8 @@
             }
             fetchMsgs()
         })
-    })
+    }
+    Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
 
     // Init SETTINGS
     window.config = {}
