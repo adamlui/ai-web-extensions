@@ -23,8 +23,8 @@ export default [
                 GM_cookie: 'readonly', hljs: 'readonly', icons: 'writable', importScripts: 'readonly',
                 infinity: 'readonly', JSON5: 'readonly', ipv4: 'readonly', marked: 'readonly', modals: 'writable',
                 notify: 'readonly', renderMathInElement: 'readonly', settings: 'writable', sites: 'writable',
-                styles: 'readonly', syncConfigToUI: 'readonly', toggleMode: 'readonly', toggles: 'writable',
-                tooltip: 'writable', ui: 'readonly', updateCheck: 'readonly'
+                styles: 'readonly', sync: 'readonly', syncConfigToUI: 'readonly', toggleMode: 'readonly',
+                toggles: 'writable', tooltip: 'writable', ui: 'readonly', updateCheck: 'readonly'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
