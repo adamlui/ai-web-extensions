@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13.7
+// @version             2025.5.13.8
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -225,8 +225,8 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@2c77583/chromium/extension/lib/browser.js#sha256-gzkpJ57Xp0CbWQuE4fBFL8DLf4OTsnRl3vfFDqg9fWs=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@6fec365/chromium/extension/lib/dom.js#sha256-/X4gSHYxumIYhBjDK8WHUirB6wDwxfwJUI0MEVpCAcw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3372987/chromium/extension/lib/infinity.js#sha256-MN1pC8s+N3Rqqj+2TmKB3Q3DyjNMmFSmdZD/4FusqyE=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@02fb499/chromium/extension/lib/settings.js#sha256-1NOaHUa2e5mcQu9bC4LJggtzcdtXeV7TmWJLu4EOz8Q=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@02fb499/chromium/extension/lib/styles.js#sha256-qoU0eAkrQKRWxiOuIYIH/PiQC0wUCTb4h3OwipCtW9c=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@2c83d1a/chromium/extension/lib/settings.js#sha256-RRtMNemejRgn2pn3OGZdrTFH/kYsiGVwvm2vts317+s=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@2c83d1a/chromium/extension/lib/styles.js#sha256-6ThPFx42YoGM79TN5iNrWNw9mlYtDIRd1qulCr34bpY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8156513/chromium/extension/lib/ui.js#sha256-2yuQbliwz+uaCxUIEeTMWIH5JADHgjDBZD4/8I2T8rE=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
