@@ -1,8 +1,10 @@
-// Requires components/buttons.js + lib/<browser|settings|styles>.js + config + notify()
+// Requires components/buttons.js + lib/<browser|chatbar||settings|styles>.js +  <config|env> + notify()
 
 window.sync = {
 
     async configToUI(options) { // on toolbar popup toggles + AI tab activations
+    // ... requires components/buttons.js + lib/<chatbar|settings|styles>.js + <config|env>
+
         const extensionWasDisabled = config.extensionDisabled || config[`${env.site}Disabled`]
         await settings.load('extensionDisabled', ...settings.siteDisabledKeys, ...sites[env.site].availFeatures)
         if (!extensionWasDisabled && ( config.extensionDisabled || config[`${env.site}Disabled`] )) { // reset UI
