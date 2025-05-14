@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13.6
+// @version             2025.5.13.7
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -564,11 +564,12 @@
         })
     }
 
-    window.syncConfigToUI = options => {
+    window.syncConfigToUI = function(options) {
         if (options?.updatedKey == 'infinityMode') infinity[config.infinityMode ? 'activate' : 'deactivate']()
         else if (settings.controls[options?.updatedKey].type == 'prompt' && config.infinityMode)
             infinity.restart({ target: options?.updatedKey == 'replyInterval' ? 'self' : 'new' })
-        if (/infinityMode|toggleHidden/.test(options?.updatedKey)) toggles.sidebar.update.state()
+        else if (/infinityMode|toggleHidden/.test(options?.updatedKey)) toggles.sidebar.update.state()
+        else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.toast.update() // sync TM
         toolbarMenu.refresh() // prefixes/suffixes
     }
 
