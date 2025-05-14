@@ -1,11 +1,11 @@
-// Requires lib/<browser|chatgpt.min>.js + <app|env> + <notify|syncConfigToUI>()
+// Requires lib/<browser|chatgpt.min>.js + <app|env> + <notify|sync.configToUI>()
 
 window.toggles = {
 
     sidebar: {
         get class() { return `${app.slug}-sidebar-toggle` },
 
-        create() {
+        create() { // requires lib/<browser|chatgpt.min>.js + <notify|sync.configToUI>()
             const firstLink = chatgpt.getNewChatLink()
 
             // Init toggle elems
@@ -44,14 +44,14 @@ window.toggles = {
             }
         },
 
-        insert() {
+        insert() { // requires lib/chatgpt.min.js
             const sidebar = document.querySelector(chatgpt.selectors.sidebar)
             if (!sidebar || this.status?.startsWith('insert') || document.querySelector(`.${this.class}`)) return
             this.status = 'inserting' ; if (!this.div) this.create()
             sidebar.querySelector('div#sidebar-header').after(this.div) ; this.status = 'inserted'
         },
 
-        stylize() {
+        stylize() { // requires lib/<chatgpt.min|dom>.js + env
             const firstLink = chatgpt.getNewChatLink()
             document.head.append(this.styles = dom.create.style(
                 `:root { /* vars */

@@ -1,8 +1,8 @@
-// Requires components/buttons.js + lib/<browserAPI|dom>.js + <app|env|sites>
+// Requires components/buttons.js + lib/<browser|dom>.js + <app|config|env>
 
 window.tooltip = {
 
-    stylize() {
+    stylize() { // requires lib/dom.js + app
         document.head.append(this.styles = dom.create.style(`.${app.slug}-tooltip {
             background-color: /* bubble style */
                 rgba(0,0,0,0.71) ; padding: 5px 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
@@ -16,7 +16,7 @@ window.tooltip = {
         ))
     },
 
-    toggle(event) {
+    toggle(event) { // requires lib/dom.js + <app|env>
         if (env.browser.isMobile) return
         tooltip.div ||= dom.create.elem('div', { class: `${app.slug}-tooltip` })
         if (!tooltip.div.isConnected) event.currentTarget?.after(tooltip.div)
@@ -25,7 +25,7 @@ window.tooltip = {
         tooltip.div.style.opacity = +(event.type == 'mouseenter')
     },
 
-    update(btn) {
+    update(btn) { // requires lib/browser.js + <config|env>
         if (!this.div) return
         const { site } = env
         const btnType = btn.id.replace(/-btn$/, '')

@@ -1,4 +1,4 @@
-// Requires lib/<browser|settings|styles>.js + components/buttons.js + notify()
+// Requires components/buttons.js + lib/<browser|settings|styles>.js + config + notify()
 
 window.sync = {
 
@@ -38,7 +38,7 @@ window.sync = {
         }
     },
 
-    fullerWin() {
+    fullerWin() { // requires components/buttons.js + lib/styles.js + config
         if (config.fullWindow && config.fullerWindows && !config.widescreen) { // activate fuller windows
             document.head.append(styles.widescreen.node) ; buttons.update.svg('widescreen', 'on')
         } else if (!config.fullWindow) { // de-activate fuller windows

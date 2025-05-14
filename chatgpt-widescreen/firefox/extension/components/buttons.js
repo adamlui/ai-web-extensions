@@ -1,4 +1,4 @@
-// Requires components/<chatbar|tooltip>.js + lib/<chatgpt.min|dom|styles>.js + <app|env|sites> + toggleMode()
+// Requires components/tooltip.js + lib/<chatbar|chatgpt.min|dom|styles>.js + <app|config|env|sites> + toggleMode()
 
 window.buttons = {
 
@@ -56,7 +56,7 @@ window.buttons = {
         })
     },
 
-    async create() {
+    async create() { // requires components|tooltip.js + lib/dom.js + <env|sites>
         if (!this.styles) this.stylize()
         const { site, ui: { hasTallChatbar }} = env, { [site]: { selectors }} = sites
         const hasDictateBtn = document.querySelector(/\(([^()]+)\)$/.exec(selectors.btns.dictate)?.[1])
@@ -115,7 +115,7 @@ window.buttons = {
     },
 
     get: {
-        async rightBtn() {
+        async rightBtn() { // requires lib/dom.js + <env|sites>
             const { [env.site]: { selectors }} = sites
             return await dom.get.loadedElem(
                 `${selectors.btns.send}, ${ selectors.btns.voice || selectors.btns.dictation }`)
@@ -133,7 +133,7 @@ window.buttons = {
         }
     },
 
-    async insert() {
+    async insert() { // requires lib/chatbar.js + <config|env>
         if (!config.btnsVisible || this.state.status == 'inserting' || this.fullscreen?.isConnected) return
         this.state.status = 'inserting' ; if (!this.fullscreen) await this.create()
 
@@ -168,14 +168,14 @@ window.buttons = {
         this.state.status = 'inserted'
     },
 
-    async remove() {
+    async remove() { // requires components/tooltip.js + lib/chatbar.js
         if ( !await chatbar.get() || !this.fullscreen?.isConnected ) return
         ['btnsDiv', ...this.types].forEach(type => this[type]?.remove()) ; tooltip.div?.remove()
         this.state.status = 'missing' // ensure next .insert() doesn't return early
         this.state.hasFadedIn = false // ensure next .insert() fades in buttons
     },
 
-    stylize() {
+    stylize() { // requires lib/dom.js + <env|sites>
         const { site } = env, { [site]: { selectors }} = sites
         document.head.append(this.styles = dom.create.style(`
             .${this.class} {
@@ -200,7 +200,7 @@ window.buttons = {
     },
 
     update: {
-        color() {
+        color() { // requires env
             const { site, ui: { scheme }} = env
             buttons.color = (
                 site == 'chatgpt' ? 'var(--text-secondary)'
@@ -212,7 +212,7 @@ window.buttons = {
                     buttons[type].style.fill = buttons[type].style.stroke = buttons.color })
         },
 
-        svg(mode, state = '') {
+        svg(mode, state = '') { // requires env
             const { site } = env
             if (!buttons.widescreen) buttons.create()
 

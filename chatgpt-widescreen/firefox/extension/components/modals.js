@@ -13,7 +13,7 @@ window.modals = {
         } else return 'Unknown'
     },
 
-    about() {
+    about() { // requires lib/browser.js + <app|env>
         const { browser: { isPortrait }, ui: { scheme }} = env
 
         // Init buttons
@@ -89,7 +89,7 @@ window.modals = {
         return alert
     },
 
-    donate() {
+    donate() { // requires lib/browser.js + <app|env>
         const { ui: { scheme }} = env
 
         // Show modal
@@ -175,7 +175,7 @@ window.modals = {
         return feedbackModal
     },
 
-    init(modal) {
+    init(modal) { // requires lib/dom.js
         if (!this.styles) this.stylize() // to init/append stylesheet
         modal.classList.add(this.class) ; modal.parentNode.classList.add(`${this.class}-bg`)
         dom.addRisingParticles(modal)
@@ -208,7 +208,7 @@ window.modals = {
 
     safeWinOpen(url) { open(url, '_blank', 'noopener') }, // to prevent backdoor vulnerabilities
 
-    stylize() {
+    stylize() { // requires lib/dom.js + env
         const { browser: { isMobile }, ui: { scheme }} = env
         if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
         this.styles.textContent = (
@@ -253,7 +253,7 @@ window.modals = {
     update: {
         width: 377,
 
-        available() {
+        available() { // requires lib/browser.js + <app|env>
 
             // Show modal
             const updateAvailModal = modals.alert(`🚀 ${browserAPI.getMsg('alert_updateAvail')}!`, // title
@@ -277,7 +277,7 @@ window.modals = {
             return updateAvailModal
         },
 
-        unavailable() {
+        unavailable() { // requires lib/browser.js + app
             return modals.alert(`${browserAPI.getMsg('alert_upToDate')}!`, // title
                 `${browserAPI.getMsg('appName')} (v${app.version}) ${browserAPI.getMsg('alert_isUpToDate')}!`, // msg
                 '', '', modals.update.width
