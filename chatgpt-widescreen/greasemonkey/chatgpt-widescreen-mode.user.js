@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13.9
+// @version             2025.5.13.10
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -262,6 +262,7 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ac383f2/chromium/extension/lib/dom.js#sha256-QAHZ9hlWeLvunZtEt2z34mKhvdg71RhGBlxfMljIBPU=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@595ac73/chromium/extension/lib/settings.js#sha256-rsh1BYveKaWfJTUlvj0FE7lcT0Vc9+YM6loKeIxbJtw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@b64fd4d/chromium/extension/lib/styles.js#sha256-y1cFaez8lntt5z+XiGf5Xu6nAmojgg7cbFeUV8S+YbA=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@a4009c5/chromium/extension/lib/sync.js#sha256-YkCW1NSHo7sN4pthsfRHL6ZNoEiF3L5OJ/N/REFFuKM=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/ui.js#sha256-9ZQ8DyJvJ5YSuOGhmdqofNMT/QJGs5uhej0DmvH0g/k=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@d606258/chromium/extension/components/buttons.js#sha256-4DPfkb7PymOivaLok4xUmWco7x6377m9+x1M11wbRpg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@a7eab4a/chromium/extension/components/icons.js#sha256-CNhIM6EizmEeGkTCStos3vp95KUbQ3y5SPTPX8YLxuU=
@@ -650,7 +651,7 @@
 
     // Define FEEDBACK functions
 
-    function notify(msg, pos = '', notifDuration = '', shadow = '') {
+    window.notify = function(msg, pos = '', notifDuration = '', shadow = '') {
         if (!styles.toast.node) styles.toast.update()
         if (config.notifDisabled && !new RegExp(`${app.msgs.menuLabel_notifs}|${app.msgs.mode_toast}|🧩`).test(msg))
             return
@@ -740,69 +741,39 @@
 
     env.ui.hasTallChatbar = await chatbar.is.tall()
 
-    const sync = {
-
-        fullerWin() {
-            if (config.fullWindow && config.fullerWindows && !config.widescreen) { // activate fuller windows
-                document.head.append(styles.widescreen.node) ; buttons.update.svg('widescreen', 'on')
-            } else if (!config.fullWindow) { // de-activate fuller windows
-                styles.fullWin.node.remove() // to remove style too so sidebar shows
-                if (!config.widescreen) { // disable widescreen if result of fuller window
-                    styles.widescreen.node.remove() ; buttons.update.svg('widescreen', 'off')
-            }}
-        },
-
-        async mode(mode) { // setting + icon + chatbar
-            const state = ( mode == 'widescreen' ? styles.widescreen.node.isConnected
-                          : mode == 'fullWindow' ? await ui.isFullWin()
-                                                 : chatgpt.isFullScreen() )
-            settings.save(mode, state) ; buttons.update.svg(mode)
-            if (!config[`${env.site}Disabled`]) { // tweak UI
-                if (mode == 'fullWindow') sync.fullerWin()
-                if (env.site == 'chatgpt') setTimeout(() => chatbar.tweak(), // update inner width
-                    mode == 'fullWindow' && ( config.widescreen || config.fullerWindows )
-                        && config.widerChatbox ? 111 : 0) // delay if toggled to/from active WCB to avoid wrong width
-                else if (env.site == 'perplexity' || env.site == 'poe' && config.widerChatbox)
-                    styles.chatbar.update() // toggle full-width Perplexity chatbar or sync Poe WCB
-                notify(`${app.msgs[`mode_${mode}`]} ${app.msgs[`state_${ state ? 'on' : 'off' }`].toUpperCase()}`)
+    sync.configToUI = async function(options) { // from toolbar menu toggles
+        const scriptWasDisabled = !config[`${env.site}Disabled`]
+        if (!scriptWasDisabled && config[`${env.site}Disabled`]) { // reset UI
+            [styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
+                .forEach(target => target.remove())
+            chatbar.reset()
+            if (env.site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
+        } else if (!config[`${env.site}Disabled`]) { // sync modes/tweaks/btns
+            if (config.widescreen ^ styles.widescreen.node.isConnected) { // sync Widescreen
+                supressNotifs() ; toggleMode('widescreen') }
+            if (sites[env.site].hasSidebar) {
+                if (config.fullWindow ^ await ui.isFullWin()) { // sync Full-Window
+                    supressNotifs() ; toggleMode('fullWindow') }
+                sync.fullerWin() // sync Fuller Windows
             }
-            config.modeSynced = true ; setTimeout(() => config.modeSynced = false, 100) // prevent repetition
-        },
+            styles.tweaks.update() // sync HH/HF/TCB/NCB/BA
+            styles.chatbar.update() // sync WCB
+            if (env.site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
+            buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
+            if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
+                // ...to visually signal location + preview fx applied by Button Animations toggle-on
+                buttons.animate()
+            else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.toast.update() // sync TM
+            if (env.site != 'poe') // toggle free wheel locked in some Spam blocks
+                document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
+                    'wheel', window.enableWheelScroll)
+        }
+        toolbarMenu.refresh() // to update state symbol/suffix + toggles visibility on site toggle
 
-        async configToUI(options) { // from toolbar menu toggles
-            const scriptWasDisabled = !config[`${env.site}Disabled`]
-            if (!scriptWasDisabled && config[`${env.site}Disabled`]) { // reset UI
-                [styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
-                    .forEach(target => target.remove())
-                chatbar.reset()
-                if (env.site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
-            } else if (!config[`${env.site}Disabled`]) { // sync modes/tweaks/btns
-                if (config.widescreen ^ styles.widescreen.node.isConnected) { // sync Widescreen
-                    supressNotifs() ; toggleMode('widescreen') }
-                if (sites[env.site].hasSidebar) {
-                    if (config.fullWindow ^ await ui.isFullWin()) { // sync Full-Window
-                        supressNotifs() ; toggleMode('fullWindow') }
-                    sync.fullerWin() // sync Fuller Windows
-                }
-                styles.tweaks.update() // sync HH/HF/TCB/NCB/BA
-                styles.chatbar.update() // sync WCB
-                if (env.site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
-                buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
-                if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
-                    // ...to visually signal location + preview fx applied by Button Animations toggle-on
-                    buttons.animate()
-                else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.toast.update() // sync TM
-                if (env.site != 'poe') // toggle free wheel locked in some Spam blocks
-                    document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
-                        'wheel', window.enableWheelScroll)
-            }
-            toolbarMenu.refresh() // to update state symbol/suffix + toggles visibility on site toggle
-
-            function supressNotifs() {
-                if (config.notifiedDisabled) return
-                settings.save('notifDisabled', true) // suppress notifs for cleaner UI
-                setTimeout(() => settings.save('notifDisabled', false), 55) // ...temporarily
-            }
+        function supressNotifs() {
+            if (config.notifiedDisabled) return
+            settings.save('notifDisabled', true) // suppress notifs for cleaner UI
+            setTimeout(() => settings.save('notifDisabled', false), 55) // ...temporarily
         }
     }
 

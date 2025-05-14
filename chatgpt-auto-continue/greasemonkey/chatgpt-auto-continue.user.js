@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13.9
+// @version             2025.5.13.10
 // @license             MIT
 // @icon                https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon48.png?v=a8c9387
 // @icon64              https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon64.png?v=a8c9387
@@ -234,6 +234,7 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@df66b49/chromium/extension/lib/dom.js#sha256-kiKOn4x4hom5TRyrda7YqUNkq+s/JYgnFDQiWrR8ffk=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@5c8fb84/chromium/extension/lib/settings.js#sha256-Hv5/wY17fX6HKOFmuMewzBLhdV7NY/pqvQc6ZwtCg6s=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@d419240/chromium/extension/lib/styles.js#sha256-6ThPFx42YoGM79TN5iNrWNw9mlYtDIRd1qulCr34bpY=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@4e4aa10/chromium/extension/lib/sync.js#sha256-oJLqJllfvZdZDqeSVh3WVsXa1ES3latcl1ZhMlH51LM=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@78d7214/chromium/extension/lib/ui.js#sha256-2yuQbliwz+uaCxUIEeTMWIH5JADHgjDBZD4/8I2T8rE=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
@@ -379,7 +380,7 @@
 
     // Define MENU functions
 
-    const toolbarMenu = {
+    window.toolbarMenu = {
         state: {
             symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
             words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
@@ -407,7 +408,7 @@
                         ctrl.type == 'toggle' ? this.state.separator + this.state.words[+settings.typeIsEnabled(key)]
                                               : ctrl.status ? ` — ${ctrl.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
-                    settings.save(key, !config[key]) ; syncConfigToUI({ updatedKey: key })
+                    settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
                     notify(`${ctrl.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
                 }, env.scriptManager.supportsTooltips ? { title: ctrl.helptip || ' ' } : undefined)
             });
@@ -502,11 +503,6 @@
                 if (config.autoScroll) try { chatgpt.scrollToBottom() } catch(err) {}
         }})
         setTimeout(checkBtnsToClick, continueBtnClicked ? 5000 : 500)
-    }
-
-    function syncConfigToUI(options) {
-        toolbarMenu.refresh() // prefixes/suffixes
-        if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.toast.update() // sync TM
     }
 
     // Run MAIN routine
