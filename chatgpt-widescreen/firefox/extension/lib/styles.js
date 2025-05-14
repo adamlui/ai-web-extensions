@@ -5,9 +5,10 @@ window.styles = {
     getAllSelectors(obj) { // used in this.tweaks.styles for spam selectors
         return Object.values(obj).flatMap(val => typeof val == 'object' ? this.getAllSelectors(val) : val) },
 
-    update(styleType, { autoAppend = true } = {}) { // requires lib/dom.js
-        const style = this[styleType] ; style.node ||= dom.create.style()
-        if (autoAppend && !style.node?.isConnected) document.head.append(style.node)
+    update({ key, autoAppend = true }) { // requires lib/dom.js
+        if (!key) return console.error('Option \'key\' required by styles.update()')
+        const style = this[key] ; style.node ||= dom.create.style()
+        if (autoAppend && !style.node.isConnected) document.head.append(style.node)
         style.node.textContent = style.styles
     },
 

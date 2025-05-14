@@ -50,7 +50,7 @@
     // Define FUNCTIONS
 
     window.notify = function(msg, pos = '', notifDuration = '', shadow = '') {
-        if (!styles.toast.node) styles.update('toast')
+        if (!styles.toast.node) styles.update({ key: 'toast' })
         if (config.notifDisabled &&
             !new RegExp(`${browserAPI.getMsg('menuLabel_notifs')}|${browserAPI.getMsg('mode_toast')}`).test(msg))
                 return
@@ -162,7 +162,7 @@
 
     // Create/append STYLES
     ;['chatbar', 'fullWin', 'tweaks', 'widescreen'].forEach(styleType =>
-        styles.update(styleType, { autoAppend: !/fullWin|widescreen/.test(styleType) }))
+        styles.update({ key: styleType, autoAppend: !/fullWin|widescreen/.test(styleType) }))
     ;['gray', 'white'].forEach(color => document.head.append( // Rising Particles styles
         dom.create.elem('link', { rel: 'stylesheet',
             href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@71695ca/assets/styles/rising-particles/dist/${

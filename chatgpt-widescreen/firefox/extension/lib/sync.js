@@ -18,14 +18,14 @@ window.sync = {
                     supressNotifs() ; toggleMode('fullWindow') }
                 sync.fullerWin() // sync Fuller Windows
             }
-            styles.update('tweaks', { autoAppend: true }) // sync HH/HF/TCB/NCB/BA
-            styles.update('chatbar', { autoAppend: true }) // sync WCB
+            styles.update({ key: 'tweaks' }) // sync HH/HF/TCB/NCB/BA
+            styles.update({ key: 'chatbar' }) // sync WCB
             if (env.site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
             if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                 // ...to visually signal location + preview fx applied by Button Animations toggle-on
                 buttons.animate()
-            else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.update('toast', { autoAppend: true })
+            else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.update({ key: 'toast' })
             if (env.site != 'poe') // toggle free wheel locked in some Spam blocks
                 document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                     'wheel', window.enableWheelScroll)
@@ -59,7 +59,7 @@ window.sync = {
                 mode == 'fullWindow' && ( config.widescreen || config.fullerWindows )
                     && config.widerChatbox ? 111 : 0) // delay if toggled to/from active WCB to avoid wrong width
             else if (env.site == 'perplexity' || env.site == 'poe' && config.widerChatbox)
-                styles.update('chatbar', { autoAppend: true }) // toggle full-width Perplexity chatbar or sync Poe WCB
+                styles.update({ key: 'chatbar' }) // toggle full-width Perplexity chatbar or sync Poe WCB
             notify(`${browserAPI.getMsg('mode_' + mode)} ${
                       browserAPI.getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
         }
