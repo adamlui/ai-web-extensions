@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13.4
+// @version             2025.5.14
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -297,66 +297,11 @@
         method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
         onload: resp => resolve(JSON.parse(resp.responseText))
     }))
-    Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
-    app.msgs = {
-        appName: app.name,
-        appAuthor: app.author.name,
-        appDesc: '*SAFELY* keeps ChatGPT sessions fresh, eliminating constant network errors + Cloudflare checks (all from the background!)',
-        menuLabel_autoRefresh: 'Auto-Refresh',
-        menuLabel_toggleVis: 'Toggle Visibility',
-        menuLabel_modeNotifs: 'Mode Notifications',
-        menuLabel_refreshInt: 'Refresh Interval',
-        menuLabel_about: 'About',
-        menuLabel_donate: 'Please send a donation',
-        about_author: 'Author',
-        about_and: '&',
-        about_contributors: 'contributors',
-        about_version: 'Version',
-        about_poweredBy: 'Powered by',
-        about_openSourceCode: 'Open source code',
-        about_latestChanges: 'Latest changes',
-        prompt_updateInt: 'Update refresh interval (in secs)',
-        helptip_toggleVis: 'Show Auto-Refresh toggle in sidebar',
-        helptip_modeNotifs: 'Show notifications when toggling modes/settings',
-        helptip_refreshInt: 'Average delay between refreshes (in seconds)',
-        alert_intUpdated: 'Interval updated',
-        alert_willRefresh: 'ChatGPT session will auto-refresh every',
-        alert_choosePlatform: 'Choose a platform',
-        alert_updateAvail: 'Update available',
-        alert_newerVer: 'An update to',
-        alert_isAvail: 'is available',
-        alert_upToDate: 'Up-to-date',
-        alert_showYourSupport: 'Show your support',
-        alert_isOSS: 'is open-source software built & maintained for free through 100% volunteer efforts',
-        alert_despiteAffliction: 'Despite being severely afflicted by',
-        alert_longCOVID: 'long COVID',
-        alert_since2020: 'since 2020',
-        alert_byDonatingResults: 'by donating, you help me to continue improving, fixing bugs, adding new features, and making the software even better',
-        alert_yourContrib: 'Your contribution',
-        alert_noMatterSize: 'no matter the size',
-        alert_directlySupports: 'directly supports my unpaid efforts to ensure this project remains free and open for all to use',
-        alert_tyForSupport: 'Thank you for your support',
-        alert_isUpToDate: 'is up-to-date',
-        btnLabel_moreAIextensions: 'More AI Extensions',
-        btnLabel_rateUs: 'Rate Us',
-        btnLabel_discuss: 'Discuss',
-        btnLabel_getSupport: 'Get Support',
-        btnLabel_checkForUpdates: 'Check for Updates',
-        btnLabel_update: 'Update',
-        btnLabel_dismiss: 'Dismiss',
-        link_viewChanges: 'View changes',
-        unit_secs: 'secs',
-        state_enabled: 'enabled',
-        state_disabled: 'disabled',
-        state_on: 'on',
-        state_off: 'off'
-    }
-
-    // LOCALIZE app.msgs for non-English users
-    if (!env.browser.language.startsWith('en')) {
-        const localizedMsgs = await new Promise(resolve => {
+    Object.assign(app, {
+        ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls },
+        msgs: await new Promise(resolve => {
             const msgHostDir = app.urls.resourceHost + '/greasemonkey/_locales/',
-                  msgLocaleDir = ( env.browser.language ? env.browser.language.replace('-', '_') : 'en' ) + '/'
+                    msgLocaleDir = ( env.browser.language ? env.browser.language.replace('-', '_') : 'en' ) + '/'
             let msgHref = msgHostDir + msgLocaleDir + 'messages.json', msgXHRtries = 0
             function fetchMsgs() { xhr({ method: 'GET', url: msgHref, onload: handleMsgs })}
             function handleMsgs(resp) {
@@ -376,8 +321,7 @@
             }
             fetchMsgs()
         })
-        Object.assign(app.msgs, localizedMsgs)
-    }
+    })
 
     // Init SETTINGS
     window.config = {}
@@ -868,7 +812,7 @@
                         background-color: var(--switch-disabled-bg-color) ; box-shadow: none }
                     .${this.class} > span > span { /* knob span */
                         position: absolute ; width: 12px ; height: 12px ; content: "" ; border-radius: 28px ;
-                        background-color: white ; left: -3px ; bottom: 1.25px ;
+                        background-color: white ; left: 2px ; bottom: 1.25px ;
                         box-shadow: var(--knob-box-shadow) ;
                             -webkit-box-shadow: var(--knob-box-shadow) ; -moz-box-shadow: var(--knob-box-shadow) ;
                         transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
