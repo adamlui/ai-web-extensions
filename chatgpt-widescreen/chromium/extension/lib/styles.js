@@ -9,12 +9,12 @@ window.styles = {
         if (!key) return console.error('Option \'key\' required by styles.update()')
         const style = this[key] ; style.node ||= dom.create.style()
         if (( autoAppend || style.autoAppend ) && !style.node.isConnected) document.head.append(style.node)
-        style.node.textContent = style.styles
+        style.node.textContent = style.css
     },
 
     chatbar: {
         autoAppend: true,
-        get styles() { // requires <config|env>
+        get css() { // requires <config|env>
             return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : {
                 chatgpt: !config.widerChatbox &&
                     `main form { max-width: ${chatbar.nativeWidth}px !important ; margin: auto }`,
@@ -26,12 +26,12 @@ window.styles = {
 
     fullWin: { // requires <env|sites>
         autoAppend: false,
-        get styles() { return sites[env.site].selectors.sidebar + '{ display: none }' }
+        get css() { return sites[env.site].selectors.sidebar + '{ display: none }' }
     },
 
     toast: {
         autoAppend: true,
-        get styles() { // requires <app|config|env>
+        get css() { // requires <app|config|env>
             return !config.toastMode ? '' : // flatten notifs into toast alerts
                 `div.${app.slug}.chatgpt-notif {
                     position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;
@@ -45,7 +45,7 @@ window.styles = {
 
     tweaks: {
         autoAppend: true,
-        get styles() { // requires <config|env|sites>
+        get css() { // requires <config|env|sites>
             const { site } = env, { [site]: { selectors }} = sites
             return config.extensionDisabled || !config[`${env.site}Disabled`] ? '' : `
                 ${ site == 'chatgpt' ?
@@ -74,7 +74,7 @@ window.styles = {
 
     widescreen: {
         autoAppend: false,
-        get styles() { // requires <config|env>
+        get css() { // requires <config|env>
             return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : {
                 chatgpt: `
                     .text-base { max-width: 100% !important } /* widen outer container */

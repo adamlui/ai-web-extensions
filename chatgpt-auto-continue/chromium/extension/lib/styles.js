@@ -6,12 +6,12 @@ window.styles = {
         if (!key) return console.error('Option \'key\' required by styles.update()')
         const style = this[key] ; style.node ||= dom.create.style()
         if (( autoAppend || style.autoAppend ) && !style.node.isConnected) document.head.append(style.node)
-        style.node.textContent = style.styles
+        style.node.textContent = style.css
     },
 
     toast: {
         autoAppend: true,
-        get styles() { // requires <app|config|env>
+        get css() { // requires <app|config|env>
             return !config.toastMode ? '' : // flatten notifs into toast alerts
                 `div.${app.slug}.chatgpt-notif {
                     position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;
