@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.13.3
+// @version               2025.5.14
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -258,10 +258,10 @@
 
     // Init APP data
     window.app = {
-        version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
+        version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         latestResourceCommitHash: '329e830' // for cached <app|messages>.json
     }
-    app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@${app.latestResourceCommitHash}`
+    app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@${app.latestResourceCommitHash}` }
     const remoteAppData = await new Promise(resolve => xhr({
         method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
         onload: resp => resolve(JSON.parse(resp.responseText))
