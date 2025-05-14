@@ -238,6 +238,7 @@
             span: dom.create.elem('span', { class: 'ticker' }), innerDiv: dom.create.elem('div')
         }
     }
+    aboutEntry.div.querySelector('span').style.paddingLeft = '4.5px'
     aboutEntry.ticker.content = `${
         settings.getMsg('about_version')}: <span class="ticker-em">v${ app.version + aboutEntry.ticker.textGap }</span>${
         settings.getMsg('about_poweredBy')} <span class="ticker-em">chatgpt.js</span>${aboutEntry.ticker.textGap}`
