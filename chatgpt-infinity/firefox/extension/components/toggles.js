@@ -38,7 +38,7 @@ window.toggles = {
                     `var(--sidebar-surface-${ type == 'mouseover' ? 'secondary' : 'primary' })`)
             this.div.onclick = () => { // toggle Infinity mode
                 settings.save('infinityMode', !this.toggleInput.checked)
-                syncConfigToUI({ updatedKey: 'infinityMode' })
+                sync.configToUI({ updatedKey: 'infinityMode' })
                 notify(`${browserAPI.getMsg('menuLabel_infinityMode')}: ${
                     browserAPI.getMsg(`state_${ config.infinityMode ? 'on' : 'off' }`).toUpperCase()}`)
             }

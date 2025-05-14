@@ -15,14 +15,14 @@
             notify: () => notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
             showAbout: () => chatgpt.isLoaded().then(() => modals.open('about')),
-            syncConfigToUI: () => syncConfigToUI(options)
+            syncConfigToUI: () => sync.configToUI(options)
         }[action]?.() || console.warn(`Received unsupported action: "${action}"`))
     })
 
     // Import JS resources
     for (const resource of [
         'components/modals.js', 'lib/browser.js', 'lib/chatgpt.min.js',
-        'lib/dom.js', 'lib/settings.js', 'lib/styles.js', 'lib/ui.js'
+        'lib/dom.js', 'lib/settings.js', 'lib/styles.js', 'lib/sync.js', 'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -88,13 +88,6 @@
                 if (config.autoScroll) try { chatgpt.scrollToBottom() } catch(err) {}
         }})
         setTimeout(checkBtnsToClick, continueBtnClicked ? 5000 : 500)
-    }
-
-    async function syncConfigToUI(options) {
-    // on toolbar popup toggles + ChatGPT tab activations
-        await settings.load('extensionDisabled', ...Object.keys(settings.controls))
-        if (!config.extensionDisabled && !checkBtnsToClick.active) checkBtnsToClick()
-        if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.toast.update() // sync TM
     }
 
     // Run MAIN routine

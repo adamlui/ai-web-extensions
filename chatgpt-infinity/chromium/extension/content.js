@@ -12,7 +12,7 @@
     // Import JS resources
     for (const resource of [
         'components/modals.js', 'components/toggles.js', 'lib/browser.js', 'lib/chatgpt.min.js',
-        'lib/dom.js', 'lib/infinity.js', 'lib/settings.js', 'lib/styles.js', 'lib/ui.js'
+        'lib/dom.js', 'lib/infinity.js', 'lib/settings.js', 'lib/styles.js', 'lib/sync.js', 'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -27,7 +27,7 @@
             showAbout: () => chatgpt.isLoaded().then(() => modals.open('about')),
             syncConfigToUI: () => {
                 fromBG && settings.save('infinityMode', false) // disable Infinity mode 1st to not transfer between tabs
-                syncConfigToUI(options)
+                sync.configToUI(options)
             }
         }[action]?.() || console.warn(`Received unsupported action: "${action}"`))
     })
@@ -92,15 +92,6 @@
         })
     }
 
-    window.syncConfigToUI = async options => { // on toolbar popup toggles + ChatGPT tab activations
-        await settings.load('extensionDisabled', ...Object.keys(settings.controls))
-        toggles.sidebar.update.state() // from extension/IM/TV toggled or tab newly active
-        if (options?.updatedKey == 'infinityMode') infinity[config.infinityMode ? 'activate' : 'deactivate']()
-        else if (settings.controls[options?.updatedKey]?.type == 'prompt' && config.infinityMode)
-            infinity.restart({ target: options?.updatedKey == 'replyInterval' ? 'self' : 'new' })
-        else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.toast.update() // sync TM
-    }
-
     // Run MAIN routine
 
     // Preload sidebar NAVICON variants
@@ -112,7 +103,7 @@
     // Add LISTENER to auto-disable Infinity Mode
     document.onvisibilitychange = () => {
         if (config.infinityMode) {
-            settings.save('infinityMode', false) ; syncConfigToUI({ updatedKey: 'infinityMode' }) }
+            settings.save('infinityMode', false) ; sync.configToUI({ updatedKey: 'infinityMode' }) }
     }
 
     // Add RISING PARTICLES styles
@@ -126,7 +117,7 @@
 
     // Auto-start if enabled
     if (config.autoStart) {
-        settings.save('infinityMode', true) ; syncConfigToUI({ updatedKey: 'infinityMode' })
+        settings.save('infinityMode', true) ; sync.configToUI({ updatedKey: 'infinityMode' })
         notify(`${browserAPI.getMsg('menuLabel_autoStart')}: ${browserAPI.getMsg('state_on').toUpperCase()}`)
     }
 
