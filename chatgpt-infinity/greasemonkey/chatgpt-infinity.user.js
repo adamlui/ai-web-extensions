@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13.9
+// @version             2025.5.14
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -226,8 +226,8 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@6fec365/chromium/extension/lib/dom.js#sha256-/X4gSHYxumIYhBjDK8WHUirB6wDwxfwJUI0MEVpCAcw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3372987/chromium/extension/lib/infinity.js#sha256-MN1pC8s+N3Rqqj+2TmKB3Q3DyjNMmFSmdZD/4FusqyE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@2c83d1a/chromium/extension/lib/settings.js#sha256-RRtMNemejRgn2pn3OGZdrTFH/kYsiGVwvm2vts317+s=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@2c83d1a/chromium/extension/lib/styles.js#sha256-6ThPFx42YoGM79TN5iNrWNw9mlYtDIRd1qulCr34bpY=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@fd789cc/chromium/extension/lib/sync.js#sha256-wMX7SicZ7n7fEmgefNCqIfPtY1XME5GSoD4H5UhNER0=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@871bc8b/chromium/extension/lib/styles.js#sha256-ZcJsZaPSnvuwYqWs9lU2RGEYqpCjvNH/ZOvfIdDXGZc=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@871bc8b/chromium/extension/lib/sync.js#sha256-RGYvehyI8Xfo+bw49yPArFhroyJVrVhncSN3qa7IHDQ=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@8156513/chromium/extension/lib/ui.js#sha256-2yuQbliwz+uaCxUIEeTMWIH5JADHgjDBZD4/8I2T8rE=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
@@ -525,7 +525,7 @@
     // Define FEEDBACK functions
 
     window.notify = (msg, pos = '', notifDuration = '', shadow = '') => {
-        if (!styles.toast.node) styles.toast.update()
+        if (!styles.toast.node) styles.update('toast')
 
         // Strip state word to append colored one later
         const foundState = toolbarMenu.state.words.find(word => msg.includes(word))

@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13.10
+// @version             2025.5.14
 // @license             MIT
 // @icon                https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon48.png?v=a8c9387
 // @icon64              https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon64.png?v=a8c9387
@@ -233,8 +233,8 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@d4e4a20/chromium/extension/lib/browser.js#sha256-gzkpJ57Xp0CbWQuE4fBFL8DLf4OTsnRl3vfFDqg9fWs=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@df66b49/chromium/extension/lib/dom.js#sha256-kiKOn4x4hom5TRyrda7YqUNkq+s/JYgnFDQiWrR8ffk=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@5c8fb84/chromium/extension/lib/settings.js#sha256-Hv5/wY17fX6HKOFmuMewzBLhdV7NY/pqvQc6ZwtCg6s=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@d419240/chromium/extension/lib/styles.js#sha256-6ThPFx42YoGM79TN5iNrWNw9mlYtDIRd1qulCr34bpY=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@4e4aa10/chromium/extension/lib/sync.js#sha256-oJLqJllfvZdZDqeSVh3WVsXa1ES3latcl1ZhMlH51LM=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@f2bed21/chromium/extension/lib/styles.js#sha256-ZcJsZaPSnvuwYqWs9lU2RGEYqpCjvNH/ZOvfIdDXGZc=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@f2bed21/chromium/extension/lib/sync.js#sha256-P/fKbC+k6rxpVXpBWVUFU8yrylHgtTmkYKOvXzadCIY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@78d7214/chromium/extension/lib/ui.js#sha256-2yuQbliwz+uaCxUIEeTMWIH5JADHgjDBZD4/8I2T8rE=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
@@ -456,7 +456,7 @@
     // Define FEEDBACK functions
 
     function notify(msg, pos = '', notifDuration = '', shadow = '') {
-        if (!styles.toast.node) styles.toast.update()
+        if (!styles.toast.node) styles.update('toast')
         if (config.notifDisabled && !new RegExp(`${app.msgs.menuLabel_notifs}|${app.msgs.mode_toast}|🧩`).test(msg))
             return
 
@@ -490,7 +490,7 @@
 
     // Define UI functions
 
-    function checkBtnsToClick() {
+    window.checkBtnsToClick = () => {
         let continueBtnClicked = false // to increase delay before next check if true to avoid repeated clicks
         const btnTypesToCheck = ['Continue'] ; if (config.autoScroll) btnTypesToCheck.push('Scroll')
         const btns = {} ; btnTypesToCheck.forEach(type => btns[type] = chatgpt[`get${type}Btn`]())
