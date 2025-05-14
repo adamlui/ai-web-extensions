@@ -18,7 +18,7 @@ window.toggles = {
 
             // Assemble elems into parent div
             this.switchSpan.append(this.knobSpan)
-            this.div.append(this.navicon, this.toggleInput, this.toggleLabel, this.switchSpan )
+            this.div.append(this.navicon, this.toggleInput, this.toggleLabel, this.switchSpan)
 
             // Stylize elems
             this.stylize() // create/append stylesheet
