@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.13.3
+// @version             2025.5.13.4
 // @license             MIT
 // @icon                https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon48.png?v=a8c9387
 // @icon64              https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon64.png?v=a8c9387
@@ -232,7 +232,8 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@a3635a5/chromium/extension/components/modals.js#sha256-sm2ki3116WKOFQR/4LuXE6tNFUbQehbJjzYwQdm52HU=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@d4e4a20/chromium/extension/lib/browser.js#sha256-gzkpJ57Xp0CbWQuE4fBFL8DLf4OTsnRl3vfFDqg9fWs=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@df66b49/chromium/extension/lib/dom.js#sha256-kiKOn4x4hom5TRyrda7YqUNkq+s/JYgnFDQiWrR8ffk=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@9070468/chromium/extension/lib/settings.js#sha256-rsHjP3SqLH9R5IeKBl+8+tebbSXt8nE6VjLLVbyy+Vo=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@5c8fb84/chromium/extension/lib/settings.js#sha256-Hv5/wY17fX6HKOFmuMewzBLhdV7NY/pqvQc6ZwtCg6s=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@5c8fb84/chromium/extension/lib/styles.js#sha256-qoU0eAkrQKRWxiOuIYIH/PiQC0wUCTb4h3OwipCtW9c=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@78d7214/chromium/extension/lib/ui.js#sha256-2yuQbliwz+uaCxUIEeTMWIH5JADHgjDBZD4/8I2T8rE=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
@@ -283,7 +284,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1], urls: {},
-        latestResourceCommitHash: '47490a6' // for cached <app|messages>.json
+        latestResourceCommitHash: '5c8fb84' // for cached <app|messages>.json
     }
     app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@${app.latestResourceCommitHash}`
     const remoteAppData = await new Promise(resolve => xhr({
@@ -295,7 +296,11 @@
         appName: app.name,
         appAuthor: app.author.name,
         appDesc: 'Automatically continue generating multiple ChatGPT responses',
+        menuLabel_settings: 'Settings',
+        menuLabel_notif: 'Notification',
+        menuLabel_notifs: 'Notifications',
         menuLabel_autoScroll: 'Auto-Scroll',
+        menuLabel_anchor: 'Anchor',
         menuLabel_modeNotifs: 'Mode Notifications',
         menuLabel_about: 'About',
         menuLabel_donate: 'Please send a donation',
@@ -308,8 +313,11 @@
         about_openSourceCode: 'Open source code',
         about_latestChanges: 'Latest changes',
         mode_autoContinue: 'Auto-Continue',
+        mode_toast: 'Toast Mode',
         helptip_autoScroll: 'Automatically scroll to bottom as replies are generating',
         helptip_modeNotifs: 'Show notifications when toggling modes/settings',
+        helptip_notifBottom: 'Anchor notifications to bottom of screen',
+        helptip_toastMode: 'Shrink/center notifications into toast bubbles',
         alert_updateAvail: 'Update available',
         alert_newerVer: 'An update to',
         alert_isAvail: 'is available',
@@ -447,7 +455,9 @@
     // Define FEEDBACK functions
 
     function notify(msg, pos = '', notifDuration = '', shadow = '') {
-        if (config.notifDisabled && !msg.includes(app.msgs.menuLabel_modeNotifs)) return
+        if (!styles.toast.node) styles.toast.update()
+        if (config.notifDisabled && !new RegExp(`${app.msgs.menuLabel_notifs}|${app.msgs.mode_toast}|🧩`).test(msg))
+            return
 
         // Strip state word to append colored one later
         const foundState = toolbarMenu.state.words.find(word => msg.includes(word))
@@ -456,6 +466,7 @@
         // Show notification
         chatgpt.notify(`${app.symbol} ${msg}`, pos, notifDuration, shadow || env.ui.scheme == 'light')
         const notif = document.querySelector('.chatgpt-notif:last-child')
+        notif.classList.add(app.slug) // for styles.toast
 
         // Append styled state word
         if (foundState) {
