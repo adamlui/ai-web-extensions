@@ -161,8 +161,7 @@
     else await settings.load('fullWindow') // otherwise load CWM's saved state
 
     // Create/append STYLES
-    ;['chatbar', 'fullWin', 'tweaks', 'widescreen'].forEach(styleType =>
-        styles.update({ key: styleType, autoAppend: !/fullWin|widescreen/.test(styleType) }))
+    ;['chatbar', 'fullWin', 'tweaks', 'widescreen'].forEach(styleType => styles.update({ key: styleType }))
     ;['gray', 'white'].forEach(color => document.head.append( // Rising Particles styles
         dom.create.elem('link', { rel: 'stylesheet',
             href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@71695ca/assets/styles/rising-particles/dist/${
