@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.14.5
+// @version             2025.5.14.6
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -744,29 +744,29 @@
     sync.configToUI = async function(options) { // from toolbar menu toggles
     // ... requires components/buttons.js + lib/<chatbar|settings|styles>.js + <config|env|toolbarMenu>
 
-        const scriptWasDisabled = !config[`${env.site}Disabled`]
-        if (!scriptWasDisabled && config[`${env.site}Disabled`]) { // reset UI
+        const { site } = env, scriptWasDisabled = !config[`${site}Disabled`]
+        if (!scriptWasDisabled && config[`${site}Disabled`]) { // reset UI
             [styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
                 .forEach(target => target.remove())
             chatbar.reset()
-            if (env.site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
-        } else if (!config[`${env.site}Disabled`]) { // sync modes/tweaks/btns
+            if (site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
+        } else if (!config[`${site}Disabled`]) { // sync modes/tweaks/btns
             if (config.widescreen ^ styles.widescreen.node.isConnected) { // sync Widescreen
                 supressNotifs() ; toggleMode('widescreen') }
-            if (sites[env.site].hasSidebar) {
+            if (sites[site].hasSidebar) {
                 if (config.fullWindow ^ await ui.isFullWin()) { // sync Full-Window
                     supressNotifs() ; toggleMode('fullWindow') }
                 sync.fullerWin() // sync Fuller Windows
             }
             styles.update('tweaks') // sync HH/HF/TCB/NCB/BA
             styles.update('chatbar') // sync WCB
-            if (env.site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
+            if (site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
             if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                 // ...to visually signal location + preview fx applied by Button Animations toggle-on
                 buttons.animate()
             else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.update({ key: 'toast' })
-            if (env.site != 'poe') // toggle free wheel locked in some Spam blocks
+            if (site != 'poe') // toggle free wheel locked in some Spam blocks
                 document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                     'wheel', window.enableWheelScroll)
         }

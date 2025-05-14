@@ -5,30 +5,30 @@ window.sync = {
     async configToUI(options) { // on toolbar popup toggles + AI tab activations
     // ... requires components/buttons.js + lib/<chatbar|settings|styles>.js + <config|env>
 
-        const extensionWasDisabled = config.extensionDisabled || config[`${env.site}Disabled`]
-        await settings.load('extensionDisabled', ...settings.siteDisabledKeys, ...sites[env.site].availFeatures)
-        if (!extensionWasDisabled && ( config.extensionDisabled || config[`${env.site}Disabled`] )) { // reset UI
+        const { site } = env, extensionWasDisabled = config.extensionDisabled || config[`${site}Disabled`]
+        await settings.load('extensionDisabled', ...settings.siteDisabledKeys, ...sites[site].availFeatures)
+        if (!extensionWasDisabled && ( config.extensionDisabled || config[`${site}Disabled`] )) { // reset UI
             [styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
                 .forEach(target => target?.remove())
             chatbar.reset()
-            if (env.site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
-        } else if (!config.extensionDisabled && !config[`${env.site}Disabled`]) { // sync modes/tweaks/btns
+            if (site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
+        } else if (!config.extensionDisabled && !config[`${site}Disabled`]) { // sync modes/tweaks/btns
             if (config.widescreen ^ styles.widescreen.node?.isConnected) { // sync Widescreen
                 supressNotifs() ; toggleMode('widescreen') }
-            if (sites[env.site].hasSidebar) {
+            if (sites[site].hasSidebar) {
                 if (config.fullWindow ^ await ui.isFullWin()) { // sync Full-Window
                     supressNotifs() ; toggleMode('fullWindow') }
                 sync.fullerWin() // sync Fuller Windows
             }
             styles.update({ key: 'tweaks' }) // sync HH/HF/TCB/NCB/BA
             styles.update({ key: 'chatbar' }) // sync WCB
-            if (env.site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
+            if (site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
             if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                 // ...to visually signal location + preview fx applied by Button Animations toggle-on
                 buttons.animate()
             else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.update({ key: 'toast' })
-            if (env.site != 'poe') // toggle free wheel locked in some Spam blocks
+            if (site != 'poe') // toggle free wheel locked in some Spam blocks
                 document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                     'wheel', window.enableWheelScroll)
         }
