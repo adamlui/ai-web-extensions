@@ -279,7 +279,7 @@
         style: 'position: relative ; top: 1px ; width: 13px ; height: 13px' }))
     footerElems.review.span.onclick = () => {
         open(app.urls.review[/edge|firefox/.exec(app.runtime.toLowerCase())?.[0] || 'chrome']) ; close() }
-    footerElems.coffee.span.append(icons.create('coffeeCup', { size: 23, style: 'position: relative ; left: 2px' }))
+    footerElems.coffee.span.append(icons.create('coffeeCup', { size: 23, style: 'position: relative ; left: 1px' }))
     footerElems.coffee.span.onclick = () => { open(app.urls.donate['ko-fi']) ; close() }
     footerElems.about.span.append(icons.create('questionMark', { width: 15, height: 13 }))
     footerElems.about.span.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
