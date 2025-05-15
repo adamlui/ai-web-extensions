@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.14
+// @version                2025.5.14.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -139,117 +139,35 @@
         latestResourceCommitHash: '78db856' // for cached <app|messages>.json
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@${app.latestResourceCommitHash}` }
-    const remoteAppData = await new Promise(resolve => xhr({
-        method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
-        onload: resp => resolve(JSON.parse(resp.responseText))
-    }))
-    Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
-    app.msgs = {
-        appDesc: 'Add AI to Amazon shopping',
-        menuLabel_proxyAPImode: 'Proxy API Mode',
-        menuLabel_preferred: 'Preferred',
-        menuLabel_autoFocusChatbar: 'Auto-Focus Chatbar',
-        menuLabel_whenStreaming: 'when streaming',
-        menuLabel_background: 'Background',
-        menuLabel_foreground: 'Foreground',
-        menuLabel_animations: 'Animations',
-        menuLabel_replyLanguage: 'Reply Language',
-        menuLabel_colorScheme: 'Color Scheme',
-        menuLabel_auto: 'Auto',
-        menuLabel_about: 'About',
-        menuLabel_settings: 'Settings',
-        menuLabel_random: 'Random',
-        menuLabel_saved: 'Saved',
-        componentLabel_used: 'used',
-        about_author: 'Author',
-        about_and: '&',
-        about_contributors: 'contributors',
-        about_version: 'Version',
-        about_poweredBy: 'Powered by',
-        about_openSourceCode: 'Open source code',
-        about_latestChanges: 'Latest changes',
-        scheme_light: 'Light',
-        scheme_dark: 'Dark',
-        mode_proxy: 'Proxy Mode',
-        mode_streaming: 'Streaming Mode',
-        mode_autoScroll: 'Auto-Scroll',
-        mode_debug: 'Debug Mode',
-        tooltip_fontSize: 'Font size',
-        tooltip_sendReply: 'Send reply',
-        tooltip_askRandQuestion: 'Ask random question',
-        tooltip_minimize: 'Minimize',
-        tooltip_restore: 'Restore',
-        tooltip_expand: 'Expand',
-        tooltip_shrink: 'Shrink',
-        tooltip_close: 'Close',
-        tooltip_copy: 'Copy',
-        tooltip_generate: 'Generate',
-        tooltip_generating: 'Generating',
-        tooltip_regenerate: 'Regenerate',
-        tooltip_regenerating: 'Regenerating',
-        tooltip_play: 'Play',
-        tooltip_playing: 'Playing',
-        tooltip_page: 'Page',
-        tooltip_reply: 'Reply',
-        tooltip_code: 'Code',
-        tooltip_generatingAudio: 'Generating audio',
-        helptip_proxyAPImode: 'Uses a Proxy API for no-login access to AI',
-        helptip_preferredAPI: 'API to use when getting answers in Proxy Mode',
-        helptip_streamingMode: 'Receive replies in a continuous text stream',
-        helptip_autoFocusChatbar: 'Auto-focus chatbar whenever it appears',
-        helptip_autoScroll: 'Auto-scroll responses as they generate in Streaming Mode',
-        helptip_bgAnimations: 'Show animated backgrounds in UI components',
-        helptip_fgAnimations: 'Show foreground animations in UI components',
-        helptip_replyLanguage: 'Language for AmazonGPT to reply in',
-        helptip_colorScheme: 'Scheme to display AmazonGPT UI components in',
-        helptip_debugMode: 'Show detailed logging in browser console',
-        placeholder_typeSomething: 'Type something',
-        prompt_updateReplyLang: 'Update reply language',
-        alert_langUpdated: 'Language updated',
-        alert_willReplyIn: 'will reply in',
-        alert_yourSysLang: 'your system language',
-        alert_choosePlatform: 'Choose a platform',
-        alert_updateAvail: 'Update available',
-        alert_newerVer: 'An update to',
-        alert_isAvail: 'is available',
-        alert_upToDate: 'Up-to-date',
-        alert_isUpToDate: 'is up-to-date',
-        alert_unavailable: 'unavailable',
-        alert_isOnlyAvailFor: 'is only available for',
-        alert_userscriptMgrNoStream: 'Your userscript manager does not support returning stream responses',
-        alert_isCurrentlyOnlyAvailBy: 'is currently only available by',
-        alert_openAIsupportSoon: 'Support for OpenAI API will be added shortly',
-        alert_waitingFor: 'Waiting for',
-        alert_response: 'response',
-        alert_login: 'Please login',
-        alert_thenRefreshPage: 'then refresh this page',
-        alert_tooManyRequests: 'ChatGPT is flooded with too many requests',
-        alert_parseFailed: 'Failed to parse response JSON',
-        alert_checkCloudflare: 'Please pass Cloudflare security check',
-        alert_notWorking: 'is not working',
-        alert_ifIssuePersists: 'If issue persists',
-        alert_try: 'Try',
-        alert_switchingOn: 'switching on',
-        alert_switchingOff: 'switching off',
-        alert_selectingDiff: 'selecting a different',
-        alert_generated: 'Generated',
-        notif_copiedToClipboard: 'Copied to clipboard',
-        notif_downloaded: 'downloaded',
-        btnLabel_moreAIextensions: 'More AI Extensions',
-        btnLabel_rateUs: 'Rate Us',
-        btnLabel_discuss: 'Discuss',
-        btnLabel_getSupport: 'Get Support',
-        btnLabel_checkForUpdates: 'Check for Updates',
-        btnLabel_update: 'Update',
-        btnLabel_dismiss: 'Dismiss',
-        btnLabel_visitPage: 'Visit Page',
-        btnLabel_download: 'Download',
-        btnLabel_convo: 'chat',
-        link_viewChanges: 'View changes',
-        state_on: 'On',
-        state_off: 'Off',
-        state_no: 'No'
+    const remoteData = {
+        app: await new Promise(resolve => xhr({
+            method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
+            onload: resp => resolve(JSON.parse(resp.responseText))
+        })),
+        msgs: await new Promise(resolve => {
+            const msgHostDir = app.urls.resourceHost + '/greasemonkey/_locales/',
+                  msgLocaleDir = ( env.browser.language ? env.browser.language.replace('-', '_') : 'en' ) + '/'
+            let msgHref = msgHostDir + msgLocaleDir + 'messages.json', msgXHRtries = 0
+            function fetchMsgs() { xhr({ method: 'GET', url: msgHref, onload: handleMsgs })}
+            function handleMsgs(resp) {
+                try { // to return localized messages.json
+                    const msgs = JSON.parse(resp.responseText), flatMsgs = {}
+                    for (const key in msgs)  // remove need to ref nested keys
+                        if (typeof msgs[key] == 'object' && 'message' in msgs[key])
+                            flatMsgs[key] = msgs[key].message
+                    resolve(flatMsgs)
+                } catch (err) { // if bad response
+                    msgXHRtries++ ; if (msgXHRtries == 3) return resolve({}) // try original/region-stripped/EN only
+                    msgHref = env.browser.language.includes('-') && msgXHRtries == 1 ? // if regional lang on 1st try...
+                        msgHref.replace(/(_locales\/[^_]+)_[^_]+(\/)/, '$1$2') // ...strip region before retrying
+                            : ( msgHostDir + 'en/messages.json' ) // else use default English messages
+                    fetchMsgs()
+                }
+            }
+            fetchMsgs()
+        })
     }
+    Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
 
     // Init API data
     const apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
