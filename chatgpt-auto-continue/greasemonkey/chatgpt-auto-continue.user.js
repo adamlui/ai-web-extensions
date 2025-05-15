@@ -219,7 +219,7 @@
 // @description:zu      ⚡ Terus menghasilkan imibuzo eminingi ye-ChatGPT ngokwesizulu
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.14.5
+// @version             2025.5.14.6
 // @license             MIT
 // @icon                https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon48.png?v=a8c9387
 // @icon64              https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon64.png?v=a8c9387
@@ -229,8 +229,8 @@
 // @connect             gm.chatgptautocontinue.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.1/dist/chatgpt.min.js#sha256-/71AK4V0/J40zINYEriMeEWGIZ8qfyWMQu76ui3SBNs=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@8537b96/chromium/extension/components/modals.js#sha256-9o4lJKhkk4KFjhIUz2iDJdkhSyzO1FqPC/hpOLthCGg=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@d4e4a20/chromium/extension/lib/browser.js#sha256-gzkpJ57Xp0CbWQuE4fBFL8DLf4OTsnRl3vfFDqg9fWs=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@b18f2dc/chromium/extension/components/modals.js#sha256-y5/TnA5Q6c/FgGctWeOvjyw2R6Fvhs+QHSn/J0HGPkE=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@b18f2dc/chromium/extension/lib/browser.js#sha256-7teBecqrjkazKH6oetGyxKlBkAk5U9ota/LNCB3Q+Jw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@df66b49/chromium/extension/lib/dom.js#sha256-kiKOn4x4hom5TRyrda7YqUNkq+s/JYgnFDQiWrR8ffk=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@5c8fb84/chromium/extension/lib/settings.js#sha256-Hv5/wY17fX6HKOFmuMewzBLhdV7NY/pqvQc6ZwtCg6s=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@d457453/chromium/extension/lib/styles.js#sha256-DHhtZ+Il3MhhW8ClHUgyqW7rvLkzUvgYPWpj57wu17k=

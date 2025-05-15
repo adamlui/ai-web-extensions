@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.14.10
+// @version             2025.5.14.11
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -257,16 +257,16 @@
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.1/dist/chatgpt.min.js#sha256-/71AK4V0/J40zINYEriMeEWGIZ8qfyWMQu76ui3SBNs=
 // @require             https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@a10cb74/chromium/extension/lib/browser.js#sha256-gzkpJ57Xp0CbWQuE4fBFL8DLf4OTsnRl3vfFDqg9fWs=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@152a535/chromium/extension/lib/browser.js#sha256-7teBecqrjkazKH6oetGyxKlBkAk5U9ota/LNCB3Q+Jw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@344ff77/chromium/extension/lib/chatbar.js#sha256-uWIO0f2rjg7rMqSJ2D7JwL+b/bHxeuIeKYthK2zSbT4=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ac383f2/chromium/extension/lib/dom.js#sha256-QAHZ9hlWeLvunZtEt2z34mKhvdg71RhGBlxfMljIBPU=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@595ac73/chromium/extension/lib/settings.js#sha256-rsh1BYveKaWfJTUlvj0FE7lcT0Vc9+YM6loKeIxbJtw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@2a65ac8/chromium/extension/lib/styles.js#sha256-EmT7nPG/2ZVL1guN2iOYb1ZKSG8LX/3G8nkG9khimkY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ea48b2a/chromium/extension/lib/sync.js#sha256-QXHSa0J8nxVhUViFa3jZhhqiCkwbXbVDvmExYOisf7k=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/ui.js#sha256-9ZQ8DyJvJ5YSuOGhmdqofNMT/QJGs5uhej0DmvH0g/k=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@344ff77/chromium/extension/components/buttons.js#sha256-hnSyDZO7Ypa2bqJLbUpyOAJtAsPxLgkANUjQlMfE4Hs=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@152a535/chromium/extension/components/buttons.js#sha256-knAf712m/p4TOpLBkS5gpB5hrpbP+GI8nFvHuc0nUVg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@a7eab4a/chromium/extension/components/icons.js#sha256-CNhIM6EizmEeGkTCStos3vp95KUbQ3y5SPTPX8YLxuU=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@344ff77/chromium/extension/components/modals.js#sha256-591kyswdUm2Hcz1gYJ4/TCQ3+xpPqyzi/7AWUlHeksQ=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@152a535/chromium/extension/components/modals.js#sha256-WP+m2SIIDRbDBFgovmWLQb53zqy/96u4yM1Gt/hnUCg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@344ff77/chromium/extension/components/tooltip.js#sha256-Ql9nR9Q0LXgnq4koXHRRs4Yur8ehdaNkwGYPdg0QkOo=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=

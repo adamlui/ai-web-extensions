@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.14.8
+// @version             2025.5.14.9
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -220,9 +220,9 @@
 // @connect             gm.chatgptinfinity.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.1/dist/chatgpt.min.js#sha256-/71AK4V0/J40zINYEriMeEWGIZ8qfyWMQu76ui3SBNs=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@cd1eddc/chromium/extension/components/modals.js#sha256-M/QQgXCVJbQCd7ls32d38Cm7jPGVlYh21zfOsTNy6e8=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@62b5899/chromium/extension/components/modals.js#sha256-wiBiH4Q+45e1RSmCmPafsQrtPcSkWVouLpWeN4RQDu4=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@2766684/chromium/extension/components/toggles.js#sha256-XeLXHJk3xSslxYXd4ESm7bUQhTvFRPveXhfron4s61k=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@2c77583/chromium/extension/lib/browser.js#sha256-gzkpJ57Xp0CbWQuE4fBFL8DLf4OTsnRl3vfFDqg9fWs=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@62b5899/chromium/extension/lib/browser.js#sha256-7teBecqrjkazKH6oetGyxKlBkAk5U9ota/LNCB3Q+Jw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@6fec365/chromium/extension/lib/dom.js#sha256-/X4gSHYxumIYhBjDK8WHUirB6wDwxfwJUI0MEVpCAcw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3372987/chromium/extension/lib/infinity.js#sha256-MN1pC8s+N3Rqqj+2TmKB3Q3DyjNMmFSmdZD/4FusqyE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@2c83d1a/chromium/extension/lib/settings.js#sha256-RRtMNemejRgn2pn3OGZdrTFH/kYsiGVwvm2vts317+s=
