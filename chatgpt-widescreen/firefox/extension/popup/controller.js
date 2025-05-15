@@ -265,9 +265,10 @@
     }))
 
     // Create/append COFEE entry
+    const coffeeURL = app.urls.donate['ko-fi']
     footer.before(createMenuEntry({
-        key: 'coffeeEntry', type: 'link', symbol: '☕',
-        label: settings.getMsg('menuLabel_buyMeAcoffee'), url: app.urls.donate['ko-fi']
+        key: 'coffeeEntry', type: 'link', symbol: '☕', url: coffeeURL, helptip: coffeeURL,
+        label: settings.getMsg('menuLabel_buyMeAcoffee')
     }))
 
     // Init FOOTER
