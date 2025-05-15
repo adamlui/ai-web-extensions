@@ -48,8 +48,8 @@
             else if (entryData.type == 'toggle') {
                 entry.leftElem.classList.toggle('on')
                 settings.save(entryData.key, !config[entryData.key]) ; sync.configToUI({ updatedKey: entryData.key })
-                notify(`${entryData.label} ${chrome.i18n.getMessage(`state_${
-                    settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`)
+                requestAnimationFrame(() => notify(`${entryData.label} ${chrome.i18n.getMessage(`state_${
+                    settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`))
             } else if (entryData.type == 'link') { open(entryData.url) ; close() }
         }
         return entry.div
@@ -57,7 +57,7 @@
 
     function extensionIsDisabled() { return !!( config.extensionDisabled || config[`${env.site}Disabled`] )}
 
-    function notify(msg, pos = 'bottom-right') {
+    function notify(msg, pos = !config.toastMode ? 'bottom-right' : null) {
         if (config.notifDisabled &&
             !new RegExp(`${browserAPI.getMsg('menuLabel_notifs')}|${browserAPI.getMsg('mode_toast')}`).test(msg))
                 return

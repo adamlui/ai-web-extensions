@@ -43,15 +43,14 @@
             else if (entryData.type == 'toggle') {
                 entry.leftElem.classList.toggle('on')
                 settings.save(entryData.key, !config[entryData.key]) ; sync.configToUI({ updatedKey: entryData.key })
-                notify(`${entryData.label} ${chrome.i18n.getMessage(`state_${
-                    settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`)
+                requestAnimationFrame(() => notify(`${entryData.label} ${chrome.i18n.getMessage(`state_${
+                    settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`))
             } else if (entryData.type == 'link') { open(entryData.url) ; close() }
         }
         return entry.div
     }
 
-
-    function notify(msg, pos = 'bottom-right') {
+    function notify(msg, pos = !config.toastMode ? 'bottom-right' : null) {
         if (config.notifDisabled && !msg.includes(browserAPI.getMsg('menuLabel_modeNotifs'))) return
         sendMsgToActiveTab('notify', { msg, pos })
     }
