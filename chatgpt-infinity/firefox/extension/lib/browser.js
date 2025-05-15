@@ -7,9 +7,10 @@ window.browserAPI = {
     },
 
     get runtime() {
-        return typeof chrome != 'undefined' && chrome.runtime ? (
-              typeof browser != 'undefined' ? 'Firefox add-on'
-                : `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
-        ) : 'unknown'
+        return typeof GM_info != 'undefined' ? 'Greasemonkey userscript'
+             : typeof chrome != 'undefined' && chrome.runtime ? (
+                    typeof browser != 'undefined' ? 'Firefox add-on'
+                    : `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
+           ) : 'unknown'
     }
 };
