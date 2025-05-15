@@ -17,6 +17,7 @@ window.modals = {
             modalBtns.splice(1, 0, function rateUs(){})
 
         // Show modal
+        const runtime = /chromium|firefox|greasemonkey/.exec(browserAPI.runtime.toLowerCase())?.[0] || ''
         const labelStyles = 'text-transform: uppercase ; font-size: 17px ; font-weight: bold ;'
                           + `color: ${ scheme == 'dark' ? 'white' : '#494141' }`
         const aboutModal = modals.alert(
@@ -30,8 +31,8 @@ window.modals = {
                 + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
                     + app.urls.github + '</a>\n'
             + `<span style="${labelStyles}">🚀 ${browserAPI.getMsg('about_latestChanges')}:</span> `
-                + `<a href="${app.urls.github}/commits" target="_blank" rel="nopener">`
-                    + `${app.urls.github}/commits</a>\n`
+                + `<a href="${app.urls.github}/commits/main/${runtime}`
+                + `/" target="_blank" rel="nopener">${app.urls.github}/commits/main/${runtime}</a>\n`
             + `<span style="${labelStyles}">⚡ ${browserAPI.getMsg('about_poweredBy')}:</span> `
                 + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`,
             modalBtns, '', 747
