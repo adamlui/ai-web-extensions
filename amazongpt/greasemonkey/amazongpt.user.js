@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.14.1
+// @version                2025.5.14.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -269,35 +269,6 @@
             )
         }
     )
-
-    // LOCALIZE app.msgs for non-English users
-    if (!env.browser.language.startsWith('en')) {
-        log.debug('Localizing app messages...')
-        const localizedMsgs = await new Promise(resolve => {
-            const msgHostDir = app.urls.resourceHost + '/greasemonkey/_locales/',
-                  msgLocaleDir = ( env.browser.language ? env.browser.language.replace('-', '_') : 'en' ) + '/'
-            let msgHref = msgHostDir + msgLocaleDir + 'messages.json', msgXHRtries = 0
-            function fetchMsgs() { xhr({ method: 'GET', url: msgHref, onload: handleMsgs })}
-            function handleMsgs(resp) {
-                try { // to return localized messages.json
-                    const msgs = JSON.parse(resp.responseText), flatMsgs = {}
-                    for (const key in msgs)  // remove need to ref nested keys
-                        if (typeof msgs[key] == 'object' && 'message' in msgs[key])
-                            flatMsgs[key] = msgs[key].message
-                    resolve(flatMsgs)
-                } catch (err) { // if bad response
-                    msgXHRtries++ ; if (msgXHRtries == 3) return resolve({}) // try original/region-stripped/EN only
-                    msgHref = env.browser.language.includes('-') && msgXHRtries == 1 ? // if regional lang on 1st try...
-                        msgHref.replace(/(_locales\/[^_]+)_[^_]+(\/)/, '$1$2') // ...strip region before retrying
-                            : ( msgHostDir + 'en/messages.json' ) // else use default English messages
-                    fetchMsgs()
-                }
-            }
-            fetchMsgs()
-        })
-        Object.assign(app.msgs, localizedMsgs)
-        log.debug(`Success! app.msgs = ${log.prettifyObj(app.msgs)}`)
-    }
 
     // Init SETTINGS
     log.debug('Initializing settings...')
