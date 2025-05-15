@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.14.8
+// @version             2025.5.14.9
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -325,122 +325,20 @@
     }
     app.urls = {
         resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.latestResourceCommitHash}` }
-    const remoteAppData = await new Promise(resolve => xhr({
-        method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
-        onload: resp => resolve(JSON.parse(resp.responseText))
-    }))
-    Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
-    app.msgs = {
-        appName: app.name,
-        appAuthor: app.author.name,
-        appDesc: 'Adds Widescreen + Fullscreen modes to ChatGPT for enhanced viewing + reduced scrolling',
-        menuLabel_settings: 'Settings',
-        menuLabel_notif: 'Notification',
-        menuLabel_notifs: 'Notifications',
-        menuLabel_btn: 'Button',
-        menuLabel_chatbox: 'Chatbox',
-        menuLabel_display: 'Display',
-        menuLabel_fullerWins: 'Fuller Windows',
-        menuLabel_tallerChatbox: 'Taller Chatbox',
-        menuLabel_widerChatbox: 'Wider Chatbox',
-        menuLabel_newChatBtn: 'New Chat Button',
-        menuLabel_hiddenHeader: 'Hidden Header',
-        menuLabel_hiddenFooter: 'Hidden Footer',
-        menuLabel_btnAnimations: 'Button Animations',
-        menuLabel_btnVisibility: 'Button Visibility',
-        menuLabel_show: 'Show',
-        menuLabel_anchor: 'Anchor',
-        menuLabel_modeNotifs: 'Mode Notifications',
-        menuLabel_blockSpam: 'Spam Block',
-        menuLabel_siteSettings: 'Site Settings',
-        menuLabel_about: 'About',
-        menuLabel_buyMeAcoffee: 'Buy Me a Coffee',
-        menuLabel_donate: 'Please send a donation',
-        menuLabel_extensionActive: 'extension active',
-        about_author: 'Author',
-        about_and: '&',
-        about_contributors: 'contributors',
-        about_version: 'Version',
-        about_poweredBy: 'Powered by',
-        about_openSourceCode: 'Open source code',
-        about_latestChanges: 'Latest changes',
-        mode_widescreen: 'Wide screen',
-        mode_fullWindow: 'Full-window',
-        mode_fullscreen: 'Full screen',
-        mode_toast: 'Toast Mode',
-        tooltip_widescreenON: 'Wide screen',
-        tooltip_widescreenOFF: 'Exit wide screen',
-        tooltip_fullWindowON: 'Full-window mode',
-        tooltip_fullWindowOFF: 'Exit full window',
-        tooltip_fullscreenON: 'Full screen',
-        tooltip_fullscreenOFF: 'Exit full screen',
-        tooltip_newChat: 'New chat',
-        tooltip_goto: 'Go to',
-        helptip_adjustSettingsRelatedTo: 'Adjust settings related to',
-        helptip_the: 'The',
-        helptip_btns: 'Buttons',
-        helptip_fullerWins: 'Also activate Wide Screen when activating Full-Window',
-        helptip_tallerChatbox: 'Expand the chatbox vertically',
-        helptip_widerChatbox: 'Expand the chatbox horizontally in Wide Screen mode',
-        helptip_newChatBtn: 'Show New Chat button in chatbox',
-        helptip_hiddenFooter: 'Hide site footer',
-        helptip_hiddenHeader: 'Hide site header',
-        helptip_btnAnimations: 'Animate chatbar buttons on hover',
-        helptip_btnVisibility: 'Show custom buttons in chatbar',
-        helptip_modeNotifs: 'Show notifications when toggling modes/settings',
-        helptip_notifBottom: 'Anchor notifications to bottom of screen',
-        helptip_toastMode: 'Shrink/center notifications into toast bubbles',
-        helptip_blockSpam: 'Hide spam banners from cluttering the page',
-        helptip_pageSettings: 'Control the appearance of the page',
-        helptip_chatbarSettings: 'Control the appearance of the chatbar',
-        helptip_buttonSettings: 'Adjust settings related to buttons',
-        helptip_enableDisable: 'Enable/disable',
-        helptip_perSite: 'per site',
-        helptip_run: 'Run',
-        alert_choosePlatform: 'Choose a platform',
-        alert_updateAvail: 'Update available',
-        alert_newerVer: 'An update to',
-        alert_isAvail: 'is available',
-        alert_upToDate: 'Up-to-date',
-        alert_isUpToDate: 'is up-to-date',
-        alert_showYourSupport: 'Show your support',
-        alert_isOSS: 'is open-source software built & maintained for free through 100% volunteer efforts',
-        alert_despiteAffliction: 'Despite being severely afflicted by',
-        alert_longCOVID: 'long COVID',
-        alert_since2020: 'since 2020',
-        alert_byDonatingResults: 'by donating, you help me to continue improving, fixing bugs, adding new features, and making the software even better',
-        alert_yourContrib: 'Your contribution',
-        alert_noMatterSize: 'no matter the size',
-        alert_directlySupports: 'directly supports my unpaid efforts to ensure this project remains free and open for all to use',
-        alert_tyForSupport: 'Thank you for your support',
-        alert_pressF11: 'Press F11 to exit full screen',
-        alert_f11reason: 'F11 was used to enter full screen, and due to browser security reasons, the same key must be used to exit it',
-        notif_chatStopped: 'Chat stopped',
-        btnLabel_moreAIextensions: 'More AI Extensions',
-        btnLabel_leaveReview: 'Leave Review',
-        btnLabel_rateUs: 'Rate Us',
-        btnLabel_discuss: 'Discuss',
-        btnLabel_getSupport: 'Get Support',
-        btnLabel_checkForUpdates: 'Check for Updates',
-        btnLabel_update: 'Update',
-        btnLabel_dismiss: 'Dismiss',
-        link_viewChanges: 'View changes',
-        state_disabled: 'disabled',
-        state_on: 'on',
-        state_off: 'off'
-    }
-
-    // LOCALIZE app.msgs for non-English users
-    if (!env.browser.language.startsWith('en')) {
-        const localizedMsgs = await new Promise(resolve => {
-            const msgHostDir = app.urls.resourceHost + '/chromium/extension/_locales/',
+    const remoteData = {
+        app: await new Promise(resolve => xhr({
+            method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
+            onload: resp => resolve(JSON.parse(resp.responseText))
+        })),
+        msgs: await new Promise(resolve => {
+            const msgHostDir = app.urls.resourceHost + '/greasemonkey/_locales/',
                   msgLocaleDir = ( env.browser.language ? env.browser.language.replace('-', '_') : 'en' ) + '/'
             let msgHref = msgHostDir + msgLocaleDir + 'messages.json', msgXHRtries = 0
             function fetchMsgs() { xhr({ method: 'GET', url: msgHref, onload: handleMsgs })}
             function handleMsgs(resp) {
                 try { // to return localized messages.json
                     const msgs = JSON.parse(resp.responseText), flatMsgs = {}
-                    for (const key in msgs) // remove need to ref nested keys
+                    for (const key in msgs)  // remove need to ref nested keys
                         if (typeof msgs[key] == 'object' && 'message' in msgs[key])
                             flatMsgs[key] = msgs[key].message
                     resolve(flatMsgs)
@@ -454,8 +352,8 @@
             }
             fetchMsgs()
         })
-        Object.assign(app.msgs, localizedMsgs)
     }
+    Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
 
     // Init SITE profiles
     window.sites = Object.assign(Object.create(null), await new Promise(resolve => xhr({
