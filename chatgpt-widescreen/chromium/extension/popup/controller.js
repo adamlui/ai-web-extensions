@@ -264,7 +264,7 @@
         label: `${toTitleCase(settings.getMsg('about_latestChanges'))}...`
     }))
 
-    // Create/append COFEE entry
+    // Create/append COFFEE entry
     const coffeeURL = app.urls.donate['ko-fi']
     footer.before(createMenuEntry({
         key: 'coffeeEntry', type: 'link', symbol: '☕', url: coffeeURL, helptip: coffeeURL,
