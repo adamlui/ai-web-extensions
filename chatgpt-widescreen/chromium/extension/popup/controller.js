@@ -120,6 +120,13 @@
         }
     }
 
+    function toTitleCase(str) {
+        if (!str) return ''
+        const words = str.toLowerCase().split(' ')
+        for (let i = 0 ; i < words.length ; i++) words[i] = words[i][0].toUpperCase() + words[i].slice(1)
+        return words.join(' ')
+    }
+
     // Run MAIN routine
 
     // LOCALIZE text/titles, set document lang
@@ -249,17 +256,18 @@
     aboutEntry.div.append(aboutEntry.ticker.span) ; footer.before(aboutEntry.div)
     aboutEntry.div.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
 
+    // Create/append LATEST CHANGES entry
+    const latestChangesURL = `${app.urls.github}/commits/main/${
+        /chromium|firefox/.exec(browserAPI.runtime.toLowerCase())?.[0] || '' }`
+    footer.before(createMenuEntry({
+        key: 'latestChangesEntry', type: 'link', symbol: '🚀', url: latestChangesURL, helptip: latestChangesURL,
+        label: toTitleCase(settings.getMsg('about_latestChanges'))
+    }))
+
     // Create/append COFEE entry
     footer.before(createMenuEntry({
         key: 'coffeeEntry', type: 'link', symbol: '☕',
         label: settings.getMsg('menuLabel_buyMeAcoffee'), url: app.urls.donate['ko-fi']
-    }))
-
-    // Create/append REVIEW entry
-    footer.before(createMenuEntry({
-        key: 'reviewEntry', type: 'link', symbol: '⭐',
-        label: settings.getMsg('btnLabel_leaveReview'),
-        url: app.urls.review[/edge|firefox/.exec(app.runtime.toLowerCase())?.[0] || 'chrome']
     }))
 
     // Init FOOTER
