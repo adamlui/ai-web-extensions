@@ -33,7 +33,7 @@ window.modals = {
                     + app.urls.github + '</a>\n'
             + `<span style="${labelStyles}">🚀 ${browserAPI.getMsg('about_latestChanges')}:</span> `
                 + `<a href="${app.urls.github}/commits/main/${runtime}`
-                + `/" target="_blank" rel="nopener">${app.urls.github}/commits/main/${runtime}</a>\n`
+                + `" target="_blank" rel="nopener">${app.urls.github}/commits/main/${runtime}</a>\n`
             + `<span style="${labelStyles}">⚡ ${browserAPI.getMsg('about_poweredBy')}:</span> `
                 + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`,
             modalBtns, '', 747
