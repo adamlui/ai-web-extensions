@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.14.3
+// @version             2025.5.14.4
 // @license             MIT
 // @icon                https://assets.autoclearchatgpt.com/images/icons/openai/black/icon48.png?v=f461c06
 // @icon64              https://assets.autoclearchatgpt.com/images/icons/openai/black/icon64.png?v=f461c06
@@ -296,66 +296,12 @@
     }
     app.urls = { resourceHost: 'https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history'
                              + `@${app.latestResourceCommitHash}` }
-    const remoteAppData = await new Promise(resolve => xhr({
-        method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
-        onload: resp => resolve(JSON.parse(resp.responseText))
-    }))
-    Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
-    app.msgs = {
-        appName: app.name,
-        appAuthor: app.author.name,
-        appDesc: 'Auto-clears chat history when visiting chatgpt.com',
-        menuLabel_autoclear: 'Autoclear Chats',
-        menuLabel_clearNow: 'Clear Chats Now',
-        menuLabel_toggleVis: 'Toggle Visibility',
-        menuLabel_modeNotifs: 'Mode Notifications',
-        menuLabel_about: 'About',
-        menuLabel_donate: 'Please send a donation',
-        about_author: 'Author',
-        about_and: '&',
-        about_contributors: 'contributors',
-        about_version: 'Version',
-        about_poweredBy: 'Powered by',
-        about_openSourceCode: 'Open source code',
-        about_latestChanges: 'Latest changes',
-        mode_autoclear: 'Auto-Clear',
-        helptip_clearNow: 'Clear chat history now',
-        helptip_toggleVis: 'Show Auto-Clear toggle in sidebar',
-        helptip_modeNotifs: 'Show notifications when toggling modes/settings',
-        notif_chatsCleared: 'Chat history cleared',
-        alert_choosePlatform: 'Choose a platform',
-        alert_updateAvail: 'Update available',
-        alert_newerVer: 'An update to',
-        alert_isAvail: 'is available',
-        alert_upToDate: 'Up-to-date',
-        alert_isUpToDate: 'is up-to-date',
-        alert_showYourSupport: 'Show your support',
-        alert_isOSS: 'is open-source software built & maintained for free through 100% volunteer efforts',
-        alert_despiteAffliction: 'Despite being severely afflicted by',
-        alert_longCOVID: 'long COVID',
-        alert_since2020: 'since 2020',
-        alert_byDonatingResults: 'by donating, you help me to continue improving, fixing bugs, adding new features, and making the software even better',
-        alert_yourContrib: 'Your contribution',
-        alert_noMatterSize: 'no matter the size',
-        alert_directlySupports: 'directly supports my unpaid efforts to ensure this project remains free and open for all to use',
-        alert_tyForSupport: 'Thank you for your support',
-        btnLabel_moreAIextensions: 'More AI Extensions',
-        btnLabel_rateUs: 'Rate Us',
-        btnLabel_discuss: 'Discuss',
-        btnLabel_getSupport: 'Get Support',
-        btnLabel_checkForUpdates: 'Check for Updates',
-        btnLabel_update: 'Update',
-        btnLabel_dismiss: 'Dismiss',
-        link_viewChanges: 'View changes',
-        state_enabled: 'enabled',
-        state_disabled: 'disabled',
-        state_on: 'on',
-        state_off: 'off'
-    }
-
-    // LOCALIZE app.msgs for non-English users
-    if (!env.browser.language.startsWith('en')) {
-        const localizedMsgs = await new Promise(resolve => {
+    const remoteData = {
+        app: await new Promise(resolve => xhr({
+            method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
+            onload: resp => resolve(JSON.parse(resp.responseText))
+        })),
+        msgs: await new Promise(resolve => {
             const msgHostDir = app.urls.resourceHost + '/greasemonkey/_locales/',
                   msgLocaleDir = ( env.browser.language ? env.browser.language.replace('-', '_') : 'en' ) + '/'
             let msgHref = msgHostDir + msgLocaleDir + 'messages.json', msgXHRtries = 0
@@ -377,8 +323,8 @@
             }
             fetchMsgs()
         })
-        Object.assign(app.msgs, localizedMsgs)
     }
+    Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
 
     // Init SETTINGS
     window.config = {}
