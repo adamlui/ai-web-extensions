@@ -261,7 +261,7 @@
         /chromium|firefox/.exec(browserAPI.runtime.toLowerCase())?.[0] || '' }`
     footer.before(createMenuEntry({
         key: 'latestChangesEntry', type: 'link', symbol: '🚀', url: latestChangesURL, helptip: latestChangesURL,
-        label: toTitleCase(settings.getMsg('about_latestChanges'))
+        label: `${toTitleCase(settings.getMsg('about_latestChanges'))}...`
     }))
 
     // Create/append COFEE entry
