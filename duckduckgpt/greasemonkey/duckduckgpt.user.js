@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.14.2
+// @version                2025.5.14.3
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -292,6 +292,10 @@
         })
     }
     Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
+    app.katexDelimiters = await new Promise(resolve => xhr({ // used in show.reply()
+        method: 'GET', onload: resp => resolve(JSON.parse(resp.responseText)),
+        url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@18fd04e/assets/data/katex-delimiters.json'
+    }))
 
     // Init API data
     const apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
@@ -300,13 +304,6 @@
         onload: resp => resolve(JSON.parse(resp.responseText))
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()
-
-    // Init KATEX delimiters
-    const katexDelimiters = await new Promise(resolve => xhr({
-        method: 'GET',
-        url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@18fd04e/assets/data/katex-delimiters.json',
-        onload: resp => resolve(JSON.parse(resp.responseText))
-    }))
 
     // Init DEBUG mode
     window.config = {}
@@ -4230,7 +4227,7 @@
 
                 // Typeset math
                 ;[replyPre, ...replyPre.querySelectorAll('*')].forEach(elem =>
-                    renderMathInElement(elem, { delimiters: katexDelimiters, throwOnError: false }))
+                    renderMathInElement(elem, { delimiters: app.katexDelimiters, throwOnError: false }))
 
                 if (config.stickySidebar) update.replyPreMaxHeight()
 

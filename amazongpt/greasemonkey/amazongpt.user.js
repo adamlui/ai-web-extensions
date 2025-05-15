@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.14.2
+// @version                2025.5.14.3
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -168,6 +168,10 @@
         })
     }
     Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
+    app.katexDelimiters = await new Promise(resolve => xhr({ // used in show.reply()
+        method: 'GET', onload: resp => resolve(JSON.parse(resp.responseText)),
+        url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@18fd04e/assets/data/katex-delimiters.json'
+    }))
 
     // Init API data
     const apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
@@ -176,13 +180,6 @@
         onload: resp => resolve(JSON.parse(resp.responseText))
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()
-
-    // Init KATEX delimiters
-    const katexDelimiters = await new Promise(resolve => xhr({
-        method: 'GET',
-        url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@18fd04e/assets/data/katex-delimiters.json',
-        onload: resp => resolve(JSON.parse(resp.responseText))
-    }))
 
     // Init DEBUG mode
     window.config = {}
@@ -3386,7 +3383,7 @@
 
             // Typeset math
             ;[replyPre, ...replyPre.querySelectorAll('*')].forEach(elem =>
-                renderMathInElement(elem, { delimiters: katexDelimiters, throwOnError: false }))
+                renderMathInElement(elem, { delimiters: app.katexDelimiters, throwOnError: false }))
 
             // Auto-scroll if active
             if (config.autoScroll && !env.browser.isMobile && config.proxyAPIenabled && !config.streamingDisabled)
