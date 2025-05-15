@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.14.4
+// @version                2025.5.14.5
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -403,13 +403,9 @@
 
             // Add login link to login msgs
             if (msg.includes('@'))
-                msg += '<a class="alert-link" target="_blank" rel="noopener"'
-                     + ' href="https://chatgpt.com">chatgpt.com</a>,'
-                     + ` ${app.msgs.alert_thenRefreshPage}.`
-                     + ` (${app.msgs.alert_ifIssuePersists},`
-                     + ` ${( app.msgs.alert_try ).toLowerCase() }`
-                     + ` ${app.msgs.alert_switchingOn}`
-                     + ` ${app.msgs.mode_proxy})`
+                msg += '<a class="alert-link" target="_blank" rel="noopener" href="https://chatgpt.com">chatgpt.com</a>'
+                     + `, ${app.msgs.alert_thenRefreshPage}. (${app.msgs.alert_ifIssuePersists}, ${
+                            app.msgs.alert_try.toLowerCase()} ${app.msgs.alert_switchingOn} ${app.msgs.mode_proxy})`
 
             // Hyperlink app.msgs.alert_suggestDiffAPI
             if (msg.includes(app.alerts.suggestDiffAPI)) {
@@ -426,8 +422,7 @@
             }
 
             // Create/fill/append msg span
-            const msgSpan = dom.create.elem('span')
-            msgSpan.innerHTML = msg ; alertP.append(msgSpan)
+            const msgSpan = dom.create.elem('span') ; msgSpan.innerHTML = msg ; alertP.append(msgSpan)
 
             // Activate toggle link if necessary
             msgSpan.querySelectorAll('a[href="#"]').forEach(anchor =>

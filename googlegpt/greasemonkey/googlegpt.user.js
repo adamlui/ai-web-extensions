@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.14.4
+// @version                  2025.5.15
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -742,13 +742,9 @@
 
             // Add login link to login msgs
             if (msg.includes('@'))
-                msg += '<a class="alert-link" target="_blank" rel="noopener"'
-                     + ' href="https://chatgpt.com">chatgpt.com</a>,'
-                     + ` ${app.msgs.alert_thenRefreshPage}.`
-                     + ` (${app.msgs.alert_ifIssuePersists},`
-                     + ` ${( app.msgs.alert_try ).toLowerCase() }`
-                     + ` ${app.msgs.alert_switchingOn}`
-                     + ` ${app.msgs.mode_proxy})`
+                msg += '<a class="alert-link" target="_blank" rel="noopener" href="https://chatgpt.com">chatgpt.com</a>'
+                     + `, ${app.msgs.alert_thenRefreshPage}. (${app.msgs.alert_ifIssuePersists}, ${
+                            app.msgs.alert_try.toLowerCase()} ${app.msgs.alert_switchingOn} ${app.msgs.mode_proxy})`
 
             // Hyperlink app.msgs.alert_suggestDiffAPI
             if (msg.includes(app.alerts.suggestDiffAPI)) {
@@ -765,8 +761,7 @@
             }
 
             // Create/fill/append msg span
-            const msgSpan = dom.create.elem('span')
-            msgSpan.innerHTML = msg ; alertP.append(msgSpan)
+            const msgSpan = dom.create.elem('span') ; msgSpan.innerHTML = msg ; alertP.append(msgSpan)
 
             // Activate toggle link if necessary
             msgSpan.querySelectorAll('a[href="#"]').forEach(anchor =>
