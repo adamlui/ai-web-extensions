@@ -175,9 +175,11 @@ window.buttons = {
         this.state.hasFadedIn = false // ensure next .insert() fades in buttons
     },
 
-    stylize() { // requires lib/dom.js + <env|sites>
+    async stylize() { // requires lib/<chatbar|dom>.js + <env|sites>
         const { site } = env, { [site]: { selectors }} = sites
-        document.head.append(this.styles = dom.create.style(`
+        this.style ||= dom.create.style()
+        if (!this.style.isConnected) document.head.append(this.style)
+        this.style.textContent = `
             .${this.class} {
                 cursor: pointer ; position: relative ;
                 --transition: transform 0.15s ease, opacity 0.5s ease ; /* for tweaksStyle's :hover + .insert()'s fade-in */
@@ -186,7 +188,10 @@ window.buttons = {
                 ${ site != 'poe' ? // remove overlay
                     'background-color: transparent ; border-color: transparent ;' : '' }
             }
-            .${this.class}:hover { opacity: ${this.opacity.active} !important }
+            .${this.class}:hover {
+                opacity: ${this.opacity.active} !important ;
+                ${ site != 'chatgpt' || await chatbar.is.dark() ? ''
+                    : 'fill: black !important ; stroke: black !important ;' }}
             #fullWindow-btn { margin-right: 1px }
             ${ selectors.sidebar ? // hide FW btn when window skinny on sites where sync req'd
                 `@media (max-width: 768px) {
@@ -196,7 +201,6 @@ window.buttons = {
             ${ site == 'perplexity' ? // hide native tooltip that persists for being in same parent, max hover opacity
                     `body:not(:has(button[role=radio]:hover)) ${selectors.tooltip} { display: none !important }`
                 : '' }`
-        ))
     },
 
     update: {
