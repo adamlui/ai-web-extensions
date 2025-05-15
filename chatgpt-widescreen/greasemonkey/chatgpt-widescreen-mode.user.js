@@ -751,7 +751,7 @@
 
             // Update button colors on temp chat toggle
             const chatbarIsDark = await chatbar.is.dark()
-            if (chatbarIsDark != isTempChat) { buttons.update.color() ; isTempChat = chatbarIsDark }
+            if (chatbarIsDark != isTempChat) { buttons.stylize() ; buttons.update.color() ; isTempChat = chatbarIsDark }
 
             // Remove buttons on Canvas mode toggle-on
             if (canvasWasOpen ^ chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }
@@ -766,7 +766,7 @@
     async function handleSchemePrefChange() {
         const displayedScheme = await ui.getScheme()
         if (env.ui.scheme != displayedScheme) {
-            env.ui.scheme = displayedScheme ; modals.stylize() ; buttons.update.color() }
+            env.ui.scheme = displayedScheme ; modals.stylize() ; buttons.stylize() ; buttons.update.color() }
     }
 
     // Monitor SIDEBARS to update config.fullWindow for sites w/ native toggle
