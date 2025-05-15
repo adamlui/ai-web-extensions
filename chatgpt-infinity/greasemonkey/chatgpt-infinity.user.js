@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.14.6
+// @version             2025.5.14.7
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -281,91 +281,13 @@
         latestResourceCommitHash: '80a0948' // for cached <app|messages>.json
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@${app.latestResourceCommitHash}` }
-    const remoteAppData = await new Promise(resolve => xhr({
-        method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
-        onload: resp => resolve(JSON.parse(resp.responseText))
-    }))
-    Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
-    app.msgs = {
-        appName: app.name,
-        appAuthor: app.author.name,
-        appDesc: 'Generate endless answers from all-knowing ChatGPT (in any language!)',
-        menuLabel_settings: 'Settings',
-        menuLabel_notif: 'Notification',
-        menuLabel_notifs: 'Notifications',
-        menuLabel_infinityMode: 'Infinity Mode',
-        menuLabel_autoStart: 'Auto-Start',
-        menuLabel_toggleVis: 'Toggle Visibility',
-        menuLabel_autoScroll: 'Auto-Scroll',
-        menuLabel_replyLang: 'Reply Language',
-        menuLabel_replyTopic: 'Reply Topic',
-        menuLabel_all: 'ALL',
-        menuLabel_replyInt: 'Reply Interval',
-        menuLabel_anchor: 'Anchor',
-        menuLabel_about: 'About',
-        menuLabel_donate: 'Please send a donation',
-        menuLabel_extensionActive: 'extension active',
-        about_author: 'Author',
-        about_and: '&',
-        about_contributors: 'contributors',
-        about_version: 'Version',
-        about_poweredBy: 'Powered by',
-        about_openSourceCode: 'Open source code',
-        about_latestChanges: 'Latest changes',
-        mode_toast: 'Toast Mode',
-        prompt_updateReplyLang: 'Update reply language',
-        prompt_updateReplyTopic: 'Update reply topic',
-        prompt_orEnter: 'or enter',
-        prompt_updateReplyInt: 'Update reply interval (minimum 5 secs)',
-        helptip_autoStart: 'Automatically start Infinity Mode when visiting chatgpt.com',
-        helptip_toggleVis: 'Show Infinity Mode toggle in sidebar',
-        helptip_autoScroll: 'Automatically scroll to bottom as replies are generating',
-        helptip_notifBottom: 'Anchor notifications to bottom of screen',
-        helptip_toastMode: 'Shrink/center notifications into toast bubbles',
-        alert_replyLangUpdated: 'Language updated',
-        alert_willReplyIn: 'will reply in',
-        alert_yourSysLang: 'your system language',
-        alert_replyTopicUpdated: 'Topic updated',
-        alert_willAnswer: 'will answer questions',
-        alert_onTopicOf: 'on the topic of',
-        alert_onAllTopics: 'on ALL topics',
-        alert_replyIntUpdated: 'Interval updated',
-        alert_willReplyEvery: 'will reply every',
-        alert_choosePlatform: 'Choose a platform',
-        alert_updateAvail: 'Update available',
-        alert_newerVer: 'An update to',
-        alert_isAvail: 'is available',
-        alert_upToDate: 'Up-to-date',
-        alert_isUpToDate: 'is up-to-date',
-        alert_showYourSupport: 'Show your support',
-        alert_isOSS: 'is open-source software built & maintained for free through 100% volunteer efforts',
-        alert_despiteAffliction: 'Despite being severely afflicted by',
-        alert_longCOVID: 'long COVID',
-        alert_since2020: 'since 2020',
-        alert_byDonatingResults: 'by donating, you help me to continue improving, fixing bugs, adding new features, and making the software even better',
-        alert_yourContrib: 'Your contribution',
-        alert_noMatterSize: 'no matter the size',
-        alert_directlySupports: 'directly supports my unpaid efforts to ensure this project remains free and open for all to use',
-        alert_tyForSupport: 'Thank you for your support',
-        btnLabel_moreAIextensions: 'More AI Extensions',
-        btnLabel_rateUs: 'Rate Us',
-        btnLabel_discuss: 'Discuss',
-        btnLabel_getSupport: 'Get Support',
-        btnLabel_checkForUpdates: 'Check for Updates',
-        btnLabel_update: 'Update',
-        btnLabel_dismiss: 'Dismiss',
-        link_viewChanges: 'View changes',
-        unit_seconds: 'seconds',
-        state_enabled: 'enabled',
-        state_disabled: 'disabled',
-        state_on: 'on',
-        state_off: 'off'
-    }
-
-    // LOCALIZE app.msgs for non-English users
-    if (!env.browser.language.startsWith('en')) {
-        const localizedMsgs = await new Promise(resolve => {
-            const msgHostDir = app.urls.resourceHost + '/chromium/extension/_locales/',
+    const remoteData = {
+        app: await new Promise(resolve => xhr({
+            method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
+            onload: resp => resolve(JSON.parse(resp.responseText))
+        })),
+        msgs: await new Promise(resolve => {
+            const msgHostDir = app.urls.resourceHost + '/greasemonkey/_locales/',
                   msgLocaleDir = ( env.browser.language ? env.browser.language.replace('-', '_') : 'en' ) + '/'
             let msgHref = msgHostDir + msgLocaleDir + 'messages.json', msgXHRtries = 0
             function fetchMsgs() { xhr({ method: 'GET', url: msgHref, onload: handleMsgs })}
@@ -386,8 +308,8 @@
             }
             fetchMsgs()
         })
-        Object.assign(app.msgs, localizedMsgs)
     }
+    Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
 
     // Init SETTINGS
     settings.load(Object.keys(settings.controls).filter(key => key != 'infinityMode')) // exclude infinityMode...
