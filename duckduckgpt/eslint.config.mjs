@@ -14,11 +14,13 @@ export default [
         languageOptions: {
             ecmaVersion: 'latest', sourceType: 'script',
             globals: {
-                ...globals.browser, ...globals.greasemonkey, app: 'writable', chatgpt: 'readonly', config: 'writable',
-                CryptoJS: 'readonly', cryptoUtils: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly',
-                GM_cookie: 'readonly', hljs: 'readonly', icons: 'readonly', ipv4: 'readonly', JSON5: 'readonly',
-                log: 'readonly', marked: 'readonly', renderMathInElement: 'readonly', session: 'readonly',
-                settings: 'writable', toggle: 'readonly', toolbarMenu: 'writable', updateCheck: 'readonly'
+                ...globals.browser, ...globals.greasemonkey, app: 'writable', buttons: 'writable', chatgpt: 'readonly',
+                config: 'writable', CryptoJS: 'readonly', cryptoUtils: 'readonly', dom: 'readonly', env: 'writable',
+                feedback: 'readonly', get: 'readonly', GM_cookie: 'readonly', hljs: 'readonly', icons: 'readonly',
+                ipv4: 'readonly', JSON5: 'readonly', log: 'readonly', marked: 'readonly', msgChain: 'writable',
+                prompts: 'readonly', renderMathInElement: 'readonly', replyBubble: 'writable', session: 'readonly',
+                settings: 'writable', show: 'readonly', toggle: 'readonly', toolbarMenu: 'writable',
+                updateCheck: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },

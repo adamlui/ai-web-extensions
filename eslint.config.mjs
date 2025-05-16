@@ -20,13 +20,14 @@ export default [
                 ...globals.browser, ...globals.greasemonkey, ...globals.node, app: 'writable', browserAPI: 'readonly',
                 buttons: 'writable', chatbar: 'writable', chatgpt: 'readonly', checkBtnsToClick: 'readonly',
                 chrome: 'readonly', config: 'writable', CryptoJS: 'readonly', cryptoUtils: 'readonly',
-                deepseek: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly', GM_cookie: 'readonly',
-                hljs: 'readonly', icons: 'writable', importScripts: 'readonly', infinity: 'readonly', JSON5: 'readonly',
-                ipv4: 'readonly', log: 'readonly', marked: 'readonly', modals: 'writable', notify: 'readonly',
-                renderMathInElement: 'readonly', session: 'readonly', settings: 'writable', sites: 'writable',
-                styles: 'readonly', sync: 'readonly', syncConfigToUI: 'readonly', toggle: 'readonly',
-                toggleMode: 'readonly', toggles: 'writable', toolbarMenu: 'writable', tooltip: 'writable',
-                ui: 'readonly', updateCheck: 'readonly'
+                deepseek: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly', get: 'readonly',
+                GM_cookie: 'readonly', hljs: 'readonly', icons: 'writable', importScripts: 'readonly',
+                infinity: 'readonly', JSON5: 'readonly', ipv4: 'readonly', log: 'readonly', marked: 'readonly',
+                modals: 'writable', msgChain: 'writable', notify: 'readonly', prompts: 'readonly',
+                renderMathInElement: 'readonly', replyBubble: 'writable', session: 'readonly', settings: 'writable',
+                show: 'readonly', sites: 'writable', styles: 'readonly', sync: 'readonly', syncConfigToUI: 'readonly',
+                toggle: 'readonly', toggleMode: 'readonly', toggles: 'writable', toolbarMenu: 'writable',
+                tooltip: 'writable', ui: 'readonly', updateCheck: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
