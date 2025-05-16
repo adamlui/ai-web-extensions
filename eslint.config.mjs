@@ -22,7 +22,7 @@ export default [
                 chrome: 'readonly', config: 'writable', CryptoJS: 'readonly', cryptoUtils: 'readonly',
                 deepseek: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly', GM_cookie: 'readonly',
                 hljs: 'readonly', icons: 'writable', importScripts: 'readonly', infinity: 'readonly', JSON5: 'readonly',
-                ipv4: 'readonly', marked: 'readonly', modals: 'writable', notify: 'readonly',
+                ipv4: 'readonly', log: 'readonly', marked: 'readonly', modals: 'writable', notify: 'readonly',
                 renderMathInElement: 'readonly', session: 'readonly', settings: 'writable', sites: 'writable',
                 styles: 'readonly', sync: 'readonly', syncConfigToUI: 'readonly', toggle: 'readonly',
                 toggleMode: 'readonly', toggles: 'writable', toolbarMenu: 'writable', tooltip: 'writable',
