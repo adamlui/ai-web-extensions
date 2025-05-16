@@ -4,6 +4,8 @@
 
 <div align="center">
 
+<a href="https://ff.chatgptautoocontinue.com/reviews">
+    <img alt="[Mozilla Add-ons Ratings]" height=31 src="https://img.shields.io/amo/stars/chatgpt-auto-continue?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></img></a>
 <a href="https://ff.chatgptautocontinue.com">
     <img height=31 alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/chatgpt-auto-continue?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="../LICENSE.md">
