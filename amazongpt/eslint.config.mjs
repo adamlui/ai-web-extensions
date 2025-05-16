@@ -20,7 +20,7 @@ export default [
                 ipv4: 'readonly', JSON5: 'readonly', log: 'readonly', marked: 'readonly', msgChain: 'writable',
                 prompts: 'readonly', renderMathInElement: 'readonly', replyBubble: 'writable', session: 'readonly',
                 settings: 'writable', show: 'readonly', toggle: 'readonly', toolbarMenu: 'writable',
-                updateCheck: 'readonly', xhr: 'writable'
+                tooltip: 'writable', updateCheck: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
