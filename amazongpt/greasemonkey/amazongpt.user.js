@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.15
+// @version                2025.5.15.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2587,7 +2587,7 @@
             if (config.minimized) toggle.minimized('off') // since user wants to see stuff
             const expandBtn = appDiv.querySelector(`#${app.slug}-arrows-btn`)
             if (expandBtn) expandBtn.firstChild.replaceWith(
-                icons.create({ key: `arrowsDiagonal${ config.expanded ? 'In' : 'Out' }` }))
+                icons.create({ key: `arrowsDiagonal${ config.expanded ? 'In' : 'Out' }`, size: 17 }))
         },
 
         minimized(state = '') {
@@ -3221,7 +3221,8 @@
                     var arrowsBtn = dom.create.elem('btn', {
                         id: `${app.slug}-arrows-btn`, class: `${app.slug}-header-btn app-hover-only anchored-only`,
                         style: 'margin: 1.5px 13.5px 0 0' })
-                    arrowsBtn.append(icons.create({ key: `arrowsDiagonal${ config.expanded ? 'In' : 'Out' }` }))
+                    arrowsBtn.append(icons.create({
+                        key: `arrowsDiagonal${ config.expanded ? 'In' : 'Out' }`, size: 17 }))
                     headerBtnsDiv.append(arrowsBtn)
                 }
 
