@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.16.15
+// @version                2025.5.16.16
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -2461,8 +2461,7 @@
                 if (isDragging) moveThumb(startLeft + event.clientX - startX) })
             document.addEventListener(inputEvents.up, () => {
                 isDragging = false
-                if (fontSizeSlider.cursorOverlay.parentNode)
-                    fontSizeSlider.cursorOverlay.remove()
+                if (fontSizeSlider.cursorOverlay?.isConnected) fontSizeSlider.cursorOverlay.remove()
             })
 
             // Add event listener for wheel-scrolling thumb

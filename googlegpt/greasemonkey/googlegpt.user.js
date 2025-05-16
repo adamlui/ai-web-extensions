@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.16.14
+// @version                  2025.5.16.15
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2678,8 +2678,7 @@
                 if (isDragging) moveThumb(startLeft + event.clientX - startX) })
             document.addEventListener(inputEvents.up, () => {
                 isDragging = false
-                if (fontSizeSlider.cursorOverlay.parentNode)
-                    fontSizeSlider.cursorOverlay.remove()
+                if (fontSizeSlider.cursorOverlay?.isConnected) fontSizeSlider.cursorOverlay.remove()
             })
 
             // Add event listener for wheel-scrolling thumb

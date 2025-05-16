@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.16.14
+// @version               2025.5.16.15
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -2468,8 +2468,7 @@
                 if (isDragging) moveThumb(startLeft + event.clientX - startX) })
             document.addEventListener(inputEvents.up, () => {
                 isDragging = false
-                if (fontSizeSlider.cursorOverlay.parentNode)
-                    fontSizeSlider.cursorOverlay.remove()
+                if (fontSizeSlider.cursorOverlay?.isConnected) fontSizeSlider.cursorOverlay.remove()
             })
 
             // Add event listener for wheel-scrolling thumb

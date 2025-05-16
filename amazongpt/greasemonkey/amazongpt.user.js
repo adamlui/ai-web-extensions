@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.16.13
+// @version                2025.5.16.14
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1766,8 +1766,7 @@
                 if (isDragging) moveThumb(startLeft + event.clientX - startX) })
             document.addEventListener(inputEvents.up, () => {
                 isDragging = false
-                if (fontSizeSlider.cursorOverlay.parentNode)
-                    fontSizeSlider.cursorOverlay.remove()
+                if (fontSizeSlider.cursorOverlay?.isConnected) fontSizeSlider.cursorOverlay.remove()
             })
 
             // Add event listener for wheel-scrolling thumb
