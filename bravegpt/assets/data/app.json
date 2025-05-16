@@ -5,7 +5,7 @@
   "urls": {
     "app": "https://www.bravegpt.com",
     "assets": "https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@latest/assets",
-    "aiweAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
+    "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
     "chatgptjs": "https://chatgpt.js.org",
     "contributors": "https://docs.bravegpt.com/#-contributors",
     "discuss": "https://github.com/KudoAI/bravegpt/discussions",

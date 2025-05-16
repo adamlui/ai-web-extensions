@@ -5,7 +5,7 @@
   "urls": {
     "app": "https://amazongpt.kudoai.com",
     "assets": "https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@latest/assets",
-    "aiweAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
+    "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
     "chatgptjs": "https://chatgpt.js.org",
     "contributors": "https://github.com/KudoAI/amazongpt/tree/main/docs/#-contributors",
     "discuss": "https://github.com/KudoAI/amazongpt/discussions",
