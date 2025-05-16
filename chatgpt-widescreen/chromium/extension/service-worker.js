@@ -6,7 +6,7 @@ const appReady = (async () => {
     // Init APP data
     const app = {
         version: chrome.runtime.getManifest().version,
-        latestResourceCommitHash: '7108680', // for cached app.json + sites.json5
+        commitHashes: { app: '7108680' }, // for cached app.json + sites.json5
         runtime: (() => {
             return typeof chrome != 'undefined' && chrome.runtime ? (
                 typeof browser != 'undefined' ? 'Firefox add-on'
@@ -15,7 +15,7 @@ const appReady = (async () => {
         })(),
         urls: {}
     }
-    app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.latestResourceCommitHash}`
+    app.urls.resourceHost = `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.commitHashes.app}`
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     chrome.storage.local.set({ app }) // save to browser storage

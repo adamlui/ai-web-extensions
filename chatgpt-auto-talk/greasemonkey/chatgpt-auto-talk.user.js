@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.14.3
+// @version             2025.5.16
 // @license             MIT
 // @icon                https://assets.chatgptautotalk.com/images/icons/openai/black/icon48.png?v=9f1ed3c
 // @icon64              https://assets.chatgptautotalk.com/images/icons/openai/black/icon64.png?v=9f1ed3c
@@ -284,9 +284,9 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        latestResourceCommitHash: 'f825434' // for cached <app|messages>.json
+        commitHashes: { app: 'f825434' } // for cached <app|messages>.json
     }
-    app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@${app.latestResourceCommitHash}` }
+    app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@${app.commitHashes.app}` }
     const remoteData = {
         app: await new Promise(resolve => xhr({
             method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
