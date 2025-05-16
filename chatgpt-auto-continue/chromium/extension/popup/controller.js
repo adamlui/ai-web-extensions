@@ -33,11 +33,11 @@
             if (entryData.status) entry.label.textContent += ` — ${entryData.status}`
             if (entryData.type == 'link') {
                 entry.label.after(entry.rightElem = dom.create.elem('div', { class: 'menu-right-elem' }))
-                entry.rightElem.append(icons.create('open', { size: 18, fill: 'black' }))
+                entry.rightElem.append(icons.create({ key: 'open', size: 18, fill: 'black' }))
             }
         }
         if (entryData.type == 'category')
-            entry.div.append(icons.create('caretDown', { size: 11, class: 'menu-caret menu-right-elem' }))
+            entry.div.append(icons.create({ key: 'caretDown', size: 11, class: 'menu-caret menu-right-elem' }))
         entry.div.onclick = () => {
             if (entryData.type == 'category') toggleCategorySettingsVisiblity(entryData.key)
             else if (entryData.type == 'toggle') {
@@ -231,15 +231,16 @@
     footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca'
                                    + '/assets/images/badges/powered-by-chatgpt.js.png'
     footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
-    footerElems.review.span.append(icons.create('star', {
-        style: 'position: relative ; top: 1px ; width: 13px ; height: 13px' }))
+    footerElems.review.span.append(
+        icons.create({key: 'star', style: 'position: relative ; top: 1px ; width: 13px ; height: 13px' }))
     footerElems.review.span.onclick = () => {
         open(app.urls.review[/edge|firefox/.exec(app.runtime.toLowerCase())?.[0] || 'chrome']) ; close() }
-    footerElems.coffee.span.append(icons.create('coffeeCup', { size: 23, style: 'position: relative ; left: 1px' }))
+    footerElems.coffee.span.append(
+        icons.create({ key: 'coffeeCup', size: 23, style: 'position: relative ; left: 1px' }))
     footerElems.coffee.span.onclick = () => { open(app.urls.donate['ko-fi']) ; close() }
-    footerElems.about.span.append(icons.create('questionMark', { width: 15, height: 13 }))
+    footerElems.about.span.append(icons.create({ key: 'questionMark', width: 15, height: 13 }))
     footerElems.about.span.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
-    footerElems.moreExt.span.append(icons.create('plus'))
+    footerElems.moreExt.span.append(icons.create({ key: 'plus' }))
     footerElems.moreExt.span.onclick = () => { open(app.urls.relatedExtensions) ; close() }
 
     // AUTO-EXPAND categories
