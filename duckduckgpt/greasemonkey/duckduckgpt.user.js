@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.15
+// @version                2025.5.15.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -3959,7 +3959,7 @@
                     var pinBtn = dom.create.elem('btn', {
                         id: `${app.slug}-pin-btn`, class: `${app.slug}-header-btn app-hover-only`,
                         style: 'margin: 1px 9px 0 0' })
-                    pinBtn.style.margin = '0.5px 9px 0 0' // position
+                    pinBtn.style.margin = '-0.5px 9px 0 0' // position
                     pinBtn.append(icons.create({ key: 'pin', size: 16.5, style: 'position: relative ; top: 2px' }))
                     headerBtnsDiv.append(pinBtn)
 
