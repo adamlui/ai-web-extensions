@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.16.6
+// @version                2025.5.16.7
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -82,6 +82,7 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@2a51ece/assets/components/chatbot/icons.js#sha256-ENowwKW3K2TJqb0YmO7/SgHb0ya3rktSJHQniS0kFSc=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8c9dbab/assets/components/chatbot/menus.js#sha256-haahzD2p9veWAtcInyrSApyj4Gzge4Xq0jsyutN/Mww=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@6a85faa/assets/lib/chatbot/feedback.js#sha256-a6Be+zJb84ObSOVjDIB4FmoRYRhWviZHHXLJ7RmX7So=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@51cbb87/assets/lib/chatbot/session.js#sha256-4eaIZJ1i0PwMY3g6oJQTac2eof7tjxXCcgHrFBBzgDQ=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@37e0d7d/assets/lib/crypto-utils.js/dist/crypto-utils.min.js#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@5fc8863/assets/lib/dom.js/dist/dom.min.js#sha256-IGNj9Eoecq7QgY7SAs75wONajgN9Wg0NmCjKTCfu9CY=
 // @require                https://cdn.jsdelivr.net/npm/generate-ip@2.4.4/dist/generate-ip.min.js#sha256-aQQKAQcMgCu8IpJp9HKs387x0uYxngO+Fb4pc5nSF4I=
@@ -1121,67 +1122,6 @@
                 feedback.notify(`${settings.controls.streamingDisabled.label} ${
                           menus.toolbar.state.words[+!config.streamingDisabled]}`)
             }
-        }
-    }
-
-    // Define SESSION functions
-
-    window.session = {
-
-        deleteOpenAIcookies() {
-            log.caller = 'session.deleteOpenAIcookies()'
-            log.debug('Deleting OpenAI cookies...')
-            GM_deleteValue(app.configKeyPrefix + '_openAItoken')
-            if (env.scriptManager.name != 'Tampermonkey') return
-            GM_cookie.list({ url: apis.OpenAI.endpoints.auth }, (cookies, error) => {
-                if (!error) { for (const cookie of cookies) {
-                    GM_cookie.delete({ url: apis.OpenAI.endpoints.auth, name: cookie.name })
-            }}})
-        },
-
-        generateGPTFLkey() {
-            log.caller = 'session.generateGPTFLkey()'
-            log.debug('Generating GPTforLove key...')
-            let nn = Math.floor(new Date().getTime() / 1e3)
-            const fD = e => {
-                let t = CryptoJS.enc.Utf8.parse(e),
-                    o = CryptoJS.AES.encrypt(t, 'vrewbhjvbrejhbevwjh156645', {
-                        mode: CryptoJS.mode.ECB, padding: CryptoJS.pad.Pkcs7
-                })
-                return o.toString()
-            }
-            const gptflKey = fD(nn)
-            return log.debug(gptflKey) || gptflKey
-        },
-
-        getOAItoken() {
-            log.caller = 'session.getOAItoken()'
-            log.debug('Getting OpenAI token...')
-            return new Promise(resolve => {
-                const accessToken = GM_getValue(app.configKeyPrefix + '_openAItoken')
-                if (accessToken) { log.debug(accessToken) ; resolve(accessToken) }
-                else {
-                    log.debug(`No token found. Fetching from ${apis.OpenAI.endpoints.session}...`)
-                    xhr({ url: apis.OpenAI.endpoints.session, onload: resp => {
-                        if (session.isBlockedByCF(resp.responseText)) return feedback.appAlert('checkCloudflare')
-                        try {
-                            const newAccessToken = JSON.parse(resp.responseText).accessToken
-                            GM_setValue(app.configKeyPrefix + '_openAItoken', newAccessToken)
-                            log.debug(`Success! newAccessToken = ${newAccessToken}`)
-                            resolve(newAccessToken)
-                        } catch { if (get.reply.api == 'OpenAI') return feedback.appAlert('login') }
-            }})}})
-        },
-
-        isBlockedByCF(resp) {
-            try {
-                const html = new DOMParser().parseFromString(resp, 'text/html'),
-                      title = html.querySelector('title')
-                if (title.textContent == 'Just a moment...') {
-                    log.caller = 'session.isBlockedByCF'
-                    return log.debug('Blocked by CloudFlare') || true
-                }
-            } catch (err) { return false }
         }
     }
 
