@@ -16,8 +16,10 @@ window.icons = {
                 })
             })(icon.data.elems).forEach(elem => icon.svg.append(elem))
             return icon.svg
-        } else // return <img> w/ src
+        } else if (icon.data?.src) // return <img> w/ src
             return dom.create.elem('img', { src: icon.data.src, ...icon.attrs })
+        else
+            return log.error(`No data.<svg|src> found for key ${key}`)
     },
 
     amzgpt: {
