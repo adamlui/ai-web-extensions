@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.16.15
+// @version                  2025.5.16.16
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -3012,10 +3012,9 @@
             }
         },
 
-        replyLang() {
+        replyLang() { // requires <app|config|env|log|modals|settings>
             while (true) {
-                let replyLang = prompt(
-                    ( app.msgs.prompt_updateReplyLang ) + ':', config.replyLang)
+                let replyLang = prompt(`${app.msgs.prompt_updateReplyLang}:`, config.replyLang)
                 if (replyLang == null) break // user cancelled so do nothing
                 else if (!/\d/.test(replyLang)) {
                     replyLang = ( // auto-case for menu/alert aesthetics
@@ -3023,8 +3022,8 @@
                             : log.toTitleCase(replyLang) )
                     settings.save('replyLang', replyLang || env.browser.language)
                     modals.alert(`${app.msgs.alert_langUpdated}!`, // title
-                        `${app.name} ${app.msgs.alert_willReplyIn} ` // msg
-                            + ( replyLang || app.msgs.alert_yourSysLang ) + '.',
+                        `${app.name} ${ // msg
+                           app.msgs.alert_willReplyIn} ${ replyLang || app.msgs.alert_yourSysLang }.`,
                         '', '', 330) // modal width
                     if (modals.settings.get()) // update settings menu status label
                         document.querySelector('#replyLang-settings-entry span').textContent = replyLang
