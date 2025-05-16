@@ -25,7 +25,7 @@
           br = '\x1b[1;91m'      // bright red
 
     // Init REGEX
-    const rePatterns = {
+    const regEx = {
         hash: { commit: /(@|\?v=)([^/#]+)/, sri: /[^#]+$/ },
         resName: /[^/]+\/(?:css|dist)?\/?[^/]+\.(?:css|js)(?=[?#]|$)/,
         url: {
@@ -146,7 +146,7 @@
     log.working('\nCollecting resources...\n')
     const urlMap = {} ; let resCnt = 0
     const reResURL = new RegExp( // eslint-disable-next-line
-        `(?:${rePatterns.url.css.source})|(?:${rePatterns.url.js.source})`, 'gm')
+        `(?:${regEx.url.css.source})|(?:${regEx.url.js.source})`, 'gm')
     userJSfiles.forEach(userJSfilePath => {
         const userJScontent = fs.readFileSync(userJSfilePath, 'utf-8'),
               resURLs = [...userJScontent.matchAll(reResURL)].map(match => match[1] || match[2])
@@ -178,27 +178,27 @@
         let fileUpdated = false
         for (const resURL of urlMap[userJSfilePath]) {
             if (!await isValidResource(resURL)) continue // to next resource
-            const resName = rePatterns.resName.exec(resURL)?.[0] || 'resource' // dir/filename for logs
+            const resName = regEx.resName.exec(resURL)?.[0] || 'resource' // dir/filename for logs
 
             // Compare/update commit hash
             let resLatestCommitHash = latestCommitHashes[resURL.includes(repoName) ? 'chromium' : 'aiweb']
             if (resLatestCommitHash.startsWith( // compare hashes
-                rePatterns.hash.commit.exec(resURL)?.[2] || '')) { // commit hash didn't change...
+                regEx.hash.commit.exec(resURL)?.[2] || '')) { // commit hash didn't change...
                     console.log(`${resName} already up-to-date!`) ; log.endedWithLineBreak = false
                     continue // ...so skip resource
                 }
             resLatestCommitHash = resLatestCommitHash.substring(0, 7) // abbr it
-            let updatedURL = resURL.replace(rePatterns.hash.commit, `$1${resLatestCommitHash}`) // update hash
+            let updatedURL = resURL.replace(regEx.hash.commit, `$1${resLatestCommitHash}`) // update hash
             if (!await isValidResource(updatedURL)) continue // to next resource
 
             // Generate/compare/update SRI hash
             console.log(`${ !log.endedWithLineBreak ? '\n' : '' }Generating SRI (SHA-256) hash for ${resName}...`)
             const newSRIhash = await generateSRIhash(updatedURL)
-            if (rePatterns.hash.sri.exec(resURL)?.[0] == newSRIhash) { // SRI hash didn't change
+            if (regEx.hash.sri.exec(resURL)?.[0] == newSRIhash) { // SRI hash didn't change
                 console.log(`${resName} already up-to-date!`) ; log.endedWithLineBreak = false
                 continue // ...so skip resource
             }
-            updatedURL = updatedURL.replace(rePatterns.hash.sri, newSRIhash) // update hash
+            updatedURL = updatedURL.replace(regEx.hash.sri, newSRIhash) // update hash
             if (!await isValidResource(updatedURL)) continue // to next resource
 
             // Write updated URL to userscript
