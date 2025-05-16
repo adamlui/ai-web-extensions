@@ -1,4 +1,4 @@
-// Requires components/icons.js + lib/dom.js + <apis|app|env|log|modals|settings|toggle>
+// Requires components/icons.js + lib/dom.js + <apis|app|config|env|log|modals|settings|toggle>
 
 window.menus = {
     hover: {
@@ -97,7 +97,7 @@ window.menus = {
             })
         },
 
-        api: { // requires apis
+        api: { // requires <apis|config>
             preferredDirection: 'down',
             get entries() { return [
                 { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
@@ -114,9 +114,9 @@ window.menus = {
             ]}
         },
 
-        pin: { // requires <app|toggle>
+        pin: { // requires <app|config|toggle>
             preferredDirection: 'up',
-            entries: [
+            get entries() { return [
                 { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
                 { label: app.msgs.menuLabel_top, iconType: 'webCorner', onclick: () => toggle.sidebar('sticky'),
                     isActive: () => config.stickySidebar },
@@ -126,7 +126,7 @@ window.menus = {
                 },
                 { label: app.msgs.menuLabel_bottom, iconType: 'anchor', onclick: () => toggle.anchorMode(),
                     isActive: () => config.anchored }
-            ]
+            ]}
         }
     },
 
@@ -142,7 +142,7 @@ window.menus = {
             for (const id of this.entryIDs) { GM_unregisterMenuCommand(id) } this.register()
         },
 
-        register() { // requires <app|env|modals|settings|toggle>
+        register() { // requires <app|config|env|modals|settings|toggle>
 
             // Add Proxy API Mode toggle
             const pmLabel = this.state.symbols[+config.proxyAPIenabled] + ' '
