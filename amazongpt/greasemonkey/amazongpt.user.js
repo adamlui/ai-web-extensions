@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.16.15
+// @version                2025.5.16.16
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1933,7 +1933,7 @@
             return alert
         },
 
-        api() {
+        api() { // requires lib/feedback.js + <apis|app|config|get|msgChain|settings>
 
             // Show modal
             const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
@@ -2037,7 +2037,7 @@
             modalContainer.onanimationend = () => modalContainer.remove()
         },
 
-        init(modal) {
+        init(modal) { // requires lib/dom.js
             if (!this.styles) this.stylize() // to init/append stylesheet
 
             // Add classes

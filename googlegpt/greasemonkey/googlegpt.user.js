@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.16.16
+// @version                  2025.5.16.17
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2847,7 +2847,7 @@
             return alert
         },
 
-        api() {
+        api() { // requires lib/feedback.js + <apis|app|config|get|msgChain|settings>
 
             // Show modal
             const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
@@ -2952,7 +2952,7 @@
             modalContainer.onanimationend = () => modalContainer.remove()
         },
 
-        init(modal) {
+        init(modal) { // requires lib/dom.js
             if (!this.styles) this.stylize() // to init/append stylesheet
 
             // Add classes
