@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.16.10
+// @version                2025.5.16.11
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2311,13 +2311,13 @@
                             settingEntry.onclick = () => modals.open('scheme')
                         } else if (key.includes('about')) {
                             const innerDiv = dom.create.elem('div'),
-                                  textGap = '&emsp;&emsp;&emsp;&emsp;&emsp;'
+                                  xGap = '&emsp;&emsp;&emsp;&emsp;&emsp;'
                             modals.settings.aboutContent = {}
                             modals.settings.aboutContent.short = `v${GM_info.script.version}`
                             modals.settings.aboutContent.long = (
                                   `${app.msgs.about_version}: <span class="about-em">v${
-                                       GM_info.script.version + textGap }</span>`
-                                + `${app.msgs.about_poweredBy} <span class="about-em">chatgpt.js</span>${textGap}` )
+                                       GM_info.script.version + xGap }</span>`
+                                + `${app.msgs.about_poweredBy} <span class="about-em">chatgpt.js</span>${xGap}` )
                             for (let i = 0; i < 7; i++)
                                 modals.settings.aboutContent.long += modals.settings.aboutContent.long // make long af
                             innerDiv.innerHTML = modals.settings.aboutContent[

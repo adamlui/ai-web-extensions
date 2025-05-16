@@ -242,15 +242,15 @@
             helptip: `${settings.getMsg('menuLabel_about')} ${app.name}`
         }),
         ticker: {
-            textGap: '&emsp;&emsp;&emsp;',
+            xGap: '&emsp;&emsp;&emsp;',
             span: dom.create.elem('span', { class: 'ticker' }), innerDiv: dom.create.elem('div')
         }
     }
     aboutEntry.div.querySelector('div.menu-icon').style.paddingLeft = '10px'
     aboutEntry.div.querySelector('span').style.paddingLeft = '2.5px'
     aboutEntry.ticker.content = `${
-        settings.getMsg('about_version')}: <span class="ticker-em">v${ app.version + aboutEntry.ticker.textGap }</span>${
-        settings.getMsg('about_poweredBy')} <span class="ticker-em">chatgpt.js</span>${aboutEntry.ticker.textGap}`
+        settings.getMsg('about_version')}: <span class="ticker-em">v${ app.version + aboutEntry.ticker.xGap }</span>${
+        settings.getMsg('about_poweredBy')} <span class="ticker-em">chatgpt.js</span>${aboutEntry.ticker.xGap}`
     for (let i = 0 ; i < 7 ; i++) aboutEntry.ticker.content += aboutEntry.ticker.content // make long af
     aboutEntry.ticker.innerDiv.innerHTML = aboutEntry.ticker.content
     aboutEntry.ticker.span.append(aboutEntry.ticker.innerDiv)
