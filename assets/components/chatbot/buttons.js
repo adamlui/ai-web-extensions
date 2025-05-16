@@ -130,7 +130,7 @@ window.buttons = {
                     tooltip.update(event.currentTarget) // to 'Generating audio...'
 
                     // Init Sogou TTS dialect map
-                    window.sgtDialectMap ||= await get.json(`${app.urls.aiweAssets}/data/sogou-tts-lang-codes.json`)
+                    window.sgtDialectMap ||= await get.json(`${app.urls.aiwebAssets}/data/sogou-tts-lang-codes.json`)
                         .catch(err => log.error(err.message)) ; if (!window.sgtDialectMap) return
                     const sgtSpeakRates = {
                         en: 2, ar: 1.5, cs: 1.4, da: 1.3, de: 1.5, es: 1.5, fi: 1.4, fr: 1.2, hu: 1.5, it: 1.4,

@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.16.19
+// @version                2025.5.16.20
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -266,7 +266,7 @@
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
-            app: '7fd1f2a', // for cached <app|messages>.json
+            app: 'f6daee0', // for cached <app|messages>.json
             aiweb: '2a51ece' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         }
     }
@@ -300,7 +300,7 @@
         })
     }
     Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
-    app.urls.aiweAssets = app.urls.aiweAssets.replace('@latest', `@${app.commitHashes.aiweb}`)
+    app.urls.aiwebAssets = app.urls.aiwebAssets.replace('@latest', `@${app.commitHashes.aiweb}`)
     app.alerts = {
         waitingResponse:  `${app.msgs.alert_waitingFor} ${app.name} ${app.msgs.alert_response}...`,
         login:            `${app.msgs.alert_login} @ `,
@@ -315,13 +315,13 @@
     }
     app.katexDelimiters = await new Promise(resolve => xhr({ // used in show.reply()
         method: 'GET', onload: resp => resolve(JSON.parse(resp.responseText)),
-        url: `${app.urls.aiweAssets}/data/katex-delimiters.json`
+        url: `${app.urls.aiwebAssets}/data/katex-delimiters.json`
     }))
 
     // Init API data
     window.apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
         method: 'GET', onload: resp => resolve(JSON5.parse(resp.responseText)),
-        url: `${app.urls.aiweAssets}/data/ai-chat-apis.json5`
+        url: `${app.urls.aiwebAssets}/data/ai-chat-apis.json5`
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()
 
@@ -2070,7 +2070,7 @@
             if (!app.div.querySelector('code')) return
 
             // Init general language data
-            window.codeLangData ||= await get.json(`${app.urls.aiweAssets}/data/code-languages.json`)
+            window.codeLangData ||= await get.json(`${app.urls.aiwebAssets}/data/code-languages.json`)
                 .catch(err => log.error(err.message))
 
             // Add buttons to every block
