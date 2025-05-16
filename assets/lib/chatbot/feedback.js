@@ -1,4 +1,4 @@
-// Requires chatgpt.js + <app|icons|session|settings|toggle|toolbarMenu>
+// Requires chatgpt.js + <app|icons|menus|session|settings|toggle>
 
 window.feedback = {
 
@@ -46,10 +46,10 @@ window.feedback = {
         app.div.append(alertP)
     },
 
-    notify(msg, pos = '', notifDuration = '', shadow = 'shadow') { // requires chatgpt.js + <icons|settings|toolbarMenu>
+    notify(msg, pos = '', notifDuration = '', shadow = 'shadow') { // requires chatgpt.js + <icons|menus|settings>
 
         // Strip state word to append styled one later
-        const foundState = toolbarMenu.state.words.find(word => msg.includes(word))
+        const foundState = menus.toolbar.state.words.find(word => msg.includes(word))
         if (foundState) msg = msg.replace(foundState, '')
 
         // Show notification
@@ -109,7 +109,7 @@ window.feedback = {
             }
             const styledStateSpan = dom.create.elem('span')
             styledStateSpan.style.cssText = ( app.slug != 'googlegpt' ? 'font-weight: bold ;' : '' )
-                + stateStyles[foundState == toolbarMenu.state.words[0] ? 'off' : 'on'][env.ui.site.scheme]
+                + stateStyles[foundState == menus.toolbar.state.words[0] ? 'off' : 'on'][env.ui.site.scheme]
             styledStateSpan.append(foundState) ; notif.insertBefore(styledStateSpan, notif.children[2])
         }
 
