@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.15.2
+// @version                  2025.5.15.3
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -825,7 +825,7 @@
                         }
                         feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`)
-                        if (appDiv.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
+                        if (app.div.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
                             get.reply({ msgs: msgChain, src: get.reply.src }) // re-send query if user alerted
                     }
                     Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
@@ -1547,7 +1547,7 @@
                 class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select`
             })
             this[menuType].ul = dom.create.elem('ul')
-            this[menuType].div.append(this[menuType].ul) ; appDiv.append(this[menuType].div)
+            this[menuType].div.append(this[menuType].ul) ; app.div.append(this[menuType].div)
             this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this.toggle
             this.update(menuType) ; this[menuType].status = 'hidden'
         },
@@ -1583,7 +1583,7 @@
             ) { // show menu
                 menu.div.style.display = '' // for rects calc
                 const rects = {
-                    appDiv: appDiv.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
+                    appDiv: app.div.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
                     hoverMenu: menu.div.getBoundingClientRect()
                 }
                 const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
@@ -1628,8 +1628,8 @@
                 }
                 item.onclick = () => {
                     if (!entry.onclick) return
-                    const prevOffsetTop = appDiv.offsetTop ; entry.onclick()
-                    if (appDiv.offsetTop != prevOffsetTop) this.hide(menuType) // since app moved
+                    const prevOffsetTop = app.div.offsetTop ; entry.onclick()
+                    if (app.div.offsetTop != prevOffsetTop) this.hide(menuType) // since app moved
                     this.update(menuType)
                 }
                 this[menuType].ul.append(item)
@@ -2013,8 +2013,8 @@
     const update = {
 
         replyPreMaxHeight() { // for various mode toggles
-            const replyPre = appDiv.querySelector('.reply-pre'),
-                  relatedQueries = appDiv.querySelector(`.${app.slug}-related-queries`),
+            const replyPre = app.div.querySelector('.reply-pre'),
+                  relatedQueries = app.div.querySelector(`.${app.slug}-related-queries`),
                   shorterPreHeight = innerHeight - relatedQueries?.offsetHeight - 328,
                   longerPreHeight = innerHeight - 309
             if (replyPre) replyPre.style.maxHeight = (
@@ -2024,7 +2024,7 @@
             )
         },
 
-        appBottomPos() { appDiv.style.bottom = `${ config.minimized ? 35 - appDiv.offsetHeight : -33 }px` },
+        appBottomPos() { app.div.style.bottom = `${ config.minimized ? 35 - app.div.offsetHeight : -33 }px` },
 
         appStyle() { // used in toggle.animations() + update.scheme() + main's app init
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled,
@@ -2428,18 +2428,18 @@
             if (env.browser.isPhone) return // since byline hidden by app.styles
 
             // Init header elems
-            const headerElems = { byline: appDiv.querySelector('.byline') }
+            const headerElems = { byline: app.div.querySelector('.byline') }
             if (!headerElems.byline) return // since in loading state
             Object.assign(headerElems, {
-                appPrefix: appDiv.querySelector('#app-prefix'),
-                btns: appDiv.querySelectorAll(`#${app.slug}-header-btns > btn`),
-                logo: appDiv.querySelector(`#${app.slug}-logo`)
+                appPrefix: app.div.querySelector('#app-prefix'),
+                btns: app.div.querySelectorAll(`#${app.slug}-header-btns > btn`),
+                logo: app.div.querySelector(`#${app.slug}-logo`)
             })
 
             // Calc/store widths of app/x-padding + header elems
-            const appDivStyle = getComputedStyle(appDiv)
+            const appDivStyle = getComputedStyle(app.div)
             const widths = {
-                appDiv: appDiv.getBoundingClientRect().width,
+                appDiv: app.div.getBoundingClientRect().width,
                 appDivXpadding: parseFloat(appDivStyle.paddingLeft) + parseFloat(appDivStyle.paddingRight)
             }
             Object.entries(headerElems).forEach(([key, elem]) => widths[key] = dom.get.computedWidth(elem))
@@ -2453,7 +2453,7 @@
         },
 
         chatbarWidth() {
-            const chatbar = appDiv.querySelector(`#${app.slug}-chatbar`)
+            const chatbar = app.div.querySelector(`#${app.slug}-chatbar`)
             if (chatbar) chatbar.style.width = `${
                 env.browser.isMobile ? 81.4
               : config.anchored ? ( config.expanded ? 87.4 : 83.3 )
@@ -2562,7 +2562,7 @@
         },
 
         replyPrefix() {
-            const firstP = appDiv.querySelector('pre p')
+            const firstP = app.div.querySelector('pre p')
             if (!firstP) return
             const prefixNeeded = env.ui.app.scheme == 'dark'
                 && !config.bgAnimationsDisabled && !/shuffle|summarize/.test(get.reply.src)
@@ -2580,7 +2580,7 @@
         },
 
         rqVisibility() {
-            const rqsDiv = appDiv.querySelector(`.${app.slug}-related-queries`)
+            const rqsDiv = app.div.querySelector(`.${app.slug}-related-queries`)
             if (rqsDiv) // update visibility based on latest setting
                 rqsDiv.style.display = config.rqDisabled || config.anchored ? 'none' : 'flex'
         },
@@ -2596,19 +2596,19 @@
     const addListeners = {
 
         appDiv() {
-            appDiv.addEventListener(inputEvents.down, event => { // to dismiss visible font size slider
+            app.div.addEventListener(inputEvents.down, event => { // to dismiss visible font size slider
                 if (event.button != 0) return // prevent non-left-click dismissal
                 if (document.getElementById(`${app.slug}-font-size-slider-track`) // slider is visible
                     && !event.target.closest('[id*=font-size]') // not clicking slider elem
                     && getComputedStyle(event.target).cursor != 'pointer') // ...or other interactive elem
                         fontSizeSlider.toggle('off')
             })
-            appDiv.onmouseover = appDiv.onmouseout = update.bylineVisibility
+            app.div.onmouseover = app.div.onmouseout = update.bylineVisibility
         },
 
         btns: {
             appHeader() {
-                appDiv.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
+                app.div.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
                     const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
 
                     // Add click listener
@@ -2616,7 +2616,7 @@
                         about: () => modals.open('about'),
                         arrows: event => { toggle.expandedMode() ; tooltip.update(event.currentTarget) },
                         chevron: () => {
-                            if (appDiv.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
+                            if (app.div.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
                                 fontSizeSlider.toggle('off')
                             toggle.minimized()
                         },
@@ -2647,7 +2647,7 @@
             },
 
             chatbar() {
-                appDiv.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
+                app.div.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
                     btn.onclick = () => {
                         tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
                         const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
@@ -2666,11 +2666,11 @@
         replySection() {
 
             // Add form key listener
-            const replyForm = appDiv.querySelector('form')
+            const replyForm = app.div.querySelector('form')
             replyForm.onkeydown = event => {
                 if (event.key == 'Enter' || event.keyCode == 13) {
                     if (event.ctrlKey) { // add newline
-                        const chatTextarea = appDiv.querySelector(`#${app.slug}-chatbar`),
+                        const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`),
                               caretPos = chatTextarea.selectionStart,
                               textBefore = chatTextarea.value.substring(0, caretPos),
                               textAfter = chatTextarea.value.substring(caretPos)
@@ -2683,7 +2683,7 @@
             // Add form submit listener
             addListeners.replySection.submitHandler = function(event) {
                 event.preventDefault()
-                const chatTextarea = appDiv.querySelector(`#${app.slug}-chatbar`)
+                const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`)
 
                 // No reply, change placeholder + focus chatbar
                 if (chatTextarea.value.trim() == '') {
@@ -2700,7 +2700,7 @@
             replyForm.onsubmit = addListeners.replySection.submitHandler
 
             // Add chatbar autosizer
-            const chatTextarea = appDiv.querySelector(`#${app.slug}-chatbar`),
+            const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`),
                   { paddingTop, paddingBottom } = getComputedStyle(chatTextarea),
                   vOffset = parseInt(paddingTop) + parseInt(paddingBottom)
             let prevLength = chatTextarea.value.length
@@ -2738,7 +2738,7 @@
 
             // Assemble/insert elems
             slider.append(sliderThumb, sliderTip)
-            appDiv.insertBefore(slider, appDiv.querySelector(`.${app.slug}-tooltip,` // desktop
+            app.div.insertBefore(slider, app.div.querySelector(`.${app.slug}-tooltip,` // desktop
                                                            + '.reply-bubble')) // mobile
             // Init thumb pos
             setTimeout(() => {
@@ -2790,7 +2790,7 @@
                 sliderThumb.style.left = newLeft + 'px'
 
                 // Adjust font size based on thumb position
-                const replyPre = appDiv.querySelector('.reply-pre'),
+                const replyPre = app.div.querySelector('.reply-pre'),
                       fontSizePercent = newLeft / sliderWidth,
                       fontSize = config.minFontSize + fontSizePercent * (config.maxFontSize - config.minFontSize)
                 replyPre.style.fontSize = fontSize + 'px'
@@ -2805,7 +2805,7 @@
         toggle(state = '') {
             const slider = document.getElementById(`${app.slug}-font-size-slider-track`)
                          || fontSizeSlider.createAppend()
-            const replyTip = appDiv.querySelector('.reply-tip')
+            const replyTip = app.div.querySelector('.reply-tip')
             const sliderTip = document.getElementById(`${app.slug}-font-size-slider-tip`)
 
             // Show slider
@@ -2813,7 +2813,7 @@
 
                 // Position slider tip
                 const btnSpan = document.getElementById(`${app.slug}-font-size-btn`)
-                const rects = { appDiv: appDiv.getBoundingClientRect(), btnSpan: btnSpan.getBoundingClientRect() }
+                const rects = { appDiv: app.div.getBoundingClientRect(), btnSpan: btnSpan.getBoundingClientRect() }
                 sliderTip.style.right = `${
                     rects.appDiv.right - ( rects.btnSpan.left + rects.btnSpan.right )/2 -35.5 }px`
 
@@ -2966,7 +2966,7 @@
         toggle(stateOrEvent) { // visibility
             if (env.browser.isMobile) return
             tooltip.div ||= dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
-            if (!tooltip.div.isConnected) appDiv.append(tooltip.div)
+            if (!tooltip.div.isConnected) app.div.append(tooltip.div)
             if (!tooltip.styles) tooltip.stylize()
             if (typeof stateOrEvent == 'object') // mouse event, update text/pos
                 tooltip.update(stateOrEvent.currentTarget)
@@ -3026,7 +3026,8 @@
                 tooltip.div.style.paddingRight = tooltip.nativeRpadding
 
             // Update position
-            const elems = { appDiv, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv: tooltip.div }
+            const elems = {
+                appDiv: app.div, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv: tooltip.div }
             const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
             tooltip.div.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
             tooltip.div.style.right = `${
@@ -3169,12 +3170,12 @@
             if (prevState == config.anchored) return
 
             // Apply changed state to UI
-            appDiv.classList.toggle('anchored', config.anchored)
+            app.div.classList.toggle('anchored', config.anchored)
             update.rqVisibility() ; update.replyPreMaxHeight() ; update.chatbarWidth()
-            if (getComputedStyle(appDiv).transitionProperty.includes('width')) // update byline visibility
-                appDiv.addEventListener('transitionend', function onTransitionEnd(event) { // ...after width transition
+            if (getComputedStyle(app.div).transitionProperty.includes('width')) // update byline visibility
+                app.div.addEventListener('transitionend', function onTransitionEnd(event) { // ...after width transition
                     if (event.propertyName == 'width') {
-                        update.bylineVisibility() ; appDiv.removeEventListener('transitionend', onTransitionEnd)
+                        update.bylineVisibility() ; app.div.removeEventListener('transitionend', onTransitionEnd)
             }})
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const anchorToggle = document.querySelector('[id*=anchor] input')
@@ -3218,15 +3219,15 @@
 
         expandedMode(state = '') {
             const toExpand = state == 'on' || !state && !config.expanded
-            settings.save('expanded', toExpand) ; appDiv.classList.toggle('expanded', toExpand)
+            settings.save('expanded', toExpand) ; app.div.classList.toggle('expanded', toExpand)
             if (config.minimized) toggle.minimized('off') // since user wants to see stuff
             update.chatbarWidth()
-            if (getComputedStyle(appDiv).transitionProperty.includes('width')) // update byline visibility
-                appDiv.addEventListener('transitionend', function onTransitionEnd(event) { // ...after width transition
+            if (getComputedStyle(app.div).transitionProperty.includes('width')) // update byline visibility
+                app.div.addEventListener('transitionend', function onTransitionEnd(event) { // ...after width transition
                     if (event.propertyName == 'width') {
-                        update.bylineVisibility() ; appDiv.removeEventListener('transitionend', onTransitionEnd)
+                        update.bylineVisibility() ; app.div.removeEventListener('transitionend', onTransitionEnd)
             }})
-            const expandBtn = appDiv.querySelector(`#${app.slug}-arrows-btn`)
+            const expandBtn = app.div.querySelector(`#${app.slug}-arrows-btn`)
             if (expandBtn) expandBtn.firstChild.replaceWith(
                 icons.create({ key: `arrowsDiagonal${ config.expanded ? 'In' : 'Out' }`, size: 17 }))
         },
@@ -3249,13 +3250,13 @@
         minimized(state = '') {
             const toMinimize = state == 'on' || !state && !config.minimized
             settings.save('minimized', toMinimize)
-            const chevronBtn = appDiv.querySelector('[id$=chevron-btn]')
+            const chevronBtn = app.div.querySelector('[id$=chevron-btn]')
             if (chevronBtn) { // update icon
                 chevronBtn.textContent = ''
                 chevronBtn.append(icons.create({ key: `chevron${ config.minimized ? 'Up' : 'Down' }`,
                     size: 22, style: 'position: relative ; top: -1px' }))
                 chevronBtn.onclick = () => {
-                    if (appDiv.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
+                    if (app.div.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
                         fontSizeSlider.toggle('off')
                     toggle.minimized()
                 }
@@ -3281,16 +3282,16 @@
                         !streamingToggle.checked && config.proxyAPIenabled && !config.streamingDisabled)
                             modals.settings.toggle.switch(streamingToggle)
             }
-            const apiBeacon = appDiv.querySelector(`#${app.slug} .api-btn`)
+            const apiBeacon = app.div.querySelector(`#${app.slug} .api-btn`)
             if (apiBeacon) apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
-            if (appDiv.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
+            if (app.div.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
                 get.reply({ msgs: msgChain, src: get.reply.src })
         },
 
         relatedQueries() {
             settings.save('rqDisabled', !config.rqDisabled)
             update.rqVisibility()
-            if (!config.rqDisabled && !appDiv.querySelector(`.${app.slug}-related-queries`)) // get related queries for 1st time
+            if (!config.rqDisabled && !app.div.querySelector(`.${app.slug}-related-queries`)) // get related queries for 1st time
                 get.related(msgChain[msgChain.length - 1]?.content || searchQuery)
                     .then(queries => show.related(queries))
                     .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
@@ -3310,7 +3311,7 @@
             } else settings.save(configKeyName, false)
 
             // Apply new state to UI
-            appDiv.classList.toggle(mode, config[configKeyName])
+            app.div.classList.toggle(mode, config[configKeyName])
             update.replyPreMaxHeight() ; update.bylineVisibility() ; update.chatbarWidth()
             if (mode == 'wider') // toggle icons everywhere
             document.querySelectorAll(`#${app.slug} svg.widescreenTall, #${app.slug} svg.widescreenWide`)
@@ -3560,7 +3561,7 @@
 
                     function handleProcessCompletion() {
                         if (env.browser.isChromium) clearTimeout(this.timeout)
-                        if (appDiv.querySelector('.loading')) // no text shown
+                        if (app.div.querySelector('.loading')) // no text shown
                             api.tryNew(caller)
                         else { // text was shown
                             show.codeCornerBtns()
@@ -3770,20 +3771,20 @@
             get.reply.src = src ; show.reply.updatedAPIinHeader = false
 
             // Show loading status
-            const rqDiv = appDiv.querySelector(`.${app.slug}-related-queries`),
+            const rqDiv = app.div.querySelector(`.${app.slug}-related-queries`),
                   loadingSpinner = icons.create({ key: 'arrowsCyclic' })
             let loadingElem
             loadingSpinner.style.cssText = 'position: relative ; top: 2px ; margin-right: 6px'
-            if (appDiv.querySelector('.reply-pre')) { // reply exists, show where chatbar was
+            if (app.div.querySelector('.reply-pre')) { // reply exists, show where chatbar was
                 if (!/regen|summarize/i.test(src)) rqDiv?.remove() // clear RQs to re-get later
-                appDiv.querySelector('footer').textContent = '' // clear footer
-                loadingElem = appDiv.querySelector('section')
+                app.div.querySelector('footer').textContent = '' // clear footer
+                loadingElem = app.div.querySelector('section')
                 loadingElem.style.margin = '3px 0 -10px'
                 loadingElem.textContent = app.alerts.waitingResponse
                 loadingSpinner.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)' // faster ver
             } else { // replace app div w/ alert
                 feedback.appAlert('waitingResponse')
-                loadingElem = appDiv.querySelector(`.${app.slug}-alert`)
+                loadingElem = app.div.querySelector(`.${app.slug}-alert`)
                 loadingSpinner.style.animation = 'rotate 2s infinite linear' // slower ver
             }
             loadingElem.classList.add('loading', 'no-user-select')
@@ -3862,7 +3863,7 @@
     const show = {
 
         async codeCornerBtns() {
-            if (!appDiv.querySelector('code')) return
+            if (!app.div.querySelector('code')) return
 
             // Init general language data
             window.codeLangData ||= await get.json(
@@ -3870,7 +3871,7 @@
             ).catch(err => log.error(err.message))
 
             // Add buttons to every block
-            appDiv.querySelectorAll('code').forEach(block => {
+            app.div.querySelectorAll('code').forEach(block => {
                 if (block.querySelector('[id$=copy-btn]')) return
                 const codeBtnsDiv = dom.create.elem('div', { class: `code-header` })
 
@@ -3940,7 +3941,7 @@
                 return setTimeout(() => show.related(queries), 500, queries)
 
             // Re-get.related() if current reply is question to suggest answers
-            const currentReply = appDiv.querySelector(`#${app.slug} .reply-pre`)?.textContent.trim()
+            const currentReply = app.div.querySelector(`#${app.slug} .reply-pre`)?.textContent.trim()
             if (!/shuffle|summarize/i.test(get.reply.src)
                     && !get.related.replyIsQuestion && /[?？]/.test(currentReply)) {
                 log.debug('Re-getting related queries to answer reply question...')
@@ -3950,11 +3951,11 @@
             }
 
             // Show the queries
-            else if (queries && !appDiv.querySelector(`.${app.slug}-related-queries`)) {
+            else if (queries && !app.div.querySelector(`.${app.slug}-related-queries`)) {
 
                 // Create/classify/append parent div
                 const rqsDiv = dom.create.elem('div', { class: `${app.slug}-related-queries anchored-hidden` })
-                appDiv.append(rqsDiv)
+                app.div.append(rqsDiv)
 
                 // Fill each child div, add attributes + icon + listener
                 queries.forEach((query, idx) => {
@@ -3969,7 +3970,7 @@
                             const keys = [' ', 'Spacebar', 'Enter', 'Return'], keyCodes = [32, 13]
                             if (keys.includes(event.key) || keyCodes.includes(event.keyCode) || event.type == 'click') {
                                 event.preventDefault() // prevent scroll on space taps
-                                const chatbar = appDiv.querySelector('textarea') ; if (!chatbar) return
+                                const chatbar = app.div.querySelector('textarea') ; if (!chatbar) return
                                 const relatedQuery = event.target.textContent ; chatbar.value = relatedQuery
                                 if (/\[[^[\]]+\]/.test(relatedQuery)) { // highlight 1st bracleted placeholder
                                     chatbar.focus()
@@ -3990,7 +3991,7 @@
         reply({ content, footerContent, standby = false, apiUsed = null }) {
             show.reply.shareURL = null // reset to regen using longer msgChain
             tooltip.toggle('off') // hide lingering tooltip if cursor was on corner button
-            const regenSVGwrapper = appDiv.querySelector('[id$=regen-btn]')?.firstChild
+            const regenSVGwrapper = app.div.querySelector('[id$=regen-btn]')?.firstChild
             if (regenSVGwrapper?.style?.animation) { // remove animation, restore cursor/tooltip
                 regenSVGwrapper.style.animation = regenSVGwrapper.style.cursor = ''
                 const regenBtn = regenSVGwrapper.closest('btn')
@@ -3999,12 +4000,12 @@
             }
 
             // Build answer interface up to reply section if missing
-            if (!appDiv.querySelector('.reply-pre')) {
-                appDiv.textContent = '' ; dom.addRisingParticles(appDiv)
+            if (!app.div.querySelector('.reply-pre')) {
+                app.div.textContent = '' ; dom.addRisingParticles(app.div)
 
                 // Create/append header div
                 const appHeaderDiv = dom.create.elem('div', { class: 'app-header', style: 'margin: -8px 0 0 0' })
-                appDiv.append(appHeaderDiv)
+                app.div.append(appHeaderDiv)
 
                 // Create/append title
                 const appPrefixSpan = dom.create.elem('span', {
@@ -4113,17 +4114,17 @@
                         }
                         btn.node.append(btn.icon, btn.textSpan) ; standbyBtnsDiv.append(btn.node)
                     })
-                    appDiv.append(standbyBtnsDiv)
+                    app.div.append(standbyBtnsDiv)
 
                 // Otherwise create/append answer bubble section
                 } else replyBubble.insert()
             }
 
             // Build reply section if missing
-            if (!appDiv.querySelector(`#${app.slug}-chatbar`)) {
+            if (!app.div.querySelector(`#${app.slug}-chatbar`)) {
 
                 // Init/clear user reply section content/classes/style
-                const replySection = appDiv.querySelector('section') || dom.create.elem('section')
+                const replySection = app.div.querySelector('section') || dom.create.elem('section')
                 if (replySection.className.includes('loading'))
                     replySection.textContent = replySection.className = replySection.style = ''
 
@@ -4136,11 +4137,11 @@
                 })
                 continueChatDiv.append(chatTextarea)
                 replyForm.append(continueChatDiv) ; replySection.append(replyForm)
-                appDiv.querySelector('.reply-bubble, [class*=standby-btns]').after(replySection)
+                app.div.querySelector('.reply-bubble, [class*=standby-btns]').after(replySection)
 
                 // Create/append chatbar buttons
                 ;['send', 'shuffle', 'summarize'].forEach((btnType, idx) => {
-                    if (btnType == 'summarize' && appDiv.querySelector('[class*=standby-btn]'))
+                    if (btnType == 'summarize' && app.div.querySelector('[class*=standby-btn]'))
                         return // since big Summarize button exists
                     const btn = dom.create.elem('button', {
                         id: `${app.slug}-${btnType}-btn`, class: `${app.slug}-chatbar-btn no-mobile-tap-outline` })
@@ -4150,9 +4151,9 @@
                 })
 
                 // Init/fill/append footer
-                const appFooter = appDiv.querySelector('footer') || dom.create.elem('footer')
+                const appFooter = app.div.querySelector('footer') || dom.create.elem('footer')
                 appFooter.append(footerContent)
-                if (!appDiv.querySelector('footer')) appDiv.append(appFooter)
+                if (!app.div.querySelector('footer')) app.div.append(appFooter)
 
                 // Add listeners
                 addListeners.replySection()
@@ -4170,7 +4171,7 @@
                 // Show API used in bubble header
                 if (!show.reply.updatedAPIinHeader) {
                     show.reply.updatedAPIinHeader = true
-                    const preHeaderLabel = appDiv.querySelector('.reply-header-txt'),
+                    const preHeaderLabel = app.div.querySelector('.reply-header-txt'),
                           apiBeacon = dom.create.elem('span', { class: 'api-btn' })
                     apiBeacon.textContent = '⦿'
                     apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = hoverMenus.toggle
@@ -4188,7 +4189,7 @@
                 }
 
                 // Render MD, highlight code
-                const replyPre = appDiv.querySelector('.reply-pre')
+                const replyPre = app.div.querySelector('.reply-pre')
                 try { // to render markdown
                     replyPre.innerHTML = marked.parse(content) } catch (err) { log.error(err.message) }
                 hljs.highlightAll() // highlight code
@@ -4205,7 +4206,7 @@
                 // Auto-scroll if active
                 if (config.autoScroll && !env.browser.isMobile && config.proxyAPIenabled && !config.streamingDisabled) {
                     if (config.stickySidebar || config.anchored) replyPre.scrollTop = replyPre.scrollHeight
-                    else scrollBy({ top: appDiv.querySelector(`#${app.slug}-chatbar`)
+                    else scrollBy({ top: app.div.querySelector(`#${app.slug}-chatbar`)
                         .getBoundingClientRect().bottom - innerHeight +13 })
                 }
             }
@@ -4215,10 +4216,10 @@
                 && !env.browser.isMobile // exclude mobile devices to not auto-popup OSD keyboard
                 && ((!config.autoFocusChatbarDisabled && ( config.anchored // include Anchored mode if AF enabled
                         // ...or un-Anchored if fully above fold
-                        || ( appDiv.offsetHeight < innerHeight - appDiv.getBoundingClientRect().top )))
+                        || ( app.div.offsetHeight < innerHeight - app.div.getBoundingClientRect().top )))
                     // ...or Anchored if AF disabled & user interacted
                     || (config.autoFocusChatbarDisabled && config.anchored && show.reply.userInteracted))
-            ) { appDiv.querySelector(`#${app.slug}-chatbar`).focus() ; show.reply.chatbarFocused = true }
+            ) { app.div.querySelector(`#${app.slug}-chatbar`).focus() ; show.reply.chatbarFocused = true }
 
             // Update styles
             if (config.anchored) update.appBottomPos() // restore minimized/restored state if anchored
@@ -4260,7 +4261,7 @@
                         if (!copyBtn.firstChild.matches('[id$=copy-icon]')) return // since clicking on Copied icon
                         const textContainer = (
                             event.currentTarget.parentNode.className.includes('reply-header')
-                                ? appDiv.querySelector('.reply-pre') // reply container
+                                ? app.div.querySelector('.reply-pre') // reply container
                                     : event.currentTarget.closest('code') // code container
                         )
                         const textToCopy = textContainer.textContent.replace(/^>> /, '').trim()
@@ -4372,7 +4373,7 @@
                         })
 
                         // Init other config/data
-                        const wholeAnswer = appDiv.querySelector('.reply-pre').textContent
+                        const wholeAnswer = app.div.querySelector('.reply-pre').textContent
                         const cjsSpeakConfig = { voice: 2, pitch: 1, speed: 1.5, onend: handleAudioEnded }
                         const sgtDialectData = Object.values(window.sgtDialectMap).find(langData =>
                             langData.isoOrNamePattern.test(config.replyLang)
@@ -4453,7 +4454,7 @@
 
         insert() {
             if (!this.bubbleDiv) this.create()
-            appDiv.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
+            app.div.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
         }
     }
 
@@ -4470,10 +4471,10 @@
     }
 
     // Create/ID/classify/listenerize/stylize APP container
-    window.appDiv = dom.create.elem('div', { id: app.slug, class: 'fade-in' })
+    app.div = dom.create.elem('div', { id: app.slug, class: 'fade-in' })
     themes.apply(config.theme) ; addListeners.appDiv()
     ;['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
-        (config[mode] || config[`${mode}Sidebar`]) && appDiv.classList.add(mode))
+        (config[mode] || config[`${mode}Sidebar`]) && app.div.classList.add(mode))
     document.head.append(app.styles = dom.create.style()) ; update.appStyle()
     ;['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
@@ -4494,8 +4495,8 @@
                centerCol.insertAdjacentElement('afterend', appDivParent)
                return appDivParent
            })()
-    appDivParent.prepend(appDiv)
-    setTimeout(() => appDiv.classList.add('active'), 100) // fade in
+    appDivParent.prepend(app.div)
+    setTimeout(() => app.div.classList.add('active'), 100) // fade in
 
     // Strip Google TRACKING
     document.addEventListener(inputEvents.down, event => {
@@ -4566,7 +4567,7 @@
     // Observe DOM for new sidebar div#rhs created by other extensions to INSERT GoogleGPT to visually co-exist
     const sidebarObserver = new MutationObserver(() => {
         const newSidebar = document.getElementById('rhs')
-        if (newSidebar) { newSidebar.prepend(appDiv) ; sidebarObserver.disconnect() }
+        if (newSidebar) { newSidebar.prepend(app.div) ; sidebarObserver.disconnect() }
     })
     sidebarObserver.observe(document.body, { subtree: true, childList: true })
     setTimeout(() => sidebarObserver.disconnect(), 5000) // don't observe forever

@@ -14,11 +14,11 @@ export default [
         languageOptions: {
             ecmaVersion: 'latest', sourceType: 'script',
             globals: {
-                ...globals.browser, ...globals.greasemonkey, app: 'writable', appDiv: 'writable', chatgpt: 'readonly',
-                config: 'writable', CryptoJS: 'readonly', cryptoUtils: 'readonly', dom: 'readonly', env: 'writable',
-                feedback: 'readonly', GM_cookie: 'readonly', hljs: 'readonly', icons: 'readonly', ipv4: 'readonly',
-                JSON5: 'readonly', marked: 'readonly', renderMathInElement: 'readonly', session: 'readonly',
-                settings: 'writable', toggle: 'readonly', toolbarMenu: 'writable', updateCheck: 'readonly'
+                ...globals.browser, ...globals.greasemonkey, app: 'writable', chatgpt: 'readonly', config: 'writable',
+                CryptoJS: 'readonly', cryptoUtils: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly',
+                GM_cookie: 'readonly', hljs: 'readonly', icons: 'readonly', ipv4: 'readonly', JSON5: 'readonly',
+                marked: 'readonly', renderMathInElement: 'readonly', session: 'readonly', settings: 'writable',
+                toggle: 'readonly', toolbarMenu: 'writable', updateCheck: 'readonly'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },

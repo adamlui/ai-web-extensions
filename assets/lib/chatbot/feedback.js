@@ -1,13 +1,13 @@
-// Requires chatgpt.js + <app|appDiv|icons|session|settings|toggle|toolbarMenu>
+// Requires chatgpt.js + <app|icons|session|settings|toggle|toolbarMenu>
 
 window.feedback = {
 
-    appAlert(...alerts) { // requires <app|appDiv|session|toggle>
+    appAlert(...alerts) { // requires <app|session|toggle>
         alerts = alerts.flat() // flatten array args nested by spread operator
-        appDiv.textContent = ''
+        app.div.textContent = ''
         const alertP = dom.create.elem('p', { class: `${app.slug}-alert no-user-select` })
         if (app.slug == 'bravegpt' || app.slug == 'googlegpt' && !alerts.includes('waitingResponse'))
-            alertP.style.marginBottom = '-20px' // counteract appDiv padding
+            alertP.style.marginBottom = '-20px' // counteract app.div padding
 
         alerts.forEach((alert, idx) => { // process each alert for display
             let msg = app.alerts[alert] || alert // use string verbatim if not found in app.alerts
@@ -43,7 +43,7 @@ window.feedback = {
                     : anchor.classList.contains('switch-proxy') ? toggle.proxyMode() : {}
             )
         })
-        appDiv.append(alertP)
+        app.div.append(alertP)
     },
 
     notify(msg, pos = '', notifDuration = '', shadow = 'shadow') { // requires chatgpt.js + <icons|settings|toolbarMenu>

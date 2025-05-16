@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.15.3
+// @version                2025.5.15.4
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -487,7 +487,7 @@
                         }
                         feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`)
-                        if (appDiv.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
+                        if (app.div.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
                             get.reply({ msgs: msgChain, src: get.reply.src }) // re-send query if user alerted
                     }
                     Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
@@ -1198,7 +1198,7 @@
                 class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select`
             })
             this[menuType].ul = dom.create.elem('ul')
-            this[menuType].div.append(this[menuType].ul) ; appDiv.append(this[menuType].div)
+            this[menuType].div.append(this[menuType].ul) ; app.div.append(this[menuType].div)
             this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this.toggle
             this.update(menuType) ; this[menuType].status = 'hidden'
         },
@@ -1234,7 +1234,7 @@
             ) { // show menu
                 menu.div.style.display = '' // for rects calc
                 const rects = {
-                    appDiv: appDiv.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
+                    appDiv: app.div.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
                     hoverMenu: menu.div.getBoundingClientRect()
                 }
                 const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
@@ -1279,8 +1279,8 @@
                 }
                 item.onclick = () => {
                     if (!entry.onclick) return
-                    const prevOffsetTop = appDiv.offsetTop ; entry.onclick()
-                    if (appDiv.offsetTop != prevOffsetTop) this.hide(menuType) // since app moved
+                    const prevOffsetTop = app.div.offsetTop ; entry.onclick()
+                    if (app.div.offsetTop != prevOffsetTop) this.hide(menuType) // since app moved
                     this.update(menuType)
                 }
                 this[menuType].ul.append(item)
@@ -1596,12 +1596,12 @@
     const update = {
 
         replyPreMaxHeight() { // for various mode toggles
-            const replyPre = appDiv.querySelector('.reply-pre'),
+            const replyPre = app.div.querySelector('.reply-pre'),
                   longerPreHeight = innerHeight - 255
             if (replyPre) replyPre.style.maxHeight = `${ longerPreHeight - ( config.expanded ? 115 : 365 )}px`
         },
 
-        appBottomPos() { appDiv.style.bottom = `${ config.minimized ? 55 - appDiv.offsetHeight : -7 }px` },
+        appBottomPos() { app.div.style.bottom = `${ config.minimized ? 55 - app.div.offsetHeight : -7 }px` },
 
         appStyle() { // used in toggle.animations() + update.scheme() + main's app init
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled,
@@ -1903,17 +1903,17 @@
             if (env.browser.isPhone) return // since byline hidden by app.styles
 
             // Init header elems
-            const headerElems = { byline: appDiv.querySelector('.byline') }
+            const headerElems = { byline: app.div.querySelector('.byline') }
             if (!headerElems.byline) return // since in loading state
             Object.assign(headerElems, {
-                btns: appDiv.querySelectorAll(`#${app.slug}-header-btns > btn`),
-                logo: appDiv.querySelector(`#${app.slug}-logo`)
+                btns: app.div.querySelectorAll(`#${app.slug}-header-btns > btn`),
+                logo: app.div.querySelector(`#${app.slug}-logo`)
             })
 
             // Calc/store widths of app/x-padding + header elems
-            const appDivStyle = getComputedStyle(appDiv)
+            const appDivStyle = getComputedStyle(app.div)
             const widths = {
-                appDiv: appDiv.getBoundingClientRect().width,
+                appDiv: app.div.getBoundingClientRect().width,
                 appDivXpadding: parseFloat(appDivStyle.paddingLeft) + parseFloat(appDivStyle.paddingRight)
             }
             Object.entries(headerElems).forEach(([key, elem]) => widths[key] = dom.get.computedWidth(elem))
@@ -1927,7 +1927,7 @@
         },
 
         replyPrefix() {
-            const firstP = appDiv.querySelector('pre p')
+            const firstP = app.div.querySelector('pre p')
             if (!firstP) return
             const prefixNeeded = env.ui.app.scheme == 'dark'
                 && !config.bgAnimationsDisabled && !/shuffle|summarize/.test(get.reply.src)
@@ -1955,19 +1955,19 @@
     const addListeners = {
 
         appDiv() {
-            appDiv.addEventListener(inputEvents.down, event => { // to dismiss visible font size slider
+            app.div.addEventListener(inputEvents.down, event => { // to dismiss visible font size slider
                 if (event.button != 0) return // prevent non-left-click dismissal
                 if (document.getElementById(`${app.slug}-font-size-slider-track`) // slider is visible
                     && !event.target.closest('[id*=font-size]') // not clicking slider elem
                     && getComputedStyle(event.target).cursor != 'pointer') // ...or other interactive elem
                         fontSizeSlider.toggle('off')
             })
-            appDiv.onmouseover = appDiv.onmouseout = update.bylineVisibility
+            app.div.onmouseover = app.div.onmouseout = update.bylineVisibility
         },
 
         btns: {
             appHeader() {
-                appDiv.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
+                app.div.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
                     const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
 
                     // Add click listener
@@ -1975,7 +1975,7 @@
                         about: () => modals.open('about'),
                         arrows: event => { toggle.expandedMode() ; tooltip.update(event.currentTarget) },
                         chevron: () => {
-                            if (appDiv.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
+                            if (app.div.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
                                 fontSizeSlider.toggle('off')
                             toggle.minimized()
                         },
@@ -2003,7 +2003,7 @@
             },
 
             chatbar() {
-                appDiv.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
+                app.div.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
                     btn.onclick = () => {
                         tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
                         const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
@@ -2022,11 +2022,11 @@
         replySection() {
 
             // Add form key listener
-            const replyForm = appDiv.querySelector('form')
+            const replyForm = app.div.querySelector('form')
             replyForm.onkeydown = event => {
                 if (event.key == 'Enter' || event.keyCode == 13) {
                     if (event.ctrlKey) { // add newline
-                        const chatTextarea = appDiv.querySelector(`#${app.slug}-chatbar`),
+                        const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`),
                               caretPos = chatTextarea.selectionStart,
                               textBefore = chatTextarea.value.substring(0, caretPos),
                               textAfter = chatTextarea.value.substring(caretPos)
@@ -2039,7 +2039,7 @@
             // Add form submit listener
             addListeners.replySection.submitHandler = event => {
                 event.preventDefault()
-                const chatTextarea = appDiv.querySelector(`#${app.slug}-chatbar`)
+                const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`)
 
                 // No reply, change placeholder + focus chatbar
                 if (chatTextarea.value.trim() == '') {
@@ -2056,7 +2056,7 @@
             replyForm.onsubmit = addListeners.replySection.submitHandler
 
             // Add chatbar autosizer
-            const chatTextarea = appDiv.querySelector(`#${app.slug}-chatbar`)
+            const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`)
             let prevLength = chatTextarea.value.length
             addListeners.replySection.chatbarAutoSizer = () => {
                 const newLength = chatTextarea.value.length
@@ -2092,7 +2092,7 @@
 
             // Assemble/insert elems
             slider.append(sliderThumb, sliderTip)
-            appDiv.insertBefore(slider, appDiv.querySelector(`.${app.slug}-tooltip,` // desktop
+            app.div.insertBefore(slider, app.div.querySelector(`.${app.slug}-tooltip,` // desktop
                                                            + '.reply-bubble')) // mobile
             // Init thumb pos
             setTimeout(() => {
@@ -2144,7 +2144,7 @@
                 sliderThumb.style.left = newLeft + 'px'
 
                 // Adjust font size based on thumb position
-                const replyPre = appDiv.querySelector('.reply-pre'),
+                const replyPre = app.div.querySelector('.reply-pre'),
                       fontSizePercent = newLeft / sliderWidth,
                       fontSize = config.minFontSize + fontSizePercent * (config.maxFontSize - config.minFontSize)
                 replyPre.style.fontSize = fontSize + 'px'
@@ -2159,7 +2159,7 @@
         toggle(state = '') {
             const slider = document.getElementById(`${app.slug}-font-size-slider-track`)
                          || fontSizeSlider.createAppend()
-            const replyTip = appDiv.querySelector('.reply-tip')
+            const replyTip = app.div.querySelector('.reply-tip')
             const sliderTip = document.getElementById(`${app.slug}-font-size-slider-tip`)
 
             // Show slider
@@ -2167,7 +2167,7 @@
 
                 // Position slider tip
                 const btnSpan = document.getElementById(`${app.slug}-font-size-btn`),
-                      rects = { appDiv: appDiv.getBoundingClientRect(), btnSpan: btnSpan.getBoundingClientRect() }
+                      rects = { appDiv: app.div.getBoundingClientRect(), btnSpan: btnSpan.getBoundingClientRect() }
                 sliderTip.style.right = `${ rects.appDiv.right - ( rects.btnSpan.left + rects.btnSpan.right )/2 -35 }px`
 
                 // Show slider, hide reply tip
@@ -2306,7 +2306,7 @@
         toggle(stateOrEvent) { // visibility
             if (env.browser.isMobile) return
             tooltip.div ||= dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
-            if (!tooltip.div.isConnected) appDiv.append(tooltip.div)
+            if (!tooltip.div.isConnected) app.div.append(tooltip.div)
             if (!tooltip.styles) tooltip.stylize()
             if (typeof stateOrEvent == 'object') // mouse event, update text/pos
                 tooltip.update(stateOrEvent.currentTarget)
@@ -2364,7 +2364,8 @@
                 tooltip.div.style.paddingRight = tooltip.nativeRpadding
 
             // Update position
-            const elems = { appDiv, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv: tooltip.div }
+            const elems = {
+                appDiv: app.div, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv: tooltip.div }
             const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
             tooltip.div.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
             tooltip.div.style.right = `${
@@ -2482,14 +2483,14 @@
 
         expandedMode(state = '') {
             const toExpand = state == 'on' || !state && !config.expanded
-            settings.save('expanded', toExpand) ; appDiv.classList.toggle('expanded', toExpand)
-            if (getComputedStyle(appDiv).transitionProperty.includes('width')) // update byline visibility
-                appDiv.addEventListener('transitionend', function onTransitionEnd(event) { // ...after width transition
+            settings.save('expanded', toExpand) ; app.div.classList.toggle('expanded', toExpand)
+            if (getComputedStyle(app.div).transitionProperty.includes('width')) // update byline visibility
+                app.div.addEventListener('transitionend', function onTransitionEnd(event) { // ...after width transition
                     if (event.propertyName == 'width') {
-                        update.bylineVisibility() ; appDiv.removeEventListener('transitionend', onTransitionEnd)
+                        update.bylineVisibility() ; app.div.removeEventListener('transitionend', onTransitionEnd)
             }})
             if (config.minimized) toggle.minimized('off') // since user wants to see stuff
-            const expandBtn = appDiv.querySelector(`#${app.slug}-arrows-btn`)
+            const expandBtn = app.div.querySelector(`#${app.slug}-arrows-btn`)
             if (expandBtn) expandBtn.firstChild.replaceWith(
                 icons.create({ key: `arrowsDiagonal${ config.expanded ? 'In' : 'Out' }`, size: 17 }))
         },
@@ -2497,13 +2498,13 @@
         minimized(state = '') {
             const toMinimize = state == 'on' || !state && !config.minimized
             settings.save('minimized', toMinimize)
-            const chevronBtn = appDiv.querySelector('[id$=chevron-btn]')
+            const chevronBtn = app.div.querySelector('[id$=chevron-btn]')
             if (chevronBtn) { // update icon
                 chevronBtn.textContent = ''
                 chevronBtn.append(icons.create({ key: `chevron${ config.minimized ? 'Up' : 'Down' }`,
                     size: 22, style: 'position: relative ; top: -1px' }))
                 chevronBtn.onclick = () => {
-                    if (appDiv.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
+                    if (app.div.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
                         fontSizeSlider.toggle('off')
                     toggle.minimized()
                 }
@@ -2529,9 +2530,9 @@
                         !streamingToggle.checked && config.proxyAPIenabled && !config.streamingDisabled)
                             modals.settings.toggle.switch(streamingToggle)
             }
-            const apiBeacon = appDiv.querySelector(`#${app.slug} .api-btn`)
+            const apiBeacon = app.div.querySelector(`#${app.slug} .api-btn`)
             if (apiBeacon) apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
-            if (appDiv.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
+            if (app.div.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
                 get.reply({ msgs: msgChain, src: get.reply.src })
         },
 
@@ -2763,7 +2764,7 @@
 
                     function handleProcessCompletion() {
                         if (env.browser.isChromium) clearTimeout(this.timeout)
-                        if (appDiv.querySelector('.loading')) // no text shown
+                        if (app.div.querySelector('.loading')) // no text shown
                             api.tryNew(caller)
                         else { // text was shown
                             show.codeCornerBtns()
@@ -2914,13 +2915,13 @@
             // Show loading status
             const loadingSpinner = icons.create({ key: 'arrowsCyclic' }) ; let loadingElem
             loadingSpinner.style.cssText = 'position: relative ; top: 2px ; margin-right: 6px'
-            if (appDiv.querySelector('.reply-pre')) { // reply exists, show where chatbar was
-                loadingElem = appDiv.querySelector('section')
+            if (app.div.querySelector('.reply-pre')) { // reply exists, show where chatbar was
+                loadingElem = app.div.querySelector('section')
                 loadingElem.textContent = app.alerts.waitingResponse
                 loadingSpinner.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)' // faster ver
             } else { // replace app div w/ alert
                 feedback.appAlert('waitingResponse')
-                loadingElem = appDiv.querySelector(`.${app.slug}-alert`)
+                loadingElem = app.div.querySelector(`.${app.slug}-alert`)
                 loadingSpinner.style.animation = 'rotate 2s infinite linear' // slower ver
             }
             loadingElem.classList.add('loading', 'no-user-select')
@@ -2991,7 +2992,7 @@
     const show = {
 
         async codeCornerBtns() {
-            if (!appDiv.querySelector('code')) return
+            if (!app.div.querySelector('code')) return
 
             // Init general language data
             window.codeLangData ||= await get.json(
@@ -2999,7 +3000,7 @@
             ).catch(err => log.error(err.message))
 
             // Add buttons to every block
-            appDiv.querySelectorAll('code').forEach(block => {
+            app.div.querySelectorAll('code').forEach(block => {
                 if (block.querySelector('[id$=copy-btn]')) return
                 const codeBtnsDiv = dom.create.elem('div', { class: `code-header` })
 
@@ -3066,7 +3067,7 @@
         reply({ content, apiUsed = null }) {
             show.reply.shareURL = null // reset to regen using longer msgChain
             tooltip.toggle('off') // hide lingering tooltip if cursor was on corner button
-            const regenSVGwrapper = appDiv.querySelector('[id$=regen-btn]')?.firstChild
+            const regenSVGwrapper = app.div.querySelector('[id$=regen-btn]')?.firstChild
             if (regenSVGwrapper?.style?.animation || regenSVGwrapper?.style?.transform) {
                 Object.assign(regenSVGwrapper.style, { animation: '', transform: '', cursor: '' }) // rm animation/tilt
                 const regenBtn = regenSVGwrapper.closest('btn')
@@ -3075,12 +3076,12 @@
             }
 
             // Build answer interface up to reply section if missing
-            if (!appDiv.querySelector('.reply-pre')) {
-                appDiv.textContent = '' ; dom.addRisingParticles(appDiv)
+            if (!app.div.querySelector('.reply-pre')) {
+                app.div.textContent = '' ; dom.addRisingParticles(app.div)
 
                 // Create/append header div
                 const appHeaderDiv = dom.create.elem('div', { class: 'app-header', style: 'margin: -3px 0' })
-                appDiv.append(appHeaderDiv)
+                app.div.append(appHeaderDiv)
 
                 // Create/append title
                 const appHeaderLogo = logos.amzgpt.create()
@@ -3145,10 +3146,10 @@
             }
 
             // Build reply section if missing
-            if (!appDiv.querySelector(`#${app.slug}-chatbar`)) {
+            if (!app.div.querySelector(`#${app.slug}-chatbar`)) {
 
                 // Init/clear user reply section content/classes/style
-                const replySection = appDiv.querySelector('section') || dom.create.elem('section')
+                const replySection = app.div.querySelector('section') || dom.create.elem('section')
                 if (replySection.className.includes('loading'))
                     replySection.textContent = replySection.className = replySection.style = ''
 
@@ -3159,7 +3160,7 @@
                     id: `${app.slug}-chatbar`, rows: 1, placeholder: `${app.msgs.tooltip_sendReply}...` })
                 continueChatDiv.append(chatTextarea)
                 replyForm.append(continueChatDiv) ; replySection.append(replyForm)
-                appDiv.querySelector('.reply-bubble').after(replySection)
+                app.div.querySelector('.reply-bubble').after(replySection)
 
                 // Create/append chatbar buttons
                 ;['send', 'shuffle'].forEach(btnType => {
@@ -3184,7 +3185,7 @@
             // Show API used in bubble header
             if (!show.reply.updatedAPIinHeader) {
                 show.reply.updatedAPIinHeader = true
-                const preHeaderLabel = appDiv.querySelector('.reply-header-txt'),
+                const preHeaderLabel = app.div.querySelector('.reply-header-txt'),
                       apiBeacon = dom.create.elem('span', { class: 'api-btn' })
                 apiBeacon.textContent = '⦿'
                 apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = hoverMenus.toggle
@@ -3202,7 +3203,7 @@
             }
 
             // Render MD, highlight code
-            const replyPre = appDiv.querySelector('.reply-pre')
+            const replyPre = app.div.querySelector('.reply-pre')
             try { // to render markdown
                 replyPre.innerHTML = marked.parse(content) } catch (err) { log.error(err.message) }
             hljs.highlightAll() // highlight code
@@ -3224,7 +3225,7 @@
                 && (!config.autoFocusChatbarDisabled // AF enabled
                     || (  // ...or AF disabled & user interacted
                         config.autoFocusChatbarDisabled && show.reply.userInteracted))
-            ) { appDiv.querySelector(`#${app.slug}-chatbar`).focus() ; show.reply.chatbarFocused = true }
+            ) { app.div.querySelector(`#${app.slug}-chatbar`).focus() ; show.reply.chatbarFocused = true }
 
             // Update styles
             update.appBottomPos() // restore minimized/restored state
@@ -3265,7 +3266,7 @@
                         if (!copyBtn.firstChild.matches('[id$=copy-icon]')) return // since clicking on Copied icon
                         const textContainer = (
                             event.currentTarget.parentNode.className.includes('reply-header')
-                                ? appDiv.querySelector('.reply-pre') // reply container
+                                ? app.div.querySelector('.reply-pre') // reply container
                                     : event.currentTarget.closest('code') // code container
                         )
                         const textToCopy = textContainer.textContent.replace(/^>> /, '').trim()
@@ -3377,7 +3378,7 @@
                         })
 
                         // Init other config/data
-                        const wholeAnswer = appDiv.querySelector('.reply-pre').textContent
+                        const wholeAnswer = app.div.querySelector('.reply-pre').textContent
                         const cjsSpeakConfig = { voice: 2, pitch: 1, speed: 1.5, onend: handleAudioEnded }
                         const sgtDialectData = Object.values(window.sgtDialectMap).find(langData =>
                             langData.isoOrNamePattern.test(config.replyLang)
@@ -3458,7 +3459,7 @@
 
         insert() {
             if (!this.bubbleDiv) this.create()
-            appDiv.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
+            app.div.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
         }
     }
 
@@ -3473,8 +3474,8 @@
         return log.debug('Exited from 404 page')
 
     // Create/ID/classify/listenerize/stylize APP container
-    window.appDiv = dom.create.elem('div', { id: app.slug, class: 'anchored fade-in' })
-    addListeners.appDiv() ; if (config.expanded) appDiv.classList.add('expanded')
+    app.div = dom.create.elem('div', { id: app.slug, class: 'anchored fade-in' })
+    addListeners.appDiv() ; if (config.expanded) app.div.classList.add('expanded')
     document.head.append(app.styles = dom.create.style()) ; update.appStyle()
     ;['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
@@ -3487,8 +3488,8 @@
     }
 
     // APPEND AMAZONGPT to Amazon
-    document.body.append(appDiv)
-    setTimeout(() => appDiv.classList.add('active'), 350) // fade in
+    document.body.append(app.div)
+    setTimeout(() => app.div.classList.add('active'), 350) // fade in
 
     // Get/show FIRST REPLY
     const pageType = /\/(?:dp|product)\//.test(location.href) ? 'Product'
