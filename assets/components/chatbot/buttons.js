@@ -1,4 +1,4 @@
-// Requires dom.js + <app|get|msgChain|replyBubble|prompts|show|xhr>
+// Requires dom.js + <app|get|msgChain|replyBubble|prompts|show|tooltip|xhr>
 
 window.buttons = {
     reply: {
@@ -6,7 +6,7 @@ window.buttons = {
             types: ['copy', 'share', 'regen', 'speak'], // right-to-left
             styles: 'float: right ; cursor: pointer ;',
 
-            create() { // requires dom.js + <app|get|msgChain|prompts|show|xhr>
+            create() { // requires dom.js + <app|get|msgChain|prompts|show|tooltip|xhr>
                 if (this.share) return
 
                 // Copy button
