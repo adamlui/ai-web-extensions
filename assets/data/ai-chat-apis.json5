@@ -7,7 +7,9 @@
     },
     "method": "POST",
     "parsingRequired": false,
-    "respPatterns": { "fail": "很抱歉地|系统公告|文字过长，请删减后重试" },
+    "respPatterns": {
+      // "Sorry | System Announcement | The text is too long, please delete it and try again
+      "fail": "很抱歉地|系统公告|文字过长，请删减后重试" },
     "streamable": true,
     "supportsLongPrompts": false
   },
@@ -20,6 +22,8 @@
     "method": "POST",
     "parsingRequired": false,
     "respPatterns": {
+      // The quota for the day has been used up | Please come back tomorrow
+      // | The quota for the day in the current area has been used up. Please try to change the network environment.
       "fail": "{\"error\":{\"message\":\"|当日额度已用完,请明天再来吧|当前地区当日额度已消耗完, 请尝试更换网络环境" },
     "streamable": true,
     "supportsLongPrompts": true
