@@ -2,15 +2,22 @@
 
 window.icons = {
 
-    create(name, { size = 16, width, height, ...additionalAttrs } = {}) {
-        const iconData = icons[name],
-              iconAttrs = { width: width || size, height: height || size, ...additionalAttrs }
-        if (iconData.type == 'svg') {
-            const svg = dom.create.svgElem('svg', { viewBox: iconData.viewBox, ...iconAttrs  })
-            iconData.elems.forEach(([tag, attrs]) => svg.append(dom.create.svgElem(tag, attrs)))
-            return svg
+    create({ key, size = 18, width, height, ...moreAttrs }) {
+        if (!key) return console.error('Option \'key\' required by icons.create()')
+        const icon = {
+            data: this[key], attrs: { width: width || size, height: height || size, class: key, ...moreAttrs }}
+        if (icon.data?.svg) {
+            icon.svg = dom.create.svgElem('svg', { ...icon.data.svg, ...icon.attrs })
+            ;(function create(elems) {
+                return elems.map(elem => {
+                    const [tag, attrs] = Object.entries(elem)[0], svgElem = dom.create.svgElem(tag, attrs)
+                    if (attrs.elems) svgElem.append(...create(attrs.elems)) // recursively create() sub-elems
+                    return svgElem
+                })
+            })(icon.data.elems).forEach(elem => icon.svg.append(elem))
+            return icon.svg
         } else // img w/ src
-            return dom.create.elem('img', { src: iconData.src, ...iconAttrs })
+            return dom.create.elem('img', { src: icon.data.src, ...icon.attrs })
     },
 
     caretDown: {
