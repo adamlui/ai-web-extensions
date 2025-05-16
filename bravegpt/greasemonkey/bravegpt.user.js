@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.15
+// @version               2025.5.15.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -200,6 +200,7 @@
 // @require               https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@37e0d7d/assets/lib/crypto-utils.js/dist/crypto-utils.min.js#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@5fc8863/assets/lib/dom.js/dist/dom.min.js#sha256-IGNj9Eoecq7QgY7SAs75wONajgN9Wg0NmCjKTCfu9CY=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@1431671/assets/lib/chatbot/feedback.js#sha256-MzreephWTSyhmdTK9Xh5iAhZdqtYq2T9Qu5zBm6SL5o=
 // @require               https://cdn.jsdelivr.net/npm/generate-ip@2.4.4/dist/generate-ip.min.js#sha256-aQQKAQcMgCu8IpJp9HKs387x0uYxngO+Fb4pc5nSF4I=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js#sha256-g3pvpbDHNrUrveKythkPMF2j/J7UFoHbUyFQcFe1yEY=
 // @require               https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js#sha256-n0UwfFeU7SR6DQlfOmLlLvIhWmeyMnIDp/2RmVmuedE=
@@ -305,7 +306,7 @@
 
     // Init DEBUG mode
     window.config = {}
-    const settings = {
+    window.settings = {
 
         load(...keys) {
             keys.flat().forEach(key => {
@@ -485,7 +486,7 @@
 
     // Define MENU functions
 
-    const toolbarMenu = {
+    window.toolbarMenu = {
         state: {
             symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
             words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
@@ -540,100 +541,6 @@
                 // Alert to no update found, nav back to About
                 modals.open('update', 'unavailable')
         }})
-    }
-
-    // Define FEEDBACK functions
-
-    function appAlert(...alerts) {
-        alerts = alerts.flat() // flatten array args nested by spread operator
-        appDiv.textContent = ''
-        const alertP = dom.create.elem('p', { class: `${app.slug}-alert no-user-select` })
-        alertP.style.marginBottom = '-20px' // counteract appDiv padding
-
-        alerts.forEach((alert, idx) => { // process each alert for display
-            let msg = app.alerts[alert] || alert // use string verbatim if not found in app.alerts
-            if (idx > 0) msg = ' ' + msg // left-pad 2nd+ alerts
-            if (msg.includes(app.alerts.login)) session.deleteOpenAIcookies()
-
-            // Add login link to login msgs
-            if (msg.includes('@'))
-                msg += '<a class="alert-link" target="_blank" rel="noopener" href="https://chatgpt.com">chatgpt.com</a>'
-                     + `, ${app.msgs.alert_thenRefreshPage}. (${app.msgs.alert_ifIssuePersists}, ${
-                            app.msgs.alert_try.toLowerCase()} ${app.msgs.alert_switchingOn} ${app.msgs.mode_proxy})`
-
-            // Hyperlink app.msgs.alert_suggestDiffAPI
-            if (msg.includes(app.alerts.suggestDiffAPI)) {
-                const selectPhrase = `${app.msgs.alert_selectingDiff} API`
-                msg = msg.replace(selectPhrase, `<a class="alert-link suggest-api" href="#">${selectPhrase}</a>`)
-            }
-
-            // Hyperlink app.msgs.alert_switching<On|Off>
-            const foundState = ['On', 'Off'].find(state =>
-                msg.includes(app.msgs['alert_switching' + state]) || new RegExp(`\\b${state}\\b`, 'i').test(msg))
-            if (foundState) { // hyperlink switch phrase for click listener to toggle.proxyMode()
-                const switchPhrase = app.msgs['alert_switching' + foundState] || 'switching ' + foundState.toLowerCase()
-                msg = msg.replace(switchPhrase, `<a class="alert-link switch-proxy" href="#">${switchPhrase}</a>`)
-            }
-
-            // Create/fill/append msg span
-            const msgSpan = dom.create.elem('span') ; msgSpan.innerHTML = msg ; alertP.append(msgSpan)
-
-            // Activate toggle link if necessary
-            msgSpan.querySelectorAll('a[href="#"]').forEach(anchor =>
-                anchor.onclick = () => anchor.classList.contains('suggest-api') ? modals.open('api')
-                    : anchor.classList.contains('switch-proxy') ? toggle.proxyMode() : {}
-            )
-        })
-        appDiv.append(alertP)
-    }
-
-    function notify(msg, pos = '', notifDuration = '', shadow = 'shadow') {
-
-        // Strip state word to append styled one later
-        const foundState = toolbarMenu.state.words.find(word => msg.includes(word))
-        if (foundState) msg = msg.replace(foundState, '')
-
-        // Show notification
-        chatgpt.notify(msg, pos, notifDuration, shadow)
-        const notif = document.querySelector('.chatgpt-notif:last-child')
-
-        // Prepend app icon
-        const notifIcon = icons.braveGPT.create()
-        notifIcon.style.cssText = 'width: 32px ; position: relative ; top: 6px ; margin-right: 6px'
-        notif.prepend(notifIcon)
-
-        // Append notif type icon
-        const iconStyles = 'width: 28px ; height: 28px ; position: relative ; top: 3px ; margin-left: 11px ;'
-        const mode = Object.keys(settings.controls).find(
-            key => msg.toLowerCase().includes(settings.controls[key].label.trim().toLowerCase()))
-        if (mode && !/(?:pre|suf)fix/.test(mode)) {
-            const modeIcon = icons.create({ key: settings.controls[mode].icon })
-            modeIcon.style.cssText = iconStyles
-                + ( /preferred/i.test(mode) ? 'top: 5.5px' : '' ) // lower Preferred API icon
-                + ( /autoget|debug|focus|scroll/i.test(mode) ? 'top: 0.5px' : '' ) // raise some icons
-                + ( /animation|debug/i.test(mode) ? 'width: 23px ; height: 23px' : '' ) // shrink some icon
-            if (mode.includes('Animation')) // customize sparkle fill
-                modeIcon[`${ mode.startsWith('fg') ? 'last' : 'first' }Child`].style.fill = 'none'
-            notif.append(modeIcon)
-        }
-
-        // Append styled state word
-        if (foundState) {
-            const stateStyles = {
-                on: {
-                    light: 'color: #5cef48 ; text-shadow: rgba(255,250,169,0.38) 2px 1px 5px',
-                    dark:  'color: #5cef48 ; text-shadow: rgb(55,255,0) 3px 0 10px'
-                },
-                off: {
-                    light: 'color: #ef4848 ; text-shadow: rgba(255,169,225,0.44) 2px 1px 5px',
-                    dark:  'color: #ef4848 ; text-shadow: rgba(255, 116, 116, 0.87) 3px 0 9px'
-                }
-            }
-            const styledStateSpan = dom.create.elem('span')
-            styledStateSpan.style.cssText = `font-weight: bold ; ${
-                stateStyles[foundState == toolbarMenu.state.words[0] ? 'off' : 'on'][env.ui.site.scheme] }`
-            styledStateSpan.append(foundState) ; notif.insertBefore(styledStateSpan, notif.children[2])
-        }
     }
 
     // Define MODAL functions
@@ -729,7 +636,7 @@
                             const preferredAPIstatus = document.querySelector('[id*=preferredAPI] > span')
                             if (preferredAPIstatus.textContent != api) preferredAPIstatus.textContent = api
                         }
-                        notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
+                        feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`)
                         if (appDiv.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
                             get.reply({ msgs: msgChain, src: get.reply.src }) // re-send query if user alerted
@@ -990,7 +897,7 @@
             function schemeNotify(scheme) {
 
                 // Show notification
-                notify(`${app.msgs.menuLabel_colorScheme}: `
+                feedback.notify(`${app.msgs.menuLabel_colorScheme}: `
                       + ( scheme == 'light' ? app.msgs.scheme_light || 'Light'
                         : scheme == 'dark'  ? app.msgs.scheme_dark  || 'Dark'
                                             : app.msgs.menuLabel_auto ).toUpperCase() )
@@ -1124,7 +1031,7 @@
                             // ...or generically toggle/notify
                             else {
                                 settings.save(key, !config[key]) // update config
-                                notify(`${settings.controls[key].label} ${
+                                feedback.notify(`${settings.controls[key].label} ${
                                     toolbarMenu.state.words[+(key.includes('Disabled') ^ config[key])]}`)
                             }
                         }
@@ -1235,7 +1142,9 @@
                 `<a target="_blank" rel="noopener" href="${shareURL}">${shareURL}</a>`, // link msg
                 [ // buttons
                     function copyUrl() {
-                        navigator.clipboard.writeText(shareURL).then(() => notify(app.msgs.notif_copiedToClipboard)) },
+                        navigator.clipboard.writeText(shareURL)
+                            .then(() => feedback.notify(app.msgs.notif_copiedToClipboard))
+                    },
                     function visitPage() { modals.safeWinOpen(shareURL) },
                     function downloadChat() {
                         xhr({
@@ -1583,7 +1492,7 @@
                     label: api,
                     onclick: () => {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
-                        notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
+                        feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                                `${ config.anchored ? 'top' : 'bottom' }-right`)
                     },
                     isActive: () => !config.preferredAPI && api == app.msgs.menuLabel_random
@@ -1610,7 +1519,7 @@
 
     // Define ICON function/props
 
-    const icons = { // requires dom.js
+    window.icons = { // requires dom.js
 
         create({ key, size = 18, width, height, ...moreAttrs }) {
             if (!key) return log.error('Option \'key\' required by icons.create()')
@@ -3086,7 +2995,7 @@
                 const anchorToggle = document.querySelector('[id*=anchor] input')
                 if (anchorToggle.checked != config.anchored) modals.settings.toggle.switch(anchorToggle)
             }
-            notify(`${app.msgs.mode_anchor} ${toolbarMenu.state.words[+config.anchored]}`,
+            feedback.notify(`${app.msgs.mode_anchor} ${toolbarMenu.state.words[+config.anchored]}`,
                 null, sidebarModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
         },
 
@@ -3100,7 +3009,7 @@
                     config.fgAnimationsDisabled ? 'short' : 'long']
                 aboutStatusLabel.style.float = config.fgAnimationsDisabled ? 'right' : ''
             }
-            notify(`${settings.controls[configKey].label} ${toolbarMenu.state.words[+!config[configKey]]}`)
+            feedback.notify(`${settings.controls[configKey].label} ${toolbarMenu.state.words[+!config[configKey]]}`)
         },
 
         autoGen(mode) {
@@ -3115,7 +3024,7 @@
                 ['prefix', 'suffix'].forEach(mode => {
                     if (config[`${mode}Enabled`]) { toggle.manualGen(mode) ; conflictingModeToggled = true }})
             }
-            notify(`${settings.controls[modeKey].label} ${toolbarMenu.state.words[+settings.typeIsEnabled(modeKey)]}`,
+            feedback.notify(`${settings.controls[modeKey].label} ${toolbarMenu.state.words[+settings.typeIsEnabled(modeKey)]}`,
                 null, conflictingModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
@@ -3146,7 +3055,7 @@
                     if (settings.typeIsEnabled(`auto${log.toTitleCase(mode)}${ mode == 'get' ? 'Disabled' : '' }`)) {
                         toggle.autoGen(mode) ; autoGenToggled = true }
                 })
-            notify(`${settings.controls[modeKey].label} ${toolbarMenu.state.words[+config[modeKey]]}`,
+            feedback.notify(`${settings.controls[modeKey].label} ${toolbarMenu.state.words[+config[modeKey]]}`,
                 null, autoGenToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown)
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
@@ -3174,7 +3083,7 @@
 
         proxyMode() {
             settings.save('proxyAPIenabled', !config.proxyAPIenabled)
-            notify(`${app.msgs.menuLabel_proxyAPImode} ${toolbarMenu.state.words[+config.proxyAPIenabled]}`)
+            feedback.notify(`${app.msgs.menuLabel_proxyAPImode} ${toolbarMenu.state.words[+config.proxyAPIenabled]}`)
             toolbarMenu.refresh()
             if (modals.settings.get()) { // update visual states of Settings toggles
                 const proxyToggle = document.querySelector('[id*=proxy] input'),
@@ -3203,7 +3112,7 @@
                     .then(queries => show.related(queries))
                     .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
             update.replyPreMaxHeight()
-            notify(`${app.msgs.menuLabel_relatedQueries} ${toolbarMenu.state.words[+!config.rqDisabled]}`)
+            feedback.notify(`${app.msgs.menuLabel_relatedQueries} ${toolbarMenu.state.words[+!config.rqDisabled]}`)
         },
 
         sidebar(mode, state = '') {
@@ -3231,7 +3140,7 @@
 
             // Notify of mode change
             if (mode == 'sticky' && prevStickyState == config.stickySidebar) return
-            notify(`${ app.msgs[`menuLabel_${ mode }Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
+            feedback.notify(`${ app.msgs[`menuLabel_${ mode }Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
                        toolbarMenu.state.words[+config[configKeyName]]}`,
                 null, anchorModeDisabled ? 2.75 : null) // +1s duration if conflicting mode notif shown
         },
@@ -3264,7 +3173,7 @@
                     alert.querySelector('.modal-close-btn').click() ; toggle.proxyMode() }
             } else { // functional toggle
                 settings.save('streamingDisabled', !config.streamingDisabled)
-                notify(`${settings.controls.streamingDisabled.label} ${
+                feedback.notify(`${settings.controls.streamingDisabled.label} ${
                           toolbarMenu.state.words[+!config.streamingDisabled]}`)
             }
         }
@@ -3309,13 +3218,13 @@
                 else {
                     log.debug(`No token found. Fetching from ${apis.OpenAI.endpoints.session}...`)
                     xhr({ url: apis.OpenAI.endpoints.session, onload: resp => {
-                        if (session.isBlockedByCF(resp.responseText)) return appAlert('checkCloudflare')
+                        if (session.isBlockedByCF(resp.responseText)) return feedback.appAlert('checkCloudflare')
                         try {
                             const newAccessToken = JSON.parse(resp.responseText).accessToken
                             GM_setValue(app.configKeyPrefix + '_openAItoken', newAccessToken)
                             log.debug(`Success! newAccessToken = ${newAccessToken}`)
                             resolve(newAccessToken)
-                        } catch { if (get.reply.api == 'OpenAI') return appAlert('login') }
+                        } catch { if (get.reply.api == 'OpenAI') return feedback.appAlert('login') }
             }})}})
         },
 
@@ -3499,7 +3408,7 @@
                         log.error('Response status', resp.status)
                         log.info('Response text', resp.response || resp.responseText)
                         if (caller == get.reply && callerAPI == 'OpenAI')
-                            appAlert(resp.status == 401 ? 'login'
+                            feedback.appAlert(resp.status == 401 ? 'login'
                                    : resp.status == 403 ? 'checkCloudflare'
                                    : resp.status == 429 ? ['tooManyRequests', 'suggestProxy']
                                                         : ['OpenAI', 'notWorking', 'suggestProxy'] )
@@ -3563,7 +3472,7 @@
                     function handleProcessError(err) { // suggest proxy or try diff API
                         log.debug('Response text', resp.response) ; log.error(app.alerts.parseFailed, err)
                         if (callerAPI == 'OpenAI' && caller == get.reply)
-                            appAlert('OpenAI', 'notWorking', 'suggestProxy')
+                            feedback.appAlert('OpenAI', 'notWorking', 'suggestProxy')
                         else api.tryNew(caller)
                     }
 
@@ -3593,7 +3502,7 @@
             } else {
                 log.debug('No remaining untried endpoints')
                 if (caller == get.reply)
-                    appAlert(`${ config.preferredAPI ? 'api' : 'proxy' }NotWorking`,
+                    feedback.appAlert(`${ config.preferredAPI ? 'api' : 'proxy' }NotWorking`,
                         `suggest${ config.preferredAPI ? 'DiffAPI' : 'OpenAI' }`)
             }
         }
@@ -3690,7 +3599,7 @@
                 loadingElem.textContent = app.alerts.waitingResponse
                 loadingSpinner.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)' // faster ver
             } else { // replace app div w/ alert
-                appAlert('waitingResponse')
+                feedback.appAlert('waitingResponse')
                 loadingElem = appDiv.querySelector(`.${app.slug}-alert`)
                 loadingSpinner.style.animation = 'rotate 2s infinite linear' // slower ver
             }
@@ -3712,7 +3621,7 @@
             // Pick API
             get.reply.api = config.proxyAPIenabled ? api.pick(get.reply) : 'OpenAI'
             if (!get.reply.api) // no more proxy APIs left untried
-                return appAlert(`${ config.preferredAPI ? 'api' : 'proxy' }NotWorking`,
+                return feedback.appAlert(`${ config.preferredAPI ? 'api' : 'proxy' }NotWorking`,
                     `suggest${ config.preferredAPI ? 'DiffAPI' : 'OpenAI' }`)
 
             // Init OpenAI key
@@ -3744,7 +3653,7 @@
                 responseType: config.streamingDisabled || !config.proxyAPIenabled ? 'text' : 'stream',
                 onerror: err => { log.error(err)
                     if (!config.proxyAPIenabled)
-                        appAlert(!config.openAIkey ? 'login' : ['OpenAI', 'notWorking', 'suggestProxy'])
+                        feedback.appAlert(!config.openAIkey ? 'login' : ['OpenAI', 'notWorking', 'suggestProxy'])
                     else api.tryNew(get.reply)
                 },
                 onload: resp => api.process.text(resp, { caller: get.reply, callerAPI: reqAPI }),
@@ -4366,7 +4275,7 @@
     env.ui = { app: { scheme: config.scheme || getScheme() }, site: { scheme: getScheme() }}
 
     // Create/ID/classify/listenerize/stylize APP container
-    let appDiv = dom.create.elem('div', { id: app.slug, class: 'fade-in snippet' })
+    window.appDiv = dom.create.elem('div', { id: app.slug, class: 'fade-in snippet' })
     themes.apply(config.theme) ; addListeners.appDiv()
     ;['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
         (config[mode] || config[`${mode}Sidebar`]) && appDiv.classList.add(mode))
