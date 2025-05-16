@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.16.16
+// @version                2025.5.16.17
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -178,6 +178,18 @@
     }
     Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
     app.urls.aiweAssets = app.urls.aiweAssets.replace('@latest', `@${app.commitHashes.aiweb}`)
+    app.alerts = {
+        waitingResponse:  `${app.msgs.alert_waitingFor} ${app.name} ${app.msgs.alert_response}...`,
+        login:            `${app.msgs.alert_login} @ `,
+        checkCloudflare:  `${app.msgs.alert_checkCloudflare} @ `,
+        tooManyRequests:  `${app.msgs.alert_tooManyRequests}.`,
+        parseFailed:      `${app.msgs.alert_parseFailed}.`,
+        proxyNotWorking:  `${app.msgs.mode_proxy} ${app.msgs.alert_notWorking}.`,
+        apiNotWorking:    `API ${app.msgs.alert_notWorking}.`,
+        suggestProxy:     `${app.msgs.alert_try} ${app.msgs.alert_switchingOn} ${app.msgs.mode_proxy}`,
+        suggestDiffAPI:   `${app.msgs.alert_try} ${app.msgs.alert_selectingDiff} API`,
+        suggestOpenAI:    `${app.msgs.alert_try} ${app.msgs.alert_switchingOff} ${app.msgs.mode_proxy}`
+    }
     app.katexDelimiters = await new Promise(resolve => xhr({ // used in show.reply()
         method: 'GET', onload: resp => resolve(JSON.parse(resp.responseText)),
         url: `${app.urls.aiweAssets}/data/katex-delimiters.json`
@@ -325,20 +337,6 @@
     // Init INPUT EVENTS
     const inputEvents = {} ; ['down', 'move', 'up'].forEach(action =>
           inputEvents[action] = ( window.PointerEvent ? 'pointer' : env.browser.isMobile ? 'touch' : 'mouse' ) + action)
-
-    // Init ALERTS
-    Object.assign(app, { alerts: {
-        waitingResponse:  `${app.msgs.alert_waitingFor} ${app.name} ${app.msgs.alert_response}...`,
-        login:            `${app.msgs.alert_login} @ `,
-        checkCloudflare:  `${app.msgs.alert_checkCloudflare} @ `,
-        tooManyRequests:  `${app.msgs.alert_tooManyRequests}.`,
-        parseFailed:      `${app.msgs.alert_parseFailed}.`,
-        proxyNotWorking:  `${app.msgs.mode_proxy} ${app.msgs.alert_notWorking}.`,
-        apiNotWorking:    `API ${app.msgs.alert_notWorking}.`,
-        suggestProxy:     `${app.msgs.alert_try} ${app.msgs.alert_switchingOn} ${app.msgs.mode_proxy}`,
-        suggestDiffAPI:   `${app.msgs.alert_try} ${app.msgs.alert_selectingDiff} API`,
-        suggestOpenAI:    `${app.msgs.alert_try} ${app.msgs.alert_switchingOff} ${app.msgs.mode_proxy}`
-    }})
 
     // Define UI functions
 
