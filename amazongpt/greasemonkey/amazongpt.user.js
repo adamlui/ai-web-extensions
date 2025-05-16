@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.15.5
+// @version                2025.5.16
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -140,7 +140,7 @@
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
             app: '1f49579', // for cached <app|messages>.json
-            aiwe: '670232f' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
+            aiwe: '0e4a7f8' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         }
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@${app.commitHashes.app}` }
@@ -181,8 +181,8 @@
 
     // Init API data
     const apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
-        method: 'GET', onload: resp => resolve(JSON.parse(resp.responseText)),
-        url: `${app.urls.aiweAssets}/data/ai-chat-apis.json`
+        method: 'GET', onload: resp => resolve(JSON5.parse(resp.responseText)),
+        url: `${app.urls.aiweAssets}/data/ai-chat-apis.json5`
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()
 
