@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.16.12
+// @version                  2025.5.16.13
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -3239,14 +3239,13 @@
                             modals.settings.updateSchemeStatus(configStatusSpan)
                             settingEntry.onclick = () => modals.open('scheme')
                         } else if (key.includes('about')) {
-                            const innerDiv = dom.create.elem('div'),
-                                  xGap = '&emsp;&emsp;&emsp;&emsp;&emsp;'
-                            modals.settings.aboutContent = {}
-                            modals.settings.aboutContent.short = `v${GM_info.script.version}`
-                            modals.settings.aboutContent.long = (
-                                  `${app.msgs.about_version}: <span class="about-em">v${
-                                       GM_info.script.version + xGap }</span>`
-                                + `${app.msgs.about_poweredBy} <span class="about-em">chatgpt.js</span>${xGap}` )
+                            const innerDiv = dom.create.elem('div'), xGap = '&emsp;&emsp;&emsp;&emsp;&emsp;'
+                            modals.settings.aboutContent = {
+                                short: `v${GM_info.script.version}`,
+                                long: `${app.msgs.about_version}: <span class="about-em">v${
+                                         GM_info.script.version + xGap }</span>${
+                                         app.msgs.about_poweredBy} <span class="about-em">chatgpt.js</span>${xGap}`
+                            }
                             for (let i = 0; i < 7; i++)
                                 modals.settings.aboutContent.long += modals.settings.aboutContent.long // make long af
                             innerDiv.innerHTML = modals.settings.aboutContent[
