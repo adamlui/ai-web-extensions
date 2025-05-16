@@ -1,4 +1,4 @@
- // Requires lib<crypto-js|feedback>.js + <apis|app|env|get|log|Math|xhr> + GM_cookie + GM_<delete|get|set>Value()
+ // Requires lib/<crypto-js|feedback>.js + <apis|app|env|get|log|Math|xhr> + GM_cookie + GM_<delete|get|set>Value()
 
 window.session = {
 
