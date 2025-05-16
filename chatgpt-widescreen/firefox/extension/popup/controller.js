@@ -38,7 +38,7 @@
             if (entryData.status) entry.label.textContent += ` — ${entryData.status}`
             if (entryData.type == 'link') {
                 entry.label.after(entry.rightElem = dom.create.elem('div', { class: 'menu-right-elem' }))
-                entry.rightElem.append(icons.create({ key: 'open', size: 18, fill: 'black' }))
+                entry.rightElem.append(icons.create({ key: 'open', size: 17, fill: 'black' }))
             }
         }
         if (entryData.type == 'category')
@@ -206,7 +206,7 @@
                 title: `${browserAPI.getMsg('tooltip_goto')} https://${sites[site].urls.homepage}`,
                 class: 'menu-right-elem' }),
             favicon: dom.create.elem('img', { src: sites[site].urls.favicon, width: 15 }),
-            openIcon: icons.create({ key: 'open', size: 18, fill: 'black' })
+            openIcon: icons.create({ key: 'open', size: 17, fill: 'black' })
         }
         ssEntry.switch.append(ssEntry.track) ; ssEntry.label.textContent = sites[site].urls.homepage
         ssEntry.switchLabelDiv.append(ssEntry.switch, ssEntry.label) ; ssEntry.faviconDiv.append(ssEntry.favicon)
