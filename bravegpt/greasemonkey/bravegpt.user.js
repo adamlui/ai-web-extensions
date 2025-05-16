@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.16.4
+// @version               2025.5.16.5
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -198,11 +198,12 @@
 // @require               https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.1/dist/chatgpt.min.js#sha256-/71AK4V0/J40zINYEriMeEWGIZ8qfyWMQu76ui3SBNs=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require               https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@37e0d7d/assets/lib/crypto-utils.js/dist/crypto-utils.min.js#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@5fc8863/assets/lib/dom.js/dist/dom.min.js#sha256-IGNj9Eoecq7QgY7SAs75wONajgN9Wg0NmCjKTCfu9CY=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@795054e/assets/components/chatbot/buttons.js#sha256-4gaPn5Wb3+Ek2y+1F/6SAHhVb0Anxp54Xrgtc1LRvSA=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@2a51ece/assets/components/chatbot/icons.js#sha256-ENowwKW3K2TJqb0YmO7/SgHb0ya3rktSJHQniS0kFSc=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8c9dbab/assets/components/chatbot/menus.js#sha256-haahzD2p9veWAtcInyrSApyj4Gzge4Xq0jsyutN/Mww=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@6a85faa/assets/lib/chatbot/feedback.js#sha256-a6Be+zJb84ObSOVjDIB4FmoRYRhWviZHHXLJ7RmX7So=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@37e0d7d/assets/lib/crypto-utils.js/dist/crypto-utils.min.js#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@5fc8863/assets/lib/dom.js/dist/dom.min.js#sha256-IGNj9Eoecq7QgY7SAs75wONajgN9Wg0NmCjKTCfu9CY=
 // @require               https://cdn.jsdelivr.net/npm/generate-ip@2.4.4/dist/generate-ip.min.js#sha256-aQQKAQcMgCu8IpJp9HKs387x0uYxngO+Fb4pc5nSF4I=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js#sha256-g3pvpbDHNrUrveKythkPMF2j/J7UFoHbUyFQcFe1yEY=
 // @require               https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js#sha256-n0UwfFeU7SR6DQlfOmLlLvIhWmeyMnIDp/2RmVmuedE=
@@ -304,7 +305,7 @@
     }))
 
     // Init API data
-    const apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
+    window.apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
         method: 'GET', onload: resp => resolve(JSON5.parse(resp.responseText)),
         url: `${app.urls.aiweAssets}/data/ai-chat-apis.json5`
     })))
@@ -2775,7 +2776,7 @@
         }
     }
 
-    const modals = {
+    window.modals = {
         stack: [], // of types of undismissed modals
         class: `${app.slug}-modal`,
 
