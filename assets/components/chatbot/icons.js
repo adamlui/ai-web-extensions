@@ -6,7 +6,7 @@ window.icons = {
         if (!key) return log.error('Option \'key\' required by icons.create()')
         const icon = {
             data: this[key], attrs: { width: width || size, height: height || size, class: key, ...moreAttrs }}
-        if (icon.data?.svg) {
+        if (icon.data?.svg) { // return <svg>
             icon.svg = dom.create.svgElem('svg', { ...icon.data.svg, ...icon.attrs })
             ;(function create(elems) {
                 return elems.map(elem => {
@@ -16,7 +16,7 @@ window.icons = {
                 })
             })(icon.data.elems).forEach(elem => icon.svg.append(elem))
             return icon.svg
-        } else // img w/ src
+        } else // return <img> w/ src
             return dom.create.elem('img', { src: icon.data.src, ...icon.attrs })
     },
 
