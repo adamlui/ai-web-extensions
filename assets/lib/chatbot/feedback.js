@@ -1,4 +1,4 @@
-// Requires chatgpt.notify() + <app|appDiv|session|toggle|toolbarMenu>
+// Requires chatgpt.js + <app|appDiv|icons|session|settings|toggle|toolbarMenu>
 
 window.feedback = {
 
@@ -47,7 +47,7 @@ window.feedback = {
         appDiv.append(alertP)
     },
 
-    notify(msg, pos = '', notifDuration = '', shadow = 'shadow') { // requires chatgpt.notify() + toolbarMenu.state
+    notify(msg, pos = '', notifDuration = '', shadow = 'shadow') { // requires chatgpt.js + <icons|settings|toolbarMenu>
 
         // Strip state word to append styled one later
         const foundState = toolbarMenu.state.words.find(word => msg.includes(word))
