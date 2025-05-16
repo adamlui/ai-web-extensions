@@ -14,8 +14,8 @@ export default [
         languageOptions: {
             ecmaVersion: 'latest', sourceType: 'script',
             globals: {
-                ...globals.browser, ...globals.greasemonkey, api: 'writable', apis: 'writable', app: 'writable',
-                buttons: 'writable', chatgpt: 'readonly', config: 'writable', CryptoJS: 'readonly',
+                ...globals.browser, ...globals.greasemonkey, ...globals.node, api: 'writable', apis: 'writable',
+                app: 'writable', buttons: 'writable', chatgpt: 'readonly', config: 'writable', CryptoJS: 'readonly',
                 cryptoUtils: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly', get: 'readonly',
                 GM_cookie: 'readonly', hljs: 'readonly', icons: 'readonly', ipv4: 'readonly', JSON5: 'readonly',
                 log: 'readonly', marked: 'readonly', menus: 'writable', modals: 'readonly', msgChain: 'writable',

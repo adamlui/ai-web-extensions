@@ -7,8 +7,14 @@
   "homepage": "https://amazongpt.kudoai.com",
   "license": "MIT",
   "funding": [
-    { "type": "github", "url": "http://github.com/sponsors/KudoAI" },
-    { "type": "paypal", "url": "http://paypal.biz/kudoai" }
+    {
+      "type": "github",
+      "url": "http://github.com/sponsors/KudoAI"
+    },
+    {
+      "type": "paypal",
+      "url": "http://paypal.biz/kudoai"
+    }
   ],
   "scripts": {
     "prepare": "husky",
@@ -16,7 +22,9 @@
     "lint:all": "eslint .",
     "lint:fix": "eslint . --fix --cache",
     "lint:fix-all": "eslint . --fix",
-    "translate": "py greasemonkey/utils/translate-en-messages.py"
+    "translate": "py greasemonkey/utils/translate-en-messages.py",
+    "bump:res": "node utils/bump/resources",
+    "bump:resources": "node utils/bump/resources"
   },
   "devDependencies": {
     "@eslint/json": "^0.12.0",
@@ -26,6 +34,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-yml": "^1.18.0",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "ssri": "^12.0.0"
   }
 }
