@@ -45,8 +45,8 @@ header {
 
 /* Menu item elements */
 .menu-entry {
-    position: relative ; align-items: center ; border-bottom: 1px solid lightgrey ;
-    display: flex ; min-height: 2rem ; padding: 0 14px 0 2px ; white-space: nowrap ; font-size: 91%
+    height: 38px ; position: relative ; align-items: center ; border-bottom: 1px solid lightgrey ;
+    display: flex ; min-height: 2rem ; padding: 0 14px 0 2px ; white-space: nowrap ; font-size: 93%
 }
 .menu-icon { padding: 8px ; justify-content: center }
 .menu-entry > label > .track { transform: scale(0.95) ; top: 1px } /* make child toggles smaller */
