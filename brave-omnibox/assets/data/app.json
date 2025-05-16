@@ -2,7 +2,7 @@
   "name": "Brave Omnibox", "symbol": "🦁", "slug": "brave-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox@latest/assets",
+    "assets": "https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox@latest/assets",
     "discuss": "https://github.com/adamlui/brave-omnibox/discussions",
     "donate": {
       "cashapp": "https://cash.app/$adamlui",

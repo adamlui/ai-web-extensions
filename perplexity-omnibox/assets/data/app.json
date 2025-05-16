@@ -2,7 +2,7 @@
   "name": "Perplexity Omnibox", "symbol": "🤖", "slug": "perplexity-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "assetHost": "https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@latest/assets",
+    "assets": "https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@latest/assets",
     "discuss": "https://github.com/adamlui/perplexity-omnibox/discussions",
     "donate": {
       "cashapp": "https://cash.app/$adamlui",

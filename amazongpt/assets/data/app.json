@@ -4,7 +4,8 @@
     { "name": "Adam Lui", "url": "https://github.com/adamlui" }, { "name": "KudoAI", "url": "https://www.kudoai.com" }],
   "urls": {
     "app": "https://amazongpt.kudoai.com",
-    "assetHost": "https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@latest/assets",
+    "assets": "https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@latest/assets",
+    "aiweAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
     "chatgptjs": "https://chatgpt.js.org",
     "contributors": "https://github.com/KudoAI/amazongpt/tree/main/docs/#-contributors",
     "discuss": "https://github.com/KudoAI/amazongpt/discussions",
