@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.16.12
+// @version                2025.5.16.13
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2295,35 +2295,42 @@
                     // Add .active + config status + listeners to pop-up settings
                     } else {
                         settingEntry.classList.add('active')
-                        const configStatusSpan = dom.create.elem('span')
-                        configStatusSpan.style.cssText = 'float: right ; font-size: 11px ; margin-top: 3px ;'
-                            + ( !key.includes('about') ? 'text-transform: uppercase !important' : '' )
-                        if (key.includes('preferredAPI')) {
-                            configStatusSpan.textContent = config.preferredAPI || app.msgs.menuLabel_random
-                            settingEntry.onclick = () => modals.open('api')
-                            settingEntry.classList.toggle('active', config.proxyAPIenabled)
-                            settingEntry.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
-                        } else if (key.includes('replyLang')) {
-                            configStatusSpan.textContent = config.replyLang
-                            settingEntry.onclick = () => modals.open('replyLang')
-                        } else if (key.includes('scheme')) {
-                            modals.settings.updateSchemeStatus(configStatusSpan)
-                            settingEntry.onclick = () => modals.open('scheme')
-                        } else if (key.includes('about')) {
-                            const innerDiv = dom.create.elem('div'), xGap = '&emsp;&emsp;&emsp;&emsp;&emsp;'
-                            modals.settings.aboutContent = {
-                                short: `v${GM_info.script.version}`,
-                                long: `${app.msgs.about_version}: <span class="about-em">v${
-                                         GM_info.script.version + xGap }</span>${
-                                         app.msgs.about_poweredBy} <span class="about-em">chatgpt.js</span>${xGap}`
+                        const configStatusSpan = dom.create.elem('span', {
+                            style: `float: right ; font-size: 11px ; margin-top: 3px ;${
+                                key != 'about' ? 'text-transform: uppercase !important' : '' }`
+                        })
+                        ;({
+                            about: () => {
+                                const innerDiv = dom.create.elem('div'), xGap = '&emsp;&emsp;&emsp;&emsp;&emsp;'
+                                modals.settings.aboutContent = {
+                                    short: `v${GM_info.script.version}`,
+                                    long: `${app.msgs.about_version}: <span class="about-em">v${
+                                            GM_info.script.version + xGap }</span>${
+                                            app.msgs.about_poweredBy} <span class="about-em">chatgpt.js</span>${xGap}`
+                                }
+                                for (let i = 0; i < 7; i++)
+                                    modals.settings.aboutContent.long += modals.settings.aboutContent.long // make long af
+                                innerDiv.innerHTML = modals.settings.aboutContent[
+                                    config.fgAnimationsDisabled ? 'short' : 'long']
+                                innerDiv.style.float = config.fgAnimationsDisabled ? 'right' : ''
+                                configStatusSpan.append(innerDiv) ; settingEntry.onclick = () => modals.open('about')
+                            },
+                            preferredAPI: () => {
+                                configStatusSpan.textContent = config.preferredAPI || app.msgs.menuLabel_random
+                                settingEntry.onclick = () => modals.open('api')
+                                settingEntry.classList.toggle('active', config.proxyAPIenabled)
+                                settingEntry.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
+                            },
+                            replyLang: () => {
+                                configStatusSpan.textContent = config.replyLang
+                                settingEntry.onclick = () => modals.open('replyLang')
+                            },
+                            scheme: () => {
+                                modals.settings.updateSchemeStatus(configStatusSpan)
+                                settingEntry.onclick = () => modals.open('scheme')
                             }
-                            for (let i = 0; i < 7; i++)
-                                modals.settings.aboutContent.long += modals.settings.aboutContent.long // make long af
-                            innerDiv.innerHTML = modals.settings.aboutContent[
-                                config.fgAnimationsDisabled ? 'short' : 'long']
-                            innerDiv.style.float = config.fgAnimationsDisabled ? 'right' : ''
-                            configStatusSpan.append(innerDiv) ; settingEntry.onclick = () => modals.open('about')
-                        } settingEntry.append(configStatusSpan)
+                        })[key]?.()
+                        settingEntry.append(configStatusSpan)
                     }
                 })
                 settingsListContainer.append(...settingsLists)
