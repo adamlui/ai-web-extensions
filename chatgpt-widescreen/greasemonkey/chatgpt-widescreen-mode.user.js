@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.16.2
+// @version             2025.5.16.3
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -265,7 +265,7 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ea48b2a/chromium/extension/lib/sync.js#sha256-QXHSa0J8nxVhUViFa3jZhhqiCkwbXbVDvmExYOisf7k=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/ui.js#sha256-9ZQ8DyJvJ5YSuOGhmdqofNMT/QJGs5uhej0DmvH0g/k=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@152a535/chromium/extension/components/buttons.js#sha256-knAf712m/p4TOpLBkS5gpB5hrpbP+GI8nFvHuc0nUVg=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@be23185/chromium/extension/components/icons.js#sha256-XxaX8U/lJX1NFmi9nouMXEC8HejX3mGS7apbt5cbwZI=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@0bbdf95/chromium/extension/components/icons.js#sha256-lQq1XrpiObc7lryhTMEgGdIIVbWZprE08jDtunjbIhY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@152a535/chromium/extension/components/modals.js#sha256-WP+m2SIIDRbDBFgovmWLQb53zqy/96u4yM1Gt/hnUCg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@344ff77/chromium/extension/components/tooltip.js#sha256-Ql9nR9Q0LXgnq4koXHRRs4Yur8ehdaNkwGYPdg0QkOo=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=

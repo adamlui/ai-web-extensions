@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.16.19
+// @version               2025.5.16.20
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -198,8 +198,8 @@
 // @require               https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.1/dist/chatgpt.min.js#sha256-/71AK4V0/J40zINYEriMeEWGIZ8qfyWMQu76ui3SBNs=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require               https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@e10fbf3/assets/components/chatbot/buttons.js#sha256-HyPkJ88pZ2K2N9vsucY9he8I2smaHCYKfE4+NalN3sA=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@e10fbf3/assets/components/chatbot/icons.js#sha256-ixfwAolzjkiWWWl6deDVEnlyu6FPQbt0g01BhBRChl4=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@a1815ba/assets/components/chatbot/buttons.js#sha256-aoR85g9x+0vbwzAhDWsBwGP8jLbMNNOukOfuR3hkC98=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@a1815ba/assets/components/chatbot/icons.js#sha256-lLoHRRNWwz4EnQzqEmCgaADE/iAabLR2r92T/ZE8rts=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@e10fbf3/assets/components/chatbot/menus.js#sha256-WmMykl3i2NW2z0q9RnTFGFq175w2mNWN8hnUuh9NFZM=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@35bf9f9/assets/lib/chatbot/feedback.js#sha256-3X5Xq5EkQKlXuHhWMOEvdCLzNUGcCBG8BIIo2LD5cxw=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@e10fbf3/assets/lib/chatbot/session.js#sha256-S6MOdBjx8Hci4GDvYl4JlhSdrDk2oaRLU9DrdxyiIss=
