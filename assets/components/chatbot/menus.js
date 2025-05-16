@@ -132,7 +132,7 @@ window.menus = {
 
     toolbar: {
         state: { // requires <app|env>
-            symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
+            symbols: ['❌', '✔️'], get separator() { return env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ' },
             words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
         },
 
