@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// Bumps @require'd JS + rising-particles CSS @resource's in userscripts
+// Bumps @require'd JS in userscripts
 
 // NOTE: Doesn't git commit to allow script editing from breaking changes
 // NOTE: Pass --cache to use cacheFilePath for faster init
