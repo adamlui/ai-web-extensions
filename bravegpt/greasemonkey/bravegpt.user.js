@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.16.2
+// @version               2025.5.16.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -518,7 +518,7 @@
                                 fontSizeSlider.toggle('off')
                             toggle.minimized()
                         },
-                        pin: () => (btn.onmouseenter = btn.onmouseleave = btn.onclick = hoverMenus.toggle),
+                        pin: () => (btn.onmouseenter = btn.onmouseleave = btn.onclick = menus.hover.toggle),
                         settings: () => modals.open('settings'),
                         'font-size': () => fontSizeSlider.toggle(),
                         wsb: event => { toggle.sidebar('wider') ; tooltip.update(event.currentTarget) }
@@ -526,7 +526,7 @@
 
                     // Add hover listener
                     if (!env.browser.isMobile)
-                        btn.onmouseenter = btn.onmouseleave = btnType == 'pin' ? hoverMenus.toggle : tooltip.toggle
+                        btn.onmouseenter = btn.onmouseleave = btnType == 'pin' ? menus.hover.toggle : tooltip.toggle
 
                      // Add zoom/fade-out to corner buttons
                     if (/about|settings/.test(btn.id)) btn.onmouseup = () => {
@@ -1445,7 +1445,7 @@
                 const anchorToggle = document.querySelector('[id*=anchor] input')
                 if (anchorToggle.checked != config.anchored) modals.settings.toggle.switch(anchorToggle)
             }
-            feedback.notify(`${app.msgs.mode_anchor} ${toolbarMenu.state.words[+config.anchored]}`,
+            feedback.notify(`${app.msgs.mode_anchor} ${menus.toolbar.state.words[+config.anchored]}`,
                 null, sidebarModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
         },
 
@@ -1459,7 +1459,7 @@
                     config.fgAnimationsDisabled ? 'short' : 'long']
                 aboutStatusLabel.style.float = config.fgAnimationsDisabled ? 'right' : ''
             }
-            feedback.notify(`${settings.controls[configKey].label} ${toolbarMenu.state.words[+!config[configKey]]}`)
+            feedback.notify(`${settings.controls[configKey].label} ${menus.toolbar.state.words[+!config[configKey]]}`)
         },
 
         autoGen(mode) {
@@ -1474,7 +1474,7 @@
                 ['prefix', 'suffix'].forEach(mode => {
                     if (config[`${mode}Enabled`]) { toggle.manualGen(mode) ; conflictingModeToggled = true }})
             }
-            feedback.notify(`${settings.controls[modeKey].label} ${toolbarMenu.state.words[+settings.typeIsEnabled(modeKey)]}`,
+            feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+settings.typeIsEnabled(modeKey)]}`,
                 null, conflictingModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
@@ -1505,7 +1505,7 @@
                     if (settings.typeIsEnabled(`auto${log.toTitleCase(mode)}${ mode == 'get' ? 'Disabled' : '' }`)) {
                         toggle.autoGen(mode) ; autoGenToggled = true }
                 })
-            feedback.notify(`${settings.controls[modeKey].label} ${toolbarMenu.state.words[+config[modeKey]]}`,
+            feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+config[modeKey]]}`,
                 null, autoGenToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown)
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
@@ -1533,8 +1533,8 @@
 
         proxyMode() {
             settings.save('proxyAPIenabled', !config.proxyAPIenabled)
-            feedback.notify(`${app.msgs.menuLabel_proxyAPImode} ${toolbarMenu.state.words[+config.proxyAPIenabled]}`)
-            toolbarMenu.refresh()
+            feedback.notify(`${app.msgs.menuLabel_proxyAPImode} ${menus.toolbar.state.words[+config.proxyAPIenabled]}`)
+            menus.toolbar.refresh()
             if (modals.settings.get()) { // update visual states of Settings toggles
                 const proxyToggle = document.querySelector('[id*=proxy] input'),
                       preferredAPIentry = document.querySelector('[id*=preferredAPI]'),
@@ -1562,7 +1562,7 @@
                     .then(queries => show.related(queries))
                     .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
             update.replyPreMaxHeight()
-            feedback.notify(`${app.msgs.menuLabel_relatedQueries} ${toolbarMenu.state.words[+!config.rqDisabled]}`)
+            feedback.notify(`${app.msgs.menuLabel_relatedQueries} ${menus.toolbar.state.words[+!config.rqDisabled]}`)
         },
 
         sidebar(mode, state = '') {
@@ -1591,7 +1591,7 @@
             // Notify of mode change
             if (mode == 'sticky' && prevStickyState == config.stickySidebar) return
             feedback.notify(`${ app.msgs[`menuLabel_${ mode }Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
-                       toolbarMenu.state.words[+config[configKeyName]]}`,
+                       menus.toolbar.state.words[+config[configKeyName]]}`,
                 null, anchorModeDisabled ? 2.75 : null) // +1s duration if conflicting mode notif shown
         },
 
@@ -1624,7 +1624,7 @@
             } else { // functional toggle
                 settings.save('streamingDisabled', !config.streamingDisabled)
                 feedback.notify(`${settings.controls.streamingDisabled.label} ${
-                          toolbarMenu.state.words[+!config.streamingDisabled]}`)
+                          menus.toolbar.state.words[+!config.streamingDisabled]}`)
             }
         }
     }
@@ -2432,7 +2432,7 @@
                     const preHeaderLabel = app.div.querySelector('.reply-header-txt'),
                           apiBeacon = dom.create.elem('span', { class: 'api-btn' })
                     apiBeacon.textContent = '⦿'
-                    apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = hoverMenus.toggle
+                    apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = menus.hover.toggle
                     apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
                     preHeaderLabel.replaceChildren(
                         apiBeacon, ` API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
@@ -2802,137 +2802,6 @@
         }
     }
 
-    const hoverMenus = {
-
-        createAppend(menuType) {
-            if (!this.styles) this.stylize()
-            this[menuType].div = dom.create.elem('div', {
-                id: `${app.slug}-${menuType}-menu`, style: 'width: max-content',
-                class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select`
-            })
-            this[menuType].ul = dom.create.elem('ul')
-            this[menuType].div.append(this[menuType].ul) ; app.div.append(this[menuType].div)
-            this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this.toggle
-            this.update(menuType) ; this[menuType].status = 'hidden'
-        },
-
-        hide(menuType) {
-            Object.assign(this[menuType].div.style, { display: 'none', opacity: 0 })
-            this[menuType].status = 'hidden'
-        },
-
-        stylize() {
-            document.head.append(this.styles = dom.create.style(`
-                .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
-                .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
-                    width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
-                #${app.slug}-api-menu > ul > li:first-of-type > svg { /* API header entry icon */
-                    top: 3px ; margin: 0 1px 0 -4px } /* tighten pos */
-                .${app.slug}-menu-item .checkmark-icon {
-                    position: relative ; float: right ; margin-right: -20px ; top: 3.5px ; fill: #b3f96d }
-                .${app.slug}-menu-item:hover .checkmark-icon { fill: green }`
-            ))
-        },
-
-        toggle(event) { // visibility
-            const toggleElem = event.currentTarget,
-                  reMenuType = /-?(\w+)-(?:btn|menu)$/,
-                  menuType = reMenuType.exec(toggleElem.id)?.[1] || reMenuType.exec(toggleElem.className)?.[1],
-                  menu = hoverMenus[menuType]
-            clearTimeout(menu.hideTimeout) // in case rapid re-enter before ran
-            if (!menu.div?.isConnected) hoverMenus.createAppend(menuType)
-            if (menu.status == 'hidden' && (
-                event.type == 'mouseenter' && event.target != menu.div // btn hovered-on
-                    || event.type == 'click' ) // btn clicked
-            ) { // show menu
-                menu.div.style.display = '' // for rects calc
-                const rects = {
-                    appDiv: app.div.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
-                    hoverMenu: menu.div.getBoundingClientRect()
-                }
-                const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
-                const appIsTooLow = rects.toggleBtn.bottom + rects.hoverMenu.height > ( innerHeight -15 )
-                const pointDirection = menu.preferredDirection == 'up' && appIsTooHigh
-                                    || menu.preferredDirection == 'down' && !appIsTooLow ? 'down' : 'up'
-                Object.assign(menu.div.style, {
-                    top: `${ rects.toggleBtn.top - rects.appDiv.top +(
-                        pointDirection == 'down' ? 30.5 : -rects.hoverMenu.height -13 )}px`,
-                    right: `${ rects.appDiv.right - event.clientX - menu.div.offsetWidth
-                        / ( pointDirection == 'up' ? /* center */ 2 : /* leftish-aligned */ 1.25 )}px`,
-                    opacity: 1
-                })
-                menu.status = 'visible'
-            } else if (/click|mouseleave/.test(event.type)) // menu/btn hovered-off or btn clicked, hide menu
-                return hoverMenus[menuType].hideTimeout = setTimeout(() => hoverMenus.hide(menuType), 55)
-        },
-
-        update(menuType) {
-            this[menuType].ul.textContent = ''
-            this[menuType].entries.forEach((entry, idx) => {
-                const item = dom.create.elem('li', { class: `${app.slug}-menu-item` })
-                if (idx == 0) { // header item
-                    item.innerHTML = `<b>${entry.label}</b>`
-                    item.classList.add(`${app.slug}-menu-header`)
-                    item.style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
-                    if (entry.iconType) item.prepend(icons.create({ key: entry.iconType }))
-                } else { // child items
-                    item.textContent = entry.label
-                    item.style.paddingRight = '24px' // make room for checkmark
-                    if (idx == 1) item.style.marginTop = '3px' // top-pad first non-header item
-                    if (entry.iconType) { // prepend it
-                        const icon = icons.create({ key: entry.iconType })
-                        icon.style.cssText = `
-                            width: 12px ; height: 12px ; position: relative ; top: 1px ; right: 5px ; margin-left: 5px`
-                        if (entry.iconType == 'webCorner') icon.style.width = icon.style.height = '11px' // shrink it
-                        item.prepend(icon)
-                    } else // indent
-                        item.style.paddingLeft = '11px'
-                    if (entry.isActive?.())
-                        item.append(icons.create({ key: 'checkmark', class: 'checkmark-icon', size: 12 }))
-                }
-                item.onclick = () => {
-                    if (!entry.onclick) return
-                    const prevOffsetTop = app.div.offsetTop ; entry.onclick()
-                    if (app.div.offsetTop != prevOffsetTop) this.hide(menuType) // since app moved
-                    this.update(menuType)
-                }
-                this[menuType].ul.append(item)
-            })
-        },
-
-        api: {
-            preferredDirection: 'down',
-            entries: [
-                { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
-                ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api !== 'OpenAI')].map(api => ({
-                    label: api,
-                    onclick: () => {
-                        settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
-                        feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                               `${ config.anchored ? 'top' : 'bottom' }-right`)
-                    },
-                    isActive: () => !config.preferredAPI && api == app.msgs.menuLabel_random
-                                  || config.preferredAPI == api
-                }))
-            ]
-        },
-
-        pin: {
-            preferredDirection: 'down',
-            entries: [
-                { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
-                { label: app.msgs.menuLabel_top, iconType: 'webCorner', onclick: () => toggle.sidebar('sticky'),
-                    isActive: () => config.stickySidebar },
-                { label: app.msgs.menuLabel_sidebar, iconType: 'sidebar',
-                    onclick: () => { toggle.sidebar('sticky', 'off') ; toggle.anchorMode('off') },
-                    isActive: () => !config.stickySidebar && !config.anchored
-                },
-                { label: app.msgs.menuLabel_bottom, iconType: 'anchor', onclick: () => toggle.anchorMode(),
-                    isActive: () => config.anchored }
-            ]
-        }
-    }
-
     const logos = {
         braveGPT: {
 
@@ -2947,6 +2816,167 @@
                 if (!targetLogos.length) targetLogos = document.querySelectorAll(`#${app.slug}-logo`)
                 targetLogos.forEach(logo =>
                     logo.src = GM_getResourceText(`bgpt${ env.ui.app.scheme == 'dark' ? 'DS' : 'LS' }logo`))
+            }
+        }
+    }
+
+    const menus = {
+        hover: {
+            createAppend(menuType) {
+                if (!this.styles) this.stylize()
+                this[menuType].div = dom.create.elem('div', {
+                    id: `${app.slug}-${menuType}-menu`, style: 'width: max-content',
+                    class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select`
+                })
+                this[menuType].ul = dom.create.elem('ul')
+                this[menuType].div.append(this[menuType].ul) ; app.div.append(this[menuType].div)
+                this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this.toggle
+                this.update(menuType) ; this[menuType].status = 'hidden'
+            },
+
+            hide(menuType) {
+                Object.assign(this[menuType].div.style, { display: 'none', opacity: 0 })
+                this[menuType].status = 'hidden'
+            },
+
+            stylize() {
+                document.head.append(this.styles = dom.create.style(`
+                    .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
+                    .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
+                        width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
+                    #${app.slug}-api-menu > ul > li:first-of-type > svg { /* API header entry icon */
+                        top: 3px ; margin: 0 1px 0 -4px } /* tighten pos */
+                    .${app.slug}-menu-item .checkmark-icon {
+                        position: relative ; float: right ; margin-right: -20px ; top: 3.5px ; fill: #b3f96d }
+                    .${app.slug}-menu-item:hover .checkmark-icon { fill: green }`
+                ))
+            },
+
+            toggle(event) { // visibility
+                const toggleElem = event.currentTarget,
+                    reMenuType = /-?(\w+)-(?:btn|menu)$/,
+                    menuType = reMenuType.exec(toggleElem.id)?.[1] || reMenuType.exec(toggleElem.className)?.[1],
+                    menu = menus.hover[menuType]
+                clearTimeout(menu.hideTimeout) // in case rapid re-enter before ran
+                if (!menu.div?.isConnected) menus.hover.createAppend(menuType)
+                if (menu.status == 'hidden' && (
+                    event.type == 'mouseenter' && event.target != menu.div // btn hovered-on
+                        || event.type == 'click' ) // btn clicked
+                ) { // show menu
+                    menu.div.style.display = '' // for rects calc
+                    const rects = {
+                        appDiv: app.div.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
+                        hoverMenu: menu.div.getBoundingClientRect()
+                    }
+                    const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
+                    const appIsTooLow = rects.toggleBtn.bottom + rects.hoverMenu.height > ( innerHeight -15 )
+                    const pointDirection = menu.preferredDirection == 'up' && appIsTooHigh
+                                        || menu.preferredDirection == 'down' && !appIsTooLow ? 'down' : 'up'
+                    Object.assign(menu.div.style, {
+                        top: `${ rects.toggleBtn.top - rects.appDiv.top +(
+                            pointDirection == 'down' ? 30.5 : -rects.hoverMenu.height -13 )}px`,
+                        right: `${ rects.appDiv.right - event.clientX - menu.div.offsetWidth
+                            / ( pointDirection == 'up' ? /* center */ 2 : /* leftish-aligned */ 1.25 )}px`,
+                        opacity: 1
+                    })
+                    menu.status = 'visible'
+                } else if (/click|mouseleave/.test(event.type)) // menu/btn hovered-off or btn clicked, hide menu
+                    return menus.hover[menuType].hideTimeout = setTimeout(() => menus.hover.hide(menuType), 55)
+            },
+
+            update(menuType) {
+                this[menuType].ul.textContent = ''
+                this[menuType].entries.forEach((entry, idx) => {
+                    const item = dom.create.elem('li', { class: `${app.slug}-menu-item` })
+                    if (idx == 0) { // header item
+                        item.innerHTML = `<b>${entry.label}</b>`
+                        item.classList.add(`${app.slug}-menu-header`)
+                        item.style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
+                        if (entry.iconType) item.prepend(icons.create({ key: entry.iconType }))
+                    } else { // child items
+                        item.textContent = entry.label
+                        item.style.paddingRight = '24px' // make room for checkmark
+                        if (idx == 1) item.style.marginTop = '3px' // top-pad first non-header item
+                        if (entry.iconType) { // prepend it
+                            const icon = icons.create({ key: entry.iconType })
+                            icon.style.cssText = `
+                                width: 12px ; height: 12px ; position: relative ; top: 1px ; right: 5px ; margin-left: 5px`
+                            if (entry.iconType == 'webCorner') icon.style.width = icon.style.height = '11px' // shrink it
+                            item.prepend(icon)
+                        } else // indent
+                            item.style.paddingLeft = '11px'
+                        if (entry.isActive?.())
+                            item.append(icons.create({ key: 'checkmark', class: 'checkmark-icon', size: 12 }))
+                    }
+                    item.onclick = () => {
+                        if (!entry.onclick) return
+                        const prevOffsetTop = app.div.offsetTop ; entry.onclick()
+                        if (app.div.offsetTop != prevOffsetTop) this.hide(menuType) // since app moved
+                        this.update(menuType)
+                    }
+                    this[menuType].ul.append(item)
+                })
+            },
+
+            api: {
+                preferredDirection: 'down',
+                entries: [
+                    { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
+                    ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api !== 'OpenAI')].map(api => ({
+                        label: api,
+                        onclick: () => {
+                            settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
+                            feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
+                                `${ config.anchored ? 'top' : 'bottom' }-right`)
+                        },
+                        isActive: () => !config.preferredAPI && api == app.msgs.menuLabel_random
+                                    || config.preferredAPI == api
+                    }))
+                ]
+            },
+
+            pin: {
+                preferredDirection: 'down',
+                entries: [
+                    { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
+                    { label: app.msgs.menuLabel_top, iconType: 'webCorner', onclick: () => toggle.sidebar('sticky'),
+                        isActive: () => config.stickySidebar },
+                    { label: app.msgs.menuLabel_sidebar, iconType: 'sidebar',
+                        onclick: () => { toggle.sidebar('sticky', 'off') ; toggle.anchorMode('off') },
+                        isActive: () => !config.stickySidebar && !config.anchored
+                    },
+                    { label: app.msgs.menuLabel_bottom, iconType: 'anchor', onclick: () => toggle.anchorMode(),
+                        isActive: () => config.anchored }
+                ]
+            }
+        },
+
+        toolbar: {
+            state: {
+                symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
+                words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
+            },
+
+            refresh() {
+                if (typeof GM_unregisterMenuCommand == 'undefined')
+                    return log.debug('GM_unregisterMenuCommand not supported.')
+                for (const id of this.entryIDs) { GM_unregisterMenuCommand(id) } this.register()
+            },
+
+            register() {
+
+                // Add Proxy API Mode toggle
+                const pmLabel = this.state.symbols[+config.proxyAPIenabled] + ' '
+                            + settings.controls.proxyAPIenabled.label + ' '
+                            + this.state.separator + this.state.words[+config.proxyAPIenabled]
+                this.entryIDs = [GM_registerMenuCommand(pmLabel, toggle.proxyMode,
+                    env.scriptManager.supportsTooltips ? { title: settings.controls.proxyAPIenabled.helptip }
+                                                       : undefined)]
+                // Add About/Settings entries
+                ;['about', 'settings'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
+                    entryType == 'about' ? `💡 ${settings.controls.about.label}` : `⚙️ ${app.msgs.menuLabel_settings}`,
+                    () => modals.open(entryType), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
+                )))
             }
         }
     }
@@ -3438,7 +3468,7 @@
                             else {
                                 settings.save(key, !config[key]) // update config
                                 feedback.notify(`${settings.controls[key].label} ${
-                                    toolbarMenu.state.words[+(key.includes('Disabled') ^ config[key])]}`)
+                                    menus.toolbar.state.words[+(key.includes('Disabled') ^ config[key])]}`)
                             }
                         }
 
@@ -3809,35 +3839,6 @@
         }
     }
 
-    window.toolbarMenu = {
-        state: {
-            symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
-            words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
-        },
-
-        refresh() {
-            if (typeof GM_unregisterMenuCommand == 'undefined')
-                return log.debug('GM_unregisterMenuCommand not supported.')
-            for (const id of this.entryIDs) { GM_unregisterMenuCommand(id) } this.register()
-        },
-
-        register() {
-
-            // Add Proxy API Mode toggle
-            const pmLabel = this.state.symbols[+config.proxyAPIenabled] + ' '
-                          + settings.controls.proxyAPIenabled.label + ' '
-                          + this.state.separator + this.state.words[+config.proxyAPIenabled]
-            this.entryIDs = [GM_registerMenuCommand(pmLabel, toggle.proxyMode,
-                env.scriptManager.supportsTooltips ? { title: settings.controls.proxyAPIenabled.helptip } : undefined)]
-
-            // Add About/Settings entries
-            ;['about', 'settings'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
-                entryType == 'about' ? `💡 ${settings.controls.about.label}` : `⚙️ ${app.msgs.menuLabel_settings}`,
-                () => modals.open(entryType), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
-            )))
-        }
-    }
-
     const tooltip = {
 
         stylize() {
@@ -3956,7 +3957,7 @@
 
     // Run MAIN routine
 
-    toolbarMenu.register()
+    menus.toolbar.register()
 
     // Init UI props
     env.ui = { app: { scheme: config.scheme || getScheme() }, site: { scheme: getScheme() }}
