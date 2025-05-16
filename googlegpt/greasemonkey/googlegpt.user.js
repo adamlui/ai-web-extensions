@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.16.6
+// @version                  2025.5.16.7
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -2701,11 +2701,11 @@
 
     // Define COMPONENTS
 
-    const fontSizeSlider = {
+    const fontSizeSlider = { // requires dom.js + <app|config|inputEvents>
         fadeInDelay: 5, // ms
         hWheelDistance: 10, // px
 
-        createAppend() {
+        createAppend() { // requires dom.js + <app|config|inputEvents>
 
             // Create/ID/classify slider elems
             fontSizeSlider.cursorOverlay = dom.create.elem('div', { class: 'cursor-overlay' })
@@ -2781,7 +2781,7 @@
             return slider
         },
 
-        toggle(state = '') {
+        toggle(state = '') { // requires app
             const slider = document.getElementById(`${app.slug}-font-size-slider-track`)
                          || fontSizeSlider.createAppend()
             const replyTip = app.div.querySelector('.reply-tip')
@@ -2808,16 +2808,16 @@
         }
     }
 
-    const logos = {
+    const logos = { // requires dom.js + <app|env> + GM_getResourceText()
         googleGPT: {
 
-            create() {
+            create() { // requires dom.js + app
                 const googleGPTlogo = dom.create.elem('img', { id: `${app.slug}-logo`, class: 'no-mobile-tap-outline' })
                 logos.googleGPT.update(googleGPTlogo)
                 return googleGPTlogo
             },
 
-            update(...targetLogos) {
+            update(...targetLogos) { // requires <app|env> + GM_getResourceText()
                 targetLogos = targetLogos.flat() // flatten array args nested by spread operator
                 if (!targetLogos.length) targetLogos = document.querySelectorAll(`#${app.slug}-logo`)
                 targetLogos.forEach(logo =>
@@ -3632,9 +3632,9 @@
         }
     }
 
-    window.replyBubble = {
+    window.replyBubble = { // requires dom.js + update
 
-        create() {
+        create() { // requires dom.js
             if (this.bubbleDiv) return
             this.replyTip = dom.create.elem('span', { class: 'reply-tip' })
             this.bubbleDiv = dom.create.elem('div', { class: 'reply-bubble bubble-elem' })
@@ -3645,15 +3645,15 @@
             this.bubbleDiv.append(this.preHeader, this.replyPre)
         },
 
-        insert() {
+        insert() { // requires update
             if (!this.bubbleDiv) this.create()
             app.div.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
         }
     }
 
-    window.tooltip = {
+    window.tooltip = { // requires dom.js + <app|config|env>
 
-        stylize() {
+        stylize() { // requires dom.js
             document.head.append(this.styles = dom.create.style(`.${app.slug}-tooltip {
                 background-color: /* bubble style */
                     rgba(0,0,0,0.64) ; padding: 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
@@ -3667,7 +3667,7 @@
             ))
         },
 
-        toggle(stateOrEvent) { // visibility
+        toggle(stateOrEvent) { // requires dom.js + <app|env>
             if (env.browser.isMobile) return
             tooltip.div ||= dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
             if (!tooltip.div.isConnected) app.div.append(tooltip.div)
@@ -3677,7 +3677,7 @@
             tooltip.div.style.opacity = +( stateOrEvent?.type == 'mouseenter' || stateOrEvent == 'on' )
         },
 
-        update(btn) { // text & position
+        update(btn) { // requires <app|config>
             if (!this.div) return // since nothing to update
             const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
             const baseText = {
@@ -3739,7 +3739,7 @@
         }
     }
 
-    window.updateCheck = () => {
+    window.updateCheck = () => { // requires <app|modals|log>
         log.caller = 'updateCheck()'
         log.debug(`currentVer = ${app.version}`)
 
