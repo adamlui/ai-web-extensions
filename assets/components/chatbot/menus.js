@@ -1,6 +1,7 @@
 // Requires components/icons.js + lib/dom.js + <apis|app|config|env|log|modals|settings|toggle>
 
 window.menus = {
+
     hover: {
         createAppend(menuType) { // requires lib/dom.js
             const menu = this[menuType] ; if (!this.styles) this.stylize()
