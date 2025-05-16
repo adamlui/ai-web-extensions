@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.14.5
+// @version               2025.5.15
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -431,7 +431,7 @@
         suffixEnabled: { type: 'toggle', icon: 'questionMark', defaultVal: false,
             label: `${app.msgs.menuLabel_require} "?" ${app.msgs.menuLabel_afterQuery}`,
             helptip: app.msgs.helptip_suffixMode },
-        widerSidebar: { type: 'toggle', mobile: false, icon: 'widescreen', defaultVal: false,
+        widerSidebar: { type: 'toggle', mobile: false, icon: 'widescreenTall', defaultVal: false,
             label: app.msgs.menuLabel_widerSidebar,
             helptip: app.msgs.helptip_widerSidebar },
         stickySidebar: { type: 'toggle', mobile: false, icon: 'webCorner', defaultVal: false,
@@ -607,11 +607,13 @@
         const mode = Object.keys(settings.controls).find(
             key => msg.toLowerCase().includes(settings.controls[key].label.trim().toLowerCase()))
         if (mode && !/(?:pre|suf)fix/.test(mode)) {
-            const modeIcon = icons[settings.controls[mode].icon].create()
+            const modeIcon = icons.create({ key: settings.controls[mode].icon })
             modeIcon.style.cssText = iconStyles
                 + ( /preferred/i.test(mode) ? 'top: 5.5px' : '' ) // lower Preferred API icon
                 + ( /autoget|debug|focus|scroll/i.test(mode) ? 'top: 0.5px' : '' ) // raise some icons
                 + ( /animation|debug/i.test(mode) ? 'width: 23px ; height: 23px' : '' ) // shrink some icon
+            if (mode.includes('Animation')) // customize sparkle fill
+                modeIcon[`${ mode.startsWith('fg') ? 'last' : 'first' }Child`].style.fill = 'none'
             notif.append(modeIcon)
         }
 
@@ -992,17 +994,13 @@
                       + ( scheme == 'light' ? app.msgs.scheme_light || 'Light'
                         : scheme == 'dark'  ? app.msgs.scheme_dark  || 'Dark'
                                             : app.msgs.menuLabel_auto ).toUpperCase() )
-
                 // Append scheme icon
-                const notifs = document.querySelectorAll('.chatgpt-notif')
-                const notif = notifs[notifs.length -1]
-                const schemeIcon = icons[
-                    scheme == 'light' ? 'sun' : scheme == 'dark' ? 'moon' : 'arrowsCyclic'].create()
-                schemeIcon.style.cssText = 'width: 23px ; height: 23px ; position: relative ;'
-                                         + 'top: 3px ; margin-left: 6px'
-                notif.append(schemeIcon)
+                const notifs = document.querySelectorAll('.chatgpt-notif'), notif = notifs[notifs.length -1]
+                notif.append(icons.create({
+                    key: scheme == 'light' ? 'sun' : scheme == 'dark' ? 'moon' : 'arrowsCyclic',
+                    style: 'width: 23px ; height: 23px ; position: relative ; top: 3px ; margin-left: 6px'
+                }))
             }
-
             return schemeModal
         },
 
@@ -1027,7 +1025,7 @@
 
                 // Init title
                 const settingsTitleDiv = dom.create.elem('div', { id: `${app.slug}-settings-title` }),
-                      settingsTitleIcon = icons.sliders.create(),
+                      settingsTitleIcon = icons.create({ key: 'sliders' }),
                       settingsTitleH4 = dom.create.elem('h4')
                 settingsTitleIcon.style.cssText += 'width: 21px ; height: 21px ;'
                                                  + 'position: relative ; right: 8px ; top: 2.5px'
@@ -1061,7 +1059,7 @@
                     (settingsLists[env.browser.isPortrait ? 0 : +(idx >= settingEntryCap)]).append(settingEntry)
 
                     // Create/prepend icons
-                    const settingIcon = icons[setting.icon].create(/bg|fg/.exec(key)?.[0] || '')
+                    const settingIcon = icons.create({ key: setting.icon })
                     settingIcon.style.cssText = 'position: relative ;' + (
                         /proxy/i.test(key) ? 'top: 3px ; left: -0.5px ; margin-right: 9px'
                       : /preferred/i.test(key) ? 'top: 3.5px ; margin-right: 7.5px'
@@ -1081,6 +1079,8 @@
                       : /about/i.test(key) ? 'top: 3px ; left: -3px ; margin-right: 5.5px' : ''
                     )
                     settingEntry.prepend(settingIcon)
+                    if (key.includes('Animation')) // customize sparkle icon elem fill
+                        settingIcon[`${ key.startsWith('fg') ? 'last' : 'first' }Child`].style.fill = 'none'
 
                     // Create/append toggles/listeners
                     if (setting.type == 'toggle') {
@@ -1169,7 +1169,7 @@
                 // Create close button
                 const closeBtn = dom.create.elem('div',
                     { title: app.msgs.tooltip_close, class: `${app.slug}-modal-close-btn no-mobile-tap-outline` })
-                closeBtn.append(icons.x.create())
+                closeBtn.append(icons.create({ key: 'x' }))
 
                 // Assemble/append elems
                 settingsModal.append(settingsIcon, settingsTitleDiv, closeBtn, settingsListContainer)
@@ -1216,9 +1216,11 @@
                 if (schemeStatusSpan) {
                     schemeStatusSpan.textContent = ''
                     schemeStatusSpan.append(...( // status txt + icon
-                        config.scheme == 'dark' ? [document.createTextNode(app.msgs.scheme_dark), icons.moon.create()]
-                      : config.scheme == 'light' ? [document.createTextNode(app.msgs.scheme_light), icons.sun.create()]
-                      : [document.createTextNode(app.msgs.menuLabel_auto), icons.arrowsCyclic.create()] ))
+                        config.scheme == 'dark' ?
+                            [document.createTextNode(app.msgs.scheme_dark), icons.create({ key: 'moon' })]
+                      : config.scheme == 'light' ?
+                        [document.createTextNode(app.msgs.scheme_light), icons.create({ key: 'sun' })]
+                      : [document.createTextNode(app.msgs.menuLabel_auto), icons.create({ key: 'arrowsCyclic' })]))
                     schemeStatusSpan.style.cssText += `; margin-top: ${ !config.scheme ? 3 : 0 }px !important`
                 }
             }
@@ -1256,7 +1258,7 @@
             )
 
             // Prefix icon to title
-            const modalTitle = shareChatModal.querySelector('h2'), titleIcon = icons.speechBalloons.create()
+            const modalTitle = shareChatModal.querySelector('h2'), titleIcon = icons.create({ key: 'speechBalloons' })
             titleIcon.style.cssText = 'height: 28px ; width: 28px ; position: relative ; top: 7px ; right: 8px ;'
                                     + `fill: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }`
             modalTitle.prepend(titleIcon)
@@ -1419,8 +1421,8 @@
               + '#scheme-settings-entry > span > svg {' // v-align/left-pad Scheme status icon
                   + 'position: relative ; top: 3px ; margin-left: 4px }'
               + ( config.fgAnimationsDisabled ? '' // spin cycle arrows icon when scheme is Auto
-                  : ( '#scheme-settings-entry svg[id*=arrows-cycle],'
-                            + '.chatgpt-notif svg[id*=arrows-cycle] { animation: rotate 5s linear infinite }' ))
+                  : ( '#scheme-settings-entry svg[class*=arrowsCyclic],'
+                            + '.chatgpt-notif svg[class*=arrowsCyclic] { animation: rotate 5s linear infinite }' ))
               + `#about-settings-entry span { color: ${ env.ui.app.scheme == 'dark' ? '#28ee28' : 'green' }}`
               + '#about-settings-entry > span {' // outer About status span
                   + `width: ${ env.browser.isPortrait ? '15vw' : '95px' }; height: 20px ; overflow: hidden ;`
@@ -1501,9 +1503,9 @@
                     width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
                 #${app.slug}-api-menu > ul > li:first-of-type > svg { /* API header entry icon */
                     top: 3px ; margin: 0 1px 0 -4px } /* tighten pos */
-                .${app.slug}-menu-item #${app.slug}-checkmark-icon {
-                    position: relative ; float: right ; margin-right: -16px ; top: 4px ; fill: #b3f96d }
-                .${app.slug}-menu-item:hover #${app.slug}-checkmark-icon { fill: green }`
+                .${app.slug}-menu-item .checkmark-icon {
+                    position: relative ; float: right ; margin-right: -20px ; top: 3.5px ; fill: #b3f96d }
+                .${app.slug}-menu-item:hover .checkmark-icon { fill: green }`
             ))
         },
 
@@ -1547,20 +1549,21 @@
                     item.innerHTML = `<b>${entry.label}</b>`
                     item.classList.add(`${app.slug}-menu-header`)
                     item.style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
-                    if (entry.iconType) item.prepend(icons[entry.iconType].create())
+                    if (entry.iconType) item.prepend(icons.create({ key: entry.iconType }))
                 } else { // child items
                     item.textContent = entry.label
                     item.style.paddingRight = '24px' // make room for checkmark
                     if (idx == 1) item.style.marginTop = '3px' // top-pad first non-header item
                     if (entry.iconType) { // prepend it
-                        const icon = icons[entry.iconType].create()
+                        const icon = icons.create({ key: entry.iconType })
                         icon.style.cssText = `
                             width: 12px ; height: 12px ; position: relative ; top: 1px ; right: 5px ; margin-left: 5px`
                         if (entry.iconType == 'webCorner') icon.style.width = icon.style.height = '11px' // shrink it
                         item.prepend(icon)
                     } else // indent
                         item.style.paddingLeft = '11px'
-                    if (entry.isActive?.()) item.append(icons.checkmark.create())
+                    if (entry.isActive?.())
+                        item.append(icons.create({ key: 'checkmark', class: 'checkmark-icon', size: 12 }))
                 }
                 item.onclick = () => {
                     if (!entry.onclick) return
@@ -1605,88 +1608,73 @@
         }
     }
 
-    // Define ICON functions
+    // Define ICON function/props
 
-    const icons = {
+    const icons = { // requires dom.js
+
+        create({ key, size = 18, width, height, ...moreAttrs }) {
+            if (!key) return log.error('Option \'key\' required by icons.create()')
+            const icon = {
+                data: this[key], attrs: { width: width || size, height: height || size, class: key, ...moreAttrs }}
+            if (icon.data?.svg) {
+                icon.svg = dom.create.svgElem('svg', { ...icon.data.svg, ...icon.attrs })
+                ;(function create(elems) {
+                    return elems.map(elem => {
+                        const [tag, attrs] = Object.entries(elem)[0], svgElem = dom.create.svgElem(tag, attrs)
+                        if (attrs.elems) svgElem.append(...create(attrs.elems)) // recursively create() sub-elems
+                        return svgElem
+                    })
+                })(icon.data.elems).forEach(elem => icon.svg.append(elem))
+                return icon.svg
+            } else // img w/ src
+                return dom.create.elem('img', { src: icon.data.src, ...icon.attrs })
+        },
 
         anchor: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 19, height: 19, viewBox: '0 0 24 24' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'M12,2 C13.6568542,2 15,3.34314575 15,5 C15,6.30588222 14.1656226,7.41688515 13.0009007,7.82897577 L13.0008722,19.9379974 C15.8984799,19.5763478 18.3147266,17.665053 19.3940412,15.0596838 L19.417,15 L17,15 C15.9853611,15 15.6358608,13.6848035 16.4495309,13.1641077 L16.5527864,13.1055728 L20.5527864,11.1055728 C21.2176875,10.7731223 22,11.256618 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,11.2957433 2.70213089,10.8247365 3.34138467,11.0597803 L3.4472136,11.1055728 L7.4472136,13.1055728 C8.35473419,13.5593331 8.07916306,14.8919819 7.11853213,14.9938221 L7,15 L4.582,15 L4.60595876,15.0596838 C5.68539551,17.6653477 8.10206662,19.5767802 11.0001109,19.9381201 L11.0000889,7.82932572 C9.8348501,7.41751442 9,6.30625206 9,5 C9,3.34314575 10.3431458,2 12,2 Z M12,4 C11.4477153,4 11,4.44771525 11,5 C11,5.55228475 11.4477153,6 12,6 C12.5522847,6 13,5.55228475 13,5 C13,4.44771525 12.5522847,4 12,4 Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 24 24' },
+            elems: [{ path: { stroke: 'none', d: 'M12,2 C13.6568542,2 15,3.34314575 15,5 C15,6.30588222 14.1656226,7.41688515 13.0009007,7.82897577 L13.0008722,19.9379974 C15.8984799,19.5763478 18.3147266,17.665053 19.3940412,15.0596838 L19.417,15 L17,15 C15.9853611,15 15.6358608,13.6848035 16.4495309,13.1641077 L16.5527864,13.1055728 L20.5527864,11.1055728 C21.2176875,10.7731223 22,11.256618 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,11.2957433 2.70213089,10.8247365 3.34138467,11.0597803 L3.4472136,11.1055728 L7.4472136,13.1055728 C8.35473419,13.5593331 8.07916306,14.8919819 7.11853213,14.9938221 L7,15 L4.582,15 L4.60595876,15.0596838 C5.68539551,17.6653477 8.10206662,19.5767802 11.0001109,19.9381201 L11.0000889,7.82932572 C9.8348501,7.41751442 9,6.30625206 9,5 C9,3.34314575 10.3431458,2 12,2 Z M12,4 C11.4477153,4 11,4.44771525 11,5 C11,5.55228475 11.4477153,6 12,6 C12.5522847,6 13,5.55228475 13,5 C13,4.44771525 12.5522847,4 12,4 Z' }}]
         },
 
 
         arrowDownRight: {
-            create() {
-                const svg = dom.create.svgElem('svg', {
-                    width: 18, height: 18, viewBox: '0 0 24 24',
-                    fill: 'currentColor', style: 'transform: rotate(180deg)' })
-                const svgPath = dom.create.svgElem('path', {
-                    d: 'M16 10H6.83L9 7.83l1.41-1.41L9 5l-6 6 6 6 1.41-1.41L9 14.17 6.83 12H16c1.65 0 3 1.35 3 3v4h2v-4c0-2.76-2.24-5-5-5z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 24 24', fill: 'currentColor', style: 'transform: rotate(180deg)' },
+            elems: [{ path: { d: 'M16 10H6.83L9 7.83l1.41-1.41L9 5l-6 6 6 6 1.41-1.41L9 14.17 6.83 12H16c1.65 0 3 1.35 3 3v4h2v-4c0-2.76-2.24-5-5-5z' }}]
         },
 
         arrowShare: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 19, height: 19, viewBox: '0 0 24 24', fill: 'none' })
-                const svgPath = dom.create.svgElem('path', { 'stroke-width': 2,
-                    d: 'M14.7441 16.4211C14.5876 16.7477 14.5 17.1136 14.5 17.5C14.5 18.8807 15.6193 20 17 20C18.3807 20 19.5 18.8807 19.5 17.5C19.5 16.1193 18.3807 15 17 15C16.0057 15 15.1469 15.5805 14.7441 16.4211ZM14.7441 16.4211L7.75586 13.0789M14.7441 7.57889C15.1469 8.41949 16.0057 9 17 9C18.3807 9 19.5 7.88071 19.5 6.5C19.5 5.11929 18.3807 4 17 4C15.6193 4 14.5 5.11929 14.5 6.5C14.5 6.88637 14.5876 7.25226 14.7441 7.57889ZM14.7441 7.57889L7.75586 10.9211M7.75586 10.9211C7.35311 10.0805 6.49435 9.5 5.5 9.5C4.11929 9.5 3 10.6193 3 12C3 13.3807 4.11929 14.5 5.5 14.5C6.49435 14.5 7.35311 13.9195 7.75586 13.0789M7.75586 10.9211C7.91235 11.2477 8 11.6136 8 12C8 12.3864 7.91235 12.7523 7.75586 13.0789' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 24 24', fill: 'none' },
+            elems: [{ path: { 'stroke-width': 2, d: 'M14.7441 16.4211C14.5876 16.7477 14.5 17.1136 14.5 17.5C14.5 18.8807 15.6193 20 17 20C18.3807 20 19.5 18.8807 19.5 17.5C19.5 16.1193 18.3807 15 17 15C16.0057 15 15.1469 15.5805 14.7441 16.4211ZM14.7441 16.4211L7.75586 13.0789M14.7441 7.57889C15.1469 8.41949 16.0057 9 17 9C18.3807 9 19.5 7.88071 19.5 6.5C19.5 5.11929 18.3807 4 17 4C15.6193 4 14.5 5.11929 14.5 6.5C14.5 6.88637 14.5876 7.25226 14.7441 7.57889ZM14.7441 7.57889L7.75586 10.9211M7.75586 10.9211C7.35311 10.0805 6.49435 9.5 5.5 9.5C4.11929 9.5 3 10.6193 3 12C3 13.3807 4.11929 14.5 5.5 14.5C6.49435 14.5 7.35311 13.9195 7.75586 13.0789M7.75586 10.9211C7.91235 11.2477 8 11.6136 8 12C8 12.3864 7.91235 12.7523 7.75586 13.0789' }}]
         },
 
         arrowsCyclic: {
-            create() {
-                const svg = dom.create.svgElem('svg', {
-                    id: `${app.slug}-arrows-cycle-icon`, width: 13, height: 13,
-                    viewBox: '197 -924 573 891', style: 'transform: rotate(14deg)' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'M204-318q-22-38-33-78t-11-82q0-134 93-228t227-94h7l-64-64 56-56 160 160-160 160-56-56 64-64h-7q-100 0-170 70.5T240-478q0 26 6 51t18 49l-60 60ZM481-40 321-200l160-160 56 56-64 64h7q100 0 170-70.5T720-482q0-26-6-51t-18-49l60-60q22 38 33 78t11 82q0 134-93 228t-227 94h-7l64 64-56 56Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '197 -924 573 891', style: 'transform: rotate(14deg)' },
+            elems: [{ path: { stroke: 'none', d: 'M204-318q-22-38-33-78t-11-82q0-134 93-228t227-94h7l-64-64 56-56 160 160-160 160-56-56 64-64h-7q-100 0-170 70.5T240-478q0 26 6 51t18 49l-60 60ZM481-40 321-200l160-160 56 56-64 64h7q100 0 170-70.5T720-482q0-26-6-51t-18-49l60-60q22 38 33 78t11 82q0 134-93 228t-227 94h-7l64 64-56 56Z' }}]
         },
 
-        arrowsDiagonal: {
-            inwardSVGpath() { return dom.create.svgElem('path', { stroke: 'none',
-                d: 'M5 1h2v6H1V5h2.59L0 1.41 1.41 0 5 3.59zm7.41 10H15V9H9v6h2v-2.59L14.59 16 16 14.59z'
-            })},
+        arrowsDiagonalIn: {
+            svg: { viewBox: '0 0 16 16' },
+            elems: [{ g: {
+                style: 'transform: rotate(-7deg)',
+                elems: [{ path: { stroke: 'none',
+                    d: 'M5 1h2v6H1V5h2.59L0 1.41 1.41 0 5 3.59zm7.41 10H15V9H9v6h2v-2.59L14.59 16 16 14.59z' }}]}
+            }]
+        },
 
-            outwardSVGpath() { return dom.create.svgElem('path', { stroke: 'none',
-                d: 'M8 6.59L6.59 8 3 4.41V7H1V1h6v2H4.41zM13 9v2.59L9.41 8 8 9.41 11.59 13H9v2h6V9z'
-            })},
-
-            create() {
-                const svg = dom.create.svgElem('svg', {
-                    id: 'arrows-diagonal-icon', width: 16, height: 16, viewBox: '0 0 16 16' })
-                const g = dom.create.svgElem('g', {
-                    style: 'transform: rotate(-7deg)' }) // tilt slightly to hint expansions often horizontal
-                svg.append(g) ; icons.arrowsDiagonal.update(svg)
-                return svg
-            },
-
-            update(...targetIcons) {
-                targetIcons = targetIcons.flat() // flatten array args nested by spread operator
-                if (!targetIcons.length) targetIcons = document.querySelectorAll('#arrows-diagonal-icon')
-                targetIcons.forEach(icon => {
-                    icon.firstChild.textContent = '' // clear prev paths
-                    icon.firstChild.append(icons.arrowsDiagonal[`${config.expanded ? 'in' : 'out' }wardSVGpath`]())
-                })
-            }
+        arrowsDiagonalOut: {
+            svg: { viewBox: '0 0 16 16' },
+            elems: [{ g: {
+                style: 'transform: rotate(-7deg)',
+                elems: [{ path: { stroke: 'none',
+                    d: 'M8 6.59L6.59 8 3 4.41V7H1V1h6v2H4.41zM13 9v2.59L9.41 8 8 9.41 11.59 13H9v2h6V9z' }}]}
+            }]
         },
 
         arrowsDown: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 19, height: 19, viewBox: '0 0 24 24' })
-                svg.append(
-                    dom.create.svgElem('path', { stroke: 'none', d: 'M18,13H6a1,1,0,0,1,0-2H18a1,1,0,0,1,0,2Z' }),
-                    dom.create.svgElem('path', { stroke: 'none',
-                        d: 'M14.71,18.29a1,1,0,0,1,0,1.42l-2,2a1,1,0,0,1-1.42,0l-2-2a1,1,0,0,1,1.42-1.42l.29.3V16a1,1,0,0,1,2,0v2.59l.29-.3A1,1,0,0,1,14.71,18.29ZM11.29,8.71a1,1,0,0,0,1.42,0l2-2a1,1,0,1,0-1.42-1.42l-.29.3V3a1,1,0,0,0-2,0V5.59l-.29-.3A1,1,0,0,0,9.29,6.71Z' }))
-                return svg
-            }
+            svg: { viewBox: '0 0 24 24' },
+            elems: [
+                { path: { stroke: 'none', d: 'M18,13H6a1,1,0,0,1,0-2H18a1,1,0,0,1,0,2Z' }},
+                { path: { stroke: 'none', d: 'M14.71,18.29a1,1,0,0,1,0,1.42l-2,2a1,1,0,0,1-1.42,0l-2-2a1,1,0,0,1,1.42-1.42l.29.3V16a1,1,0,0,1,2,0v2.59l.29-.3A1,1,0,0,1,14.71,18.29ZM11.29,8.71a1,1,0,0,0,1.42,0l2-2a1,1,0,1,0-1.42-1.42l-.29.3V3a1,1,0,0,0-2,0V5.59l-.29-.3A1,1,0,0,0,9.29,6.71Z' }}
+            ]
         },
 
         braveGPT: {
@@ -1698,361 +1686,232 @@
         },
 
         bug: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 16, height: 16, viewBox: '0 0 17 17' })
-                svg.append(
-                    dom.create.svgElem('path', {
-                        d: 'M7 0V1.60002C7.32311 1.53443 7.65753 1.5 8 1.5C8.34247 1.5 8.67689 1.53443 9 1.60002V0H11V2.49963C11.8265 3.12041 12.4543 3.99134 12.7711 5H3.2289C3.5457 3.99134 4.17354 3.12041 5 2.49963V0H7Z' }),
-                    dom.create.svgElem('path', {
-                        d: 'M0 7V9H3V10.4957L0.225279 11.2885L0.774721 13.2115L3.23189 12.5095C3.87194 14.5331 5.76467 16 8 16C10.2353 16 12.1281 14.5331 12.7681 12.5095L15.2253 13.2115L15.7747 11.2885L13 10.4957V9H16V7H9V12H7V7H0Z' }))
-                return svg
-            }
+            svg: { viewBox: '0 0 17 17' },
+            elems: [
+                { path: { d: 'M7 0V1.60002C7.32311 1.53443 7.65753 1.5 8 1.5C8.34247 1.5 8.67689 1.53443 9 1.60002V0H11V2.49963C11.8265 3.12041 12.4543 3.99134 12.7711 5H3.2289C3.5457 3.99134 4.17354 3.12041 5 2.49963V0H7Z' }},
+                { path: { d: 'M0 7V9H3V10.4957L0.225279 11.2885L0.774721 13.2115L3.23189 12.5095C3.87194 14.5331 5.76467 16 8 16C10.2353 16 12.1281 14.5331 12.7681 12.5095L15.2253 13.2115L15.7747 11.2885L13 10.4957V9H16V7H9V12H7V7H0Z' }}
+            ]
         },
 
         caretsInward: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 0 24 24' })
-                const svgPath = dom.create.svgElem('path', {
-                    d: 'M11.29,9.71a1,1,0,0,0,1.42,0l5-5a1,1,0,1,0-1.42-1.42L12,7.59,7.71,3.29A1,1,0,0,0,6.29,4.71Zm1.42,4.58a1,1,0,0,0-1.42,0l-5,5a1,1,0,0,0,1.42,1.42L12,16.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 24 24' },
+            elems: [{ path: { d: 'M11.29,9.71a1,1,0,0,0,1.42,0l5-5a1,1,0,1,0-1.42-1.42L12,7.59,7.71,3.29A1,1,0,0,0,6.29,4.71Zm1.42,4.58a1,1,0,0,0-1.42,0l-5,5a1,1,0,0,0,1.42,1.42L12,16.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z' }}]
         },
 
         checkmark: {
-            create() {
-                const svg = dom.create.svgElem('svg', {
-                    id: `${app.slug}-checkmark-icon`, width: 10, height: 10, viewBox: '0 0 20 20' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none', d: 'M0 11l2-2 5 5L18 3l2 2L7 18z' })
-                svg.append(svgPath) ; return svg
-            }
-        },
+            svg: { viewBox: '0 0 20 20' }, elems: [{ path: { stroke: 'none', d: 'M0 11l2-2 5 5L18 3l2 2L7 18z' }}]},
 
         checkmarkDouble: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 0 24 24' })
-                svg.append(
-                    dom.create.svgElem('path', { stroke: 'none',
-                        d: 'M23.228 8.01785C23.6186 7.62741 23.6187 6.99424 23.2283 6.60363L22.5213 5.89638C22.1309 5.50577 21.4977 5.50563 21.1071 5.89607L10.0862 16.9122C9.69563 17.3027 9.6955 17.9359 10.0859 18.3265L10.7929 19.0337C11.1833 19.4243 11.8165 19.4245 12.2071 19.034L23.228 8.01785Z' }),
-                    dom.create.svgElem('path', { stroke: 'none',
-                        d: 'M17.2285 8.01777C17.619 7.62724 17.619 6.99408 17.2285 6.60356L16.5214 5.89645C16.1309 5.50592 15.4977 5.50592 15.1072 5.89645L5.54542 15.4582L2.76773 12.6805C2.37721 12.29 1.74404 12.29 1.35352 12.6805L0.646409 13.3876C0.255884 13.7782 0.255885 14.4113 0.646409 14.8019L4.83831 18.9938C5.22883 19.3843 5.862 19.3843 6.25252 18.9938L17.2285 8.01777Z' })
-                )
-                return svg
-            }
+            svg: { viewBox: '0 0 24 24' },
+            elems: [
+                { path: { stroke: 'none', d: 'M23.228 8.01785C23.6186 7.62741 23.6187 6.99424 23.2283 6.60363L22.5213 5.89638C22.1309 5.50577 21.4977 5.50563 21.1071 5.89607L10.0862 16.9122C9.69563 17.3027 9.6955 17.9359 10.0859 18.3265L10.7929 19.0337C11.1833 19.4243 11.8165 19.4245 12.2071 19.034L23.228 8.01785Z' }},
+                { path: { stroke: 'none', d: 'M17.2285 8.01777C17.619 7.62724 17.619 6.99408 17.2285 6.60356L16.5214 5.89645C16.1309 5.50592 15.4977 5.50592 15.1072 5.89645L5.54542 15.4582L2.76773 12.6805C2.37721 12.29 1.74404 12.29 1.35352 12.6805L0.646409 13.3876C0.255884 13.7782 0.255885 14.4113 0.646409 14.8019L4.83831 18.9938C5.22883 19.3843 5.862 19.3843 6.25252 18.9938L17.2285 8.01777Z' }}
+            ]
         },
 
         chevronDown: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 20, height: 20, viewBox: '0 0 16 16' }),
-                      svgPath = dom.create.svgElem('path', { stroke: 'none', d: 'M1 5l7 4.61L15 5v2.39L8 12 1 7.39z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 16 16' },
+            elems: [{ path: { stroke: 'none', d: 'M1 5l7 4.61L15 5v2.39L8 12 1 7.39z' }}]
         },
 
         chevronUp: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 20, height: 20, viewBox: '0 0 16 16' }),
-                      svgPath = dom.create.svgElem('path', { stroke: 'none', d: 'M15 11L8 6.39 1 11V8.61L8 4l7 4.61z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 16 16' },
+            elems: [{ path: { stroke: 'none', d: 'M15 11L8 6.39 1 11V8.61L8 4l7 4.61z' }}]
         },
 
         copy: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 18, height: 18, viewBox: '0 0 1024 1024' })
-                svg.append(
-                    dom.create.svgElem('path', { stroke: 'none',
-                        d: 'M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z' }),
-                    dom.create.svgElem('path', { stroke: 'none',
-                        d: 'M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z' }))
-                return svg
-            }
+            svg: { viewBox: '0 0 1024 1024' },
+            elems: [
+                { path: { stroke: 'none', d: 'M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z' }},
+                { path: { stroke: 'none', d: 'M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z' }}
+            ]
         },
 
         download: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 16, height: 16, viewBox: '1 1 14 14' })
-                svg.append(
-                    dom.create.svgElem('path', { stroke: 'none',
-                        d: 'M8 2c.328 0 .595.26.595.579v7.892c0 .32-.267.578-.595.578a.587.587 0 0 1-.595-.578V2.579c0-.32.267-.579.595-.579z' }),
-                    dom.create.svgElem('path', { stroke: 'none',
-                        d: 'M12.489 6.393a.547.547 0 0 1-.016.805l-4.054 3.683a.63.63 0 0 1-.854-.015.547.547 0 0 1 .016-.806l4.054-3.683a.63.63 0 0 1 .854.016z' }),
-                    dom.create.svgElem('path', { stroke: 'none',
-                        d: 'M3.511 6.393a.63.63 0 0 1 .854-.016l4.054 3.683c.24.218.247.579.016.806a.63.63 0 0 1-.854.015L3.527 7.198a.547.547 0 0 1-.016-.805z' }),
-                    dom.create.svgElem('path', { stroke: 'none',
-                        d: 'M2.595 10.418c.328 0 .594.26.594.579v1.052a.48.48 0 0 0 .487.474h8.648a.48.48 0 0 0 .487-.474v-1.052c0-.32.266-.579.594-.579.329 0 .595.26.595.579v1.052c0 .9-.75 1.631-1.676 1.631H3.676C2.75 13.68 2 12.95 2 12.049v-1.052c0-.32.266-.579.595-.579z' }))
-                return svg
-            }
+            svg: { viewBox: '1 1 14 14' },
+            elems: [
+                { path: { stroke: 'none', d: 'M8 2c.328 0 .595.26.595.579v7.892c0 .32-.267.578-.595.578a.587.587 0 0 1-.595-.578V2.579c0-.32.267-.579.595-.579z' }},
+                { path: { stroke: 'none', d: 'M12.489 6.393a.547.547 0 0 1-.016.805l-4.054 3.683a.63.63 0 0 1-.854-.015.547.547 0 0 1 .016-.806l4.054-3.683a.63.63 0 0 1 .854.016z' }},
+                { path: { stroke: 'none', d: 'M3.511 6.393a.63.63 0 0 1 .854-.016l4.054 3.683c.24.218.247.579.016.806a.63.63 0 0 1-.854.015L3.527 7.198a.547.547 0 0 1-.016-.805z' }},
+                { path: { stroke: 'none', d: 'M2.595 10.418c.328 0 .594.26.594.579v1.052a.48.48 0 0 0 .487.474h8.648a.48.48 0 0 0 .487-.474v-1.052c0-.32.266-.579.594-.579.329 0 .595.26.595.579v1.052c0 .9-.75 1.631-1.676 1.631H3.676C2.75 13.68 2 12.95 2 12.049v-1.052c0-.32.266-.579.595-.579z' }}
+            ]
         },
 
         fontSize: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 0 512 512' })
-                svg.append(
-                    dom.create.svgElem('path', { stroke: 'none',
-                        d: 'M234.997 448.199h-55.373a6.734 6.734 0 0 1-6.556-5.194l-11.435-48.682a6.734 6.734 0 0 0-6.556-5.194H86.063a6.734 6.734 0 0 0-6.556 5.194l-11.435 48.682a6.734 6.734 0 0 1-6.556 5.194H7.74c-4.519 0-7.755-4.363-6.445-8.687l79.173-261.269a6.734 6.734 0 0 1 6.445-4.781h69.29c2.97 0 5.59 1.946 6.447 4.79l78.795 261.269c1.303 4.322-1.933 8.678-6.448 8.678zm-88.044-114.93l-19.983-84.371c-1.639-6.921-11.493-6.905-13.111.02l-19.705 84.371c-.987 4.224 2.22 8.266 6.558 8.266H140.4c4.346 0 7.555-4.056 6.553-8.286z' }),
-                    dom.create.svgElem('path', { stroke: 'none',
-                        d: 'M502.572 448.199h-77.475a9.423 9.423 0 0 1-9.173-7.268l-16-68.114a9.423 9.423 0 0 0-9.173-7.268H294.19a9.423 9.423 0 0 0-9.173 7.268l-16 68.114a9.423 9.423 0 0 1-9.173 7.268h-75.241c-6.322 0-10.851-6.104-9.017-12.155L286.362 70.491a9.422 9.422 0 0 1 9.017-6.69h96.947a9.422 9.422 0 0 1 9.021 6.702l110.245 365.554c1.825 6.047-2.703 12.142-9.02 12.142zM379.385 287.395l-27.959-118.047c-2.293-9.683-16.081-9.661-18.344.029l-27.57 118.047c-1.38 5.91 3.106 11.565 9.175 11.565h55.529c6.082-.001 10.571-5.676 9.169-11.594z' })
-                )
-                return svg
-            }
+            svg: { viewBox: '0 0 512 512' },
+            elems: [
+                { path: { stroke: 'none', d: 'M234.997 448.199h-55.373a6.734 6.734 0 0 1-6.556-5.194l-11.435-48.682a6.734 6.734 0 0 0-6.556-5.194H86.063a6.734 6.734 0 0 0-6.556 5.194l-11.435 48.682a6.734 6.734 0 0 1-6.556 5.194H7.74c-4.519 0-7.755-4.363-6.445-8.687l79.173-261.269a6.734 6.734 0 0 1 6.445-4.781h69.29c2.97 0 5.59 1.946 6.447 4.79l78.795 261.269c1.303 4.322-1.933 8.678-6.448 8.678zm-88.044-114.93l-19.983-84.371c-1.639-6.921-11.493-6.905-13.111.02l-19.705 84.371c-.987 4.224 2.22 8.266 6.558 8.266H140.4c4.346 0 7.555-4.056 6.553-8.286z' }},
+                { path: { stroke: 'none', d: 'M502.572 448.199h-77.475a9.423 9.423 0 0 1-9.173-7.268l-16-68.114a9.423 9.423 0 0 0-9.173-7.268H294.19a9.423 9.423 0 0 0-9.173 7.268l-16 68.114a9.423 9.423 0 0 1-9.173 7.268h-75.241c-6.322 0-10.851-6.104-9.017-12.155L286.362 70.491a9.422 9.422 0 0 1 9.017-6.69h96.947a9.422 9.422 0 0 1 9.021 6.702l110.245 365.554c1.825 6.047-2.703 12.142-9.02 12.142zM379.385 287.395l-27.959-118.047c-2.293-9.683-16.081-9.661-18.344.029l-27.57 118.047c-1.38 5.91 3.106 11.565 9.175 11.565h55.529c6.082-.001 10.571-5.676 9.169-11.594z' }}
+            ]
         },
 
         languageChars: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 15, height: 15, viewBox: '0 -960 960 960' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'm459-48 188-526h125L960-48H847l-35-100H603L568-48H459ZM130-169l-75-75 196-196q-42-45-78-101t-55-105h117q17 32 40.5 67.5T325-514q35-37 70-93t64-119H0v-106h290v-80h106v80h290v106H572q-23 74-70 152T399-438l82 85-39 111-118-121-194 194Zm508-79h139l-69-197-70 197Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 -960 960 960' },
+            elems: [{ path: { stroke: 'none', d: 'm459-48 188-526h125L960-48H847l-35-100H603L568-48H459ZM130-169l-75-75 196-196q-42-45-78-101t-55-105h117q17 32 40.5 67.5T325-514q35-37 70-93t64-119H0v-106h290v-80h106v80h290v106H572q-23 74-70 152T399-438l82 85-39 111-118-121-194 194Zm508-79h139l-69-197-70 197Z' }}]
         },
 
         lightning: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 43 430.317 545.316' }),
-                      g = dom.create.svgElem('g', { style: 'transform: rotate(12deg)' })
-                g.append(
-                    dom.create.svgElem('path', {
-                        d: 'M207.523 560.316s194.42-421.925 194.444-421.986l10.79-23.997c-41.824 12.02-135.271 34.902-135.57 35.833C286.96 122.816 329.017 0 330.829 0H210.902l-12.167 57.938-51.176 209.995 135.191-36.806-75.227 329.189z' })
-                ) ; svg.append(g)
-                return svg
-            }
+            svg: { viewBox: '0 43 430.317 545.316', style: 'transform: rotate(12deg)' },
+            elems: [{ path: { d: 'M207.523 560.316s194.42-421.925 194.444-421.986l10.79-23.997c-41.824 12.02-135.271 34.902-135.57 35.833C286.96 122.816 329.017 0 330.829 0H210.902l-12.167 57.938-51.176 209.995 135.191-36.806-75.227 329.189z' }}]
         },
 
         moon: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 0 24 24' })
-                const svgPath = dom.create.svgElem('path', {
-                    fill: 'none', 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round',
-                    d: 'M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 24 24' },
+            elems: [{ path: {
+                fill: 'none', 'stroke-width': 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round',
+                d: 'M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z'
+            }}]
         },
 
         pin: {
-            create() {
-                const svg = dom.create.svgElem('svg', { id: 'pin-icon', width: 16, height: 16, viewBox: '0 0 16 16' })
-                const svgPath = dom.create.svgElem('path', {
-                    d: 'M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707-.195-.195.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133a2.772 2.772 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 16 16' },
+            elems: [{ path: { d: 'M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.588-.177 0-.335-.018-.46-.039l-3.134 3.134a5.927 5.927 0 0 1 .16 1.013c.046.702-.032 1.687-.72 2.375a.5.5 0 0 1-.707 0l-2.829-2.828-3.182 3.182c-.195.195-1.219.902-1.414.707-.195-.195.512-1.22.707-1.414l3.182-3.182-2.828-2.829a.5.5 0 0 1 0-.707c.688-.688 1.673-.767 2.375-.72a5.922 5.922 0 0 1 1.013.16l3.134-3.133a2.772 2.772 0 0 1-.04-.461c0-.43.108-1.022.589-1.503a.5.5 0 0 1 .353-.146z' }}]
         },
 
         questionMark: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 18, height: 18, viewBox: '0 -960 960 960' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'M428-383q0-71 16-111t63-74q47-35 58.5-55.5T577-683q0-35-25-57.5T488-763q-26 0-61 18t-50 70l-114-47q27-82 90.5-122.5T488-885q93 0 151.5 59.5T698-682q0 55-17 95t-70 83q-37 29-48.5 55T550-383H428Zm60 265q-41 0-69.5-28.5T390-216q0-41 28.5-69.5T488-314q41 0 69.5 28.5T586-216q0 41-28.5 69.5T488-118Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 -960 960 960' },
+            elems: [{ path: { stroke: 'none', d: 'M428-383q0-71 16-111t63-74q47-35 58.5-55.5T577-683q0-35-25-57.5T488-763q-26 0-61 18t-50 70l-114-47q27-82 90.5-122.5T488-885q93 0 151.5 59.5T698-682q0 55-17 95t-70 83q-37 29-48.5 55T550-383H428Zm60 265q-41 0-69.5-28.5T390-216q0-41 28.5-69.5T488-314q41 0 69.5 28.5T586-216q0 41-28.5 69.5T488-118Z' }}]
         },
 
         questionMarkCircle: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 0 56.693 56.693' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'M28.765,4.774c-13.562,0-24.594,11.031-24.594,24.594c0,13.561,11.031,24.594,24.594,24.594  c13.561,0,24.594-11.033,24.594-24.594C53.358,15.805,42.325,4.774,28.765,4.774z M31.765,42.913c0,0.699-0.302,1.334-0.896,1.885  c-0.587,0.545-1.373,0.82-2.337,0.82c-0.993,0-1.812-0.273-2.431-0.814c-0.634-0.551-0.954-1.188-0.954-1.891v-1.209  c0-0.703,0.322-1.34,0.954-1.891c0.619-0.539,1.438-0.812,2.431-0.812c0.964,0,1.75,0.277,2.337,0.82  c0.594,0.551,0.896,1.186,0.896,1.883V42.913z M38.427,24.799c-0.389,0.762-0.886,1.432-1.478,1.994  c-0.581,0.549-1.215,1.044-1.887,1.473c-0.643,0.408-1.248,0.852-1.798,1.315c-0.539,0.455-0.99,0.963-1.343,1.512  c-0.336,0.523-0.507,1.178-0.507,1.943v0.76c0,0.504-0.247,1.031-0.735,1.572c-0.494,0.545-1.155,0.838-1.961,0.871l-0.167,0.004  c-0.818,0-1.484-0.234-1.98-0.699c-0.532-0.496-0.801-1.055-0.801-1.658c0-1.41,0.196-2.611,0.584-3.572  c0.385-0.953,0.86-1.78,1.416-2.459c0.554-0.678,1.178-1.27,1.854-1.762c0.646-0.467,1.242-0.93,1.773-1.371  c0.513-0.428,0.954-0.885,1.312-1.354c0.328-0.435,0.489-0.962,0.489-1.608c0-1.066-0.289-1.83-0.887-2.334  c-0.604-0.512-1.442-0.771-2.487-0.771c-0.696,0-1.294,0.043-1.776,0.129c-0.471,0.083-0.905,0.223-1.294,0.417  c-0.384,0.19-0.745,0.456-1.075,0.786c-0.346,0.346-0.71,0.783-1.084,1.301c-0.336,0.473-0.835,0.83-1.48,1.062  c-0.662,0.239-1.397,0.175-2.164-0.192c-0.689-0.344-1.11-0.793-1.254-1.338c-0.135-0.5-0.135-1.025-0.002-1.557  c0.098-0.453,0.369-1.012,0.83-1.695c0.451-0.67,1.094-1.321,1.912-1.938c0.814-0.614,1.847-1.151,3.064-1.593  c1.227-0.443,2.695-0.668,4.367-0.668c1.648,0,3.078,0.249,4.248,0.742c1.176,0.496,2.137,1.157,2.854,1.967  c0.715,0.809,1.242,1.738,1.568,2.762c0.322,1.014,0.486,2.072,0.486,3.146C39.024,23.075,38.823,24.024,38.427,24.799z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 56.693 56.693' },
+            elems: [{ path: { stroke: 'none', d: 'M28.765,4.774c-13.562,0-24.594,11.031-24.594,24.594c0,13.561,11.031,24.594,24.594,24.594  c13.561,0,24.594-11.033,24.594-24.594C53.358,15.805,42.325,4.774,28.765,4.774z M31.765,42.913c0,0.699-0.302,1.334-0.896,1.885  c-0.587,0.545-1.373,0.82-2.337,0.82c-0.993,0-1.812-0.273-2.431-0.814c-0.634-0.551-0.954-1.188-0.954-1.891v-1.209  c0-0.703,0.322-1.34,0.954-1.891c0.619-0.539,1.438-0.812,2.431-0.812c0.964,0,1.75,0.277,2.337,0.82  c0.594,0.551,0.896,1.186,0.896,1.883V42.913z M38.427,24.799c-0.389,0.762-0.886,1.432-1.478,1.994  c-0.581,0.549-1.215,1.044-1.887,1.473c-0.643,0.408-1.248,0.852-1.798,1.315c-0.539,0.455-0.99,0.963-1.343,1.512  c-0.336,0.523-0.507,1.178-0.507,1.943v0.76c0,0.504-0.247,1.031-0.735,1.572c-0.494,0.545-1.155,0.838-1.961,0.871l-0.167,0.004  c-0.818,0-1.484-0.234-1.98-0.699c-0.532-0.496-0.801-1.055-0.801-1.658c0-1.41,0.196-2.611,0.584-3.572  c0.385-0.953,0.86-1.78,1.416-2.459c0.554-0.678,1.178-1.27,1.854-1.762c0.646-0.467,1.242-0.93,1.773-1.371  c0.513-0.428,0.954-0.885,1.312-1.354c0.328-0.435,0.489-0.962,0.489-1.608c0-1.066-0.289-1.83-0.887-2.334  c-0.604-0.512-1.442-0.771-2.487-0.771c-0.696,0-1.294,0.043-1.776,0.129c-0.471,0.083-0.905,0.223-1.294,0.417  c-0.384,0.19-0.745,0.456-1.075,0.786c-0.346,0.346-0.71,0.783-1.084,1.301c-0.336,0.473-0.835,0.83-1.48,1.062  c-0.662,0.239-1.397,0.175-2.164-0.192c-0.689-0.344-1.11-0.793-1.254-1.338c-0.135-0.5-0.135-1.025-0.002-1.557  c0.098-0.453,0.369-1.012,0.83-1.695c0.451-0.67,1.094-1.321,1.912-1.938c0.814-0.614,1.847-1.151,3.064-1.593  c1.227-0.443,2.695-0.668,4.367-0.668c1.648,0,3.078,0.249,4.248,0.742c1.176,0.496,2.137,1.157,2.854,1.967  c0.715,0.809,1.242,1.738,1.568,2.762c0.322,1.014,0.486,2.072,0.486,3.146C39.024,23.075,38.823,24.024,38.427,24.799z' }}]
         },
 
         scheme: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 15, height: 15, viewBox: '0 -960 960 960' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'M479.92-34q-91.56 0-173.4-35.02t-142.16-95.34q-60.32-60.32-95.34-142.24Q34-388.53 34-480.08q0-91.56 35.02-173.4t95.34-142.16q60.32-60.32 142.24-95.34Q388.53-926 480.08-926q91.56 0 173.4 35.02t142.16 95.34q60.32 60.32 95.34 142.24Q926-571.47 926-479.92q0 91.56-35.02 173.4t-95.34 142.16q-60.32 60.32-142.24 95.34Q571.47-34 479.92-34ZM530-174q113-19 186.5-102.78T790-480q0-116.71-73.5-201.35Q643-766 530-785v611Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 -960 960 960' },
+            elems: [{ path: { stroke: 'none', d: 'M479.92-34q-91.56 0-173.4-35.02t-142.16-95.34q-60.32-60.32-95.34-142.24Q34-388.53 34-480.08q0-91.56 35.02-173.4t95.34-142.16q60.32-60.32 142.24-95.34Q388.53-926 480.08-926q91.56 0 173.4 35.02t142.16 95.34q60.32 60.32 95.34 142.24Q926-571.47 926-479.92q0 91.56-35.02 173.4t-95.34 142.16q-60.32 60.32-142.24 95.34Q571.47-34 479.92-34ZM530-174q113-19 186.5-102.78T790-480q0-116.71-73.5-201.35Q643-766 530-785v611Z' }}]
         },
 
         send: {
-            create() {
-                const svg = dom.create.svgElem('svg', {
-                    width: 16, height: 16, viewBox: '4 2 16 16', 'stroke-width': '2',
-                    'stroke-linecap': 'round', 'stroke-linejoin': 'round' })
-                const svgPath = dom.create.svgElem('path', {
-                    fill: 'none', 'stroke-width': '2', linecap: 'round',
-                    'stroke-linejoin': 'round', d: 'M7 11L12 6L17 11M12 18V7' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '4 2 16 16', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+            elems: [{ path: { fill: 'none', 'stroke-width': '2', linecap: 'round', 'stroke-linejoin': 'round',
+                              d: 'M7 11L12 6L17 11M12 18V7' }}]
         },
 
         shuffle: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 21, height: 21, viewBox: '0 0 32 32' })
-                const svgPath = dom.create.svgElem('path', {
-                    d: 'M23.707,16.293L28.414,21l-4.707,4.707l-1.414-1.414L24.586,22H23c-2.345,0-4.496-1.702-6.702-3.753c0.498-0.458,0.984-0.92,1.46-1.374C19.624,18.6,21.393,20,23,20h1.586l-2.293-2.293L23.707,16.293zM23,11h1.586l-2.293,2.293l1.414,1.414L28.414,10l-4.707-4.707l-1.414,1.414L24.586,9H23c-2.787,0-5.299,2.397-7.957,4.936C12.434,16.425,9.736,19,7,19H4v2h3c3.537,0,6.529-2.856,9.424-5.618C18.784,13.129,21.015,11,23,11zM11.843,14.186c0.5-0.449,0.995-0.914,1.481-1.377C11.364,11.208,9.297,10,7,10H4v2h3C8.632,12,10.25,12.919,11.843,14.186z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 32 32' },
+            elems: [{ path: { d: 'M23.707,16.293L28.414,21l-4.707,4.707l-1.414-1.414L24.586,22H23c-2.345,0-4.496-1.702-6.702-3.753c0.498-0.458,0.984-0.92,1.46-1.374C19.624,18.6,21.393,20,23,20h1.586l-2.293-2.293L23.707,16.293zM23,11h1.586l-2.293,2.293l1.414,1.414L28.414,10l-4.707-4.707l-1.414,1.414L24.586,9H23c-2.787,0-5.299,2.397-7.957,4.936C12.434,16.425,9.736,19,7,19H4v2h3c3.537,0,6.529-2.856,9.424-5.618C18.784,13.129,21.015,11,23,11zM11.843,14.186c0.5-0.449,0.995-0.914,1.481-1.377C11.364,11.208,9.297,10,7,10H4v2h3C8.632,12,10.25,12.919,11.843,14.186z' }}]
         },
 
         sidebar: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 15, height: 15, viewBox: '0 -975 900 1000' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'M800-160q33 0 56.5-23.5T880-240v-480q0-33-23.5-56.5T800-800H160q-33 0-56.5 23.5T80-720v480q0 33 23.5 56.5T160-160h640Zm-240-80H160v-480h400v480Zm80 0v-480H800v480H640Zm160 0v-480 480Zm-160 0h-80 80Zm0-480h-80 80Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 -975 900 1000' },
+            elems: [{ path: { stroke: 'none', d: 'M800-160q33 0 56.5-23.5T880-240v-480q0-33-23.5-56.5T800-800H160q-33 0-56.5 23.5T80-720v480q0 33 23.5 56.5T160-160h640Zm-240-80H160v-480h400v480Zm80 0v-480H800v480H640Zm160 0v-480 480Zm-160 0h-80 80Zm0-480h-80 80Z' }}]
         },
 
         signalStream: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 16, height: 16, viewBox: '0 0 32 32' })
-                const svgPath = dom.create.svgElem('path', { 'stroke-width': 0.5,
-                    d: 'M16 11.75c-2.347 0-4.25 1.903-4.25 4.25s1.903 4.25 4.25 4.25c2.347 0 4.25-1.903 4.25-4.25v0c-0.003-2.346-1.904-4.247-4.25-4.25h-0zM16 17.75c-0.966 0-1.75-0.784-1.75-1.75s0.784-1.75 1.75-1.75c0.966 0 1.75 0.784 1.75 1.75v0c-0.001 0.966-0.784 1.749-1.75 1.75h-0zM3.25 16c0.211-3.416 1.61-6.471 3.784-8.789l-0.007 0.008c0.223-0.226 0.361-0.536 0.361-0.879 0-0.69-0.56-1.25-1.25-1.25-0.344 0-0.655 0.139-0.881 0.363l0-0c-2.629 2.757-4.31 6.438-4.506 10.509l-0.001 0.038c0.198 4.109 1.879 7.79 4.514 10.553l-0.006-0.006c0.226 0.228 0.54 0.369 0.886 0.369 0.69 0 1.249-0.559 1.249-1.249 0-0.346-0.141-0.659-0.368-0.885l-0-0c-2.173-2.307-3.573-5.363-3.774-8.743l-0.002-0.038zM9.363 16c0.149-2.342 1.109-4.436 2.6-6.026l-0.005 0.005c0.224-0.226 0.363-0.537 0.363-0.88 0-0.69-0.56-1.25-1.25-1.25-0.345 0-0.657 0.139-0.883 0.365l0-0c-1.94 2.035-3.179 4.753-3.323 7.759l-0.001 0.028c0.145 3.032 1.384 5.75 3.329 7.79l-0.005-0.005c0.226 0.228 0.54 0.369 0.886 0.369 0.69 0 1.249-0.559 1.249-1.249 0-0.346-0.141-0.659-0.368-0.885l-0-0c-1.49-1.581-2.451-3.676-2.591-5.993l-0.001-0.027zM26.744 5.453c-0.226-0.227-0.54-0.368-0.886-0.368-0.691 0-1.251 0.56-1.251 1.251 0 0.345 0.139 0.657 0.365 0.883l-0-0c2.168 2.31 3.567 5.365 3.775 8.741l0.002 0.040c-0.21 3.417-1.609 6.471-3.784 8.789l0.007-0.008c-0.224 0.226-0.362 0.537-0.362 0.88 0 0.691 0.56 1.251 1.251 1.251 0.345 0 0.657-0.14 0.883-0.365l-0 0c2.628-2.757 4.308-6.439 4.504-10.509l0.001-0.038c-0.198-4.108-1.878-7.79-4.512-10.553l0.006 0.007zM21.811 8.214c-0.226-0.224-0.537-0.363-0.881-0.363-0.69 0-1.25 0.56-1.25 1.25 0 0.343 0.138 0.653 0.361 0.879l-0-0c1.486 1.585 2.447 3.678 2.594 5.992l0.001 0.028c-0.151 2.343-1.111 4.436-2.601 6.027l0.005-0.005c-0.224 0.226-0.362 0.537-0.362 0.88 0 0.691 0.56 1.251 1.251 1.251 0.345 0 0.657-0.14 0.883-0.365l-0 0c1.939-2.036 3.178-4.754 3.323-7.759l0.001-0.028c-0.145-3.033-1.385-5.751-3.331-7.791l0.005 0.005z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 32 32' },
+            elems: [{ path: { 'stroke-width': 0.5,
+                d: 'M16 11.75c-2.347 0-4.25 1.903-4.25 4.25s1.903 4.25 4.25 4.25c2.347 0 4.25-1.903 4.25-4.25v0c-0.003-2.346-1.904-4.247-4.25-4.25h-0zM16 17.75c-0.966 0-1.75-0.784-1.75-1.75s0.784-1.75 1.75-1.75c0.966 0 1.75 0.784 1.75 1.75v0c-0.001 0.966-0.784 1.749-1.75 1.75h-0zM3.25 16c0.211-3.416 1.61-6.471 3.784-8.789l-0.007 0.008c0.223-0.226 0.361-0.536 0.361-0.879 0-0.69-0.56-1.25-1.25-1.25-0.344 0-0.655 0.139-0.881 0.363l0-0c-2.629 2.757-4.31 6.438-4.506 10.509l-0.001 0.038c0.198 4.109 1.879 7.79 4.514 10.553l-0.006-0.006c0.226 0.228 0.54 0.369 0.886 0.369 0.69 0 1.249-0.559 1.249-1.249 0-0.346-0.141-0.659-0.368-0.885l-0-0c-2.173-2.307-3.573-5.363-3.774-8.743l-0.002-0.038zM9.363 16c0.149-2.342 1.109-4.436 2.6-6.026l-0.005 0.005c0.224-0.226 0.363-0.537 0.363-0.88 0-0.69-0.56-1.25-1.25-1.25-0.345 0-0.657 0.139-0.883 0.365l0-0c-1.94 2.035-3.179 4.753-3.323 7.759l-0.001 0.028c0.145 3.032 1.384 5.75 3.329 7.79l-0.005-0.005c0.226 0.228 0.54 0.369 0.886 0.369 0.69 0 1.249-0.559 1.249-1.249 0-0.346-0.141-0.659-0.368-0.885l-0-0c-1.49-1.581-2.451-3.676-2.591-5.993l-0.001-0.027zM26.744 5.453c-0.226-0.227-0.54-0.368-0.886-0.368-0.691 0-1.251 0.56-1.251 1.251 0 0.345 0.139 0.657 0.365 0.883l-0-0c2.168 2.31 3.567 5.365 3.775 8.741l0.002 0.040c-0.21 3.417-1.609 6.471-3.784 8.789l0.007-0.008c-0.224 0.226-0.362 0.537-0.362 0.88 0 0.691 0.56 1.251 1.251 1.251 0.345 0 0.657-0.14 0.883-0.365l-0 0c2.628-2.757 4.308-6.439 4.504-10.509l0.001-0.038c-0.198-4.108-1.878-7.79-4.512-10.553l0.006 0.007zM21.811 8.214c-0.226-0.224-0.537-0.363-0.881-0.363-0.69 0-1.25 0.56-1.25 1.25 0 0.343 0.138 0.653 0.361 0.879l-0-0c1.486 1.585 2.447 3.678 2.594 5.992l0.001 0.028c-0.151 2.343-1.111 4.436-2.601 6.027l0.005-0.005c-0.224 0.226-0.362 0.537-0.362 0.88 0 0.691 0.56 1.251 1.251 1.251 0.345 0 0.657-0.14 0.883-0.365l-0 0c1.939-2.036 3.178-4.754 3.323-7.759l0.001-0.028c-0.145-3.033-1.385-5.751-3.331-7.791l0.005 0.005z' }}]
         },
 
         slash: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 15, height: 15, viewBox: '0 0 15 15' }),
-                      svgPath = dom.create.svgElem('path', { d: 'M4.10876 14L9.46582 1H10.8178L5.46074 14H4.10876Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 15 15' }, elems: [{ path: { d: 'M4.10876 14L9.46582 1H10.8178L5.46074 14H4.10876Z' }}]
         },
 
         sliders: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 0 24 28',
-                    'stroke-width': 3.1, 'stroke-linecap': 'round' })
-                const g = dom.create.svgElem('g', {
-                    style: 'transform: rotate(90deg) scaleY(1.35) ; transform-origin: 12px 12px' })
-                g.append(
-                    dom.create.svgElem('line', { x1: 4, y1: 21, x2: 4, y2: 14 }),
-                    dom.create.svgElem('line', { x1: 4, y1: 10, x2: 4, y2: 3 }),
-                    dom.create.svgElem('line', { x1: 12, y1: 21, x2: 12, y2: 12 }),
-                    dom.create.svgElem('line', { x1: 12, y1: 8, x2: 12, y2: 3 }),
-                    dom.create.svgElem('line', { x1: 20, y1: 21, x2: 20, y2: 16 }),
-                    dom.create.svgElem('line', { x1: 20, y1: 12, x2: 20, y2: 3 }),
-                    dom.create.svgElem('line', { x1: 1, y1: 14, x2: 7, y2: 14 }),
-                    dom.create.svgElem('line', { x1: 9, y1: 8, x2: 15, y2: 8 }),
-                    dom.create.svgElem('line', { x1: 17, y1: 16, x2: 23, y2: 16 })
-                ) ; svg.append(g)
-                return svg
-            }
+            svg: { viewBox: '0 0 24 28', 'stroke-width': 3.1, 'stroke-linecap': 'round' },
+            elems: [{
+                g: {
+                    style: 'transform: rotate(90deg) scaleY(1.35) ; transform-origin: 12px 12px',
+                    elems: [
+                        { line: { x1: 4, y1: 21, x2: 4, y2: 14 }},
+                        { line: { x1: 4, y1: 10, x2: 4, y2: 3 }},
+                        { line: { x1: 12, y1: 21, x2: 12, y2: 12 }},
+                        { line: { x1: 12, y1: 8, x2: 12, y2: 3 }},
+                        { line: { x1: 20, y1: 21, x2: 20, y2: 16 }},
+                        { line: { x1: 20, y1: 12, x2: 20, y2: 3 }},
+                        { line: { x1: 1, y1: 14, x2: 7, y2: 14 }},
+                        { line: { x1: 9, y1: 8, x2: 15, y2: 8 }},
+                        { line: { x1: 17, y1: 16, x2: 23, y2: 16 }}
+                    ]
+                }
+            }]
         },
 
         sparkles: {
-            create(style) { // style = ( 'fg' ? filled front sparkle : 'bg' ? filled rear sparkles )
-                const svg = dom.create.svgElem('svg', { width: 18, height: 18, viewBox: '0 0 512 512' })
-                svg.append(dom.create.svgElem('path', { // large front sparkle
-                    fill: style == 'bg' ? 'none' : '',
+            svg: { viewBox: '0 0 512 512' },
+            elems: [
+                { path: { // large front sparkle
                     'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': 32,
-                    d: 'M259.92,262.91,216.4,149.77a9,9,0,0,0-16.8,0L156.08,262.91a9,9,0,0,1-5.17,5.17L37.77,311.6a9,9,0,0,0,0,16.8l113.14,43.52a9,9,0,0,1,5.17,5.17L199.6,490.23a9,9,0,0,0,16.8,0l43.52-113.14a9,9,0,0,1,5.17-5.17L378.23,328.4a9,9,0,0,0,0-16.8L265.09,268.08A9,9,0,0,1,259.92,262.91Z' }))
-                svg.append(dom.create.svgElem('polygon', { // small(est) rear-left sparkle
-                    fill: style == 'fg' ? 'none' : '',
+                    d: 'M259.92,262.91,216.4,149.77a9,9,0,0,0-16.8,0L156.08,262.91a9,9,0,0,1-5.17,5.17L37.77,311.6a9,9,0,0,0,0,16.8l113.14,43.52a9,9,0,0,1,5.17,5.17L199.6,490.23a9,9,0,0,0,16.8,0l43.52-113.14a9,9,0,0,1,5.17-5.17L378.23,328.4a9,9,0,0,0,0-16.8L265.09,268.08A9,9,0,0,1,259.92,262.91Z'
+                }},
+                { polygon: { // small(est) rear-left sparkle
                     'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': 24,
-                    points: '108 68 88 16 68 68 16 88 68 108 88 160 108 108 160 88 108 68' }))
-                svg.append(dom.create.svgElem('polygon', { // small rear-right sparkle
-                    fill: style == 'fg' ? 'none' : '',
+                    points: '108 68 88 16 68 68 16 88 68 108 88 160 108 108 160 88 108 68'
+                }},
+                { polygon: { // small rear-right sparkle
                     'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': 32,
-                    points: '426.67 117.33 400 48 373.33 117.33 304 144 373.33 170.67 400 240 426.67 170.67 496 144 426.67 117.33' }))
-                return svg
-            }
+                    points: '426.67 117.33 400 48 373.33 117.33 304 144 373.33 170.67 400 240 426.67 170.67 496 144 426.67 117.33'
+                }}
+            ]
         },
 
         soundwave: {
-            create({ height } = {}) {
-                const svg = dom.create.svgElem('svg', { width: 19, height: 19, viewBox: '0 0 24 24' })
-                const svgPath = dom.create.svgElem('path', { 'stroke-width': 1.75, 'stroke-linecap': 'round',
-                    d: height == 'short' ? 'M3 11V13M6 11V13M9 11V13M12 10V14M15 11V13M18 11V13M21 11V13'
-                     : height == 'tall' ? 'M3 11V13M6 8V16M9 10V14M12 7V17M15 4V20M18 9V15M21 11V13'
-                     : 'M3 11V13M6 10V14M9 11V13M12 9V15M15 6V18M18 10V14M21 11V13'
-                })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 24 24' },
+            elems: [{ path: { 'stroke-width': 1.75, 'stroke-linecap': 'round',
+                              d: 'M3 11V13M6 10V14M9 11V13M12 9V15M15 6V18M18 10V14M21 11V13' }}]
+        },
+
+        soundwaveShort: {
+            svg: { viewBox: '0 0 24 24' },
+            elems: [{ path: { 'stroke-width': 1.75, 'stroke-linecap': 'round',
+                              d: 'M3 11V13M6 11V13M9 11V13M12 10V14M15 11V13M18 11V13M21 11V13' }}]
+        },
+
+        soundwaveTall: {
+            svg: { viewBox: '0 0 24 24' },
+            elems: [{ path: { 'stroke-width': 1.75, 'stroke-linecap': 'round',
+                              d: 'M3 11V13M6 8V16M9 10V14M12 7V17M15 4V20M18 9V15M21 11V13' }}]
         },
 
         speechBalloonLasso: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 -960 960 960' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'M323-41v-247h-10q-105 0-172.5-67T73-528q0-105 74-179t179-74h36l-44-44 69-69 162 162-162 162-69-69 44-44h-36q-64 0-109.5 45.5T171-528q0 64 45.5 109.5T326-373h95v96l96-96h117q64 0 109.5-45.5T789-528q0-64-45.5-109.5T634-683h10v-98h-10q105 0 179 74t74 179q0 105-74 179t-179 74h-77L323-41Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 -960 960 960' },
+            elems: [{ path: { stroke: 'none', d: 'M323-41v-247h-10q-105 0-172.5-67T73-528q0-105 74-179t179-74h36l-44-44 69-69 162 162-162 162-69-69 44-44h-36q-64 0-109.5 45.5T171-528q0 64 45.5 109.5T326-373h95v96l96-96h117q64 0 109.5-45.5T789-528q0-64-45.5-109.5T634-683h10v-98h-10q105 0 179 74t74 179q0 105-74 179t-179 74h-77L323-41Z' }}]
         },
 
         speechBalloons: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 16, height: 16, viewBox: '0 -960 960 960' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'M350-212q-32.55 0-55.27-22.73Q272-257.45 272-290v-64h492v-342h63.67q33.33 0 55.83 22.72Q906-650.55 906-618v576L736-212H350ZM54-256v-582.4q0-32.38 22.72-54.99Q99.45-916 132-916h482q32.55 0 55.28 22.72Q692-870.55 692-838v334q0 32.55-22.72 55.27Q646.55-426 614-426H224L54-256Zm540-268v-294H152v294h442Zm-442 0v-294 294Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 -960 960 960' },
+            elems: [{ path: { stroke: 'none', d: 'M350-212q-32.55 0-55.27-22.73Q272-257.45 272-290v-64h492v-342h63.67q33.33 0 55.83 22.72Q906-650.55 906-618v576L736-212H350ZM54-256v-582.4q0-32.38 22.72-54.99Q99.45-916 132-916h482q32.55 0 55.28 22.72Q692-870.55 692-838v334q0 32.55-22.72 55.27Q646.55-426 614-426H224L54-256Zm540-268v-294H152v294h442Zm-442 0v-294 294Z' }}]
         },
 
         summarize: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 21, height: 21, viewBox: '-6 -2 29 29',
-                    'stroke-linecap': 'round', 'stroke-width': 3 })
-                svg.append(
-                    dom.create.svgElem('line', { x1: 21, y1: 6, x2: 3, y2: 6 }),
-                    dom.create.svgElem('line', { x1: 21, y1: 12, x2: 9, y2: 12 }),
-                    dom.create.svgElem('line', { x1: 21, y1: 18, x2: 7, y2: 18 })
-                )
-                return svg
-            }
+            svg: { viewBox: '-6 -2 29 29', 'stroke-linecap': 'round', 'stroke-width': 3 },
+            elems: [
+                { 'line': { x1: 21, y1: 6, x2: 3, y2: 6 }},
+                { 'line': { x1: 21, y1: 12, x2: 9, y2: 12 }},
+                { 'line': { x1: 21, y1: 18, x2: 7, y2: 18 }}
+            ]
         },
 
         sun: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 -960 960 960' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm283-100q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-160Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 -960 960 960' },
+            elems: [{ path: { stroke: 'none', d: 'M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm283-100q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-160Z' }}]
         },
 
         sunglasses: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 17, height: 17, viewBox: '0 0 512 512' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'M507.44,185.327c-4.029-5.124-10.185-8.112-16.704-8.112c0,0-48.021,0-156.827,0h-65.774H243.87h-65.774c-108.806,0-156.827,0-156.827,0c-6.519,0-12.675,2.988-16.714,8.112c-4.028,5.125-5.486,11.815-3.965,18.152c0,0,12.421,56.269,19.927,82.534c7.506,26.265,26.265,48.772,86.29,48.772s59.827,0,74.828,0c21.258,0,46.256-19.99,55.028-45.023c4.97-14.16,12.756-32.738,19.338-47.876c6.582,15.138,14.368,33.716,19.338,47.876c8.773,25.033,33.77,45.023,55.028,45.023c15.001,0,14.803,0,74.828,0s78.784-22.507,86.29-48.772c7.496-26.264,19.918-82.534,19.918-82.534C512.935,197.142,511.478,190.452,507.44,185.327z M90.339,278.734C45.314,263.732,40.318,198.7,40.318,198.7s22.507,0,55.028,0L90.339,278.734z M340.464,278.734c-45.015-15.001-50.022-80.034-50.022-80.034s22.508,0,55.029,0L340.464,278.734z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 512 512' },
+            elems: [{ path: { stroke: 'none', d: 'M507.44,185.327c-4.029-5.124-10.185-8.112-16.704-8.112c0,0-48.021,0-156.827,0h-65.774H243.87h-65.774c-108.806,0-156.827,0-156.827,0c-6.519,0-12.675,2.988-16.714,8.112c-4.028,5.125-5.486,11.815-3.965,18.152c0,0,12.421,56.269,19.927,82.534c7.506,26.265,26.265,48.772,86.29,48.772s59.827,0,74.828,0c21.258,0,46.256-19.99,55.028-45.023c4.97-14.16,12.756-32.738,19.338-47.876c6.582,15.138,14.368,33.716,19.338,47.876c8.773,25.033,33.77,45.023,55.028,45.023c15.001,0,14.803,0,74.828,0s78.784-22.507,86.29-48.772c7.496-26.264,19.918-82.534,19.918-82.534C512.935,197.142,511.478,190.452,507.44,185.327z M90.339,278.734C45.314,263.732,40.318,198.7,40.318,198.7s22.507,0,55.028,0L90.339,278.734z M340.464,278.734c-45.015-15.001-50.022-80.034-50.022-80.034s22.508,0,55.029,0L340.464,278.734z' }}]
         },
 
         webCorner: {
-            create() {
-                const svg = dom.create.svgElem('svg', { width: 18, height: 18, viewBox: '0 0 32 32' })
-                const svgPath = dom.create.svgElem('path', { stroke: 'none',
-                    d: 'M29.9,2.6c-0.1-0.2-0.3-0.4-0.5-0.5C29.3,2,29.1,2,29,2H3C2.4,2,2,2.4,2,3s0.4,1,1,1h2c5,0,9,4,9,9c0,1.9-0.6,3.8-1.8,5.4l-4.9,4.9c-0.4,0.4-0.4,1,0,1.4C7.5,24.9,7.7,25,8,25s0.5-0.1,0.7-0.3l4.9-4.9c1.6-1.2,3.4-1.8,5.4-1.8c5,0,9,4,9,9v2    c0,0.6,0.4,1,1,1s1-0.4,1-1V3C30,2.9,30,2.7,29.9,2.6zM26.6,4l-4.8,4.8c0-1.9-0.8-3.5-2-4.8H26.6z M11.3,4H15c2.7,0,4.8,2.2,4.8,4.8c0,1-0.3,2-0.9,2.9l-3,3C16,14.2,16,13.6,16,13C16,9.3,14.1,6,11.3,4z M19,16c-0.6,0-1.2,0-1.7,0.1l3-3c0.8-0.6,1.8-0.9,2.9-0.9c2.7,0,4.8,2.2,4.8,4.8v3.7C26,17.9,22.7,16,19,16z M23.2,10.2L28,5.4v6.8C26.8,11,25.1,10.2,23.2,10.2z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 32 32' },
+            elems: [{ path: { stroke: 'none', d: 'M29.9,2.6c-0.1-0.2-0.3-0.4-0.5-0.5C29.3,2,29.1,2,29,2H3C2.4,2,2,2.4,2,3s0.4,1,1,1h2c5,0,9,4,9,9c0,1.9-0.6,3.8-1.8,5.4l-4.9,4.9c-0.4,0.4-0.4,1,0,1.4C7.5,24.9,7.7,25,8,25s0.5-0.1,0.7-0.3l4.9-4.9c1.6-1.2,3.4-1.8,5.4-1.8c5,0,9,4,9,9v2    c0,0.6,0.4,1,1,1s1-0.4,1-1V3C30,2.9,30,2.7,29.9,2.6zM26.6,4l-4.8,4.8c0-1.9-0.8-3.5-2-4.8H26.6z M11.3,4H15c2.7,0,4.8,2.2,4.8,4.8c0,1-0.3,2-0.9,2.9l-3,3C16,14.2,16,13.6,16,13C16,9.3,14.1,6,11.3,4z M19,16c-0.6,0-1.2,0-1.7,0.1l3-3c0.8-0.6,1.8-0.9,2.9-0.9c2.7,0,4.8,2.2,4.8,4.8v3.7C26,17.9,22.7,16,19,16z M23.2,10.2L28,5.4v6.8C26.8,11,25.1,10.2,23.2,10.2z' }}]
         },
 
-        widescreen: {
-            wideSVGpath() { return dom.create.svgElem('path', {
-                'fill-rule': 'evenodd', d: 'm26,13 0,10 -16,0 0,-10 z m-14,2 12,0 0,6 -12,0 0,-6 z' })},
+        widescreenTall: {
+            svg: { viewBox: '8 8 20 20' },
+            elems: [{ path: { 'fill-rule': 'evenodd', d: 'm28,11 0,14 -20,0 0,-14 z m-18,2 16,0 0,10 -16,0 0,-10 z' }}]
+        },
 
-            tallSVGpath() { return dom.create.svgElem('path', {
-                'fill-rule': 'evenodd', d: 'm28,11 0,14 -20,0 0,-14 z m-18,2 16,0 0,10 -16,0 0,-10 z' })},
-
-            create() {
-                const svg = dom.create.svgElem('svg', {
-                    id: 'widescreen-icon', width: 18, height: 18, viewBox: '8 8 20 20' })
-                icons.widescreen.update(svg)
-                return svg
-            },
-
-            update(...targetIcons) {
-                targetIcons = targetIcons.flat() // flatten array args nested by spread operator
-                if (!targetIcons.length)
-                    targetIcons = document.querySelectorAll('#widescreen-icon:not(.chatgpt-notif *)')
-                targetIcons.forEach(icon => {
-                    icon.firstChild?.remove() // clear prev paths
-                    icon.append(icons.widescreen[config.widerSidebar ? 'wideSVGpath' : 'tallSVGpath']())
-                })
-            }
+        widescreenWide: {
+            svg: { viewBox: '8 8 20 20' },
+            elems: [{ path: { 'fill-rule': 'evenodd', d: 'm26,13 0,10 -16,0 0,-10 z m-14,2 12,0 0,6 -12,0 0,-6 z' }}]
         },
 
         x: {
-            create() {
-                const svg = dom.create.svgElem('svg', { height: 10, viewBox: '0 0 14 14', fill: 'none' })
-                const svgPath = dom.create.svgElem('path', {
-                    d: 'M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976312 12.6834 -0.0976312 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976312 0.683417 -0.0976312 0.292893 0.292893C-0.0976312 0.683417 -0.0976312 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976312 12.6834 -0.0976312 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z' })
-                svg.append(svgPath) ; return svg
-            }
+            svg: { viewBox: '0 0 14 14', fill: 'none' },
+            elems: [{ path: { d: 'M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976312 12.6834 -0.0976312 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976312 0.683417 -0.0976312 0.292893 0.292893C-0.0976312 0.683417 -0.0976312 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976312 12.6834 -0.0976312 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z' }}]
         }
     }
 
@@ -3273,7 +3132,9 @@
                     if (event.propertyName == 'width') {
                         update.bylineVisibility() ; appDiv.removeEventListener('transitionend', onTransitionEnd)
             }})
-            icons.arrowsDiagonal.update() // toggle downwawrd/upward caret icons
+            const expandBtn = appDiv.querySelector(`#${app.slug}-arrows-btn`)
+            if (expandBtn) expandBtn.firstChild.replaceWith(
+                icons.create({ key: `arrowsDiagonal${ config.expanded ? 'In' : 'Out' }`, size: 17 }))
         },
 
         manualGen(mode) { // Prefix/Suffix modes
@@ -3299,7 +3160,8 @@
             const chevronBtn = appDiv.querySelector('[id$=chevron-btn]')
             if (chevronBtn) { // update icon
                 chevronBtn.textContent = ''
-                chevronBtn.append(icons[`chevron${ config.minimized ? 'Up' : 'Down' }`].create())
+                chevronBtn.append(icons.create({ key: `chevron${ config.minimized ? 'Up' : 'Down' }`,
+                    size: 22, style: 'position: relative ; top: -1px' }))
                 chevronBtn.onclick = () => {
                     if (appDiv.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
                         fontSizeSlider.toggle('off')
@@ -3358,7 +3220,10 @@
             // Apply new state to UI
             appDiv.classList.toggle(mode, config[configKeyName])
             update.replyPreMaxHeight() ; update.bylineVisibility()
-            if (mode == 'wider') icons.widescreen.update() // toggle icons everywhere
+            if (mode == 'wider') // toggle icons everywhere
+            document.querySelectorAll(`#${app.slug} svg.widescreenTall, #${app.slug} svg.widescreenWide`)
+                .forEach(icon => icon.replaceWith(
+                    icons.create({ key: `widescreen${ config.widerSidebar ? 'Wide' : 'Tall' }`})))
             if (modals.settings.get()) { // update visual state of Settings toggles
                 const sidebarToggle = document.querySelector(`[id*=${mode}] input`)
                 if (sidebarToggle.checked ^ config[`${mode}Sidebar`]) modals.settings.toggle.switch(sidebarToggle)
@@ -3814,7 +3679,7 @@
 
             // Show loading status
             const rqDiv = appDiv.querySelector(`.${app.slug}-related-queries`),
-                  loadingSpinner = icons.arrowsCyclic.create()
+                  loadingSpinner = icons.create({ key: 'arrowsCyclic' })
             let loadingElem
             loadingSpinner.style.cssText = 'position: relative ; top: 1px ; margin-right: 6px'
             if (appDiv.querySelector('.reply-pre')) { // reply exists, show where chatbar was
@@ -3924,8 +3789,9 @@
                     ([eventType, handler]) => copyBtn[eventType] = handler)
 
                 // Create Download button
-                const downloadBtn = dom.create.elem('btn', { id: `${app.slug}-download-btn` }),
-                      downloadSVGs = { download: icons.download.create(), downloaded: icons.checkmarkDouble.create() }
+                const downloadBtn = dom.create.elem('btn', { id: `${app.slug}-download-btn` })
+                const downloadSVGs = {
+                    download: icons.create({ key: 'download' }), downloaded: icons.create({ key: 'checkmarkDouble' })}
                 Object.entries(downloadSVGs).forEach(([svgType, svg]) => {
                     svg.id = `${app.slug}-${svgType}-icon`
                     ;['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
@@ -4003,7 +3869,8 @@
                     const rqDiv = dom.create.elem('div', {
                         title: app.msgs.tooltip_sendRelatedQuery, tabindex: 0,
                         class: `${app.slug}-related-query fade-in no-user-select no-mobile-tap-outline` })
-                    rqDiv.textContent = query ; rqDiv.prepend(icons.arrowDownRight.create()) ; rqsDiv.append(rqDiv)
+                    rqDiv.textContent = query ; rqDiv.prepend(icons.create({ key: 'arrowDownRight' }))
+                    rqsDiv.append(rqDiv)
                     setTimeout(() => { // add fade + listeners
                         rqDiv.classList.add('active')
                         rqDiv.onclick = rqDiv.onkeydown = event => {
@@ -4063,47 +3930,52 @@
                     var chevronBtn = dom.create.elem('btn', {
                         id: `${app.slug}-chevron-btn`, class: `${app.slug}-header-btn anchored-only`,
                         style: 'margin: 0.5px 1px 0 11px' })
-                    chevronBtn.append(icons[`chevron${ config.minimized ? 'Up' : 'Down' }`].create())
+                    chevronBtn.append(icons.create({ key: `chevron${ config.minimized ? 'Up' : 'Down' }`,
+                        size: 22, style: 'position: relative ; top: -1px' }))
                     headerBtnsDiv.append(chevronBtn)
                 }
 
                 // Create/append About button
                 const aboutBtn = dom.create.elem('btn', {
-                    id: `${app.slug}-about-btn`, class: `${app.slug}-header-btn`, style: 'margin-top: 0.8px' })
-                aboutBtn.append(icons.questionMarkCircle.create()) ; headerBtnsDiv.append(aboutBtn)
+                    id: `${app.slug}-about-btn`, class: `${app.slug}-header-btn`, style: 'margin-top: 1px' })
+                aboutBtn.append(icons.create({ key: 'questionMarkCircle' })) ; headerBtnsDiv.append(aboutBtn)
 
                 // Create/append Settings button
                 const settingsBtn = dom.create.elem('btn', {
                     id: `${app.slug}-settings-btn`, class: `${app.slug}-header-btn`,
                     style: 'margin: 2.5px 10.5px 0 3px' })
-                settingsBtn.append(icons.sliders.create()) ; headerBtnsDiv.append(settingsBtn)
+                settingsBtn.append(icons.create({ key: 'sliders', size: 17 })) ; headerBtnsDiv.append(settingsBtn)
 
                 // Create/append Font Size button
                 if (!standby) {
                     var fontSizeBtn = dom.create.elem('btn', {
                         id: `${app.slug}-font-size-btn`, class: `${app.slug}-header-btn app-hover-only`,
                         style: 'margin: 1px 10px 0 1px' })
-                    fontSizeBtn.append(icons.fontSize.create()) ; headerBtnsDiv.append(fontSizeBtn)
+                    fontSizeBtn.append(icons.create({ key: 'fontSize' })) ; headerBtnsDiv.append(fontSizeBtn)
                 }
 
                 // Create/append Pin button
                 if (!env.browser.isMobile) {
                     var pinBtn = dom.create.elem('btn', {
                         id: `${app.slug}-pin-btn`, class: `${app.slug}-header-btn app-hover-only`,
-                        style: 'margin: 1px 9px 0 0' })
-                    pinBtn.append(icons.pin.create()) ; headerBtnsDiv.append(pinBtn)
+                        style: 'margin: 1.5px 9px 0 0' })
+                    pinBtn.append(icons.create({ key: 'pin', size: 16.5 }))
+                    headerBtnsDiv.append(pinBtn)
 
                 // Create/append Wider Sidebar button
                     var wsbBtn = dom.create.elem('btn', {
                         id: `${app.slug}-wsb-btn`, class: `${app.slug}-header-btn app-hover-only anchored-hidden`,
                         style: 'margin: 2px 12px 0 0' })
-                    wsbBtn.append(icons.widescreen.create()) ; headerBtnsDiv.append(wsbBtn)
+                    wsbBtn.append(icons.create({ key: `widescreen${ config.widerSidebar ? 'Wide' : 'Tall' }`}))
+                    headerBtnsDiv.append(wsbBtn)
 
                 // Create/append Expand/Shrink button
                     var arrowsBtn = dom.create.elem('btn', {
                         id: `${app.slug}-arrows-btn`, class: `${app.slug}-header-btn app-hover-only anchored-only`,
                         style: 'margin: 2.5px 13.5px 0 0' })
-                    arrowsBtn.append(icons.arrowsDiagonal.create()) ; headerBtnsDiv.append(arrowsBtn)
+                    arrowsBtn.append(icons.create({
+                        key: `arrowsDiagonal${ config.expanded ? 'In' : 'Out' }`, size: 17 }))
+                    headerBtnsDiv.append(arrowsBtn)
                 }
 
                 // Add app header button listeners
@@ -4124,7 +3996,7 @@
                         const btn = {
                             node: dom.create.elem('button', {
                                 class: `${app.slug}-standby-btn no-mobile-tap-outline` }),
-                            icon: icons[btnType == 'query' ? 'send' : 'summarize'].create(),
+                            icon: icons.create({ key: btnType == 'query' ? 'send' : 'summarize' }),
                             textSpan: dom.create.elem('span')
                         }
                         btn.textSpan.textContent = btnType == 'query' ?
@@ -4172,7 +4044,7 @@
                         id: `${app.slug}-${btnType}-btn`, class: `${app.slug}-chatbar-btn no-mobile-tap-outline` })
                     btn.style.right = `${ rOffset + idx * spreadFactor }px`
                     if (btnType == 'shuffle') btn.style.right = '17px'
-                    btn.append(icons[btnType].create())
+                    btn.append(icons.create({ key: btnType, size: btnType == 'send' ? 14 : 18 }))
                     continueChatDiv.append(btn)
                 })
 
@@ -4273,7 +4145,8 @@
                         id: `${app.slug}-copy-btn`, class: 'no-mobile-tap-outline',
                         style: this.styles + 'display: flex'
                     })
-                    const copySVGs = { copy: icons.copy.create(), copied: icons.checkmarkDouble.create() }
+                    const copySVGs = {
+                        copy: icons.create({ key: 'copy' }), copied: icons.create({ key: 'checkmarkDouble' })}
                     Object.entries(copySVGs).forEach(([svgType, svg]) => {
                         svg.id = `${app.slug}-${svgType}-icon`
                         ;['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
@@ -4309,9 +4182,7 @@
                         id: `${app.slug}-share-btn`, class: 'no-mobile-tap-outline',
                         style: this.styles + 'margin-right: 10px ; position: relative ; bottom: 2px'
                     })
-                    const shareSVG = icons.arrowShare.create()
-                    ;['width', 'height'].forEach(attr => shareSVG.setAttribute(attr, 16))
-                    this.share.append(shareSVG)
+                    this.share.append(icons.create({ key: 'arrowShare', size: 16 }))
                     if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = tooltip.toggle
                     this.share.onclick = event => {
                         if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
@@ -4337,9 +4208,8 @@
                     })
                     const regenSVGwrapper = dom.create.elem('div', { // to spin while respecting ini icon tilt
                         style: 'display: flex' }) // wrap the icon tightly
-                    const regenSVG = icons.arrowsCyclic.create()
-                    ;['width', 'height'].forEach(attr => regenSVG.setAttribute(attr, 14))
-                    regenSVGwrapper.append(regenSVG) ; this.regen.append(regenSVGwrapper)
+                    regenSVGwrapper.append(icons.create({ key: 'arrowsCyclic', size: 14 }))
+                    this.regen.append(regenSVGwrapper)
                     if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = tooltip.toggle
                     this.regen.onclick = event => {
                         get.reply({ msgs: msgChain, src: 'regen' })
@@ -4360,12 +4230,12 @@
                     const speakSVGscroller = dom.create.elem('div', { // to scroll the icons
                         style: `display: flex ; /* align the SVGs horizontally */
                                 width: 41px ; height: 22px /* rectangle to fit both icons */` })
-                    const speakSVGs = { speak: icons.soundwave.create() } ; speakSVGs.speak.id = `${app.slug}-speak-icon`
+                    const speakSVGs = { speak: icons.create({ key: 'soundwave', id: `${app.slug}-speak-icon` })}
                     ;['generating', 'playing'].forEach(state => {
                         speakSVGs[state] = []
                         for (let i = 0 ; i < 2 ; i++) { // push/id 2 of each state icon for continuous scroll animation
                             speakSVGs[state].push(
-                                icons.soundwave.create({ height: state == 'generating' ? 'short' : 'tall' }))
+                                icons.create({ key: `soundwave${ state == 'generating' ? 'Short' : 'Tall' }` }))
                             speakSVGs[state][i].id = `${app.slug}-${state}-icon-${i+1}`
                             if (i == 1) // close gap of 2nd icon during scroll
                                 speakSVGs[state][i].style.marginLeft = `-${ state == 'generating' ? 3 : 5 }px`
