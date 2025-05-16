@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.16.2
+// @version                2025.5.16.3
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -489,1062 +489,258 @@
         suggestOpenAI:    `${app.msgs.alert_try} ${app.msgs.alert_switchingOff} ${app.msgs.mode_proxy}`
     }})
 
-    // Define MENU functions
+    // Define UI functions
 
-    window.toolbarMenu = {
-        state: {
-            symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
-            words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
+    const addListeners = {
+
+        appDiv() {
+            app.div.addEventListener(inputEvents.down, event => { // to dismiss visible font size slider
+                if (event.button != 0) return // prevent non-left-click dismissal
+                if (document.getElementById(`${app.slug}-font-size-slider-track`) // slider is visible
+                    && !event.target.closest('[id*=font-size]') // not clicking slider elem
+                    && getComputedStyle(event.target).cursor != 'pointer') // ...or other interactive elem
+                        fontSizeSlider.toggle('off')
+            })
+            app.div.onmouseenter = app.div.onmouseleave = update.bylineVisibility
         },
 
-        refresh() {
-            if (typeof GM_unregisterMenuCommand == 'undefined')
-                return log.debug('GM_unregisterMenuCommand not supported.')
-            for (const id of this.entryIDs) { GM_unregisterMenuCommand(id) } this.register()
+        btns: {
+            appHeader() {
+                app.div.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
+                    const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
+
+                    // Add click listener
+                    btn.onclick = {
+                        about: () => modals.open('about'),
+                        arrows: event => { toggle.expandedMode() ; tooltip.update(event.currentTarget) },
+                        chevron: () => {
+                            if (app.div.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
+                                fontSizeSlider.toggle('off')
+                            toggle.minimized()
+                        },
+                        pin: () => (btn.onmouseenter = btn.onmouseleave = btn.onclick = hoverMenus.toggle),
+                        settings: () => modals.open('settings'),
+                        'font-size': () => fontSizeSlider.toggle(),
+                        wsb: event => { toggle.sidebar('wider') ; tooltip.update(event.currentTarget) }
+                    }[btnType]
+
+                    // Add hover listener
+                    if (!env.browser.isMobile)
+                        btn.onmouseenter = btn.onmouseleave = btnType == 'pin' ? hoverMenus.toggle : tooltip.toggle
+
+                     // Add zoom/fade-out to corner buttons
+                    if (/about|settings/.test(btn.id)) btn.onmouseup = () => {
+                        if (config.fgAnimationsDisabled) return
+                        btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
+                        if (env.browser.isFF) // end animation 0.08s early to avoid icon overgrowth
+                            setTimeout(handleAnimationEnded, 0.12 *1000)
+                        else btn.onanimationend = handleAnimationEnded
+                        function handleAnimationEnded() {
+                            Object.assign(btn.style, { opacity: '0', visibility: 'hidden', animation: '' }) // hide btn
+                            setTimeout(() => // show btn after short delay
+                                Object.assign(btn.style, { visibility: 'visible', opacity: '1' }), 135)
+                        }
+                    }
+                })
+            },
+
+            chatbar() {
+                app.div.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
+                    btn.onclick = () => {
+                        tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
+                        const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
+                        if (btnType == 'send') return // since handled by form submit
+                        msgChain.push({ time: Date.now(), role: 'user', content: prompts.create(
+                            btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })})
+                        get.reply({ msgs: msgChain, src: btnType })
+                        show.reply.chatbarFocused = false ; show.reply.userInteracted = true
+                    }
+                    if (!env.browser.isMobile) // add hover listener for tooltips
+                        btn.onmouseenter = btn.onmouseleave = tooltip.toggle
+                })
+            }
         },
 
-        register() {
+        replySection() {
 
-            // Add Proxy API Mode toggle
-            const pmLabel = this.state.symbols[+config.proxyAPIenabled] + ' '
-                          + settings.controls.proxyAPIenabled.label + ' '
-                          + this.state.separator + this.state.words[+config.proxyAPIenabled]
-            this.entryIDs = [GM_registerMenuCommand(pmLabel, toggle.proxyMode,
-                env.scriptManager.supportsTooltips ? { title: settings.controls.proxyAPIenabled.helptip } : undefined)]
+            // Add form key listener
+            const replyForm = app.div.querySelector('form')
+            replyForm.onkeydown = event => {
+                if (event.key == 'Enter' || event.keyCode == 13) {
+                    if (event.ctrlKey) { // add newline
+                        const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`),
+                              caretPos = chatTextarea.selectionStart,
+                              textBefore = chatTextarea.value.substring(0, caretPos),
+                              textAfter = chatTextarea.value.substring(caretPos)
+                        chatTextarea.value = textBefore + '\n' + textAfter // add newline
+                        chatTextarea.selectionStart = chatTextarea.selectionEnd = caretPos + 1 // preserve caret pos
+                        addListeners.replySection.chatbarAutoSizer()
+                    } else if (!event.shiftKey) addListeners.replySection.submitHandler(event)
+            }}
 
-            // Add About/Settings entries
-            ;['about', 'settings'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
-                entryType == 'about' ? `💡 ${settings.controls.about.label}` : `⚙️ ${app.msgs.menuLabel_settings}`,
-                () => modals.open(entryType), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
-            )))
+            // Add form submit listener
+            addListeners.replySection.submitHandler = function(event) {
+                event.preventDefault()
+                const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`)
+
+                // No reply, change placeholder + focus chatbar
+                if (chatTextarea.value.trim() == '') {
+                    chatTextarea.placeholder = `${app.msgs.placeholder_typeSomething}...`
+                    chatTextarea.focus()
+
+                // Yes reply, submit it + transform to loading UI
+                } else {
+                    msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
+                    get.reply({ msgs: msgChain, src: 'submit' })
+                    show.reply.chatbarFocused = false ; show.reply.userInteracted = true
+                }
+            }
+            replyForm.onsubmit = addListeners.replySection.submitHandler
+
+            // Add chatbar autosizer
+            const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`),
+                  { paddingTop, paddingBottom } = getComputedStyle(chatTextarea),
+                  vOffset = parseInt(paddingTop) + parseInt(paddingBottom)
+            let prevLength = chatTextarea.value.length
+            addListeners.replySection.chatbarAutoSizer = () => {
+                const newLength = chatTextarea.value.length
+                if (newLength < prevLength) { // if deleting txt
+                    chatTextarea.style.height = 'auto' // ...auto-fit height
+                    if (parseInt(getComputedStyle(chatTextarea).height) < 35) // if down to one line
+                        chatTextarea.style.height = '19px' // ...reset to original height
+                }
+                chatTextarea.style.height = chatTextarea.scrollHeight - vOffset + 'px'
+                prevLength = newLength
+            }
+            chatTextarea.oninput = addListeners.replySection.chatbarAutoSizer
+
+            // Add button listeners
+            this.btns.chatbar()
         }
     }
 
-    window.updateCheck = () => {
-        log.caller = 'updateCheck()'
-        log.debug(`currentVer = ${app.version}`)
-
-        // Fetch latest meta
-        log.debug('Fetching latest userscript metadata...')
-        xhr({
-            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
-            headers: { 'Cache-Control': 'no-cache' },
-            onload: resp => {
-                log.debug('Success! Response received')
-
-                // Compare versions, alert if update found
-                log.debug('Comparing versions...')
-                app.latestVer = /@version +(.*)/.exec(resp.responseText)?.[1]
-                if (app.latestVer) for (let i = 0 ; i < 4 ; i++) { // loop thru subver's
-                    const currentSubVer = parseInt(app.version.split('.')[i], 10) || 0,
-                          latestSubVer = parseInt(app.latestVer.split('.')[i], 10) || 0
-                    if (currentSubVer > latestSubVer) break // out of comparison since not outdated
-                    else if (latestSubVer > currentSubVer) // if outdated
-                        return modals.open('update', 'available')
-                }
-
-                // Alert to no update found, nav back to About
-                modals.open('update', 'unavailable')
-        }})
+    function getScheme() {
+        return document.documentElement?.className?.includes('dark') // from DDG pref
+            || window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
 
-    // Define MODAL functions
-
-    const modals = {
-        stack: [], // of types of undismissed modals
-        class: `${app.slug}-modal`,
-
-        about() {
-
-            // Show modal
-            const labelStyles = 'text-transform: uppercase ; font-size: 16px ; font-weight: bold ;'
-                              + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#494141' }`
-
-            const aboutModal = modals.alert(
-                `${app.symbol} ${app.msgs.appName}`, // title
-                `<span style="${labelStyles}">🧠 ${app.msgs.about_author}:</span> `
-                    + `<a href="${app.author[0].url}">${app.author[0].name}</a> ${app.msgs.about_and}`
-                        + ` <a href="${app.urls.contributors}">${app.msgs.about_contributors}</a>\n`
-                + `<span style="${labelStyles}">🏷️ ${app.msgs.about_version}:</span> `
-                    + `<span class="about-em">${app.version}</span>\n`
-                + `<span style="${labelStyles}">📜 ${app.msgs.about_openSourceCode}:</span> `
-                    + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
-                        + app.urls.github + '</a>\n'
-                + `<span style="${labelStyles}">🚀 ${app.msgs.about_latestChanges}:</span> `
-                    + `<a href="${app.urls.github}/commits" target="_blank" rel="nopener">`
-                        + `${app.urls.github}/commits</a>\n`
-                + `<span style="${labelStyles}">⚡ ${app.msgs.about_poweredBy}:</span> `
-                    + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
-                        + ` v${app.chatgptjsVer}`,
-                [ // buttons
-                    function checkForUpdates() { updateCheck() },
-                    function getSupport(){},
-                    function rateUs() { modals.open('feedback') },
-                    function moreAIextensions(){}
-                ], '', 577 // modal width
-            )
-
-            // Add logo
-            const aboutHeaderLogo = logos.ddgpt.create() ; aboutHeaderLogo.width = 420
-            aboutHeaderLogo.style.cssText = 'max-width: 98% ;'
-                + `margin: -1px ${ env.browser.isMobile ? 'auto' : '13.5%' } 1px`
-            aboutModal.firstChild.nextSibling.before(aboutHeaderLogo) // after close btn
-
-            // Format text
-            aboutModal.querySelector('h2').remove() // remove empty title h2
-            aboutModal.querySelector('p').style.cssText = (
-                'overflow-wrap: anywhere ; line-height: 1.55 ;'
-              + `margin: ${ env.browser.isPhone ? '9px 0 -16px' : '3px 0 -11px 10px' }`)
-
-            // Hack buttons
-            aboutModal.querySelectorAll('button').forEach(btn => {
-                btn.style.cssText = 'height: 52px ; min-width: 136px'
-
-                // Replace link buttons w/ clones that don't dismiss modal
-                if (/support|extensions/i.test(btn.textContent)) {
-                    btn.replaceWith(btn = btn.cloneNode(true))
-                    btn.onclick = () => modals.safeWinOpen(app.urls[
-                        btn.textContent.includes(app.msgs.btnLabel_getSupport) ? 'support' : 'relatedExtensions' ])
-                }
-
-                // Prepend emoji + localize labels
-                if (/updates/i.test(btn.textContent))
-                    btn.textContent = `🚀 ${app.msgs.btnLabel_checkForUpdates}`
-                else if (/support/i.test(btn.textContent))
-                    btn.textContent = `🧠 ${app.msgs.btnLabel_getSupport}`
-                else if (/rate/i.test(btn.textContent))
-                    btn.textContent = `⭐ ${app.msgs.btnLabel_rateUs}`
-                else if (/extensions/i.test(btn.textContent))
-                    btn.textContent = `🤖 ${app.msgs.btnLabel_moreAIextensions}`
-
-                // Hide Dismiss button
-                else btn.style.display = 'none'
-            })
-
-            return aboutModal
+    const themes = {
+        apply(theme) {
+            if (!this.styleNode) document.head.append(this.styleNode = dom.create.style())
+            this.styleNode.textContent = this.styles[theme]
         },
 
-        alert(title = '', msg = '', btns = '', checkbox = '', width = '') { // generic one from chatgpt.alert()
-            const alertID = chatgpt.alert(title, msg, btns, checkbox, width),
-                  alert = document.getElementById(alertID).firstChild
-            this.init(alert) // add classes/listeners/hack bg
-            return alert
-        },
-
-        api() {
-
-            // Show modal
-            const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
-                .map(api => { // to btn callback/label
-                    function onclick() {
-                        settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
-                        if (modals.settings.get()) { // update status of Preferred API entry
-                            const preferredAPIstatus = document.querySelector('[id*=preferredAPI] > span')
-                            if (preferredAPIstatus.textContent != api) preferredAPIstatus.textContent = api
-                        }
-                        feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                            `${ config.anchored ? 'top' : 'bottom' }-right`)
-                        if (app.div.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
-                            get.reply({ msgs: msgChain, src: get.reply.src }) // re-send query if user alerted
-                    }
-                    Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
-                    return onclick
-                })
-            const apiModal = modals.alert(`${app.msgs.menuLabel_preferred} API:`, '', modalBtns, '', 503)
-
-            // Re-style elems
-            apiModal.querySelector('h2').style.justifySelf = 'center' // center title
-            const btnsDiv = apiModal.querySelector('.modal-buttons')
-            btnsDiv.style.cssText = ` /* y-pad, gridify */
-                margin: 18px 0px 14px !important ; display: grid ; grid-template-columns: repeat(3, 1fr) ; gap: 10px`
-            btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
-                if (idx == 0) btn.style.display = 'none' // hide Dismiss button
-                else btn.classList.toggle('primary-modal-btn', // emphasize preferred API
-                    config.preferredAPI.toLowerCase() == btn.textContent.toLowerCase()
-                        || btn.textContent == app.msgs.menuLabel_random && !config.preferredAPI)
-            })
-
-            return apiModal
-        },
-
-        feedback() {
-
-            // Init buttons
-            let btns = [ function productHunt(){}, function g2(){}, function alternativeto(){} ]
-            if (modals.stack[0] != 'about') btns.push(function github(){})
-
-            // Show modal
-            const feedbackModal = modals.alert(`${app.msgs.alert_choosePlatform}:`, '', btns, '', 456)
-
-            // Center CTA
-            feedbackModal.querySelector('h2').style.justifySelf = 'center'
-
-            // Re-style button cluster
-            const btnsDiv = feedbackModal.querySelector('.modal-buttons')
-            btnsDiv.style.cssText += 'display: flex ; flex-wrap: wrap ; justify-content: center ;'
-                                   + 'margin-top: -2px !important' // close gap between title/btns
-            // Hack buttons
-            btns = btnsDiv.querySelectorAll('button')
-            btns.forEach((btn, idx) => {
-                if (idx == 0) btn.style.display = 'none' // hide Dismiss button
-                if (idx == btns.length -1) btn.classList.remove('primary-modal-btn') // de-emphasize last link
-                btn.style.marginTop = btn.style.marginBottom = '5px' // v-pad btns
-
-                // Replace buttons w/ clones that don't dismiss modal
-                btn.replaceWith(btn = btn.cloneNode(true))
-                btn.onclick = () => modals.safeWinOpen(
-                    btn.textContent == 'Product Hunt' ? app.urls.review.productHunt
-                  : btn.textContent == 'G2' ? app.urls.review.g2
-                  : btn.textContent == 'Alternativeto' ? app.urls.review.alternativeTo
-                  : app.urls.discuss
-                )
-            })
-
-            return feedbackModal
-        },
-
-        handlers: {
-
-            dismiss: { // to dismiss native modals
-                click(event) {
-                    const clickedElem = event.target
-                    if (clickedElem == event.currentTarget || clickedElem.closest('[class*=-close-btn]'))
-                        modals.hide((clickedElem.closest('[class*=-modal-bg]') || clickedElem).firstChild)
-                },
-
-                key(event) {
-                    if (event.key.startsWith('Esc') || event.keyCode == 27)
-                        modals.hide(document.querySelector('[class$=-modal]'))
-                }
-            },
-
-            drag: {
-
-                mousedown(event) { // find modal, update styles, attach listeners, init XY offsets
-                    if (event.button != 0) return // prevent non-left-click drag
-                    if (!/auto|default/.test(getComputedStyle(event.target).cursor))
-                        return // prevent drag on interactive elems
-                    modals.draggingModal = event.currentTarget
-                    event.preventDefault() // prevent sub-elems like icons being draggable
-                    Object.assign(modals.draggingModal.style, { // update styles
-                        transform: 'scale(1.05)', willChange: 'transform',
-                        transition: '0.1s', '-webkit-transition': '0.1s', '-moz-transition': '0.1s',
-                            '-o-transition': '0.1s', '-ms-transition': '0.1s'
-                    })
-                    document.body.style.cursor = 'grabbing' // update cursor
-                    ;[...modals.draggingModal.children] // prevent hover FX if drag lags behind cursor
-                        .forEach(child => child.style.pointerEvents = 'none')
-                    ;['mousemove', 'mouseup'].forEach(eventType => // add listeners
-                        document.addEventListener(eventType, modals.handlers.drag[eventType]))
-                    const draggingModalRect = modals.draggingModal.getBoundingClientRect(),
-                          targetModalIsSettings = event.currentTarget.closest('[id*=-settings]')
-                    modals.handlers.drag.offsetX = (
-                        event.clientX - draggingModalRect.left + ( targetModalIsSettings ? 0 : 21 ))
-                    modals.handlers.drag.offsetY = (
-                        event.clientY - draggingModalRect.top + ( targetModalIsSettings ? 0 : 12 ))
-                },
-
-                mousemove(event) { // drag modal
-                    if (modals.draggingModal) {
-                        const newX = event.clientX - modals.handlers.drag.offsetX,
-                              newY = event.clientY - modals.handlers.drag.offsetY
-                        Object.assign(modals.draggingModal.style, { left: `${newX}px`, top: `${newY}px` })
-                    }
-                },
-
-                mouseup() { // restore styles/pointer events, remove listeners, reset modals.draggingModal
-                    Object.assign(modals.draggingModal.style, { // restore styles
-                        cursor: 'inherit', transform: 'scale(1)', willChange: 'auto',
-                        transition: 'inherit', '-webkit-transition': 'inherit', '-moz-transition': 'inherit',
-                            '-o-transition': 'inherit', '-ms-transition': 'inherit'
-                    })
-                    document.body.style.cursor = '' // restore cursor
-                    ;[...modals.draggingModal.children] // restore pointer events
-                        .forEach(child => child.style.pointerEvents = '')
-                    ;['mousemove', 'mouseup'].forEach(eventType => // remove listeners
-                        document.removeEventListener(eventType, modals.handlers.drag[eventType]))
-                    modals.draggingModal = null
-                }
-
+        selectors: {
+            btn: {
+                get after() { return this.shared.split(',').map(sel => `${sel}::after`).join(', ') },
+                get before() { return this.shared.split(',').map(sel => `${sel}::before`).join(', ') },
+                get hover() { return this.shared.split(',').map(sel => `${sel}:hover`).join(', ') },
+                get hoverAfter() { return this.hover.split(',').map(sel => `${sel}::after`).join(', ') },
+                get hoverBefore() { return this.hover.split(',').map(sel => `${sel}::before`).join(', ') },
+                get hoverSVG() { return this.hover.split(',').map(sel => `${sel} svg`).join(', ') },
+                modal: `body:has(#${app.slug}) .modal-buttons button`,
+                modalPrimary: `body:has(#${app.slug}) .primary-modal-btn`,
+                get shared() { return `${this.modal},${this.standby}` },
+                get span() { return this.shared.split(',').map(sel => `${sel} span`).join(', ') },
+                standby: `button.${app.slug}-standby-btn`,
+                get svg() { return this.shared.split(',').map(sel => `${sel} svg`).join(', ') }
             }
         },
 
-        hide(modal) {
-            const modalContainer = modal?.parentNode ; if (!modalContainer) return
-            modalContainer.style.animation = 'modal-zoom-fade-out 0.165s ease-out'
-            modalContainer.onanimationend = () => modalContainer.remove()
-        },
+        styles: {
+            get lines() { const { selectors } = themes ; return `
 
-        init(modal) {
-            if (!this.styles) this.stylize() // to init/append stylesheet
+                /* General button styles */
+                ${selectors.btn.shared} {
+                    --content-color: ${ env.ui.app.scheme == 'light' ? '0,0,0' : '255,255,255' };
+                    --side-line-fill: linear-gradient(rgb(var(--content-color)), rgb(var(--content-color))) ;
+                    --skew: skew(-13deg) ; --counter-skew: skew(13deg) ; --btn-svg-zoom: scale(1.2) ;
+                    --btn-transition: 0.1s ease all ;
+                    position: relative ; border-width: 1px ; cursor: crosshair ;
+                    border: 1px solid rgb(var(--content-color)) ;
+                    background: /* side lines */
+                        var(--side-line-fill) left / 2px 50% no-repeat,
+                        var(--side-line-fill) right / 2px 50% no-repeat ;
+                    background-position-y: 81% ;
+                    background-color: #ffffff00 ; /* clear bg */
+                    color: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.85 : 1 }) ;
+                    font-size: 0.8em ; font-family: "Roboto", sans-serif ; text-transform: uppercase ;
+                    transform: var(--skew)  }
+                ${selectors.btn.svg} {
+                    stroke: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.65 : 1 }) ;
+                    transform: var(--counter-skew) ;
+                    ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
+                          -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
+                          -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
+                ${selectors.btn.span} { /* text */
+                    font-weight: 600 ; display: inline-block ; transform: var(--counter-skew) }
+                ${selectors.btn.before}, ${selectors.btn.after} { /* top/bottom lines */
+                    content: "" ; position: absolute ; background: rgb(var(--content-color)) ;
+                    ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
+                          -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
+                          -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
+                ${selectors.btn.before} { top: 0 ; left: 10% ; width: 65% ; height: 1px } /* top line */
+                ${selectors.btn.after} { bottom: 0 ; right: 10% ; width: 80% ; height: 1px } /* bottom line */
+                ${selectors.btn.hover} {
+                    color: rgb(var(--content-color)) ;
+                    background: /* extend side lines */
+                        var(--side-line-fill) left / 2px 100% no-repeat,
+                        var(--side-line-fill) right / 2px 100% no-repeat !important }
+                ${selectors.btn.hoverBefore} { left: 0 ; width: 20px } /* top line on hover */
+                ${selectors.btn.hoverAfter} { right: 0 ; width: 20px } /* bottom line on hover */
+                ${selectors.btn.hoverSVG} {
+                    transform: var(--counter-skew) var(--btn-svg-zoom) ; stroke: rgba(var(--content-color),1) }
 
-            // Add classes
-            modal.classList.add('no-user-select', this.class) ; modal.parentNode.classList.add(`${this.class}-bg`)
+                /* Modal styles */
+                .${modals.class} { border-radius: 0 !important } /* square the corners to match the buttons */
 
-            // Add listeners
-            modal.onwheel = modal.ontouchmove = event => event.preventDefault() // disable wheel/swipe scrolling
-            modal.onmousedown = this.handlers.drag.mousedown // enable click-dragging
-            if (!modal.parentNode.className.includes('chatgpt-modal')) { // enable click-dismissing native modals
-                const dismissElems = [modal.parentNode, modal.querySelector('[class*=-close-btn]')]
-                dismissElems.forEach(elem => elem.onclick = this.handlers.dismiss.click)
-            }
-
-            // Hack BG
-            dom.addRisingParticles(modal)
-            setTimeout(() => { // dim bg
-                modal.parentNode.style.backgroundColor = `rgba(67,70,72,${
-                    env.ui.app.scheme == 'dark' ? 0.62 : 0.33 })`
-                modal.parentNode.classList.add('animated')
-            }, 100) // delay for transition fx
-
-            // Wrap button contents in span to counter-skew vs. themes that skew
-            modal.querySelectorAll('button:not(:has(> span))').forEach(spanlessBtn =>
-                spanlessBtn.innerHTML = `<span>${spanlessBtn.innerHTML}</span>`)
-        },
-
-        observeRemoval(modal, modalType, modalSubType) { // to maintain stack for proper nav
-            const modalBG = modal.parentNode
-            new MutationObserver(([mutation], obs) => {
-                mutation.removedNodes.forEach(removedNode => { if (removedNode == modalBG) {
-                    if (modals.stack[0].includes(modalSubType || modalType)) { // new modal not launched so nav back
-                        modals.stack.shift() // remove this modal type from stack 1st
-                        const prevModalType = modals.stack[0]
-                        if (prevModalType) { // open it
-                            modals.stack.shift() // remove type from stack since re-added on open
-                            modals.open(prevModalType)
-                        }
-                    }
-                    obs.disconnect()
-                }})
-            }).observe(modalBG.parentNode, { childList: true, subtree: true })
-        },
-
-        open(modalType, modalSubType) { // custom ones
-            const modal = modalSubType ? modals[modalType][modalSubType]()
-                        : (modals[modalType].show || modals[modalType])()
-            if (!modal) return // since no div returned
-            if (settings.controls[modalType]?.type != 'prompt') { // add to stack
-                this.stack.unshift(modalSubType ? `${modalType}_${modalSubType}` : modalType)
-                log.debug(`Modal stack: ${JSON.stringify(modals.stack)}`)
-            }
-            this.init(modal) // add classes/listeners/hack bg
-            this.observeRemoval(modal, modalType, modalSubType) // to maintain stack for proper nav
-            if (!modals.handlers.dismiss.key.added) { // add key listener to dismiss modals
-                document.addEventListener('keydown', modals.handlers.dismiss.key)
-                modals.handlers.dismiss.key.added = true
-            }
-        },
-
-        replyLang() {
-            while (true) {
-                let replyLang = prompt(
-                    ( app.msgs.prompt_updateReplyLang ) + ':', config.replyLang)
-                if (replyLang == null) break // user cancelled so do nothing
-                else if (!/\d/.test(replyLang)) {
-                    replyLang = ( // auto-case for menu/alert aesthetics
-                        replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
-                            : log.toTitleCase(replyLang) )
-                    settings.save('replyLang', replyLang || env.browser.language)
-                    modals.alert(`${app.msgs.alert_langUpdated}!`, // title
-                        `${app.name} ${app.msgs.alert_willReplyIn} ` // msg
-                            + ( replyLang || app.msgs.alert_yourSysLang ) + '.',
-                        '', '', 330) // modal width
-                    if (modals.settings.get()) // update settings menu status label
-                        document.querySelector('#replyLang-settings-entry span').textContent = replyLang
-                    break
-                }
-            }
-        },
-
-        safeWinOpen(url) { open(url, '_blank', 'noopener') }, // to prevent backdoor vulnerabilities
-
-        scheme() {
-
-            // Show modal
-            const schemeModal = modals.alert(`${
-                app.name } ${( app.msgs.menuLabel_colorScheme ).toLowerCase() }:`, '', // title
-                [ function auto(){}, function light(){}, function dark(){} ] // buttons
-            )
-
-            // Center title/button cluster
-            schemeModal.querySelector('h2').style.justifySelf = 'center'
-            schemeModal.querySelector('.modal-buttons')
-                .style.cssText = 'justify-content: center ; margin-top: -2px !important'
-
-            // Hack buttons
-            const schemeEmojis = { 'light': '☀️', 'dark': '🌘', 'auto': '🌗'}
-            schemeModal.querySelectorAll('button').forEach(btn => {
-                const btnScheme = btn.textContent.toLowerCase()
-
-                // Emphasize active scheme
-                btn.classList.toggle('primary-modal-btn',
-                    config.scheme == btn.textContent.toLowerCase() || (btn.textContent == 'Auto' && !config.scheme))
-
-                // Prepend emoji + localize labels
-                if (Object.prototype.hasOwnProperty.call(schemeEmojis, btnScheme))
-                    btn.textContent = `${schemeEmojis[btnScheme]} ${ // emoji
-                        app.msgs['scheme_' + btnScheme] || app.msgs['menuLabel_' + btnScheme]
-                            || btnScheme.toUpperCase() }`
-                else btn.style.display = 'none' // hide Dismiss button
-
-                // Clone button to replace listener to not dismiss modal on click
-                btn.replaceWith(btn = btn.cloneNode(true))
-                btn.onclick = () => {
-                    const newScheme = btnScheme == 'auto' ? getScheme() : btnScheme
-                    settings.save('scheme', btnScheme == 'auto' ? false : newScheme)
-                    schemeModal.querySelectorAll('button').forEach(btn =>
-                        btn.classList.remove('primary-modal-btn')) // clear prev emphasized active scheme
-                    btn.classList.add('primary-modal-btn') // emphasize newly active scheme
-                    btn.style.cssText = 'pointer-events: none' // disable hover fx to show emphasis
-                    setTimeout(() => { btn.style.pointerEvents = 'auto' }, // re-enable hover fx
-                        100) // ...after 100ms to flicker emphasis
-                    update.scheme(newScheme) ; schemeNotify(btnScheme)
-                }
-            })
-
-            function schemeNotify(scheme) {
-
-                // Show notification
-                feedback.notify(`${app.msgs.menuLabel_colorScheme}: `
-                      + ( scheme == 'light' ? app.msgs.scheme_light || 'Light'
-                        : scheme == 'dark'  ? app.msgs.scheme_dark  || 'Dark'
-                                            : app.msgs.menuLabel_auto ).toUpperCase() )
-                // Append scheme icon
-                const notifs = document.querySelectorAll('.chatgpt-notif'), notif = notifs[notifs.length -1]
-                notif.append(icons.create({
-                    key: scheme == 'light' ? 'sun' : scheme == 'dark' ? 'moon' : 'arrowsCyclic',
-                    style: 'width: 23px ; height: 23px ; position: relative ; top: 3px ; margin-left: 6px'
-                }))
-            }
-            return schemeModal
-        },
-
-        settings: {
-
-            createAppend() {
-
-                // Init master elems
-                const settingsContainer = dom.create.elem('div'),
-                      settingsModal = dom.create.elem('div', { id: `${app.slug}-settings` })
-                      settingsContainer.append(settingsModal)
-
-                // Init settings keys
-                const settingsKeys = Object.keys(settings.controls).filter(key =>
-                      !(env.browser.isMobile && settings.controls[key].mobile == false)
-                   && !(env.ui.site.isCentered && settings.controls[key].centered == false))
-
-                // Init logo
-                const settingsIcon = icons.ddgpt.create()
-                settingsIcon.style.cssText = 'width: 65px ; position: relative ; top: -32px ; margin-bottom: 4px ;'
-                                           + 'filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.3))'
-                // Init title
-                const settingsTitleDiv = dom.create.elem('div', { id: `${app.slug}-settings-title` }),
-                      settingsTitleIcon = icons.create({ key: 'sliders' }),
-                      settingsTitleH4 = dom.create.elem('h4')
-                settingsTitleIcon.style.cssText += 'width: 20.5px ; height: 20.5px ; margin-right: 8px ;'
-                                                 + 'position: relative ; right: 2px ; top: 2.5px'
-                settingsTitleH4.textContent = app.msgs.menuLabel_settings
-                settingsTitleH4.prepend(settingsTitleIcon) ; settingsTitleDiv.append(settingsTitleH4)
-
-                // Init settings lists
-                const settingsLists = [], middleGap = 30 // px
-                const settingsListContainer = dom.create.elem('div')
-                const settingsListCnt = (
-                    env.browser.isMobile && ( env.browser.isPortrait || settingsKeys.length < 8 )) ? 1 : 2
-                const settingEntryCap = Math.floor(settingsKeys.length /2)
-                for (let i = 0 ; i < settingsListCnt ; i++) settingsLists.push(dom.create.elem('ul'))
-                settingsListContainer.style.width = '95%' // pad vs. parent
-                if (settingsListCnt > 1) { // style multi-list landscape mode
-                    settingsListContainer.style.cssText += ( // make/pad flexbox, add middle gap
-                        `display: flex ; padding: 11px 0 13px ; gap: ${ middleGap /2 }px` )
-                    settingsLists[0].style.cssText = ( // add vertical separator
-                        `padding-right: ${ middleGap /2 }px` )
-                }
-
-                // Create/append setting icons/labels/toggles
-                settingsKeys.forEach((key, idx) => {
-                    const setting = settings.controls[key]
-
-                    // Create/append item/label elems
-                    const settingEntry = dom.create.elem('li',
-                        { id: `${key}-settings-entry`, title: setting.helptip || '' })
-                    const settingLabel = dom.create.elem('label') ; settingLabel.textContent = setting.label
-                    settingEntry.append(settingLabel);
-                    (settingsLists[env.browser.isPortrait ? 0 : +(idx >= settingEntryCap)]).append(settingEntry)
-
-                    // Create/prepend icons
-                    const settingIcon = icons.create({ key: setting.icon })
-                    settingIcon.style.cssText = 'position: relative ;' + (
-                        /proxy/i.test(key) ? 'top: 3px ; left: -0.5px ; margin-right: 9px'
-                      : /preferred/i.test(key) ? 'top: 3.5px ; margin-right: 7.5px'
-                      : /streaming/i.test(key) ? 'top: 3px ; left: 0.5px ; margin-right: 9px'
-                      : /auto(?:get|focus)/i.test(key) ? 'top: 4.5px ; margin-right: 7px'
-                      : /summarize/i.test(key) ? 'top: 3.5px ; left: -5px ; margin-right: 3px ; height: 17.5px'
-                      : /autoscroll/i.test(key) ? 'top: 3.5px ; left: -1.5px ; margin-right: 6px'
-                      : /^rq/.test(key) ? 'top: 2.5px ; left: 0.5px ; margin-right: 9px ; transform: scaleY(-1)'
-                      : /prefix/i.test(key) ? 'top: 2.5px ; left: 0.5px ; margin-right: 9px'
-                      : /suffix/i.test(key) ? 'top: 4px ; left: -1.5px ; margin-right: 7px'
-                      : /sidebar/i.test(key) ? 'top: 4px ; left: -1.5px ; margin-right: 7.5px'
-                      : /anchor/i.test(key) ? 'top: 3px ; left: -2.5px ; margin-right: 5.5px'
-                      : /animation/i.test(key) ? 'top: 3px ; left: -1.5px ; margin-right: 6.5px'
-                      : /replylang/i.test(key) ? 'top: 3px ; left: -1.5px ; margin-right: 9px'
-                      : /scheme/i.test(key) ? 'top: 2.5px ; left: -1.5px ; margin-right: 8px'
-                      : /debug/i.test(key) ? 'top: 3.5px ; left: -1.5px ; margin-right: 8px'
-                      : /about/i.test(key) ? 'top: 3px ; left: -3px ; margin-right: 5.5px' : ''
-                    )
-                    settingEntry.prepend(settingIcon)
-                    if (key.includes('Animation')) // customize sparkle icon elem fill
-                        settingIcon[`${ key.startsWith('fg') ? 'last' : 'first' }Child`].style.fill = 'none'
-
-                    // Create/append toggles/listeners
-                    if (setting.type == 'toggle') {
-
-                        // Init toggle input
-                        const settingToggle = dom.create.elem('input', {
-                            type: 'checkbox', disabled: true, style: 'display: none' })
-                        settingToggle.checked = config[key] ^ key.includes('Disabled') // init based on config/name
-                            && !(key == 'streamingDisabled' && !config.proxyAPIenabled) // uncheck Streaming in OAI mode
-
-                        // Create/classify switch
-                        const switchSpan = dom.create.elem('span', { class: 'track' }),
-                              knobSpan = dom.create.elem('span', { class: 'knob' })
-
-                        // Append elems
-                        switchSpan.append(knobSpan) ; settingEntry.append(settingToggle, switchSpan)
-
-                        // Update visual state w/ animation
-                        setTimeout(() => modals.settings.toggle.updateStyles(settingToggle), 155)
-
-                        // Add click listener
-                        settingEntry.onclick = () => {
-                            if (!(key == 'streamingDisabled' // visually switch toggle if not Streaminng...
-                                && ( // ...in unsupported env...
-                                    !env.scriptManager.supportsStreaming || !config.proxyAPIenabled )
-                            )) modals.settings.toggle.switch(settingToggle)
-
-                            // Call specialized toggle funcs
-                            const autoGenMatch = /get|summarize/i.exec(key),
-                                  manualGenMatch = /(?:suf|pre)fix/i.exec(key)
-                            if (key.includes('proxy')) toggle.proxyMode()
-                            else if (key.includes('streaming')) toggle.streaming()
-                            else if (key.includes('rq')) toggle.relatedQueries()
-                            else if (autoGenMatch) toggle.autoGen(autoGenMatch[0].toLowerCase())
-                            else if (manualGenMatch) toggle.manualGen(manualGenMatch[0].toLowerCase())
-                            else if (key.includes('Sidebar')) toggle.sidebar(key.replace('Sidebar', ''))
-                            else if (key.includes('anchor')) toggle.anchorMode()
-                            else if (key.includes('bgAnimation')) toggle.animations('bg')
-                            else if (key.includes('fgAnimation')) toggle.animations('fg')
-
-                            // ...or generically toggle/notify
-                            else {
-                                settings.save(key, !config[key]) // update config
-                                feedback.notify(`${settings.controls[key].label} ${
-                                    toolbarMenu.state.words[+(key.includes('Disabled') ^ config[key])]}`)
-                            }
-                        }
-
-                    // Add .active + config status + listeners to pop-up settings
-                    } else {
-                        settingEntry.classList.add('active')
-                        const configStatusSpan = dom.create.elem('span')
-                        configStatusSpan.style.cssText = 'float: right ; font-size: 11px ; margin-top: 3px ;'
-                            + ( !key.includes('about') ? 'text-transform: uppercase !important' : '' )
-                        if (key.includes('preferredAPI')) {
-                            configStatusSpan.textContent = config.preferredAPI || app.msgs.menuLabel_random
-                            settingEntry.onclick = () => modals.open('api')
-                            settingEntry.classList.toggle('active', config.proxyAPIenabled)
-                            settingEntry.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
-                        } else if (key.includes('replyLang')) {
-                            configStatusSpan.textContent = config.replyLang
-                            settingEntry.onclick = () => modals.open('replyLang')
-                        } else if (key.includes('scheme')) {
-                            modals.settings.updateSchemeStatus(configStatusSpan)
-                            settingEntry.onclick = () => modals.open('scheme')
-                        } else if (key.includes('about')) {
-                            const innerDiv = dom.create.elem('div'),
-                                  textGap = '&emsp;&emsp;&emsp;&emsp;&emsp;'
-                            modals.settings.aboutContent = {}
-                            modals.settings.aboutContent.short = `v${GM_info.script.version}`
-                            modals.settings.aboutContent.long = (
-                                  `${app.msgs.about_version}: <span class="about-em">v${
-                                       GM_info.script.version + textGap }</span>`
-                                + `${app.msgs.about_poweredBy} <span class="about-em">chatgpt.js</span>${textGap}` )
-                            for (let i = 0; i < 7; i++)
-                                modals.settings.aboutContent.long += modals.settings.aboutContent.long // make long af
-                            innerDiv.innerHTML = modals.settings.aboutContent[
-                                config.fgAnimationsDisabled ? 'short' : 'long']
-                            innerDiv.style.float = config.fgAnimationsDisabled ? 'right' : ''
-                            configStatusSpan.append(innerDiv) ; settingEntry.onclick = () => modals.open('about')
-                        } settingEntry.append(configStatusSpan)
-                    }
-                })
-                settingsListContainer.append(...settingsLists)
-
-                // Create close button
-                const closeBtn = dom.create.elem('div',
-                    { title: app.msgs.tooltip_close, class: `${app.slug}-modal-close-btn no-mobile-tap-outline` })
-                closeBtn.append(icons.create({ key: 'x' }))
-
-                // Assemble/append elems
-                settingsModal.append(settingsIcon, settingsTitleDiv, closeBtn, settingsListContainer)
-                document.body.append(settingsContainer)
-
-                return settingsContainer
-            },
-
-            get() { return document.getElementById(`${app.slug}-settings`) },
-
-            show() {
-                const settingsContainer = modals.settings.get()?.parentNode || modals.settings.createAppend()
-                settingsContainer.style.display = '' // show modal
-                if (env.browser.isMobile) { // scale 93% to viewport sides
-                    const settingsModal = settingsContainer.querySelector(`#${app.slug}-settings`),
-                          scaleRatio = 0.93 * innerWidth / settingsModal.offsetWidth
-                    settingsModal.style.transform = `scale(${scaleRatio})`
-                }
-                return settingsContainer.firstChild
-            },
-
-            toggle: {
-                switch(settingToggle) {
-                    settingToggle.checked = !settingToggle.checked
-                    modals.settings.toggle.updateStyles(settingToggle)
-                },
-
-                updateStyles(settingToggle) { // for .toggle.show() + staggered switch animations in .createAppend()
-                    const settingLi = settingToggle.parentNode,
-                          switchSpan = settingLi.querySelector('span'),
-                          knobSpan = switchSpan.querySelector('span')
-                    requestAnimationFrame(() => {
-                        switchSpan.style.backgroundColor = settingToggle.checked ? '#ad68ff' : '#ccc'
-                        switchSpan.style.boxShadow = settingToggle.checked ? '2px 1px 9px #d8a9ff' : 'none'
-                        knobSpan.style.transform = settingToggle.checked ?
-                            'translateX(14px) translateY(0)' : 'translateX(0)'
-                        settingLi.classList.toggle('active', settingToggle.checked) // dim/brighten entry
-                    }) // to trigger 1st transition fx
-                }
-            },
-
-            updateSchemeStatus(schemeStatusSpan = null) {
-                schemeStatusSpan = schemeStatusSpan || document.querySelector('#scheme-settings-entry span')
-                if (schemeStatusSpan) {
-                    schemeStatusSpan.textContent = ''
-                    schemeStatusSpan.append(...( // status txt + icon
-                        config.scheme == 'dark' ?
-                            [document.createTextNode(app.msgs.scheme_dark), icons.create({ key: 'moon' })]
-                      : config.scheme == 'light' ?
-                        [document.createTextNode(app.msgs.scheme_light), icons.create({ key: 'sun' })]
-                      : [document.createTextNode(app.msgs.menuLabel_auto), icons.create({ key: 'arrowsCyclic' })]))
-                    schemeStatusSpan.style.cssText += `; margin-top: ${ !config.scheme ? 3 : 0 }px !important`
-                }
-            }
-        },
-
-        shareChat(shareURL) {
-
-            // Show modal
-            const shareChatModal = modals.alert(
-                `${log.toTitleCase(app.msgs.btnLabel_convo)} ${app.msgs.tooltip_page} ${ // title
-                    app.msgs.alert_generated.toLowerCase()}!`,
-                `<a target="_blank" rel="noopener" href="${shareURL}">${shareURL}</a>`, // link msg
-                [ // buttons
-                    function copyUrl() {
-                        navigator.clipboard.writeText(shareURL)
-                            .then(() => feedback.notify(app.msgs.notif_copiedToClipboard))
-                    },
-                    function visitPage() { modals.safeWinOpen(shareURL) },
-                    function downloadChat() {
-                        xhr({
-                            method: 'GET', url: shareURL,
-                            onload: resp => {
-                                const html = resp.responseText, dlLink = dom.create.anchor(
-                                    URL.createObjectURL(new Blob([html], { type: 'text/html' })))
-                                dlLink.download /* filename */ = html.match(/<title>([^<]+)<\/title>/i)[1] // page title
-                                    .replace(/\s*[—|/]+\s*/g, ' ') // convert symbols to space for hyphen-casing
-                                    .replace(/\.{2,}/g, '') // strip ellipsis
-                                    .toLowerCase().trim().replace(/\s+/g, '-') // hyphen-case
-                                    + '.html'
-                                document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download HTML
-                                URL.revokeObjectURL(dlLink.href) // prevent memory leaks
-                            },
-                            onerror: err => log.error('Failed to download chat:', err)
-                        })
-                    }
-                ]
-            )
-
-            // Prefix icon to title
-            const modalTitle = shareChatModal.querySelector('h2'), titleIcon = icons.create({ key: 'speechBalloons' })
-            titleIcon.style.cssText = 'height: 28px ; width: 28px ; position: relative ; top: 7px ; right: 8px ;'
-                                    + `fill: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }`
-            modalTitle.prepend(titleIcon)
-
-            // Hide Dismiss button, localize other labels
-            const modalBtns = shareChatModal.querySelectorAll('button')
-            modalBtns[0].style.display = 'none' // hide Dismiss button
-            if (!env.browser.language.startsWith('en')) // localize button labels
-                modalBtns.forEach(btn => {
-                    if (/copy/i.test(btn.textContent)) btn.textContent = `${app.msgs.tooltip_copy} URL`
-                    else if (/visit/i.test(btn.textContent)) btn.textContent = app.msgs.btnLabel_visitPage
-                    else if (/download/i.test(btn.textContent))
-                         btn.textContent = `${app.msgs.btnLabel_download} ${log.toTitleCase(app.msgs.btnLabel_convo)}`
-                })
-
-            // Style elements
-            shareChatModal.style.wordBreak = 'break-all' // since URL really long
-            modalTitle.style.justifySelf = 'center'
-            shareChatModal.querySelector('p').style.cssText = 'text-align: center ; margin: -10px 0'
-            shareChatModal.querySelector('.modal-buttons').style.cssText = 'justify-content: center'
-
-            return shareChatModal
-        },
-
-        stylize() {
-            if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
-            this.styles.textContent = (
-
-                // Vars
-                `:root {
-                    --modal-btn-zoom: scale(1.055) ; --modal-btn-transition: transform 0.15s ease ;
-                    --settings-li-transition: transform 0.1s ease ; /* for Settings entry hover-zoom */
-                    --fg-transition: opacity 0.65s cubic-bezier(0.165,0.84,0.44,1), /* fade-in */
-                                     transform 0.55s cubic-bezier(0.165,0.84,0.44,1) !important ; /* move-in */
-                    --bg-transition: background-color 0.25s ease !important } /* dim */`
-
-                // Main modal styles
-              + '@keyframes modal-zoom-fade-out {'
-                  + '0% { opacity: 1 } 50% { opacity: 0.25 ; transform: scale(1.05) }'
-                  + '100% { opacity: 0 ; transform: scale(1.35) }}'
-              + '.chatgpt-modal > div {'
-                  + 'padding: 20px 25px 24px 31px !important ;' // increase alert padding
-                  + 'background-color: white !important ; color: black }'
-              + '.chatgpt-modal p { margin: -8px 0 -14px 4px ; font-size: 1.55rem }' // pos/size modal msg
-              + `.chatgpt-modal a { color: #${ env.ui.app.scheme == 'dark' ? '00cfff' : '1e9ebb' } !important }`
-              + '.modal-buttons {'
-                  + `margin: 24px -5px -3px ${ env.browser.isMobile ? -5 : -15 }px !important ; width: 100% }`
-              + '.chatgpt-modal button {' // this.alert() buttons
-                  + `min-width: 121px ; padding: ${ env.browser.isMobile ? '7px' : '4px 15px' } !important ;`
-                  + 'cursor: pointer ; border-radius: 0 !important ; height: 39px ;'
-                  + 'border: 1px solid ' + ( env.ui.app.scheme == 'dark' ? 'white' : 'black' ) + '!important ;'
-                  + `${ env.ui.app.scheme == 'dark' ? 'background: none ; color: white' : '' }}`
-              + '.primary-modal-btn { background: black !important ; color: white !important }'
-              + '.chatgpt-modal button:hover { background-color: #9cdaff !important ; color: black !important }'
-              + ( env.ui.app.scheme == 'dark' ? // darkmode chatgpt.alert() styles
-                  ( '.chatgpt-modal > div, .chatgpt-modal button:not(.primary-modal-btn) {'
-                      + 'color: white !important }'
-                  + '.primary-modal-btn { background: hsl(186 100% 69%) !important ; color: black !important }'
-                  + '.chatgpt-modal a { color: #00cfff !important }'
-                  + '.chatgpt-modal button:hover {'
-                      + 'background-color: #00cfff !important ; color: black !important }' ) : '' )
-              + `.${modals.class} { display: grid ; place-items: center }` // for centered icon/logo
-              + '[class*=modal-close-btn] {'
-                  + 'position: absolute !important ; float: right ; top: 14px !important ; right: 16px !important ;'
-                  + 'cursor: pointer ; width: 33px ; height: 33px ; border-radius: 20px }'
-              + `[class*=modal-close-btn] path {${ env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white'
-                                                                             : 'stroke: #9f9f9f ; fill: #9f9f9f' }}`
-              + ( env.ui.app.scheme == 'dark' ?  // invert dark mode hover paths
-                    '[class*=modal-close-btn]:hover path { stroke: black ; fill: black }' : '' )
-              + '[class*=modal-close-btn]:hover { background-color: #f2f2f2 }' // hover underlay
-              + '[class*=modal-close-btn] svg { margin: 11.5px }' // center SVG for hover underlay
-              + '[class*=-modal] h2 {'
-                  + 'font-weight: bold ; line-height: 32px ; padding: 0 ; margin: 9px 0 14px !important ;'
-                  + `${ env.browser.isMobile ? 'text-align: center' // center on mobile
-                                             : 'justify-self: start' }}` // left-align on desktop
-              + '[class*=-modal] p { justify-self: start ; font-size: 20px }'
-              + '[class*=-modal] button { font-size: 13px !important ; background: none }'
-              + '[class*=-modal-bg] {'
-                  + 'pointer-events: auto ;' // override any disabling from site modals
-                  + 'position: fixed ; top: 0 ; left: 0 ; width: 100% ; height: 100% ;' // expand to full view-port
-                  + 'display: flex ; justify-content: center ; align-items: center ; z-index: 9999 ;' // align
-                  + `transition: var(--bg-transition) ; /* dim */
-                        -webkit-transition: var(--bg-transition) ; -moz-transition: var(--bg-transition) ;
-                        -o-transition: var(--bg-transition) ; -ms-transition: var(--bg-transition) }`
-              + '[class*=-modal-bg].animated > div {'
-                  + 'z-index: 13456 ; opacity: 0.98 ; transform: translateX(0) translateY(0) }'
-              + '[class$=-modal] {' // native modals + chatgpt.alert()s
-                  + 'position: absolute ;' // to be click-draggable
-                  + 'opacity: 0 ;' // to fade-in
-                  + `background-image: linear-gradient(180deg, ${
-                       env.ui.app.scheme == 'dark' ? '#99a8a6 -200px, black 200px' : '#b6ebff -296px, white 171px' }) ;`
-                  + `border: 1px solid ${ env.ui.app.scheme == 'dark' ? 'white' : '#b5b5b5' } !important ;`
-                  + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };`
-                  + 'transform: translateX(-3px) translateY(7px) ;' // offset to move-in from
-                  + `transition: var(--fg-transition) ; /* fade-in + move-in */
-                        -webkit-transition: var(--fg-transition) ; -moz-transition: var(--fg-transition) ;
-                        -o-transition: var(--fg-transition) ; -ms-transition:  var(--fg-transition) }
-                    ${ env.browser.isMobile ? '' : `[class$=-modal] button:hover { transform: var(--modal-btn-zoom) }` }
-                    ${ config.fgAnimationsDisabled ? '' : `[class$=-modal] button {
-                        ${ env.browser.isMobile ? '' : 'will-change: transform ;' }
-                        transition: var(--modal-btn-transition) ;
+                /* Modal button styles */
+                ${selectors.btn.modal} {
+                    --modal-btn-y-offset: 2px ; --glow-color: #a0fdff ;
+                    --modal-btn-zoom: scale(1.075) ;
+                    --modal-btn-transition: transform 0.1s ease, background 0.2s ease, box-shadow 0.5s ease ;
+                    ${ config.fgAnimationsDisabled ? /* override chatgpt.js transitions */
+                        `transition: none ;
+                            -webkit-transition: none ; -moz-transition: none ;
+                            -o-transition: none ; -ms-transition: none`
+                      : `transition: var(--modal-btn-transition) ;
                             -webkit-transition: var(--modal-btn-transition) ;
                             -moz-transition: var(--modal-btn-transition) ;
                             -o-transition: var(--modal-btn-transition) ;
-                            -ms-transition: var(--modal-btn-transition) }` }`
+                            -ms-transition: var(--modal-btn-transition)` }}
+                ${selectors.btn.modalPrimary} {
+                    ${ env.ui.app.scheme == 'dark' ? 'background-color: white !important ; color: black'
+                                                   : 'background-color: black !important ; color: white' }}
+                ${selectors.btn.modal}:nth-child(odd) {
+                    transform: var(--skew) translateY(calc(-1 * var(--modal-btn-y-offset))) }
+                ${selectors.btn.modal}:nth-child(even) {
+                    transform: var(--skew) translateY(var(--modal-btn-y-offset)) }
+                ${selectors.btn.modal}:nth-child(odd):hover {
+                    transform: var(--skew) translateY(calc(-1 * var(--modal-btn-y-offset))) ${
+                        env.browser.isMobile ? '' : 'var(--modal-btn-zoom)' }}
+                ${selectors.btn.modal}:nth-child(even):hover {
+                    transform: var(--skew) translateY(var(--modal-btn-y-offset)) ${
+                        env.browser.isMobile ? '' : 'var(--modal-btn-zoom)' }}
+                ${selectors.btn.modal}:hover { /* add glow */
+                    background-color: var(--glow-color) !important ;
+                    box-shadow: 2px 1px 30px var(--glow-color) ;
+                        -webkit-box-shadow: 2px 1px 30px var(--glow-color) ;
+                        -moz-box-shadow: 2px 1px 30px var(--glow-color) }
 
-              // Settings modal
-              + `#${app.slug}-settings {
-                    min-width: ${ env.browser.isPortrait ? 288 : 698 }px ; max-width: 75vw ;
-                    word-wrap: break-word ; border-radius: 15px ;
-                    ${ env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: black ; fill: black' };
-                    --shadow: 0 30px 60px rgba(0,0,0,0.12) ;
-                        box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) }`
-              + `#${app.slug}-settings-title {`
-                  + 'font-weight: bold ; line-height: 19px ; text-align: center ; margin: 0 3px -3px 0 }'
-              + `#${app.slug}-settings-title h4 {`
-                  + `font-size: ${ env.browser.isPortrait ? 26 : 31 }px ; font-weight: bold ; margin-top: -39px }`
-              + `#${app.slug}-settings ul {`
-                  + 'list-style: none ; padding: 0 ; margin-bottom: 2px ;' // hide bullets, close bottom gap
-                  + `width: ${ env.browser.isPortrait ? 100 : 50 }% }` // set width based on column cnt
-              + ( env.browser.isPhone ? '' : ( `#${app.slug}-settings ul:first-of-type {` // color desktop middle separator
-                  + `border-right: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}` ))
-              + `#${app.slug}-settings li {`
-                  + `color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };` // for text
-                  + `fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };` // for icons
-                  + `stroke: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };` // for icons
-                  + 'height: 25px ; padding: 4px 10px ; font-size: 14.5px ;'
-                  + `border-bottom: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };` // add separator
-                  + 'border-radius: 3px ;' // slightly round highlight strip
-                  + `${ config.fgAnimationsDisabled || env.browser.isMobile ? '' :
-                        `transition: var(--settings-li-transition) ;
-                            -webkit-transition: var(--settings-li-transition) ;
-                            -moz-transition: var(--settings-li-transition) ;
-                            -o-transition: var(--settings-li-transition) ;
-                            -ms-transition: var(--settings-li-transition)` }}`
-              + `#${app.slug}-settings li.active {`
-                  + `color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };` // for text
-                  + `fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };` // for icons
-                  + `stroke: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }}` // for icons
-              + `#${app.slug}-settings li label { padding-right: 20px }` // right-pad labels so toggles don't hug
-              + `#${app.slug}-settings li:last-of-type { border-bottom: none }` // remove last bottom-border
-              + `#${app.slug}-settings li, #${app.slug}-settings li label { cursor: pointer }` // add finger on hover
-              + `#${app.slug}-settings li:hover {`
-                  + 'background: rgba(100,149,237,0.88) ; color: white ; fill: white ; stroke: white ;'
-                  + `${ env.browser.isMobile ? '' : 'transform: scale(1.15)' }}`
-              + `#${app.slug}-settings li > input { float: right } /* pos toggles */
-                 #${app.slug}-settings li > .track {
-                    position: relative ; left: -1px ; bottom: -5.5px ; float: right ;
-                    background-color: #ccc ; width: 26px ; height: 13px ; border-radius: 28px ;
-                    ${ config.fgAnimationsDisabled ? '' :
-                        `transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
-                            -o-transition: 0.4s ; -ms-transition: 0.4s` }}
-                 #${app.slug}-settings li .knob {
-                    position: absolute ; left: 1px ; bottom: 1px ; content: "" ;
-                    background-color: white ; width: 11px ; height: 11px ; border-radius: 28px ;
-                    ${ config.fgAnimationsDisabled ? '' :
-                        `transition: 0.2s ; -webkit-transition: 0.2s ; -moz-transition: 0.2s ;
-                            -o-transition: 0.2s ; -ms-transition: 0.2s` }}`
-              + '#scheme-settings-entry > span { margin: 0 -2px }' // align Scheme status
-              + '#scheme-settings-entry > span > svg {' // v-align/left-pad Scheme status icon
-                  + 'position: relative ; top: 3px ; margin-left: 4px }'
-              + ( config.fgAnimationsDisabled ? '' // spin cycle arrows icon when scheme is Auto
-                  : ( '#scheme-settings-entry svg[class*=arrowsCyclic],'
-                            + '.chatgpt-notif svg[class*=arrowsCyclic] { animation: rotate 5s linear infinite }' ))
-              + `#about-settings-entry span { color: ${ env.ui.app.scheme == 'dark' ? '#28ee28' : 'green' }}`
-              + '#about-settings-entry > span {' // outer About status span
-                  + `width: ${ env.browser.isPortrait ? '15vw' : '95px' }; height: 20px ; overflow: hidden ;`
-                  + `${ config.fgAnimationsDisabled ? '' : ( // fade edges
-                            'mask-image: linear-gradient('
-                                + 'to right, transparent, black 20%, black 89%, transparent) ;'
-                  + '-webkit-mask-image: linear-gradient('
-                                + 'to right, transparent, black 20%, black 89%, transparent)' )}}`
-              + '#about-settings-entry > span > div {'
-                  + `text-wrap: nowrap ; ${
-                        config.fgAnimationsDisabled ? '' : 'animation: ticker linear 60s infinite' }}`
-              + '@keyframes ticker { 0% { transform: translateX(100%) } 100% { transform: translateX(-2000%) }}'
-              + `.about-em { color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'green' } !important }`
-            )
-        },
-
-        update: {
-            width: 409,
-
-            available() {
-
-                // Show modal
-                const updateAvailModal = modals.alert(`🚀 ${app.msgs.alert_updateAvail}!`, // title
-                    `${app.msgs.alert_newerVer} ${app.name} ` // msg
-                        + `(v${app.latestVer}) ${app.msgs.alert_isAvail}!  `
-                        + '<a target="_blank" rel="noopener" style="font-size: 1.1rem" href="'
-                            + `${app.urls.github}/commits/main/greasemonkey/${app.slug}.user.js`
-                        + `">${app.msgs.link_viewChanges}</a>`,
-                    function update() { // button
-                        modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
-                    }, '', modals.update.width
-                )
-
-                // Localize button labels if needed
-                if (!env.browser.language.startsWith('en')) {
-                    const updateBtns = updateAvailModal.querySelectorAll('button')
-                    updateBtns[1].textContent = app.msgs.btnLabel_update
-                    updateBtns[0].textContent = app.msgs.btnLabel_dismiss
-                }
-
-                return updateAvailModal
-            },
-
-            unavailable() {
-                return modals.alert(`${app.msgs.alert_upToDate}!`, // title
-                    `${app.name} (v${app.version}) ${app.msgs.alert_isUpToDate}!`, // msg
-                    '', '', modals.update.width
-                )
+                /* Standby button styles */
+                ${selectors.btn.standby} {
+                    --standby-btn-zoom: scale(1.055) ;
+                    --standby-btn-transition: transform 0.18s ease, background 0.2s ease ;
+                    font-size: 11.5px ; width: 80% ; height: 51px ; margin-bottom: 16px }
+                ${selectors.btn.standby}:nth-child(odd) { margin-right: 20% ; margin-left: 15px }
+                ${selectors.btn.standby}:nth-child(even) { margin-left: 20% ; margin-bottom: 19px }
+                ${selectors.btn.standby}:hover {
+                    border : 1px rgba(var(--content-color), ${
+                        env.ui.app.scheme == 'dark' ? '1) solid' : '0.6) dotted' };
+                    transform: var(--skew) ${ env.browser.isMobile ? '' : 'var(--standby-btn-zoom)' }}`
             }
         }
     }
-
-    // Define MENU functions
-
-    const hoverMenus = {
-
-        createAppend(menuType) {
-            if (!this.styles) this.stylize()
-            this[menuType].div = dom.create.elem('div', {
-                id: `${app.slug}-${menuType}-menu`, style: 'width: max-content',
-                class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select`
-            })
-            this[menuType].ul = dom.create.elem('ul')
-            this[menuType].div.append(this[menuType].ul) ; app.div.append(this[menuType].div)
-            this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this.toggle
-            this.update(menuType) ; this[menuType].status = 'hidden'
-        },
-
-        hide(menuType) {
-            Object.assign(this[menuType].div.style, { display: 'none', opacity: 0 })
-            this[menuType].status = 'hidden'
-        },
-
-        stylize() {
-            document.head.append(this.styles = dom.create.style(`
-                .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
-                .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
-                    width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
-                #${app.slug}-api-menu > ul > li:first-of-type > svg { /* API header entry icon */
-                    top: 3px ; margin: 0 1px 0 -4px } /* tighten pos */
-                .${app.slug}-menu-item .checkmark-icon {
-                    position: relative ; float: right ; margin-right: -20px ; top: 3.5px ; fill: #b3f96d }
-                .${app.slug}-menu-item:hover .checkmark-icon { fill: green }`
-            ))
-        },
-
-        toggle(event) { // visibility
-            const toggleElem = event.currentTarget,
-                  reMenuType = /-?(\w+)-(?:btn|menu)$/,
-                  menuType = reMenuType.exec(toggleElem.id)?.[1] || reMenuType.exec(toggleElem.className)?.[1],
-                  menu = hoverMenus[menuType]
-            clearTimeout(menu.hideTimeout) // in case rapid re-enter before ran
-            if (!menu.div?.isConnected) hoverMenus.createAppend(menuType)
-            if (menu.status == 'hidden' && (
-                event.type == 'mouseenter' && event.target != menu.div // btn hovered-on
-                    || event.type == 'click' ) // btn clicked
-            ) { // show menu
-                menu.div.style.display = '' // for rects calc
-                const rects = {
-                    appDiv: app.div.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
-                    hoverMenu: menu.div.getBoundingClientRect()
-                }
-                const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
-                const appIsTooLow = rects.toggleBtn.bottom + rects.hoverMenu.height > ( innerHeight -15 )
-                const pointDirection = menu.preferredDirection == 'up' && appIsTooHigh
-                                    || menu.preferredDirection == 'down' && !appIsTooLow ? 'down' : 'up'
-                Object.assign(menu.div.style, {
-                    top: `${ rects.toggleBtn.top - rects.appDiv.top +(
-                        pointDirection == 'down' ? 30.5 : -rects.hoverMenu.height -13 )}px`,
-                    right: `${ rects.appDiv.right - event.clientX - menu.div.offsetWidth
-                        / ( pointDirection == 'up' ? /* center */ 2 : /* leftish-aligned */ 1.25 )}px`,
-                    opacity: 1
-                })
-                menu.status = 'visible'
-            } else if (/click|mouseleave/.test(event.type)) // menu/btn hovered-off or btn clicked, hide menu
-                return hoverMenus[menuType].hideTimeout = setTimeout(() => hoverMenus.hide(menuType), 55)
-        },
-
-        update(menuType) {
-            this[menuType].ul.textContent = ''
-            this[menuType].entries.forEach((entry, idx) => {
-                const item = dom.create.elem('li', { class: `${app.slug}-menu-item` })
-                if (idx == 0) { // header item
-                    item.innerHTML = `<b>${entry.label}</b>`
-                    item.classList.add(`${app.slug}-menu-header`)
-                    item.style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
-                    if (entry.iconType) item.prepend(icons.create({ key: entry.iconType }))
-                } else { // child items
-                    item.textContent = entry.label
-                    item.style.paddingRight = '24px' // make room for checkmark
-                    if (idx == 1) item.style.marginTop = '3px' // top-pad first non-header item
-                    if (entry.iconType) { // prepend it
-                        const icon = icons.create({ key: entry.iconType })
-                        icon.style.cssText = `
-                            width: 12px ; height: 12px ; position: relative ; top: 1px ; right: 5px ; margin-left: 5px`
-                        if (entry.iconType == 'webCorner') icon.style.width = icon.style.height = '11px' // shrink it
-                        item.prepend(icon)
-                    } else // indent
-                        item.style.paddingLeft = '11px'
-                    if (entry.isActive?.())
-                        item.append(icons.create({ key: 'checkmark', class: 'checkmark-icon', size: 12 }))
-                }
-                item.onclick = () => {
-                    if (!entry.onclick) return
-                    const prevOffsetTop = app.div.offsetTop ; entry.onclick()
-                    if (app.div.offsetTop != prevOffsetTop) this.hide(menuType) // since app moved
-                    this.update(menuType)
-                }
-                this[menuType].ul.append(item)
-            })
-        },
-
-        api: {
-            preferredDirection: 'down',
-            entries: [
-                { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
-                ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api !== 'OpenAI')].map(api => ({
-                    label: api,
-                    onclick: () => {
-                        settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
-                        feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                               `${ config.anchored ? 'top' : 'bottom' }-right`)
-                    },
-                    isActive: () => !config.preferredAPI && api == app.msgs.menuLabel_random
-                                  || config.preferredAPI == api
-                }))
-            ]
-        },
-
-        pin: {
-            preferredDirection: 'up',
-            entries: [
-                { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
-                { label: app.msgs.menuLabel_top, iconType: 'webCorner', onclick: () => toggle.sidebar('sticky'),
-                    isActive: () => config.stickySidebar },
-                { label: app.msgs.menuLabel_sidebar, iconType: 'sidebar',
-                    onclick: () => { toggle.sidebar('sticky', 'off') ; toggle.anchorMode('off') },
-                    isActive: () => !config.stickySidebar && !config.anchored
-                },
-                { label: app.msgs.menuLabel_bottom, iconType: 'anchor', onclick: () => toggle.anchorMode(),
-                    isActive: () => config.anchored }
-            ]
-        }
-    }
-
-    // Define LOGO functions
-
-    const logos = {
-        ddgpt: {
-
-            create() {
-                const ddgptLogo = dom.create.elem('img', { id: `${app.slug}-logo`, class: 'no-mobile-tap-outline' })
-                logos.ddgpt.update(ddgptLogo)
-                return ddgptLogo
-            },
-
-            update(...targetLogos) {
-                targetLogos = targetLogos.flat() // flatten array args nested by spread operator
-                if (!targetLogos.length) targetLogos = document.querySelectorAll(`#${app.slug}-logo`)
-                targetLogos.forEach(logo =>
-                    logo.src = GM_getResourceText(`ddgpt${ env.ui.app.scheme == 'dark' ? 'DS' : 'LS' }logo`))
-            }
-        }
-    }
-
-    // Define UPDATE functions
 
     const update = {
 
@@ -2115,454 +1311,6 @@
             env.ui.app.scheme = newScheme ; logos.ddgpt.update() ; update.appStyle()
             update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
         }
-    }
-
-    // Define UI functions
-
-    const addListeners = {
-
-        appDiv() {
-            app.div.addEventListener(inputEvents.down, event => { // to dismiss visible font size slider
-                if (event.button != 0) return // prevent non-left-click dismissal
-                if (document.getElementById(`${app.slug}-font-size-slider-track`) // slider is visible
-                    && !event.target.closest('[id*=font-size]') // not clicking slider elem
-                    && getComputedStyle(event.target).cursor != 'pointer') // ...or other interactive elem
-                        fontSizeSlider.toggle('off')
-            })
-            app.div.onmouseenter = app.div.onmouseleave = update.bylineVisibility
-        },
-
-        btns: {
-            appHeader() {
-                app.div.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
-                    const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
-
-                    // Add click listener
-                    btn.onclick = {
-                        about: () => modals.open('about'),
-                        arrows: event => { toggle.expandedMode() ; tooltip.update(event.currentTarget) },
-                        chevron: () => {
-                            if (app.div.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
-                                fontSizeSlider.toggle('off')
-                            toggle.minimized()
-                        },
-                        pin: () => (btn.onmouseenter = btn.onmouseleave = btn.onclick = hoverMenus.toggle),
-                        settings: () => modals.open('settings'),
-                        'font-size': () => fontSizeSlider.toggle(),
-                        wsb: event => { toggle.sidebar('wider') ; tooltip.update(event.currentTarget) }
-                    }[btnType]
-
-                    // Add hover listener
-                    if (!env.browser.isMobile)
-                        btn.onmouseenter = btn.onmouseleave = btnType == 'pin' ? hoverMenus.toggle : tooltip.toggle
-
-                     // Add zoom/fade-out to corner buttons
-                    if (/about|settings/.test(btn.id)) btn.onmouseup = () => {
-                        if (config.fgAnimationsDisabled) return
-                        btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
-                        if (env.browser.isFF) // end animation 0.08s early to avoid icon overgrowth
-                            setTimeout(handleAnimationEnded, 0.12 *1000)
-                        else btn.onanimationend = handleAnimationEnded
-                        function handleAnimationEnded() {
-                            Object.assign(btn.style, { opacity: '0', visibility: 'hidden', animation: '' }) // hide btn
-                            setTimeout(() => // show btn after short delay
-                                Object.assign(btn.style, { visibility: 'visible', opacity: '1' }), 135)
-                        }
-                    }
-                })
-            },
-
-            chatbar() {
-                app.div.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
-                    btn.onclick = () => {
-                        tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
-                        const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
-                        if (btnType == 'send') return // since handled by form submit
-                        msgChain.push({ time: Date.now(), role: 'user', content: prompts.create(
-                            btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })})
-                        get.reply({ msgs: msgChain, src: btnType })
-                        show.reply.chatbarFocused = false ; show.reply.userInteracted = true
-                    }
-                    if (!env.browser.isMobile) // add hover listener for tooltips
-                        btn.onmouseenter = btn.onmouseleave = tooltip.toggle
-                })
-            }
-        },
-
-        replySection() {
-
-            // Add form key listener
-            const replyForm = app.div.querySelector('form')
-            replyForm.onkeydown = event => {
-                if (event.key == 'Enter' || event.keyCode == 13) {
-                    if (event.ctrlKey) { // add newline
-                        const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`),
-                              caretPos = chatTextarea.selectionStart,
-                              textBefore = chatTextarea.value.substring(0, caretPos),
-                              textAfter = chatTextarea.value.substring(caretPos)
-                        chatTextarea.value = textBefore + '\n' + textAfter // add newline
-                        chatTextarea.selectionStart = chatTextarea.selectionEnd = caretPos + 1 // preserve caret pos
-                        addListeners.replySection.chatbarAutoSizer()
-                    } else if (!event.shiftKey) addListeners.replySection.submitHandler(event)
-            }}
-
-            // Add form submit listener
-            addListeners.replySection.submitHandler = function(event) {
-                event.preventDefault()
-                const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`)
-
-                // No reply, change placeholder + focus chatbar
-                if (chatTextarea.value.trim() == '') {
-                    chatTextarea.placeholder = `${app.msgs.placeholder_typeSomething}...`
-                    chatTextarea.focus()
-
-                // Yes reply, submit it + transform to loading UI
-                } else {
-                    msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
-                    get.reply({ msgs: msgChain, src: 'submit' })
-                    show.reply.chatbarFocused = false ; show.reply.userInteracted = true
-                }
-            }
-            replyForm.onsubmit = addListeners.replySection.submitHandler
-
-            // Add chatbar autosizer
-            const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`),
-                  { paddingTop, paddingBottom } = getComputedStyle(chatTextarea),
-                  vOffset = parseInt(paddingTop) + parseInt(paddingBottom)
-            let prevLength = chatTextarea.value.length
-            addListeners.replySection.chatbarAutoSizer = () => {
-                const newLength = chatTextarea.value.length
-                if (newLength < prevLength) { // if deleting txt
-                    chatTextarea.style.height = 'auto' // ...auto-fit height
-                    if (parseInt(getComputedStyle(chatTextarea).height) < 35) // if down to one line
-                        chatTextarea.style.height = '19px' // ...reset to original height
-                }
-                chatTextarea.style.height = chatTextarea.scrollHeight - vOffset + 'px'
-                prevLength = newLength
-            }
-            chatTextarea.oninput = addListeners.replySection.chatbarAutoSizer
-
-            // Add button listeners
-            this.btns.chatbar()
-        }
-    }
-
-    const fontSizeSlider = {
-        fadeInDelay: 5, // ms
-        hWheelDistance: 10, // px
-
-        createAppend() {
-
-            // Create/ID/classify slider elems
-            fontSizeSlider.cursorOverlay = dom.create.elem('div', { class: 'cursor-overlay' })
-            const slider = dom.create.elem('div',
-                { id: `${app.slug}-font-size-slider-track`, class: 'fade-in-less', style: 'display: none' })
-            const sliderThumb = dom.create.elem('div',
-                { title: Math.floor(config.fontSize *10) /10 + 'px', id: `${app.slug}-font-size-slider-thumb` })
-            const sliderTip = dom.create.elem('div', { id: `${app.slug}-font-size-slider-tip` })
-
-            // Assemble/insert elems
-            slider.append(sliderThumb, sliderTip)
-            app.div.insertBefore(slider, app.div.querySelector(`.${app.slug}-tooltip,` // desktop
-                                                           + '.reply-bubble')) // mobile
-            // Init thumb pos
-            setTimeout(() => {
-                const iniLeft = (config.fontSize - config.minFontSize) / (config.maxFontSize - config.minFontSize)
-                              * (slider.offsetWidth - sliderThumb.offsetWidth) // slider width
-                sliderThumb.style.left = iniLeft + 'px'
-            }, fontSizeSlider.fadeInDelay) // to ensure visibility for accurate dimension calcs
-
-            // Add event listeners for dragging thumb
-            let isDragging = false, startX, startLeft
-            sliderThumb.addEventListener(inputEvents.down, event => {
-                if (event.button != 0) return // prevent non-left-click drag
-                event.preventDefault() // prevent text selection
-                isDragging = true ; startX = event.clientX ; startLeft = sliderThumb.offsetLeft
-                document.body.appendChild(fontSizeSlider.cursorOverlay)
-            })
-            document.addEventListener(inputEvents.move, event => {
-                if (isDragging) moveThumb(startLeft + event.clientX - startX) })
-            document.addEventListener(inputEvents.up, () => {
-                isDragging = false
-                if (fontSizeSlider.cursorOverlay.parentNode)
-                    fontSizeSlider.cursorOverlay.remove()
-            })
-
-            // Add event listener for wheel-scrolling thumb
-            if (!env.browser.isMobile) slider.onwheel = event => {
-                event.preventDefault()
-                moveThumb(sliderThumb.offsetLeft - Math.sign(event.deltaY) * fontSizeSlider.hWheelDistance)
-            }
-
-            // Add event listener for seek/dragging by inputEvents.down on track
-            slider.addEventListener(inputEvents.down, event => {
-                if (event.button != 0) return // prevent non-left-click drag
-                event.preventDefault() // prevent text selection
-                const clientX = event.clientX || event.touches?.[0]?.clientX
-                moveThumb(clientX - slider.getBoundingClientRect().left - sliderThumb.offsetWidth / 2)
-                isDragging = true ; startX = clientX ; startLeft = sliderThumb.offsetLeft // manually init dragging
-                document.body.appendChild(fontSizeSlider.cursorOverlay)
-            })
-
-            function moveThumb(newLeft) {
-
-                // Bound thumb
-                const sliderWidth = slider.offsetWidth - sliderThumb.offsetWidth
-                if (newLeft < 0) newLeft = 0
-                if (newLeft > sliderWidth) newLeft = sliderWidth
-
-                // Move thumb
-                sliderThumb.style.left = newLeft + 'px'
-
-                // Adjust font size based on thumb position
-                const replyPre = app.div.querySelector('.reply-pre'),
-                      fontSizePercent = newLeft / sliderWidth,
-                      fontSize = config.minFontSize + fontSizePercent * (config.maxFontSize - config.minFontSize)
-                replyPre.style.fontSize = fontSize + 'px'
-                replyPre.style.lineHeight = fontSize * config.lineHeightRatio + 'px'
-                settings.save('fontSize', fontSize)
-                sliderThumb.title = Math.floor(config.fontSize *10) /10 + 'px'
-            }
-
-            return slider
-        },
-
-        toggle(state = '') {
-            const slider = document.getElementById(`${app.slug}-font-size-slider-track`)
-                         || fontSizeSlider.createAppend()
-            const replyTip = app.div.querySelector('.reply-tip')
-            const sliderTip = document.getElementById(`${app.slug}-font-size-slider-tip`)
-
-            // Show slider
-            if (state == 'on' || (!state && slider.style.display == 'none')) {
-
-                // Position slider tip
-                const btnSpan = document.getElementById(`${app.slug}-font-size-btn`),
-                      rects = { appDiv: app.div.getBoundingClientRect(), btnSpan: btnSpan.getBoundingClientRect() }
-                sliderTip.style.right = `${
-                    rects.appDiv.right - ( rects.btnSpan.left + rects.btnSpan.right )/2 -35.5 }px`
-
-                // Show slider, hide reply tip
-                slider.style.display = sliderTip.style.display = '' ; if (replyTip) replyTip.style.display = 'none'
-                setTimeout(() => slider.classList.add('active'), fontSizeSlider.fadeInDelay)
-
-            // Hide slider
-            } else if (state == 'off' || (!state && slider.style.display != 'none')) {
-                slider.classList.remove('active') ; if (replyTip) replyTip.style.display = ''
-                sliderTip.style.display = slider.style.display = 'none'
-            }
-        }
-    }
-
-    const themes = {
-        apply(theme) {
-            if (!this.styleNode) document.head.append(this.styleNode = dom.create.style())
-            this.styleNode.textContent = this.styles[theme]
-        },
-
-        selectors: {
-            btn: {
-                get after() { return this.shared.split(',').map(sel => `${sel}::after`).join(', ') },
-                get before() { return this.shared.split(',').map(sel => `${sel}::before`).join(', ') },
-                get hover() { return this.shared.split(',').map(sel => `${sel}:hover`).join(', ') },
-                get hoverAfter() { return this.hover.split(',').map(sel => `${sel}::after`).join(', ') },
-                get hoverBefore() { return this.hover.split(',').map(sel => `${sel}::before`).join(', ') },
-                get hoverSVG() { return this.hover.split(',').map(sel => `${sel} svg`).join(', ') },
-                modal: `body:has(#${app.slug}) .modal-buttons button`,
-                modalPrimary: `body:has(#${app.slug}) .primary-modal-btn`,
-                get shared() { return `${this.modal},${this.standby}` },
-                get span() { return this.shared.split(',').map(sel => `${sel} span`).join(', ') },
-                standby: `button.${app.slug}-standby-btn`,
-                get svg() { return this.shared.split(',').map(sel => `${sel} svg`).join(', ') }
-            }
-        },
-
-        styles: {
-            get lines() { const { selectors } = themes ; return `
-
-                /* General button styles */
-                ${selectors.btn.shared} {
-                    --content-color: ${ env.ui.app.scheme == 'light' ? '0,0,0' : '255,255,255' };
-                    --side-line-fill: linear-gradient(rgb(var(--content-color)), rgb(var(--content-color))) ;
-                    --skew: skew(-13deg) ; --counter-skew: skew(13deg) ; --btn-svg-zoom: scale(1.2) ;
-                    --btn-transition: 0.1s ease all ;
-                    position: relative ; border-width: 1px ; cursor: crosshair ;
-                    border: 1px solid rgb(var(--content-color)) ;
-                    background: /* side lines */
-                        var(--side-line-fill) left / 2px 50% no-repeat,
-                        var(--side-line-fill) right / 2px 50% no-repeat ;
-                    background-position-y: 81% ;
-                    background-color: #ffffff00 ; /* clear bg */
-                    color: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.85 : 1 }) ;
-                    font-size: 0.8em ; font-family: "Roboto", sans-serif ; text-transform: uppercase ;
-                    transform: var(--skew)  }
-                ${selectors.btn.svg} {
-                    stroke: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.65 : 1 }) ;
-                    transform: var(--counter-skew) ;
-                    ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
-                          -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                          -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
-                ${selectors.btn.span} { /* text */
-                    font-weight: 600 ; display: inline-block ; transform: var(--counter-skew) }
-                ${selectors.btn.before}, ${selectors.btn.after} { /* top/bottom lines */
-                    content: "" ; position: absolute ; background: rgb(var(--content-color)) ;
-                    ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
-                          -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                          -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
-                ${selectors.btn.before} { top: 0 ; left: 10% ; width: 65% ; height: 1px } /* top line */
-                ${selectors.btn.after} { bottom: 0 ; right: 10% ; width: 80% ; height: 1px } /* bottom line */
-                ${selectors.btn.hover} {
-                    color: rgb(var(--content-color)) ;
-                    background: /* extend side lines */
-                        var(--side-line-fill) left / 2px 100% no-repeat,
-                        var(--side-line-fill) right / 2px 100% no-repeat !important }
-                ${selectors.btn.hoverBefore} { left: 0 ; width: 20px } /* top line on hover */
-                ${selectors.btn.hoverAfter} { right: 0 ; width: 20px } /* bottom line on hover */
-                ${selectors.btn.hoverSVG} {
-                    transform: var(--counter-skew) var(--btn-svg-zoom) ; stroke: rgba(var(--content-color),1) }
-
-                /* Modal styles */
-                .${modals.class} { border-radius: 0 !important } /* square the corners to match the buttons */
-
-                /* Modal button styles */
-                ${selectors.btn.modal} {
-                    --modal-btn-y-offset: 2px ; --glow-color: #a0fdff ;
-                    --modal-btn-zoom: scale(1.075) ;
-                    --modal-btn-transition: transform 0.1s ease, background 0.2s ease, box-shadow 0.5s ease ;
-                    ${ config.fgAnimationsDisabled ? /* override chatgpt.js transitions */
-                        `transition: none ;
-                            -webkit-transition: none ; -moz-transition: none ;
-                            -o-transition: none ; -ms-transition: none`
-                      : `transition: var(--modal-btn-transition) ;
-                            -webkit-transition: var(--modal-btn-transition) ;
-                            -moz-transition: var(--modal-btn-transition) ;
-                            -o-transition: var(--modal-btn-transition) ;
-                            -ms-transition: var(--modal-btn-transition)` }}
-                ${selectors.btn.modalPrimary} {
-                    ${ env.ui.app.scheme == 'dark' ? 'background-color: white !important ; color: black'
-                                                   : 'background-color: black !important ; color: white' }}
-                ${selectors.btn.modal}:nth-child(odd) {
-                    transform: var(--skew) translateY(calc(-1 * var(--modal-btn-y-offset))) }
-                ${selectors.btn.modal}:nth-child(even) {
-                    transform: var(--skew) translateY(var(--modal-btn-y-offset)) }
-                ${selectors.btn.modal}:nth-child(odd):hover {
-                    transform: var(--skew) translateY(calc(-1 * var(--modal-btn-y-offset))) ${
-                        env.browser.isMobile ? '' : 'var(--modal-btn-zoom)' }}
-                ${selectors.btn.modal}:nth-child(even):hover {
-                    transform: var(--skew) translateY(var(--modal-btn-y-offset)) ${
-                        env.browser.isMobile ? '' : 'var(--modal-btn-zoom)' }}
-                ${selectors.btn.modal}:hover { /* add glow */
-                    background-color: var(--glow-color) !important ;
-                    box-shadow: 2px 1px 30px var(--glow-color) ;
-                        -webkit-box-shadow: 2px 1px 30px var(--glow-color) ;
-                        -moz-box-shadow: 2px 1px 30px var(--glow-color) }
-
-                /* Standby button styles */
-                ${selectors.btn.standby} {
-                    --standby-btn-zoom: scale(1.055) ;
-                    --standby-btn-transition: transform 0.18s ease, background 0.2s ease ;
-                    font-size: 11.5px ; width: 80% ; height: 51px ; margin-bottom: 16px }
-                ${selectors.btn.standby}:nth-child(odd) { margin-right: 20% ; margin-left: 15px }
-                ${selectors.btn.standby}:nth-child(even) { margin-left: 20% ; margin-bottom: 19px }
-                ${selectors.btn.standby}:hover {
-                    border : 1px rgba(var(--content-color), ${
-                        env.ui.app.scheme == 'dark' ? '1) solid' : '0.6) dotted' };
-                    transform: var(--skew) ${ env.browser.isMobile ? '' : 'var(--standby-btn-zoom)' }}`
-            }
-        }
-    }
-
-    const tooltip = {
-
-        stylize() {
-            document.head.append(this.styles = dom.create.style(`.${app.slug}-tooltip {
-                background-color: /* bubble style */
-                    rgba(0,0,0,0.64) ; padding: 5px 6px 3px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
-                font-size: 0.87em ; color: white ; fill: white ; stroke: white ; /* font/icon style */
-                position: absolute ; /* for this.update() calcs */
-                --shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
-                    box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)
-                opacity: 0 ; height: fit-content ; z-index: 1250 ; /* visibility */
-                transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
-                    -o-transition: opacity 0.15s ; -ms-transition: opacity 0.15s }`
-            ))
-        },
-
-        toggle(stateOrEvent) { // visibility
-            if (env.browser.isMobile) return
-            tooltip.div ||= dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
-            if (!tooltip.div.isConnected) app.div.append(tooltip.div)
-            if (!tooltip.styles) tooltip.stylize()
-            if (typeof stateOrEvent == 'object') // mouse event, update text/pos
-                tooltip.update(stateOrEvent.currentTarget)
-            tooltip.div.style.opacity = +( stateOrEvent?.type == 'mouseenter' || stateOrEvent == 'on' )
-        },
-
-        update(btn) { // text & position
-            if (!this.div) return // since nothing to update
-            const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
-            const baseText = {
-                about: app.msgs.menuLabel_about,
-                arrows: app.msgs[`tooltip_${ config.expanded ? 'shrink' : 'expand' }`],
-                chevron: app.msgs[`tooltip_${ config.minimized ? 'restore' : 'minimize' }`],
-                copy:
-                    btn.firstChild.id.includes('-copy-') ?
-                        `${app.msgs.tooltip_copy}${ btn.closest('code') ? ''
-                            : ` ${app.msgs.tooltip_reply.toLowerCase()}`}`
-                    : `${app.msgs.notif_copiedToClipboard}!`,
-                download:
-                    btn.firstChild.id.includes('-download-') ? app.msgs.btnLabel_download
-                        : `${app.msgs.tooltip_code} ${app.msgs.notif_downloaded}!`,
-                'font-size': app.msgs.tooltip_fontSize,
-                regen:
-                    btn.firstChild.style.animation || btn.firstChild.style.transform ?
-                        `${app.msgs.tooltip_regenerating} ${app.msgs.tooltip_reply.toLowerCase()}...`
-                        : `${app.msgs.tooltip_regenerate} ${app.msgs.tooltip_reply.toLowerCase()}`,
-                send: app.msgs.tooltip_sendReply,
-                settings: app.msgs.menuLabel_settings,
-                share:
-                    btn.style.animation ? `${app.msgs.tooltip_generating} HTML...`
-                        : `${app.msgs.tooltip_generate} ${app.msgs.btnLabel_convo} ${
-                                app.msgs.tooltip_page.toLowerCase()}`,
-                shuffle: app.msgs.tooltip_askRandQuestion,
-                speak:
-                    btn.querySelector('svg').id.includes('-speak-') ?
-                        `${app.msgs.tooltip_play} ${app.msgs.tooltip_reply.toLowerCase()}`
-                    : btn.querySelector('svg').id.includes('generating-') ? `${app.msgs.tooltip_generatingAudio}...`
-                    : `${app.msgs.tooltip_playing} ${app.msgs.tooltip_reply.toLowerCase()}...`,
-                summarize: app.msgs.tooltip_summarizeResults,
-                wsb: ( config.widerSidebar ? `${app.msgs.prefix_exit} ` : '' ) + app.msgs.menuLabel_widerSidebar
-            }[btnType]
-
-            // Update text
-            tooltip.div.textContent = baseText
-            tooltip.nativeRpadding = tooltip.nativeRpadding
-                || parseFloat(window.getComputedStyle(tooltip.div).paddingRight)
-            clearInterval(tooltip.dotCycler)
-            if (baseText.endsWith('...')) { // animate the dots
-                const noDotText = baseText.slice(0, -3), dotWidth = 2.75 ; let dotCnt = 3
-                tooltip.dotCycler = setInterval(() => {
-                    dotCnt = (dotCnt % 3) + 1 // cycle thru 1 → 2 → 3
-                    tooltip.div.textContent = noDotText + '.'.repeat(dotCnt)
-                    tooltip.div.style.paddingRight = `${ // adjust based on dotCnt
-                        tooltip.nativeRpadding + (3 - dotCnt) * dotWidth }px`
-                }, 350)
-            } else // restore native right-padding
-                tooltip.div.style.paddingRight = tooltip.nativeRpadding
-
-            // Update position
-            const elems = {
-                appDiv: app.div, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv: tooltip.div }
-            const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
-            tooltip.div.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
-            tooltip.div.style.right = `${
-                rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
-        }
-    }
-
-    function getScheme() {
-        return document.documentElement?.className?.includes('dark') // from DDG pref
-            || window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
 
     // Define PROMPT functions
@@ -3941,6 +2689,1103 @@
         }
     }
 
+    const fontSizeSlider = {
+        fadeInDelay: 5, // ms
+        hWheelDistance: 10, // px
+
+        createAppend() {
+
+            // Create/ID/classify slider elems
+            fontSizeSlider.cursorOverlay = dom.create.elem('div', { class: 'cursor-overlay' })
+            const slider = dom.create.elem('div',
+                { id: `${app.slug}-font-size-slider-track`, class: 'fade-in-less', style: 'display: none' })
+            const sliderThumb = dom.create.elem('div',
+                { title: Math.floor(config.fontSize *10) /10 + 'px', id: `${app.slug}-font-size-slider-thumb` })
+            const sliderTip = dom.create.elem('div', { id: `${app.slug}-font-size-slider-tip` })
+
+            // Assemble/insert elems
+            slider.append(sliderThumb, sliderTip)
+            app.div.insertBefore(slider, app.div.querySelector(`.${app.slug}-tooltip,` // desktop
+                                                           + '.reply-bubble')) // mobile
+            // Init thumb pos
+            setTimeout(() => {
+                const iniLeft = (config.fontSize - config.minFontSize) / (config.maxFontSize - config.minFontSize)
+                              * (slider.offsetWidth - sliderThumb.offsetWidth) // slider width
+                sliderThumb.style.left = iniLeft + 'px'
+            }, fontSizeSlider.fadeInDelay) // to ensure visibility for accurate dimension calcs
+
+            // Add event listeners for dragging thumb
+            let isDragging = false, startX, startLeft
+            sliderThumb.addEventListener(inputEvents.down, event => {
+                if (event.button != 0) return // prevent non-left-click drag
+                event.preventDefault() // prevent text selection
+                isDragging = true ; startX = event.clientX ; startLeft = sliderThumb.offsetLeft
+                document.body.appendChild(fontSizeSlider.cursorOverlay)
+            })
+            document.addEventListener(inputEvents.move, event => {
+                if (isDragging) moveThumb(startLeft + event.clientX - startX) })
+            document.addEventListener(inputEvents.up, () => {
+                isDragging = false
+                if (fontSizeSlider.cursorOverlay.parentNode)
+                    fontSizeSlider.cursorOverlay.remove()
+            })
+
+            // Add event listener for wheel-scrolling thumb
+            if (!env.browser.isMobile) slider.onwheel = event => {
+                event.preventDefault()
+                moveThumb(sliderThumb.offsetLeft - Math.sign(event.deltaY) * fontSizeSlider.hWheelDistance)
+            }
+
+            // Add event listener for seek/dragging by inputEvents.down on track
+            slider.addEventListener(inputEvents.down, event => {
+                if (event.button != 0) return // prevent non-left-click drag
+                event.preventDefault() // prevent text selection
+                const clientX = event.clientX || event.touches?.[0]?.clientX
+                moveThumb(clientX - slider.getBoundingClientRect().left - sliderThumb.offsetWidth / 2)
+                isDragging = true ; startX = clientX ; startLeft = sliderThumb.offsetLeft // manually init dragging
+                document.body.appendChild(fontSizeSlider.cursorOverlay)
+            })
+
+            function moveThumb(newLeft) {
+
+                // Bound thumb
+                const sliderWidth = slider.offsetWidth - sliderThumb.offsetWidth
+                if (newLeft < 0) newLeft = 0
+                if (newLeft > sliderWidth) newLeft = sliderWidth
+
+                // Move thumb
+                sliderThumb.style.left = newLeft + 'px'
+
+                // Adjust font size based on thumb position
+                const replyPre = app.div.querySelector('.reply-pre'),
+                      fontSizePercent = newLeft / sliderWidth,
+                      fontSize = config.minFontSize + fontSizePercent * (config.maxFontSize - config.minFontSize)
+                replyPre.style.fontSize = fontSize + 'px'
+                replyPre.style.lineHeight = fontSize * config.lineHeightRatio + 'px'
+                settings.save('fontSize', fontSize)
+                sliderThumb.title = Math.floor(config.fontSize *10) /10 + 'px'
+            }
+
+            return slider
+        },
+
+        toggle(state = '') {
+            const slider = document.getElementById(`${app.slug}-font-size-slider-track`)
+                         || fontSizeSlider.createAppend()
+            const replyTip = app.div.querySelector('.reply-tip')
+            const sliderTip = document.getElementById(`${app.slug}-font-size-slider-tip`)
+
+            // Show slider
+            if (state == 'on' || (!state && slider.style.display == 'none')) {
+
+                // Position slider tip
+                const btnSpan = document.getElementById(`${app.slug}-font-size-btn`),
+                      rects = { appDiv: app.div.getBoundingClientRect(), btnSpan: btnSpan.getBoundingClientRect() }
+                sliderTip.style.right = `${
+                    rects.appDiv.right - ( rects.btnSpan.left + rects.btnSpan.right )/2 -35.5 }px`
+
+                // Show slider, hide reply tip
+                slider.style.display = sliderTip.style.display = '' ; if (replyTip) replyTip.style.display = 'none'
+                setTimeout(() => slider.classList.add('active'), fontSizeSlider.fadeInDelay)
+
+            // Hide slider
+            } else if (state == 'off' || (!state && slider.style.display != 'none')) {
+                slider.classList.remove('active') ; if (replyTip) replyTip.style.display = ''
+                sliderTip.style.display = slider.style.display = 'none'
+            }
+        }
+    }
+
+    const hoverMenus = {
+
+        createAppend(menuType) {
+            if (!this.styles) this.stylize()
+            this[menuType].div = dom.create.elem('div', {
+                id: `${app.slug}-${menuType}-menu`, style: 'width: max-content',
+                class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select`
+            })
+            this[menuType].ul = dom.create.elem('ul')
+            this[menuType].div.append(this[menuType].ul) ; app.div.append(this[menuType].div)
+            this[menuType].div.onmouseenter = this[menuType].div.onmouseleave = this.toggle
+            this.update(menuType) ; this[menuType].status = 'hidden'
+        },
+
+        hide(menuType) {
+            Object.assign(this[menuType].div.style, { display: 'none', opacity: 0 })
+            this[menuType].status = 'hidden'
+        },
+
+        stylize() {
+            document.head.append(this.styles = dom.create.style(`
+                .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
+                .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
+                    width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
+                #${app.slug}-api-menu > ul > li:first-of-type > svg { /* API header entry icon */
+                    top: 3px ; margin: 0 1px 0 -4px } /* tighten pos */
+                .${app.slug}-menu-item .checkmark-icon {
+                    position: relative ; float: right ; margin-right: -20px ; top: 3.5px ; fill: #b3f96d }
+                .${app.slug}-menu-item:hover .checkmark-icon { fill: green }`
+            ))
+        },
+
+        toggle(event) { // visibility
+            const toggleElem = event.currentTarget,
+                  reMenuType = /-?(\w+)-(?:btn|menu)$/,
+                  menuType = reMenuType.exec(toggleElem.id)?.[1] || reMenuType.exec(toggleElem.className)?.[1],
+                  menu = hoverMenus[menuType]
+            clearTimeout(menu.hideTimeout) // in case rapid re-enter before ran
+            if (!menu.div?.isConnected) hoverMenus.createAppend(menuType)
+            if (menu.status == 'hidden' && (
+                event.type == 'mouseenter' && event.target != menu.div // btn hovered-on
+                    || event.type == 'click' ) // btn clicked
+            ) { // show menu
+                menu.div.style.display = '' // for rects calc
+                const rects = {
+                    appDiv: app.div.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
+                    hoverMenu: menu.div.getBoundingClientRect()
+                }
+                const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
+                const appIsTooLow = rects.toggleBtn.bottom + rects.hoverMenu.height > ( innerHeight -15 )
+                const pointDirection = menu.preferredDirection == 'up' && appIsTooHigh
+                                    || menu.preferredDirection == 'down' && !appIsTooLow ? 'down' : 'up'
+                Object.assign(menu.div.style, {
+                    top: `${ rects.toggleBtn.top - rects.appDiv.top +(
+                        pointDirection == 'down' ? 30.5 : -rects.hoverMenu.height -13 )}px`,
+                    right: `${ rects.appDiv.right - event.clientX - menu.div.offsetWidth
+                        / ( pointDirection == 'up' ? /* center */ 2 : /* leftish-aligned */ 1.25 )}px`,
+                    opacity: 1
+                })
+                menu.status = 'visible'
+            } else if (/click|mouseleave/.test(event.type)) // menu/btn hovered-off or btn clicked, hide menu
+                return hoverMenus[menuType].hideTimeout = setTimeout(() => hoverMenus.hide(menuType), 55)
+        },
+
+        update(menuType) {
+            this[menuType].ul.textContent = ''
+            this[menuType].entries.forEach((entry, idx) => {
+                const item = dom.create.elem('li', { class: `${app.slug}-menu-item` })
+                if (idx == 0) { // header item
+                    item.innerHTML = `<b>${entry.label}</b>`
+                    item.classList.add(`${app.slug}-menu-header`)
+                    item.style.cssText = 'margin-bottom: 1px ; border-bottom: 1px dotted white'
+                    if (entry.iconType) item.prepend(icons.create({ key: entry.iconType }))
+                } else { // child items
+                    item.textContent = entry.label
+                    item.style.paddingRight = '24px' // make room for checkmark
+                    if (idx == 1) item.style.marginTop = '3px' // top-pad first non-header item
+                    if (entry.iconType) { // prepend it
+                        const icon = icons.create({ key: entry.iconType })
+                        icon.style.cssText = `
+                            width: 12px ; height: 12px ; position: relative ; top: 1px ; right: 5px ; margin-left: 5px`
+                        if (entry.iconType == 'webCorner') icon.style.width = icon.style.height = '11px' // shrink it
+                        item.prepend(icon)
+                    } else // indent
+                        item.style.paddingLeft = '11px'
+                    if (entry.isActive?.())
+                        item.append(icons.create({ key: 'checkmark', class: 'checkmark-icon', size: 12 }))
+                }
+                item.onclick = () => {
+                    if (!entry.onclick) return
+                    const prevOffsetTop = app.div.offsetTop ; entry.onclick()
+                    if (app.div.offsetTop != prevOffsetTop) this.hide(menuType) // since app moved
+                    this.update(menuType)
+                }
+                this[menuType].ul.append(item)
+            })
+        },
+
+        api: {
+            preferredDirection: 'down',
+            entries: [
+                { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
+                ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api !== 'OpenAI')].map(api => ({
+                    label: api,
+                    onclick: () => {
+                        settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
+                        feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
+                               `${ config.anchored ? 'top' : 'bottom' }-right`)
+                    },
+                    isActive: () => !config.preferredAPI && api == app.msgs.menuLabel_random
+                                  || config.preferredAPI == api
+                }))
+            ]
+        },
+
+        pin: {
+            preferredDirection: 'up',
+            entries: [
+                { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
+                { label: app.msgs.menuLabel_top, iconType: 'webCorner', onclick: () => toggle.sidebar('sticky'),
+                    isActive: () => config.stickySidebar },
+                { label: app.msgs.menuLabel_sidebar, iconType: 'sidebar',
+                    onclick: () => { toggle.sidebar('sticky', 'off') ; toggle.anchorMode('off') },
+                    isActive: () => !config.stickySidebar && !config.anchored
+                },
+                { label: app.msgs.menuLabel_bottom, iconType: 'anchor', onclick: () => toggle.anchorMode(),
+                    isActive: () => config.anchored }
+            ]
+        }
+    }
+
+    const logos = {
+        ddgpt: {
+
+            create() {
+                const ddgptLogo = dom.create.elem('img', { id: `${app.slug}-logo`, class: 'no-mobile-tap-outline' })
+                logos.ddgpt.update(ddgptLogo)
+                return ddgptLogo
+            },
+
+            update(...targetLogos) {
+                targetLogos = targetLogos.flat() // flatten array args nested by spread operator
+                if (!targetLogos.length) targetLogos = document.querySelectorAll(`#${app.slug}-logo`)
+                targetLogos.forEach(logo =>
+                    logo.src = GM_getResourceText(`ddgpt${ env.ui.app.scheme == 'dark' ? 'DS' : 'LS' }logo`))
+            }
+        }
+    }
+
+    const modals = {
+        stack: [], // of types of undismissed modals
+        class: `${app.slug}-modal`,
+
+        about() {
+
+            // Show modal
+            const labelStyles = 'text-transform: uppercase ; font-size: 16px ; font-weight: bold ;'
+                              + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#494141' }`
+
+            const aboutModal = modals.alert(
+                `${app.symbol} ${app.msgs.appName}`, // title
+                `<span style="${labelStyles}">🧠 ${app.msgs.about_author}:</span> `
+                    + `<a href="${app.author[0].url}">${app.author[0].name}</a> ${app.msgs.about_and}`
+                        + ` <a href="${app.urls.contributors}">${app.msgs.about_contributors}</a>\n`
+                + `<span style="${labelStyles}">🏷️ ${app.msgs.about_version}:</span> `
+                    + `<span class="about-em">${app.version}</span>\n`
+                + `<span style="${labelStyles}">📜 ${app.msgs.about_openSourceCode}:</span> `
+                    + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
+                        + app.urls.github + '</a>\n'
+                + `<span style="${labelStyles}">🚀 ${app.msgs.about_latestChanges}:</span> `
+                    + `<a href="${app.urls.github}/commits" target="_blank" rel="nopener">`
+                        + `${app.urls.github}/commits</a>\n`
+                + `<span style="${labelStyles}">⚡ ${app.msgs.about_poweredBy}:</span> `
+                    + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
+                        + ` v${app.chatgptjsVer}`,
+                [ // buttons
+                    function checkForUpdates() { updateCheck() },
+                    function getSupport(){},
+                    function rateUs() { modals.open('feedback') },
+                    function moreAIextensions(){}
+                ], '', 577 // modal width
+            )
+
+            // Add logo
+            const aboutHeaderLogo = logos.ddgpt.create() ; aboutHeaderLogo.width = 420
+            aboutHeaderLogo.style.cssText = 'max-width: 98% ;'
+                + `margin: -1px ${ env.browser.isMobile ? 'auto' : '13.5%' } 1px`
+            aboutModal.firstChild.nextSibling.before(aboutHeaderLogo) // after close btn
+
+            // Format text
+            aboutModal.querySelector('h2').remove() // remove empty title h2
+            aboutModal.querySelector('p').style.cssText = (
+                'overflow-wrap: anywhere ; line-height: 1.55 ;'
+              + `margin: ${ env.browser.isPhone ? '9px 0 -16px' : '3px 0 -11px 10px' }`)
+
+            // Hack buttons
+            aboutModal.querySelectorAll('button').forEach(btn => {
+                btn.style.cssText = 'height: 52px ; min-width: 136px'
+
+                // Replace link buttons w/ clones that don't dismiss modal
+                if (/support|extensions/i.test(btn.textContent)) {
+                    btn.replaceWith(btn = btn.cloneNode(true))
+                    btn.onclick = () => modals.safeWinOpen(app.urls[
+                        btn.textContent.includes(app.msgs.btnLabel_getSupport) ? 'support' : 'relatedExtensions' ])
+                }
+
+                // Prepend emoji + localize labels
+                if (/updates/i.test(btn.textContent))
+                    btn.textContent = `🚀 ${app.msgs.btnLabel_checkForUpdates}`
+                else if (/support/i.test(btn.textContent))
+                    btn.textContent = `🧠 ${app.msgs.btnLabel_getSupport}`
+                else if (/rate/i.test(btn.textContent))
+                    btn.textContent = `⭐ ${app.msgs.btnLabel_rateUs}`
+                else if (/extensions/i.test(btn.textContent))
+                    btn.textContent = `🤖 ${app.msgs.btnLabel_moreAIextensions}`
+
+                // Hide Dismiss button
+                else btn.style.display = 'none'
+            })
+
+            return aboutModal
+        },
+
+        alert(title = '', msg = '', btns = '', checkbox = '', width = '') { // generic one from chatgpt.alert()
+            const alertID = chatgpt.alert(title, msg, btns, checkbox, width),
+                  alert = document.getElementById(alertID).firstChild
+            this.init(alert) // add classes/listeners/hack bg
+            return alert
+        },
+
+        api() {
+
+            // Show modal
+            const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
+                .map(api => { // to btn callback/label
+                    function onclick() {
+                        settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
+                        if (modals.settings.get()) { // update status of Preferred API entry
+                            const preferredAPIstatus = document.querySelector('[id*=preferredAPI] > span')
+                            if (preferredAPIstatus.textContent != api) preferredAPIstatus.textContent = api
+                        }
+                        feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
+                            `${ config.anchored ? 'top' : 'bottom' }-right`)
+                        if (app.div.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
+                            get.reply({ msgs: msgChain, src: get.reply.src }) // re-send query if user alerted
+                    }
+                    Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
+                    return onclick
+                })
+            const apiModal = modals.alert(`${app.msgs.menuLabel_preferred} API:`, '', modalBtns, '', 503)
+
+            // Re-style elems
+            apiModal.querySelector('h2').style.justifySelf = 'center' // center title
+            const btnsDiv = apiModal.querySelector('.modal-buttons')
+            btnsDiv.style.cssText = ` /* y-pad, gridify */
+                margin: 18px 0px 14px !important ; display: grid ; grid-template-columns: repeat(3, 1fr) ; gap: 10px`
+            btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
+                if (idx == 0) btn.style.display = 'none' // hide Dismiss button
+                else btn.classList.toggle('primary-modal-btn', // emphasize preferred API
+                    config.preferredAPI.toLowerCase() == btn.textContent.toLowerCase()
+                        || btn.textContent == app.msgs.menuLabel_random && !config.preferredAPI)
+            })
+
+            return apiModal
+        },
+
+        feedback() {
+
+            // Init buttons
+            let btns = [ function productHunt(){}, function g2(){}, function alternativeto(){} ]
+            if (modals.stack[0] != 'about') btns.push(function github(){})
+
+            // Show modal
+            const feedbackModal = modals.alert(`${app.msgs.alert_choosePlatform}:`, '', btns, '', 456)
+
+            // Center CTA
+            feedbackModal.querySelector('h2').style.justifySelf = 'center'
+
+            // Re-style button cluster
+            const btnsDiv = feedbackModal.querySelector('.modal-buttons')
+            btnsDiv.style.cssText += 'display: flex ; flex-wrap: wrap ; justify-content: center ;'
+                                   + 'margin-top: -2px !important' // close gap between title/btns
+            // Hack buttons
+            btns = btnsDiv.querySelectorAll('button')
+            btns.forEach((btn, idx) => {
+                if (idx == 0) btn.style.display = 'none' // hide Dismiss button
+                if (idx == btns.length -1) btn.classList.remove('primary-modal-btn') // de-emphasize last link
+                btn.style.marginTop = btn.style.marginBottom = '5px' // v-pad btns
+
+                // Replace buttons w/ clones that don't dismiss modal
+                btn.replaceWith(btn = btn.cloneNode(true))
+                btn.onclick = () => modals.safeWinOpen(
+                    btn.textContent == 'Product Hunt' ? app.urls.review.productHunt
+                  : btn.textContent == 'G2' ? app.urls.review.g2
+                  : btn.textContent == 'Alternativeto' ? app.urls.review.alternativeTo
+                  : app.urls.discuss
+                )
+            })
+
+            return feedbackModal
+        },
+
+        handlers: {
+
+            dismiss: { // to dismiss native modals
+                click(event) {
+                    const clickedElem = event.target
+                    if (clickedElem == event.currentTarget || clickedElem.closest('[class*=-close-btn]'))
+                        modals.hide((clickedElem.closest('[class*=-modal-bg]') || clickedElem).firstChild)
+                },
+
+                key(event) {
+                    if (event.key.startsWith('Esc') || event.keyCode == 27)
+                        modals.hide(document.querySelector('[class$=-modal]'))
+                }
+            },
+
+            drag: {
+
+                mousedown(event) { // find modal, update styles, attach listeners, init XY offsets
+                    if (event.button != 0) return // prevent non-left-click drag
+                    if (!/auto|default/.test(getComputedStyle(event.target).cursor))
+                        return // prevent drag on interactive elems
+                    modals.draggingModal = event.currentTarget
+                    event.preventDefault() // prevent sub-elems like icons being draggable
+                    Object.assign(modals.draggingModal.style, { // update styles
+                        transform: 'scale(1.05)', willChange: 'transform',
+                        transition: '0.1s', '-webkit-transition': '0.1s', '-moz-transition': '0.1s',
+                            '-o-transition': '0.1s', '-ms-transition': '0.1s'
+                    })
+                    document.body.style.cursor = 'grabbing' // update cursor
+                    ;[...modals.draggingModal.children] // prevent hover FX if drag lags behind cursor
+                        .forEach(child => child.style.pointerEvents = 'none')
+                    ;['mousemove', 'mouseup'].forEach(eventType => // add listeners
+                        document.addEventListener(eventType, modals.handlers.drag[eventType]))
+                    const draggingModalRect = modals.draggingModal.getBoundingClientRect(),
+                          targetModalIsSettings = event.currentTarget.closest('[id*=-settings]')
+                    modals.handlers.drag.offsetX = (
+                        event.clientX - draggingModalRect.left + ( targetModalIsSettings ? 0 : 21 ))
+                    modals.handlers.drag.offsetY = (
+                        event.clientY - draggingModalRect.top + ( targetModalIsSettings ? 0 : 12 ))
+                },
+
+                mousemove(event) { // drag modal
+                    if (modals.draggingModal) {
+                        const newX = event.clientX - modals.handlers.drag.offsetX,
+                              newY = event.clientY - modals.handlers.drag.offsetY
+                        Object.assign(modals.draggingModal.style, { left: `${newX}px`, top: `${newY}px` })
+                    }
+                },
+
+                mouseup() { // restore styles/pointer events, remove listeners, reset modals.draggingModal
+                    Object.assign(modals.draggingModal.style, { // restore styles
+                        cursor: 'inherit', transform: 'scale(1)', willChange: 'auto',
+                        transition: 'inherit', '-webkit-transition': 'inherit', '-moz-transition': 'inherit',
+                            '-o-transition': 'inherit', '-ms-transition': 'inherit'
+                    })
+                    document.body.style.cursor = '' // restore cursor
+                    ;[...modals.draggingModal.children] // restore pointer events
+                        .forEach(child => child.style.pointerEvents = '')
+                    ;['mousemove', 'mouseup'].forEach(eventType => // remove listeners
+                        document.removeEventListener(eventType, modals.handlers.drag[eventType]))
+                    modals.draggingModal = null
+                }
+
+            }
+        },
+
+        hide(modal) {
+            const modalContainer = modal?.parentNode ; if (!modalContainer) return
+            modalContainer.style.animation = 'modal-zoom-fade-out 0.165s ease-out'
+            modalContainer.onanimationend = () => modalContainer.remove()
+        },
+
+        init(modal) {
+            if (!this.styles) this.stylize() // to init/append stylesheet
+
+            // Add classes
+            modal.classList.add('no-user-select', this.class) ; modal.parentNode.classList.add(`${this.class}-bg`)
+
+            // Add listeners
+            modal.onwheel = modal.ontouchmove = event => event.preventDefault() // disable wheel/swipe scrolling
+            modal.onmousedown = this.handlers.drag.mousedown // enable click-dragging
+            if (!modal.parentNode.className.includes('chatgpt-modal')) { // enable click-dismissing native modals
+                const dismissElems = [modal.parentNode, modal.querySelector('[class*=-close-btn]')]
+                dismissElems.forEach(elem => elem.onclick = this.handlers.dismiss.click)
+            }
+
+            // Hack BG
+            dom.addRisingParticles(modal)
+            setTimeout(() => { // dim bg
+                modal.parentNode.style.backgroundColor = `rgba(67,70,72,${
+                    env.ui.app.scheme == 'dark' ? 0.62 : 0.33 })`
+                modal.parentNode.classList.add('animated')
+            }, 100) // delay for transition fx
+
+            // Wrap button contents in span to counter-skew vs. themes that skew
+            modal.querySelectorAll('button:not(:has(> span))').forEach(spanlessBtn =>
+                spanlessBtn.innerHTML = `<span>${spanlessBtn.innerHTML}</span>`)
+        },
+
+        observeRemoval(modal, modalType, modalSubType) { // to maintain stack for proper nav
+            const modalBG = modal.parentNode
+            new MutationObserver(([mutation], obs) => {
+                mutation.removedNodes.forEach(removedNode => { if (removedNode == modalBG) {
+                    if (modals.stack[0].includes(modalSubType || modalType)) { // new modal not launched so nav back
+                        modals.stack.shift() // remove this modal type from stack 1st
+                        const prevModalType = modals.stack[0]
+                        if (prevModalType) { // open it
+                            modals.stack.shift() // remove type from stack since re-added on open
+                            modals.open(prevModalType)
+                        }
+                    }
+                    obs.disconnect()
+                }})
+            }).observe(modalBG.parentNode, { childList: true, subtree: true })
+        },
+
+        open(modalType, modalSubType) { // custom ones
+            const modal = modalSubType ? modals[modalType][modalSubType]()
+                        : (modals[modalType].show || modals[modalType])()
+            if (!modal) return // since no div returned
+            if (settings.controls[modalType]?.type != 'prompt') { // add to stack
+                this.stack.unshift(modalSubType ? `${modalType}_${modalSubType}` : modalType)
+                log.debug(`Modal stack: ${JSON.stringify(modals.stack)}`)
+            }
+            this.init(modal) // add classes/listeners/hack bg
+            this.observeRemoval(modal, modalType, modalSubType) // to maintain stack for proper nav
+            if (!modals.handlers.dismiss.key.added) { // add key listener to dismiss modals
+                document.addEventListener('keydown', modals.handlers.dismiss.key)
+                modals.handlers.dismiss.key.added = true
+            }
+        },
+
+        replyLang() {
+            while (true) {
+                let replyLang = prompt(
+                    ( app.msgs.prompt_updateReplyLang ) + ':', config.replyLang)
+                if (replyLang == null) break // user cancelled so do nothing
+                else if (!/\d/.test(replyLang)) {
+                    replyLang = ( // auto-case for menu/alert aesthetics
+                        replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
+                            : log.toTitleCase(replyLang) )
+                    settings.save('replyLang', replyLang || env.browser.language)
+                    modals.alert(`${app.msgs.alert_langUpdated}!`, // title
+                        `${app.name} ${app.msgs.alert_willReplyIn} ` // msg
+                            + ( replyLang || app.msgs.alert_yourSysLang ) + '.',
+                        '', '', 330) // modal width
+                    if (modals.settings.get()) // update settings menu status label
+                        document.querySelector('#replyLang-settings-entry span').textContent = replyLang
+                    break
+                }
+            }
+        },
+
+        safeWinOpen(url) { open(url, '_blank', 'noopener') }, // to prevent backdoor vulnerabilities
+
+        scheme() {
+
+            // Show modal
+            const schemeModal = modals.alert(`${
+                app.name } ${( app.msgs.menuLabel_colorScheme ).toLowerCase() }:`, '', // title
+                [ function auto(){}, function light(){}, function dark(){} ] // buttons
+            )
+
+            // Center title/button cluster
+            schemeModal.querySelector('h2').style.justifySelf = 'center'
+            schemeModal.querySelector('.modal-buttons')
+                .style.cssText = 'justify-content: center ; margin-top: -2px !important'
+
+            // Hack buttons
+            const schemeEmojis = { 'light': '☀️', 'dark': '🌘', 'auto': '🌗'}
+            schemeModal.querySelectorAll('button').forEach(btn => {
+                const btnScheme = btn.textContent.toLowerCase()
+
+                // Emphasize active scheme
+                btn.classList.toggle('primary-modal-btn',
+                    config.scheme == btn.textContent.toLowerCase() || (btn.textContent == 'Auto' && !config.scheme))
+
+                // Prepend emoji + localize labels
+                if (Object.prototype.hasOwnProperty.call(schemeEmojis, btnScheme))
+                    btn.textContent = `${schemeEmojis[btnScheme]} ${ // emoji
+                        app.msgs['scheme_' + btnScheme] || app.msgs['menuLabel_' + btnScheme]
+                            || btnScheme.toUpperCase() }`
+                else btn.style.display = 'none' // hide Dismiss button
+
+                // Clone button to replace listener to not dismiss modal on click
+                btn.replaceWith(btn = btn.cloneNode(true))
+                btn.onclick = () => {
+                    const newScheme = btnScheme == 'auto' ? getScheme() : btnScheme
+                    settings.save('scheme', btnScheme == 'auto' ? false : newScheme)
+                    schemeModal.querySelectorAll('button').forEach(btn =>
+                        btn.classList.remove('primary-modal-btn')) // clear prev emphasized active scheme
+                    btn.classList.add('primary-modal-btn') // emphasize newly active scheme
+                    btn.style.cssText = 'pointer-events: none' // disable hover fx to show emphasis
+                    setTimeout(() => { btn.style.pointerEvents = 'auto' }, // re-enable hover fx
+                        100) // ...after 100ms to flicker emphasis
+                    update.scheme(newScheme) ; schemeNotify(btnScheme)
+                }
+            })
+
+            function schemeNotify(scheme) {
+
+                // Show notification
+                feedback.notify(`${app.msgs.menuLabel_colorScheme}: `
+                      + ( scheme == 'light' ? app.msgs.scheme_light || 'Light'
+                        : scheme == 'dark'  ? app.msgs.scheme_dark  || 'Dark'
+                                            : app.msgs.menuLabel_auto ).toUpperCase() )
+                // Append scheme icon
+                const notifs = document.querySelectorAll('.chatgpt-notif'), notif = notifs[notifs.length -1]
+                notif.append(icons.create({
+                    key: scheme == 'light' ? 'sun' : scheme == 'dark' ? 'moon' : 'arrowsCyclic',
+                    style: 'width: 23px ; height: 23px ; position: relative ; top: 3px ; margin-left: 6px'
+                }))
+            }
+            return schemeModal
+        },
+
+        settings: {
+
+            createAppend() {
+
+                // Init master elems
+                const settingsContainer = dom.create.elem('div'),
+                      settingsModal = dom.create.elem('div', { id: `${app.slug}-settings` })
+                      settingsContainer.append(settingsModal)
+
+                // Init settings keys
+                const settingsKeys = Object.keys(settings.controls).filter(key =>
+                      !(env.browser.isMobile && settings.controls[key].mobile == false)
+                   && !(env.ui.site.isCentered && settings.controls[key].centered == false))
+
+                // Init logo
+                const settingsIcon = icons.ddgpt.create()
+                settingsIcon.style.cssText = 'width: 65px ; position: relative ; top: -32px ; margin-bottom: 4px ;'
+                                           + 'filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.3))'
+                // Init title
+                const settingsTitleDiv = dom.create.elem('div', { id: `${app.slug}-settings-title` }),
+                      settingsTitleIcon = icons.create({ key: 'sliders' }),
+                      settingsTitleH4 = dom.create.elem('h4')
+                settingsTitleIcon.style.cssText += 'width: 20.5px ; height: 20.5px ; margin-right: 8px ;'
+                                                 + 'position: relative ; right: 2px ; top: 2.5px'
+                settingsTitleH4.textContent = app.msgs.menuLabel_settings
+                settingsTitleH4.prepend(settingsTitleIcon) ; settingsTitleDiv.append(settingsTitleH4)
+
+                // Init settings lists
+                const settingsLists = [], middleGap = 30 // px
+                const settingsListContainer = dom.create.elem('div')
+                const settingsListCnt = (
+                    env.browser.isMobile && ( env.browser.isPortrait || settingsKeys.length < 8 )) ? 1 : 2
+                const settingEntryCap = Math.floor(settingsKeys.length /2)
+                for (let i = 0 ; i < settingsListCnt ; i++) settingsLists.push(dom.create.elem('ul'))
+                settingsListContainer.style.width = '95%' // pad vs. parent
+                if (settingsListCnt > 1) { // style multi-list landscape mode
+                    settingsListContainer.style.cssText += ( // make/pad flexbox, add middle gap
+                        `display: flex ; padding: 11px 0 13px ; gap: ${ middleGap /2 }px` )
+                    settingsLists[0].style.cssText = ( // add vertical separator
+                        `padding-right: ${ middleGap /2 }px` )
+                }
+
+                // Create/append setting icons/labels/toggles
+                settingsKeys.forEach((key, idx) => {
+                    const setting = settings.controls[key]
+
+                    // Create/append item/label elems
+                    const settingEntry = dom.create.elem('li',
+                        { id: `${key}-settings-entry`, title: setting.helptip || '' })
+                    const settingLabel = dom.create.elem('label') ; settingLabel.textContent = setting.label
+                    settingEntry.append(settingLabel);
+                    (settingsLists[env.browser.isPortrait ? 0 : +(idx >= settingEntryCap)]).append(settingEntry)
+
+                    // Create/prepend icons
+                    const settingIcon = icons.create({ key: setting.icon })
+                    settingIcon.style.cssText = 'position: relative ;' + (
+                        /proxy/i.test(key) ? 'top: 3px ; left: -0.5px ; margin-right: 9px'
+                      : /preferred/i.test(key) ? 'top: 3.5px ; margin-right: 7.5px'
+                      : /streaming/i.test(key) ? 'top: 3px ; left: 0.5px ; margin-right: 9px'
+                      : /auto(?:get|focus)/i.test(key) ? 'top: 4.5px ; margin-right: 7px'
+                      : /summarize/i.test(key) ? 'top: 3.5px ; left: -5px ; margin-right: 3px ; height: 17.5px'
+                      : /autoscroll/i.test(key) ? 'top: 3.5px ; left: -1.5px ; margin-right: 6px'
+                      : /^rq/.test(key) ? 'top: 2.5px ; left: 0.5px ; margin-right: 9px ; transform: scaleY(-1)'
+                      : /prefix/i.test(key) ? 'top: 2.5px ; left: 0.5px ; margin-right: 9px'
+                      : /suffix/i.test(key) ? 'top: 4px ; left: -1.5px ; margin-right: 7px'
+                      : /sidebar/i.test(key) ? 'top: 4px ; left: -1.5px ; margin-right: 7.5px'
+                      : /anchor/i.test(key) ? 'top: 3px ; left: -2.5px ; margin-right: 5.5px'
+                      : /animation/i.test(key) ? 'top: 3px ; left: -1.5px ; margin-right: 6.5px'
+                      : /replylang/i.test(key) ? 'top: 3px ; left: -1.5px ; margin-right: 9px'
+                      : /scheme/i.test(key) ? 'top: 2.5px ; left: -1.5px ; margin-right: 8px'
+                      : /debug/i.test(key) ? 'top: 3.5px ; left: -1.5px ; margin-right: 8px'
+                      : /about/i.test(key) ? 'top: 3px ; left: -3px ; margin-right: 5.5px' : ''
+                    )
+                    settingEntry.prepend(settingIcon)
+                    if (key.includes('Animation')) // customize sparkle icon elem fill
+                        settingIcon[`${ key.startsWith('fg') ? 'last' : 'first' }Child`].style.fill = 'none'
+
+                    // Create/append toggles/listeners
+                    if (setting.type == 'toggle') {
+
+                        // Init toggle input
+                        const settingToggle = dom.create.elem('input', {
+                            type: 'checkbox', disabled: true, style: 'display: none' })
+                        settingToggle.checked = config[key] ^ key.includes('Disabled') // init based on config/name
+                            && !(key == 'streamingDisabled' && !config.proxyAPIenabled) // uncheck Streaming in OAI mode
+
+                        // Create/classify switch
+                        const switchSpan = dom.create.elem('span', { class: 'track' }),
+                              knobSpan = dom.create.elem('span', { class: 'knob' })
+
+                        // Append elems
+                        switchSpan.append(knobSpan) ; settingEntry.append(settingToggle, switchSpan)
+
+                        // Update visual state w/ animation
+                        setTimeout(() => modals.settings.toggle.updateStyles(settingToggle), 155)
+
+                        // Add click listener
+                        settingEntry.onclick = () => {
+                            if (!(key == 'streamingDisabled' // visually switch toggle if not Streaminng...
+                                && ( // ...in unsupported env...
+                                    !env.scriptManager.supportsStreaming || !config.proxyAPIenabled )
+                            )) modals.settings.toggle.switch(settingToggle)
+
+                            // Call specialized toggle funcs
+                            const autoGenMatch = /get|summarize/i.exec(key),
+                                  manualGenMatch = /(?:suf|pre)fix/i.exec(key)
+                            if (key.includes('proxy')) toggle.proxyMode()
+                            else if (key.includes('streaming')) toggle.streaming()
+                            else if (key.includes('rq')) toggle.relatedQueries()
+                            else if (autoGenMatch) toggle.autoGen(autoGenMatch[0].toLowerCase())
+                            else if (manualGenMatch) toggle.manualGen(manualGenMatch[0].toLowerCase())
+                            else if (key.includes('Sidebar')) toggle.sidebar(key.replace('Sidebar', ''))
+                            else if (key.includes('anchor')) toggle.anchorMode()
+                            else if (key.includes('bgAnimation')) toggle.animations('bg')
+                            else if (key.includes('fgAnimation')) toggle.animations('fg')
+
+                            // ...or generically toggle/notify
+                            else {
+                                settings.save(key, !config[key]) // update config
+                                feedback.notify(`${settings.controls[key].label} ${
+                                    toolbarMenu.state.words[+(key.includes('Disabled') ^ config[key])]}`)
+                            }
+                        }
+
+                    // Add .active + config status + listeners to pop-up settings
+                    } else {
+                        settingEntry.classList.add('active')
+                        const configStatusSpan = dom.create.elem('span')
+                        configStatusSpan.style.cssText = 'float: right ; font-size: 11px ; margin-top: 3px ;'
+                            + ( !key.includes('about') ? 'text-transform: uppercase !important' : '' )
+                        if (key.includes('preferredAPI')) {
+                            configStatusSpan.textContent = config.preferredAPI || app.msgs.menuLabel_random
+                            settingEntry.onclick = () => modals.open('api')
+                            settingEntry.classList.toggle('active', config.proxyAPIenabled)
+                            settingEntry.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
+                        } else if (key.includes('replyLang')) {
+                            configStatusSpan.textContent = config.replyLang
+                            settingEntry.onclick = () => modals.open('replyLang')
+                        } else if (key.includes('scheme')) {
+                            modals.settings.updateSchemeStatus(configStatusSpan)
+                            settingEntry.onclick = () => modals.open('scheme')
+                        } else if (key.includes('about')) {
+                            const innerDiv = dom.create.elem('div'),
+                                  textGap = '&emsp;&emsp;&emsp;&emsp;&emsp;'
+                            modals.settings.aboutContent = {}
+                            modals.settings.aboutContent.short = `v${GM_info.script.version}`
+                            modals.settings.aboutContent.long = (
+                                  `${app.msgs.about_version}: <span class="about-em">v${
+                                       GM_info.script.version + textGap }</span>`
+                                + `${app.msgs.about_poweredBy} <span class="about-em">chatgpt.js</span>${textGap}` )
+                            for (let i = 0; i < 7; i++)
+                                modals.settings.aboutContent.long += modals.settings.aboutContent.long // make long af
+                            innerDiv.innerHTML = modals.settings.aboutContent[
+                                config.fgAnimationsDisabled ? 'short' : 'long']
+                            innerDiv.style.float = config.fgAnimationsDisabled ? 'right' : ''
+                            configStatusSpan.append(innerDiv) ; settingEntry.onclick = () => modals.open('about')
+                        } settingEntry.append(configStatusSpan)
+                    }
+                })
+                settingsListContainer.append(...settingsLists)
+
+                // Create close button
+                const closeBtn = dom.create.elem('div',
+                    { title: app.msgs.tooltip_close, class: `${app.slug}-modal-close-btn no-mobile-tap-outline` })
+                closeBtn.append(icons.create({ key: 'x' }))
+
+                // Assemble/append elems
+                settingsModal.append(settingsIcon, settingsTitleDiv, closeBtn, settingsListContainer)
+                document.body.append(settingsContainer)
+
+                return settingsContainer
+            },
+
+            get() { return document.getElementById(`${app.slug}-settings`) },
+
+            show() {
+                const settingsContainer = modals.settings.get()?.parentNode || modals.settings.createAppend()
+                settingsContainer.style.display = '' // show modal
+                if (env.browser.isMobile) { // scale 93% to viewport sides
+                    const settingsModal = settingsContainer.querySelector(`#${app.slug}-settings`),
+                          scaleRatio = 0.93 * innerWidth / settingsModal.offsetWidth
+                    settingsModal.style.transform = `scale(${scaleRatio})`
+                }
+                return settingsContainer.firstChild
+            },
+
+            toggle: {
+                switch(settingToggle) {
+                    settingToggle.checked = !settingToggle.checked
+                    modals.settings.toggle.updateStyles(settingToggle)
+                },
+
+                updateStyles(settingToggle) { // for .toggle.show() + staggered switch animations in .createAppend()
+                    const settingLi = settingToggle.parentNode,
+                          switchSpan = settingLi.querySelector('span'),
+                          knobSpan = switchSpan.querySelector('span')
+                    requestAnimationFrame(() => {
+                        switchSpan.style.backgroundColor = settingToggle.checked ? '#ad68ff' : '#ccc'
+                        switchSpan.style.boxShadow = settingToggle.checked ? '2px 1px 9px #d8a9ff' : 'none'
+                        knobSpan.style.transform = settingToggle.checked ?
+                            'translateX(14px) translateY(0)' : 'translateX(0)'
+                        settingLi.classList.toggle('active', settingToggle.checked) // dim/brighten entry
+                    }) // to trigger 1st transition fx
+                }
+            },
+
+            updateSchemeStatus(schemeStatusSpan = null) {
+                schemeStatusSpan = schemeStatusSpan || document.querySelector('#scheme-settings-entry span')
+                if (schemeStatusSpan) {
+                    schemeStatusSpan.textContent = ''
+                    schemeStatusSpan.append(...( // status txt + icon
+                        config.scheme == 'dark' ?
+                            [document.createTextNode(app.msgs.scheme_dark), icons.create({ key: 'moon' })]
+                      : config.scheme == 'light' ?
+                        [document.createTextNode(app.msgs.scheme_light), icons.create({ key: 'sun' })]
+                      : [document.createTextNode(app.msgs.menuLabel_auto), icons.create({ key: 'arrowsCyclic' })]))
+                    schemeStatusSpan.style.cssText += `; margin-top: ${ !config.scheme ? 3 : 0 }px !important`
+                }
+            }
+        },
+
+        shareChat(shareURL) {
+
+            // Show modal
+            const shareChatModal = modals.alert(
+                `${log.toTitleCase(app.msgs.btnLabel_convo)} ${app.msgs.tooltip_page} ${ // title
+                    app.msgs.alert_generated.toLowerCase()}!`,
+                `<a target="_blank" rel="noopener" href="${shareURL}">${shareURL}</a>`, // link msg
+                [ // buttons
+                    function copyUrl() {
+                        navigator.clipboard.writeText(shareURL)
+                            .then(() => feedback.notify(app.msgs.notif_copiedToClipboard))
+                    },
+                    function visitPage() { modals.safeWinOpen(shareURL) },
+                    function downloadChat() {
+                        xhr({
+                            method: 'GET', url: shareURL,
+                            onload: resp => {
+                                const html = resp.responseText, dlLink = dom.create.anchor(
+                                    URL.createObjectURL(new Blob([html], { type: 'text/html' })))
+                                dlLink.download /* filename */ = html.match(/<title>([^<]+)<\/title>/i)[1] // page title
+                                    .replace(/\s*[—|/]+\s*/g, ' ') // convert symbols to space for hyphen-casing
+                                    .replace(/\.{2,}/g, '') // strip ellipsis
+                                    .toLowerCase().trim().replace(/\s+/g, '-') // hyphen-case
+                                    + '.html'
+                                document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download HTML
+                                URL.revokeObjectURL(dlLink.href) // prevent memory leaks
+                            },
+                            onerror: err => log.error('Failed to download chat:', err)
+                        })
+                    }
+                ]
+            )
+
+            // Prefix icon to title
+            const modalTitle = shareChatModal.querySelector('h2'), titleIcon = icons.create({ key: 'speechBalloons' })
+            titleIcon.style.cssText = 'height: 28px ; width: 28px ; position: relative ; top: 7px ; right: 8px ;'
+                                    + `fill: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }`
+            modalTitle.prepend(titleIcon)
+
+            // Hide Dismiss button, localize other labels
+            const modalBtns = shareChatModal.querySelectorAll('button')
+            modalBtns[0].style.display = 'none' // hide Dismiss button
+            if (!env.browser.language.startsWith('en')) // localize button labels
+                modalBtns.forEach(btn => {
+                    if (/copy/i.test(btn.textContent)) btn.textContent = `${app.msgs.tooltip_copy} URL`
+                    else if (/visit/i.test(btn.textContent)) btn.textContent = app.msgs.btnLabel_visitPage
+                    else if (/download/i.test(btn.textContent))
+                         btn.textContent = `${app.msgs.btnLabel_download} ${log.toTitleCase(app.msgs.btnLabel_convo)}`
+                })
+
+            // Style elements
+            shareChatModal.style.wordBreak = 'break-all' // since URL really long
+            modalTitle.style.justifySelf = 'center'
+            shareChatModal.querySelector('p').style.cssText = 'text-align: center ; margin: -10px 0'
+            shareChatModal.querySelector('.modal-buttons').style.cssText = 'justify-content: center'
+
+            return shareChatModal
+        },
+
+        stylize() {
+            if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
+            this.styles.textContent = (
+
+                // Vars
+                `:root {
+                    --modal-btn-zoom: scale(1.055) ; --modal-btn-transition: transform 0.15s ease ;
+                    --settings-li-transition: transform 0.1s ease ; /* for Settings entry hover-zoom */
+                    --fg-transition: opacity 0.65s cubic-bezier(0.165,0.84,0.44,1), /* fade-in */
+                                     transform 0.55s cubic-bezier(0.165,0.84,0.44,1) !important ; /* move-in */
+                    --bg-transition: background-color 0.25s ease !important } /* dim */`
+
+                // Main modal styles
+              + '@keyframes modal-zoom-fade-out {'
+                  + '0% { opacity: 1 } 50% { opacity: 0.25 ; transform: scale(1.05) }'
+                  + '100% { opacity: 0 ; transform: scale(1.35) }}'
+              + '.chatgpt-modal > div {'
+                  + 'padding: 20px 25px 24px 31px !important ;' // increase alert padding
+                  + 'background-color: white !important ; color: black }'
+              + '.chatgpt-modal p { margin: -8px 0 -14px 4px ; font-size: 1.55rem }' // pos/size modal msg
+              + `.chatgpt-modal a { color: #${ env.ui.app.scheme == 'dark' ? '00cfff' : '1e9ebb' } !important }`
+              + '.modal-buttons {'
+                  + `margin: 24px -5px -3px ${ env.browser.isMobile ? -5 : -15 }px !important ; width: 100% }`
+              + '.chatgpt-modal button {' // this.alert() buttons
+                  + `min-width: 121px ; padding: ${ env.browser.isMobile ? '7px' : '4px 15px' } !important ;`
+                  + 'cursor: pointer ; border-radius: 0 !important ; height: 39px ;'
+                  + 'border: 1px solid ' + ( env.ui.app.scheme == 'dark' ? 'white' : 'black' ) + '!important ;'
+                  + `${ env.ui.app.scheme == 'dark' ? 'background: none ; color: white' : '' }}`
+              + '.primary-modal-btn { background: black !important ; color: white !important }'
+              + '.chatgpt-modal button:hover { background-color: #9cdaff !important ; color: black !important }'
+              + ( env.ui.app.scheme == 'dark' ? // darkmode chatgpt.alert() styles
+                  ( '.chatgpt-modal > div, .chatgpt-modal button:not(.primary-modal-btn) {'
+                      + 'color: white !important }'
+                  + '.primary-modal-btn { background: hsl(186 100% 69%) !important ; color: black !important }'
+                  + '.chatgpt-modal a { color: #00cfff !important }'
+                  + '.chatgpt-modal button:hover {'
+                      + 'background-color: #00cfff !important ; color: black !important }' ) : '' )
+              + `.${modals.class} { display: grid ; place-items: center }` // for centered icon/logo
+              + '[class*=modal-close-btn] {'
+                  + 'position: absolute !important ; float: right ; top: 14px !important ; right: 16px !important ;'
+                  + 'cursor: pointer ; width: 33px ; height: 33px ; border-radius: 20px }'
+              + `[class*=modal-close-btn] path {${ env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white'
+                                                                             : 'stroke: #9f9f9f ; fill: #9f9f9f' }}`
+              + ( env.ui.app.scheme == 'dark' ?  // invert dark mode hover paths
+                    '[class*=modal-close-btn]:hover path { stroke: black ; fill: black }' : '' )
+              + '[class*=modal-close-btn]:hover { background-color: #f2f2f2 }' // hover underlay
+              + '[class*=modal-close-btn] svg { margin: 11.5px }' // center SVG for hover underlay
+              + '[class*=-modal] h2 {'
+                  + 'font-weight: bold ; line-height: 32px ; padding: 0 ; margin: 9px 0 14px !important ;'
+                  + `${ env.browser.isMobile ? 'text-align: center' // center on mobile
+                                             : 'justify-self: start' }}` // left-align on desktop
+              + '[class*=-modal] p { justify-self: start ; font-size: 20px }'
+              + '[class*=-modal] button { font-size: 13px !important ; background: none }'
+              + '[class*=-modal-bg] {'
+                  + 'pointer-events: auto ;' // override any disabling from site modals
+                  + 'position: fixed ; top: 0 ; left: 0 ; width: 100% ; height: 100% ;' // expand to full view-port
+                  + 'display: flex ; justify-content: center ; align-items: center ; z-index: 9999 ;' // align
+                  + `transition: var(--bg-transition) ; /* dim */
+                        -webkit-transition: var(--bg-transition) ; -moz-transition: var(--bg-transition) ;
+                        -o-transition: var(--bg-transition) ; -ms-transition: var(--bg-transition) }`
+              + '[class*=-modal-bg].animated > div {'
+                  + 'z-index: 13456 ; opacity: 0.98 ; transform: translateX(0) translateY(0) }'
+              + '[class$=-modal] {' // native modals + chatgpt.alert()s
+                  + 'position: absolute ;' // to be click-draggable
+                  + 'opacity: 0 ;' // to fade-in
+                  + `background-image: linear-gradient(180deg, ${
+                       env.ui.app.scheme == 'dark' ? '#99a8a6 -200px, black 200px' : '#b6ebff -296px, white 171px' }) ;`
+                  + `border: 1px solid ${ env.ui.app.scheme == 'dark' ? 'white' : '#b5b5b5' } !important ;`
+                  + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };`
+                  + 'transform: translateX(-3px) translateY(7px) ;' // offset to move-in from
+                  + `transition: var(--fg-transition) ; /* fade-in + move-in */
+                        -webkit-transition: var(--fg-transition) ; -moz-transition: var(--fg-transition) ;
+                        -o-transition: var(--fg-transition) ; -ms-transition:  var(--fg-transition) }
+                    ${ env.browser.isMobile ? '' : `[class$=-modal] button:hover { transform: var(--modal-btn-zoom) }` }
+                    ${ config.fgAnimationsDisabled ? '' : `[class$=-modal] button {
+                        ${ env.browser.isMobile ? '' : 'will-change: transform ;' }
+                        transition: var(--modal-btn-transition) ;
+                            -webkit-transition: var(--modal-btn-transition) ;
+                            -moz-transition: var(--modal-btn-transition) ;
+                            -o-transition: var(--modal-btn-transition) ;
+                            -ms-transition: var(--modal-btn-transition) }` }`
+
+              // Settings modal
+              + `#${app.slug}-settings {
+                    min-width: ${ env.browser.isPortrait ? 288 : 698 }px ; max-width: 75vw ;
+                    word-wrap: break-word ; border-radius: 15px ;
+                    ${ env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: black ; fill: black' };
+                    --shadow: 0 30px 60px rgba(0,0,0,0.12) ;
+                        box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) }`
+              + `#${app.slug}-settings-title {`
+                  + 'font-weight: bold ; line-height: 19px ; text-align: center ; margin: 0 3px -3px 0 }'
+              + `#${app.slug}-settings-title h4 {`
+                  + `font-size: ${ env.browser.isPortrait ? 26 : 31 }px ; font-weight: bold ; margin-top: -39px }`
+              + `#${app.slug}-settings ul {`
+                  + 'list-style: none ; padding: 0 ; margin-bottom: 2px ;' // hide bullets, close bottom gap
+                  + `width: ${ env.browser.isPortrait ? 100 : 50 }% }` // set width based on column cnt
+              + ( env.browser.isPhone ? '' : ( `#${app.slug}-settings ul:first-of-type {` // color desktop middle separator
+                  + `border-right: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}` ))
+              + `#${app.slug}-settings li {`
+                  + `color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };` // for text
+                  + `fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };` // for icons
+                  + `stroke: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };` // for icons
+                  + 'height: 25px ; padding: 4px 10px ; font-size: 14.5px ;'
+                  + `border-bottom: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };` // add separator
+                  + 'border-radius: 3px ;' // slightly round highlight strip
+                  + `${ config.fgAnimationsDisabled || env.browser.isMobile ? '' :
+                        `transition: var(--settings-li-transition) ;
+                            -webkit-transition: var(--settings-li-transition) ;
+                            -moz-transition: var(--settings-li-transition) ;
+                            -o-transition: var(--settings-li-transition) ;
+                            -ms-transition: var(--settings-li-transition)` }}`
+              + `#${app.slug}-settings li.active {`
+                  + `color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };` // for text
+                  + `fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };` // for icons
+                  + `stroke: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }}` // for icons
+              + `#${app.slug}-settings li label { padding-right: 20px }` // right-pad labels so toggles don't hug
+              + `#${app.slug}-settings li:last-of-type { border-bottom: none }` // remove last bottom-border
+              + `#${app.slug}-settings li, #${app.slug}-settings li label { cursor: pointer }` // add finger on hover
+              + `#${app.slug}-settings li:hover {`
+                  + 'background: rgba(100,149,237,0.88) ; color: white ; fill: white ; stroke: white ;'
+                  + `${ env.browser.isMobile ? '' : 'transform: scale(1.15)' }}`
+              + `#${app.slug}-settings li > input { float: right } /* pos toggles */
+                 #${app.slug}-settings li > .track {
+                    position: relative ; left: -1px ; bottom: -5.5px ; float: right ;
+                    background-color: #ccc ; width: 26px ; height: 13px ; border-radius: 28px ;
+                    ${ config.fgAnimationsDisabled ? '' :
+                        `transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
+                            -o-transition: 0.4s ; -ms-transition: 0.4s` }}
+                 #${app.slug}-settings li .knob {
+                    position: absolute ; left: 1px ; bottom: 1px ; content: "" ;
+                    background-color: white ; width: 11px ; height: 11px ; border-radius: 28px ;
+                    ${ config.fgAnimationsDisabled ? '' :
+                        `transition: 0.2s ; -webkit-transition: 0.2s ; -moz-transition: 0.2s ;
+                            -o-transition: 0.2s ; -ms-transition: 0.2s` }}`
+              + '#scheme-settings-entry > span { margin: 0 -2px }' // align Scheme status
+              + '#scheme-settings-entry > span > svg {' // v-align/left-pad Scheme status icon
+                  + 'position: relative ; top: 3px ; margin-left: 4px }'
+              + ( config.fgAnimationsDisabled ? '' // spin cycle arrows icon when scheme is Auto
+                  : ( '#scheme-settings-entry svg[class*=arrowsCyclic],'
+                            + '.chatgpt-notif svg[class*=arrowsCyclic] { animation: rotate 5s linear infinite }' ))
+              + `#about-settings-entry span { color: ${ env.ui.app.scheme == 'dark' ? '#28ee28' : 'green' }}`
+              + '#about-settings-entry > span {' // outer About status span
+                  + `width: ${ env.browser.isPortrait ? '15vw' : '95px' }; height: 20px ; overflow: hidden ;`
+                  + `${ config.fgAnimationsDisabled ? '' : ( // fade edges
+                            'mask-image: linear-gradient('
+                                + 'to right, transparent, black 20%, black 89%, transparent) ;'
+                  + '-webkit-mask-image: linear-gradient('
+                                + 'to right, transparent, black 20%, black 89%, transparent)' )}}`
+              + '#about-settings-entry > span > div {'
+                  + `text-wrap: nowrap ; ${
+                        config.fgAnimationsDisabled ? '' : 'animation: ticker linear 60s infinite' }}`
+              + '@keyframes ticker { 0% { transform: translateX(100%) } 100% { transform: translateX(-2000%) }}'
+              + `.about-em { color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'green' } !important }`
+            )
+        },
+
+        update: {
+            width: 409,
+
+            available() {
+
+                // Show modal
+                const updateAvailModal = modals.alert(`🚀 ${app.msgs.alert_updateAvail}!`, // title
+                    `${app.msgs.alert_newerVer} ${app.name} ` // msg
+                        + `(v${app.latestVer}) ${app.msgs.alert_isAvail}!  `
+                        + '<a target="_blank" rel="noopener" style="font-size: 1.1rem" href="'
+                            + `${app.urls.github}/commits/main/greasemonkey/${app.slug}.user.js`
+                        + `">${app.msgs.link_viewChanges}</a>`,
+                    function update() { // button
+                        modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
+                    }, '', modals.update.width
+                )
+
+                // Localize button labels if needed
+                if (!env.browser.language.startsWith('en')) {
+                    const updateBtns = updateAvailModal.querySelectorAll('button')
+                    updateBtns[1].textContent = app.msgs.btnLabel_update
+                    updateBtns[0].textContent = app.msgs.btnLabel_dismiss
+                }
+
+                return updateAvailModal
+            },
+
+            unavailable() {
+                return modals.alert(`${app.msgs.alert_upToDate}!`, // title
+                    `${app.name} (v${app.version}) ${app.msgs.alert_isUpToDate}!`, // msg
+                    '', '', modals.update.width
+                )
+            }
+        }
+    }
+
     const replyBubble = {
 
         create() {
@@ -3958,6 +3803,151 @@
             if (!this.bubbleDiv) this.create()
             app.div.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
         }
+    }
+
+    window.toolbarMenu = {
+        state: {
+            symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
+            words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
+        },
+
+        refresh() {
+            if (typeof GM_unregisterMenuCommand == 'undefined')
+                return log.debug('GM_unregisterMenuCommand not supported.')
+            for (const id of this.entryIDs) { GM_unregisterMenuCommand(id) } this.register()
+        },
+
+        register() {
+
+            // Add Proxy API Mode toggle
+            const pmLabel = this.state.symbols[+config.proxyAPIenabled] + ' '
+                          + settings.controls.proxyAPIenabled.label + ' '
+                          + this.state.separator + this.state.words[+config.proxyAPIenabled]
+            this.entryIDs = [GM_registerMenuCommand(pmLabel, toggle.proxyMode,
+                env.scriptManager.supportsTooltips ? { title: settings.controls.proxyAPIenabled.helptip } : undefined)]
+
+            // Add About/Settings entries
+            ;['about', 'settings'].forEach(entryType => this.entryIDs.push(GM_registerMenuCommand(
+                entryType == 'about' ? `💡 ${settings.controls.about.label}` : `⚙️ ${app.msgs.menuLabel_settings}`,
+                () => modals.open(entryType), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
+            )))
+        }
+    }
+
+    const tooltip = {
+
+        stylize() {
+            document.head.append(this.styles = dom.create.style(`.${app.slug}-tooltip {
+                background-color: /* bubble style */
+                    rgba(0,0,0,0.64) ; padding: 5px 6px 3px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
+                font-size: 0.87em ; color: white ; fill: white ; stroke: white ; /* font/icon style */
+                position: absolute ; /* for this.update() calcs */
+                --shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
+                    box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)
+                opacity: 0 ; height: fit-content ; z-index: 1250 ; /* visibility */
+                transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
+                    -o-transition: opacity 0.15s ; -ms-transition: opacity 0.15s }`
+            ))
+        },
+
+        toggle(stateOrEvent) { // visibility
+            if (env.browser.isMobile) return
+            tooltip.div ||= dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
+            if (!tooltip.div.isConnected) app.div.append(tooltip.div)
+            if (!tooltip.styles) tooltip.stylize()
+            if (typeof stateOrEvent == 'object') // mouse event, update text/pos
+                tooltip.update(stateOrEvent.currentTarget)
+            tooltip.div.style.opacity = +( stateOrEvent?.type == 'mouseenter' || stateOrEvent == 'on' )
+        },
+
+        update(btn) { // text & position
+            if (!this.div) return // since nothing to update
+            const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
+            const baseText = {
+                about: app.msgs.menuLabel_about,
+                arrows: app.msgs[`tooltip_${ config.expanded ? 'shrink' : 'expand' }`],
+                chevron: app.msgs[`tooltip_${ config.minimized ? 'restore' : 'minimize' }`],
+                copy:
+                    btn.firstChild.id.includes('-copy-') ?
+                        `${app.msgs.tooltip_copy}${ btn.closest('code') ? ''
+                            : ` ${app.msgs.tooltip_reply.toLowerCase()}`}`
+                    : `${app.msgs.notif_copiedToClipboard}!`,
+                download:
+                    btn.firstChild.id.includes('-download-') ? app.msgs.btnLabel_download
+                        : `${app.msgs.tooltip_code} ${app.msgs.notif_downloaded}!`,
+                'font-size': app.msgs.tooltip_fontSize,
+                regen:
+                    btn.firstChild.style.animation || btn.firstChild.style.transform ?
+                        `${app.msgs.tooltip_regenerating} ${app.msgs.tooltip_reply.toLowerCase()}...`
+                        : `${app.msgs.tooltip_regenerate} ${app.msgs.tooltip_reply.toLowerCase()}`,
+                send: app.msgs.tooltip_sendReply,
+                settings: app.msgs.menuLabel_settings,
+                share:
+                    btn.style.animation ? `${app.msgs.tooltip_generating} HTML...`
+                        : `${app.msgs.tooltip_generate} ${app.msgs.btnLabel_convo} ${
+                                app.msgs.tooltip_page.toLowerCase()}`,
+                shuffle: app.msgs.tooltip_askRandQuestion,
+                speak:
+                    btn.querySelector('svg').id.includes('-speak-') ?
+                        `${app.msgs.tooltip_play} ${app.msgs.tooltip_reply.toLowerCase()}`
+                    : btn.querySelector('svg').id.includes('generating-') ? `${app.msgs.tooltip_generatingAudio}...`
+                    : `${app.msgs.tooltip_playing} ${app.msgs.tooltip_reply.toLowerCase()}...`,
+                summarize: app.msgs.tooltip_summarizeResults,
+                wsb: ( config.widerSidebar ? `${app.msgs.prefix_exit} ` : '' ) + app.msgs.menuLabel_widerSidebar
+            }[btnType]
+
+            // Update text
+            tooltip.div.textContent = baseText
+            tooltip.nativeRpadding = tooltip.nativeRpadding
+                || parseFloat(window.getComputedStyle(tooltip.div).paddingRight)
+            clearInterval(tooltip.dotCycler)
+            if (baseText.endsWith('...')) { // animate the dots
+                const noDotText = baseText.slice(0, -3), dotWidth = 2.75 ; let dotCnt = 3
+                tooltip.dotCycler = setInterval(() => {
+                    dotCnt = (dotCnt % 3) + 1 // cycle thru 1 → 2 → 3
+                    tooltip.div.textContent = noDotText + '.'.repeat(dotCnt)
+                    tooltip.div.style.paddingRight = `${ // adjust based on dotCnt
+                        tooltip.nativeRpadding + (3 - dotCnt) * dotWidth }px`
+                }, 350)
+            } else // restore native right-padding
+                tooltip.div.style.paddingRight = tooltip.nativeRpadding
+
+            // Update position
+            const elems = {
+                appDiv: app.div, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv: tooltip.div }
+            const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
+            tooltip.div.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
+            tooltip.div.style.right = `${
+                rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
+        }
+    }
+
+    window.updateCheck = () => {
+        log.caller = 'updateCheck()'
+        log.debug(`currentVer = ${app.version}`)
+
+        // Fetch latest meta
+        log.debug('Fetching latest userscript metadata...')
+        xhr({
+            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
+            headers: { 'Cache-Control': 'no-cache' },
+            onload: resp => {
+                log.debug('Success! Response received')
+
+                // Compare versions, alert if update found
+                log.debug('Comparing versions...')
+                app.latestVer = /@version +(.*)/.exec(resp.responseText)?.[1]
+                if (app.latestVer) for (let i = 0 ; i < 4 ; i++) { // loop thru subver's
+                    const currentSubVer = parseInt(app.version.split('.')[i], 10) || 0,
+                          latestSubVer = parseInt(app.latestVer.split('.')[i], 10) || 0
+                    if (currentSubVer > latestSubVer) break // out of comparison since not outdated
+                    else if (latestSubVer > currentSubVer) // if outdated
+                        return modals.open('update', 'available')
+                }
+
+                // Alert to no update found, nav back to About
+                modals.open('update', 'unavailable')
+        }})
     }
 
     // Run MAIN routine
