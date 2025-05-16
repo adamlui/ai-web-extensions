@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.15.4
+// @version                2025.5.16
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -261,9 +261,12 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        latestResourceCommitHash: 'af248c9' // for cached <app|messages>.json
+        commitHashes: {
+            app: '7fd1f2a', // for cached <app|messages>.json
+            aiwe: '670232f' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
+        }
     }
-    app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@${app.latestResourceCommitHash}` }
+    app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@${app.commitHashes.app}` }
     const remoteData = {
         app: await new Promise(resolve => xhr({
             method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
@@ -293,15 +296,16 @@
         })
     }
     Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
+    app.urls.aiweAssets = app.urls.aiweAssets.replace('@latest', `@${app.commitHashes.aiwe}`)
     app.katexDelimiters = await new Promise(resolve => xhr({ // used in show.reply()
         method: 'GET', onload: resp => resolve(JSON.parse(resp.responseText)),
-        url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@18fd04e/assets/data/katex-delimiters.json'
+        url: `${app.urls.aiweAssets}/data/katex-delimiters.json`
     }))
 
     // Init API data
     const apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
         method: 'GET', onload: resp => resolve(JSON.parse(resp.responseText)),
-        url: 'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@456ac92/assets/data/ai-chat-apis.json'
+        url: `${app.urls.aiweAssets}/data/ai-chat-apis.json`
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()
 
@@ -3683,9 +3687,8 @@
             if (!app.div.querySelector('code')) return
 
             // Init general language data
-            window.codeLangData ||= await get.json(
-                'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@760af42/assets/data/code-languages.json'
-            ).catch(err => log.error(err.message))
+            window.codeLangData ||= await get.json(`${app.urls.aiweAssets}/data/code-languages.json`)
+                .catch(err => log.error(err.message))
 
             // Add buttons to every block
             app.div.querySelectorAll('code').forEach(block => {
@@ -4165,9 +4168,8 @@
                         tooltip.update(event.currentTarget) // to 'Generating audio...'
 
                         // Init Sogou TTS dialect map
-                        window.sgtDialectMap ||= await get.json(
-                            'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@10af83c/assets/data/sogou-tts-lang-codes.json'
-                        ).catch(err => log.error(err.message)) ; if (!window.sgtDialectMap) return
+                        window.sgtDialectMap ||= await get.json(`${app.urls.aiweAssets}/data/sogou-tts-lang-codes.json`)
+                            .catch(err => log.error(err.message)) ; if (!window.sgtDialectMap) return
                         const sgtSpeakRates = {
                             en: 2, ar: 1.5, cs: 1.4, da: 1.3, de: 1.5, es: 1.5, fi: 1.4, fr: 1.2, hu: 1.5, it: 1.4,
                             ja: 1.5, nl: 1.3, pl: 1.4, pt: 1.5, ru: 1.3, sv: 1.4, tr: 1.6, vi: 1.5, 'zh-CHS': 2
