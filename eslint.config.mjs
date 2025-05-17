@@ -27,7 +27,7 @@ export default [
                 renderMathInElement: 'readonly', replyBubble: 'writable', session: 'readonly', settings: 'writable',
                 show: 'readonly', sites: 'writable', styles: 'readonly', sync: 'readonly', syncConfigToUI: 'readonly',
                 toggle: 'readonly', toggleMode: 'readonly', toggles: 'writable', toolbarMenu: 'writable',
-                tooltip: 'writable', ui: 'readonly', updateCheck: 'readonly', xhr: 'writable'
+                tooltip: 'writable', ui: 'readonly', updateCheck: 'readonly', userscript: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },

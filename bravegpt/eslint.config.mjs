@@ -21,7 +21,7 @@ export default [
                 log: 'readonly', marked: 'readonly', menus: 'writable', modals: 'readonly', msgChain: 'writable',
                 prompts: 'readonly', renderMathInElement: 'readonly', replyBubble: 'writable', session: 'readonly',
                 settings: 'writable', show: 'readonly', toggle: 'readonly', toolbarMenu: 'writable',
-                tooltip: 'writable', updateCheck: 'readonly', xhr: 'writable'
+                tooltip: 'writable', updateCheck: 'readonly', userscript: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
