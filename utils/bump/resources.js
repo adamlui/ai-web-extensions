@@ -28,7 +28,7 @@
     const regEx = {
         hash: { commit: /(@|\?v=)([^/#]+)/, sri: /[^#]+$/ },
         resName: /[^/]+\/(?:dist)?\/?[^/]+\.js(?=[?#]|$)/,
-        url: { js: /^\/\/ @require\s+(https:\/\/cdn\.jsdelivr\.net\/gh\/.+)$/ }
+        jsURL: /^\/\/ @require\s+(https:\/\/cdn\.jsdelivr\.net\/gh\/.+)$/
     }
 
     // Define FUNCTIONS
@@ -144,7 +144,7 @@
     const urlMap = {} ; let resCnt = 0
     userJSfiles.forEach(userJSfilePath => {
         const userJScontent = fs.readFileSync(userJSfilePath, 'utf-8'),
-              resURLs = [...userJScontent.matchAll(new RegExp(regEx.url.js.source, 'gm'))].map(match => match[1])
+              resURLs = [...userJScontent.matchAll(new RegExp(regEx.jsURL.source, 'gm'))].map(match => match[1])
         if (resURLs.length > 0) { urlMap[userJSfilePath] = resURLs ; resCnt += resURLs.length }
     })
     log.success(`${resCnt} potentially bumpable resource(s) found.`)
