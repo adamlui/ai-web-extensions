@@ -37,6 +37,23 @@
         console.log(formattedMsg) ; log.endedWithLineBreak = msg.toString().endsWith('\n')
     })
 
+    function bumpUserJSver(userJSfilePath) {
+        const date = new Date(),
+              today = `${date.getFullYear()}.${date.getMonth() +1}.${date.getDate()}`, // YYYY.M.D format
+              reVersion = /(@version\s+)([\d.]+)/,
+              userJScontent = fs.readFileSync(userJSfilePath, 'utf-8'),
+              currentVer = userJScontent.match(reVersion)[2]
+        let newVer
+        if (currentVer.startsWith(today)) { // bump sub-ver
+            const verParts = currentVer.split('.'),
+                  subVer = verParts.length > 3 ? parseInt(verParts[3], 10) +1 : 1
+            newVer = `${today}.${subVer}`
+        } else // bump to today
+            newVer = today
+        fs.writeFileSync(userJSfilePath, userJScontent.replace(reVersion, `$1${newVer}`), 'utf-8')
+        console.log(`Updated: ${bw}v${currentVer}${nc} → ${bg}v${newVer}${nc}`)
+    }
+
     function fetchData(url) {
         if (typeof fetch == 'undefined') // polyfill for Node.js < v21
             return new Promise((resolve, reject) => {
@@ -54,15 +71,11 @@
             return fetch(url)
     }
 
-    async function isValidResource(resURL) {
-        try {
-            const resIsValid = !(await (await fetchData(resURL)).text()).startsWith('Package size exceeded')
-            if (!resIsValid) log.error(`\nInvalid resource: ${resURL}\n`)
-            return resIsValid
-        } catch (err) {
-            log.error(`\nCannot validate resource: ${resURL}\n`)
-            return null
-        }
+    async function generateSRIhash(resURL, algorithm = 'sha256') {
+        const sriHash = ssri.fromData(
+            Buffer.from(await (await fetchData(resURL)).arrayBuffer()), { algorithms: [algorithm] }).toString()
+        log.hash(`${sriHash}\n`)
+        return sriHash
     }
 
     async function getLatestCommitHash(repo, path) {
@@ -72,28 +85,15 @@
         return latestCommitHash
     }
 
-    async function generateSRIhash(resURL, algorithm = 'sha256') {
-        const sriHash = ssri.fromData(
-            Buffer.from(await (await fetchData(resURL)).arrayBuffer()), { algorithms: [algorithm] }).toString()
-        log.hash(`${sriHash}\n`)
-        return sriHash
-    }
-
-    function bumpUserJSver(userJSfilePath) {
-        const date = new Date(),
-              today = `${date.getFullYear()}.${date.getMonth() +1}.${date.getDate()}`, // YYYY.M.D format
-              reVersion = /(@version\s+)([\d.]+)/,
-              userJScontent = fs.readFileSync(userJSfilePath, 'utf-8'),
-              currentVer = userJScontent.match(reVersion)[2]
-        let newVer
-        if (currentVer.startsWith(today)) { // bump sub-ver
-            const verParts = currentVer.split('.'),
-                  subVer = verParts.length > 3 ? parseInt(verParts[3], 10) +1 : 1
-            newVer = `${today}.${subVer}`
-        } else // bump to today
-            newVer = today
-        fs.writeFileSync(userJSfilePath, userJScontent.replace(reVersion, `$1${newVer}`), 'utf-8')
-        console.log(`Updated: ${bw}v${currentVer}${nc} → ${bg}v${newVer}${nc}`)
+    async function isValidResource(resURL) {
+        try {
+            const resIsValid = !(await (await fetchData(resURL)).text()).startsWith('Package size exceeded')
+            if (!resIsValid) log.error(`\nInvalid resource: ${resURL}\n`)
+            return resIsValid
+        } catch (err) {
+            log.error(`\nCannot validate resource: ${resURL}\n`)
+            return null
+        }
     }
 
     // Run MAIN routine
