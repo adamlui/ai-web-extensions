@@ -10,8 +10,12 @@
           ssri = require('ssri') // to generate SHA-256 hashes
 
     // Init REPO context
-    const repoName = 'amazongpt',
-          userJSfilePath = `./greasemonkey/${repoName}.user.js`
+    const repoName = (() => {
+        const path = require('path') ; let dir = __dirname
+        while (!fs.existsSync(path.join(dir, 'package.json'))) dir = path.dirname(dir)
+        return path.basename(dir)
+    })()
+    const userJSfilePath = `./greasemonkey/${repoName}.user.js`
 
     // Init UI COLORS
     const nc = '\x1b[0m',        // no color
