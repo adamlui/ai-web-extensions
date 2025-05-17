@@ -82,7 +82,7 @@ window.tooltip = { // requires dom.js + <app|config|env>
         const elems = {
             appDiv: app.div, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv: tooltip.div }
         const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
-        tooltip.div.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -37 }px`
+        tooltip.div.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top -39 }px`
         tooltip.div.style.right = `${
             rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
     }
