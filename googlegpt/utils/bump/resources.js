@@ -101,8 +101,7 @@
     // Collect resourcs
     log.working('\nCollecting resources...\n')
     const userJScontent = fs.readFileSync(userJSfilePath, 'utf-8'),
-          reResURL = new RegExp(regEx.jsURL.source, 'gm'),
-          resURLs = [...userJScontent.matchAll(reResURL)].map(match => match[1] || match[2])
+          resURLs = [...userJScontent.matchAll(new RegExp(regEx.jsURL.source, 'gm'))].map(match => match[1])
     log.success(`${resURLs.length} potentially bumpable resource(s) found.`)
 
     // Fetch latest commit hash for adamlui/ai-web-extensions
