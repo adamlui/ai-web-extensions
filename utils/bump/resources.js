@@ -28,10 +28,7 @@
     const regEx = {
         hash: { commit: /(@|\?v=)([^/#]+)/, sri: /[^#]+$/ },
         resName: /[^/]+\/(?:dist)?\/?[^/]+\.js(?=[?#]|$)/,
-        url: {
-            css: /^\/\/ @resource.+(https:\/\/assets.+\.css.+)$/,
-            js: /^\/\/ @require\s+(https:\/\/cdn\.jsdelivr\.net\/gh\/.+)$/
-        }
+        url: { js: /^\/\/ @require\s+(https:\/\/cdn\.jsdelivr\.net\/gh\/.+)$/ }
     }
 
     // Define FUNCTIONS
@@ -145,11 +142,9 @@
     // Collect resources
     log.working('\nCollecting resources...\n')
     const urlMap = {} ; let resCnt = 0
-    const reResURL = new RegExp( // eslint-disable-next-line
-        `(?:${regEx.url.css.source})|(?:${regEx.url.js.source})`, 'gm')
     userJSfiles.forEach(userJSfilePath => {
         const userJScontent = fs.readFileSync(userJSfilePath, 'utf-8'),
-              resURLs = [...userJScontent.matchAll(reResURL)].map(match => match[1] || match[2])
+              resURLs = [...userJScontent.matchAll(new RegExp(regEx.url.js.source, 'gm'))].map(match => match[1])
         if (resURLs.length > 0) { urlMap[userJSfilePath] = resURLs ; resCnt += resURLs.length }
     })
     log.success(`${resCnt} potentially bumpable resource(s) found.`)
