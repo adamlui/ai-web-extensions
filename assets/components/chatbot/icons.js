@@ -19,7 +19,7 @@ window.icons = {
         } else if (icon.data?.src) // return <img> w/ src
             return dom.create.elem('img', { src: icon.data.src, ...icon.attrs })
         else
-            return log.error(`No <svg|src> data found for key ${key}`)
+            return log.error(`No <svg|src> data found for key '${key}'`)
     },
 
     amzgpt: {

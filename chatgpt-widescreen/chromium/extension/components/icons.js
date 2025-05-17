@@ -19,7 +19,7 @@ window.icons = {
         } else if (icon.data?.src) // return <img> w/ src
             return dom.create.elem('img', { src: icon.data.src, ...icon.attrs })
         else
-            return console.error(`No <svg|src> data found for key ${key}`)
+            return console.error(`No <svg|src> data found for key '${key}'`)
     },
 
     caretDown: { svg: { viewBox: '0 0 24 24' }, elems: [{ path: { d: 'm0 6.4 12 12 12-12z' }}]},
