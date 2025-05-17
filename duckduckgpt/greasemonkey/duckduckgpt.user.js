@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.2
+// @version                2025.5.17.3
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -205,7 +205,7 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/tooltip.js#sha256-xrfMTFfKqdqN926lng78y9ECco6ccpi3Mz9LBaTP7Ws=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/chatbot/feedback.js#sha256-3X5Xq5EkQKlXuHhWMOEvdCLzNUGcCBG8BIIo2LD5cxw=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/chatbot/session.js#sha256-S6MOdBjx8Hci4GDvYl4JlhSdrDk2oaRLU9DrdxyiIss=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/crypto-utils.js/dist/crypto-utils.min.js#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@b1e28ff/assets/js/lib/chatbot/userscript.js#sha256-SytCWuD3YOcYFDaVfpF8Pq67zDbV8cZcIENz+0zpZ40=// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/crypto-utils.js/dist/crypto-utils.min.js#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/dom.js/dist/dom.min.js#sha256-IGNj9Eoecq7QgY7SAs75wONajgN9Wg0NmCjKTCfu9CY=
 // @require                https://cdn.jsdelivr.net/npm/generate-ip@2.4.4/dist/generate-ip.min.js#sha256-aQQKAQcMgCu8IpJp9HKs387x0uYxngO+Fb4pc5nSF4I=
 // @require                https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js#sha256-g3pvpbDHNrUrveKythkPMF2j/J7UFoHbUyFQcFe1yEY=
@@ -2574,7 +2574,7 @@
                     + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`
                         + ` v${app.chatgptjsVer}`,
                 [ // buttons
-                    function checkForUpdates() { updateCheck() },
+                    function checkForUpdates() { userscript.updateCheck() },
                     function getSupport(){},
                     function rateUs() { modals.open('feedback') },
                     function moreAIextensions(){}
@@ -3410,34 +3410,6 @@
             if (!this.bubbleDiv) this.create()
             app.div.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
         }
-    }
-
-    window.updateCheck = () => { // requires <app|modals|log>
-        log.caller = 'updateCheck()'
-        log.debug(`currentVer = ${app.version}`)
-
-        // Fetch latest meta
-        log.debug('Fetching latest userscript metadata...')
-        xhr({
-            method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
-            headers: { 'Cache-Control': 'no-cache' },
-            onload: resp => {
-                log.debug('Success! Response received')
-
-                // Compare versions, alert if update found
-                log.debug('Comparing versions...')
-                app.latestVer = /@version +(.*)/.exec(resp.responseText)?.[1]
-                if (app.latestVer) for (let i = 0 ; i < 4 ; i++) { // loop thru subver's
-                    const currentSubVer = parseInt(app.version.split('.')[i], 10) || 0,
-                          latestSubVer = parseInt(app.latestVer.split('.')[i], 10) || 0
-                    if (currentSubVer > latestSubVer) break // out of comparison since not outdated
-                    else if (latestSubVer > currentSubVer) // if outdated
-                        return modals.open('update', 'available')
-                }
-
-                // Alert to no update found, nav back to About
-                modals.open('update', 'unavailable')
-        }})
     }
 
     // Run MAIN routine
