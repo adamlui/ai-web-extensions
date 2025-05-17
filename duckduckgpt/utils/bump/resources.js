@@ -23,9 +23,9 @@
 
     // Init REGEX
     const regEx = {
+        hash: { commit: /(@|\?v=)([^/#]+)/, sri: /[^#]+$/ },
         resName: /[^/]+\/(?:dist)?\/?[^/]+\.js(?=[?#]|$)/,
-        jsURL: /^\/\/ @require\s+(https:\/\/cdn\.jsdelivr\.net\/gh\/.+)$/,
-        commitHash: /(@|\?v=)([^/#]+)/, sriHash: /[^#]+$/
+        jsURL: /^\/\/ @require\s+(https:\/\/cdn\.jsdelivr\.net\/gh\/.+)$/
     }
 
     // Define FUNCTIONS
@@ -125,22 +125,22 @@
         // Compare/update commit hash
         let resLatestCommitHash = latestCommitHashes[resURL.includes(repoName) ? 'chromium' : 'aiweb']
         if (resLatestCommitHash.startsWith( // compare hashes
-            regEx.commitHash.exec(resURL)?.[2] || '')) { // commit hash didn't change...
+            regEx.hash.commit.exec(resURL)?.[2] || '')) { // commit hash didn't change...
                 console.log(`${resName} already up-to-date!`) ; log.endedWithLineBreak = false
                 continue // ...so skip resource
             }
         resLatestCommitHash = resLatestCommitHash.substring(0, 7) // abbr it
-        let updatedURL = resURL.replace(regEx.commitHash, `$1${resLatestCommitHash}`) // update hash
+        let updatedURL = resURL.replace(regEx.hash.commit, `$1${resLatestCommitHash}`) // update hash
         if (!await isValidResource(updatedURL)) continue // to next resource
 
         // Generate/compare/update SRI hash
         console.log(`${ !log.endedWithLineBreak ? '\n' : '' }Generating SRI (SHA-256) hash for ${resName}...`)
         const newSRIhash = await generateSRIhash(updatedURL)
-        if (regEx.sriHash.exec(resURL)?.[0] == newSRIhash) { // SRI hash didn't change
+        if (regEx.hash.sri.exec(resURL)?.[0] == newSRIhash) { // SRI hash didn't change
             console.log(`${resName} already up-to-date!`) ; log.endedWithLineBreak = false
             continue // ...so skip resource
         }
-        updatedURL = updatedURL.replace(regEx.sriHash, newSRIhash) // update hash
+        updatedURL = updatedURL.replace(regEx.hash.sri, newSRIhash) // update hash
         if (!await isValidResource(updatedURL)) continue // to next resource
 
         // Write updated URL to userscript
