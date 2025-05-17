@@ -4,8 +4,8 @@ window.log = {
 
     styles: {
         prefix: {
-            base: `color: white ; padding: 2px 3px 2px 5px ; border-radius: 2px ; ${
-                env.browser.isFF ? 'font-size: 13px ;' : '' }`,
+            get base() { return `color: white ; padding: 2px 3px 2px 5px ; border-radius: 2px ; ${
+                env.browser.isFF ? 'font-size: 13px ;' : '' }`},
             info: 'background: linear-gradient(344deg, rgba(0,0,0,1) 0%,'
                 + 'rgba(0,0,0,1) 39%, rgba(30,29,43,0.6026611328125) 93%)',
             working: 'background: linear-gradient(342deg, rgba(255,128,0,1) 0%,'
