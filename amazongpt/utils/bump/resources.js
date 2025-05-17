@@ -23,7 +23,7 @@
 
     // Init REGEX
     const regEx = {
-        resName: /[^/]+\/(?:css|dist)?\/?[^/]+\.(?:css|js)(?=[?#]|$)/,
+        resName: /[^/]+\/(?:dist)?\/?[^/]+\.js(?=[?#]|$)/,
         jsURL: /^\/\/ @require\s+(https:\/\/cdn\.jsdelivr\.net\/gh\/.+)$/,
         commitHash: /(@|\?v=)([^/#]+)/, sriHash: /[^#]+$/
     }

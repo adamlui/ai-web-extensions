@@ -27,7 +27,7 @@
     // Init REGEX
     const regEx = {
         hash: { commit: /(@|\?v=)([^/#]+)/, sri: /[^#]+$/ },
-        resName: /[^/]+\/(?:css|dist)?\/?[^/]+\.(?:css|js)(?=[?#]|$)/,
+        resName: /[^/]+\/(?:dist)?\/?[^/]+\.js(?=[?#]|$)/,
         url: {
             css: /^\/\/ @resource.+(https:\/\/assets.+\.css.+)$/,
             js: /^\/\/ @require\s+(https:\/\/cdn\.jsdelivr\.net\/gh\/.+)$/
