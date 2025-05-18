@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.17.10
+// @version               2025.5.17.11
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1093,7 +1093,7 @@
         },
 
         scheme(newScheme) {
-            env.ui.app.scheme = newScheme ; logos.braveGPT.update() ; update.appStyle()
+            env.ui.app.scheme = newScheme ; logos.bravegpt.update() ; update.appStyle()
             update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
         }
     }
@@ -1891,7 +1891,7 @@
                 app.div.append(appHeaderDiv)
 
                 // Create/append title
-                const appHeaderLogo = logos.braveGPT.create() ; appHeaderLogo.width = 112
+                const appHeaderLogo = logos.bravegpt.create() ; appHeaderLogo.width = 112
                 const appTitleAnchor = dom.create.anchor(app.urls.app, appHeaderLogo)
                 appTitleAnchor.classList.add(`${app.slug}-name`, 'no-user-select')
                 appHeaderDiv.append(appTitleAnchor)
@@ -2213,12 +2213,12 @@
     }
 
     const logos = { // requires dom.js + <app|env> + GM_getResourceText()
-        braveGPT: {
+        bravegpt: {
 
             create() { // requires dom.js + app
-                const braveGPTlogo = dom.create.elem('img', { id: `${app.slug}-logo`, class: 'no-mobile-tap-outline' })
-                logos.braveGPT.update(braveGPTlogo)
-                return braveGPTlogo
+                const bravegptlogo = dom.create.elem('img', { id: `${app.slug}-logo`, class: 'no-mobile-tap-outline' })
+                logos.bravegpt.update(bravegptlogo)
+                return bravegptlogo
             },
 
             update(...targetLogos) { // requires <app|env> + GM_getResourceText()
@@ -2264,7 +2264,7 @@
             )
 
             // Add logo
-            const aboutHeaderLogo = logos.braveGPT.create() ; aboutHeaderLogo.width = 375
+            const aboutHeaderLogo = logos.bravegpt.create() ; aboutHeaderLogo.width = 375
             aboutHeaderLogo.style.cssText = `max-width: 98% ; margin: 1px ${
                 env.browser.isMobile ? 'auto' : '16%' } 0`
             aboutModal.firstChild.nextSibling.before(aboutHeaderLogo) // after close btn

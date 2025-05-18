@@ -22,10 +22,10 @@ window.icons = {
             return log.error(`No <svg|src> data found for key '${key}'`)
     },
 
-    amzgpt: {
+    amazongpt: {
         create(color = '') {
             const icon = dom.create.elem('img') ; icon.id = `${app.slug}-icon`
-            icons.amzgpt.update(icon, color)
+            icons.amazongpt.update(icon, color)
             return icon
         },
 
@@ -89,7 +89,7 @@ window.icons = {
         elems: [{ path: { 'stroke-width': 2, d: 'M14.7441 16.4211C14.5876 16.7477 14.5 17.1136 14.5 17.5C14.5 18.8807 15.6193 20 17 20C18.3807 20 19.5 18.8807 19.5 17.5C19.5 16.1193 18.3807 15 17 15C16.0057 15 15.1469 15.5805 14.7441 16.4211ZM14.7441 16.4211L7.75586 13.0789M14.7441 7.57889C15.1469 8.41949 16.0057 9 17 9C18.3807 9 19.5 7.88071 19.5 6.5C19.5 5.11929 18.3807 4 17 4C15.6193 4 14.5 5.11929 14.5 6.5C14.5 6.88637 14.5876 7.25226 14.7441 7.57889ZM14.7441 7.57889L7.75586 10.9211M7.75586 10.9211C7.35311 10.0805 6.49435 9.5 5.5 9.5C4.11929 9.5 3 10.6193 3 12C3 13.3807 4.11929 14.5 5.5 14.5C6.49435 14.5 7.35311 13.9195 7.75586 13.0789M7.75586 10.9211C7.91235 11.2477 8 11.6136 8 12C8 12.3864 7.91235 12.7523 7.75586 13.0789' }}]
     },
 
-    braveGPT: {
+    bravegpt: {
         create() {
             const icon = dom.create.elem('img')
             icon.src = GM_getResourceText('bgptIcon')
@@ -139,7 +139,7 @@ window.icons = {
         ]
     },
 
-    ddgpt: {
+    duckduckgpt: {
         create() {
             const icon = dom.create.elem('img')
             icon.src = GM_getResourceText('ddgptIcon')
@@ -165,7 +165,7 @@ window.icons = {
         ]
     },
 
-    googleGPT: {
+    googlegpt: {
         create(color = '') {
             const icon = dom.create.elem('img') ; icon.id = `${app.slug}-icon`
             icons.googleGPT.update(icon, color)

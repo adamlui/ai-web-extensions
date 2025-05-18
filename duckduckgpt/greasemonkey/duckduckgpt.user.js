@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.11
+// @version                2025.5.17.12
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -1098,7 +1098,7 @@
         },
 
         scheme(newScheme) {
-            env.ui.app.scheme = newScheme ; logos.ddgpt.update() ; update.appStyle()
+            env.ui.app.scheme = newScheme ; logos.duckduckgpt.update() ; update.appStyle()
             update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
         }
     }
@@ -1890,7 +1890,7 @@
                 app.div.append(appHeaderDiv)
 
                 // Create/append title
-                const appHeaderLogo = logos.ddgpt.create()
+                const appHeaderLogo = logos.duckduckgpt.create()
                 appHeaderLogo.width = 157 ; appHeaderLogo.style.margin = '-4px 0'
                 const appTitleAnchor = dom.create.anchor(app.urls.app, appHeaderLogo)
                 appTitleAnchor.classList.add(`${app.slug}-name`, 'no-user-select')
@@ -2208,12 +2208,12 @@
     }
 
     const logos = { // requires dom.js + <app|env> + GM_getResourceText()
-        ddgpt: {
+        duckduckgpt: {
 
             create() { // requires dom.js + app
-                const ddgptLogo = dom.create.elem('img', { id: `${app.slug}-logo`, class: 'no-mobile-tap-outline' })
-                logos.ddgpt.update(ddgptLogo)
-                return ddgptLogo
+                const duckduckgptLogo = dom.create.elem('img', { id: `${app.slug}-logo`, class: 'no-mobile-tap-outline' })
+                logos.duckduckgpt.update(duckduckgptLogo)
+                return duckduckgptLogo
             },
 
             update(...targetLogos) { // requires <app|env> + GM_getResourceText()
@@ -2260,7 +2260,7 @@
             )
 
             // Add logo
-            const aboutHeaderLogo = logos.ddgpt.create() ; aboutHeaderLogo.width = 420
+            const aboutHeaderLogo = logos.duckduckgpt.create() ; aboutHeaderLogo.width = 420
             aboutHeaderLogo.style.cssText = 'max-width: 98% ;'
                 + `margin: -1px ${ env.browser.isMobile ? 'auto' : '13.5%' } 1px`
             aboutModal.firstChild.nextSibling.before(aboutHeaderLogo) // after close btn

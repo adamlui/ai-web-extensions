@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.9
+// @version                2025.5.17.10
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -722,7 +722,7 @@
         },
 
         scheme(newScheme) {
-            env.ui.app.scheme = newScheme ; logos.amzgpt.update() ; icons.amzgpt.update() ; update.appStyle()
+            env.ui.app.scheme = newScheme ; logos.amazongpt.update() ; icons.amazongpt.update() ; update.appStyle()
             update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
         }
     }
@@ -1285,7 +1285,7 @@
                 app.div.append(appHeaderDiv)
 
                 // Create/append title
-                const appHeaderLogo = logos.amzgpt.create()
+                const appHeaderLogo = logos.amazongpt.create()
                 appHeaderLogo.style.width = env.browser.isMobile ? '55%' : '181px'
                 const appTitleAnchor = dom.create.anchor(app.urls.app, appHeaderLogo)
                 appTitleAnchor.classList.add(`${app.slug}-name`, 'no-user-select')
@@ -1543,12 +1543,12 @@
     }
 
     const logos = { // requires dom.js + <app|env> + GM_getResourceText()
-        amzgpt: {
+        amazongpt: {
 
             create() { // requires dom.js + app
-                const amzgptLogo = dom.create.elem('img', { id: `${app.slug}-logo`, class: 'no-mobile-tap-outline' })
-                logos.amzgpt.update(amzgptLogo)
-                return amzgptLogo
+                const amazongptLogo = dom.create.elem('img', { id: `${app.slug}-logo`, class: 'no-mobile-tap-outline' })
+                logos.amazongpt.update(amazongptLogo)
+                return amazongptLogo
             },
 
             update(...targetLogos) { // requires <app|env> + GM_getResourceText()
@@ -1594,7 +1594,7 @@
             )
 
             // Add logo
-            const aboutHeaderLogo = logos.amzgpt.create() ; aboutHeaderLogo.width = 420
+            const aboutHeaderLogo = logos.amazongpt.create() ; aboutHeaderLogo.width = 420
             aboutHeaderLogo.style.cssText = `max-width: 98% ; margin: 15px ${
                 env.browser.isMobile ? 'auto' : '15.5%' } 17px`
             aboutModal.firstChild.nextSibling.before(aboutHeaderLogo) // after close btn

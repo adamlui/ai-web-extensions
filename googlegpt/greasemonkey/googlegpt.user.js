@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.17.11
+// @version                  2025.5.17.12
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -1299,7 +1299,7 @@
         },
 
         scheme(newScheme) {
-            env.ui.app.scheme = newScheme ; logos.googleGPT.update() ; icons.googleGPT.update() ; update.appStyle()
+            env.ui.app.scheme = newScheme ; logos.googlegpt.update() ; icons.googleGPT.update() ; update.appStyle()
             update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
         }
     }
@@ -2104,7 +2104,7 @@
                     id: 'app-prefix', class: 'no-user-select',
                     style: `margin-right: -2px ; font-size: ${ env.browser.isMobile ? '1.7rem' : '1.1rem' }` })
                 appPrefixSpan.textContent = '🤖 ' ; appHeaderDiv.append(appPrefixSpan)
-                const appHeaderLogo = logos.googleGPT.create()
+                const appHeaderLogo = logos.googlegpt.create()
                 appHeaderLogo.width = env.browser.isMobile ? 177 : env.browser.isFF ? 124 : 122
                 appHeaderLogo.style.cssText = (
                     `position: relative ; top: ${ env.browser.isMobile ? 4 : env.browser.isFF ? 3 : 2 }px`
@@ -2430,12 +2430,12 @@
     }
 
     const logos = { // requires dom.js + <app|env> + GM_getResourceText()
-        googleGPT: {
+        googlegpt: {
 
             create() { // requires dom.js + app
-                const googleGPTlogo = dom.create.elem('img', { id: `${app.slug}-logo`, class: 'no-mobile-tap-outline' })
-                logos.googleGPT.update(googleGPTlogo)
-                return googleGPTlogo
+                const googlegptlogo = dom.create.elem('img', { id: `${app.slug}-logo`, class: 'no-mobile-tap-outline' })
+                logos.googlegpt.update(googlegptlogo)
+                return googlegptlogo
             },
 
             update(...targetLogos) { // requires <app|env> + GM_getResourceText()
@@ -2481,7 +2481,7 @@
             )
 
             // Add logo
-            const aboutHeaderLogo = logos.googleGPT.create() ; aboutHeaderLogo.width = 405
+            const aboutHeaderLogo = logos.googlegpt.create() ; aboutHeaderLogo.width = 405
             aboutHeaderLogo.style.cssText = `max-width: 98% ; margin: 15px ${
                 env.browser.isMobile ? 'auto' : '14.5%' } -1px`
             aboutModal.firstChild.nextSibling.before(aboutHeaderLogo) // after close btn

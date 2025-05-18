@@ -57,12 +57,7 @@ window.feedback = {
         const notif = document.querySelector('.chatgpt-notif:last-child')
 
         // Prepend app icon
-        const notifIcon = icons[
-            app.slug == 'amazongpt' ? 'amzgpt'
-          : app.slug == 'bravegpt' ? 'braveGPT'
-          : app.slug == 'duckduckgpt' ? 'ddgpt'
-          : 'googleGPT'
-        ].create(/amazon|google/.test(app.slug) ? 'white' : undefined)
+        const notifIcon = icons[app.slug].create(/amazon|google/.test(app.slug) ? 'white' : undefined)
         notifIcon.style.cssText = (
             app.slug == 'amazongpt' ? 'width: 28px ; position: relative ; top: 4.8px ; margin-right: 8px'
           : app.slug == 'bravegpt' ? 'width: 32px ; position: relative ; top: 6px ; margin-right: 6px'
