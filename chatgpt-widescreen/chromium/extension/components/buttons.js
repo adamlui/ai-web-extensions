@@ -43,15 +43,15 @@ window.buttons = {
         }
     },
 
-    animate() { // used in content.js > sync.configToUI() on Button Animations toggle-on
+    animate() { // used in lib/sync.configToUI() on Button Animations toggle-on
         const btnHoverStyles = new RegExp(`.${this.class}:hover\\s*\\{([^}]*)\\}`, 'm')
             .exec(styles.tweaks.node.innerText)?.[1].trim()
         this.types.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType] ; if (!btn) return
             const staggerInt = 75 // ms
             setTimeout(() => { // apply/remove fx
-                btn.style.cssText += btnHoverStyles
-                setTimeout(() => btn.style.cssText = btn.style.cssText.replace(btnHoverStyles, ''), 150)
+                const ogBtnStyle = btn.style.cssText ; btn.style.cssText += btnHoverStyles
+                setTimeout(() => btn.style.cssText = ogBtnStyle, 150)
             }, idx * staggerInt)
         })
     },
