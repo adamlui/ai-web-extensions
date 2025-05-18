@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.8
+// @version                2025.5.17.9
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -143,6 +143,8 @@
     env.scriptManager.supportsStreaming = /Tampermonkey|ScriptCat/.test(env.scriptManager.name)
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
                                       && parseInt(env.scriptManager.version.split('.')[0]) >= 5
+    window.inputEvents = {} ; ['down', 'move', 'up'].forEach(action =>
+        inputEvents[action] = ( window.PointerEvent ? 'pointer' : env.browser.isMobile ? 'touch' : 'mouse' ) + action)
     window.xhr = typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
 
     // Init APP data
@@ -260,10 +262,6 @@
     if (!config.fontSize) settings.save('fontSize', 14) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env
     log.debug(`Success! config = ${log.prettifyObj(config)}`)
-
-    // Init INPUT EVENTS
-    window.inputEvents = {} ; ['down', 'move', 'up'].forEach(action =>
-        inputEvents[action] = ( window.PointerEvent ? 'pointer' : env.browser.isMobile ? 'touch' : 'mouse' ) + action)
 
     // Define UI functions
 

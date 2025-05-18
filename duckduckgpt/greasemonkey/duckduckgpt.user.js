@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.10
+// @version                2025.5.17.11
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -266,6 +266,8 @@
     env.scriptManager.supportsStreaming = /Tampermonkey|ScriptCat/.test(env.scriptManager.name)
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
                                       && parseInt(env.scriptManager.version.split('.')[0]) >= 5
+    window.inputEvents = {} ; ['down', 'move', 'up'].forEach(action =>
+        inputEvents[action] = ( window.PointerEvent ? 'pointer' : env.browser.isMobile ? 'touch' : 'mouse' ) + action)
     window.xhr = typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
 
     // Init APP data
@@ -409,10 +411,6 @@
     if (!config.notFirstRun && env.browser.isMobile) settings.save('autoGet', true) // reverse default auto-get disabled if mobile
     settings.save('notFirstRun', true)
     log.debug(`Success! config = ${log.prettifyObj(config)}`)
-
-    // Init INPUT EVENTS
-    window.inputEvents = {} ; ['down', 'move', 'up'].forEach(action =>
-        inputEvents[action] = ( window.PointerEvent ? 'pointer' : env.browser.isMobile ? 'touch' : 'mouse' ) + action)
 
     // Define UI functions
 
