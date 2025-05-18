@@ -27,7 +27,7 @@ window.icons = {
         amazongpt: {
             create(color = '') {
                 const icon = dom.create.elem('img') ; icon.id = `${app.slug}-icon`
-                icons.amazongpt.update(icon, color)
+                icons.app.amazongpt.update(icon, color)
                 return icon
             },
 
@@ -64,7 +64,7 @@ window.icons = {
         googlegpt: {
             create(color = '') {
                 const icon = dom.create.elem('img') ; icon.id = `${app.slug}-icon`
-                icons.googlegpt.update(icon, color)
+                icons.app.googlegpt.update(icon, color)
                 return icon
             },
 
