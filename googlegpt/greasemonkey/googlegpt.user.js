@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.17.7
+// @version                  2025.5.17.8
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -396,6 +396,7 @@
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/chatbot/feedback.js#sha256-3X5Xq5EkQKlXuHhWMOEvdCLzNUGcCBG8BIIo2LD5cxw=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f4da9d4/assets/js/lib/chatbot/log.js#sha256-kjt26UXbx44I0/iDOf50F/LbRtsYcSwMHrexImR4D5A=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/chatbot/session.js#sha256-S6MOdBjx8Hci4GDvYl4JlhSdrDk2oaRLU9DrdxyiIss=
+// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@fa545bb/assets/js/lib/chatbot/ui.js#sha256-u8kep/5RNzUItnvnCeDPbKjtGv3XB4J+VwjOWBD5OdA=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@b1e28ff/assets/js/lib/chatbot/userscript.js#sha256-SytCWuD3YOcYFDaVfpF8Pq67zDbV8cZcIENz+0zpZ40=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/crypto-utils.js/dist/crypto-utils.min.js#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/dom.js/dist/dom.min.js#sha256-IGNj9Eoecq7QgY7SAs75wONajgN9Wg0NmCjKTCfu9CY=
@@ -600,146 +601,10 @@
     log.debug(`Success! config = ${log.prettifyObj(config)}`)
 
     // Init INPUT EVENTS
-    const inputEvents = {} ; ['down', 'move', 'up'].forEach(action =>
-          inputEvents[action] = ( window.PointerEvent ? 'pointer' : env.browser.isMobile ? 'touch' : 'mouse' ) + action)
+    window.inputEvents = {} ; ['down', 'move', 'up'].forEach(action =>
+        inputEvents[action] = ( window.PointerEvent ? 'pointer' : env.browser.isMobile ? 'touch' : 'mouse' ) + action)
 
     // Define UI functions
-
-    const ui = {
-
-        addListeners: {
-            appDiv() {
-                app.div.addEventListener(inputEvents.down, event => { // to dismiss visible font size slider
-                    if (event.button != 0) return // prevent non-left-click dismissal
-                    if (document.getElementById(`${app.slug}-font-size-slider-track`) // slider is visible
-                        && !event.target.closest('[id*=font-size]') // not clicking slider elem
-                        && getComputedStyle(event.target).cursor != 'pointer') // ...or other interactive elem
-                            fontSizeSlider.toggle('off')
-                })
-                app.div.onmouseover = app.div.onmouseout = update.bylineVisibility
-            },
-
-            btns: {
-                appHeader() {
-                    app.div.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
-                        const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
-
-                        // Add click listener
-                        btn.onclick = {
-                            about: () => modals.open('about'),
-                            arrows: event => { toggle.expandedMode() ; tooltip.update(event.currentTarget) },
-                            chevron: () => {
-                                if (app.div.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
-                                    fontSizeSlider.toggle('off')
-                                toggle.minimized()
-                            },
-                            pin: () => (btn.onmouseenter = btn.onmouseleave = btn.onclick = menus.hover.toggle),
-                            settings: () => modals.open('settings'),
-                            'font-size': () => fontSizeSlider.toggle(),
-                            wsb: event => { toggle.sidebar('wider') ; tooltip.update(event.currentTarget) }
-                        }[btnType]
-
-                        // Add hover listener
-                        if (!env.browser.isMobile)
-                            btn.onmouseenter = btn.onmouseleave = btnType == 'pin' ? menus.hover.toggle : tooltip.toggle
-
-                        // Add zoom/fade-out to corner buttons
-                        if (/about|settings/.test(btn.id)) btn.onmouseup = () => {
-                            if (config.fgAnimationsDisabled) return
-                            btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
-                            if (env.browser.isFF) // end animation 0.08s early to avoid icon overgrowth
-                                setTimeout(handleAnimationEnded, 0.12 *1000)
-                            else btn.onanimationend = handleAnimationEnded
-                            function handleAnimationEnded() {
-                                Object.assign(btn.style, { opacity: '0', visibility: 'hidden', animation: '' }) // hide btn
-                                setTimeout(() => // show btn after short delay
-                                    Object.assign(btn.style, { visibility: 'visible', opacity: '1' }), 135)
-                            }
-                        }
-                    })
-                },
-
-                chatbar() {
-                    app.div.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
-                        btn.onclick = () => {
-                            tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
-                            const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
-                            if (btnType == 'send') return // since handled by form submit
-                            msgChain.push({ time: Date.now(), role: 'user', content: prompts.create(
-                                btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })})
-                            get.reply({ msgs: msgChain, src: btnType })
-                            show.reply.chatbarFocused = false ; show.reply.userInteracted = true
-                        }
-                        if (!env.browser.isMobile) // add hover listener for tooltips
-                            btn.onmouseenter = btn.onmouseleave = tooltip.toggle
-                    })
-                }
-            },
-
-            replySection() {
-
-                // Add form key listener
-                const replyForm = app.div.querySelector('form')
-                replyForm.onkeydown = event => {
-                    if (event.key == 'Enter' || event.keyCode == 13) {
-                        if (event.ctrlKey) { // add newline
-                            const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`),
-                                caretPos = chatTextarea.selectionStart,
-                                textBefore = chatTextarea.value.substring(0, caretPos),
-                                textAfter = chatTextarea.value.substring(caretPos)
-                            chatTextarea.value = textBefore + '\n' + textAfter // add newline
-                            chatTextarea.selectionStart = chatTextarea.selectionEnd = caretPos + 1 // preserve caret pos
-                            ui.addListeners.replySection.chatbarAutoSizer()
-                        } else if (!event.shiftKey) ui.addListeners.replySection.submitHandler(event)
-                }}
-
-                // Add form submit listener
-                ui.addListeners.replySection.submitHandler = function(event) {
-                    event.preventDefault()
-                    const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`)
-
-                    // No reply, change placeholder + focus chatbar
-                    if (chatTextarea.value.trim() == '') {
-                        chatTextarea.placeholder = `${app.msgs.placeholder_typeSomething}...`
-                        chatTextarea.focus()
-
-                    // Yes reply, submit it + transform to loading UI
-                    } else {
-                        msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
-                        get.reply({ msgs: msgChain, src: 'submit' })
-                        show.reply.chatbarFocused = false ; show.reply.userInteracted = true
-                    }
-                }
-                replyForm.onsubmit = ui.addListeners.replySection.submitHandler
-
-                // Add chatbar autosizer
-                const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`),
-                    { paddingTop, paddingBottom } = getComputedStyle(chatTextarea),
-                    vOffset = parseInt(paddingTop) + parseInt(paddingBottom)
-                let prevLength = chatTextarea.value.length
-                ui.addListeners.replySection.chatbarAutoSizer = () => {
-                    const newLength = chatTextarea.value.length
-                    if (newLength < prevLength) { // if deleting txt
-                        chatTextarea.style.height = 'auto' // ...auto-fit height
-                        if (parseInt(getComputedStyle(chatTextarea).height) < 35) { // if down to one line
-                            chatTextarea.style.height = '16px' } // ...reset to original height
-                    }
-                    const unpaddedHeight = chatTextarea.scrollHeight - vOffset
-                    chatTextarea.style.height = `${ unpaddedHeight > 29 ? unpaddedHeight : 16 }px`
-                    prevLength = newLength
-                }
-                chatTextarea.oninput = ui.addListeners.replySection.chatbarAutoSizer
-
-                // Add button listeners
-                this.btns.chatbar()
-            }
-        },
-
-        getScheme() {
-            return document.querySelector('meta[name="color-scheme"]')?.content?.includes('dark') // from Google Search pref
-                || window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-        }
-    }
 
     const themes = {
         apply(theme) {
@@ -2569,7 +2434,7 @@
 
     // Define COMPONENTS
 
-    const fontSizeSlider = { // requires dom.js + <app|config|inputEvents>
+    window.fontSizeSlider = { // requires dom.js + <app|config|inputEvents>
         fadeInDelay: 5, // ms
         hWheelDistance: 10, // px
 
