@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.18
+// @version                2025.5.18.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -1777,7 +1777,7 @@
                 if (!show.reply.updatedAPIinHeader) {
                     show.reply.updatedAPIinHeader = true
                     const preHeaderLabel = app.div.querySelector('.reply-header-txt'),
-                          apiBeacon = dom.create.elem('span', { class: 'api-btn' })
+                          apiBeacon = dom.create.elem('span', { class: 'api-btn', style: 'cursor: pointer' })
                     apiBeacon.textContent = '⦿'
                     apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = menus.hover.toggle
                     apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'

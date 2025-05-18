@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.18.2
+// @version               2025.5.18.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1782,7 +1782,7 @@
                 if (!show.reply.updatedAPIinHeader) {
                     show.reply.updatedAPIinHeader = true
                     const preHeaderLabel = app.div.querySelector('.reply-header-txt'),
-                          apiBeacon = dom.create.elem('span', { class: 'api-btn' })
+                          apiBeacon = dom.create.elem('span', { class: 'api-btn', style: 'cursor: pointer' })
                     apiBeacon.textContent = '⦿'
                     apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = menus.hover.toggle
                     apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
