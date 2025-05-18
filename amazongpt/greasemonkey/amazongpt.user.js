@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.18
+// @version                2025.5.18.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -984,7 +984,7 @@
                         downloadBtn.style.cursor = 'pointer'
                         if (downloadBtn.matches(':hover')) // restore tooltip
                             downloadBtn.dispatchEvent(new Event('mouseenter'))
-                    }, 15000)
+                    }, 10000)
 
                     // Init block's language data
                     const codeBlock = downloadBtn.closest('code'),
