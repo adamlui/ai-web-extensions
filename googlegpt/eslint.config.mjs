@@ -16,13 +16,13 @@ export default [
             globals: {
                 ...globals.browser, ...globals.greasemonkey, ...globals.node, api: 'writable', apis: 'writable',
                 app: 'writable', buttons: 'writable', chatgpt: 'readonly', config: 'writable', CryptoJS: 'readonly',
-                cryptoUtils: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly', get: 'readonly',
-                GM_cookie: 'readonly', hljs: 'readonly', icons: 'readonly', ipv4: 'readonly', JSON5: 'readonly',
-                log: 'readonly', marked: 'readonly', menus: 'writable', modals: 'readonly', msgChain: 'writable',
-                prompts: 'readonly', renderMathInElement: 'readonly', replyBubble: 'writable', session: 'readonly',
-                settings: 'writable', show: 'readonly', toggle: 'readonly', toolbarMenu: 'writable',
-                tooltip: 'writable', update: 'readonly', updateCheck: 'readonly', userscript: 'readonly',
-                xhr: 'writable'
+                cryptoUtils: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly',
+                fontSizeSlider: 'writable', get: 'readonly', GM_cookie: 'readonly', hljs: 'readonly', icons: 'readonly',
+                inputEvents: 'readonly', ipv4: 'readonly', JSON5: 'readonly', log: 'readonly', marked: 'readonly',
+                menus: 'writable', modals: 'readonly', msgChain: 'writable', prompts: 'readonly',
+                renderMathInElement: 'readonly', replyBubble: 'writable', session: 'readonly', settings: 'writable',
+                show: 'readonly', toggle: 'readonly', toolbarMenu: 'writable', tooltip: 'writable', update: 'readonly',
+                updateCheck: 'readonly', userscript: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
