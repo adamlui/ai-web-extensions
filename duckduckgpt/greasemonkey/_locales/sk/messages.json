@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Širší bočný panel" },
   "menuLabel_stickySidebar": { "message": "Lepkavý bočný panel" },
   "menuLabel_pinTo": { "message": "Pripnúť na" },
+  "menuLabel_nothing": { "message": "Nič" },
   "menuLabel_top": { "message": "Hore" },
   "menuLabel_sidebar": { "message": "Bočný panel" },
   "menuLabel_bottom": { "message": "Dole" },

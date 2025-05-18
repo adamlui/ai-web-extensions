@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "По - широка странична лента" },
   "menuLabel_stickySidebar": { "message": "Лепкава Лента" },
   "menuLabel_pinTo": { "message": "Закачи към" },
+  "menuLabel_nothing": { "message": "Не" },
   "menuLabel_top": { "message": "Горе" },
   "menuLabel_sidebar": { "message": "Страничната лента" },
   "menuLabel_bottom": { "message": "Долу" },

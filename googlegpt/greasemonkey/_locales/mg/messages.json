@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Sisiny mivelatra kokoa" },
   "menuLabel_stickySidebar": { "message": "Sisiny miraikitra" },
   "menuLabel_pinTo": { "message": "PIN ao amin'ny" },
+  "menuLabel_nothing": { "message": "Tsy misy" },
   "menuLabel_top": { "message": "Ambony" },
   "menuLabel_sidebar": { "message": "Miverena" },
   "menuLabel_bottom": { "message": "Ambany" },

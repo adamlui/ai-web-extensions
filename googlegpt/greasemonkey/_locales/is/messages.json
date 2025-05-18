@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Breiðari hliðarslá" },
   "menuLabel_stickySidebar": { "message": "Límd hliðarslá" },
   "menuLabel_pinTo": { "message": "Festa við" },
+  "menuLabel_nothing": { "message": "& Engin" },
   "menuLabel_top": { "message": "Efst" },
   "menuLabel_sidebar": { "message": "Hliðarslá" },
   "menuLabel_bottom": { "message": "Botn" },

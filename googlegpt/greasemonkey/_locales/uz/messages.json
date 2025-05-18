@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Kengroq yon panel" },
   "menuLabel_stickySidebar": { "message": "Yopishqoq yon panel" },
   "menuLabel_pinTo": { "message": "Quyidagiga mahkamlang" },
+  "menuLabel_nothing": { "message": "Hech narsa" },
   "menuLabel_top": { "message": "Yuqoridagi" },
   "menuLabel_sidebar": { "message": "Yon tomon" },
   "menuLabel_bottom": { "message": "Pastki" },

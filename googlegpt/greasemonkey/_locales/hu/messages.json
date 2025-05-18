@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Szélesebb oldalsáv" },
   "menuLabel_stickySidebar": { "message": "Ragadós oldalsáv" },
   "menuLabel_pinTo": { "message": "Rögzítés ide" },
+  "menuLabel_nothing": { "message": "Semmi" },
   "menuLabel_top": { "message": "Felette" },
   "menuLabel_sidebar": { "message": "Oldalrúd" },
   "menuLabel_bottom": { "message": "Alul" },

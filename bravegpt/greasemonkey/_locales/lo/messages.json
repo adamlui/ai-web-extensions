@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "ແຖບຂ້າງກວ້າງ" },
   "menuLabel_stickySidebar": { "message": "ແຖບຂ້າງຕິດ" },
   "menuLabel_pinTo": { "message": "PIN to" },
+  "menuLabel_nothing": { "message": "ບໍ່ມີຫຍັງ" },
   "menuLabel_top": { "message": "ເທິງ" },
   "menuLabel_sidebar": { "message": "ແຖບຂ້າງ" },
   "menuLabel_bottom": { "message": "ລຸ່ມ" },

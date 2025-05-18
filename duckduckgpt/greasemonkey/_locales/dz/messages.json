@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "ཟུར་ཟུར་རྒྱ་ཆེ་དྲགས་" },
   "menuLabel_stickySidebar": { "message": "ཟུར་ཟུར་གྱི་ཐེམ་སྐུམ།" },
   "menuLabel_pinTo": { "message": "འདི་ནང་ལུ་ཨེབ་གཏང་འབད།" },
+  "menuLabel_nothing": { "message": "ག་ནི་ཡང་མེདཔ།" },
   "menuLabel_top": { "message": "སྟེང་" },
   "menuLabel_sidebar": { "message": "ཟུར་ཟུར་བྷ་རི།" },
   "menuLabel_bottom": { "message": "འོག་ངོས།" },

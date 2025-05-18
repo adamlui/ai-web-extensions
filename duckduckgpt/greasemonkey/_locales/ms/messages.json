@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Bar Sisi Lebih Luas" },
   "menuLabel_stickySidebar": { "message": "Palang Sisi Melekit" },
   "menuLabel_pinTo": { "message": "Pin ke" },
+  "menuLabel_nothing": { "message": "Tiada " },
   "menuLabel_top": { "message": "Atas" },
   "menuLabel_sidebar": { "message": "Sidebar" },
   "menuLabel_bottom": { "message": "Bawah" },

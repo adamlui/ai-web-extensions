@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "அகலப் பக்கப்பட்டி" },
   "menuLabel_stickySidebar": { "message": "ஒட்டும் பக்கப்பட்டி" },
   "menuLabel_pinTo": { "message": "இதில் பின் செய்யவும்" },
+  "menuLabel_nothing": { "message": "எதற்காக" },
   "menuLabel_top": { "message": "பம்பரம்" },
   "menuLabel_sidebar": { "message": "பக்கப்பட்டி" },
   "menuLabel_bottom": { "message": "அடிப்பகுதி" },

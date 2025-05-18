@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Mas lapad nga Sidebar" },
   "menuLabel_stickySidebar": { "message": "Sticky Sidebar" },
   "menuLabel_pinTo": { "message": "Pin sa" },
+  "menuLabel_nothing": { "message": "Wala" },
   "menuLabel_top": { "message": "Ibabaw" },
   "menuLabel_sidebar": { "message": "Sidebar" },
   "menuLabel_bottom": { "message": "Ubos" },

@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "ওয়াইডার সাইডবার" },
   "menuLabel_stickySidebar": { "message": "স্টিকি সাইডবার" },
   "menuLabel_pinTo": { "message": "পিন করুন" },
+  "menuLabel_nothing": { "message": "কিছুই না" },
   "menuLabel_top": { "message": "উপর" },
   "menuLabel_sidebar": { "message": "সাইডবার" },
   "menuLabel_bottom": { "message": "নীচ" },

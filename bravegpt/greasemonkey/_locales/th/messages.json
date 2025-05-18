@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "แถบด้านข้างที่กว้างขึ้น" },
   "menuLabel_stickySidebar": { "message": "แถบด้านข้างแบบสติ๊กกี้" },
   "menuLabel_pinTo": { "message": "ตรึงไว้ที่" },
+  "menuLabel_nothing": { "message": "ไม่มีอะไร" },
   "menuLabel_top": { "message": "อันดับสูงสุด" },
   "menuLabel_sidebar": { "message": "แถบด้านข้าง" },
   "menuLabel_bottom": { "message": "อันดับท้าย" },

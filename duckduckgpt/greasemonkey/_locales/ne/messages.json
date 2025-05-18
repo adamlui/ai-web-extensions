@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "फराकिलो साइडबार" },
   "menuLabel_stickySidebar": { "message": "टाँसिने साइडबार" },
   "menuLabel_pinTo": { "message": "पिन गर्न" },
+  "menuLabel_nothing": { "message": "तामाङ भाषाजेनी" },
   "menuLabel_top": { "message": "Orientation" },
   "menuLabel_sidebar": { "message": "साइडबार" },
   "menuLabel_bottom": { "message": "Orientation" },

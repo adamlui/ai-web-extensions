@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Более широкая боковая панель" },
   "menuLabel_stickySidebar": { "message": "Липкий сайдбар" },
   "menuLabel_pinTo": { "message": "Закрепить на" },
+  "menuLabel_nothing": { "message": "Ничего" },
   "menuLabel_top": { "message": "Сверху" },
   "menuLabel_sidebar": { "message": "Боковая панель" },
   "menuLabel_bottom": { "message": "Низ" },

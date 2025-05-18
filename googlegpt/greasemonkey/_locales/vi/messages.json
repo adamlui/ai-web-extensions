@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Sidebar rộng hơn" },
   "menuLabel_stickySidebar": { "message": "Thanh bên dính" },
   "menuLabel_pinTo": { "message": "Ghim vào" },
+  "menuLabel_nothing": { "message": "Không gì cả" },
   "menuLabel_top": { "message": "Trên" },
   "menuLabel_sidebar": { "message": "Thanh bên" },
   "menuLabel_bottom": { "message": "Dưới" },

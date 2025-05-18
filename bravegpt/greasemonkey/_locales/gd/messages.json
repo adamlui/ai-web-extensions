@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Barra-taobh nas fharsainge" },
   "menuLabel_stickySidebar": { "message": "Bàr - taoibh steigeach" },
   "menuLabel_pinTo": { "message": "Pin gu" },
+  "menuLabel_nothing": { "message": "Chan eil gin" },
   "menuLabel_top": { "message": "Gu h - àrd" },
   "menuLabel_sidebar": { "message": "Bàr-taoibh" },
   "menuLabel_bottom": { "message": "Bun" },

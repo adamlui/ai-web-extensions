@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Barre latérale plus large" },
   "menuLabel_stickySidebar": { "message": "Colonne latérale épinglée" },
   "menuLabel_pinTo": { "message": "Épingler sur" },
+  "menuLabel_nothing": { "message": "Rien" },
   "menuLabel_top": { "message": "Ventes" },
   "menuLabel_sidebar": { "message": "Barre latérale" },
   "menuLabel_bottom": { "message": "Bas" },

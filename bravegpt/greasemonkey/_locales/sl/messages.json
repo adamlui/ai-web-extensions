@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Širša stranska vrstica" },
   "menuLabel_stickySidebar": { "message": "Lepljiva stranska vrstica" },
   "menuLabel_pinTo": { "message": "Pripni na" },
+  "menuLabel_nothing": { "message": "Nič" },
   "menuLabel_top": { "message": "Na vrh" },
   "menuLabel_sidebar": { "message": "Stranski stolpec" },
   "menuLabel_bottom": { "message": "Dno" },

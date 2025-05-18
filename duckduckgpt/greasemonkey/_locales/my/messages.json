@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "ကျယ်ပြန့်သော ဘေးဘား" },
   "menuLabel_stickySidebar": { "message": "စေးကပ်သော ဘေးဘား" },
   "menuLabel_pinTo": { "message": "ချိတ်ရန်" },
+  "menuLabel_nothing": { "message": "ဘာမှမပြောနိုင်ပါ" },
   "menuLabel_top": { "message": "ထိပ်" },
   "menuLabel_sidebar": { "message": "ဘေးဘား" },
   "menuLabel_bottom": { "message": "အောက်ခြေ" },

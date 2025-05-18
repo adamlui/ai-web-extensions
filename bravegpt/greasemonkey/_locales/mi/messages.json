@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Wider Sidebar" },
   "menuLabel_stickySidebar": { "message": "Sticky Sidebar" },
   "menuLabel_pinTo": { "message": "PIN ki" },
+  "menuLabel_nothing": { "message": "kei te aha koe inaianei" },
   "menuLabel_top": { "message": "Orientation" },
   "menuLabel_sidebar": { "message": "Te taha o te taha" },
   "menuLabel_bottom": { "message": "Orientation" },

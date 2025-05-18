@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "نوار کناری گسترده تر" },
   "menuLabel_stickySidebar": { "message": "نوار کناری چسبنده" },
   "menuLabel_pinTo": { "message": "پین به" },
+  "menuLabel_nothing": { "message": "هیچی" },
   "menuLabel_top": { "message": "بالا" },
   "menuLabel_sidebar": { "message": "سایدبار" },
   "menuLabel_bottom": { "message": "پایین" },

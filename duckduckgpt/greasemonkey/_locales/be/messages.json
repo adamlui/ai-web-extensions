@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Шырэйшая бакавая панэль" },
   "menuLabel_stickySidebar": { "message": "Ліпкая бакавая панэль" },
   "menuLabel_pinTo": { "message": "PIN-код" },
+  "menuLabel_nothing": { "message": "Адладчык PHP4" },
   "menuLabel_top": { "message": "& Уверсе" },
   "menuLabel_sidebar": { "message": "Сайдбар" },
   "menuLabel_bottom": { "message": "Дол" },

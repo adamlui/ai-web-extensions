@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Bareng e Kgolwane ya mo Letlhakoreng" },
   "menuLabel_stickySidebar": { "message": "STICKY SIDEBAR" },
   "menuLabel_pinTo": { "message": "PIN to" },
+  "menuLabel_nothing": { "message": "Sepe" },
   "menuLabel_top": { "message": "TOP" },
   "menuLabel_sidebar": { "message": "SIDEBAR" },
   "menuLabel_bottom": { "message": "Bottom" },

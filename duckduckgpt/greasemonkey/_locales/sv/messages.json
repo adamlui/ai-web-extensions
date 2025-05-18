@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Bredare sidofält" },
   "menuLabel_stickySidebar": { "message": "Klistrad sidopanel" },
   "menuLabel_pinTo": { "message": "Fäst på" },
+  "menuLabel_nothing": { "message": "Ingenting" },
   "menuLabel_top": { "message": "Upptill" },
   "menuLabel_sidebar": { "message": "Sidofält" },
   "menuLabel_bottom": { "message": "Nertill" },

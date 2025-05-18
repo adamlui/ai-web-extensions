@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "របារចំហៀងធំជាង" },
   "menuLabel_stickySidebar": { "message": "របារចំហៀងស្អិត" },
   "menuLabel_pinTo": { "message": "ខ្ទាស់ទៅ" },
+  "menuLabel_nothing": { "message": "គ្មានអ្វីទេ" },
   "menuLabel_top": { "message": "កំពូល" },
   "menuLabel_sidebar": { "message": "Name" },
   "menuLabel_bottom": { "message": "បាត" },

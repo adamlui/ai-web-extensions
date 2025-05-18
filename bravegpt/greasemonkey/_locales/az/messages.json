@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Daha geniş yan panel" },
   "menuLabel_stickySidebar": { "message": "Yapışqan Kənar sahə" },
   "menuLabel_pinTo": { "message": "PİN kod" },
+  "menuLabel_nothing": { "message": "heç nə" },
   "menuLabel_top": { "message": "Üst" },
   "menuLabel_sidebar": { "message": "Kənar Hissə" },
   "menuLabel_bottom": { "message": "Alt" },

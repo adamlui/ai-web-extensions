@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "더 넓은 사이드바" },
   "menuLabel_stickySidebar": { "message": "고정 사이드바" },
   "menuLabel_pinTo": { "message": "고정 위치" },
+  "menuLabel_nothing": { "message": "진짜는 희귀 한 가짜는 어디에나" },
   "menuLabel_top": { "message": "상의" },
   "menuLabel_sidebar": { "message": "사이드바" },
   "menuLabel_bottom": { "message": "하위" },

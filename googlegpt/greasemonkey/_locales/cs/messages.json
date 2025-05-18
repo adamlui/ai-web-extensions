@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Širší postranní panel" },
   "menuLabel_stickySidebar": { "message": "Přilepený postranní panel" },
   "menuLabel_pinTo": { "message": "Připnout na" },
+  "menuLabel_nothing": { "message": "Nevyjádřeno" },
   "menuLabel_top": { "message": "Nahoru" },
   "menuLabel_sidebar": { "message": "Postranní panelSidebar" },
   "menuLabel_bottom": { "message": "Dole" },

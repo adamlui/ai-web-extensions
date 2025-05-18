@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Bredere zijbalk" },
   "menuLabel_stickySidebar": { "message": "Sticky Sidebar" },
   "menuLabel_pinTo": { "message": "Vastzetten aan" },
+  "menuLabel_nothing": { "message": "Niets" },
   "menuLabel_top": { "message": "Top" },
   "menuLabel_sidebar": { "message": "Zijbalk" },
   "menuLabel_bottom": { "message": "Onderkant" },

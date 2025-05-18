@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Bredere sidefelt" },
   "menuLabel_stickySidebar": { "message": "Klissete sidepanel" },
   "menuLabel_pinTo": { "message": "Fest til" },
+  "menuLabel_nothing": { "message": "Ingenting" },
   "menuLabel_top": { "message": "Mest lest" },
   "menuLabel_sidebar": { "message": "Sidepanel" },
   "menuLabel_bottom": { "message": "Nede" },

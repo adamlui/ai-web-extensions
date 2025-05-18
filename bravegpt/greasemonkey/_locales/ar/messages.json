@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "الشريط الجانبي الأوسع" },
   "menuLabel_stickySidebar": { "message": "شريط جانبي ثابت" },
   "menuLabel_pinTo": { "message": "قم بالتثبيت على" },
+  "menuLabel_nothing": { "message": "والو" },
   "menuLabel_top": { "message": "أعلى" },
   "menuLabel_sidebar": { "message": "الشريط الجانبي" },
   "menuLabel_bottom": { "message": "الأسفل" },

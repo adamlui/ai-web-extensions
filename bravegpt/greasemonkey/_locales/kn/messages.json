@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "ವಿಶಾಲ ಬದಿಪಟ್ಟಿ" },
   "menuLabel_stickySidebar": { "message": "ಜಿಗುಟಾದ ಬದಿಪಟ್ಟಿ" },
   "menuLabel_pinTo": { "message": "ಇದಕ್ಕೆ ಪಿನ್ ಮಾಡಿ" },
+  "menuLabel_nothing": { "message": "ಯಾವುದೂ ಇಲ್ಲ" },
   "menuLabel_top": { "message": "ಬುಗುರಿ" },
   "menuLabel_sidebar": { "message": "ಬದಿಯ ಪಟ್ಟಿName" },
   "menuLabel_bottom": { "message": "ಕೆಳಕ್ಕೆ" },

@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Leveämpi sivupalkki" },
   "menuLabel_stickySidebar": { "message": "Kiinnitetty sivupalkki" },
   "menuLabel_pinTo": { "message": "Kiinnitä kohteeseen" },
+  "menuLabel_nothing": { "message": "Ei mitään" },
   "menuLabel_top": { "message": "Yläosa" },
   "menuLabel_sidebar": { "message": "Sivupalkki" },
   "menuLabel_bottom": { "message": "Alaosassa" },

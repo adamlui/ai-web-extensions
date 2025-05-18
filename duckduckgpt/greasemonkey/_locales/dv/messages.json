@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Wider Sidebar" },
   "menuLabel_stickySidebar": { "message": "Sticky Sidebar" },
   "menuLabel_pinTo": { "message": "ޕިން ޓު" },
+  "menuLabel_nothing": { "message": "އެއްޗެއް ނޫން" },
   "menuLabel_top": { "message": "މަތި" },
   "menuLabel_sidebar": { "message": "ސައިޑްބާރ އެވެ" },
   "menuLabel_bottom": { "message": "ތިރި" },

@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Ширша бічна панель" },
   "menuLabel_stickySidebar": { "message": "Липка бічна панель" },
   "menuLabel_pinTo": { "message": "Закріпити на" },
+  "menuLabel_nothing": { "message": "Нічого" },
   "menuLabel_top": { "message": "Верх" },
   "menuLabel_sidebar": { "message": "Сайдбар" },
   "menuLabel_bottom": { "message": "Низ" },

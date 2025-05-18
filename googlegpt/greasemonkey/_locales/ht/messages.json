@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Pi laj Sidebar" },
   "menuLabel_stickySidebar": { "message": "Baton Sidebar" },
   "menuLabel_pinTo": { "message": "Pin nan" },
+  "menuLabel_nothing": { "message": "Anyen" },
   "menuLabel_top": { "message": "<g id=\"1\">[anwo]</g>" },
   "menuLabel_sidebar": { "message": "Sidebar" },
   "menuLabel_bottom": { "message": "Anba" },

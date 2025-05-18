@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Wider Sidebar" },
   "menuLabel_stickySidebar": { "message": "Sticky Sidebar" },
   "menuLabel_pinTo": { "message": "Pin i" },
+  "menuLabel_nothing": { "message": "E leai se mea" },
   "menuLabel_top": { "message": "Pito i luga" },
   "menuLabel_sidebar": { "message": "Sidebar" },
   "menuLabel_bottom": { "message": "Bottom" },

@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Hirondelle Sidebar" },
   "menuLabel_stickySidebar": { "message": "Sticky Sidebar" },
   "menuLabel_pinTo": { "message": "A yeke nzoni e sara ye tongana nyen?" },
+  "menuLabel_nothing": { "message": "Ye oko pepe" },
   "menuLabel_top": { "message": "Top ti" },
   "menuLabel_sidebar": { "message": "Sidebar ti" },
   "menuLabel_bottom": { "message": "Kota Bottom" },

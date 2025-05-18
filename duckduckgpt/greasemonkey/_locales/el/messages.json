@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Ευρύτερη πλευρική στήλη" },
   "menuLabel_stickySidebar": { "message": "Κολλώδης πλαϊνή μπάρα" },
   "menuLabel_pinTo": { "message": "Καρφίτσωμα σε" },
+  "menuLabel_nothing": { "message": "Τίποτα" },
   "menuLabel_top": { "message": "Πάνω μέρος" },
   "menuLabel_sidebar": { "message": "Πλαϊνή εργαλειοθήκη" },
   "menuLabel_bottom": { "message": "Κάτω μέρος" },

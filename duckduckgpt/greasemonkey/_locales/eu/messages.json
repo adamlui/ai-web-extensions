@@ -14,6 +14,7 @@
   "menuLabel_widerSidebar": { "message": "Alboko barra zabalagoa" },
   "menuLabel_stickySidebar": { "message": "Alboko barra itsaskorra" },
   "menuLabel_pinTo": { "message": "Ainguratu" },
+  "menuLabel_nothing": { "message": "Ezer ere ez" },
   "menuLabel_top": { "message": "Goren" },
   "menuLabel_sidebar": { "message": "Alboko barra" },
   "menuLabel_bottom": { "message": "Beheren" },
