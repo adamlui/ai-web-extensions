@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.14
+// @version                2025.5.17.15
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -385,6 +385,7 @@
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled,
                   willNotZoom = config.fgAnimationsDisabled || env.browser.isMobile
             modals.stylize() // update modal styles
+            if (!app.styles?.isConnected) document.head.append(app.styles ||= dom.create.style())
             app.styles.textContent = (
 
                 // Init vars
@@ -2126,7 +2127,7 @@
     // Create/ID/classify/listenerize/stylize APP container
     app.div = dom.create.elem('div', { id: app.slug, class: 'anchored fade-in' })
     ui.addListeners.appDiv() ; if (config.expanded) app.div.classList.add('expanded')
-    document.head.append(app.styles = dom.create.style()) ; update.appStyle()
+    update.appStyle()
     ;['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 

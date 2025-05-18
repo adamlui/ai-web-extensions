@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.17.17
+// @version                  2025.5.17.18
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/googlegpt/black/icon48.png?v=59409b2
 // @icon64                   https://assets.googlegpt.io/images/icons/googlegpt/black/icon64.png?v=59409b2
@@ -744,6 +744,7 @@
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled,
                   willNotZoom = config.fgAnimationsDisabled || env.browser.isMobile
             modals.stylize() // update modal styles
+            if (!app.styles?.isConnected) document.head.append(app.styles ||= dom.create.style())
             app.styles.textContent = (
 
                 // Init vars
@@ -3008,7 +3009,7 @@
     themes.apply(config.theme) ; ui.addListeners.appDiv()
     ;['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
         (config[mode] || config[`${mode}Sidebar`]) && app.div.classList.add(mode))
-    document.head.append(app.styles = dom.create.style()) ; update.appStyle()
+    update.appStyle()
     ;['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
