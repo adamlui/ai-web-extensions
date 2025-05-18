@@ -1,4 +1,4 @@
-// Requires dom.js + <app|get|msgChain|replyBubble|prompts|show|tooltip|xhr>
+// Requires components/replyBubble.js + lib/dom.js + <app|get|msgChain|prompts|show|tooltip|xhr>
 
 window.buttons = {
     reply: {
@@ -6,7 +6,7 @@ window.buttons = {
             types: ['copy', 'share', 'regen', 'speak'], // right-to-left
             styles: 'float: right ; cursor: pointer ;',
 
-            create() { // requires dom.js + <app|get|msgChain|prompts|show|tooltip|xhr>
+            create() { // requires lib/dom.js + <app|get|msgChain|prompts|show|tooltip|xhr>
                 if (this.share) return
 
                 // Copy button
@@ -198,7 +198,7 @@ window.buttons = {
                 }
             },
 
-            insert() { // requires dom.js + replyBubble
+            insert() { // requires components/replyBubble.js + lib/dom.js
                 if (!this.share) this.create() ; if (!replyBubble.preHeader) replyBubble.create()
                 const preHeaderBtnsDiv = dom.create.elem('div', { class: 'reply-header-btns' })
                 preHeaderBtnsDiv.append(this.copy, this.share, this.regen, this.speak)
