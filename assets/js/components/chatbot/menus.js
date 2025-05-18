@@ -121,14 +121,12 @@ window.menus = {
                 { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
                 { label: app.msgs.menuLabel_nothing, iconType: 'cancel',
                     onclick: () => { toggle.sidebar('sticky', 'off') ; toggle.anchorMode('off') },
-                    isActive: () => config.stickySidebar },
-                { label: app.msgs.menuLabel_sidebar, iconType: 'sidebar',
-                    onclick: () => toggle.sidebar('sticky'),
                     isActive: () => !config.stickySidebar && !config.anchored
                 },
+                { label: app.msgs.menuLabel_sidebar, iconType: 'sidebar',
+                    onclick: () => toggle.sidebar('sticky'), isActive: () => config.stickySidebar },
                 { label: app.msgs.menuLabel_bottom, iconType: 'anchor',
-                    onclick: () => toggle.anchorMode(),
-                    isActive: () => config.anchored }
+                    onclick: () => toggle.anchorMode(), isActive: () => config.anchored }
             ]}
         }
     },
