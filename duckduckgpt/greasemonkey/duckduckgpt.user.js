@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.13
+// @version                2025.5.17.14
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -1233,14 +1233,14 @@
             const apiBeacon = app.div.querySelector(`#${app.slug} .api-btn`)
             if (apiBeacon) apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
             if (app.div.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
-                get.reply({ msgs: msgChain, src: get.reply.src })
+                get.reply({ msgs: app.msgChain, src: get.reply.src })
         },
 
         relatedQueries() {
             settings.save('rqDisabled', !config.rqDisabled)
             update.rqVisibility()
             if (!config.rqDisabled && !app.div.querySelector(`.${app.slug}-related-queries`)) // get related queries for 1st time
-                get.related(msgChain[msgChain.length - 1]?.content || searchQuery)
+                get.related(app.msgChain[app.msgChain.length - 1]?.content || searchQuery)
                     .then(queries => show.related(queries))
                     .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
             update.replyPreMaxHeight()
@@ -1376,7 +1376,7 @@
                         && ( // exclude unstreamable APIs if !config.streamingDisabled
                             config.streamingDisabled || apis[api].streamable)
                         && !( // exclude GET APIs if msg history established while not shuffling
-                            apis[api].method == 'GET' && get.reply.src != 'shuffle' && msgChain.length > 2)
+                            apis[api].method == 'GET' && get.reply.src != 'shuffle' && app.msgChain.length > 2)
                         && !( // exclude APIs that don't support long prompts while summarizing
                             get.reply.src == 'summarize' && apis[api].supportsLongPrompts == false)
                     ))
@@ -1452,9 +1452,9 @@
                             api.tryNew(caller)
                         else { // text was shown
                             show.codeCornerBtns()
-                            if (callerAPI == caller.sender) msgChain.push({
+                            if (callerAPI == caller.sender) app.msgChain.push({
                                 time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
-                                regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
+                                regenerated: app.msgChain[app.msgChain.length -1]?.role == 'assistant'
                             })
                             api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
                             caller.status = 'done' ; caller.sender = caller.attemptCnt = null
@@ -1530,9 +1530,9 @@
                                 textToShow = textToShow.replace(apis[callerAPI].respPatterns?.watermark, '').trim()
                                 if (caller == get.reply) {
                                     show.reply({ content: textToShow, apiUsed: callerAPI }) ; show.codeCornerBtns()
-                                    msgChain.push({
+                                    app.msgChain.push({
                                         time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
-                                        regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
+                                        regenerated: app.msgChain[app.msgChain.length -1]?.role == 'assistant'
                                     })
                                 } else resolve(arrayify(textToShow))
                             }
@@ -1567,7 +1567,7 @@
             if (caller.attemptCnt < Object.keys(apis).length -+(caller == get.reply)) {
                 log.debug('Trying another endpoint...')
                 caller.attemptCnt++
-                caller(caller == get.reply ? { msgs: msgChain, src: caller.src } : get.related.query)
+                caller(caller == get.reply ? { msgs: app.msgChain, src: caller.src } : get.related.query)
                     .then(result => { if (caller == get.related) show.related(result) ; else return })
             } else {
                 log.debug('No remaining untried endpoints')
@@ -1735,7 +1735,7 @@
 
             // Get/show Related Queries if enabled/missing/on 1st get.reply() attempt only
             if (!config.rqDisabled && !rqDiv && get.reply.attemptCnt == 1)
-                get.related(msgChain[msgChain.length - 1].content)
+                get.related(app.msgChain[app.msgChain.length - 1].content)
                     .then(queries => show.related(queries))
                     .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
         }
@@ -1871,7 +1871,7 @@
         },
 
         reply({ content, standby = false, apiUsed = null }) {
-            show.reply.shareURL = null // reset to regen using longer msgChain
+            show.reply.shareURL = null // reset to regen using longer app.msgChain
             tooltip.toggle('off') // hide lingering tooltip if cursor was on corner button
             const regenSVGwrapper = app.div.querySelector('[id$=regen-btn]')?.firstChild
             if (regenSVGwrapper?.style?.animation) { // remove animation, restore cursor/tooltip
@@ -1981,10 +1981,10 @@
                                 : app.msgs.tooltip_summarizeResults
                         btn.node.onclick = () => {
                             show.reply.userInteracted = true ; show.reply.chatbarFocused = false
-                            msgChain.push({ role: 'user', content:
+                            app.msgChain.push({ role: 'user', content:
                                 btnType == 'summarize' ? prompts.create('summarizeResults')
                                                        : new URL(location.href).searchParams.get('q') })
-                            get.reply({ msgs: msgChain, src: btnType })
+                            get.reply({ msgs: app.msgChain, src: btnType })
                         }
                         btn.node.append(btn.icon, btn.textSpan) ; standbyBtnsDiv.append(btn.node)
                     })
@@ -2306,7 +2306,7 @@
             return alert
         },
 
-        api() { // requires lib/feedback.js + <apis|app|config|get|msgChain|settings>
+        api() { // requires lib/feedback.js + <apis|app|config|get|settings>
 
             // Show modal
             const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
@@ -2320,7 +2320,7 @@
                         feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`)
                         if (app.div.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
-                            get.reply({ msgs: msgChain, src: get.reply.src }) // re-send query if user alerted
+                            get.reply({ msgs: app.msgChain, src: get.reply.src }) // re-send query if user alerted
                     }
                     Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
                     return onclick
@@ -3098,16 +3098,16 @@
     }
 
     // Create/classify/fill feedback FOOTER
-    const appFooter = dom.create.elem('footer', { class: 'fade-in anchored-hidden' })
+    app.footer = dom.create.elem('footer', { class: 'fade-in anchored-hidden' })
     let footerContent = dom.create.anchor('#', app.msgs.link_shareFeedback, { target: '_self' })
     footerContent.onclick = () => modals.open('feedback')
-    appFooter.append(footerContent);
+    app.footer.append(footerContent)
 
     // Check for active TEXT CAMPAIGNS to replace footer CTA
     update.footerContent()
 
     // APPEND DDGPT + footer to DDG
-    const appElems = [app.div, appFooter]
+    const appElems = [app.div, app.footer]
     const appDivParentSelector = env.browser.isMobile || env.ui.site.isCentered ? '[data-area*=mainline]'
                                                                                 : '[class*=sidebar]'
     const appDivParent = await new Promise(resolve => {
@@ -3132,7 +3132,7 @@
     }), 1500)
 
     // AUTO-GEN reply or show STANDBY mode
-    window.msgChain = [] ; const searchQuery = new URL(location.href).searchParams.get('q')
+    app.msgChain = [] ; const searchQuery = new URL(location.href).searchParams.get('q')
     if (config.autoGet || config.autoSummarize // Auto-Gen on
         || (config.prefixEnabled || config.suffixEnabled) // or Manual-Gen on
             && [config.prefixEnabled && location.href.includes('q=%2F'), // prefix required/present
@@ -3140,11 +3140,11 @@
                     && /q=.*?(?:%3F|？|%EF%BC%9F)(?:&|$)/.test(location.href)
             ].filter(Boolean).length == (config.prefixEnabled + config.suffixEnabled) // validate both Manual-Gen modes
     ) { // auto-gen reply
-        msgChain.push({
+        app.msgChain.push({
             time: Date.now(), role: 'user',
             content: config.autoSummarize ? prompts.create('summarizeResults') : searchQuery
         })
-        get.reply({ msgs: msgChain, src: 'query' })
+        get.reply({ msgs: app.msgChain, src: 'query' })
     } else { // show Standby mode
         show.reply({ standby: true })
         if (!config.rqDisabled)

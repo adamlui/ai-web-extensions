@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.11
+// @version                2025.5.17.12
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -796,7 +796,7 @@
             const apiBeacon = app.div.querySelector(`#${app.slug} .api-btn`)
             if (apiBeacon) apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
             if (app.div.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
-                get.reply({ msgs: msgChain, src: get.reply.src })
+                get.reply({ msgs: app.msgChain, src: get.reply.src })
         },
 
         streaming() {
@@ -898,7 +898,7 @@
                         && ( // exclude unstreamable APIs if !config.streamingDisabled
                             config.streamingDisabled || apis[api].streamable)
                         && !( // exclude GET APIs if msg history established while not shuffling
-                            apis[api].method == 'GET' && get.reply.src != 'shuffle' && msgChain.length > 2)))
+                            apis[api].method == 'GET' && get.reply.src != 'shuffle' && app.msgChain.length > 2)))
             const chosenAPI = untriedAPIs[ // pick random array entry
                 Math.floor(chatgpt.randomFloat() * untriedAPIs.length)]
             if (!chosenAPI) { return log.error('No proxy APIs left untried') || null }
@@ -970,9 +970,9 @@
                             api.tryNew(caller)
                         else { // text was shown
                             show.codeCornerBtns()
-                            if (callerAPI == caller.sender) msgChain.push({
+                            if (callerAPI == caller.sender) app.msgChain.push({
                                 time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
-                                regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
+                                regenerated: app.msgChain[app.msgChain.length -1]?.role == 'assistant'
                             })
                             api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
                             caller.status = 'done' ; caller.sender = caller.attemptCnt = null
@@ -1047,9 +1047,9 @@
                                 api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
                                 textToShow = textToShow.replace(apis[callerAPI].respPatterns?.watermark, '').trim()
                                 show.reply({ content: textToShow, apiUsed: callerAPI }) ; show.codeCornerBtns()
-                                msgChain.push({
+                                app.msgChain.push({
                                     time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
-                                    regenerated: msgChain[msgChain.length -1]?.role == 'assistant'
+                                    regenerated: app.msgChain[app.msgChain.length -1]?.role == 'assistant'
                                 })
                             }
                         }
@@ -1073,7 +1073,7 @@
             if (caller.attemptCnt < Object.keys(apis).length -+(caller == get.reply)) {
                 log.debug('Trying another endpoint...')
                 caller.attemptCnt++
-                caller({ msgs: msgChain, src: caller.src })
+                caller({ msgs: app.msgChain, src: caller.src })
             } else {
                 log.debug('No remaining untried endpoints')
                 if (caller == get.reply)
@@ -1266,7 +1266,7 @@
         },
 
         reply({ content, apiUsed = null }) {
-            show.reply.shareURL = null // reset to regen using longer msgChain
+            show.reply.shareURL = null // reset to regen using longer app.msgChain
             tooltip.toggle('off') // hide lingering tooltip if cursor was on corner button
             const regenSVGwrapper = app.div.querySelector('[id$=regen-btn]')?.firstChild
             if (regenSVGwrapper?.style?.animation || regenSVGwrapper?.style?.transform) {
@@ -1641,7 +1641,7 @@
             return alert
         },
 
-        api() { // requires lib/feedback.js + <apis|app|config|get|msgChain|settings>
+        api() { // requires lib/feedback.js + <apis|app|config|get|settings>
 
             // Show modal
             const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
@@ -1655,7 +1655,7 @@
                         feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`)
                         if (app.div.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
-                            get.reply({ msgs: msgChain, src: get.reply.src }) // re-send query if user alerted
+                            get.reply({ msgs: app.msgChain, src: get.reply.src }) // re-send query if user alerted
                     }
                     Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
                     return onclick
@@ -2394,7 +2394,7 @@
     const pageType = /\/(?:dp|product)\//.test(location.href) ? 'Product'
                    : /\/b\//.test(location.href) ? 'Category' : 'Other'
     const firstQuery = pageType == 'Other' ? 'Hi there' : prompts.create(`inform${pageType}`, { mods: 'all' })
-    window.msgChain = [{ time: Date.now(), role: 'user', content: firstQuery }]
-    get.reply({ msgs: msgChain, src: 'firstQuery' })
+    app.msgChain = [{ time: Date.now(), role: 'user', content: firstQuery }]
+    get.reply({ msgs: app.msgChain, src: 'firstQuery' })
 
 })()
