@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.18
+// @version                2025.5.17.19
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -2842,23 +2842,23 @@
     update.footerContent()
 
     // APPEND DDGPT + footer to DDG
-    const appElems = [app.div, app.footer]
-    const appDivParentSelector = env.browser.isMobile || env.ui.site.isCentered ? '[data-area*=mainline]'
-                                                                                : '[class*=sidebar]'
-    const appDivParent = await new Promise(resolve => {
-        const appDivParent = document.querySelector(appDivParentSelector)
+    app.elems = [app.div, app.footer]
+    app.div.parent = {
+        selector: env.browser.isMobile || env.ui.site.isCentered ? '[data-area*=mainline]' : '[class*=sidebar]' }
+    app.div.parent.div = await new Promise(resolve => {
+        const appDivParent = document.querySelector(app.div.parent.selector)
         if (appDivParent) resolve(appDivParent)
         else new MutationObserver((_, obs) => {
-            const appDivParent = document.querySelector(appDivParentSelector)
+            const appDivParent = document.querySelector(app.div.parent.selector)
             if (appDivParent) { obs.disconnect() ; resolve(appDivParent) }
         }).observe(document.body, { childList: true, subtree: true })
     })
-    appDivParent.prepend(...appElems)
-    appElems.forEach((elem, idx) => // fade in staggered
+    app.div.parent.div.prepend(...app.elems)
+    app.elems.forEach((elem, idx) => // fade in staggered
         setTimeout(() => elem.classList.add('active'), idx * 550 - 200))
 
     // REPLACE appDivParent max-width w/ min-width for better UI
-    if (!env.browser.isMobile) Object.assign(appDivParent.style, { maxWidth: '', minWidth: '448px' })
+    if (!env.browser.isMobile) Object.assign(app.div.parent.div.style, { maxWidth: '', minWidth: '448px' })
 
     // REFERRALIZE links to support author
     setTimeout(() => document.querySelectorAll('a[href^="https://www.amazon."]').forEach(anchor => {
@@ -2901,10 +2901,10 @@
 
     // Observe sidebar for need to RAISE DDGPT as other extensions inject into it
     const sidebarObserver = new MutationObserver(() => {
-        if (appDivParent.firstChild != app.div) {
-            appDivParent.prepend(...appElems) ; sidebarObserver.disconnect() }
+        if (app.div.parent.div.firstChild != app.div) {
+            app.div.parent.div.prepend(...app.elems) ; sidebarObserver.disconnect() }
     })
-    sidebarObserver.observe(appDivParent, { subtree: true, childList: true })
+    sidebarObserver.observe(app.div.parent.div, { subtree: true, childList: true })
     setTimeout(() => sidebarObserver.disconnect(), 5000) // don't observe forever
 
 })()
