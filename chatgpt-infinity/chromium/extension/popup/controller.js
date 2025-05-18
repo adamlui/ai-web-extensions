@@ -256,20 +256,22 @@
             label: `${settings.getMsg('menuLabel_open')} ChatGPT`
         }))
 
-    // Create/append LATEST CHANGES entry
-    const latestChangesURL = `${app.urls.github}/commits/main/${
-        /chromium|firefox/.exec(browserAPI.runtime.toLowerCase())?.[0] || '' }`
-    footer.before(createMenuEntry({
-        key: 'latestChangesEntry', type: 'link', symbol: '🚀', url: latestChangesURL, helptip: latestChangesURL,
-        label: `${toTitleCase(settings.getMsg('about_latestChanges'))}...`
-    }))
-
     // Create/append COFFEE entry
     const coffeeURL = app.urls.donate['ko-fi']
     footer.before(createMenuEntry({
         key: 'coffeeEntry', type: 'link', symbol: '☕', url: coffeeURL, helptip: coffeeURL,
         label: settings.getMsg('menuLabel_buyMeAcoffee')
     }))
+
+    // Create/append REVIEW entry
+    let platform = /chromium|edge|firefox/.exec(browserAPI.runtime.toLowerCase())?.[0] || ''
+    if (platform == 'chromium') platform = 'chrome'
+    const reviewURL = app.urls.review[platform]
+    footer.before(createMenuEntry({
+        key: 'reviewEntry', type: 'link', symbol: '⭐', url: reviewURL, helptip: reviewURL,
+        label: `${settings.getMsg('btnLabel_leaveReview')}`
+    }))
+
 
     // Init FOOTER
     const footerElems = { // left-to-right
