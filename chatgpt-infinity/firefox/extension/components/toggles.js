@@ -51,7 +51,7 @@ window.toggles = {
             sidebar.querySelector('div#sidebar-header').after(this.div) ; this.status = 'inserted'
         },
 
-        stylize() { // requires lib/<chatgpt.min|dom>.js + env
+        stylize() { // requires lib/<chatgpt|dom>.js + env
             const firstLink = chatgpt.getNewChatLink()
             document.head.append(this.styles = dom.create.style(
                 `:root { /* vars */
