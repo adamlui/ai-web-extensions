@@ -141,5 +141,13 @@ window.ui = {
             || document.documentElement?.className?.includes('dark') // from DDG pref
             || document.querySelector('meta[name="color-scheme"]')?.content?.includes('dark') // from Google pref
             || window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    },
+
+    visibilizeOverflow() { // used by BraveGPT for boundless hover fx
+        let appAncestor = appDivParent
+        while (appAncestor) {
+            if (getComputedStyle(appAncestor).overflow != 'visible') appAncestor.style.overflow = 'visible'
+            appAncestor = appAncestor.parentElement
+        }
     }
 };
