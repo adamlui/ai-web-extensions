@@ -44,11 +44,11 @@ window.buttons = {
     },
 
     animate() { // used in lib/sync.configToUI() on Button Animations toggle-on
+        const staggerInt = 75 // ms
         const btnHoverStyles = new RegExp(`.${this.class}:hover\\s*\\{([^}]*)\\}`, 'm')
             .exec(styles.tweaks.node.innerText)?.[1].trim()
         this.types.slice().reverse().forEach((btnType, idx) => {
             const btn = this[btnType] ; if (!btn) return
-            const staggerInt = 75 // ms
             setTimeout(() => { // apply/remove fx
                 const ogBtnStyle = btn.style.cssText ; btn.style.cssText += btnHoverStyles
                 setTimeout(() => btn.style.cssText = ogBtnStyle, 150)
