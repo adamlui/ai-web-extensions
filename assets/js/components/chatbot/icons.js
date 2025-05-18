@@ -168,7 +168,7 @@ window.icons = {
     googlegpt: {
         create(color = '') {
             const icon = dom.create.elem('img') ; icon.id = `${app.slug}-icon`
-            icons.googleGPT.update(icon, color)
+            icons.googlegpt.update(icon, color)
             return icon
         },
 
