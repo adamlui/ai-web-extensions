@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.17.15
+// @version               2025.5.17.16
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -1037,9 +1037,9 @@
                     const newFooterContent = destinationURL ? dom.create.anchor(destinationURL)
                                                             : dom.create.elem('span')
                     newFooterContent.className = braveClassList
-                    footerContent.replaceWith(newFooterContent) ; footerContent = newFooterContent
-                    footerContent.textContent = chosenAd.text
-                    footerContent.setAttribute('title', chosenAd.tooltip || '')
+                    app.footerContent.replaceWith(newFooterContent) ; app.footerContent = newFooterContent
+                    app.footerContent.textContent = chosenAd.text
+                    app.footerContent.setAttribute('title', chosenAd.tooltip || '')
                     adSelected = true ; break // out of group loop
                 }
                 if (adSelected) break // out of campaign loop
@@ -1310,14 +1310,14 @@
 
     // Define API functions
 
-    const api = {
+    const api = { // requires lib/generate-ip.js + apis
 
         clearTimedOut(triedAPIs) { // to retry on new queries
             triedAPIs.splice(0, triedAPIs.length, // empty apiArray
                 ...triedAPIs.filter(entry => Object.values(entry)[0] != 'timeout')) // replace w/ err'd APIs
         },
 
-        createHeaders(api) {
+        createHeaders(api) { // requires lib/generate-ip.js + apis
             const ip = ipv4.generate({ verbose: false })
             const headers = {
                 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate, br, zstd',
@@ -1439,7 +1439,7 @@
                             caller.sender = caller.sender || callerAPI // app is waiting, become sender
                             if (caller.sender == callerAPI // app is sending from this api
                                 && textToShow.trim() != '' // empty reply chunk not read
-                            ) show.reply({ content: textToShow, footerContent, apiUsed: callerAPI })
+                            ) show.reply({ content: textToShow, apiUsed: callerAPI })
                         }
                     } catch (err) { log.error('Error showing stream', err.message) }
 
@@ -1526,7 +1526,7 @@
                                 api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
                                 textToShow = textToShow.replace(apis[callerAPI].respPatterns?.watermark, '').trim()
                                 if (caller == get.reply) {
-                                    show.reply({ content: textToShow, footerContent, apiUsed: callerAPI })
+                                    show.reply({ content: textToShow, apiUsed: callerAPI })
                                     show.codeCornerBtns()
                                     app.msgChain.push({
                                         time: Date.now(), role: 'assistant', content: textToShow, api: callerAPI,
@@ -1871,7 +1871,7 @@
             }
         },
 
-        reply({ content, footerContent, standby = false, apiUsed = null }) {
+        reply({ content, standby = false, apiUsed = null }) {
             show.reply.shareURL = null // reset to regen using longer app.msgChain
             tooltip.toggle('off') // hide lingering tooltip if cursor was on corner button
             const regenSVGwrapper = app.div.querySelector('[id$=regen-btn]')?.firstChild
@@ -2026,7 +2026,7 @@
 
                 // Init/fill/append footer
                 app.footer = app.div.querySelector('footer') || dom.create.elem('footer')
-                app.footer.append(footerContent)
+                app.footer.append(app.footerContent)
                 if (!app.div.querySelector('footer')) app.div.append(app.footer)
 
                 // Add listeners
@@ -3115,8 +3115,8 @@
 
     // Init footer CTA to share feedback
     const braveClassList = 'feedback svelte-8js1iq'
-    let footerContent = dom.create.anchor('#', app.msgs.link_shareFeedback, { target: '_self', class: braveClassList })
-    footerContent.onclick = () => modals.open('feedback')
+    app.footerContent = dom.create.anchor('#', app.msgs.link_shareFeedback, { target: '_self', class: braveClassList })
+    app.footerContent.onclick = () => modals.open('feedback')
 
     // REFERRALIZE links to support author
     setTimeout(() => document.querySelectorAll('a[href^="https://www.amazon."]').forEach(anchor => {
@@ -3139,7 +3139,7 @@
         })
         get.reply({ msgs: app.msgChain, src: 'query' })
     } else { // show Standby mode
-        show.reply({ standby: true, footerContent })
+        show.reply({ standby: true })
         if (!config.rqDisabled)
             get.related(searchQuery)
                 .then(queries => show.related(queries))
