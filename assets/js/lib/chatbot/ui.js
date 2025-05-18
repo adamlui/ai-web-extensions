@@ -143,8 +143,8 @@ window.ui = {
             || window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     },
 
-    visibilizeOverflow() { // used by BraveGPT for boundless hover fx
-        let appAncestor = appDivParent
+    visibilizeOverflow() { // used by BraveGPT for boundless hover fx // requires app
+        let appAncestor = app.parentDiv
         while (appAncestor) {
             if (getComputedStyle(appAncestor).overflow != 'visible') appAncestor.style.overflow = 'visible'
             appAncestor = appAncestor.parentElement
