@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.15
+// @version                2025.5.17.16
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -1037,14 +1037,14 @@
                     }
 
                     // Update footer content
-                    footerContent.setAttribute('class', '') // reset for re-fade
+                    app.footerContent.setAttribute('class', '') // reset for re-fade
                     const newFooterContent = destinationURL ? dom.create.anchor(destinationURL)
                                                             : dom.create.elem('span')
-                    footerContent.replaceWith(newFooterContent) ; footerContent = newFooterContent
-                    footerContent.classList.add('fade-in', 'anchored-hidden')
-                    footerContent.textContent = chosenAd.text
-                    footerContent.setAttribute('title', chosenAd.tooltip || '')
-                    setTimeout(() => footerContent.classList.add('active'), 100) // to trigger fade
+                    app.footerContent.replaceWith(newFooterContent) ; app.footerContent = newFooterContent
+                    app.footerContent.classList.add('fade-in', 'anchored-hidden')
+                    app.footerContent.textContent = chosenAd.text
+                    app.footerContent.setAttribute('title', chosenAd.tooltip || '')
+                    setTimeout(() => app.footerContent.classList.add('active'), 100) // to trigger fade
                     adSelected = true ; break
                 }
                 if (adSelected) break // out of campaign loop after ad selection
@@ -3099,9 +3099,9 @@
 
     // Create/classify/fill feedback FOOTER
     app.footer = dom.create.elem('footer', { class: 'fade-in anchored-hidden' })
-    let footerContent = dom.create.anchor('#', app.msgs.link_shareFeedback, { target: '_self' })
-    footerContent.onclick = () => modals.open('feedback')
-    app.footer.append(footerContent)
+    app.footerContent = dom.create.anchor('#', app.msgs.link_shareFeedback, { target: '_self' })
+    app.footerContent.onclick = () => modals.open('feedback')
+    app.footer.append(app.footerContent)
 
     // Check for active TEXT CAMPAIGNS to replace footer CTA
     update.footerContent()
