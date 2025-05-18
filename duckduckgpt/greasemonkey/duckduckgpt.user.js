@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.18.2
+// @version                2025.5.18.3
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -200,8 +200,8 @@
 // @require                https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require                https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0b0a95c/assets/js/components/chatbot/buttons.js#sha256-asY0ofyKM5sKrShlMpN2hosAh8USqk+/cwx2+ToWicU=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@fe9371a/assets/js/components/chatbot/icons.js#sha256-jX3E30akiMj9Sd4UrrYw5/mVOMr9u1+ul7cJrXfbSnQ=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/menus.js#sha256-WmMykl3i2NW2z0q9RnTFGFq175w2mNWN8hnUuh9NFZM=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3732152/assets/js/components/chatbot/icons.js#sha256-Jc4/I4f7lPj6oB9SKYRbuaDxI5ahOhDjM3A3V86pISU=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@cd3d1a3/assets/js/components/chatbot/menus.js#sha256-vQnBP/BGY6emBG25Y3strr7WP3LNbR/qrGHl8Jm8FV4=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@97173cc/assets/js/components/chatbot/replyBubble.js#sha256-sOVj/ESmlNMLCA13w2ZzqP5hVtcnqlQpbY9yvkFWNek=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/tooltip.js#sha256-xrfMTFfKqdqN926lng78y9ECco6ccpi3Mz9LBaTP7Ws=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d7da881/assets/js/lib/chatbot/api.js#sha256-FUp9fE9ogQ1IOACKoG52mU14Xm71089WPbreEcRzHzE=
@@ -209,7 +209,7 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f4da9d4/assets/js/lib/chatbot/log.js#sha256-kjt26UXbx44I0/iDOf50F/LbRtsYcSwMHrexImR4D5A=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@199128d/assets/js/lib/chatbot/prompts.js#sha256-6U2C3dVLpYixR3UCNABCfvNpRa/9gJZYR8fElXmhGVk=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/chatbot/session.js#sha256-S6MOdBjx8Hci4GDvYl4JlhSdrDk2oaRLU9DrdxyiIss=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0b0a95c/assets/js/lib/chatbot/ui.js#sha256-RfXkIFfCASiLEkLL5V5f1DVB7rOi1w2pC6PTfpadaXk=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3732152/assets/js/lib/chatbot/ui.js#sha256-j2G0yOX1nHMYmwhV9oLlycdX05oZHLxqCW4voSfbchQ=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@b1e28ff/assets/js/lib/chatbot/userscript.js#sha256-SytCWuD3YOcYFDaVfpF8Pq67zDbV8cZcIENz+0zpZ40=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/crypto-utils.js/dist/crypto-utils.min.js#sha256-xRkis9u0tYeTn/GBN4sqVRqcCdEhDUN16/PlCy9wNnk=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/dom.js/dist/dom.min.js#sha256-IGNj9Eoecq7QgY7SAs75wONajgN9Wg0NmCjKTCfu9CY=
@@ -275,7 +275,7 @@
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
-            app: 'f6daee0', // for cached <app|messages>.json
+            app: '8082cb8', // for cached <app|messages>.json
             aiweb: '2a51ece' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         }
     }

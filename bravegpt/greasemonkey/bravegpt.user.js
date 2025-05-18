@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.18.4
+// @version               2025.5.18.5
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -199,8 +199,8 @@
 // @require               https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require               https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0b0a95c/assets/js/components/chatbot/buttons.js#sha256-asY0ofyKM5sKrShlMpN2hosAh8USqk+/cwx2+ToWicU=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@fe9371a/assets/js/components/chatbot/icons.js#sha256-jX3E30akiMj9Sd4UrrYw5/mVOMr9u1+ul7cJrXfbSnQ=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/menus.js#sha256-WmMykl3i2NW2z0q9RnTFGFq175w2mNWN8hnUuh9NFZM=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3732152/assets/js/components/chatbot/icons.js#sha256-Jc4/I4f7lPj6oB9SKYRbuaDxI5ahOhDjM3A3V86pISU=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@cd3d1a3/assets/js/components/chatbot/menus.js#sha256-vQnBP/BGY6emBG25Y3strr7WP3LNbR/qrGHl8Jm8FV4=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@97173cc/assets/js/components/chatbot/replyBubble.js#sha256-sOVj/ESmlNMLCA13w2ZzqP5hVtcnqlQpbY9yvkFWNek=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/tooltip.js#sha256-xrfMTFfKqdqN926lng78y9ECco6ccpi3Mz9LBaTP7Ws=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d7da881/assets/js/lib/chatbot/api.js#sha256-FUp9fE9ogQ1IOACKoG52mU14Xm71089WPbreEcRzHzE=
@@ -274,7 +274,7 @@
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
-            app: 'b62177e', // for cached <app|messages>.json
+            app: '70b39a1', // for cached <app|messages>.json
             aiweb: '2a51ece' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         }
     }
