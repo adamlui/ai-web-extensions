@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.16
+// @version                2025.5.18
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1139,7 +1139,7 @@
             if (!show.reply.updatedAPIinHeader) {
                 show.reply.updatedAPIinHeader = true
                 const preHeaderLabel = app.div.querySelector('.reply-header-txt'),
-                      apiBeacon = dom.create.elem('span', { class: 'api-btn' })
+                      apiBeacon = dom.create.elem('span', { class: 'api-btn', style: 'cursor: pointer' })
                 apiBeacon.textContent = '⦿'
                 apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = menus.hover.toggle
                 apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
