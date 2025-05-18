@@ -22,7 +22,7 @@ window.icons = {
             return log.error(`No <svg|src> data found for key '${key}'`)
     },
 
-    app: {
+    app: { // requires lib/dom.js + GM_getResourceText()
 
         amazongpt: {
             create(color = '') {
