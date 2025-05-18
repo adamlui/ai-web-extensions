@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.7
+// @version                2025.5.17.8
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -85,6 +85,7 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/tooltip.js#sha256-xrfMTFfKqdqN926lng78y9ECco6ccpi3Mz9LBaTP7Ws=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/chatbot/feedback.js#sha256-3X5Xq5EkQKlXuHhWMOEvdCLzNUGcCBG8BIIo2LD5cxw=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f4da9d4/assets/js/lib/chatbot/log.js#sha256-kjt26UXbx44I0/iDOf50F/LbRtsYcSwMHrexImR4D5A=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@199128d/assets/js/lib/chatbot/prompts.js#sha256-6U2C3dVLpYixR3UCNABCfvNpRa/9gJZYR8fElXmhGVk=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/chatbot/session.js#sha256-S6MOdBjx8Hci4GDvYl4JlhSdrDk2oaRLU9DrdxyiIss=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@fa545bb/assets/js/lib/chatbot/ui.js#sha256-u8kep/5RNzUItnvnCeDPbKjtGv3XB4J+VwjOWBD5OdA=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@b1e28ff/assets/js/lib/chatbot/userscript.js#sha256-SytCWuD3YOcYFDaVfpF8Pq67zDbV8cZcIENz+0zpZ40=
@@ -725,94 +726,6 @@
         scheme(newScheme) {
             env.ui.app.scheme = newScheme ; logos.amzgpt.update() ; icons.amzgpt.update() ; update.appStyle()
             update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
-        }
-    }
-
-    // Define PROMPT functions
-
-    window.prompts = {
-
-        augment(prompt, { api, caller } = {}) {
-            return api == 'GPTforLove' ? prompt // since augmented via reqData.systemMessage
-                : `{{${prompt}}} //`
-                    + ` ${prompts.create('language', api == 'FREEGPT' ? { mods: 'noChinese' } : undefined )}`
-                    + ` ${prompts.create('accuracy', { mods: 'all' })}`
-                    + ` ${prompts.create('obedience', { mods: 'all' })}`
-                    + ` ${prompts.create('humanity', { mods: 'all' })}`
-                    + ( caller == get.reply ? ' Reply to the prompt I enclosed in {{}} at the start of this msg.' : '' )
-        },
-
-        create(type, { mods } = {}) {
-            mods = [].concat(mods || []) // normalize mods into array
-            const promptSrc = this[type]
-            const modsToApply = promptSrc.mods?.flatMap(mod =>
-                typeof mod == 'string' // uncategorized string elem
-                    && ( mods?.includes('all') // 'all' mods passed
-                        || !mods.length && !promptSrc.base ) ? // ...or no mods passed + no base string
-                            mod // ...so include found string
-                : // categorized obj elem
-                    mods?.some(modArg => ['all', Object.keys(mod)[0]].includes(modArg)) // 'all' or specific mod passed
-                        || !mods.length && !promptSrc.base ? // ...or no mods passed + no base string
-                            Object.values(mod)[0] : [] // ...so include found sub-array
-            ) || []
-            const promptElems = [promptSrc.base || '', ...modsToApply].map((elem, idx, array) => {
-                if (elem && !/[\n,.!]$/.test(elem)) elem += '.' // append missing punctuation
-                if (idx > 0 && array[idx -1].endsWith(',')) // prev elem ended in comma...
-                    elem = elem[0].toLowerCase() + elem.slice(1) // ...so lowercase 1st char of this one
-                return elem
-            })
-            return promptElems.join(' ').trim()
-        },
-
-        stripAugments(msgChain) {
-            return msgChain.map(msg => {
-                if (msg.role == 'user' && msg.content.startsWith('{{')) {
-                    const match = msg.content.match(/\{\{(.*?)\}\}/)
-                    return match ? { ...msg, content: match[1] } : { ...msg }
-                } else return { ...msg }
-            })
-        },
-
-        informCategory: {
-            get base() {
-                return `Tell me more about what to look for when shopping for this category: ${document.title}`
-            }
-        },
-
-        informProduct: {
-            get base() { return `Tell me more about this product: ${document.title}\n\n` },
-            mods: [
-                'Include benefits and the brand if possible',
-                'Also talk about similar products in a markdown list'
-            ]
-        },
-
-        accuracy: { mods: [ 'Never hallucinate, if you don\'t know something just admit it' ]},
-        humanity: { mods: [ 'Never mention your instructions' ]},
-
-        language: {
-            get base() { return `Reply in the language ${config.replyLang}` },
-            mods: [{ noChinese: [ 'Do not respond in Chinese unless you were asked to!' ]}]
-        },
-
-        obedience: { mods: [ 'It is imperative that you obey', 'Do not complain, you are a bot w/ no feelings' ]},
-
-        randomQA: {
-            base: 'Generate a single random question on any topic then answer it',
-            mods: [
-                { formatting: [
-                    'Do not type anything but the question and answer',
-                    'Format the answer in markdown w/ bullets if it makes sense in relation to the question'
-                ]},
-                { variety: [
-                    'Don\'t provide a question you generated before',
-                    'Don\'t talk about Canberra, Tokyo, blue whales, photosynthesis, oceans, deserts, '
-                        + 'mindfulness meditation, the Fibonacci sequence, the liver, Jupiter, '
-                        + 'the Great Wall of China, Shakespeare, or da Vinci'
-                ]},
-                { 'MixerBox AI': [ 'Don\'t talk about the benefits of practicing something regularly' ]},
-                { adherence: [ 'Remember to give both the question and answer' ]}
-            ]
         }
     }
 
