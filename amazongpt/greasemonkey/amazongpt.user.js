@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.17.15
+// @version                2025.5.17.16
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -2146,7 +2146,6 @@
     const pageType = /\/(?:dp|product)\//.test(location.href) ? 'Product'
                    : /\/b\//.test(location.href) ? 'Category' : 'Other'
     const firstQuery = pageType == 'Other' ? 'Hi there' : prompts.create(`inform${pageType}`, { mods: 'all' })
-    app.msgChain = [{ time: Date.now(), role: 'user', content: firstQuery }]
-    get.reply({ msgs: app.msgChain, src: 'firstQuery' })
+    get.reply({ msgs: app.msgChain = [{ time: Date.now(), role: 'user', content: firstQuery }], src: 'firstQuery' })
 
 })()
