@@ -22,24 +22,64 @@ window.icons = {
             return log.error(`No <svg|src> data found for key '${key}'`)
     },
 
-    amazongpt: {
-        create(color = '') {
-            const icon = dom.create.elem('img') ; icon.id = `${app.slug}-icon`
-            icons.amazongpt.update(icon, color)
-            return icon
+    app: {
+
+        amazongpt: {
+            create(color = '') {
+                const icon = dom.create.elem('img') ; icon.id = `${app.slug}-icon`
+                icons.amazongpt.update(icon, color)
+                return icon
+            },
+
+            update(targetIcons = [], color = '') {
+                if (!Array.isArray(targetIcons)) targetIcons = [targetIcons]
+                if (!targetIcons.length) targetIcons = document.querySelectorAll(`#${app.slug}-icon`)
+                targetIcons.forEach(icon => {
+                    icon.src = GM_getResourceText(`amzgpt${
+                        color == 'white' || !color && env.ui.app.scheme == 'dark' ? 'DS' : 'LS' }icon`)
+                    icon.style.filter = icon.style.webkitFilter = (
+                        'drop-shadow(5px 5px 15px rgba(0,0,0,0.3))' // drop shadow
+                        + ( env.ui.app.scheme == 'dark' ? // RGB shift
+                            'drop-shadow(2px 1px 0 #ff5b5b) drop-shadow(-1px -1px 0 rgb(73,215,73,0.75))' : '' ))
+                })
+            }
         },
 
-        update(targetIcons = [], color = '') {
-            if (!Array.isArray(targetIcons)) targetIcons = [targetIcons]
-            if (!targetIcons.length) targetIcons = document.querySelectorAll(`#${app.slug}-icon`)
-            targetIcons.forEach(icon => {
-                icon.src = GM_getResourceText(`amzgpt${
-                    color == 'white' || !color && env.ui.app.scheme == 'dark' ? 'DS' : 'LS' }icon`)
-                icon.style.filter = icon.style.webkitFilter = (
-                    'drop-shadow(5px 5px 15px rgba(0,0,0,0.3))' // drop shadow
-                    + ( env.ui.app.scheme == 'dark' ? // RGB shift
-                        'drop-shadow(2px 1px 0 #ff5b5b) drop-shadow(-1px -1px 0 rgb(73,215,73,0.75))' : '' ))
-            })
+        bravegpt: {
+            create() {
+                const icon = dom.create.elem('img')
+                icon.src = GM_getResourceText('bgptIcon')
+                return icon
+            }
+        },
+
+        duckduckgpt: {
+            create() {
+                const icon = dom.create.elem('img')
+                icon.src = GM_getResourceText('ddgptIcon')
+                return icon
+            }
+        },
+
+        googlegpt: {
+            create(color = '') {
+                const icon = dom.create.elem('img') ; icon.id = `${app.slug}-icon`
+                icons.googlegpt.update(icon, color)
+                return icon
+            },
+
+            update(targetIcons = [], color = '') {
+                if (!Array.isArray(targetIcons)) targetIcons = [targetIcons]
+                if (!targetIcons.length) targetIcons = document.querySelectorAll(`#${app.slug}-icon`)
+                targetIcons.forEach(icon => {
+                    icon.src = GM_getResourceText(`ggptIcon${color ? color[0].toUpperCase() + color.slice(1)
+                        : env.ui.app.scheme == 'dark' ? 'White' : 'Black' }`)
+                    icon.style.filter = icon.style.webkitFilter = (
+                        'drop-shadow(5px 5px 15px rgba(0,0,0,0.3))' // drop shadow
+                        + 'drop-shadow(2px 1px 0 #ff5b5b) drop-shadow(-1px -1px 0 rgb(73,215,73,0.75))' // RGB shift
+                            + ( env.ui.app.scheme == 'light' ? 'drop-shadow(white 1px 1px)' : '' ))
+                })
+            }
         }
     },
 
@@ -87,14 +127,6 @@ window.icons = {
     arrowShare: {
         svg: { viewBox: '0 0 24 24', fill: 'none' },
         elems: [{ path: { 'stroke-width': 2, d: 'M14.7441 16.4211C14.5876 16.7477 14.5 17.1136 14.5 17.5C14.5 18.8807 15.6193 20 17 20C18.3807 20 19.5 18.8807 19.5 17.5C19.5 16.1193 18.3807 15 17 15C16.0057 15 15.1469 15.5805 14.7441 16.4211ZM14.7441 16.4211L7.75586 13.0789M14.7441 7.57889C15.1469 8.41949 16.0057 9 17 9C18.3807 9 19.5 7.88071 19.5 6.5C19.5 5.11929 18.3807 4 17 4C15.6193 4 14.5 5.11929 14.5 6.5C14.5 6.88637 14.5876 7.25226 14.7441 7.57889ZM14.7441 7.57889L7.75586 10.9211M7.75586 10.9211C7.35311 10.0805 6.49435 9.5 5.5 9.5C4.11929 9.5 3 10.6193 3 12C3 13.3807 4.11929 14.5 5.5 14.5C6.49435 14.5 7.35311 13.9195 7.75586 13.0789M7.75586 10.9211C7.91235 11.2477 8 11.6136 8 12C8 12.3864 7.91235 12.7523 7.75586 13.0789' }}]
-    },
-
-    bravegpt: {
-        create() {
-            const icon = dom.create.elem('img')
-            icon.src = GM_getResourceText('bgptIcon')
-            return icon
-        }
     },
 
     bug: {
@@ -147,14 +179,6 @@ window.icons = {
         ]
     },
 
-    duckduckgpt: {
-        create() {
-            const icon = dom.create.elem('img')
-            icon.src = GM_getResourceText('ddgptIcon')
-            return icon
-        }
-    },
-
     download: {
         svg: { viewBox: '1 1 14 14' },
         elems: [
@@ -171,27 +195,6 @@ window.icons = {
             { path: { stroke: 'none', d: 'M234.997 448.199h-55.373a6.734 6.734 0 0 1-6.556-5.194l-11.435-48.682a6.734 6.734 0 0 0-6.556-5.194H86.063a6.734 6.734 0 0 0-6.556 5.194l-11.435 48.682a6.734 6.734 0 0 1-6.556 5.194H7.74c-4.519 0-7.755-4.363-6.445-8.687l79.173-261.269a6.734 6.734 0 0 1 6.445-4.781h69.29c2.97 0 5.59 1.946 6.447 4.79l78.795 261.269c1.303 4.322-1.933 8.678-6.448 8.678zm-88.044-114.93l-19.983-84.371c-1.639-6.921-11.493-6.905-13.111.02l-19.705 84.371c-.987 4.224 2.22 8.266 6.558 8.266H140.4c4.346 0 7.555-4.056 6.553-8.286z' }},
             { path: { stroke: 'none', d: 'M502.572 448.199h-77.475a9.423 9.423 0 0 1-9.173-7.268l-16-68.114a9.423 9.423 0 0 0-9.173-7.268H294.19a9.423 9.423 0 0 0-9.173 7.268l-16 68.114a9.423 9.423 0 0 1-9.173 7.268h-75.241c-6.322 0-10.851-6.104-9.017-12.155L286.362 70.491a9.422 9.422 0 0 1 9.017-6.69h96.947a9.422 9.422 0 0 1 9.021 6.702l110.245 365.554c1.825 6.047-2.703 12.142-9.02 12.142zM379.385 287.395l-27.959-118.047c-2.293-9.683-16.081-9.661-18.344.029l-27.57 118.047c-1.38 5.91 3.106 11.565 9.175 11.565h55.529c6.082-.001 10.571-5.676 9.169-11.594z' }}
         ]
-    },
-
-    googlegpt: {
-        create(color = '') {
-            const icon = dom.create.elem('img') ; icon.id = `${app.slug}-icon`
-            icons.googlegpt.update(icon, color)
-            return icon
-        },
-
-        update(targetIcons = [], color = '') {
-            if (!Array.isArray(targetIcons)) targetIcons = [targetIcons]
-            if (!targetIcons.length) targetIcons = document.querySelectorAll(`#${app.slug}-icon`)
-            targetIcons.forEach(icon => {
-                icon.src = GM_getResourceText(`ggptIcon${color ? color[0].toUpperCase() + color.slice(1)
-                    : env.ui.app.scheme == 'dark' ? 'White' : 'Black' }`)
-                icon.style.filter = icon.style.webkitFilter = (
-                    'drop-shadow(5px 5px 15px rgba(0,0,0,0.3))' // drop shadow
-                    + 'drop-shadow(2px 1px 0 #ff5b5b) drop-shadow(-1px -1px 0 rgb(73,215,73,0.75))' // RGB shift
-                        + ( env.ui.app.scheme == 'light' ? 'drop-shadow(white 1px 1px)' : '' ))
-            })
-        }
     },
 
     languageChars: {
