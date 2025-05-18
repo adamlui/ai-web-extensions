@@ -29,7 +29,7 @@
                 fromBG && settings.save('infinityMode', false) // disable Infinity mode 1st to not transfer between tabs
                 sync.configToUI(options)
             }
-        }[action]?.() || console.warn(`Received unsupported action: "${action}"`))
+        }[action]?.() || console.warn(`Chome msg listener warning: "${action}"`))
     })
 
     // Import APP data
