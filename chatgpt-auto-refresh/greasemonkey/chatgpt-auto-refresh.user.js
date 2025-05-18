@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.17
+// @version             2025.5.18
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -785,7 +785,7 @@
 
                     // Element styles
                   + `.${this.class} { /* parent div */
-                        max-height: 37px ; margin: 2px 0 ; user-select: none ; cursor: pointer ;
+                        width: auto ; max-height: 37px ; margin: 2px 0 ; user-select: none ; cursor: pointer ;
                         opacity: 1 !important ; /* overcome OpenAI click-dim */
                         justify-content: unset ; /* overcome OpenAI .justify-center */
                         flex-grow: unset } /* overcome OpenAI .grow */
@@ -820,7 +820,7 @@
                             -o-transition: 0.4s ; -ms-transition: 0.4s }
                     .${this.class} > label { /* toggle label */
                         cursor: pointer ; overflow: hidden ; text-overflow: ellipsis ; white-space: nowrap ;
-                        color: black ; padding: 0 12px ; flex-grow: 1 ;
+                        color: black ; padding: 0 8px ; flex-grow: 1 ;
                         ${ firstLink ? 'font-size: var(--text-sm)' : 'font-size: 0.875rem ; font-weight: 600' }}`
 
                     // Dark scheme mods
