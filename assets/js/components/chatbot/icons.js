@@ -1,8 +1,8 @@
-// Requires dom.js + log
+// Requires lib<dom|log>.js + GM_getResourceText()
 
 window.icons = {
 
-    create({ key, size = 18, width, height, ...otherAttrs }) {
+    create({ key, size = 18, width, height, ...otherAttrs }) { // requires lib/<dom|log>.js
         if (!key) return log.error('Option \'key\' required by icons.create()')
         const icon = {
             data: this[key], attrs: { width: width || size, height: height || size, class: key, ...otherAttrs }}
