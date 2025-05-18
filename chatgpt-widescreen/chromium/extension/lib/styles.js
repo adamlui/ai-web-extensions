@@ -47,7 +47,7 @@ window.styles = {
         autoAppend: true,
         get css() { // requires <config|env|sites>
             const { site } = env, { [site]: { selectors }} = sites
-            return config.extensionDisabled || !config[`${env.site}Disabled`] ? '' : `
+            return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
                 ${ site == 'chatgpt' ?
                     `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
                         overflow: clip !important }` : '' }
