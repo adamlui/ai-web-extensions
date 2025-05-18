@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.17.5
+// @version               2025.5.17.6
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -201,6 +201,7 @@
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/buttons.js#sha256-aoR85g9x+0vbwzAhDWsBwGP8jLbMNNOukOfuR3hkC98=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/icons.js#sha256-BqoVngaqcnEYbzSmCwngdXV37PEvt3AJ6RwMhuEKxv4=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/menus.js#sha256-WmMykl3i2NW2z0q9RnTFGFq175w2mNWN8hnUuh9NFZM=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@97173cc/assets/js/components/chatbot/replyBubble.js#sha256-sOVj/ESmlNMLCA13w2ZzqP5hVtcnqlQpbY9yvkFWNek=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/tooltip.js#sha256-xrfMTFfKqdqN926lng78y9ECco6ccpi3Mz9LBaTP7Ws=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/chatbot/feedback.js#sha256-3X5Xq5EkQKlXuHhWMOEvdCLzNUGcCBG8BIIo2LD5cxw=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f4da9d4/assets/js/lib/chatbot/log.js#sha256-kjt26UXbx44I0/iDOf50F/LbRtsYcSwMHrexImR4D5A=
@@ -669,7 +670,7 @@
         }
     }
 
-    const update = {
+    window.update = {
 
         replyPreMaxHeight() { // for various mode toggles
             const replyPre = app.div.querySelector('.reply-pre'),
@@ -3320,25 +3321,6 @@
                     '', '', modals.update.width
                 )
             }
-        }
-    }
-
-    window.replyBubble = { // requires dom.js + update
-
-        create() { // requires dom.js
-            if (this.bubbleDiv) return
-            this.replyTip = dom.create.elem('span', { class: 'reply-tip' })
-            this.bubbleDiv = dom.create.elem('div', { class: 'reply-bubble bubble-elem' })
-            this.preHeader = dom.create.elem('div', { class: 'reply-header bubble-elem' })
-            this.preHeader.append(dom.create.elem('span', { class: 'reply-header-txt no-user-select' }))
-            buttons.reply.bubble.insert()
-            this.replyPre = dom.create.elem('pre', { class: 'reply-pre bubble-elem' })
-            this.bubbleDiv.append(this.preHeader, this.replyPre)
-        },
-
-        insert() { // requires update
-            if (!this.bubbleDiv) this.create()
-            app.div.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
         }
     }
 
