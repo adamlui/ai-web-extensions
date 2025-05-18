@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.17.6
+// @version               2025.5.17.7
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -420,136 +420,146 @@
 
     // Define UI functions
 
-    const addListeners = {
+    const ui = {
 
-        appDiv() {
-            app.div.addEventListener(inputEvents.down, event => { // to dismiss visible font size slider
-                if (event.button != 0) return // prevent non-left-click dismissal
-                if (document.getElementById(`${app.slug}-font-size-slider-track`) // slider is visible
-                    && !event.target.closest('[id*=font-size]') // not clicking slider elem
-                    && getComputedStyle(event.target).cursor != 'pointer') // ...or other interactive elem
-                        fontSizeSlider.toggle('off')
-            })
-            app.div.onmouseover = app.div.onmouseout = update.bylineVisibility
-        },
-
-        btns: {
-            appHeader() {
-                app.div.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
-                    const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
-
-                    // Add click listener
-                    btn.onclick = {
-                        about: () => modals.open('about'),
-                        arrows: event => { toggle.expandedMode() ; tooltip.update(event.currentTarget) },
-                        chevron: () => {
-                            if (app.div.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
-                                fontSizeSlider.toggle('off')
-                            toggle.minimized()
-                        },
-                        pin: () => (btn.onmouseenter = btn.onmouseleave = btn.onclick = menus.hover.toggle),
-                        settings: () => modals.open('settings'),
-                        'font-size': () => fontSizeSlider.toggle(),
-                        wsb: event => { toggle.sidebar('wider') ; tooltip.update(event.currentTarget) }
-                    }[btnType]
-
-                    // Add hover listener
-                    if (!env.browser.isMobile)
-                        btn.onmouseenter = btn.onmouseleave = btnType == 'pin' ? menus.hover.toggle : tooltip.toggle
-
-                     // Add zoom/fade-out to corner buttons
-                    if (/about|settings/.test(btn.id)) btn.onmouseup = () => {
-                        if (config.fgAnimationsDisabled) return
-                        btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
-                        if (env.browser.isFF) // end animation 0.08s early to avoid icon overgrowth
-                            setTimeout(handleAnimationEnded, 0.12 *1000)
-                        else btn.onanimationend = handleAnimationEnded
-                        function handleAnimationEnded() {
-                            Object.assign(btn.style, { opacity: '0', visibility: 'hidden', animation: '' }) // hide btn
-                            setTimeout(() => // show btn after short delay
-                                Object.assign(btn.style, { visibility: 'visible', opacity: '1' }), 135)
-                        }
-                    }
+        addListeners: {
+            appDiv() {
+                app.div.addEventListener(inputEvents.down, event => { // to dismiss visible font size slider
+                    if (event.button != 0) return // prevent non-left-click dismissal
+                    if (document.getElementById(`${app.slug}-font-size-slider-track`) // slider is visible
+                        && !event.target.closest('[id*=font-size]') // not clicking slider elem
+                        && getComputedStyle(event.target).cursor != 'pointer') // ...or other interactive elem
+                            fontSizeSlider.toggle('off')
                 })
+                app.div.onmouseover = app.div.onmouseout = update.bylineVisibility
             },
 
-            chatbar() {
-                app.div.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
-                    btn.onclick = () => {
-                        tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
+            btns: {
+                appHeader() {
+                    app.div.querySelectorAll(`.${app.slug}-header-btn`).forEach(btn => { // from right to left
                         const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
-                        if (btnType == 'send') return // since handled by form submit
-                        msgChain.push({ time: Date.now(), role: 'user', content: prompts.create(
-                            btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })})
-                        get.reply({ msgs: msgChain, src: btnType })
+
+                        // Add click listener
+                        btn.onclick = {
+                            about: () => modals.open('about'),
+                            arrows: event => { toggle.expandedMode() ; tooltip.update(event.currentTarget) },
+                            chevron: () => {
+                                if (app.div.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
+                                    fontSizeSlider.toggle('off')
+                                toggle.minimized()
+                            },
+                            pin: () => (btn.onmouseenter = btn.onmouseleave = btn.onclick = menus.hover.toggle),
+                            settings: () => modals.open('settings'),
+                            'font-size': () => fontSizeSlider.toggle(),
+                            wsb: event => { toggle.sidebar('wider') ; tooltip.update(event.currentTarget) }
+                        }[btnType]
+
+                        // Add hover listener
+                        if (!env.browser.isMobile)
+                            btn.onmouseenter = btn.onmouseleave = btnType == 'pin' ? menus.hover.toggle : tooltip.toggle
+
+                        // Add zoom/fade-out to corner buttons
+                        if (/about|settings/.test(btn.id)) btn.onmouseup = () => {
+                            if (config.fgAnimationsDisabled) return
+                            btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
+                            if (env.browser.isFF) // end animation 0.08s early to avoid icon overgrowth
+                                setTimeout(handleAnimationEnded, 0.12 *1000)
+                            else btn.onanimationend = handleAnimationEnded
+                            function handleAnimationEnded() {
+                                Object.assign(btn.style, { opacity: '0', visibility: 'hidden', animation: '' }) // hide btn
+                                setTimeout(() => // show btn after short delay
+                                    Object.assign(btn.style, { visibility: 'visible', opacity: '1' }), 135)
+                            }
+                        }
+                    })
+                },
+
+                chatbar() {
+                    app.div.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
+                        btn.onclick = () => {
+                            tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
+                            const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
+                            if (btnType == 'send') return // since handled by form submit
+                            msgChain.push({ time: Date.now(), role: 'user', content: prompts.create(
+                                btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })})
+                            get.reply({ msgs: msgChain, src: btnType })
+                            show.reply.chatbarFocused = false ; show.reply.userInteracted = true
+                        }
+                        if (!env.browser.isMobile) // add hover listener for tooltips
+                            btn.onmouseenter = btn.onmouseleave = tooltip.toggle
+                    })
+                }
+            },
+
+            replySection() {
+
+                // Add form key listener
+                const replyForm = app.div.querySelector('form')
+                replyForm.onkeydown = event => {
+                    if (event.key == 'Enter' || event.keyCode == 13) {
+                        if (event.ctrlKey) { // add newline
+                            const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`),
+                                caretPos = chatTextarea.selectionStart,
+                                textBefore = chatTextarea.value.substring(0, caretPos),
+                                textAfter = chatTextarea.value.substring(caretPos)
+                            chatTextarea.value = textBefore + '\n' + textAfter // add newline
+                            chatTextarea.selectionStart = chatTextarea.selectionEnd = caretPos + 1 // preserve caret pos
+                            ui.addListeners.replySection.chatbarAutoSizer()
+                        } else if (!event.shiftKey) ui.addListeners.replySection.submitHandler(event)
+                }}
+
+                // Add form submit listener
+                ui.addListeners.replySection.submitHandler = event => {
+                    event.preventDefault()
+                    const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`)
+
+                    // No reply, change placeholder + focus chatbar
+                    if (chatTextarea.value.trim() == '') {
+                        chatTextarea.placeholder = `${app.msgs.placeholder_typeSomething}...`
+                        chatTextarea.focus()
+
+                    // Yes reply, submit it + transform to loading UI
+                    } else {
+                        msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
+                        get.reply({ msgs: msgChain, src: 'submit' })
                         show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                     }
-                    if (!env.browser.isMobile) // add hover listener for tooltips
-                        btn.onmouseenter = btn.onmouseleave = tooltip.toggle
-                })
+                }
+                replyForm.onsubmit = ui.addListeners.replySection.submitHandler
+
+                // Add chatbar autosizer
+                const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`)
+                let prevLength = chatTextarea.value.length
+                ui.addListeners.replySection.chatbarAutoSizer = () => {
+                    const newLength = chatTextarea.value.length
+                    if (newLength < prevLength) { // if deleting txt
+                        chatTextarea.style.height = 'auto' // ...auto-fit height
+                        if (parseInt(getComputedStyle(chatTextarea).height) < 55) { // if down to one line
+                            chatTextarea.style.height = '43px' } // ...reset to original height
+                    }
+                    chatTextarea.style.height = `${
+                        chatTextarea.scrollHeight > 60 ? ( chatTextarea.scrollHeight +2 ) : 43 }px`
+                    prevLength = newLength
+                }
+                chatTextarea.oninput = ui.addListeners.replySection.chatbarAutoSizer
+
+                // Add button listeners
+                this.btns.chatbar()
             }
         },
 
-        replySection() {
+        getScheme() {
+            return document.documentElement?.classList?.contains('dark') // from Brave Search pref
+                || window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        },
 
-            // Add form key listener
-            const replyForm = app.div.querySelector('form')
-            replyForm.onkeydown = event => {
-                if (event.key == 'Enter' || event.keyCode == 13) {
-                    if (event.ctrlKey) { // add newline
-                        const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`),
-                              caretPos = chatTextarea.selectionStart,
-                              textBefore = chatTextarea.value.substring(0, caretPos),
-                              textAfter = chatTextarea.value.substring(caretPos)
-                        chatTextarea.value = textBefore + '\n' + textAfter // add newline
-                        chatTextarea.selectionStart = chatTextarea.selectionEnd = caretPos + 1 // preserve caret pos
-                        addListeners.replySection.chatbarAutoSizer()
-                    } else if (!event.shiftKey) addListeners.replySection.submitHandler(event)
-            }}
-
-            // Add form submit listener
-            addListeners.replySection.submitHandler = event => {
-                event.preventDefault()
-                const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`)
-
-                // No reply, change placeholder + focus chatbar
-                if (chatTextarea.value.trim() == '') {
-                    chatTextarea.placeholder = `${app.msgs.placeholder_typeSomething}...`
-                    chatTextarea.focus()
-
-                // Yes reply, submit it + transform to loading UI
-                } else {
-                    msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
-                    get.reply({ msgs: msgChain, src: 'submit' })
-                    show.reply.chatbarFocused = false ; show.reply.userInteracted = true
-                }
+        visibilizeOverflow() { // for boundless hover fx
+            let appAncestor = appDivParent
+            while (appAncestor) {
+                if (getComputedStyle(appAncestor).overflow != 'visible') appAncestor.style.overflow = 'visible'
+                appAncestor = appAncestor.parentElement
             }
-            replyForm.onsubmit = addListeners.replySection.submitHandler
-
-            // Add chatbar autosizer
-            const chatTextarea = app.div.querySelector(`#${app.slug}-chatbar`)
-            let prevLength = chatTextarea.value.length
-            addListeners.replySection.chatbarAutoSizer = () => {
-                const newLength = chatTextarea.value.length
-                if (newLength < prevLength) { // if deleting txt
-                    chatTextarea.style.height = 'auto' // ...auto-fit height
-                    if (parseInt(getComputedStyle(chatTextarea).height) < 55) { // if down to one line
-                        chatTextarea.style.height = '43px' } // ...reset to original height
-                }
-                chatTextarea.style.height = `${
-                    chatTextarea.scrollHeight > 60 ? ( chatTextarea.scrollHeight +2 ) : 43 }px`
-                prevLength = newLength
-            }
-            chatTextarea.oninput = addListeners.replySection.chatbarAutoSizer
-
-            // Add button listeners
-            this.btns.chatbar()
         }
-    }
-
-    function getScheme() {
-        return document.documentElement?.classList?.contains('dark') // from Brave Search pref
-            || window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
 
     const themes = {
@@ -1227,14 +1237,6 @@
         scheme(newScheme) {
             env.ui.app.scheme = newScheme ; logos.braveGPT.update() ; update.appStyle()
             update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
-        }
-    }
-
-    function visibilizeOverflow() { // for boundless hover fx
-        let appAncestor = appDivParent
-        while (appAncestor) {
-            if (getComputedStyle(appAncestor).overflow != 'visible') appAncestor.style.overflow = 'visible'
-            appAncestor = appAncestor.parentElement
         }
     }
 
@@ -2107,7 +2109,7 @@
                                 const relatedQuery = event.target.textContent ; chatbar.value = relatedQuery
                                 if (/\[[^[\]]+\]/.test(relatedQuery)) { // highlight 1st bracleted placeholder
                                     chatbar.focus()
-                                    addListeners.replySection.chatbarAutoSizer() // since query not auto-sent
+                                    ui.addListeners.replySection.chatbarAutoSizer() // since query not auto-sent
                                     chatbar.setSelectionRange(relatedQuery.indexOf('['), relatedQuery.indexOf(']') +1)
                                 } else // send placeholder-free related query
                                     chatbar.dispatchEvent(new KeyboardEvent('keydown',
@@ -2205,7 +2207,7 @@
                 }
 
                 // Add app header button listeners
-                addListeners.btns.appHeader()
+                ui.addListeners.btns.appHeader()
 
                 // Create/append 'by KudoAI'
                 const bylineSpan = dom.create.elem('span', { class: 'byline no-user-select' })
@@ -2280,7 +2282,7 @@
                 if (!app.div.querySelector('footer')) app.div.append(appFooter)
 
                 // Add listeners
-                addListeners.replySection()
+                ui.addListeners.replySection()
 
                 // Scroll to top on mobile if user interacted
                 if (env.browser.isMobile && show.reply.userInteracted) {
@@ -2816,7 +2818,7 @@
                 // Clone button to replace listener to not dismiss modal on click
                 btn.replaceWith(btn = btn.cloneNode(true))
                 btn.onclick = () => {
-                    const newScheme = btnScheme == 'auto' ? getScheme() : btnScheme
+                    const newScheme = btnScheme == 'auto' ? ui.getScheme() : btnScheme
                     settings.save('scheme', btnScheme == 'auto' ? false : newScheme)
                     schemeModal.querySelectorAll('button').forEach(btn =>
                         btn.classList.remove('primary-modal-btn')) // clear prev emphasized active scheme
@@ -3329,11 +3331,11 @@
     menus.toolbar.register()
 
     // Init UI props
-    env.ui = { app: { scheme: config.scheme || getScheme() }, site: { scheme: getScheme() }}
+    env.ui = { app: { scheme: config.scheme || ui.getScheme() }, site: { scheme: ui.getScheme() }}
 
     // Create/ID/classify/listenerize/stylize APP container
     app.div = dom.create.elem('div', { id: app.slug, class: 'fade-in snippet' })
-    themes.apply(config.theme) ; addListeners.appDiv()
+    themes.apply(config.theme) ; ui.addListeners.appDiv()
     ;['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
         (config[mode] || config[`${mode}Sidebar`]) && app.div.classList.add(mode))
     document.head.append(app.styles = dom.create.style()) ; update.appStyle()
@@ -3358,7 +3360,7 @@
         }).observe(document.body, { childList: true, subtree: true })
     })
     setTimeout(() => {
-        appDivParent.prepend(app.div) ; visibilizeOverflow()
+        appDivParent.prepend(app.div) ; ui.visibilizeOverflow()
         setTimeout(() => app.div.classList.add('active'), 100) // fade in
     }, env.scriptManager.name == 'Violentmonkey' ?
         1000 : 0) // delay in VM to avoid mutation bug https://github.com/KudoAI/bravegpt/issues/123
@@ -3404,7 +3406,7 @@
         'change', () => requestAnimationFrame(handleSchemePrefChange))
     function handleSchemePrefChange() {
         if (config.scheme) return // since light/dark hard-set
-        const displayedScheme = getScheme()
+        const displayedScheme = ui.getScheme()
         if (env.ui.app.scheme != displayedScheme) update.scheme(displayedScheme)
     }
 
@@ -3416,16 +3418,16 @@
     function restoreAppDiv() {
         log.caller = 'restoreAppDiv()'
         log.debug(`Restoring ${app.name} from mutation...`)
-        app.div = dom.create.elem('div', { id: app.slug, class: 'fade-in active snippet' }) ; addListeners.appDiv()
+        app.div = dom.create.elem('div', { id: app.slug, class: 'fade-in active snippet' }) ; ui.addListeners.appDiv()
         ;['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
             (config[mode] || config[`${mode}Sidebar`]) && app.div.classList.add(mode))
         app.div.innerHTML = saveAppDiv.html
-        if (app.div.querySelector(`.${app.slug}-header-btn`)) addListeners.btns.appHeader()
+        if (app.div.querySelector(`.${app.slug}-header-btn`)) ui.addListeners.btns.appHeader()
         app.div.querySelectorAll(`.${app.slug}-standby-btn`).forEach((btn, idx) =>
             btn.onclick = show.reply[`${['query', 'summarize'][idx]}BtnClickHandler`])
         show.codeCornerBtns()
-        if (app.div.querySelector(`.${app.slug}-chatbar-btn`)) addListeners.replySection()
-        document.querySelector(appDivParentSelector).prepend(app.div) ; visibilizeOverflow()
+        if (app.div.querySelector(`.${app.slug}-chatbar-btn`)) ui.addListeners.replySection()
+        document.querySelector(appDivParentSelector).prepend(app.div) ; ui.visibilizeOverflow()
         restoreAppDiv.restored = true
     }
 
