@@ -54,15 +54,15 @@ window.ui = {
                 })
             },
 
-            chatbar() {
+            chatbar() { // requires component/tooltip.js + lib/prompts.js + <app|env|get|show>
                 app.div.querySelectorAll(`.${app.slug}-chatbar-btn`).forEach(btn => {
                     btn.onclick = () => {
                         tooltip.toggle('off') // hide lingering tooltip when not in Standby mode
                         const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
                         if (btnType == 'send') return // since handled by form submit
-                        msgChain.push({ time: Date.now(), role: 'user', content: prompts.create(
+                        app.msgChain.push({ time: Date.now(), role: 'user', content: prompts.create(
                             btnType == 'shuffle' ? 'randomQA' : 'summarizeResults', { mods: 'all' })})
-                        get.reply({ msgs: msgChain, src: btnType })
+                        get.reply({ msgs: app.msgChain, src: btnType })
                         show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                     }
                     if (!env.browser.isMobile) // add hover listener for tooltips
@@ -100,8 +100,8 @@ window.ui = {
 
                 // Yes reply, submit it + transform to loading UI
                 } else {
-                    msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
-                    get.reply({ msgs: msgChain, src: 'submit' })
+                    app.msgChain.push({ time: Date.now(), role: 'user', content: chatTextarea.value })
+                    get.reply({ msgs: app.msgChain, src: 'submit' })
                     show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
             }

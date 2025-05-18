@@ -1,4 +1,4 @@
-// Requires components/replyBubble.js + lib/dom.js + <app|get|msgChain|prompts|show|tooltip|xhr>
+// Requires components/replyBubble.js + lib/dom.js + <app|get|prompts|show|tooltip|xhr>
 
 window.buttons = {
     reply: {
@@ -6,7 +6,7 @@ window.buttons = {
             types: ['copy', 'share', 'regen', 'speak'], // right-to-left
             styles: 'float: right ; cursor: pointer ;',
 
-            create() { // requires lib/dom.js + <app|get|msgChain|prompts|show|tooltip|xhr>
+            create() { // requires lib/dom.js + <app|get|prompts|show|tooltip|xhr>
                 if (this.share) return
 
                 // Copy button
@@ -62,7 +62,7 @@ window.buttons = {
                     xhr({
                         method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
                         headers: { 'Content-Type': 'application/json', 'Referer': location.href },
-                        data: JSON.stringify({ messages: prompts.stripAugments(msgChain) }),
+                        data: JSON.stringify({ messages: prompts.stripAugments(app.msgChain) }),
                         onload: resp => {
                             const shareURL = JSON.parse(resp.responseText).url
                             show.reply.shareURL = shareURL ; modals.shareChat(shareURL)
@@ -82,7 +82,7 @@ window.buttons = {
                 this.regen.append(regenSVGwrapper)
                 if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = tooltip.toggle
                 this.regen.onclick = event => {
-                    get.reply({ msgs: msgChain, src: 'regen' })
+                    get.reply({ msgs: app.msgChain, src: 'regen' })
                     regenSVGwrapper.style.cursor = 'default' // remove finger
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
