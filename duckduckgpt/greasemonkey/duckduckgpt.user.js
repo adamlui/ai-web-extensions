@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.18.3
+// @version                2025.5.18.4
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
 // @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
@@ -200,7 +200,7 @@
 // @require                https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require                https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0b0a95c/assets/js/components/chatbot/buttons.js#sha256-asY0ofyKM5sKrShlMpN2hosAh8USqk+/cwx2+ToWicU=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3732152/assets/js/components/chatbot/icons.js#sha256-Jc4/I4f7lPj6oB9SKYRbuaDxI5ahOhDjM3A3V86pISU=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0070ba9/assets/js/components/chatbot/icons.js#sha256-bWvDiSkOyK2wrBCiw/7AhMYE7uOKO5kJAme+bWy/9uM=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@cd3d1a3/assets/js/components/chatbot/menus.js#sha256-vQnBP/BGY6emBG25Y3strr7WP3LNbR/qrGHl8Jm8FV4=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@97173cc/assets/js/components/chatbot/replyBubble.js#sha256-sOVj/ESmlNMLCA13w2ZzqP5hVtcnqlQpbY9yvkFWNek=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/tooltip.js#sha256-xrfMTFfKqdqN926lng78y9ECco6ccpi3Mz9LBaTP7Ws=
@@ -2343,7 +2343,7 @@
                    && !(env.ui.site.isCentered && settings.controls[key].centered == false))
 
                 // Init logo
-                const settingsIcon = icons.duckduckgpt.create()
+                const settingsIcon = icons.app.duckduckgpt.create()
                 settingsIcon.style.cssText = 'width: 65px ; position: relative ; top: -32px ; margin-bottom: 4px ;'
                                            + 'filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.3))'
                 // Init title
