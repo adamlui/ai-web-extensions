@@ -4,7 +4,7 @@
     // Init APP data
     const app = {
         version: chrome.runtime.getManifest().version,
-        commitHashes: { app: '7108680' }, // for cached app.json + sites.json5
+        commitHashes: { app: '0c2f97d' }, // for cached app.json + sites.json5
         runtime: (() => {
             return typeof chrome != 'undefined' && chrome.runtime ? (
                 typeof browser != 'undefined' ? 'Firefox add-on'
