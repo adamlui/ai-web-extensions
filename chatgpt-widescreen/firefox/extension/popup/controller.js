@@ -257,9 +257,8 @@
     }))
 
     // Create/append REVIEW entry
-    let platform = /chromium|edge|firefox/.exec(browserAPI.runtime.toLowerCase())?.[0] || ''
-    if (platform == 'chromium') platform = 'chrome'
-    const reviewURL = app.urls.review[platform]
+    const platform = /chromium|edge|firefox/.exec(browserAPI.runtime.toLowerCase())?.[0] || '',
+          reviewURL = app.urls.review[platform != 'chromium' ? platform : 'chrome']
     footer.before(createMenuEntry({
         key: 'reviewEntry', type: 'link', symbol: '⭐', url: reviewURL, helptip: reviewURL,
         label: `${settings.getMsg('btnLabel_leaveReview')}`
