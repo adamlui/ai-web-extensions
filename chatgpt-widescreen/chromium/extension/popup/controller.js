@@ -278,8 +278,7 @@
     footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@745f0ca'
                                    + '/assets/images/badges/powered-by-chatgpt.js.png'
     footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
-    footerElems.review.span.append(
-        icons.create({key: 'star', style: 'position: relative ; top: 1px ; width: 13px ; height: 13px' }))
+    footerElems.review.span.append(icons.create({key: 'star', size: 13, style: 'position: relative ; top: 1px' }))
     footerElems.review.span.onclick = () => {
         open(app.urls.review[/edge|firefox/.exec(app.runtime.toLowerCase())?.[0] || 'chrome']) ; close() }
     footerElems.coffee.span.append(
