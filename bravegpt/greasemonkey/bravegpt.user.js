@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.18.8
+// @version               2025.5.18.9
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/bravegpt/icon48.png?v=df624b0
 // @icon64                https://assets.bravegpt.com/images/icons/bravegpt/icon64.png?v=df624b0
@@ -461,16 +461,13 @@
                     background-position-y: 81% ;
                     background-color: #ffffff00 ; /* clear bg */
                     color: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.85 : 1 }) ;
-                    font-size: 10px ; font-family: "Roboto", sans-serif ; text-transform: uppercase ;
-                    transform: var(--skew)  }
+                    font-size: 10px ; font-family: "Roboto", sans-serif ; text-transform: uppercase }
                 ${selectors.btn.svg} {
                     stroke: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.65 : 1 }) ;
-                    transform: var(--counter-skew) ;
                     ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
                           -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
                           -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
-                ${selectors.btn.span} { /* text */
-                    font-weight: 600 ; display: inline-block ; transform: var(--counter-skew) }
+                ${selectors.btn.span} { font-weight: 600 ; display: inline-block } /* text */
                 ${selectors.btn.before}, ${selectors.btn.after} { /* top/bottom lines */
                     content: "" ; position: absolute ; background: rgb(var(--content-color)) ;
                     ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
@@ -485,8 +482,7 @@
                         var(--side-line-fill) right / 2px 100% no-repeat !important }
                 ${selectors.btn.hoverBefore} { left: 0 ; width: 20px } /* top line on hover */
                 ${selectors.btn.hoverAfter} { right: 0 ; width: 20px } /* bottom line on hover */
-                ${selectors.btn.hoverSVG} {
-                    transform: var(--counter-skew) var(--btn-svg-zoom) ; stroke: rgba(var(--content-color),1) }
+                ${selectors.btn.hoverSVG} { transform: var(--btn-svg-zoom) ; stroke: rgba(var(--content-color),1) }
 
                 /* Modal styles */
                 .${modals.class} { border-radius: 0 !important } /* square the corners to match the buttons */
@@ -509,14 +505,14 @@
                     ${ env.ui.app.scheme == 'dark' ? 'background-color: white !important ; color: black'
                                                    : 'background-color: black !important ; color: white' }}
                 ${selectors.btn.modal}:nth-child(odd) {
-                    transform: var(--skew) translateY(calc(-1 * var(--modal-btn-y-offset))) }
+                    transform: translateY(calc(-1 * var(--modal-btn-y-offset))) }
                 ${selectors.btn.modal}:nth-child(even) {
-                    transform: var(--skew) translateY(var(--modal-btn-y-offset)) }
+                    transform: translateY(var(--modal-btn-y-offset)) }
                 ${selectors.btn.modal}:nth-child(odd):hover {
-                    transform: var(--skew) translateY(calc(-1 * var(--modal-btn-y-offset))) ${
+                    transform: translateY(calc(-1 * var(--modal-btn-y-offset))) ${
                         env.browser.isMobile ? '' : 'var(--modal-btn-zoom)' }}
                 ${selectors.btn.modal}:nth-child(even):hover {
-                    transform: var(--skew) translateY(var(--modal-btn-y-offset)) ${
+                    transform: translateY(var(--modal-btn-y-offset)) ${
                         env.browser.isMobile ? '' : 'var(--modal-btn-zoom)' }}
                 ${selectors.btn.modal}:hover { /* add glow */
                     background-color: var(--glow-color) !important ;
@@ -528,7 +524,8 @@
                 ${selectors.btn.standby} {
                     --standby-btn-zoom: scale(1.055) ;
                     --standby-btn-transition: transform 0.18s ease, background 0.2s ease ;
-                    font-size: 10px ; width: 80% ; height: 43px ; margin-bottom: 13px }
+                    font-size: 10px ; width: 80% ; height: 43px ; margin-bottom: 13px ; transform: var(--skew) }
+                ${selectors.btn.standby} > span { transform: var(--counter-skew) }
                 ${selectors.btn.standby}:nth-child(odd) { margin-right: 20% ; margin-left: 15px }
                 ${selectors.btn.standby}:nth-child(even) { margin-left: 20% ; margin-bottom: 19px }
                 ${selectors.btn.standby}:hover {
@@ -815,7 +812,6 @@
                     height: 43px ; line-height: 17px ; width: 100% ; max-height: 200px ; resize: none ;
                     background: ${ env.ui.app.scheme == 'light' ? '#eeeeee9e'
                         : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }` };
-                    transform: skew(-3deg) ;
                     ${ env.ui.app.scheme == 'dark' ? '' :
                         `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
                         box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
@@ -2206,10 +2202,6 @@
                     env.ui.app.scheme == 'dark' ? 0.62 : 0.33 })`
                 modal.parentNode.classList.add('animated')
             }, 100) // delay for transition fx
-
-            // Wrap button contents in span to counter-skew vs. themes that skew
-            modal.querySelectorAll('button:not(:has(> span))').forEach(spanlessBtn =>
-                spanlessBtn.innerHTML = `<span>${spanlessBtn.innerHTML}</span>`)
         },
 
         observeRemoval(modal, modalType, modalSubType) { // to maintain stack for proper nav
