@@ -16,7 +16,7 @@
     "review": {
       "chrome": "https://chrome.braveomnibox.com/reviews",
       "edge": "https://edge.braveomnibox.com/reviews",
-      "firefox": "https://ff.braveomnibox.com/reviews"
+      "firefox": "https://ff.braveomnibox.com"
     },
     "support": "https://support.braveomnibox.com"
   }

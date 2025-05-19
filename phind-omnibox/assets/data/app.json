@@ -13,7 +13,7 @@
     "github": "https://github.com/adamlui/phind-omnibox",
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
-    "review": { "firefox": "https://ff.phindomnibox.com/reviews" },
+    "review": { "firefox": "https://ff.phindomnibox.com" },
     "support": "https://support.phindomnibox.com"
   }
 }

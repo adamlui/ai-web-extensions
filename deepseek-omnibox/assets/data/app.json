@@ -16,7 +16,7 @@
     "review": {
       "chrome": "https://chrome.deepseekomnibox.com/reviews",
       "edge": "https://edge.deepseekomnibox.com/reviews",
-      "firefox": "https://ff.deepseekomnibox.com/reviews",
+      "firefox": "https://ff.deepseekomnibox.com",
       "g2": "https://www.g2.com/products/deepseek-omnibox/take_survey"
     },
     "support": "https://support.deepseekomnibox.com"

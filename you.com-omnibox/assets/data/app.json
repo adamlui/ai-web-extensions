@@ -13,7 +13,7 @@
     "github": "https://github.com/adamlui/you-omnibox",
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
-    "review": { "firefox": "https://ff.youomnibox.com/reviews" },
+    "review": { "firefox": "https://ff.youomnibox.com" },
     "support": "https://support.youomnibox.com"
   }
 }

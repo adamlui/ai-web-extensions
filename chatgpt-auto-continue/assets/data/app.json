@@ -19,7 +19,7 @@
     "review": {
       "chrome": "https://chrome.chatgptautocontinue.com/reviews",
       "edge": "https://edge.chatgptautocontinue.com",
-      "firefox": "https://ff.chatgptautocontinue.com/reviews"
+      "firefox": "https://ff.chatgptautocontinue.com"
     },
     "support": "https://support.chatgptautocontinue.com",
     "update": { "gm": "https://gm.chatgptautocontinue.com" },
