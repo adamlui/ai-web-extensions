@@ -109,7 +109,7 @@ window.feedback = {
         }
 
         // Overcome Amazon line-height off-centers text if no icon appended
-        if (!(notif.lastChild instanceof SVGElement))
+        if (app.slug == 'amazongpt' && !(notif.lastChild instanceof SVGElement))
             Object.assign(notif.style, { lineHeight: 'normal', height: '61px' })
     }
 };
