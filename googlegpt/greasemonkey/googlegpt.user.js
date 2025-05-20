@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.20.2
+// @version                  2025.5.20.3
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/app/black/icon48.png?v=12a91c0
 // @icon64                   https://assets.googlegpt.io/images/icons/app/black/icon64.png?v=12a91c0
@@ -2722,8 +2722,8 @@
                     schemeStatusSpan.append( // status txt + icon
                         document.createTextNode(app.msgs[/dark|light/.test(config.scheme) ? `scheme_${config.scheme}`
                                                                                           : 'menuLabel_auto']),
-                        icons.create({ key: config.scheme == 'dark' ? 'moon' : config.scheme == 'light' ? 'sun'
-                            : 'arrowsCyclic', size: 12 })
+                        icons.create({ size: 12,
+                            key: config.scheme == 'dark' ? 'moon' : config.scheme == 'light' ? 'sun' : 'arrowsCyclic' })
                     )
                 }
             }

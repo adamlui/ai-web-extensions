@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.20.2
+// @version                2025.5.20.3
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2539,8 +2539,8 @@
                     schemeStatusSpan.append( // status txt + icon
                         document.createTextNode(app.msgs[/dark|light/.test(config.scheme) ? `scheme_${config.scheme}`
                                                                                           : 'menuLabel_auto']),
-                        icons.create({ key: config.scheme == 'dark' ? 'moon' : config.scheme == 'light' ? 'sun'
-                            : 'arrowsCyclic', size: 12 })
+                        icons.create({ size: 12,
+                            key: config.scheme == 'dark' ? 'moon' : config.scheme == 'light' ? 'sun' : 'arrowsCyclic' })
                     )
                 }
             }
