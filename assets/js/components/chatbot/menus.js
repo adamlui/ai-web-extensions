@@ -5,11 +5,11 @@ window.menus = {
     hover: {
         createAppend(menuType) { // requires lib/dom.js
             const menu = this[menuType] ; if (!this.styles) this.stylize()
-            menu.div = dom.create.elem('div', {
+            app.div.append(menu.div = dom.create.elem('div', {
                 id: `${app.slug}-${menuType}-menu`, style: 'width: max-content',
                 class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select`
-            })
-            menu.div.append(menu.ul = dom.create.elem('ul')) ; app.div.append(menu.div)
+            }))
+            menu.div.append(menu.ul = dom.create.elem('ul'))
             menu.div.onmouseenter = menu.div.onmouseleave = this.toggle
             this.update(menuType) ; menu.status = 'hidden'
         },
