@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.20
+// @version                2025.5.20.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1830,16 +1830,15 @@
             },
 
             updateSchemeStatus(schemeStatusSpan = null) {
-                schemeStatusSpan = schemeStatusSpan || document.querySelector('#scheme-settings-entry span')
+                schemeStatusSpan ||= document.querySelector('#scheme-settings-entry span')
                 if (schemeStatusSpan) {
                     schemeStatusSpan.textContent = ''
-                    schemeStatusSpan.append(...( // status txt + icon
-                        config.scheme == 'dark' ?
-                            [document.createTextNode(app.msgs.scheme_dark), icons.create({ key: 'moon' })]
-                      : config.scheme == 'light' ?
-                        [document.createTextNode(app.msgs.scheme_light), icons.create({ key: 'sun' })]
-                      : [document.createTextNode(app.msgs.menuLabel_auto), icons.create({ key: 'arrowsCyclic' })]))
-                    schemeStatusSpan.style.cssText += `; margin-top: ${ !config.scheme ? 3 : 0 }px !important`
+                    schemeStatusSpan.append( // status txt + icon
+                        document.createTextNode(app.msgs[/dark|light/.test(config.scheme) ? `scheme_${config.scheme}`
+                                                                                          : 'menuLabel_auto']),
+                        icons.create({ key: config.scheme == 'dark' ? 'moon' : config.scheme == 'light' ? 'sun'
+                            : 'arrowsCyclic', size: 12 })
+                    )
                 }
             }
         },
@@ -2041,9 +2040,9 @@
                     ${ config.fgAnimationsDisabled ? '' :
                         `transition: 0.2s ; -webkit-transition: 0.2s ; -moz-transition: 0.2s ;
                             -o-transition: 0.2s ; -ms-transition: 0.2s` }}`
-              + '#scheme-settings-entry > span { margin: 0 -2px }' // align Scheme status
+              + '#scheme-settings-entry > span { margin: 3px -2px 0 }' // align Scheme status
               + '#scheme-settings-entry > span > svg {' // v-align/left-pad Scheme status icon
-                  + 'position: relative ; top: 3px ; margin-left: 4px }'
+                  + 'position: relative ; top: 2px ; margin-left: 4px }'
               + ( config.fgAnimationsDisabled ? '' // spin cycle arrows icon when scheme is Auto
                   : ( '#scheme-settings-entry svg[class*=arrowsCyclic],'
                             + '.chatgpt-notif svg[class*=arrowsCyclic] { animation: rotate 5s linear infinite }' ))
