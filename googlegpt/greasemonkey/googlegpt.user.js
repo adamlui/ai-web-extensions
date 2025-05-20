@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.20.1
+// @version                  2025.5.20.2
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/app/black/icon48.png?v=12a91c0
 // @icon64                   https://assets.googlegpt.io/images/icons/app/black/icon64.png?v=12a91c0
@@ -1614,7 +1614,7 @@
             loadingElem.prepend(loadingSpinner)
 
             // Init msgs
-            msgs = structuredClone(msgs) // deep copy to not affect global chain
+            msgs = structuredClone(msgs) // deep copy to not affect app.msgChain
             if (msgs.length > 3) msgs = msgs.slice(-3) // keep last 3 only
             msgs.forEach(msg => { // trim agent msgs
                 if (msg.role == 'assistant' && msg.content.length > 250)
