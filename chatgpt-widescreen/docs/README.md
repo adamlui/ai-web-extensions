@@ -87,7 +87,7 @@
 ## 🗨️ User feedback
 
 #### <a href="https://gm.chatgptwidescreen.com/feedback">
-    <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon25.png"><img width=12 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon25.png"></picture></a> Greasy Fork:
+<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon25.png"><img width=12 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon25.png"></picture></a> Greasy Fork:
 
 <a href="https://gm.chatgptwidescreen.com/feedback"><img width=999 src="https://assets.chatgptwidescreen.com/images/reviews/greasy-fork.png"></a>
 
