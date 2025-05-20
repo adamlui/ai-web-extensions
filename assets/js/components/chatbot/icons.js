@@ -4,8 +4,8 @@ window.icons = {
 
     create({ key, size = 18, width, height, ...otherAttrs }) { // requires lib/<dom|log>.js
         if (!key) return log.error('Option \'key\' required by icons.create()')
-        const icon = {
-            data: this[key], attrs: { width: width || size, height: height || size, class: key, ...otherAttrs }}
+        const icon = { data: this[key], attrs: { width: width || size, height: height || size, ...otherAttrs }}
+        if (icon.data?.classify != false) icon.data.class = key
         if (icon.data?.svg) { // return <svg>
             icon.svg = dom.create.svgElem('svg', { ...icon.data.svg, ...icon.attrs })
             ;(function create(elems) {
@@ -84,7 +84,7 @@ window.icons = {
     },
 
     anchor: {
-        svg: { viewBox: '0 0 24 24' },
+        svg: { viewBox: '0 0 24 24' }, classify: false,
         elems: [{ path: { stroke: 'none', d: 'M12,2 C13.6568542,2 15,3.34314575 15,5 C15,6.30588222 14.1656226,7.41688515 13.0009007,7.82897577 L13.0008722,19.9379974 C15.8984799,19.5763478 18.3147266,17.665053 19.3940412,15.0596838 L19.417,15 L17,15 C15.9853611,15 15.6358608,13.6848035 16.4495309,13.1641077 L16.5527864,13.1055728 L20.5527864,11.1055728 C21.2176875,10.7731223 22,11.256618 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,11.2957433 2.70213089,10.8247365 3.34138467,11.0597803 L3.4472136,11.1055728 L7.4472136,13.1055728 C8.35473419,13.5593331 8.07916306,14.8919819 7.11853213,14.9938221 L7,15 L4.582,15 L4.60595876,15.0596838 C5.68539551,17.6653477 8.10206662,19.5767802 11.0001109,19.9381201 L11.0000889,7.82932572 C9.8348501,7.41751442 9,6.30625206 9,5 C9,3.34314575 10.3431458,2 12,2 Z M12,4 C11.4477153,4 11,4.44771525 11,5 C11,5.55228475 11.4477153,6 12,6 C12.5522847,6 13,5.55228475 13,5 C13,4.44771525 12.5522847,4 12,4 Z' }}]
     },
 
