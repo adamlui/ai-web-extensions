@@ -8,9 +8,9 @@ window.icons = {
         if (icon.data?.classify != false) icon.attrs.class = key
         if (icon.data?.svg) { // return <svg>
             icon.svg = dom.create.svgElem('svg', { ...icon.data.svg, ...icon.attrs })
-            ;(function create(elems) {
-                return elems.map(elem => {
-                    const [tag, attrs] = Object.entries(elem)[0], svgElem = dom.create.svgElem(tag, attrs)
+            ;(function create(svgElems) {
+                return svgElems.map(elemData => {
+                    const [tag, attrs] = Object.entries(elemData)[0], svgElem = dom.create.svgElem(tag, attrs)
                     if (attrs.elems) svgElem.append(...create(attrs.elems)) // recursively create() sub-elems
                     return svgElem
                 })
