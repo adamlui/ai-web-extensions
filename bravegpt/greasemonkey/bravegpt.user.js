@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.19.1
+// @version               2025.5.19.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1386,7 +1386,7 @@
 
             // Show loading status
             const rqDiv = app.div.querySelector(`.${app.slug}-related-queries`),
-                  loadingSpinner = icons.create({ key: 'arrowsCyclic' })
+                  loadingSpinner = icons.create({ key: 'arrowsCyclic', size: 15 })
             let loadingElem
             loadingSpinner.style.cssText = 'position: relative ; top: 1px ; margin-right: 6px'
             if (app.div.querySelector('.reply-pre')) { // reply exists, show where chatbar was

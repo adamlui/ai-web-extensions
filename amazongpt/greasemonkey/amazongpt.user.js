@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.19
+// @version                2025.5.19.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -862,7 +862,7 @@
             get.reply.src = src ; show.reply.updatedAPIinHeader = false
 
             // Show loading status
-            const loadingSpinner = icons.create({ key: 'arrowsCyclic' }) ; let loadingElem
+            const loadingSpinner = icons.create({ key: 'arrowsCyclic', size: 15 }) ; let loadingElem
             loadingSpinner.style.cssText = 'position: relative ; top: 2px ; margin-right: 6px'
             if (app.div.querySelector('.reply-pre')) { // reply exists, show where chatbar was
                 loadingElem = app.div.querySelector('section')

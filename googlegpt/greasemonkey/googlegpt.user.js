@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.19.1
+// @version                  2025.5.19.2
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/app/black/icon48.png?v=12a91c0
 // @icon64                   https://assets.googlegpt.io/images/icons/app/black/icon64.png?v=12a91c0
@@ -1595,7 +1595,7 @@
 
             // Show loading status
             const rqDiv = app.div.querySelector(`.${app.slug}-related-queries`),
-                  loadingSpinner = icons.create({ key: 'arrowsCyclic' })
+                  loadingSpinner = icons.create({ key: 'arrowsCyclic', size: 15 })
             let loadingElem
             loadingSpinner.style.cssText = 'position: relative ; top: 2px ; margin-right: 6px'
             if (app.div.querySelector('.reply-pre')) { // reply exists, show where chatbar was
