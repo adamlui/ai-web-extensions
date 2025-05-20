@@ -5,7 +5,7 @@ window.icons = {
     create({ key, size = 18, width, height, ...otherAttrs }) { // requires lib/<dom|log>.js
         if (!key) return log.error('Option \'key\' required by icons.create()')
         const icon = { data: this[key], attrs: { width: width || size, height: height || size, ...otherAttrs }}
-        if (icon.data?.classify != false) icon.data.class = key
+        if (icon.data?.classify != false) icon.attrs.class = key
         if (icon.data?.svg) { // return <svg>
             icon.svg = dom.create.svgElem('svg', { ...icon.data.svg, ...icon.attrs })
             ;(function create(elems) {
