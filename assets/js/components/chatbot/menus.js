@@ -26,9 +26,9 @@ window.menus = {
                     width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
                 #${app.slug}-api-menu > ul > li:first-of-type > svg { /* API header entry icon */
                     top: 3px ; margin: 0 1px 0 -4px } /* tighten pos */
-                .${app.slug}-menu-item .checkmark-icon {
+                .${app.slug}-menu-item .checkmark {
                     position: relative ; float: right ; margin-right: -20px ; top: 3.5px ; fill: #b3f96d }
-                .${app.slug}-menu-item:hover .checkmark-icon { fill: green }`
+                .${app.slug}-menu-item:hover .checkmark { fill: green }`
             ))
         },
 
@@ -85,8 +85,7 @@ window.menus = {
                         item.prepend(icon)
                     } else // indent
                         item.style.paddingLeft = '11px'
-                    if (entry.isActive)
-                        item.append(icons.create({ key: 'checkmark', class: 'checkmark-icon', size: 12 }))
+                    if (entry.isActive) item.append(icons.create({ key: 'checkmark', size: 12 }))
                 }
                 item.onclick = () => {
                     if (!entry.onclick) return
