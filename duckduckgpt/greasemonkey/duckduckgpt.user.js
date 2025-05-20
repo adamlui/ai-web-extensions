@@ -148,10 +148,10 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.19
+// @version                2025.5.19.1
 // @license                MIT
-// @icon                   https://assets.ddgpt.com/images/icons/duckduckgpt/icon48.png?v=06af076
-// @icon64                 https://assets.ddgpt.com/images/icons/duckduckgpt/icon64.png?v=06af076
+// @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
+// @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
 // @compatible             brave
 // @compatible             chrome
 // @compatible             chromebeta
