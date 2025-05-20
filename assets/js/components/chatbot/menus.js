@@ -85,7 +85,7 @@ window.menus = {
                         item.prepend(icon)
                     } else // indent
                         item.style.paddingLeft = '11px'
-                    if (entry.isActive?.())
+                    if (entry.isActive)
                         item.append(icons.create({ key: 'checkmark', class: 'checkmark-icon', size: 12 }))
                 }
                 item.onclick = () => {
@@ -109,8 +109,8 @@ window.menus = {
                         feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
                             `${ config.anchored ? 'top' : 'bottom' }-right`)
                     },
-                    isActive: () => !config.preferredAPI && api == app.msgs.menuLabel_random
-                                || config.preferredAPI == api
+                    get isActive() {
+                        return !config.preferredAPI && api == app.msgs.menuLabel_random || config.preferredAPI == api }
                 }))
             ]}
         },
@@ -121,12 +121,12 @@ window.menus = {
                 { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
                 { label: app.msgs.menuLabel_nothing, iconType: 'cancel',
                     onclick: () => { toggle.sidebar('sticky', 'off') ; toggle.anchorMode('off') },
-                    isActive: () => !config.stickySidebar && !config.anchored
+                    get isActive() { return !config.stickySidebar && !config.anchored }
                 },
                 { label: app.msgs.menuLabel_sidebar, iconType: 'sidebar',
-                    onclick: () => toggle.sidebar('sticky'), isActive: () => config.stickySidebar },
+                    onclick: () => toggle.sidebar('sticky'), get isActive() { return config.stickySidebar }},
                 { label: app.msgs.menuLabel_bottom, iconType: 'anchor',
-                    onclick: () => toggle.anchorMode(), isActive: () => config.anchored }
+                    onclick: () => toggle.anchorMode(), get isActive() { return config.anchored }}
             ]}
         }
     },
