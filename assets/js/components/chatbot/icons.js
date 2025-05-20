@@ -1,4 +1,4 @@
-// Requires lib<dom|log>.js + GM_getResourceText()
+// Requires lib/<dom|log>.js + GM_getResourceText()
 
 window.icons = {
 
