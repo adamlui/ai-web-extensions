@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.20.3
+// @version                  2025.5.21
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/app/black/icon48.png?v=12a91c0
 // @icon64                   https://assets.googlegpt.io/images/icons/app/black/icon64.png?v=12a91c0
@@ -389,8 +389,8 @@
 // @require                  https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require                  https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0b0a95c/assets/js/components/chatbot/buttons.js#sha256-asY0ofyKM5sKrShlMpN2hosAh8USqk+/cwx2+ToWicU=
-// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@b290c06/assets/js/components/chatbot/icons.js#sha256-mnzhYlUYXfX2A6+p46nc/kFlsiPDpa/3eXFD+bVIn/s=
-// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@b290c06/assets/js/components/chatbot/menus.js#sha256-Hv+YAdGO7irWrJ2Lj9i3e7TqHmiO1pGmRDBfxU6WbCI=
+// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@4aeb902/assets/js/components/chatbot/icons.js#sha256-FT7ArGvZmQGdEHKHUBMe1hXGMDCLjOxK99uqdXpamMc=
+// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@4aeb902/assets/js/components/chatbot/menus.js#sha256-LL4nC4rowrId5RJQ6ADBrVS2ALVGS06dPl5KJpMeBXk=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@97173cc/assets/js/components/chatbot/replyBubble.js#sha256-sOVj/ESmlNMLCA13w2ZzqP5hVtcnqlQpbY9yvkFWNek=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/components/chatbot/tooltip.js#sha256-xrfMTFfKqdqN926lng78y9ECco6ccpi3Mz9LBaTP7Ws=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d7da881/assets/js/lib/chatbot/api.js#sha256-FUp9fE9ogQ1IOACKoG52mU14Xm71089WPbreEcRzHzE=
