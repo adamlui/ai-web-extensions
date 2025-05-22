@@ -268,6 +268,8 @@ This script exists thanks to code, translations, issues & ideas from the followi
     <img width=46 title="Aria Dahl" src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.5.10-requested-show-notifs-at-bottom"></img></a>
 <a href="https://github.com/14790897">
     <img width=47 title="@14790897" src="https://avatars.githubusercontent.com/u/121866954?first-contrib=2025.5.19-revealed-cwm-stopped-working-leading-to-locales-url-correction"></img></a>
+<a href="https://github.com/shtirlitsDva">
+    <img width=47 title="@shtirlitsDva" src="https://avatars.githubusercontent.com/u/12258139?first-contrib=2025.5.22-reported-taller-chatbox-buried-on-chatgpt-homepage"></img></a>
 <a href="https://github.com/dependabot">
     <img width=46 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp">
