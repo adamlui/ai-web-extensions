@@ -39,7 +39,7 @@
 
 <img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
 
-<h3>Bring AI chat & search summaries to Brave Search, powered by the latest LLMs</h3>
+<h3>Enhance Brave Search w/ AI chat & search summaries, powered by the latest LLMs</h3>
 
 <a href="https://gm.bravegpt.com"><img height=50 alt="[Install this script]" src="https://assets.bravegpt.com/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://assets.bravegpt.com/images/buttons/greasy-fork/help.svg"></a>
 <br>
