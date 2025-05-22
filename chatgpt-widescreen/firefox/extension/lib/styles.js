@@ -56,8 +56,8 @@ window.styles = {
                 ${ config.tcbDisabled ? '' // heighten chatbox
                     : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
                         { max-height: 68vh }
-                       ${ site == 'chatgpt' && location.pathname == '/' ? // fix y-positioning
-                            'div#thread-bottom-container { position: absolute ; bottom: 37px }' : '' }`}
+                       ${ site == 'chatgpt' && location.pathname == '/' ? // fix y-positionin
+                            'div#thread-bottom-container { position: absolute ; bottom: -51px }' : '' }`}
                 ${ !config.hiddenHeader ? ''
                     : `${selectors.header} { display: none !important }
                        ${ site == 'chatgpt' ? 'main { padding-top: 12px }' : '' }` }
