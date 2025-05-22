@@ -20,7 +20,7 @@
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/Clones-1.7K/month-869da0?logo=github&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/KudoAI/googlegpt">
-    <img height=31 alt="[CodeFactor grade]" src="https://img.shields.io/codefactor/grade/github/KudoAI/googlegpt?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=30c93f&style=for-the-badge"></a>
+    <img height=31 alt="[CodeFactor grade]" src="https://img.shields.io/codefactor/grade/github/KudoAI/googlegpt?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=18bf42&style=for-the-badge"></a>
 <a href="https://chatgpt.js.org?utm_source=googlegpt&utm_content=github_shield">
     <img height=31 alt="[Powered by chatgpt.js]" src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=KudoAI_googlegpt">

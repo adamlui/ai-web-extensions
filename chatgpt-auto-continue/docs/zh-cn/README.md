@@ -24,7 +24,7 @@
 <a href="LICENSE.md">
     <img height=31 alt="[许可证: MIT]" src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-fc4f2d.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-auto-continue">
-    <img height=31 alt="[CodeFactor 等级]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-auto-continue?label=%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F&logo=codefactor&logoColor=white&labelColor=464646&color=30c93f&style=for-the-badge"></a>
+    <img height=31 alt="[CodeFactor 等级]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-auto-continue?label=%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F&logo=codefactor&logoColor=white&labelColor=464646&color=18bf42&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_auto_continue&utm_content=github_shield">
     <img height=31 alt="[由 chatgpt.js 提供支持]" src="https://img.shields.io/badge/%E4%BE%9B%E7%94%B5-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=adamlui_chatgpt-auto-continue">

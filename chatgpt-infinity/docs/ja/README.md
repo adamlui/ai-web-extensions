@@ -29,7 +29,7 @@
 <a href="#">
     <img src="https://img.shields.io/badge/%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%B3-4.4K/月-869da0?logo=github&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-infinity">
-    <img alt="[CodeFactor グレード]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-infinity?label=%E3%82%B3%E3%83%BC%E3%83%89%E5%93%81%E8%B3%AA&logo=codefactor&logoColor=white&labelColor=464646&color=30c93f&style=for-the-badge"></img></a>
+    <img alt="[CodeFactor グレード]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-infinity?label=%E3%82%B3%E3%83%BC%E3%83%89%E5%93%81%E8%B3%AA&logo=codefactor&logoColor=white&labelColor=464646&color=18bf42&style=for-the-badge"></img></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_infinity&utm_content=github_shield">
     <img alt="[chatgpt.js によって供給される]" src="https://img.shields.io/badge/%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E4%BE%9B%E7%B5%A6%E3%81%95%E3%82%8C%E3%82%8B-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=adamlui_chatgpt-infinity">
