@@ -19,7 +19,7 @@ window.menus = {
             this[menuType].status = 'hidden'
         },
 
-        stylize() { // requires lib/dom.js + app
+        stylize() { // requires lib/dom.js + app.slug
             document.head.append(this.styles = dom.create.style(`
                 .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
                 .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
