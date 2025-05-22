@@ -9,7 +9,7 @@ window.styles = {
         if (!key) return console.error('Option \'key\' required by styles.update()')
         const style = this[key] ; style.node ||= dom.create.style()
         if (( autoAppend || style.autoAppend ) && !style.node.isConnected) document.head.append(style.node)
-        style.node.textContent = style.css ; style.node.textContent = style.node.textContent.replace(/\s/g, '')
+        style.node.textContent = style.css
     },
 
     chatbar: {
