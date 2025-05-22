@@ -9,7 +9,7 @@
 <a href="https://github.com/adamlui/chatgpt-widescreen/blob/main/greasemonkey/chatgpt-widescreen-mode.user.js">
     <img height=32 src="https://img.shields.io/github/size/adamlui/chatgpt-widescreen/greasemonkey/chatgpt-widescreen-mode.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></img></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-widescreen">
-    <img alt="[CodeFactor grade]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-widescreen?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=18bf42&style=for-the-badge"></img></a>
+    <img alt="[CodeFactor grade]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-widescreen?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></img></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_widescreen&utm_content=github_shield">
     <img alt="[Powered by chatgpt.js]" height=31 src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=adamlui_chatgpt-widescreen">
