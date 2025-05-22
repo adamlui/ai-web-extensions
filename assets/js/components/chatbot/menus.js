@@ -48,10 +48,10 @@ window.menus = {
                     appDiv: app.div.getBoundingClientRect(), toggleBtn: toggleElem.getBoundingClientRect(),
                     hoverMenu: menu.div.getBoundingClientRect()
                 }
-                const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
-                const appIsTooLow = rects.toggleBtn.bottom + rects.hoverMenu.height > ( innerHeight -15 )
-                const pointDirection = menu.directionBias == 'up' && appIsTooHigh
-                                    || menu.directionBias == 'down' && !appIsTooLow ? 'down' : 'up'
+                const pointDirection = {
+                    up: rects.toggleBtn.top < ( rects.hoverMenu.height +15 ),
+                    down: !( rects.toggleBtn.bottom + rects.hoverMenu.height > innerHeight -15 )
+                }[menu.directionBias] ? 'down' : 'up'
                 Object.assign(menu.div.style, {
                     top: `${ rects.toggleBtn.top - rects.appDiv.top +(
                         pointDirection == 'down' ? 30.5 : -rects.hoverMenu.height -13 )}px`,
