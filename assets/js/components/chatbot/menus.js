@@ -50,7 +50,7 @@ window.menus = {
                 }
                 const pointDirection = ['up', 'down'][+(
                     menu.directionBias == 'up' ? rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
-                        : !( rects.toggleBtn.bottom + rects.hoverMenu.height > innerHeight -15 )
+                        : ( rects.toggleBtn.bottom + rects.hoverMenu.height <= innerHeight -15 )
                 )]
                 Object.assign(menu.div.style, {
                     top: `${ rects.toggleBtn.top - rects.appDiv.top +(
