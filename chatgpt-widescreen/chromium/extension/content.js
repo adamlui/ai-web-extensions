@@ -200,7 +200,9 @@
             // Update button + 'Attach File' colors on temp chat toggle
             const chatbarIsDark = await chatbar.is.dark()
             if (chatbarIsDark != isTempChat) {
-                buttons.stylize() ; buttons.update.color() ; styles.update({ key: 'tweaks' }) ; isTempChat = chatbarIsDark }
+                buttons.stylize() ; buttons.update.color() ; styles.update({ key: 'tweaks' })
+                isTempChat = chatbarIsDark
+            }
 
             // Remove buttons on Canvas mode toggle-on
             if (canvasWasOpen ^ chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }

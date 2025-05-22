@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.22
+// @version             2025.5.22.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -752,7 +752,9 @@
             // Update button + 'Attach File' colors on temp chat toggle
             const chatbarIsDark = await chatbar.is.dark()
             if (chatbarIsDark != isTempChat) {
-                buttons.stylize() ; buttons.update.color() ; styles.update({ key: 'tweaks' }) ; isTempChat = chatbarIsDark }
+                buttons.stylize() ; buttons.update.color() ; styles.update({ key: 'tweaks' })
+                isTempChat = chatbarIsDark
+            }
 
             // Remove buttons on Canvas mode toggle-on
             if (canvasWasOpen ^ chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }
