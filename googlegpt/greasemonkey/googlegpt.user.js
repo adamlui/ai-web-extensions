@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.22.2
+// @version                  2025.5.22.3
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/app/black/icon48.png?v=12a91c0
 // @icon64                   https://assets.googlegpt.io/images/icons/app/black/icon64.png?v=12a91c0
@@ -864,7 +864,7 @@
                     transition: var(--byline-transition) ;
                         -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
                         -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
-                #${app.slug}-header-btns { float: right ; ${ willNotZoom ? '' : 'will-change: transform' }}
+                #${app.slug}-header-btns { display: flex ; direction: rtl ; gap: 2px ; float: right }
                 .${app.slug}-header-btn {
                     float: right ; cursor: pointer ; position: relative ; top: 6px ;
                     ${ env.ui.app.scheme == 'dark' ? 'fill: white ; stroke: white'
@@ -1156,7 +1156,7 @@
             Object.entries(headerElems).forEach(([key, elem]) => widths[key] = dom.get.computedWidth(elem))
 
             // Hide/show byline based on space available
-            const availSpace = widths.appDiv - widths.appDivXpadding - widths.appPrefix - widths.logo - widths.btns -10
+            const availSpace = widths.appDiv - widths.appDivXpadding - widths.appPrefix - widths.logo - widths.btns -16
             Object.assign(headerElems.byline.style, widths.byline > availSpace ?
                 { position: 'absolute', left: '-9999px', opacity: 0 } // hide using position to support transition
               : { position: '', left: '', opacity: 1 } // show
