@@ -51,7 +51,10 @@
     }
 
     function notify(msg, pos = !config.toastMode ? 'bottom-right' : null) {
-        if (config.notifDisabled && !msg.includes(browserAPI.getMsg('menuLabel_modeNotifs'))) return
+        if (config.notifDisabled
+            && !new RegExp(`${browserAPI.getMsg('menuLabel_show')} ${browserAPI.getMsg('menuLabel_notifs')}|🧩`, 'i')
+                .test(msg)
+        ) return
         sendMsgToActiveTab('notify', { msg, pos })
     }
 

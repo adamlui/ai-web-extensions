@@ -51,9 +51,10 @@
 
     window.notify = function(msg, pos = '', notifDuration = '', shadow = '') {
         if (!styles.toast.node) styles.update({ key: 'toast' })
-        if (config.notifDisabled &&
-            !new RegExp(`${browserAPI.getMsg('menuLabel_notifs')}|${browserAPI.getMsg('mode_toast')}`).test(msg))
-                return
+        if (config.notifDisabled
+            && !new RegExp(`${browserAPI.getMsg('menuLabel_show')} ${browserAPI.getMsg('menuLabel_notifs')}|🧩`, 'i')
+                .test(msg)
+        ) return
 
         // Strip state word to append colored one later
         const foundState = [

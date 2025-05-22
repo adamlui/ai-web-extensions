@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.22
+// @version             2025.5.22.1
 // @license             MIT
 // @icon                https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon48.png?v=8df6f33
 // @icon64              https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/with-robot/icon64.png?v=8df6f33
@@ -448,6 +448,9 @@
 
     window.notify = (msg, pos = '', notifDuration = '', shadow = '') => {
         if (!styles.toast.node) styles.update({ key: 'toast' })
+        if (config.notifDisabled
+            && !new RegExp(`${app.msgs.menuLabel_show} ${app.msgs.menuLabel_notifs}|🧩`, 'i').test(msg)
+        ) return
 
         // Strip state word to append colored one later
         const foundState = toolbarMenu.state.words.find(word => msg.includes(word))

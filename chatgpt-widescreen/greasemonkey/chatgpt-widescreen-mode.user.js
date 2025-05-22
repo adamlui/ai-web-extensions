@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.22.3
+// @version             2025.5.22.4
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -552,8 +552,9 @@
 
     window.notify = function(msg, pos = '', notifDuration = '', shadow = '') {
         if (!styles.toast.node) styles.update({ key: 'toast' })
-        if (config.notifDisabled && !new RegExp(`${app.msgs.menuLabel_notifs}|${app.msgs.mode_toast}|🧩`).test(msg))
-            return
+        if (config.notifDisabled
+            && !new RegExp(`${app.msgs.menuLabel_show} ${app.msgs.menuLabel_notifs}|🧩`, 'i').test(msg)
+        ) return
 
         // Strip state word to append colored one later
         const foundState = toolbarMenu.state.words.find(word => msg.includes(word))
