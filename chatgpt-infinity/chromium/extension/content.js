@@ -47,7 +47,7 @@
 
     // Define FUNCTIONS
 
-    window.notify = (msg, pos = '', notifDuration = '', shadow = '') => {
+    window.notify = function(msg, pos = '', notifDuration = '', shadow = '') {
         if (!styles.toast.node) styles.update({ key: 'toast' })
         if (config.notifDisabled
             && !new RegExp(`${browserAPI.getMsg('menuLabel_show')} ${browserAPI.getMsg('menuLabel_notifs')}`, 'i')
