@@ -14,7 +14,7 @@ window.icons = {
                     if (attrs.elems) svgElem.append(...create(attrs.elems)) // recursively create() sub-elems
                     return svgElem
                 })
-            })(icon.data.elems).forEach(elem => icon.svg.append(elem))
+            })(icon.data.elems).forEach(svgElem => icon.svg.append(svgElem))
             return icon.svg
         } else if (icon.data?.src) // return <img> w/ src
             return dom.create.elem('img', { src: icon.data.src, ...icon.attrs })
