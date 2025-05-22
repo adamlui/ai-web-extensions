@@ -55,7 +55,9 @@ window.styles = {
                         : `svg:has(path[d^="M9 7C9 4.238"]) + span { color: white }`}`}
                 ${ config.tcbDisabled ? '' // heighten chatbox
                     : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
-                        { max-height: 68vh }` }
+                        { max-height: 68vh }
+                       ${ site == 'chatgpt' && location.pathname == '/' ? // fix y-positioning
+                            'div#thread-bottom-container { position: absolute ; bottom: 37px }' : '' }`}
                 ${ !config.hiddenHeader ? ''
                     : `${selectors.header} { display: none !important }
                        ${ site == 'chatgpt' ? 'main { padding-top: 12px }' : '' }` }
