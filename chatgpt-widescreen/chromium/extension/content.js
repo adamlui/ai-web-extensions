@@ -197,9 +197,10 @@
         // Maintain button colors + Widescreen button visibility on snowflake chatgpt.com
         if (env.site == 'chatgpt') {
 
-            // Update button colors on temp chat toggle
+            // Update button + 'Attach File' colors on temp chat toggle
             const chatbarIsDark = await chatbar.is.dark()
-            if (chatbarIsDark != isTempChat) { buttons.stylize() ; buttons.update.color() ; isTempChat = chatbarIsDark }
+            if (chatbarIsDark != isTempChat) {
+                buttons.stylize() ; buttons.update.color() ; styles.update({ key: 'tweaks' }) ; isTempChat = chatbarIsDark }
 
             // Remove buttons on Canvas mode toggle-on
             if (canvasWasOpen ^ chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }

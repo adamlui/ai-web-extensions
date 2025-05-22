@@ -5,11 +5,11 @@ window.styles = {
     getAllSelectors(obj) { // used in this.tweaks.styles for spam selectors
         return Object.values(obj).flatMap(val => typeof val == 'object' ? this.getAllSelectors(val) : val) },
 
-    update({ key, autoAppend }) { // requires lib/dom.js
+    async update({ key, autoAppend }) { // requires lib/dom.js
         if (!key) return console.error('Option \'key\' required by styles.update()')
         const style = this[key] ; style.node ||= dom.create.style()
         if (( autoAppend || style.autoAppend ) && !style.node.isConnected) document.head.append(style.node)
-        style.node.textContent = style.css
+        style.node.textContent = await style.css
     },
 
     chatbar: {
@@ -47,10 +47,12 @@ window.styles = {
         autoAppend: true,
         get css() { // requires <config|env|sites>
             const { site } = env, { [site]: { selectors }} = sites
-            return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
-                ${ site == 'chatgpt' ?
-                    `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
-                        overflow: clip !important }` : '' }
+            return (async () => config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
+                ${ site != 'chatgpt' ? ''
+                    : `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
+                        overflow: clip !important }
+                    ${ !await chatbar.is.dark() ? '' // color 'Attach File' white
+                        : `svg:has(path[d^="M9 7C9 4.238"]) + span { color: white }`}`}
                 ${ config.tcbDisabled ? '' // heighten chatbox
                     : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
                         { max-height: 68vh }` }
@@ -69,6 +71,7 @@ window.styles = {
                 ${ config.blockSpamDisabled ? ''
                     : `${styles.getAllSelectors(selectors.spam).join(',')} { display: none !important }
                         body { pointer-events: unset !important }` /* free click lock from blocking modals */ }`
+            )()
         }
     },
 
