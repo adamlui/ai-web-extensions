@@ -50,8 +50,8 @@ window.menus = {
                 }
                 const appIsTooHigh = rects.toggleBtn.top < ( rects.hoverMenu.height +15 )
                 const appIsTooLow = rects.toggleBtn.bottom + rects.hoverMenu.height > ( innerHeight -15 )
-                const pointDirection = menu.preferredDirection == 'up' && appIsTooHigh
-                                    || menu.preferredDirection == 'down' && !appIsTooLow ? 'down' : 'up'
+                const pointDirection = menu.directionBias == 'up' && appIsTooHigh
+                                    || menu.directionBias == 'down' && !appIsTooLow ? 'down' : 'up'
                 Object.assign(menu.div.style, {
                     top: `${ rects.toggleBtn.top - rects.appDiv.top +(
                         pointDirection == 'down' ? 30.5 : -rects.hoverMenu.height -13 )}px`,
@@ -98,7 +98,7 @@ window.menus = {
         },
 
         api: { // requires <apis|config>
-            preferredDirection: 'down',
+            directionBias: 'down',
             get entries() { return [
                 { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
                 ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')].map(api => ({
@@ -115,7 +115,7 @@ window.menus = {
         },
 
         pin: { // requires <app|config|toggle>
-            preferredDirection: 'up',
+            directionBias: 'up',
             get entries() { return [
                 { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
                 { label: app.msgs.menuLabel_nothing, iconType: 'cancel',
