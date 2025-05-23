@@ -264,6 +264,8 @@ This extension exists thanks to code, translations, issues & ideas from the foll
     <img width=46 title="Aria Dahl" src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.5.10-requested-show-notifs-at-bottom"></img></a>
 <a href="https://github.com/shtirlitsDva">
     <img width=47 title="@shtirlitsDva" src="https://avatars.githubusercontent.com/u/12258139?first-contrib=2025.5.22-reported-taller-chatbox-buried-on-chatgpt-homepage"></img></a>
+<a href="https://github.com/lijiachang">
+    <img width=47 title="@lijiachang" src="https://avatars.githubusercontent.com/u/28041718?first-contrib=2025.5.22-reported-poe-btn-became-undefined"></img></a>
 <a href="https://github.com/dependabot">
     <img width=46 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp">
