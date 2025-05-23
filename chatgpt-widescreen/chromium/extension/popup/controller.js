@@ -160,7 +160,7 @@
         const categorizedCtrls = {}
         Object.entries(settings.controls).forEach(([key, ctrl]) => {
             if (!sites[env.site].availFeatures.includes(key)) return
-            ( categorizedCtrls[ctrl.category || 'general'] ??= {} )[key] = { ...ctrl, key: key }
+            ( categorizedCtrls[ctrl.category || 'general'] ??= {} )[key] = { ...ctrl, key }
         })
 
         // Create/append general controls
