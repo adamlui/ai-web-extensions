@@ -8,7 +8,7 @@ window.sync = {
         const { site } = env, extensionWasDisabled = config.extensionDisabled || config[`${site}Disabled`]
         await settings.load('extensionDisabled', ...settings.siteDisabledKeys, ...sites[site].availFeatures)
         if (!extensionWasDisabled && ( config.extensionDisabled || config[`${site}Disabled`] )) { // reset UI
-            [styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
+            [styles.chatbar.node, styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
                 .forEach(target => target?.remove())
             chatbar.reset()
             if (site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
