@@ -186,7 +186,7 @@
     }
 
     // Monitor NODE CHANGES to maintain button visibility + update colors/styles
-    let isTempChat = false, canvasWasOpen = chatgpt.canvasIsOpen()
+    let isTempChat = false, canvasWasOpen = chatgpt.canvasIsOpen(), prevPath = location.pathname
     new MutationObserver(async () => {
 
         // Maintain button visibility on nav
@@ -209,8 +209,8 @@
             if (canvasWasOpen ^ chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }
 
         // Update Widescreen styles on Perplexity
-        } else if (env.site == 'perplexity')
-            styles.update({ key: 'widescreen' })
+        } else if (env.site == 'perplexity' && location.pathname != prevPath) {
+            styles.update({ key: 'widescreen' }) ; prevPath = location.pathname }
 
     }).observe(document[env.site == 'poe' ? 'head' : 'body'], { attributes: true, subtree: true })
 
