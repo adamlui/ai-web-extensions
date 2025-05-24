@@ -87,9 +87,11 @@ window.styles = {
                     .text-base { max-width: 100% !important } /* widen outer container */
                     .tableContainer { min-width: 100% }`, // widen tables
                 perplexity: `
-                    .max-w-threadWidth, .max-w-threadContentWidth { /* widen limiting Page/Answer containers */
-                        max-width: 100% }
-                    @media (min-width: 769px) { .col-span-8 { width: 151% }} /* widen inner-left container */
+                    div.max-w-threadWidth, .max-w-threadContentWidth, div.max-w-screen-lg,
+                        div[class*="max-w-\\[700px\\]"] { /* Trending Topics on /academic */                  
+                            max-width: ${ location.pathname.startsWith('/travel') ? 95 : 100 }% }
+                    ${ location.pathname.startsWith('/collections') ? '' // widen inner-left container
+                        : '@media (min-width: 769px) { .col-span-8 { width: 151% }} ' }
                     .col-span-4:has([class*=sticky]) { display: none }`, // hide right-bar
                 poe: `
                     [class*=ChatMessagesView] { width: 100% !important } /* widen outer container */

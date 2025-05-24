@@ -185,7 +185,7 @@
         }
     }
 
-    // Monitor NODE CHANGES to maintain button visibility + update colors
+    // Monitor NODE CHANGES to maintain button visibility + update colors/styles
     let isTempChat = false, canvasWasOpen = chatgpt.canvasIsOpen()
     new MutationObserver(async () => {
 
@@ -207,7 +207,11 @@
 
             // Remove buttons on Canvas mode toggle-on
             if (canvasWasOpen ^ chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }
-        }
+
+        // Update Widescreen styles on Perplexity
+        } else if (env.site == 'perplexity')
+            styles.update({ key: 'widescreen' })
+
     }).observe(document[env.site == 'poe' ? 'head' : 'body'], { attributes: true, subtree: true })
 
     // Monitor SCHEME PREF changes to update sidebar toggle + modal colors
