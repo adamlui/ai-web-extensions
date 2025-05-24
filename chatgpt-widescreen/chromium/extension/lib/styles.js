@@ -55,7 +55,7 @@ window.styles = {
                         : `svg:has(path[d^="M9 7C9 4.238"]) + span { color: white }`}`}
                 ${ config.tcbDisabled ? '' // heighten chatbox
                     : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
-                        { max-height: 68vh }
+                        { max-height: ${ site == 'poe' ? 77 : 68 }vh }
                        ${ site == 'chatgpt' && location.pathname == '/' ? // anchor to bottom for visible overflow
                             'div#thread-bottom-container { position: absolute ; bottom: 0 }' : '' }`}
                 ${ !config.hiddenHeader ? ''
