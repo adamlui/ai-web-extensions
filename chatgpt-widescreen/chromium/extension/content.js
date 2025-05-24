@@ -208,8 +208,8 @@
             // Remove buttons on Canvas mode toggle-on
             if (canvasWasOpen ^ chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }
 
-        // Update Widescreen styles on Perplexity
-        } else if (env.site == 'perplexity' && location.pathname != prevPath) {
+        // Update Widescreen styles on Perplexity nav
+        } else if (env.site == 'perplexity' && location.pathname != prevPath && config.widescreen) {
             styles.update({ key: 'widescreen' }) ; prevPath = location.pathname }
 
     }).observe(document[env.site == 'poe' ? 'head' : 'body'], { attributes: true, subtree: true })
