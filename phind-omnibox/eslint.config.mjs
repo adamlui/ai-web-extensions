@@ -2,7 +2,7 @@ import js from '@eslint/js'
 import importPlugin from 'eslint-plugin-import'
 import json from '@eslint/json'
 import markdown from '@eslint/markdown'
-import stylisticJS from '@stylistic/eslint-plugin-js'
+import stylisticJS from '@stylistic/eslint-plugin'
 import yml from 'eslint-plugin-yml'
 
 export default [

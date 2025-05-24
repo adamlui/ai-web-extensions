@@ -7,10 +7,22 @@
   "homepage": "https://www.aiwebextensions.org",
   "license": "MIT",
   "funding": [
-    { "type": "cashapp", "url": "https://cash.app/$AdamLui" },
-    { "type": "github", "url": "http://github.com/sponsors/adamlui" },
-    { "type": "ko-fi", "url": "https://ko-fi.com/adamlui" },
-    { "type": "paypal", "url": "https://paypal.me/adamlui" }
+    {
+      "type": "cashapp",
+      "url": "https://cash.app/$AdamLui"
+    },
+    {
+      "type": "github",
+      "url": "http://github.com/sponsors/adamlui"
+    },
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/adamlui"
+    },
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/adamlui"
+    }
   ],
   "scripts": {
     "prepare": "husky",
@@ -62,7 +74,7 @@
     "@eslint/markdown": "^6.4.0",
     "@html-eslint/eslint-plugin": "^0.40.3",
     "@html-eslint/parser": "^0.40.0",
-    "@stylistic/eslint-plugin-js": "^4.2.0",
+    "@stylistic/eslint-plugin": "^4.4.0",
     "cross-spawn": "^7.0.6",
     "eslint": "^9.27.0",
     "eslint-plugin-import": "^2.31.0",
