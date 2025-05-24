@@ -142,8 +142,8 @@ window.buttons = {
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
         const parentToInsertInto = (
             site == 'chatgpt' ? (await this.get.rightBtn()).closest('[class*=bottom]') // right btn div
-          : site == 'perplexity' ? // left mode btns div || chat bar
-                chatbarDiv.querySelector('div[role=radiogroup]') || chatbarDiv
+          : site == 'perplexity' ? chatbarDiv.querySelector('div[role=radiogroup]') // left mode btns div
+                                || chatbarDiv
           : /* poe */ chatbarDiv.lastChild // parent of Mic/Send btns
         )
         parentToInsertInto[site == 'perplexity' ? 'append' : 'prepend']( // wrap btns in flexbox for better control
