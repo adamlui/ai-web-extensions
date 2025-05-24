@@ -64,12 +64,11 @@ window.styles = {
                 ${ !config.hiddenFooter ? ''
                     : `${selectors.footer}${ site != 'poe' ? `, ${selectors.btns.help}` : '' }
                         { display: none }` }
-                ${ !config.ncbDisabled ? ''
-                    : `#newChat-btn { display: none }
-                        ${ site == 'perplexity' ? '#widescreen-btn { margin-left: 18px }' : '' }` }
+                ${ !config.ncbDisabled ? '' : `#newChat-btn { display: none } ${
+                    site == 'perplexity' ? '#widescreen-btn { margin-left: 18px }' : '' }`}
                 ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
                    `.${buttons.class} { will-change: transform } /* prevent wobble */
-                    .${buttons.class}:hover { transform: scale(${ site == 'poe' ? 1.15 : 1.285 }) }` }
+                    .${buttons.class}:hover { transform: scale(${ site == 'poe' ? 1.15 : 1.285 })}`}
                 ${ site == 'perplexity' ? // prevent overlay
                     `.${buttons.class} { background: none !important }` : '' }
                 ${ config.blockSpamDisabled ? ''
