@@ -1,7 +1,7 @@
-const chatgptURL = 'https://chatgpt.com/';
+const chatgptURL = 'https://chatgpt.com/'
 
 // Init APP data
-(async () => {
+;(async () => {
     const app = {
         version: chrome.runtime.getManifest().version,
         commitHashes: { app: '8df233b' }, // for cached app.json
