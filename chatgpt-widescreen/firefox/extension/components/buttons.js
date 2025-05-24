@@ -58,30 +58,20 @@ window.buttons = {
 
     async create() { // requires components|tooltip.js + lib/dom.js + <env|sites>
         if (!this.styles) this.stylize()
-        const { site, ui: { hasTallChatbar }} = env, { [site]: { selectors }} = sites
-        const hasDictateBtn = document.querySelector(/\(([^()]+)\)$/.exec(selectors.btns.dictate)?.[1])
-                          && !document.querySelector(selectors.btns.login)
-        const isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true')
-        const validBtnTypes = this.get.types.valid()
-        const spreadFactor = site == 'poe' ? 1 : site == 'perplexity' ? -16 : hasTallChatbar ? -15.5 : -8.85
-        if (isGuestTempChat) // wait for arrow Send button after black chatbar loads or rOffset inaccurate
-            await dom.get.loadedElem(selectors.btns.send, { timeout: 1000 })
-        if (site != 'poe') this.rightBtn = await this.get.rightBtn() // for rOffset + styles
-        const rOffset = site == 'poe' ? -6.5 : site == 'perplexity' ? -4
-            : hasTallChatbar ? (
-                this.rightBtn.getBoundingClientRect().width +2 ) *( hasDictateBtn || isGuestTempChat ? 2 : 1 ) -84
-            : -0.25 // skinny ChatGPT chatbar
+        const { site, ui: { hasTallChatbar }} = env, { [site]: { selectors }} = sites,
+              isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true'),
+              validBtnTypes = this.get.types.valid()
+        if (site != 'poe') this.rightBtn = await this.get.rightBtn() // for styles
 
-        validBtnTypes.forEach(async (btnType, idx) => {
+        validBtnTypes.forEach(async btnType => {
             const btn = this[btnType] = dom.create.elem('div', { id: `${btnType}-btn`, class: this.class })
 
             // Position
-            btn.style.right = `${ rOffset + idx * spreadFactor }px` // position left of prev button
             if (site == 'chatgpt' && hasTallChatbar) {
                 btn.style.bottom = '-0.5px'
                 if (isGuestTempChat && btnType == 'widescreen') btn.style.marginRight = '3px'
-            } else btn.style.top = `${ site == 'chatgpt' ? -3.25
-                                     : site == 'poe' ? ( btnType == 'newChat' ? 0.5 : 3 ) : 0 }px`
+            } else btn.style.top = `${ site == 'chatgpt' ? -3.25 : site == 'poe' ? 3.5 : 0 }px`
+            btn.style.margin = site != 'poe' ? '0 -5px' : '0 2px'
 
             if (site != 'poe') // add site button classes
                 btn.classList.add(...(this.rightBtn?.classList || []))
@@ -148,9 +138,11 @@ window.buttons = {
         )
         parentToInsertInto[site == 'perplexity' ? 'append' : 'prepend']( // wrap btns in flexbox for better control
             this.btnsDiv = dom.create.elem('div', {
-                style: `display: flex ; align-items: center ; gap: 6px ;
-                        margin: ${ site == 'perplexity' ? '0 9px 0 -61px' : '0 -2px 0 0' }`
-        }))
+                style: `display: flex ; align-items: center ; gap: 3px ; position: relative ; right: ${
+                    site == 'chatgpt' ? ( document.querySelector(sites[site].selectors.btns.login) ? 1 : -9.5 )
+                  : site == 'perplexity' ? 7 : /* poe */ -11 }px`
+            })
+        )
 
         // Insert buttons
         const btnTypesToInsert = this.get.types.valid()
