@@ -71,7 +71,7 @@ window.buttons = {
                 btn.style.bottom = '-0.5px'
                 if (isGuestTempChat && btnType == 'widescreen') btn.style.marginRight = '3px'
             } else btn.style.top = `${ site == 'chatgpt' ? -3.25 : site == 'poe' ? 3.5 : 0 }px`
-            btn.style.margin = site != 'poe' ? '0 -5px' : '0 2px'
+            btn.style.margin = `0 ${ site != 'poe' ? -5 : 2 }px`
 
             if (site != 'poe') // add site button classes
                 btn.classList.add(...(this.rightBtn?.classList || []))
