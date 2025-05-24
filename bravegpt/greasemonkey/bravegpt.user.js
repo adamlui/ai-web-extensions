@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.22.3
+// @version               2025.5.24
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -687,7 +687,7 @@
                    `.${app.slug}-header-btn, .${app.slug}-header-btn svg { /* smooth header button fade-in + hover-zoom */
                     transition: var(--btn-transition) ;
                         -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }` }
+                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }`}
                 .${app.slug}-header-btn:active {
                     ${ env.ui.app.scheme == 'dark' ? 'fill: #999999 ; stroke: #999999'
                                                    : 'fill: #638ed4 ; stroke: #638ed4' }}
@@ -719,7 +719,7 @@
                         -moz-transition: var(--font-size-slider-thumb-transition) ;
                         -o-transition: var(--font-size-slider-thumb-transition) ;
                         -ms-transition: var(--font-size-slider-thumb-transition)` }}
-                ${ env.browser.isMobile ? '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }` }
+                ${ env.browser.isMobile ? '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }`}
                 .${app.slug}-standby-btns { margin: 14px 0 22px }
                 .${app.slug}-standby-btn {
                     display: flex ; align-items: center ; justify-content: center ; gap: 8px ;
@@ -811,7 +811,7 @@
                     position: relative ; z-index: 555 ; color: ${ env.ui.app.scheme == 'dark' ? '#eee' : '#222' };
                     height: 43px ; line-height: 17px ; width: 100% ; max-height: 200px ; resize: none ;
                     background: ${ env.ui.app.scheme == 'light' ? '#eeeeee9e'
-                        : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }` };
+                        : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }`};
                     ${ env.ui.app.scheme == 'dark' ? '' :
                         `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
                         box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
@@ -828,7 +828,7 @@
                         -moz-box-shadow: var(--chatbar-hover-inset-shadow) ;
                         transition: box-shadow 0.25s ease ;
                             -webkit-transition: box-shadow 0.25s ease ; -moz-transition: box-shadow 0.25s ease ;
-                            -o-transition: box-shadow 0.25s ease ; -ms-transition: box-shadow 0.25s ease }` }
+                            -o-transition: box-shadow 0.25s ease ; -ms-transition: box-shadow 0.25s ease }`}
                 #${app.slug}-chatbar:focus-visible { /* fallback outline chatbar + reduce inset shadow on focus */
                     outline: -webkit-focus-ring-color auto 1px ;
                     ${ isParticlizedDS ? '' :
@@ -2677,14 +2677,14 @@
                   + `transition: var(--fg-transition) ; /* fade-in + move-in */
                         -webkit-transition: var(--fg-transition) ; -moz-transition: var(--fg-transition) ;
                         -o-transition: var(--fg-transition) ; -ms-transition:  var(--fg-transition) }
-                    ${ env.browser.isMobile ? '' : `[class$=-modal] button:hover { transform: var(--modal-btn-zoom) }` }
+                    ${ env.browser.isMobile ? '' : `[class$=-modal] button:hover { transform: var(--modal-btn-zoom) }`}
                     ${ config.fgAnimationsDisabled ? '' : `[class$=-modal] button {
                         ${ env.browser.isMobile ? '' : 'will-change: transform ;' }
                         transition: var(--modal-btn-transition) ;
                             -webkit-transition: var(--modal-btn-transition) ;
                             -moz-transition: var(--modal-btn-transition) ;
                             -o-transition: var(--modal-btn-transition) ;
-                            -ms-transition: var(--modal-btn-transition) }` }`
+                            -ms-transition: var(--modal-btn-transition) }`}`
 
               // Settings modal
               + `#${app.slug}-settings {

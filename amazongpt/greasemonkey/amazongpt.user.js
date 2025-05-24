@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.22.3
+// @version                2025.5.24
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -394,7 +394,7 @@
                     --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: white ;
                     --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;
                     --app-border: ${ isParticlizedDS ? 'none'
-                        : `1px solid #${ env.ui.app.scheme == 'light' ? 'dadce0' : '3b3b3b' }` };
+                        : `1px solid #${ env.ui.app.scheme == 'light' ? 'dadce0' : '3b3b3b' }`};
                     --app-gradient-bg: linear-gradient(180deg, ${
                         env.ui.app.scheme == 'dark' ? '#99a8a6 -245px, black 185px' : '#b6ebff -163px, white 65px' }) ;
                     --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
@@ -481,7 +481,7 @@
                    `.${app.slug}-header-btn, .${app.slug}-header-btn svg { /* smooth header button fade-in + hover-zoom */
                     transition: var(--btn-transition) ;
                         -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }` }
+                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }`}
                 .${app.slug}-header-btn:active {
                     ${ env.ui.app.scheme == 'dark' ? 'fill: #999999 ; stroke: #999999'
                                                    : 'fill: #638ed4 ; stroke: #638ed4' }}
@@ -512,7 +512,7 @@
                         -moz-transition: var(--font-size-slider-thumb-transition) ;
                         -o-transition: var(--font-size-slider-thumb-transition) ;
                         -ms-transition: var(--font-size-slider-thumb-transition)` }}
-                ${ env.browser.isMobile ? '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }` }`
+                ${ env.browser.isMobile ? '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }`}`
 
               // AI reply elem styles
              + `#${app.slug} .reply-tip {
@@ -592,7 +592,7 @@
                     font-size: 14.5px ; height: 46px ; width: 100% ; max-height: 200px ; resize: none ;
                     position: relative ; z-index: 555 ; color: #${ env.ui.app.scheme == 'dark' ? 'eee' : '222' };
                     background: ${ env.ui.app.scheme == 'light' ? '#eeeeee9e'
-                        : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }` };
+                        : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }`};
                     ${ env.ui.app.scheme == 'dark' ? '' :
                         `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
                         box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
@@ -609,7 +609,7 @@
                         -moz-box-shadow: var(--chatbar-hover-inset-shadow) ;
                         transition: box-shadow 0.25s ease ;
                             -webkit-transition: box-shadow 0.25s ease ; -moz-transition: box-shadow 0.25s ease ;
-                            -o-transition: box-shadow 0.25s ease ; -ms-transition: box-shadow 0.25s ease }` }
+                            -o-transition: box-shadow 0.25s ease ; -ms-transition: box-shadow 0.25s ease }`}
                 #${app.slug}-chatbar:focus-visible { /* fallback outline chatbar + reduce inset shadow on focus */
                     outline: -webkit-focus-ring-color auto 1px ;
                     ${ isParticlizedDS ? '' :
@@ -1975,14 +1975,14 @@
                   + `transition: var(--fg-transition) ; /* fade-in + move-in */
                         -webkit-transition: var(--fg-transition) ; -moz-transition: var(--fg-transition) ;
                         -o-transition: var(--fg-transition) ; -ms-transition:  var(--fg-transition) }
-                    ${ env.browser.isMobile ? '' : `[class$=-modal] button:hover { transform: var(--modal-btn-zoom) }` }
+                    ${ env.browser.isMobile ? '' : `[class$=-modal] button:hover { transform: var(--modal-btn-zoom) }`}
                     ${ config.fgAnimationsDisabled ? '' : `[class$=-modal] button {
                         ${ env.browser.isMobile ? '' : 'will-change: transform ;' }
                         transition: var(--modal-btn-transition) ;
                             -webkit-transition: var(--modal-btn-transition) ;
                             -moz-transition: var(--modal-btn-transition) ;
                             -o-transition: var(--modal-btn-transition) ;
-                            -ms-transition: var(--modal-btn-transition) }` }`
+                            -ms-transition: var(--modal-btn-transition) }`}`
 
               // Settings modal
               + `#${app.slug}-settings {

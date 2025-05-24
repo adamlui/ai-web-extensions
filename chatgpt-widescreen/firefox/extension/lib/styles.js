@@ -60,10 +60,10 @@ window.styles = {
                             'div#thread-bottom-container { position: absolute ; bottom: 0 }' : '' }`}
                 ${ !config.hiddenHeader ? ''
                     : `${selectors.header} { display: none !important }
-                       ${ site == 'chatgpt' ? 'main { padding-top: 12px }' : '' }` }
+                       ${ site == 'chatgpt' ? 'main { padding-top: 12px }' : '' }`}
                 ${ !config.hiddenFooter ? ''
                     : `${selectors.footer}${ site != 'poe' ? `, ${selectors.btns.help}` : '' }
-                        { display: none }` }
+                        { display: none }`}
                 ${ !config.ncbDisabled ? '' : `#newChat-btn { display: none } ${
                     site == 'perplexity' ? '#widescreen-btn { margin-left: 18px }' : '' }`}
                 ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover

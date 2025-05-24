@@ -105,7 +105,7 @@ window.buttons = {
                     speakSVGs[state] = []
                     for (let i = 0 ; i < 2 ; i++) { // push/id 2 of each state icon for continuous scroll animation
                         speakSVGs[state].push(
-                            icons.create({ key: `soundwave${ state == 'generating' ? 'Short' : 'Tall' }` }))
+                            icons.create({ key: `soundwave${ state == 'generating' ? 'Short' : 'Tall' }`}))
                         speakSVGs[state][i].id = `${app.slug}-${state}-icon-${i+1}`
                         if (i == 1) // close gap of 2nd icon during scroll
                             speakSVGs[state][i].style.marginLeft = `-${ state == 'generating' ? 3 : 5 }px`
