@@ -64,7 +64,9 @@ window.styles = {
                 ${ !config.hiddenFooter ? ''
                     : `${selectors.footer}${ site != 'poe' ? `, ${selectors.btns.help}` : '' }
                         { display: none }` }
-                #newChat-btn { display: ${ config.ncbDisabled ? 'none' : 'flex' }}
+                ${ !config.ncbDisabled ? ''
+                    : `#newChat-btn { display: none }
+                        ${ site == 'perplexity' ? '#widescreen-btn { margin-left: 18px }' : '' }` }
                 ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
                    `.${buttons.class} { will-change: transform } /* prevent wobble */
                     .${buttons.class}:hover { transform: scale(${ site == 'poe' ? 1.15 : 1.285 }) }` }
