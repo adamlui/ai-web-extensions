@@ -94,10 +94,7 @@
             const resIsValid = !(await (await fetchData(resURL)).text()).startsWith('Package size exceeded')
             if (!resIsValid) log.error(`\nInvalid resource: ${resURL}\n`)
             return resIsValid
-        } catch (err) {
-            log.error(`\nCannot validate resource: ${resURL}\n`)
-            return null
-        }
+        } catch (err) { return log.error(`\nCannot validate resource: ${resURL}\n`) }
     }
 
     // Run MAIN routine
