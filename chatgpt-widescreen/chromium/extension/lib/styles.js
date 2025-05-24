@@ -57,7 +57,7 @@ window.styles = {
                     : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
                         { max-height: 68vh }
                        ${ site == 'chatgpt' && location.pathname == '/' ? // anchor to bottom for visible overflow
-                            'div#thread-bottom-container { position: absolute ; bottom: -51px }' : '' }`}
+                            'div#thread-bottom-container { position: absolute ; bottom: 0 }' : '' }`}
                 ${ !config.hiddenHeader ? ''
                     : `${selectors.header} { display: none !important }
                        ${ site == 'chatgpt' ? 'main { padding-top: 12px }' : '' }` }
