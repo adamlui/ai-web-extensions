@@ -49,7 +49,7 @@
         "settings": "button:has(svg[data-icon=user])", "sidebar": "button[data-testid=sidebar-pin-sidebar]"
       },
       "footer": "div:has(> a[href=\"https://www.perplexity.ai/hub/careers\"])",
-      "header": "div[class*=header].sticky:nth-of-type(2)", "input": "textarea[placeholder]",
+      "header": "div[class*=header].sticky:nth-of-type(2), div.h-headerHeight", "input": "textarea[placeholder]",
       "spam": {
         "banners": {
           "apps": "div.col-span-6:has(a[href*=\"perplexity.ai\"])", // http://i.imgur.com/ewit7S6.png
