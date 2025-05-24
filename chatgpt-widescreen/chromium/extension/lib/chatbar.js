@@ -61,7 +61,7 @@ window.chatbar = {
                     key: 'paperclip',  style: 'height: 15px !important ; width: 15px !important' }))
             })
             dom.get.loadedElem(selectors.btns.mic, { timeout: btnLoadTimeout })
-                .then(btn => { if (btn) btn.style.marginRight = '-7px' })
+                .then(btn => { if (btn) btn.style.marginRight = '-8px' })
         }
     }
 };
