@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.25
+// @version             2025.5.25.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -260,9 +260,9 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@152a535/chromium/extension/lib/browser.js#sha256-7teBecqrjkazKH6oetGyxKlBkAk5U9ota/LNCB3Q+Jw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@2b3e5c8/chromium/extension/lib/chatbar.js#sha256-+XVFMnktVYGGVrk4v2PrWqvvWGA71kn1KDv+6oCjfZY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ac383f2/chromium/extension/lib/dom.js#sha256-QAHZ9hlWeLvunZtEt2z34mKhvdg71RhGBlxfMljIBPU=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@595ac73/chromium/extension/lib/settings.js#sha256-rsh1BYveKaWfJTUlvj0FE7lcT0Vc9+YM6loKeIxbJtw=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@0f832cf/chromium/extension/lib/styles.js#sha256-j4riHTfeYcVBhwwHHrsuZYwKxOtG1h74HPyCdCVsqSY=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@2b3e5c8/chromium/extension/lib/sync.js#sha256-rP41QfiNKrcecoz0BmFhgVPvxlJ6EEqHVT3hwqGeAvg=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@8df0330/chromium/extension/lib/settings.js#sha256-7aIptrk/18+9g1h22gHznWguVIy9QhaYEAoxz8qRb+Q=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@8df0330/chromium/extension/lib/styles.js#sha256-w+3dVN1H/PDb4npwohXYkA9XqeSATYRnU58m9O49UWk=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@8df0330/chromium/extension/lib/sync.js#sha256-iruip0Cgm3Ycv1zPYglHVLhSgBnoOAsHeDMpjz+4F24=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/ui.js#sha256-9ZQ8DyJvJ5YSuOGhmdqofNMT/QJGs5uhej0DmvH0g/k=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@0f832cf/chromium/extension/components/buttons.js#sha256-Z87gee2On4NXlvwn3IG/VcI5Jv9SNlsaH63n7px3fao=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@511d193/chromium/extension/components/icons.js#sha256-6eK7coHHFB4zBfl8XXtjojrnfbBOFiEgYfQtz/Whv2E=
@@ -313,8 +313,6 @@
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
                                       && parseInt(env.scriptManager.version.split('.')[0]) >= 5
     ui.getScheme().then(scheme => env.ui.scheme = scheme)
-    if (env.site == 'chatgpt') // store native chatbar width for Wider Chatbox style
-        chatbar.nativeWidth = dom.get.computedWidth(document.querySelector('main form'))
     const xhr = typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
 
     // Init APP data
@@ -361,11 +359,14 @@
         onload: resp => resolve(JSON5.parse(resp.responseText))
     })))
 
+    chatbar.nativeWidth = dom.get.computedWidth( // for ChatGPT WCB + styles.widescreen.css math
+        document.querySelector(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input))
+
     // Init SETTINGS
     if (GM_getValue(`${app.configKeyPrefix}_isFirstRun`) == undefined) { // activate widescreen on install
         settings.save('widescreen', true) ; settings.save('isFirstRun', false) }
     settings.siteDisabledKeys = Object.keys(sites).map(site => `${site}Disabled`)
-    settings.load(...settings.siteDisabledKeys, sites[env.site].availFeatures)
+    settings.load(...settings.siteDisabledKeys, sites[env.site].availFeatures) ; config.widescreenWidth = 100
 
     // Define MENU functions
 
@@ -392,7 +393,7 @@
             // ...or create toggles for available features if script not disabled via Site Settings
             : !config[`${env.site}Disabled`] ?
                 Object.keys(settings.controls).map(key => {
-                    if (sites[env.site].availFeatures.includes(key)) {
+                    if (sites[env.site].availFeatures.includes(key) && !settings.controls[key].excludeGM) {
                         const ctrl = settings.controls[key]
                         const menuLabel = `${
                             ctrl.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${ctrl.label} ${
