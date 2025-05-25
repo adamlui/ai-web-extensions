@@ -47,7 +47,7 @@ chrome.runtime.onMessage.addListener(async req => {
             new URL(activeTab.url).hostname == new URL(aiURL).hostname) ? activeTab // active tab is AI site, use it
                 : // else use random enabled site or ChatGPT
                 await chrome.storage.local.get(['chatgptDisabled', 'perplexityDisabled', 'poeDisabled'])
-                    .then(({chatgptDisabled, perplexityDisabled, poeDisabled}) => {
+                    .then(({ chatgptDisabled, perplexityDisabled, poeDisabled }) => {
                         const sitesEnabled = [
                             !chatgptDisabled && aiHomeURLs[0],
                             !perplexityDisabled && aiHomeURLs[1],
