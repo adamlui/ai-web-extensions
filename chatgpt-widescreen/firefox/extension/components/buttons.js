@@ -71,7 +71,7 @@ window.buttons = {
                 btn.style.bottom = '-0.5px'
                 if (isGuestTempChat && btnType == 'widescreen') btn.style.marginRight = '3px'
             } else btn.style.top = `${ site == 'chatgpt' ? -3.25 : site == 'poe' ? 3.5 : 0 }px`
-            btn.style.margin = `0 ${ site != 'poe' ? -5 : 2 }px`
+            btn.style.margin = `0 ${ site == 'chatgpt' ? -7 : site == 'perplexity' ? -6 : /* poe */ 2 }px`
 
             if (site != 'poe') // add site button classes
                 btn.classList.add(...(this.rightBtn?.classList || []))
@@ -139,7 +139,7 @@ window.buttons = {
         parentToInsertInto[site == 'perplexity' ? 'append' : 'prepend']( // wrap btns in flexbox for better control
             this.btnsDiv = dom.create.elem('div', {
                 style: `display: flex ; align-items: center ; gap: 3px ; position: relative ; right: ${
-                    site == 'chatgpt' ? ( document.querySelector(sites[site].selectors.btns.login) ? 1 : -9.5 )
+                    site == 'chatgpt' ? ( document.querySelector(sites[site].selectors.btns.login) ? 1 : -12 )
                   : site == 'perplexity' ? 7 : /* poe */ -11 }px`
             })
         )
