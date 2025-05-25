@@ -201,7 +201,7 @@ window.buttons = {
         color() { // requires env
             const { site, ui: { scheme }} = env
             buttons.color = (
-                site == 'chatgpt' ? 'var(--text-secondary)'
+                site == 'chatgpt' ? 'var(--text-primary)'
               : site == 'perplexity' ? ( scheme == 'dark' ? 'white' : '#39545a' )
               : /* poe */ 'currentColor'
             )
