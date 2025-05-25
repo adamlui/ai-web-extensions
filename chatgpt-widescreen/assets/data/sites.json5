@@ -3,7 +3,7 @@
     "availFeatures": [
       "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenFooter",
       "hiddenHeader", "ncbDisabled", "notifBottom", "notifDisabled", "tcbDisabled", "toastMode", "widerChatbox",
-      "widescreen"
+      "widescreen", "widescreenWidth"
     ],
     "selectors": {
       "btns": {
@@ -38,7 +38,8 @@
   "perplexity": {
     "availFeatures": [
       "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenFooter",
-      "hiddenHeader", "ncbDisabled", "notifBottom", "notifDisabled", "tcbDisabled", "toastMode", "widescreen"
+      "hiddenHeader", "ncbDisabled", "notifBottom", "notifDisabled", "tcbDisabled", "toastMode", "widescreen",
+      "widescreenWidth"
     ],
     "hasSidebar": true,
     "selectors": {
@@ -74,7 +75,8 @@
   "poe": {
     "availFeatures": [
       "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenHeader",
-      "ncbDisabled", "notifBottom", "notifDisabled", "tcbDisabled", "toastMode", "widerChatbox", "widescreen"
+      "ncbDisabled", "notifBottom", "notifDisabled", "tcbDisabled", "toastMode", "widerChatbox", "widescreen",
+      "widescreenWidth"
     ],
     "hasSidebar": true,
     "selectors": {
