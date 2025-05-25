@@ -89,7 +89,6 @@ window.styles = {
             window.nativeMinWidth ||= chatbar.nativeWidth +( site == 'chatgpt' ? 128 : site == 'poe' ? 66 : 274 )
             window.nativeMaxWidth ||= document.querySelector(outerDivSelector)?.parentNode?.offsetWidth
                 +( site == 'poe' ? -64 : 0 ) // prevent over-expansion on Poe which doesn't use max-width
-            console.log(window.nativeMinWidth, window.nativeMaxWidth)
             const finalWidth = window.nativeMinWidth +(
                 window.nativeMaxWidth - window.nativeMinWidth ) * config.widescreenWidth /100
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
