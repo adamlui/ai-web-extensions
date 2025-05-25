@@ -191,6 +191,7 @@ window.buttons = {
                     #fullWindow-btn { display: none }
                     #widescreen-btn { margin-right: ${ site == 'perplexity' ? 9 : 19 }px }}`
                 : '' }
+            ${ site == 'chatgpt' ? `.${this.class} svg { height: 19.5px ; width: 19.5px }` : '' }
             ${ site == 'perplexity' ? // hide native tooltip that persists for being in same parent, max hover opacity
                     `body:not(:has(button[role=radio]:hover)) ${selectors.tooltip} { display: none !important }`
                 : '' }`
