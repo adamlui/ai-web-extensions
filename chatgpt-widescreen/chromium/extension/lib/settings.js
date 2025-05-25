@@ -48,6 +48,11 @@ window.settings = {
     },
 
     controls: { // displays top-to-bottom in toolbar menu
+        get widescreenWidth() { return {
+            type: 'slider', symbol: '↔️', defaultVal: 100, category: 'displaySettings', excludeEnv: ['greasemonkey'],
+            label: settings.getMsg('menuLabel_widescreenWidth'), labelSuffix: '%',
+            helptip: settings.getMsg('helptip_widescreenWidth')
+        }},
         get fullerWindows() { return {
             type: 'toggle', defaultVal: false, category: 'displaySettings',
             label: settings.getMsg('menuLabel_fullerWins'),

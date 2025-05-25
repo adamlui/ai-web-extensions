@@ -23,8 +23,6 @@
     }
     env.browser.isPortrait = env.browser.isMobile && ( innerWidth < innerHeight )
     ui.getScheme().then(scheme => env.ui.scheme = scheme)
-    if (env.site == 'chatgpt') // store native chatbar width for Wider Chatbox style
-        chatbar.nativeWidth = dom.get.computedWidth(document.querySelector('main form'))
 
     // Add CHROME MSG listener for background/popup requests to sync modes/settings
     chrome.runtime.onMessage.addListener(({ action, options }) => {
@@ -39,6 +37,9 @@
     // Import DATA
     ;({ app: window.app } = await chrome.storage.local.get('app'))
     ;({ sites: window.sites } = await chrome.storage.local.get('sites'))
+
+    chatbar.nativeWidth = dom.get.computedWidth( // for ChatGPT WCB + styles.widescreen.css math
+        document.querySelector(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input))
 
     // Init SETTINGS
     const firstRunKey = `${env.site}_isFirstRun`

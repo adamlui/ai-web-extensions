@@ -24,9 +24,9 @@ window.sync = {
             styles.update({ key: 'chatbar' }) // sync WCB
             if (site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
-            if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
-                // ...to visually signal location + preview fx applied by Button Animations toggle-on
-                buttons.animate()
+            if (options?.updatedKey == 'widescreenWidth') styles.update({ key: 'widescreen' })
+            else if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled)
+                buttons.animate() // to visually signal location + preview fx applied by Button Animations toggle-on
             else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.update({ key: 'toast' })
             if (site != 'poe') // toggle free wheel locked in some Spam blocks
                 document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](

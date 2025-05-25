@@ -80,21 +80,32 @@ window.styles = {
 
     widescreen: {
         autoAppend: false,
-        get css() { // requires <config|env>
-            return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : {
+        get css() { // requires <config|env|sites>
+            const { site } = env
+            const outerDivSelector = site == 'chatgpt' ? 'div.text-base'
+                : site == 'perplexity' ? `div.max-w-threadWidth, .max-w-threadContentWidth, div.max-w-screen-lg,
+                                          div[class*="max-w-\\[700px\\]"]` // Trending Topics on /academic
+                : /* poe */ 'div[class*=ChatMessagesView]'
+            window.nativeMinWidth ||= chatbar.nativeWidth +( site == 'chatgpt' ? 128 : site == 'poe' ? 66 : 274 )
+            window.nativeMaxWidth ||= document.querySelector(outerDivSelector)?.parentNode?.offsetWidth
+                +( site == 'poe' ? -64 : 0 ) // prevent over-expansion on Poe which doesn't use max-width
+            console.log(window.nativeMinWidth, window.nativeMaxWidth)
+            const finalWidth = window.nativeMinWidth +(
+                window.nativeMaxWidth - window.nativeMinWidth ) * config.widescreenWidth /100
+            return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
                 chatgpt: `
-                    .text-base { max-width: 100% !important } /* widen outer container */
+                    ${outerDivSelector} { max-width: ${finalWidth}px !important } /* widen outer div */
                     .tableContainer { min-width: 100% }`, // widen tables
                 perplexity: `
-                    div.max-w-threadWidth, .max-w-threadContentWidth, div.max-w-screen-lg,
-                        div[class*="max-w-\\[700px\\]"] { /* Trending Topics on /academic */                  
-                            max-width: ${ location.pathname.startsWith('/travel') ? 95 : 100 }% }
-                    ${ location.pathname.startsWith('/collections') ? '' // widen inner-left container
-                        : '@media (min-width: 769px) { .col-span-8 { width: 151% }} ' }
+                    ${outerDivSelector} { max-width: ${finalWidth}px }
+                    ${ location.pathname.startsWith('/collections') ? '' // widen inner-left div
+                        : '@media (min-width: 769px) { .col-span-8 { width: 151% }}' }
+                    ${ !location.pathname.startsWith('/travel') ? '' // push right
+                        : `${outerDivSelector} { margin-left: 68px }` }
                     .col-span-4:has([class*=sticky]) { display: none }`, // hide right-bar
                 poe: `
-                    [class*=ChatMessagesView] { width: 100% !important } /* widen outer container */
-                    [class^=Message] { max-width: 100% !important }` // widen speech bubbles
+                    ${outerDivSelector} { width: ${finalWidth}px !important } /* widen outer div */
+                    div[class^=Message] { max-width: 100% !important }` // widen speech bubbles
             }[env.site]
         }
     }
