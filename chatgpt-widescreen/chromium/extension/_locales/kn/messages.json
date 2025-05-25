@@ -8,6 +8,7 @@
   "menuLabel_btn": { "message": "à²à²¨à³à²µà²¯à²à²³à²¨à³à²¨à³ à²ªà³à²°à²¾à²°à²à²­à²¿à²¸à²²à³ à²à²à²¦à³ à²ªà³à²°à²à³à²·à³à²ªà² (à²²à²¾à²à²à²°à³) Name" },
   "menuLabel_chatbox": { "message": "ಚಾಟ್‌ಬಾಕ್ಸ್" },
   "menuLabel_display": { "message": "ಪ್ರದರ್ಶಕComment" },
+  "menuLabel_widescreenWidth": { "message": "ಅಗಲ ಪರದೆ ಅಗಲ" },
   "menuLabel_fullerWins": { "message": "ಪೂರ್ಣ ಕಿಟಕಿಗಳು" },
   "menuLabel_tallerChatbox": { "message": "ಎತ್ತರದ ಚಾಟ್ಬಾಕ್ಸ್" },
   "menuLabel_widerChatbox": { "message": "ವಿಶಾಲ ಚಾಟ್ ಬಾಕ್ಸ್" },
@@ -47,6 +48,7 @@
   "helptip_adjustSettingsRelatedTo": { "message": "ಇದಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಸರಿಹೊಂದಿಸಿ" },
   "helptip_the": { "message": "Adu" },
   "helptip_btns": { "message": "ಗುಂಡಿಗಳು" },
+  "helptip_widescreenWidth": { "message": "ಅನ್ವಯಿಸಲು ವೈಡ್‌ಸ್ಕ್ರೀನ್ ಪ್ರಮಾಣವನ್ನು ಸರಿಹೊಂದಿಸಿ" },
   "helptip_fullerWins": { "message": "ಪೂರ್ಣ ವಿಂಡೋವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುವಾಗ ವೈಡ್ ಸ್ಕ್ರೀನ್ ಅನ್ನು ಸಹ ಸಕ್ರಿಯಗೊಳಿಸಿ" },
   "helptip_tallerChatbox": { "message": "ಚಾಟ್ ‌ ಬಾಕ್ಸ್ ಅನ್ನು ಲಂಬವಾಗಿ ವಿಸ್ತರಿಸಿ" },
   "helptip_widerChatbox": { "message": "ಚಾಟ್ ‌ ಬಾಕ್ಸ್ ಅನ್ನು ಅಡ್ಡಲಾಗಿ ವೈಡ್ ಸ್ಕ್ರೀನ್ ಮೋಡ್ ‌ ನಲ್ಲಿ ವಿಸ್ತರಿಸಿ" },
