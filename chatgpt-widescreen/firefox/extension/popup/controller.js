@@ -41,7 +41,7 @@
                 entry.rightElem.append(icons.create({ key: 'open', size: 17, fill: 'black' }))
             }
         }
-        if (entryData.type == 'slider') { // append slider, add listeners + remove highlight-on-hover
+        if (entryData.type == 'slider') { // append slider, add listeners, remove .highlight-on-hover
             entry.slider = dom.create.elem('input', { class: 'slider', type: 'range',
                 min: entry.min || 0, max: entry.max || 100, value: config[entryData.key] })
             entry.label.textContent += `: ${entry.slider.value}${ entryData.labelSuffix || '' }`
