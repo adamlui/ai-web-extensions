@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.26.2
+// @version               2025.5.26.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -413,7 +413,7 @@
             label: `${app.msgs.menuLabel_about} ${app.name}...` }
     }})
     Object.assign(config, { lineHeightRatio: 1.313, maxFontSize: 24, minFontSize: 11, theme: 'lines'  })
-    settings.load([...Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized'])
+    settings.load(Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized')
     if (!config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!config.fontSize) settings.save('fontSize', 12.8791) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env

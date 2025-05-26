@@ -6,7 +6,7 @@ window.sync = {
     // ... requires components/buttons.js + lib/<chatbar|settings|styles>.js + <config|env>
 
         const { site } = env, extensionWasDisabled = config.extensionDisabled || config[`${site}Disabled`]
-        await settings.load('extensionDisabled', ...settings.siteDisabledKeys, ...sites[site].availFeatures)
+        await settings.load('extensionDisabled', settings.siteDisabledKeys, sites[site].availFeatures)
         if (!extensionWasDisabled && ( config.extensionDisabled || config[`${site}Disabled`] )) { // reset UI
             [styles.chatbar.node, styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
                 .forEach(target => target?.remove())

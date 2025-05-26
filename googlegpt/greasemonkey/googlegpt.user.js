@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.26.2
+// @version                  2025.5.26.3
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/app/black/icon48.png?v=12a91c0
 // @icon64                   https://assets.googlegpt.io/images/icons/app/black/icon64.png?v=12a91c0
@@ -596,7 +596,7 @@
     }})
     Object.assign(config, {
         lineHeightRatio: env.browser.isMobile ? 1.357 : 1.375, maxFontSize: 24, minFontSize: 11, theme: 'lines' })
-    settings.load([...Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized', 'notFirstRun'])
+    settings.load(Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized', 'notFirstRun')
     if (!config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!config.fontSize) settings.save('fontSize', env.browser.isMobile ? 14 : 14.0423) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env

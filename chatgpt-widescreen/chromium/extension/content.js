@@ -46,7 +46,7 @@
     if ((await chrome.storage.local.get(firstRunKey))[firstRunKey] == undefined) { // activate widescreen on install
         settings.save('widescreen', true) ; settings.save('isFirstRun', false) }
     settings.siteDisabledKeys = Object.keys(sites).map(site => `${site}Disabled`)
-    await settings.load('extensionDisabled', ...settings.siteDisabledKeys, ...sites[env.site].availFeatures)
+    await settings.load('extensionDisabled', settings.siteDisabledKeys, sites[env.site].availFeatures)
 
     // Define FUNCTIONS
 

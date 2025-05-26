@@ -36,7 +36,7 @@
     ;({ app: window.app } = await chrome.storage.local.get('app'))
 
     // Init SETTINGS
-    await settings.load('extensionDisabled', ...Object.keys(settings.controls)
+    await settings.load('extensionDisabled', Object.keys(settings.controls)
         .filter(key => key != 'infinityMode')) // exclude infinityMode...
     settings.save('infinityMode', false) // ...to always init as false
     if (!config.replyLanguage) // init reply language if unset
