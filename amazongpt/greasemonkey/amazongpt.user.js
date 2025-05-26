@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.26
+// @version                2025.5.26.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -293,10 +293,10 @@
 
                 /* General button styles */
                 ${selectors.btn.shared} {
-                    --content-color: ${ env.ui.app.scheme == 'light' ? '0,0,0' : '255,255,255' };
-                    --side-line-fill: linear-gradient(rgb(var(--content-color)), rgb(var(--content-color))) ;
-                    --skew: skew(-13deg) ; --counter-skew: skew(13deg) ; --btn-svg-zoom: scale(1.2) ;
-                    --btn-transition: 0.1s ease all ;
+                  --content-color: ${ env.ui.app.scheme == 'light' ? '0,0,0' : '255,255,255' };
+                  --side-line-fill: linear-gradient(rgb(var(--content-color)), rgb(var(--content-color))) ;
+                  --skew: skew(-13deg) ; --counter-skew: skew(13deg) ; --btn-svg-zoom: scale(1.2) ;
+                  --btn-transition: 0.1s ease all ;
                     position: relative ; border-width: 1px ; cursor: crosshair ;
                     border: 1px solid rgb(var(--content-color)) ;
                     background: /* side lines */
@@ -333,9 +333,9 @@
 
                 /* Modal button styles */
                 ${selectors.btn.modal} {
-                    --modal-btn-y-offset: 2px ; --glow-color: #a0fdff ;
-                    --modal-btn-zoom: scale(1.075) ;
-                    --modal-btn-transition: transform 0.1s ease, background 0.2s ease, box-shadow 5s ease ;
+                  --modal-btn-y-offset: 2px ; --glow-color: #a0fdff ;
+                  --modal-btn-zoom: scale(1.075) ;
+                  --modal-btn-transition: transform 0.1s ease, background 0.2s ease, box-shadow 5s ease ;
                     ${ config.fgAnimationsDisabled ? /* override chatgpt.js transitions */
                         `transition: none ;
                             -webkit-transition: none ; -moz-transition: none ;
@@ -386,27 +386,27 @@
 
                 // Init vars
                `:root {
-                    --app-bg-color-light-scheme: white ; --app-bg-color-dark-scheme: #1c1c1c ;
-                    --pre-bg-color-light-scheme: #b7b7b736 ; --pre-bg-color-dark-scheme: #3a3a3a ;
-                    --reply-header-bg-color-light-scheme: #d7d4d4 ;
-                    --reply-header-bg-color-dark-scheme: ${ !isParticlizedDS ? '#545454' : '#0e0e0e24' };
-                    --reply-header-fg-color-light-scheme: white ; --reply-header-fg-color-dark-scheme: white ;
-                    --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: white ;
-                    --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;
-                    --app-border: ${ isParticlizedDS ? 'none'
+                  --app-bg-color-light-scheme: white ; --app-bg-color-dark-scheme: #1c1c1c ;
+                  --pre-bg-color-light-scheme: #b7b7b736 ; --pre-bg-color-dark-scheme: #3a3a3a ;
+                  --reply-header-bg-color-light-scheme: #d7d4d4 ;
+                  --reply-header-bg-color-dark-scheme: ${ !isParticlizedDS ? '#545454' : '#0e0e0e24' };
+                  --reply-header-fg-color-light-scheme: white ; --reply-header-fg-color-dark-scheme: white ;
+                  --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: white ;
+                  --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;
+                  --app-border: ${ isParticlizedDS ? 'none'
                         : `1px solid #${ env.ui.app.scheme == 'light' ? 'dadce0' : '3b3b3b' }`};
-                    --app-gradient-bg: linear-gradient(180deg, ${
+                  --app-gradient-bg: linear-gradient(180deg, ${
                         env.ui.app.scheme == 'dark' ? '#99a8a6 -245px, black 185px' : '#b6ebff -163px, white 65px' }) ;
-                    --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
+                  --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
                                                                                                : '11,0.22' }) ;
-                    --app-transition: opacity 0.5s ease, transform 0.5s ease, /* for 1st fade-in */
+                  --app-transition: opacity 0.5s ease, transform 0.5s ease, /* for 1st fade-in */
                                       bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
                                       width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
-                    --btn-transition: transform 0.15s ease, /* for hover-zoom */
+                  --btn-transition: transform 0.15s ease, /* for hover-zoom */
                                       opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
-                    --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
-                    --reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ; /* for Anchor changes */
-                    --fade-in-less-transition: opacity 0.2s ease } /* used by Font Size slider */`
+                  --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
+                  --reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ; /* for Anchor changes */
+                  --fade-in-less-transition: opacity 0.2s ease } /* used by Font Size slider */`
 
                 // Animations
              + `.fade-in { opacity: 0 ; transform: translateY(10px) }
@@ -459,7 +459,7 @@
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}
                 .byline { /* header byline */
                     position: relative ; bottom: -1px ; margin-left: 8px ; color: #aaa ;
-                    --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
+                  --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
                         -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
                         -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
                 .byline a, .byline a:visited { color: #aaa ; text-decoration: none !important }
@@ -505,7 +505,7 @@
                     z-index: 2 ; width: 7px ; height: 25px ; border-radius: 30% ; position: relative ;
                     top: -7.65px ; cursor: ew-resize ;
                     background-color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#4a4a4a' };
-                    --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
+                  --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
                     ${ willNotZoom ? '' : `transition: var(--font-size-slider-thumb-transition) 
                         -webkit-transition: var(--font-size-slider-thumb-transition) ;
@@ -602,7 +602,7 @@
                             -o-transition: box-shadow 0.15s ease ; -ms-transition: box-shadow 0.15s ease }
                 ${ isParticlizedDS ? '' : // add inset shadow to chatbar on hover
                     `#${app.slug}-chatbar:hover:not(:focus) {
-                        --chatbar-hover-inset-shadow: 0 ${
+                      --chatbar-hover-inset-shadow: 0 ${
                             env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 7px' } rgba(15,17,17,0.15) inset ;
                         box-shadow: var(--chatbar-hover-inset-shadow) ;
                         -webkit-box-shadow: var(--chatbar-hover-inset-shadow) ;
@@ -1907,11 +1907,11 @@
 
                 // Vars
                 `:root {
-                    --modal-btn-zoom: scale(1.055) ; --modal-btn-transition: transform 0.15s ease ;
-                    --settings-li-transition: transform 0.1s ease ; /* for Settings entry hover-zoom */
-                    --fg-transition: opacity 0.65s cubic-bezier(0.165,0.84,0.44,1), /* fade-in */
+                  --modal-btn-zoom: scale(1.055) ; --modal-btn-transition: transform 0.15s ease ;
+                  --settings-li-transition: transform 0.1s ease ; /* for Settings entry hover-zoom */
+                  --fg-transition: opacity 0.65s cubic-bezier(0.165,0.84,0.44,1), /* fade-in */
                                      transform 0.55s cubic-bezier(0.165,0.84,0.44,1) !important ; /* move-in */
-                    --bg-transition: background-color 0.25s ease !important } /* dim */`
+                  --bg-transition: background-color 0.25s ease !important } /* dim */`
 
                 // Main modal styles
               + '@keyframes modal-zoom-fade-out {'
@@ -1989,7 +1989,7 @@
                     min-width: ${ env.browser.isPortrait ? 288 : 755 }px ; max-width: 75vw ; margin: 12px 23px ;
                     word-wrap: break-word ; border-radius: 15px ;
                     ${ env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: black ; fill: black' };
-                    --shadow: 0 30px 60px rgba(0,0,0,0.12) ;
+                  --shadow: 0 30px 60px rgba(0,0,0,0.12) ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) }`
               + `#a${app.slug}-settings-title {`
                   + 'font-weight: bold ; line-height: 19px ; text-align: center ;'

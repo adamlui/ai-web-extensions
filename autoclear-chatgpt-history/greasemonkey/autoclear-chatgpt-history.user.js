@@ -225,7 +225,7 @@
 // @description:zu      Ziba itshala lokucabanga okuzoshintshwa ngokuzenzakalelayo uma ukubuka chatgpt.com
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.18
+// @version             2025.5.26
 // @license             MIT
 // @icon                https://assets.autoclearchatgpt.com/images/icons/openai/black/icon48.png?v=f461c06
 // @icon64              https://assets.autoclearchatgpt.com/images/icons/openai/black/icon64.png?v=f461c06
@@ -786,11 +786,11 @@
                 const firstLink = chatgpt.getNewChatLink()
                 document.head.append(this.styles = dom.create.style(
                     `:root { /* vars */
-                        --switch-enabled-bg-color: #ad68ff ; --switch-disabled-bg-color: #ccc ;
-                        --switch-enabled-box-shadow: 1px 2px 8px #d8a9ff ;
-                        --switch-enabled-hover-box-shadow: 0 1px 10px #9b5ad1 ;
-                        --knob-box-shadow: rgba(0,0,0,0.3) 0 1px 2px 0 ;
-                        --knob-box-shadow-dark: rgba(0,0,0,0.3) 0 1px 2px 0, rgba(0,0,0,0.15) 0 3px 6px 2px }`
+                      --switch-enabled-bg-color: #ad68ff ; --switch-disabled-bg-color: #ccc ;
+                      --switch-enabled-box-shadow: 1px 2px 8px #d8a9ff ;
+                      --switch-enabled-hover-box-shadow: 0 1px 10px #9b5ad1 ;
+                      --knob-box-shadow: rgba(0,0,0,0.3) 0 1px 2px 0 ;
+                      --knob-box-shadow-dark: rgba(0,0,0,0.3) 0 1px 2px 0, rgba(0,0,0,0.15) 0 3px 6px 2px }`
 
                     // Element styles
                   + `.${this.class} { /* parent div */

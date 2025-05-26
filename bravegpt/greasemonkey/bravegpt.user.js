@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.26
+// @version               2025.5.26.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -449,10 +449,10 @@
 
                 /* General button styles */
                 ${selectors.btn.shared} {
-                    --content-color: ${ env.ui.app.scheme == 'light' ? '0,0,0' : '255,255,255' };
-                    --side-line-fill: linear-gradient(rgb(var(--content-color)), rgb(var(--content-color))) ;
-                    --skew: skew(-13deg) ; --counter-skew: skew(13deg) ; --btn-svg-zoom: scale(1.2) ;
-                    --btn-transition: 0.1s ease all ;
+                  --content-color: ${ env.ui.app.scheme == 'light' ? '0,0,0' : '255,255,255' };
+                  --side-line-fill: linear-gradient(rgb(var(--content-color)), rgb(var(--content-color))) ;
+                  --skew: skew(-13deg) ; --counter-skew: skew(13deg) ; --btn-svg-zoom: scale(1.2) ;
+                  --btn-transition: 0.1s ease all ;
                     position: relative ; border-width: 1px ; cursor: crosshair ;
                     border: 1px solid rgb(var(--content-color)) ;
                     background: /* side lines */
@@ -489,9 +489,9 @@
 
                 /* Modal button styles */
                 ${selectors.btn.modal} {
-                    --modal-btn-y-offset: 2px ; --glow-color: #a0fdff ;
-                    --modal-btn-zoom: scale(1.075) ;
-                    --modal-btn-transition: transform 0.1s ease, background 0.2s ease, box-shadow 5s ease ;
+                  --modal-btn-y-offset: 2px ; --glow-color: #a0fdff ;
+                  --modal-btn-zoom: scale(1.075) ;
+                  --modal-btn-transition: transform 0.1s ease, background 0.2s ease, box-shadow 5s ease ;
                     ${ config.fgAnimationsDisabled ? /* override chatgpt.js transitions */
                         `transition: none ;
                             -webkit-transition: none ; -moz-transition: none ;
@@ -522,8 +522,8 @@
 
                 /* Standby button styles */
                 ${selectors.btn.standby} {
-                    --standby-btn-zoom: scale(1.055) ;
-                    --standby-btn-transition: transform 0.18s ease, background 0.2s ease ;
+                  --standby-btn-zoom: scale(1.055) ;
+                  --standby-btn-transition: transform 0.18s ease, background 0.2s ease ;
                     font-size: 10px ; width: 80% ; height: 43px ; margin-bottom: 13px ; transform: var(--skew) }
                 ${selectors.btn.standby} > span { transform: var(--counter-skew) }
                 ${selectors.btn.standby}:nth-child(odd) { margin-right: 20% ; margin-left: 15px }
@@ -561,32 +561,32 @@
 
                 // Init vars
                `:root {
-                    --app-bg-color-light-scheme: white ; --app-bg-color-dark-scheme: #1b1b1f ;
-                    --pre-bg-color-light-scheme: #b7b7b736 ; --pre-bg-color-dark-scheme: #3a3a3a ;
-                    --reply-header-bg-color-light-scheme: #d7d4d4 ;
-                    --reply-header-bg-color-dark-scheme: ${ !isParticlizedDS ? '#545454' : '#0e0e0e24' };
-                    --reply-header-fg-color-light-scheme: white ; --reply-header-fg-color-dark-scheme: white ;
-                    --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: white ;
-                    --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;
-                    --app-border: ${ isParticlizedDS ? 'none' : '1px solid var(--color-divider-subtle)' };
-                    --app-gradient-bg: linear-gradient(180deg, ${
+                  --app-bg-color-light-scheme: white ; --app-bg-color-dark-scheme: #1b1b1f ;
+                  --pre-bg-color-light-scheme: #b7b7b736 ; --pre-bg-color-dark-scheme: #3a3a3a ;
+                  --reply-header-bg-color-light-scheme: #d7d4d4 ;
+                  --reply-header-bg-color-dark-scheme: ${ !isParticlizedDS ? '#545454' : '#0e0e0e24' };
+                  --reply-header-fg-color-light-scheme: white ; --reply-header-fg-color-dark-scheme: white ;
+                  --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: white ;
+                  --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;
+                  --app-border: ${ isParticlizedDS ? 'none' : '1px solid var(--color-divider-subtle)' };
+                  --app-gradient-bg: linear-gradient(180deg, ${
                         env.ui.app.scheme == 'dark' ? '#99a8a6 -245px, black 185px' : '#b6ebff -163px, white 65px' }) ;
-                    --app-shadow: 0 2px 3px rgb(0,0,0,0.06) ;
-                    --app-hover-shadow-light-scheme: 0 9px 28px rgba(0,0,0,0.09) ;
-                    --app-hover-shadow-dark-scheme:  0 9px 28px rgba(0,0,0,0.39) ;
-                    --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
+                  --app-shadow: 0 2px 3px rgb(0,0,0,0.06) ;
+                  --app-hover-shadow-light-scheme: 0 9px 28px rgba(0,0,0,0.09) ;
+                  --app-hover-shadow-dark-scheme:  0 9px 28px rgba(0,0,0,0.39) ;
+                  --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
                                                                                                : '11,0.22' }) ;
-                    --app-transition: opacity 0.5s ease, transform 0.5s ease, /* for 1st fade-in */
+                  --app-transition: opacity 0.5s ease, transform 0.5s ease, /* for 1st fade-in */
                                       bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
                                       width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
-                    --app-shadow-transition: box-shadow 0.15s ease ; /* for app:hover to not trigger on hover-off */
-                    --standby-btn-zoom: scale(1.055) ; --standby-btn-transition: all 0.25s ease ;
-                    --btn-transition: transform 0.15s ease, /* for hover-zoom */
+                  --app-shadow-transition: box-shadow 0.15s ease ; /* for app:hover to not trigger on hover-off */
+                  --standby-btn-zoom: scale(1.055) ; --standby-btn-transition: all 0.25s ease ;
+                  --btn-transition: transform 0.15s ease, /* for hover-zoom */
                                       opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
-                    --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
-                    --reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ; /* for Anchor changes */
-                    --rq-transition: opacity 0.55s ease, transform 0.1s ease !important ; /* for fade-in + hover-zoom */
-                    --fade-in-less-transition: opacity 0.2s ease } /* used by Font Size slider + Pin menu */`
+                  --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
+                  --reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ; /* for Anchor changes */
+                  --rq-transition: opacity 0.55s ease, transform 0.1s ease !important ; /* for fade-in + hover-zoom */
+                  --fade-in-less-transition: opacity 0.2s ease } /* used by Font Size slider + Pin menu */`
 
                 // Animations
              + `.fade-in { opacity: 0 ; transform: translateY(10px) }
@@ -664,7 +664,7 @@
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' } !important }
                 .byline { /* header byline */
                     position: relative ; bottom: 5.5px ; margin-left: 7px ; color: #aaa ; font-size: 11px ;
-                    --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
+                  --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
                         -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
                         -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
                 .byline a { color: #aaa ; text-decoration: none !important }
@@ -712,7 +712,7 @@
                     z-index: 2 ; width: 7px ; height: 25px ; border-radius: 30% ; position: relative ;
                     top: -8px ; cursor: ew-resize ;
                     background-color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#4a4a4a' };
-                    --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
+                  --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
                     ${ willNotZoom ? '' : `transition: var(--font-size-slider-thumb-transition) 
                         -webkit-transition: var(--font-size-slider-thumb-transition) ;
@@ -821,7 +821,7 @@
                             -o-transition: box-shadow 0.15s ease ; -ms-transition: box-shadow 0.15s ease }
                 ${ isParticlizedDS ? '' : // add inset shadow to chatbar on hover
                     `#${app.slug}-chatbar:hover:not(:focus) {
-                        --chatbar-hover-inset-shadow: 0 ${
+                      --chatbar-hover-inset-shadow: 0 ${
                             env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 7px' } rgba(15,17,17,0.15) inset ;
                         box-shadow: var(--chatbar-hover-inset-shadow) ;
                         -webkit-box-shadow: var(--chatbar-hover-inset-shadow) ;
@@ -861,7 +861,7 @@
                     border: 1px solid ${ env.ui.app.scheme == 'dark' ? (
                         config.bgAnimationsDisabled ? '#5f5f5f' : '#777' ) : '#e1e1e1' };
                     border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;
-                    --rq-shadow: 1px 4px 8px -6px rgba(169,169,169,0.75) ; box-shadow: var(--rq-shadow) ;
+                  --rq-shadow: 1px 4px 8px -6px rgba(169,169,169,0.75) ; box-shadow: var(--rq-shadow) ;
                         -webkit-box-shadow: var(--rq-shadow) ; -moz-box-shadow: var(--rq-shadow) ;
                     ${ willNotZoom ? '' : `transition: var(--rq-transition) ;
                         -webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;
@@ -2613,11 +2613,11 @@
 
                 // Vars
                 `:root {
-                    --modal-btn-zoom: scale(1.055) ; --modal-btn-transition: transform 0.15s ease ;
-                    --settings-li-transition: transform 0.1s ease ; /* for Settings entry hover-zoom */
-                    --fg-transition: opacity 0.65s cubic-bezier(0.165,0.84,0.44,1), /* fade-in */
+                  --modal-btn-zoom: scale(1.055) ; --modal-btn-transition: transform 0.15s ease ;
+                  --settings-li-transition: transform 0.1s ease ; /* for Settings entry hover-zoom */
+                  --fg-transition: opacity 0.65s cubic-bezier(0.165,0.84,0.44,1), /* fade-in */
                                      transform 0.55s cubic-bezier(0.165,0.84,0.44,1) !important ; /* move-in */
-                    --bg-transition: background-color 0.25s ease !important } /* dim */`
+                  --bg-transition: background-color 0.25s ease !important } /* dim */`
 
                 // Main modal styles
               + '@keyframes modal-zoom-fade-out {'
@@ -2692,7 +2692,7 @@
                     min-width: ${ env.browser.isPortrait ? 288 : 758 }px ; max-width: 75vw ; margin: 12px 23px ;
                     word-wrap: break-word ; border-radius: 15px ;
                     ${ env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: black ; fill: black' };
-                    --shadow: 0 30px 60px rgba(0,0,0,0.12) ;
+                  --shadow: 0 30px 60px rgba(0,0,0,0.12) ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) }`
               + `#${app.slug}-settings-title {`
                   + 'font-weight: bold ; line-height: 19px ; text-align: center ;'

@@ -175,7 +175,7 @@ window.buttons = {
         this.style.textContent = `
             .${this.class} {
                 cursor: pointer ; position: relative ;
-                --transition: transform 0.15s ease, opacity 0.5s ease ; /* for tweaksStyle's :hover + .insert()'s fade-in */
+              --transition: transform 0.15s ease, opacity 0.5s ease ; /* for tweaksStyle's :hover + .insert()'s fade-in */
                     -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
                     -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
                 ${ site != 'poe' ? // remove overlay

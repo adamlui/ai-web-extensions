@@ -64,8 +64,8 @@ header {
 /* Slider */
 div.menu-entry:has(> input.slider) { flex-wrap: wrap ; padding-top: 2px }
 div.menu-entry > input.slider {
-  --track-filled-color: #000 ; --track-empty-color: #E0E0E0 ; --thumb-color: #000 ; --thumb-border: #fff ;
-  --track-fill-percent: 100% ; padding: 7px 0 ; width: 100% ; margin: -4px -5px 7px 8px ; cursor: pointer ;
+--track-filled-color: #000 ; --track-empty-color: #E0E0E0 ; --thumb-color: #000 ; --thumb-border: #fff ;
+--track-fill-percent: 100% ; padding: 7px 0 ; width: 100% ; margin: -4px -5px 7px 8px ; cursor: pointer ;
    -webkit-appearance: none ; appearance: none
 }
 .slider::-webkit-slider-runnable-track {
@@ -97,7 +97,7 @@ div.menu-entry > input.slider {
 div#about > div.menu-icon { padding: 8px 10px 8px 11px }
 .ticker {
     align-content: center ; overflow: hidden ; font-size: 10px ; width: 105px ;
-    --mask: linear-gradient(to right, transparent, black 20%, black 89%, transparent) ;
+  --mask: linear-gradient(to right, transparent, black 20%, black 89%, transparent) ;
     mask-image: var(--mask) ; -webkit-mask-image: var(--mask) /* eslint-disable-line */
 }
 .ticker-em { color: green } .highlight-on-hover:hover .ticker-em { color: #28ee28 }

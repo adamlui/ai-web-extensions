@@ -8,7 +8,7 @@ window.tooltip = { // requires dom.js + <app|config|env>
                 /amazon|duck/.test(app.slug) ? 0.87 : app.slug == 'bravegpt' ? 0.58 : /* googlegpt */ 0.75 }rem ;
             color: white ; fill: white ; stroke: white ; /* font/icon style */
             position: absolute ; /* for this.update() calcs */
-            --shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
+          --shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
                 box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)
             opacity: 0 ; height: fit-content ; z-index: 1250 ; /* visibility */
             transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
