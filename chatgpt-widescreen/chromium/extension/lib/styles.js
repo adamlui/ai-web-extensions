@@ -45,7 +45,7 @@ window.styles = {
 
     tweaks: {
         autoAppend: true,
-        get css() { // requires <config|env|sites>
+        get css() { // requires <config|env>
             const { site } = env, { [site]: { selectors }} = sites
             return (async () => config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
                 ${ site != 'chatgpt' ? ''
@@ -80,7 +80,7 @@ window.styles = {
 
     widescreen: {
         autoAppend: false,
-        get css() { // requires <config|env|sites>
+        get css() { // requires <config|env>
             const { site } = env
             const outerDivSelector = site == 'chatgpt' ? 'div.text-base'
                 : site == 'perplexity' ? `div.max-w-threadWidth, .max-w-threadContentWidth, div.max-w-screen-lg,
