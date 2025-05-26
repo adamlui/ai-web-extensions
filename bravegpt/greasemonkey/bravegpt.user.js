@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.26.1
+// @version               2025.5.26.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -465,14 +465,14 @@
                 ${selectors.btn.svg} {
                     stroke: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.65 : 1 }) ;
                     ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
-                          -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                          -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
+                           -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
+                           -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
                 ${selectors.btn.span} { font-weight: 600 ; display: inline-block } /* text */
                 ${selectors.btn.before}, ${selectors.btn.after} { /* top/bottom lines */
                     content: "" ; position: absolute ; background: rgb(var(--content-color)) ;
                     ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
-                          -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                          -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
+                           -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
+                           -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
                 ${selectors.btn.before} { top: 0 ; left: 10% ; width: 65% ; height: 1px } /* top line */
                 ${selectors.btn.after} { bottom: 0 ; right: 10% ; width: 80% ; height: 1px } /* bottom line */
                 ${selectors.btn.hover} {
@@ -517,8 +517,8 @@
                 ${selectors.btn.modal}:hover { /* add glow */
                     background-color: var(--glow-color) !important ;
                     box-shadow: 2px 1px 30px var(--glow-color) ;
-                        -webkit-box-shadow: 2px 1px 30px var(--glow-color) ;
-                        -moz-box-shadow: 2px 1px 30px var(--glow-color) }
+                       -webkit-box-shadow: 2px 1px 30px var(--glow-color) ;
+                       -moz-box-shadow: 2px 1px 30px var(--glow-color) }
 
                 /* Standby button styles */
                 ${selectors.btn.standby} {
@@ -592,10 +592,10 @@
              + `.fade-in { opacity: 0 ; transform: translateY(10px) }
                 .fade-in-less { opacity: 0 ;
                     transition: var(--fade-in-less-transition) ;
-                        -webkit-transition: var(--fade-in-less-transition) ;
-                        -moz-transition: var(--fade-in-less-transition) ;
-                        -o-transition: var(--fade-in-less-transition) ;
-                        -ms-transition: var(--fade-in-less-transition) }
+                       -webkit-transition: var(--fade-in-less-transition) ;
+                       -moz-transition: var(--fade-in-less-transition) ;
+                       -o-transition: var(--fade-in-less-transition) ;
+                       -ms-transition: var(--fade-in-less-transition) }
                 .fade-in.active, .fade-in-less.active { opacity: 1 ; transform: translateY(0) }
                 @keyframes btn-zoom-fade-out {
                     0% { opacity: 1 } 55% { opacity: 0.25 ; transform: scale(1.85) }
@@ -607,8 +607,8 @@
 
                 // Main styles
              + `.no-user-select {
-                    -webkit-user-select: none ; -moz-user-select: none ;
-                    -ms-user-select: none ; user-select: none }
+                   -webkit-user-select: none ; -moz-user-select: none ;
+                   -ms-user-select: none ; user-select: none }
                 .no-mobile-tap-outline { outline: none ; -webkit-tap-highlight-color: transparent }
                 /* stylize scrollbars in Chromium/Safari */
                     #${app.slug} *::-webkit-scrollbar { width: 7px }
@@ -625,8 +625,8 @@
                     position: sticky ; z-index: 1111 ; padding: 24px 22px 42px ; border-radius: 18px ;
                     word-wrap: break-word ; white-space: pre-wrap ;
                     transition: var(--app-transition) ;
-                        -webkit-transition: var(--app-transition) ; -moz-transition: var(--app-transition) ;
-                        -o-transition: var(--app-transition) ; -ms-transition: var(--app-transition) }
+                       -webkit-transition: var(--app-transition) ; -moz-transition: var(--app-transition) ;
+                       -o-transition: var(--app-transition) ; -ms-transition: var(--app-transition) }
                 #${app.slug}:has(.${app.slug}-alert) { /* app alerts */
                     border: var(--app-border) ; box-shadow: var(--app-shadow) ;
                     -webkit-box-shadow: var(--app-shadow) ; -moz-box-shadow: var(--app-shadow) ;
@@ -635,19 +635,19 @@
                 #${app.slug}:has(.${app.slug}-alert):hover, #${app.slug}:has(.${app.slug}-alert):active {
                     box-shadow: var(--app-hover-shadow-${env.ui.app.scheme}-scheme) ;
                     transition: var(--app-shadow-transition) ;
-                        -webkit-transition: var(--app-shadow-transition) ;
-                        -moz-transition: var(--app-shadow-transition) ;
-                        -o-transition: var(--app-shadow-transition) ;
-                        -ms-transition: var(--app-shadow-transition) }
+                       -webkit-transition: var(--app-shadow-transition) ;
+                       -moz-transition: var(--app-shadow-transition) ;
+                       -o-transition: var(--app-shadow-transition) ;
+                       -ms-transition: var(--app-shadow-transition) }
                 ${ env.browser.isPhone ? '' : env.ui.app.scheme != env.ui.site.scheme ?
                       // add hover shadow to bordered/un-anchored desktop app div
                         `#${app.slug}:hover, #${app.slug}:active {
                             box-shadow: var(--app-hover-shadow-${env.ui.app.scheme}-scheme) ;
                             transition: var(--app-shadow-transition) ;
-                                -webkit-transition: var(--app-shadow-transition) ;
-                                -moz-transition: var(--app-shadow-transition) ;
-                                -o-transition: var(--app-shadow-transition) ;
-                                -ms-transition: var(--app-shadow-transition) }`
+                               -webkit-transition: var(--app-shadow-transition) ;
+                               -moz-transition: var(--app-shadow-transition) ;
+                               -o-transition: var(--app-shadow-transition) ;
+                               -ms-transition: var(--app-shadow-transition) }`
                     : '' }
                 #${app.slug} .app-hover-only { /* hide app-hover-only elems */
                     position: absolute ; left: -9999px ; opacity: 0 ; /* using position to support transitions */
@@ -665,14 +665,14 @@
                 .byline { /* header byline */
                     position: relative ; bottom: 5.5px ; margin-left: 7px ; color: #aaa ; font-size: 11px ;
                   --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
-                        -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
-                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
+                       -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
+                       -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
                 .byline a { color: #aaa ; text-decoration: none !important }
                 .byline a:hover {
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
                     transition: var(--byline-transition) ;
-                        -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
-                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
+                       -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
+                       -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
                 #${app.slug}-header-btns {
                     display: flex ; direction: rtl ; gap: 2px ; float: right ; position: relative ; bottom: 3px }
                 .${app.slug}-header-btn {
@@ -686,8 +686,8 @@
                 ${ config.fgAnimationsDisabled ? '' :
                    `.${app.slug}-header-btn, .${app.slug}-header-btn svg { /* smooth header button fade-in + hover-zoom */
                     transition: var(--btn-transition) ;
-                        -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }`}
+                       -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
+                       -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }`}
                 .${app.slug}-header-btn:active {
                     ${ env.ui.app.scheme == 'dark' ? 'fill: #999999 ; stroke: #999999'
                                                    : 'fill: #638ed4 ; stroke: #638ed4' }}
@@ -700,7 +700,7 @@
                 #${app.slug}-font-size-slider-track {
                     width: 98% ; height: 7px ; margin: -5px auto ${ env.browser.isPhone ? -4 : -9 }px ;
                     padding: 15px 0 ; background-color: #ccc ; box-sizing: content-box; background-clip: content-box ;
-                    -webkit-background-clip: content-box }
+                   -webkit-background-clip: content-box }
                 #${app.slug}-font-size-slider-track::before { /* to add finger cursor to unpadded core only */
                     content: "" ; position: absolute ; top: 10px ; left: 0 ; right: 0 ;
                     height: calc(100% - 20px) ; cursor: pointer }
@@ -715,10 +715,10 @@
                   --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
                     ${ willNotZoom ? '' : `transition: var(--font-size-slider-thumb-transition) 
-                        -webkit-transition: var(--font-size-slider-thumb-transition) ;
-                        -moz-transition: var(--font-size-slider-thumb-transition) ;
-                        -o-transition: var(--font-size-slider-thumb-transition) ;
-                        -ms-transition: var(--font-size-slider-thumb-transition)` }}
+                           -webkit-transition: var(--font-size-slider-thumb-transition) ;
+                           -moz-transition: var(--font-size-slider-thumb-transition) ;
+                           -o-transition: var(--font-size-slider-thumb-transition) ;
+                           -ms-transition: var(--font-size-slider-thumb-transition)` }}
                 ${ env.browser.isMobile ? '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }`}
                 .${app.slug}-standby-btns { margin: 14px 0 22px }
                 .${app.slug}-standby-btn {
@@ -727,10 +727,10 @@
                     ${ config.fgAnimationsDisabled ? ''
                         : `will-change: transform ;
                            transition: var(--standby-btn-transition) ;
-                                -webkit-transition: var(--standby-btn-transition) ;
-                                -moz-transition: var(--standby-btn-transition) ;
-                                -o-transition: var(--standby-btn-transition) ;
-                                -ms-transition: var(--standby-btn-transition)` }}
+                              -webkit-transition: var(--standby-btn-transition) ;
+                              -moz-transition: var(--standby-btn-transition) ;
+                              -o-transition: var(--standby-btn-transition) ;
+                              -ms-transition: var(--standby-btn-transition)` }}
                 .${app.slug}-standby-btn:hover { color: rgb(var(--content-color)) ; transform: var(--standby-btn-zoom) }
                 .${app.slug}-standby-btn > svg { position: relative ; stroke: rgb(var(--content-color)) }
                 .${app.slug}-standby-btn:first-of-type svg { /* Query button icon */
@@ -815,27 +815,27 @@
                     ${ env.ui.app.scheme == 'dark' ? '' :
                         `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
                         box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
-                        -moz-box-shadow: var(--chatbar-inset-shadow) ;` }
+                       -moz-box-shadow: var(--chatbar-inset-shadow) ;` }
                         transition: box-shadow 0.15s ease ;
-                            -webkit-transition: box-shadow 0.15s ease ; -moz-transition: box-shadow 0.15s ease ;
-                            -o-transition: box-shadow 0.15s ease ; -ms-transition: box-shadow 0.15s ease }
+                           -webkit-transition: box-shadow 0.15s ease ; -moz-transition: box-shadow 0.15s ease ;
+                           -o-transition: box-shadow 0.15s ease ; -ms-transition: box-shadow 0.15s ease }
                 ${ isParticlizedDS ? '' : // add inset shadow to chatbar on hover
                     `#${app.slug}-chatbar:hover:not(:focus) {
                       --chatbar-hover-inset-shadow: 0 ${
                             env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 7px' } rgba(15,17,17,0.15) inset ;
                         box-shadow: var(--chatbar-hover-inset-shadow) ;
-                        -webkit-box-shadow: var(--chatbar-hover-inset-shadow) ;
-                        -moz-box-shadow: var(--chatbar-hover-inset-shadow) ;
+                       -webkit-box-shadow: var(--chatbar-hover-inset-shadow) ;
+                       -moz-box-shadow: var(--chatbar-hover-inset-shadow) ;
                         transition: box-shadow 0.25s ease ;
-                            -webkit-transition: box-shadow 0.25s ease ; -moz-transition: box-shadow 0.25s ease ;
-                            -o-transition: box-shadow 0.25s ease ; -ms-transition: box-shadow 0.25s ease }`}
+                           -webkit-transition: box-shadow 0.25s ease ; -moz-transition: box-shadow 0.25s ease ;
+                           -o-transition: box-shadow 0.25s ease ; -ms-transition: box-shadow 0.25s ease }`}
                 #${app.slug}-chatbar:focus-visible { /* fallback outline chatbar + reduce inset shadow on focus */
                     outline: -webkit-focus-ring-color auto 1px ;
                     ${ isParticlizedDS ? '' :
                         `--inset-shadow: 0 ${
                                 env.ui.app.scheme == 'dark' ? '3px -1px' : '1px 2px' } rgba(0,0,0,0.3) inset ;
                         box-shadow: var(--inset-shadow) ; -webkit-box-shadow: var(--inset-shadow) ;
-                        -moz-box-shadow: var(--inset-shadow)`}}
+                       -moz-box-shadow: var(--inset-shadow)`}}
                 .${app.slug}-chatbar-btn {
                     z-index: 560 ;
                     border: none ; float: right ; position: relative ; background: none ; cursor: pointer ;
@@ -862,10 +862,10 @@
                         config.bgAnimationsDisabled ? '#5f5f5f' : '#777' ) : '#e1e1e1' };
                     border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;
                   --rq-shadow: 1px 4px 8px -6px rgba(169,169,169,0.75) ; box-shadow: var(--rq-shadow) ;
-                        -webkit-box-shadow: var(--rq-shadow) ; -moz-box-shadow: var(--rq-shadow) ;
+                       -webkit-box-shadow: var(--rq-shadow) ; -moz-box-shadow: var(--rq-shadow) ;
                     ${ willNotZoom ? '' : `transition: var(--rq-transition) ;
-                        -webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;
-                        -o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)` }}
+                           -webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;
+                           -o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)` }}
                 .${app.slug}-related-query:hover, .${app.slug}-related-query:focus {
                     ${ config.fgAnimationsDisabled ? '' : 'transform: scale(1.055) !important ;' }
                     background: ${ env.ui.app.scheme == 'dark' ? '#a2a2a270'
@@ -2681,10 +2681,10 @@
                     ${ config.fgAnimationsDisabled ? '' : `[class$=-modal] button {
                         ${ env.browser.isMobile ? '' : 'will-change: transform ;' }
                         transition: var(--modal-btn-transition) ;
-                            -webkit-transition: var(--modal-btn-transition) ;
-                            -moz-transition: var(--modal-btn-transition) ;
-                            -o-transition: var(--modal-btn-transition) ;
-                            -ms-transition: var(--modal-btn-transition) }`}`
+                           -webkit-transition: var(--modal-btn-transition) ;
+                           -moz-transition: var(--modal-btn-transition) ;
+                           -o-transition: var(--modal-btn-transition) ;
+                           -ms-transition: var(--modal-btn-transition) }`}`
 
               // Settings modal
               + `#${app.slug}-settings {

@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.26.1
+// @version                2025.5.26.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -309,14 +309,14 @@
                 ${selectors.btn.svg} {
                     stroke: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.65 : 1 }) ;
                     ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
-                          -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                          -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
+                           -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
+                           -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
                 ${selectors.btn.span} { font-weight: 600 ; display: inline-block } /* text */
                 ${selectors.btn.before}, ${selectors.btn.after} { /* top/bottom lines */
                     content: "" ; position: absolute ; background: rgb(var(--content-color)) ;
                     ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
-                          -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                          -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
+                           -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
+                           -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
                 ${selectors.btn.before} { top: 0 ; left: 10% ; width: 65% ; height: 1px } /* top line */
                 ${selectors.btn.after} { bottom: 0 ; right: 10% ; width: 80% ; height: 1px } /* bottom line */
                 ${selectors.btn.hover} {
@@ -361,8 +361,8 @@
                 ${selectors.btn.modal}:hover { /* add glow */
                     background-color: var(--glow-color) !important ;
                     box-shadow: 2px 1px 30px var(--glow-color) ;
-                        -webkit-box-shadow: 2px 1px 30px var(--glow-color) ;
-                        -moz-box-shadow: 2px 1px 30px var(--glow-color) }`
+                       -webkit-box-shadow: 2px 1px 30px var(--glow-color) ;
+                       -moz-box-shadow: 2px 1px 30px var(--glow-color) }`
             }
         }
     }
@@ -412,10 +412,10 @@
              + `.fade-in { opacity: 0 ; transform: translateY(10px) }
                 .fade-in-less { opacity: 0 ;
                     transition: var(--fade-in-less-transition) ;
-                        -webkit-transition: var(--fade-in-less-transition) ;
-                        -moz-transition: var(--fade-in-less-transition) ;
-                        -o-transition: var(--fade-in-less-transition) ;
-                        -ms-transition: var(--fade-in-less-transition) }
+                       -webkit-transition: var(--fade-in-less-transition) ;
+                       -moz-transition: var(--fade-in-less-transition) ;
+                       -o-transition: var(--fade-in-less-transition) ;
+                       -ms-transition: var(--fade-in-less-transition) }
                 .fade-in.active, .fade-in-less.active { opacity: 1 ; transform: translateY(0) }
                 @keyframes btn-zoom-fade-out {
                     0% { opacity: 1 } 55% { opacity: 0.25 ; transform: scale(1.85) }
@@ -427,8 +427,8 @@
 
                 // Main styles
              + `.no-user-select {
-                    -webkit-user-select: none ; -moz-user-select: none ;
-                    -ms-user-select: none ; user-select: none }
+                   -webkit-user-select: none ; -moz-user-select: none ;
+                   -ms-user-select: none ; user-select: none }
                 .no-mobile-tap-outline { outline: none ; -webkit-tap-highlight-color: transparent }
                 #${app.slug} * { scrollbar-width: thin } /* make scrollbars thin in Firefox */
                 .cursor-overlay { /* for fontSizeSlider.createAppend() drag listeners to show resize cursor everywhere */
@@ -440,8 +440,8 @@
                     z-index: 5555 ; padding: 17px 26px 16px ; border-radius: 15px ;
                     word-wrap: break-word ; white-space: pre-wrap ;
                     transition: var(--app-transition) ;
-                        -webkit-transition: var(--app-transition) ; -moz-transition: var(--app-transition) ;
-                        -o-transition: var(--app-transition) ; -ms-transition: var(--app-transition) ;
+                       -webkit-transition: var(--app-transition) ; -moz-transition: var(--app-transition) ;
+                       -o-transition: var(--app-transition) ; -ms-transition: var(--app-transition) ;
                     ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${env.ui.app.scheme}-scheme)`
                                                    : 'background-image: var(--app-gradient-bg)' }}
                 #${app.slug} .app-hover-only { /* hide app-hover-only elems */
@@ -460,14 +460,14 @@
                 .byline { /* header byline */
                     position: relative ; bottom: -1px ; margin-left: 8px ; color: #aaa ;
                   --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
-                        -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
-                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
+                       -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
+                       -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
                 .byline a, .byline a:visited { color: #aaa ; text-decoration: none !important }
                 .byline a:hover {
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
                     transition: var(--byline-transition) ;
-                        -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
-                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
+                       -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
+                       -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
                 #${app.slug}-header-btns { display: flex ; direction: rtl ; gap: 2px ; float: right ; margin-top: -2px }
                 .${app.slug}-header-btn {
                     float: right ; cursor: pointer ; position: relative ; top: 4px ;
@@ -480,8 +480,8 @@
                 ${ config.fgAnimationsDisabled ? '' :
                    `.${app.slug}-header-btn, .${app.slug}-header-btn svg { /* smooth header button fade-in + hover-zoom */
                     transition: var(--btn-transition) ;
-                        -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
-                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }`}
+                       -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
+                       -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }`}
                 .${app.slug}-header-btn:active {
                     ${ env.ui.app.scheme == 'dark' ? 'fill: #999999 ; stroke: #999999'
                                                    : 'fill: #638ed4 ; stroke: #638ed4' }}
@@ -493,7 +493,7 @@
                 #${app.slug}-font-size-slider-track {
                     width: 98% ; height: 7px ; margin: -2px auto ${ env.browser.isPhone ? -8 : -13 }px ;
                     padding: 15px 0 ; background-color: #ccc ; box-sizing: content-box; background-clip: content-box ;
-                    -webkit-background-clip: content-box }
+                   -webkit-background-clip: content-box }
                 #${app.slug}-font-size-slider-track::before { /* to add finger cursor to unpadded core only */
                     content: "" ; position: absolute ; top: 10px ; left: 0 ; right: 0 ;
                     height: calc(100% - 20px) ; cursor: pointer }
@@ -508,10 +508,10 @@
                   --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
                     ${ willNotZoom ? '' : `transition: var(--font-size-slider-thumb-transition) 
-                        -webkit-transition: var(--font-size-slider-thumb-transition) ;
-                        -moz-transition: var(--font-size-slider-thumb-transition) ;
-                        -o-transition: var(--font-size-slider-thumb-transition) ;
-                        -ms-transition: var(--font-size-slider-thumb-transition)` }}
+                           -webkit-transition: var(--font-size-slider-thumb-transition) ;
+                           -moz-transition: var(--font-size-slider-thumb-transition) ;
+                           -o-transition: var(--font-size-slider-thumb-transition) ;
+                           -ms-transition: var(--font-size-slider-thumb-transition)` }}
                 ${ env.browser.isMobile ? '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }`}`
 
               // AI reply elem styles
@@ -596,27 +596,27 @@
                     ${ env.ui.app.scheme == 'dark' ? '' :
                         `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
                         box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
-                        -moz-box-shadow: var(--chatbar-inset-shadow) ;` }
+                       -moz-box-shadow: var(--chatbar-inset-shadow) ;` }
                         transition: box-shadow 0.15s ease ;
-                            -webkit-transition: box-shadow 0.15s ease ; -moz-transition: box-shadow 0.15s ease ;
-                            -o-transition: box-shadow 0.15s ease ; -ms-transition: box-shadow 0.15s ease }
+                           -webkit-transition: box-shadow 0.15s ease ; -moz-transition: box-shadow 0.15s ease ;
+                           -o-transition: box-shadow 0.15s ease ; -ms-transition: box-shadow 0.15s ease }
                 ${ isParticlizedDS ? '' : // add inset shadow to chatbar on hover
                     `#${app.slug}-chatbar:hover:not(:focus) {
                       --chatbar-hover-inset-shadow: 0 ${
                             env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 7px' } rgba(15,17,17,0.15) inset ;
                         box-shadow: var(--chatbar-hover-inset-shadow) ;
-                        -webkit-box-shadow: var(--chatbar-hover-inset-shadow) ;
-                        -moz-box-shadow: var(--chatbar-hover-inset-shadow) ;
+                       -webkit-box-shadow: var(--chatbar-hover-inset-shadow) ;
+                       -moz-box-shadow: var(--chatbar-hover-inset-shadow) ;
                         transition: box-shadow 0.25s ease ;
-                            -webkit-transition: box-shadow 0.25s ease ; -moz-transition: box-shadow 0.25s ease ;
-                            -o-transition: box-shadow 0.25s ease ; -ms-transition: box-shadow 0.25s ease }`}
+                           -webkit-transition: box-shadow 0.25s ease ; -moz-transition: box-shadow 0.25s ease ;
+                           -o-transition: box-shadow 0.25s ease ; -ms-transition: box-shadow 0.25s ease }`}
                 #${app.slug}-chatbar:focus-visible { /* fallback outline chatbar + reduce inset shadow on focus */
                     outline: -webkit-focus-ring-color auto 1px ;
                     ${ isParticlizedDS ? '' :
                         `--inset-shadow: 0 ${
                                 env.ui.app.scheme == 'dark' ? '3px -1px' : '1px 2px' } rgba(0,0,0,0.3) inset ;
                         box-shadow: var(--inset-shadow) ; -webkit-box-shadow: var(--inset-shadow) ;
-                        -moz-box-shadow: var(--inset-shadow)`}}
+                       -moz-box-shadow: var(--inset-shadow)`}}
                 .${app.slug}-chatbar-btn {
                     z-index: 560 ; border: none ; float: right ; position: relative ;
                     bottom: 50px ; background: none ; cursor: pointer ;
@@ -1979,10 +1979,10 @@
                     ${ config.fgAnimationsDisabled ? '' : `[class$=-modal] button {
                         ${ env.browser.isMobile ? '' : 'will-change: transform ;' }
                         transition: var(--modal-btn-transition) ;
-                            -webkit-transition: var(--modal-btn-transition) ;
-                            -moz-transition: var(--modal-btn-transition) ;
-                            -o-transition: var(--modal-btn-transition) ;
-                            -ms-transition: var(--modal-btn-transition) }`}`
+                           -webkit-transition: var(--modal-btn-transition) ;
+                           -moz-transition: var(--modal-btn-transition) ;
+                           -o-transition: var(--modal-btn-transition) ;
+                           -ms-transition: var(--modal-btn-transition) }`}`
 
               // Settings modal
               + `#${app.slug}-settings {

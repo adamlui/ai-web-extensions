@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.26
+// @version             2025.5.26.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -437,8 +437,8 @@
                                 color: ${getTextColor()} ; /* based on config */
                                 border-radius: 3px ; /* slightly round highlight strip */
                                 transition: 0.1s ease ; /* for hover-zoom */
-                                    -webkit-transition: 0.1s ease ; -moz-transition: 0.1s ease ;
-                                    -o-transition: 0.1s ease ; -ms-transition: 0.1s ease`
+                                   -webkit-transition: 0.1s ease ; -moz-transition: 0.1s ease ;
+                                   -o-transition: 0.1s ease ; -ms-transition: 0.1s ease`
                         })
                         const settingLabel = dom.create.elem('label', { style: 'cursor: pointer' })
                         settingLabel.textContent = siteHomeURL

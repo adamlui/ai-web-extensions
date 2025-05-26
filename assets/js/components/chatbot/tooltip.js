@@ -12,7 +12,7 @@ window.tooltip = { // requires dom.js + <app|config|env>
                 box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)
             opacity: 0 ; height: fit-content ; z-index: 1250 ; /* visibility */
             transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
-                -o-transition: opacity 0.15s ; -ms-transition: opacity 0.15s }`
+               -o-transition: opacity 0.15s ; -ms-transition: opacity 0.15s }`
         ))
     },
 

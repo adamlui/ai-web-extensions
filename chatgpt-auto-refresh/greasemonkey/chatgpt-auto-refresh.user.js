@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.26
+// @version             2025.5.26.1
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -797,27 +797,27 @@
                         background-color: var(--switch-disabled-bg-color) ;
                         bottom: ${ firstLink ? '0.5px' : '-0.15em' } ;
                         transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
-                            -o-transition: 0.4s ; -ms-transition: 0.4s }
+                           -o-transition: 0.4s ; -ms-transition: 0.4s }
                     .${this.class} > span.enabled { /* switch on */
                         background-color: var(--switch-enabled-bg-color) ;
                         box-shadow: var(--switch-enabled-box-shadow) ;
-                            -webkit-box-shadow: var(--switch-enabled-box-shadow) ;
-                            -moz-box-shadow: var(--switch-enabled-box-shadow) ;
+                           -webkit-box-shadow: var(--switch-enabled-box-shadow) ;
+                           -moz-box-shadow: var(--switch-enabled-box-shadow) ;
                         transition: 0.15s ; -webkit-transition: 0.15s ; -moz-transition: 0.15s ;
-                            -o-transition: 0.15s ; -ms-transition: 0.15s }
+                           -o-transition: 0.15s ; -ms-transition: 0.15s }
                     .${this.class}:hover > span.enabled { /* switch on when hover on parent div */
                         box-shadow: var(--switch-enabled-hover-box-shadow) ;
-                        -webkit-box-shadow: var(--switch-enabled-hover-box-shadow) ;
-                        -moz-box-shadow: var(--switch-enabled-hover-box-shadow) }
+                       -webkit-box-shadow: var(--switch-enabled-hover-box-shadow) ;
+                       -moz-box-shadow: var(--switch-enabled-hover-box-shadow) }
                     .${this.class} > span.disabled { /* switch off */
                         background-color: var(--switch-disabled-bg-color) ; box-shadow: none }
                     .${this.class} > span > span { /* knob span */
                         position: absolute ; width: 12px ; height: 12px ; content: "" ; border-radius: 28px ;
                         background-color: white ; left: 2px ; bottom: 1.25px ;
                         box-shadow: var(--knob-box-shadow) ;
-                            -webkit-box-shadow: var(--knob-box-shadow) ; -moz-box-shadow: var(--knob-box-shadow) ;
+                           -webkit-box-shadow: var(--knob-box-shadow) ; -moz-box-shadow: var(--knob-box-shadow) ;
                         transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
-                            -o-transition: 0.4s ; -ms-transition: 0.4s }
+                           -o-transition: 0.4s ; -ms-transition: 0.4s }
                     .${this.class} > label { /* toggle label */
                         cursor: pointer ; overflow: hidden ; text-overflow: ellipsis ; white-space: nowrap ;
                         color: black ; padding: 0 8px ; flex-grow: 1 ;
@@ -827,16 +827,16 @@
                   + `.${this.class}.dark > span.enabled { /* switch on */
                         background-color: var(--switch-enabled-bg-color) ;
                         box-shadow: var(--switch-enabled-hover-box-shadow) ; /* use hover style instead */
-                            -webkit-box-shadow: var(--switch-enabled-hover-box-shadow) ;
-                            -moz-box-shadow: var(--switch-enabled-hover-box-shadow) }
+                           -webkit-box-shadow: var(--switch-enabled-hover-box-shadow) ;
+                           -moz-box-shadow: var(--switch-enabled-hover-box-shadow) }
                     .${this.class}.dark:hover > span.enabled { /* switch on when hover on parent div */
                         box-shadow: var(--switch-enabled-box-shadow) ; /* use regular style instead */
-                            -webkit-box-shadow: var(--switch-enabled-box-shadow) ;
-                            -moz-box-shadow: var(--switch-enabled-box-shadow) }
+                           -webkit-box-shadow: var(--switch-enabled-box-shadow) ;
+                           -moz-box-shadow: var(--switch-enabled-box-shadow) }
                     .${this.class}.dark > span > span { /* knob span */
                         box-shadow: var(--knob-box-shadow-dark) ; /* make 3D-er */
-                            -webkit-box-shadow: var(--knob-box-shadow-dark) ;
-                            -moz-box-shadow: var(--knob-box-shadow-dark) }
+                           -webkit-box-shadow: var(--knob-box-shadow-dark) ;
+                           -moz-box-shadow: var(--knob-box-shadow-dark) }
                     .${this.class}.dark > label { color: white } /* toggle label */`
                 ))
             },
