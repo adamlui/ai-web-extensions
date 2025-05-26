@@ -86,11 +86,11 @@ window.styles = {
                 : site == 'perplexity' ? `div.max-w-threadWidth, .max-w-threadContentWidth, div.max-w-screen-lg,
                                           div[class*="max-w-\\[700px\\]"]` // Trending Topics on /academic
                 : /* poe */ 'div[class*=ChatMessagesView]'
-            window.nativeMinWidth ||= chatbar.nativeWidth +( site == 'chatgpt' ? 128 : site == 'poe' ? 66 : 274 )
-            window.nativeMaxWidth ||= document.querySelector(outerDivSelector)?.parentNode?.offsetWidth
+            window.wsMinWidth ||= chatbar.nativeWidth +( site == 'chatgpt' ? 128 : site == 'poe' ? 66 : 274 )
+            window.wsMaxWidth ||= document.querySelector(outerDivSelector)?.parentNode?.offsetWidth
                 +( site == 'poe' ? -64 : 0 ) // prevent over-expansion on Poe which doesn't use max-width
-            const finalWidth = window.nativeMinWidth +(
-                window.nativeMaxWidth - window.nativeMinWidth ) * config.widescreenWidth /100
+            const finalWidth = window.wsMinWidth +(
+                window.wsMaxWidth - window.wsMinWidth ) * config.widescreenWidth /100
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
                 chatgpt: `
                     ${outerDivSelector} { max-width: ${finalWidth}px !important } /* widen outer div */
