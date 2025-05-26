@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.25.4
+// @version             2025.5.26
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -260,8 +260,8 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@152a535/chromium/extension/lib/browser.js#sha256-7teBecqrjkazKH6oetGyxKlBkAk5U9ota/LNCB3Q+Jw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@2b3e5c8/chromium/extension/lib/chatbar.js#sha256-+XVFMnktVYGGVrk4v2PrWqvvWGA71kn1KDv+6oCjfZY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ac383f2/chromium/extension/lib/dom.js#sha256-QAHZ9hlWeLvunZtEt2z34mKhvdg71RhGBlxfMljIBPU=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@8df0330/chromium/extension/lib/settings.js#sha256-7aIptrk/18+9g1h22gHznWguVIy9QhaYEAoxz8qRb+Q=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@8df0330/chromium/extension/lib/styles.js#sha256-w+3dVN1H/PDb4npwohXYkA9XqeSATYRnU58m9O49UWk=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@14393a8/chromium/extension/lib/settings.js#sha256-ALbSSDZncixT/aOzyi8wFqlOsSQsUmGwEJnjWXynNe8=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@14393a8/chromium/extension/lib/styles.js#sha256-mdNH0yBd0VWXg+6SVOJkvdVsDsQJuBELUXmUdnYGTZk=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@8df0330/chromium/extension/lib/sync.js#sha256-iruip0Cgm3Ycv1zPYglHVLhSgBnoOAsHeDMpjz+4F24=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/ui.js#sha256-9ZQ8DyJvJ5YSuOGhmdqofNMT/QJGs5uhej0DmvH0g/k=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@0f832cf/chromium/extension/components/buttons.js#sha256-Z87gee2On4NXlvwn3IG/VcI5Jv9SNlsaH63n7px3fao=
@@ -394,7 +394,7 @@
             : !config[`${env.site}Disabled`] ?
                 Object.keys(settings.controls).map(key => {
                     if (sites[env.site].availFeatures.includes(key)
-                        && !settings.controls[key].excludeEnv?.includes('greasemonkey')
+                        && !settings.controls[key].excludes?.env?.includes('greasemonkey')
                     ) {
                         const ctrl = settings.controls[key]
                         const menuLabel = `${
