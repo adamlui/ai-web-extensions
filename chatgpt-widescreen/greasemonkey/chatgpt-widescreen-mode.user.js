@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.25.3
+// @version             2025.5.25.4
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -393,7 +393,9 @@
             // ...or create toggles for available features if script not disabled via Site Settings
             : !config[`${env.site}Disabled`] ?
                 Object.keys(settings.controls).map(key => {
-                    if (sites[env.site].availFeatures.includes(key) && !settings.controls[key].excludeGM) {
+                    if (sites[env.site].availFeatures.includes(key)
+                        && !settings.controls[key].excludeEnv?.includes('greasemonkey')
+                    ) {
                         const ctrl = settings.controls[key]
                         const menuLabel = `${
                             ctrl.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${ctrl.label} ${
