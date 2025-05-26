@@ -44,7 +44,7 @@
         if (entryData.type == 'slider') { // append slider, add listeners + remove highlight-on-hover
             entry.slider = dom.create.elem('input', { class: 'slider', type: 'range',
                 min: entry.min || 0, max: entry.max || 100, value: config[entryData.key] })
-            entry.label.textContent = `${entryData.label}: ${entry.slider.value}${ entryData.labelSuffix || '' }`
+            entry.label.textContent += `: ${entry.slider.value}${ entryData.labelSuffix || '' }`
             entry.slider.style.setProperty('--track-fill-percent', `${ entry.slider.value / entry.slider.max *100 }%`)
             entry.slider.oninput = ({ target: { value }}) => { // update label/color
                 settings.save(entryData.key, parseInt(value)) ; sync.configToUI({ updatedKey: entryData.key })
