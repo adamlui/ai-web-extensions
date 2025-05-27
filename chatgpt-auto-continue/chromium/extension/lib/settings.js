@@ -57,8 +57,7 @@ window.settings = {
                 config[key] = (await chrome.storage.local.get(key))[key] ?? initDefaultVal(key)))
         function initDefaultVal(key) {
             return this.controls?.[key]?.defaultVal
-                ?? this.controls?.[key]?.type == 'slider' ? 100
-                 : this.controls?.[key]?.type == 'toggle'
+              ?? ( this.controls?.[key]?.type == 'slider' ? 100 : this.controls?.[key]?.type == 'toggle' )
         }
     },
 
