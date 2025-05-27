@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.5.26.4
+// @version                  2025.5.26.5
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/app/black/icon48.png?v=12a91c0
 // @icon64                   https://assets.googlegpt.io/images/icons/app/black/icon64.png?v=12a91c0
@@ -528,10 +528,12 @@
     window.config = {}
     window.settings = {
         load(...keys) {
-            keys.flat().forEach(key => {
-                config[key] = GM_getValue(`${app.configKeyPrefix}_${key}`,
-                    this.controls?.[key]?.defaultVal ?? this.controls?.[key]?.type == 'toggle')
-            })
+            keys.flat().forEach(key => config[key] = GM_getValue(`${app.configKeyPrefix}_${key}`, initDefaultVal(key)))
+            function initDefaultVal(key) {
+                return this.controls?.[key]?.defaultVal
+                    ?? this.controls?.[key]?.type == 'slider' ? 100
+                     : this.controls?.[key]?.type == 'toggle'
+            }
         },
         save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val }
     }

@@ -134,16 +134,18 @@ window.settings = {
         keys = keys.flat() // flatten array args nested by spread operator
         if (typeof GM_info != 'undefined') // synchronously load from userscript manager storage
             keys.forEach(key => config[key] = GM_getValue(
-                !this.browserwideKeys.includes(key) ? `${app.configKeyPrefix}_${key}` : key,
-                this.controls[key]?.defaultVal ?? this.controls[key]?.type == 'toggle'
-            ))
+                !this.browserwideKeys.includes(key) ? `${app.configKeyPrefix}_${key}` : key, initDefaultVal(key)))
         else // asynchronously load from browser extension storage
             return Promise.all(keys.map(async key => { // resolve promise when all keys load
                 const result = await chrome.storage.local.get(
                     !this.browserwideKeys.includes(key) ? `${env.site}_${key}` : key )
-                config[key] = result[`${env.site}_${key}`] ?? result[key]
-                    ?? this.controls[key]?.defaultVal ?? this.controls[key]?.type == 'toggle'
-        }))
+                config[key] = result[`${env.site}_${key}`] ?? result[key] ?? initDefaultVal(key)
+            }))
+        function initDefaultVal(key) {
+            return this.controls[key]?.defaultVal
+                ?? this.controls[key]?.type == 'slider' ? 100
+                 : this.controls[key]?.type == 'toggle'
+        }
     },
 
     save(key, val) {

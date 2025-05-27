@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.26.1
+// @version             2025.5.26.2
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -340,10 +340,12 @@
         },
 
         load(...keys) {
-            keys.flat().forEach(key => {
-                config[key] = GM_getValue(`${app.configKeyPrefix}_${key}`,
-                    this.controls[key]?.defaultVal ?? this.controls[key]?.type == 'toggle')
-            })
+            keys.flat().forEach(key => config[key] = GM_getValue(`${app.configKeyPrefix}_${key}`, initDefaultVal(key)))
+            function initDefaultVal(key) {
+                return this.controls?.[key]?.defaultVal
+                    ?? this.controls?.[key]?.type == 'slider' ? 100
+                     : this.controls?.[key]?.type == 'toggle'
+            }
         },
 
         save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val },
