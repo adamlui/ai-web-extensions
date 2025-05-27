@@ -74,7 +74,8 @@ window.buttons = {
             btn.style.margin = `0 ${
                 site == 'chatgpt' ? -5
               : site == 'perplexity' ? ( env.browser.isFF ? 3 : -6 )
-              : /* poe */ 2 }px`
+              : /* poe */ 2
+            }px`
 
             if (site != 'poe') // add site button classes
                 btn.classList.add(...(this.rightBtn?.classList || []))
