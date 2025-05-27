@@ -71,12 +71,12 @@ for manifest_path in "${MANIFEST_PATHS[@]}" ; do
 done
 
 # LOG manifests bumped
+plural_suffix=$((( ${#bumped_manifests[@]} > 1 )) && echo "s")
 if (( ${#bumped_manifests[@]} == 0 )) ; then echo -e "${BW}Completed. No manifests bumped.${NC}" ; exit 0
 else echo -e "${BG}${#bumped_manifests[@]} manifest${plural_suffix} bumped!${NC}" ; fi
 
 # ADD/COMMIT/PUSH bump(s)
 if [[ "$no_commit" != true ]] ; then
-    plural_suffix=$((( ${#bumped_manifests[@]} > 1 )) && echo "s")
     echo -e "\n${BY}Committing bump${plural_suffix} to Git...\n${NC}"
 
     # Init commit msg
