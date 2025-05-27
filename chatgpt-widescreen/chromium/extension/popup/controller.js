@@ -274,14 +274,6 @@
         label: settings.getMsg('menuLabel_buyMeAcoffee')
     }))
 
-    // Create/append REVIEW entry
-    const platform = /chromium|edge|firefox/.exec(browserAPI.runtime.toLowerCase())?.[0] || '',
-          reviewURL = app.urls.review[platform != 'chromium' ? platform : 'chrome']
-    footer.before(createMenuEntry({
-        key: 'reviewEntry', type: 'link', symbol: '⭐', url: reviewURL, helptip: reviewURL,
-        label: `${settings.getMsg('btnLabel_leaveReview')}`
-    }))
-
     // Init FOOTER
     const footerElems = { // left-to-right
         chatgptjs: { logo: footer.querySelector('.chatgptjs-logo') },
