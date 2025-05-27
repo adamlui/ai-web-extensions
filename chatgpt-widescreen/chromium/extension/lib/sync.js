@@ -36,7 +36,7 @@ window.sync = {
         function supressNotifs() {
             if (config.notifiedDisabled) return
             settings.save('notifDisabled', true) // suppress notifs for cleaner UI
-            setTimeout(() => settings.save('notifDisabled', false), 55) // ...temporarily
+            requestAnimationFrame(() => settings.save('notifDisabled', false)) // ...temporarily
         }
     },
 

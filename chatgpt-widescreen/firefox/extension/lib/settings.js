@@ -54,6 +54,16 @@ window.settings = {
             helptip: settings.getMsg('helptip_widescreenWidth'),
             excludes: { env: ['greasemonkey'] }
         }},
+        get widescreen() { return {
+            type: 'toggle', defaultVal: true, category: 'displaySettings',
+            label: settings.getMsg('mode_widescreen'),
+            excludes: { env: ['greasemonkey'] }
+        }},
+        get fullWindow() { return {
+            type: 'toggle', defaultVal: false, category: 'displaySettings',
+            label: settings.getMsg('mode_fullWindow'),
+            excludes: { env: ['greasemonkey'] }
+        }},
         get fullerWindows() { return {
             type: 'toggle', defaultVal: false, category: 'displaySettings',
             label: settings.getMsg('menuLabel_fullerWins'),
