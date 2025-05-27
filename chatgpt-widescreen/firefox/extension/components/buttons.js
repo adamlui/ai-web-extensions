@@ -140,7 +140,8 @@ window.buttons = {
             this.btnsDiv = dom.create.elem('div', {
                 style: `display: flex ; align-items: center ; gap: 3px ; position: relative ; right: ${
                     site == 'chatgpt' ? ( document.querySelector(sites[site].selectors.btns.login) ? 1 : -11 )
-                  : site == 'perplexity' ? 7 : /* poe */ -11 }px`
+                  : site == 'perplexity' ? ( chatbarDiv.querySelector('div[role=radiogroup]') ? 7 : 1 )
+                  : /* poe */ -11 }px`
             })
         )
 
