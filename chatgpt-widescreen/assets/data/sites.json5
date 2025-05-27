@@ -45,7 +45,8 @@
     "selectors": {
       "btns": {
         "attachFile": "button:has(svg[class*=icon-paperclip])", "dictation": "button:has(svg[class*=icon-microphone])",
-        "help": "button:has(svg[data-icon=question])", "newChat": "div:has(> span > a[href=\"/\"] svg) + div",
+        "help": "button:has(svg[data-icon=question])", "input": "textarea[placeholder]",
+        "newChat": "div:has(> span > a[href=\"/\"] svg) + div",
         "send": "button:has(svg[class*=icon-arrow-], svg[class*=icon-git-fork])", // Send w/ ↑/→ or New Thread
         "settings": "button:has(svg[data-icon=user])", "sidebar": "button[data-testid=sidebar-pin-sidebar]"
       },
