@@ -20,7 +20,7 @@ window.sync = {
                     supressNotifs() ; toggleMode('fullWindow') }
                 sync.fullerWin() // sync Fuller Windows
             }
-            styles.update({ key: 'widescreen' }) // in case Widescreen Width changed
+            styles.update({ key: 'widescreen' }) // sync WW
             styles.update({ key: 'tweaks' }) // sync HH/HF/TCB/NCB/BA
             styles.update({ key: 'chatbar' }) // sync WCB
             if (site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
