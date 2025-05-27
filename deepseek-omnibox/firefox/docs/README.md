@@ -17,6 +17,8 @@
 
 <a href="#">
     <img height=31 src="https://img.shields.io/amo/users/deepseek-omnibox?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+<a href="https://ff.deepseekomnibox.com">
+    <img alt="[Trending on Mozilla Add-ons]" height=31 src="https://img.shields.io/badge/Trending_on-Mozilla_Addons-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com/reviews">
     <img alt="[Mozilla Add-ons Ratings]" height=31 src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com">

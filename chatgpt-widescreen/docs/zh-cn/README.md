@@ -10,6 +10,8 @@
 
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-10,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+<a href="https://ff.chatgptwidescreen.com">
+    <img alt="[Mozilla 附加组件的趋势]" height=31 src="https://img.shields.io/badge/Mozilla%20%E9%99%84%E5%8A%A0%E7%BB%84%E4%BB%B6%E7%9A%84%E8%B6%8B%E5%8A%BF-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-shield">
     <img alt="[由 Google 推荐]" height=31 src="https://img.shields.io/badge/%E7%B2%BE%E9%80%89%E8%80%85-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.chatgptwidescreen.com/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">

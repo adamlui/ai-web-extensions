@@ -4,6 +4,8 @@
 
 <div align="center">
 
+<a href="https://ff.chatgptwidescreen.com">
+    <img alt="[Trending on Mozilla Add-ons]" height=31 src="https://img.shields.io/badge/Trending_on-Mozilla_Addons-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.chatgptwidescreen.com/reviews">
     <img alt="[Mozilla Add-ons Ratings]" height=31 src="https://img.shields.io/amo/stars/chatgpt-widescreen?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></img></a>
 <a href="https://ff.chatgptwidescreen.com">

@@ -17,6 +17,8 @@
 
 <a href="#">
     <img height=31 src="https://img.shields.io/amo/users/deepseek-omnibox?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge&label=%E7%94%A8%E6%88%B7"></img></a>
+<a href="https://ff.deepseekomnibox.com">
+    <img alt="[Mozilla 附加组件的趋势]" height=31 src="https://img.shields.io/badge/Mozilla%20%E9%99%84%E5%8A%A0%E7%BB%84%E4%BB%B6%E7%9A%84%E8%B6%8B%E5%8A%BF-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com/reviews">
     <img alt="[Mozilla Add-ons 评级]" height=31 src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E8%AF%84%E5%88%86"></img></a>
 <a href="https://ff.deepseekomnibox.com">
