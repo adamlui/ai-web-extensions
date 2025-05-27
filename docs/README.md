@@ -546,7 +546,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
         <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.perplexityomnibox.com/images/icons/perplexity/white/icon32.png"><img width=20 src="https://assets.perplexityomnibox.com/images/icons/perplexity/turquoise/icon32.png"></picture></a>
     <a href="../perplexity-omnibox">Perplexity Omnibox</a>&nbsp;
     <a href="https://edge.perplexityomnibox.com">
-        <img height=20 alt="Trending on Microsoft Edge Add-ons" title="Trending on Microsoft Edge Add-ons" src="https://assets.perplexityomnibox.com/images/badges/microsoft-store/trending/trending-badge-500x91.png"></a>
+        <img height=20 alt="Trended on Microsoft Edge Add-ons" title="Trended on Microsoft Edge Add-ons" src="https://assets.braveomnibox.com/images/badges/microsoft-store/trending/trended-badge-500x91.png"></a>
 </h3>
 
 <details>
