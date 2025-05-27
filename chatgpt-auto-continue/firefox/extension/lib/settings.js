@@ -56,7 +56,7 @@ window.settings = {
             return Promise.all(keys.map(async key => // resolve promise when all keys load
                 config[key] = (await chrome.storage.local.get(key))[key] ?? initDefaultVal(key)))
         function initDefaultVal(key) {
-            const ctrlData = this.controls?.[key]
+            const ctrlData = settings.controls?.[key]
             return ctrlData?.defaultVal ?? ( ctrlData?.type == 'slider' ? 100 : ctrlData?.type == 'toggle' )
         }
     },

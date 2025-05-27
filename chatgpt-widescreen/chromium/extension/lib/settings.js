@@ -142,7 +142,7 @@ window.settings = {
                 config[key] = result[`${env.site}_${key}`] ?? result[key] ?? initDefaultVal(key)
             }))
         function initDefaultVal(key) {
-            const ctrlData = this.controls?.[key]
+            const ctrlData = settings.controls?.[key]
             return ctrlData?.defaultVal ?? ( ctrlData?.type == 'slider' ? 100 : ctrlData?.type == 'toggle' )
         }
     },
