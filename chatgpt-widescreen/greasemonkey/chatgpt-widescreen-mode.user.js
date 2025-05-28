@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.28.1
+// @version             2025.5.28.2
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -366,7 +366,7 @@
     if (GM_getValue(`${app.configKeyPrefix}_isFirstRun`) == undefined) { // activate widescreen on install
         settings.save('widescreen', true) ; settings.save('isFirstRun', false) }
     settings.siteDisabledKeys = Object.keys(sites).map(site => `${site}Disabled`)
-    settings.load(settings.siteDisabledKeys, sites[env.site].availFeatures) ; config.widescreenWidth = 100
+    settings.load(settings.siteDisabledKeys, sites[env.site].availFeatures)
 
     // Define MENU functions
 
