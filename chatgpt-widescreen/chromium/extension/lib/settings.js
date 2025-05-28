@@ -66,12 +66,12 @@ window.settings = {
         }},
         get tcbDisabled() { return {
             type: 'toggle', symbol: '↕️', defaultVal: false, category: 'chatboxSettings',
-            label: settings.getMsg('menuLabel_tallerChatbox'),
+            label: `${settings.getMsg('menuLabel_taller')} ${settings.getMsg('menuLabel_chatbox')}`,
             helptip: settings.getMsg('helptip_tallerChatbox')
         }},
         get widerChatbox() { return {
             type: 'toggle', symbol: '↔️', defaultVal: false, category: 'chatboxSettings',
-            label: settings.getMsg('menuLabel_widerChatbox'),
+            label: `${settings.getMsg('menuLabel_wider')} ${settings.getMsg('menuLabel_chatbox')}`,
             helptip: settings.getMsg('helptip_widerChatbox')
         }},
         get ncbDisabled() { return {
