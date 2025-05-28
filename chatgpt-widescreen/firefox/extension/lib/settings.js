@@ -64,11 +64,6 @@ window.settings = {
             label: settings.getMsg('mode_fullWindow'),
             excludes: { env: ['greasemonkey'] }
         }},
-        get fullerWindows() { return {
-            type: 'toggle', defaultVal: false, category: 'displaySettings',
-            label: settings.getMsg('menuLabel_fullerWins'),
-            helptip: settings.getMsg('helptip_fullerWins')
-        }},
         get tcbDisabled() { return {
             type: 'toggle', symbol: '↕️', defaultVal: false, category: 'chatboxSettings',
             label: settings.getMsg('menuLabel_tallerChatbox'),
