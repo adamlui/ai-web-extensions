@@ -116,7 +116,7 @@ window.styles = {
                         : `${outerDivSelector} { margin-left: 68px }` }
                     .col-span-4:has([class*=sticky]) { display: none }`, // hide right-bar
                 poe: `
-                    ${outerDivSelector} { width: ${wsWidth}px !important } /* widen outer div */
+                    ${outerDivSelector} { width: calc(${wsWidth}px - 4%) !important } /* widen outer div */
                     div[class^=Message] { max-width: 100% !important }` // widen speech bubbles
             }[site]
         }
