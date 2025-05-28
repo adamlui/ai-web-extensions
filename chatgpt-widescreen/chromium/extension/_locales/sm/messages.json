@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Buttons" },
   "helptip_widescreenWidth": { "message": "Fetuunai le aofaiga o Widescreen e faaaoga" },
   "helptip_tallerChatbox": { "message": "Faʻalauteleina le chatbox vertically" },
+  "helptip_widerChatboxWidth": { "message": "Fetuunai le aofaiga o Wider Chatbox e faaaoga" },
   "helptip_widerChatbox": { "message": "Faalauteleina le pusa talatalanoaga faalava i le Wide Screen mode" },
   "helptip_newChatBtn": { "message": "Faaali atu le faamau talatalanoaga fou i le pusa talatalanoaga" },
   "helptip_hiddenFooter": { "message": "Faʻasalaga i luga o le upega tafaʻilagi" },

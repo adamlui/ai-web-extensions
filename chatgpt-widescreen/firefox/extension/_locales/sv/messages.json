@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Knappar" },
   "helptip_widescreenWidth": { "message": "Justera mängden Widescreen som ska tillämpas" },
   "helptip_tallerChatbox": { "message": "Expandera chattrutan vertikalt" },
+  "helptip_widerChatboxWidth": { "message": "Justera mängden bredare chattruta för att ansöka" },
   "helptip_widerChatbox": { "message": "Expandera chattrutan horisontellt i bredbildsläge" },
   "helptip_newChatBtn": { "message": "Visa knappen Ny chatt i chattrutan" },
   "helptip_hiddenFooter": { "message": "Dölj webbplatsens sidfot" },

@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Mga butones" },
   "helptip_widescreenWidth": { "message": "Ipahiangay ang gidaghanon sa Widescreen nga i-apply" },
   "helptip_tallerChatbox": { "message": "Pagpalapad sa chatbox nga patindog" },
+  "helptip_widerChatboxWidth": { "message": "Ayuhon ang kantidad sa Wider Chatbox aron magamit" },
   "helptip_widerChatbox": { "message": "Pagpalapad sa chatbox horizontally sa Wide Screen mode" },
   "helptip_newChatBtn": { "message": "Ipakita ang Bag-ong Chat button sa chatbox" },
   "helptip_hiddenFooter": { "message": "Itago ang footer sa site" },

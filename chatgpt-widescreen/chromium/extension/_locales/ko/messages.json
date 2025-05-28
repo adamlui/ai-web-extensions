@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "버튼" },
   "helptip_widescreenWidth": { "message": "적용할 와이드스크린의 양을 조정합니다." },
   "helptip_tallerChatbox": { "message": "채팅창을 세로로 펼치세요" },
+  "helptip_widerChatboxWidth": { "message": "적용할 Wider Chatbox의 양을 조정합니다." },
   "helptip_widerChatbox": { "message": "와이드 스크린 모드에서 채팅 상자를 수평으로 확장합니다" },
   "helptip_newChatBtn": { "message": "채팅창에 새 채팅 버튼 표시" },
   "helptip_hiddenFooter": { "message": "사이트 푸터" },

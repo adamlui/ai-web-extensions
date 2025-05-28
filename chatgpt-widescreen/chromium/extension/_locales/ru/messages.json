@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Кнопки" },
   "helptip_widescreenWidth": { "message": "Отрегулируйте количество широкоэкранных экранов для применения" },
   "helptip_tallerChatbox": { "message": "Развернуть чат-бокс по вертикали" },
+  "helptip_widerChatboxWidth": { "message": "Отрегулируйте количество Wider Chatbox, чтобы применить" },
   "helptip_widerChatbox": { "message": "Разверните чат-бокс по горизонтали в режиме «Широкий экран»" },
   "helptip_newChatBtn": { "message": "Показать новую кнопку чата в окне чата" },
   "helptip_hiddenFooter": { "message": "Стиль нижнего колонтитула сайта" },

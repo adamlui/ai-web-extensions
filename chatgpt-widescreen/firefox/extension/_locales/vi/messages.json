@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Nút" },
   "helptip_widescreenWidth": { "message": "Điều chỉnh lượng Màn hình rộng để áp dụng" },
   "helptip_tallerChatbox": { "message": "Mở rộng hộp trò chuyện theo chiều dọc" },
+  "helptip_widerChatboxWidth": { "message": "Điều chỉnh số lượng Hộp trò chuyện Rộng hơn để áp dụng" },
   "helptip_widerChatbox": { "message": "Mở rộng hộp trò chuyện theo chiều ngang ở chế độ Màn hình rộng" },
   "helptip_newChatBtn": { "message": "Hiển thị nút Trò chuyện mới trong hộp trò chuyện" },
   "helptip_hiddenFooter": { "message": "Ẩn chân trang web" },

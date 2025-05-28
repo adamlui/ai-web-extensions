@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Butonoj" },
   "helptip_widescreenWidth": { "message": "Adapti la kvanton de Widescreen apliki" },
   "helptip_tallerChatbox": { "message": "Vastigi la babilejon vertikale" },
+  "helptip_widerChatboxWidth": { "message": "Adapti la kvanton de Wider Babilejo apliki" },
   "helptip_widerChatbox": { "message": "Etendi la babilejon horizontale en Larĝekrana reĝimo" },
   "helptip_newChatBtn": { "message": "Montri novan babilejbutonon en babilejujo" },
   "helptip_hiddenFooter": { "message": "Kaŝi la paĝopiedon" },

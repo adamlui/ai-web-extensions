@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "تڼیگانې" },
   "helptip_widescreenWidth": { "message": "د درخواست کولو لپاره د Widescreen اندازه تنظیم کړئ" },
   "helptip_tallerChatbox": { "message": "چیټ باکس په عمودي ډول پراخ کړئ" },
+  "helptip_widerChatboxWidth": { "message": "د درخواست کولو لپاره د پراخه چیټ باکس مقدار تنظیم کړئ" },
   "helptip_widerChatbox": { "message": "د چټ باکس په افقی ډول د پراخ سکرین حالت کې پراخ کړئ" },
   "helptip_newChatBtn": { "message": "په ګپ شپ بکس کې نوې چټ تڼۍ وښایاست" },
   "helptip_hiddenFooter": { "message": "د سایټ پښۍ پټ کړئ" },

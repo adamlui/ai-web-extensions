@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Botões" },
   "helptip_widescreenWidth": { "message": "Ajuste a quantidade de Widescreen a ser aplicada" },
   "helptip_tallerChatbox": { "message": "Expanda a caixa de chat verticalmente" },
+  "helptip_widerChatboxWidth": { "message": "Ajuste a quantidade de Chatbox mais ampla a ser aplicada" },
   "helptip_widerChatbox": { "message": "Expanda a caixa de chat horizontalmente no modo de ecrã largo" },
   "helptip_newChatBtn": { "message": "Mostrar o botão Novo chat na caixa de chat" },
   "helptip_hiddenFooter": { "message": "Ocultar o rodapé do Site" },

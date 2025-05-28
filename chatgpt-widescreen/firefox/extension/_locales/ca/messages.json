@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Buttons" },
   "helptip_widescreenWidth": { "message": "Ajusta la quantitat de pantalla panoràmica que vols aplicar" },
   "helptip_tallerChatbox": { "message": "Expandeix el quadre de xat verticalment" },
+  "helptip_widerChatboxWidth": { "message": "Ajusta la quantitat de Wider Chatbox a aplicar" },
   "helptip_widerChatbox": { "message": "Expandeix el quadre de xat horitzontalment en mode de pantalla ampla" },
   "helptip_newChatBtn": { "message": "Mostra el botó Nou xat al quadre de xat" },
   "helptip_hiddenFooter": { "message": "Amaga el peu de pàgina" },

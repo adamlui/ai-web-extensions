@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "බොත්තම්" },
   "helptip_widescreenWidth": { "message": "යෙදීමට පුළුල් තිර ප් ‍ රමාණය සකසන්න" },
   "helptip_tallerChatbox": { "message": "චැට්බොක්ස් සිරස් අතට පුළුල් කරන්න" },
+  "helptip_widerChatboxWidth": { "message": "අයදුම් කිරීමට පුළුල් සංවාද කොටුවේ ප් ‍ රමාණය සකසන්න" },
   "helptip_widerChatbox": { "message": "සංවාද කොටුව තිරස්ව පුළුල් තිර ප් ‍ රකාරයෙන් පුළුල් කරන්න" },
   "helptip_newChatBtn": { "message": "සංවාද කොටුවේ නව සංවාද බොත්තම පෙන්වන්න" },
   "helptip_hiddenFooter": { "message": "අඩවි පාදකය සඟවන්න" },

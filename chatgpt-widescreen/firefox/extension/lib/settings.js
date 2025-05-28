@@ -69,6 +69,14 @@ window.settings = {
             label: `${settings.getMsg('menuLabel_taller')} ${settings.getMsg('menuLabel_chatbox')}`,
             helptip: settings.getMsg('helptip_tallerChatbox')
         }},
+        get widerChatboxWidth() { return {
+            type: 'slider', symbol: '↔️', defaultVal: 100, category: 'chatboxSettings',
+            label: `${settings.getMsg('menuLabel_wider')} ${settings.getMsg('menuLabel_chatbox')} ${
+                      settings.getMsg('menuLabel_width')}`,
+            labelSuffix: '%',
+            helptip: settings.getMsg('helptip_widerChatboxWidth'),
+            excludes: { env: ['greasemonkey'] }
+        }},
         get widerChatbox() { return {
             type: 'toggle', symbol: '↔️', defaultVal: false, category: 'chatboxSettings',
             label: `${settings.getMsg('menuLabel_wider')} ${settings.getMsg('menuLabel_chatbox')}`,

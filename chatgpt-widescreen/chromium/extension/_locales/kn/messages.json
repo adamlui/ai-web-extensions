@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "ಗುಂಡಿಗಳು" },
   "helptip_widescreenWidth": { "message": "ಅನ್ವಯಿಸಲು ವೈಡ್‌ಸ್ಕ್ರೀನ್ ಪ್ರಮಾಣವನ್ನು ಸರಿಹೊಂದಿಸಿ" },
   "helptip_tallerChatbox": { "message": "ಚಾಟ್ ‌ ಬಾಕ್ಸ್ ಅನ್ನು ಲಂಬವಾಗಿ ವಿಸ್ತರಿಸಿ" },
+  "helptip_widerChatboxWidth": { "message": "ಅನ್ವಯಿಸಲು ವಿಶಾಲ ಚಾಟ್‌ಬಾಕ್ಸ್ ಮೊತ್ತವನ್ನು ಸರಿಹೊಂದಿಸಿ" },
   "helptip_widerChatbox": { "message": "ಚಾಟ್ ‌ ಬಾಕ್ಸ್ ಅನ್ನು ಅಡ್ಡಲಾಗಿ ವೈಡ್ ಸ್ಕ್ರೀನ್ ಮೋಡ್ ‌ ನಲ್ಲಿ ವಿಸ್ತರಿಸಿ" },
   "helptip_newChatBtn": { "message": "ಚಾಟ್ ‌ ಬಾಕ್ಸ್ ‌ ನಲ್ಲಿ ಹೊಸ ಚಾಟ್ ಬಟನ್ ತೋರಿಸಿ" },
   "helptip_hiddenFooter": { "message": "ಸೈಟ್ ಅಡಿಟಿಪ್ಪಣಿಯನ್ನು ಮರೆಮಾಡಿ" },

@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "دکمه ها" },
   "helptip_widescreenWidth": { "message": "میزان پهنا (Widescreen) مورد نظر را تنظیم کنید" },
   "helptip_tallerChatbox": { "message": "جعبه گفتگو را به صورت عمودی گسترش دهید" },
+  "helptip_widerChatboxWidth": { "message": "میزان Wider Chatbox مورد نظر را تنظیم کنید" },
   "helptip_widerChatbox": { "message": "جعبه گفتگو را به صورت افقی در حالت Wide Screen گسترش دهید" },
   "helptip_newChatBtn": { "message": "نمایش دکمه چت جدید در چت باکس" },
   "helptip_hiddenFooter": { "message": "مخفی کردن پاورقی  سایت" },

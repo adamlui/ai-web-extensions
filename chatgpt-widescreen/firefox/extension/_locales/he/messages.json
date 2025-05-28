@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "כפתורים" },
   "helptip_widescreenWidth": { "message": "התאם את כמות המסך הרחב להחלה" },
   "helptip_tallerChatbox": { "message": "הרחב את תיבת הצ'אט אנכית" },
+  "helptip_widerChatboxWidth": { "message": "התאם את הסכום של תיבת צ'אט רחבה יותר כדי להחיל" },
   "helptip_widerChatbox": { "message": "הרחב את תיבת הצ'אט אופקית במצב מסך רחב" },
   "helptip_newChatBtn": { "message": "הצג לחצן צ'אט חדש בתיבת הצ'אט" },
   "helptip_hiddenFooter": { "message": "ערוך את תחתית האתר" },

@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "ボタン" },
   "helptip_widescreenWidth": { "message": "適用するワイドスクリーンの量を調整する" },
   "helptip_tallerChatbox": { "message": "チャットボックスを垂直に展開します" },
+  "helptip_widerChatboxWidth": { "message": "適用するWider Chatboxの量を調整する" },
   "helptip_widerChatbox": { "message": "ワイドスクリーンモードでチャットボックスを水平に展開する" },
   "helptip_newChatBtn": { "message": "チャットボックスに新しいチャットボタンを表示" },
   "helptip_hiddenFooter": { "message": "サイトフッター" },

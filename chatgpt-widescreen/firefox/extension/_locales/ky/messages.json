@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Кнопкалар" },
   "helptip_widescreenWidth": { "message": "Колдонула турган Widescreen көлөмүн тууралоо" },
   "helptip_tallerChatbox": { "message": "Undo-type" },
+  "helptip_widerChatboxWidth": { "message": "Колдонула турган кененирээк баарлашуу кутучасынын көлөмүн тууралоо" },
   "helptip_widerChatbox": { "message": "Чат кутучасын горизонталдуу түрдө кең экран режиминде кеңейтүү" },
   "helptip_newChatBtn": { "message": "Чат кутучасында жаңы баарлашуу баскычын көрсөтүү" },
   "helptip_hiddenFooter": { "message": "Сайттын бут кийимин жашыруу" },

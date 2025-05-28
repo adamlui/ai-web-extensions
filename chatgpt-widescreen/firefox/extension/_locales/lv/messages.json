@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Pogas" },
   "helptip_widescreenWidth": { "message": "Pielāgojiet izmantojamā platekrāna apjomu" },
   "helptip_tallerChatbox": { "message": "Paplašiniet tērzētavu vertikāli" },
+  "helptip_widerChatboxWidth": { "message": "Pielāgojiet lietojamo Platākas tērzēšanas lodziņa summu" },
   "helptip_widerChatbox": { "message": "Paplašiniet tērzēšanas lodziņu horizontāli platekrāna režīmā" },
   "helptip_newChatBtn": { "message": "Rādīt jaunu tērzēšanas pogu tērzēšanas lodziņā" },
   "helptip_hiddenFooter": { "message": "Paslēpt vietnes kājeni" },

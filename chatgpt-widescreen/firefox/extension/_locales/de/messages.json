@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Tasten" },
   "helptip_widescreenWidth": { "message": "Passen Sie die Menge des anzuwendenden Breitbildschirms an" },
   "helptip_tallerChatbox": { "message": "Erweitern Sie die Chatbox vertikal" },
+  "helptip_widerChatboxWidth": { "message": "Passen Sie die Menge der breiteren Chatbox an, die angewendet werden soll" },
   "helptip_widerChatbox": { "message": "Erweitern Sie die Chatbox horizontal im Breitbildmodus" },
   "helptip_newChatBtn": { "message": "Schaltfläche „Neuer Chat“ in der Chatbox anzeigen" },
   "helptip_hiddenFooter": { "message": "Seiten-Footer" },

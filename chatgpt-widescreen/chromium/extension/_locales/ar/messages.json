@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "الأزرار" },
   "helptip_widescreenWidth": { "message": "اضبط مقدار الشاشة العريضة للتطبيق" },
   "helptip_tallerChatbox": { "message": "قم بتوسيع مربع الدردشة عموديًا" },
+  "helptip_widerChatboxWidth": { "message": "قم بتعديل مقدار مربع الدردشة الأوسع لتطبيقه" },
   "helptip_widerChatbox": { "message": "قم بتوسيع مربع الدردشة أفقيًا في وضع الشاشة العريضة" },
   "helptip_newChatBtn": { "message": "عرض زر دردشة جديد في مربع الدردشة" },
   "helptip_hiddenFooter": { "message": "إخفاء تذييل الموقع" },

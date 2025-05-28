@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Hnappar" },
   "helptip_widescreenWidth": { "message": "Breyttu magni breiðskjásins til að nota" },
   "helptip_tallerChatbox": { "message": "Stækkaðu spjallboxið lóðrétt" },
+  "helptip_widerChatboxWidth": { "message": "Breyttu upphæð breiðari spjallreits til að sækja um" },
   "helptip_widerChatbox": { "message": "Stækkaðu spjallboxið lárétt í víðskjásham" },
   "helptip_newChatBtn": { "message": "Sýna nýjan spjallhnapp í spjallreit" },
   "helptip_hiddenFooter": { "message": "Fela síðufót" },

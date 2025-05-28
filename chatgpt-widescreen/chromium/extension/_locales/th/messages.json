@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "ปุ่ม" },
   "helptip_widescreenWidth": { "message": "ปรับปริมาณของจอกว้างเพื่อนำไปใช้" },
   "helptip_tallerChatbox": { "message": "ขยายแชทบ็อกซ์ในแนวตั้ง" },
+  "helptip_widerChatboxWidth": { "message": "ปรับจำนวน Chatbox ที่กว้างขึ้นเพื่อใช้" },
   "helptip_widerChatbox": { "message": "ขยายแชทบ็อกซ์ในแนวนอนในโหมดหน้าจอกว้าง" },
   "helptip_newChatBtn": { "message": "แสดงปุ่มแชทใหม่ในกล่องแชท" },
   "helptip_hiddenFooter": { "message": "ส่วนท้ายของเว็บไซต์" },

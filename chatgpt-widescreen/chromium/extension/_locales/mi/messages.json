@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Ngā potae" },
   "helptip_widescreenWidth": { "message": "Whakaritea te nui o te Widescreen ki te tono" },
   "helptip_tallerChatbox": { "message": "Whakapai ake i te pouaka kōrerorero vertically" },
+  "helptip_widerChatboxWidth": { "message": "Whakaritea te nui o Wider Chatbox ki te tono" },
   "helptip_widerChatbox": { "message": "Whakanuia te pouaka kōrerorero maramataka i roto i te aratau mata Wide" },
   "helptip_newChatBtn": { "message": "Whakaatuhia te pātene Kōrerorero Hou i roto i te pouaka kōrerorero" },
   "helptip_hiddenFooter": { "message": "Hide pae footer" },

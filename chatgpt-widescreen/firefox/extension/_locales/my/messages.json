@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "ခလုတ်များ" },
   "helptip_widescreenWidth": { "message": "အသုံးပြုရန် မျက်နှာပြင်ပမာဏကို ချိန်ညှိပါ" },
   "helptip_tallerChatbox": { "message": "စကားပြောခွက်ကို ဒေါင်လိုက် တိုးချဲ့ပါ" },
+  "helptip_widerChatboxWidth": { "message": "လျှောက်ထားရန် ကျယ်ပြန့်သော စကားပြောဆိုမှုပမာဏကို ချိန်ညှိပါ" },
   "helptip_widerChatbox": { "message": "စကားပြောခွက်ကို အလျားလိုက် ကျယ်ပြန့်သော မျက်နှာပြင်ပုံစံဖြင့် ချဲ့ပါ" },
   "helptip_newChatBtn": { "message": "စကားပြောခလုတ်အသစ်ကို စကားပြောခလုတ်တွင် ပြပါ" },
   "helptip_hiddenFooter": { "message": "ဆိုက်ဖိုင်တွဲကို ဝှက်ပါ" },

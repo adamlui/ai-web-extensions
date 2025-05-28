@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "ބަޓަންތަކެވެ" },
   "helptip_widescreenWidth": { "message": "އެޕްލައި ކުރަން ވައިޑްސްކްރީންގެ މިންވަރު އެޖެސްޓް ކުރާށެވެ" },
   "helptip_tallerChatbox": { "message": "ޗެޓްބޮކްސް ވަށައިގެން ފުޅާކޮށްލާށެވެ" },
+  "helptip_widerChatboxWidth": { "message": "އެޕްލައި ކުރަން ވައިޑަރ ޗެޓްބޮކްސްގެ މިންވަރު އެޖެސްޓް ކުރާށެވެ" },
   "helptip_widerChatbox": { "message": "ވައިޑް ސްކްރީން މޯޑުގައި ޗެޓްބޮކްސް ހޮރޮޒޮންޓަލީ ފުޅާކުރުން" },
   "helptip_newChatBtn": { "message": "ޗެޓްބޮކްސްގައި އާ ޗެޓް ބަޓަން ދައްކާށެވެ" },
   "helptip_hiddenFooter": { "message": "ސައިޓްގެ ފޫޓަރ ފޮރުވުން" },

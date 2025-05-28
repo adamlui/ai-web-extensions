@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Тугмаҳо" },
   "helptip_widescreenWidth": { "message": "Миқдори васеъи экранро барои татбиқ танзим кунед" },
   "helptip_tallerChatbox": { "message": "Ð  Ð ° Ð ¼ Ð ¾ Ð ¸ Ñ  Ð" },
+  "helptip_widerChatboxWidth": { "message": "Танзими андозаи васеътари Chatbox барои татбиқ" },
   "helptip_widerChatbox": { "message": "Кушодани қуттии чат ба таври уфуқӣ дар ҳолати экрани васеъ" },
   "helptip_newChatBtn": { "message": "Намоиши тугмаи нави чат дар қуттии чат" },
   "helptip_hiddenFooter": { "message": "Itago ang footer ng site" },

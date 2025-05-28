@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "بٹن" },
   "helptip_widescreenWidth": { "message": "لاگو کرنے کے لیے وائڈ اسکرین کی مقدار کو ایڈجسٹ کریں" },
   "helptip_tallerChatbox": { "message": "چیٹ باکس کو عمودی طور پر وسعت دیں" },
+  "helptip_widerChatboxWidth": { "message": "درخواست دینے کے لیے وسیع تر چیٹ باکس کی رقم کو ایڈجسٹ کریں" },
   "helptip_widerChatbox": { "message": "وائڈ اسکرین موڈ میں چیٹ باکس کو افقی طور پر وسعت دیں" },
   "helptip_newChatBtn": { "message": "چیٹ باکس میں نیا چیٹ بٹن دکھائیں" },
   "helptip_hiddenFooter": { "message": "سائٹ کا فوٹر چھپائیں" },

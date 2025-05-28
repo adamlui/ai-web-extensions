@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Gombok" },
   "helptip_widescreenWidth": { "message": "Állítsa be az alkalmazni kívánt szélesvásznú képernyő mennyiségét" },
   "helptip_tallerChatbox": { "message": "A csevegődoboz függőleges kibontása" },
+  "helptip_widerChatboxWidth": { "message": "Módosítsd a szélesebb csevegőmező mennyiségét az alkalmazáshoz" },
   "helptip_widerChatbox": { "message": "Bontsa ki a csevegődobozt vízszintesen szélesvásznú módban" },
   "helptip_newChatBtn": { "message": "Új csevegés gomb megjelenítése a csevegőmezőben" },
   "helptip_hiddenFooter": { "message": "Oldal lábléc" },

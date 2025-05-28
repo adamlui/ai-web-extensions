@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Botoiak" },
   "helptip_widescreenWidth": { "message": "Doitu aplikatuko den pantaila zabalaren kopurua" },
   "helptip_tallerChatbox": { "message": "Zabaldu txat-koadroa bertikalki" },
+  "helptip_widerChatboxWidth": { "message": "Doitu aplikatuko den Txat-kutxa zabalagoa zenbatekoa" },
   "helptip_widerChatbox": { "message": "Zabaldu txat-koadroa horizontalki Pantaila zabaleko moduan" },
   "helptip_newChatBtn": { "message": "Erakutsi txat berria botoia txat-koadroan" },
   "helptip_hiddenFooter": { "message": "Ezkutatu gune-oina" },

@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Structural navigation" },
   "helptip_widescreenWidth": { "message": "Laraskan amaun Skrin Lebar untuk digunakan" },
   "helptip_tallerChatbox": { "message": "Kembangkan kotak sembang secara menegak" },
+  "helptip_widerChatboxWidth": { "message": "Laraskan amaun Kotak Sembang Lebih Luas untuk digunakan" },
   "helptip_widerChatbox": { "message": "Kembangkan kotak sembang secara mendatar dalam mod Skrin Lebar" },
   "helptip_newChatBtn": { "message": "Tunjukkan butang Sembang Baharu dalam kotak sembang" },
   "helptip_hiddenFooter": { "message": "Sembunyikan pengaki tapak" },

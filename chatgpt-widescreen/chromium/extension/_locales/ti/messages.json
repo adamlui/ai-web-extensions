@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "ሰሌዳታት" },
   "helptip_widescreenWidth": { "message": "እቲ ናይ Widescreen መጠን ክተተኣታተወሉ" },
   "helptip_tallerChatbox": { "message": "ነቲ ናይ ቻትቦክስ ጽርግያ ኣስፋሕፍሕ" },
+  "helptip_widerChatboxWidth": { "message": "እቲ ናይ ሰፊሕ ቻትቦክስ መጠን ንምትግባር ኣስተማቕሮ" },
   "helptip_widerChatbox": { "message": "ነቲ ናይ ቻትቦክስ ጠመቓ ብሰፊሕ ኣገባብ ስክሪን ኣስፋሕፍሕ" },
   "helptip_newChatBtn": { "message": "ኣብ ቻትቦክስ ሓድሽ ቻት ጠውቑ" },
   "helptip_hiddenFooter": { "message": "ናይ መርበብ ሓበሬታ ገጸ-ባህርይ" },

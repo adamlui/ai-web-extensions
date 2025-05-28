@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Gumbi" },
   "helptip_widescreenWidth": { "message": "Prilagodite količinu Widescreen za primjenu" },
   "helptip_tallerChatbox": { "message": "Proširite chatbox okomito" },
+  "helptip_widerChatboxWidth": { "message": "Prilagodite količinu šireg okvira za razgovor kako bi se primijenio" },
   "helptip_widerChatbox": { "message": "Proširite chatbox vodoravno u načinu rada širokog zaslona" },
   "helptip_newChatBtn": { "message": "Prikaži gumb Novo čavrljanje u okviru za čavrljanje" },
   "helptip_hiddenFooter": { "message": "Sakrij podnožje web-mjesta" },

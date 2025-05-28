@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Mygtukai" },
   "helptip_widescreenWidth": { "message": "Koreguokite norimą taikyti plačiaekranio ekrano dydį" },
   "helptip_tallerChatbox": { "message": "Išplėskite pokalbių dėžutę vertikaliai" },
+  "helptip_widerChatboxWidth": { "message": "Pakoreguokite norimą taikyti platesnio pokalbių lauko kiekį" },
   "helptip_widerChatbox": { "message": "Išplėskite pokalbių dėžutę horizontaliai plačiaekraniu režimu" },
   "helptip_newChatBtn": { "message": "Pokalbių dėžutėje rodyti mygtuką „Naujas pokalbis“" },
   "helptip_hiddenFooter": { "message": "Slėpti svetainės poraštę" },

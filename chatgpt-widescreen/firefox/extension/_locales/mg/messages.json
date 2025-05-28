@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Tsindry" },
   "helptip_widescreenWidth": { "message": "Amboary ny habetsaky ny Widescreen mba hampihatra" },
   "helptip_tallerChatbox": { "message": "Hanitatra ny chatbox mitsangana" },
+  "helptip_widerChatboxWidth": { "message": "Amboary ny habetsaky ny Wider Chatbox ny mampihatra" },
   "helptip_widerChatbox": { "message": "Velaro mitsivalana ny chatbox amin'ny fomba mivelatra" },
   "helptip_newChatBtn": { "message": "Asehoy ny bokotra chat ao amin'ny chatbox" },
   "helptip_hiddenFooter": { "message": "Afeno ny faram-pejy" },

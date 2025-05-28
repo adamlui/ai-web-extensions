@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Dikonopo" },
   "helptip_widescreenWidth": { "message": "Fetola selekanyo sa Sekirini se Segolo go se dirisa" },
   "helptip_tallerChatbox": { "message": "Atolosa lebokoso la motlotlo ka go le emisa" },
+  "helptip_widerChatboxWidth": { "message": "Fetola selekanyo sa Chatbox e e atlhameng go e dirisa" },
   "helptip_widerChatbox": { "message": "Atolosa lebokoso la motlotlo ka go le tobetsa ka mokgwa wa Sekerini se se Phara" },
   "helptip_newChatBtn": { "message": "SHOW New Chat button in chatbox" },
   "helptip_hiddenFooter": { "message": "Fitlha botlase jwa saete" },

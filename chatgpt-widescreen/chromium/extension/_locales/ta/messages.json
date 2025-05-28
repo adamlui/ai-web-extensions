@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "பொத்தான்கள்" },
   "helptip_widescreenWidth": { "message": "விண்ணப்பிக்க அகலத்திரையின் அளவை சரிசெய்யவும்" },
   "helptip_tallerChatbox": { "message": "அரட்டைப்பெட்டியை செங்குத்தாக விரிவாக்கவும்" },
+  "helptip_widerChatboxWidth": { "message": "விண்ணப்பிக்க பரந்த அரட்டை பெட்டியின் அளவை சரிசெய்யவும்" },
   "helptip_widerChatbox": { "message": "அரட்டைப்பெட்டியை கிடைமட்டமாக வைட் ஸ்கிரீன் பயன்முறையில் விரிவாக்கவும்" },
   "helptip_newChatBtn": { "message": "அரட்டை பெட்டியில் புதிய அரட்டை பொத்தானைக் காட்டவும்" },
   "helptip_hiddenFooter": { "message": "தள அடிக்குறிப்பை மறைக்கவும்" },

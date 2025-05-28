@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Przyciski" },
   "helptip_widescreenWidth": { "message": "Dostosuj ilość ekranu panoramicznego do zastosowania" },
   "helptip_tallerChatbox": { "message": "Rozwiń czatbox w pionie" },
+  "helptip_widerChatboxWidth": { "message": "Dostosuj ilość Wider Chatbox do zastosowania" },
   "helptip_widerChatbox": { "message": "Rozwiń czatbox poziomo w trybie Wide Screen" },
   "helptip_newChatBtn": { "message": "Pokaż przycisk nowego czatu w skrzynce czatu" },
   "helptip_hiddenFooter": { "message": "Stopka" },

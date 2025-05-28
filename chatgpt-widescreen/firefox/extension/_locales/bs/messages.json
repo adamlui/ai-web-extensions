@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Dugmad" },
   "helptip_widescreenWidth": { "message": "Prilagodite količinu širokog ekrana za primjenu" },
   "helptip_tallerChatbox": { "message": "Proširite chatbox vertikalno" },
+  "helptip_widerChatboxWidth": { "message": "Prilagodite količinu šireg okvira za razgovor koji će se primijeniti" },
   "helptip_widerChatbox": { "message": "Proširite chatbox horizontalno u režimu širokog ekrana" },
   "helptip_newChatBtn": { "message": "Prikaži dugme Novo ćaskanje u okviru za ćaskanje" },
   "helptip_hiddenFooter": { "message": "Sakrij podnožje stranice" },

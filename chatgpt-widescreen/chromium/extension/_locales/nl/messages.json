@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Knoppen" },
   "helptip_widescreenWidth": { "message": "Pas de hoeveelheid Breedbeeld aan om toe te passen" },
   "helptip_tallerChatbox": { "message": "Breid de chatbox verticaal uit" },
+  "helptip_widerChatboxWidth": { "message": "Pas de hoeveelheid bredere chatbox aan om toe te passen" },
   "helptip_widerChatbox": { "message": "Breid de chatbox horizontaal uit in de breedbeeldmodus" },
   "helptip_newChatBtn": { "message": "Toon nieuwe chatknop in chatbox" },
   "helptip_hiddenFooter": { "message": "Site voettekst" },

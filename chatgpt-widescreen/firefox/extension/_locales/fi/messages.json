@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Painikkeet" },
   "helptip_widescreenWidth": { "message": "Säädä käytettävän laajakuvanäytön määrää" },
   "helptip_tallerChatbox": { "message": "Laajenna chatboxia pystysuunnassa" },
+  "helptip_widerChatboxWidth": { "message": "Muokkaa käytettävän laajemman chatboxin määrää" },
   "helptip_widerChatbox": { "message": "Laajenna keskusteluruutua vaakasuunnassa laajakuvatilassa" },
   "helptip_newChatBtn": { "message": "Näytä uusi chat-painike chat-laatikossa" },
   "helptip_hiddenFooter": { "message": "Piilota sivuston alatunniste" },

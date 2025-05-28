@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "አዝራሮች" },
   "helptip_widescreenWidth": { "message": "ለማመልከት Widescreen መጠን ያስተካክሉ" },
   "helptip_tallerChatbox": { "message": "የውይይት ሳጥኑን በአቀባዊ ያሰፉ" },
+  "helptip_widerChatboxWidth": { "message": "ለማመልከት ሰፋ ያለ የውይይት ሳጥን መጠን ያስተካክሉ" },
   "helptip_widerChatbox": { "message": "ሰፊ ማያ ሁነታ ውስጥ የውይይት ሳጥን አግድም ማራዘም" },
   "helptip_newChatBtn": { "message": "በቻትቦክስ ውስጥ አዲስ የውይይት አዝራር አሳይ" },
   "helptip_hiddenFooter": { "message": "የጣቢያ ግርጌን ደብቅ" },

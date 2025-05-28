@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Buttons" },
   "helptip_widescreenWidth": { "message": "Atharraich an àireamh de sgàilean - sreathan a thèid a chur an sàs" },
   "helptip_tallerChatbox": { "message": "Leudaich am bogsa - cabadaich gu h - inghearach" },
+  "helptip_widerChatboxWidth": { "message": "Atharraich an t - suim de Chatbox nas fharsainge airson a chur an sàs" },
   "helptip_widerChatbox": { "message": "Leudaich am bogsa - cabadaich gu còmhnard sa mhodh sgrìn fharsaing" },
   "helptip_newChatBtn": { "message": "Seall putan cabadaich ùr ann am bogsa cabadaich" },
   "helptip_hiddenFooter": { "message": "Falaich bann - coise na làraich" },

@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Tlačítka" },
   "helptip_widescreenWidth": { "message": "Upravte množství širokoúhlé obrazovky, které chcete použít" },
   "helptip_tallerChatbox": { "message": "Rozbalit chatovací pole svisle" },
+  "helptip_widerChatboxWidth": { "message": "Upravit množství širšího chatboxu tak, aby platilo" },
   "helptip_widerChatbox": { "message": "Rozbalte chatovací pole vodorovně v režimu širokoúhlé obrazovky" },
   "helptip_newChatBtn": { "message": "Zobrazit tlačítko Nový chat v chatboxu" },
   "helptip_hiddenFooter": { "message": "Skrýt zápatí webu" },

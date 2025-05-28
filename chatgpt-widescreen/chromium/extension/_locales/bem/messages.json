@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Amabutoni" },
   "helptip_widescreenWidth": { "message": "Sangeni Impapulo sha Kubomfya pa Kubomfya" },
   "helptip_tallerChatbox": { "message": "Ukulushe akabokoshi ka kulanshanya ukwaiminina" },
+  "helptip_widerChatboxWidth": { "message": "Amanyisye impendwa ya Chatbox ya Wider" },
   "helptip_widerChatbox": { "message": "Langululeni akabokoshi ka kulanshanyapo ukulungama mu musango wa cikope icikulu" },
   "helptip_newChatBtn": { "message": "Langisheni batani ilyakulanshanya ilipya mu kabokoshi kakulanshanya" },
   "helptip_hiddenFooter": { "message": "Fiseni icakukonkapo ica ncende" },

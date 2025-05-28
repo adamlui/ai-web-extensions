@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Nupud" },
   "helptip_widescreenWidth": { "message": "Kohanda rakendatava laiekraani suurust" },
   "helptip_tallerChatbox": { "message": "Laienda vestluskasti vertikaalselt" },
+  "helptip_widerChatboxWidth": { "message": "Kohanda rakendatava laiema vestluskasti summat" },
   "helptip_widerChatbox": { "message": "Laiekraanirežiimis laienda vestluskasti horisontaalselt" },
   "helptip_newChatBtn": { "message": "Kuva uus vestlusnupp vestluskastis" },
   "helptip_hiddenFooter": { "message": "Peida saidi jalus" },

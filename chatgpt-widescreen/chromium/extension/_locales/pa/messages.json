@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "ਬਟਨ" },
   "helptip_widescreenWidth": { "message": "ਲਾਗੂ ਕਰਨ ਲਈ ਵਾਈਡਸਕ੍ਰੀਨ ਦੀ ਮਾਤਰਾ ਅਡਜੱਸਟ ਕਰੋ" },
   "helptip_tallerChatbox": { "message": "ਗੱਲਬਾਤ ਬਾਕਸ ਨੂੰ ਲੰਬਕਾਰੀ ਫੈਲਾਓ" },
+  "helptip_widerChatboxWidth": { "message": "ਲਾਗੂ ਕਰਨ ਲਈ ਚੌੜਾ ਚੈਟਬਾਕਸ ਦੀ ਮਾਤਰਾ ਅਡਜੱਸਟ ਕਰੋ" },
   "helptip_widerChatbox": { "message": "ਚੌੜੀ ਸਕਰੀਨ ਮੋਡ ਵਿੱਚ ਖਿਤਿਜੀ ਗੱਲਬਾਤ ਬਾਕਸ ਫੈਲਾਓ" },
   "helptip_newChatBtn": { "message": "ਗੱਲਬਾਤ ਬਾਕਸ ਵਿੱਚ ਨਵਾਂ ਚੈਟ ਬਟਨ ਵੇਖੋ" },
   "helptip_hiddenFooter": { "message": "ਸਾਈਟ ਫੁੱਟਰ ਓਹਲੇ" },

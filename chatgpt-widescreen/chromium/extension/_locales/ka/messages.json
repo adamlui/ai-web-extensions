@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "ღილაკები" },
   "helptip_widescreenWidth": { "message": "Დააკორექტირეთ გამოყენებული ფართო ეკრანის ოდენობა" },
   "helptip_tallerChatbox": { "message": "Ვერტიკალურად გაშალეთ ჩატბოქსი" },
+  "helptip_widerChatboxWidth": { "message": "Დააკორექტირეთ უფრო ფართო სასაუბრო ყუთის ოდენობა" },
   "helptip_widerChatbox": { "message": "Ჰორიზონტალურად გაშალეთ ჩატბოქსი ფართო ეკრანის რეჟიმში" },
   "helptip_newChatBtn": { "message": "Ჩატბოქსში ახალი ჩატის ღილაკის ჩვენება" },
   "helptip_hiddenFooter": { "message": "Საიტის ქვესართის დამალვა" },

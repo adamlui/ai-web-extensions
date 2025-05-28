@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "टाँकहरूstructural navigation" },
   "helptip_widescreenWidth": { "message": "लागू गर्न वाइडस्क्रिनको मात्रा समायोजन गर्नुहोस्" },
   "helptip_tallerChatbox": { "message": "च्याटबक्स ठाडो रूपमा विस्तार गर्नुहोस्" },
+  "helptip_widerChatboxWidth": { "message": "लागू गर्न फराकिलो च्याटबक्सको मात्रा समायोजन गर्नुहोस्" },
   "helptip_widerChatbox": { "message": "वाइड स्क्रिन मोडमा तेर्सो रूपमा च्याटबक्स विस्तार गर्नुहोस्" },
   "helptip_newChatBtn": { "message": "च्याटबक्समा नयाँ कुराकानी बटन देखाउनुहोस्" },
   "helptip_hiddenFooter": { "message": "साइट फुटर लुकाउनुहोस्" },

@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "ལྡེ་མིག་ཚུ་" },
   "helptip_widescreenWidth": { "message": "ལག་ལེན་འཐབ་ནིའི་དོན་ལུ་ ཝའི་ཌེཀསི་ཀེནཌ་གི་གྲངས་ཀ་འདི་ སེལ་འཐུ་འབད།" },
   "helptip_tallerChatbox": { "message": "སྒྲིག་འཇུག་བྱས་ཚད། ཐེངས་ 3 ལས་ཉུང་བ། ཐོན་རིམ་ 5.7.1 ནང་" },
+  "helptip_widerChatboxWidth": { "message": "སྒྲིག་འཇུག་བྱས་ཚད། ཐེངས་ 3 ལས་ཉུང་བ། ཐོན་རིམ་ 5.7.1 ནང་དུ་ཚོད་ལྟ་བྱས་" },
   "helptip_widerChatbox": { "message": "སྒྲིག་འཇུག་བྱས་ཚད། ཐེངས་ 3 ལས་ཉུང་བ། ཐོན་རིམ་ 5.7.1 ནང་དུ་ཚོད་ལྟ་བྱས་ཟིན། ལོ" },
   "helptip_newChatBtn": { "message": "Chatboxནང་ལུ་ chat བལྡེ་མིག་གསརཔ་སྟོན་འབད།" },
   "helptip_hiddenFooter": { "message": "ས་སྒོ་གི་རྐང་པ་སྦ་བཞག" },

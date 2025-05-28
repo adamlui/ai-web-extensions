@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Κουμπιά" },
   "helptip_widescreenWidth": { "message": "Προσαρμόστε την ποσότητα της ευρείας οθόνης που θα εφαρμοστεί" },
   "helptip_tallerChatbox": { "message": "Αναπτύξτε το πλαίσιο συνομιλίας κατακόρυφα" },
+  "helptip_widerChatboxWidth": { "message": "Προσαρμόστε το ποσό του ευρύτερου πλαισίου συνομιλίας για να εφαρμόσετε" },
   "helptip_widerChatbox": { "message": "Αναπτύξτε το πλαίσιο συνομιλίας οριζόντια σε λειτουργία ευρείας οθόνης" },
   "helptip_newChatBtn": { "message": "Εμφάνιση κουμπιού νέας συνομιλίας στο πλαίσιο συνομιλίας" },
   "helptip_hiddenFooter": { "message": "Υποσέλιδο ιστότοπου" },

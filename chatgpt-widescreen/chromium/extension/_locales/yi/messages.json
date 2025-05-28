@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "קנעפּלעך" },
   "helptip_widescreenWidth": { "message": "אַדזשאַסטירן די מאָס פון ברייטסקרין צו צולייגן" },
   "helptip_tallerChatbox": { "message": "יקספּאַנד די טשאַטבאָקס ווערטיקלי" },
+  "helptip_widerChatboxWidth": { "message": "אַדזשאַסטירן די מאָס פון ברייטערער טשאַטבאַקס צו צולייגן" },
   "helptip_widerChatbox": { "message": "יקספּאַנד די טשאַטבאָקס כאָריזאַנטאַלי אין ווידע סקרין מאָדע" },
   "helptip_newChatBtn": { "message": "ווייַזן ניו טשאַט קנעפּל אין טשאַטבאָקס" },
   "helptip_hiddenFooter": { "message": "באַהאַלטן פּלאַץ פוטער" },

@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "ZOKHUDZA" },
   "helptip_widescreenWidth": { "message": "Sinthani kuchuluka kwa Widescreen kuti mugwiritse ntchito" },
   "helptip_tallerChatbox": { "message": "Kukulitsa chatbox vertically" },
+  "helptip_widerChatboxWidth": { "message": "Sinthani kuchuluka kwa Wider Chatbox kuti mugwiritse ntchito" },
   "helptip_widerChatbox": { "message": "Kukulitsa chatbox yopingasa mu Wide Screen mode" },
   "helptip_newChatBtn": { "message": "Onetsani batani Latsopano la Chat mu chatbox" },
   "helptip_hiddenFooter": { "message": "Kubisa malo footer" },

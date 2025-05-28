@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Tombol" },
   "helptip_widescreenWidth": { "message": "Sesuaikan jumlah Layar Lebar yang akan diterapkan" },
   "helptip_tallerChatbox": { "message": "Perluas kotak obrolan secara vertikal" },
+  "helptip_widerChatboxWidth": { "message": "Sesuaikan jumlah Kotak Obrolan yang Lebih Luas untuk diterapkan" },
   "helptip_widerChatbox": { "message": "Perluas kotak obrolan secara horizontal dalam mode Layar Lebar" },
   "helptip_newChatBtn": { "message": "Tampilkan tombol Obrolan Baru di kotak obrolan" },
   "helptip_hiddenFooter": { "message": "Sembunyikan footer situs" },

@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Badhamada" },
   "helptip_widescreenWidth": { "message": "Ku hagaaji xaddiga Widescreen si aad u codsato" },
   "helptip_tallerChatbox": { "message": "Si toos ah u fidi sanduuqa sheekaysiga" },
+  "helptip_widerChatboxWidth": { "message": "Ku hagaaji xaddiga Wider Chatbox si aad u codsato" },
   "helptip_widerChatbox": { "message": "Ballaarinta sanduuqa sheekaysiga si horizontally in hab Screen Wide" },
   "helptip_newChatBtn": { "message": "Muuji badhanka Wadahadalka Cusub ee Chatbox" },
   "helptip_hiddenFooter": { "message": "Qari footer goobta" },

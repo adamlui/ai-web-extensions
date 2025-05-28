@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Бутони" },
   "helptip_widescreenWidth": { "message": "Коригирайте размера на широкоекранния екран, за да приложите" },
   "helptip_tallerChatbox": { "message": "Разгънете кутията за чат вертикално" },
+  "helptip_widerChatboxWidth": { "message": "Коригирайте размера на по - широката чат кутия, за да приложите" },
   "helptip_widerChatbox": { "message": "Разгънете полето за чат хоризонтално в режим на широк екран" },
   "helptip_newChatBtn": { "message": "Показване на нов бутон за чат в чат кутия" },
   "helptip_hiddenFooter": { "message": "Скриване на долния колонтитул на сайта" },

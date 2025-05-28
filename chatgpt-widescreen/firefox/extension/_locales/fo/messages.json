@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Knappur" },
   "helptip_widescreenWidth": { "message": "Tillaga nøgdini av víðskjá at seta í verk" },
   "helptip_tallerChatbox": { "message": "At víðka chatboxina vertikalt" },
+  "helptip_widerChatboxWidth": { "message": "Tillaga nøgdini av breiðari chatbox at seta í verk" },
   "helptip_widerChatbox": { "message": "At víðka chatboxina horisontalt í breiðum skermumynd" },
   "helptip_newChatBtn": { "message": "Vís nýggja chat-knappið í chatbox" },
   "helptip_hiddenFooter": { "message": "Fylg síðusíðu fótspor" },

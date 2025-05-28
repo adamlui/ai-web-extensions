@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Tasteri" },
   "helptip_widescreenWidth": { "message": "Podesite količinu širokog ekrana za primenu" },
   "helptip_tallerChatbox": { "message": "Proširite ćaskanje vertikalno" },
+  "helptip_widerChatboxWidth": { "message": "Prilagodite količinu šireg okvira za ćaskanje koji će se primenjivati" },
   "helptip_widerChatbox": { "message": "Proširite ćaskanje horizontalno u režimu širokog ekrana" },
   "helptip_newChatBtn": { "message": "Prikaži dugme Novo ćaskanje u okviru za ćaskanje" },
   "helptip_hiddenFooter": { "message": "Sakrij podnožje sajta" },

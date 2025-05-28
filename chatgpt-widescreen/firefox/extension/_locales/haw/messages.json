@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Nā pihi" },
   "helptip_widescreenWidth": { "message": "Hoʻoponopono i ka nui o ka Widescreen e hoʻopili" },
   "helptip_tallerChatbox": { "message": "E hoʻonui i ka pahu kamaʻilio me ke kū pololei" },
+  "helptip_widerChatboxWidth": { "message": "Hoʻoponopono i ka nui o Wider Chatbox e noi ai" },
   "helptip_widerChatbox": { "message": "E hoʻonui i ka pahu kamaʻilio ma ka ʻaoʻao ākea ma ke ʻano Wide Screen" },
   "helptip_newChatBtn": { "message": "Hōʻike i ke pihi Kūkākūkā Hou ma ka pahu kamaʻilio" },
   "helptip_hiddenFooter": { "message": "Hūnā pae wāwae" },

@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Vifungo " },
   "helptip_widescreenWidth": { "message": "Rekebisha kiasi cha Skrini pana ili utumie" },
   "helptip_tallerChatbox": { "message": "Panua kisanduku cha gumzo wima" },
+  "helptip_widerChatboxWidth": { "message": "Rekebisha kiasi cha Kikasha Pana cha Gumzo ili utumie" },
   "helptip_widerChatbox": { "message": "Panua sanduku la gumzo mlalo katika hali ya Skrini pana" },
   "helptip_newChatBtn": { "message": "Onyesha kitufe kipya cha Gumzo kwenye kisanduku cha g" },
   "helptip_hiddenFooter": { "message": "Ficha kidokezi cha tovuti" },

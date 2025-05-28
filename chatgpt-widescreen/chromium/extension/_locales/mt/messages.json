@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Buttuni" },
   "helptip_widescreenWidth": { "message": "Irranġa l-ammont ta' Widescreen biex tapplika" },
   "helptip_tallerChatbox": { "message": "Espandi ċ-chatbox vertikalment" },
+  "helptip_widerChatboxWidth": { "message": "Irranġa l-ammont ta' Kaxxa taċ-chat usa' biex tapplika" },
   "helptip_widerChatbox": { "message": "Espandi ċ-chatbox orizzontalment fil-modalità ta' Wide Screen" },
   "helptip_newChatBtn": { "message": "Uri l-buttuna taċ-chat Ġdida fiċ-chatbox" },
   "helptip_hiddenFooter": { "message": "Aħbi l-paġna tal-post" },

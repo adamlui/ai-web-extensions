@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Mabhatani" },
   "helptip_widescreenWidth": { "message": "Gadzirisa uwandu Widescreen kushandisa" },
   "helptip_tallerChatbox": { "message": "Wedzera chatbox yakatwasuka" },
+  "helptip_widerChatboxWidth": { "message": "Gadzirisa uwandu Wider Chatbox kushandisa" },
   "helptip_widerChatbox": { "message": "Kuwedzera chatbox horizontally muna Wide Chinovhara muoti" },
   "helptip_newChatBtn": { "message": "Ratidza bhatani idzva rekukurukurirana mubhokisi rekukurukurirana" },
   "helptip_hiddenFooter": { "message": "Kuvanza nzvimbo footer" },

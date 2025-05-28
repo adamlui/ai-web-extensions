@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Yângâ tî kodoro ti Béthel" },
   "helptip_widescreenWidth": { "message": "Disable alert for Mbeni" },
   "helptip_tallerChatbox": { "message": "A yeke zi yâ ti boîte ti chat ni na nduzu" },
+  "helptip_widerChatboxWidth": { "message": "Gbian wungo ti Chatbox so ayeke na nduzu ti sara kua na ni" },
   "helptip_widerChatbox": { "message": "A yeke kono yâ ti boîte ti lisoro ni na nduzu na yâ ti mode ti écran ti kota ndo" },
   "helptip_newChatBtn": { "message": "Fa mbeni fini bouton ti lisoro na yâ ti boîte ti lisoro" },
   "helptip_hiddenFooter": { "message": "Hide site fandango" },

@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Düymələr" },
   "helptip_widescreenWidth": { "message": "Tətbiq ediləcək Geniş Ekranın miqdarını tənzimləyin" },
   "helptip_tallerChatbox": { "message": "Söhbət qutusunu şaquli istiqamətdə genişləndirin" },
+  "helptip_widerChatboxWidth": { "message": "Tətbiq ediləcək daha geniş söhbət qutusunun miqdarını tənzimləyin" },
   "helptip_widerChatbox": { "message": "Geniş Ekran rejimində söhbət qutusunu üfüqi istiqamətdə genişləndirin" },
   "helptip_newChatBtn": { "message": "Yeni söhbət düyməsini söhbət qutusunda göstər" },
   "helptip_hiddenFooter": { "message": "Saytın altbiletini gizlədin" },

@@ -5,6 +5,20 @@ window.styles = {
     getAllSelectors(obj) { // used in this.tweaks.styles for spam selectors
         return Object.values(obj).flatMap(val => typeof val == 'object' ? this.getAllSelectors(val) : val) },
 
+    get outerDivSelector() { // requires env.site
+        const { site } = env
+        return site == 'chatgpt' ? 'div.text-base'
+             : site == 'perplexity' ? `div.max-w-threadWidth, .max-w-threadContentWidth, div.max-w-screen-lg,
+                                       div[class*="max-w-\\[700px\\]"]` // Trending Topics on /academic
+             : /* poe */ 'div[class*=ChatMessagesView]'
+    },
+
+    initMinMaxWidths() { // requires env.site
+        const { site } = env
+        window.wsMinWidth ||= chatbar.nativeWidth +( site == 'chatgpt' ? 128 : site == 'poe' ? 66 : 274 )
+        window.wsMaxWidth ||= document.querySelector(this.outerDivSelector)?.parentNode?.offsetWidth
+    },
+
     async update({ key, autoAppend }) { // requires lib/dom.js
         if (!key) return console.error('Option \'key\' required by styles.update()')
         const style = this[key] ; style.node ||= dom.create.style()
@@ -14,13 +28,19 @@ window.styles = {
 
     chatbar: {
         autoAppend: true,
-        get css() { // requires components/chatbar.js + <config|env>
-            return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : {
-                chatgpt: !config.widerChatbox &&
-                    `main form { max-width: ${chatbar.nativeWidth}px !important ; margin: auto }`,
+        get css() { // requires <config|env>
+            styles.initMinMaxWidths()
+            console.log(config.widerChatboxWidth)
+            const { site } = env
+            const wcbWidth = window.wsMinWidth
+                +( window.wsMaxWidth - window.wsMinWidth ) * config.widerChatboxWidth /100
+                -( site == 'chatgpt' ? 128 : 0 )
+            return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
+                chatgpt: config.widerChatbox &&
+                    `main form { max-width: ${wcbWidth}px !important ; margin: auto }`,
                 poe: config.widerChatbox && config.widescreen &&
-                    '[class^=ChatPageMainFooter_footerInner] { width: 98% ; margin-right: 15px }'
-            }[env.site]
+                    `[class^=ChatPageMainFooter_footerInner] { width: ${wcbWidth}px ; margin-right: 15px }`
+            }[site]
         }
     },
 
@@ -81,31 +101,24 @@ window.styles = {
     widescreen: {
         autoAppend: false,
         get css() { // requires <config|env>
-            const { site } = env
-            const outerDivSelector = site == 'chatgpt' ? 'div.text-base'
-                : site == 'perplexity' ? `div.max-w-threadWidth, .max-w-threadContentWidth, div.max-w-screen-lg,
-                                          div[class*="max-w-\\[700px\\]"]` // Trending Topics on /academic
-                : /* poe */ 'div[class*=ChatMessagesView]'
-            window.wsMinWidth ||= chatbar.nativeWidth +( site == 'chatgpt' ? 128 : site == 'poe' ? 66 : 274 )
-            window.wsMaxWidth ||= document.querySelector(outerDivSelector)?.parentNode?.offsetWidth
-                +( site == 'poe' ? -64 : 0 ) // prevent over-expansion on Poe which doesn't use max-width
-            const finalWidth = window.wsMinWidth +(
-                window.wsMaxWidth - window.wsMinWidth ) * config.widescreenWidth /100
+            styles.initMinMaxWidths()
+            const { site } = env, outerDivSelector = styles.outerDivSelector
+            const wsWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth ) * config.widescreenWidth /100
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
                 chatgpt: `
-                    ${outerDivSelector} { max-width: ${finalWidth}px !important } /* widen outer div */
+                    ${outerDivSelector} { max-width: ${wsWidth}px !important } /* widen outer div */
                     .tableContainer { min-width: 100% }`, // widen tables
                 perplexity: `
-                    ${outerDivSelector} { max-width: ${finalWidth}px }
+                    ${outerDivSelector} { max-width: ${wsWidth}px }
                     ${ location.pathname.startsWith('/collections') ? '' // widen inner-left div
                         : '@media (min-width: 769px) { .col-span-8 { width: 151% }}' }
                     ${ !location.pathname.startsWith('/travel') ? '' // push right
                         : `${outerDivSelector} { margin-left: 68px }` }
                     .col-span-4:has([class*=sticky]) { display: none }`, // hide right-bar
                 poe: `
-                    ${outerDivSelector} { width: ${finalWidth}px !important } /* widen outer div */
+                    ${outerDivSelector} { width: ${wsWidth}px !important } /* widen outer div */
                     div[class^=Message] { max-width: 100% !important }` // widen speech bubbles
-            }[env.site]
+            }[site]
         }
     }
 };

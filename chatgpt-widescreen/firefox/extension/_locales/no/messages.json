@@ -49,6 +49,7 @@
   "helptip_btns": { "message": "Buttons" },
   "helptip_widescreenWidth": { "message": "Juster mengden widescreen som skal brukes" },
   "helptip_tallerChatbox": { "message": "Utvid chatboksen vertikalt" },
+  "helptip_widerChatboxWidth": { "message": "Juster mengden av bredere chatboks som skal brukes" },
   "helptip_widerChatbox": { "message": "Utvid chatboksen horisontalt i Wide Screen-modus" },
   "helptip_newChatBtn": { "message": "Vis ny chat-knapp i chatboksen" },
   "helptip_hiddenFooter": { "message": "Skjul sidebunntekst" },
