@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "ਬਟਨ" },
   "menuLabel_chatbox": { "message": "ਗੱਲਬਾਤ ਬਾਕਸ" },
   "menuLabel_display": { "message": "ਡਿਸਪਲੇਅ" },
-  "menuLabel_widescreenWidth": { "message": "ਚੌੜੀ ਸਕਰੀਨ ਚੌੜਾਈ" },
+  "menuLabel_width": { "message": "ਚੌੜਾਈ" },
   "menuLabel_tallerChatbox": { "message": "ਚੈਟਬਾਕਸ ਚੈਟਬਾਕਸ" },
   "menuLabel_widerChatbox": { "message": "ਚੌੜਾ ਚੈਟਬਾਕਸ" },
   "menuLabel_newChatBtn": { "message": "ਨਵਾਂ ਗੱਲਬਾਤ ਬਟਨ" },

@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "버튼" },
   "menuLabel_chatbox": { "message": "채팅창" },
   "menuLabel_display": { "message": "디스플레이" },
-  "menuLabel_widescreenWidth": { "message": "와이드스크린 너비" },
+  "menuLabel_width": { "message": "너비" },
   "menuLabel_tallerChatbox": { "message": "더 높은 채팅 상자" },
   "menuLabel_widerChatbox": { "message": "더 넓은 채팅 상자" },
   "menuLabel_newChatBtn": { "message": "채팅 버튼" },

@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "Копче" },
   "menuLabel_chatbox": { "message": "Кутија за разговор" },
   "menuLabel_display": { "message": "Екран" },
-  "menuLabel_widescreenWidth": { "message": "Ширина на широк екран" },
+  "menuLabel_width": { "message": "Ширина" },
   "menuLabel_tallerChatbox": { "message": "Повисоки Chatbox" },
   "menuLabel_widerChatbox": { "message": "Пошироко поле за разговор" },
   "menuLabel_newChatBtn": { "message": "Копче за нов разговор" },

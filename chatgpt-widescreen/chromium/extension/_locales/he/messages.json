@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "כפתור" },
   "menuLabel_chatbox": { "message": "תיבת צ'אט" },
   "menuLabel_display": { "message": "תצוגה" },
-  "menuLabel_widescreenWidth": { "message": "רוחב מסך רחב" },
+  "menuLabel_width": { "message": "רוחב" },
   "menuLabel_tallerChatbox": { "message": "צ'טבוקס גבוה יותר" },
   "menuLabel_widerChatbox": { "message": "תיבת צ'אט רחבה יותר" },
   "menuLabel_newChatBtn": { "message": "לחצן צ'אט חדש" },

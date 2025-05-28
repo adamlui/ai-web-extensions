@@ -50,7 +50,7 @@ window.settings = {
     controls: { // displays top-to-bottom in toolbar menu
         get widescreenWidth() { return {
             type: 'slider', symbol: '↔️', defaultVal: 100, category: 'displaySettings',
-            label: settings.getMsg('menuLabel_widescreenWidth'), labelSuffix: '%',
+            label: `${settings.getMsg('mode_widescreen')} ${settings.getMsg('menuLabel_width')}`, labelSuffix: '%',
             helptip: settings.getMsg('helptip_widescreenWidth'),
             excludes: { env: ['greasemonkey'] }
         }},

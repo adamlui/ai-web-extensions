@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "Pulsante" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Display" },
-  "menuLabel_widescreenWidth": { "message": "Larghezza widescreen" },
+  "menuLabel_width": { "message": "Larghezza" },
   "menuLabel_tallerChatbox": { "message": "Chatbox più alta" },
   "menuLabel_widerChatbox": { "message": "Chatbox più ampia" },
   "menuLabel_newChatBtn": { "message": "pulsante chat" },

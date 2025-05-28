@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "按鈕" },
   "menuLabel_chatbox": { "message": "聊天室" },
   "menuLabel_display": { "message": "顯示器" },
-  "menuLabel_widescreenWidth": { "message": "寬螢幕寬度" },
+  "menuLabel_width": { "message": "寬" },
   "menuLabel_tallerChatbox": { "message": "更高的聊天框" },
   "menuLabel_widerChatbox": { "message": "更廣泛的聊天室" },
   "menuLabel_newChatBtn": { "message": "新聊天按鈕" },

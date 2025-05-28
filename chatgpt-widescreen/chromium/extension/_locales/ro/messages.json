@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "Buton" },
   "menuLabel_chatbox": { "message": "Casetă de chat" },
   "menuLabel_display": { "message": "Ecran" },
-  "menuLabel_widescreenWidth": { "message": "Lățime ecran lat" },
+  "menuLabel_width": { "message": "Lățime" },
   "menuLabel_tallerChatbox": { "message": "Cutie de chat mai înaltă" },
   "menuLabel_widerChatbox": { "message": "Casetă de chat mai largă" },
   "menuLabel_newChatBtn": { "message": "Buton de chat nou" },

@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "Nupp " },
   "menuLabel_chatbox": { "message": "Vestluskast" },
   "menuLabel_display": { "message": "Ekraan" },
-  "menuLabel_widescreenWidth": { "message": "Laiekraani laius" },
+  "menuLabel_width": { "message": "Laius" },
   "menuLabel_tallerChatbox": { "message": "Pikem vestluskast" },
   "menuLabel_widerChatbox": { "message": "Laiem vestluskast" },
   "menuLabel_newChatBtn": { "message": "Uus vestlusnupp" },

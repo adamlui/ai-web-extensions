@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "Botó" },
   "menuLabel_chatbox": { "message": "Bústia de xat" },
   "menuLabel_display": { "message": "Pantalla" },
-  "menuLabel_widescreenWidth": { "message": "Amplada de la pantalla ampla" },
+  "menuLabel_width": { "message": "Amplada" },
   "menuLabel_tallerChatbox": { "message": "Taller Chatbox" },
   "menuLabel_widerChatbox": { "message": "Bústia de xat més àmplia" },
   "menuLabel_newChatBtn": { "message": "Botó de xat nou" },

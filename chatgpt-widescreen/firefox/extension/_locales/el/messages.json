@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "Κουμπί" },
   "menuLabel_chatbox": { "message": "Κουτί συνομιλίας" },
   "menuLabel_display": { "message": "Πιατέλες" },
-  "menuLabel_widescreenWidth": { "message": "Πλάτος ευρείας οθόνης" },
+  "menuLabel_width": { "message": "Πλάτος" },
   "menuLabel_tallerChatbox": { "message": "Taller Chatbox" },
   "menuLabel_widerChatbox": { "message": "Ευρύτερο πλαίσιο συνομιλίας" },
   "menuLabel_newChatBtn": { "message": "Κουμπί νέας συνομιλίας" },
