@@ -2,7 +2,7 @@
 
 window.tooltip = {
 
-    stylize() { // requires lib/dom.js + app
+    stylize() { // requires lib/dom.js + app.slug
         document.head.append(this.styles = dom.create.style(`.${app.slug}-tooltip {
             background-color: /* bubble style */
                 rgba(0,0,0,0.71) ; padding: 5px 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
