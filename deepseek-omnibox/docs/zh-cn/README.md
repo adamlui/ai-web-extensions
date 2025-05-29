@@ -18,7 +18,7 @@
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-395-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com">
-    <img alt="[#3 热门 DeepSeek Mozilla 插件]" height=31 src="https://img.shields.io/badge/%233%20%E7%83%AD%E9%97%A8%20DeepSeek%20Mozilla%20%E6%8F%92%E4%BB%B6-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[#1 热门 DeepSeek Mozilla 插件]" height=31 src="https://img.shields.io/badge/%231%20%E7%83%AD%E9%97%A8%20DeepSeek%20Mozilla%20%E6%8F%92%E4%BB%B6-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com/reviews">
     <img alt="[Mozilla Add-ons 评级]" height=31 src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E8%AF%84%E5%88%86"></img></a>
 <a href="../LICENSE.md">

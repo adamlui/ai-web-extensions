@@ -18,7 +18,7 @@
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/Users-395-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com">
-    <img alt="[#3 ट्रेंडिंग डीपसीक मोज़िला ऐड-ऑन]" height=31 src="https://img.shields.io/badge/%233_Trending-DeepSeek_Mozilla_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[#1 ट्रेंडिंग डीपसीक मोज़िला ऐड-ऑन]" height=31 src="https://img.shields.io/badge/%231_Trending-DeepSeek_Mozilla_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com/reviews">
     <img alt="[Mozilla Add-ons रेटिंग]" height=31 src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></img></a>
 <a href="../LICENSE.md">
