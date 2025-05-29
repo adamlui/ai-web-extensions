@@ -290,7 +290,7 @@
     // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        commitHashes: { app: '27dde1f' } // for cached <app|messages>.json
+        commitHashes: { app: '12a1b70' } // for cached <app|messages>.json
     }
     app.urls = {
         resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@${app.commitHashes.app}` }
