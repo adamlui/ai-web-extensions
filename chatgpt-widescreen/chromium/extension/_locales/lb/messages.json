@@ -19,7 +19,7 @@
   "menuLabel_show": { "message": "Uweisen" },
   "menuLabel_anchor": { "message": "CAA -" },
   "menuLabel_modeNotifs": { "message": "Modus Notifikatiounen" },
-  "menuLabel_blockSpam": { "message": "Spam Block" },
+  "menuLabel_blockSpam": { "message": "Spamblock" },
   "menuLabel_siteSettings": { "message": "Siteastellungen" },
   "menuLabel_about": { "message": "Iwwer Qt" },
   "menuLabel_buyMeAcoffee": { "message": "Ik ben heel benieuwd naar jouw mening laat het me weten in de comments" },
