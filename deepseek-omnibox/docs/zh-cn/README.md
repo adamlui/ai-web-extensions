@@ -22,7 +22,7 @@
 <a href="https://chrome.deepseekomnibox.com/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
     <img alt="[Chrome 网上应用店评分]" height=31 src="https://img.shields.io/chrome-web-store/stars/gcgfmipiaiopmjcmggnnehnehhdjdkgi?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></img></a>
 <a href="https://ff.deepseekomnibox.com/reviews">
-    <img alt="[Mozilla Add-ons 评级]" height=31 src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E8%AF%84%E5%88%86"></img></a>
+    <img alt="[Mozilla Add-ons 评级]" height=31 src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></img></a>
 <a href="../LICENSE.md">
     <img alt="[许可证: MIT]" height=31 src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-fc4f2d.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/deepseek-omnibox">
