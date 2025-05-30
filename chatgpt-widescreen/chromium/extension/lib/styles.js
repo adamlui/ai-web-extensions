@@ -30,7 +30,6 @@ window.styles = {
         autoAppend: true,
         get css() { // requires <config|env>
             styles.initMinMaxWidths()
-            console.log(config.widerChatboxWidth)
             const { site } = env
             const wcbWidth = window.wsMinWidth
                 +( window.wsMaxWidth - window.wsMinWidth ) * config.widerChatboxWidth /100
