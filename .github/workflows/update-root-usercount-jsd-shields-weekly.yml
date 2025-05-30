@@ -1,4 +1,4 @@
-name: Update usercount/jsDelivr shields in root READMEs
+name: Update usercount/jsDelivr shields in root readmes
 
 on:
   schedule:
@@ -223,7 +223,7 @@ jobs:
           [ "$users_updated" = true ] && COMMIT_MSG+="usercount"
           if [ "$requests_updated" = true ] ; then            
              [ "$multi_shield_types_updated" = true ] && COMMIT_MSG+="/" ; COMMIT_MSG+="jsDelivr" ; fi
-          COMMIT_MSG+=" shield counters in root READMEs"
+          COMMIT_MSG+=" shield counters in root readmes"
           echo "COMMIT_MSG=$COMMIT_MSG" >> $GITHUB_ENV # expose for push step
 
           # Set Updated flag to check in subsequent steps
