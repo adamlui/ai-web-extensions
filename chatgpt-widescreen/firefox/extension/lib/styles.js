@@ -35,8 +35,9 @@ window.styles = {
                 +( window.wsMaxWidth - window.wsMinWidth ) * config.widerChatboxWidth /100
                 -( site == 'chatgpt' ? 128 : 0 )
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
-                chatgpt: config.widerChatbox &&
-                    `main form { max-width: ${wcbWidth}px !important ; margin: auto }`,
+                chatgpt: `main form { max-width: ${
+                    config.widerChatbox && config.widescreen ? wcbWidth : window.wsMinWidth -128
+                        }px !important ; margin: auto }`,
                 poe: config.widerChatbox && config.widescreen &&
                     `[class^=ChatPageMainFooter_footerInner] { width: ${wcbWidth}px ; margin-right: 15px }`
             }[site]
