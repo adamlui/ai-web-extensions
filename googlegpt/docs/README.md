@@ -36,7 +36,7 @@
 </div>
 
 > [!IMPORTANT]
-> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/white/icon25.png"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/black/icon25.png"></picture> _**Greasy Fork users:** If you installed GoogleGPT **before January 18, 2025**, auto-updates no longer work because the script's update mechanism has migrated to GitHub. To continue receiving updates, click the green 'Install this script' button below (once) or click [this link](https://gm.googlegpt.io) (once)_
+> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/white/icon25.png"><img height="12.5" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/black/icon25.png"></picture> _**Greasy Fork users:** If you installed GoogleGPT **before January 18, 2025**, auto-updates no longer work because the script's update mechanism has migrated to GitHub. To continue receiving updates, click the green 'Install this script' button below (once) or click [this link](https://gm.googlegpt.io) (once)_
 
 <div align="center">
 

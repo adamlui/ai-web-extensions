@@ -43,7 +43,7 @@
 </div>
 
 > [!IMPORTANT]
-> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/white/icon25.png"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/black/icon25.png"></picture> _**Greasy Fork ユーザー:** ChatGPT Infinity を **2025 年 1 月 18 日より前に** インストールした場合、スクリプトの更新メカニズムが GitHub に移行したため、自動更新は機能しなくなりました。更新を引き続き受信するには、下の "Install Greasemonkey Userscript" ボタンをクリックするか (1 回)、[このリンク](https://gm.chatgptinfinity.com) を (1 回) クリックしてください。_
+> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/white/icon25.png"><img height="12.5" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/black/icon25.png"></picture> _**Greasy Fork ユーザー:** ChatGPT Infinity を **2025 年 1 月 18 日より前に** インストールした場合、スクリプトの更新メカニズムが GitHub に移行したため、自動更新は機能しなくなりました。更新を引き続き受信するには、下の "Install Greasemonkey Userscript" ボタンをクリックするか (1 回)、[このリンク](https://gm.chatgptinfinity.com) を (1 回) クリックしてください。_
 
 <div align="center">
 
