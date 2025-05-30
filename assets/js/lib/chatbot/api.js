@@ -1,4 +1,4 @@
-// Requires lib/generate-ip.js + <apis|app|config|get|log|show>
+// Requires lib/generate-ip.js + <apis|app|config|cryptoJS|get|log|show>
 
 window.api = {
 
