@@ -65,7 +65,7 @@ window.settings = {
             excludes: { env: ['greasemonkey'] }
         }},
         get tcbDisabled() { return {
-            type: 'toggle', symbol: '↕️', defaultVal: false, category: 'chatboxSettings',
+            type: 'toggle', symbol: '↕️', defaultVal: true, category: 'chatboxSettings',
             label: `${settings.getMsg('menuLabel_taller')} ${settings.getMsg('menuLabel_chatbox')}`,
             helptip: settings.getMsg('helptip_tallerChatbox')
         }},
