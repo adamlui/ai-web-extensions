@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.29.1
+// @version             2025.5.29.2
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -260,14 +260,14 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@152a535/chromium/extension/lib/browser.js#sha256-7teBecqrjkazKH6oetGyxKlBkAk5U9ota/LNCB3Q+Jw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@2b3e5c8/chromium/extension/lib/chatbar.js#sha256-+XVFMnktVYGGVrk4v2PrWqvvWGA71kn1KDv+6oCjfZY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ac383f2/chromium/extension/lib/dom.js#sha256-QAHZ9hlWeLvunZtEt2z34mKhvdg71RhGBlxfMljIBPU=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@96b9c89/chromium/extension/lib/settings.js#sha256-i/x1qUXT+Twqxi2sfjJjGJvpl14zSZgYxUf1t+mhwXc=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@96b9c89/chromium/extension/lib/styles.js#sha256-k1xIf5NNRAw1dZSARC6oRdfpz/utke2ZiHhUfRO59S4=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@a8ae8c1/chromium/extension/lib/sync.js#sha256-uhff+iHv2eNIqlDb8adseCYebq4+UbmGDB/rIxrt7Kw=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ad59251/chromium/extension/lib/settings.js#sha256-ANYxMPW7OXPXgwmrd68SrVo6m+aDee9wq3JDUb0Agpc=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ad59251/chromium/extension/lib/styles.js#sha256-nLUV0c/zxWYdaZA2Xa7UFdpnVqxtv6PCxtnDKj6Y3kU=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ad59251/chromium/extension/lib/sync.js#sha256-8nx0B6s5mM6Cs1MD08l639DoPiLTDFeTHz8no96ZtKo=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@168ed97/chromium/extension/lib/ui.js#sha256-9ZQ8DyJvJ5YSuOGhmdqofNMT/QJGs5uhej0DmvH0g/k=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ba3cfba/chromium/extension/components/buttons.js#sha256-cxEmrFlVqYNduFyb6eInkPhE/g/gTjL6ynHLVkarjyA=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@511d193/chromium/extension/components/icons.js#sha256-6eK7coHHFB4zBfl8XXtjojrnfbBOFiEgYfQtz/Whv2E=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@77e43d3/chromium/extension/components/modals.js#sha256-51DQAJXbJueXHDzeqxEfjsgU1tXS3om7pfngPHd7vGQ=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f787d28/chromium/extension/components/tooltip.js#sha256-DpOiHz1k92i3Nx4VvHXx4YQSC/zTJHV4K+C/vOJpIvg=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ad59251/chromium/extension/components/tooltip.js#sha256-RIgqL5ThSkvdcNihZJCZW/ZV5v09PqRpi/h9kTR/8N0=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
 // @grant               GM_setValue
@@ -359,8 +359,9 @@
         onload: resp => resolve(JSON5.parse(resp.responseText))
     })))
 
-    chatbar.nativeWidth = dom.get.computedWidth( // for ChatGPT WCB + styles.widescreen.css math
-        document.querySelector(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input))
+    const chatbarElem = document.querySelector(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input)
+    chatbar.nativeWidth = dom.get.computedWidth(chatbarElem) // for ChatGPT WCB + styles.widescreen.css math
+    chatbar.nativeHeight = dom.get.computedHeight(chatbarElem) // for TCB math
 
     // Init SETTINGS
     if (GM_getValue(`${app.configKeyPrefix}_isFirstRun`) == undefined) { // activate widescreen on install
