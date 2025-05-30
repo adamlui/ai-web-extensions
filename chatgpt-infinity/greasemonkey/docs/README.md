@@ -23,7 +23,7 @@
 </div>
 
 > [!IMPORTANT]
-> _**Greasy Fork users:** If you installed ChatGPT Infinity **before January 18, 2025**, auto-updates no longer work because the script's update mechanism has migrated to GitHub. To continue receiving updates, click the green 'Install this script' button below (once) or click [this link](https://gm.chatgptinfinity.com) (once)_
+> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/white/icon25.png"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/black/icon25.png"></picture> _**Greasy Fork users:** If you installed ChatGPT Infinity **before January 18, 2025**, auto-updates no longer work because the script's update mechanism has migrated to GitHub. To continue receiving updates, click the green 'Install this script' button below (once) or click [this link](https://gm.chatgptinfinity.com) (once)_
 
 <div align="center">
 

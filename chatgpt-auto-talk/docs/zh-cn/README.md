@@ -29,7 +29,7 @@
 ### 自动播放 ChatGPT 响应。
 
 > [!IMPORTANT]
-> _**Greasy Fork 用户：** 如果您在 **2025 年 1 月 18 日** 之前安装了 ChatGPT 自动谈话，则自动更新将不再起作用，因为脚本的更新机制已迁移到 GitHub。要继续接收更新，请点击下面的绿色 “安装此脚本” 按钮（一次）或点击 [此链接](https://gm.chatgptautotalk.com)（一次）_
+> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/white/icon25.png"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/black/icon25.png"></picture> _**Greasy Fork 用户：** 如果您在 **2025 年 1 月 18 日** 之前安装了 ChatGPT 自动谈话，则自动更新将不再起作用，因为脚本的更新机制已迁移到 GitHub。要继续接收更新，请点击下面的绿色 “安装此脚本” 按钮（一次）或点击 [此链接](https://gm.chatgptautotalk.com)（一次）_
 
 <a href="https://gm.chatgptautotalk.com"><img height=45 alt="[安装这个脚本]" src="https://assets.chatgptautotalk.com/images/buttons/greasy-fork/zh-cn/install-button.svg"></a><a href="#-installation"><img height=45 alt="[如何安装]" title="如何安装" src="https://assets.chatgptautotalk.com/images/buttons/greasy-fork/help-button.svg"></a>
 <br>

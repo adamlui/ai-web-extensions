@@ -35,7 +35,7 @@
 ### 背景リクエストを介して ChatGPT セッションを最新の状態に保ち、ネットワーク エラーと Cloudflare チェックを排除します。
 
 > [!IMPORTANT]
-> _**Greasy Fork ユーザー:** ChatGPT 自動更新 を **2025 年 1 月 18 日より前に** インストールした場合、スクリプトの更新メカニズムが GitHub に移行したため、自動更新は機能しなくなりました。更新を引き続き受信するには、下の緑色の "Install this script" ボタンをクリックするか (1 回)、[このリンク](https://gm.chatgptautorefresh.com) を (1 回) クリックしてください。_
+> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/white/icon25.png"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/black/icon25.png"></picture> _**Greasy Fork ユーザー:** ChatGPT 自動更新 を **2025 年 1 月 18 日より前に** インストールした場合、スクリプトの更新メカニズムが GitHub に移行したため、自動更新は機能しなくなりました。更新を引き続き受信するには、下の緑色の "Install this script" ボタンをクリックするか (1 回)、[このリンク](https://gm.chatgptautorefresh.com) を (1 回) クリックしてください。_
 
 <a href="https://gm.chatgptautorefresh.com"><img height=45 alt="[このスクリプトをインストール]" src="https://assets.chatgptautorefresh.com/images/buttons/greasy-fork/install-button.svg"></a><a href="#-インストール"><img height=45 alt="[インストール方法]" title="インストール方法" src="https://assets.chatgptautorefresh.com/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
