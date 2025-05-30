@@ -38,8 +38,9 @@
     ;({ app: window.app } = await chrome.storage.local.get('app'))
     ;({ sites: window.sites } = await chrome.storage.local.get('sites'))
 
-    chatbar.nativeWidth = dom.get.computedWidth( // for ChatGPT WCB + styles.widescreen.css math
-        document.querySelector(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input))
+    const chatbarElem = document.querySelector(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input)
+    chatbar.nativeWidth = dom.get.computedWidth(chatbarElem) // for ChatGPT WCB + styles.widescreen.css math
+    chatbar.nativeHeight = dom.get.computedHeight(chatbarElem) // for TCB math
 
     // Init SETTINGS
     const firstRunKey = `${env.site}_isFirstRun`

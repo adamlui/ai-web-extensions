@@ -64,6 +64,14 @@ window.settings = {
             label: settings.getMsg('mode_fullWindow'),
             excludes: { env: ['greasemonkey'] }
         }},
+        get tallerChatboxHeight() { return {
+            type: 'slider', symbol: '↕️', defaultVal: 100, category: 'chatboxSettings',
+            label: `${settings.getMsg('menuLabel_taller')} ${settings.getMsg('menuLabel_chatbox')} ${
+                      settings.getMsg('menuLabel_height')}`,
+            labelSuffix: '%',
+            helptip: settings.getMsg('helptip_tallerChatboxHeight'),
+            excludes: { env: ['greasemonkey'] }
+        }},
         get tcbDisabled() { return {
             type: 'toggle', symbol: '↕️', defaultVal: true, category: 'chatboxSettings',
             label: `${settings.getMsg('menuLabel_taller')} ${settings.getMsg('menuLabel_chatbox')}`,

@@ -19,7 +19,7 @@ window.sync = {
                     supressNotifs() ; toggleMode('fullWindow') }
             styles.update({ key: 'widescreen' }) // sync WW
             styles.update({ key: 'tweaks' }) // sync HH/HF/TCB/NCB/BA
-            styles.update({ key: 'chatbar' }) // sync WCB
+            styles.update({ key: 'chatbar' }) // sync TCB/WCB
             if (site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
             if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled)

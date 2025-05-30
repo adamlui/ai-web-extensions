@@ -67,6 +67,9 @@ window.styles = {
         autoAppend: true,
         get css() { // requires <config|env>
             const { site } = env, { [site]: { selectors }} = sites
+            const tcbMinHeight = site == 'chatgpt' ? 25 : site == 'perplexity' ? 40 : /* poe */ 50
+            const tcbHeight = tcbMinHeight +(
+                ( site == 'poe' ? 80 : 68 ) -tcbMinHeight ) * config.tallerChatboxHeight /100
             return (async () => config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
                 ${ site != 'chatgpt' ? ''
                     : `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
@@ -75,7 +78,7 @@ window.styles = {
                         : `svg:has(path[d^="M9 7C9 4.238"]) + span { color: white }`}`}
                 ${ config.tcbDisabled ? '' // heighten chatbox
                     : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
-                        { max-height: ${ site == 'poe' ? 77 : 68 }vh }
+                        { max-height: ${tcbHeight}vh }
                        ${ site == 'chatgpt' && location.pathname == '/' ? // anchor to bottom for visible overflow
                             'div#thread-bottom-container { position: absolute ; bottom: 0 }' : '' }`}
                 ${ !config.hiddenHeader ? ''
