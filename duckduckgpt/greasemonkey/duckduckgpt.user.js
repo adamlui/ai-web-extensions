@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.29
+// @version                2025.5.29.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -204,7 +204,7 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@31b78fe/assets/js/components/chatbot/menus.js#sha256-Bj0pz4oKLEzoaJxiqtddJ4E5VtMbpDB2sqoE4kDBfSs=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@97173cc/assets/js/components/chatbot/replyBubble.js#sha256-sOVj/ESmlNMLCA13w2ZzqP5hVtcnqlQpbY9yvkFWNek=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f10be07/assets/js/components/chatbot/tooltip.js#sha256-u01988VokQnOZmjIIIPRN2mLJtaID/I8G77iMNcDOp8=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d7da881/assets/js/lib/chatbot/api.js#sha256-FUp9fE9ogQ1IOACKoG52mU14Xm71089WPbreEcRzHzE=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@bb5451a/assets/js/lib/chatbot/api.js#sha256-nCFc1tcSAfGJT260Sn07YGEczKPrhXdj8UlrKi+ac8M=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@ecaeb55/assets/js/lib/chatbot/feedback.js#sha256-9Hm3fBS96DtWFdT5VwGDGvwZMpYIRfxGAQRaCGECeqA=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f4da9d4/assets/js/lib/chatbot/log.js#sha256-kjt26UXbx44I0/iDOf50F/LbRtsYcSwMHrexImR4D5A=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@199128d/assets/js/lib/chatbot/prompts.js#sha256-6U2C3dVLpYixR3UCNABCfvNpRa/9gJZYR8fElXmhGVk=
