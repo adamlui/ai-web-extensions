@@ -25,7 +25,7 @@ window.api = {
         return headers
     },
 
-    createReqData(api, msgs) { // returns payload for POST / query string for GET // requires <apis|log>
+    createReqData(api, msgs) { // returns payload for POST / query string for GET // requires <apis|CryptoJS|log>
         log.caller = `api.createReqData('${api}', msgs)`
         msgs = msgs.map(({ api, regenerated, time, ...rest }) => rest) // eslint-disable-line no-unused-vars
         const time = Date.now(), lastUserMsg = msgs[msgs.length - 1]
@@ -35,7 +35,7 @@ window.api = {
                 userId: apis.AIchatOS.userID, withoutContext: false
         } : api == 'FREEGPT' ? {
                 messages: msgs, pass: null,
-                sign: cryptoUtils.generateSignature({ time: time, msg: lastUserMsg.content, pkey: '' }),
+                sign: CryptoJS.SHA256(`${time}:${lastUserMsg.content}:`).toString(CryptoJS.enc.Hex),
                 time: time
         } : api == 'GPTforLove' ? {
                 prompt: lastUserMsg.content, secret: session.generateGPTFLkey(),
