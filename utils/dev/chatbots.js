@@ -2,7 +2,7 @@
 
 // Opens KudoAI chatbots in VS Code
 
-const projects = ['amazongpt', 'bravegpt', 'duckduckgpt', 'googlegpt']
+const chatbots = ['amazongpt', 'bravegpt', 'duckduckgpt', 'googlegpt']
 
 // Import LIBS
 const { resolve, dirname } = require('path'),
@@ -16,8 +16,8 @@ const br = '\x1b[91m', // bright red
 const repoRoot = (dir => {
     while (dir != '/' && !require('fs').existsSync(resolve(dir, 'package.json'))) dir = dirname(dir) ; return dir
 })(__dirname)
-const filePaths = projects.map(
-    project => resolve(repoRoot, `${project}/greasemonkey/${project}.user.js`)
+const filePaths = chatbots.map(
+    chatbot => resolve(repoRoot, `${chatbot}/greasemonkey/${chatbot}.user.js`)
 ).filter(path => require('fs').existsSync(path))
 
 // OPEN files
