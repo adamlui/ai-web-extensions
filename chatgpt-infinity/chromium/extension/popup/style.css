@@ -10,7 +10,7 @@ body {
 .highlight-on-hover:hover { background: rgb(100,149,237) }
 .highlight-on-hover:hover span:not(.track), .highlight-on-hover:hover svg, span.menu-icon.highlight-on-hover:hover img {
     filter: invert(1) } /* invert setting labels on hover */
-.disabled { opacity: 0.3 !important ; pointer-events: none } /* eslint-disable-line */
+.disabled { opacity: 0.3 !important ; pointer-events: none }
 
 /* Loader */
 .loading-bg {
@@ -21,7 +21,6 @@ body {
     width: 19px ; aspect-ratio: 1 ; border-radius: 50% ; border: 3px solid #000 ;
     animation: loader-move-head-tail 0.8s infinite linear alternate, loader-rotate 1.6s infinite linear
 }
-@keyframes loader-move-head-tail {
      0% { clip-path: polygon(50% 50%, 0 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0) }
      12.5% { clip-path: polygon(50% 50%, 0 0, 50% 0, 100% 0, 100% 0, 100% 0, 100% 0) }
      25% { clip-path: polygon(50% 50%, 0 0, 50% 0, 100% 0, 100% 100%, 100% 100%, 100% 100%) }
@@ -29,7 +28,6 @@ body {
      62.5% { clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0, 100% 100%, 50% 100%, 0 100%) }
      75% { clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0 100%) }
      100% { clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0 100%) }
-}
 @keyframes loader-rotate { 
     0% { transform: scaleY(1) rotate(0deg) } 49.99% { transform: scaleY(1) rotate(135deg) }
     50% { transform: scaleY(-1) rotate(0deg) } 100% { transform: scaleY(-1) rotate(-135deg) }

@@ -54,7 +54,10 @@ export default [
     },
     { files: ['**/chatgpt.js'], languageOptions: { globals: { chatgpt: 'off' }}},
     { files: ['**/deepseek.js'], languageOptions: { globals: { deepseek: 'off' }}},
-    { files: ['**/*.css'], language: 'css/css', ...css.configs.recommended },
+    {
+        files: ['**/*.css'], language: 'css/css', plugins: { css },
+        rules: { ...css.configs.recommended.rules, 'css/no-important': 'off' }
+    },
     {
         files: ['**/*.html'], languageOptions: { parser: htmlParser }, plugins: { '@html-eslint': html },
         rules: {
