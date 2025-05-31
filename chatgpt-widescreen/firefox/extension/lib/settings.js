@@ -52,7 +52,7 @@ window.settings = {
             type: 'slider', symbol: '↔️', defaultVal: 100, category: 'displaySettings',
             label: `${settings.getMsg('mode_widescreen')} ${settings.getMsg('menuLabel_width')}`, labelSuffix: '%',
             helptip: settings.getMsg('helptip_widescreenWidth'),
-            excludes: { env: ['greasemonkey'] }
+            excludes: { env: ['greasemonkey'] }, dependencies: { controls: ['widescreen'] }
         }},
         get widescreen() { return {
             type: 'toggle', defaultVal: true, category: 'displaySettings',
@@ -70,7 +70,7 @@ window.settings = {
                       settings.getMsg('menuLabel_height')}`,
             labelSuffix: '%',
             helptip: settings.getMsg('helptip_tallerChatboxHeight'),
-            excludes: { env: ['greasemonkey'] }
+            excludes: { env: ['greasemonkey'] }, dependencies: { controls: ['tcbDisabled'] }
         }},
         get tcbDisabled() { return {
             type: 'toggle', symbol: '↕️', defaultVal: true, category: 'chatboxSettings',
@@ -83,7 +83,7 @@ window.settings = {
                       settings.getMsg('menuLabel_width')}`,
             labelSuffix: '%',
             helptip: settings.getMsg('helptip_widerChatboxWidth'),
-            excludes: { env: ['greasemonkey'] }
+            excludes: { env: ['greasemonkey'] }, dependencies: { controls: ['widerChatbox'] }
         }},
         get widerChatbox() { return {
             type: 'toggle', symbol: '↔️', defaultVal: false, category: 'chatboxSettings',
