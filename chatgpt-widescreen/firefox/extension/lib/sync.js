@@ -14,9 +14,9 @@ window.sync = {
             if (site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
         } else if (!config.extensionDisabled && !config[`${site}Disabled`]) { // sync modes/tweaks/btns
             if (config.widescreen ^ styles.widescreen.node?.isConnected) { // sync Widescreen
-                supressNotifs() ; toggleMode('widescreen') }
+                suppressNotifs() ; toggleMode('widescreen') }
             if (sites[site].hasSidebar && ( config.fullWindow ^ await ui.isFullWin() )) { // sync Full-Window
-                    supressNotifs() ; toggleMode('fullWindow') }
+                    suppressNotifs() ; toggleMode('fullWindow') }
             styles.update({ key: 'widescreen' }) // sync WW
             styles.update({ key: 'tweaks' }) // sync HH/HF/TCB/NCB/BA
             styles.update({ key: 'chatbar' }) // sync TCB/WCB
@@ -30,7 +30,7 @@ window.sync = {
                     'wheel', window.enableWheelScroll)
         }
 
-        function supressNotifs() {
+        function suppressNotifs() {
             if (config.notifDisabled) return
             settings.save('notifDisabled', true) // suppress notifs for cleaner UI
             setTimeout(() => settings.save('notifDisabled', false), 15) // ...temporarily

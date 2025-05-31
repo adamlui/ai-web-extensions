@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.31.1
+// @version             2025.5.31.2
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -656,9 +656,9 @@
             if (site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
         } else if (!config[`${site}Disabled`]) { // sync modes/tweaks/btns
             if (config.widescreen ^ styles.widescreen.node.isConnected) { // sync Widescreen
-                supressNotifs() ; toggleMode('widescreen') }
+                suppressNotifs() ; toggleMode('widescreen') }
             if (sites[site].hasSidebar && ( config.fullWindow ^ await ui.isFullWin() )) { // sync Full-Window
-                    supressNotifs() ; toggleMode('fullWindow') }
+                    suppressNotifs() ; toggleMode('fullWindow') }
             styles.update({ key: 'tweaks' }) // sync HH/HF/TCB/NCB/BA
             styles.update({ key: 'chatbar' }) // sync WCB
             if (site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
@@ -673,7 +673,7 @@
         }
         toolbarMenu.refresh() // to update state symbol/suffix + toggles visibility on site toggle
 
-        function supressNotifs() {
+        function suppressNotifs() {
             if (config.notifDisabled) return
             settings.save('notifDisabled', true) // suppress notifs for cleaner UI
             setTimeout(() => settings.save('notifDisabled', false), 15) // ...temporarily
