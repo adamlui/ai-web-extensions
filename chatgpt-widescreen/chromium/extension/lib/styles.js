@@ -30,16 +30,14 @@ window.styles = {
         autoAppend: true,
         get css() { // requires <config|env>
             styles.initMinMaxWidths()
-            const { site } = env
+            const { site } = env, toWiden = config.widerChatbox && config.widescreen
             const wcbWidth = window.wsMinWidth
                 +( window.wsMaxWidth - window.wsMinWidth ) * config.widerChatboxWidth /100
                 -( site == 'chatgpt' ? 128 : 0 )
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
-                chatgpt: `main form { max-width: ${
-                    config.widerChatbox && config.widescreen ? wcbWidth : window.wsMinWidth -128
+                chatgpt: `main form { max-width: ${ toWiden ? wcbWidth : window.wsMinWidth -128
                         }px !important ; margin: auto }`,
-                poe: config.widerChatbox && config.widescreen &&
-                    `[class^=ChatPageMainFooter_footerInner] { width: ${wcbWidth}px ; margin-right: 15px }`
+                poe: toWiden && `[class^=ChatPageMainFooter_footerInner] { width: ${wcbWidth}px ; margin-right: 15px }`
             }[site]
         }
     },
