@@ -54,13 +54,12 @@
         }
         if (entryData.type == 'category')
             entry.div.append(icons.create({ key: 'caretDown', size: 11, class: 'menu-caret menu-right-elem' }))
-        let lastClickTime = 0
         entry.div.onclick = () => {
             const now = Date.now()
             const throttleMs = typeof entryData.throttle == 'number' ? entryData.throttle
                              : entryData.throttle ? 1500 : 0
-            if (throttleMs && now - lastClickTime < throttleMs) return
-            lastClickTime = now
+            if (throttleMs && now -( entry.div.lastClickTime || 0 ) < throttleMs) return
+            entry.div.lastClickTime = now
             if (entryData.type == 'category') toggleCategorySettingsVisiblity(entryData.key)
             else if (entryData.type == 'toggle') {
                 entry.leftElem.classList.toggle('on')
