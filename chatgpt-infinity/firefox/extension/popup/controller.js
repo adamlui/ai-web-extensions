@@ -59,7 +59,7 @@
             const throttleMs = typeof entryData.throttle == 'number' ? entryData.throttle
                              : entryData.throttle ? 1500 : 0
             if (throttleMs && now -( entry.div.lastClickTime || 0 ) < throttleMs) return
-            entry.div.lastClickTime = now
+            entry.div.classList.remove('disabled') ; entry.div.lastClickTime = now
             if (entryData.type == 'category') toggleCategorySettingsVisiblity(entryData.key)
             else if (entryData.type == 'toggle') {
                 entry.leftElem.classList.toggle('on')
@@ -117,6 +117,10 @@
                     }
                 }
                 sync.configToUI({ updatedKey: entryData.key }) ; close() // popup
+            }
+            if (entryData.throttle) {
+                entry.div.classList.add('disabled')
+                setTimeout(() => entry.div.classList.remove('disabled'), throttleMs)
             }
         }
         return entry.div
