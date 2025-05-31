@@ -33,7 +33,8 @@ window.sync = {
         function suppressNotifs() {
             if (config.notifDisabled) return
             settings.save('notifDisabled', true) // suppress notifs for cleaner UI
-            setTimeout(() => settings.save('notifDisabled', false), 15) // ...temporarily
+            setTimeout( // ...temporarily
+                () => settings.save('notifDisabled', false), options?.updatedKey == 'widescreen' ? 1 : 15)
         }
     },
 
