@@ -62,7 +62,7 @@ window.settings = {
         get fullWindow() { return {
             type: 'toggle', defaultVal: false, category: 'displaySettings',
             label: settings.getMsg('mode_fullWindow'),
-            excludes: { env: ['greasemonkey'] }
+            excludes: { env: ['greasemonkey'] }, throttle: true
         }},
         get tallerChatboxHeight() { return {
             type: 'slider', symbol: '↕️', defaultVal: 100, category: 'chatboxSettings',
