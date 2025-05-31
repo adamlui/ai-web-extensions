@@ -22,6 +22,8 @@
     // Define FUNCTIONS
 
     function createMenuEntry(entryData) {
+
+        // Assemble elems
         const entry = {
             div: dom.create.elem('div', {
                 id: entryData.key, class: 'menu-entry highlight-on-hover', title: entryData.helptip || '' }),
@@ -59,6 +61,9 @@
         }
         if (entryData.type == 'category')
             entry.div.append(icons.create({ key: 'caretDown', size: 11, class: 'menu-caret menu-right-elem' }))
+        if (entryData.dependencies) entry.div.classList.add('disabled')
+
+        // Add click listener
         entry.div.onclick = () => {
             const now = Date.now()
             const throttleMs = typeof entryData.throttle == 'number' ? entryData.throttle
@@ -76,12 +81,29 @@
                 },
                 link: () => { open(entryData.url) ; close() }
             })[entryData.type]()
+
+            // Throttle re-click
             if (entryData.throttle) {
                 entry.div.classList.add('disabled')
                 setTimeout(() => entry.div.classList.remove('disabled'), throttleMs)
             }
+
+            // Enable/disable dependent entries
+            for (const [ctrlKey, ctrlData] of Object.entries({ ...settings.categories, ...settings.controls }))
+                if (Object.values(ctrlData.dependencies || {}).flat().includes(entryData.key)) {
+                    const depDiv = document.querySelector(`div#${ctrlKey}`) ; if (!depDiv) continue
+                    const toDisable = !settings.typeIsEnabled(entryData.key)
+                    depDiv.style.transition = toDisable ? '' : 'opacity 0.15s ease-in'
+                    depDiv.classList.toggle('disabled', toDisable)
+                }
         }
+
         return entry.div
+    }
+
+    function depIsEnabled(ctrlKey) {
+        const deps = settings.controls[ctrlKey]?.dependencies
+        return !deps || Object.values(deps).flat(Infinity).some(depKey => settings.typeIsEnabled(depKey))
     }
 
     function extensionIsDisabled() { return !!( config.extensionDisabled || config[`${env.site}Disabled`] )}
@@ -114,8 +136,9 @@
                     || elem.closest('.categorized-entries')?.previousElementSibling?.id == 'siteSettings'
                 ) return // never disable Site Settings + link/About entries
                 elem.style.transition = extensionIsDisabled() ? '' : 'opacity 0.15s ease-in'
-                setTimeout(() => elem.classList.toggle('disabled', extensionIsDisabled()),
-                    extensionIsDisabled() ? 0 : idx *10) // fade-out abruptly, fade-in staggered
+                const toDisable = extensionIsDisabled() || !depIsEnabled(elem.id)
+                setTimeout(() => elem.classList.toggle('disabled', toDisable),
+                    toDisable ? 0 : idx *10) // fade-out abruptly, fade-in staggered
             })
         },
 
