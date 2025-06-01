@@ -2,7 +2,7 @@
 const appReady = (async () => {
     const app = {
         version: chrome.runtime.getManifest().version,
-        commitHashes: { app: '8df233b' }, // for cached app.json
+        commitHashes: { app: '4dd9d96' }, // for cached app.json
         runtime: (() => {
             return typeof chrome != 'undefined' && chrome.runtime ? (
                 typeof browser != 'undefined' ? 'Firefox add-on'
@@ -14,6 +14,7 @@ const appReady = (async () => {
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     chrome.storage.local.set({ app }) // save to browser storage
+    chrome.runtime.setUninstallURL(app.urls.uninstall)
     return app // to install listener
 })()
 

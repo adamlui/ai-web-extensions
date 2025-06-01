@@ -1,4 +1,5 @@
 import js from '@eslint/js'
+import globals from 'globals'
 import importPlugin from 'eslint-plugin-import'
 import json from '@eslint/json'
 import markdown from '@eslint/markdown'
@@ -9,7 +10,8 @@ export default [
     { ignores: ['**/package-lock.json'] },
     {
         files: ['**/*.{js,mjs}'],
-        languageOptions: { ecmaVersion: 'latest', sourceType: 'script', globals: { chrome: 'readonly' }},
+        languageOptions: {
+            ecmaVersion: 'latest', sourceType: 'script', globals: { ...globals.browser, chrome: 'readonly' }},
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS },
         rules: {
             ...js.configs.recommended.rules,

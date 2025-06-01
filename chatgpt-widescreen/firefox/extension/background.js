@@ -4,7 +4,7 @@
     // Init APP data
     const app = {
         version: chrome.runtime.getManifest().version,
-        commitHashes: { app: '746f5f0' }, // for cached app.json + sites.json5
+        commitHashes: { app: '89e1e1a' }, // for cached app.json + sites.json5
         runtime: (() => {
             return typeof chrome != 'undefined' && chrome.runtime ? (
                 typeof browser != 'undefined' ? 'Firefox add-on'
@@ -16,6 +16,7 @@
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     chrome.storage.local.set({ app }) // save to browser storage
+    chrome.runtime.setUninstallURL(app.urls.uninstall)
 
     // Init SITES data
     const sites = Object.assign(Object.create(null),
