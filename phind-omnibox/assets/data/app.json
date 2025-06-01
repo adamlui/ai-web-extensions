@@ -14,6 +14,7 @@
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": { "firefox": "https://ff.phindomnibox.com" },
-    "support": "https://support.phindomnibox.com"
+    "support": "https://support.phindomnibox.com",
+    "uninstall": "https://forms.gle/z1cxDAPgw63tDnhP9"
   }
 }

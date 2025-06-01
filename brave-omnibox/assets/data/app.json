@@ -18,6 +18,7 @@
       "edge": "https://edge.braveomnibox.com/reviews",
       "firefox": "https://ff.braveomnibox.com"
     },
-    "support": "https://support.braveomnibox.com"
+    "support": "https://support.braveomnibox.com",
+    "uninstall": "https://forms.gle/Jetu6BSezVws8nXb9"
   }
 }

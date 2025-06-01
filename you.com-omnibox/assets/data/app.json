@@ -14,6 +14,7 @@
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": { "firefox": "https://ff.youomnibox.com" },
-    "support": "https://support.youomnibox.com"
+    "support": "https://support.youomnibox.com",
+    "uninstall": "https://forms.gle/HkJFqQ7LEFCxNz6a6"
   }
 }

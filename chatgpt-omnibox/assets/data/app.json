@@ -14,6 +14,7 @@
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": { "firefox": "https://ff.chatgptomnibox.com" },
-    "support": "https://support.chatgptomnibox.com"
+    "support": "https://support.chatgptomnibox.com",
+    "uninstall": "https://forms.gle/bdwdJyr3SEfsqtjy9"
   }
 }

@@ -17,6 +17,7 @@
       "chrome": "https://chrome.perplexityomnibox.com/reviews",
       "edge": "https://edge.perplexityomnibox.com/reviews"
     },
-    "support": "https://support.perplexityomnibox.com"
+    "support": "https://support.perplexityomnibox.com",
+    "uninstall": "https://forms.gle/UmVid74JscT6oc3f8"
   }
 }
