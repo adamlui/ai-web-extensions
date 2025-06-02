@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.5.29.2
+// @version               2025.6.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -412,7 +412,7 @@
         about: { type: 'modal', icon: 'questionMarkCircle',
             label: `${app.msgs.menuLabel_about} ${app.name}...` }
     }})
-    Object.assign(config, { lineHeightRatio: 1.313, maxFontSize: 24, minFontSize: 11, theme: 'lines'  })
+    Object.assign(config, { lineHeightRatio: 1.313, maxFontSize: 24, minFontSize: 11  })
     settings.load(Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized')
     if (!config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!config.fontSize) settings.save('fontSize', 12.8791) // init reply font size if unset
@@ -522,16 +522,13 @@
 
                 /* Standby button styles */
                 ${selectors.btn.standby} {
-                  --standby-btn-zoom: scale(1.055) ;
                   --standby-btn-transition: transform 0.18s ease, background 0.2s ease ;
-                    font-size: 10px ; width: 80% ; height: 43px ; margin-bottom: 13px ; transform: var(--skew) }
-                ${selectors.btn.standby} > span { transform: var(--counter-skew) }
+                    font-size: 10px ; width: 80% ; height: 43px ; margin-bottom: 13px }
                 ${selectors.btn.standby}:nth-child(odd) { margin-right: 20% ; margin-left: 15px }
                 ${selectors.btn.standby}:nth-child(even) { margin-left: 20% ; margin-bottom: 19px }
                 ${selectors.btn.standby}:hover {
                     border : 1px rgba(var(--content-color), ${
-                        env.ui.app.scheme == 'dark' ? '1) solid' : '0.6) dotted' };
-                    transform: var(--skew) ${ env.browser.isMobile ? '' : 'var(--standby-btn-zoom)' }}`
+                        env.ui.app.scheme == 'dark' ? '1) solid' : '0.6) dotted' }}`
             }
         }
     }
@@ -574,15 +571,14 @@
                   --app-shadow: 0 2px 3px rgb(0,0,0,0.06) ;
                   --app-hover-shadow-light-scheme: 0 9px 28px rgba(0,0,0,0.09) ;
                   --app-hover-shadow-dark-scheme:  0 9px 28px rgba(0,0,0,0.39) ;
-                  --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
-                                                                                               : '11,0.22' }) ;
+                  --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06' : '11,0.22' }) ;
                   --app-transition: opacity 0.5s ease, transform 0.5s ease, /* for 1st fade-in */
-                                      bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
-                                      width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
+                                    bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
+                                    width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
                   --app-shadow-transition: box-shadow 0.15s ease ; /* for app:hover to not trigger on hover-off */
-                  --standby-btn-zoom: scale(1.055) ; --standby-btn-transition: all 0.25s ease ;
+                  --standby-btn-zoom: scale(1.055) ; --standby-btn-transition: all 0.18s ease ;
                   --btn-transition: transform 0.15s ease, /* for hover-zoom */
-                                      opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
+                                    opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
                   --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
                   --reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ; /* for Anchor changes */
                   --rq-transition: opacity 0.55s ease, transform 0.1s ease !important ; /* for fade-in + hover-zoom */
@@ -722,8 +718,13 @@
                 ${ env.browser.isMobile ? '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }`}
                 .${app.slug}-standby-btns { margin: 14px 0 22px }
                 .${app.slug}-standby-btn {
+                  --skew: skew(-13deg) ; --counter-skew: skew(13deg) ;
+                  --content-color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
                     display: flex ; align-items: center ; justify-content: center ; gap: 8px ;
-                    cursor: pointer ; background: none ; color: rgb(var(--content-color)) ;
+                    width: 90% ; height: 47px ; margin-bottom: 9px ; padding: 12px 0 ;
+                    cursor: pointer ; transform: var(--skew) ; border: 1px solid var(--content-color) ;
+                    background: none ; box-shadow: #aaaaaa12 7px 7px 3px 0px ; color: var(--content-color) ;
+                    font-size: 12px ;
                     ${ config.fgAnimationsDisabled ? ''
                         : `will-change: transform ;
                            transition: var(--standby-btn-transition) ;
@@ -731,8 +732,15 @@
                               -moz-transition: var(--standby-btn-transition) ;
                               -o-transition: var(--standby-btn-transition) ;
                               -ms-transition: var(--standby-btn-transition)` }}
-                .${app.slug}-standby-btn:hover { color: rgb(var(--content-color)) ; transform: var(--standby-btn-zoom) }
-                .${app.slug}-standby-btn > svg { position: relative ; stroke: rgb(var(--content-color)) }
+                .${app.slug}-standby-btn:hover {
+                    color: var(--content-color) ;
+                    transform: var(--skew) ${ env.browser.isMobile ? '' : 'var(--standby-btn-zoom)' }}
+                .${app.slug}-standby-btn > span { transform: var(--counter-skew) }
+                .${app.slug}-standby-btn > svg {
+                    position: relative ; stroke: var(--content-color) ; fill: stroke: var(--content-color) ;
+                    transform: var(--counter-skew) }
+                .${app.slug}-standby-btn:nth-child(odd) { margin-right: 10% }
+                .${app.slug}-standby-btn:nth-child(even) { margin-left: 10% ; margin-bottom: 19px }
                 .${app.slug}-standby-btn:first-of-type svg { /* Query button icon */
                     width: 11px ; height: 11px ; top: -1.5px ; right: -1.5px }
                 .${app.slug}-standby-btn:nth-of-type(2) svg { /* Summarize button icon */

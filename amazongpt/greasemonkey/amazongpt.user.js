@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.5.29.2
+// @version                2025.6.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -257,7 +257,7 @@
         about: { type: 'modal', icon: 'questionMarkCircle',
             label: `${app.msgs.menuLabel_about} ${app.name}...` }
     }})
-    Object.assign(config, { lineHeightRatio: 1.28, maxFontSize: 24, minFontSize: 11, theme: 'lines' })
+    Object.assign(config, { lineHeightRatio: 1.28, maxFontSize: 24, minFontSize: 11 })
     settings.load(Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized')
     if (!config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!config.fontSize) settings.save('fontSize', 14) // init reply font size if unset
@@ -397,13 +397,12 @@
                         : `1px solid #${ env.ui.app.scheme == 'light' ? 'dadce0' : '3b3b3b' }`};
                   --app-gradient-bg: linear-gradient(180deg, ${
                         env.ui.app.scheme == 'dark' ? '#99a8a6 -245px, black 185px' : '#b6ebff -163px, white 65px' }) ;
-                  --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06'
-                                                                                               : '11,0.22' }) ;
+                  --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06' : '11,0.22' }) ;
                   --app-transition: opacity 0.5s ease, transform 0.5s ease, /* for 1st fade-in */
-                                      bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
-                                      width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
+                                    bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
+                                    width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
                   --btn-transition: transform 0.15s ease, /* for hover-zoom */
-                                      opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
+                                    opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
                   --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
                   --reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ; /* for Anchor changes */
                   --fade-in-less-transition: opacity 0.2s ease } /* used by Font Size slider */`
