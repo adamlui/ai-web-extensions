@@ -66,7 +66,7 @@
     <summary>在亚马逊购物中添加 AI 聊天和产品/类别摘要，由最新的法学硕士提供支持！</summary>
     <br><blockquote>
         <a href="../../amazongpt">
-            <img width=511 src="https://amazongpt.kudoai.com/assets/images/screenshots/desktop/mice-md-reply-darkmode.png"></a>
+            <img width=511 src="https://amazongpt.kudoai.com/assets/images/screenshots/desktop/mice-md-reply-darkmode.png?v=80bceab"></a>
     </blockquote>
 </details>
 
@@ -99,7 +99,7 @@
     <summary>自动清除您的 ChatGPT 查询历史记录以获得最大的隐私。</summary>
     <br><blockquote>
         <a href="../../autoclear-chatgpt-history">
-            <img width=511 src="https://assets.autoclearchatgpt.com/images/screenshots/demo.png"></a>
+            <img width=511 src="https://assets.autoclearchatgpt.com/images/screenshots/demo.png?v=d6e2060"></a>
     </blockquote>
 </details>
 
@@ -173,7 +173,7 @@
     <summary>在 Brave 搜索中添加 AI 聊天和搜索摘要，由最新的法学硕士提供支持！</summary>
     <br><blockquote>
         <a href="../../bravegpt">
-            <img width=511 src="https://assets.bravegpt.com/images/screenshots/desktop/bitcoin-query/darkmode.png"></a>
+            <img width=511 src="https://assets.bravegpt.com/images/screenshots/desktop/bitcoin-query/darkmode.png?v=a0dd1de"></a>
     </blockquote>
 </details>
 
@@ -204,7 +204,7 @@
     <summary>当 ChatGPT 响应被切断时自动继续生成答案。</summary>
     <br><blockquote>
         <a href="../../chatgpt-auto-continue">
-            <img width=600 src="https://assets.chatgptautocontinue.com/images/tiles/marquee/tile625x250.png"></a>
+            <img width=600 src="https://assets.chatgptautocontinue.com/images/tiles/marquee/tile625x250.png?v=eb96a05"></a>
     </blockquote>
 </details>
 
@@ -313,7 +313,7 @@
     <summary>从无所不知的 ChatGPT 生成无尽的答案（任何语言!）</summary>
     <br><blockquote>
         <a href="../../chatgpt-infinity">
-            <img width=600 src="https://assets.chatgptinfinity.com/images/tiles/marquee/tile-625x250.png"></a>
+            <img width=600 src="https://assets.chatgptinfinity.com/images/tiles/marquee/tile-625x250.png?v=4a7bac9"></a>
     </blockquote>
 </details>
 
@@ -384,7 +384,7 @@
         通过宽屏/全屏/高屏+垃圾邮件块模式增强 ChatGPT。也可以在 perplexity.ai + poe.com 上使用！</summary>
     <br><blockquote>
         <a href="../../chatgpt-widescreen">
-            <img width=600 src="https://assets.chatgptwidescreen.com/images/tiles/marquee/tile-625x250.png"></a>
+            <img width=600 src="https://assets.chatgptwidescreen.com/images/tiles/marquee/tile-625x250.png?v=91656d3"></a>
     </blockquote>
 </details>
 
@@ -488,7 +488,7 @@
     <summary>在 DuckDuckGo 中添加 AI 聊天和搜索摘要，由最新的法学硕士提供支持！</summary>
     <br><blockquote>
         <a href="../../duckduckgpt">
-            <img width=511 src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png"></a>
+            <img width=511 src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png?v=6a5a2b9"></a>
     </blockquote>
 </details>
 
@@ -521,7 +521,7 @@
     <summary>在 Google 搜索中添加 AI 聊天和搜索摘要，由最新的法学硕士提供支持！</summary>
     <br><blockquote>
         <a href="../../googlegpt">
-            <img width=511 src="https://assets.googlegpt.io/images/screenshots/desktop/javascript-arrays-query/darkmode.png"></a>
+            <img width=511 src="https://assets.googlegpt.io/images/screenshots/desktop/javascript-arrays-query/darkmode.png?v=a363ecf"></a>
     </blockquote>
 </details>
 

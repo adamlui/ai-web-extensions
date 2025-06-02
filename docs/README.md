@@ -66,7 +66,7 @@
     <summary>Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs!</summary>
     <br><blockquote>
         <a href="../amazongpt">
-            <img width=511 src="https://amazongpt.kudoai.com/assets/images/screenshots/desktop/mice-md-reply-darkmode.png"></a>
+            <img width=511 src="https://amazongpt.kudoai.com/assets/images/screenshots/desktop/mice-md-reply-darkmode.png?v=80bceab"></a>
     </blockquote>
 </details>
 
@@ -98,7 +98,7 @@
     <summary>Auto-clear your ChatGPT query history for maximum privacy.</summary>
     <br><blockquote>
         <a href="../autoclear-chatgpt-history">
-            <img width=511 src="https://assets.autoclearchatgpt.com/images/screenshots/demo.png"></a>
+            <img width=511 src="https://assets.autoclearchatgpt.com/images/screenshots/demo.png?v=d6e2060"></a>
     </blockquote>
 </details>
 
@@ -171,7 +171,7 @@
     <summary>Add AI chat & search summaries to Brave Search, powered by the latest LLMs!</summary>
     <br><blockquote>
         <a href="../bravegpt">
-            <img width=511 src="https://assets.bravegpt.com/images/screenshots/desktop/bitcoin-query/darkmode.png"></a>
+            <img width=511 src="https://assets.bravegpt.com/images/screenshots/desktop/bitcoin-query/darkmode.png?v=a0dd1de"></a>
     </blockquote>
 </details>
 
@@ -202,7 +202,7 @@
     <summary>Automatically continue generating answers when ChatGPT responses get cut-off.</summary>
     <br><blockquote>
         <a href="../chatgpt-auto-continue">
-            <img width=600 src="https://assets.chatgptautocontinue.com/images/tiles/marquee/tile625x250.png"></a>
+            <img width=600 src="https://assets.chatgptautocontinue.com/images/tiles/marquee/tile625x250.png?v=eb96a05"></a>
     </blockquote>
 </details>
 
@@ -311,7 +311,7 @@ Auto-play ChatGPT responses.
     <summary>Generate endless answers from all-knowing ChatGPT (in any language!)</summary>
     <br><blockquote>
         <a href="../chatgpt-infinity">
-            <img width=600 src="https://assets.chatgptinfinity.com/images/tiles/marquee/tile-625x250.png"></a>
+            <img width=600 src="https://assets.chatgptinfinity.com/images/tiles/marquee/tile-625x250.png?v=4a7bac9"></a>
     </blockquote>
 </details>
 
@@ -383,7 +383,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
     </summary>
     <br><blockquote>
         <a href="../chatgpt-widescreen">
-            <img width=600 src="https://assets.chatgptwidescreen.com/images/tiles/marquee/tile-625x250.png"></a>
+            <img width=600 src="https://assets.chatgptwidescreen.com/images/tiles/marquee/tile-625x250.png?v=91656d3"></a>
     </blockquote>
 </details>
 
@@ -487,7 +487,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
     <summary>Add AI chat & search summaries to DuckDuckGo, powered by the latest LLMs! </summary>
     <br><blockquote>
         <a href="../duckduckgpt">
-            <img width=511 src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png"></a>
+            <img width=511 src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png?v=6a5a2b9"></a>
     </blockquote>
 </details>
 
@@ -520,7 +520,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
     <summary>Add AI chat & search summaries to Google Search, powered by the latest LLMs!</summary>
     <br><blockquote>
         <a href="../googlegpt">
-            <img width=511 src="https://assets.googlegpt.io/images/screenshots/desktop/javascript-arrays-query/darkmode.png"></a>
+            <img width=511 src="https://assets.googlegpt.io/images/screenshots/desktop/javascript-arrays-query/darkmode.png?v=a363ecf"></a>
     </blockquote>
 </details>
 

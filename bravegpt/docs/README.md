@@ -64,7 +64,7 @@
 
 ### Desktop:
 
-<img src="https://assets.bravegpt.com/images/screenshots/desktop/bitcoin-query/darkmode.png">
+<img src="https://assets.bravegpt.com/images/screenshots/desktop/bitcoin-query/darkmode.png?v=a0dd1de">
 
 #### Mobile:
 

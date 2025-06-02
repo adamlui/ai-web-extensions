@@ -56,7 +56,7 @@
 
 <br>
 
-<div align="center"><img src="https://assets.googlegpt.io/images/screenshots/desktop/javascript-arrays-query/darkmode.png">
+<div align="center"><img src="https://assets.googlegpt.io/images/screenshots/desktop/javascript-arrays-query/darkmode.png?v=a363ecf">
 <br><br>
 
 <h3>Mobile compatible:</h3>
