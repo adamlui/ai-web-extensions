@@ -24,7 +24,7 @@
       "is_default": false
     }
   },
-  "web_accessible_resources": [{ "matches": ["<all_urls>"], "resources": ["lib/deepseek.js", "lib/dom.js"] }],
+  "web_accessible_resources": [{ "matches": ["<all_urls>"], "resources": ["lib/deepseek.js", "lib/dom.min.js"] }],
   "content_scripts": [{
     "matches": ["https://chat.deepseek.com/*"], "run_at": "document_end", "js": ["content.js"] }],
   "background": { "scripts": ["background.js"] },
