@@ -220,7 +220,7 @@
 // @description:zu      *NGOKUPHEPHA* susa ukusetha kabusha ingxoxo yemizuzu eyi-10 + amaphutha enethiwekhi ahlala njalo + Ukuhlolwa kwe-Cloudflare ku-ChatGPT.
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.5.27
+// @version             2025.6.4
 // @license             MIT
 // @icon                https://assets.chatgptautorefresh.com/images/icons/openai/black/icon48.png?v=f11a0a8
 // @icon64              https://assets.chatgptautorefresh.com/images/icons/openai/black/icon64.png?v=f11a0a8
@@ -736,8 +736,7 @@
         sidebar: {
             class: `${app.slug}-sidebar-toggle`,
 
-            create() {
-                const firstLink = chatgpt.getNewChatLink()
+            create() { 
 
                 // Init toggle elems
                 this.div = dom.create.elem('div', { class: this.class })
@@ -753,13 +752,6 @@
 
                 // Stylize elems
                 this.stylize() // create/append stylesheet
-                if (firstLink) { // borrow/assign classes from sidebar elems
-                    const firstIcon = firstLink.querySelector('div:first-child'),
-                          firstLabel = firstLink.querySelector('div:nth-child(2)')
-                    this.div.classList.add(
-                        ...firstLink.classList, ...(firstLabel?.classList || []))
-                    this.div.querySelector('img')?.classList.add(...(firstIcon?.classList || []))
-                }
 
                 // Update scheme/state
                 this.update.scheme() ; this.update.state()
@@ -776,7 +768,14 @@
 
             stylize() {
                 const firstLink = chatgpt.getNewChatLink()
-                document.head.append(this.styles = dom.create.style(
+                if (firstLink && !this.classesBorrowed) { // borrow/assign classes from sidebar elems
+                const firstIcon = firstLink.querySelector('div:first-child'),
+                      firstLabel = firstLink.querySelector('div:nth-child(2)')
+                this.div.classList.add(...firstLink.classList, ...(firstLabel?.classList || []))
+                this.div.querySelector('img')?.classList.add(...(firstIcon?.classList || []))
+                this.classesBorrowed = true
+            }
+            this.styles ||= dom.create.style(
                     `:root { /* vars */
                       --switch-enabled-bg-color: #ad68ff ; --switch-disabled-bg-color: #ccc ;
                       --switch-enabled-box-shadow: 1px 2px 8px #d8a9ff ;
@@ -786,10 +785,8 @@
 
                     // Element styles
                   + `.${this.class} { /* parent div */
-                        width: auto ; max-height: 37px ; margin: 2px 0 ; user-select: none ; cursor: pointer ;
-                        opacity: 1 !important ; /* overcome OpenAI click-dim */
-                        justify-content: unset ; /* overcome OpenAI .justify-center */
-                        flex-grow: unset } /* overcome OpenAI .grow */
+                        width: auto ; max-height: 37px ; margin: -8px 0 ; user-select: none ; cursor: pointer ;
+                        opacity: 1 !important } /* overcome OpenAI click-dim */
                     .${this.class} > img { /* navicon */
                         width: 1.25rem ; height: 1.25rem ; margin-left: 2px ; margin-right: 4px }
                     .${this.class} > input { display: none } /* hide checkbox */
@@ -821,8 +818,7 @@
                            -o-transition: 0.4s ; -ms-transition: 0.4s }
                     .${this.class} > label { /* toggle label */
                         cursor: pointer ; overflow: hidden ; text-overflow: ellipsis ; white-space: nowrap ;
-                        color: black ; padding: 0 8px ; flex-grow: 1 ;
-                        ${ firstLink ? 'font-size: var(--text-sm)' : 'font-size: 0.875rem ; font-weight: 600' }}`
+                        color: black ; padding: 0 3px ; flex-grow: 1 ; font-size: var(--text-sm) }`
 
                     // Dark scheme mods
                   + `.${this.class}.dark > span.enabled { /* switch on */
@@ -839,14 +835,22 @@
                            -webkit-box-shadow: var(--knob-box-shadow-dark) ;
                            -moz-box-shadow: var(--knob-box-shadow-dark) }
                     .${this.class}.dark > label { color: white } /* toggle label */`
-                ))
+                )
+                if (!this.styles.isConnected) document.head.append(this.styles)
             },
 
             insert() {
                 const sidebar = document.querySelector(chatgpt.selectors.sidebar)
                 if (!sidebar || this.status?.startsWith('insert') || document.querySelector(`.${this.class}`)) return
                 this.status = 'inserting' ; if (!this.div) this.create()
-                sidebar.querySelector('div#sidebar-header').after(this.div) ; this.status = 'inserted'
+                const sidebarHeader = sidebar.querySelector('div#sidebar-header')
+            if (sidebarHeader) { sidebarHeader.after(this.div) ; this.status = 'inserted' }
+            else {
+                this.status = 'waitingForSidebar'
+                dom.get.loadedElem('div#sidebar-header').then(header => {
+                    header.after(this.div) ; this.stylize() ; this.status = 'inserted'
+                }).catch((err) => { this.status = 'failed' ; console.error('toggles.sidebar.insert()', err) })
+            }
             },
 
             update: {
