@@ -1,5 +1,7 @@
+const chatgptURL = 'https://chatgpt.com'
+
 // Init APP data
-(async () => {
+;(async () => {
     const app = { commitHashes: { app: 'fbedfed' }} // for cached app.json
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-omnibox@${app.commitHashes.app}` }
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
@@ -8,4 +10,8 @@
 })()
 
 // Launch ChatGPT on toolbar icon click
-chrome.action.onClicked.addListener(() => chrome.tabs.create({ url: 'https://chatgpt.com' }))
+chrome.action.onClicked.addListener(async () => {
+    const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
+          query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi'
+    chrome.tabs.create({ url: `${chatgptURL}/?q=${query}` })
+})

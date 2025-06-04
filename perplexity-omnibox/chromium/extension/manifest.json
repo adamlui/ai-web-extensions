@@ -14,6 +14,7 @@
     "64": "icons/icon64.png",
     "128": "icons/icon128.png"
   },
+  "permissions": ["activeTab"],
   "action": { "default_title": "__MSG_prefix_ask__ Perplexity.ai" },
   "omnibox": { "keyword" : "@perplexity" },
   "background": { "service_worker": "service-worker.js" },

@@ -10,8 +10,12 @@ const braveSearchURL = 'https://search.brave.com'
 })()
 
 // Launch Brave Search on toolbar icon click
-chrome.action.onClicked.addListener(() => chrome.tabs.create({ url: braveSearchURL }))
+chrome.action.onClicked.addListener(async () => {
+    const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
+          query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi'
+    chrome.tabs.create({ url: `${braveSearchURL}/search?q=${query}&summary=1` })
+})
 
 // Query Brave AI on omnibox query submitted
 chrome.omnibox.onInputEntered.addListener(query =>
-    chrome.tabs.update({ url: `${braveSearchURL}/search?q=${decodeURIComponent(query)}&summary=1` }))
+    chrome.tabs.update({ url: `${braveSearchURL}/search?q=${query}&summary=1` }))

@@ -10,8 +10,12 @@ const chatgptURL = 'https://chatgpt.com'
 })()
 
 // Launch ChatGPT on toolbar icon click
-chrome.action.onClicked.addListener(() => chrome.tabs.create({ url: chatgptURL }))
+chrome.action.onClicked.addListener(async () => {
+    const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
+          query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi'
+    chrome.tabs.create({ url: `${chatgptURL}/?q=${query}` })
+})
 
 // Query ChatGPT on omnibox query submitted
 chrome.omnibox.onInputEntered.addListener(query =>
-    chrome.tabs.update({ url: `${chatgptURL}/?q=${decodeURIComponent(query)}` }))
+    chrome.tabs.update({ url: `${chatgptURL}/?q=${query}` }))

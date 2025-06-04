@@ -10,8 +10,12 @@ const youDotComURL = 'https://you.com/'
 })()
 
 // Launch You.com on toolbar icon click
-chrome.action.onClicked.addListener(() => chrome.tabs.create({ url: youDotComURL }))
+chrome.action.onClicked.addListener(async () => {
+    const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
+          query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi'
+    chrome.tabs.create({ url: `${youDotComURL}/search?q=${query}&tbm=youchat` })
+})
 
 // Query You.com on omnibox query submitted
 chrome.omnibox.onInputEntered.addListener(query =>
-    chrome.tabs.update({ url: `${youDotComURL}/search?q=${decodeURIComponent(query)}&tbm=youchat` }))
+    chrome.tabs.update({ url: `${youDotComURL}/search?q=${query}&tbm=youchat` }))
