@@ -487,7 +487,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
     <summary>Add AI chat & search summaries to DuckDuckGo, powered by the latest LLMs! </summary>
     <br><blockquote>
         <a href="../duckduckgpt">
-            <img width=511 src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png?v=6a5a2b9"></a>
+            <img width=511 src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png"></a>
     </blockquote>
 </details>
 

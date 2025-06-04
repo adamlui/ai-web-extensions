@@ -488,7 +488,7 @@
     <summary>在 DuckDuckGo 中添加 AI 聊天和搜索摘要，由最新的法学硕士提供支持！</summary>
     <br><blockquote>
         <a href="../../duckduckgpt">
-            <img width=511 src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png?v=6a5a2b9"></a>
+            <img width=511 src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png"></a>
     </blockquote>
 </details>
 
