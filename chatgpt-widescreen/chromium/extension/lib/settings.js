@@ -86,7 +86,7 @@ window.settings = {
             excludes: { env: ['greasemonkey'] }, dependencies: { controls: ['widerChatbox'] }
         }},
         get widerChatbox() { return {
-            type: 'toggle', symbol: '↔️', defaultVal: false, category: 'chatboxSettings',
+            type: 'toggle', symbol: '↔️', defaultVal: true, category: 'chatboxSettings',
             label: `${settings.getMsg('menuLabel_wider')} ${settings.getMsg('menuLabel_chatbox')}`,
             helptip: settings.getMsg('helptip_widerChatbox')
         }},
