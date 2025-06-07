@@ -18,7 +18,7 @@
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/Users-455-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com">
-    <img alt="[#1 ट्रेंडिंग डीपसीक मोज़िला ऐड-ऑन]" height=31 src="https://img.shields.io/badge/%231_Trending-DeepSeek_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[#3 ट्रेंडिंग डीपसीक मोज़िला ऐड-ऑन]" height=31 src="https://img.shields.io/badge/%233_Trending-DeepSeek_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.deepseekomnibox.com/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
     <img alt="[क्रोम वेब स्टोर रेटिंग]" height=31 src="https://img.shields.io/chrome-web-store/stars/gcgfmipiaiopmjcmggnnehnehhdjdkgi?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com/reviews">

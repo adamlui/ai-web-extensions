@@ -18,7 +18,7 @@
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-455-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com">
-    <img alt="[#1 热门 DeepSeek Mozilla 插件]" height=31 src="https://img.shields.io/badge/%E7%83%AD%E9%97%A8%E5%86%85%E5%AE%B9-%E6%8E%92%E5%90%8D%E7%AC%AC%E4%B8%80%E7%9A%84%20DeepSeek%20%E6%8F%92%E4%BB%B6-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[#3 热门 DeepSeek Mozilla 插件]" height=31 src="https://img.shields.io/badge/%E7%83%AD%E9%97%A8%E5%86%85%E5%AE%B9-%233%20DeepSeek%20%E6%8F%92%E4%BB%B6-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.deepseekomnibox.com/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
     <img alt="[Chrome 网上应用店评分]" height=31 src="https://img.shields.io/chrome-web-store/stars/gcgfmipiaiopmjcmggnnehnehhdjdkgi?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></img></a>
 <a href="https://ff.deepseekomnibox.com/reviews">
