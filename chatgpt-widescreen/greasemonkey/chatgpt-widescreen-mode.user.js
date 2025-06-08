@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.6.5
+// @version             2025.6.8
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -762,9 +762,12 @@
             // Remove buttons on Canvas mode toggle-on
             if (canvasWasOpen ^ chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }
 
-        // Update Widescreen styles on Perplexity nav
-        } else if (env.site == 'perplexity' && location.pathname != prevPath && config.widescreen) {
-            styles.update({ key: 'widescreen' }) ; prevPath = location.pathname }
+        // Update Widescreen styles on Perplexity/Poe nav
+        } else if (env.site != 'chatgpt' && location.pathname != prevPath && config.widescreen) {
+            styles.update({ key: 'widescreen' })
+            if (env.site == 'poe') styles.update({ key: 'chatbar' })
+            prevPath = location.pathname
+        }
 
     }).observe(document[env.site == 'poe' ? 'head' : 'body'], { attributes: true, subtree: true })
 
