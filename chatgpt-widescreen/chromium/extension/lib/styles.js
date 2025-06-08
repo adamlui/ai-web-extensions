@@ -10,7 +10,7 @@ window.styles = {
         return site == 'chatgpt' ? 'div.text-base'
              : site == 'perplexity' ? `div.max-w-threadWidth, .max-w-threadContentWidth, div.max-w-screen-lg,
                                        div[class*="max-w-\\[700px\\]"]` // Trending Topics on /academic
-             : /* poe */ 'div[class*=ChatMessagesView]'
+             : /* poe */ 'div[class*=ChatHomeMain_centered], div[class*=ChatMessagesView]'
     },
 
     initMinMaxWidths() { // requires env.site
@@ -35,9 +35,10 @@ window.styles = {
                 +( window.wsMaxWidth - window.wsMinWidth ) * config.widerChatboxWidth /100
                 -( site == 'chatgpt' ? 128 : 0 )
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
-                chatgpt: `main form { max-width: ${ toWiden ? wcbWidth : window.wsMinWidth -128
-                        }px !important ; margin: auto }`,
-                poe: toWiden && `[class^=ChatPageMainFooter_footerInner] { width: ${wcbWidth}px ; margin-right: 15px }`
+                chatgpt: `main form { max-width: ${
+                    toWiden ? wcbWidth : window.wsMinWidth -128 }px !important ; margin: auto }`,
+                poe: toWiden && `[class*=ChatHomeMain_inputContainer], [class^=ChatPageMainFooter_footerInner] {
+                    width: ${wcbWidth}px ; margin-right: 15px }`
             }[site]
         }
     },
