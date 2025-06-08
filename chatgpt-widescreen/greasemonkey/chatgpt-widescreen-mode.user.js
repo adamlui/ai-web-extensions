@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.6.8.1
+// @version             2025.6.8.2
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -814,7 +814,10 @@
         else if (!config.fullscreen && fullscreenState) // entering full screen
             sync.mode('fullscreen')
         if (env.site == 'chatgpt') chatbar.tweak() // update chatgpt.com chatbar inner width
-        if (config.widerChatbox) styles.update({ key: 'chatbar' })
+        if (config.widescreen) {
+            styles.update({ key: 'widescreen' })
+            if (config.widerChatbox) styles.update({ key: 'chatbar' })
+        }
     })
 
     // Add KEY LISTENER to enable flag on F11 + stop generating text on ESC

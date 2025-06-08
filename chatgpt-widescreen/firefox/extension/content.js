@@ -262,7 +262,10 @@
         else if (!config.fullscreen && fullscreenState) // entering full screen
             sync.mode('fullscreen')
         if (env.site == 'chatgpt') chatbar.tweak() // update chatgpt.com chatbar inner width
-        if (config.widerChatbox) styles.update({ key: 'chatbar' })
+        if (config.widescreen) {
+            styles.update({ key: 'widescreen' })
+            if (config.widerChatbox) styles.update({ key: 'chatbar' })
+        }
     })
 
     // Add KEY LISTENER to enable flag on F11 + stop generating text on ESC
