@@ -15,8 +15,8 @@ window.styles = {
 
     initMinMaxWidths() { // requires env.site
         const { site } = env
-        window.wsMinWidth ||= chatbar.nativeWidth +( site == 'chatgpt' ? 128 : site == 'poe' ? 66 : 274 )
-        window.wsMaxWidth ||= document.querySelector(this.outerDivSelector)?.parentNode?.offsetWidth
+        window.wsMinWidth = chatbar.nativeWidth +( site == 'chatgpt' ? 128 : site == 'poe' ? 66 : 274 )
+        window.wsMaxWidth = document.querySelector(this.outerDivSelector)?.parentNode?.offsetWidth
     },
 
     async update({ key, autoAppend }) { // requires lib/dom.js

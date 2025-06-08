@@ -254,7 +254,7 @@
         }
     }
 
-    // Add RESIZE LISTENER to update full screen setting/button + disable F11 flag
+    // Add RESIZE LISTENER to update full screen setting/button + disable F11 flag + update chatbar
     addEventListener('resize', () => {
         const fullscreenState = chatgpt.isFullScreen()
         if (config.fullscreen && !fullscreenState) { // exiting full screen
@@ -262,6 +262,7 @@
         else if (!config.fullscreen && fullscreenState) // entering full screen
             sync.mode('fullscreen')
         if (env.site == 'chatgpt') chatbar.tweak() // update chatgpt.com chatbar inner width
+        if (config.widerChatbox) styles.update({ key: 'chatbar' })
     })
 
     // Add KEY LISTENER to enable flag on F11 + stop generating text on ESC
