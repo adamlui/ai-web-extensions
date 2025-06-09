@@ -192,6 +192,14 @@
     )
     document.documentElement.lang = chrome.i18n.getUILanguage().split('-')[0]
 
+    // Append RISING PARTICLES styles
+    ;['gray', 'white'].forEach(color => document.head.append(
+        dom.create.elem('link', { rel: 'stylesheet',
+            href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@71695ca/assets/styles/rising-particles/dist/${
+                color}.min.css`
+    })))
+    dom.addRisingParticles(document.body)
+
     // Init MASTER TOGGLE
     const masterToggle = {
         div: document.querySelector('.master-toggle'),
