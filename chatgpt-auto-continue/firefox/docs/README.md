@@ -4,6 +4,8 @@
 
 <div align="center">
 
+<a href="https://ff.chatgptautocontinue.com">
+    <img alt="[Trended Top 25 ChatGPT Mozilla Android Add-on]" height=31 src="https://img.shields.io/badge/Trended-Top_25_ChatGPT_Android_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.chatgptautoocontinue.com/reviews">
     <img alt="[Mozilla Add-ons Ratings]" height=31 src="https://img.shields.io/amo/stars/chatgpt-auto-continue?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></img></a>
 <a href="https://ff.chatgptautocontinue.com">
