@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.6.2.1
+// @version                  2025.6.8
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/app/black/icon48.png?v=12a91c0
 // @icon64                   https://assets.googlegpt.io/images/icons/app/black/icon64.png?v=12a91c0
@@ -732,7 +732,7 @@
             )
         },
 
-        appBottomPos() { app.div.style.bottom = `${ config.minimized ? 35 - app.div.offsetHeight : -33 }px` },
+        appBottomPos() { app.div.style.bottom = `${ config.minimized ? 22 - app.div.offsetHeight : -33 }px` },
 
         appStyle() { // used in toggle.animations() + update.scheme() + main's app init
             const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled,
@@ -906,7 +906,7 @@
                        -o-transition: var(--font-size-slider-thumb-transition) ;
                        -ms-transition: var(--font-size-slider-thumb-transition)` }}
                 ${ env.browser.isMobile ? '' : `#${app.slug}-font-size-slider-thumb:hover { transform: scale(1.125) }`}
-                .${app.slug}-standby-btns { margin: 15px 0 -14px }
+                .${app.slug}-standby-btns { margin: 20px 0 -14px }
                 .${app.slug}-standby-btn {
                   --skew: skew(-13deg) ; --counter-skew: skew(13deg) ;
                   --content-color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
@@ -3012,7 +3012,7 @@
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
 
     // Hide GF alert on GitHub if found
-    if (location.host == 'github.com') {
+    if (location.host == 'github.com') { // hide GF alert
         const gfAlert = [...document.querySelectorAll('.markdown-alert')]
             .find(alert => alert.textContent.includes('Greasy Fork'))
         return !gfAlert ? undefined : gfAlert.style.display = 'none'
@@ -3030,8 +3030,16 @@
     appDivParent.prepend(app.div)
     setTimeout(() => app.div.classList.add('active'), 100) // fade in
 
+    // ANCHOR GoogleGPT in Google AI Mode
+    if (/udm=50(?:&|$)/.test(location.search)) {
+        toggle.anchorMode('on')
+        if (!env.browser.isMobile) { // hide Pin button + Anchor Mode setting
+            dom.get.loadedElem(`#${app.slug}-pin-btn`).then(btn => btn.style.display = 'none')
+            document.head.append(dom.create.style('li#anchored-settings-entry { display: none }'))
+        }
+
     // Strip Google TRACKING
-    document.addEventListener(inputEvents.down, event => {
+    } else document.addEventListener(inputEvents.down, event => {
         let a = event.target ; while (a && !a.href) a = a.parentElement ; if (!a) return // find closest ancestor href
         a.removeAttribute('ping') // prevent pingback on link click
         if (a.getAttribute('onmousedown')?.includes('rwt(')) {
