@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.6.8
+// @version                  2025.6.8.1
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/app/black/icon48.png?v=12a91c0
 // @icon64                   https://assets.googlegpt.io/images/icons/app/black/icon64.png?v=12a91c0
@@ -2994,7 +2994,7 @@
 
     menus.toolbar.register()
 
-    if (location.search.includes('&udm=2')) return log.debug('Exited from Google Images')
+    if (/udm=2(?:&|$)/.test(location.search)) return log.debug('Exited from Google Images')
 
     // Init UI props
     env.ui = {
