@@ -31,9 +31,8 @@ window.styles = {
         get css() { // requires <config|env>
             styles.initMinMaxWidths()
             const { site } = env, toWiden = config.widerChatbox && config.widescreen
-            const wcbWidth = window.wsMinWidth
-                +( window.wsMaxWidth - window.wsMinWidth ) * config.widerChatboxWidth /100
-                -( site == 'chatgpt' ? 128 : 0 )
+            const wcbWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth )
+                * Math.min(config.widerChatboxWidth, config.widescreenWidth) /100 -( site == 'chatgpt' ? 128 : 0 )
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
                 chatgpt: `main form { max-width: ${
                     toWiden ? wcbWidth : window.wsMinWidth -128 }px !important ; margin: auto }`,
