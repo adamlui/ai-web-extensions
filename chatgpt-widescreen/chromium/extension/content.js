@@ -258,15 +258,15 @@
     addEventListener('resize', () => {
         const fullscreenState = chatgpt.isFullScreen()
         if (config.fullscreen && !fullscreenState) { // exiting full screen
-            sync.mode('fullscreen') ; config.f11 = false }
-        else if (!config.fullscreen && fullscreenState) // entering full screen
+            sync.mode('fullscreen') ; config.f11 = false
+        } else if (!config.fullscreen && fullscreenState) // entering full screen
             sync.mode('fullscreen')
-        if (env.site == 'chatgpt') chatbar.tweak() // update chatgpt.com chatbar inner width
         if (config.widescreen) {
             styles.update({ key: 'widescreen' })
             if (sites[env.site].availFeatures.includes('widerChatbox') && config.widerChatbox)
                 styles.update({ key: 'chatbar' })
         }
+        if (env.site == 'chatgpt') chatbar.tweak() // update chatgpt.com chatbar inner width
     })
 
     // Add KEY LISTENER to enable flag on F11 + stop generating text on ESC
