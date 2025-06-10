@@ -23,6 +23,9 @@
           "tos": "div.bottom-full:has(a[href=\"https://openai.com/terms\"])", // https://i.imgur.com/8BUOhn1.png
           "withButton": "div.bottom-full:has(button[data-testid=close-button])" // https://i.imgur.com/5dGYD42.png
         },
+        "btns": {
+          "getPlus" : "button:has(path[d^=\"M17.665 10C17.665\"])" // https://i.imgur.com/ReFu8xF.png
+        },
         "modals": {
           "deepResearch": "div[data-testid=modal-deep-research-mini-nux]", // https://i.imgur.com/3GLab1m.png
           "guest": "div[data-testid^=modal-no-auth]" // https://i.imgur.com/ItLsJLT.png
