@@ -179,7 +179,7 @@ window.buttons = {
                             // Play audio
                             if (resp.status != 200) {
                                 buttons.reply.bubble.speak.style.cursor = 'pointer'
-                                chatgpt.speak(wholeAnswer, cjsSpeakConfig)
+                                window.currentlyPlayingAudio = chatgpt.speak(wholeAnswer, cjsSpeakConfig)
                             } else {
                                 const audioContext = new (window.webkitAudioContext || window.AudioContext)()
                                 audioContext.decodeAudioData(resp.response, buffer => {
