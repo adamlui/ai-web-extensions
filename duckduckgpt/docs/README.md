@@ -612,6 +612,8 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 This app exists thanks to code, translations, issues & ideas from the following contributors:
 
+<div align="center">
+
 <a href="https://github.com/adamlui">
     <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.02.11"></img></a>
 <a href="https://github.com/piederecho">
@@ -698,6 +700,8 @@ This app exists thanks to code, translations, issues & ideas from the following 
         <img title="ChatGPT" src="https://assets.ddgpt.com/images/icons/chatgpt/white-on-gray/icon50.png"></img>
     </picture></a>
 <br><br>
+
+</div>
 
 #
 
