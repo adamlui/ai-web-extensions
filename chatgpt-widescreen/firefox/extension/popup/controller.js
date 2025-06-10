@@ -216,8 +216,14 @@
             browserAPI.getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
     }
 
+    // Create/append COFFEE entry
+    const footer = document.querySelector('footer'), coffeeURL = app.urls.donate['ko-fi']
+    footer.before(createMenuEntry({
+        key: 'coffeeEntry', type: 'link', symbol: '☕', url: coffeeURL, helptip: coffeeURL,
+        label: settings.getMsg('menuLabel_buyMeAcoffee')
+    }))
+
     // Create CHILD menu entries on matched pages
-    const footer = document.querySelector('footer')
     if (chrome.runtime.getManifest().content_scripts[0].matches.some(match => match.includes(env.site))) {
         await settings.load(sites[env.site].availFeatures)
         const menuEntriesDiv = dom.create.elem('div') ; footer.before(menuEntriesDiv)
@@ -316,13 +322,6 @@
     aboutEntry.div.append(aboutEntry.ticker.span) ; footer.before(aboutEntry.div)
     aboutEntry.div.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
 
-    // Create/append COFFEE entry
-    const coffeeURL = app.urls.donate['ko-fi']
-    footer.before(createMenuEntry({
-        key: 'coffeeEntry', type: 'link', symbol: '☕', url: coffeeURL, helptip: coffeeURL,
-        label: settings.getMsg('menuLabel_buyMeAcoffee')
-    }))
-
     // Create/append REVIEW entry
     const platform = /chromium|edge|firefox/.exec(browserAPI.runtime.toLowerCase())?.[0] || '',
           reviewURL = app.urls.review[platform != 'chromium' ? platform : 'chrome']
@@ -330,7 +329,6 @@
         key: 'reviewEntry', type: 'link', symbol: '⭐', url: reviewURL, helptip: reviewURL,
         label: `${settings.getMsg('btnLabel_leaveReview')}`
     }))
-
 
     // Init FOOTER
     const footerElems = { // left-to-right

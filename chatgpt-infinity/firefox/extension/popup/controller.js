@@ -264,8 +264,14 @@
         notify(`${browserAPI.getMsg('appName')} 🧩 ${browserAPI.getMsg(`state_${ config.extensionDisabled ? 'off' : 'on' }`).toUpperCase()}`)
     }
 
+    // Create/append COFFEE entry
+    const footer = document.querySelector('footer'), coffeeURL = app.urls.donate['ko-fi']
+    footer.before(createMenuEntry({
+        key: 'coffeeEntry', type: 'link', symbol: '☕', url: coffeeURL, helptip: coffeeURL,
+        label: settings.getMsg('menuLabel_buyMeAcoffee')
+    }))
+
     // Create CHILD menu entries on chatgpt.com
-    const footer = document.querySelector('footer')
     if (env.site == 'chatgpt') {
         await settings.load(Object.keys(settings.controls))
         const menuEntriesDiv = dom.create.elem('div') ; footer.before(menuEntriesDiv)
@@ -322,14 +328,6 @@
             label: `${settings.getMsg('menuLabel_open')} ChatGPT`
         }))
 
-    // Create/append COFFEE entry
-    const coffeeURL = app.urls.donate['ko-fi']
-    footer.before(createMenuEntry({
-        key: 'coffeeEntry', type: 'link', symbol: '☕', url: coffeeURL, helptip: coffeeURL,
-        label: settings.getMsg('menuLabel_buyMeAcoffee')
-    }))
-
-
     // Create/append REVIEW entry
     const platform = /chromium|edge|firefox/.exec(browserAPI.runtime.toLowerCase())?.[0] || '',
           reviewURL = app.urls.review[platform != 'chromium' ? platform : 'chrome']
@@ -337,7 +335,6 @@
         key: 'reviewEntry', type: 'link', symbol: '⭐', url: reviewURL, helptip: reviewURL,
         label: `${settings.getMsg('btnLabel_leaveReview')}`
     }))
-
 
     // Init FOOTER
     const footerElems = { // left-to-right
