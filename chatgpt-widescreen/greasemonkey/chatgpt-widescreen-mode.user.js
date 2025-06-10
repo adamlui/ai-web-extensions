@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.6.8.2
+// @version             2025.6.9
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -806,7 +806,7 @@
         }
     }
 
-    // Add RESIZE LISTENER to update full screen setting/button + disable F11 flag + update chatbar
+    // Add RESIZE LISTENER to update full screen setting/button + disable F11 flag + update widescreen/chatbar styles
     addEventListener('resize', () => {
         const fullscreenState = chatgpt.isFullScreen()
         if (config.fullscreen && !fullscreenState) { // exiting full screen
@@ -816,7 +816,8 @@
         if (env.site == 'chatgpt') chatbar.tweak() // update chatgpt.com chatbar inner width
         if (config.widescreen) {
             styles.update({ key: 'widescreen' })
-            if (config.widerChatbox) styles.update({ key: 'chatbar' })
+            if (sites[env.site].availFeatures.includes('widerChatbox') && config.widerChatbox)
+                styles.update({ key: 'chatbar' })
         }
     })
 

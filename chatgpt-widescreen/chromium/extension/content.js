@@ -254,7 +254,7 @@
         }
     }
 
-    // Add RESIZE LISTENER to update full screen setting/button + disable F11 flag + update chatbar
+    // Add RESIZE LISTENER to update full screen setting/button + disable F11 flag + update widescreen/chatbar styles
     addEventListener('resize', () => {
         const fullscreenState = chatgpt.isFullScreen()
         if (config.fullscreen && !fullscreenState) { // exiting full screen
@@ -264,7 +264,8 @@
         if (env.site == 'chatgpt') chatbar.tweak() // update chatgpt.com chatbar inner width
         if (config.widescreen) {
             styles.update({ key: 'widescreen' })
-            if (config.widerChatbox) styles.update({ key: 'chatbar' })
+            if (sites[env.site].availFeatures.includes('widerChatbox') && config.widerChatbox)
+                styles.update({ key: 'chatbar' })
         }
     })
 
