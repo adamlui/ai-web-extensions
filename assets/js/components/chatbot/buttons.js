@@ -115,7 +115,10 @@ window.buttons = {
                 this.speak.append(speakSVGwrapper)
                 if (!env.browser.isMobile) this.speak.onmouseenter = this.speak.onmouseleave = tooltip.toggle
                 this.speak.onclick = async event => {
-                    if (!this.speak.contains(speakSVGs.speak)) return // since clicking on Generating or Playing icon
+                    if (this.speak.contains(speakSVGs.generating[0])) return
+                    if (window.currentlyPlayingAudio) {
+                        window.currentlyPlayingAudio.stop() ; handleAudioEnded() ; return }
+
                     this.speak.style.cursor = 'default' // remove finger
 
                     // Update icon to Generating ones
@@ -174,26 +177,33 @@ window.buttons = {
                                 this.speak.dispatchEvent(new Event('mouseenter'))
 
                             // Play audio
-                            if (resp.status != 200) chatgpt.speak(wholeAnswer, cjsSpeakConfig)
-                            else {
+                            if (resp.status != 200) {
+                                buttons.reply.bubble.speak.style.cursor = 'pointer'
+                                chatgpt.speak(wholeAnswer, cjsSpeakConfig)
+                            } else {
                                 const audioContext = new (window.webkitAudioContext || window.AudioContext)()
                                 audioContext.decodeAudioData(resp.response, buffer => {
+                                    buttons.reply.bubble.speak.style.cursor = 'pointer'
                                     const audioSrc = audioContext.createBufferSource()
                                     audioSrc.buffer = buffer
                                     audioSrc.connect(audioContext.destination) // connect source to speakers
                                     audioSrc.start(0) // play audio
+                                    window.currentlyPlayingAudio = audioSrc
                                     audioSrc.onended = handleAudioEnded
-                                }).catch(() => chatgpt.speak(wholeAnswer, cjsSpeakConfig))
+                                }).catch(() => {
+                                    buttons.reply.bubble.speak.style.cursor = 'pointer'
+                                    window.currentlyPlayingAudio = chatgpt.speak(wholeAnswer, cjsSpeakConfig)
+                                })
                             }
                         }
                     })
 
                     function handleAudioEnded() {
-                        buttons.reply.bubble.speak.style.cursor = 'pointer' // restore cursor
                         speakSVGscroller.textContent = speakSVGscroller.style.animation = '' // rid Playing icons
                         speakSVGscroller.append(speakSVGs.speak) // restore Speak icon
                         if (buttons.reply.bubble.speak.matches(':hover')) // restore tooltip
                             buttons.reply.bubble.speak.dispatchEvent(new Event('mouseenter'))
+                        window.currentlyPlayingAudio = null
                     }
                 }
             },
