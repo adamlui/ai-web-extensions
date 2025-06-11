@@ -201,8 +201,7 @@
             href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@71695ca/assets/styles/rising-particles/dist/${
                 color}.min.css`
     })))
-    dom.addRisingParticles(document.body, {
-        lightScheme: [...document.documentElement.classList].includes('dark') ? 'white' : 'gray' })
+    dom.addRisingParticles(document.body, { lightScheme: env.menu.isDark ? 'white' : 'gray' })
 
     // Init MASTER TOGGLE
     const masterToggle = {
@@ -348,8 +347,7 @@
     footerElems.chatgptjs.logo.parentNode.title = env.browser.displaysEnglish ? ''
         : `${browserAPI.getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
     footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@858b952'
-        + `/assets/images/badges/powered-by-chatgpt.js/${
-            [...document.documentElement.classList].includes('dark') ? 'white' : 'black' }/with-robot/95x19.png`
+        + `/assets/images/badges/powered-by-chatgpt.js/${ env.menu.isDark ? 'white' : 'black' }/with-robot/95x19.png`
     footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
     footerElems.review.span.append(icons.create({key: 'star', size: 13, style: 'position: relative ; top: 1px' }))
     footerElems.review.span.onclick = () => {
