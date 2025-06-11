@@ -341,7 +341,8 @@
     footerElems.chatgptjs.logo.parentNode.title = env.browser.displaysEnglish ? ''
         : `${browserAPI.getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
     footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@858b952'
-                                   + '/assets/images/badges/powered-by-chatgpt.js/white/with-robot/95x19.png'
+        + `/assets/images/badges/powered-by-chatgpt.js/${
+            [...document.documentElement.classList].includes('dark') ? 'white' : 'black' }/with-robot/95x19.png`
     footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
     footerElems.review.span.append(icons.create({key: 'star', size: 13, style: 'position: relative ; top: 1px' }))
     footerElems.review.span.onclick = () => {
