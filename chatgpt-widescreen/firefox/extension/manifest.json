@@ -21,7 +21,7 @@
     "matches": ["https://chatgpt.com/*", "https://www.perplexity.ai/*", "https://poe.com/*"],
     "run_at": "document_end", "js": ["content.js"]
   }],
-  "background": { "scripts": ["background.js", "lib/json5.min.js"] },
+  "background": { "scripts": ["background.js"] },
   "browser_specific_settings": {
     "gecko": { "id": "chatgpt.widescreen@chatgptevo.com", "strict_min_version": "109.0" },
     "gecko_android": { "strict_min_version": "120.0" }
