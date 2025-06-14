@@ -134,8 +134,9 @@
             // Menu elems
             document.querySelectorAll('.logo, .menu-title, .menu-entry, .slider, .categorized-entries')
                 .forEach((elem, idx) => {
-                    if (elem.id &&( elem.matches(`#${elem.id}:has(> div.link)`) || /aboutEntry|siteSettings/.test(elem.id) )
-                        || elem.closest('.categorized-entries')?.previousElementSibling?.id == 'siteSettings'
+                    if (elem.id && (
+                        elem.matches(`#${elem.id}:has(> div.link)`) || /aboutEntry|siteSettings/.test(elem.id) )
+                     || elem.closest('.categorized-entries')?.previousElementSibling?.id == 'siteSettings'
                     ) return // never disable Site Settings + link/About entries
                     elem.style.transition = extensionIsDisabled() ? '' : 'opacity 0.15s ease-in'
                     const toDisable = extensionIsDisabled() || !depIsEnabled(elem.id)
