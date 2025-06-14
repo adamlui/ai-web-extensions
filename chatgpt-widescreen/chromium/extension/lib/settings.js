@@ -48,21 +48,26 @@ window.settings = {
     },
 
     controls: { // displays top-to-bottom in toolbar menu
+        get widescreen() { return {
+            type: 'toggle', defaultVal: true, category: 'displaySettings',
+            label: settings.getMsg('mode_widescreen'),
+            excludes: { env: ['greasemonkey'] }
+        }},
         get widescreenWidth() { return {
             type: 'slider', symbol: '↔️', defaultVal: 100, category: 'displaySettings',
             label: `${settings.getMsg('mode_widescreen')} ${settings.getMsg('menuLabel_width')}`, labelSuffix: '%',
             helptip: settings.getMsg('helptip_widescreenWidth'),
             excludes: { env: ['greasemonkey'] }, dependencies: { controls: ['widescreen'] }
         }},
-        get widescreen() { return {
-            type: 'toggle', defaultVal: true, category: 'displaySettings',
-            label: settings.getMsg('mode_widescreen'),
-            excludes: { env: ['greasemonkey'] }
-        }},
         get fullWindow() { return {
             type: 'toggle', defaultVal: false, category: 'displaySettings',
             label: settings.getMsg('mode_fullWindow'),
             excludes: { env: ['greasemonkey'] }, throttle: env.site == 'chatgpt' ? 750 : false
+        }},
+        get tcbDisabled() { return {
+            type: 'toggle', symbol: '↕️', defaultVal: true, category: 'chatboxSettings',
+            label: `${settings.getMsg('menuLabel_taller')} ${settings.getMsg('menuLabel_chatbox')}`,
+            helptip: settings.getMsg('helptip_tallerChatbox')
         }},
         get tallerChatboxHeight() { return {
             type: 'slider', symbol: '↕️', defaultVal: 100, category: 'chatboxSettings',
@@ -72,10 +77,10 @@ window.settings = {
             helptip: settings.getMsg('helptip_tallerChatboxHeight'),
             excludes: { env: ['greasemonkey'] }, dependencies: { controls: ['tcbDisabled'] }
         }},
-        get tcbDisabled() { return {
-            type: 'toggle', symbol: '↕️', defaultVal: true, category: 'chatboxSettings',
-            label: `${settings.getMsg('menuLabel_taller')} ${settings.getMsg('menuLabel_chatbox')}`,
-            helptip: settings.getMsg('helptip_tallerChatbox')
+        get widerChatbox() { return {
+            type: 'toggle', symbol: '↔️', defaultVal: true, category: 'chatboxSettings',
+            label: `${settings.getMsg('menuLabel_wider')} ${settings.getMsg('menuLabel_chatbox')}`,
+            helptip: settings.getMsg('helptip_widerChatbox')
         }},
         get widerChatboxWidth() { return {
             type: 'slider', symbol: '↔️', defaultVal: 100, category: 'chatboxSettings',
@@ -84,11 +89,6 @@ window.settings = {
             labelSuffix: '%',
             helptip: settings.getMsg('helptip_widerChatboxWidth'),
             excludes: { env: ['greasemonkey'] }, dependencies: { controls: ['widerChatbox'] }
-        }},
-        get widerChatbox() { return {
-            type: 'toggle', symbol: '↔️', defaultVal: true, category: 'chatboxSettings',
-            label: `${settings.getMsg('menuLabel_wider')} ${settings.getMsg('menuLabel_chatbox')}`,
-            helptip: settings.getMsg('helptip_widerChatbox')
         }},
         get ncbDisabled() { return {
             type: 'toggle', defaultVal: false, category: 'btnSettings',
