@@ -377,7 +377,7 @@
                 toggleCategorySettingsVisiblity(ctgDiv.id, { transitions: false })
         })
 
-    // Remove LOADING SPINNER after imgs load
+    // REMOVE LOADING spinner after imgs load
     Promise.all([...document.querySelectorAll('img')].map(img =>
         img.complete ? Promise.resolve() : new Promise(resolve => img.onload = resolve)
     )).then(() => {
