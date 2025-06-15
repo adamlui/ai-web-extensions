@@ -36,7 +36,7 @@
     <img alt="[chatgpt.js によって供給される]" src="https://img.shields.io/badge/%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E4%BE%9B%E7%B5%A6%E3%81%95%E3%82%8C%E3%82%8B-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=adamlui_chatgpt-infinity">
     <img alt="[SonarCloud 脆弱性]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-infinity%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonarcloud&logoColor=white&labelColor=464646&label=%E8%84%86%E5%BC%B1%E6%80%A7&color=gold"></img></a>
-<a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt">
+<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
     <img alt="[Awesome で言及される]" src="https://img.shields.io/badge/%E3%81%A7%E8%A8%80%E5%8F%8A%E3%81%95%E3%82%8C%E3%82%8B-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-infinity?tab=stats">
     <img alt="[jsDelivr 統計]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-infinity?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88&labelColor=464646&color=2bbbd8"></img></a>
@@ -271,14 +271,14 @@ ChatGPT Infinity は、強力な [chatgpt.js](https://github.com/KudoAI/chatgpt.
 
 ## 📜 関連アプリ
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautorefresh.com/images/icons/openai/white/icon16.png"><img width=16 src="https://assets.chatgptautorefresh.com/images/icons/openai/black/icon16.png"></picture> [ChatGPT 自動更新 ↻](https://chatgptautorefresh.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt"><img src="https://assets.chatgptautorefresh.com/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautorefresh.com/images/icons/openai/white/icon16.png"><img width=16 src="https://assets.chatgptautorefresh.com/images/icons/openai/black/icon16.png"></picture> [ChatGPT 自動更新 ↻](https://chatgptautorefresh.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautorefresh.com/images/badges/awesome/badge.svg"></a>
 
 > ChatGPT セッションを新鮮に保ち、チャット時間制限 + ネットワークエラー + Cloudflare チェックを排除します。
 <br>[インストール](https://docs.chatgptautorefresh.com/#-installation) / 
 [README](https://docs.chatgptautorefresh.com/#readme) / 
 [議論](https://github.com/adamlui/chatgpt-auto-refresh/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/continue-symbol/white/icon32.png?v=1f9acd8"><img height=16 src="https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon32.png?v=1f9acd8"></picture> [ChatGPT 自動継続](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/continue-symbol/white/icon32.png?v=1f9acd8"><img height=16 src="https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon32.png?v=1f9acd8"></picture> [ChatGPT 自動継続](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
 
 > ChatGPT の応答が中断されたときに、自動的に回答の生成を継続します。。<br>
 [インストール](https://docs.chatgptautocontinue.com/#-installation) / 

@@ -196,7 +196,7 @@
     <a href="../../chatgpt-auto-continue">
         <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/continue-symbol/white/icon32.png?v=1f9acd8"><img height=20 src="https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon32.png?v=1f9acd8"></picture></a>
     <a href="../../chatgpt-auto-continue">ChatGPT 自动继续</a>&nbsp;
-    <a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt">
+    <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
         <img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
 </h3>
 
@@ -251,7 +251,7 @@
     <a href="../../chatgpt-auto-refresh">
         <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautorefresh.com/images/icons/openai/white/icon32.png"><img width=19 src="https://assets.chatgptautorefresh.com/images/icons/openai/black/icon32.png"></picture></a>
     <a href="../../chatgpt-auto-refresh">ChatGPT 自动刷新 ↻</a>&nbsp;
-    <a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt">
+    <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
         <img src="https://assets.chatgptautorefresh.com/images/badges/awesome/badge.svg"></a>
 </h3>
 
@@ -278,7 +278,7 @@
     <a href="../../chatgpt-auto-talk">
         <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautotalk.com/images/icons/openai/white/icon32.png"><img width=19 src="https://assets.chatgptautotalk.com/images/icons/openai/black/icon32.png"></picture></a>
     <a href="../../chatgpt-auto-talk">ChatGPT 自动谈话 📣</a>&nbsp;
-    <a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt">
+    <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
         <img src="https://assets.chatgptautotalk.com/images/badges/awesome/badge.svg"></a>
 </h3>
 
@@ -513,7 +513,7 @@
     <a href="../../googlegpt">
         <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/app/white/icon32.png"><img width=19 src="https://assets.googlegpt.io/images/icons/app/black/icon32.png"></picture></a>
     <a href="../../googlegpt">GoogleGPT</a>&nbsp;
-    <a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt">
+    <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
         <img src="https://assets.googlegpt.io/images/badges/awesome/badge.svg"></a>
 </h3>
 

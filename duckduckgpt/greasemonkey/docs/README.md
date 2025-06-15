@@ -21,7 +21,7 @@
     <img height=31 alt="[Powered by chatgpt.js]" src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=kudoai_duckduckgpt">
     <img height=31 alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dkudoai_duckduckgpt%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonarcloud&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></img></a>
-<a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt">
+<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
     <img height=31 alt="[Mentioned in Awesome]" src="https://img.shields.io/badge/Mentioned_in-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://opentools.ai/tools/duckduckgpt">
     <img height=31 alt="[Voted Top Tool on OpenTools.ai]" src="https://img.shields.io/badge/Voted_Top_Tool-OpenTools.ai-f43f5e?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNTAiIGhlaWdodD0iMzUwIiBzdHlsZT0ic2hhcGUtcmVuZGVyaW5nOmdlb21ldHJpY1ByZWNpc2lvbjt0ZXh0LXJlbmRlcmluZzpnZW9tZXRyaWNQcmVjaXNpb247aW1hZ2UtcmVuZGVyaW5nOm9wdGltaXplUXVhbGl0eTtmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZCI+PHBhdGggZmlsbD0iI2ZlZmZmZSIgZD0iTTM2LjUgMzAuNWM5My44MzItMSAxODcuODMyLTEuMzMzIDI4Mi0xIC4xNjcgOTQuMDAxIDAgMTg4LjAwMS0uNSAyODJsLTc4LTc4Yy0uNS00MS42NjUtLjY2Ny04My4zMzItLjUtMTI1LTQxLjY2OC4xNjctODMuMzM1IDAtMTI1LS41YTg1MzcuOTUgODUzNy45NSAwIDAgMC03OC03Ny41WiIgc3R5bGU9Im9wYWNpdHk6Ljk4NCIvPjxwYXRoIGZpbGw9IiNmZWZmZmUiIGQ9Ik0yOS41IDM1LjVhMjkyNC4wMjQgMjkyNC4wMjQgMCAwIDEgNzguNSA3OWMuNSA0MS42NjUuNjY3IDgzLjMzMi41IDEyNSA0Mi4wMDEtLjE2NyA4NC4wMDEgMCAxMjYgLjVhODQzMy4xNiA4NDMzLjE2IDAgMCAxIDc3IDc3LjVjLTkzLjk5OCAxLTE4Ny45OTggMS4zMzMtMjgyIDF2LTI4M1oiIHN0eWxlPSJvcGFjaXR5Oi45ODEiLz48L3N2Zz4=&logoColor=white&labelColor=464646&style=for-the-badge"></a>
@@ -743,7 +743,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.com/adamlui/chatgpt-infinity/#readme) / 
 [Discuss](https://chatgptinfinity.com/discuss)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/app/white/icon32.png"><img width=17 src="https://assets.googlegpt.io/images/icons/app/black/icon32.png"></picture> [GoogleGPT](https://googlegpt.io) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#chatgpt"><img src="https://assets.googlegpt.io/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/app/white/icon32.png"><img width=17 src="https://assets.googlegpt.io/images/icons/app/black/icon32.png"></picture> [GoogleGPT](https://googlegpt.io) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.googlegpt.io/images/badges/awesome/badge.svg"></a>
 
 > Bring the magic of AI to Google Search (powered by Google Gemma + GPT-4o!)
 <br>[Install](https://gm.googlegpt.io) /
