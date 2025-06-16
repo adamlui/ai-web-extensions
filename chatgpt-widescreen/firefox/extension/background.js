@@ -6,7 +6,7 @@ importScripts('lib/json5.min.js')
     // Init APP data
     const app = {
         version: chrome.runtime.getManifest().version,
-        commitHashes: { app: '764d8e9' }, // for cached app.json + sites.json5
+        commitHashes: { app: 'b0c9c71' }, // for cached app.json + sites.json5
         runtime: (() => {
             return typeof chrome != 'undefined' && chrome.runtime ? (
                 typeof browser != 'undefined' ? 'Firefox add-on'
