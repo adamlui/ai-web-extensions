@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.6.9.2
+// @version                  2025.6.15
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/app/black/icon48.png?v=12a91c0
 // @icon64                   https://assets.googlegpt.io/images/icons/app/black/icon64.png?v=12a91c0
@@ -2948,7 +2948,7 @@
                                 + 'to right, transparent, black 20%, black 89%, transparent)' )}}`
               + '#about-settings-entry > span > div {'
                   + `text-wrap: nowrap ; ${
-                        config.fgAnimationsDisabled ? '' : 'animation: ticker linear 60s infinite' }}`
+                        config.fgAnimationsDisabled ? '' : 'animation: ticker linear 75s infinite' }}`
               + '@keyframes ticker { 0% { transform: translateX(100%) } 100% { transform: translateX(-2000%) }}'
               + `.about-em { color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'green' } !important }`
             )
