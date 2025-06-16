@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.6.15.1
+// @version             2025.6.16
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -787,10 +787,9 @@
         const sidebarObserver = new ResizeObserver( // sync config.fullWindow ⇆ sidebar width + update styles
             async () => {
                 if ((config.fullWindow ^ await ui.isFullWin()) && !config.modeSynced) sync.mode('fullWindow')
-                if (env.site != 'poe') setTimeout(() => {
+                if (env.site != 'poe' && config.widescreen) setTimeout(() => {
                     styles.update({ key: 'widescreen' }) // for new window.wsMaxWidth
-                    if (sites[env.site].availFeatures.includes('widerChatbox') && config.widerChatbox)
-                        styles.update({ key: 'chatbar' })
+                    if (config.widerChatbox) styles.update({ key: 'chatbar' })
                 }, env.site == 'perplexity' ? 100 : 0)
             }
         )
@@ -822,9 +821,8 @@
         } else if (!config.fullscreen && fullscreenState) // entering full screen
             sync.mode('fullscreen')
         if (config.widescreen) {
-            styles.update({ key: 'widescreen' })
-            if (sites[env.site].availFeatures.includes('widerChatbox') && config.widerChatbox)
-                styles.update({ key: 'chatbar' })
+            styles.update({ key: 'widescreen' }) // for new window.wsMaxWidth
+            if (config.widerChatbox) styles.update({ key: 'chatbar' })
         }
         if (env.site == 'chatgpt') chatbar.tweak() // update chatgpt.com chatbar inner width
     })
