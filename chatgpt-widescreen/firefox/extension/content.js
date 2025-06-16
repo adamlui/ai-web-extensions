@@ -232,8 +232,16 @@
 
     // Monitor SIDEBARS to update config.fullWindow for sites w/ native toggle
     if (sites[env.site].selectors.btns.sidebar && sites[env.site].hasSidebar) {
-        const sidebarObserver = new ResizeObserver( // sync config.fullWindow ⇆ sidebar width
-            async () => (config.fullWindow ^ await ui.isFullWin()) && !config.modeSynced && sync.mode('fullWindow'))
+        const sidebarObserver = new ResizeObserver( // sync config.fullWindow ⇆ sidebar width + update styles
+            async () => {
+                if ((config.fullWindow ^ await ui.isFullWin()) && !config.modeSynced) sync.mode('fullWindow')
+                if (env.site != 'poe') setTimeout(() => {
+                    styles.update({ key: 'widescreen' }) // for new window.wsMaxWidth
+                    if (sites[env.site].availFeatures.includes('widerChatbox') && config.widerChatbox)
+                        styles.update({ key: 'chatbar' })
+                }, env.site == 'perplexity' ? 100 : 0)
+            }
+        )
         observeSidebars()
         new MutationObserver( // re-observeSidebars() on disconnect
             () => getSidebars().some(bar => !sidebarObserver.targets?.includes(bar)) && observeSidebars()

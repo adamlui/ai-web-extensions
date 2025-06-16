@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.6.15
+// @version             2025.6.15.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -319,7 +319,7 @@
     window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        commitHashes: { app: 'b0c9c71' } // for cached <app|messages>.json + sites.json5
+        commitHashes: { app: '53bd0b0' } // for cached <app|messages>.json + sites.json5
     }
     app.urls = {
         resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.commitHashes.app}` }
@@ -784,8 +784,16 @@
 
     // Monitor SIDEBARS to update config.fullWindow for sites w/ native toggle
     if (sites[env.site].selectors.btns.sidebar && sites[env.site].hasSidebar) {
-        const sidebarObserver = new ResizeObserver( // sync config.fullWindow ⇆ sidebar width
-            async () => (config.fullWindow ^ await ui.isFullWin()) && !config.modeSynced && sync.mode('fullWindow'))
+        const sidebarObserver = new ResizeObserver( // sync config.fullWindow ⇆ sidebar width + update styles
+            async () => {
+                if ((config.fullWindow ^ await ui.isFullWin()) && !config.modeSynced) sync.mode('fullWindow')
+                if (env.site != 'poe') setTimeout(() => {
+                    styles.update({ key: 'widescreen' }) // for new window.wsMaxWidth
+                    if (sites[env.site].availFeatures.includes('widerChatbox') && config.widerChatbox)
+                        styles.update({ key: 'chatbar' })
+                }, env.site == 'perplexity' ? 100 : 0)
+            }
+        )
         observeSidebars()
         new MutationObserver( // re-observeSidebars() on disconnect
             () => getSidebars().some(bar => !sidebarObserver.targets?.includes(bar)) && observeSidebars()
