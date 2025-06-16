@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-perplexity.ai + poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.6.16
+// @version             2025.6.16.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -359,7 +359,7 @@
         onload: resp => resolve(JSON5.parse(resp.responseText))
     })))
 
-    const chatbarElem = document.querySelector(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input)
+    const chatbarElem = await dom.get.loadedElem(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input)
     chatbar.nativeWidth = dom.get.computedWidth(chatbarElem) // for ChatGPT WCB + styles.widescreen.css math
     chatbar.nativeHeight = dom.get.computedHeight(chatbarElem) // for TCB math
 
