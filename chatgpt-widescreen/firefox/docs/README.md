@@ -4,6 +4,8 @@
 
 <div align="center">
 
+<a href="#">
+    <img height=31 src="https://img.shields.io/amo/users/chatgpt-widescreen?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.chatgptwidescreen.com">
     <img alt="[Trended #1 ChatGPT Mozilla Add-on]" height=31 src="https://img.shields.io/badge/Trended-%231_ChatGPT_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.chatgptwidescreen.com/reviews">
