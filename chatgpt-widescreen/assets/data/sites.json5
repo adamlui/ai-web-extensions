@@ -55,6 +55,7 @@
       },
       "footer": "div:has(> a[href=\"https://www.perplexity.ai/hub/careers\"])",
       "header": "div[class*=header].sticky:nth-of-type(2), div.h-headerHeight", "input": "textarea[placeholder]",
+      "sidebar": "div[class*=\"group/sidebar-menu\"]",
       "spam": {
         "banners": {
           "apps": "div.col-span-6:has(a[href*=\"perplexity.ai\"])", // http://i.imgur.com/ewit7S6.png
