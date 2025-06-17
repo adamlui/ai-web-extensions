@@ -341,7 +341,7 @@
           chatgptURL = chrome.runtime.getManifest().content_scripts[0].matches.map(url => url.replace(/\/\*$/, ''))
     if (!activeTab.url.includes(chatgptURL))
         footer.before(createMenuEntry({
-            key: 'chatgptEntry', type: 'link', symbol: '💬', url: chatgptURL, helptip: chatgptURL,
+            key: 'chatgptEntry', type: 'link', symbol: '🤖', url: chatgptURL, helptip: chatgptURL,
             label: `${settings.getMsg('menuLabel_open')} ChatGPT`
         }))
 
