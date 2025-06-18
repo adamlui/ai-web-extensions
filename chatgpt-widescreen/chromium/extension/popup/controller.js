@@ -271,11 +271,11 @@
     }
 
     // Create SITE SETTINGS
-    const ss = {
+    const siteSettings = {
         labelDiv: createMenuEntry({ ...settings.categories.siteSettings, key: 'siteSettings', type: 'category' }),
         entriesDiv: dom.create.elem('div', { class: 'categorized-entries' })
     }
-    footer.before(ss.labelDiv, ss.entriesDiv)
+    footer.before(siteSettings.labelDiv, siteSettings.entriesDiv)
     for (const site of Object.keys(sites)) { // create toggle per site
 
         // Init entry's elems
@@ -295,11 +295,11 @@
         }
         ssEntry.switch.append(ssEntry.track) ; ssEntry.label.textContent = sites[site].urls.homepage
         ssEntry.switchLabelDiv.append(ssEntry.switch, ssEntry.label) ; ssEntry.faviconDiv.append(ssEntry.favicon)
-        ssEntry.div.append(ssEntry.switchLabelDiv, ssEntry.faviconDiv) ; ss.entriesDiv.append(ssEntry.div)
+        ssEntry.div.append(ssEntry.switchLabelDiv, ssEntry.faviconDiv) ; siteSettings.entriesDiv.append(ssEntry.div)
         await settings.load(`${site}Disabled`) ; ssEntry.switch.classList.toggle('on', !config[`${site}Disabled`])
         if (env.site == site) {
             env.siteDisabled = config[`${site}Disabled`] // to auto-expand toggles later if true
-            if (config[`${site}Disabled`]) ss.labelDiv.classList.add('anchored')
+            if (config[`${site}Disabled`]) siteSettings.labelDiv.classList.add('anchored')
         }
 
         // Add listeners
@@ -307,7 +307,7 @@
             env.extensionWasDisabled = extensionIsDisabled()
             ssEntry.switch.classList.toggle('on')
             settings.save(`${site}Disabled`, !config[`${site}Disabled`]) ; sync.configToUI()
-            ss.labelDiv.classList.toggle('anchored', env.site == site && config[`${site}Disabled`])
+            siteSettings.labelDiv.classList.toggle('anchored', env.site == site && config[`${site}Disabled`])
             if (env.site == site) { // fade/notify if setting of active site toggled
                 sync.fade()
                 if (env.extensionWasDisabled ^ extensionIsDisabled()) notify(`${app.name} 🧩 ${
@@ -385,7 +385,7 @@
     const onMatchedPage = chrome.runtime.getManifest().content_scripts[0].matches.toString().includes(env.site)
     if (!onMatchedPage || config[`${env.site}Disabled`]) { // auto-expand Site Settings
         if (!onMatchedPage) // disable label from triggering unneeded collapse
-            ss.labelDiv.classList.add('anchored')
+            siteSettings.labelDiv.classList.add('anchored')
         setTimeout(() => toggleCategorySettingsVisiblity({ key: 'siteSettings', transitions: onMatchedPage }),
             !onMatchedPage ? 0 // no delay since emptyish already
           : !env.browser.isFF ? 250 // some delay since other settings appear
