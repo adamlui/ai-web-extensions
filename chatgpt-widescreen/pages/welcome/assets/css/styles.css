@@ -5,9 +5,7 @@ h1, p, img, .footer-links, .hidden { opacity: 0 }
     to { transform: translateY(0) ; opacity: 1 }
 }
 
-body {
-    font-family: Arial,sans-serif ; text-align: center ;
-    margin: 0 ; background-color: #f9f9f9 }
+body { font-family: Arial,sans-serif ; text-align: center ; margin: 0 ; background: #f9f9f9 }
 .main { max-width: 812px ; margin: 0 auto ; padding: 56px 16.5vw 131px }
 .title-icon { width: 67px ; height: 67px ; position: relative ; top: 22px ; margin-right: 21px }
 h1 { font-size: 68px ; margin-bottom: 48px }
