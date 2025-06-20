@@ -87,6 +87,8 @@ ChatGPT 自动谈话 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
     <img width=50 title="@MLBott" src="https://avatars.githubusercontent.com/u/7270299?first-contrib=2024.9.26-play-btn-selector-changed-alert"></img></a>
 <a href="https://github.com/9romise">
     <img width=50 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></img></a>
+<a href="https://github.com/RoonMoonlight">
+    <img width=50 title="@RoonMoonlight" src="https://avatars.githubusercontent.com/u/25527589?first-contrib=2025.6.19-reported-stopped-working"></img></a>
 <a href="https://github.com/dependabot">
     <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://chatgpt.com">
