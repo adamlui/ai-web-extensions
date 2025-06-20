@@ -20,8 +20,8 @@ function tabIsLoaded(tabId) {
 chrome.action.onClicked.addListener(async () => {
     const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
           query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi',
-          newTab = await chrome.tabs.create({ url: deepseekChatURL })
-    tabIsLoaded(newTab.id).then(() => chrome.tabs.sendMessage(newTab.id, query))
+          updatedTab = await chrome.tabs.update(activeTab.id, { url: deepseekChatURL })
+    tabIsLoaded(updatedTab.id).then(() => chrome.tabs.sendMessage(updatedTab.id, query))
 })
 
 // Query DeepSeek on omnibox query submitted
