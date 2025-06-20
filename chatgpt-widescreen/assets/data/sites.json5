@@ -11,7 +11,8 @@
         "login": "button[data-testid*=login]",
         "newChat": // Pencil button (when logged in), Cycle Arrows button (in temp chat logged out)
           "a[href=\"/\"]:has(svg), button:has([d^=\"M3.06957\"])",
-        "send": "button[data-testid=send-button]", "sidebar": "button[data-testid*=sidebar-button]",
+        "send": "button[data-testid=send-button]",
+        "sidebar": "button[aria-controls=stage-slideover-sidebar], button[data-testid*=sidebar-button]",
         "stop": "button[data-testid=stop-button]", "voice": "button[data-testid*=composer-speech-button]"
       },
       "footer": "div#thread-bottom-container > div:last-of-type > div, span.text-sm.leading-none",
