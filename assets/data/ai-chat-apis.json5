@@ -13,21 +13,6 @@
     "streamable": true,
     "supportsLongPrompts": false
   },
-  "FREEGPT": {
-    "endpoint": "https://am.aifree.site/api/generate",
-    "expectedOrigin": {
-      "url": "https://am.aifree.site",
-      "headers": { "Alt-Used": "am.aifree.site", "Content-Type": "text/plain;charset=UTF-8", "Priority": "u=4" }
-    },
-    "method": "POST",
-    "parsingRequired": false,
-    "respPatterns": {
-      // The quota for the day has been used up | Please come back tomorrow
-      // | The quota for the day in the current area has been used up. Please try to change the network environment.
-      "fail": "{\"error\":{\"message\":\"|当日额度已用完,请明天再来吧|当前地区当日额度已消耗完, 请尝试更换网络环境" },
-    "streamable": true,
-    "supportsLongPrompts": true
-  },
   "GPTforLove": {
     "endpoint": "https://api11.gptforlove.com/chat-process",
     "expectedOrigin": {
