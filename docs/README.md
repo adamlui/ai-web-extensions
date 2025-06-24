@@ -98,7 +98,7 @@
     <summary>Auto-clear your ChatGPT query history for maximum privacy.</summary>
     <br><blockquote>
         <a href="../autoclear-chatgpt-history">
-            <img width=511 src="https://assets.autoclearchatgpt.com/images/screenshots/demo.png?v=69b726a"></a>
+            <img width=511 src="https://assets.autoclearchatgpt.com/images/screenshots/demo.png?v=7750f69"></a>
     </blockquote>
 </details>
 
