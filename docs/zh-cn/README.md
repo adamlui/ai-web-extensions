@@ -194,7 +194,7 @@
 
 <h3>
     <a href="../../chatgpt-auto-continue">
-        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/continue-symbol/white/icon32.png?v=1f9acd8"><img height=20 src="https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon32.png?v=1f9acd8"></picture></a>
+        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/app/white/icon32.png?v=7e2c739"><img height=20 src="https://assets.chatgptautocontinue.com/images/icons/app/black/icon32.png?v=7e2c739"></picture></a>
     <a href="../../chatgpt-auto-continue">ChatGPT 自动继续</a>&nbsp;
     <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
         <img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>

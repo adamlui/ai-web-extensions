@@ -273,7 +273,7 @@ ChatGPT 自动刷新 与使用 [ScriptCat](https://docs.scriptcat.org)、[Violen
 [自述文件](https://docs.chatgptwidescreen.com/zh-cn/#readme) /
 [讨论](https://github.com/adamlui/chatgpt-widescreen/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/continue-symbol/white/icon32.png?v=1f9acd8"><img height=16 src="https://assets.chatgptautocontinue.com/images/icons/continue-symbol/black/icon32.png?v=1f9acd8"></picture> [ChatGPT 自动继续](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/app/white/icon32.png?v=7e2c739"><img height=16 src="https://assets.chatgptautocontinue.com/images/icons/app/black/icon32.png?v=7e2c739"></picture> [ChatGPT 自动继续](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
 > 当 ChatGPT 响应被切断时自动继续生成答案。<br>
 [安装](https://docs.chatgptautocontinue.com/zh-cn/#-如何安装) /
 [自述文件](https://docs.chatgptautocontinue.com/zh-cn/#readme) /
