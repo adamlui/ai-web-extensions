@@ -33,8 +33,8 @@
   "devDependencies": {
     "@eslint/json": "^0.12.0",
     "@eslint/markdown": "^6.6.0",
-    "@stylistic/eslint-plugin": "^5.0.0",
-    "eslint": "^9.29.0",
+    "@stylistic/eslint-plugin": "^5.1.0",
+    "eslint": "^9.30.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-yml": "^1.18.0",
     "husky": "^9.1.7"
