@@ -90,6 +90,8 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     <img width=50 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></img></a>
 <a href="https://github.com/RoonMoonlight">
     <img width=50 title="@RoonMoonlight" src="https://avatars.githubusercontent.com/u/25527589?first-contrib=2025.6.19-reported-stopped-working"></img></a>
+<a href="https://github.com/zkisaboss">
+    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></img></a>
 <a href="https://github.com/dependabot">
     <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://chatgpt.com">
