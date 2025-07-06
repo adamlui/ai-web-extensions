@@ -39,7 +39,7 @@
 
 ## 💡 About
 
-**ChatGPT Widescreen Mode** adds wide/full/tall-screen + spamblock modes to ChatGPT, enhancing your chat sessions by reducing scrolling & removing clutter, creating a more immersive viewing experience.
+**ChatGPT Widescreen** adds wide/full/tall-screen + spamblock modes to ChatGPT, enhancing your chat sessions by reducing scrolling & removing clutter, creating a more immersive viewing experience.
 
 <img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
 
@@ -84,7 +84,7 @@
     - Tampermonkey for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
     - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) or [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) for Safari
 
-2. Install [ChatGPT Widescreen Mode](https://gm.chatgptwidescreen.com) userscript (will load in manager installed above)
+2. Install [ChatGPT Widescreen](https://gm.chatgptwidescreen.com) userscript (will load in manager installed above)
 
 3. Visit [chatgpt.com](https://chatgpt.com), [perplexity.ai](https://perplexity.ai), or [poe.com](https://poe.com) & mode toggles are added to chatbar!
 
@@ -114,7 +114,7 @@
 </a>
 <br><br>
 
-ChatGPT Widescreen Mode relies on code from the powerful [chatgpt.js](https://github.com/KudoAI/chatgpt.js) library 
+ChatGPT Widescreen relies on code from the powerful [chatgpt.js](https://github.com/KudoAI/chatgpt.js) library 
 <br>© 2023–2025 KudoAI & contributors under the MIT license.
 
 </div>
@@ -124,7 +124,7 @@ ChatGPT Widescreen Mode relies on code from the powerful [chatgpt.js](https://gi
 
 ## 🌐 Compatibility
 
-ChatGPT Widescreen Mode is compatible w/ the following browsers using [ScriptCat](https://docs.scriptcat.org), [Violentmonkey](https://violentmonkey.github.io), [OrangeMonkey](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf), [OrangeMonkey Pro](https://chromewebstore.google.com/detail/orangemonkey-pro/ggdmdoodcfamjggeigifpjfnnjfbland) or [Tampermonkey](https://www.tampermonkey.net):
+ChatGPT Widescreen is compatible w/ the following browsers using [ScriptCat](https://docs.scriptcat.org), [Violentmonkey](https://violentmonkey.github.io), [OrangeMonkey](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf), [OrangeMonkey Pro](https://chromewebstore.google.com/detail/orangemonkey-pro/ggdmdoodcfamjggeigifpjfnnjfbland) or [Tampermonkey](https://www.tampermonkey.net):
 
 - [Google Chrome](https://www.chrome.com) (also available on [Chrome Web Store](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
 - [Mozilla Firefox](https://www.firefox.com) (also available on [Firefox Add-on Store](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))

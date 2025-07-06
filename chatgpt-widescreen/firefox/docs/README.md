@@ -43,7 +43,7 @@
 
 ## 💡 About
 
-**ChatGPT Widescreen Mode** adds wide/full/tall-screen + spamblock modes to ChatGPT, enhancing your chat sessions by reducing scrolling & removing clutter, creating a more immersive viewing experience.
+**ChatGPT Widescreen** adds wide/full/tall-screen + spamblock modes to ChatGPT, enhancing your chat sessions by reducing scrolling & removing clutter, creating a more immersive viewing experience.
 
 <img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
 
@@ -105,7 +105,7 @@
 </a>
 <br><br>
 
-ChatGPT Widescreen Mode relies on code from the powerful [chatgpt.js](https://github.com/KudoAI/chatgpt.js) library 
+ChatGPT Widescreen relies on code from the powerful [chatgpt.js](https://github.com/KudoAI/chatgpt.js) library 
 <br>© 2023–2025 KudoAI & contributors under the MIT license.
 
 </div>

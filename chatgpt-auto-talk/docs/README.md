@@ -144,7 +144,7 @@ For even more epic ChatGPT apps, go here: https://github.com/adamlui/ai-web-exte
 [Readme](https://docs.chatgptinfinity.com/#readme) / 
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
-### <img width=17 src="https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen Mode](https://chatgptwidescreen.com) &nbsp;<img src="https://assets.chatgptwidescreen.com/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg?v=02d9942" width="auto" height="24" />
+### <img width=17 src="https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen](https://chatgptwidescreen.com) &nbsp;<img src="https://assets.chatgptwidescreen.com/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg?v=02d9942" width="auto" height="24" />
 
 > Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on perplexity.ai + poe.com!
 <br>[Install](https://docs.chatgptwidescreen.com/#-installation) / 

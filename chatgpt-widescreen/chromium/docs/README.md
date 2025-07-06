@@ -43,7 +43,7 @@
 
 ## 💡 About
 
-**ChatGPT Widescreen Mode** adds wide/full/tall-screen + spamblock modes to ChatGPT, enhancing your chat sessions by reducing scrolling & removing clutter, creating a more immersive viewing experience.
+**ChatGPT Widescreen** adds wide/full/tall-screen + spamblock modes to ChatGPT, enhancing your chat sessions by reducing scrolling & removing clutter, creating a more immersive viewing experience.
 
 <img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
 
@@ -81,7 +81,7 @@
 
 ## 🚀 Installation
 
-1. Install **ChatGPT Widescreen Mode** from the [Chrome Web Store](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or the [Edge Add-on Store](https://edge.chatgptwidescreen.com)
+1. Install **ChatGPT Widescreen** from the [Chrome Web Store](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or the [Edge Add-on Store](https://edge.chatgptwidescreen.com)
 
 2. Visit [chatgpt.com](https://chatgpt.com), [perplexity.ai](https://perplexity.ai), or [poe.com](https://poe.com) & mode toggles are added to chatbar!
 
@@ -116,7 +116,7 @@
 </a>
 <br><br>
 
-ChatGPT Widescreen Mode relies on code from the powerful [chatgpt.js](https://github.com/KudoAI/chatgpt.js) library 
+ChatGPT Widescreen relies on code from the powerful [chatgpt.js](https://github.com/KudoAI/chatgpt.js) library 
 <br>© 2023–2025 KudoAI & contributors under the MIT license.
 
 </div>

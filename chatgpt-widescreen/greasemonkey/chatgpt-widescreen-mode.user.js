@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name                ChatGPT Widescreen Mode 🖥️
+// @name                ChatGPT Widescreen 🖥️
 // @name:af             ChatGPT Widescreen Modus 🖥️
 // @name:am             ቻትጂፒቲ ሰፊ ስክሪን 🖥️
 // @name:ar             ChatGPT وضع شاشة عريضة 🖥️
