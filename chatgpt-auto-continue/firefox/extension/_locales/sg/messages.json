@@ -6,9 +6,9 @@
   "menuLabel_notif": { "message": "A yeke wara tënë ti fango tënë" },
   "menuLabel_notifs": { "message": "A yeke wara tënë ti fango tënë" },
   "menuLabel_autoScroll": { "message": "Auto brochure" },
-  "menuLabel_anchor": { "message": "Hirondelle Anchor" },
+  "menuLabel_anchor": { "message": "Ancre" },
   "menuLabel_modeNotifs": { "message": "Nduru tënë ti mode" },
-  "menuLabel_about": { "message": "About sara" },
+  "menuLabel_about": { "message": "Na ndo ni" },
   "menuLabel_open": { "message": "A ti A ti - Open" },
   "menuLabel_buyMeAcoffee": { "message": "Wake Me Café" },
   "menuLabel_donate": { "message": "Sara mbeni ye ti mû maboko na zo" },
@@ -21,7 +21,7 @@
   "about_openSourceCode": { "message": "Création d 'une brochure open source" },
   "about_latestChanges": { "message": "Ndangba changement" },
   "mode_autoContinue": { "message": "Auto article" },
-  "mode_toast": { "message": "Moyenne Toast" },
+  "mode_toast": { "message": "Mode ti Toast" },
   "helptip_autoScroll": { "message": "Na ngoi so azo ayeke kiri tënë na ala, ala yeke kiri tënë na ala" },
   "helptip_modeNotifs": { "message": "Fa awango na ngoi so mo yeke toggling mode/settings" },
   "helptip_notifBottom": { "message": "A yeke wara a-avertissement na gbe ti écran ni" },
@@ -52,7 +52,7 @@
   "btnLabel_update": { "message": "Nduru tënëModifier" },
   "btnLabel_dismiss": { "message": "Gbenga Akinnagbe" },
   "link_viewChanges": { "message": "Bâ achangement" },
-  "state_disabled": { "message": "disable awe" },
-  "state_on": { "message": "na ndö ti" },
-  "state_off": { "message": "ti zia lege ni" }
+  "state_disabled": { "message": "zo ti kpale ti seni" },
+  "state_on": { "message": "na nduzu" },
+  "state_off": { "message": "zia lege ni" }
 }

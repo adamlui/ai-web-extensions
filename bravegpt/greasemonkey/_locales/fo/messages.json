@@ -33,7 +33,7 @@
   "about_and": { "message": "og" },
   "about_contributors": { "message": "ískoytisfólk" },
   "about_version": { "message": "Útgáva" },
-  "about_poweredBy": { "message": "Dreivin av" },
+  "about_poweredBy": { "message": "Drivið av" },
   "about_openSourceCode": { "message": "Opna keldukota" },
   "about_latestChanges": { "message": "Nýggju broytingarnar" },
   "scheme_light": { "message": "Ljós" },
@@ -131,7 +131,7 @@
   "link_viewChanges": { "message": "Sí broytingar" },
   "link_shareFeedback": { "message": "Viðmerkingar" },
   "prefix_exit": { "message": "Útgangur" },
-  "state_on": { "message": "t" },
+  "state_on": { "message": "á" },
   "state_off": { "message": "Av" },
   "state_no": { "message": "Nei" }
 }

@@ -42,5 +42,5 @@
   "state_enabled": { "message": "Utheketsa" },
   "state_disabled": { "message": "Usatheketsa" },
   "state_on": { "message": "pa" },
-  "state_off": { "message": "m 'munsi" }
+  "state_off": { "message": "kuzimitsa" }
 }

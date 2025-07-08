@@ -1,5 +1,5 @@
 {
-  "appName": { "message": "ʻO ChatGPT Widescreen" },
+  "appName": { "message": "ChatGPT Kīkahaʻākea" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Hoʻonui i ka ChatGPT me nā ʻano ākea / piha / kiʻekiʻe + spamblock. Hana pū ma perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Nā hoʻonohonoho" },
@@ -44,7 +44,7 @@
   "tooltip_fullscreenON": { "message": "Paʻa piha" },
   "tooltip_fullscreenOFF": { "message": "Haʻalele i ka pale piha" },
   "tooltip_newChat": { "message": "Kūkākūkā hou" },
-  "tooltip_goto": { "message": "E hele i ka ‘ao‘ao <x id=\"1\"/><x id=\"2\"/><x id=\"3\"/><x id=\"4\"/>." },
+  "tooltip_goto": { "message": "E hele i" },
   "helptip_adjustSettingsRelatedTo": { "message": "Hoʻoponopono i nā hoʻonohonoho pili i" },
   "helptip_the": { "message": "ʻO ka" },
   "helptip_btns": { "message": "Nā pihi" },
@@ -99,5 +99,5 @@
   "link_viewChanges": { "message": "Nānā i nā hoʻololi" },
   "state_disabled": { "message": "kino kīnā" },
   "state_on": { "message": "ma" },
-  "state_off": { "message": "OFF" }
+  "state_off": { "message": "hemo" }
 }

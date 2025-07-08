@@ -1,16 +1,16 @@
 {
-  "appName": { "message": "ChatGPT Widescreen" },
+  "appName": { "message": "ChatGPT Waid Skrin" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "I strongim ChatGPT wantaim ol bikpela/plen/longpela piksa + spamblock mod. Em i wok tu long perplexity.ai + poe.com!" },
   "menuLabel_settings": { "message": "Aitaim" },
   "menuLabel_notif": { "message": "Toksave" },
   "menuLabel_notifs": { "message": "Ol notis" },
   "menuLabel_btn": { "message": "Knop" },
-  "menuLabel_chatbox": { "message": "Chatbox" },
-  "menuLabel_display": { "message": "Display" },
+  "menuLabel_chatbox": { "message": "Chatbokis" },
+  "menuLabel_display": { "message": "Soim" },
   "menuLabel_width": { "message": "Wit" },
   "menuLabel_height": { "message": "Hait" },
-  "menuLabel_taller": { "message": "Taller" },
+  "menuLabel_taller": { "message": "Longpela moa" },
   "menuLabel_wider": { "message": "Witim moa" },
   "menuLabel_newChatBtn": { "message": "Nupela Baten bilong Toktok" },
   "menuLabel_hiddenHeader": { "message": "Header i stap hait" },
@@ -33,7 +33,7 @@
   "about_poweredBy": { "message": "Ran long" },
   "about_openSourceCode": { "message": "Open sos kod" },
   "about_latestChanges": { "message": "Ol nupela senis" },
-  "mode_widescreen": { "message": "Widescreen" },
+  "mode_widescreen": { "message": "Waid Skrin" },
   "mode_fullWindow": { "message": "Ful-Windo" },
   "mode_fullscreen": { "message": "Plen skrin" },
   "mode_toast": { "message": "Modus bilong toast" },
@@ -98,6 +98,6 @@
   "btnLabel_dismiss": { "message": "Rausim" },
   "link_viewChanges": { "message": "Lukim ol senis" },
   "state_disabled": { "message": "disable" },
-  "state_on": { "message": "long" },
-  "state_off": { "message": "i go" }
+  "state_on": { "message": "i stap on" },
+  "state_off": { "message": "i stap off" }
 }

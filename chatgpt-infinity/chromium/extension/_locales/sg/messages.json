@@ -14,7 +14,7 @@
   "menuLabel_replyTopic": { "message": "Ìyọ̀nù tí ìyọ̀nù" },
   "menuLabel_all": { "message": "GBÓGBÉ" },
   "menuLabel_replyInt": { "message": "Ìrànràn tí ìyọ̀nù" },
-  "menuLabel_anchor": { "message": "Hirondelle Anchor" },
+  "menuLabel_anchor": { "message": "Ancre" },
   "menuLabel_modeNotifs": { "message": "Nduru tënë ti mode" },
   "menuLabel_about": { "message": "Ní Ìtúmọ̀" },
   "menuLabel_open": { "message": "A ti A ti - Open" },
@@ -28,7 +28,7 @@
   "about_poweredBy": { "message": "A yeke sara kua na ni" },
   "about_openSourceCode": { "message": "Création d 'une brochure open source" },
   "about_latestChanges": { "message": "Ndangba changement" },
-  "mode_toast": { "message": "Moyenne Toast" },
+  "mode_toast": { "message": "Mode ti Toast" },
   "prompt_updateReplyLang": { "message": "Sé àtúmọ̀ lálẹ̀ lángá tí ìyọ̀nù" },
   "prompt_updateReplyTopic": { "message": "Sé àtúmọ̀ ìyọ̀nù tí ìyọ̀nù" },
   "prompt_orEnter": { "message": "tabi pẹlu" },
@@ -78,6 +78,6 @@
   "unit_seconds": { "message": "kọọkan" },
   "state_enabled": { "message": "n tò" },
   "state_disabled": { "message": "tòlẹ̀" },
-  "state_on": { "message": "na ndö ti" },
-  "state_off": { "message": "ti zia lege ni" }
+  "state_on": { "message": "na nduzu" },
+  "state_off": { "message": "zia lege ni" }
 }

@@ -51,5 +51,5 @@
   "state_enabled": { "message": "habilitá" },
   "state_disabled": { "message": "desabilitá" },
   "state_on": { "message": "riba" },
-  "state_off": { "message": "for di" }
+  "state_off": { "message": "pagá" }
 }

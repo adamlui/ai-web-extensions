@@ -24,7 +24,7 @@
   "alert_updateAvail": { "message": "Täzeleşdir" },
   "alert_newerVer": { "message": "Täzeleşdirmek" },
   "alert_isAvail": { "message": "häzir bar" },
-  "alert_upToDate": { "message": "Up-to-date" },
+  "alert_upToDate": { "message": "Täze" },
   "alert_isUpToDate": { "message": "häzirki döwürde" },
   "alert_showYourSupport": { "message": "Öz goldawyňyzy görkeziň" },
   "alert_isOSS": { "message": "100% meýletinlik bilen gurulýan we pulsuz saklanýan açyk esbaplar" },

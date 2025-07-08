@@ -5,7 +5,7 @@
   "menuLabel_settings": { "message": "Establesimentunan" },
   "menuLabel_reply": { "message": "Kontesta" },
   "menuLabel_notif": { "message": "Notifikashon" },
-  "menuLabel_notifs": { "message": "Notifikashon" },
+  "menuLabel_notifs": { "message": "Notifikashonnan" },
   "menuLabel_infinityMode": { "message": "Modo Infinito" },
   "menuLabel_autoStart": { "message": "Komienso di outo" },
   "menuLabel_toggleVis": { "message": "Cambia Visibilidad" },
@@ -79,5 +79,5 @@
   "state_enabled": { "message": "habilidá" },
   "state_disabled": { "message": "desaktiva" },
   "state_on": { "message": "riba" },
-  "state_off": { "message": "for di" }
+  "state_off": { "message": "pagá" }
 }

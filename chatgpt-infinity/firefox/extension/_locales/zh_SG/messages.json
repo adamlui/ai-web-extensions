@@ -14,7 +14,7 @@
   "menuLabel_replyTopic": { "message": "回复主题" },
   "menuLabel_all": { "message": "全部" },
   "menuLabel_replyInt": { "message": "回复间隔" },
-  "menuLabel_anchor": { "message": "Anchor" },
+  "menuLabel_anchor": { "message": "锚" },
   "menuLabel_modeNotifs": { "message": "模式通知" },
   "menuLabel_about": { "message": "关于" },
   "menuLabel_open": { "message": "打开" },

@@ -24,7 +24,7 @@
   "alert_updateAvail": { "message": "Tok pisin i go pinis" },
   "alert_newerVer": { "message": "Ol nupela tok" },
   "alert_isAvail": { "message": "em i kamap pinis" },
-  "alert_upToDate": { "message": "UPDATE" },
+  "alert_upToDate": { "message": "Ap-tu-deit" },
   "alert_isUpToDate": { "message": "ol i save mekim ol samting i kamap" },
   "alert_showYourSupport": { "message": "Em i soim olsem em i sapotim ol" },
   "alert_isOSS": { "message": "em i wanpela program bilong ol man i save yusim ol fon bilong ol long yusim ol fon bilong ol long helpim ol narapela" },
@@ -43,11 +43,11 @@
   "btnLabel_discuss": { "message": "Toktok" },
   "btnLabel_getSupport": { "message": "Kisim helpim" },
   "btnLabel_checkForUpdates": { "message": "Lukim ol nupela tok" },
-  "btnLabel_update": { "message": "UPDATE" },
+  "btnLabel_update": { "message": "Apdet" },
   "btnLabel_dismiss": { "message": "Lusim" },
   "link_viewChanges": { "message": "Lukim ol senis" },
   "state_enabled": { "message": "em i bin mekim olsem" },
   "state_disabled": { "message": "disable" },
-  "state_on": { "message": "long" },
-  "state_off": { "message": "i go" }
+  "state_on": { "message": "i stap on" },
+  "state_off": { "message": "i stap off" }
 }

@@ -67,7 +67,7 @@
   "helptip_buttonSettings": { "message": "ضبط الإعدادات المتعلقة بالأزرار" },
   "helptip_enableDisable": { "message": "تمكين / تعطيل" },
   "helptip_perSite": { "message": "لكل موقع" },
-  "helptip_run": { "message": "Run" },
+  "helptip_run": { "message": "يجري" },
   "alert_choosePlatform": { "message": "اختر منصة" },
   "alert_updateAvail": { "message": "تحديث متوفر" },
   "alert_newerVer": { "message": "تحديث لـ" },

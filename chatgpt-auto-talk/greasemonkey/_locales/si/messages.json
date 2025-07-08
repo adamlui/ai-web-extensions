@@ -36,7 +36,7 @@
   "btnLabel_discuss": { "message": "සාකච්ඡා කරන්න" },
   "btnLabel_getSupport": { "message": "Get Support" },
   "btnLabel_checkForUpdates": { "message": "Check for Updates" },
-  "btnLabel_update": { "message": "Update" },
+  "btnLabel_update": { "message": "යාවත්කාලීන කරන්න" },
   "btnLabel_dismiss": { "message": "Dismiss" },
   "link_viewChanges": { "message": "View changes" },
   "state_enabled": { "message": "සක්‍රීය කල" },

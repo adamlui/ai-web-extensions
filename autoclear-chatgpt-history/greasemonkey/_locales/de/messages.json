@@ -24,7 +24,7 @@
   "alert_updateAvail": { "message": "Update verfügbar" },
   "alert_newerVer": { "message": "Ein Update zu" },
   "alert_isAvail": { "message": "ist verfügbar" },
-  "alert_upToDate": { "message": "Up-to-date" },
+  "alert_upToDate": { "message": "Auf dem neuesten Stand" },
   "alert_isUpToDate": { "message": "ist auf dem aktuellen Stand" },
   "alert_showYourSupport": { "message": "Support" },
   "alert_isOSS": { "message": "ist Open-Source-Software, die durch 100% freiwillige Bemühungen kostenlos entwickelt und gepflegt wird" },

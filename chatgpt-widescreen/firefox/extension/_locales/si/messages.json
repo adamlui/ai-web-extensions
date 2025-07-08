@@ -33,7 +33,7 @@
   "about_poweredBy": { "message": "විසින් බල ගැන්වී ඇත" },
   "about_openSourceCode": { "message": "විවෘත කේතය" },
   "about_latestChanges": { "message": "නවතම වෙනස්කම්" },
-  "mode_widescreen": { "message": "Widescreen" },
+  "mode_widescreen": { "message": "පුළුල් තිරය" },
   "mode_fullWindow": { "message": "පූර්ණ - කවුළුව" },
   "mode_fullscreen": { "message": "සම්පූර්ණ තිරය (_F)" },
   "mode_toast": { "message": "ටෝස්ට් ප් ‍ රකාරය" },

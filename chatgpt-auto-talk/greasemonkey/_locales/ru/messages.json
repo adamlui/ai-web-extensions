@@ -17,7 +17,7 @@
   "alert_updateAvail": { "message": "Доступны обновления" },
   "alert_newerVer": { "message": "Обновление для" },
   "alert_isAvail": { "message": "доступно" },
-  "alert_upToDate": { "message": "Up-to-date" },
+  "alert_upToDate": { "message": "Обновлённый" },
   "alert_isUpToDate": { "message": "<PROG_NAME> в актуальном состоянии" },
   "alert_showYourSupport": { "message": "Выразите свою поддержку" },
   "alert_isOSS": { "message": "это программное обеспечение с открытым исходным кодом, созданное и поддерживаемое бесплатно благодаря 100% волонтерским усилиям" },

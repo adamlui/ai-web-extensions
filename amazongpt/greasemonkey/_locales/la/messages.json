@@ -66,7 +66,7 @@
   "alert_updateAvail": { "message": "Updateis available" },
   "alert_newerVer": { "message": "Omnia ad" },
   "alert_isAvail": { "message": "est disponibus" },
-  "alert_upToDate": { "message": "Up-to-date" },
+  "alert_upToDate": { "message": "Recens" },
   "alert_isUpToDate": { "message": "est up-to-date" },
   "alert_unavailable": { "message": "unicutus" },
   "alert_isOnlyAvailFor": { "message": "is only available for" },

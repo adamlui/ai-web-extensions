@@ -46,7 +46,7 @@
   "tooltip_newChat": { "message": "Նոր զրուցարան" },
   "tooltip_goto": { "message": "Գնացինք [???]" },
   "helptip_adjustSettingsRelatedTo": { "message": "Կարգավորել կարգավորումները, որոնք կապված են" },
-  "helptip_the": { "message": "The" },
+  "helptip_the": { "message": "ը" },
   "helptip_btns": { "message": "Կոճակներ" },
   "helptip_widescreenWidth": { "message": "Կարգավորեք կիրառվող լայնէկրանների քանակը" },
   "helptip_tallerChatboxHeight": { "message": "Կարգավորեք Taller Chatbox - ի կիրառման չափը" },

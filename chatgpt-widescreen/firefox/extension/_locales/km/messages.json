@@ -46,7 +46,7 @@
   "tooltip_newChat": { "message": "ការជជែកកំសាន្តថ្មី" },
   "tooltip_goto": { "message": "ទៅ" },
   "helptip_adjustSettingsRelatedTo": { "message": "លៃតម្រូវការកំណត់ដែលទាក់ទងនឹង" },
-  "helptip_the": { "message": "The" },
+  "helptip_the": { "message": "នេះ។" },
   "helptip_btns": { "message": "ប៊ូតុង" },
   "helptip_widescreenWidth": { "message": "លៃតម្រូវចំនួនអេក្រង់ធំដើម្បីអនុវត្ត" },
   "helptip_tallerChatboxHeight": { "message": "លៃតម្រូវបរិមាណនៃ Taller Chatbox ដើម្បីអនុវត្ត" },

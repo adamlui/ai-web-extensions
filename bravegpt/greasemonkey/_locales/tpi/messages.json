@@ -131,7 +131,7 @@
   "link_viewChanges": { "message": "Lukim ol senis" },
   "link_shareFeedback": { "message": "Toksave" },
   "prefix_exit": { "message": "Kisim" },
-  "state_on": { "message": "Long" },
+  "state_on": { "message": "i stap on" },
   "state_off": { "message": "Kisim i go" },
   "state_no": { "message": "Nogat" }
 }

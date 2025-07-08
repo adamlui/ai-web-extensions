@@ -36,7 +36,7 @@
   "btnLabel_discuss": { "message": "Discuss" },
   "btnLabel_getSupport": { "message": "Destek Al" },
   "btnLabel_checkForUpdates": { "message": "Güncellemeleri Kontrol Et" },
-  "btnLabel_update": { "message": "Update" },
+  "btnLabel_update": { "message": "Güncelleme" },
   "btnLabel_dismiss": { "message": "Yok say" },
   "link_viewChanges": { "message": "Değişen Dosyalar" },
   "state_enabled": { "message": "etkinleştirilmiş" },

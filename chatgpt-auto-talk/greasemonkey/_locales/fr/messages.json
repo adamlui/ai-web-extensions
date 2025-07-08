@@ -36,7 +36,7 @@
   "btnLabel_discuss": { "message": "Discutez" },
   "btnLabel_getSupport": { "message": "Obtenir de l’aide" },
   "btnLabel_checkForUpdates": { "message": "Vérifier les Mises à jour" },
-  "btnLabel_update": { "message": "Update" },
+  "btnLabel_update": { "message": "Mise à jour" },
   "btnLabel_dismiss": { "message": "Rejeter" },
   "link_viewChanges": { "message": "Afficher les modifications" },
   "state_enabled": { "message": "activé" },

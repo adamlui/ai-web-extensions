@@ -78,6 +78,6 @@
   "unit_seconds": { "message": "sekond" },
   "state_enabled": { "message": "hapim" },
   "state_disabled": { "message": "diwai" },
-  "state_on": { "message": "long" },
-  "state_off": { "message": "i go" }
+  "state_on": { "message": "i stap on" },
+  "state_off": { "message": "i stap off" }
 }

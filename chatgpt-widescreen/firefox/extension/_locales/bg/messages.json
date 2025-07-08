@@ -46,7 +46,7 @@
   "tooltip_newChat": { "message": "Нов чат" },
   "tooltip_goto": { "message": "Отиди към" },
   "helptip_adjustSettingsRelatedTo": { "message": "Коригиране на настройките, свързани с" },
-  "helptip_the": { "message": "The" },
+  "helptip_the": { "message": "" },
   "helptip_btns": { "message": "Бутони" },
   "helptip_widescreenWidth": { "message": "Коригирайте размера на широкоекранния екран, за да приложите" },
   "helptip_tallerChatboxHeight": { "message": "Коригирайте размера на по - високата чат кутия, за да приложите" },

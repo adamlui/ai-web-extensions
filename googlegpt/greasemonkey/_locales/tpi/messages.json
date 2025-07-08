@@ -94,7 +94,7 @@
   "alert_updateAvail": { "message": "Tok pisin i go pinis" },
   "alert_newerVer": { "message": "Ol nupela tok" },
   "alert_isAvail": { "message": "em i kamap pinis" },
-  "alert_upToDate": { "message": "UPDATE" },
+  "alert_upToDate": { "message": "Ap-tu-deit" },
   "alert_isUpToDate": { "message": "em i stap up-to-date" },
   "alert_unavailable": { "message": "i no gat rot" },
   "alert_isOnlyAvailFor": { "message": "em i stap long rot bilong" },
@@ -124,7 +124,7 @@
   "btnLabel_discuss": { "message": "Toktok" },
   "btnLabel_getSupport": { "message": "Kisim helpim" },
   "btnLabel_checkForUpdates": { "message": "Lukim ol eleksen" },
-  "btnLabel_update": { "message": "UPDATE" },
+  "btnLabel_update": { "message": "Apdet" },
   "btnLabel_dismiss": { "message": "Lusim" },
   "btnLabel_visitPage": { "message": "Visitim pes" },
   "btnLabel_download": { "message": "Download" },
@@ -132,7 +132,7 @@
   "link_viewChanges": { "message": "Lukim ol senis" },
   "link_shareFeedback": { "message": "Toksave long ol samting" },
   "prefix_exit": { "message": "Kisim" },
-  "state_on": { "message": "Long" },
+  "state_on": { "message": "i stap on" },
   "state_off": { "message": "Kisim i go" },
   "state_no": { "message": "Nogat" }
 }

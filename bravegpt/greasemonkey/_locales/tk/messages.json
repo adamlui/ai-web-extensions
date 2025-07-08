@@ -94,7 +94,7 @@
   "alert_updateAvail": { "message": "Täzeleşdir" },
   "alert_newerVer": { "message": "Täzeleşdirmek" },
   "alert_isAvail": { "message": "häzir bar" },
-  "alert_upToDate": { "message": "Up-to-date" },
+  "alert_upToDate": { "message": "Täze" },
   "alert_isUpToDate": { "message": "häzirki döwürde" },
   "alert_unavailable": { "message": "ähli zat ýok" },
   "alert_isOnlyAvailFor": { "message": "ýeke ulanmaga rugsat berilýän" },

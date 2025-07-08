@@ -66,7 +66,7 @@
   "alert_updateAvail": { "message": "Доступне оновлення" },
   "alert_newerVer": { "message": "Оновлення для" },
   "alert_isAvail": { "message": "не доступно" },
-  "alert_upToDate": { "message": "Up-to-date" },
+  "alert_upToDate": { "message": "Актуальний" },
   "alert_isUpToDate": { "message": "оновлено" },
   "alert_unavailable": { "message": "недоступне" },
   "alert_isOnlyAvailFor": { "message": "доступний лише для" },

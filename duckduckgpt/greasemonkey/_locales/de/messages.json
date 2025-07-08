@@ -94,7 +94,7 @@
   "alert_updateAvail": { "message": "Update verfügbar" },
   "alert_newerVer": { "message": "Ein Update zu" },
   "alert_isAvail": { "message": "ist verfügbar" },
-  "alert_upToDate": { "message": "Up-to-date" },
+  "alert_upToDate": { "message": "Auf dem neuesten Stand" },
   "alert_isUpToDate": { "message": "ist auf dem aktuellen Stand" },
   "alert_unavailable": { "message": "Weil der Artikel nicht verfügbar ist" },
   "alert_isOnlyAvailFor": { "message": "Es steht nur für <stringmarket stringmarket=\"omnipcx_office\"/> zur Verfügung" },

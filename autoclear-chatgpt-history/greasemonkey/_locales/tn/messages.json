@@ -18,7 +18,7 @@
   "mode_autoclear": { "message": "Auto-Clear" },
   "helptip_clearNow": { "message": "Hisitori ya motlotlo e e tlhaloganyesegang sentle jaanong jaana" },
   "helptip_toggleVis": { "message": "SHOW Auto-Clear toggle in sidebar" },
-  "helptip_modeNotifs": { "message": "Bontsha dikitsiso fa o toggling modes/settings" },
+  "helptip_modeNotifs": { "message": "Bontsha dikitsiso fa o fetola mekgwa/diseting" },
   "notif_chatsCleared": { "message": "Hisitori ya motlotlo e phimotswe" },
   "alert_choosePlatform": { "message": "Tlhopha polateforomo ya thelebišene" },
   "alert_updateAvail": { "message": "Diphetogo tse di leng teng" },

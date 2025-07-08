@@ -3,7 +3,7 @@
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Gbu li ti mo na ndo ti atënë so ayeke na yâ ti Bible" },
   "menuLabel_toggleVis": { "message": "A yeke bâ ni na lê ti azo" },
-  "menuLabel_about": { "message": "About sara" },
+  "menuLabel_about": { "message": "Na ndo ni" },
   "menuLabel_donate": { "message": "Sara mbeni ye ti mû maboko na zo" },
   "about_author": { "message": "Author sara" },
   "about_and": { "message": "na" },
@@ -40,7 +40,7 @@
   "btnLabel_dismiss": { "message": "Dismiss" },
   "link_viewChanges": { "message": "View changes" },
   "state_enabled": { "message": "enable awe" },
-  "state_disabled": { "message": "disable awe" },
-  "state_on": { "message": "na ndö ti" },
-  "state_off": { "message": "ti zia lege ni" }
+  "state_disabled": { "message": "zo ti kpale ti seni" },
+  "state_on": { "message": "na nduzu" },
+  "state_off": { "message": "zia lege ni" }
 }

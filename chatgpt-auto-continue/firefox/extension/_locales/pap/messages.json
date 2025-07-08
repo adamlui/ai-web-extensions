@@ -4,7 +4,7 @@
   "appDesc": { "message": "SimpanSimpan Clasificacion de Respuestas Automáticas Untuk Nanti" },
   "menuLabel_settings": { "message": "Establesimentunan" },
   "menuLabel_notif": { "message": "Notifikashon" },
-  "menuLabel_notifs": { "message": "Notifikashon" },
+  "menuLabel_notifs": { "message": "Notifikashonnan" },
   "menuLabel_autoScroll": { "message": "Auto Screenshot" },
   "menuLabel_anchor": { "message": "Anker" },
   "menuLabel_modeNotifs": { "message": "Notifikashon di Mode" },
@@ -29,7 +29,7 @@
   "alert_updateAvail": { "message": "Actualizacion Disponible" },
   "alert_newerVer": { "message": "Un update pa" },
   "alert_isAvail": { "message": "ta disponibel" },
-  "alert_upToDate": { "message": "UPDATE" },
+  "alert_upToDate": { "message": "Aktualisa" },
   "alert_isUpToDate": { "message": "tabata up-to-date" },
   "alert_showYourSupport": { "message": "Mustra bo sosten" },
   "alert_isOSS": { "message": "software Abierto Creado Y Manteniendo Gratis Por 100% Voluntario" },
@@ -54,5 +54,5 @@
   "link_viewChanges": { "message": "Bista riba kambionan" },
   "state_disabled": { "message": "desabilidat" },
   "state_on": { "message": "riba" },
-  "state_off": { "message": "for di" }
+  "state_off": { "message": "pagá" }
 }

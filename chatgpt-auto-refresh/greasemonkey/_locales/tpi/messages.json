@@ -44,12 +44,12 @@
   "btnLabel_discuss": { "message": "Toktok" },
   "btnLabel_getSupport": { "message": "Kisim helpim" },
   "btnLabel_checkForUpdates": { "message": "Lukim ol nupela tok" },
-  "btnLabel_update": { "message": "UPDATE" },
+  "btnLabel_update": { "message": "Apdet" },
   "btnLabel_dismiss": { "message": "Lusim" },
   "link_viewChanges": { "message": "Lukim ol senis" },
   "unit_secs": { "message": "ol seken" },
   "state_enabled": { "message": "em i bin mekim olsem" },
   "state_disabled": { "message": "pasim" },
-  "state_on": { "message": "long" },
-  "state_off": { "message": "i go" }
+  "state_on": { "message": "i stap on" },
+  "state_off": { "message": "i stap off" }
 }

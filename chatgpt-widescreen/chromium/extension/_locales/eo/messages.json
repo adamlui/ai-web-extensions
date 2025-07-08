@@ -67,7 +67,7 @@
   "helptip_buttonSettings": { "message": "Adapti agordojn rilatajn al butonoj" },
   "helptip_enableDisable": { "message": "Ebligi/malebligi" },
   "helptip_perSite": { "message": "por retejo" },
-  "helptip_run": { "message": "RUN" },
+  "helptip_run": { "message": "Kuru" },
   "alert_choosePlatform": { "message": "Elekti platformon" },
   "alert_updateAvail": { "message": "Neniu priskribo disponebla" },
   "alert_newerVer": { "message": "Ĝisdatigo al" },

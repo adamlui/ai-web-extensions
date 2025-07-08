@@ -24,7 +24,7 @@
   "alert_updateAvail": { "message": "Updateis available" },
   "alert_newerVer": { "message": "Omnia ad" },
   "alert_isAvail": { "message": "est disponibus" },
-  "alert_upToDate": { "message": "Up-to-date" },
+  "alert_upToDate": { "message": "Recens" },
   "alert_isUpToDate": { "message": "est up-to-date" },
   "alert_showYourSupport": { "message": "Showa adresse tua" },
   "alert_isOSS": { "message": "[30] open-source software built & maintainitur in free per 100% volunteer efforts" },

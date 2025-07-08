@@ -43,7 +43,7 @@
   "btnLabel_discuss": { "message": "Razprava" },
   "btnLabel_getSupport": { "message": "Podpora" },
   "btnLabel_checkForUpdates": { "message": "Preveri stanje posodobitev" },
-  "btnLabel_update": { "message": "Update" },
+  "btnLabel_update": { "message": "Posodobitev" },
   "btnLabel_dismiss": { "message": "Opusti" },
   "link_viewChanges": { "message": "Poglej spremembe" },
   "state_enabled": { "message": "omogočeno" },

@@ -10,7 +10,7 @@
   "menuLabel_display": { "message": "Amosar" },
   "menuLabel_width": { "message": "Largura" },
   "menuLabel_height": { "message": "Altura" },
-  "menuLabel_taller": { "message": "TALLER" },
+  "menuLabel_taller": { "message": "Máis alto" },
   "menuLabel_wider": { "message": "Amplo" },
   "menuLabel_newChatBtn": { "message": "Novo botón de conversa" },
   "menuLabel_hiddenHeader": { "message": "Cabeceira acochada" },

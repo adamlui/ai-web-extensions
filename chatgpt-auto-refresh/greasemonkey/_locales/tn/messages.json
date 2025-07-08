@@ -17,7 +17,7 @@
   "about_latestChanges": { "message": "Diphetogo tsa sesweng" },
   "prompt_updateInt": { "message": "Bakaya setlhare sa boitlhotlho (mefuta)" },
   "helptip_toggleVis": { "message": "SHOW Auto-Refresh toggle in sidebar" },
-  "helptip_modeNotifs": { "message": "Bontsha dikitsiso fa o toggling modes/settings" },
+  "helptip_modeNotifs": { "message": "Bontsha dikitsiso fa o fetola mekgwa/diseting" },
   "helptip_refreshInt": { "message": "Palogare ya go diega magareng ga tse di lapolosang (mo metsotswaneng)" },
   "alert_intUpdated": { "message": "Sebaka se se ntšhwafaditsweng" },
   "alert_willRefresh": { "message": "Thulaganyo ya ChatGPT e tlile go ntšhwafatsa nako le nako" },

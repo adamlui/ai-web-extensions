@@ -33,7 +33,7 @@
   "about_poweredBy": { "message": "Alimentado por" },
   "about_openSourceCode": { "message": "Código-fonte aberto" },
   "about_latestChanges": { "message": "Últimas modificações" },
-  "mode_widescreen": { "message": "Widescreen" },
+  "mode_widescreen": { "message": "Tela ampla" },
   "mode_fullWindow": { "message": "Modo Janela Completa" },
   "mode_fullscreen": { "message": "Ecrã inteiro" },
   "mode_toast": { "message": "Modo Torrada" },

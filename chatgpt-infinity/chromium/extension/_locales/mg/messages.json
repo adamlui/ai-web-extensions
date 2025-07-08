@@ -28,7 +28,7 @@
   "about_poweredBy": { "message": "Ampandehanin'i" },
   "about_openSourceCode": { "message": "Kaody niaingana" },
   "about_latestChanges": { "message": "Fiovana farany" },
-  "mode_toast": { "message": "Toast Mode" },
+  "mode_toast": { "message": "Mode Toast" },
   "prompt_updateReplyLang": { "message": "Ampidiro ny fiteny fialamboly" },
   "prompt_updateReplyTopic": { "message": "Ampidiro ny soratra" },
   "prompt_orEnter": { "message": "na ampidiro" },

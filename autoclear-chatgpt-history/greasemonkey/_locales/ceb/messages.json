@@ -24,7 +24,7 @@
   "alert_updateAvail": { "message": "Magamit ang pag-update" },
   "alert_newerVer": { "message": "Usa ka update sa" },
   "alert_isAvail": { "message": "mao available" },
-  "alert_upToDate": { "message": "UPDATE" },
+  "alert_upToDate": { "message": "Pinakabag-o" },
   "alert_isUpToDate": { "message": "uPDATE kini" },
   "alert_showYourSupport": { "message": "Ipakita ang imong suporta" },
   "alert_isOSS": { "message": "ang open-source software nga gitukod ug gipadayon nga libre pinaagi sa 100% nga mga paningkamot sa boluntaryo" },

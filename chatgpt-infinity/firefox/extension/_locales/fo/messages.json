@@ -25,7 +25,7 @@
   "about_and": { "message": "og" },
   "about_contributors": { "message": "ískoytisfólk" },
   "about_version": { "message": "Útgáva" },
-  "about_poweredBy": { "message": "Powered by SFX" },
+  "about_poweredBy": { "message": "Drivið av" },
   "about_openSourceCode": { "message": "Opna keldukota" },
   "about_latestChanges": { "message": "Nýggju broytingarnar" },
   "mode_toast": { "message": "Toastmodus" },
@@ -78,6 +78,6 @@
   "unit_seconds": { "message": "sekund" },
   "state_enabled": { "message": "virkt" },
   "state_disabled": { "message": "óvirkt" },
-  "state_on": { "message": "t" },
-  "state_off": { "message": "av" }
+  "state_on": { "message": "á" },
+  "state_off": { "message": "fara" }
 }

@@ -24,7 +24,7 @@
   "alert_updateAvail": { "message": "Actualizacion Disponible" },
   "alert_newerVer": { "message": "Un update pa" },
   "alert_isAvail": { "message": "ta disponibel" },
-  "alert_upToDate": { "message": "UPDATE" },
+  "alert_upToDate": { "message": "Aktualisa" },
   "alert_isUpToDate": { "message": "tabata up-to-date" },
   "alert_showYourSupport": { "message": "Mustra bo sosten" },
   "alert_isOSS": { "message": "software Abierto Creado Y Manteniendo Gratis Por 100% Voluntario" },
@@ -49,5 +49,5 @@
   "state_enabled": { "message": "pèrmití" },
   "state_disabled": { "message": "desabilidat" },
   "state_on": { "message": "riba" },
-  "state_off": { "message": "for di" }
+  "state_off": { "message": "pagá" }
 }
