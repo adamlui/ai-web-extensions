@@ -1,5 +1,3 @@
-importScripts('lib/json5.min.js')
-
 // Init DATA
 (async () => {
 
