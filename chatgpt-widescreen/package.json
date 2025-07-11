@@ -41,8 +41,8 @@
   },
   "devDependencies": {
     "@adamlui/minify.js": "^1.8.6",
-    "@eslint/json": "^0.12.0",
-    "@eslint/markdown": "^6.6.0",
+    "@eslint/json": "^0.13.0",
+    "@eslint/markdown": "^7.0.0",
     "@html-eslint/eslint-plugin": "^0.42.0",
     "@html-eslint/parser": "^0.42.0",
     "@stylistic/eslint-plugin": "^5.1.0",
@@ -55,6 +55,6 @@
     "ssri": "^12.0.0"
   },
   "dependencies": {
-    "@eslint/css": "^0.9.0"
+    "@eslint/css": "^0.10.0"
   }
 }
