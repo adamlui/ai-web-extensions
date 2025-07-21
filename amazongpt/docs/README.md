@@ -15,8 +15,6 @@
     <img height=32 alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-fc4f2d.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/amazongpt/blob/main/greasemonkey/amazongpt.user.js">
     <img height=32 src="https://img.shields.io/github/size/KudoAI/amazongpt/greasemonkey/amazongpt.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></img></a>
-<a href="https://github.com/KudoAI/amazongpt/commits">
-    <img height=32 alt="[GitHub commits]" src="https://img.shields.io/github/commit-activity/m/KudoAI/googlegpt?label=Commits&logo=github&logoColor=white&labelColor=464646&color=7bb7fc&style=for-the-badge"></a>
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/Clones-912/month-869da0?logo=github&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/kudoai/amazongpt">
