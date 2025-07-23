@@ -7,7 +7,7 @@ window.styles = {
 
     get outerDivSelector() { // requires env.site
         const { site } = env
-        return site == 'chatgpt' ? 'div.text-base'
+        return site == 'chatgpt' ? 'div.text-base > div'
              : site == 'perplexity' ? `div.max-w-threadWidth, .max-w-threadContentWidth, div.max-w-screen-lg,
                                        div[class*="max-w-\\[700px\\]"]` // Trending Topics on /academic
              : /* poe */ 'div[class*=ChatHomeMain_centered], div[class*=ChatMessagesView]'
