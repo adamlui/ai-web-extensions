@@ -10,13 +10,13 @@ window.chatbar = {
     },
 
     is: {
-        async dark() { // requires lib/chatbar.js + env
+        async dark() { // requires env.site
             return env.site != 'chatgpt' ? undefined
                 : getComputedStyle(await chatbar.get() || document.documentElement)
                     .backgroundColor == 'rgb(33, 33, 33)'
         },
 
-        async tall() { return (await chatbar.get())?.getBoundingClientRect().height > 60 } // requires lib/chatbar.js
+        async tall() { return (await chatbar.get())?.getBoundingClientRect().height > 60 }
     },
 
     async reset() { // requires <env|sites>
