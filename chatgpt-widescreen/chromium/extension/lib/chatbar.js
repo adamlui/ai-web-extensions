@@ -4,15 +4,16 @@ window.chatbar = {
 
     async get() { // requires lib/dom.js + <env|sites>
         const { site } = env, { [site]: { selectors }} = sites
-        return site == 'chatgpt' ? document.querySelector('form[data-type=unified-composer] > div')
-            : (await dom.get.loadedElem(selectors.input)).parentNode.parentNode
+        return site == 'chatgpt' ?
+            document.querySelector('form[data-type=unified-composer] > div[class*="overflow-clip"]')
+                : (await dom.get.loadedElem(selectors.input)).parentNode.parentNode
     },
 
     is: {
         async dark() { // requires lib/chatbar.js + env
             return env.site != 'chatgpt' ? undefined
                 : getComputedStyle(await chatbar.get() || document.documentElement)
-                    .backgroundColor == 'rgb(48, 48, 48)'
+                    .backgroundColor == 'rgb(33, 33, 33)'
         },
 
         async tall() { return (await chatbar.get())?.getBoundingClientRect().height > 60 } // requires lib/chatbar.js
