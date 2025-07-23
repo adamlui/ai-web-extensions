@@ -70,7 +70,7 @@ window.buttons = {
             if (site == 'chatgpt' && hasTallChatbar) {
                 btn.style.bottom = '-0.5px'
                 if (isGuestTempChat && btnType == 'widescreen') btn.style.marginRight = '3px'
-            } else btn.style.top = `${ site == 'chatgpt' ? -3.25 : site == 'poe' ? 3.5 : 0 }px`
+            } else btn.style.top = `${ site == 'poe' ? 3.5 : 0 }px`
             btn.style.margin = `0 ${
                 site == 'chatgpt' ? -5
               : site == 'perplexity' ? ( env.browser.isFF ? 3 : -6 )
