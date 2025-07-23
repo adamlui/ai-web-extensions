@@ -274,6 +274,8 @@ This script exists thanks to code, translations, issues & ideas from the followi
     <img width=47 title="@lijiachang" src="https://avatars.githubusercontent.com/u/28041718?first-contrib=2025.5.22-reported-poe-btn-became-undefined"></img></a>
 <a href="#">
     <img width=47 title="T. H." src="https://lh3.googleusercontent.com/a-/ALV-UjXUG8oXqPfr4ipnBg_byILlBIaZbi6Ie-vnd_BsKK5F7ZMTme1LMw=s48-w48-h48?first-contrib=2025.6.5-found-no-wider-chatbox-on-install-confusing-leading-to-new-default-val"></img></a>
+<a href="https://github.com/JangGeol9">
+    <img width=47 title="@JangGeol9" src="https://avatars.githubusercontent.com/u/131735042?first-contrib=2025.7.22-reported-widescreen-broke"></img></a>
 <a href="https://github.com/dependabot">
     <img width=46 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp">
