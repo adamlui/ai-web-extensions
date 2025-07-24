@@ -5,7 +5,7 @@
   "description": "__MSG_appDesc__",
   "version": "2025.6.30.1",
   "author": "Adam Lui",
-  "homepage_url": "https://www.braveomnibox.com",
+  "homepage_url": "https://braveomnibox.com",
   "default_locale": "en",
   "icons": {
     "16": "icons/icon16.png",

@@ -5,7 +5,7 @@
   "description": "__MSG_appDesc__",
   "version": "2025.6.19",
   "author": "Adam Lui",
-  "homepage_url": "https://www.perplexityomnibox.com",
+  "homepage_url": "https://perplexityomnibox.com",
   "default_locale": "en",
   "icons": {
     "16": "icons/icon16.png",
