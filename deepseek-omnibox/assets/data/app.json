@@ -2,6 +2,7 @@
   "name": "DeepSeek Omnibox", "symbol": "🐋", "slug": "deepseek-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
+    "app": "https://deepseekomnibox.com",
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox@latest/assets",
     "discuss": "https://github.com/adamlui/deepseek-omnibox/discussions",
     "donate": {

@@ -2,6 +2,7 @@
   "name": "ChatGPT Omnibox", "symbol": "🤖", "slug": "chatgpt-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
+    "app": "https://chatgptomnibox.com",
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-omnibox@latest/assets",
     "discuss": "https://github.com/adamlui/chatgpt-omnibox/discussions",
     "donate": {

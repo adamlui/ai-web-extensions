@@ -5,6 +5,7 @@
   "urls": {
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@latest/assets",
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
+    "app": "https://autoclearchatgpt.com",
     "chatgptjs": "https://chatgpt.js.org",
     "contributors": "https://docs.autoclearchatgpt.com/#-contributors",
     "discuss": "https://github.com/adamlui/autoclear-chatgpt-history/discussions",

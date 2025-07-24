@@ -2,6 +2,7 @@
   "name": "You.com Omnibox", "symbol": "🤖", "slug": "you-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
+    "app": "https://youomnibox.com",
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/you.com-omnibox@latest/assets",
     "discuss": "https://github.com/adamlui/you-omnibox/discussions",
     "donate": {

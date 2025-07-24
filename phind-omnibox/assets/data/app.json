@@ -2,6 +2,7 @@
   "name": "Phind Omnibox", "symbol": "🤖", "slug": "phind-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
+    "app": "https://phindomnibox.com",
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/phind-omnibox@latest/assets",
     "discuss": "https://github.com/adamlui/phind-omnibox/discussions",
     "donate": {

@@ -5,6 +5,7 @@
   "urls": {
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@latest/assets",
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
+    "app": "https://chatgptautorefresh.com",
     "chatgptjs": "https://chatgpt.js.org",
     "contributors": "https://docs.chatgptautorefresh.com/#-contributors",
     "discuss": "https://github.com/adamlui/chatgpt-auto-refresh/discussions",

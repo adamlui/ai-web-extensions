@@ -5,6 +5,7 @@
   "urls": {
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@latest/assets",
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
+    "app": "https://chatgptautotalk.com",
     "chatgptjs": "https://chatgpt.js.org",
     "contributors": "https://docs.chatgptautotalk.com/#-contributors",
     "discuss": "https://github.com/adamlui/chatgpt-auto-talk/discussions",
