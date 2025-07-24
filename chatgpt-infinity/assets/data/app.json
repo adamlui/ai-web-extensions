@@ -3,9 +3,9 @@
   "configKeyPrefix": "chatGPTinfinity",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "assets": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@latest/assets",
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
     "app": "https://chatgptinfinity.com",
+    "assets": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@latest/assets",
     "chatgptjs": "https://chatgpt.js.org",
     "contributors": "https://docs.chatgptautorefresh.com/#-contributors",
     "discuss": "https://github.com/adamlui/chatgpt-infinity /discussions",

@@ -3,9 +3,9 @@
   "author": [
     { "name": "Adam Lui", "url": "https://github.com/adamlui" }, { "name": "KudoAI", "url": "https://www.kudoai.com" }],
   "urls": {
+    "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
     "app": "https://www.googlegpt.io",
     "assets": "https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@latest/assets",
-    "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
     "chatgptjs": "https://chatgpt.js.org",
     "contributors": "https://docs.googlegpt.io/#-contributors",
     "discuss": "https://github.com/KudoAI/googlegpt/discussions",
