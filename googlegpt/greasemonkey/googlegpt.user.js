@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.7.28
+// @version                  2025.7.31
 // @license                  MIT
 // @icon                     https://assets.googlegpt.io/images/icons/app/black/icon48.png?v=12a91c0
 // @icon64                   https://assets.googlegpt.io/images/icons/app/black/icon64.png?v=12a91c0
@@ -372,7 +372,6 @@
 // @match                    *://*.google.co.zm/search*
 // @match                    *://*.google.co.zw/search*
 // @match                    *://*.google.cat/search*
-// @match                    *://github.com/*/googlegpt*
 // @include                  https://auth0.openai.com
 // @connect                  am.aifree.site
 // @connect                  api.binjie.fun
@@ -3010,13 +3009,6 @@
     update.appStyle()
     ;['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
-
-    // Hide GF alert on GitHub if found
-    if (location.host == 'github.com') {
-        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
-            .find(alert => alert.textContent.includes('Greasy Fork'))
-        return !gfAlert ? undefined : gfAlert.style.display = 'none'
-    }
 
     // APPEND to Google
     app.centerCol = document.querySelector('#center_col') || document.querySelector('#main')

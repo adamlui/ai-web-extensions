@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.7.28
+// @version                2025.7.31
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -182,7 +182,6 @@
 // @compatible             waterfox
 // @compatible             whale
 // @match                  *://duckduckgo.com/?*
-// @match                  *://github.com/*/duckduckgpt*
 // @include                https://auth0.openai.com
 // @connect                am.aifree.site
 // @connect                api.binjie.fun
@@ -2821,13 +2820,6 @@
     update.appStyle()
     ;['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
-
-    // Hide GF alert on GitHub if found
-    if (location.host == 'github.com') {
-        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
-            .find(alert => alert.textContent.includes('Greasy Fork'))
-        return !gfAlert ? undefined : gfAlert.style.display = 'none'
-    }
 
     // Create/classify/fill feedback FOOTER
     app.footer = dom.create.elem('footer', { class: 'fade-in anchored-hidden' })

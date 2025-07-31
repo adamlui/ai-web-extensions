@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.7.28
+// @version               2025.7.31
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -182,7 +182,6 @@
 // @compatible            waterfox
 // @compatible            whale
 // @match                 *://search.brave.com/search*
-// @match                 *://github.com/*/bravegpt*
 // @include               https://auth0.openai.com
 // @connect               am.aifree.site
 // @connect               api.binjie.fun
@@ -2822,13 +2821,6 @@
     update.appStyle()
     ;['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
-
-    // Hide GF alert on GitHub if found
-    if (location.host == 'github.com') {
-        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
-            .find(alert => alert.textContent.includes('Greasy Fork'))
-        return !gfAlert ? undefined : gfAlert.style.display = 'none'
-    }
 
     // APPEND to Brave
     app.parentDivSelector = env.browser.isMobile ? '#results' : '.sidebar'

@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.7.31.2
+// @version             2025.7.31.3
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -250,7 +250,6 @@
 // @compatible          qq
 // @match               *://chatgpt.com/*
 // @match               *://poe.com/*
-// @match               *://github.com/*/chatgpt-widescreen*
 // @connect             cdn.jsdelivr.net
 // @connect             gm.chatgptwidescreen.com
 // @connect             raw.githubusercontent.com
@@ -289,13 +288,6 @@
 //  © 2023–2025 KudoAI & contributors under the MIT license.
 
 (async () => {
-
-    // Hide GF alert on GitHub if found
-    if (location.host == 'github.com') {
-        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
-            .find(alert => alert.textContent.includes('Greasy Fork'))
-        return !gfAlert ? undefined : gfAlert.style.display = 'none'
-    }
 
     // Init ENV context
     window.env = {

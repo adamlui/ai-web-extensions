@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.7.28
+// @version                2025.7.31
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -60,7 +60,6 @@
 // @match                  *://www.amazon.sa/*
 // @match                  *://www.amazon.se/*
 // @match                  *://www.amazon.sg/*
-// @match                  *://github.com/*/amazongpt*
 // @exclude                *://*.amazon.*/ap/*
 // @exclude                *://*.amazon.*/message-us*
 // @include                https://auth0.openai.com
@@ -2118,13 +2117,6 @@
     update.appStyle()
     ;['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
-
-    // Hide GF alert on GitHub if found
-    if (location.host == 'github.com') {
-        const gfAlert = [...document.querySelectorAll('.markdown-alert')]
-            .find(alert => alert.textContent.includes('Greasy Fork'))
-        return !gfAlert ? undefined : gfAlert.style.display = 'none'
-    }
 
     // APPEND AMAZONGPT to Amazon
     document.body.append(app.div)
