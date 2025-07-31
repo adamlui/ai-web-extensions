@@ -37,7 +37,7 @@ window.styles = {
                 chatgpt: `main form { max-width: ${
                     toWiden ? wcbWidth : window.wsMinWidth -128 }px !important ; margin: auto }`,
                 poe: toWiden && `[class*=ChatHomeMain_inputContainer], [class^=ChatPageMainFooter_footerInner] {
-                    width: ${wcbWidth}px ; margin-right: 15px }`
+                    width: ${wcbWidth}px !important ; margin-right: 15px }`
             }[site]
         }
     },
