@@ -33,13 +33,6 @@
     <img height=31 alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/googlegpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-</div>
-
-> [!IMPORTANT]
-> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/white/icon25.png"><img height="12.5" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/black/icon25.png"></picture> _**Greasy Fork users:** If you installed GoogleGPT **before January 18, 2025**, auto-updates no longer work because the script's update mechanism has migrated to GitHub. To continue receiving updates, click the green 'Install this script' button below (once) or click [this link](https://gm.googlegpt.io) (once)_
-
-<div align="center">
-
 <img height=6px width="100%" src="https://assets.googlegpt.io/images/separators/gradient-aqua.png">
 
 <h3>🤖 Bring AI chat & search summaries to Google Search, powered by the latest LLMs</h3>

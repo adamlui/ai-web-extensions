@@ -37,13 +37,6 @@
     <img height=31 alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-auto-continue?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-</div>
-
-> [!IMPORTANT]
-> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/white/icon25.png"><img height="12.5" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/black/icon25.png"></picture> _**Greasy Fork users:** If you installed ChatGPT Auto-Continue **before January 18, 2025**, auto-updates no longer work because the script's update mechanism has migrated to GitHub. To continue receiving updates, click the 'Install Greasemonkey Userscript' button below (once) or click [this link](https://gm.chatgptautocontinue.com) (once)_
-
-<div align="center">
-
 <a href="https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
     <img alt="[Get for Chrome]" width=auto height=60 src="https://assets.chatgptautocontinue.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://edge.chatgptautocontinue.com">

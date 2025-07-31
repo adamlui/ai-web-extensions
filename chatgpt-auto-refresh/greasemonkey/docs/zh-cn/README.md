@@ -33,9 +33,6 @@
 
 ### 通过后台请求保持 ChatGPT 会话新鲜，以消除网络错误 + Cloudflare 检查。
 
-> [!IMPORTANT]
-><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/white/icon25.png"><img height="12.5" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/black/icon25.png"></picture>  _**Greasy Fork 用户：** 如果您在 **2025 年 1 月 18 日** 之前安装了 ChatGPT 自动刷新，则自动更新将不再起作用，因为脚本的更新机制已迁移到 GitHub。要继续接收更新，请点击下面的绿色 “安装此脚本” 按钮（一次）或点击 [此链接](https://gm.chatgptautorefresh.com)（一次）_
-
 <a href="https://gm.chatgptautorefresh.com"><img height=45 alt="[安装这个脚本]" src="https://assets.chatgptautorefresh.com/images/buttons/greasy-fork/zh-cn/install-button.svg"></a><a href="#-如何安装"><img height=45 alt="[如何安装]" title="如何安装" src="https://assets.chatgptautorefresh.com/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [讨论](https://github.com/adamlui/chatgpt-auto-refresh/discussions) /
