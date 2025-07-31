@@ -108,7 +108,9 @@ window.styles = {
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
                 chatgpt: `
                     ${outerDivSelector} { max-width: ${wsWidth}px !important } /* widen outer div */
-                    .tableContainer { min-width: 100% }`, // widen tables
+                    div[class*=tableContainer] { min-width: 100vw }  /* widen tables */
+                    div[class*=tableWrapper] { min-width: ${wsWidth}px }
+                    div[class*=tableWrapper] > table { width: 100% }`,
                 perplexity: `
                     ${outerDivSelector} { max-width: ${wsWidth}px }
                     ${ location.pathname.startsWith('/collections') ? '' // widen inner-left div
