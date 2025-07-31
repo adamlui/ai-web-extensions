@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Skrine e e Tologang" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "E tokafatsa ChatGPT ka mekgwa ya sekerini se se bulegileng/se se tletseng/se seleele. Gape e dira mo perplexity.ai + poe.com!" },
+  "appDesc": { "message": "E tokafatsa ChatGPT ka mekgwa ya sekerini se se bulegileng/se se tletseng/se seleele. Gape e dira mo poe.com!" },
   "menuLabel_settings": { "message": "Diseting" },
   "menuLabel_notif": { "message": "Kitsiso" },
   "menuLabel_notifs": { "message": "Dikitsiso" },

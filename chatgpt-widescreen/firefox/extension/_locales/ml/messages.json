@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT വൈഡ്സ്ക്രീൻ മോഡ്" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "വൈഡ്/ഫുൾ/ടോൾ-സ്‌ക്രീൻ + സ്പാംബ്ലോക്ക് മോഡുകൾ ഉപയോഗിച്ച് ChatGPT മെച്ചപ്പെടുത്തുന്നു. perplexity.ai + poe.com-ലും പ്രവർത്തിക്കുന്നു!" },
+  "appDesc": { "message": "വൈഡ്/ഫുൾ/ടോൾ-സ്‌ക്രീൻ + സ്പാംബ്ലോക്ക് മോഡുകൾ ഉപയോഗിച്ച് ChatGPT മെച്ചപ്പെടുത്തുന്നു. poe.com-ലും പ്രവർത്തിക്കുന്നു!" },
   "menuLabel_settings": { "message": "സെറ്റിങ്സ്" },
   "menuLabel_notif": { "message": "അറിയിപ്പ്" },
   "menuLabel_notifs": { "message": "അറിയിപ്പുകള്‍" },

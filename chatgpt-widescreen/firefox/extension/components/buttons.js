@@ -4,7 +4,7 @@ window.buttons = {
 
     types: [ 'fullscreen', 'fullWindow', 'widescreen', 'newChat' ], // right-to-left
     get class() { return `${app.slug}-btn` },
-    get opacity() { return { active: 1, inactive: env.site == 'perplexity' ? 0.85 : 1 }},
+    get opacity() { return { active: 1, inactive: 1 }},
 
     state: {
         status: 'missing', // or 'inserting', 'inserted'
@@ -70,12 +70,8 @@ window.buttons = {
             if (site == 'chatgpt' && hasTallChatbar) {
                 btn.style.bottom = '-0.5px'
                 if (isGuestTempChat && btnType == 'widescreen') btn.style.marginRight = '3px'
-            } else btn.style.top = `${ site == 'poe' ? 3.5 : 0 }px`
-            btn.style.margin = `0 ${
-                site == 'chatgpt' ? -5
-              : site == 'perplexity' ? ( env.browser.isFF ? 3 : -6 )
-              : /* poe */ 2
-            }px`
+            } else btn.style.top = `${ site == 'chatgpt' ? 0 : /* poe */ 3.5 }px`
+            btn.style.margin = `0 ${ site == 'chatgpt' ? -5 : /* poe */ 2 }px`
 
             if (site != 'poe') // add site button classes
                 btn.classList.add(...(this.rightBtn?.classList || []))
@@ -90,19 +86,7 @@ window.buttons = {
                         btn.style.cursor = 'pointer'
                         if (btn.matches(':hover')) btn.dispatchEvent(new Event('mouseenter'))
                     }, 1000)
-                } else {
-                    toggleMode(btnType)
-                    if (btnType == 'fullWindow' // disable right btn tooltips on Perplexity homepage to avoid v-flicker
-                        && site == 'perplexity' && location.pathname == '/'
-                    ) {
-                        tooltip.div.style.opacity = 0;
-                        ['fullWindow', 'fullscreen'].forEach(btnType => {
-                            const btn = this[btnType]
-                            btn.onmouseenter = btn.onmouseleave = null
-                            setTimeout(() => btn.onmouseenter = btn.onmouseleave = tooltip.toggle, 300)
-                        })
-                    }
-                }
+                } else toggleMode(btnType)
                 tooltip.update(btn)
             }
         })
@@ -136,15 +120,12 @@ window.buttons = {
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
         const parentToInsertInto = (
             site == 'chatgpt' ? (await this.get.rightBtn()).closest('[class*=bottom]') // right btn div
-          : site == 'perplexity' ? chatbarDiv.querySelector('div[role=radiogroup]') // left mode btns div
-                                || chatbarDiv
           : /* poe */ chatbarDiv.lastChild // parent of Mic/Send btns
         )
-        parentToInsertInto[site == 'perplexity' ? 'append' : 'prepend']( // wrap btns in flexbox for better control
+        parentToInsertInto.prepend( // wrap btns in flexbox for better control
             this.btnsDiv = dom.create.elem('div', {
                 style: `display: flex ; align-items: center ; gap: 3px ; position: relative ; right: ${
                     site == 'chatgpt' ? ( document.querySelector(sites[site].selectors.btns.login) ? 1 : -11 )
-                  : site == 'perplexity' ? ( chatbarDiv.querySelector('div[role=radiogroup]') ? 7 : 1 )
                   : /* poe */ -11 }px`
             })
         )
@@ -192,24 +173,14 @@ window.buttons = {
                     : 'fill: black !important ; stroke: black !important ;' }}
             #fullWindow-btn { margin-right: 1px }
             ${ selectors.sidebar ? // hide FW btn when window skinny on sites where sync req'd
-                `@media (max-width: 768px) {
-                    #fullWindow-btn { display: none }
-                    #widescreen-btn { margin-right: ${ site == 'perplexity' ? 9 : 19 }px }}`
-                : '' }
-            ${ site == 'chatgpt' ? `.${this.class} svg { height: 19.5px ; width: 19.5px }` : '' }
-            ${ site == 'perplexity' ? // hide native tooltip that persists for being in same parent, max hover opacity
-                    `body:not(:has(button[role=radio]:hover)) ${selectors.tooltip} { display: none !important }`
-                : '' }`
+                '@media (max-width: 768px) { #fullWindow-btn { display: none } #widescreen-btn { margin-right: 19px }}'
+                    : '' }
+            ${ site == 'chatgpt' ? `.${this.class} svg { height: 19.5px ; width: 19.5px }` : '' }`
     },
 
     update: {
         color() { // requires env
-            const { site, ui: { scheme }} = env
-            buttons.color = (
-                site == 'chatgpt' ? 'var(--text-primary)'
-              : site == 'perplexity' ? ( scheme == 'dark' ? 'white' : '#39545a' )
-              : /* poe */ 'currentColor'
-            )
+            buttons.color = env.site == 'chatgpt' ? 'var(--text-primary)' : /* poe */ 'currentColor'
             if (buttons.widescreen?.style.fill != buttons.color)
                 buttons.types.forEach(type => { if (buttons[type])
                     buttons[type].style.fill = buttons[type].style.stroke = buttons.color })

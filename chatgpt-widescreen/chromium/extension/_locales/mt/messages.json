@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Modalità Widescreen ta' ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Ittejjeb ChatGPT b' modi ta' imblokk tal-ispam b' skrin wiesa'/sħiħ/twil +. Jaħdem ukoll fuq perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Ittejjeb ChatGPT b' modi ta' imblokk tal-ispam b' skrin wiesa'/sħiħ/twil +. Jaħdem ukoll fuq poe.com!" },
   "menuLabel_settings": { "message": "Settings" },
   "menuLabel_notif": { "message": "Notifika" },
   "menuLabel_notifs": { "message": "Notifiki" },

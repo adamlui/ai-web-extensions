@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT ווידעסקרעען מאָדע" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ימפּרוווז ChatGPT מיט ברייט / פול / הויך פאַרשטעלן + ספּאַמבלאָקק מאָדעס. אַרבעט אויך אויף perplexity.ai + poe.com!" },
+  "appDesc": { "message": "ימפּרוווז ChatGPT מיט ברייט / פול / הויך פאַרשטעלן + ספּאַמבלאָקק מאָדעס. אַרבעט אויך אויף poe.com!" },
   "menuLabel_settings": { "message": "סעטטינגס" },
   "menuLabel_notif": { "message": "אַנימאַציע" },
   "menuLabel_notifs": { "message": "נאָטיפיקאַציעס" },

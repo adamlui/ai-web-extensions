@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Qaabka Shaashadda Widescreen" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Waxay ku wanaajisaa ChatGPT oo leh qaabab shaashad ballaaran/buuxa/dheer ah. Sidoo kale waxay ka shaqeysaa perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Waxay ku wanaajisaa ChatGPT oo leh qaabab shaashad ballaaran/buuxa/dheer ah. Sidoo kale waxay ka shaqeysaa poe.com!" },
   "menuLabel_settings": { "message": "Settings" },
   "menuLabel_notif": { "message": "Ogeysiis" },
   "menuLabel_notifs": { "message": "Ogeysiisyada" },

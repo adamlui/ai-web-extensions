@@ -1,7 +1,7 @@
 {
   "appName": { "message": "চ্যাটজিপিটি ওয়াইডস্ক্রিন মোড" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "চওড়া/পূর্ণ/লম্বা-স্ক্রিন + স্প্যামলক মোড সহ চ্যাটজিপিটি উন্নত করে । এছাড়াও perplexity.ai + poe.com এ কাজ করে!" },
+  "appDesc": { "message": "চওড়া/পূর্ণ/লম্বা-স্ক্রিন + স্প্যামলক মোড সহ চ্যাটজিপিটি উন্নত করে । এছাড়াও poe.com এ কাজ করে!" },
   "menuLabel_settings": { "message": "সেটিংস" },
   "menuLabel_notif": { "message": "নোটিফিকেশন" },
   "menuLabel_notifs": { "message": "বিজ্ঞপ্তি" },

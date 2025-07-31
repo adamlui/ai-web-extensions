@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Sgrion Leathann ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "A’ neartachadh ChatGPT le modhan sgrion farsaing/làn/àrd-sgrìn + bacadh spama. Bidh e ag obair air perplexity.ai + poe.com cuideachd!" },
+  "appDesc": { "message": "A’ neartachadh ChatGPT le modhan sgrion farsaing/làn/àrd-sgrìn + bacadh spama. Bidh e ag obair air poe.com cuideachd!" },
   "menuLabel_settings": { "message": "Roghainnean" },
   "menuLabel_notif": { "message": "Fiosrachadh" },
   "menuLabel_notifs": { "message": "Fiosan" },

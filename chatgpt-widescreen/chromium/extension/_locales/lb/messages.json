@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT-Breetbildmodus" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Verbessert ChatGPT mat breet/voll/héije Bildschierm + Spamblock Modi. Och Wierker op perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Verbessert ChatGPT mat breet/voll/héije Bildschierm + Spamblock Modi. Och Wierker op poe.com!" },
   "menuLabel_settings": { "message": "Astellungen" },
   "menuLabel_notif": { "message": "Notifikatioun" },
   "menuLabel_notifs": { "message": "Noriichten" },

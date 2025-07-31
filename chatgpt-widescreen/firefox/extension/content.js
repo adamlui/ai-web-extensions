@@ -114,9 +114,10 @@
                         bar && dom.get.computedWidth(bar) > 100 && sidebarsToHide.push({ side, bar }))
                     sidebarsToHide.forEach(({ side, bar }) => { // hide'em
                         if (side == 'left') sidebarToggle.click() ; else bar.style.display = 'none' })
-                } else if (site == 'perplexity') sidebarToggle.click()
-                else /* poe */ document.head.append(styles.fullWin.node)
-                if (site != 'chatgpt') sync.mode('fullWindow') // since they don't monitor sidebar
+                } else { // poe
+                    document.head.append(styles.fullWin.node)
+                    sync.mode('fullWindow') // since it doesn't monitor sidebar
+                }
             } else if (mode == 'fullscreen') document.documentElement.requestFullscreen()
         }
 
@@ -210,10 +211,10 @@
             // Remove buttons on Canvas mode toggle-on
             if (canvasWasOpen ^ chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }
 
-        // Update Widescreen styles on Perplexity/Poe nav
-        } else if (env.site != 'chatgpt' && location.pathname != prevPath && config.widescreen) {
+        // Update Widescreen styles on Poe nav
+        } else if (location.pathname != prevPath && config.widescreen) {
             styles.update({ key: 'widescreen' })
-            if (env.site == 'poe') styles.update({ key: 'chatbar' })
+            styles.update({ key: 'chatbar' })
             prevPath = location.pathname
         }
 
@@ -235,10 +236,10 @@
         const sidebarObserver = new ResizeObserver( // sync config.fullWindow ⇆ sidebar width + update styles
             async () => {
                 if ((config.fullWindow ^ await ui.isFullWin()) && !config.modeSynced) sync.mode('fullWindow')
-                if (env.site != 'poe' && config.widescreen) setTimeout(() => {
+                if (env.site == 'chatgpt' && config.widescreen) {
                     styles.update({ key: 'widescreen' }) // for new window.wsMaxWidth
                     if (config.widerChatbox) styles.update({ key: 'chatbar' })
-                }, env.site == 'perplexity' ? 100 : 0)
+                }
             }
         )
         observeSidebars()

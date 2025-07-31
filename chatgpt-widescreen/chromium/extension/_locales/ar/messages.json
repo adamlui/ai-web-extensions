@@ -1,7 +1,7 @@
 {
   "appName": { "message": "وضع الشاشة العريضة ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "يعزز ChatGPT مع أوضاع واسعة/كاملة/طويلة الشاشة + كتل السبام. يعمل أيضًا على perplexity.ai + poe.com!" },
+  "appDesc": { "message": "يعزز ChatGPT مع أوضاع واسعة/كاملة/طويلة الشاشة + كتل السبام. يعمل أيضًا على poe.com!" },
   "menuLabel_settings": { "message": "الإعدادات" },
   "menuLabel_notif": { "message": "الإخطار" },
   "menuLabel_notifs": { "message": "الإشعارات" },

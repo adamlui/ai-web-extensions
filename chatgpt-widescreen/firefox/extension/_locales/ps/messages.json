@@ -1,7 +1,7 @@
 {
   "appName": { "message": "د WIFT چارټ" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ChatGPT د پراخه/بشپړ/اوچت سکرین + سپمبلاک حالتونو سره وده کوي. په perplexity.ai + poe.com کې هم کار کوي!" },
+  "appDesc": { "message": "ChatGPT د پراخه/بشپړ/اوچت سکرین + سپمبلاک حالتونو سره وده کوي. په poe.com کې هم کار کوي!" },
   "menuLabel_settings": { "message": "تنظیمات" },
   "menuLabel_notif": { "message": "خبرتیا" },
   "menuLabel_notifs": { "message": "خبرتياوې " },

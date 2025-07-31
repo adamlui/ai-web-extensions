@@ -20,7 +20,7 @@ window.sync = {
             styles.update({ key: 'widescreen' }) // sync WW
             styles.update({ key: 'tweaks' }) // sync HH/HF/TCB/NCB/BA
             styles.update({ key: 'chatbar' }) // sync TCB/WCB
-            if (site != 'perplexity') chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
+            chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
             if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled)
                 buttons.animate() // to visually signal location + preview fx applied by Button Animations toggle-on
@@ -47,8 +47,7 @@ window.sync = {
             if (env.site == 'chatgpt') setTimeout(() => chatbar.tweak(), // update inner width
                 mode == 'fullWindow' && config.widescreen && config.widerChatbox ?
                     111 : 0) // delay if toggled to/from active WCB to avoid wrong width
-            else if (env.site == 'perplexity' || env.site == 'poe' && config.widerChatbox)
-                styles.update({ key: 'chatbar' }) // toggle full-width Perplexity chatbar or sync Poe WCB
+            else if (env.site == 'poe' && config.widerChatbox) styles.update({ key: 'chatbar' }) // sync Poe WCB
             notify(`${browserAPI.getMsg('mode_' + mode)} ${
                       browserAPI.getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
         }

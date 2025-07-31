@@ -8,9 +8,7 @@ window.styles = {
     get outerDivSelector() { // requires env.site
         const { site } = env
         return site == 'chatgpt' ? 'div.text-base > div'
-             : site == 'perplexity' ? `div.max-w-threadWidth, .max-w-threadContentWidth, div.max-w-screen-lg,
-                                       div[class*="max-w-\\[700px\\]"]` // Trending Topics on /academic
-             : /* poe */ 'div[class*=ChatHomeMain_centered], div[class*=ChatMessagesView]'
+            : /* poe */ 'div[class*=ChatHomeMain_centered], div[class*=ChatMessagesView]'
     },
 
     initMinMaxWidths() { // requires env.site
@@ -65,7 +63,7 @@ window.styles = {
         autoAppend: true,
         get css() { // requires <config|env>
             const { site } = env, { [site]: { selectors }} = sites
-            const tcbMinHeight = site == 'chatgpt' ? 25 : site == 'perplexity' ? 40 : /* poe */ 50
+            const tcbMinHeight = site == 'chatgpt' ? 25 : /* poe */ 50
             const tcbHeight = tcbMinHeight +(
                 ( site == 'poe' ? 80 : 68 ) -tcbMinHeight ) * config.tallerChatboxHeight /100
             return (async () => config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
@@ -85,13 +83,10 @@ window.styles = {
                 ${ !config.hiddenFooter ? ''
                     : `${selectors.footer}${ site != 'poe' ? `, ${selectors.btns.help}` : '' }
                         { display: none }`}
-                ${ !config.ncbDisabled ? '' : `#newChat-btn { display: none } ${
-                    site == 'perplexity' ? '#widescreen-btn { margin-left: 18px }' : '' }`}
+                ${ !config.ncbDisabled ? '' : '#newChat-btn { display: none }' }
                 ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
                    `.${buttons.class} { will-change: transform } /* prevent wobble */
                     .${buttons.class}:hover { transform: scale(${ site == 'poe' ? 1.15 : 1.285 })}`}
-                ${ site == 'perplexity' ? // prevent overlay
-                    `.${buttons.class} { background: none !important }` : '' }
                 ${ config.blockSpamDisabled ? ''
                     : `${styles.getAllSelectors(selectors.spam).join(',')} { display: none !important }
                         body { pointer-events: unset !important }` /* free click lock from blocking modals */ }`
@@ -111,13 +106,6 @@ window.styles = {
                     div[class*=tableContainer] { min-width: 100vw }  /* widen tables */
                     div[class*=tableWrapper] { min-width: ${wsWidth}px }
                     div[class*=tableWrapper] > table { width: 100% }`,
-                perplexity: `
-                    ${outerDivSelector} { max-width: ${wsWidth}px }
-                    ${ location.pathname.startsWith('/collections') ? '' // widen inner-left div
-                        : '@media (min-width: 769px) { .col-span-8 { width: 151% }}' }
-                    ${ !location.pathname.startsWith('/travel') ? '' // push right
-                        : `${outerDivSelector} { margin-left: 68px }` }
-                    .col-span-4:has([class*=sticky]) { display: none }`, // hide right-bar
                 poe: `
                     ${outerDivSelector} { width: calc(${wsWidth}px - 4%) !important } /* widen outer div */
                     div[class^=Message] { max-width: 100% !important }` // widen speech bubbles

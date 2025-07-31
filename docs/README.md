@@ -379,7 +379,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
 
 <details>
     <summary>
-        Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on perplexity.ai + poe.com!
+        Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on poe.com!
     </summary>
     <br><blockquote>
         <a href="../chatgpt-widescreen">

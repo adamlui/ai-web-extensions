@@ -1,7 +1,7 @@
 {
   "appName": { "message": "WTTT Chat" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Manamafy ny ChatGPT amin'ny fomba malalaka/feno/avo-efijery + spamblock. Koa miasa amin'ny perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Manamafy ny ChatGPT amin'ny fomba malalaka/feno/avo-efijery + spamblock. Koa miasa amin'ny poe.com!" },
   "menuLabel_settings": { "message": "Fandrindrana" },
   "menuLabel_notif": { "message": "Fampahafantarana" },
   "menuLabel_notifs": { "message": "Fampahafantarana" },

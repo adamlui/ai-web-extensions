@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Modo de pantalla ancha de ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Mellora ChatGPT con modos de pantalla ancha/completa/alta + bloqueo de spam. Tamén funciona en perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Mellora ChatGPT con modos de pantalla ancha/completa/alta + bloqueo de spam. Tamén funciona en poe.com!" },
   "menuLabel_settings": { "message": "Configuración" },
   "menuLabel_notif": { "message": "Historial das modificaciónsQuestion" },
   "menuLabel_notifs": { "message": "Notificacións" },

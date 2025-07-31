@@ -82,7 +82,7 @@
 
 ⚙️ Customize features like larger chatbox & hidden header/footer for more spacious view
 
-🌐 Works with: **chatgpt.com** + **perplexity.ai** + **poe.com**
+🌐 Works with: **chatgpt.com** + **poe.com**
 
 <img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
 
@@ -105,7 +105,7 @@
 
 1. Install ChatGPT Widescreen extension ([Chrome](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link), [Edge](https://edge.chatgptwidescreen.com), [Firefox](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
 
-2. Visit [chatgpt.com](https://chatgpt.com), [perplexity.ai](https://perplexity.ai), or [poe.com](https://poe.com) & mode toggles are added to chatbar!
+2. Visit [chatgpt.com](https://chatgpt.com) or [poe.com](https://poe.com) & mode toggles are added to chatbar!
 
 *Pro tip: For easier access to extension toggles, (1) click <img height=12 width=12 src="https://assets.chatgptwidescreen.com/images/icons/toolbar/chrome-puzzle-piece/gray.png"> in the browser's toolbar, (2) then <img height=12 width=12 src="https://assets.chatgptwidescreen.com/images/icons/toolbar/push-pin/blue.png"> next to extension name.*
 
@@ -129,7 +129,7 @@
 
 2. Install [ChatGPT Widescreen](https://gm.chatgptwidescreen.com) userscript (will load in manager installed above)
 
-3. Visit [chatgpt.com](https://chatgpt.com), [perplexity.ai](https://perplexity.ai), or [poe.com](https://poe.com) & mode toggles are added to chatbar!
+3. Visit [chatgpt.com](https://chatgpt.com) or [poe.com](https://poe.com) & mode toggles are added to chatbar!
 
 <div align="center">
 

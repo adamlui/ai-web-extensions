@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Kīkahaʻākea" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Hoʻonui i ka ChatGPT me nā ʻano ākea / piha / kiʻekiʻe + spamblock. Hana pū ma perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Hoʻonui i ka ChatGPT me nā ʻano ākea / piha / kiʻekiʻe + spamblock. Hana pū ma poe.com!" },
   "menuLabel_settings": { "message": "Nā hoʻonohonoho" },
   "menuLabel_notif": { "message": "Hoolaha" },
   "menuLabel_notifs": { "message": "Hoolaha" },

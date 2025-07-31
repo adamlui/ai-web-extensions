@@ -37,7 +37,6 @@ window.tooltip = {
         this.div.textContent = browserAPI.getMsg(`tooltip_${btnType}${
             !/full|wide/i.test(btnType) ? '' : (config[btnType] ? 'OFF' : 'ON')}`)
         this.div.style.left = `${ btnRect.left +( btnRect.width /2 ) -( this.div.offsetWidth /2 )}px`
-        this.div.style.top = `${ unscaledTop - this.div.offsetHeight -(
-            site == 'chatgpt' ? -75 : site == 'perplexity' ? 11 : /* poe */ 19 )}px`
+        this.div.style.top = `${ unscaledTop - this.div.offsetHeight -( site == 'chatgpt' ? -75 : /* poe */ 19 )}px`
     }
 };

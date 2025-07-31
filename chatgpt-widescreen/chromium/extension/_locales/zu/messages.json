@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Imodi yesikrini esibanzi se-ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Ithuthukisa i-ChatGPT ngamamodi esikrini esibanzi/esigcwele/esinde. Isebenza futhi ku-perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Ithuthukisa i-ChatGPT ngamamodi esikrini esibanzi/esigcwele/esinde. Isebenza futhi ku-poe.com!" },
   "menuLabel_settings": { "message": "Sebenzisa uhlelo X" },
   "menuLabel_notif": { "message": "Isaziso" },
   "menuLabel_notifs": { "message": "Izaziso" },

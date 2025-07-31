@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Pantaila zabaleko modua" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ChatGPT hobetzen du pantaila zabal/osoa/altuko + spamblokeatzeko moduekin. Perplexity.ai + poe.com-en ere lan egiten du!" },
+  "appDesc": { "message": "ChatGPT hobetzen du pantaila zabal/osoa/altuko + spamblokeatzeko moduekin. poe.com-en ere lan egiten du!" },
   "menuLabel_settings": { "message": "Ezarpenak" },
   "menuLabel_notif": { "message": "Abisua" },
   "menuLabel_notifs": { "message": "Jakinarazpenak" },

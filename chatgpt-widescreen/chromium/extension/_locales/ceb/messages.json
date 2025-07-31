@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Lapad nga Screen" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Nagpauswag sa ChatGPT nga adunay lapad / bug-os / taas nga mga mode sa screen. Nagtrabaho usab sa perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Nagpauswag sa ChatGPT nga adunay lapad / bug-os / taas nga mga mode sa screen. Nagtrabaho usab sa poe.com!" },
   "menuLabel_settings": { "message": "Mga Konteksto" },
   "menuLabel_notif": { "message": "Notipikasyon" },
   "menuLabel_notifs": { "message": "Mga Notipikasyon" },

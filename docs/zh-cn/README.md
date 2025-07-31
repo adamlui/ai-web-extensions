@@ -381,7 +381,7 @@
 
 <details>
     <summary>
-        通过宽屏/全屏/高屏+垃圾邮件块模式增强 ChatGPT。也可以在 perplexity.ai + poe.com 上使用！</summary>
+        通过宽屏/全屏/高屏+垃圾邮件块模式增强 ChatGPT。也可以在 poe.com 上使用！</summary>
     <br><blockquote>
         <a href="../../chatgpt-widescreen">
             <img width=600 src="https://assets.chatgptwidescreen.com/images/tiles/marquee/tile-625x250.png?v=91656d3"></a>

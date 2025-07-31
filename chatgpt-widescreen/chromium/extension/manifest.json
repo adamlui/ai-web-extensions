@@ -18,7 +18,7 @@
   "action": { "default_popup": "popup/index.html" },
   "web_accessible_resources": [{ "matches": ["<all_urls>"], "resources": ["components/*", "lib/*"] }],
   "content_scripts": [{
-    "matches": ["https://chatgpt.com/*", "https://www.perplexity.ai/*", "https://poe.com/*"],
+    "matches": ["https://chatgpt.com/*", "https://poe.com/*"],
     "run_at": "document_end", "js": ["content.js"]
   }],
   "background": { "service_worker": "service-worker.js" },

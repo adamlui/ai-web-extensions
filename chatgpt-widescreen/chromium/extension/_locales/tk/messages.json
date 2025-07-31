@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Giň Ekran Tertibi" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Giň / doly / uzyn ekranly + spamblok rejeleri bilen ChatGPT-i güýçlendirýär. Şeýle hem perplexity.ai + poe.com-da işleýär!" },
+  "appDesc": { "message": "Giň / doly / uzyn ekranly + spamblok rejeleri bilen ChatGPT-i güýçlendirýär. Şeýle hem poe.com-da işleýär!" },
   "menuLabel_settings": { "message": "Saýlamalar" },
   "menuLabel_notif": { "message": "janlaşdyrma" },
   "menuLabel_notifs": { "message": "Haýdalylar" },

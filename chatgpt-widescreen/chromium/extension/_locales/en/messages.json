@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Widescreen" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on poe.com!" },
   "menuLabel_settings": { "message": "Settings" },
   "menuLabel_notif": { "message": "Notification" },
   "menuLabel_notifs": { "message": "Notifications" },

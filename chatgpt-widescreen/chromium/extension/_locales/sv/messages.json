@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT bredbildsläge" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Förbättrar ChatGPT med lägen för bred/hel/hög skärm + spamblock. Fungerar även på perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Förbättrar ChatGPT med lägen för bred/hel/hög skärm + spamblock. Fungerar även på poe.com!" },
   "menuLabel_settings": { "message": "Inställningar" },
   "menuLabel_notif": { "message": "Meddelande" },
   "menuLabel_notifs": { "message": "Aviseringar" },

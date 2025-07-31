@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT víðmyndahamur" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Bætir ChatGPT með breiðum/fullum/háum skjá + ruslpóstsstillingum. Virkar einnig á perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Bætir ChatGPT með breiðum/fullum/háum skjá + ruslpóstsstillingum. Virkar einnig á poe.com!" },
   "menuLabel_settings": { "message": "Stillingar" },
   "menuLabel_notif": { "message": "Tilkynning" },
   "menuLabel_notifs": { "message": "Tilkynningar" },

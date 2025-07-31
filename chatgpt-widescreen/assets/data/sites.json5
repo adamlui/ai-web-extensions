@@ -39,45 +39,6 @@
     },
     "urls": { "homepage": "https://chatgpt.com" }
   },
-  "perplexity": {
-    "availFeatures": [
-      "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenFooter",
-      "hiddenHeader", "ncbDisabled", "notifBottom", "notifDisabled", "tallerChatboxHeight", "tcbDisabled", "toastMode",
-      "widescreen", "widescreenWidth"
-    ],
-    "hasSidebar": true,
-    "selectors": {
-      "btns": {
-        "attachFile": "button:has(svg[class*=icon-paperclip])", "dictation": "button:has(svg[class*=icon-microphone])",
-        "help": "button:has(svg[data-icon=question])", "input": "textarea[placeholder]",
-        "newChat": "div:has(> span > a[href=\"/\"] svg) + div",
-        "send": "button:has(svg[class*=icon-arrow-], svg[class*=icon-git-fork])", // Send w/ ↑/→ or New Thread
-        "settings": "button:has(svg[data-icon=user])", "sidebar": "button[data-testid=sidebar-pin-sidebar]"
-      },
-      "footer": "div:has(> a[href=\"https://www.perplexity.ai/hub/careers\"])",
-      "header": "div[class*=header].sticky:nth-of-type(2), div.h-headerHeight", "input": "textarea[placeholder]",
-      "sidebar": "div[class*=\"group/sidebar-menu\"]",
-      "spam": {
-        "banners": {
-          "apps": "div.col-span-6:has(a[href*=\"perplexity.ai\"])", // http://i.imgur.com/ewit7S6.png
-          "homepage": "div.absolute.w-full:has(svg[data-icon=xmark])"
-        },
-        "modals": {
-          "privateThread": "div[data-type=portal]:has(svg[data-icon=google])" }, // https://i.imgur.com/n3BPf56.png
-        "popups": {
-          "googleLogin": "div#credential_picker_container", // upper-right login popup
-          "perplexityLogin": "div[class*=bottom]:has(div[data-testid*=login-modal])" // lower-right login/signup popup
-        },
-        "sideBlocks": {
-          // "You are missing out: Upgrade to Pro for more detailed answers powered by the top AI models"
-          "upgradeToPro": "div[class*=\"\:block\"]:has(button):has(svg[data-icon*=arrow-up-right])" },
-        "slideUpCards": {
-          "getAndroidApp": "div[data-type=portal]:has(svg[data-icon=android])" } // https://i.imgur.com/FZdDg6d.png
-      },
-      "tooltip": "div[data-radix-popper-content-wrapper]:has(> div[class*=tooltip])"
-    },
-    "urls": { "homepage": "https://www.perplexity.ai" }
-  },
   "poe": {
     "availFeatures": [
       "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenHeader",

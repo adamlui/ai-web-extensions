@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT 宽屏模式" },
   "appAuthor": { "message": "刘展鹏 (Adam Lui)" },
-  "appDesc": { "message": "通过宽屏/全屏/高屏+垃圾邮件块模式增强 ChatGPT。也可以在 perplexity.ai + poe.com 上使用！" },
+  "appDesc": { "message": "通过宽屏/全屏/高屏+垃圾邮件块模式增强 ChatGPT。也可以在 poe.com 上使用！" },
   "menuLabel_settings": { "message": "设置" },
   "menuLabel_notif": { "message": "通知" },
   "menuLabel_notifs": { "message": "通知" },

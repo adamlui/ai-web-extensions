@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT မျက်နှာပြင်ကျယ်မုဒ်" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "မျက်နှာပြင်ကျယ်/အပြည့်/အမြင့်+စပမ်းဘလောက်မုဒ်များဖြင့် ChatGPT ကို မြှင့်တင်ပေးသည်။ perplexity.ai + poe.com တွင်လည်း လုပ်ဆောင်သည်။" },
+  "appDesc": { "message": "မျက်နှာပြင်ကျယ်/အပြည့်/အမြင့်+စပမ်းဘလောက်မုဒ်များဖြင့် ChatGPT ကို မြှင့်တင်ပေးသည်။ poe.com တွင်လည်း လုပ်ဆောင်သည်။" },
   "menuLabel_settings": { "message": "ဆက္တင္မ်ား" },
   "menuLabel_notif": { "message": "အသိပေးချက်" },
   "menuLabel_notifs": { "message": "အသိပေးချက်များ" },

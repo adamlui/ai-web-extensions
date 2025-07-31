@@ -1,7 +1,7 @@
 {
   "appName": { "message": "โหมดหน้าจอกว้าง ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ปรับปรุง ChatGPT ด้วยโหมดหน้าจอกว้าง/เต็ม/สูง + สแปมบล็อค นอกจากนี้ยังใช้งานได้กับ perplexity.ai + poe.com!" },
+  "appDesc": { "message": "ปรับปรุง ChatGPT ด้วยโหมดหน้าจอกว้าง/เต็ม/สูง + สแปมบล็อค นอกจากนี้ยังใช้งานได้กับ poe.com!" },
   "menuLabel_settings": { "message": "การตั้งค่า" },
   "menuLabel_notif": { "message": "การแจ้งเตือน" },
   "menuLabel_notifs": { "message": "ประกาศ" },

@@ -82,7 +82,7 @@
 
 ⚙️ 自定义功能，例如更大的聊天框和隐藏的页眉/页脚，以获得更宽敞的视图
 
-🌐 适用于: **chatgpt.com** + **perplexity.ai** + **poe.com**
+🌐 适用于: **chatgpt.com** + **poe.com**
 
 <img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
 
@@ -105,7 +105,7 @@
 
 1. 安装 ChatGPT 宽屏模式扩展 ([Chrome](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link), [Edge](https://edge.chatgptwidescreen.com), [Firefox](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
 
-2. 访问 [chatgpt.com](https://chatgpt.com), [perplexity.ai](https://perplexity.ai), 或 [poe.com](https://poe.com)，聊天栏已添加模式切换！
+2. 访问 [chatgpt.com](https://chatgpt.com), 或 [poe.com](https://poe.com)，聊天栏已添加模式切换！
 
 *专业提示：更容易访问扩展开关, (1) 点击 <img height=12 width=12 src="https://assets.chatgptwidescreen.com/images/icons/toolbar/chrome-puzzle-piece/gray.png"> 在浏览器的工具栏中, (2) 然后 <img height=12 width=12 src="https://assets.chatgptwidescreen.com/images/icons/toolbar/push-pin/blue.png"> 在分机名称旁边.*
 
@@ -129,7 +129,7 @@
 
 2. 安装 [ChatGPT 宽屏模式](https://gm.chatgptwidescreen.com) 用户脚本（将在上面安装的管理器中加载）
 
-3. 访问 [chatgpt.com](https://chatgpt.com), [perplexity.ai](https://perplexity.ai), 或 [poe.com](https://poe.com)，聊天栏已添加模式切换！
+3. 访问 [chatgpt.com](https://chatgpt.com), 或 [poe.com](https://poe.com)，聊天栏已添加模式切换！
 
 <div align="center">
 

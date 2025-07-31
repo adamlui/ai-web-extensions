@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT ವೈಡ್ಸ್ಕ್ರೀನ್ ಮೋಡ್" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ವೈಡ್/ಫುಲ್/ಟಾಲ್-ಸ್ಕ್ರೀನ್ ಮೋಡ್‌ಗಳೊಂದಿಗೆ ChatGPT ಅನ್ನು ವರ್ಧಿಸುತ್ತದೆ. perplexity.ai + poe.com ನಲ್ಲಿ ಸಹ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ!" },
+  "appDesc": { "message": "ವೈಡ್/ಫುಲ್/ಟಾಲ್-ಸ್ಕ್ರೀನ್ ಮೋಡ್‌ಗಳೊಂದಿಗೆ ChatGPT ಅನ್ನು ವರ್ಧಿಸುತ್ತದೆ. poe.com ನಲ್ಲಿ ಸಹ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ!" },
   "menuLabel_settings": { "message": "ಸೆಟ್ಟಿಂಗ್‍ಗಳು" },
   "menuLabel_notif": { "message": "ಸೂಚನೆ" },
   "menuLabel_notifs": { "message": "ಸೂಚನೆಗಳುName" },

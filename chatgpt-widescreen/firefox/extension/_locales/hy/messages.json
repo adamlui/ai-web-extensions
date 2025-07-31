@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT լայնէկրան ռեժիմ" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Ընդլայնում է ChatGPT-ն լայն/ամբողջական/բարձր էկրանով + սպամբլոկ ռեժիմներով: Նաև աշխատում է perplexity.ai + poe.com-ում" },
+  "appDesc": { "message": "Ընդլայնում է ChatGPT-ն լայն/ամբողջական/բարձր էկրանով + սպամբլոկ ռեժիմներով: Նաև աշխատում է poe.com-ում" },
   "menuLabel_settings": { "message": "Կարգավորումներ" },
   "menuLabel_notif": { "message": "Ծանուցում" },
   "menuLabel_notifs": { "message": "Նույնականացվել համակարգում" },

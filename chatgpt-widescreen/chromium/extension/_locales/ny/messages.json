@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Skrini Yofiyira" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Imakulitsa ChatGPT yokhala ndimitundu yayikulu/yathunthu/yatali. Komanso imagwira ntchito pa perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Imakulitsa ChatGPT yokhala ndimitundu yayikulu/yathunthu/yatali. Komanso imagwira ntchito pa poe.com!" },
   "menuLabel_settings": { "message": "Zikhazikiko" },
   "menuLabel_notif": { "message": "Chidziwitso" },
   "menuLabel_notifs": { "message": "Zidziwitso" },

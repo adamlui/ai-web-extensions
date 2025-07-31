@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT keng ekran rejimi" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ChatGPT-ni keng/to'liq/uzun ekran + spam bloklash rejimlari bilan yaxshilaydi. Shuningdek, perplexity.ai + poe.com da ishlaydi!" },
+  "appDesc": { "message": "ChatGPT-ni keng/to'liq/uzun ekran + spam bloklash rejimlari bilan yaxshilaydi. Shuningdek, poe.com da ishlaydi!" },
   "menuLabel_settings": { "message": "Sozlamalar" },
   "menuLabel_notif": { "message": "Xabarnoma" },
   "menuLabel_notifs": { "message": "Bildirishnomalar" },

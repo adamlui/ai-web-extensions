@@ -65,7 +65,7 @@
 
 ⚙️ Customize features like larger chatbox & hidden header/footer for more spacious view
 
-🌐 Works with: **chatgpt.com** + **perplexity.ai** + **poe.com**
+🌐 Works with: **chatgpt.com** + **poe.com**
 
 <img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
 
@@ -86,7 +86,7 @@
 
 2. Install [ChatGPT Widescreen](https://gm.chatgptwidescreen.com) userscript (will load in manager installed above)
 
-3. Visit [chatgpt.com](https://chatgpt.com), [perplexity.ai](https://perplexity.ai), or [poe.com](https://poe.com) & mode toggles are added to chatbar!
+3. Visit [chatgpt.com](https://chatgpt.com) or [poe.com](https://poe.com) & mode toggles are added to chatbar!
 
 <div align="center">
 

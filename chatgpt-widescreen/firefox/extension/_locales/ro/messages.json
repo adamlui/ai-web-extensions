@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Mod ecran lat ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Îmbunătățește ChatGPT cu moduri cu ecran lat/plin/înalt + blocare spam. Funcționează și pe perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Îmbunătățește ChatGPT cu moduri cu ecran lat/plin/înalt + blocare spam. Funcționează și pe poe.com!" },
   "menuLabel_settings": { "message": "Setări" },
   "menuLabel_notif": { "message": "Notificare" },
   "menuLabel_notifs": { "message": "Notificări" },

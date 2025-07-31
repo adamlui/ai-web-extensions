@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Pantaya Hòrdu" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Ta mehorá ChatGPT ku e modonan di pantaya hanchu/yen/haltu + spamblock. Tambe ta traha riba perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Ta mehorá ChatGPT ku e modonan di pantaya hanchu/yen/haltu + spamblock. Tambe ta traha riba poe.com!" },
   "menuLabel_settings": { "message": "Establesimentunan" },
   "menuLabel_notif": { "message": "Notifikashon" },
   "menuLabel_notifs": { "message": "Notifikashonnan" },

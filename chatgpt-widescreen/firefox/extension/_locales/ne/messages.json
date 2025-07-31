@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT वाइडस्क्रिन मोड" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "फराकिलो/पूर्ण/अग्लो-स्क्रिन + स्प्यामब्लक मोडहरूसँग ChatGPT बढाउँछ। perplexity.ai + poe.com मा पनि काम गर्दछ!" },
+  "appDesc": { "message": "फराकिलो/पूर्ण/अग्लो-स्क्रिन + स्प्यामब्लक मोडहरूसँग ChatGPT बढाउँछ। poe.com मा पनि काम गर्दछ!" },
   "menuLabel_settings": { "message": "सेटिङहरू" },
   "menuLabel_notif": { "message": "सूचना" },
   "menuLabel_notifs": { "message": "सूचनाहरू" },

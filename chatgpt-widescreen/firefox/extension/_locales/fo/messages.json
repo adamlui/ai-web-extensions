@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Breiðskíggja" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Tað bøtir um ChatGPT við breiðum/fullum/høgum skermum + spamblock-tilgongdum. Arbeiði eisini á perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Tað bøtir um ChatGPT við breiðum/fullum/høgum skermum + spamblock-tilgongdum. Arbeiði eisini á poe.com!" },
   "menuLabel_settings": { "message": "Stillingar" },
   "menuLabel_notif": { "message": "Fráboðan" },
   "menuLabel_notifs": { "message": "Kunningar" },

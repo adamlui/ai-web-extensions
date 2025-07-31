@@ -145,7 +145,7 @@ ChatGPT 自动谈话 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 
 ### <img width=17 src="https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT 宽屏模式](https://chatgptwidescreen.com) &nbsp;<img src="https://assets.chatgptwidescreen.com/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg?v=02d9942" width="auto" height="24" />
 
-> 通过宽屏/全屏/高屏+垃圾邮件块模式增强 ChatGPT。也可以在 perplexity.ai + poe.com 上使用！<br>
+> 通过宽屏/全屏/高屏+垃圾邮件块模式增强 ChatGPT。也可以在 poe.com 上使用！<br>
 [安装](https://docs.chatgptwidescreen.com/zh-cn/#-如何安装) / 
 [自述文件](https://docs.chatgptwidescreen.com/zh-cn/#readme) / 
 [讨论](https://github.com/adamlui/chatgpt-widescreen/discussions)

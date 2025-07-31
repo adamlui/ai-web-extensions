@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT način rada za široki zaslon" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Poboljšava ChatGPT sa širokim/punim/visokim zaslonom + načinima spamblokiranja. Radi i na perplexity.ai + poe.com!" },
+  "appDesc": { "message": "Poboljšava ChatGPT sa širokim/punim/visokim zaslonom + načinima spamblokiranja. Radi i na poe.com!" },
   "menuLabel_settings": { "message": "Postavke" },
   "menuLabel_notif": { "message": "izvješće" },
   "menuLabel_notifs": { "message": "Obavijesti" },
