@@ -81,7 +81,7 @@ window.styles = {
                             'div#thread-bottom-container { position: absolute ; bottom: 0 }' : '' }`}
                 ${ !config.hiddenHeader ? ''
                     : `${selectors.header} { display: none !important }
-                       ${ site == 'chatgpt' ? 'div[class*=--header-height] { padding-top: 56px }' : '' }`}
+                       ${ site == 'chatgpt' ? 'div[class*=--header-height] { padding-top: 52px }' : '' }`}
                 ${ !config.hiddenFooter ? ''
                     : `${selectors.footer}${ site != 'poe' ? `, ${selectors.btns.help}` : '' }
                         { display: none }`}
