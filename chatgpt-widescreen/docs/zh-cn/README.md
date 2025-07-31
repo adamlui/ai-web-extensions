@@ -39,7 +39,7 @@
 </div>
 
 > [!IMPORTANT]
-> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/white/icon25.png"><img height="12.5" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0c98c4f/assets/images/icons/greasy-fork/black/icon25.png"></picture> _**Greasy Fork 用户：** 如果您在 **2025 年 1 月 18 日** 之前安装了 ChatGPT 宽屏模式，则自动更新将不再起作用，因为脚本的更新机制已迁移到 GitHub。要继续接收更新，请点击下面的 “安装 Greasemonkey 用户脚本” 按钮（一次）或点击 [此链接](https://gm.chatgptwidescreen.com)（一次）_
+> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@8651933/assets/images/icons/perplexity/white/icon16.png"><img height="18" src="https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@8651933/assets/images/icons/perplexity/purple-gradient/icon16.png"></picture> _**Perplexity.ai 用户:** ChatGPT Widescreen 不再支持 Perplexity.ai，因为该网站的重大更新数量和频率惊人。_
 
 <div align="center">
 

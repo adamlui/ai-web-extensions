@@ -30,6 +30,13 @@
     <img alt="[www.chatgptwidescreen.com]" height=31 src="https://img.shields.io/badge/web-www.chatgptwidescreen.com-lightgrey?logo=dribbble&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <br><br>
 
+</div>
+
+> [!IMPORTANT]
+> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@8651933/assets/images/icons/perplexity/white/icon16.png"><img height="13" src="https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@8651933/assets/images/icons/perplexity/purple-gradient/icon16.png"></picture> _**Perplexity.ai users:** ChatGPT Widescreen no longer supports Perplexity.ai due to the astounding number & frequency of breaking updates made to the site._
+
+<div align="center">
+
 <a href="https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
     <img alt="[Get for Firefox]" height=75 src="https://assets.chatgptwidescreen.com/images/buttons/add-to-firefox-button.png"></a>
 
