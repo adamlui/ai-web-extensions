@@ -262,6 +262,8 @@ This script exists thanks to code, translations, issues & ideas from the followi
     <img width=46 title="@cleuton4k" src="https://avatars.githubusercontent.com/u/90144967?first-contrib=2025.4.4-btn-visibility-feat-request"></img></a>
 <a href="https://addons.mozilla.org/firefox/user/18948576/">
     <img width=46 title="RandomFayerFoksUser" src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.4.19-reported-chatgpt-tables-dont-stretch"></img></a>
+<a href="https://github.com/kiranwayne">
+    <img width=46 title="@kiranwayne" src="https://avatars.githubusercontent.com/u/160079167?first-contrib=2025.4.22-requested-width-wlider-and-text-justification"></img></a>
 <a href="https://github.com/AnglusWang">
     <img width=46 title="@AnglusWang" src="https://avatars.githubusercontent.com/u/17423592?first-contrib=2025.4.26-reported-new-chat-btn-stopped-working"></img></a>
 <a href="https://addons.mozilla.org/firefox/user/17585562/">
