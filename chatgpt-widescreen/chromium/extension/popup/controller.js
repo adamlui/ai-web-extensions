@@ -344,12 +344,14 @@
     aboutEntry.div.append(aboutEntry.ticker.span) ; footer.before(aboutEntry.div)
     aboutEntry.div.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
 
-    // Create/append COFFEE entry
-    const coffeeURL = app.urls.donate['ko-fi']
-    footer.before(createMenuEntry({
-        key: 'coffeeEntry', type: 'link', symbol: '☕', url: coffeeURL, helptip: coffeeURL,
-        label: settings.getMsg('menuLabel_buyMeAcoffee')
-    }))
+    // Create/append COFFEE entry im short popups
+    if (!document.getElementById('displaySettings')) {
+        const coffeeURL = app.urls.donate['ko-fi']
+        footer.before(createMenuEntry({
+            key: 'coffeeEntry', type: 'link', symbol: '☕', url: coffeeURL, helptip: coffeeURL,
+            label: settings.getMsg('menuLabel_buyMeAcoffee')
+        }))
+    }
 
     // Create/append REVIEW entry
     const platform = /chromium|edge|firefox/.exec(browserAPI.runtime.toLowerCase())?.[0] || '',
