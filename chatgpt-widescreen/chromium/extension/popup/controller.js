@@ -344,7 +344,7 @@
     aboutEntry.div.append(aboutEntry.ticker.span) ; footer.before(aboutEntry.div)
     aboutEntry.div.onclick = () => { chrome.runtime.sendMessage({ action: 'showAbout' }) ; close() }
 
-    // Create/append COFFEE entry im short popups
+    // Create/append COFFEE entry in short popups
     if (!document.getElementById('displaySettings')) {
         const coffeeURL = app.urls.donate['ko-fi']
         footer.before(createMenuEntry({
