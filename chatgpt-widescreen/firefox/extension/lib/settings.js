@@ -105,6 +105,11 @@ window.settings = {
             label: settings.getMsg('menuLabel_hiddenFooter'),
             helptip: settings.getMsg('helptip_hiddenFooter')
         }},
+        get justifyText() { return {
+            type: 'toggle', defaultVal: true, category: 'displaySettings',
+            label: settings.getMsg('menuLabel_justifyText'),
+            helptip: settings.getMsg('helptip_justifyText')
+        }},
         get btnAnimationsDisabled() { return {
             type: 'toggle', defaultVal: false, category: 'btnSettings',
             label: settings.getMsg('menuLabel_btnAnimations'),
