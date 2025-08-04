@@ -2,8 +2,8 @@
   "chatgpt": {
     "availFeatures": [
       "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenFooter",
-      "hiddenHeader", "ncbDisabled", "notifBottom", "notifDisabled", "tallerChatboxHeight", "tcbDisabled", "toastMode",
-      "widerChatbox", "widerChatboxWidth", "widescreen", "widescreenWidth"
+      "hiddenHeader", "justifyText", "ncbDisabled", "notifBottom", "notifDisabled", "tallerChatboxHeight",
+      "tcbDisabled", "toastMode", "widerChatbox", "widerChatboxWidth", "widescreen", "widescreenWidth"
     ],
     "selectors": {
       "btns": {
@@ -42,8 +42,8 @@
   "poe": {
     "availFeatures": [
       "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenHeader",
-      "ncbDisabled", "notifBottom", "notifDisabled", "tallerChatboxHeight", "tcbDisabled", "toastMode", "widerChatbox",
-      "widerChatboxWidth", "widescreen", "widescreenWidth"
+      "justifyText", "ncbDisabled", "notifBottom", "notifDisabled", "tallerChatboxHeight", "tcbDisabled", "toastMode",
+      "widerChatbox", "widerChatboxWidth", "widescreen", "widescreenWidth"
     ],
     "hasSidebar": true,
     "selectors": {
