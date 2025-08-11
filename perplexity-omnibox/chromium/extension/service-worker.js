@@ -16,6 +16,14 @@ chrome.action.onClicked.addListener(async () => {
     chrome.tabs.update(activeTab.id, { url: `${perplexityURL}/search/new?q=${query}` })
 })
 
+// Suggest Perplexity on short prefix entered
+chrome.omnibox.onInputChanged.addListener((text, suggest) => {
+    if (text.startsWith('@p')) suggest([{
+        content: `@perplexity ${text.slice(2)}`,
+        description: `${chrome.i18n.getMessage('prefix_ask')} Perplexity.ai: ${text.slice(2)}`
+    }])
+})
+
 // Query Perplexity on omnibox query submitted
 chrome.omnibox.onInputEntered.addListener(query =>
     chrome.tabs.update({ url: `${perplexityURL}/search/new?q=${query}` }))
