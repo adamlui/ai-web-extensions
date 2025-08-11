@@ -16,7 +16,7 @@ chrome.action.onClicked.addListener(async () => {
     chrome.tabs.update(activeTab.id, { url: `${braveURL}/search?q=${query}&summary=1` })
 })
 
-// Suggest Brave AI on short prefix entered
+// Suggest Brave AI on short prefix used
 chrome.omnibox.onInputChanged.addListener((text, suggest) => {
     if (text.startsWith('@b')) suggest([{
         content: `@brave ${text.slice(2)}`,

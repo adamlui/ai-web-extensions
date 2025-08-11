@@ -16,7 +16,7 @@ chrome.action.onClicked.addListener(async () => {
     chrome.tabs.update(activeTab.id, { url: `${chatgptURL}/?q=${query}` })
 })
 
-// Suggest ChatGPT on short prefix entered
+// Suggest ChatGPT on short prefix used
 chrome.omnibox.onInputChanged.addListener((text, suggest) => {
     if (text.startsWith('@c')) suggest([{
         content: `@chatgpt ${text.slice(2)}`,

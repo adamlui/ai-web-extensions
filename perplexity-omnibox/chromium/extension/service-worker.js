@@ -16,7 +16,7 @@ chrome.action.onClicked.addListener(async () => {
     chrome.tabs.update(activeTab.id, { url: `${perplexityURL}/search/new?q=${query}` })
 })
 
-// Suggest Perplexity on short prefix entered
+// Suggest Perplexity on short prefix used
 chrome.omnibox.onInputChanged.addListener((text, suggest) => {
     if (text.startsWith('@p')) suggest([{
         content: `@perplexity ${text.slice(2)}`,
