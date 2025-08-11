@@ -17,7 +17,7 @@ window.userscript = {
                 app.latestVer = /@version +(.*)/.exec(resp.responseText)?.[1]
                 if (app.latestVer) for (let i = 0 ; i < 4 ; i++) { // loop thru subver's
                     const currentSubVer = parseInt(app.version.split('.')[i], 10) || 0,
-                        latestSubVer = parseInt(app.latestVer.split('.')[i], 10) || 0
+                          latestSubVer = parseInt(app.latestVer.split('.')[i], 10) || 0
                     if (currentSubVer > latestSubVer) break // out of comparison since not outdated
                     else if (latestSubVer > currentSubVer) // if outdated
                         return modals.open('update', 'available')
