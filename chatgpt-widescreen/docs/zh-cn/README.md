@@ -39,7 +39,7 @@
 </div>
 
 > [!IMPORTANT]
-> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@8651933/assets/images/icons/perplexity/white/icon16.png"><img height="18" src="https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@8651933/assets/images/icons/perplexity/purple-gradient/icon16.png"></picture> _**Perplexity.ai 用户:** ChatGPT Widescreen 不再支持 Perplexity.ai，因为该网站的重大更新数量和频率惊人。_
+> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@8651933/assets/images/icons/perplexity/white/icon16.png"><img height="18" src="https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@8651933/assets/images/icons/perplexity/purple-gradient/icon16.png"></picture> _**Perplexity.ai 用户:** ChatGPT 宽屏模式 不再支持 Perplexity.ai，因为他们对网站进行的重大更新数量和频率惊人。_
 
 <div align="center">
 
