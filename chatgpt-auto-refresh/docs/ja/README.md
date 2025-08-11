@@ -233,6 +233,11 @@ ChatGPT 自動更新 は、[ScriptCat](https://docs.scriptcat.org)、[Violentmon
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautorefresh.com/images/icons/chatgpt/black-on-white/icon50.png">
         <img title="ChatGPT" src="https://assets.chatgptautorefresh.com/images/icons/chatgpt/white-on-gray/icon50.png"></img>
     </picture></a>
+<a href="https://https://chat.deepseek.com/">
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon64.png">
+        <img width=50 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon64.png"></img>
+    </picture></a>
 
 </div>
 

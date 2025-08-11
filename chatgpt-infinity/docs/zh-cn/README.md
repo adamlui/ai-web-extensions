@@ -231,6 +231,11 @@ ChatGPT 无穷 与以下浏览器兼容:
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/chatgpt/black-on-white/icon50.png">
         <img width=47 title="ChatGPT" src="https://assets.chatgptinfinity.com/images/icons/chatgpt/white-on-gray/icon50.png" title="ChatGPT">
     </picture></a>
+<a href="https://https://chat.deepseek.com/">
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon48.png">
+        <img width=47 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon48.png"></img>
+    </picture></a>
 
 <img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 

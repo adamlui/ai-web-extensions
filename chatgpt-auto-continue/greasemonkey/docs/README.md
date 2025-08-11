@@ -143,6 +143,11 @@ This project exists thanks to code, testing, issues, translations & ideas from t
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/chatgpt/black-on-white/icon50.png">
         <img width=47 title="ChatGPT" src="https://assets.chatgptautocontinue.com/images/icons/chatgpt/white-on-gray/icon50.png"></img>
     </picture></a>
+<a href="https://https://chat.deepseek.com/">
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon48.png">
+        <img width=47 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon48.png"></img>
+    </picture></a>
 
 #
 
