@@ -86,7 +86,7 @@ window.styles = {
                 ${ !config.justifyText ? ''
                     : `${ site == 'chatgpt' ? 'div[data-message-author-role]'
                                 : /* poe */ 'div[class*=messageTextContainer]' }
-                        { text-align: justify }`}
+                        { text-align: justify }` }
                 ${ !config.ncbDisabled ? '' : '#newChat-btn { display: none }' }
                 ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
                    `.${buttons.class} { will-change: transform } /* prevent wobble */
