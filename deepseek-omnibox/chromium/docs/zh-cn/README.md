@@ -16,7 +16,7 @@
 <br><br>
 
 <a href="#">
-    <img height=31 src="https://img.shields.io/badge/Users-327-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge&label=%E7%94%A8%E6%88%B7"></img></a>
+    <img height=31 src="https://img.shields.io/badge/Users-331-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge&label=%E7%94%A8%E6%88%B7"></img></a>
 <a href="https://chrome.deepseekomnibox.com/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
     <img alt="[Chrome 网上应用店评分]" height=31 src="https://img.shields.io/chrome-web-store/stars/gcgfmipiaiopmjcmggnnehnehhdjdkgi?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></img></a>
 <a href="https://chrome.deepseekomnibox.com">
