@@ -17,14 +17,14 @@ jobs:
     steps:
 
       - name: Checkout adamlui/ai-web-extensions
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           repository: adamlui/ai-web-extensions
           path: adamlui/ai-web-extensions
 
       - name: Checkout adamlui/perplexity-omnibox
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           repository: adamlui/perplexity-omnibox
