@@ -72,6 +72,17 @@ window.styles = {
                         overflow: clip !important }
                     ${ !await chatbar.is.dark() ? '' // color 'Attach File' white
                         : `svg:has(path[d^="M9 7C9 4.238"]) + span { color: white }`}`}
+
+                /* Keep Projects landing list scrollable (fix #192) */
+                ${ site == 'chatgpt' ? `
+                    div[role="presentation"] > header#page-header + div.flex.basis-auto.flex-col.grow {
+                        overflow-y: auto !important;
+                        max-height: 100vh;            /* safety cap */
+                        overscroll-behavior: contain;  /* smoother wheel/touch behaviour */
+                    }`
+                  : ''
+                }
+
                 ${ config.tcbDisabled ? '' // heighten chatbox
                     : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
                         { max-height: ${tcbHeight}vh }

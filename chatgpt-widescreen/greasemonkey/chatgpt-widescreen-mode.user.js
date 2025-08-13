@@ -827,4 +827,23 @@
                       notify(app.msgs.notif_chatStopped, 'bottom-right')) } catch (err) {}
     })
 
+    // === FIX: Keep Projects landing list scrollable (issue #192) ===
+    function ensureProjectsScroll() {
+        if (env.site !== 'chatgpt') return
+        const el = document.querySelector(
+            'div[role="presentation"] > header#page-header + div.flex.basis-auto.flex-col.grow'
+        )
+        if (el) {
+            el.style.overflowY = 'auto'              // allow vertical scrolling
+            el.style.maxHeight = '100vh'             // safety cap
+            el.style.overscrollBehavior = 'contain'  // smoother wheel/touch behaviour
+        }
+    }
+    ensureProjectsScroll()
+    new MutationObserver(ensureProjectsScroll).observe(document.body, {
+        childList: true,
+        subtree: true
+    })
+    // === END FIX ===
+
 })()
