@@ -11,7 +11,7 @@ window.sync = {
             [styles.chatbar.node, styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
                 .forEach(target => target?.remove())
             chatbar.reset()
-            if (site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
+            if (site == 'chatgpt') document.body.removeEventListener('wheel', window.enableWheelScroll)
         } else if (!config.extensionDisabled && !config[`${site}Disabled`]) { // sync modes/tweaks/btns
             if (config.widescreen ^ styles.widescreen.node?.isConnected) { // sync Widescreen
                 suppressNotifs() ; toggleMode('widescreen') }
@@ -25,7 +25,7 @@ window.sync = {
             if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled)
                 buttons.animate() // to visually signal location + preview fx applied by Button Animations toggle-on
             else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.update({ key: 'toast' })
-            if (site != 'poe') // toggle free wheel locked in some Spam blocks
+            if (site == 'chatgpt') // toggle free wheel locked in some Spam blocks
                 document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                     'wheel', window.enableWheelScroll)
         }

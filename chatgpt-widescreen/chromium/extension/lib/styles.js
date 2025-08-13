@@ -13,7 +13,7 @@ window.styles = {
 
     initMinMaxWidths() { // requires env.site
         const { site } = env
-        window.wsMinWidth = chatbar.nativeWidth +( site == 'chatgpt' ? 128 : site == 'poe' ? 66 : 274 )
+        window.wsMinWidth = chatbar.nativeWidth +( site == 'chatgpt' ? 128 : /* poe */ 66 )
         window.wsMaxWidth = document.querySelector(this.outerDivSelector)?.parentNode?.offsetWidth
     },
 
@@ -65,7 +65,7 @@ window.styles = {
             const { site } = env, { [site]: { selectors }} = sites
             const tcbMinHeight = site == 'chatgpt' ? 25 : /* poe */ 50
             const tcbHeight = tcbMinHeight +(
-                ( site == 'poe' ? 80 : 68 ) -tcbMinHeight ) * config.tallerChatboxHeight /100
+                ( site == 'chatgpt' ? 68 : 80 ) -tcbMinHeight ) * config.tallerChatboxHeight /100
             return (async () => config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
                 ${ site != 'chatgpt' ? ''
                     : `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
@@ -87,7 +87,7 @@ window.styles = {
                     : `${selectors.header} { display: none !important }
                        ${ site == 'chatgpt' ? 'div[class*=--header-height] { padding-top: 52px }' : '' }`}
                 ${ !config.hiddenFooter ? ''
-                    : `${selectors.footer}${ site != 'poe' ? `, ${selectors.btns.help}` : '' }
+                    : `${selectors.footer}${ site == 'chatgpt' ? `, ${selectors.btns.help}` : '' }
                         { display: none }`}
                 ${ !config.justifyText ? ''
                     : `${ site == 'chatgpt' ? 'div[data-message-author-role]'
@@ -96,7 +96,7 @@ window.styles = {
                 ${ !config.ncbDisabled ? '' : '#newChat-btn { display: none }' }
                 ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
                    `.${buttons.class} { will-change: transform } /* prevent wobble */
-                    .${buttons.class}:hover { transform: scale(${ site == 'poe' ? 1.15 : 1.285 })}`}
+                    .${buttons.class}:hover { transform: scale(${ site == 'chatgpt' ? 1.285 : 1.15 })}`}
                 ${ config.blockSpamDisabled ? ''
                     : `${styles.getAllSelectors(selectors.spam).join(',')} { display: none !important }
                         body { pointer-events: unset !important }` /* free click lock from blocking modals */ }`

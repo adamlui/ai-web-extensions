@@ -61,7 +61,7 @@ window.buttons = {
         const { site, ui: { hasTallChatbar }} = env, { [site]: { selectors }} = sites,
               isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true'),
               validBtnTypes = this.get.types.valid()
-        if (site != 'poe') this.rightBtn = await this.get.rightBtn() // for styles
+        if (site == 'chatgpt') this.rightBtn = await this.get.rightBtn() // for styles
 
         validBtnTypes.forEach(async btnType => {
             const btn = this[btnType] = dom.create.elem('div', { id: `${btnType}-btn`, class: this.class })
@@ -73,7 +73,7 @@ window.buttons = {
             } else btn.style.top = `${ site == 'chatgpt' ? 0 : /* poe */ 3.5 }px`
             btn.style.margin = `0 ${ site == 'chatgpt' ? -5 : /* poe */ 2 }px`
 
-            if (site != 'poe') // add site button classes
+            if (site == 'chatgpt') // add site button classes
                 btn.classList.add(...(this.rightBtn?.classList || []))
 
             // Add hover/click listeners
@@ -164,12 +164,12 @@ window.buttons = {
               --transition: transform 0.15s ease, opacity 0.5s ease ; /* for tweaksStyle's :hover + .insert()'s fade-in */
                    -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
                    -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
-                ${ site != 'poe' ? // remove overlay
+                ${ site == 'chatgpt' ? // remove overlay
                     'background-color: transparent ; border-color: transparent ;' : '' }
             }
             .${this.class}:hover {
                 opacity: ${this.opacity.active} !important ;
-                ${ site != 'chatgpt' || await chatbar.is.dark() ? ''
+                ${ site == 'poe' || await chatbar.is.dark() ? ''
                     : 'fill: black !important ; stroke: black !important ;' }}
             #fullWindow-btn { margin-right: 1px }
             ${ selectors.sidebar ? // hide FW btn when window skinny on sites where sync req'd
