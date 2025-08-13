@@ -280,6 +280,8 @@ This script exists thanks to code, translations, issues & ideas from the followi
     <img width=47 title="@JangGeol9" src="https://avatars.githubusercontent.com/u/131735042?first-contrib=2025.7.22-reported-widescreen-broke"></img></a>
 <a href="https://github.com/xeruf">
     <img width=47 title="@xeruf" src="https://avatars.githubusercontent.com/u/13354331?first-contrib=2025.7.30-reported-chatgpt-widescreen-tables-stopped-working"></img></a>
+<a href="https://github.com/panosru">
+    <img width=47 title="@panosru" src="https://avatars.githubusercontent.com/u/400362?first-contrib=2025.8.12-added-preserve-chatgpt-project-list-scrollability"></img></a>
 <a href="https://github.com/dependabot">
     <img width=46 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp">
