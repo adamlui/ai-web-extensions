@@ -1,5 +1,4 @@
-name: Sync perplexity-omnibox/ to adamlui/perplexity-omnibox/, then root to GitLab
-
+name: Sync perplexity-omnibox/ to adamlui/perplexity-omnibox/
 on:
   push:
     branches: [main]
@@ -59,9 +58,3 @@ jobs:
           git pull # again to sync w/ concurrent workflow updates
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/perplexity-omnibox]" || true
           git push
-
-      - name: Push changes to gitlab.com/adamlui/ai-web-extensions
-        run: |
-          cd ${{ github.workspace }}/adamlui/ai-web-extensions
-          git fetch --unshallow # since shallow update not allowed by GitLab
-          git push --force https://oauth2:${{ secrets.GITLAB_SYNC_PAT }}@gitlab.com/adamlui/ai-web-extensions.git main
