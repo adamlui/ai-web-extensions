@@ -1,4 +1,4 @@
-name: Sync amazongpt/ to KudoAI/amazongpt/, then amazongpt/greasemonkey/ to adamlui/userscripts/chatgpt/amazongpt/
+name: Sync amazongpt/ to KudoAI/amazongpt/, then amazongpt/greasemonkey/ to adamlui/userscripts/chatgpt/amazongpt/, then root to GitLab
 
 on:
   push:
@@ -128,5 +128,5 @@ jobs:
       - name: Push changes to gitlab.com/adamlui/ai-web-extensions
         run: |
           cd ${{ github.workspace }}/adamlui/ai-web-extensions
-          git fetch --unshallow
+          git fetch --unshallow # since shallow update not allowed by GitLab
           git push --force https://oauth2:${{ secrets.GITLAB_SYNC_PAT }}@gitlab.com/adamlui/ai-web-extensions.git main
