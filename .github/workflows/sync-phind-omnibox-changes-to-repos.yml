@@ -1,4 +1,5 @@
 name: Sync _locales/ between phind-omnibox/<chromium|firefox>/extension/, then phind-omnibox/ to adamlui/phind-omnibox/
+
 on:
   push:
     branches: [main]

@@ -1,4 +1,5 @@
 name: Sync _locales/ between chatgpt-omnibox/<chromium|firefox>/extension/, then chatgpt-omnibox/ to adamlui/chatgpt-omnibox/
+
 on:
   push:
     branches: [main]

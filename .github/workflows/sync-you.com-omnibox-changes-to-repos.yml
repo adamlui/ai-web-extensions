@@ -1,4 +1,5 @@
 name: Sync _locales/ between you.com-omnibox/<chromium|firefox>/extension/, then you.com-omnibox/ to adamlui/you.com-omnibox/
+
 on:
   push:
     branches: [main]

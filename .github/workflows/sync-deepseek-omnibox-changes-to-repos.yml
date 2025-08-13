@@ -1,4 +1,5 @@
 name: Sync _locales/ between deepseek-omnibox/<chromium|firefox>/extension/, then deepseek-omnibox/ to adamlui/deepseek-omnibox/
+
 on:
   push:
     branches: [main]
