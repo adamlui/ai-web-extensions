@@ -128,5 +128,5 @@ jobs:
       - name: Push changes to gitlab.com/adamlui/ai-web-extensions
         run: |
           cd ${{ github.workspace }}/adamlui/ai-web-extensions
-          git fetch --unshallow
-          git push --force https://oauth2:${{ secrets.GITLAB_PAT }}@gitlab.com/adamlui/ai-web-extensions.git main
+          git remote add gitlab https://oauth2:${{ secrets.GITLAB_SYNC_PAT }}@gitlab.com/adamlui/ai-web-extensions.git
+          git push --force gitlab main
