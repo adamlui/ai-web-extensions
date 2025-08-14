@@ -19,11 +19,7 @@ jobs:
       - name: Checkout adamlui/ai-web-extensions
         uses: actions/checkout@v5
         with:
-          repository: adamlui/ai-web-extensions
-          path: adamlui/ai-web-extensions
           fetch-depth: 0
 
       - name: Push changes to gitlab.com/adamlui/ai-web-extensions
-        run: |
-          cd ${{ github.workspace }}/adamlui/ai-web-extensions
-          git push --force https://oauth2:${{ secrets.GITLAB_SYNC_PAT }}@gitlab.com/adamlui/ai-web-extensions.git main
+        run: git push --force https://oauth2:${{ secrets.GITLAB_SYNC_PAT }}@gitlab.com/adamlui/ai-web-extensions.git main
