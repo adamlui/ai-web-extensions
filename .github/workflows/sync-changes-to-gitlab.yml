@@ -22,4 +22,6 @@ jobs:
           fetch-depth: 0
 
       - name: Push changes to gitlab.com/adamlui/ai-web-extensions
-        run: git push --force https://oauth2:${{ secrets.GITLAB_SYNC_PAT }}@gitlab.com/adamlui/ai-web-extensions.git main
+        run: |
+          git push --force -o ci.skip \
+            https://oauth2:${{ secrets.GITLAB_SYNC_PAT }}@gitlab.com/adamlui/ai-web-extensions.git main
