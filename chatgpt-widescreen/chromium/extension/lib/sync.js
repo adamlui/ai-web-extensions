@@ -44,10 +44,12 @@ window.sync = {
                       : chatgpt.isFullScreen() )
         settings.save(mode, state) ; buttons.update.svg(mode)
         if (!config.extensionDisabled && !config[`${env.site}Disabled`]) { // tweak UI
-            if (env.site == 'chatgpt') setTimeout(() => chatbar.tweak(), // update inner width
-                mode == 'fullWindow' && config.widescreen && config.widerChatbox ?
-                    111 : 0) // delay if toggled to/from active WCB to avoid wrong width
-            else if (env.site == 'poe' && config.widerChatbox) styles.update({ key: 'chatbar' }) // sync Poe WCB
+            if (env.site == 'chatgpt') {
+                if (config.widerChatbox) styles.update({ key: 'chatbar' })
+                setTimeout(() => chatbar.tweak(), // update inner width
+                    mode == 'fullWindow' && config.widescreen && config.widerChatbox ?
+                        111 : 0) // delay if toggled to/from active WCB to avoid wrong width
+            } else if (env.site == 'poe' && config.widerChatbox) styles.update({ key: 'chatbar' }) // sync Poe WCB
             notify(`${browserAPI.getMsg('mode_' + mode)} ${
                       browserAPI.getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
         }
