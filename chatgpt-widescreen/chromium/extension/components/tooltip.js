@@ -1,4 +1,4 @@
-// Requires components/buttons.js + lib/<browser|dom>.js + <app|config|env>
+// Requires components/buttons.js + lib/<browser|chatgpt|dom>.js + <app|config|env>
 
 window.tooltip = {
 
@@ -25,7 +25,7 @@ window.tooltip = {
         tooltip.div.style.opacity = +(event.type == 'mouseenter')
     },
 
-    update(btn) { // requires lib/browser.js + <config|env>
+    update(btn) { // requires lib/<browser|chatgpt>.js + <config|env>
         if (!this.div) return
         const { site } = env
         const btnType = btn.id.replace(/-btn$/, '')
@@ -37,7 +37,7 @@ window.tooltip = {
         this.div.textContent = browserAPI.getMsg(`tooltip_${btnType}${
             !/full|wide/i.test(btnType) ? '' : (config[btnType] ? 'OFF' : 'ON')}`)
         this.div.style.left = `${ btnRect.left +( btnRect.width /2 ) -( this.div.offsetWidth /2 )
-                            -( site == 'chatgpt' ? 260 : 0 )}px`
+                            -( site == 'poe' ? 0 : chatgpt.sidebar.isOn() ? 260 : 52 )}px`
         this.div.style.top = `${ unscaledTop - this.div.offsetHeight -( site == 'chatgpt' ? -75 : /* poe */ 19 )}px`
     }
 };
