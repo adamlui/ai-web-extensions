@@ -1,6 +1,6 @@
 sync_to_github:
   rules:
-    - if: $CI_COMMIT_BRANCH == "master" && $CI_PROJECT_PATH == "adamlui/ai-web-extensions"
+    - if: $CI_COMMIT_BRANCH == "main" && $CI_PROJECT_PATH == "adamlui/ai-web-extensions"
   image: alpine:latest
   script:
     - apk add --no-cache git
