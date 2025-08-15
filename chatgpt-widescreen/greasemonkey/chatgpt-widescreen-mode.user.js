@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.8.14
+// @version             2025.8.14.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -826,20 +826,5 @@
             try { chatgpt.stop() ; requestAnimationFrame(() => !chatgpt.isTyping() &&
                       notify(app.msgs.notif_chatStopped, 'bottom-right')) } catch (err) {}
     })
-
-    // Ensure CHATGPT PROJECTS scroll
-    if (env.site == 'chatgpt') {
-        ensureProjectsScroll()
-        new MutationObserver(ensureProjectsScroll).observe(document.body, { childList: true, subtree: true })
-        function ensureProjectsScroll() {
-            const projectElem = document.querySelector(
-                'div[role="presentation"] > header#page-header + div.flex.basis-auto.flex-col.grow')
-            if (projectElem) {
-                projectElem.style.overflowY = 'auto'
-                projectElem.style.maxHeight = '100vh'            // safety cap
-                projectElem.style.overscrollBehavior = 'contain' // smoother wheel/touch behaviour
-            }
-        }
-    }
 
 })()
