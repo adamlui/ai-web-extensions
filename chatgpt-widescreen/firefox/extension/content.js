@@ -284,19 +284,4 @@
                     notify(browserAPI.getMsg('notif_chatStopped'), 'bottom-right')) } catch (err) {}
     })
 
-    // Ensure CHATGPT PROJECTS scroll
-    if (env.site == 'chatgpt') {
-        ensureProjectsScroll()
-        new MutationObserver(ensureProjectsScroll).observe(document.body, { childList: true, subtree: true })
-        function ensureProjectsScroll() {
-            const projectElem = document.querySelector(
-                'div[role="presentation"] > header#page-header + div.flex.basis-auto.flex-col.grow')
-            if (projectElem) {
-                projectElem.style.overflowY = 'auto'
-                projectElem.style.maxHeight = '100vh'            // safety cap
-                projectElem.style.overscrollBehavior = 'contain' // smoother wheel/touch behaviour
-            }
-        }
-    }
-
 })()

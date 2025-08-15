@@ -70,12 +70,6 @@ window.styles = {
                 ${ site != 'chatgpt' ? ''
                     : `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
                         overflow: clip !important }
-                    div[role="presentation"] > header#page-header + div.flex.basis-auto.flex-col.grow {
-                    /* keep Projects landing list scrollable */
-                        overflow-y: auto !important;
-                        max-height: 100vh;            /* safety cap */
-                        overscroll-behavior: contain;  /* smoother wheel/touch behaviour */
-                    }
                     ${ !await chatbar.is.dark() ? '' // color 'Attach File' white
                         : `svg:has(path[d^="M9 7C9 4.238"]) + span { color: white }`}`}
                 ${ config.tcbDisabled ? '' // heighten chatbox
