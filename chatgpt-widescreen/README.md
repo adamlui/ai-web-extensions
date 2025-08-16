@@ -1,7 +1,7 @@
 <a id="top"></a>
 
 <div align="right">
-<h5>English | <a href="zh-cn/#readme">简体中文</a></h5>
+    <h5>English | <a href="docs/zh-cn/#readme">简体中文</a></h5>
 </div>
 
 <img src="https://assets.chatgptwidescreen.com/images/tiles/marquee/tile-1400x560.png"></img>
