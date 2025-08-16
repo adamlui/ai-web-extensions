@@ -34,7 +34,7 @@
 <br><br>
 
 <a href="https://ff.deepseekomnibox.com">
-    <img alt="[Get for Firefox]" width=auto height=60 src="https://assets.deepseekomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+    <img alt="[Get for Firefox]" height=60 src="https://assets.deepseekomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 
 </div>
 

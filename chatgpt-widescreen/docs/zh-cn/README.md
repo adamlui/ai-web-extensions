@@ -44,13 +44,13 @@
 <div align="center">
 
 <a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
-    <img alt="[获取 Chrome 版本]" width=auto height=60 src="https://assets.chatgptwidescreen.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
+    <img alt="[获取 Chrome 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://edge.chatgptwidescreen.com">
-    <img alt="[获取 Edge 版本]" width=auto height=60 src="https://assets.chatgptwidescreen.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
+    <img alt="[获取 Edge 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
-    <img alt="[获取 Firefox 版本]" width=auto height=60 src="https://assets.chatgptwidescreen.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+    <img alt="[获取 Firefox 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://gm.chatgptwidescreen.com">
-    <img alt="[获取 Greasemonkey 版本]" width=auto height=60 src="https://assets.chatgptwidescreen.com/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
+    <img alt="[获取 Greasemonkey 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
 
 </div>
 

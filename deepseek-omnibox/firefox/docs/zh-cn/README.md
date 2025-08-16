@@ -34,7 +34,7 @@
 <br><br>
 
 <a href="https://ff.deepseekomnibox.com">
-    <img alt="[获取 Firefox 版本]" width=auto height=60 src="https://assets.deepseekomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+    <img alt="[获取 Firefox 版本]" height=60 src="https://assets.deepseekomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 
 </div>
 

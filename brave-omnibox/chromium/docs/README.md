@@ -26,9 +26,9 @@
 <br><br>
 
 <a href="https://chrome.braveomnibox.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
-    <img alt="[Get for Chrome]" width=auto height=60 src="https://assets.braveomnibox.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
+    <img alt="[Get for Chrome]" height=60 src="https://assets.braveomnibox.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://edge.braveomnibox.com">
-    <img alt="[Get for Edge]" width=auto height=60 src="https://assets.braveomnibox.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
+    <img alt="[Get for Edge]" height=60 src="https://assets.braveomnibox.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 
 </div>
 

@@ -18,7 +18,7 @@
 <br><br>
 
 <a href="https://ff.braveomnibox.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
-    <img alt="[Get for Firefox]" width=auto height=60 src="https://assets.braveomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+    <img alt="[Get for Firefox]" height=60 src="https://assets.braveomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 
 </div>
 

@@ -34,7 +34,7 @@
 <br><br>
 
 <a href="https://ff.deepseekomnibox.com">
-    <img alt="[Firefox के लिए प्राप्त करें]" width=auto height=60 src="https://assets.deepseekomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+    <img alt="[Firefox के लिए प्राप्त करें]" height=60 src="https://assets.deepseekomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 
 </div>
 
