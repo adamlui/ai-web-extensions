@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.8.15
+// @version             2025.8.18
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -370,7 +370,8 @@
 
         refresh() {
             if (typeof GM_unregisterMenuCommand == 'undefined') return
-            for (const id of this.entryIDs) { GM_unregisterMenuCommand(id) } this.register()
+            this.entryIDs.forEach(id => GM_unregisterMenuCommand(id))
+            this.register()
         },
 
         register() {
