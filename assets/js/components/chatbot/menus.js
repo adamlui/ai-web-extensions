@@ -143,7 +143,8 @@ window.menus = {
         refresh() { // requires <GM_unregisterMenuCommand|log>
             if (typeof GM_unregisterMenuCommand == 'undefined')
                 return log.debug('GM_unregisterMenuCommand not supported.')
-            for (const id of this.entryIDs) { GM_unregisterMenuCommand(id) } this.register()
+            this.entryIDs.forEach(id => GM_unregisterMenuCommand(id))
+            this.register()
         },
 
         register() { // requires <app|config|env|modals|settings|toggle>
