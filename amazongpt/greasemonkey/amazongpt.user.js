@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.8.18
+// @version                2025.8.19
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -213,10 +213,17 @@
     window.config = {}
     window.settings = {
         load(...keys) {
-            keys.flat().forEach(key => config[key] = GM_getValue(`${app.configKeyPrefix}_${key}`, initDefaultVal(key)))
-            function initDefaultVal(key) {
-                const ctrlData = settings.controls?.[key]
-                return ctrlData?.defaultVal ?? ( ctrlData?.type == 'slider' ? 100 : ctrlData?.type == 'toggle' )
+            keys.flat().forEach(key =>
+                config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
+            function processKey(key, val) {
+                const ctrl = settings.controls?.[key]
+                if (val != undefined) {
+                    if (ctrl?.type == 'toggle' // ensure toggle vals are booleans
+                        && typeof val != 'boolean') val = undefined
+                    else if (ctrl?.type == 'slider') { // ensure slider vals are nums
+                        val = parseFloat(val) ; if (isNaN(val)) val = undefined }
+                }
+                return val ?? (ctrl?.defaultVal ?? (ctrl?.type == 'slider' ? 100 : false))
             }
         },
         save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val }

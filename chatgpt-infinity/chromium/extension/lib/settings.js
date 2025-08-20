@@ -80,13 +80,19 @@ window.settings = {
     load(...keys) {
         keys = keys.flat() // flatten array args nested by spread operator
         if (typeof GM_info != 'undefined') // synchronously load from userscript manager storage
-            keys.forEach(key => config[key] = GM_getValue(`${app.configKeyPrefix}_${key}`, initDefaultVal(key)))
+            keys.forEach(key => config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
         else // asynchronously load from browser extension storage
-            return Promise.all(keys.map(async key => // resolve promise when all keys load
-                config[key] = (await chrome.storage.local.get(key))[key] ?? initDefaultVal(key)))
-        function initDefaultVal(key) {
-            const ctrlData = settings.controls?.[key]
-            return ctrlData?.defaultVal ?? ( ctrlData?.type == 'slider' ? 100 : ctrlData?.type == 'toggle' )
+            return Promise.all(keys.map(async key =>
+                config[key] = processKey(key, (await chrome.storage.local.get(key))[key])))
+        function processKey(key, val) {
+            const ctrl = settings.controls?.[key]
+            if (val != undefined) {
+                if (ctrl?.type == 'toggle' // ensure toggle vals are booleans
+                    && typeof val != 'boolean') val = undefined
+                else if (ctrl?.type == 'slider') { // ensure slider vals are nums
+                    val = parseFloat(val) ; if (isNaN(val)) val = undefined }
+            }
+            return val ?? (ctrl?.defaultVal ?? (ctrl?.type == 'slider' ? 100 : false))
         }
     },
 

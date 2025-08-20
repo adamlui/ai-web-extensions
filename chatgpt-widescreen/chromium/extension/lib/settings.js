@@ -158,17 +158,23 @@ window.settings = {
     load(...keys) {
         keys = keys.flat() // flatten array args nested by spread operator
         if (typeof GM_info != 'undefined') // synchronously load from userscript manager storage
-            keys.forEach(key => config[key] = GM_getValue(
-                !this.browserwideKeys.includes(key) ? `${app.configKeyPrefix}_${key}` : key, initDefaultVal(key)))
+            keys.forEach(key => config[key] = processKey(key,
+                GM_getValue(!this.browserwideKeys.includes(key) ? `${app.configKeyPrefix}_${key}` : key, undefined)))
         else // asynchronously load from browser extension storage
-            return Promise.all(keys.map(async key => { // resolve promise when all keys load
-                const result = await chrome.storage.local.get(
-                    !this.browserwideKeys.includes(key) ? `${env.site}_${key}` : key )
-                config[key] = result[`${env.site}_${key}`] ?? result[key] ?? initDefaultVal(key)
+            return Promise.all(keys.map(async key => {
+                const storageKey = !this.browserwideKeys.includes(key) ? `${env.site}_${key}` : key,
+                      result = await chrome.storage.local.get(storageKey)
+                config[key] = processKey(key, result[storageKey])
             }))
-        function initDefaultVal(key) {
-            const ctrlData = settings.controls?.[key]
-            return ctrlData?.defaultVal ?? ( ctrlData?.type == 'slider' ? 100 : ctrlData?.type == 'toggle' )
+        function processKey(key, val) {
+            const ctrl = settings.controls?.[key]
+            if (val != undefined) {
+                if (ctrl?.type == 'toggle' // ensure toggle vals are booleans
+                    && typeof val != 'boolean') val = undefined
+                else if (ctrl?.type == 'slider') { // ensure slider vals are nums
+                    val = parseFloat(val) ; if (isNaN(val)) val = undefined }
+            }
+            return val ?? (ctrl?.defaultVal ?? (ctrl?.type == 'slider' ? 100 : false))
         }
     },
 

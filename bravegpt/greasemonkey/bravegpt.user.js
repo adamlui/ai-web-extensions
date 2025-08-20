@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.8.18
+// @version               2025.8.19
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -336,10 +336,17 @@
     window.settings = {
 
         load(...keys) {
-            keys.flat().forEach(key => config[key] = GM_getValue(`${app.configKeyPrefix}_${key}`, initDefaultVal(key)))
-            function initDefaultVal(key) {
-                const ctrlData = settings.controls?.[key]
-                return ctrlData?.defaultVal ?? ( ctrlData?.type == 'slider' ? 100 : ctrlData?.type == 'toggle' )
+            keys.flat().forEach(key =>
+                config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
+            function processKey(key, val) {
+                const ctrl = settings.controls?.[key]
+                if (val != undefined) {
+                    if (ctrl?.type == 'toggle' // ensure toggle vals are booleans
+                        && typeof val != 'boolean') val = undefined
+                    else if (ctrl?.type == 'slider') { // ensure slider vals are nums
+                        val = parseFloat(val) ; if (isNaN(val)) val = undefined }
+                }
+                return val ?? (ctrl?.defaultVal ?? (ctrl?.type == 'slider' ? 100 : false))
             }
         },
 
