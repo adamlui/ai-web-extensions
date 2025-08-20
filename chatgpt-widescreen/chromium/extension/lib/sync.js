@@ -16,7 +16,7 @@ window.sync = {
             if (config.widescreen ^ styles.widescreen.node?.isConnected) { // sync Widescreen
                 suppressNotifs() ; toggleMode('widescreen') }
             if (sites[site].hasSidebar && ( config.fullWindow ^ await ui.isFullWin() )) { // sync Full-Window
-                    suppressNotifs() ; toggleMode('fullWindow') }
+                suppressNotifs() ; toggleMode('fullWindow') }
             styles.update({ key: 'widescreen' }) // sync WW
             styles.update({ key: 'tweaks' }) // sync HH/HF/TCB/NCB/BA
             styles.update({ key: 'chatbar' }) // sync TCB/WCB
