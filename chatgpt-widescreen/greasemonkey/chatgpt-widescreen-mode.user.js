@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.8.18
+// @version             2025.8.19
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -258,9 +258,9 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@152a535/chromium/extension/lib/browser.js#sha256-7teBecqrjkazKH6oetGyxKlBkAk5U9ota/LNCB3Q+Jw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@6da7673/chromium/extension/lib/chatbar.js#sha256-WHEkQoiOn0C2V+2lkpNft5pUIXntsL668Zt/7sohyN4=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@1e7f759/chromium/extension/lib/dom.min.js#sha256-IGNj9Eoecq7QgY7SAs75wONajgN9Wg0NmCjKTCfu9CY=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@58a5c12/chromium/extension/lib/settings.js#sha256-DaeFUYf3mgKvFxagVD4byHLYBJz4bRlhg52wl0VgZMY=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@6432f82/chromium/extension/lib/settings.js#sha256-h/jgEhUFXm8JDMTCH4/Xrg/clucllr+du1wxxCU+Lhg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@1ede080/chromium/extension/lib/styles.js#sha256-sT2NK0JIEx2K2OZK4+GqQbMTxecVYdDZ9Jv+mrcsrok=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@401c2d2/chromium/extension/lib/sync.js#sha256-fsTpo+C1TIVg9/ePhNN9GWGr24qA/iJ7wh6dmEjO2bA=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@b4f5cfd/chromium/extension/lib/sync.js#sha256-wbaW/BRijKwN53FFvKau5x30QeyZG55chKgpsGoRSOg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f06fa5f/chromium/extension/lib/ui.js#sha256-niLmd2EMi/LCgGgs0MfX7AykWzzfQ9bXCo/6X08M6Ik=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@6da7673/chromium/extension/components/buttons.js#sha256-Ze4zyzL+sLPI+ei2PUScSdHUYKzb3FZIntnBCnLSpSQ=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@511d193/chromium/extension/components/icons.js#sha256-6eK7coHHFB4zBfl8XXtjojrnfbBOFiEgYfQtz/Whv2E=
@@ -362,7 +362,7 @@
 
     // Define MENU functions
 
-    const toolbarMenu = {
+    window.toolbarMenu = {
         state: {
             symbols: ['❌', '✔️'], separator: env.scriptManager.name == 'Tampermonkey' ? ' — ' : ': ',
             words: [app.msgs.state_off.toUpperCase(), app.msgs.state_on.toUpperCase()]
@@ -396,8 +396,49 @@
                                                       + this.state.words[+settings.typeIsEnabled(key)]
                                                       : ctrl.status ? ` — ${ctrl.status}` : '' }`
                         return GM_registerMenuCommand(menuLabel, () => {
-                            settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
-                            notify(`${ctrl.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
+                            if (ctrl.type == 'toggle') {
+                                settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
+                                notify(`${ctrl.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
+                            } else if (ctrl.type == 'slider') {
+
+                                // Stylize slider
+                                if (!window.sliderModalStyle?.isConnected)
+                                    document.head.append(window.sliderModalStyle ||= dom.create.style(`  
+                                        .${app.slug}-modal:has(input.slider) h2 { text-align:center }
+                                        .${app.slug}-modal input.slider {
+                                            width: 100% ; margin: 7px 0 ; padding: 8.5px 3px ; cursor: pointer }
+                                        .${app.slug}-modal .slider::-webkit-slider-thumb {
+                                            transform: scale(1.325) ; cursor: ew-resize ;
+                                            transition: transform 0.05s ease
+                                        }
+                                        .${app.slug}-modal .slider::-webkit-slider-thumb:hover {
+                                            transform: scale(1.5) }`
+                                    ))
+
+                                // Create/assemble slider
+                                const slider = {
+                                    div: dom.create.elem('div'),
+                                    input: dom.create.elem('input', { class: 'slider', type: 'range',
+                                        min: ctrl.min || 0, max: ctrl.max || 100, value: config[key] })
+                                }
+                                slider.modal = modals.alert(
+                                    `${ctrl.label}: ${slider.input.value}${ ctrl.labelSuffix || '' }`)
+                                if (ctrl.step || env.browser.isFF) // use val from ctrl data or default to 2% in FF for being laggy
+                                    slider.input.step = ctrl.step || ( 0.02 * slider.input.max - slider.input.min )
+                                slider.div.append(slider.input)
+                                slider.modal.querySelector('button').parentNode.before(slider.div)
+
+                                // Add listeners
+                                slider.input.oninput = ({ target: { value }}) => { // update UI
+                                    slider.modal.querySelector('h2').textContent = `${
+                                        ctrl.label}: ${value}${ctrl.labelSuffix || ''}`
+                                    settings.save(key, parseInt(value)) ; sync.configToUI({ updatedKey: key })
+                                }
+                                slider.div.onwheel = event => { // move slider by 2 steps
+                                    slider.input.value = parseInt(slider.input.value) -Math.sign(event.deltaY) *2
+                                    slider.input.dispatchEvent(new Event('input'))
+                                }
+                            }
                         }, env.scriptManager.supportsTooltips ? { title: ctrl.helptip || ' ' } : undefined )
                     }
                 })
@@ -651,7 +692,8 @@
             if (config.widescreen ^ styles.widescreen.node.isConnected) { // sync Widescreen
                 suppressNotifs() ; toggleMode('widescreen') }
             if (sites[site].hasSidebar && ( config.fullWindow ^ await ui.isFullWin() )) { // sync Full-Window
-                    suppressNotifs() ; toggleMode('fullWindow') }
+                suppressNotifs() ; toggleMode('fullWindow') }
+            styles.update({ key: 'widescreen' }) // sync WW
             styles.update({ key: 'tweaks' }) // sync HH/HF/TCB/NCB/BA
             styles.update({ key: 'chatbar' }) // sync WCB
             chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
@@ -670,7 +712,7 @@
             if (config.notifDisabled) return
             settings.save('notifDisabled', true) // suppress notifs for cleaner UI
             setTimeout( // ...temporarily
-                () => settings.save('notifDisabled', false), options?.updatedKey == 'widescreen' ? 1 : 15)
+                () => settings.save('notifDisabled', false), options?.updatedKey == 'widescreen' ? 1 : 555)
         }
     }
 
