@@ -50,19 +50,18 @@ window.settings = {
     controls: { // displays top-to-bottom in toolbar menu
         get widescreen() { return {
             type: 'toggle', defaultVal: true, category: 'displaySettings',
-            label: settings.getMsg('mode_widescreen'),
-            excludes: { env: ['greasemonkey'] }
+            label: settings.getMsg('mode_widescreen')
         }},
         get widescreenWidth() { return {
             type: 'slider', symbol: '↔️', defaultVal: 100, category: 'displaySettings',
             label: `${settings.getMsg('mode_widescreen')} ${settings.getMsg('menuLabel_width')}`, labelSuffix: '%',
             helptip: settings.getMsg('helptip_widescreenWidth'),
-            excludes: { env: ['greasemonkey'] }, dependencies: { controls: ['widescreen'] }
+            dependencies: { controls: ['widescreen'] }
         }},
         get fullWindow() { return {
             type: 'toggle', defaultVal: false, category: 'displaySettings',
             label: settings.getMsg('mode_fullWindow'),
-            excludes: { env: ['greasemonkey'] }, throttle: env.site == 'chatgpt' ? 750 : false
+            throttle: env.site == 'chatgpt' ? 750 : false
         }},
         get tcbDisabled() { return {
             type: 'toggle', symbol: '↕️', defaultVal: true, category: 'chatboxSettings',
@@ -75,7 +74,7 @@ window.settings = {
                       settings.getMsg('menuLabel_height')}`,
             labelSuffix: '%',
             helptip: settings.getMsg('helptip_tallerChatboxHeight'),
-            excludes: { env: ['greasemonkey'] }, dependencies: { controls: ['tcbDisabled'] }
+            dependencies: { controls: ['tcbDisabled'] }
         }},
         get widerChatbox() { return {
             type: 'toggle', symbol: '↔️', defaultVal: true, category: 'chatboxSettings',
@@ -88,7 +87,7 @@ window.settings = {
                       settings.getMsg('menuLabel_width')}`,
             labelSuffix: '%',
             helptip: settings.getMsg('helptip_widerChatboxWidth'),
-            excludes: { env: ['greasemonkey'] }, dependencies: { controls: ['widerChatbox'] }
+            dependencies: { controls: ['widerChatbox'] }
         }},
         get ncbDisabled() { return {
             type: 'toggle', defaultVal: false, category: 'btnSettings',
