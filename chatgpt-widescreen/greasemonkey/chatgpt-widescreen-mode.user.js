@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.8.19.1
+// @version             2025.8.20
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -431,7 +431,7 @@
                                 // Add listeners
                                 slider.input.oninput = ({ target: { value }}) => { // update UI
                                     slider.modal.querySelector('h2').textContent = `${
-                                        ctrl.label}: ${value}${ctrl.labelSuffix || ''}`
+                                        ctrl.label}: ${value}${ ctrl.labelSuffix || '' }`
                                     settings.save(key, parseInt(value)) ; sync.configToUI({ updatedKey: key })
                                 }
                                 slider.div.onwheel = event => { // move slider by 2 steps
