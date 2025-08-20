@@ -21,7 +21,8 @@ export default [
                 buttons: 'writable', chatbar: 'writable', chatgpt: 'readonly', chrome: 'readonly', config: 'writable',
                 dom: 'readonly', env: 'writable', icons: 'writable', importScripts: 'readonly', JSON5: 'readonly',
                 modals: 'readonly', notify: 'readonly', settings: 'writable', sites: 'writable', styles: 'readonly',
-                sync: 'readonly', toggleMode: 'readonly', tooltip: 'writable', ui: 'readonly', updateCheck: 'readonly'
+                sync: 'readonly', toggleMode: 'readonly', toolbarMenu: 'writable', tooltip: 'writable', ui: 'readonly',
+                updateCheck: 'readonly'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },

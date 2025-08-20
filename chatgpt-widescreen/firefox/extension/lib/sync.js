@@ -51,6 +51,7 @@ window.sync = {
             notify(`${browserAPI.getMsg('mode_' + mode)} ${
                       browserAPI.getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
         }
+        if (typeof GM_info != 'undefined') toolbarMenu.refresh()
         config.modeSynced = true ; setTimeout(() => config.modeSynced = false, 100) // prevent repetition
     }
 };
