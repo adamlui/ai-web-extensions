@@ -13,7 +13,7 @@ window.chatbar = {
         async dark() { // requires env.site
             return env.site == 'poe' ? undefined
                 : getComputedStyle(await chatbar.get() || document.documentElement)
-                    .backgroundColor == 'rgb(33, 33, 33)'
+                    .backgroundColor == 'rgba(0, 0, 0, 0)'
         },
 
         async tall() { return (await chatbar.get())?.getBoundingClientRect().height > 60 }
