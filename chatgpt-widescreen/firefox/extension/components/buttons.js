@@ -119,9 +119,12 @@ window.buttons = {
         const { site } = env
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
         const parentToInsertInto = (
-            site == 'chatgpt' ? (await this.get.rightBtn()).closest('[class*=bottom]') // right btn div
-          : /* poe */ chatbarDiv.lastChild // parent of Mic/Send btns
-        )
+            site == 'chatgpt' ? await (async () => {
+                const rightBtn = await this.get.rightBtn()
+                return await chatbar.is.tall() ? rightBtn.closest('[class*=bottom]') : rightBtn.parentNode
+            })()
+            : /* poe */ chatbarDiv.lastChild
+        );
         parentToInsertInto.prepend( // wrap btns in flexbox for better control
             this.btnsDiv = dom.create.elem('div', {
                 style: `display: flex ; align-items: center ; gap: 3px ; position: relative ; right: ${
