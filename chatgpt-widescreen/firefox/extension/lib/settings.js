@@ -9,12 +9,13 @@ window.settings = {
     },
 
     categories: {
-        get btnSettings() { return {
-            symbol: '🔘',
-            color: 'a80104', // red
-            label: `${settings.getMsg(`menuLabel_btn`)} ${settings.getMsg(`menuLabel_settings`)}`,
+        get displaySettings() { return {
+            symbol: '🖥️', autoExpand: true,
+            color: '856cb7', // purple
+            label: `${settings.getMsg(`menuLabel_display`)} ${settings.getMsg(`menuLabel_settings`)}`,
             helptip: `${settings.getMsg('helptip_adjustSettingsRelatedTo')} ${
-                        settings.getMsg('helptip_btns').toLowerCase()}`
+                        settings.getMsg('helptip_the').toLowerCase()} ${
+                        settings.getMsg('menuLabel_display').toLowerCase()}`
         }},
         get chatboxSettings() { return {
             symbol: '📤',
@@ -24,13 +25,12 @@ window.settings = {
                         settings.getMsg('helptip_the').toLowerCase()} ${
                         settings.getMsg('menuLabel_chatbox').toLowerCase()}`
         }},
-        get displaySettings() { return {
-            symbol: '🖥️', autoExpand: true,
-            color: '856cb7', // purple
-            label: `${settings.getMsg(`menuLabel_display`)} ${settings.getMsg(`menuLabel_settings`)}`,
+        get btnSettings() { return {
+            symbol: '🔘',
+            color: 'a80104', // red
+            label: `${settings.getMsg(`menuLabel_btn`)} ${settings.getMsg(`menuLabel_settings`)}`,
             helptip: `${settings.getMsg('helptip_adjustSettingsRelatedTo')} ${
-                        settings.getMsg('helptip_the').toLowerCase()} ${
-                        settings.getMsg('menuLabel_display').toLowerCase()}`
+                        settings.getMsg('helptip_btns').toLowerCase()}`
         }},
         get notifSettings() { return {
             symbol: '📣',
