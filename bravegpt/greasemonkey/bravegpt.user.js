@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.8.24
+// @version               2025.8.24.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -2414,7 +2414,7 @@
                         // Init toggle input
                         const settingToggle = dom.create.elem('input', {
                             type: 'checkbox', disabled: true, style: 'display: none' })
-                        settingToggle.checked = config[key] ^ key.includes('Disabled') // init based on config/name
+                        settingToggle.checked = settings.typeIsEnabled(key) // init based on config/name
                             && !(key == 'streamingDisabled' && !config.proxyAPIenabled) // uncheck Streaming in OAI mode
 
                         // Create/classify switch
