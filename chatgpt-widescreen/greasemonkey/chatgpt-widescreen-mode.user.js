@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.8.24.1
+// @version             2025.8.24.2
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -659,6 +659,41 @@
                 }
             })
             return settingsModal
+        },
+
+        update: {
+            width: 377,
+
+            available() {
+
+                // Show modal
+                const updateAvailModal = modals.alert(`🚀 ${app.msgs.alert_updateAvail}!`, // title
+                    `${app.msgs.alert_newerVer} ${app.msgs.appName} ` // msg
+                        + `(v${app.latestVer}) ${app.msgs.alert_isAvail}!  `
+                        + '<a target="_blank" rel="noopener" style="font-size: 0.7rem" href="'
+                            + `${app.urls.github}/commits/main/greasemonkey/${app.slug}-mode.user.js`
+                        + `">${app.msgs.link_viewChanges}</a>`,
+                    function update() { // button
+                        modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
+                    }, '', modals.update.width
+                )
+
+                // Localize button labels if needed
+                if (!env.browser.language.startsWith('en')) {
+                    const updateBtns = updateAvailModal.querySelectorAll('button')
+                    updateBtns[1].textContent = app.msgs.btnLabel_update
+                    updateBtns[0].textContent = app.msgs.btnLabel_dismiss
+                }
+
+                return updateAvailModal
+            },
+
+            unavailable() {
+                return modals.alert(`${app.msgs.alert_upToDate}!`, // title
+                    `${app.msgs.appName} (v${app.version}) ${app.msgs.alert_isUpToDate}!`, // msg
+                    '', '', modals.update.width
+                )
+            }
         },
 
         toggleUtils: {

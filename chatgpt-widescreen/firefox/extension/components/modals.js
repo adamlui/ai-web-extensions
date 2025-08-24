@@ -1,4 +1,4 @@
-// Requires lib/<browser|chatgpt|dom>.js + <app|env> + updateCheck() (Greasemonkey only)
+// Requires lib/<browser|chatgpt|dom>.js + <app|env>
 
 window.modals = {
 
@@ -241,40 +241,5 @@ window.modals = {
           + ( !isMobile ? `.${this.class} .modal-buttons { margin-left: -13px !important }` : '' )
           + `.about-em { color: ${ scheme == 'dark' ? 'white' : 'green' } !important }`
         )
-    },
-
-    update: {
-        width: 377,
-
-        available() { // requires lib/browser.js + <app|env>
-
-            // Show modal
-            const updateAvailModal = modals.alert(`🚀 ${browserAPI.getMsg('alert_updateAvail')}!`, // title
-                `${browserAPI.getMsg('alert_newerVer')} ${browserAPI.getMsg('appName')} ` // msg
-                    + `(v${app.latestVer}) ${browserAPI.getMsg('alert_isAvail')}!  `
-                    + '<a target="_blank" rel="noopener" style="font-size: 0.7rem" href="'
-                        + `${app.urls.github}/commits/main/greasemonkey/${app.slug}-mode.user.js`
-                    + `">${browserAPI.getMsg('link_viewChanges')}</a>`,
-                function update() { // button
-                    modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
-                }, '', modals.update.width
-            )
-
-            // Localize button labels if needed
-            if (!env.browser.language.startsWith('en')) {
-                const updateBtns = updateAvailModal.querySelectorAll('button')
-                updateBtns[1].textContent = browserAPI.getMsg('btnLabel_update')
-                updateBtns[0].textContent = browserAPI.getMsg('btnLabel_dismiss')
-            }
-
-            return updateAvailModal
-        },
-
-        unavailable() { // requires lib/browser.js + app
-            return modals.alert(`${browserAPI.getMsg('alert_upToDate')}!`, // title
-                `${browserAPI.getMsg('appName')} (v${app.version}) ${browserAPI.getMsg('alert_isUpToDate')}!`, // msg
-                '', '', modals.update.width
-            )
-        }
     }
 };
