@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.8.24
+// @version             2025.8.24.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -383,179 +383,19 @@
                     () => modals.open('about'), env.scriptManager.supportsTooltips ? { title: ' ' } : undefined )
             ]
 
-            // ...or create toggles for available features if script not disabled via Site Settings
-            : !config[`${env.site}Disabled`] ?
-                Object.keys(settings.controls).map(key => {
-                    if (sites[env.site].availFeatures.includes(key)
-                        && !settings.controls[key].excludes?.env?.includes('greasemonkey')
-                    ) {
-                        const ctrl = settings.controls[key]
-                        const menuLabel = `${
-                            ctrl.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${ctrl.label} ${
-                                ctrl.type == 'toggle' ? this.state.separator
-                                                      + this.state.words[+settings.typeIsEnabled(key)]
-                              : ctrl.type == 'slider' ? ': ' + config[key] + ctrl.labelSuffix || ''
-                              : ctrl.status ? ` — ${ctrl.status}` : '' }`
-                        return GM_registerMenuCommand(menuLabel, () => {
-                            if (ctrl.type == 'toggle') {
-                                settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
-                                notify(`${ctrl.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
-                            } else if (ctrl.type == 'slider') {
-
-                                // Stylize slider
-                                if (!window.sliderModalStyle?.isConnected)
-                                    document.head.append(window.sliderModalStyle ||= dom.create.style(`  
-                                        .${app.slug}-modal:has(input.slider) h2 { text-align:center }
-                                        .${app.slug}-modal input.slider {
-                                            width: 100% ; margin: 7px 0 ; padding: 8.5px 3px ; cursor: pointer }
-                                        .${app.slug}-modal .slider::-webkit-slider-thumb {
-                                            transform: scale(1.325) ; cursor: ew-resize ;
-                                            transition: transform 0.05s ease
-                                        }
-                                        .${app.slug}-modal .slider::-webkit-slider-thumb:hover {
-                                            transform: scale(1.5) }`
-                                    ))
-
-                                // Create/assemble slider
-                                const slider = {
-                                    div: dom.create.elem('div'),
-                                    input: dom.create.elem('input', { class: 'slider', type: 'range',
-                                        min: ctrl.min || 0, max: ctrl.max || 100, value: config[key] })
-                                }
-                                slider.modal = modals.alert(
-                                    `${ctrl.label}: ${slider.input.value}${ ctrl.labelSuffix || '' }`)
-                                if (ctrl.step || env.browser.isFF) // use val from ctrl data or default to 2% in FF for being laggy
-                                    slider.input.step = ctrl.step || ( 0.02 * slider.input.max - slider.input.min )
-                                slider.div.append(slider.input)
-                                slider.modal.querySelector('button').parentNode.before(slider.div)
-
-                                // Add listeners
-                                slider.input.oninput = ({ target: { value }}) => { // update UI
-                                    slider.modal.querySelector('h2').textContent = `${
-                                        ctrl.label}: ${value}${ ctrl.labelSuffix || '' }`
-                                    settings.save(key, parseInt(value)) ; sync.configToUI({ updatedKey: key })
-                                }
-                                slider.div.onwheel = event => { // move slider by 2 steps
-                                    slider.input.value = parseInt(slider.input.value) -Math.sign(event.deltaY) *2
-                                    slider.input.dispatchEvent(new Event('input'))
-                                }
-                            }
-                        }, env.scriptManager.supportsTooltips ? { title: ctrl.helptip || ' ' } : undefined )
-                    }
-                })
-            : []
-
-            // Add Site Settings
-            if (!env.extensionActive) {
-                const siteSettingsLabel = `🌐 ${settings.categories.siteSettings.label}`
-                this.entryIDs.push(GM_registerMenuCommand(siteSettingsLabel, () => {
-
-                    // Show modal
-                    const siteSettingsModal = modals.alert(siteSettingsLabel,
-                        `<span style="font-size: 15px">${settings.categories.siteSettings.helptip}:</span><ul></ul>`,
-                        null, null, 365
-                    )
-
-                    // Stylize toggles container
-                    const siteSettingsUL = siteSettingsModal.querySelector('ul')
-                    Object.assign(siteSettingsUL.style, { cursor: 'pointer', fontSize: '18px', margin: '16px 0 -45px',
-                        minHeight: '100px', listStyle: 'none' })
-
-                    // Create toggle per site
-                    Object.keys(sites).forEach(site => {
-                        const siteHomeURL = sites[site].urls.homepage.replace(/^https?:\/\//, '')
-
-                        // Create/append item/label elems
-                        const toggleRow = dom.create.elem('li', {
-                            title: `${app.msgs.helptip_run} ${app.name} on ${siteHomeURL}`,
-                            style: `
-                                color: ${getTextColor()} ; /* based on config */
-                                border-radius: 3px ; /* slightly round highlight strip */
-                                transition: 0.1s ease ; /* for hover-zoom */
-                                   -webkit-transition: 0.1s ease ; -moz-transition: 0.1s ease ;
-                                   -o-transition: 0.1s ease ; -ms-transition: 0.1s ease`
-                        })
-                        const settingLabel = dom.create.elem('label', { style: 'cursor: pointer' })
-                        settingLabel.textContent = siteHomeURL
-                        toggleRow.append(settingLabel) ; siteSettingsUL.append(toggleRow)
-
-                        // Init toggle input
-                        const toggleInput = dom.create.elem('input',
-                            { type: 'checkbox', disabled: true, style: 'display: none' })
-                        toggleInput.checked = !config[`${site}Disabled`]
-
-                        // Create/stylize switch
-                        const switchSpan = dom.create.elem('span')
-                        Object.assign(switchSpan.style, {
-                            position: 'relative', left: '-1px', bottom:'-8.5px', float: 'right',
-                            backgroundColor: '#ccc', width: '26px', height: '13px', borderRadius: '28px',
-                            transition: '0.4s', '-webkit-transition': '0.4s', '-moz-transition': '0.4s',
-                                '-o-transition': '0.4s', '-ms-transition': '0.4s'
-                        })
-
-                        // Create/stylize knob
-                        const knobSpan = dom.create.elem('span')
-                        Object.assign(knobSpan.style, {
-                            position: 'absolute', left: '1px', bottom: '1px', content: '""',
-                            backgroundColor: 'white', width: '11px', height: '11px', borderRadius: '28px',
-                            transition: '0.2s', '-webkit-transition': '0.2s', '-moz-transition': '0.2s',
-                                '-o-transition': '0.2s', '-ms-transition': '0.2s'
-                        })
-
-                        // Append elems
-                        switchSpan.append(knobSpan) ; toggleRow.append(toggleInput, switchSpan)
-
-                        // Update visual state w/ animation
-                        setTimeout(() => updateStyles(toggleInput), 155)
-
-                        // Add listeners
-                        toggleRow.onmouseenter = () => Object.assign(toggleRow.style, {
-                            padding: '4px 10px', transform: 'scale(1.15)',
-                            background: 'rgba(100,149,237,0.88)', color: 'white'
-                        })
-                        toggleRow.onmouseleave = () => Object.assign(toggleRow.style, {
-                            padding: '', transform: '', background: '', color: getTextColor() })
-                        toggleRow.onclick = () => {
-                            switchToggle(toggleInput)
-                            settings.save(`${site}Disabled`, !config[`${site}Disabled`]) ; sync.configToUI()
-                            if (env.site == site) // notify if setting of active site toggled
-                                notify(`${app.name} 🧩 ${
-                                    app.msgs[`state_${config[`${site}Disabled`] ? 'off' : 'on' }`].toUpperCase()}`)
-                        }
-
-                        function getTextColor() {
-                            return config[`${site}Disabled`] ?
-                                ( env.ui.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' ) // off
-                                : ( env.ui.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' ) // on
-                        }
-
-                        function switchToggle(toggleInput) {
-                            toggleInput.checked = !toggleInput.checked ; updateStyles(toggleInput) }
-
-                        function updateStyles(toggleInput) { // toggle show + staggered switch animations in
-                            requestAnimationFrame(() => {
-                                switchSpan.style.backgroundColor = toggleInput.checked ? '#ad68ff' : '#ccc'
-                                switchSpan.style.boxShadow = toggleInput.checked ? '2px 1px 9px #d8a9ff' : 'none'
-                                knobSpan.style.transform = toggleInput.checked ?
-                                    'translateX(14px) translateY(0)' : 'translateX(0)'
-                                toggleRow.classList.toggle('active', toggleInput.checked) // dim/brighten entry
-                            }) // to trigger 1st transition fx
-                        }
-                    })
-                }, env.scriptManager.supportsTooltips ?
-                    { title: settings.categories.siteSettings.helptip } : undefined ))
-            }
-
-            // Add About/Donate entries
-            ['about', 'donate'].forEach(entryType => {
-                if (entryType == 'donate' && env.extensionActive) return
-                this.entryIDs.push(GM_registerMenuCommand(
-                    `${ entryType == 'about' ? '💡' : '💖' } ${
-                        app.msgs[`menuLabel_${entryType}`]} ${ entryType == 'about' ? app.msgs.appName : '' }`,
-                    () => entryType == 'about' ? modals.open(entryType) : modals.safeWinOpen(app.urls.donate['ko-fi']),
+            // ...or create settings categories
+            : Object.entries(settings.categories)
+                .filter(([key]) => !config[`${env.site}Disabled`] || key == 'siteSettings')
+                .map(([key, category]) => GM_registerMenuCommand(
+                    `${ category.symbol ? category.symbol + ' ' : '' }${category.label}`, () => modals.settings(key),
                     env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
                 ))
-            })
+
+            // Add About entry
+            this.entryIDs.push(GM_registerMenuCommand(
+                `💡 ${app.msgs.menuLabel_about} ${app.msgs.appName}`, () => modals.open('about'),
+                env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
+            ))
         }
     }
 
@@ -685,7 +525,7 @@
 
         const { site } = env, scriptWasDisabled = !config[`${site}Disabled`]
         if (!scriptWasDisabled && config[`${site}Disabled`]) { // reset UI
-            [styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
+            [styles.chatbar.node, styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
                 .forEach(target => target.remove())
             chatbar.reset()
             if (site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
@@ -716,6 +556,129 @@
                 () => settings.save('notifDisabled', false), options?.updatedKey == 'widescreen' ? 1 : 555)
         }
     }
+
+    Object.assign(modals, { // userscript modals/utils
+
+        settings(ctgKey) { // for categories
+
+            // Create modal
+            const category = settings.categories[ctgKey],
+                  settingsModal = modals.alert(`${category.symbol} ${category.label}`, '<ul></ul>', null, null, 365)
+            settingsModal.classList.add(`${app.slug}-settings-modal`)
+
+            // Create entries
+            const settingsUL = settingsModal.querySelector('ul'),
+                  objToParse = ctgKey == 'siteSettings' ? sites : settings.controls
+            Object.entries(objToParse).forEach(([key, ctrl]) => {
+                if (ctgKey != 'siteSettings' && ctrl.category != ctgKey) return
+
+                // Refine Site Settings data
+                if (ctgKey == 'siteSettings') {
+                    const siteHomeURL = sites[key].urls.homepage.replace(/^https?:\/\//, '')
+                    ctrl = {
+                        type: 'toggle', label: siteHomeURL,
+                        helptip: `${app.msgs.helptip_run} ${app.name} on ${siteHomeURL}`
+                    }
+                }
+
+                // Create/append entry/label elems
+                const entry = {
+                    row: dom.create.elem('li', { id: key, title: ctrl.helptip || '' }),
+                    label: dom.create.elem('label')
+                }
+                entry.label.textContent = `${ctrl.label}`
+                entry.row.append(entry.label) ; settingsUL.append(entry.row)
+
+                // Create/append toggles/listeners
+                if (ctrl.type == 'toggle') {
+
+                    // Create/append toggle elems
+                    entry.toggle = {
+                        input: dom.create.elem('input', { class: 'toggle-input', type: 'checkbox', disabled: true }),
+                        switch: dom.create.elem('span', { class: 'toggle-switch' }),
+                        knob: dom.create.elem('span', { class: 'toggle-knob' })
+                    }
+                    entry.toggle.input.checked = (
+                        ctgKey == 'siteSettings' ? !config[`${key}Disabled`] : settings.typeIsEnabled(key) )
+                    entry.toggle.switch.append(entry.toggle.knob)
+                    entry.row.append(entry.toggle.input, entry.toggle.switch)
+
+                    // Update visual state w/ animation
+                    setTimeout(() => modals.toggleUtils.updateStyles(entry.toggle.input), 155)
+
+                    // Add click listener
+                    entry.row.onclick = () => {
+                        modals.toggleUtils.switchToggle(entry.toggle.input)
+                        settings.save(
+                            ctgKey == 'siteSettings' ? `${key}Disabled` : key,
+                            ctgKey == 'siteSettings' ? !config[`${key}Disabled`] : !config[key]
+                        )
+                        sync.configToUI({ updatedKey: key })
+                        if (ctgKey == 'siteSettings' && env.site == key) // notify if setting of active site toggled
+                             notify(`${app.name} 🧩 ${
+                                app.msgs[`state_${config[`${key}Disabled`] ? 'off' : 'on' }`].toUpperCase()}`)
+                        else if (ctgKey != 'siteSettings')
+                            notify(`${ctrl.label}: ${toolbarMenu.state.words[+settings.typeIsEnabled(key)]}`)
+
+                        // Enable/disable dependent entries
+                        for (const [ctrlKey, ctrlData] of Object.entries(
+                                { ...settings.categories, ...settings.controls }))
+                            if (Object.values(ctrlData.dependencies || {}).flat().includes(key)) {
+                                const depDiv = document.querySelector(`li#${ctrlKey}`) ; if (!depDiv) continue
+                                depDiv.style.display = !settings.typeIsEnabled(key) ? 'none' : ''
+                            }
+                    }
+
+                } else if (ctrl.type == 'slider') {
+
+                    // Create/append slider elems
+                    entry.row.classList.add('active')
+                    entry.row.append(entry.slider = dom.create.elem('input',
+                        { type: 'range', min: ctrl.min || 0, max: ctrl.max || 100, value: config[key] }))
+                    if (ctrl.step || env.browser.isFF) // use val from ctrl data or default to 2% in FF for being laggy
+                        entry.slider.step = ctrl.step || (0.02 * entry.slider.max - entry.slider.min)
+                    entry.label.textContent += `: ${entry.slider.value}${ ctrl.labelSuffix || '' }`
+                    entry.slider.style.setProperty(
+                        '--track-fill-percent', `${ entry.slider.value / entry.slider.max *100 }%`)
+
+                    // Add listeners
+                    entry.slider.oninput = ({ target: { value }}) => { // update UI
+                        settings.save(key, parseInt(value)) ; sync.configToUI({ updatedKey: key })
+                        entry.label.textContent = `${ctrl.label}: ${value}${ ctrl.labelSuffix || '' }`
+                        entry.slider.style.setProperty('--track-fill-percent', `${ value / entry.slider.max *100 }%`)
+                    }
+                    entry.row.onwheel = event => { // move slider by 2 steps
+                        entry.slider.value = parseInt(entry.slider.value) -Math.sign(event.deltaY) *2
+                        entry.slider.dispatchEvent(new Event('input'))
+                    }
+                }
+
+                if (ctrl.dependencies) {
+                    const toDisable = Object.values(ctrl.dependencies).flat().some(dep => !settings.typeIsEnabled(dep))
+                    entry.row.style.display = toDisable ? 'none' : ''
+                }
+            })
+            return settingsModal
+        },
+
+        toggleUtils: {
+            switchToggle(toggleInput) {
+                toggleInput.checked = !toggleInput.checked ; modals.toggleUtils.updateStyles(toggleInput) },
+
+            updateStyles(toggleInput) { // toggle show + staggered switch animations in
+                const switchSpan = toggleInput.nextElementSibling,
+                      knobSpan = switchSpan.querySelector('span'),
+                      toggleRow = toggleInput.parentNode
+                requestAnimationFrame(() => {
+                    switchSpan.style.backgroundColor = toggleInput.checked ? '#ad68ff' : '#ccc'
+                    switchSpan.style.boxShadow = toggleInput.checked ? '2px 1px 9px #d8a9ff' : 'none'
+                    knobSpan.style.transform = toggleInput.checked ?
+                        'translateX(14px) translateY(0)' : 'translateX(0)'
+                    toggleRow.classList.toggle('active', toggleInput.checked) // dim/brighten entry
+                }) // to trigger 1st transition fx
+            }
+        }
+    })
 
     chatgpt.canvasIsOpen = function() {
         return document.querySelector('section.popover')?.getBoundingClientRect().top == 0 }
@@ -758,6 +721,62 @@
             href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/${
                 color}.min.css`
     })))
+    document.head.append(dom.create.style( // settings modal styles
+       `:root {
+          --entry-highlighted-bg: rgba(100,149,237,0.88) ; --thumb-color: #000 ; --thumb-border: #fff ;
+          --track-filled-color: #000 ; --track-empty-color: #e0e0e0 
+        }
+        .${app.slug}-settings-modal h2 { text-align: center }
+        .${app.slug}-settings-modal ul { /* entries list */
+            cursor: pointer ; font-size: 18px ; margin: 16px 0 -10px ; min-height: 100px ; list-style: none }
+        .${app.slug}-settings-modal li { /* entry row */
+            color: ${ env.ui.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
+            height: 37px ; padding: 6px 10px 4px ; font-size: 15.5px ; align-content: center ;
+            border-bottom: 1px dotted ${ env.ui.scheme == 'dark' ? 'white' : 'black' };
+            border-radius: 3px ; /* slightly round highlight strip */
+            transition: 0.1s ease ; /* for hover-zoom */
+                -webkit-transition: 0.1s ease ; -moz-transition: 0.1s ease ;
+                -o-transition: 0.1s ease ; -ms-transition: 0.1s ease
+        }
+        .${app.slug}-settings-modal li.active {
+            color: ${ env.ui.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }}
+        .${app.slug}-settings-modal li:not(:has(input[type=range])):hover {
+            padding: 4px 10px ; transform: scale(1.15) ; background: var(--entry-highlighted-bg) ; color: white }
+        .${app.slug}-settings-modal li:last-of-type { border-bottom: none } // remove last bottom-border
+        .${app.slug}-settings-modal li > label { cursor: pointer }
+        .${app.slug}-settings-modal li > input[type=checkbox] { display: none }
+        .${app.slug}-settings-modal .toggle-switch {
+            position: relative ; left: -1px ; bottom: -4px ; float: right ;
+            background-color: #ccc ; width: 26px ; height: 13px ; border-radius: 28px ;
+            transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
+                -o-transition: 0.4s ; -ms-transition: 0.4s
+        }
+        .${app.slug}-settings-modal .toggle-knob {
+            position: absolute ; left: 1px ; bottom: 1px ; content: "" ;
+            background-color: white ; width: 11px ; height: 11px ; border-radius: 28px ;
+            transition: 0.2s ; -webkit-transition: 0.2s ; -moz-transition: 0.2s ;
+                -o-transition: 0.2s ; -ms-transition: 0.2s
+        }
+        .${app.slug}-settings-modal li:has(input[type=range]) { display: flex ; flex-wrap: wrap; padding: 32px 8px   }
+        .${app.slug}-settings-modal li > input[type=range] {
+          --track-fill-percent: 100% ; width: 100% ; cursor: pointer ; margin: 7px 0 ;
+           -webkit-appearance: none ; appearance: none ; background: none
+        }
+        .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-runnable-track {
+            height: 5px ; border-radius: 10px ;
+            background: linear-gradient(to right,
+                var(--track-filled-color) 0%, var(--track-filled-color) var(--track-fill-percent),
+                var(--track-empty-color) var(--track-fill-percent), var(--track-empty-color) 100%
+            )
+        }
+        .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-thumb {
+           -webkit-appearance: none ; width: 12px ; height: 26.5px ; background: var(--thumb-color) ;
+           margin-top: -10.5px ; border: 4px solid var(--thumb-border) ; border-radius: 16px ; cursor: ew-resize ;
+           transition: transform 0.05s ease
+        }
+        .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-thumb:hover { transform: scaleX(1.325) }
+        .${app.slug}-settings-modal button { display: none }`
+    ))
 
     // Restore PREV SESSION's state
     if (!config[`${env.site}Disabled`]) {
