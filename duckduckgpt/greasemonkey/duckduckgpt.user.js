@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.8.24
+// @version                2025.8.24.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2082,7 +2082,7 @@
             btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
                 if (idx == 0) btn.style.display = 'none' // hide Dismiss button
                 else btn.classList.toggle('primary-modal-btn', // emphasize preferred API
-                    config.preferredAPI.toLowerCase() == btn.textContent.toLowerCase()
+                    config.preferredAPI && config.preferredAPI.toLowerCase() == btn.textContent.toLowerCase()
                         || btn.textContent == app.msgs.menuLabel_random && !config.preferredAPI)
             })
 
