@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.8.19.1
+// @version                2025.8.24
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -347,7 +347,13 @@
                 return val ?? (ctrl?.defaultVal ?? (ctrl?.type == 'slider' ? 100 : false))
             }
         },
-        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val }
+        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val },
+        typeIsEnabled(key) {
+            const reInvertFlags = /disabled|hidden/i
+            return reInvertFlags.test(key) // flag in control key name
+                && !reInvertFlags.test(this.controls[key]?.label || '') // but not in label msg key name
+                    ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
+        }
     }
     settings.load('debugMode') ; log.debug('Initializing settings...')
     Object.assign(settings, { controls: { // displays top-to-bottom, left-to-right in Settings modal
@@ -2413,7 +2419,7 @@
                         // Init toggle input
                         const settingToggle = dom.create.elem('input', {
                             type: 'checkbox', disabled: true, style: 'display: none' })
-                        settingToggle.checked = config[key] ^ key.includes('Disabled') // init based on config/name
+                        settingToggle.checked = settings.typeIsEnabled(key) // init based on config/name
                             && !(key == 'streamingDisabled' && !config.proxyAPIenabled) // uncheck Streaming in OAI mode
 
                         // Create/classify switch
