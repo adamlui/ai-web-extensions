@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.8.23
+// @version             2025.8.24
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -458,7 +458,7 @@
 
                     // Stylize toggles container
                     const siteSettingsUL = siteSettingsModal.querySelector('ul')
-                    Object.assign(siteSettingsUL.style, { cursor: 'pointer', fontSize: '18px', margin: '16px 0 -15px',
+                    Object.assign(siteSettingsUL.style, { cursor: 'pointer', fontSize: '18px', margin: '16px 0 -45px',
                         minHeight: '100px', listStyle: 'none' })
 
                     // Create toggle per site
