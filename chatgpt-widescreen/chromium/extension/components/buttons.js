@@ -119,8 +119,7 @@ window.buttons = {
         const { site } = env
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
         const parentToInsertInto = (
-            site == 'chatgpt' ? (await this.get.rightBtn()).closest(
-                (await chatbar.is.tall()) ? '[class*=bottom]' : 'div.flex' )
+            site == 'chatgpt' ? (await this.get.rightBtn()).closest('div.flex')
                     /* poe */ : chatbarDiv.lastChild )
         parentToInsertInto.prepend( // wrap btns in flexbox for better control
             this.btnsDiv = dom.create.elem('div', {
