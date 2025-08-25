@@ -121,10 +121,11 @@ window.buttons = {
         const parentToInsertInto = (
             site == 'chatgpt' ? await (async () => {
                 const rightBtn = await this.get.rightBtn()
-                return await chatbar.is.tall() ? rightBtn.closest('[class*=bottom]') : rightBtn.parentNode
+                console.log(rightBtn)
+                return await chatbar.is.tall() ? rightBtn.closest('[class*=bottom]') : rightBtn.closest('div.flex')
             })()
             : /* poe */ chatbarDiv.lastChild
-        );
+        )
         parentToInsertInto.prepend( // wrap btns in flexbox for better control
             this.btnsDiv = dom.create.elem('div', {
                 style: `display: flex ; align-items: center ; gap: 3px ; position: relative ; right: ${
