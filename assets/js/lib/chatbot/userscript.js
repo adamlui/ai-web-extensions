@@ -24,7 +24,7 @@ window.userscript = {
                 }
 
                 // Alert to no update found, nav back to About
-                modals.open('update', 'unavailable')
+                modals.open('update', 'unavailable') ; modals.open('about')
             }
         })
     }
