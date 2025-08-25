@@ -5,4 +5,4 @@ sync_changes_to_github:
   script:
     - apk add --no-cache git
     - git clone https://gitlab.com/adamlui/ai-web-extensions.git
-    - git push --force -o ci.skip https://${GITHUB_SYNC_PAT}@github.com/adamlui/ai-web-extensions.git HEAD:main 
+    - git push --force -o ci.skip https://${GITHUB_SYNC_PAT}@github.com/adamlui/ai-web-extensions.git HEAD:main
