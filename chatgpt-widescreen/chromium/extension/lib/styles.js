@@ -26,7 +26,7 @@ window.styles = {
 
     chatbar: {
         autoAppend: true,
-        get css() { // requires <config|env>
+        get css() { // requires lib/chatbar.js + <config|env>
             styles.initMinMaxWidths()
             const { site } = env, toWiden = config.widerChatbox && config.widescreen
             const wcbWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth )
@@ -34,8 +34,8 @@ window.styles = {
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
                 chatgpt: `main form { width: ${
                     toWiden ? wcbWidth : window.wsMinWidth -128 }px !important ; align-self: center }`,
-                poe: toWiden && `[class*=ChatHomeMain_inputContainer], [class^=ChatPageMainFooter_footerInner] {
-                    width: ${wcbWidth}px !important ; margin-right: 15px }`
+                poe: `[class*=ChatHomeMain_inputContainer], [class^=ChatPageMainFooter_footerInner] { width: ${
+                    toWiden ? wcbWidth : chatbar.nativeWidth }px !important ; margin-right: 15px }`
             }[site]
         }
     },
