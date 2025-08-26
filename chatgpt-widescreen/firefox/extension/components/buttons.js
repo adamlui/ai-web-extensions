@@ -124,8 +124,7 @@ window.buttons = {
         parentToInsertInto.prepend( // wrap btns in flexbox for better control
             this.btnsDiv = dom.create.elem('div', {
                 style: `display: flex ; align-items: center ; gap: 3px ; position: relative ; right: ${
-                    site == 'chatgpt' ? ( document.querySelector(sites[site].selectors.btns.login) ? 1 : -11 )
-                  : /* poe */ -11 }px`
+                    site == 'chatgpt' && document.querySelector(sites[site].selectors.btns.login) ? 1 : -11 }px`
             })
         )
 
