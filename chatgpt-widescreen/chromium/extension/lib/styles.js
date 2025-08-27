@@ -11,10 +11,10 @@ window.styles = {
             : /* poe */ 'div[class*=ChatHomeMain_centered], div[class*=ChatMessagesView]'
     },
 
-    initMinMaxWidths() { // requires env.site
+    calcWSbounds() { // requires env.site
         const { site } = env
-        window.wsMinWidth = chatbar.nativeWidth +( site == 'chatgpt' ? 128 : /* poe */ 66 )
-        window.wsMaxWidth = document.querySelector(this.outerDivSelector)?.parentNode?.offsetWidth
+        window.wsMinWidth ||= chatbar.nativeWidth +( site == 'chatgpt' ? 128 : /* poe */ 66 )
+        window.wsMaxWidth ||= document.querySelector(this.outerDivSelector)?.parentNode?.offsetWidth -25
     },
 
     async update({ key, autoAppend }) { // requires lib/dom.js
@@ -27,7 +27,7 @@ window.styles = {
     chatbar: {
         autoAppend: true,
         get css() { // requires lib/chatbar.js + <config|env>
-            styles.initMinMaxWidths()
+            styles.calcWSbounds()
             const { site } = env, toWiden = config.widerChatbox && config.widescreen
             const wcbWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth )
                 * Math.min(config.widerChatboxWidth, config.widescreenWidth) /100 -20
@@ -101,7 +101,7 @@ window.styles = {
     widescreen: {
         autoAppend: false,
         get css() { // requires <config|env>
-            styles.initMinMaxWidths()
+            styles.calcWSbounds()
             const { site } = env, outerDivSelector = styles.outerDivSelector
             const wsWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth ) * config.widescreenWidth /100
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
