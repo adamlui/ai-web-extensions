@@ -34,7 +34,7 @@
     "bump:firefox": "bash utils/bump.sh --ff"
   },
   "devDependencies": {
-    "@eslint/json": "^0.13.1",
+    "@eslint/json": "^0.13.2",
     "@eslint/markdown": "^7.2.0",
     "@stylistic/eslint-plugin": "^5.2.3",
     "eslint": "^9.34.0",
