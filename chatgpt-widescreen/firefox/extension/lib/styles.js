@@ -33,7 +33,7 @@ window.styles = {
                 * Math.min(config.widerChatboxWidth, config.widescreenWidth) /100 -20
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
                 chatgpt: `main form { width: ${
-                    toWiden ? wcbWidth : window.wsMinWidth -128 }px !important ; align-self: center }`,
+                    toWiden ? wcbWidth : chatbar.nativeWidth }px !important ; align-self: center }`,
                 poe: `[class*=ChatHomeMain_inputContainer], [class^=ChatPageMainFooter_footerInner] { width: ${
                     toWiden ? wcbWidth : chatbar.nativeWidth }px !important ; margin-right: 15px }`
             }[site]
