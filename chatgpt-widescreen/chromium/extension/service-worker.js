@@ -23,10 +23,8 @@ const appReady = (async () => {
     // Init SITES data
     const sites = Object.assign(Object.create(null),
         JSON5.parse(await (await fetch(`${app.urls.resourceHost}/assets/data/sites.json5`)).text()))
-    Object.keys(sites).forEach(site => { // strip protocol from homepage URL + add favicon URL for popup menu
-        sites[site].urls.homepage = sites[site].urls.homepage.replace(/^https?:\/\//, '') // for cleaner tooltips/labels
-        sites[site].urls.favicon = `https://www.google.com/s2/favicons?domain=${sites[site].urls.homepage}`
-    })
+    Object.keys(sites).forEach(site => // strip protocol from homepage URL for cleaner tooltips/labels
+        sites[site].urls.homepage = sites[site].urls.homepage.replace(/^https?:\/\//, ''))
     chrome.storage.local.set({ sites })
 
     return { app, sites } // to install listener
