@@ -56,7 +56,7 @@ window.buttons = {
         })
     },
 
-    async create() { // requires components|tooltip.js + lib/dom.js + <env|sites>
+    async create() { // requires components/tooltip.js + lib/dom.js + <env|sites>
         if (!this.styles) this.stylize()
         const { site, ui: { hasTallChatbar }} = env, { [site]: { selectors }} = sites,
               isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true'),
@@ -122,7 +122,7 @@ window.buttons = {
             site == 'chatgpt' ? (await this.get.rightBtn()).closest('div.flex')
                     /* poe */ : chatbarDiv.lastChild )
         parentToInsertInto.prepend( // wrap btns in flexbox for better control
-            this.btnsDiv = dom.create.elem('div', {
+            this.btnsDiv ||= dom.create.elem('div', {
                 style: `display: flex ; align-items: center ; gap: 3px ; position: relative ; right: ${
                     site == 'chatgpt' && document.querySelector(sites[site].selectors.btns.login) ? 1 : -11 }px`
             })
