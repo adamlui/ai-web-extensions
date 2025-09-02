@@ -50,7 +50,7 @@
   "helptip_the": { "message": "De " },
   "helptip_btns": { "message": "Knapper" },
   "helptip_widescreenWidth": { "message": "Juster mængden af bredformat, der skal anvendes" },
-  "helptip_tallerChatboxHeight": { "message": "Juster mængden af højere chatboks for at anvende" },
+  "helptip_tallerChatboxHeight": { "message": "Juster mængden af højere chatboks, der skal anvendes (kræver tekst for at forhåndsvise)" },
   "helptip_tallerChatbox": { "message": "Udvid chatboksen lodret" },
   "helptip_widerChatboxWidth": { "message": "Juster mængden af bredere chatboks for at anvende" },
   "helptip_widerChatbox": { "message": "Udvid chatboksen vandret i bredskærmstilstand" },

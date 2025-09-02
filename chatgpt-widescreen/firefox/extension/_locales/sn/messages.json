@@ -50,7 +50,7 @@
   "helptip_the": { "message": "" },
   "helptip_btns": { "message": "Mabhatani" },
   "helptip_widescreenWidth": { "message": "Gadzirisa uwandu Widescreen kushandisa" },
-  "helptip_tallerChatboxHeight": { "message": "Gadzirisa huwandu hweTaller Chatbox kuti ushandise" },
+  "helptip_tallerChatboxHeight": { "message": "Gadzirisa uwandu Taller Chatbox kushandisa (kunoda rugwaro preview)" },
   "helptip_tallerChatbox": { "message": "Wedzera chatbox yakatwasuka" },
   "helptip_widerChatboxWidth": { "message": "Gadzirisa uwandu Wider Chatbox kushandisa" },
   "helptip_widerChatbox": { "message": "Kuwedzera chatbox horizontally muna Wide Chinovhara muoti" },

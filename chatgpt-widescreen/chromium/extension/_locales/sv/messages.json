@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Dessa" },
   "helptip_btns": { "message": "Knappar" },
   "helptip_widescreenWidth": { "message": "Justera mängden Widescreen som ska tillämpas" },
-  "helptip_tallerChatboxHeight": { "message": "Justera mängden Högre Chatbox för att ansöka" },
+  "helptip_tallerChatboxHeight": { "message": "Justera mängden högre chattruta som ska tillämpas (kräver text för att förhandsgranska)" },
   "helptip_tallerChatbox": { "message": "Expandera chattrutan vertikalt" },
   "helptip_widerChatboxWidth": { "message": "Justera mängden bredare chattruta för att ansöka" },
   "helptip_widerChatbox": { "message": "Expandera chattrutan horisontellt i bredbildsläge" },

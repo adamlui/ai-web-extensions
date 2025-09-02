@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Planul" },
   "helptip_btns": { "message": "Butoane" },
   "helptip_widescreenWidth": { "message": "Ajustați cantitatea de ecran lat pentru a aplica" },
-  "helptip_tallerChatboxHeight": { "message": "Ajustați cantitatea de chatbox mai înalt pentru a aplica" },
+  "helptip_tallerChatboxHeight": { "message": "Ajustați valoarea casetei de chat mai înalte pentru a aplica (necesită text pentru previzualizare)" },
   "helptip_tallerChatbox": { "message": "Extindeți caseta de chat pe verticală" },
   "helptip_widerChatboxWidth": { "message": "Ajustați cantitatea de casetă de chat mai largă pentru a aplica" },
   "helptip_widerChatbox": { "message": "Extindeți caseta de chat orizontal în modul Ecran lat" },

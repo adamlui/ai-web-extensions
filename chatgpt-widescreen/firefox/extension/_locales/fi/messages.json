@@ -50,7 +50,7 @@
   "helptip_the": { "message": "[  ..]" },
   "helptip_btns": { "message": "Painikkeet" },
   "helptip_widescreenWidth": { "message": "Säädä käytettävän laajakuvanäytön määrää" },
-  "helptip_tallerChatboxHeight": { "message": "Muokkaa käytettävän korkeamman chatboxin määrää" },
+  "helptip_tallerChatboxHeight": { "message": "Muokkaa käytettävän korkeamman chatboxin määrää (vaatii tekstin esikatselua varten)" },
   "helptip_tallerChatbox": { "message": "Laajenna chatboxia pystysuunnassa" },
   "helptip_widerChatboxWidth": { "message": "Muokkaa käytettävän laajemman chatboxin määrää" },
   "helptip_widerChatbox": { "message": "Laajenna keskusteluruutua vaakasuunnassa laajakuvatilassa" },

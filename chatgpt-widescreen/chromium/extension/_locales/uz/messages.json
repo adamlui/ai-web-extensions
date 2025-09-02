@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Asbobda" },
   "helptip_btns": { "message": "Tugmalar" },
   "helptip_widescreenWidth": { "message": "Qo'llash uchun keng ekran miqdorini sozlang" },
-  "helptip_tallerChatboxHeight": { "message": "Qo'llash uchun Taller Chatbox miqdorini sozlang" },
+  "helptip_tallerChatboxHeight": { "message": "Qo'llash uchun balandroq chat qutisi miqdorini sozlang (oldindan ko'rish uchun matn kerak)" },
   "helptip_tallerChatbox": { "message": "Chat qutisini vertikal ravishda kengaytiring" },
   "helptip_widerChatboxWidth": { "message": "Qo'llash uchun Wider Chatbox miqdorini sozlang" },
   "helptip_widerChatbox": { "message": "Keng ekran rejimida chat qutisini gorizontal ravishda kengaytiring" },

@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Panduan kebijakan ini" },
   "helptip_btns": { "message": "Tombol" },
   "helptip_widescreenWidth": { "message": "Sesuaikan jumlah Layar Lebar yang akan diterapkan" },
-  "helptip_tallerChatboxHeight": { "message": "Sesuaikan jumlah Kotak Obrolan yang Lebih Tinggi untuk diterapkan" },
+  "helptip_tallerChatboxHeight": { "message": "Sesuaikan jumlah Kotak Obrolan yang Lebih Tinggi untuk diterapkan (memerlukan teks untuk melihat pratinjau)" },
   "helptip_tallerChatbox": { "message": "Perluas kotak obrolan secara vertikal" },
   "helptip_widerChatboxWidth": { "message": "Sesuaikan jumlah Kotak Obrolan yang Lebih Luas untuk diterapkan" },
   "helptip_widerChatbox": { "message": "Perluas kotak obrolan secara horizontal dalam mode Layar Lebar" },

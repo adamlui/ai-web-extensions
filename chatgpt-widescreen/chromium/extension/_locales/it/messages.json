@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Il" },
   "helptip_btns": { "message": "Pulsanti" },
   "helptip_widescreenWidth": { "message": "Regola la quantità di Widescreen da applicare" },
-  "helptip_tallerChatboxHeight": { "message": "Regola la quantità di Chatbox più alta da applicare" },
+  "helptip_tallerChatboxHeight": { "message": "Regola la quantità di Chatbox più alta da applicare (richiede il testo per l'anteprima)" },
   "helptip_tallerChatbox": { "message": "Espandi la chatbox verticalmente" },
   "helptip_widerChatboxWidth": { "message": "Regola la quantità di Chatbox più ampia da applicare" },
   "helptip_widerChatbox": { "message": "Espandi la chatbox orizzontalmente in modalità Wide Screen" },

@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Tempoh rawatan" },
   "helptip_btns": { "message": "Structural navigation" },
   "helptip_widescreenWidth": { "message": "Laraskan amaun Skrin Lebar untuk digunakan" },
-  "helptip_tallerChatboxHeight": { "message": "Laraskan amaun Kotak Sembang Lebih Tinggi untuk digunakan" },
+  "helptip_tallerChatboxHeight": { "message": "Laraskan amaun Kotak Sembang Lebih Tinggi untuk digunakan (memerlukan teks untuk pratonton)" },
   "helptip_tallerChatbox": { "message": "Kembangkan kotak sembang secara menegak" },
   "helptip_widerChatboxWidth": { "message": "Laraskan amaun Kotak Sembang Lebih Luas untuk digunakan" },
   "helptip_widerChatbox": { "message": "Kembangkan kotak sembang secara mendatar dalam mod Skrin Lebar" },

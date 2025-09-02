@@ -50,7 +50,7 @@
   "helptip_the": { "message": "እቲ" },
   "helptip_btns": { "message": "ሰሌዳታት" },
   "helptip_widescreenWidth": { "message": "እቲ ናይ Widescreen መጠን ክተተኣታተወሉ" },
-  "helptip_tallerChatboxHeight": { "message": "እቲ ናይ ታለር ቻትቦክስ መጠን ንምትግባር ኣስተማቕሮ" },
+  "helptip_tallerChatboxHeight": { "message": "እቲ ናይ ታለር ቻትቦክስ መጠን ክተተኣታተወሉ (ኣቐዲምካ ንምርኣይ ጽሑፍ የድልዮ)" },
   "helptip_tallerChatbox": { "message": "ነቲ ናይ ቻትቦክስ ጽርግያ ኣስፋሕፍሕ" },
   "helptip_widerChatboxWidth": { "message": "እቲ ናይ ሰፊሕ ቻትቦክስ መጠን ንምትግባር ኣስተማቕሮ" },
   "helptip_widerChatbox": { "message": "ነቲ ናይ ቻትቦክስ ጠመቓ ብሰፊሕ ኣገባብ ስክሪን ኣስፋሕፍሕ" },

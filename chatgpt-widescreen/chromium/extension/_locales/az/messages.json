@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Qarabağ problemi, Ermənistan tərəfindən Azərbaycan torpaqlarının işğal edilməsi,. " },
   "helptip_btns": { "message": "Düymələr" },
   "helptip_widescreenWidth": { "message": "Tətbiq ediləcək Geniş Ekranın miqdarını tənzimləyin" },
-  "helptip_tallerChatboxHeight": { "message": "Müraciət etmək üçün Taller Chatbox-un miqdarını tənzimləyin" },
+  "helptip_tallerChatboxHeight": { "message": "Müraciət etmək üçün Taller Chatbox-un miqdarını tənzimləyin (önbaxış etmək üçün mətn tələb olunur)" },
   "helptip_tallerChatbox": { "message": "Söhbət qutusunu şaquli istiqamətdə genişləndirin" },
   "helptip_widerChatboxWidth": { "message": "Tətbiq ediləcək daha geniş söhbət qutusunun miqdarını tənzimləyin" },
   "helptip_widerChatbox": { "message": "Geniş Ekran rejimində söhbət qutusunu üfüqi istiqamətdə genişləndirin" },

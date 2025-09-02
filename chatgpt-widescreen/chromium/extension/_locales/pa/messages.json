@@ -50,7 +50,7 @@
   "helptip_the": { "message": "ਦ" },
   "helptip_btns": { "message": "ਬਟਨ" },
   "helptip_widescreenWidth": { "message": "ਲਾਗੂ ਕਰਨ ਲਈ ਵਾਈਡਸਕ੍ਰੀਨ ਦੀ ਮਾਤਰਾ ਅਡਜੱਸਟ ਕਰੋ" },
-  "helptip_tallerChatboxHeight": { "message": "ਲਾਗੂ ਕਰਨ ਲਈ ਟੈੱਲਰ ਚੈਟਬਾਕਸ ਦੀ ਮਾਤਰਾ ਅਡਜੱਸਟ ਕਰੋ" },
+  "helptip_tallerChatboxHeight": { "message": "ਲਾਗੂ ਕਰਨ ਲਈ ਟੇਲਰ ਚੈਟਬਾਕਸ ਦੀ ਮਾਤਰਾ ਅਡਜੱਸਟ ਕਰੋ (ਝਲਕ ਲਈ ਟੈਕਸਟ ਦੀ ਲੋੜ ਹੈ)" },
   "helptip_tallerChatbox": { "message": "ਗੱਲਬਾਤ ਬਾਕਸ ਨੂੰ ਲੰਬਕਾਰੀ ਫੈਲਾਓ" },
   "helptip_widerChatboxWidth": { "message": "ਲਾਗੂ ਕਰਨ ਲਈ ਚੌੜਾ ਚੈਟਬਾਕਸ ਦੀ ਮਾਤਰਾ ਅਡਜੱਸਟ ਕਰੋ" },
   "helptip_widerChatbox": { "message": "ਚੌੜੀ ਸਕਰੀਨ ਮੋਡ ਵਿੱਚ ਖਿਤਿਜੀ ਗੱਲਬਾਤ ਬਾਕਸ ਫੈਲਾਓ" },

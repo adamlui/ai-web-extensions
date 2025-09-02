@@ -50,7 +50,7 @@
   "helptip_the": { "message": "" },
   "helptip_btns": { "message": "Dikonopo" },
   "helptip_widescreenWidth": { "message": "Fetola selekanyo sa Sekirini se Segolo go se dirisa" },
-  "helptip_tallerChatboxHeight": { "message": "Fetola selekanyo sa Taller Chatbox gore e dirisiwe" },
+  "helptip_tallerChatboxHeight": { "message": "Fetola selekanyo sa Taller Chatbox gore e dirisiwe (e tlhoka tshedimosetso go e leba pele)" },
   "helptip_tallerChatbox": { "message": "Atolosa lebokoso la motlotlo ka go le emisa" },
   "helptip_widerChatboxWidth": { "message": "Fetola selekanyo sa Chatbox e e atlhameng go e dirisa" },
   "helptip_widerChatbox": { "message": "Atolosa lebokoso la motlotlo ka go le tobetsa ka mokgwa wa Sekerini se se Phara" },

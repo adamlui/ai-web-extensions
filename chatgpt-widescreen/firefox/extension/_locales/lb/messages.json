@@ -50,7 +50,7 @@
   "helptip_the": { "message": "D'" },
   "helptip_btns": { "message": "Knäppchen" },
   "helptip_widescreenWidth": { "message": "Ajustéiert d'Quantitéit vum Widescreen fir ze applizéieren" },
-  "helptip_tallerChatboxHeight": { "message": "Ajustéiert de Betrag vun Taller Chatbox fir ze gëllen" },
+  "helptip_tallerChatboxHeight": { "message": "Ajustéiert de Betrag vun Taller Chatbox fir ze gëllen (erfuerdert Text op Virschau)" },
   "helptip_tallerChatbox": { "message": "D'Chatbox vertikal ausbauen" },
   "helptip_widerChatboxWidth": { "message": "Ajustéiert d'Quantitéit vu méi grousser Chatbox fir ze gëllen" },
   "helptip_widerChatbox": { "message": "D'Chatbox horizontal am Wide Screen Modus ausbauen" },

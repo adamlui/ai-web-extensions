@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Wat is jou planne vir vandag?" },
   "helptip_btns": { "message": "Knoppies" },
   "helptip_widescreenWidth": { "message": "Pas die hoeveelheid wydskerm aan om toe te pas" },
-  "helptip_tallerChatboxHeight": { "message": "Verstel die hoeveelheid Taller Chatbox om aansoek te doen" },
+  "helptip_tallerChatboxHeight": { "message": "Verstel die hoeveelheid Taller Chatbox om aansoek te doen (vereis teks om voorskou te sien)" },
   "helptip_tallerChatbox": { "message": "Brei die kletsboks vertikaal uit" },
   "helptip_widerChatboxWidth": { "message": "Verstel die hoeveelheid wyer chatbox om aansoek te doen" },
   "helptip_widerChatbox": { "message": "Brei die kletsboks horisontaal uit in wye skermmodus" },

@@ -50,7 +50,7 @@
   "helptip_the": { "message": "x" },
   "helptip_btns": { "message": "Przyciski" },
   "helptip_widescreenWidth": { "message": "Dostosuj ilość ekranu panoramicznego do zastosowania" },
-  "helptip_tallerChatboxHeight": { "message": "Dostosuj ilość wyższej skrzynki czatu do zastosowania" },
+  "helptip_tallerChatboxHeight": { "message": "Dostosuj ilość wyższej skrzynki czatu do zastosowania (wymaga tekstu do podglądu)" },
   "helptip_tallerChatbox": { "message": "Rozwiń czatbox w pionie" },
   "helptip_widerChatboxWidth": { "message": "Dostosuj ilość Wider Chatbox do zastosowania" },
   "helptip_widerChatbox": { "message": "Rozwiń czatbox poziomo w trybie Wide Screen" },

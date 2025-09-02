@@ -50,7 +50,7 @@
   "helptip_the": { "message": "И" },
   "helptip_btns": { "message": "Копчиња" },
   "helptip_widescreenWidth": { "message": "Прилагодете го износот на широкиот екран за да се примени" },
-  "helptip_tallerChatboxHeight": { "message": "Прилагодете го износот на кутијата за разговор Taller за да се примени" },
+  "helptip_tallerChatboxHeight": { "message": "Прилагодете го износот на Taller Chatbox за да се примени (потребен е текст за преглед)" },
   "helptip_tallerChatbox": { "message": "Проширете го полето за разговор вертикално" },
   "helptip_widerChatboxWidth": { "message": "Прилагодете го износот на поширокото поле за разговор за да го примените" },
   "helptip_widerChatbox": { "message": "Проширете го полето за разговор хоризонтално во режим на широк екран" },

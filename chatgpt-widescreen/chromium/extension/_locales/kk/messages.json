@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Ағымдағы " },
   "helptip_btns": { "message": "Батырмалар" },
   "helptip_widescreenWidth": { "message": "Қолданылатын кең экран мөлшерін реттеңіз" },
-  "helptip_tallerChatboxHeight": { "message": "Қолданылатын биіктіктегі сөйлесу жәшігінің мөлшерін реттеңіз" },
+  "helptip_tallerChatboxHeight": { "message": "Қолданылатын биіктіктегі сөйлесу жәшігінің мөлшерін реттеңіз (алдын-ала қарау үшін мәтін қажет)" },
   "helptip_tallerChatbox": { "message": "Чат терезесін вертикалды түрде кеңейту" },
   "helptip_widerChatboxWidth": { "message": "Қолданылатын кеңірек чат жәшігінің мөлшерін реттеңіз" },
   "helptip_widerChatbox": { "message": "Кең экран режимінде чат терезесін көлденеңінен кеңейту" },

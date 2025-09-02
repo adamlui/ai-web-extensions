@@ -50,7 +50,7 @@
   "helptip_the": { "message": "." },
   "helptip_btns": { "message": "Mygtukai" },
   "helptip_widescreenWidth": { "message": "Koreguokite norimą taikyti plačiaekranio ekrano dydį" },
-  "helptip_tallerChatboxHeight": { "message": "Pakoreguokite taikytiną aukštesnės pokalbių dėžutės kiekį" },
+  "helptip_tallerChatboxHeight": { "message": "Pakoreguokite norimą taikyti aukštesnio pokalbių lauko kiekį (peržiūrai reikia teksto)" },
   "helptip_tallerChatbox": { "message": "Išplėskite pokalbių dėžutę vertikaliai" },
   "helptip_widerChatboxWidth": { "message": "Pakoreguokite norimą taikyti platesnio pokalbių lauko kiekį" },
   "helptip_widerChatbox": { "message": "Išplėskite pokalbių dėžutę horizontaliai plačiaekraniu režimu" },

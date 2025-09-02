@@ -50,7 +50,7 @@
   "helptip_the": { "message": "-" },
   "helptip_btns": { "message": "Кнопки" },
   "helptip_widescreenWidth": { "message": "Отрегулируйте количество широкоэкранных экранов для применения" },
-  "helptip_tallerChatboxHeight": { "message": "Отрегулируйте количество Taller Chatbox, чтобы применить" },
+  "helptip_tallerChatboxHeight": { "message": "Отрегулируйте количество Taller Chatbox для применения (требуется текст для предварительного просмотра)" },
   "helptip_tallerChatbox": { "message": "Развернуть чат-бокс по вертикали" },
   "helptip_widerChatboxWidth": { "message": "Отрегулируйте количество Wider Chatbox, чтобы применить" },
   "helptip_widerChatbox": { "message": "Разверните чат-бокс по горизонтали в режиме «Широкий экран»" },

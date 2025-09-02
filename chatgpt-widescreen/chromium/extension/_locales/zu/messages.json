@@ -50,7 +50,7 @@
   "helptip_the": { "message": "I" },
   "helptip_btns": { "message": "Izinkinobho" },
   "helptip_widescreenWidth": { "message": "Lungisa inani lesikrini esibanzi ukuze ufake isicelo" },
-  "helptip_tallerChatboxHeight": { "message": "Lungisa inani le-Taller Chatbox ukuze lifake isicelo" },
+  "helptip_tallerChatboxHeight": { "message": "Lungisa inani le-Taller Chatbox ukuze lisebenze (kudinga umbhalo ukuze ubuke kuqala)" },
   "helptip_tallerChatbox": { "message": "Nweba ibhokisi lengxoxo ngokuqondile" },
   "helptip_widerChatboxWidth": { "message": "Lungisa inani le-Chatbox Ebanzi ukuze lifake isicelo" },
   "helptip_widerChatbox": { "message": "Nweba ibhokisi lengxoxo ngokuvundlile ngemodi Yesikrini Esibanzi" },

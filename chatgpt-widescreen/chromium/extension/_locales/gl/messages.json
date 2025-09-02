@@ -50,7 +50,7 @@
   "helptip_the": { "message": "o" },
   "helptip_btns": { "message": "Botóns" },
   "helptip_widescreenWidth": { "message": "Axustar a cantidade de pantalla ancha a aplicar" },
-  "helptip_tallerChatboxHeight": { "message": "Axustar a cantidade de Taller Chatbox para aplicar" },
+  "helptip_tallerChatboxHeight": { "message": "Axuste a cantidade de Taller Chatbox para aplicar (require texto para previsualizar)" },
   "helptip_tallerChatbox": { "message": "Expandir o chatbox verticalmente" },
   "helptip_widerChatboxWidth": { "message": "Axuste o importe de Wider Chatbox para aplicar" },
   "helptip_widerChatbox": { "message": "Expandir o chatbox horizontalmente no modo Wide Screen" },

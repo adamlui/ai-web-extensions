@@ -50,7 +50,7 @@
   "helptip_the": { "message": "ໄດ້" },
   "helptip_btns": { "message": "ປຸ່ມ" },
   "helptip_widescreenWidth": { "message": "ປັບປະລິມານຂອງ Widescreen ເພື່ອສະ ຫມັກ" },
-  "helptip_tallerChatboxHeight": { "message": "ປັບປະລິມານຂອງ Taller Chatbox ເພື່ອສະ ຫມັກ" },
+  "helptip_tallerChatboxHeight": { "message": "ປັບປະລິມານຂອງ Taller Chatbox ເພື່ອສະໝັກ (ຕ້ອງການຂໍ້ຄວາມເພື່ອເບິ່ງລ່ວງໜ້າ)" },
   "helptip_tallerChatbox": { "message": "ຂະຫຍາຍກ່ອງສົນທະນາເປັນແນວຕັ້ງ" },
   "helptip_widerChatboxWidth": { "message": "ປັບປະລິມານຂອງ Wider Chatbox ເພື່ອສະໝັກ" },
   "helptip_widerChatbox": { "message": "ຂະຫຍາຍກ່ອງສົນທະນາຕາມລວງນອນໃນໂໝດໜ້າຈໍກວ້າງ" },

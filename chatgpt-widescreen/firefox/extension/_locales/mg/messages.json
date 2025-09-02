@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Ny\t… " },
   "helptip_btns": { "message": "Tsindry" },
   "helptip_widescreenWidth": { "message": "Amboary ny habetsaky ny Widescreen mba hampihatra" },
-  "helptip_tallerChatboxHeight": { "message": "Amboary ny habetsaky ny Taller Chatbox ny mampihatra" },
+  "helptip_tallerChatboxHeight": { "message": "Amboary ny habetsaky ny Taller Chatbox hampihatra (mitaky lahatsoratra mba hijery)" },
   "helptip_tallerChatbox": { "message": "Hanitatra ny chatbox mitsangana" },
   "helptip_widerChatboxWidth": { "message": "Amboary ny habetsaky ny Wider Chatbox ny mampihatra" },
   "helptip_widerChatbox": { "message": "Velaro mitsivalana ny chatbox amin'ny fomba mivelatra" },

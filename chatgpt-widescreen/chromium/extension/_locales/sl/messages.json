@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Lahek" },
   "helptip_btns": { "message": "Gumbi" },
   "helptip_widescreenWidth": { "message": "Prilagodite količino širokega zaslona, ki jo želite uporabiti" },
-  "helptip_tallerChatboxHeight": { "message": "Prilagodite količino višjega polja za klepet, da se uporabi" },
+  "helptip_tallerChatboxHeight": { "message": "Prilagodite količino višjih klepetalnic, ki jih želite uporabiti (za predogled je potrebno besedilo)" },
   "helptip_tallerChatbox": { "message": "Razširi klepetalnico navpično" },
   "helptip_widerChatboxWidth": { "message": "Prilagodite količino razširjenega polja za klepet, ki ga želite uporabiti" },
   "helptip_widerChatbox": { "message": "Razširite klepetalnico vodoravno v načinu širokega zaslona" },

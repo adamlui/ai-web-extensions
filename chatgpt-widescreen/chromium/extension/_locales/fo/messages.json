@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Tað er" },
   "helptip_btns": { "message": "Knappur" },
   "helptip_widescreenWidth": { "message": "Tillaga nøgdini av víðskjá at seta í verk" },
-  "helptip_tallerChatboxHeight": { "message": "Tillaga nøgdini av Taller Chatbox at seta í verk" },
+  "helptip_tallerChatboxHeight": { "message": "Tillaga nøgdini av Taller Chatbox at seta í verk (krevur tekst til forskoðan)" },
   "helptip_tallerChatbox": { "message": "At víðka chatboxina vertikalt" },
   "helptip_widerChatboxWidth": { "message": "Tillaga nøgdini av breiðari chatbox at seta í verk" },
   "helptip_widerChatbox": { "message": "At víðka chatboxina horisontalt í breiðum skermumynd" },

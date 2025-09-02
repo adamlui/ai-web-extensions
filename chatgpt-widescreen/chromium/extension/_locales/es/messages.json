@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Las " },
   "helptip_btns": { "message": "Botones" },
   "helptip_widescreenWidth": { "message": "Ajuste la cantidad de pantalla panorámica a aplicar" },
-  "helptip_tallerChatboxHeight": { "message": "Ajuste la cantidad de Taller Chatbox a aplicar" },
+  "helptip_tallerChatboxHeight": { "message": "Ajuste la cantidad de Taller Chatbox a aplicar (requiere texto para previsualizar)" },
   "helptip_tallerChatbox": { "message": "Expanda el cuadro de chat verticalmente" },
   "helptip_widerChatboxWidth": { "message": "Ajuste la cantidad de Wider Chatbox a aplicar" },
   "helptip_widerChatbox": { "message": "Expanda el cuadro de chat horizontalmente en el modo de pantalla ancha" },

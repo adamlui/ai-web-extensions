@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Lumikizanani nafe" },
   "helptip_btns": { "message": "Mabatani" },
   "helptip_widescreenWidth": { "message": "Sinthani kuchuluka kwa Widescreen kuti mugwiritse ntchito" },
-  "helptip_tallerChatboxHeight": { "message": "Sinthani kuchuluka kwa Taller Chatbox kuti mugwiritse ntchito" },
+  "helptip_tallerChatboxHeight": { "message": "Sinthani kuchuluka kwa Taller Chatbox kuti mugwiritse ntchito (kumafuna malemba kuti muwonekere)" },
   "helptip_tallerChatbox": { "message": "Kukulitsa chatbox vertically" },
   "helptip_widerChatboxWidth": { "message": "Sinthani kuchuluka kwa Wider Chatbox kuti mugwiritse ntchito" },
   "helptip_widerChatbox": { "message": "Kukulitsa chatbox yopingasa mu Wide Screen mode" },

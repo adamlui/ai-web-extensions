@@ -50,7 +50,7 @@
   "helptip_the": { "message": "." },
   "helptip_btns": { "message": "כפתורים" },
   "helptip_widescreenWidth": { "message": "התאם את כמות המסך הרחב להחלה" },
-  "helptip_tallerChatboxHeight": { "message": "התאם את הסכום של תיבת צ'אט גבוהה יותר כדי להחיל" },
+  "helptip_tallerChatboxHeight": { "message": "התאם את הסכום של תיבת צ'אט גבוהה יותר להחלה (דורש טקסט לתצוגה מקדימה)" },
   "helptip_tallerChatbox": { "message": "הרחב את תיבת הצ'אט אנכית" },
   "helptip_widerChatboxWidth": { "message": "התאם את הסכום של תיבת צ'אט רחבה יותר כדי להחיל" },
   "helptip_widerChatbox": { "message": "הרחב את תיבת הצ'אט אופקית במצב מסך רחב" },

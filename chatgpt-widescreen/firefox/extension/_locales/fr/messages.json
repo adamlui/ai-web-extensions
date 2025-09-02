@@ -50,7 +50,7 @@
   "helptip_the": { "message": "La" },
   "helptip_btns": { "message": "Boutons" },
   "helptip_widescreenWidth": { "message": "Ajustez la quantité d'écran large à appliquer" },
-  "helptip_tallerChatboxHeight": { "message": "Ajustez le montant de Taller Chatbox à appliquer" },
+  "helptip_tallerChatboxHeight": { "message": "Ajustez la quantité de Taller Chatbox à appliquer (nécessite du texte pour prévisualiser)" },
   "helptip_tallerChatbox": { "message": "Développez la boîte de discussion verticalement" },
   "helptip_widerChatboxWidth": { "message": "Ajustez la quantité de Wider Chatbox à appliquer" },
   "helptip_widerChatbox": { "message": "Développez la boîte de discussion horizontalement en mode grand écran" },

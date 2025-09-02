@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Ol" },
   "helptip_btns": { "message": "Ol bot" },
   "helptip_widescreenWidth": { "message": "Pasim namba bilong ol samting yu laik yusim" },
-  "helptip_tallerChatboxHeight": { "message": "Pasim namba bilong Taller Chatbox bilong mekim wok" },
+  "helptip_tallerChatboxHeight": { "message": "Pasim namba bilong Taller Chatbox bilong mekim wok (i gat tok bilong en i mas kamap pastaim)" },
   "helptip_tallerChatbox": { "message": "Kisim bek dispela bokis long rot bilong rot" },
   "helptip_widerChatboxWidth": { "message": "Pasim namba bilong bikpela chatbox bilong mekim wok" },
   "helptip_widerChatbox": { "message": "Long hap bilong en, ol i save yusim bikpela piksa bilong soim ol samting long hap bilong en" },

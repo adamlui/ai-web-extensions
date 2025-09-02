@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Pieczvaigžņu" },
   "helptip_btns": { "message": "Pogas" },
   "helptip_widescreenWidth": { "message": "Pielāgojiet izmantojamā platekrāna apjomu" },
-  "helptip_tallerChatboxHeight": { "message": "Pielāgojiet piemērojamo Taller Chatbox summu" },
+  "helptip_tallerChatboxHeight": { "message": "Pielāgojiet lietojamo garāku tērzēšanas lodziņu (nepieciešams teksts, lai to priekšskatītu)" },
   "helptip_tallerChatbox": { "message": "Paplašiniet tērzētavu vertikāli" },
   "helptip_widerChatboxWidth": { "message": "Pielāgojiet lietojamo Platākas tērzēšanas lodziņa summu" },
   "helptip_widerChatbox": { "message": "Paplašiniet tērzēšanas lodziņu horizontāli platekrāna režīmā" },

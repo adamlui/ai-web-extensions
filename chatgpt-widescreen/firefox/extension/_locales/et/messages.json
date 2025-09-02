@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Laenusaaja " },
   "helptip_btns": { "message": "Nupud" },
   "helptip_widescreenWidth": { "message": "Kohanda rakendatava laiekraani suurust" },
-  "helptip_tallerChatboxHeight": { "message": "Kohanda rakendatava pikema vestluskasti summat" },
+  "helptip_tallerChatboxHeight": { "message": "Kohanda rakendatava pikema vestluskasti summat (eelvaate jaoks on vaja teksti)" },
   "helptip_tallerChatbox": { "message": "Laienda vestluskasti vertikaalselt" },
   "helptip_widerChatboxWidth": { "message": "Kohanda rakendatava laiema vestluskasti summat" },
   "helptip_widerChatbox": { "message": "Laiekraanirežiimis laienda vestluskasti horisontaalselt" },

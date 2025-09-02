@@ -50,7 +50,7 @@
   "helptip_the": { "message": "An" },
   "helptip_btns": { "message": "Putanan" },
   "helptip_widescreenWidth": { "message": "Atharraich an ìre de Leathann-sgrìn a chuireas tu an sàs" },
-  "helptip_tallerChatboxHeight": { "message": "Atharraich an t - suim de Taller Chatbox airson a chur an sàs" },
+  "helptip_tallerChatboxHeight": { "message": "Atharraich an t - suim de Taller Chatbox a chuireas tu a - steach (feumar teacsa gu ro - shealladh)" },
   "helptip_tallerChatbox": { "message": "Leudaich am bogsa cabadaich gu dìreach" },
   "helptip_widerChatboxWidth": { "message": "Atharraich meud a’ Bhogsa Chat nas Leatha a thèid a chur an sàs" },
   "helptip_widerChatbox": { "message": "Leudaich am bogsa cabadaich gu còmhnard ann am modh Sgrion Leathann" },

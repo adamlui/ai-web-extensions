@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Hluta" },
   "helptip_btns": { "message": "Hnappar" },
   "helptip_widescreenWidth": { "message": "Breyttu magni breiðskjásins til að nota" },
-  "helptip_tallerChatboxHeight": { "message": "Breyttu upphæð Taller-spjallhólfsins til að sækja um" },
+  "helptip_tallerChatboxHeight": { "message": "Breyttu upphæð Taller-spjallhólfsins til að eiga við (krefst texta til að forskoða)" },
   "helptip_tallerChatbox": { "message": "Stækkaðu spjallboxið lóðrétt" },
   "helptip_widerChatboxWidth": { "message": "Breyttu upphæð breiðari spjallreits til að sækja um" },
   "helptip_widerChatbox": { "message": "Stækkaðu spjallboxið lárétt í víðskjásham" },

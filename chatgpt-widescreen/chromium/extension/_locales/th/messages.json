@@ -50,7 +50,7 @@
   "helptip_the": { "message": "ระบบ" },
   "helptip_btns": { "message": "ปุ่ม" },
   "helptip_widescreenWidth": { "message": "ปรับปริมาณของจอกว้างเพื่อนำไปใช้" },
-  "helptip_tallerChatboxHeight": { "message": "ปรับจำนวนกล่องแชทที่สูงขึ้นเพื่อใช้" },
+  "helptip_tallerChatboxHeight": { "message": "ปรับจำนวนของ Taller Chatbox ที่จะใช้ (ต้องใช้ข้อความเพื่อดูตัวอย่าง)" },
   "helptip_tallerChatbox": { "message": "ขยายแชทบ็อกซ์ในแนวตั้ง" },
   "helptip_widerChatboxWidth": { "message": "ปรับจำนวน Chatbox ที่กว้างขึ้นเพื่อใช้" },
   "helptip_widerChatbox": { "message": "ขยายแชทบ็อกซ์ในแนวนอนในโหมดหน้าจอกว้าง" },

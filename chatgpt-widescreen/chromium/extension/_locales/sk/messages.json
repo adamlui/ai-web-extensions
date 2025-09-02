@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Tie" },
   "helptip_btns": { "message": "Tlačidlá" },
   "helptip_widescreenWidth": { "message": "Upravte množstvo širokouhlého displeja, ktoré chcete použiť" },
-  "helptip_tallerChatboxHeight": { "message": "Ak chcete použiť vyššie chatovacie pole, upravte jeho výšku." },
+  "helptip_tallerChatboxHeight": { "message": "Upraviť množstvo vyššieho chatboxu, ktoré sa má použiť (vyžaduje text na zobrazenie ukážky)" },
   "helptip_tallerChatbox": { "message": "Rozbaľte chatovacie pole vertikálne" },
   "helptip_widerChatboxWidth": { "message": "Upravte množstvo širšieho chatboxu, aby ste ho mohli použiť" },
   "helptip_widerChatbox": { "message": "Rozbaľte chatovacie pole vodorovne v režime širokej obrazovky" },

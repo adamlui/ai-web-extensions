@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Колективний" },
   "helptip_btns": { "message": "Кнопки" },
   "helptip_widescreenWidth": { "message": "Налаштуйте кількість широкоекранних зображень, які потрібно застосувати" },
-  "helptip_tallerChatboxHeight": { "message": "Скоригуйте кількість Taller Chatbox, щоб застосувати" },
+  "helptip_tallerChatboxHeight": { "message": "Налаштуйте кількість Taller Chatbox, щоб застосувати (потрібен текст для попереднього перегляду)" },
   "helptip_tallerChatbox": { "message": "Розгорнути чат-бокс вертикально" },
   "helptip_widerChatboxWidth": { "message": "Скоригуйте кількість ширших чатів, щоб застосувати" },
   "helptip_widerChatbox": { "message": "Розгорніть вікно чату по горизонталі в режимі широкого екрана" },

@@ -50,7 +50,7 @@
   "helptip_the": { "message": "De" },
   "helptip_btns": { "message": "Knoppen" },
   "helptip_widescreenWidth": { "message": "Pas de hoeveelheid Breedbeeld aan om toe te passen" },
-  "helptip_tallerChatboxHeight": { "message": "Pas het aantal Taller Chatbox aan om toe te passen" },
+  "helptip_tallerChatboxHeight": { "message": "Pas het aantal Taller Chatbox aan om toe te passen (vereist tekst om een voorbeeld te bekijken)" },
   "helptip_tallerChatbox": { "message": "Breid de chatbox verticaal uit" },
   "helptip_widerChatboxWidth": { "message": "Pas de hoeveelheid bredere chatbox aan om toe te passen" },
   "helptip_widerChatbox": { "message": "Breid de chatbox horizontaal uit in de breedbeeldmodus" },

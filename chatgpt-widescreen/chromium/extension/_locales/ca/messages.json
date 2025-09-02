@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Els " },
   "helptip_btns": { "message": "Buttons" },
   "helptip_widescreenWidth": { "message": "Ajusta la quantitat de pantalla panoràmica que vols aplicar" },
-  "helptip_tallerChatboxHeight": { "message": "Ajusta la quantitat de xat Taller per aplicar" },
+  "helptip_tallerChatboxHeight": { "message": "Ajusta la quantitat de xat Taller que s'ha d'aplicar (requereix text per obtenir una vista prèvia)" },
   "helptip_tallerChatbox": { "message": "Expandeix el quadre de xat verticalment" },
   "helptip_widerChatboxWidth": { "message": "Ajusta la quantitat de Wider Chatbox a aplicar" },
   "helptip_widerChatbox": { "message": "Expandeix el quadre de xat horitzontalment en mode de pantalla ampla" },

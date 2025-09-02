@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Il-" },
   "helptip_btns": { "message": "Buttuni" },
   "helptip_widescreenWidth": { "message": "Irranġa l-ammont ta' Widescreen biex tapplika" },
-  "helptip_tallerChatboxHeight": { "message": "Irranġa l-ammont ta' Taller Chatbox biex tapplika" },
+  "helptip_tallerChatboxHeight": { "message": "Irranġa l-ammont ta' Taller Chatbox biex tapplika (teħtieġ test biex tara minn qabel)" },
   "helptip_tallerChatbox": { "message": "Espandi ċ-chatbox vertikalment" },
   "helptip_widerChatboxWidth": { "message": "Irranġa l-ammont ta' Kaxxa taċ-chat usa' biex tapplika" },
   "helptip_widerChatbox": { "message": "Espandi ċ-chatbox orizzontalment fil-modalità ta' Wide Screen" },

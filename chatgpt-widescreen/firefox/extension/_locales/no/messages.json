@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Uten uttrykkelig samtykke er " },
   "helptip_btns": { "message": "Buttons" },
   "helptip_widescreenWidth": { "message": "Juster mengden widescreen som skal brukes" },
-  "helptip_tallerChatboxHeight": { "message": "Juster mengden Taller Chatbox som skal brukes" },
+  "helptip_tallerChatboxHeight": { "message": "Juster mengden av Taller Chatbox som skal brukes (krever tekst for forhåndsvisning)" },
   "helptip_tallerChatbox": { "message": "Utvid chatboksen vertikalt" },
   "helptip_widerChatboxWidth": { "message": "Juster mengden av bredere chatboks som skal brukes" },
   "helptip_widerChatbox": { "message": "Utvid chatboksen horisontalt i Wide Screen-modus" },

@@ -50,7 +50,7 @@
   "helptip_the": { "message": "энэхүү" },
   "helptip_btns": { "message": "Товчлуур" },
   "helptip_widescreenWidth": { "message": "Өргөдөл гаргахын тулд Widescreen-ийн хэмжээг тохируулна уу" },
-  "helptip_tallerChatboxHeight": { "message": "Хэрэглэхийн тулд Taller Chatbox-ийн хэмжээг тохируулна уу" },
+  "helptip_tallerChatboxHeight": { "message": "Хэрэглэх Таллер Чатбоксын хэмжээг тохируулна уу (урьдчилан текстийг шаарддаг)" },
   "helptip_tallerChatbox": { "message": "Чатбоксыг босоо дэлгэх" },
   "helptip_widerChatboxWidth": { "message": "Өргөдөл гаргахын тулд Wider Chatbox-ийн хэмжээг тохируулна уу" },
   "helptip_widerChatbox": { "message": "Чатбоксыг Өргөн дэлгэцийн горимд хэвтээ дэлгэх" },

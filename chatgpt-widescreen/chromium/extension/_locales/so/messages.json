@@ -50,7 +50,7 @@
   "helptip_the": { "message": "D" },
   "helptip_btns": { "message": "Badhamada" },
   "helptip_widescreenWidth": { "message": "Ku hagaaji xaddiga Widescreen si aad u codsato" },
-  "helptip_tallerChatboxHeight": { "message": "Ku hagaaji qadarka Taller Chatbox si aad u codsato" },
+  "helptip_tallerChatboxHeight": { "message": "Ku hagaaji xaddiga Taller Chatbox si aad u codsato (waxay u baahan tahay qoraal si aad u eegto)" },
   "helptip_tallerChatbox": { "message": "Si toos ah u fidi sanduuqa sheekaysiga" },
   "helptip_widerChatboxWidth": { "message": "Ku hagaaji xaddiga Wider Chatbox si aad u codsato" },
   "helptip_widerChatbox": { "message": "Ballaarinta sanduuqa sheekaysiga si horizontally in hab Screen Wide" },

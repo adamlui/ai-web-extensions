@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Dylid" },
   "helptip_btns": { "message": "Botymau" },
   "helptip_widescreenWidth": { "message": "Addasu swm y Sgrin Lydan i 'w gymhwyso" },
-  "helptip_tallerChatboxHeight": { "message": "Addasu faint o Taller Chatbox i wneud cais" },
+  "helptip_tallerChatboxHeight": { "message": "Addasu faint o Taller Chatbox i wneud cais (mae angen testun i ragolwg)" },
   "helptip_tallerChatbox": { "message": "Ehangu'r blwch sgwrsio yn fertigol" },
   "helptip_widerChatboxWidth": { "message": "Addasu faint o Blwch Sgwrsio Ehangach i'w gymhwyso" },
   "helptip_widerChatbox": { "message": "Ehangu'r blwch sgwrsio yn llorweddol yn y modd Sgrin Lydan" },

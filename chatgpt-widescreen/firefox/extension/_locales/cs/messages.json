@@ -50,7 +50,7 @@
   "helptip_the": { "message": "První" },
   "helptip_btns": { "message": "Tlačítka" },
   "helptip_widescreenWidth": { "message": "Upravte množství širokoúhlé obrazovky, které chcete použít" },
-  "helptip_tallerChatboxHeight": { "message": "Upravte množství vyššího chatboxu, které chcete použít" },
+  "helptip_tallerChatboxHeight": { "message": "Upravte množství vyššího chatboxu, které chcete použít (vyžaduje text pro náhled)" },
   "helptip_tallerChatbox": { "message": "Rozbalit chatovací pole svisle" },
   "helptip_widerChatboxWidth": { "message": "Upravit množství širšího chatboxu tak, aby platilo" },
   "helptip_widerChatbox": { "message": "Rozbalte chatovací pole vodorovně v režimu širokoúhlé obrazovky" },

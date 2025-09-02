@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Fanmi" },
   "helptip_btns": { "message": "Bouton" },
   "helptip_widescreenWidth": { "message": "Ajiste kantite ekran lajè pou aplike" },
-  "helptip_tallerChatboxHeight": { "message": "Ajiste kantite Taller Chatbox pou aplike" },
+  "helptip_tallerChatboxHeight": { "message": "Ajiste kantite Taller Chatbox pou aplike (mande tèks pou preview)" },
   "helptip_tallerChatbox": { "message": "Elaji bwat chat la vètikalman" },
   "helptip_widerChatboxWidth": { "message": "Ajiste kantite pi laj Chatbox pou aplike" },
   "helptip_widerChatbox": { "message": "Elaji bwat chat la orizontalman nan mòd Wide Screen" },

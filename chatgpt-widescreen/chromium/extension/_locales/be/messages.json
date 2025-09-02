@@ -50,7 +50,7 @@
   "helptip_the": { "message": "- " },
   "helptip_btns": { "message": "Кнопкі" },
   "helptip_widescreenWidth": { "message": "Адрэгуляваць колькасць шырокаэкраннага экрана" },
-  "helptip_tallerChatboxHeight": { "message": "Адрэгуляваць колькасць вышэйшых чатаў для прымянення" },
+  "helptip_tallerChatboxHeight": { "message": "Адрэгуляваць колькасць вышэйшых чатаў (патрабуецца тэкст для папярэдняга прагляду)" },
   "helptip_tallerChatbox": { "message": "Пашырыць поле чата вертыкальна" },
   "helptip_widerChatboxWidth": { "message": "Адрэгуляваць колькасць больш шырокай чат-бокса для прымянення" },
   "helptip_widerChatbox": { "message": "Пашырыць чат-бокс гарызантальна ў шырокаэкранным рэжыме" },

@@ -50,7 +50,7 @@
   "helptip_the": { "message": "このボタンの" },
   "helptip_btns": { "message": "ボタン" },
   "helptip_widescreenWidth": { "message": "適用するワイドスクリーンの量を調整する" },
-  "helptip_tallerChatboxHeight": { "message": "適用する背の高いチャットボックスの量を調整します" },
+  "helptip_tallerChatboxHeight": { "message": "適用する背の高いチャットボックスの量を調整します（プレビューにはテキストが必要です）" },
   "helptip_tallerChatbox": { "message": "チャットボックスを垂直に展開します" },
   "helptip_widerChatboxWidth": { "message": "適用するWider Chatboxの量を調整する" },
   "helptip_widerChatbox": { "message": "ワイドスクリーンモードでチャットボックスを水平に展開する" },

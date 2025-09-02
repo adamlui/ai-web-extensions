@@ -50,7 +50,7 @@
   "helptip_the": { "message": "আইএমসি" },
   "helptip_btns": { "message": "বোতামগুলি: " },
   "helptip_widescreenWidth": { "message": "প্রয়োগ করতে ওয়াইডস্ক্রিনের পরিমাণ সামঞ্জস্য করুন" },
-  "helptip_tallerChatboxHeight": { "message": "প্রয়োগ করতে টালার চ্যাটবক্সের পরিমাণ সামঞ্জস্য করুন" },
+  "helptip_tallerChatboxHeight": { "message": "প্রয়োগ করতে টালার চ্যাটবক্সের পরিমাণ সামঞ্জস্য করুন (পূর্বরূপ টেক্সট প্রয়োজন)" },
   "helptip_tallerChatbox": { "message": "চ্যাটবক্সটি উল্লম্বভাবে প্রসারিত করুন" },
   "helptip_widerChatboxWidth": { "message": "প্রয়োগ করতে বৃহত্তর চ্যাটবক্সের পরিমাণ সামঞ্জস্য করুন" },
   "helptip_widerChatbox": { "message": "ওয়াইড স্ক্রিন মোডে চ্যাটবক্সটি অনুভূমিকভাবে প্রসারিত করুন" },

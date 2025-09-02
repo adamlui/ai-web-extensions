@@ -50,7 +50,7 @@
   "helptip_the": { "message": "مدينة" },
   "helptip_btns": { "message": "الأزرار" },
   "helptip_widescreenWidth": { "message": "اضبط مقدار الشاشة العريضة للتطبيق" },
-  "helptip_tallerChatboxHeight": { "message": "اضبط مقدار صندوق الدردشة الأطول لتطبيقه" },
+  "helptip_tallerChatboxHeight": { "message": "اضبط مقدار مربع الدردشة الأطول للتطبيق (يتطلب نصًا للمعاينة)" },
   "helptip_tallerChatbox": { "message": "قم بتوسيع مربع الدردشة عموديًا" },
   "helptip_widerChatboxWidth": { "message": "قم بتعديل مقدار مربع الدردشة الأوسع لتطبيقه" },
   "helptip_widerChatbox": { "message": "قم بتوسيع مربع الدردشة أفقيًا في وضع الشاشة العريضة" },

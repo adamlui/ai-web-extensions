@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Ol" },
   "helptip_btns": { "message": "Butunlar" },
   "helptip_widescreenWidth": { "message": "Uly ekranyň sanyny üýtget" },
-  "helptip_tallerChatboxHeight": { "message": "Arza çekmek üçin Taller Chatbox sanyny üýtget" },
+  "helptip_tallerChatboxHeight": { "message": "Uzak Chatbox sanyny üýtget (öňünden seretmek üçin metni talap edýär)" },
   "helptip_tallerChatbox": { "message": "Çat kutusyny vertikal giňelt" },
   "helptip_widerChatboxWidth": { "message": "Uly Chatbox sanyny üýtget" },
   "helptip_widerChatbox": { "message": "Çat kutusyny uzyn ekran modunda uzynlaşdyr" },

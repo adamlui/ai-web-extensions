@@ -50,7 +50,7 @@
   "helptip_the": { "message": "本作" },
   "helptip_btns": { "message": "按鈕" },
   "helptip_widescreenWidth": { "message": "調整要套用的寬螢幕數量" },
-  "helptip_tallerChatboxHeight": { "message": "調整要套用的更高聊天框的數量" },
+  "helptip_tallerChatboxHeight": { "message": "調整要套用的較高聊天室數量（需要文字才能預覽）" },
   "helptip_tallerChatbox": { "message": "垂直展開聊天框" },
   "helptip_widerChatboxWidth": { "message": "調整要套用的更寬聊天框的數量" },
   "helptip_widerChatbox": { "message": "在寬螢幕模式下水平展開聊天框" },

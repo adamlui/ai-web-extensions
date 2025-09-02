@@ -50,7 +50,7 @@
   "helptip_the": { "message": "የኢ." },
   "helptip_btns": { "message": "አዝራሮች" },
   "helptip_widescreenWidth": { "message": "ለማመልከት Widescreen መጠን ያስተካክሉ" },
-  "helptip_tallerChatboxHeight": { "message": "ለማመልከት የታለር ቻትቦክስ መጠን ያስተካክሉ" },
+  "helptip_tallerChatboxHeight": { "message": "ለማመልከት የታለር ቻትቦክስ መጠን ያስተካክሉ (ቅድመ-እይታ ጽሑፍን ይጠይቃል)" },
   "helptip_tallerChatbox": { "message": "የውይይት ሳጥኑን በአቀባዊ ያሰፉ" },
   "helptip_widerChatboxWidth": { "message": "ለማመልከት ሰፋ ያለ የውይይት ሳጥን መጠን ያስተካክሉ" },
   "helptip_widerChatbox": { "message": "ሰፊ ማያ ሁነታ ውስጥ የውይይት ሳጥን አግድም ማራዘም" },

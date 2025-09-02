@@ -50,7 +50,7 @@
   "helptip_the": { "message": "Ang" },
   "helptip_btns": { "message": "Mga butones" },
   "helptip_widescreenWidth": { "message": "Ipahiangay ang gidaghanon sa Widescreen nga i-apply" },
-  "helptip_tallerChatboxHeight": { "message": "Ayuhon ang kantidad sa Taller Chatbox aron magamit" },
+  "helptip_tallerChatboxHeight": { "message": "Ayuhon ang kantidad sa Taller Chatbox aron magamit (nanginahanglan teksto aron ma-preview)" },
   "helptip_tallerChatbox": { "message": "Pagpalapad sa chatbox nga patindog" },
   "helptip_widerChatboxWidth": { "message": "Ayuhon ang kantidad sa Wider Chatbox aron magamit" },
   "helptip_widerChatbox": { "message": "Pagpalapad sa chatbox horizontally sa Wide Screen mode" },
