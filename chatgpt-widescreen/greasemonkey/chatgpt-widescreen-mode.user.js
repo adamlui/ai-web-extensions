@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.2
+// @version             2025.9.2.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -259,8 +259,8 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@dd4f5ac/chromium/extension/lib/chatbar.js#sha256-YUVTAFP+pS5dYG//S0j8anbrR4IdGaqyfMzyHYJLmKk=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@1e7f759/chromium/extension/lib/dom.min.js#sha256-IGNj9Eoecq7QgY7SAs75wONajgN9Wg0NmCjKTCfu9CY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@01bcbd6/chromium/extension/lib/settings.js#sha256-gfnbziJG+aHUeYEYi55OUTC/mHpy4DF3SeDGX32s+i8=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@dc90a4c/chromium/extension/lib/styles.js#sha256-lLz1llib2ujQfqBwk9N8OKSuQQfZjLxYMt3TeLZduTQ=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@96eb10b/chromium/extension/lib/sync.js#sha256-+ehzX2C3qz73JaTNKYl98DQelX4/O58ruG0SYrQ8qfw=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@0697e67/chromium/extension/lib/styles.js#sha256-7S3suMZQSvBZtKxjsIdm98g/aBtaO0SbyJbMsEBNQQg=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@0697e67/chromium/extension/lib/sync.js#sha256-TgnlMU6Y+2hW2YDsPuzvndeYQ2lZEqWOGmF++7CQ7nE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f06fa5f/chromium/extension/lib/ui.js#sha256-niLmd2EMi/LCgGgs0MfX7AykWzzfQ9bXCo/6X08M6Ik=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@a129ece/chromium/extension/components/buttons.js#sha256-l5x86OZfyuMBGh3F3NRMW7mQC4OYCBTHB1vZkZweCAU=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@511d193/chromium/extension/components/icons.js#sha256-6eK7coHHFB4zBfl8XXtjojrnfbBOFiEgYfQtz/Whv2E=
@@ -534,9 +534,7 @@
                 suppressNotifs() ; toggleMode('widescreen') }
             if (sites[site].hasSidebar && ( config.fullWindow ^ await ui.isFullWin() )) { // sync Full-Window
                 suppressNotifs() ; toggleMode('fullWindow') }
-            styles.update({ key: 'widescreen' }) // sync WW
-            styles.update({ key: 'tweaks' }) // sync HH/HF/TCB/NCB/BA
-            styles.update({ key: 'chatbar' }) // sync WCB
+            styles.update({ keys: ['chatbar', 'tweaks', 'widescreen'] }) // sync HH/HF/TCB/WCB/NCB/BA/WW
             chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
             if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
@@ -854,8 +852,7 @@
 
         // Update Widescreen styles on Poe nav
         } else if (location.pathname != prevPath && config.widescreen) {
-            styles.update({ key: 'widescreen' })
-            styles.update({ key: 'chatbar' })
+            styles.update({ keys: ['widescreen', 'chatbar'] })
             prevPath = location.pathname
         }
 
