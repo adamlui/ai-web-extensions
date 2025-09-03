@@ -21,8 +21,8 @@ window.styles = {
         if (Array.isArray(keys)) {
             for (const k of keys) await updateStyle.call(this, k)
             return
-        }
-        if (!key) return console.error('Option \'key\' required by styles.update()')
+        } else if (!key)
+            return console.error('Option \'key\' or \'keys\' required by styles.update()')
         await updateStyle.call(this, key)
         async function updateStyle(key) {
             const style = this[key] ; style.node ||= dom.create.style()
