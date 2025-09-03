@@ -25,6 +25,7 @@ chrome.runtime.onInstalled.addListener(({ reason }) => {
     chrome.tabs.create({ url: chatgptURL })
 })
 
+// Sync SETTINGS to activated tabs
 chrome.tabs.onActivated.addListener(({ tabId }) =>
     chrome.tabs.sendMessage(tabId, {
         action: 'syncConfigToUI',
