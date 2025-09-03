@@ -18,17 +18,12 @@ window.styles = {
     },
 
     async update({ key, keys, autoAppend }) { // requires lib/dom.js
-        if (Array.isArray(keys)) {
-            for (const k of keys) await updateStyle.call(this, k)
-            return
-        } else if (!key)
-            return console.error('Option \'key\' or \'keys\' required by styles.update()')
-        await updateStyle.call(this, key)
-        async function updateStyle(key) {
+        if (!key && !keys) return console.error('Option \'key\' or \'keys\' required by styles.update()')
+        ;(Array.isArray(keys) ? keys : [key]).forEach(async key => {
             const style = this[key] ; style.node ||= dom.create.style()
             if ((autoAppend ?? style.autoAppend) && !style.node.isConnected) document.head.append(style.node)
             style.node.textContent = await style.css
-        }
+        })
     },
 
     chatbar: {
