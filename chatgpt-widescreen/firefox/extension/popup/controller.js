@@ -355,7 +355,7 @@
     if (!document.getElementById('displaySettings')) {
         const coffeeURL = app.urls.donate['ko-fi']
         footer.before(createMenuEntry({
-            key: 'coffeeEntry', type: 'link', symbol: '☕', url: coffeeURL, helptip: coffeeURL,
+            key: 'coffeeEntry', type: 'link', symbol: '☕', url: coffeeURL, favicon: true, helptip: coffeeURL,
             label: settings.getMsg('menuLabel_buyMeAcoffee')
         }))
     }
