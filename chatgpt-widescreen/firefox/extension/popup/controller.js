@@ -45,7 +45,14 @@
             if (entryData.status) entry.label.textContent += ` — ${entryData.status}`
             if (entryData.type == 'link') {
                 entry.label.after(entry.rightElem = dom.create.elem('div', { class: 'menu-right-elem' }))
-                entry.rightElem.append(icons.create({ key: 'open', size: 17, fill: 'black' }))
+                entry.favicon = !entryData.favicon ? null
+                    : dom.create.elem('img', { width: 15,
+                        src: typeof entryData.favicon == 'string' ? entryData.favicon
+                            : `https://www.google.com/s2/favicons?domain=${new URL(entryData.url).hostname}` })
+                entry.openIcon = icons.create({ key: 'open', size: 17, fill: 'black' })
+                entry.rightElem.append(entry.favicon || entry.openIcon)
+                if (entry.favicon) entry.rightElem.onmouseenter = entry.rightElem.onmouseleave = event =>
+                    entry.rightElem.firstChild.replaceWith(entry[event.type == 'mouseenter' ? 'openIcon' : 'favicon'])
             }
         }
         if (entryData.type == 'category')
