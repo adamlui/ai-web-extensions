@@ -213,8 +213,7 @@
 
         // Update Widescreen styles on Poe nav
         } else if (location.pathname != prevPath && config.widescreen) {
-            styles.update({ key: 'widescreen' })
-            styles.update({ key: 'chatbar' })
+            styles.update({ keys: ['widescreen', 'chatbar'] })
             prevPath = location.pathname
         }
 
