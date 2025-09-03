@@ -28,19 +28,19 @@
 })()
 
 // Launch CHATGPT on install
-chrome.runtime.onInstalled.addListener(details => {
-    if (details.reason == 'install') // to exclude updates
+chrome.runtime.onInstalled.addListener(({ reason }) => {
+    if (reason == 'install') // to exclude updates
         chrome.tabs.create({ url: 'https://chatgpt.com/' })
 })
 
 // Sync SETTINGS/MODES to activated tabs
-chrome.tabs.onActivated.addListener(activeInfo =>
-    chrome.tabs.sendMessage(activeInfo.tabId, { action: 'syncConfigToUI' }))
+chrome.tabs.onActivated.addListener(({ tabId }) =>
+    chrome.tabs.sendMessage(tabId, { action: 'syncConfigToUI' }))
 
 // Show ABOUT modal on AI site when toolbar button clicked
 const aiHomeURLs = chrome.runtime.getManifest().content_scripts[0].matches.map(url => url.replace(/\*$/, ''))
-chrome.runtime.onMessage.addListener(async req => {
-    if (req.action == 'showAbout') {
+chrome.runtime.onMessage.addListener(async ({ action }) => {
+    if (action == 'showAbout') {
         const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true })
         const aiTab = aiHomeURLs.some(aiURL =>
             new URL(activeTab.url).hostname == new URL(aiURL).hostname) ? activeTab // active tab is AI site, use it
