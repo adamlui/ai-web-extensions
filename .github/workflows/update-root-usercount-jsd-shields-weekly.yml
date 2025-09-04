@@ -221,14 +221,14 @@ jobs:
           # Define commit msg for push step next
           COMMIT_MSG="Updated "
           [ "$users_updated" = true ] && COMMIT_MSG+="usercount"
-          if [ "$requests_updated" = true ] ; then            
+          if [ "$requests_updated" = true ] ; then
              [ "$multi_shield_types_updated" = true ] && COMMIT_MSG+="/" ; COMMIT_MSG+="jsDelivr" ; fi
           COMMIT_MSG+=" shield counters in root readmes"
           echo "COMMIT_MSG=$COMMIT_MSG" >> $GITHUB_ENV # expose for push step
 
           # Set Updated flag to check in subsequent steps
           if (( "$shield_types_updated" > 0 )) ; then echo "SHIELDS_UPDATED=true" >> $GITHUB_ENV ; fi
-      
+
       - name: Config committer
         if: env.SHIELDS_UPDATED == 'true'
         run: |

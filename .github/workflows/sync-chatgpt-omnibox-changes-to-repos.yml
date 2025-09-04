@@ -37,7 +37,7 @@ jobs:
           cd ${{ github.workspace }}/adamlui/ai-web-extensions/chatgpt-omnibox
           ff_dir="firefox/extension/_locales"
           chromium_dir="chromium/extension/_locales"
-          
+
           # Loop thru all lang dirs in firefox
           for locale in $(find "$ff_dir" -mindepth 1 -maxdepth 1 -type d -exec basename {} \;) ; do
             ff_file="$ff_dir/$locale/messages.json"
@@ -47,7 +47,7 @@ jobs:
               # Get the latest commit timestamps for both files
               ff_timestamp=$(git log -1 --format="%ct" -- "$ff_file" 2>/dev/null || echo 0)
               chromium_timestamp=$(git log -1 --format="%ct" -- "$chromium_file" 2>/dev/null || echo 0)
-      
+
               # Sync the most recently updated messages.json to the other dir
               if [[ $ff_timestamp -ne $chromium_timestamp ]] ; then
                 if (( $ff_timestamp > $chromium_timestamp )) ; then
@@ -74,7 +74,7 @@ jobs:
           echo "ESCAPED_MSG<<EOF" >> $GITHUB_ENV
           echo "$COMMIT_MSG" | sed 's/`/\`/g' >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-      
+
       - name: Config committer
         run: |
           gpg --batch --import <(echo "${{ secrets.GPG_PRIVATE_KEY }}")
