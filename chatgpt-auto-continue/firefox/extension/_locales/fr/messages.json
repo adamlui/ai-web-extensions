@@ -24,7 +24,7 @@
   "mode_toast": { "message": "Mode Toast" },
   "promptLabel_edit": { "message": "editer" },
   "prompt_enterNewVal": { "message": "Saisissez une nouvelle valeur" },
-  "error_enterValidNum": { "message": "Veuillez saisir un nombre valide." },
+  "error_enterValidNum": { "message": "Veuillez saisir un nombre valide" },
   "error_between": { "message": "entre" },
   "error_and": { "message": "et" },
   "helptip_autoScroll": { "message": "Faites défiler automatiquement vers le bas au fur et à mesure que les réponses sont générées" },

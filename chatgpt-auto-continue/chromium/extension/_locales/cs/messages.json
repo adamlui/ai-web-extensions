@@ -18,7 +18,7 @@
   "about_contributors": { "message": "přispěvatelé" },
   "about_version": { "message": "Verze" },
   "about_poweredBy": { "message": "Běží na" },
-  "about_openSourceCode": { "message": "Otevřený zdrojový kód." },
+  "about_openSourceCode": { "message": "Otevřený zdrojový kód" },
   "about_latestChanges": { "message": "Poslední změny" },
   "mode_autoContinue": { "message": "Pokračovat automaticky" },
   "mode_toast": { "message": "Režim toastu" },

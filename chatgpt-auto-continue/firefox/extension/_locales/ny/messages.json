@@ -26,7 +26,7 @@
   "prompt_enterNewVal": { "message": "Lowetsani mtengo watsopano wa" },
   "error_enterValidNum": { "message": "Lowetsani nambala yovomerezeka" },
   "error_between": { "message": "pakati" },
-  "error_and": { "message": "Ndi..." },
+  "error_and": { "message": "Ndi" },
   "helptip_autoScroll": { "message": "Makinawa mpukutu pansi monga mayankho akupanga" },
   "helptip_modeNotifs": { "message": "Onetsani zidziwitso pamene toggling modes/zoikamo" },
   "helptip_notifBottom": { "message": "Anchor zidziwitso pansi pazenera" },

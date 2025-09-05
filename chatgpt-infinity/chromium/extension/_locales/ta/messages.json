@@ -3,7 +3,7 @@
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "எந்த மொழியிலும் அனைத்துக் கேள்விகளுக்கும் பதிலளிக்கப்படும் அனைத்து அறிமுக சாட்ஜிபிடி இன்பினிடி இத்தளத்தில்" },
   "menuLabel_settings": { "message": "அமைப்புகள்" },
-  "menuLabel_reply": { "message": "பதில் " },
+  "menuLabel_reply": { "message": "பதில்" },
   "menuLabel_notif": { "message": "அறிவிப்பு" },
   "menuLabel_notifs": { "message": "அறிவிப்புகள்" },
   "menuLabel_infinityMode": { "message": "முடிவிலிட்ட முறை" },

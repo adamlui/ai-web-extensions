@@ -38,7 +38,7 @@
   "tooltip_close": { "message": "Bezárás" },
   "tooltip_copy": { "message": "Másolja" },
   "tooltip_generate": { "message": "Generálás" },
-  "tooltip_generating": { "message": "Generálás…." },
+  "tooltip_generating": { "message": "Generálás…" },
   "tooltip_regenerate": { "message": "Újragenerálás" },
   "tooltip_regenerating": { "message": "Javítás" },
   "tooltip_play": { "message": "Játék" },

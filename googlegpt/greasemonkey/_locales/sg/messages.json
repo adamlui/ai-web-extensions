@@ -70,7 +70,7 @@
   "helptip_preferredAPI": { "message": "API ti sara kua na ni na ngoi so mo yeke wara akiringo tënë na yâ ti mode Proxy" },
   "helptip_streamingMode": { "message": "Ti wara akiringo tënë na yâ ti mbeni mbeti so angbâ lakue" },
   "helptip_autoGetAnswers": { "message": "Auto-send questions na GoogleGPT na ngoi so mo yeke sara kua na moteur ti gi ye" },
-  "helptip_autoSummarizeResults": { "message": "A yeke sara si a yeke nzoni ti tene azo ti Israël asara kua na aye so ala ye ti sara." },
+  "helptip_autoSummarizeResults": { "message": "A yeke sara si a yeke nzoni ti tene azo ti Israël asara kua na aye so ala ye ti sara" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar na ngoi kue so a yeke bâ ni" },
   "helptip_autoScroll": { "message": "Auto-scroll kiringo tënë tongana ti so ala yeke sara na yâ ti mode ti streaming" },
   "helptip_showRelatedQueries": { "message": "Fa atënë so andu tënë ni na gbe ti chatbar" },

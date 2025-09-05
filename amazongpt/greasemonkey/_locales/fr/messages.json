@@ -81,7 +81,7 @@
   "alert_parseFailed": { "message": "Échec de l'analyse de la réponse JSON" },
   "alert_checkCloudflare": { "message": "Veuillez passer le contrôle de sécurité Cloudflare" },
   "alert_notWorking": { "message": "combustion ne marche pas" },
-  "alert_ifIssuePersists": { "message": "Si le problème persiste " },
+  "alert_ifIssuePersists": { "message": "Si le problème persiste" },
   "alert_try": { "message": "Essayer" },
   "alert_switchingOn": { "message": "Mise en marche" },
   "alert_switchingOff": { "message": "Arrêt" },

@@ -77,7 +77,7 @@
   "helptip_run": { "message": "Mhanya" },
   "alert_choosePlatform": { "message": "Sarudza chikuva" },
   "alert_updateAvail": { "message": "Kugadziridza kunowanikwa" },
-  "alert_newerVer": { "message": "Gadziridzo ye-" },
+  "alert_newerVer": { "message": "Gadziridzo ye" },
   "alert_isAvail": { "message": "inowanika" },
   "alert_upToDate": { "message": "Yazvino" },
   "alert_isUpToDate": { "message": "iri kufambirana nenguva" },

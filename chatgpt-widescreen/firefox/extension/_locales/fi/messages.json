@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "Painike" },
   "menuLabel_chatbox": { "message": "Chatbox" },
   "menuLabel_display": { "message": "Näyttö" },
-  "menuLabel_width": { "message": "Leveys " },
+  "menuLabel_width": { "message": "Leveys" },
   "menuLabel_height": { "message": "Korkeus" },
   "menuLabel_taller": { "message": "Pidempi" },
   "menuLabel_wider": { "message": "Leveämpi" },

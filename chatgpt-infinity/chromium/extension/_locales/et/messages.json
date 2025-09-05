@@ -36,7 +36,7 @@
   "prompt_orEnter": { "message": "või sisesta" },
   "prompt_updateReplyInt": { "message": "Uuenda vastamisintervalli (vähemalt 5 sekundit)" },
   "error_enterValidNum": { "message": "Palun sisesta toimiv number" },
-  "error_between": { "message": "mille osapoolteks on " },
+  "error_between": { "message": "mille osapoolteks on" },
   "error_and": { "message": "ja" },
   "helptip_autoStart": { "message": "Kui külastate veebisaiti chatgpt.com, käivitage automaatselt lõpmatusrežiim" },
   "helptip_toggleVis": { "message": "Näita lõpmatuse režiimi lülitit külgribal" },

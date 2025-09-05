@@ -88,7 +88,7 @@
   "alert_selectingDiff": { "message": "การเลือกที่แตกต่างกัน" },
   "alert_generated": { "message": "สร้าง" },
   "notif_copiedToClipboard": { "message": "คัดลอกไปที่คลิปบอร์ด" },
-  "notif_downloaded": { "message": "ดาวน์โหลด " },
+  "notif_downloaded": { "message": "ดาวน์โหลด" },
   "btnLabel_moreAIextensions": { "message": "ส่วนขยาย AI เพิ่มเติม" },
   "btnLabel_leaveReview": { "message": "ให้รีวิว" },
   "btnLabel_rateUs": { "message": "ให้คะแนนเรา" },

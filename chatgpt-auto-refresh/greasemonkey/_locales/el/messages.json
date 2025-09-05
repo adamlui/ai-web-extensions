@@ -13,7 +13,7 @@
   "about_contributors": { "message": "συντελεστές" },
   "about_version": { "message": "Έκδοση" },
   "about_poweredBy": { "message": "Με την υποστήριξη" },
-  "about_openSourceCode": { "message": "Ανοιχτός κώδικας." },
+  "about_openSourceCode": { "message": "Ανοιχτός κώδικας" },
   "about_latestChanges": { "message": "Τελευταίες αλλαγές" },
   "prompt_updateInt": { "message": "Ενημερώστε το διάστημα ανανέωσης (σε δευτερόλεπτα)" },
   "helptip_toggleVis": { "message": "Εμφάνιση εναλλαγής αυτόματης ανανέωσης στην πλαϊνή γραμμή" },

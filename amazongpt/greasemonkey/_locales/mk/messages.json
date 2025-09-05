@@ -43,7 +43,7 @@
   "tooltip_regenerating": { "message": "Се регенерира" },
   "tooltip_play": { "message": "Играј" },
   "tooltip_playing": { "message": "Играјќи" },
-  "tooltip_page": { "message": "Страница " },
+  "tooltip_page": { "message": "Страница" },
   "tooltip_reply": { "message": "Одговори" },
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Генерирање аудио" },

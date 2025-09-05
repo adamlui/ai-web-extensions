@@ -40,7 +40,7 @@
   "mode_toast": { "message": "टोस्ट मोड" },
   "promptLabel_edit": { "message": "संपादित करें" },
   "prompt_enterNewVal": { "message": "के लिए नया मान दर्ज करें" },
-  "error_enterValidNum": { "message": "अख् द्रुस्तु॒ सफ़्ह् नंबर करिउ दर्ज " },
+  "error_enterValidNum": { "message": "अख् द्रुस्तु॒ सफ़्ह् नंबर करिउ दर्ज" },
   "error_between": { "message": "के बीच में" },
   "error_and": { "message": "मैंने समझा दिया है" },
   "tooltip_widescreenON": { "message": "वाइडस्क्रीन मोड" },

@@ -58,7 +58,7 @@
   "tooltip_generate": { "message": "Ģenerēt" },
   "tooltip_generating": { "message": "Notiek ģenerēšana" },
   "tooltip_regenerate": { "message": "Reģenerēt" },
-  "tooltip_regenerating": { "message": "Atjaunojošs." },
+  "tooltip_regenerating": { "message": "Atjaunojošs" },
   "tooltip_play": { "message": "Spēlēties" },
   "tooltip_playing": { "message": "Spēlēšana" },
   "tooltip_page": { "message": "Lapa" },

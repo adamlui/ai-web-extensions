@@ -1,7 +1,7 @@
 {
   "appDesc": { "message": "Amazon alışverişine yapay zeka ekler" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Modu" },
-  "menuLabel_preferred": { "message": "Tercih ettiğiniz SMS Ağ Geçidini seçin." },
+  "menuLabel_preferred": { "message": "Tercih ettiğiniz SMS Ağ Geçidini seçin" },
   "menuLabel_autoFocusChatbar": { "message": "Otomatik Odaklanma Sohbet Çubuğu" },
   "menuLabel_whenStreaming": { "message": "akış sırasında" },
   "menuLabel_background": { "message": "Arka Plan" },

@@ -24,7 +24,7 @@
   "mode_toast": { "message": "Toastmodus" },
   "promptLabel_edit": { "message": "Rediger" },
   "prompt_enterNewVal": { "message": "Skriv inn ny verdi for" },
-  "error_enterValidNum": { "message": "Skriv inn et gyldig POS-nummer." },
+  "error_enterValidNum": { "message": "Skriv inn et gyldig POS-nummer" },
   "error_between": { "message": "imellom" },
   "error_and": { "message": "og" },
   "helptip_autoScroll": { "message": "Rull automatisk til bunnen mens svar genereres" },

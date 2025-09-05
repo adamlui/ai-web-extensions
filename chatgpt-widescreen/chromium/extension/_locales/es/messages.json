@@ -52,7 +52,7 @@
   "tooltip_newChat": { "message": "Nuevo chat" },
   "tooltip_goto": { "message": "Ir a" },
   "helptip_adjustSettingsRelatedTo": { "message": "Ajustar la configuración relacionada con" },
-  "helptip_the": { "message": "Las " },
+  "helptip_the": { "message": "Las" },
   "helptip_btns": { "message": "Botones" },
   "helptip_widescreenWidth": { "message": "Ajuste la cantidad de pantalla panorámica a aplicar" },
   "helptip_tallerChatboxHeight": { "message": "Ajuste la cantidad de Taller Chatbox a aplicar (requiere texto para previsualizar)" },

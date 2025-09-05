@@ -20,7 +20,7 @@
   "menuLabel_open": { "message": "Open" },
   "menuLabel_buyMeAcoffee": { "message": "Koop een kopje koffie voor mij :)" },
   "menuLabel_donate": { "message": "Stuur een donatie" },
-  "menuLabel_extensionActive": { "message": "SOAP Extensie actief." },
+  "menuLabel_extensionActive": { "message": "SOAP Extensie actief" },
   "about_author": { "message": "Auteur" },
   "about_and": { "message": "and" },
   "about_contributors": { "message": "contributanten" },

@@ -5,7 +5,7 @@
   "menuLabel_autoFocusChatbar": { "message": "Otomatik Odaklanma Sohbet Çubuğu" },
   "menuLabel_whenStreaming": { "message": "akış sırasında" },
   "menuLabel_proxyAPImode": { "message": "Proxy API Modu" },
-  "menuLabel_preferred": { "message": "Tercih ettiğiniz SMS Ağ Geçidini seçin." },
+  "menuLabel_preferred": { "message": "Tercih ettiğiniz SMS Ağ Geçidini seçin" },
   "menuLabel_show": { "message": "Göster" },
   "menuLabel_relatedQueries": { "message": "İlgili Sorgular" },
   "menuLabel_require": { "message": "Gerekli" },

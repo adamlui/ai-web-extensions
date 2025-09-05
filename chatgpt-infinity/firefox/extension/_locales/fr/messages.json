@@ -35,7 +35,7 @@
   "prompt_updateReplyTopic": { "message": "Mettre à jour le sujet de la réponse" },
   "prompt_orEnter": { "message": "OK ou Entrer" },
   "prompt_updateReplyInt": { "message": "Mettre à jour l'intervalle de réponse (minimum 5 secondes)" },
-  "error_enterValidNum": { "message": "Veuillez saisir un nombre valide." },
+  "error_enterValidNum": { "message": "Veuillez saisir un nombre valide" },
   "error_between": { "message": "entre" },
   "error_and": { "message": "et" },
   "helptip_autoStart": { "message": "Démarrez automatiquement le mode Infinity lorsque vous visitez chatgpt.com" },

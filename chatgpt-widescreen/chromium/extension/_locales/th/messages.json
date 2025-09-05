@@ -8,7 +8,7 @@
   "menuLabel_btn": { "message": "ปุ่ม" },
   "menuLabel_chatbox": { "message": "แชทบ็อกซ์" },
   "menuLabel_display": { "message": "จอแสดงผล" },
-  "menuLabel_width": { "message": "ความกว้างกระดาษ " },
+  "menuLabel_width": { "message": "ความกว้างกระดาษ" },
   "menuLabel_height": { "message": "ความสูง" },
   "menuLabel_taller": { "message": "สูงขึ้น" },
   "menuLabel_wider": { "message": "กว้างขึ้น" },

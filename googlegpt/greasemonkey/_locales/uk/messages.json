@@ -1,7 +1,7 @@
 {
   "appDesc": { "message": "Додає відповіді ШІ до Пошуку Google (на базі Google Gemma + GPT-4o!)" },
   "menuLabel_autoAnswer": { "message": "Автовідповідь" },
-  "menuLabel_autoSummarizeResults": { "message": "Підсумуйте свої результати." },
+  "menuLabel_autoSummarizeResults": { "message": "Підсумуйте свої результати" },
   "menuLabel_autoFocusChatbar": { "message": "Панель чату з автофокусом" },
   "menuLabel_whenStreaming": { "message": "під час потокової передачі" },
   "menuLabel_proxyAPImode": { "message": "Режим API проксі-сервера" },
@@ -48,7 +48,7 @@
   "tooltip_fontSize": { "message": "Розмір шрифту" },
   "tooltip_sendReply": { "message": "Надіслати відповідь" },
   "tooltip_feelingLucky": { "message": "Мені пощастило" },
-  "tooltip_summarizeResults": { "message": "Підсумуйте свої результати." },
+  "tooltip_summarizeResults": { "message": "Підсумуйте свої результати" },
   "tooltip_minimize": { "message": "Згорнути" },
   "tooltip_restore": { "message": "Відновити" },
   "tooltip_expand": { "message": "Розгорнути" },

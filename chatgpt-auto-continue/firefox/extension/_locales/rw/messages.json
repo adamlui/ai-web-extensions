@@ -46,7 +46,7 @@
   "alert_noMatterSize": { "message": "no matter ya size" },
   "alert_directlySupports": { "message": "abitabiriye iyi nama biyemeje gukomeza gushyira mu bikorwa aya mahugurwa ku buntu kandi buri wese akabasha kuyakoresha" },
   "alert_growTogether": { "message": "Dufatanyije, dushobora gukomeza iyi software ikomeye" },
-  "alert_tyForSupport": { "message": "Mwarakoze kudushyigikira." },
+  "alert_tyForSupport": { "message": "Mwarakoze kudushyigikira" },
   "notif_chatAutoContinued": { "message": "Komeza > >" },
   "btnLabel_moreAIextensions": { "message": "Umigereka" },
   "btnLabel_leaveReview": { "message": "Isubiramo" },

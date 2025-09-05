@@ -37,7 +37,7 @@
   "prompt_updateReplyInt": { "message": "Usbongi ang interval sa tubag (minimum nga 5 ka segundo)" },
   "error_enterValidNum": { "message": "Pagsulod sa usa ka balido nga gidaghanon" },
   "error_between": { "message": "sa tunga-tunga" },
-  "error_and": { "message": "ug " },
+  "error_and": { "message": "ug" },
   "helptip_autoStart": { "message": "Awtomatikong pagsugod sa Infinity Mode kung mobisita sa chatgpt.com" },
   "helptip_toggleVis": { "message": "Ipakita ang Infinity Mode toggle sa sidebar" },
   "helptip_autoScroll": { "message": "Awtomatikong pag-scroll sa ilawom samtang ang mga tubag nagmugna" },

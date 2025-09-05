@@ -74,7 +74,7 @@
   "helptip_buttonSettings": { "message": "Баскычтарга байланыштуу параметрлерди өзгөртүү" },
   "helptip_enableDisable": { "message": "Күйгүзүү/өчүрүү" },
   "helptip_perSite": { "message": "сайтка" },
-  "helptip_run": { "message": "Чурка." },
+  "helptip_run": { "message": "Чурка" },
   "alert_choosePlatform": { "message": "Платформаны тандоо" },
   "alert_updateAvail": { "message": "Баяндалмасы табылган жок" },
   "alert_newerVer": { "message": "Жаңыртуу" },

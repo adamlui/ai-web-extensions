@@ -91,7 +91,7 @@
   "alert_noMatterSize": { "message": "no matter ya size" },
   "alert_directlySupports": { "message": "abitabiriye iyi nama biyemeje gukomeza gushyira mu bikorwa aya mahugurwa ku buntu kandi buri wese akabasha kuyakoresha" },
   "alert_growTogether": { "message": "Dufatanyije, dushobora gukomeza iyi software ikomeye" },
-  "alert_tyForSupport": { "message": "Mwarakoze kudushyigikira." },
+  "alert_tyForSupport": { "message": "Mwarakoze kudushyigikira" },
   "alert_pressF11": { "message": "Kuri Gusohoka Mugaragaza" },
   "alert_f11reason": { "message": "F11 yakoreshejwe mu kwinjira mugaragaza yuzuye, kandi kubera impamvu z'umutekano wa mushakisha, urufunguzo rugomba gukoreshwa kugirango usohoke" },
   "notif_chatStopped": { "message": "Guhagarara" },

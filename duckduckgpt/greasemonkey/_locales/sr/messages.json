@@ -126,7 +126,7 @@
   "btnLabel_update": { "message": "Ažuriraj" },
   "btnLabel_dismiss": { "message": "Odbaci" },
   "btnLabel_visitPage": { "message": "Posetite stranicu" },
-  "btnLabel_download": { "message": "Preuzmi " },
+  "btnLabel_download": { "message": "Preuzmi" },
   "btnLabel_convo": { "message": "Konverzacija" },
   "link_viewChanges": { "message": "Prikaži promjene" },
   "link_shareFeedback": { "message": "Deljenje povratnih informacija" },

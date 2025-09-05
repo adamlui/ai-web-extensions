@@ -13,7 +13,7 @@
   "menuLabel_about": { "message": "Iwwer Qt" },
   "menuLabel_settings": { "message": "Astellungen" },
   "menuLabel_random": { "message": "Zoufälleg" },
-  "menuLabel_saved": { "message": "Gespäichert..." },
+  "menuLabel_saved": { "message": "Gespäichert" },
   "componentLabel_used": { "message": "benotzt" },
   "about_author": { "message": "Auteur" },
   "about_and": { "message": "a(n)" },

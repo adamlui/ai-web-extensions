@@ -38,7 +38,7 @@
   "tooltip_close": { "message": "Zamknij" },
   "tooltip_copy": { "message": "Skopiuj" },
   "tooltip_generate": { "message": "Generuj" },
-  "tooltip_generating": { "message": "Generowanie " },
+  "tooltip_generating": { "message": "Generowanie" },
   "tooltip_regenerate": { "message": "Regeneruj" },
   "tooltip_regenerating": { "message": "Regeneracja" },
   "tooltip_play": { "message": "Odtwórz" },

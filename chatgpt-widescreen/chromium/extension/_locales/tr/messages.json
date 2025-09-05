@@ -52,7 +52,7 @@
   "tooltip_newChat": { "message": "Yeni sohbet" },
   "tooltip_goto": { "message": "Git" },
   "helptip_adjustSettingsRelatedTo": { "message": "Şununla ilgili ayarları yapın" },
-  "helptip_the": { "message": "." },
+  "helptip_the": { "message": "" },
   "helptip_btns": { "message": "Butonlar" },
   "helptip_widescreenWidth": { "message": "Uygulanacak Geniş Ekran miktarını ayarlayın" },
   "helptip_tallerChatboxHeight": { "message": "Uygulanacak Uzun Sohbet Kutusu miktarını ayarlayın (önizlemek için metin gerektirir)" },

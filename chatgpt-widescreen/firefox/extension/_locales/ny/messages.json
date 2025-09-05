@@ -42,7 +42,7 @@
   "prompt_enterNewVal": { "message": "Lowetsani mtengo watsopano wa" },
   "error_enterValidNum": { "message": "Lowetsani nambala yovomerezeka" },
   "error_between": { "message": "pakati" },
-  "error_and": { "message": "Ndi..." },
+  "error_and": { "message": "Ndi" },
   "tooltip_widescreenON": { "message": "Chithunzi chazitali" },
   "tooltip_widescreenOFF": { "message": "Tulutsani chophimba chachikulu" },
   "tooltip_fullWindowON": { "message": "Full-window mode" },

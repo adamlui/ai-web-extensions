@@ -26,7 +26,7 @@
   "prompt_enterNewVal": { "message": "Pagsulod sa bag-ong bili alang sa" },
   "error_enterValidNum": { "message": "Pagsulod sa usa ka balido nga gidaghanon" },
   "error_between": { "message": "sa tunga-tunga" },
-  "error_and": { "message": "ug " },
+  "error_and": { "message": "ug" },
   "helptip_autoScroll": { "message": "Awtomatikong pag-scroll sa ilawom samtang ang mga tubag nagmugna" },
   "helptip_modeNotifs": { "message": "Ipakita ang mga pahibalo kung ang mga mode/setting sa pag-toggle" },
   "helptip_notifBottom": { "message": "Mga pahibalo sa angkla sa ilawom sa screen" },

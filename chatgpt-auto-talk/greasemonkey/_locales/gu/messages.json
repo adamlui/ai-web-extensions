@@ -29,7 +29,7 @@
   "alert_noMatterSize": { "message": "કદ ભલે ગમે તે હોય" },
   "alert_directlySupports": { "message": "આ પ્રોજેક્ટ નિઃશુલ્ક અને વાપરવા માટે બધા માટે ખુલ્લો રહે તેની ખાતરી કરવા માટે મારા અવેતન પ્રયત્નોને સીધો ટેકો આપે છે" },
   "alert_growTogether": { "message": "સાથે મળીને, આપણે આ શક્તિશાળી સૉફ્ટવેરને વિકસિત કરી શકીએ છીએ" },
-  "alert_tyForSupport": { "message": "તમારી મદદ માટે આભાર." },
+  "alert_tyForSupport": { "message": "તમારી મદદ માટે આભાર" },
   "btnLabel_moreAIextensions": { "message": "વધુ AI એક્સ્ટેન્શન્સ" },
   "btnLabel_leaveReview": { "message": "સમીક્ષા છોડો" },
   "btnLabel_rateUs": { "message": "અમને રેટ કરો" },

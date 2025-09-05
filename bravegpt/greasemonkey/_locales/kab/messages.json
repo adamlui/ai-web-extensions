@@ -27,7 +27,7 @@
   "menuLabel_about": { "message": "Axxam" },
   "menuLabel_settings": { "message": "Tameslayt" },
   "menuLabel_random": { "message": "[Agacuran]" },
-  "menuLabel_saved": { "message": "Yettwasekles." },
+  "menuLabel_saved": { "message": "Yettwasekles" },
   "componentLabel_used": { "message": "yettwaseqdacen" },
   "about_author": { "message": "Ameskar" },
   "about_and": { "message": "akked" },
@@ -132,6 +132,6 @@
   "link_shareFeedback": { "message": "Amusn ad-yefk s" },
   "prefix_exit": { "message": "Aksum" },
   "state_on": { "message": "D" },
-  "state_off": { "message": "Ur d-" },
+  "state_off": { "message": "Ur d" },
   "state_no": { "message": "Uhu" }
 }

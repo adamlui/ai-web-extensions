@@ -36,7 +36,7 @@
   "prompt_orEnter": { "message": "ወይም ያስገቡ" },
   "prompt_updateReplyInt": { "message": "የምላሽ ጊዜን ያዘምኑ (ቢያንስ 5 ሰከንድ)" },
   "error_enterValidNum": { "message": "እባክዎ ትክክለኛ ቁጥር ያስገቡ" },
-  "error_between": { "message": "እና " },
+  "error_between": { "message": "እና" },
   "error_and": { "message": "እና" },
   "helptip_autoStart": { "message": "Chatgpt.com ን በሚጎበኙበት ጊዜ በራስ-ሰር ማለቂያ ሁነታ ይጀምሩ" },
   "helptip_toggleVis": { "message": "የጎን አሞሌ ውስጥ ማለቂያ ሁነታ toggle አሳይ" },

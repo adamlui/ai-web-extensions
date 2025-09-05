@@ -20,7 +20,7 @@
   "menuLabel_open": { "message": "Öppen" },
   "menuLabel_buyMeAcoffee": { "message": "Skänk mig en slant :)" },
   "menuLabel_donate": { "message": "Vänligen skicka en donation" },
-  "menuLabel_extensionActive": { "message": "SOAP Extension aktiv." },
+  "menuLabel_extensionActive": { "message": "SOAP Extension aktiv" },
   "about_author": { "message": "Författare" },
   "about_and": { "message": "och" },
   "about_contributors": { "message": "bidragsgivare" },

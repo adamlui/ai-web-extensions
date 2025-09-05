@@ -13,7 +13,7 @@
   "about_contributors": { "message": "colaboratorilor" },
   "about_version": { "message": "Versiune" },
   "about_poweredBy": { "message": "Operat de" },
-  "about_openSourceCode": { "message": "Cod cu sursă deschisă." },
+  "about_openSourceCode": { "message": "Cod cu sursă deschisă" },
   "about_latestChanges": { "message": "Cele mai recente modificări" },
   "prompt_updateInt": { "message": "Actualizați intervalul de reîmprospătare (în secunde)" },
   "helptip_toggleVis": { "message": "Afișează comutatorul Reîmprospătare automată în bara laterală" },

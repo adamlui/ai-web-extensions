@@ -52,7 +52,7 @@
   "tooltip_newChat": { "message": "Nou xat" },
   "tooltip_goto": { "message": "Anar a" },
   "helptip_adjustSettingsRelatedTo": { "message": "Ajusta la configuració relacionada amb" },
-  "helptip_the": { "message": "Els " },
+  "helptip_the": { "message": "Els" },
   "helptip_btns": { "message": "Buttons" },
   "helptip_widescreenWidth": { "message": "Ajusta la quantitat de pantalla panoràmica que vols aplicar" },
   "helptip_tallerChatboxHeight": { "message": "Ajusta la quantitat de xat Taller que s'ha d'aplicar (requereix text per obtenir una vista prèvia)" },

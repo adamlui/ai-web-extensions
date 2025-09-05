@@ -37,7 +37,7 @@
   "tooltip_shrink": { "message": "સંકોચો" },
   "tooltip_close": { "message": "બંધ કરો" },
   "tooltip_copy": { "message": "નકલ કરો" },
-  "tooltip_generate": { "message": "બેકસ્ટ્રેસ બનાવી શકાયો નહી કારણકે ડિબગર '% 1' મળ્યું નહી." },
+  "tooltip_generate": { "message": "બેકસ્ટ્રેસ બનાવી શકાયો નહી કારણકે ડિબગર '% 1' મળ્યું નહી" },
   "tooltip_generating": { "message": "જનરેટ કરી રહ્યા છીએ" },
   "tooltip_regenerate": { "message": "પુન: ઉત્પન્ન કરો" },
   "tooltip_regenerating": { "message": "પુનર્જીવિત કરી રહ્યા છીએ" },

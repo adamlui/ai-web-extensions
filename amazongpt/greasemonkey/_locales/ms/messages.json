@@ -43,7 +43,7 @@
   "tooltip_regenerating": { "message": "Menjana semula" },
   "tooltip_play": { "message": "Main" },
   "tooltip_playing": { "message": "Memainkan" },
-  "tooltip_page": { "message": "Halaman " },
+  "tooltip_page": { "message": "Halaman" },
   "tooltip_reply": { "message": "Balas" },
   "tooltip_code": { "message": "Kod" },
   "tooltip_generatingAudio": { "message": "Menjana audio" },

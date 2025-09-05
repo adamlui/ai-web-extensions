@@ -5,7 +5,7 @@
   "menuLabel_settings": { "message": "تنظیمات" },
   "menuLabel_reply": { "message": "ځواب ورکړه" },
   "menuLabel_notif": { "message": "خبرتیا" },
-  "menuLabel_notifs": { "message": "خبرتياوې " },
+  "menuLabel_notifs": { "message": "خبرتياوې" },
   "menuLabel_infinityMode": { "message": "انفنټی موډ" },
   "menuLabel_autoStart": { "message": "اتومات پیل (Auto - Start)" },
   "menuLabel_toggleVis": { "message": "دیداریګرۍ تبدیل کړئ" },

@@ -26,7 +26,7 @@
   "prompt_enterNewVal": { "message": "Жаңа мәнді енгізіңіз" },
   "error_enterValidNum": { "message": "Жарамды нөмірді енгізіңіз" },
   "error_between": { "message": "ххх" },
-  "error_and": { "message": "және " },
+  "error_and": { "message": "және" },
   "helptip_autoScroll": { "message": "Жауаптар пайда болған кезде автоматты түрде төмен қарай жылжыңыз" },
   "helptip_modeNotifs": { "message": "Режимдерді/параметрлерді ауыстыру кезінде хабарландыруларды көрсету" },
   "helptip_notifBottom": { "message": "Экранның төменгі жағындағы анкерлік хабарландырулар" },

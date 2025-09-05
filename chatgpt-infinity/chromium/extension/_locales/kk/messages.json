@@ -37,7 +37,7 @@
   "prompt_updateReplyInt": { "message": "Жауап беру арақатынасын жаңарту (ең аз 5 сек)" },
   "error_enterValidNum": { "message": "Жарамды нөмірді енгізіңіз" },
   "error_between": { "message": "ххх" },
-  "error_and": { "message": "және " },
+  "error_and": { "message": "және" },
   "helptip_autoStart": { "message": "Chatgpt.com сайтына кіргенде шексіздік режимін автоматты түрде іске қосыңыз" },
   "helptip_toggleVis": { "message": "Бүйірлік тақтада Infinity Mode (Шексіздік режимі) ауыстырғышын көрсету" },
   "helptip_autoScroll": { "message": "Жауаптар пайда болған кезде автоматты түрде төмен қарай жылжыңыз" },

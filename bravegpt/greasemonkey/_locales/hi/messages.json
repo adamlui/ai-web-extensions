@@ -126,7 +126,7 @@
   "btnLabel_update": { "message": "अपडेट करें" },
   "btnLabel_dismiss": { "message": "खारिज करना" },
   "btnLabel_visitPage": { "message": "पेज पर जाएँ" },
-  "btnLabel_download": { "message": "डाउनलोड " },
+  "btnLabel_download": { "message": "डाउनलोड" },
   "btnLabel_convo": { "message": "संवाद" },
   "link_viewChanges": { "message": "बदलाव देखें" },
   "link_shareFeedback": { "message": "फ़ीडबैक" },

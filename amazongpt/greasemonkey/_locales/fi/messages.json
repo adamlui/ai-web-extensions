@@ -88,7 +88,7 @@
   "alert_selectingDiff": { "message": "valitaan toinen" },
   "alert_generated": { "message": "Luotu" },
   "notif_copiedToClipboard": { "message": "Kopioitu leikepöydälle" },
-  "notif_downloaded": { "message": "ladattu." },
+  "notif_downloaded": { "message": "ladattu" },
   "btnLabel_moreAIextensions": { "message": "Lisää tekoälylaajennuksia" },
   "btnLabel_leaveReview": { "message": "Jätä arvostelu" },
   "btnLabel_rateUs": { "message": "Anna meille arvostelu" },

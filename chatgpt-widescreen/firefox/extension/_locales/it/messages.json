@@ -26,7 +26,7 @@
   "menuLabel_about": { "message": "Informazioni generali" },
   "menuLabel_buyMeAcoffee": { "message": "Comprami un caffè" },
   "menuLabel_donate": { "message": "Invia una donazione" },
-  "menuLabel_extensionActive": { "message": "Estensione SOAP attiva." },
+  "menuLabel_extensionActive": { "message": "Estensione SOAP attiva" },
   "about_author": { "message": "Autore" },
   "about_and": { "message": "e" },
   "about_contributors": { "message": "collaboratori" },

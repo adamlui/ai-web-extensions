@@ -52,7 +52,7 @@
   "tooltip_newChat": { "message": "Ny chat" },
   "tooltip_goto": { "message": "Gå til" },
   "helptip_adjustSettingsRelatedTo": { "message": "Juster indstillinger relateret til" },
-  "helptip_the": { "message": "De " },
+  "helptip_the": { "message": "De" },
   "helptip_btns": { "message": "Knapper" },
   "helptip_widescreenWidth": { "message": "Juster mængden af bredformat, der skal anvendes" },
   "helptip_tallerChatboxHeight": { "message": "Juster mængden af højere chatboks, der skal anvendes (kræver tekst for at forhåndsvise)" },

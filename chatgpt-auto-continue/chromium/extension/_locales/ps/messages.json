@@ -4,7 +4,7 @@
   "appDesc": { "message": "په اوتومات ډول د ځوابونو تولید ته دوام ورکړئ کله چې د ChatGPT ځوابونه پرې کیږي" },
   "menuLabel_settings": { "message": "تنظیمات" },
   "menuLabel_notif": { "message": "خبرتیا" },
-  "menuLabel_notifs": { "message": "خبرتياوې " },
+  "menuLabel_notifs": { "message": "خبرتياوې" },
   "menuLabel_autoScroll": { "message": "اتومات سمول" },
   "menuLabel_anchor": { "message": "لنګر" },
   "menuLabel_modeNotifs": { "message": "د حالت خبرتیاوې" },

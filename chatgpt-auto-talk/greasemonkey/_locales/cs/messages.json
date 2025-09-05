@@ -10,7 +10,7 @@
   "about_contributors": { "message": "přispěvatelé" },
   "about_version": { "message": "Verze" },
   "about_poweredBy": { "message": "Běží na" },
-  "about_openSourceCode": { "message": "Otevřený zdrojový kód." },
+  "about_openSourceCode": { "message": "Otevřený zdrojový kód" },
   "about_latestChanges": { "message": "Poslední změny" },
   "mode_autoTalk": { "message": "Auto-Talk" },
   "helptip_toggleVis": { "message": "Zobrazit přepínač Auto-Talk v postranním panelu" },

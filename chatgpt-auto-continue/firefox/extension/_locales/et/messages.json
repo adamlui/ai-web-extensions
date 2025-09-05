@@ -25,7 +25,7 @@
   "promptLabel_edit": { "message": "Muutke" },
   "prompt_enterNewVal": { "message": "Sisesta uus väärtus" },
   "error_enterValidNum": { "message": "Palun sisesta toimiv number" },
-  "error_between": { "message": "mille osapoolteks on " },
+  "error_between": { "message": "mille osapoolteks on" },
   "error_and": { "message": "ja" },
   "helptip_autoScroll": { "message": "Kui vastuseid genereeritakse, keri automaatselt alla" },
   "helptip_modeNotifs": { "message": "Kuva teated režiimide/seadete vahetamisel" },

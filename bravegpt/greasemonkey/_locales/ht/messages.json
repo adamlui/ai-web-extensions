@@ -26,7 +26,7 @@
   "menuLabel_auto": { "message": "Otomatik" },
   "menuLabel_about": { "message": "Apwopo" },
   "menuLabel_settings": { "message": "Reglaj" },
-  "menuLabel_random": { "message": "o aza/pa aza " },
+  "menuLabel_random": { "message": "o aza/pa aza" },
   "menuLabel_saved": { "message": "Sove" },
   "componentLabel_used": { "message": "itilize" },
   "about_author": { "message": "otè" },
@@ -61,7 +61,7 @@
   "tooltip_regenerating": { "message": "Rejenerasyon" },
   "tooltip_play": { "message": "Jwe" },
   "tooltip_playing": { "message": "Jwe" },
-  "tooltip_page": { "message": "Paj " },
+  "tooltip_page": { "message": "Paj" },
   "tooltip_reply": { "message": "Reponn" },
   "tooltip_code": { "message": "Sèvis" },
   "tooltip_generatingAudio": { "message": "Jenere odyo" },
@@ -132,6 +132,6 @@
   "link_shareFeedback": { "message": "Fidbak" },
   "prefix_exit": { "message": "Sòti" },
   "state_on": { "message": "Sou" },
-  "state_off": { "message": "Koupe " },
+  "state_off": { "message": "Koupe" },
   "state_no": { "message": "Non" }
 }

@@ -40,7 +40,7 @@
   "mode_toast": { "message": "Toastmodus" },
   "promptLabel_edit": { "message": "Rætta" },
   "prompt_enterNewVal": { "message": "Skriva nýtt virði fyri" },
-  "error_enterValidNum": { "message": "Vinarliga skriva eitt gildugt nummar." },
+  "error_enterValidNum": { "message": "Vinarliga skriva eitt gildugt nummar" },
   "error_between": { "message": "ímillum" },
   "error_and": { "message": "og" },
   "tooltip_widescreenON": { "message": "Breiddarskrá" },
