@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.5.10
+// @version             2025.9.5.11
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -289,7 +289,7 @@
 
 (async () => {
 
-    // Init ENV context
+    // Init DATA
     window.env = {
         browser: {
             language: chatgpt.getUserLanguage(), isFF: chatgpt.browser.isFirefox(), isMobile: chatgpt.browser.isMobile()
@@ -305,8 +305,6 @@
                                       && parseInt(env.scriptManager.version.split('.')[0]) >= 5
     ui.getScheme().then(scheme => env.ui.scheme = scheme)
     const xhr = typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
-
-    // Init APP data
     window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
@@ -343,13 +341,10 @@
         })
     }
     Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
-
-    // Init SITE profiles
     window.sites = Object.assign(Object.create(null), await new Promise(resolve => xhr({
         method: 'GET', url: `${app.urls.resourceHost}/assets/data/sites.json5`,
         onload: resp => resolve(JSON5.parse(resp.responseText))
     })))
-
     const chatbarElem = await dom.get.loadedElem(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input)
     chatbar.nativeWidth = dom.get.computedWidth(chatbarElem) // for ChatGPT WCB + styles.widescreen.css math
     chatbar.nativeHeight = dom.get.computedHeight(chatbarElem) // for TCB math

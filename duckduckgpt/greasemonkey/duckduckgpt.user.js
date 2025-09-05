@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.5.4
+// @version                2025.9.5.6
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -250,7 +250,7 @@
 
 (async () => {
 
-    // Init ENV context
+    // Init DATA
     window.env = {
         browser: { language: chatgpt.getUserLanguage() },
         scriptManager: {
@@ -268,8 +268,6 @@
     window.inputEvents = {} ; ['down', 'move', 'up'].forEach(action =>
         inputEvents[action] = ( window.PointerEvent ? 'pointer' : env.browser.isMobile ? 'touch' : 'mouse' ) + action)
     window.xhr = typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
-
-    // Init APP data
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
@@ -324,8 +322,6 @@
         method: 'GET', onload: resp => resolve(JSON.parse(resp.responseText)),
         url: `${app.urls.aiwebAssets}/data/katex-delimiters.json`
     }))
-
-    // Init API data
     window.apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
         method: 'GET', onload: resp => resolve(JSON5.parse(resp.responseText)),
         url: `${app.urls.aiwebAssets}/data/ai-chat-apis.json5`
