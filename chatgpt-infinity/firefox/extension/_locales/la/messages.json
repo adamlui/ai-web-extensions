@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Codex Próxus" },
   "about_latestChanges": { "message": "QUAE QUAE" },
   "mode_toast": { "message": "Modus Toastus" },
+  "promptLabel_edit": { "message": "Commutare: Undo=Abrogare" },
+  "prompt_enterNewVal": { "message": "Datum nunquam valderem" },
   "prompt_updateReplyLang": { "message": "Linguam responsionis update" },
   "prompt_updateReplyTopic": { "message": "Topicae responsionis update" },
   "prompt_orEnter": { "message": "vel inscribe" },

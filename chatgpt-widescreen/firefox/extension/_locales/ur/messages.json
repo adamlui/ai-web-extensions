@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "مکمل ونڈو (full - window)" },
   "mode_fullscreen": { "message": "مکمل سکریں" },
   "mode_toast": { "message": "ٹوسٹ موڈ" },
+  "promptLabel_edit": { "message": "ترمیم کریں" },
+  "prompt_enterNewVal": { "message": "کے لیے نئی قدر درج کریں" },
   "tooltip_widescreenON": { "message": "Wide screen" },
   "tooltip_widescreenOFF": { "message": "WIDE اسکرین سے باہر نکلیں" },
   "tooltip_fullWindowON": { "message": "مکمل ونڈو موڈ (Full window mode)" },

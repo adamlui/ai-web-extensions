@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "ਪੂਰੀ ਵਿੰਡੋ" },
   "mode_fullscreen": { "message": "ਪੂਰੀ ਸਕਰੀਨ" },
   "mode_toast": { "message": "ਟੋਸਟ ਮੋਡ" },
+  "promptLabel_edit": { "message": "Editar" },
+  "prompt_enterNewVal": { "message": "ਲਈ ਨਵਾਂ ਮੁੱਲ ਦਿਓ" },
   "tooltip_widescreenON": { "message": "ਚੌੜੀ ਸਕਰੀਨ" },
   "tooltip_widescreenOFF": { "message": "ਚੌੜੀ ਸਕਰੀਨ ਤੋਂ ਬਾਹਰ ਜਾਓ" },
   "tooltip_fullWindowON": { "message": "ਪੂਰੀ - ਵਿੰਡੋ ਮੋਡ" },

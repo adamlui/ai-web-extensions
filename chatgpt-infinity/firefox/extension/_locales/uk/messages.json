@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Джерельний код" },
   "about_latestChanges": { "message": "Останні зміни" },
   "mode_toast": { "message": "Режим тостів" },
+  "promptLabel_edit": { "message": "Редагувати" },
+  "prompt_enterNewVal": { "message": "Введіть нове значення для" },
   "prompt_updateReplyLang": { "message": "Оновити мову відповіді" },
   "prompt_updateReplyTopic": { "message": "Оновити тему відповіді" },
   "prompt_orEnter": { "message": "або введіть" },

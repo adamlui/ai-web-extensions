@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Zambiri zaife" },
   "mode_fullscreen": { "message": "Lumikizanani nafe" },
   "mode_toast": { "message": "Mchitidwe wa Toast" },
+  "promptLabel_edit": { "message": "Sinthani" },
+  "prompt_enterNewVal": { "message": "Lowetsani mtengo watsopano wa" },
   "tooltip_widescreenON": { "message": "Chithunzi chazitali" },
   "tooltip_widescreenOFF": { "message": "Tulutsani chophimba chachikulu" },
   "tooltip_fullWindowON": { "message": "Full-window mode" },

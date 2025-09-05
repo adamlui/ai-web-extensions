@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Վերջին փոփոխությունները" },
   "mode_autoContinue": { "message": "Շարունակել ավտոմատ կերպով" },
   "mode_toast": { "message": "Տոստի ռեժիմ" },
+  "promptLabel_edit": { "message": "Փոփոխել" },
+  "prompt_enterNewVal": { "message": "Մուտքագրեք նոր արժեք ՝" },
   "helptip_autoScroll": { "message": "Ավտոմատ կերպով սահեցրեք ներքև, քանի որ պատասխանները գեներացվում են" },
   "helptip_modeNotifs": { "message": "Ցույց տալ ծանուցումները, երբ փոխվում են ռեժիմները/կարգավորումները" },
   "helptip_notifBottom": { "message": "Էկրանի ներքևի մասում խարիսխով ծանուցումներ" },

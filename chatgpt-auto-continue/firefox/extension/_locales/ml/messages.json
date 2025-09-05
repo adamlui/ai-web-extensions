@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "ഏറ്റവും പുതിയ മാറ്റങ്ങൾ" },
   "mode_autoContinue": { "message": "യാന്ത്രികമായി തുടരുക" },
   "mode_toast": { "message": "ടോസ്റ്റ് മോഡ്" },
+  "promptLabel_edit": { "message": "എഡിറ്റുചെയ്യുക" },
+  "prompt_enterNewVal": { "message": "ഇതിനായി പുതിയ മൂല്യം നൽകുക" },
   "helptip_autoScroll": { "message": "മറുപടികൾ ജനറേറ്റ് ചെയ്യുന്നതിനാൽ യാന്ത്രികമായി താഴേക്ക് സ്ക്രോൾ ചെയ്യുക" },
   "helptip_modeNotifs": { "message": "മോഡുകൾ/ക്രമീകരണങ്ങൾ ടോഗിൾ ചെയ്യുമ്പോൾ അറിയിപ്പുകൾ കാണിക്കുക" },
   "helptip_notifBottom": { "message": "സ്ക്രീനിന്റെ അടിയിലേക്കുള്ള ആങ്കർ അറിയിപ്പുകൾ" },

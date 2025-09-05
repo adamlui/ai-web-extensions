@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Phyllus spp" },
   "mode_fullscreen": { "message": "Plenarumscreen" },
   "mode_toast": { "message": "Modus Toastus" },
+  "promptLabel_edit": { "message": "Commutare: Undo=Abrogare" },
+  "prompt_enterNewVal": { "message": "Datum nunquam valderem" },
   "tooltip_widescreenON": { "message": "Screen screen screen" },
   "tooltip_widescreenOFF": { "message": "Próximo Screen" },
   "tooltip_fullWindowON": { "message": "Uno strano modo" },

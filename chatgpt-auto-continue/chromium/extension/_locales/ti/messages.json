@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "ናይ መወዳእታ ለውጥታት" },
   "mode_autoContinue": { "message": "אויטאָ-פאָרזעצן" },
   "mode_toast": { "message": "ናይ ጽዋእ ኣገባብ" },
+  "promptLabel_edit": { "message": "vector-mode" },
+  "prompt_enterNewVal": { "message": "ሓድሽ ዋጋ ምእታው" },
   "helptip_autoScroll": { "message": "መልሲ ስለ ዝፈጥር ፡ ብገዛእ ርእሱ ናብ ታሕቲ ይሽየጥ" },
   "helptip_modeNotifs": { "message": "ኣብ እዋን ምትሕልላፍ ኣገባባት/ኣቀማምጣታት ኣፍልጦታት ኣርኢ" },
   "helptip_notifBottom": { "message": "ናይ ምስሊ መግለጺ ኣብ ታሕቲ ናይ ምስሊ መግለጺ" },

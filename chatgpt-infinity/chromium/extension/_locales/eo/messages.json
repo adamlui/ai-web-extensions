@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Fontkodo" },
   "about_latestChanges": { "message": "Lastaj ŝanĝoj" },
   "mode_toast": { "message": "Toastreĝimo" },
+  "promptLabel_edit": { "message": "Redaktu" },
+  "prompt_enterNewVal": { "message": "Entajpu novan valoron por" },
   "prompt_updateReplyLang": { "message": "Ĝisdatigu responda lingvo" },
   "prompt_updateReplyTopic": { "message": "Ĝisdatigi respondan temon" },
   "prompt_orEnter": { "message": "aŭ eniri" },

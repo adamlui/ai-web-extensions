@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Fakaava ʻa e kouti maʻuʻanga tokoni" },
   "about_latestChanges": { "message": "Ngaahi liliu fakamuimuitaha" },
   "mode_toast": { "message": "Mode Toasi" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "ʻOku ʻikai fie maʻu ke fai ha sivi kimuʻa ke ke hu ai ki Nuʻu Sila." },
   "prompt_updateReplyLang": { "message": "Fakapau'i lea fakautu" },
   "prompt_updateReplyTopic": { "message": "Fakapau'i lea faka'ilo" },
   "prompt_orEnter": { "message": "pe fakahu heni" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Plen-fenèt" },
   "mode_fullscreen": { "message": "Ekran konplè" },
   "mode_toast": { "message": "Mòd Toast" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Antre nouvo valè pou" },
   "tooltip_widescreenON": { "message": "Wide ekran" },
   "tooltip_widescreenOFF": { "message": "Sòti ekran lajè" },
   "tooltip_fullWindowON": { "message": "Full-fen mòd" },

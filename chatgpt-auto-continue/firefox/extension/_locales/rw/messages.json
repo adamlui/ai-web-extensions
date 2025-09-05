@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Amahinduka" },
   "mode_autoContinue": { "message": "Gukomeza" },
   "mode_toast": { "message": "Ubwoko" },
+  "promptLabel_edit": { "message": "Guhindura inyandiko" },
+  "prompt_enterNewVal": { "message": "Gishya Agaciro kugirango" },
   "helptip_autoScroll": { "message": "Kuri Hasi: Nka" },
   "helptip_modeNotifs": { "message": "Ibimenyetso Ryari: Amagenamiterere" },
   "helptip_notifBottom": { "message": "Ibimenyetso Kuri Hasi: Bya Mugaragaza" },

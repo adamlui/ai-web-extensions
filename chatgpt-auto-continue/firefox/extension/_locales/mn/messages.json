@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Сүүлийн өөрчлөлтүүд" },
   "mode_autoContinue": { "message": "Автоматаар задлах" },
   "mode_toast": { "message": "Шөнийн Горим" },
+  "promptLabel_edit": { "message": "Засах" },
+  "prompt_enterNewVal": { "message": "Шинэ утгыг оруулна уу" },
   "helptip_autoScroll": { "message": "Хариултууд нь гарч байгаа тул автоматаар доод хүртэл гүйлгэх" },
   "helptip_modeNotifs": { "message": "Модель/тохиргоонуудыг өөрчлөх үед мэдэгдлүүдийг харуулах" },
   "helptip_notifBottom": { "message": "Дэлгэцийн доод хэсэгт зангууны мэдэгдэл" },

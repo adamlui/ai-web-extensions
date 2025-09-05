@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "全視窗" },
   "mode_fullscreen": { "message": "全螢幕" },
   "mode_toast": { "message": "Toast 模式" },
+  "promptLabel_edit": { "message": "編輯" },
+  "prompt_enterNewVal": { "message": "輸入新值" },
   "tooltip_widescreenON": { "message": "寬螢幕" },
   "tooltip_widescreenOFF": { "message": "退出寬螢幕" },
   "tooltip_fullWindowON": { "message": "全視窗模式" },

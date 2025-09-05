@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Зыходнікі" },
   "about_latestChanges": { "message": "Апошнія змены" },
   "mode_toast": { "message": "Рэжым тоста" },
+  "promptLabel_edit": { "message": "Змяніць" },
+  "prompt_enterNewVal": { "message": "Увядзіце новае значэнне для" },
   "prompt_updateReplyLang": { "message": "Абнавіць мову адказу" },
   "prompt_updateReplyTopic": { "message": "Абнавіць тэму адказу" },
   "prompt_orEnter": { "message": "або ўвесці" },

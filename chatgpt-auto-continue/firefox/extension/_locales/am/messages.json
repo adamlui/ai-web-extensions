@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "የቅርብ ጊዜ ለውጦች" },
   "mode_autoContinue": { "message": "ራስ-ቀጥል" },
   "mode_toast": { "message": "የጥርስ ሁነታ" },
+  "promptLabel_edit": { "message": "አርትዕ" },
+  "prompt_enterNewVal": { "message": "አዲስ እሴት ያስገቡ ለ" },
   "helptip_autoScroll": { "message": "መልሶች እንደሚያመነጩት በራስ-ሰር ወደ ታች ይሸብልሉ" },
   "helptip_modeNotifs": { "message": "ሁነቶችን/ቅንብሮችን በሚገፉበት ጊዜ ማሳወቂያዎችን ያሳዩ" },
   "helptip_notifBottom": { "message": "መልህቅ ማሳወቂያዎች ወደ ታችኛው ማያ ገጽ" },

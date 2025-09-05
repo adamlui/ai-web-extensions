@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Còd stòr fosgailte" },
   "about_latestChanges": { "message": "Na h-atharrachaidhean as ùire" },
   "mode_toast": { "message": "Modh toast" },
+  "promptLabel_edit": { "message": "Deasaichvector-mode" },
+  "prompt_enterNewVal": { "message": "Cuir a - steach luach ùr airson" },
   "prompt_updateReplyLang": { "message": "Ùrachadh air cànan freagairt" },
   "prompt_updateReplyTopic": { "message": "Ùrachadh air àbhaist freagairt" },
   "prompt_orEnter": { "message": "no sgrìobh a-steach" },

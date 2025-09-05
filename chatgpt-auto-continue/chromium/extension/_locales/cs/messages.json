@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Poslední změny" },
   "mode_autoContinue": { "message": "Pokračovat automaticky" },
   "mode_toast": { "message": "Režim toastu" },
+  "promptLabel_edit": { "message": "Upravit" },
+  "prompt_enterNewVal": { "message": "Zadejte novou hodnotu pro" },
   "helptip_autoScroll": { "message": "Automaticky sjeďte dolů při generování odpovědí" },
   "helptip_modeNotifs": { "message": "Zobrazit oznámení při přepínání režimů/nastavení" },
   "helptip_notifBottom": { "message": "Oznámení o ukotvení do spodní části obrazovky" },

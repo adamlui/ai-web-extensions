@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "سرچينه كوډه" },
   "about_latestChanges": { "message": "وروستي بدلونونه" },
   "mode_toast": { "message": "د ټوسټ حالت" },
+  "promptLabel_edit": { "message": "بدلول" },
+  "prompt_enterNewVal": { "message": "لپاره نوی ارزښت دننه کړئ" },
   "prompt_updateReplyLang": { "message": "جواب ژبه اوسمهالول" },
   "prompt_updateReplyTopic": { "message": "جواب موضوع اوسمهالول" },
   "prompt_orEnter": { "message": "یا داخل شئ" },

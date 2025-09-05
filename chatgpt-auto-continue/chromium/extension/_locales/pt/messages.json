@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Últimas modificações" },
   "mode_autoContinue": { "message": "Continuar automaticamente" },
   "mode_toast": { "message": "Modo Torrada" },
+  "promptLabel_edit": { "message": "Editar" },
+  "prompt_enterNewVal": { "message": "<g id=\"11801\"/>\tDigite o novo valor." },
   "helptip_autoScroll": { "message": "Desloque-se automaticamente para baixo à medida que as respostas são geradas" },
   "helptip_modeNotifs": { "message": "Mostrar notificações ao alternar modos/configurações" },
   "helptip_notifBottom": { "message": "Ancorar notificações na parte inferior da tela" },

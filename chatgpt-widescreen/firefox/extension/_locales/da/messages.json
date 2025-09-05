@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Fuldt vindue" },
   "mode_fullscreen": { "message": "Fuld skærm" },
   "mode_toast": { "message": "Toast-tilstand" },
+  "promptLabel_edit": { "message": "Rediger" },
+  "prompt_enterNewVal": { "message": "Indtast ny værdi for" },
   "tooltip_widescreenON": { "message": "Bredformat" },
   "tooltip_widescreenOFF": { "message": "Bredformat" },
   "tooltip_fullWindowON": { "message": "Fuld vinduestilstand" },

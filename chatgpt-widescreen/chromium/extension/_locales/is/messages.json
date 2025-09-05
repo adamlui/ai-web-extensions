@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Heill gluggi" },
   "mode_fullscreen": { "message": "Fylla út í skjá" },
   "mode_toast": { "message": "Ristunarhamur" },
+  "promptLabel_edit": { "message": "Breyta" },
+  "prompt_enterNewVal": { "message": "Sláðu inn nýtt gildi fyrir" },
   "tooltip_widescreenON": { "message": "Breiður skjár" },
   "tooltip_widescreenOFF": { "message": "Fara út af breiðskjá" },
   "tooltip_fullWindowON": { "message": "Heilgluggahamur" },

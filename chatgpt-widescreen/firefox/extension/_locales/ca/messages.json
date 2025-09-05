@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Finestra completa" },
   "mode_fullscreen": { "message": "Pantalla completa" },
   "mode_toast": { "message": "Mode Toast" },
+  "promptLabel_edit": { "message": "Edita" },
+  "prompt_enterNewVal": { "message": "Introdueix un valor nou per a" },
   "tooltip_widescreenON": { "message": "Pantalla ampla" },
   "tooltip_widescreenOFF": { "message": "Surt de la pantalla ampla" },
   "tooltip_fullWindowON": { "message": "Mode de finestra completa" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Cửa sổ đầy đủ" },
   "mode_fullscreen": { "message": "Toàn Màn Hình" },
   "mode_toast": { "message": "Chế độ bánh mì nướng" },
+  "promptLabel_edit": { "message": "Chỉnh sửa" },
+  "prompt_enterNewVal": { "message": "Nhập giá trị mới cho" },
   "tooltip_widescreenON": { "message": "Màn Hình Rộng" },
   "tooltip_widescreenOFF": { "message": "Màn Hình Rộng" },
   "tooltip_fullWindowON": { "message": "Chế độ toàn cửa sổ" },

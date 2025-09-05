@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Koda çavkanî" },
   "about_latestChanges": { "message": "Guhertinên dawî" },
   "mode_toast": { "message": "Moda Toastkirinê" },
+  "promptLabel_edit": { "message": "ئێدیت" },
+  "prompt_enterNewVal": { "message": "Nirxek nû binivîse ji bo" },
   "prompt_updateReplyLang": { "message": "نوێکردنەوەی زمانی وەرزیی پاسخ" },
   "prompt_updateReplyTopic": { "message": "نوێکردنەوەی بابەتی وەرزیی پاسخ" },
   "prompt_orEnter": { "message": "یان تایبەتی بکە" },

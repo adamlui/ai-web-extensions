@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Zosintha zaposachedwa" },
   "mode_autoContinue": { "message": "Pitirizani Zokha" },
   "mode_toast": { "message": "Mchitidwe wa Toast" },
+  "promptLabel_edit": { "message": "Sinthani" },
+  "prompt_enterNewVal": { "message": "Lowetsani mtengo watsopano wa" },
   "helptip_autoScroll": { "message": "Makinawa mpukutu pansi monga mayankho akupanga" },
   "helptip_modeNotifs": { "message": "Onetsani zidziwitso pamene toggling modes/zoikamo" },
   "helptip_notifBottom": { "message": "Anchor zidziwitso pansi pazenera" },

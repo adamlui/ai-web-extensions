@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Últimos cambios" },
   "mode_autoContinue": { "message": "Continuar automaticamente" },
   "mode_toast": { "message": "Modo de brinde" },
+  "promptLabel_edit": { "message": "Editar" },
+  "prompt_enterNewVal": { "message": "Introduza un novo valor para" },
   "helptip_autoScroll": { "message": "Desprazarse automaticamente para o fondo como as respostas están a xerar" },
   "helptip_modeNotifs": { "message": "Mostrar as notificacións ao axustar os modos/configuracións" },
   "helptip_notifBottom": { "message": "Anclar as notificacións ao fondo da pantalla" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "קוד מקור" },
   "about_latestChanges": { "message": "שינויים אחרונים" },
   "mode_toast": { "message": "מצב הרמת כוסית" },
+  "promptLabel_edit": { "message": "ערוך" },
+  "prompt_enterNewVal": { "message": "הזן ערך חדש עבור" },
   "prompt_updateReplyLang": { "message": "עדכון שפת התגובה" },
   "prompt_updateReplyTopic": { "message": "עדכון נושא התגובה" },
   "prompt_orEnter": { "message": "או הזן" },

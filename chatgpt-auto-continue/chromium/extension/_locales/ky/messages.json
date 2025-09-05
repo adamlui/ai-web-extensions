@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Акыркы өзгөртүүлөр" },
   "mode_autoContinue": { "message": "Undo-type" },
   "mode_toast": { "message": "Тост режими" },
+  "promptLabel_edit": { "message": "Оңдоо" },
+  "prompt_enterNewVal": { "message": "Жаңы маанини киргизүү" },
   "helptip_autoScroll": { "message": "Жооптор түзүлүп жаткандыктан, автоматтык түрдө түбүнө жылдыруу" },
   "helptip_modeNotifs": { "message": "Режимдерди/параметрлерди алмаштырганда эскертүүлөрдү көрсөтүү" },
   "helptip_notifBottom": { "message": "Экрандын ылдый жагындагы анкердик эскертүүлөр" },

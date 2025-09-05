@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Lastaj ŝanĝoj" },
   "mode_autoContinue": { "message": "Daŭrigi aŭtomate" },
   "mode_toast": { "message": "Toastreĝimo" },
+  "promptLabel_edit": { "message": "Redaktu" },
+  "prompt_enterNewVal": { "message": "Entajpu novan valoron por" },
   "helptip_autoScroll": { "message": "Aŭtomate rulumi al fundo kiel respondoj generas" },
   "helptip_modeNotifs": { "message": "Montri sciigojn kiam ŝanĝi reĝimojn/agordojn" },
   "helptip_notifBottom": { "message": "Ankrosciigoj al la fundo de la ekrano" },

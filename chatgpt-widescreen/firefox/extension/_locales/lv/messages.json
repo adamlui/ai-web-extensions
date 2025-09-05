@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Pilns logs" },
   "mode_fullscreen": { "message": "Pilnekrāna režīms" },
   "mode_toast": { "message": "Tosta režīms" },
+  "promptLabel_edit": { "message": "Rediģēt" },
+  "prompt_enterNewVal": { "message": "Ievadiet jaunu vērtību" },
   "tooltip_widescreenON": { "message": "Platekrāns" },
   "tooltip_widescreenOFF": { "message": "Iziet no platekrāna režīma" },
   "tooltip_fullWindowON": { "message": "Pilna loga režīms" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "ఓపెన్ సోర్స్ కోడ్" },
   "about_latestChanges": { "message": "తాజా మార్పులు" },
   "mode_toast": { "message": "టోస్ట్ మోడ్" },
+  "promptLabel_edit": { "message": " సంకలనం చేయి" },
+  "prompt_enterNewVal": { "message": "కోసం కొత్త విలువను నమోదు చేయండి" },
   "prompt_updateReplyLang": { "message": "ప్రత్యుత్తరం భాషను అప్ ‌ డేట్ చేయండి" },
   "prompt_updateReplyTopic": { "message": "ప్రతిస్పందన అంశాన్ని అప్ ‌ డేట్ చేయండి" },
   "prompt_orEnter": { "message": "లేదా ఎంటర్ చేయండి" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "ክፉት ምንጪ ኮድ" },
   "about_latestChanges": { "message": "ናይ መወዳእታ ለውጥታት" },
   "mode_toast": { "message": "ናይ ጽዋእ ኣገባብ" },
+  "promptLabel_edit": { "message": "vector-mode" },
+  "prompt_enterNewVal": { "message": "ሓድሽ ዋጋ ምእታው" },
   "prompt_updateReplyLang": { "message": "ቋንቋ መልሲ ኣመሓይሽ" },
   "prompt_updateReplyTopic": { "message": "ኣርእስቲ መልሲ ኣመሓይሽ" },
   "prompt_orEnter": { "message": "ወይ ኣእቱ" },

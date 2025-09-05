@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Heilt vindeyga" },
   "mode_fullscreen": { "message": "Fult skjá" },
   "mode_toast": { "message": "Toastmodus" },
+  "promptLabel_edit": { "message": "Rætta" },
+  "prompt_enterNewVal": { "message": "Skriva nýtt virði fyri" },
   "tooltip_widescreenON": { "message": "Breiddarskrá" },
   "tooltip_widescreenOFF": { "message": "Far út breitt skjal" },
   "tooltip_fullWindowON": { "message": "Fullur vindeyga háttur" },

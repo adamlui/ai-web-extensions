@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Modalità finestra completa" },
   "mode_fullscreen": { "message": "Schermo intero" },
   "mode_toast": { "message": "Modalità brindisi" },
+  "promptLabel_edit": { "message": "Modifica" },
+  "prompt_enterNewVal": { "message": "Immettere il nuovo valore" },
   "tooltip_widescreenON": { "message": "Schermo largo" },
   "tooltip_widescreenOFF": { "message": "Esci dalla modalità schermo largo" },
   "tooltip_fullWindowON": { "message": "Modalità finestra completa" },

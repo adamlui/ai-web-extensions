@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Täisaken" },
   "mode_fullscreen": { "message": "Täisekraan" },
   "mode_toast": { "message": "Röstsaia režiim" },
+  "promptLabel_edit": { "message": "Muutke" },
+  "prompt_enterNewVal": { "message": "Sisesta uus väärtus" },
   "tooltip_widescreenON": { "message": "Laiekraan" },
   "tooltip_widescreenOFF": { "message": "Laiekraanilt väljumine" },
   "tooltip_fullWindowON": { "message": "Täisakna režiim" },

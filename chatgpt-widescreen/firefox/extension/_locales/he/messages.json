@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "חלון מלא" },
   "mode_fullscreen": { "message": "מסך מלא" },
   "mode_toast": { "message": "מצב הרמת כוסית" },
+  "promptLabel_edit": { "message": "ערוך" },
+  "prompt_enterNewVal": { "message": "הזן ערך חדש עבור" },
   "tooltip_widescreenON": { "message": "מסך רחב" },
   "tooltip_widescreenOFF": { "message": "צא ממסך רחב" },
   "tooltip_fullWindowON": { "message": "מצב חלון מלא" },

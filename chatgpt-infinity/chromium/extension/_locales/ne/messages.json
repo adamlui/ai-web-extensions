@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "स्रोत सङ्केत" },
   "about_latestChanges": { "message": "भर्खरका परिवर्तनहरू" },
   "mode_toast": { "message": "टोस्ट मोड" },
+  "promptLabel_edit": { "message": "सम्पादन गर्नुहोस्" },
+  "prompt_enterNewVal": { "message": "को लागि नयाँ मान प्रविष्ट गर्नुहोस्" },
   "prompt_updateReplyLang": { "message": "जवाफ भाषा अद्यावधिक गर्नुहोस्" },
   "prompt_updateReplyTopic": { "message": "जवाफ विषय अद्यावधिक गर्नुहोस्" },
   "prompt_orEnter": { "message": "वा प्रविष्ट गर्नुहोस्" },

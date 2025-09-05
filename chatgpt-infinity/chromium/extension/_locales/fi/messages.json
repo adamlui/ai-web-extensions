@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "avoin lähdekoodi" },
   "about_latestChanges": { "message": "Viimeisimmät muutokset" },
   "mode_toast": { "message": "Paahtoleipätila" },
+  "promptLabel_edit": { "message": "Muokkaa" },
+  "prompt_enterNewVal": { "message": "Syötä uusi arvo kohteelle" },
   "prompt_updateReplyLang": { "message": "Päivitä vastauskieli" },
   "prompt_updateReplyTopic": { "message": "Päivitä vastauksen aihe" },
   "prompt_orEnter": { "message": "tai kirjoita" },

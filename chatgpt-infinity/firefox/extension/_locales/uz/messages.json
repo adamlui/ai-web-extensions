@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Ochiq kod" },
   "about_latestChanges": { "message": "Eng so'nggi o'zgarishlar" },
   "mode_toast": { "message": "Tost rejimi" },
+  "promptLabel_edit": { "message": "Tahrir" },
+  "prompt_enterNewVal": { "message": "uchun yangi qiymat kiriting" },
   "prompt_updateReplyLang": { "message": "Javob tilini yangilash" },
   "prompt_updateReplyTopic": { "message": "Javob mavzusini yangilash" },
   "prompt_orEnter": { "message": "yoki kiriting" },

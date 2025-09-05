@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Izinguquko zakamuva" },
   "mode_autoContinue": { "message": "Qhubeka Ngokuzenzakalelayo" },
   "mode_toast": { "message": "Imodi ye-Toast" },
+  "promptLabel_edit": { "message": "Hlela" },
+  "prompt_enterNewVal": { "message": "Faka inani elisha le" },
   "helptip_autoScroll": { "message": "Skrola ngokuzenzakalelayo uye ezansi njengoba izimpendulo zikhiqiza" },
   "helptip_modeNotifs": { "message": "Bonisa izaziso lapho kuguqulwa izindlela/amasethingi" },
   "helptip_notifBottom": { "message": "Izaziso zehange ezansi kwesikrini" },

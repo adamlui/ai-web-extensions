@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Açık kaynak kodu" },
   "about_latestChanges": { "message": "Son Değişiklikler" },
   "mode_toast": { "message": "Tost Modu" },
+  "promptLabel_edit": { "message": "Düzenle" },
+  "prompt_enterNewVal": { "message": "Yeni Değer Gir" },
   "prompt_updateReplyLang": { "message": "Cevap dili güncelle" },
   "prompt_updateReplyTopic": { "message": "Yanıt konusunu güncelle" },
   "prompt_orEnter": { "message": "veya girin" },

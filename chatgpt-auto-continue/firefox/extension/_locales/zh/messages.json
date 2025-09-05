@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "新版变化" },
   "mode_autoContinue": { "message": "自动继续" },
   "mode_toast": { "message": "Toast 模式" },
+  "promptLabel_edit": { "message": "编辑" },
+  "prompt_enterNewVal": { "message": "输入以下内容的值" },
   "helptip_autoScroll": { "message": "回复生成时自动滚动到底部" },
   "helptip_modeNotifs": { "message": "切换模式/设置时显示通知" },
   "helptip_notifBottom": { "message": "将通知定位到屏幕底部" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Ծրագրային կոդ" },
   "about_latestChanges": { "message": "Վերջին փոփոխությունները" },
   "mode_toast": { "message": "Տոստի ռեժիմ" },
+  "promptLabel_edit": { "message": "Փոփոխել" },
+  "prompt_enterNewVal": { "message": "Մուտքագրեք նոր արժեք ՝" },
   "prompt_updateReplyLang": { "message": "Թարմացնել պատասխանի լեզուն" },
   "prompt_updateReplyTopic": { "message": "Թարմացնել պատասխանի թեման" },
   "prompt_orEnter": { "message": "կամ մուտքագրեք" },

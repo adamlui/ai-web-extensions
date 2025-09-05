@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "หน้าต่างเต็มบาน" },
   "mode_fullscreen": { "message": "เต็มหน้าจอ" },
   "mode_toast": { "message": "โหมดขนมปังปิ้ง" },
+  "promptLabel_edit": { "message": "แก้ไข" },
+  "prompt_enterNewVal": { "message": "ป้อนค่าใหม่สำหรับ" },
   "tooltip_widescreenON": { "message": "หน้าจอกว้าง" },
   "tooltip_widescreenOFF": { "message": "ออกจากหน้าจอกว้าง" },
   "tooltip_fullWindowON": { "message": "โหมดเต็มหน้าต่าง" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "بشپړول" },
   "mode_fullscreen": { "message": "بشپړه پرده" },
   "mode_toast": { "message": "د ټوسټ حالت" },
+  "promptLabel_edit": { "message": "بدلول" },
+  "prompt_enterNewVal": { "message": "لپاره نوی ارزښت دننه کړئ" },
   "tooltip_widescreenON": { "message": "پرده پرده پرده" },
   "tooltip_widescreenOFF": { "message": "د سکرین سکرین پرده" },
   "tooltip_fullWindowON": { "message": "بشپړ ډول" },

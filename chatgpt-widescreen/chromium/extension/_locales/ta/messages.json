@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "முழு-வடிவம்" },
   "mode_fullscreen": { "message": "முழுத்திரை" },
   "mode_toast": { "message": "டோஸ்ட் பயன்முறை" },
+  "promptLabel_edit": { "message": "திருத்துக" },
+  "prompt_enterNewVal": { "message": "க்கான புதிய மதிப்பை உள்ளிடவும்" },
   "tooltip_widescreenON": { "message": "பரந்த திரை" },
   "tooltip_widescreenOFF": { "message": "பரந்த திரையில் இருந்து வெளியேறவும்" },
   "tooltip_fullWindowON": { "message": "முழு விண்ட்ரோ பயன்முறை" },

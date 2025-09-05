@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Баштапкы код" },
   "about_latestChanges": { "message": "Акыркы өзгөртүүлөр" },
   "mode_toast": { "message": "Тост режими" },
+  "promptLabel_edit": { "message": "Оңдоо" },
+  "prompt_enterNewVal": { "message": "Жаңы маанини киргизүү" },
   "prompt_updateReplyLang": { "message": "Жооп тилин жаңыртуу" },
   "prompt_updateReplyTopic": { "message": "Жооп темасын жаңыртуу" },
   "prompt_orEnter": { "message": "же кирүү" },

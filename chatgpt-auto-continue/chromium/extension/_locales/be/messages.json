@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Апошнія змены" },
   "mode_autoContinue": { "message": "Аўтаматычны працяг" },
   "mode_toast": { "message": "Рэжым тоста" },
+  "promptLabel_edit": { "message": "Змяніць" },
+  "prompt_enterNewVal": { "message": "Увядзіце новае значэнне для" },
   "helptip_autoScroll": { "message": "Аўтаматычна пракручваць уніз, калі генеруюцца адказы" },
   "helptip_modeNotifs": { "message": "Паказваць апавяшчэнні пры пераключэнні рэжымаў/налад" },
   "helptip_notifBottom": { "message": "Апавяшчэнні аб якары ўнізе экрана" },

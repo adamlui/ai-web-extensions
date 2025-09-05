@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "ಇತ್ತೀಚಿನ ಬದಲಾವಣೆಗಳು" },
   "mode_autoContinue": { "message": "ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮುಂದುವರಿಸಿ" },
   "mode_toast": { "message": "ಟೋಸ್ಟ್ ಮೋಡ್" },
+  "promptLabel_edit": { "message": "ಸಂಕಲಿಸಿ" },
+  "prompt_enterNewVal": { "message": "ಗಾಗಿ ಹೊಸ ಮೌಲ್ಯವನ್ನು ನಮೂದಿಸಿ" },
   "helptip_autoScroll": { "message": "ಪ್ರತ್ಯುತ್ತರಗಳು ಉತ್ಪತ್ತಿಯಾಗುತ್ತಿರುವುದರಿಂದ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಕೆಳಕ್ಕೆ ಸ್ಕ್ರಾಲ್ ಮಾಡಿ" },
   "helptip_modeNotifs": { "message": "ಮೋಡ್‌ಗಳು/ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಟಾಗಲ್ ಮಾಡುವಾಗ ಅಧಿಸೂಚನೆಗಳನ್ನು ತೋರಿಸಿ" },
   "helptip_notifBottom": { "message": "ಪರದೆಯ ಕೆಳಭಾಗಕ್ಕೆ ಆಂಕರ್ ಅಧಿಸೂಚನೆಗಳು" },

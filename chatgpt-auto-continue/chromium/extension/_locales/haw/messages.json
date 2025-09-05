@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Nā hoʻololi hou" },
   "mode_autoContinue": { "message": "Hoʻomau-Aunoa" },
   "mode_toast": { "message": "ʻO ke ʻano Toast" },
+  "promptLabel_edit": { "message": "Ho‘oponopono" },
+  "prompt_enterNewVal": { "message": "E hoʻokomo i ka waiwai hou no" },
   "helptip_autoScroll": { "message": "ʻOka ʻakomi i lalo i ka wā e hana ana nā pane" },
   "helptip_modeNotifs": { "message": "E hōʻike i nā leka hoʻomaopopo i ka wā e hoʻololi ai i nā ʻano" },
   "helptip_notifBottom": { "message": "Hoʻolaha heleuma ma lalo o ka pale" },

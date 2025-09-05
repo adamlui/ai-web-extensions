@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Mənbə kodunu açın" },
   "about_latestChanges": { "message": "Son dəyişikliklər" },
   "mode_toast": { "message": "Tost rejimi" },
+  "promptLabel_edit": { "message": "Redaktə et" },
+  "prompt_enterNewVal": { "message": "Bunun üçün yeni dəyər daxil edin:" },
   "prompt_updateReplyLang": { "message": "Cavab dilini yenilə" },
   "prompt_updateReplyTopic": { "message": "Cavab mövzusunu yenilə" },
   "prompt_orEnter": { "message": "və ya daxil edin" },

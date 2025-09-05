@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Full-Window" },
   "mode_fullscreen": { "message": "Vollbildmodus" },
   "mode_toast": { "message": "Toastmodus" },
+  "promptLabel_edit": { "message": "Veränneren" },
+  "prompt_enterNewVal": { "message": "Gitt en neie Wäert fir" },
   "tooltip_widescreenON": { "message": "Breet Bildschierm" },
   "tooltip_widescreenOFF": { "message": "Ewechzehuelen breet Bildschierm" },
   "tooltip_fullWindowON": { "message": "Full-Window Modus" },

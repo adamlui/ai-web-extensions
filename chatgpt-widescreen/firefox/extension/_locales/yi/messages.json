@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "גאַנץ-פֿענצטער" },
   "mode_fullscreen": { "message": "פולסקרין" },
   "mode_toast": { "message": "טאָסט מאָדע" },
+  "promptLabel_edit": { "message": "רעדאַקטירן" },
+  "prompt_enterNewVal": { "message": "אַרייַן אַ נייעם ווערט פֿאַר" },
   "tooltip_widescreenON": { "message": "ברייט פאַרשטעלן" },
   "tooltip_widescreenOFF": { "message": "אַרויסגאַנג ברייט פאַרשטעלן" },
   "tooltip_fullWindowON": { "message": "גאַנץ-פֿענצטער מאָדע" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Mo fensetereng e e tletseng" },
   "mode_fullscreen": { "message": "Sekirini se se feletseng" },
   "mode_toast": { "message": "Mokgwa wa Toast" },
+  "promptLabel_edit": { "message": "Tseleganya" },
+  "prompt_enterNewVal": { "message": "INSERT NEW VALUE FOR" },
   "tooltip_widescreenON": { "message": "Sekirini se segolo" },
   "tooltip_widescreenOFF": { "message": "Go tswa mo sekerining se se atlhameng" },
   "tooltip_fullWindowON": { "message": "Total Modèle Modèle" },

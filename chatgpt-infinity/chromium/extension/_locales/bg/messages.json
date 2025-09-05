@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Отворен код" },
   "about_latestChanges": { "message": "Последни промени" },
   "mode_toast": { "message": "Режим на тост" },
+  "promptLabel_edit": { "message": "Редактирай" },
+  "prompt_enterNewVal": { "message": "Въведете нова стойност за" },
   "prompt_updateReplyLang": { "message": "Актуализиране на езика за отговор" },
   "prompt_updateReplyTopic": { "message": "Актуализиране на темата за отговор" },
   "prompt_orEnter": { "message": "или въведете" },

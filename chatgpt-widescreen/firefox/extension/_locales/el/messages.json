@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Πλήρες παράθυρο" },
   "mode_fullscreen": { "message": "Πλήρης οθόνη" },
   "mode_toast": { "message": "Λειτουργία τοστ" },
+  "promptLabel_edit": { "message": "Επεξεργασία" },
+  "prompt_enterNewVal": { "message": "Εισαγάγετε νέα τιμή για" },
   "tooltip_widescreenON": { "message": "Ευρεία οθόνη" },
   "tooltip_widescreenOFF": { "message": "Έξοδος από ευρεία οθόνη" },
   "tooltip_fullWindowON": { "message": "Λειτουργία πλήρους παραθύρου" },

@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Naujausi pakeitimai" },
   "mode_autoContinue": { "message": "Automatiškai tęsti" },
   "mode_toast": { "message": "Tosto režimas" },
+  "promptLabel_edit": { "message": "Redaguoti" },
+  "prompt_enterNewVal": { "message": "Įveskite naują reikšmę" },
   "helptip_autoScroll": { "message": "Automatiškai slinkite į apačią, kai generuojami atsakymai" },
   "helptip_modeNotifs": { "message": "Rodyti pranešimus, kai perjungiami režimai/nustatymai" },
   "helptip_notifBottom": { "message": "Inkaro pranešimai ekrano apačioje" },

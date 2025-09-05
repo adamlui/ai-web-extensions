@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "フルウィンドウモード" },
   "mode_fullscreen": { "message": "フルスクリーン" },
   "mode_toast": { "message": "トーストモード" },
+  "promptLabel_edit": { "message": "編集" },
+  "prompt_enterNewVal": { "message": "新しい値を入力してください:" },
   "tooltip_widescreenON": { "message": "ワイドスクリーンモード" },
   "tooltip_widescreenOFF": { "message": "ワイドスクリーンモードを終了する" },
   "tooltip_fullWindowON": { "message": "フルウィンドウモード" },

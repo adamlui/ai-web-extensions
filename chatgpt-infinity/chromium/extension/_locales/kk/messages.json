@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Ашық бастапқы код" },
   "about_latestChanges": { "message": "Соңғы өзгерістер" },
   "mode_toast": { "message": "Тостаған режимі" },
+  "promptLabel_edit": { "message": "Өзгерту" },
+  "prompt_enterNewVal": { "message": "Жаңа мәнді енгізіңіз" },
   "prompt_updateReplyLang": { "message": "Жауап беру тілін жаңарту" },
   "prompt_updateReplyTopic": { "message": "Жауап беру тақырыбын жаңарту" },
   "prompt_orEnter": { "message": "немесе кіріңіз" },

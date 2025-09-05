@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "開放原始碼" },
   "about_latestChanges": { "message": "最新變更" },
   "mode_toast": { "message": "Toast 模式" },
+  "promptLabel_edit": { "message": "編輯" },
+  "prompt_enterNewVal": { "message": "輸入新值" },
   "prompt_updateReplyLang": { "message": "更新回覆語言" },
   "prompt_updateReplyTopic": { "message": "更新回復" },
   "prompt_orEnter": { "message": "或輸入" },

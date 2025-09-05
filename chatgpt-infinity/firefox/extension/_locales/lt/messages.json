@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Pradinis kodas" },
   "about_latestChanges": { "message": "Naujausi pakeitimai" },
   "mode_toast": { "message": "Tosto režimas" },
+  "promptLabel_edit": { "message": "Redaguoti" },
+  "prompt_enterNewVal": { "message": "Įveskite naują reikšmę" },
   "prompt_updateReplyLang": { "message": "Atnaujinti atsakymo kalbą" },
   "prompt_updateReplyTopic": { "message": "Atnaujinti atsakymo temą" },
   "prompt_orEnter": { "message": "arba įveskite" },

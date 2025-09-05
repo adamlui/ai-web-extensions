@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Ultimi cambiamenti" },
   "mode_autoContinue": { "message": "Continuazione automatica" },
   "mode_toast": { "message": "Modalità brindisi" },
+  "promptLabel_edit": { "message": "Modifica" },
+  "prompt_enterNewVal": { "message": "Immettere il nuovo valore" },
   "helptip_autoScroll": { "message": "Scorri automaticamente verso il basso man mano che le risposte vengono generate" },
   "helptip_modeNotifs": { "message": "Mostra notifiche quando si attivano modalità/impostazioni" },
   "helptip_notifBottom": { "message": "Ancorare le notifiche alla parte inferiore dello schermo" },

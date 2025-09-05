@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "النافذة كاملة" },
   "mode_fullscreen": { "message": "شاشة كاملة" },
   "mode_toast": { "message": "وضع الخبز المحمص" },
+  "promptLabel_edit": { "message": "تحرير" },
+  "prompt_enterNewVal": { "message": "أدخل قيمة جديدة لـ" },
   "tooltip_widescreenON": { "message": "شاشة عريضة" },
   "tooltip_widescreenOFF": { "message": "شاشة عريضة" },
   "tooltip_fullWindowON": { "message": "وضع النافذة الكاملة" },

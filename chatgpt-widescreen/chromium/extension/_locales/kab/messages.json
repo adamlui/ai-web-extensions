@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Asfaylu aččuran" },
   "mode_fullscreen": { "message": "Agdil aččuran" },
   "mode_toast": { "message": "Aγewwaṛ n tuqqna" },
+  "promptLabel_edit": { "message": "Abedel" },
+  "prompt_enterNewVal": { "message": "Sekcem azal amaynut i" },
   "tooltip_widescreenON": { "message": "Agdil meqqren" },
   "tooltip_widescreenOFF": { "message": "Ffeɣ seg ugdil meqqren" },
   "tooltip_fullWindowON": { "message": "Asfaylu n usfaylu aččuran" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Inkomoko Inyandikoporogaramu" },
   "about_latestChanges": { "message": "Amahinduka" },
   "mode_toast": { "message": "Ubwoko" },
+  "promptLabel_edit": { "message": "Guhindura inyandiko" },
+  "prompt_enterNewVal": { "message": "Gishya Agaciro kugirango" },
   "prompt_updateReplyLang": { "message": "Guhindura lugha yo kuvugana" },
   "prompt_updateReplyTopic": { "message": "Guhindura icyanditswe" },
   "prompt_orEnter": { "message": "cyangwa inshingano" },

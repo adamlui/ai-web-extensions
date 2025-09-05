@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Opinn kóðalisti" },
   "about_latestChanges": { "message": "Nýjustu breytingar" },
   "mode_toast": { "message": "Ristunarhamur" },
+  "promptLabel_edit": { "message": "Breyta" },
+  "prompt_enterNewVal": { "message": "Sláðu inn nýtt gildi fyrir" },
   "prompt_updateReplyLang": { "message": "Uppfæra tungumál svars" },
   "prompt_updateReplyTopic": { "message": "Uppfæra viðfangsefni svars" },
   "prompt_orEnter": { "message": "eða sláðu inn" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "ပွင့်လင်းအရင်းအမြစ်ကုဒ်" },
   "about_latestChanges": { "message": "နောက်ဆုံးအပြောင်းအလဲများ" },
   "mode_toast": { "message": "Toast မုဒ်" },
+  "promptLabel_edit": { "message": "တည်းဖြတ်ရန်" },
+  "prompt_enterNewVal": { "message": "တန်ဖိုးအသစ်ကို ထည့်သွင်းပါ" },
   "prompt_updateReplyLang": { "message": "ပြန်ကြားရေးဘာသာစကားကို အပ်ဒိတ်လုပ်ပါ" },
   "prompt_updateReplyTopic": { "message": "ပြန်ကြားချက် ခေါင်းစဉ်ကို အပ်ဒိတ်လုပ်ပါ" },
   "prompt_orEnter": { "message": "သို့မဟုတ် ထည့်သွင်းပါ" },

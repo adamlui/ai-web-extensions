@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Nýjustu breytingar" },
   "mode_autoContinue": { "message": "Sjálfvirk stöðvun" },
   "mode_toast": { "message": "Ristunarhamur" },
+  "promptLabel_edit": { "message": "Breyta" },
+  "prompt_enterNewVal": { "message": "Sláðu inn nýtt gildi fyrir" },
   "helptip_autoScroll": { "message": "Flettu sjálfkrafa neðst þegar svör eru að myndast" },
   "helptip_modeNotifs": { "message": "Sýna tilkynningar þegar skipt er um ham/stillingar" },
   "helptip_notifBottom": { "message": "Festið tilkynningar neðst á skjáinn" },

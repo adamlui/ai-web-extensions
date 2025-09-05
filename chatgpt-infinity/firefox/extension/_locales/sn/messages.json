@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Kodhi yakavhurika" },
   "about_latestChanges": { "message": "Shanduko dzichangoburwa" },
   "mode_toast": { "message": "Toast Mode" },
+  "promptLabel_edit": { "message": "Gadzirisa" },
+  "prompt_enterNewVal": { "message": "Pinda kukosha kutsva kwe" },
   "prompt_updateReplyLang": { "message": "Kuvandudza mutauro wekupindura" },
   "prompt_updateReplyTopic": { "message": "Gadzirisa nyaya yemhinduro" },
   "prompt_orEnter": { "message": "kana kupinda" },

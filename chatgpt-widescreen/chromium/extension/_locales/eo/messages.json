@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Plena fenestro" },
   "mode_fullscreen": { "message": "Tutekrana reĝimo" },
   "mode_toast": { "message": "Toastreĝimo" },
+  "promptLabel_edit": { "message": "Redaktu" },
+  "prompt_enterNewVal": { "message": "Entajpu novan valoron por" },
   "tooltip_widescreenON": { "message": "Larĝa ekrano" },
   "tooltip_widescreenOFF": { "message": "Eliri larĝan ekranon" },
   "tooltip_fullWindowON": { "message": "Plen-fenestra reĝimo" },

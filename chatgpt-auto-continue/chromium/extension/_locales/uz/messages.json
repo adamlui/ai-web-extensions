@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Eng so'nggi o'zgarishlar" },
   "mode_autoContinue": { "message": "Avtomatik Davom etish" },
   "mode_toast": { "message": "Tost rejimi" },
+  "promptLabel_edit": { "message": "Tahrir" },
+  "prompt_enterNewVal": { "message": "uchun yangi qiymat kiriting" },
   "helptip_autoScroll": { "message": "Javoblar yaratilayotganda avtomatik ravishda pastga aylantiring" },
   "helptip_modeNotifs": { "message": "Rejimlar/sozlamalarni almashtirishda bildirishnomalarni ko'rsatish" },
   "helptip_notifBottom": { "message": "Bildirishnomalarni ekranning pastki qismiga mahkamlang" },

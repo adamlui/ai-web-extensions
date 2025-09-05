@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "وروستي بدلونونه" },
   "mode_autoContinue": { "message": "خپلکاره لیکل" },
   "mode_toast": { "message": "د ټوسټ حالت" },
+  "promptLabel_edit": { "message": "بدلول" },
+  "prompt_enterNewVal": { "message": "لپاره نوی ارزښت دننه کړئ" },
   "helptip_autoScroll": { "message": "په اتومات ډول ښکته ته سکرول ځکه چې ځوابونه تولید کوي" },
   "helptip_modeNotifs": { "message": "خبرتیاوې وښایاست کله چې د حالتونو/ترتیباتو ته اشاره وکړئ" },
   "helptip_notifBottom": { "message": "د سکرین پای ته د لنگر خبرتیاوې" },

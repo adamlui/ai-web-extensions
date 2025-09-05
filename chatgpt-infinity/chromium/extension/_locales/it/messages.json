@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Codice open source" },
   "about_latestChanges": { "message": "Ultimi cambiamenti" },
   "mode_toast": { "message": "Modalità brindisi" },
+  "promptLabel_edit": { "message": "Modifica" },
+  "prompt_enterNewVal": { "message": "Immettere il nuovo valore" },
   "prompt_updateReplyLang": { "message": "Aggiorna la lingua di risposta" },
   "prompt_updateReplyTopic": { "message": "Aggiorna argomento risposta" },
   "prompt_orEnter": { "message": "o inserisci" },

@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Letzte Änderungen" },
   "mode_autoContinue": { "message": "Automatisch fortsetzen" },
   "mode_toast": { "message": "Toast-Modus" },
+  "promptLabel_edit": { "message": "Bearbeiten" },
+  "prompt_enterNewVal": { "message": "Neuen Wert eintragen" },
   "helptip_autoScroll": { "message": "Automatisch nach unten scrollen, während Antworten generiert werden" },
   "helptip_modeNotifs": { "message": "Benachrichtigungen anzeigen, wenn Modi/Einstellungen umgeschaltet werden" },
   "helptip_notifBottom": { "message": "Benachrichtigungen am unteren Bildschirmrand verankern" },

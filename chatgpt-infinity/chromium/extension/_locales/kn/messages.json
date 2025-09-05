@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "ಓಪನ್ ಸೋರ್ಸ್ ಕೋಡ್" },
   "about_latestChanges": { "message": "ಇತ್ತೀಚಿನ ಬದಲಾವಣೆಗಳು" },
   "mode_toast": { "message": "ಟೋಸ್ಟ್ ಮೋಡ್" },
+  "promptLabel_edit": { "message": "ಸಂಕಲಿಸಿ" },
+  "prompt_enterNewVal": { "message": "ಗಾಗಿ ಹೊಸ ಮೌಲ್ಯವನ್ನು ನಮೂದಿಸಿ" },
   "prompt_updateReplyLang": { "message": "ಉತ್ತರ ಭಾಷೆಯನ್ನು ಅದಾಯವಿಸಿ" },
   "prompt_updateReplyTopic": { "message": "ಪ್ರತಿಕ್ರಿಯೆಯ ವಿಷಯವನ್ನು ನವೀಕರಿಸಿ" },
   "prompt_orEnter": { "message": "ಅಥವಾ ನಮೂದಿಸಿ" },

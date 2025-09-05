@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Otwarty kod PHP" },
   "about_latestChanges": { "message": "Najnowsze zmiany" },
   "mode_toast": { "message": "Tryb opiekania" },
+  "promptLabel_edit": { "message": "Edytuj" },
+  "prompt_enterNewVal": { "message": "Wprowadź nową wartość dla" },
   "prompt_updateReplyLang": { "message": "Zaktualizuj język odpowiedzi" },
   "prompt_updateReplyTopic": { "message": "Zaktualizuj temat odpowiedzi" },
   "prompt_orEnter": { "message": "lub wpisz z" },

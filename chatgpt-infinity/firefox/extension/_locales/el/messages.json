@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Ανοιχτός κώδικας." },
   "about_latestChanges": { "message": "Τελευταίες αλλαγές" },
   "mode_toast": { "message": "Λειτουργία τοστ" },
+  "promptLabel_edit": { "message": "Επεξεργασία" },
+  "prompt_enterNewVal": { "message": "Εισαγάγετε νέα τιμή για" },
   "prompt_updateReplyLang": { "message": "Ενημέρωση γλώσσας απάντησης" },
   "prompt_updateReplyTopic": { "message": "Ενημέρωση θέματος απάντησης" },
   "prompt_orEnter": { "message": "ή εισάγετε" },

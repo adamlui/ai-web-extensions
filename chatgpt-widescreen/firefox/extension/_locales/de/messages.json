@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Vollfenstermodus" },
   "mode_fullscreen": { "message": "Vollbild" },
   "mode_toast": { "message": "Toast-Modus" },
+  "promptLabel_edit": { "message": "Bearbeiten" },
+  "prompt_enterNewVal": { "message": "Neuen Wert eintragen" },
   "tooltip_widescreenON": { "message": "Breitbildmodus" },
   "tooltip_widescreenOFF": { "message": "Breitbildmodus beenden" },
   "tooltip_fullWindowON": { "message": "Vollfenstermodus" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Faumuina Faumuina Full" },
   "mode_fullscreen": { "message": "Fullscreen" },
   "mode_toast": { "message": "Faiga Toast" },
+  "promptLabel_edit": { "message": "Fa'asa'osa'o" },
+  "prompt_enterNewVal": { "message": "Ulufale i le taua fou mo" },
   "tooltip_widescreenON": { "message": "Screen lautele" },
   "tooltip_widescreenOFF": { "message": "Tuua le lau lautele" },
   "tooltip_fullWindowON": { "message": "Faiga Atoatoa Faatosinaga" },

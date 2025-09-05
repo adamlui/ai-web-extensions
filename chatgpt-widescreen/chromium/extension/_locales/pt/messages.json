@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Modo Janela Completa" },
   "mode_fullscreen": { "message": "Ecrã inteiro" },
   "mode_toast": { "message": "Modo Torrada" },
+  "promptLabel_edit": { "message": "Editar" },
+  "prompt_enterNewVal": { "message": "<g id=\"11801\"/>\tDigite o novo valor." },
   "tooltip_widescreenON": { "message": "Tela Ampla" },
   "tooltip_widescreenOFF": { "message": "Sair da Tela Ampla" },
   "tooltip_fullWindowON": { "message": "Modo Janela Completa" },

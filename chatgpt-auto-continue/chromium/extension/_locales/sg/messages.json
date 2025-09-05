@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Ndangba changement" },
   "mode_autoContinue": { "message": "Auto article" },
   "mode_toast": { "message": "Mode ti Toast" },
+  "promptLabel_edit": { "message": "Éditeur: Éd" },
+  "prompt_enterNewVal": { "message": "Entre nouveau valeur pour ti" },
   "helptip_autoScroll": { "message": "Na ngoi so azo ayeke kiri tënë na ala, ala yeke kiri tënë na ala" },
   "helptip_modeNotifs": { "message": "Fa awango na ngoi so mo yeke toggling mode/settings" },
   "helptip_notifBottom": { "message": "A yeke wara a-avertissement na gbe ti écran ni" },

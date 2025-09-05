@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Լրիվ պատուհան" },
   "mode_fullscreen": { "message": "Ամբողջ էկրանով" },
   "mode_toast": { "message": "Տոստի ռեժիմ" },
+  "promptLabel_edit": { "message": "Փոփոխել" },
+  "prompt_enterNewVal": { "message": "Մուտքագրեք նոր արժեք ՝" },
   "tooltip_widescreenON": { "message": "Լայն էկրան" },
   "tooltip_widescreenOFF": { "message": "Դուրս գալ լայն էկրանից" },
   "tooltip_fullWindowON": { "message": "Լրիվ պատուհանների ռեժիմ" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Cod ffynhonnell" },
   "about_latestChanges": { "message": "Newidiadau diweddaraf" },
   "mode_toast": { "message": "Modd Tost" },
+  "promptLabel_edit": { "message": "Golygu" },
+  "prompt_enterNewVal": { "message": "Rhowch werth newydd ar gyfer" },
   "prompt_updateReplyLang": { "message": "Diweddaru'r iaith ymateb" },
   "prompt_updateReplyTopic": { "message": "Diweddaru'r pwnc ateb" },
   "prompt_orEnter": { "message": "neu nodwch" },

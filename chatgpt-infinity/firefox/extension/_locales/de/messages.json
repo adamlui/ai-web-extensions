@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Quellcodeoffen" },
   "about_latestChanges": { "message": "Letzte Änderungen" },
   "mode_toast": { "message": "Toast-Modus" },
+  "promptLabel_edit": { "message": "Bearbeiten" },
+  "prompt_enterNewVal": { "message": "Neuen Wert eintragen" },
   "prompt_updateReplyLang": { "message": "Antwortsprache aktualisieren" },
   "prompt_updateReplyTopic": { "message": "Antwort-Thema aktualisieren" },
   "prompt_orEnter": { "message": "oder eintreten" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Поўнае акно" },
   "mode_fullscreen": { "message": "Поўнаэкранны рэжым" },
   "mode_toast": { "message": "Рэжым тоста" },
+  "promptLabel_edit": { "message": "Змяніць" },
+  "prompt_enterNewVal": { "message": "Увядзіце новае значэнне для" },
   "tooltip_widescreenON": { "message": "Шырокі экран" },
   "tooltip_widescreenOFF": { "message": "Выйсці з шырокага экрана" },
   "tooltip_fullWindowON": { "message": "Рэжым поўнага акна" },

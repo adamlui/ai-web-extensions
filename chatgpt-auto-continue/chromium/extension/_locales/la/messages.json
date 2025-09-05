@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "QUAE QUAE" },
   "mode_autoContinue": { "message": "Coninue autorum" },
   "mode_toast": { "message": "Modus Toastus" },
+  "promptLabel_edit": { "message": "Commutare: Undo=Abrogare" },
+  "prompt_enterNewVal": { "message": "Datum nunquam valderem" },
   "helptip_autoScroll": { "message": "Scripta automatique ad bottom as reperibus generatione" },
   "helptip_modeNotifs": { "message": "Notificationes quod toggling modes/settings" },
   "helptip_notifBottom": { "message": "Notificationes anchor ad praescripta" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Open sos kod" },
   "about_latestChanges": { "message": "Ol nupela senis" },
   "mode_toast": { "message": "Modus bilong toast" },
+  "promptLabel_edit": { "message": "Redigim" },
+  "prompt_enterNewVal": { "message": "Enter new value for" },
   "prompt_updateReplyLang": { "message": "Sosopen Toksait bilong Toktok" },
   "prompt_updateReplyTopic": { "message": "Sosopen Tema bilong Toktok" },
   "prompt_orEnter": { "message": "or yu save givim" },

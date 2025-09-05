@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "પૂર્ણ - વિન્ડો" },
   "mode_fullscreen": { "message": "પૂર્ણ સ્ક્રીન" },
   "mode_toast": { "message": "ટોસ્ટ મોડ" },
+  "promptLabel_edit": { "message": "એડિટ કરો" },
+  "prompt_enterNewVal": { "message": "માટે નવી કિંમત દાખલ કરો" },
   "tooltip_widescreenON": { "message": "વિશાળ સ્ક્રીન" },
   "tooltip_widescreenOFF": { "message": "વિશાળ સ્ક્રીનમાંથી બહાર નીકળો" },
   "tooltip_fullWindowON": { "message": "પૂર્ણ - વિન્ડો સ્થિતિ" },

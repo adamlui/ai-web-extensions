@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Bug-os nga bintana" },
   "mode_fullscreen": { "message": "Fullscreen" },
   "mode_toast": { "message": "Toast Mode" },
+  "promptLabel_edit": { "message": "Usaba" },
+  "prompt_enterNewVal": { "message": "Pagsulod sa bag-ong bili alang sa" },
   "tooltip_widescreenON": { "message": "Hapit nalukop sa kaumahan ang" },
   "tooltip_widescreenOFF": { "message": "Paggawas sa lapad nga screen" },
   "tooltip_fullWindowON": { "message": "Bug-os nga bintana" },

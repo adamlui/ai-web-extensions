@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Ful-Windo" },
   "mode_fullscreen": { "message": "Plen skrin" },
   "mode_toast": { "message": "Modus bilong toast" },
+  "promptLabel_edit": { "message": "Redigim" },
+  "prompt_enterNewVal": { "message": "Enter new value for" },
   "tooltip_widescreenON": { "message": "Bikpela skrin" },
   "tooltip_widescreenOFF": { "message": "Lusim bikpela skrin" },
   "tooltip_fullWindowON": { "message": "Ful-Windo Mod" },

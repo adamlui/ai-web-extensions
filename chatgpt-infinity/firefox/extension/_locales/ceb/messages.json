@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Gigikana sa kodigo" },
   "about_latestChanges": { "message": "Pinakabag-o nga mga pagbag-o" },
   "mode_toast": { "message": "Toast Mode" },
+  "promptLabel_edit": { "message": "Usaba" },
+  "prompt_enterNewVal": { "message": "Pagsulod sa bag-ong bili alang sa" },
   "prompt_updateReplyLang": { "message": "Usbongi ang lengguwahe sa tubag" },
   "prompt_updateReplyTopic": { "message": "Usbongi ang topiko sa tubag" },
   "prompt_orEnter": { "message": "o isulat" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Открытый исходный код" },
   "about_latestChanges": { "message": "Последние изменения" },
   "mode_toast": { "message": "Режим тоста" },
+  "promptLabel_edit": { "message": "Правка" },
+  "prompt_enterNewVal": { "message": "Ввести новое значение" },
   "prompt_updateReplyLang": { "message": "Обновить язык ответа" },
   "prompt_updateReplyTopic": { "message": "Обновить тему ответа" },
   "prompt_orEnter": { "message": "или введите сумму" },

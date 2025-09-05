@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Otevřený zdrojový kód." },
   "about_latestChanges": { "message": "Poslední změny" },
   "mode_toast": { "message": "Režim toastu" },
+  "promptLabel_edit": { "message": "Upravit" },
+  "prompt_enterNewVal": { "message": "Zadejte novou hodnotu pro" },
   "prompt_updateReplyLang": { "message": "Aktualizovat jazyk odpovědi" },
   "prompt_updateReplyTopic": { "message": "Aktualizovat téma odpovědi" },
   "prompt_orEnter": { "message": "nebo zadat URL" },

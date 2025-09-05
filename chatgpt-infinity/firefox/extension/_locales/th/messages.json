@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "โปรแกรมโอเพนซอร์ซ" },
   "about_latestChanges": { "message": "การเปลี่ยนแปลงล่าสุด" },
   "mode_toast": { "message": "โหมดขนมปังปิ้ง" },
+  "promptLabel_edit": { "message": "แก้ไข" },
+  "prompt_enterNewVal": { "message": "ป้อนค่าใหม่สำหรับ" },
   "prompt_updateReplyLang": { "message": "อัปเดตภาษาตอบกลับ" },
   "prompt_updateReplyTopic": { "message": "ปรับปรุงหัวข้อการตอบกลับ" },
   "prompt_orEnter": { "message": "หรือเข้า" },

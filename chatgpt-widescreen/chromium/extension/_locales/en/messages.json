@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Full-window" },
   "mode_fullscreen": { "message": "Fullscreen" },
   "mode_toast": { "message": "Toast Mode" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Enter new value for" },
   "tooltip_widescreenON": { "message": "Wide screen" },
   "tooltip_widescreenOFF": { "message": "Exit wide screen" },
   "tooltip_fullWindowON": { "message": "Full-window mode" },

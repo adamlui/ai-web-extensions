@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Tangalt taɣbalut" },
   "about_latestChanges": { "message": "Isbeddilen aneggaru" },
   "mode_toast": { "message": "Aγewwaṛ n tuqqna" },
+  "promptLabel_edit": { "message": "Abedel" },
+  "prompt_enterNewVal": { "message": "Sekcem azal amaynut i" },
   "prompt_updateReplyLang": { "message": "Leqqem tutlayt n tririt" },
   "prompt_updateReplyTopic": { "message": "Leqqem asentel n tririt" },
   "prompt_orEnter": { "message": "neɣ kcem" },

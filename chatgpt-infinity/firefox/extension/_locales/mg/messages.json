@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Kaody niaingana" },
   "about_latestChanges": { "message": "Fiovana farany" },
   "mode_toast": { "message": "Mode Toast" },
+  "promptLabel_edit": { "message": "Hanova" },
+  "prompt_enterNewVal": { "message": "Soraty ny sanda vaovao" },
   "prompt_updateReplyLang": { "message": "Ampidiro ny fiteny fialamboly" },
   "prompt_updateReplyTopic": { "message": "Ampidiro ny soratra" },
   "prompt_orEnter": { "message": "na ampidiro" },

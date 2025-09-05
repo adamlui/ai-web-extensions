@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Ilembo lya pa kompyuta ilyaba pa kompyuta" },
   "about_latestChanges": { "message": "Ukucinja kwa nomba line" },
   "mode_toast": { "message": "Umusango wa Kukasha" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Get New Value For ukulele" },
   "prompt_updateReplyLang": { "message": "Kulanda lusani lwama wafwile" },
   "prompt_updateReplyTopic": { "message": "Kulanda lusani lwamukanda" },
   "prompt_orEnter": { "message": "kamfumu" },

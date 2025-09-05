@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Na h-atharrachaidhean as ùire" },
   "mode_autoContinue": { "message": "Lean air adhart gu fèin - obrachail" },
   "mode_toast": { "message": "Modh toast" },
+  "promptLabel_edit": { "message": "Deasaichvector-mode" },
+  "prompt_enterNewVal": { "message": "Cuir a - steach luach ùr airson" },
   "helptip_autoScroll": { "message": "Sgrolaich gu bonn gu fèin - obrachail oir tha freagairtean a 'gineadh" },
   "helptip_modeNotifs": { "message": "Seall brathan nuair a thogras tu modhan/roghainnean" },
   "helptip_notifBottom": { "message": "Ag acair brathan gu bonn na sgrìn" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Равзанаи пурра" },
   "mode_fullscreen": { "message": "_Экрани пурра" },
   "mode_toast": { "message": "Ҳолати тост" },
+  "promptLabel_edit": { "message": "Таҳрир" },
+  "prompt_enterNewVal": { "message": "Қимати навро ворид кунед барои" },
   "tooltip_widescreenON": { "message": "Экрани васеъ" },
   "tooltip_widescreenOFF": { "message": "Баромадан аз экрани васеъ" },
   "tooltip_fullWindowON": { "message": "Ҳолати равзанаи пурра" },

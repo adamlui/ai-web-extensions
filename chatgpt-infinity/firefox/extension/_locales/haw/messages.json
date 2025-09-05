@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Wehe kumu kumu" },
   "about_latestChanges": { "message": "Nā hoʻololi hou" },
   "mode_toast": { "message": "ʻO ke ʻano Toast" },
+  "promptLabel_edit": { "message": "Ho‘oponopono" },
+  "prompt_enterNewVal": { "message": "E hoʻokomo i ka waiwai hou no" },
   "prompt_updateReplyLang": { "message": "Hōʻano hou i ka ʻōlelo pane" },
   "prompt_updateReplyTopic": { "message": "Hōʻano hou i ke kumuhana pane" },
   "prompt_orEnter": { "message": "a komo" },

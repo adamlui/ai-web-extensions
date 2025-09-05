@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "آخرین تغییرات" },
   "mode_autoContinue": { "message": "ادامه خودکار" },
   "mode_toast": { "message": "حالت تست" },
+  "promptLabel_edit": { "message": "ویرایش" },
+  "prompt_enterNewVal": { "message": "مقدار جدید را وارد کنید برای" },
   "helptip_autoScroll": { "message": "همزمان با ایجاد پاسخ، به صورت خودکار به پایین بروید" },
   "helptip_modeNotifs": { "message": "نمایش اعلان‌ها هنگام تغییر حالت‌ها/تنظیمات" },
   "helptip_notifBottom": { "message": "اعلان‌ها را به پایین صفحه نمایش دهید" },

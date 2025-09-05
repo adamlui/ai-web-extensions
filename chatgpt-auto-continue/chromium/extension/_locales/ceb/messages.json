@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Pinakabag-o nga mga pagbag-o" },
   "mode_autoContinue": { "message": "Awtomatikong Pagpadayon" },
   "mode_toast": { "message": "Toast Mode" },
+  "promptLabel_edit": { "message": "Usaba" },
+  "prompt_enterNewVal": { "message": "Pagsulod sa bag-ong bili alang sa" },
   "helptip_autoScroll": { "message": "Awtomatikong pag-scroll sa ilawom samtang ang mga tubag nagmugna" },
   "helptip_modeNotifs": { "message": "Ipakita ang mga pahibalo kung ang mga mode/setting sa pag-toggle" },
   "helptip_notifBottom": { "message": "Mga pahibalo sa angkla sa ilawom sa screen" },

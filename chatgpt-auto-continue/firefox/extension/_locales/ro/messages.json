@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Cele mai recente modificări" },
   "mode_autoContinue": { "message": "Continuare automată" },
   "mode_toast": { "message": "Mod prăjire" },
+  "promptLabel_edit": { "message": "Editare" },
+  "prompt_enterNewVal": { "message": "Introduceți o valoare nouă pentru" },
   "helptip_autoScroll": { "message": "Derulați automat în jos pe măsură ce se generează răspunsuri" },
   "helptip_modeNotifs": { "message": "Afișați notificările la comutarea modurilor/setărilor" },
   "helptip_notifBottom": { "message": "Notificări de ancorare în partea de jos a ecranului" },

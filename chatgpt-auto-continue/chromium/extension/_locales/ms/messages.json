@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Perubahan terkini" },
   "mode_autoContinue": { "message": "Teruskan Secara Automatik" },
   "mode_toast": { "message": "Mod Roti Bakar" },
+  "promptLabel_edit": { "message": "Sunting" },
+  "prompt_enterNewVal": { "message": "Masukkan nilai baharu untuk" },
   "helptip_autoScroll": { "message": "Tatal ke bawah secara automatik ketika jawapan dijana" },
   "helptip_modeNotifs": { "message": "Tunjukkan pemberitahuan apabila menogol mod/tetapan" },
   "helptip_notifBottom": { "message": "Pemberitahuan sauh ke bahagian bawah skrin" },

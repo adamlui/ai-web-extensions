@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Últims canvis" },
   "mode_autoContinue": { "message": "Continua automàticament" },
   "mode_toast": { "message": "Mode Toast" },
+  "promptLabel_edit": { "message": "Edita" },
+  "prompt_enterNewVal": { "message": "Introdueix un valor nou per a" },
   "helptip_autoScroll": { "message": "Desplaça't automàticament a la part inferior a mesura que es generen les respostes" },
   "helptip_modeNotifs": { "message": "Mostra les notificacions quan es canvien els modes o la configuració" },
   "helptip_notifBottom": { "message": "Notificacions d'ancoratge a la part inferior de la pantalla" },

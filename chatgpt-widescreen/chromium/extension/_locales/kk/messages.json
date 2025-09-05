@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Толық терезе" },
   "mode_fullscreen": { "message": "Т_олық экранға" },
   "mode_toast": { "message": "Тостаған режимі" },
+  "promptLabel_edit": { "message": "Өзгерту" },
+  "prompt_enterNewVal": { "message": "Жаңа мәнді енгізіңіз" },
   "tooltip_widescreenON": { "message": "Кең экран" },
   "tooltip_widescreenOFF": { "message": "Кең экраннан шығу" },
   "tooltip_fullWindowON": { "message": "Толық терезе режимі" },

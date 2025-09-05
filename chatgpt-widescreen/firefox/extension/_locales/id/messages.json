@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Jendela penuh" },
   "mode_fullscreen": { "message": "Layar Penuh" },
   "mode_toast": { "message": "Mode Roti Bakar" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Masukkan nilai baru untuk" },
   "tooltip_widescreenON": { "message": "Layar lebar" },
   "tooltip_widescreenOFF": { "message": "Keluar dari layar lebar" },
   "tooltip_fullWindowON": { "message": "Mode jendela penuh" },

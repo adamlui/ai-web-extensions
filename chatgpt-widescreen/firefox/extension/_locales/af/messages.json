@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Vol-venster" },
   "mode_fullscreen": { "message": "Volskermmodus" },
   "mode_toast": { "message": "Roosterbroodmodus" },
+  "promptLabel_edit": { "message": "Wysig" },
+  "prompt_enterNewVal": { "message": "Invoer nuwe waarde vir" },
   "tooltip_widescreenON": { "message": "Wye skerm" },
   "tooltip_widescreenOFF": { "message": "Verlaat wye skerm" },
   "tooltip_fullWindowON": { "message": "Vol-venster af" },

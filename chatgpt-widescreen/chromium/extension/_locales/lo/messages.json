@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "ປ່ອງຢ້ຽມເຕັມ" },
   "mode_fullscreen": { "message": "ຫນ້າຈໍເຕັມ" },
   "mode_toast": { "message": "ໂໝດເຂົ້າໜົມອົມ" },
+  "promptLabel_edit": { "message": "ແກ້ໄຂ" },
+  "prompt_enterNewVal": { "message": "ປ້ອນຄ່າໃໝ່ສຳລັບ" },
   "tooltip_widescreenON": { "message": "ຫນ້າຈໍກວ້າງ" },
   "tooltip_widescreenOFF": { "message": "ອອກຈາກ ຫນ້າ ຈໍກວ້າງ" },
   "tooltip_fullWindowON": { "message": "ໂຫມດປ່ອງຢ້ຽມເຕັມ" },

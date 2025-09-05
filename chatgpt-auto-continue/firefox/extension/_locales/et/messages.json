@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Viimased muudatused" },
   "mode_autoContinue": { "message": "Automaatne jätkamine" },
   "mode_toast": { "message": "Röstsaia režiim" },
+  "promptLabel_edit": { "message": "Muutke" },
+  "prompt_enterNewVal": { "message": "Sisesta uus väärtus" },
   "helptip_autoScroll": { "message": "Kui vastuseid genereeritakse, keri automaatselt alla" },
   "helptip_modeNotifs": { "message": "Kuva teated režiimide/seadete vahetamisel" },
   "helptip_notifBottom": { "message": "Ankru teatised ekraani alumisse ossa" },

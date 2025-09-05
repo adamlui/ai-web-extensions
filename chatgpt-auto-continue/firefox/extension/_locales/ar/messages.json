@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "آخر التغييرات" },
   "mode_autoContinue": { "message": "متابعة تلقائية" },
   "mode_toast": { "message": "وضع الخبز المحمص" },
+  "promptLabel_edit": { "message": "تحرير" },
+  "prompt_enterNewVal": { "message": "أدخل قيمة جديدة لـ" },
   "helptip_autoScroll": { "message": "قم بالتمرير تلقائيًا إلى الأسفل أثناء إنشاء الردود" },
   "helptip_modeNotifs": { "message": "عرض الإشعارات عند تبديل الأوضاع/الإعدادات" },
   "helptip_notifBottom": { "message": "قم بتثبيت الإشعارات في أسفل الشاشة" },

@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Jongste veranderinge" },
   "mode_autoContinue": { "message": "Outo-gaan voort" },
   "mode_toast": { "message": "Roosterbroodmodus" },
+  "promptLabel_edit": { "message": "Wysig" },
+  "prompt_enterNewVal": { "message": "Invoer nuwe waarde vir" },
   "helptip_autoScroll": { "message": "Blaai outomaties na onder as antwoorde genereer" },
   "helptip_modeNotifs": { "message": "Wys kennisgewings wanneer modusse/instellings wissel" },
   "helptip_notifBottom": { "message": "Anker kennisgewings aan die onderkant van die skerm" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Msimbo wa chanzo wazi" },
   "about_latestChanges": { "message": "Mabadiliko ya hivi karibuni" },
   "mode_toast": { "message": "Modi ya Toast" },
+  "promptLabel_edit": { "message": "Kuhariri " },
+  "prompt_enterNewVal": { "message": "Weka thamani mpya ya" },
   "prompt_updateReplyLang": { "message": "Sasisha lugha ya kujibu" },
   "prompt_updateReplyTopic": { "message": "Sasisha mada ya jibu" },
   "prompt_orEnter": { "message": "au ingiza" },

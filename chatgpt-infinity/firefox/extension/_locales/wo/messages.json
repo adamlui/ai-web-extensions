@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Kodu Source bu ubbeeku" },
   "about_latestChanges": { "message": "Coppite yu mujj" },
   "mode_toast": { "message": "Toast Mode (Toast Mode)" },
+  "promptLabel_edit": { "message": "binde ..." },
+  "prompt_enterNewVal": { "message": "Di dugg ci benn xët bu bees ngir" },
   "prompt_updateReplyLang": { "message": "Noppa xët yi jëm ci kat" },
   "prompt_updateReplyTopic": { "message": "Noppa xët yi tema" },
   "prompt_orEnter": { "message": "am mënu" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "sors miftuħ" },
   "about_latestChanges": { "message": "L-aħħar bidliet" },
   "mode_toast": { "message": "Modalità Toast" },
+  "promptLabel_edit": { "message": "Editja" },
+  "prompt_enterNewVal": { "message": "Daħħal valur ġdid għal" },
   "prompt_updateReplyLang": { "message": "Aġġorna l-lingwa tat-tweġibiet" },
   "prompt_updateReplyTopic": { "message": "Aġġorna s-suġġett tat-tweġiba" },
   "prompt_orEnter": { "message": "jew daħħal" },

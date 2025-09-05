@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Legutóbbi módosítások" },
   "mode_autoContinue": { "message": "Automatikus folytatás" },
   "mode_toast": { "message": "Pirítós üzemmód" },
+  "promptLabel_edit": { "message": "Szerkesztés" },
+  "prompt_enterNewVal": { "message": "Adjon meg új értéket" },
   "helptip_autoScroll": { "message": "Automatikus görgetés az aljára a válaszok generálásakor" },
   "helptip_modeNotifs": { "message": "Értesítések megjelenítése üzemmódok/beállítások közötti váltáskor" },
   "helptip_notifBottom": { "message": "Értesítések horgonyzása a képernyő aljára" },

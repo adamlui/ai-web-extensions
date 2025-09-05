@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Iwindi eligcwele" },
   "mode_fullscreen": { "message": "Isihenqo esigcwele" },
   "mode_toast": { "message": "Imodi ye-Toast" },
+  "promptLabel_edit": { "message": "Hlela" },
+  "prompt_enterNewVal": { "message": "Faka inani elisha le" },
   "tooltip_widescreenON": { "message": "Ubuso besiga-nyezi obubanzi" },
   "tooltip_widescreenOFF": { "message": "Phuma esikrinini esibanzi" },
   "tooltip_fullWindowON": { "message": "Imodi yewindi eligcwele" },

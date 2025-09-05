@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Dènye chanjman yo" },
   "mode_autoContinue": { "message": "Oto-kontinye" },
   "mode_toast": { "message": "Mòd Toast" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Antre nouvo valè pou" },
   "helptip_autoScroll": { "message": "Otomatikman woulo liv anba pandan repons yo ap jenere" },
   "helptip_modeNotifs": { "message": "Montre notifikasyon lè toggling mòd/anviwònman" },
   "helptip_notifBottom": { "message": "Anchor notifikasyon nan pati anba ekran an" },

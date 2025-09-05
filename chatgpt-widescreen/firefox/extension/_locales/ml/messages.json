@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "പൂർണ്ണ-വീണ്ടും" },
   "mode_fullscreen": { "message": "സ്ക്രീന്‍ പരമാവധി വലുപ്പത്തില്‍" },
   "mode_toast": { "message": "ടോസ്റ്റ് മോഡ്" },
+  "promptLabel_edit": { "message": "എഡിറ്റുചെയ്യുക" },
+  "prompt_enterNewVal": { "message": "ഇതിനായി പുതിയ മൂല്യം നൽകുക" },
   "tooltip_widescreenON": { "message": "വലിപ്പമുള്ള സ്ക്രീന്‍" },
   "tooltip_widescreenOFF": { "message": "വിശാലമായ സ്ക്രീനില്‍ നിന്ന് പുറത്തുകടക്കുക" },
   "tooltip_fullWindowON": { "message": "പൂർണ്ണ-വിൻഡോ മോഡ്" },

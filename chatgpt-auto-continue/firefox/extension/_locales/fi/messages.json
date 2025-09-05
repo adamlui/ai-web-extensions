@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Viimeisimmät muutokset" },
   "mode_autoContinue": { "message": "Automaattinen jatkaminen" },
   "mode_toast": { "message": "Paahtoleipätila" },
+  "promptLabel_edit": { "message": "Muokkaa" },
+  "prompt_enterNewVal": { "message": "Syötä uusi arvo kohteelle" },
   "helptip_autoScroll": { "message": "Vieritä automaattisesti alareunaan, kun vastauksia luodaan" },
   "helptip_modeNotifs": { "message": "Näytä ilmoitukset, kun vaihdat tiloja/asetuksia" },
   "helptip_notifBottom": { "message": "Ankkuroi ilmoitukset näytön alareunaan" },

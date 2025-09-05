@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Laatste wijzigingen" },
   "mode_autoContinue": { "message": "Automatisch doorgaan" },
   "mode_toast": { "message": "Toastmodus" },
+  "promptLabel_edit": { "message": "Bewerken" },
+  "prompt_enterNewVal": { "message": "Voer de nieuwe waarde in voor" },
   "helptip_autoScroll": { "message": "Scrol automatisch naar beneden terwijl antwoorden worden gegenereerd" },
   "helptip_modeNotifs": { "message": "Meldingen weergeven bij schakelen tussen modi/instellingen" },
   "helptip_notifBottom": { "message": "Meldingen aan de onderkant van het scherm verankeren" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Uinneag làn" },
   "mode_fullscreen": { "message": "Làn-sgrìn" },
   "mode_toast": { "message": "Modh toast" },
+  "promptLabel_edit": { "message": "Deasaichvector-mode" },
+  "prompt_enterNewVal": { "message": "Cuir a - steach luach ùr airson" },
   "tooltip_widescreenON": { "message": "Sgrìn fharsaing" },
   "tooltip_widescreenOFF": { "message": "Fàg an sgrìn fharsaing" },
   "tooltip_fullWindowON": { "message": "Modh làn-uinneige" },

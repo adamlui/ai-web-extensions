@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Цял прозорец" },
   "mode_fullscreen": { "message": "Цял екран" },
   "mode_toast": { "message": "Режим на тост" },
+  "promptLabel_edit": { "message": "Редактирай" },
+  "prompt_enterNewVal": { "message": "Въведете нова стойност за" },
   "tooltip_widescreenON": { "message": "Широк екран" },
   "tooltip_widescreenOFF": { "message": "Широк екран" },
   "tooltip_fullWindowON": { "message": "Режим на цял прозорец" },

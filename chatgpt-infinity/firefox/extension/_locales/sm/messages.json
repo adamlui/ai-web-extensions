@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Tatala fa'ailoga fa'apogai" },
   "about_latestChanges": { "message": "Suiga mulimuli" },
   "mode_toast": { "message": "Faiga Toast" },
+  "promptLabel_edit": { "message": "Fa'asa'osa'o" },
+  "prompt_enterNewVal": { "message": "Ulufale i le taua fou mo" },
   "prompt_updateReplyLang": { "message": "Faʻatauina le gagana e toe faʻatauina ai" },
   "prompt_updateReplyTopic": { "message": "Faʻatauina le sili atu o le sili" },
   "prompt_orEnter": { "message": "pe afai ae atu" },

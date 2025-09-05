@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "오픈소스" },
   "about_latestChanges": { "message": "최근 변경된 페이지" },
   "mode_toast": { "message": "토스트 모드" },
+  "promptLabel_edit": { "message": "편집" },
+  "prompt_enterNewVal": { "message": "%s 새 값을 입력하십시오:" },
   "prompt_updateReplyLang": { "message": "응답 언어 업데이트" },
   "prompt_updateReplyTopic": { "message": "답변 주제 업데이트" },
   "prompt_orEnter": { "message": "또는 입력" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Puni prozor" },
   "mode_fullscreen": { "message": "Preko celog ekrana" },
   "mode_toast": { "message": "Režim tosta" },
+  "promptLabel_edit": { "message": "Izmeni" },
+  "prompt_enterNewVal": { "message": "Unesite novu vrednost za" },
   "tooltip_widescreenON": { "message": "Širok ekran" },
   "tooltip_widescreenOFF": { "message": "Širok ekran" },
   "tooltip_fullWindowON": { "message": "Režim punog prozora" },

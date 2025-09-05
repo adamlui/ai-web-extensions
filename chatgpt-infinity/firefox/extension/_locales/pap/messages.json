@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Codigo Fuente Abierto" },
   "about_latestChanges": { "message": "Último kambionan" },
   "mode_toast": { "message": "Moda di Toast" },
+  "promptLabel_edit": { "message": "Editá" },
+  "prompt_enterNewVal": { "message": "Ingresá a Nuevo Valor" },
   "prompt_updateReplyLang": { "message": "Actualisá idioma di contestá" },
   "prompt_updateReplyTopic": { "message": "Actualisá tema di contestá" },
   "prompt_orEnter": { "message": "òf drenta" },

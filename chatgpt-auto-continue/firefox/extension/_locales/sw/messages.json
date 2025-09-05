@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Mabadiliko ya hivi karibuni" },
   "mode_autoContinue": { "message": "Endelea Kiotomatiki" },
   "mode_toast": { "message": "Modi ya Toast" },
+  "promptLabel_edit": { "message": "Kuhariri " },
+  "prompt_enterNewVal": { "message": "Weka thamani mpya ya" },
   "helptip_autoScroll": { "message": "Sogeza moja kwa moja hadi chini kwani majibu yanazalisha" },
   "helptip_modeNotifs": { "message": "Onyesha arifa wakati wa kugeuza modi/mipangilio" },
   "helptip_notifBottom": { "message": "Arifa za nanga hadi chini ya skrini" },

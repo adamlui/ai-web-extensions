@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "öppen källkod" },
   "about_latestChanges": { "message": "Latest changes" },
   "mode_toast": { "message": "Rostningsläge" },
+  "promptLabel_edit": { "message": "Redigera" },
+  "prompt_enterNewVal": { "message": "Ange nytt värde för" },
   "prompt_updateReplyLang": { "message": "Uppdatera svarsspråk" },
   "prompt_updateReplyTopic": { "message": "Uppdatera svarsämne" },
   "prompt_orEnter": { "message": "eller ange webbadress" },

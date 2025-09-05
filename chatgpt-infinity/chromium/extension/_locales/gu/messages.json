@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "સ્ત્રોત કોડ" },
   "about_latestChanges": { "message": "તાજેતરના ફેરફારો" },
   "mode_toast": { "message": "ટોસ્ટ મોડ" },
+  "promptLabel_edit": { "message": "એડિટ કરો" },
+  "prompt_enterNewVal": { "message": "માટે નવી કિંમત દાખલ કરો" },
   "prompt_updateReplyLang": { "message": "જવાબ ભાષા અપડેટ કરો" },
   "prompt_updateReplyTopic": { "message": "જવાબનો વિષય સુધારો" },
   "prompt_orEnter": { "message": "અથવા દાખલ કરો" },

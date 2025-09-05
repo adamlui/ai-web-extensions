@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Newidiadau diweddaraf" },
   "mode_autoContinue": { "message": "Parhau'n Awtomatig" },
   "mode_toast": { "message": "Modd Tost" },
+  "promptLabel_edit": { "message": "Golygu" },
+  "prompt_enterNewVal": { "message": "Rhowch werth newydd ar gyfer" },
   "helptip_autoScroll": { "message": "Sgroliwch i'r gwaelod yn awtomatig gan fod yr atebion yn cynhyrchu" },
   "helptip_modeNotifs": { "message": "Dangos hysbysiadau wrth toglo moddau/gosodiadau" },
   "helptip_notifBottom": { "message": "Angori hysbysiadau i waelod y sgrin" },

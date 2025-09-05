@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Kòd sous louvri" },
   "about_latestChanges": { "message": "Dènye chanjman yo" },
   "mode_toast": { "message": "Mòd Toast" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Antre nouvo valè pou" },
   "prompt_updateReplyLang": { "message": "MIZAJOU REPONS LANG" },
   "prompt_updateReplyTopic": { "message": "Mizajou sijè repons" },
   "prompt_orEnter": { "message": "oswa antre/ou antre/ou antre" },

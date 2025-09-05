@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "সর্বশেষ পরিবর্তনসমূহ" },
   "mode_autoContinue": { "message": "স্বয়ংক্রিয়ভাবে চালিয়ে যান" },
   "mode_toast": { "message": "টোস্ট মোড" },
+  "promptLabel_edit": { "message": "সম্পাদনা" },
+  "prompt_enterNewVal": { "message": "এর জন্য নতুন মান লিখুন" },
   "helptip_autoScroll": { "message": "উত্তরগুলি তৈরি হওয়ার সাথে সাথে স্বয়ংক্রিয়ভাবে নীচে স্ক্রোল করুন" },
   "helptip_modeNotifs": { "message": "মোড/সেটিংস টগল করার সময় বিজ্ঞপ্তিগুলি দেখান" },
   "helptip_notifBottom": { "message": "স্ক্রিনের নিচে নোঙ্গর বিজ্ঞপ্তি" },

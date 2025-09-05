@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Idirishya" },
   "mode_fullscreen": { "message": "<B B" },
   "mode_toast": { "message": "Ubwoko" },
+  "promptLabel_edit": { "message": "Guhindura inyandiko" },
+  "prompt_enterNewVal": { "message": "Gishya Agaciro kugirango" },
   "tooltip_widescreenON": { "message": "Mugaragaza" },
   "tooltip_widescreenOFF": { "message": "Mugaragaza" },
   "tooltip_fullWindowON": { "message": "Idirishya Ubwoko" },

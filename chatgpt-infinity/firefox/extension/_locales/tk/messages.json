@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Açyk manyly kod" },
   "about_latestChanges": { "message": "Soňky özgerişler" },
   "mode_toast": { "message": "Toast modu" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Täze bir gymmat gir" },
   "prompt_updateReplyLang": { "message": "Cevap Tilini Gaýd Et" },
   "prompt_updateReplyTopic": { "message": "Cevap temasyny ýükle" },
   "prompt_orEnter": { "message": "ýoksa gir" },

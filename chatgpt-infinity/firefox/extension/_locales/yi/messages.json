@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "עפֿענען מקור קאָד" },
   "about_latestChanges": { "message": "לעצטע ענדערונגען" },
   "mode_toast": { "message": "טאָסט מאָדע" },
+  "promptLabel_edit": { "message": "רעדאַקטירן" },
+  "prompt_enterNewVal": { "message": "אַרייַן אַ נייעם ווערט פֿאַר" },
   "prompt_updateReplyLang": { "message": "דערהייַנטיקן ענטפער שפּראַך" },
   "prompt_updateReplyTopic": { "message": "דערהייַנטיקן ענטפער טעמע" },
   "prompt_orEnter": { "message": "אָדער אַרייַן" },

@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "తాజా మార్పులు" },
   "mode_autoContinue": { "message": "స్వయంచాలకంగా కొనసాగించు" },
   "mode_toast": { "message": "టోస్ట్ మోడ్" },
+  "promptLabel_edit": { "message": " సంకలనం చేయి" },
+  "prompt_enterNewVal": { "message": "కోసం కొత్త విలువను నమోదు చేయండి" },
   "helptip_autoScroll": { "message": "ప్రత్యుత్తరాలు ఉత్పత్తి అవుతున్నందున ఆటోమేటిక్ ‌ గా దిగువకు స్క్రోల్ చేయండి" },
   "helptip_modeNotifs": { "message": "మోడ్ ‌ లు/సెట్టింగ్ ‌ లను టోగుల్ చేసేటప్పుడు నోటిఫికేషన్ ‌ లను చూపించండి" },
   "helptip_notifBottom": { "message": "స్క్రీన్ దిగువన యాంకర్ నోటిఫికేషన్ ‌ లు" },

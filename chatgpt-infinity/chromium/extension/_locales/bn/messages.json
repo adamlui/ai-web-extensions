@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "সোর্স কোড" },
   "about_latestChanges": { "message": "সর্বশেষ পরিবর্তনসমূহ" },
   "mode_toast": { "message": "টোস্ট মোড" },
+  "promptLabel_edit": { "message": "সম্পাদনা" },
+  "prompt_enterNewVal": { "message": "এর জন্য নতুন মান লিখুন" },
   "prompt_updateReplyLang": { "message": "জবাব ভাষা আপডেট করুন" },
   "prompt_updateReplyTopic": { "message": "উত্তর সংক্রান্ত বিষয় হালনাগাদ করুন" },
   "prompt_orEnter": { "message": "অথবা প্রবেশ করুন" },

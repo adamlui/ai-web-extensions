@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "开源代码" },
   "about_latestChanges": { "message": "新版变化" },
   "mode_toast": { "message": "Toast 模式" },
+  "promptLabel_edit": { "message": "编辑" },
+  "prompt_enterNewVal": { "message": "输入以下内容的值" },
   "prompt_updateReplyLang": { "message": "更新回复语言" },
   "prompt_updateReplyTopic": { "message": "更新回复主题" },
   "prompt_orEnter": { "message": "或输入" },

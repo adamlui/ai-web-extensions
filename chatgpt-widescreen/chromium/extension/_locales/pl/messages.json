@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Pełne okno" },
   "mode_fullscreen": { "message": "Pełny ekran" },
   "mode_toast": { "message": "Tryb opiekania" },
+  "promptLabel_edit": { "message": "Edytuj" },
+  "prompt_enterNewVal": { "message": "Wprowadź nową wartość dla" },
   "tooltip_widescreenON": { "message": "Ekran panoramiczny" },
   "tooltip_widescreenOFF": { "message": "Wyjdź z szerokiego ekranu" },
   "tooltip_fullWindowON": { "message": "Tryb pełnego okna" },

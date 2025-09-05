@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Open Source" },
   "about_latestChanges": { "message": "Neist Ännerungen" },
   "mode_toast": { "message": "Toastmodus" },
+  "promptLabel_edit": { "message": "Veränneren" },
+  "prompt_enterNewVal": { "message": "Gitt en neie Wäert fir" },
   "prompt_updateReplyLang": { "message": "Äntwertsprooch aktualiséieren" },
   "prompt_updateReplyTopic": { "message": "Äntwerten op d'Thema aktualiséieren" },
   "prompt_orEnter": { "message": "oder aginn" },

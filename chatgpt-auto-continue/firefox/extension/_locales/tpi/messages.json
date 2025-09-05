@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Ol nupela senis" },
   "mode_autoContinue": { "message": "Autokontinu" },
   "mode_toast": { "message": "Modus bilong toast" },
+  "promptLabel_edit": { "message": "Redigim" },
+  "prompt_enterNewVal": { "message": "Enter new value for" },
   "helptip_autoScroll": { "message": "Ol bekim i save kamap long rot bilong ol yet" },
   "helptip_modeNotifs": { "message": "Toksave taim yu senisim ol modus/sait" },
   "helptip_notifBottom": { "message": "Anka notis long daunbilo bilong skrin" },

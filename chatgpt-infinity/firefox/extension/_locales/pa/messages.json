@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "ਓਪਨ ਸੋਰਸ ਕੋਡ" },
   "about_latestChanges": { "message": "ਨਵੀਨਤਮ ਤਬਦੀਲੀਆਂ" },
   "mode_toast": { "message": "ਟੋਸਟ ਮੋਡ" },
+  "promptLabel_edit": { "message": "Editar" },
+  "prompt_enterNewVal": { "message": "ਲਈ ਨਵਾਂ ਮੁੱਲ ਦਿਓ" },
   "prompt_updateReplyLang": { "message": "ਜਵਾਬ ਭਾਸ਼ਾ ਅਪਡੇਟ ਕਰੋ" },
   "prompt_updateReplyTopic": { "message": "ਜਵਾਬ ਵਿਸ਼ਾ ਅੱਪਡੇਟ ਕਰੋ" },
   "prompt_orEnter": { "message": "ਜਾਂ ਦਾਖਲ ਕਰੋ" },

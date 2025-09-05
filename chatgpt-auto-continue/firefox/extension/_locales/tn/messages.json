@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Diphetogo tsa sesweng" },
   "mode_autoContinue": { "message": "Tswelela ka Boitiriso" },
   "mode_toast": { "message": "Mokgwa wa Toast" },
+  "promptLabel_edit": { "message": "Tseleganya" },
+  "prompt_enterNewVal": { "message": "INSERT NEW VALUE FOR" },
   "helptip_autoScroll": { "message": "Tsholeletsa kwa tlase ka go itirisa ka gonne dikarabo di a tlhagisa" },
   "helptip_modeNotifs": { "message": "Bontsha dikitsiso fa o fetola mekgwa/diseting" },
   "helptip_notifBottom": { "message": "Tsenya dikitsiso kwa tlase ga sekerini" },

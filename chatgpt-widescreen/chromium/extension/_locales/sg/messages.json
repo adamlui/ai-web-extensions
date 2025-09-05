@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "A yeke na yâ ti fenêtre kue" },
   "mode_fullscreen": { "message": "A yeke na yâ ti mbeni kete kete kete kete kete kete kete kete" },
   "mode_toast": { "message": "Mode ti Toast" },
+  "promptLabel_edit": { "message": "Éditeur: Éd" },
+  "prompt_enterNewVal": { "message": "Entre nouveau valeur pour ti" },
   "tooltip_widescreenON": { "message": "Wide Image brochure" },
   "tooltip_widescreenOFF": { "message": "Ti sigigi na yâ ti mbeni kota écran" },
   "tooltip_fullWindowON": { "message": "A yeke na lege ti fenêtre kue" },

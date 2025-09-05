@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Ffenestr - lawn" },
   "mode_fullscreen": { "message": "Llenwi'r Sgrin" },
   "mode_toast": { "message": "Modd Tost" },
+  "promptLabel_edit": { "message": "Golygu" },
+  "prompt_enterNewVal": { "message": "Rhowch werth newydd ar gyfer" },
   "tooltip_widescreenON": { "message": "Sgrîn lydan" },
   "tooltip_widescreenOFF": { "message": "Gadael y sgrin eang" },
   "tooltip_fullWindowON": { "message": "Modd ffenestr - lawn" },

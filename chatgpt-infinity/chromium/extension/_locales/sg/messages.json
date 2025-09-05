@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Création d 'une brochure open source" },
   "about_latestChanges": { "message": "Ndangba changement" },
   "mode_toast": { "message": "Mode ti Toast" },
+  "promptLabel_edit": { "message": "Éditeur: Éd" },
+  "prompt_enterNewVal": { "message": "Entre nouveau valeur pour ti" },
   "prompt_updateReplyLang": { "message": "Sé àtúmọ̀ lálẹ̀ lángá tí ìyọ̀nù" },
   "prompt_updateReplyTopic": { "message": "Sé àtúmọ̀ ìyọ̀nù tí ìyọ̀nù" },
   "prompt_orEnter": { "message": "tabi pẹlu" },

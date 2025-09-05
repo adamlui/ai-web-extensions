@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Τελευταίες αλλαγές" },
   "mode_autoContinue": { "message": "Αυτόματη συνέχιση" },
   "mode_toast": { "message": "Λειτουργία τοστ" },
+  "promptLabel_edit": { "message": "Επεξεργασία" },
+  "prompt_enterNewVal": { "message": "Εισαγάγετε νέα τιμή για" },
   "helptip_autoScroll": { "message": "Αυτόματη κύλιση στο κάτω μέρος καθώς δημιουργούνται απαντήσεις" },
   "helptip_modeNotifs": { "message": "Εμφάνιση ειδοποιήσεων κατά την εναλλαγή λειτουργιών/ρυθμίσεων" },
   "helptip_notifBottom": { "message": "Ειδοποιήσεις αγκύρωσης στο κάτω μέρος της οθόνης" },

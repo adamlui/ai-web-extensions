@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "کۆسی سەرچاوە" },
   "about_latestChanges": { "message": "تازہ ترین تبدیلیاں" },
   "mode_toast": { "message": "ٹوسٹ موڈ" },
+  "promptLabel_edit": { "message": "ترمیم کریں" },
+  "prompt_enterNewVal": { "message": "کے لیے نئی قدر درج کریں" },
   "prompt_updateReplyLang": { "message": "جواب کی زبان کو اپ ڈیٹ کریں" },
   "prompt_updateReplyTopic": { "message": "جواب کا موضوع اپ ڈیٹ کریں" },
   "prompt_orEnter": { "message": "یا درج کریں" },

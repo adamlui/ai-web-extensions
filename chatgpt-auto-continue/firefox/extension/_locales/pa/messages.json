@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "ਨਵੀਨਤਮ ਤਬਦੀਲੀਆਂ" },
   "mode_autoContinue": { "message": "ਆਟੋ- ਜਾਰੀ ਰੱਖੋ" },
   "mode_toast": { "message": "ਟੋਸਟ ਮੋਡ" },
+  "promptLabel_edit": { "message": "Editar" },
+  "prompt_enterNewVal": { "message": "ਲਈ ਨਵਾਂ ਮੁੱਲ ਦਿਓ" },
   "helptip_autoScroll": { "message": "ਜਵਾਬ ਤਿਆਰ ਹੋਣ ਦੇ ਨਾਤੇ ਆਟੋਮੈਟਿਕ ਹੀ ਹੇਠਾਂ ਵੱਲ ਸਕ੍ਰੌਲ ਕਰੋ" },
   "helptip_modeNotifs": { "message": "ਜਦੋਂ ਟੌਗਲਿੰਗ ਮੋਡ/ਸੈਟਿੰਗ ਹੋਵੇ ਤਾਂ ਨੋਟੀਫਿਕੇਸ਼ਨ ਵੇਖੋ" },
   "helptip_notifBottom": { "message": "ਐਂਕਰ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸਕਰੀਨ ਦੇ ਹੇਠਾਂ" },

@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Ბოლო ცვლილებები" },
   "mode_autoContinue": { "message": "Ავტომატური გაგრძელება" },
   "mode_toast": { "message": "Ტოსტის რეჟიმი" },
+  "promptLabel_edit": { "message": "ჩასოწრება" },
+  "prompt_enterNewVal": { "message": "Შეიყვანეთ ახალი მნიშვნელობა" },
   "helptip_autoScroll": { "message": "Ავტომატურად გადადით ბოლოში, რადგან პასუხები გენერირდება" },
   "helptip_modeNotifs": { "message": "Გაფრთხილებების ჩვენება რეჟიმების/პარამეტრების გადართვისას" },
   "helptip_notifBottom": { "message": "Ანკერული შეტყობინებები ეკრანის ბოლოში" },

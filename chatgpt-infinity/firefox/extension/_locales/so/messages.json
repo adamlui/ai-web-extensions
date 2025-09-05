@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Koodhka ilaha furan" },
   "about_latestChanges": { "message": "Isbedelada ugu dambeeyay" },
   "mode_toast": { "message": "Mode toast" },
+  "promptLabel_edit": { "message": "Beddel" },
+  "prompt_enterNewVal": { "message": "Gali qiime cusub oo loogu talagalay" },
   "prompt_updateReplyLang": { "message": "Cusbooneysii luqadda jawaabta" },
   "prompt_updateReplyTopic": { "message": "Cusbooneysii mawduuca jawaabta" },
   "prompt_orEnter": { "message": "ama soo galiya" },

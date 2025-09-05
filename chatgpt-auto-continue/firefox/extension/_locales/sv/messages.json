@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Latest changes" },
   "mode_autoContinue": { "message": "Fortsätt automatiskt" },
   "mode_toast": { "message": "Rostningsläge" },
+  "promptLabel_edit": { "message": "Redigera" },
+  "prompt_enterNewVal": { "message": "Ange nytt värde för" },
   "helptip_autoScroll": { "message": "Bläddra automatiskt till botten när svaren genereras" },
   "helptip_modeNotifs": { "message": "Visa aviseringar när du växlar lägen/inställningar" },
   "helptip_notifBottom": { "message": "Förankra meddelanden längst ner på skärmen" },

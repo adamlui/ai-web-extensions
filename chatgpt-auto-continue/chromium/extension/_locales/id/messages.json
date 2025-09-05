@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Perubahan terbaru" },
   "mode_autoContinue": { "message": "Lanjutkan Otomatis" },
   "mode_toast": { "message": "Mode Roti Bakar" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Masukkan nilai baru untuk" },
   "helptip_autoScroll": { "message": "Gulir ke bawah secara otomatis saat balasan dihasilkan" },
   "helptip_modeNotifs": { "message": "Tampilkan pemberitahuan saat mengaktifkan mode/pengaturan" },
   "helptip_notifBottom": { "message": "Jangkar pemberitahuan ke bagian bawah layar" },

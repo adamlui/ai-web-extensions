@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Соңғы өзгерістер" },
   "mode_autoContinue": { "message": "Автоматты жалғастыру" },
   "mode_toast": { "message": "Тостаған режимі" },
+  "promptLabel_edit": { "message": "Өзгерту" },
+  "prompt_enterNewVal": { "message": "Жаңа мәнді енгізіңіз" },
   "helptip_autoScroll": { "message": "Жауаптар пайда болған кезде автоматты түрде төмен қарай жылжыңыз" },
   "helptip_modeNotifs": { "message": "Режимдерді/параметрлерді ауыстыру кезінде хабарландыруларды көрсету" },
   "helptip_notifBottom": { "message": "Экранның төменгі жағындағы анкерлік хабарландырулар" },

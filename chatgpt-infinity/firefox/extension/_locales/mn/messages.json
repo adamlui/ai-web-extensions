@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Нээлттэй Эх сурвалж" },
   "about_latestChanges": { "message": "Сүүлийн өөрчлөлтүүд" },
   "mode_toast": { "message": "Шөнийн Горим" },
+  "promptLabel_edit": { "message": "Засах" },
+  "prompt_enterNewVal": { "message": "Шинэ утгыг оруулна уу" },
   "prompt_updateReplyLang": { "message": "Хариултын хэл шинэчлэх" },
   "prompt_updateReplyTopic": { "message": "Хариултын сэдэв шинэчлэх" },
   "prompt_orEnter": { "message": "эсвэл оруул" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Ifestile epheleleyo" },
   "mode_fullscreen": { "message": "Isikrini esiphelele" },
   "mode_toast": { "message": "Imo yeToast" },
+  "promptLabel_edit": { "message": "Hlela" },
+  "prompt_enterNewVal": { "message": "Faka ixabiso elitsha le" },
   "tooltip_widescreenON": { "message": "Iskrini esibanzi" },
   "tooltip_widescreenOFF": { "message": "Phuma kwikhusi elibanzi" },
   "tooltip_fullWindowON": { "message": "Inkqubo yefestile epheleleyo" },

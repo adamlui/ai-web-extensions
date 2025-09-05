@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Fullvindu" },
   "mode_fullscreen": { "message": "Fullskjerm" },
   "mode_toast": { "message": "Toastmodus" },
+  "promptLabel_edit": { "message": "Rediger" },
+  "prompt_enterNewVal": { "message": "Skriv inn ny verdi for" },
   "tooltip_widescreenON": { "message": "Bred skjerm" },
   "tooltip_widescreenOFF": { "message": "Avslutt widescreen" },
   "tooltip_fullWindowON": { "message": "Full-vindu-modus" },

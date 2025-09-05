@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "ཁ་ཕྱེ་བའི་ཁ་བྱང་།" },
   "about_latestChanges": { "message": "མཐའ་མའི་འགྱུར་ཁུངས །" },
   "mode_toast": { "message": "བག་ལེབ་བག་ལེབ་ཀྱི་ཐབས་ལམ།" },
+  "promptLabel_edit": { "message": "བཅོས" },
+  "prompt_enterNewVal": { "message": "རིན་གོང་གསར་བ་ལ་འཇུག་པ" },
   "prompt_updateReplyLang": { "message": "ལོ་ལུགས་ཀླད་གྲིས་སྟོན་པ་བཞག་སྟོན་" },
   "prompt_updateReplyTopic": { "message": "ལོ་ལུགས་སྟོན་པ་གསར་འོས་བཞག་སྟོན་" },
   "prompt_orEnter": { "message": "ངེས་དོན་པ་ལེགས་ཀྱང་ནི་ཐུགས་སྒྲིགས་" },

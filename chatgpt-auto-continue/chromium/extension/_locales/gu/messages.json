@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "તાજેતરના ફેરફારો" },
   "mode_autoContinue": { "message": "આપમેળે ચાલુ રાખો" },
   "mode_toast": { "message": "ટોસ્ટ મોડ" },
+  "promptLabel_edit": { "message": "એડિટ કરો" },
+  "prompt_enterNewVal": { "message": "માટે નવી કિંમત દાખલ કરો" },
   "helptip_autoScroll": { "message": "જવાબો ઉત્પન્ન થઈ રહ્યા હોવાથી આપમેળે તળિયે સ્ક્રોલ કરો" },
   "helptip_modeNotifs": { "message": "જ્યારે ટૉગલિંગ મોડ્સ/સેટિંગ્સ હોય ત્યારે સૂચનાઓ બતાવો" },
   "helptip_notifBottom": { "message": "સ્ક્રીનના તળિયે એન્કર સૂચનાઓ" },

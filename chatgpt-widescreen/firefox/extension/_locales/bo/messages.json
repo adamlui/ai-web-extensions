@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "ཡོངས་རྫོགས །" },
   "mode_fullscreen": { "message": "ཆ་ཚང་།" },
   "mode_toast": { "message": "བག་ལེབ་བག་ལེབ་ཀྱི་ཐབས་ལམ།" },
+  "promptLabel_edit": { "message": "བཅོས" },
+  "prompt_enterNewVal": { "message": "རིན་གོང་གསར་བ་ལ་འཇུག་པ" },
   "tooltip_widescreenON": { "message": "བརྙན་གཟུགས །" },
   "tooltip_widescreenOFF": { "message": "ཁྱབ་ཚད་མཐོ་ཤོས །" },
   "tooltip_fullWindowON": { "message": "སྒེའུ་ཁུང་ཆ་ཚང་གི་ཐབས་ལམ།" },

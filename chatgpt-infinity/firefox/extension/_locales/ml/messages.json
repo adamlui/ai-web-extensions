@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "ഓപ്പൺ സോഴ്സ് കോഡ്" },
   "about_latestChanges": { "message": "ഏറ്റവും പുതിയ മാറ്റങ്ങൾ" },
   "mode_toast": { "message": "ടോസ്റ്റ് മോഡ്" },
+  "promptLabel_edit": { "message": "എഡിറ്റുചെയ്യുക" },
+  "prompt_enterNewVal": { "message": "ഇതിനായി പുതിയ മൂല്യം നൽകുക" },
   "prompt_updateReplyLang": { "message": "പ്രതികരണ ഭാഷ അപ്ഡേറ്റ് ചെയ്യുക" },
   "prompt_updateReplyTopic": { "message": "മറുപടി വിഷയം അപ്‌ഡേറ്റുചെയ്യുക" },
   "prompt_orEnter": { "message": "അല്ലെങ്കില്‍ പ്രവേശിക്കുക" },

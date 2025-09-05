@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Ngaahi liliu fakamuimuitaha" },
   "mode_autoContinue": { "message": "Hoko atu e meʻalele" },
   "mode_toast": { "message": "Mode Toasi" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "ʻOku ʻikai fie maʻu ke fai ha sivi kimuʻa ke ke hu ai ki Nuʻu Sila." },
   "helptip_autoScroll": { "message": "ʻOtometiki pe hono scroll ki lalo ʻo hange ko hono faʻu ʻo e tali" },
   "helptip_modeNotifs": { "message": "Fakaʻasi ʻa e fanongonongo ʻi he taimi ʻoku toggling ai ʻa e ngaahi founga/fokotuʻutuʻu" },
   "helptip_notifBottom": { "message": "Fakamafola ʻa e ngaahi fanongonongo ki lalo ʻi he screen" },

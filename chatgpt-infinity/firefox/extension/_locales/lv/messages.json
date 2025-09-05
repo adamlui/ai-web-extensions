@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Atklātais pirmkods" },
   "about_latestChanges": { "message": "Jaunākās izmaiņas" },
   "mode_toast": { "message": "Tosta režīms" },
+  "promptLabel_edit": { "message": "Rediģēt" },
+  "prompt_enterNewVal": { "message": "Ievadiet jaunu vērtību" },
   "prompt_updateReplyLang": { "message": "Atjaunināt atbildes valodu" },
   "prompt_updateReplyTopic": { "message": "Atjaunināt atbildes tēmu" },
   "prompt_orEnter": { "message": "vai ievadiet" },

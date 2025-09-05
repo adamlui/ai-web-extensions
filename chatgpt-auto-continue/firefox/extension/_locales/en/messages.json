@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Latest changes" },
   "mode_autoContinue": { "message": "Auto-Continue" },
   "mode_toast": { "message": "Toast Mode" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Enter new value for" },
   "helptip_autoScroll": { "message": "Automatically scroll to bottom as replies are generating" },
   "helptip_modeNotifs": { "message": "Show notifications when toggling modes/settings" },
   "helptip_notifBottom": { "message": "Anchor notifications to bottom of screen" },

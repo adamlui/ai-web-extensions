@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Son Değişiklikler" },
   "mode_autoContinue": { "message": "Otomatik Devam" },
   "mode_toast": { "message": "Tost Modu" },
+  "promptLabel_edit": { "message": "Düzenle" },
+  "prompt_enterNewVal": { "message": "Yeni Değer Gir" },
   "helptip_autoScroll": { "message": "Yanıtlar oluşturulurken otomatik olarak en alta kaydır" },
   "helptip_modeNotifs": { "message": "Modlar/ayarlar arasında geçiş yaparken bildirimleri göster" },
   "helptip_notifBottom": { "message": "Bildirimleri ekranın altına sabitleyin" },

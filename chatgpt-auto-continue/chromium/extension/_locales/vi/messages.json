@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Thay đổi mới nhất" },
   "mode_autoContinue": { "message": "Tự động tiếp tục" },
   "mode_toast": { "message": "Chế độ bánh mì nướng" },
+  "promptLabel_edit": { "message": "Chỉnh sửa" },
+  "prompt_enterNewVal": { "message": "Nhập giá trị mới cho" },
   "helptip_autoScroll": { "message": "Tự động cuộn xuống dưới cùng khi thư trả lời được tạo" },
   "helptip_modeNotifs": { "message": "Hiển thị thông báo khi chuyển đổi chế độ/cài đặt" },
   "helptip_notifBottom": { "message": "Thông báo neo ở cuối màn hình" },

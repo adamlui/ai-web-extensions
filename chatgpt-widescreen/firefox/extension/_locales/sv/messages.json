@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Fullfönster" },
   "mode_fullscreen": { "message": "Helskärm" },
   "mode_toast": { "message": "Rostningsläge" },
+  "promptLabel_edit": { "message": "Redigera" },
+  "prompt_enterNewVal": { "message": "Ange nytt värde för" },
   "tooltip_widescreenON": { "message": "bredbildsformat" },
   "tooltip_widescreenOFF": { "message": "bredbildsformat" },
   "tooltip_fullWindowON": { "message": "Fullfönsterläge" },

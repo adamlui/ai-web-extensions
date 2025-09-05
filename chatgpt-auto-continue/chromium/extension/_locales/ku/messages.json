@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Guhertinên dawî" },
   "mode_autoContinue": { "message": "خۆکارانە پەیشکرابێت" },
   "mode_toast": { "message": "Moda Toastkirinê" },
+  "promptLabel_edit": { "message": "ئێدیت" },
+  "prompt_enterNewVal": { "message": "Nirxek nû binivîse ji bo" },
   "helptip_autoScroll": { "message": "Gava ku bersiv têne hilberandin, bixweber ber bi jêr ve bigerin" },
   "helptip_modeNotifs": { "message": "Dema ku modên / mîhengan biguherînin, agahdariyan nîşan bidin" },
   "helptip_notifBottom": { "message": "Agahdariyên lengerê li binê ekranê" },

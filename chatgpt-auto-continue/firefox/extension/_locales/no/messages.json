@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Siste endringer" },
   "mode_autoContinue": { "message": "Auto-Fortsett" },
   "mode_toast": { "message": "Toastmodus" },
+  "promptLabel_edit": { "message": "Rediger" },
+  "prompt_enterNewVal": { "message": "Skriv inn ny verdi for" },
   "helptip_autoScroll": { "message": "Rull automatisk til bunnen mens svar genereres" },
   "helptip_modeNotifs": { "message": "Vis varsler når du bytter moduser/innstillinger" },
   "helptip_notifBottom": { "message": "Ankre varsler nederst på skjermen" },

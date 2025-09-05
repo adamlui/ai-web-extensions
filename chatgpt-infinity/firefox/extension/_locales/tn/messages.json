@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Khoutu ya motswedi o o bulegileng" },
   "about_latestChanges": { "message": "Diphetogo tsa sesweng" },
   "mode_toast": { "message": "Mokgwa wa Toast" },
+  "promptLabel_edit": { "message": "Tseleganya" },
+  "prompt_enterNewVal": { "message": "INSERT NEW VALUE FOR" },
   "prompt_updateReplyLang": { "message": "Leetiša puo ya go dira" },
   "prompt_updateReplyTopic": { "message": "Leetiša selo sa go dira" },
   "prompt_orEnter": { "message": "pele le tla" },

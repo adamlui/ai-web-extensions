@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "שינויים אחרונים" },
   "mode_autoContinue": { "message": "המשך אוטומטי" },
   "mode_toast": { "message": "מצב הרמת כוסית" },
+  "promptLabel_edit": { "message": "ערוך" },
+  "prompt_enterNewVal": { "message": "הזן ערך חדש עבור" },
   "helptip_autoScroll": { "message": "גלול לתחתית באופן אוטומטי כשהתשובות נוצרות" },
   "helptip_modeNotifs": { "message": "הצג התראות בעת החלפת מצבים/הגדרות" },
   "helptip_notifBottom": { "message": "התראות עוגן לתחתית המסך" },

@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Najnovšie zmeny" },
   "mode_autoContinue": { "message": "Automatické pokračovanie" },
   "mode_toast": { "message": "Režim toastu" },
+  "promptLabel_edit": { "message": "Upraviť" },
+  "prompt_enterNewVal": { "message": "Zadajte novú hodnotu pre" },
   "helptip_autoScroll": { "message": "Počas generovania odpovedí sa automaticky posúvajte nadol" },
   "helptip_modeNotifs": { "message": "Zobraziť upozornenia pri prepínaní režimov/nastavení" },
   "helptip_notifBottom": { "message": "Upozornenia na ukotvenie v dolnej časti obrazovky" },

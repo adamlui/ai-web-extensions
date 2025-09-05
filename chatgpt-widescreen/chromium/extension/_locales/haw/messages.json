@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "pukaaniani piha" },
   "mode_fullscreen": { "message": "Palena piha" },
   "mode_toast": { "message": "ʻO ke ʻano Toast" },
+  "promptLabel_edit": { "message": "Ho‘oponopono" },
+  "prompt_enterNewVal": { "message": "E hoʻokomo i ka waiwai hou no" },
   "tooltip_widescreenON": { "message": "Palena laula" },
   "tooltip_widescreenOFF": { "message": "Haʻalele pale ākea" },
   "tooltip_fullWindowON": { "message": "ʻano pukaaniani piha" },

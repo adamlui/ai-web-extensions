@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "الشفرة المفتوحة المصدر" },
   "about_latestChanges": { "message": "آخر التغييرات" },
   "mode_toast": { "message": "وضع الخبز المحمص" },
+  "promptLabel_edit": { "message": "تحرير" },
+  "prompt_enterNewVal": { "message": "أدخل قيمة جديدة لـ" },
   "prompt_updateReplyLang": { "message": "تحديث لغة الرد" },
   "prompt_updateReplyTopic": { "message": "تحديث موضوع الرد" },
   "prompt_orEnter": { "message": "أو أدخل" },

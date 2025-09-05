@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Leiho osoa" },
   "mode_fullscreen": { "message": "Ikusleiho-osoa" },
   "mode_toast": { "message": "Tostada modua" },
+  "promptLabel_edit": { "message": "Editatu" },
+  "prompt_enterNewVal": { "message": "Sartu balio berria honetarako:" },
   "tooltip_widescreenON": { "message": "Pantaila zabala" },
   "tooltip_widescreenOFF": { "message": "Irten pantaila zabala" },
   "tooltip_fullWindowON": { "message": "Leiho osoko modua" },

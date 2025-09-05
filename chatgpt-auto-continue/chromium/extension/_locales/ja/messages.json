@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "最新の変更" },
   "mode_autoContinue": { "message": "自動続行" },
   "mode_toast": { "message": "トーストモード" },
+  "promptLabel_edit": { "message": "編集" },
+  "prompt_enterNewVal": { "message": "新しい値を入力してください:" },
   "helptip_autoScroll": { "message": "返信が生成されると自動的に一番下までスクロールします" },
   "helptip_modeNotifs": { "message": "モード/設定の切り替え時に通知を表示する" },
   "helptip_notifBottom": { "message": "通知を画面下部に固定する" },

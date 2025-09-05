@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "تمام پنجره" },
   "mode_fullscreen": { "message": "فول اسکرین" },
   "mode_toast": { "message": "حالت تست" },
+  "promptLabel_edit": { "message": "ویرایش" },
+  "prompt_enterNewVal": { "message": "مقدار جدید را وارد کنید برای" },
   "tooltip_widescreenON": { "message": "تمام صفحه" },
   "tooltip_widescreenOFF": { "message": "تمام صفحه" },
   "tooltip_fullWindowON": { "message": "مد تمام پنجره" },

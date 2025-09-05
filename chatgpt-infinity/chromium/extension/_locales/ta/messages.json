@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "திறந்த மூலக் குறியீடு" },
   "about_latestChanges": { "message": "சமீபத்திய மாற்றங்கள்" },
   "mode_toast": { "message": "டோஸ்ட் பயன்முறை" },
+  "promptLabel_edit": { "message": "திருத்துக" },
+  "prompt_enterNewVal": { "message": "க்கான புதிய மதிப்பை உள்ளிடவும்" },
   "prompt_updateReplyLang": { "message": "பதில் மொழியை புதுப்பிக்கவும்" },
   "prompt_updateReplyTopic": { "message": "பதில் தலைப்பைப் புதுப்பிக்கவும்" },
   "prompt_orEnter": { "message": "அல்லது உள்ளிடவும்" },

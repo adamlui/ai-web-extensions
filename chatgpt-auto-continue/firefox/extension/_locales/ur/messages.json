@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "تازہ ترین تبدیلیاں" },
   "mode_autoContinue": { "message": "خودکار طور پر جاری رکھیں" },
   "mode_toast": { "message": "ٹوسٹ موڈ" },
+  "promptLabel_edit": { "message": "ترمیم کریں" },
+  "prompt_enterNewVal": { "message": "کے لیے نئی قدر درج کریں" },
   "helptip_autoScroll": { "message": "جوابات جنریٹ ہوتے ہی خود بخود نیچے تک اسکرول کریں" },
   "helptip_modeNotifs": { "message": "ٹوگلنگ کے طریقوں/ترتیبات کے دوران اطلاعات دکھائیں" },
   "helptip_notifBottom": { "message": "اسکرین کے نچلے حصے میں لنگر کی اطلاعات" },

@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "མཐའ་མའི་འགྱུར་ཁུངས །" },
   "mode_autoContinue": { "message": "རང་འགུལ་དུ་འཇུག་པ" },
   "mode_toast": { "message": "བག་ལེབ་བག་ལེབ་ཀྱི་ཐབས་ལམ།" },
+  "promptLabel_edit": { "message": "བཅོས" },
+  "prompt_enterNewVal": { "message": "རིན་གོང་གསར་བ་ལ་འཇུག་པ" },
   "helptip_autoScroll": { "message": "ལན་འདེབས་ཀྱིས་རང་བཞིན་གཤེགས་ནས་མར་གཤེགས་པ" },
   "helptip_modeNotifs": { "message": "ཐབས་ལམ/སྒྲིག་སྟངས་བརྗེ་སྒྱུར་བྱེད་སྐབས་བརྡ་ཐོ་སྟོན།" },
   "helptip_notifBottom": { "message": "གསལ་བརྙན་གཤམ་གྱི་བརྡ་ཁྱབ་གཏིང་ཟབ་བྱེད།" },

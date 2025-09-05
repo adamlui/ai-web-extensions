@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Najnowsze zmiany" },
   "mode_autoContinue": { "message": "Automatycznie kontynuuj" },
   "mode_toast": { "message": "Tryb opiekania" },
+  "promptLabel_edit": { "message": "Edytuj" },
+  "prompt_enterNewVal": { "message": "Wprowadź nową wartość dla" },
   "helptip_autoScroll": { "message": "Automatycznie przewijaj do dołu podczas generowania odpowiedzi" },
   "helptip_modeNotifs": { "message": "Pokaż powiadomienia podczas przełączania trybów/ustawień" },
   "helptip_notifBottom": { "message": "Zakotwicz powiadomienia na dole ekranu" },

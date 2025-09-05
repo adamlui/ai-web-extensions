@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "سورس کد" },
   "about_latestChanges": { "message": "آخرین تغییرات" },
   "mode_toast": { "message": "حالت تست" },
+  "promptLabel_edit": { "message": "ویرایش" },
+  "prompt_enterNewVal": { "message": "مقدار جدید را وارد کنید برای" },
   "prompt_updateReplyLang": { "message": "زبان پاسخ را به روز کنید" },
   "prompt_updateReplyTopic": { "message": "موضوع پاسخ را به روز کنید" },
   "prompt_orEnter": { "message": "ویا آدرس را وارد کنید" },

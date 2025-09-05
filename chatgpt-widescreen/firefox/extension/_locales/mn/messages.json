@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Хоолойн" },
   "mode_fullscreen": { "message": "Бүтэн дэлгэц" },
   "mode_toast": { "message": "Шөнийн Горим" },
+  "promptLabel_edit": { "message": "Засах" },
+  "prompt_enterNewVal": { "message": "Шинэ утгыг оруулна уу" },
   "tooltip_widescreenON": { "message": "Цонхны дэлгэц" },
   "tooltip_widescreenOFF": { "message": "Төгсгөл" },
   "tooltip_fullWindowON": { "message": "Тавтай морилно уу" },

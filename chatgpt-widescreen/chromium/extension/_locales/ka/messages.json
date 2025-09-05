@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Სრული ფანჯარა" },
   "mode_fullscreen": { "message": "მთელ ეკრანზე" },
   "mode_toast": { "message": "Ტოსტის რეჟიმი" },
+  "promptLabel_edit": { "message": "ჩასოწრება" },
+  "prompt_enterNewVal": { "message": "Შეიყვანეთ ახალი მნიშვნელობა" },
   "tooltip_widescreenON": { "message": "Ფართო ეკრანი" },
   "tooltip_widescreenOFF": { "message": "Ფართო ეკრანიდან გამოსვლა" },
   "tooltip_fullWindowON": { "message": "Სრული ფანჯრის რეჟიმი" },

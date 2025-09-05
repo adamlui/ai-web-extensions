@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Nýggju broytingarnar" },
   "mode_autoContinue": { "message": "Sjálvvirkandi Halt fram" },
   "mode_toast": { "message": "Toastmodus" },
+  "promptLabel_edit": { "message": "Rætta" },
+  "prompt_enterNewVal": { "message": "Skriva nýtt virði fyri" },
   "helptip_autoScroll": { "message": "Skrolla til botn sjálvvirkandi, tá ið svar verða skapt" },
   "helptip_modeNotifs": { "message": "Vís boð, tá ið tú skiftir stillingar/stillingar" },
   "helptip_notifBottom": { "message": "Ankarafrágreiðingar til botn á skjánum" },

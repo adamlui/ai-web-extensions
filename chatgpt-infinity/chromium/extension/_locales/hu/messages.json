@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Open Source" },
   "about_latestChanges": { "message": "Legutóbbi módosítások" },
   "mode_toast": { "message": "Pirítós üzemmód" },
+  "promptLabel_edit": { "message": "Szerkesztés" },
+  "prompt_enterNewVal": { "message": "Adjon meg új értéket" },
   "prompt_updateReplyLang": { "message": "Válasznyelv frissítése" },
   "prompt_updateReplyTopic": { "message": "Válasz témájának frissítése" },
   "prompt_orEnter": { "message": ") gombot, vagy adja be a “számjegyeket" },

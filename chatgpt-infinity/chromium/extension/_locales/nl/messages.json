@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "open bron" },
   "about_latestChanges": { "message": "Laatste wijzigingen" },
   "mode_toast": { "message": "Toastmodus" },
+  "promptLabel_edit": { "message": "Bewerken" },
+  "prompt_enterNewVal": { "message": "Voer de nieuwe waarde in voor" },
   "prompt_updateReplyLang": { "message": "Werk antwoordtaal bij" },
   "prompt_updateReplyTopic": { "message": "Werk antwoordonderwerp bij" },
   "prompt_orEnter": { "message": "of voer in" },

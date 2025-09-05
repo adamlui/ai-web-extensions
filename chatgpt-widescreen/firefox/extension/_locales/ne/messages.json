@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "पूरा सञ्झ्याल" },
   "mode_fullscreen": { "message": "पूरा पर्दा" },
   "mode_toast": { "message": "टोस्ट मोड" },
+  "promptLabel_edit": { "message": "सम्पादन गर्नुहोस्" },
+  "prompt_enterNewVal": { "message": "को लागि नयाँ मान प्रविष्ट गर्नुहोस्" },
   "tooltip_widescreenON": { "message": "फराकिलो पर्दा" },
   "tooltip_widescreenOFF": { "message": "फराकिलो पर्दाबाट निस्कनुहोस्" },
   "tooltip_fullWindowON": { "message": "पूर्ण विन्डो मोड" },

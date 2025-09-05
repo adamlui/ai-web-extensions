@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "ሙሉ መስኮት" },
   "mode_fullscreen": { "message": "ሙሉ እስክሪን" },
   "mode_toast": { "message": "የጥርስ ሁነታ" },
+  "promptLabel_edit": { "message": "አርትዕ" },
+  "prompt_enterNewVal": { "message": "አዲስ እሴት ያስገቡ ለ" },
   "tooltip_widescreenON": { "message": "ሰፊ ማያ ገጽ" },
   "tooltip_widescreenOFF": { "message": "ሰፊ ማያ ገጽ ውጣ" },
   "tooltip_fullWindowON": { "message": "ሙሉ መስኮት ሁነታ" },

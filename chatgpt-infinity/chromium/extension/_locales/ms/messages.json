@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Sumber Terbuka" },
   "about_latestChanges": { "message": "Perubahan terkini" },
   "mode_toast": { "message": "Mod Roti Bakar" },
+  "promptLabel_edit": { "message": "Sunting" },
+  "prompt_enterNewVal": { "message": "Masukkan nilai baharu untuk" },
   "prompt_updateReplyLang": { "message": "Kemas kini bahasa balasan" },
   "prompt_updateReplyTopic": { "message": "Kemas kini topik balasan" },
   "prompt_orEnter": { "message": "atau masukkan" },

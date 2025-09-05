@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Tam pencere" },
   "mode_fullscreen": { "message": "Täze ekran" },
   "mode_toast": { "message": "Toast modu" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Täze bir gymmat gir" },
   "tooltip_widescreenON": { "message": "Keng Ekran" },
   "tooltip_widescreenOFF": { "message": "Ekranyň ýygnaýyşyndan çyk" },
   "tooltip_fullWindowON": { "message": "Tam pencere modu" },

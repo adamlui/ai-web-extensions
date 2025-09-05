@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Teljes ablak" },
   "mode_fullscreen": { "message": "Teljes képernyős" },
   "mode_toast": { "message": "Pirítós üzemmód" },
+  "promptLabel_edit": { "message": "Szerkesztés" },
+  "prompt_enterNewVal": { "message": "Adjon meg új értéket" },
   "tooltip_widescreenON": { "message": "Szélesképernyő" },
   "tooltip_widescreenOFF": { "message": "Szélesképernyő" },
   "tooltip_fullWindowON": { "message": "Teljes ablakos mód" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "مۆدی پڕۆژەیی" },
   "mode_fullscreen": { "message": "Ekrana Tam" },
   "mode_toast": { "message": "Moda Toastkirinê" },
+  "promptLabel_edit": { "message": "ئێدیت" },
+  "prompt_enterNewVal": { "message": "Nirxek nû binivîse ji bo" },
   "tooltip_widescreenON": { "message": "پەیشاندانی ڕووناکی" },
   "tooltip_widescreenOFF": { "message": "داخستنی پەیشاندانی ڕووناک" },
   "tooltip_fullWindowON": { "message": "مۆدی پڕۆژەیی" },

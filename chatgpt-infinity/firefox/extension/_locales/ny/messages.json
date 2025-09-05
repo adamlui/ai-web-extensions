@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Open gwero kachidindo" },
   "about_latestChanges": { "message": "Zosintha zaposachedwa" },
   "mode_toast": { "message": "Mchitidwe wa Toast" },
+  "promptLabel_edit": { "message": "Sinthani" },
+  "prompt_enterNewVal": { "message": "Lowetsani mtengo watsopano wa" },
   "prompt_updateReplyLang": { "message": "Sinthani Chilankhulo cha Yankho" },
   "prompt_updateReplyTopic": { "message": "Sinthani reply nkhani" },
   "prompt_orEnter": { "message": "kapena kulowa" },

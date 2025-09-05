@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Visas langas" },
   "mode_fullscreen": { "message": "Per visą ekraną " },
   "mode_toast": { "message": "Tosto režimas" },
+  "promptLabel_edit": { "message": "Redaguoti" },
+  "prompt_enterNewVal": { "message": "Įveskite naują reikšmę" },
   "tooltip_widescreenON": { "message": "plačiaekranis" },
   "tooltip_widescreenOFF": { "message": "Išeiti iš plačiaekranio ekrano" },
   "tooltip_fullWindowON": { "message": "Viso lango režimas" },

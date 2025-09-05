@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "ଉତ୍ସ କୋଡକୁ ଖୋଲନ୍ତୁ" },
   "about_latestChanges": { "message": "ଅନ୍ତିମ ପରିବର୍ତ୍ତନଗୁଡ଼ିକ" },
   "mode_toast": { "message": "ଟୋଷ୍ଟ ମୋଡ" },
+  "promptLabel_edit": { "message": "ସମ୍ପାଦନ କରନ୍ତୁ" },
+  "prompt_enterNewVal": { "message": "ପାଇଁ ନୂତନ ମୂଲ୍ଯ ଭରଣ କରନ୍ତୁ" },
   "prompt_updateReplyLang": { "message": "ଉତ୍ତର ଭାଷା ଅଦତକୁ ଅପଡେଟ୍ କରନ୍ତୁ" },
   "prompt_updateReplyTopic": { "message": "ଉତ୍ତର ବିଷୟ ଅପଡେଟ୍ କରନ୍ତୁ" },
   "prompt_orEnter": { "message": "ଅଥବା ପ୍ରବେଶ କରନ୍ତୁ" },

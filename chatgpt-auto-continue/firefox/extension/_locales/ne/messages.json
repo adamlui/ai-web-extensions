@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "भर्खरका परिवर्तनहरू" },
   "mode_autoContinue": { "message": "स्वत: जारी राख्नुहोस्" },
   "mode_toast": { "message": "टोस्ट मोड" },
+  "promptLabel_edit": { "message": "सम्पादन गर्नुहोस्" },
+  "prompt_enterNewVal": { "message": "को लागि नयाँ मान प्रविष्ट गर्नुहोस्" },
   "helptip_autoScroll": { "message": "जवाफहरू उत्पन्न हुँदै गर्दा स्वचालित रूपमा तल स्क्रोल गर्नुहोस्" },
   "helptip_modeNotifs": { "message": "मोडहरू/सेटिङहरू टगल गर्दा सूचनाहरू देखाउनुहोस्" },
   "helptip_notifBottom": { "message": "स्क्रिनको तल एङ्कर सूचनाहरू" },

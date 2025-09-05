@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "최근 변경된 페이지" },
   "mode_autoContinue": { "message": "자동 계속" },
   "mode_toast": { "message": "토스트 모드" },
+  "promptLabel_edit": { "message": "편집" },
+  "prompt_enterNewVal": { "message": "%s 새 값을 입력하십시오:" },
   "helptip_autoScroll": { "message": "응답이 생성될 때 자동으로 맨 아래로 스크롤" },
   "helptip_modeNotifs": { "message": "모드/설정을 전환할 때 알림 표시" },
   "helptip_notifBottom": { "message": "화면 하단에 앵커 알림" },

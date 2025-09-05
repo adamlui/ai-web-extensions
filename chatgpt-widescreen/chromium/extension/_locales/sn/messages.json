@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Hwindo rakazara" },
   "mode_fullscreen": { "message": "Chidzitiro chakazara" },
   "mode_toast": { "message": "Toast Mode" },
+  "promptLabel_edit": { "message": "Gadzirisa" },
+  "prompt_enterNewVal": { "message": "Pinda kukosha kutsva kwe" },
   "tooltip_widescreenON": { "message": "Wide chidzitiro" },
   "tooltip_widescreenOFF": { "message": "Kubuda pachiratidziri chakakura" },
   "tooltip_fullWindowON": { "message": "Yakazara nzira kuchinyorwa: Ehupfumi Zvemari \"Zvigadzirwa zve" },

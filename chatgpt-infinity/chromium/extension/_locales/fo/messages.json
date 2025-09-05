@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Opna keldukota" },
   "about_latestChanges": { "message": "Nýggju broytingarnar" },
   "mode_toast": { "message": "Toastmodus" },
+  "promptLabel_edit": { "message": "Rætta" },
+  "prompt_enterNewVal": { "message": "Skriva nýtt virði fyri" },
   "prompt_updateReplyLang": { "message": "Uppdater svar máli" },
   "prompt_updateReplyTopic": { "message": "Uppdater svar evni" },
   "prompt_orEnter": { "message": "ella skriva inn" },

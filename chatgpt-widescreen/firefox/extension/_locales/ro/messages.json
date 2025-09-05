@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Fereastră completă" },
   "mode_fullscreen": { "message": "Ecran complet" },
   "mode_toast": { "message": "Mod prăjire" },
+  "promptLabel_edit": { "message": "Editare" },
+  "prompt_enterNewVal": { "message": "Introduceți o valoare nouă pentru" },
   "tooltip_widescreenON": { "message": "Ecran lat" },
   "tooltip_widescreenOFF": { "message": "Ieșire ecran lat" },
   "tooltip_fullWindowON": { "message": "Mod fereastră completă" },

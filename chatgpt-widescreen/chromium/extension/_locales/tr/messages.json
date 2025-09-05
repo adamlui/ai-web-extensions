@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Tam Pencere" },
   "mode_fullscreen": { "message": "Tam ekran" },
   "mode_toast": { "message": "Tost Modu" },
+  "promptLabel_edit": { "message": "Düzenle" },
+  "prompt_enterNewVal": { "message": "Yeni Değer Gir" },
   "tooltip_widescreenON": { "message": "-Geniş ekran" },
   "tooltip_widescreenOFF": { "message": "-Geniş ekran" },
   "tooltip_fullWindowON": { "message": "Tam pencere modu" },

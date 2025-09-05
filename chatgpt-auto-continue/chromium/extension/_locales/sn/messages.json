@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Shanduko dzichangoburwa" },
   "mode_autoContinue": { "message": "Auto-Enderera mberi" },
   "mode_toast": { "message": "Toast Mode" },
+  "promptLabel_edit": { "message": "Gadzirisa" },
+  "prompt_enterNewVal": { "message": "Pinda kukosha kutsva kwe" },
   "helptip_autoScroll": { "message": "Otomatiki fambisa kusvika pasi sezvo mhinduro dziri kugadzira" },
   "helptip_modeNotifs": { "message": "Ratidza zviziviso kana toggling modes/marongero" },
   "helptip_notifBottom": { "message": "Anchor zviziviso pasi chidzitiro" },

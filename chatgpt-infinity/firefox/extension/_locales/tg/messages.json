@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Рамзи кушодаасос" },
   "about_latestChanges": { "message": "Mga pinakabagong pagbabago" },
   "mode_toast": { "message": "Усули Toast" },
+  "promptLabel_edit": { "message": "Таҳрир" },
+  "prompt_enterNewVal": { "message": "Қимати навро ворид кунед барои" },
   "prompt_updateReplyLang": { "message": "Забони ҷавобро навсозӣ кунед" },
   "prompt_updateReplyTopic": { "message": "Мавзӯъи ҷавобро навсозӣ кунед" },
   "prompt_orEnter": { "message": "ё ворид кунед" },

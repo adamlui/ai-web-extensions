@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "የምንጭ ኮድ" },
   "about_latestChanges": { "message": "የቅርብ ጊዜ ለውጦች" },
   "mode_toast": { "message": "የጥርስ ሁነታ" },
+  "promptLabel_edit": { "message": "አርትዕ" },
+  "prompt_enterNewVal": { "message": "አዲስ እሴት ያስገቡ ለ" },
   "prompt_updateReplyLang": { "message": "የምላሽ ቋንቋን ያዘምኑ" },
   "prompt_updateReplyTopic": { "message": "የምላሽ ርዕስን ያዘምኑ" },
   "prompt_orEnter": { "message": "ወይም ያስገቡ" },

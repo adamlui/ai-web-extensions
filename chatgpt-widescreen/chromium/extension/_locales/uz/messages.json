@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "To'liq oyna" },
   "mode_fullscreen": { "message": "To'liq ekranga" },
   "mode_toast": { "message": "Tost rejimi" },
+  "promptLabel_edit": { "message": "Tahrir" },
+  "prompt_enterNewVal": { "message": "uchun yangi qiymat kiriting" },
   "tooltip_widescreenON": { "message": "Keng ekran" },
   "tooltip_widescreenOFF": { "message": "Keng ekrandan chiqish" },
   "tooltip_fullWindowON": { "message": "To'liq oyna rejimi" },

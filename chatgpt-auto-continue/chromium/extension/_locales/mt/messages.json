@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "L-aħħar bidliet" },
   "mode_autoContinue": { "message": "Kompli Awtomatikament" },
   "mode_toast": { "message": "Modalità Toast" },
+  "promptLabel_edit": { "message": "Editja" },
+  "prompt_enterNewVal": { "message": "Daħħal valur ġdid għal" },
   "helptip_autoScroll": { "message": "Skrollja awtomatikament 'l isfel hekk kif it-tweġibiet qed jiġġeneraw" },
   "helptip_modeNotifs": { "message": "Uri n-notifiki meta tibdel il-modi/settings" },
   "helptip_notifBottom": { "message": "Ankra n-notifiki fil-qiegħ tal-iskrin" },

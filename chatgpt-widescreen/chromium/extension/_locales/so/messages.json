@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Daaqad buuxda" },
   "mode_fullscreen": { "message": "Dariishadweyn" },
   "mode_toast": { "message": "Mode toast" },
+  "promptLabel_edit": { "message": "Beddel" },
+  "prompt_enterNewVal": { "message": "Gali qiime cusub oo loogu talagalay" },
   "tooltip_widescreenON": { "message": "Shaashad ballaaran" },
   "tooltip_widescreenOFF": { "message": "Ka bax shaashadda ballaaran" },
   "tooltip_fullWindowON": { "message": "Habka daaqada oo buuxa" },

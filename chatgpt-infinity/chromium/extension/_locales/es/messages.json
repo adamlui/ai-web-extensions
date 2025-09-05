@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Cola ciega" },
   "about_latestChanges": { "message": "Últimos cambios" },
   "mode_toast": { "message": "Modo tostado" },
+  "promptLabel_edit": { "message": "Editar" },
+  "prompt_enterNewVal": { "message": "Introduzca un nuevo valor para" },
   "prompt_updateReplyLang": { "message": "Actualizar idioma de respuesta" },
   "prompt_updateReplyTopic": { "message": "Actualizar tema de respuesta" },
   "prompt_orEnter": { "message": "o acceda a" },

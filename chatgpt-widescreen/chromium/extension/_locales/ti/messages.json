@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "ምሉእ ዊንዶው" },
   "mode_fullscreen": { "message": "ምሉእ ማያ ገጽ" },
   "mode_toast": { "message": "ናይ ጽዋእ ኣገባብ" },
+  "promptLabel_edit": { "message": "vector-mode" },
+  "prompt_enterNewVal": { "message": "ሓድሽ ዋጋ ምእታው" },
   "tooltip_widescreenON": { "message": "ሰፊሕ ስክሪን" },
   "tooltip_widescreenOFF": { "message": "ካብ ሰፊሕ ስክሪን ወጻኢ" },
   "tooltip_fullWindowON": { "message": "ኣገባብ ምሉእ መስኰት" },

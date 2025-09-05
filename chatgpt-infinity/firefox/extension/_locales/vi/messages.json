@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Nguồn mở" },
   "about_latestChanges": { "message": "Thay đổi mới nhất" },
   "mode_toast": { "message": "Chế độ bánh mì nướng" },
+  "promptLabel_edit": { "message": "Chỉnh sửa" },
+  "prompt_enterNewVal": { "message": "Nhập giá trị mới cho" },
   "prompt_updateReplyLang": { "message": "Cập nhật ngôn ngữ trả lời" },
   "prompt_updateReplyTopic": { "message": "Cập nhật chủ đề trả lời" },
   "prompt_orEnter": { "message": "hoặc nhập" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Celé okno" },
   "mode_fullscreen": { "message": "Celá obrazovka" },
   "mode_toast": { "message": "Režim toastu" },
+  "promptLabel_edit": { "message": "Upraviť" },
+  "prompt_enterNewVal": { "message": "Zadajte novú hodnotu pre" },
   "tooltip_widescreenON": { "message": "Širokouhlá obrazovka" },
   "tooltip_widescreenOFF": { "message": "Ukončiť širokú obrazovku" },
   "tooltip_fullWindowON": { "message": "Režim celého okna" },

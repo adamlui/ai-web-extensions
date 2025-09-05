@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Dirisha kamili" },
   "mode_fullscreen": { "message": "Skrini nzima" },
   "mode_toast": { "message": "Modi ya Toast" },
+  "promptLabel_edit": { "message": "Kuhariri " },
+  "prompt_enterNewVal": { "message": "Weka thamani mpya ya" },
   "tooltip_widescreenON": { "message": "Skrini pana" },
   "tooltip_widescreenOFF": { "message": "Toka kwenye skrini pana" },
   "tooltip_fullWindowON": { "message": "Hali ya dirisha kamili" },

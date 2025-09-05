@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Najnovije izmjene" },
   "mode_autoContinue": { "message": "Automatski nastavi" },
   "mode_toast": { "message": "Režim tosta" },
+  "promptLabel_edit": { "message": "Uredi" },
+  "prompt_enterNewVal": { "message": "Unesite novu vrijednost za" },
   "helptip_autoScroll": { "message": "Automatski se pomičite na dno dok se generišu odgovori" },
   "helptip_modeNotifs": { "message": "Prikaži obavještenja prilikom prebacivanja režima/postavki" },
   "helptip_notifBottom": { "message": "Pričvrstite obavještenja na dno ekrana" },

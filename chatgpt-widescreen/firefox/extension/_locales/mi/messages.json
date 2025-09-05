@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Whakakiia i roto i te katoa" },
   "mode_fullscreen": { "message": "Whakaaturanga" },
   "mode_toast": { "message": "Te tikanga o te toast" },
+  "promptLabel_edit": { "message": "Whakatika" },
+  "prompt_enterNewVal": { "message": "Whakauru i te uara hou mo" },
   "tooltip_widescreenON": { "message": "Mata Whānui" },
   "tooltip_widescreenOFF": { "message": "Puta i te mata whānui" },
   "tooltip_fullWindowON": { "message": "Momotuhi" },

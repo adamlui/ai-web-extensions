@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Izvorni kod" },
   "about_latestChanges": { "message": "Najnovije promene" },
   "mode_toast": { "message": "Režim tosta" },
+  "promptLabel_edit": { "message": "Izmeni" },
+  "prompt_enterNewVal": { "message": "Unesite novu vrednost za" },
   "prompt_updateReplyLang": { "message": "Ажурирај језик одговора" },
   "prompt_updateReplyTopic": { "message": "Ažurirajte temu odgovora" },
   "prompt_orEnter": { "message": "ili unesite" },

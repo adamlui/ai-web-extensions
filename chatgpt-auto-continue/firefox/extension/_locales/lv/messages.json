@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "Jaunākās izmaiņas" },
   "mode_autoContinue": { "message": "Automātiski turpināt" },
   "mode_toast": { "message": "Tosta režīms" },
+  "promptLabel_edit": { "message": "Rediģēt" },
+  "prompt_enterNewVal": { "message": "Ievadiet jaunu vērtību" },
   "helptip_autoScroll": { "message": "Automātiski ritiniet līdz apakšai, jo tiek ģenerētas atbildes" },
   "helptip_modeNotifs": { "message": "Rādīt paziņojumus, pārslēdzot režīmus/iestatījumus" },
   "helptip_notifBottom": { "message": "Enkura paziņojumi ekrāna apakšdaļā" },

@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Iwindo lyonse" },
   "mode_fullscreen": { "message": "Fullscreen" },
   "mode_toast": { "message": "Umusango wa Kukasha" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Get New Value For ukulele" },
   "tooltip_widescreenON": { "message": "Icikope icakulisha" },
   "tooltip_widescreenOFF": { "message": "Fumeni pa cibuno icikulu" },
   "tooltip_fullWindowON": { "message": "Umusango wa windo lyonse" },

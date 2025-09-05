@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "විවෘත කේතය" },
   "about_latestChanges": { "message": "නවතම වෙනස්කම්" },
   "mode_toast": { "message": "ටෝස්ට් ප් ‍ රකාරය" },
+  "promptLabel_edit": { "message": "සංස්කරණය කරන්න" },
+  "prompt_enterNewVal": { "message": "සඳහා නව අගයක් ඇතුළත් කරන්න" },
   "prompt_updateReplyLang": { "message": "ප්‍රතිචාර භාෂාව යාවත්කාලීන කරන්න" },
   "prompt_updateReplyTopic": { "message": "ප්‍රතිචාර මාතෘකාව යාවත්කාලීන කරන්න" },
   "prompt_orEnter": { "message": "හෝ ඇතුල් වන්න" },

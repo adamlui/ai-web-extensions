@@ -13,6 +13,8 @@
   "about_openSourceCode": { "message": "Open source code" },
   "about_latestChanges": { "message": "Latest changes" },
   "mode_autoTalk": { "message": "Auto-Talk" },
+  "promptLabel_edit": { "message": "Edit" },
+  "prompt_enterNewVal": { "message": "Enter new value for" },
   "helptip_toggleVis": { "message": "Show Auto-Talk toggle in sidebar" },
   "alert_updateAvail": { "message": "Update available" },
   "alert_newerVer": { "message": "An update to" },

@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "åpen kilde" },
   "about_latestChanges": { "message": "Siste endringer" },
   "mode_toast": { "message": "Toastmodus" },
+  "promptLabel_edit": { "message": "Rediger" },
+  "prompt_enterNewVal": { "message": "Skriv inn ny verdi for" },
   "prompt_updateReplyLang": { "message": "Oppdater svarspråk" },
   "prompt_updateReplyTopic": { "message": "Oppdater svaremne" },
   "prompt_orEnter": { "message": "eller gå inn" },

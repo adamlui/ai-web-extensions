@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "전체 창" },
   "mode_fullscreen": { "message": "전체 화면" },
   "mode_toast": { "message": "토스트 모드" },
+  "promptLabel_edit": { "message": "편집" },
+  "prompt_enterNewVal": { "message": "%s 새 값을 입력하십시오:" },
   "tooltip_widescreenON": { "message": "와이드 스크린" },
   "tooltip_widescreenOFF": { "message": "와이드 스크린 모드 종료" },
   "tooltip_fullWindowON": { "message": "전체 창 모드" },

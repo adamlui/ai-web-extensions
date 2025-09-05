@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Vula ikhodi yomthombo" },
   "about_latestChanges": { "message": "Izinguquko zakamuva" },
   "mode_toast": { "message": "Imodi ye-Toast" },
+  "promptLabel_edit": { "message": "Hlela" },
+  "prompt_enterNewVal": { "message": "Faka inani elisha le" },
   "prompt_updateReplyLang": { "message": "Buyekeza ulimi lokuphendula" },
   "prompt_updateReplyTopic": { "message": "Buyekeza isihloko sokuphendula" },
   "prompt_orEnter": { "message": "noma ungene" },

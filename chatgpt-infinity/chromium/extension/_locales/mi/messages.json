@@ -29,6 +29,8 @@
   "about_openSourceCode": { "message": "Waehere puna tuwhera" },
   "about_latestChanges": { "message": "Ngā huringa hou" },
   "mode_toast": { "message": "Te tikanga o te toast" },
+  "promptLabel_edit": { "message": "Whakatika" },
+  "prompt_enterNewVal": { "message": "Whakauru i te uara hou mo" },
   "prompt_updateReplyLang": { "message": "Whakahōu reo whakautu" },
   "prompt_updateReplyTopic": { "message": "Kaupapa whakautu whakahou" },
   "prompt_orEnter": { "message": "tomokanga ranei" },

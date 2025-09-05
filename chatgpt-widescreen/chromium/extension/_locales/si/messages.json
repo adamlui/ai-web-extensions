@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "පූර්ණ - කවුළුව" },
   "mode_fullscreen": { "message": "සම්පූර්ණ තිරය (_F)" },
   "mode_toast": { "message": "ටෝස්ට් ප් ‍ රකාරය" },
+  "promptLabel_edit": { "message": "සංස්කරණය කරන්න" },
+  "prompt_enterNewVal": { "message": "සඳහා නව අගයක් ඇතුළත් කරන්න" },
   "tooltip_widescreenON": { "message": "පුළුල් තිරය" },
   "tooltip_widescreenOFF": { "message": "පුළුල් තිරයෙන් පිටවන්න" },
   "tooltip_fullWindowON": { "message": "පූර්ණ - කවුළු මාදිලිය" },

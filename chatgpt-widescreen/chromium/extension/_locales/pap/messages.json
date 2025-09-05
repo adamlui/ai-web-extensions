@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Kompletná kompletná komple" },
   "mode_fullscreen": { "message": "Fullscreen" },
   "mode_toast": { "message": "Moda di Toast" },
+  "promptLabel_edit": { "message": "Editá" },
+  "prompt_enterNewVal": { "message": "Ingresá a Nuevo Valor" },
   "tooltip_widescreenON": { "message": "Pantaya amplio" },
   "tooltip_widescreenOFF": { "message": "Laga un pantaya grandi" },
   "tooltip_fullWindowON": { "message": "Forme Di Compleanno Di" },

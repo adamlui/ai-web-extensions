@@ -38,6 +38,8 @@
   "mode_fullWindow": { "message": "Full-window" },
   "mode_fullscreen": { "message": "Schermvullend maken" },
   "mode_toast": { "message": "Toastmodus" },
+  "promptLabel_edit": { "message": "Bewerken" },
+  "prompt_enterNewVal": { "message": "Voer de nieuwe waarde in voor" },
   "tooltip_widescreenON": { "message": "Breedbeeld" },
   "tooltip_widescreenOFF": { "message": "Breedbeeld" },
   "tooltip_fullWindowON": { "message": "Volledige raammodus" },

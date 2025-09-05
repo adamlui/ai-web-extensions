@@ -22,6 +22,8 @@
   "about_latestChanges": { "message": "ការផ្លាស់ប្តូរចុងក្រោយបំផុត" },
   "mode_autoContinue": { "message": "បន្តដោយស្វ័យប្រវត្តិ" },
   "mode_toast": { "message": "ម៉ូដដុតនំ" },
+  "promptLabel_edit": { "message": "កែសំរូល" },
+  "prompt_enterNewVal": { "message": "បញ្ចូលតម្លៃថ្មីសម្រាប់" },
   "helptip_autoScroll": { "message": "ស្វ័យរំកិលទៅបាត ខណៈពេលការឆ្លើយតបកំពុងបង្កើត" },
   "helptip_modeNotifs": { "message": "បង្ហាញការជូនដំណឹងនៅពេលបិទបើកម៉ូដ/ការកំណត់" },
   "helptip_notifBottom": { "message": "ការជូនដំណឹងយុថ្កាទៅផ្នែកខាងក្រោមនៃអេក្រង់" },
