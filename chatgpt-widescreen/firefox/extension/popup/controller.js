@@ -71,12 +71,6 @@
                 textContent: browserAPI.getMsg('promptLabel_edit')
             }))
             entry.slider.style.setProperty('--track-fill-percent', `${ entry.slider.value / entry.slider.max *100 }%`)
-            entry.slider.oninput = ({ target: { value }}) => { // update label/color
-                settings.save(entryData.key, parseInt(value)) ; sync.configToUI({ updatedKey: entryData.key })
-                entry.label.textContent = `${entryData.label}: ${value}${ entryData.labelSuffix || '' }`
-                entry.label.append(entry.editLink)
-                entry.slider.style.setProperty('--track-fill-percent', `${ value / entry.slider.max *100 }%`)
-            }
 
             // Add listeners
             entry.editLink.onclick = () => {
@@ -93,6 +87,12 @@
                 entry.label.textContent = `${entryData.label}: ${validVal}${ entryData.labelSuffix || '' }`
                 entry.label.append(entry.editLink)
                 entry.slider.style.setProperty('--track-fill-percent', `${ validVal / entry.slider.max *100 }%`)
+            }
+            entry.slider.oninput = ({ target: { value }}) => { // update label/color
+                settings.save(entryData.key, parseInt(value)) ; sync.configToUI({ updatedKey: entryData.key })
+                entry.label.textContent = `${entryData.label}: ${value}${ entryData.labelSuffix || '' }`
+                entry.label.append(entry.editLink)
+                entry.slider.style.setProperty('--track-fill-percent', `${ value / entry.slider.max *100 }%`)
             }
             entry.div.onwheel = ({ deltaY }) => { // move slider by 2 steps
                 entry.slider.value = parseInt(entry.slider.value) - Math.sign(deltaY) *2
