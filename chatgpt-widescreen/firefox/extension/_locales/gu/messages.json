@@ -1,7 +1,7 @@
 {
   "appName": { "message": "સંવાદGPT વાઇડસ્ક્રીન સ્થિતિ" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "વિશાળ/પૂર્ણ/ઊંચી સ્ક્રીન + સ્પામબ્લોક મોડ્સ સાથે ચેટજીપીટીને વધારે છે. poe.com પર પણ કામ કરે છે!" },
+  "appDesc": { "message": "વિશાળ/પૂર્ણ/ઊંચી સ્ક્રીન + સ્પામબ્લોક મોડ્સ સાથે ચેટજીપીટીને વધારે છે. poe.com પર પણ કામ કરે છે" },
   "menuLabel_settings": { "message": "સેટિંગ્સ" },
   "menuLabel_notif": { "message": "નોંધણી" },
   "menuLabel_notifs": { "message": "(અટકાવેલ)% 1% 1 is the name of the job, can be things like Copying, deleting, moving" },

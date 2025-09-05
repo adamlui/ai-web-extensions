@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Režim širokoúhlé obrazovky ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Vylepšuje ChatGPT o širokoúhlou/celou/vysokou obrazovku + režimy spamblock. Funguje také na poe.com!" },
+  "appDesc": { "message": "Vylepšuje ChatGPT o širokoúhlou/celou/vysokou obrazovku + režimy spamblock. Funguje také na poe.com" },
   "menuLabel_settings": { "message": "Nastavení" },
   "menuLabel_notif": { "message": "Oznamování" },
   "menuLabel_notifs": { "message": "Oznámení" },

@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Aratau Matawhānui" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Whakapai ake ChatGPT ki whānui/tonu/mata teitei + aratau spamblock. Mahi hoki i runga i poe.com!" },
+  "appDesc": { "message": "Whakapai ake ChatGPT ki whānui/tonu/mata teitei + aratau spamblock. Mahi hoki i runga i poe.com" },
   "menuLabel_settings": { "message": "Ngā Tautuhinga" },
   "menuLabel_notif": { "message": "Whakapuakanga" },
   "menuLabel_notifs": { "message": "notifications" },

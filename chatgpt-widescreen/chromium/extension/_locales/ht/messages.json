@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Widecreen Mode" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Amelyore ChatGPT ak lajè/plen/ekran wo + mòd bloke spam. Epitou travay sou poe.com!" },
+  "appDesc": { "message": "Amelyore ChatGPT ak lajè/plen/ekran wo + mòd bloke spam. Epitou travay sou poe.com" },
   "menuLabel_settings": { "message": "Reglaj" },
   "menuLabel_notif": { "message": "Notifikasyon" },
   "menuLabel_notifs": { "message": "notifikasyon/notifications" },

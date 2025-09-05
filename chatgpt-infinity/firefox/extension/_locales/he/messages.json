@@ -44,7 +44,7 @@
   "helptip_modeNotifs": { "message": "הצג התראות בעת החלפת מצבים/הגדרות" },
   "helptip_notifBottom": { "message": "התראות עוגן לתחתית המסך" },
   "helptip_toastMode": { "message": "כווץ/מרכז התראות לבועות טוסט" },
-  "helptip_adjustSettingsRelatedTo": { "message": "שינוי ההגדרות הקשורות ל -" },
+  "helptip_adjustSettingsRelatedTo": { "message": "שינוי ההגדרות הקשורות ל" },
   "alert_replyLangUpdated": { "message": "השפה עודכנה" },
   "alert_willReplyIn": { "message": "יגיב בעוד" },
   "alert_yourSysLang": { "message": "שפת המערכת שלך" },

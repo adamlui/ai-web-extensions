@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Skrini Yakafara" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Inovandudza ChatGPT nehupamhi/izere/yakareba-screen + spamblock modes. Zvakare inoshanda pa poe.com!" },
+  "appDesc": { "message": "Inovandudza ChatGPT nehupamhi/izere/yakareba-screen + spamblock modes. Zvakare inoshanda pa poe.com" },
   "menuLabel_settings": { "message": "Masetingi" },
   "menuLabel_notif": { "message": "Chiziviso" },
   "menuLabel_notifs": { "message": "Zviziviso" },

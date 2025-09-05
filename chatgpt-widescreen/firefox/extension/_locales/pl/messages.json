@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Tryb szerokoekranowy ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Ulepsza ChatGPT o tryby szeroki/pełny/wysoki ekran + spamblock. Działa również na poe.com!" },
+  "appDesc": { "message": "Ulepsza ChatGPT o tryby szeroki/pełny/wysoki ekran + spamblock. Działa również na poe.com" },
   "menuLabel_settings": { "message": "Ustawienia" },
   "menuLabel_notif": { "message": "Powiadomienie" },
   "menuLabel_notifs": { "message": "Powiadomienia" },

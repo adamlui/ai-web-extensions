@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Pantaya Hòrdu" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Ta mehorá ChatGPT ku e modonan di pantaya hanchu/yen/haltu + spamblock. Tambe ta traha riba poe.com!" },
+  "appDesc": { "message": "Ta mehorá ChatGPT ku e modonan di pantaya hanchu/yen/haltu + spamblock. Tambe ta traha riba poe.com" },
   "menuLabel_settings": { "message": "Establesimentunan" },
   "menuLabel_notif": { "message": "Notifikashon" },
   "menuLabel_notifs": { "message": "Notifikashonnan" },
@@ -68,7 +68,7 @@
   "helptip_modeNotifs": { "message": "Ver Informe Ampliado de Modalidad E Instalacion Sl" },
   "helptip_notifBottom": { "message": "Notificacion Ancora Al Fondo De Screenshot" },
   "helptip_toastMode": { "message": "Página principal > Ciencia > Toast bubbles Toast bubbles" },
-  "helptip_blockSpam": { "message": "Escriba un comentario para SPAM Banner!" },
+  "helptip_blockSpam": { "message": "Escriba un comentario para SPAM Banner" },
   "helptip_pageSettings": { "message": "Controlá la página" },
   "helptip_chatbarSettings": { "message": "Controla e apariencia di e bapor" },
   "helptip_buttonSettings": { "message": "Adaptacion a botones" },

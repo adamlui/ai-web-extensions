@@ -44,7 +44,7 @@
   "helptip_modeNotifs": { "message": "Bonisa izaziso lapho kuguqulwa izindlela/amasethingi" },
   "helptip_notifBottom": { "message": "Izaziso zehange ezansi kwesikrini" },
   "helptip_toastMode": { "message": "Nciphisa izaziso zibe ama-bubble e-toast" },
-  "helptip_adjustSettingsRelatedTo": { "message": "Lungisa amasethingi ahlobene ne-" },
+  "helptip_adjustSettingsRelatedTo": { "message": "Lungisa amasethingi ahlobene ne" },
   "alert_replyLangUpdated": { "message": "Ulimi lubuyekeziwe" },
   "alert_willReplyIn": { "message": "izophendula" },
   "alert_yourSysLang": { "message": "uhlelo lwakho lolimi" },

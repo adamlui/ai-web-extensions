@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Mod Skrin Lebar ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Meningkatkan ChatGPT dengan mod skrin lebar/penuh/tinggi + sekatan spam. Juga berfungsi pada poe.com!" },
+  "appDesc": { "message": "Meningkatkan ChatGPT dengan mod skrin lebar/penuh/tinggi + sekatan spam. Juga berfungsi pada poe.com" },
   "menuLabel_settings": { "message": "Tetapan" },
   "menuLabel_notif": { "message": "Notifikasi" },
   "menuLabel_notifs": { "message": "Pemberitahuan" },

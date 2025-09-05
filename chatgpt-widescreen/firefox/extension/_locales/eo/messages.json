@@ -1,7 +1,7 @@
 {
   "appName": { "message": "BabilejoGPT Larĝekrana reĝimo" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Plibonigas ChatGPT per larĝa/plena/alta ekrano + spambloka reĝimoj. Ankaŭ funkcias ĉe poe.com!" },
+  "appDesc": { "message": "Plibonigas ChatGPT per larĝa/plena/alta ekrano + spambloka reĝimoj. Ankaŭ funkcias ĉe poe.com" },
   "menuLabel_settings": { "message": "Agordoj" },
   "menuLabel_notif": { "message": "Atentigo" },
   "menuLabel_notifs": { "message": "Atentigoj" },

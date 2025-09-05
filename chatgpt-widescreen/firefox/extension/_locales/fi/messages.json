@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT-laajakuvaustila" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Parantaa ChatGPT:tä laaja/koko/korkea näyttö + roskapostitiloilla. Toimii myös sivustolla poe.com!" },
+  "appDesc": { "message": "Parantaa ChatGPT:tä laaja/koko/korkea näyttö + roskapostitiloilla. Toimii myös sivustolla poe.com" },
   "menuLabel_settings": { "message": "Asetukset" },
   "menuLabel_notif": { "message": "Tiedoksianto" },
   "menuLabel_notifs": { "message": "Ilmoitukset" },
@@ -24,7 +24,7 @@
   "menuLabel_blockSpam": { "message": "Roskapostin esto" },
   "menuLabel_siteSettings": { "message": "Sivuston lisäasetukset" },
   "menuLabel_about": { "message": "Tietoa" },
-  "menuLabel_buyMeAcoffee": { "message": "Osta minulle kahvi!" },
+  "menuLabel_buyMeAcoffee": { "message": "Osta minulle kahvi" },
   "menuLabel_donate": { "message": "Lähetä lahjoitus" },
   "menuLabel_extensionActive": { "message": "laajennus aktiivinen" },
   "about_author": { "message": "Tekijä" },

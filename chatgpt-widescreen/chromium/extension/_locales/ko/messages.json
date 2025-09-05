@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT 와이드스크린 모드" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "와이드/풀/톨 스크린 + 스팸블록 모드로 ChatGPT 를 향상시킵니다. poe.com 에서도 작동합니다!" },
+  "appDesc": { "message": "와이드/풀/톨 스크린 + 스팸블록 모드로 ChatGPT 를 향상시킵니다. poe.com 에서도 작동합니다" },
   "menuLabel_settings": { "message": "설정" },
   "menuLabel_notif": { "message": "알림" },
   "menuLabel_notifs": { "message": "토" },

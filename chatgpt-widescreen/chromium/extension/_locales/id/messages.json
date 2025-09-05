@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Mode Layar Lebar ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Meningkatkan ChatGPT dengan mode layar lebar/penuh/tinggi + spamblock. Juga berfungsi di poe.com!" },
+  "appDesc": { "message": "Meningkatkan ChatGPT dengan mode layar lebar/penuh/tinggi + spamblock. Juga berfungsi di poe.com" },
   "menuLabel_settings": { "message": "Pengaturan" },
   "menuLabel_notif": { "message": "Notifikasi" },
   "menuLabel_notifs": { "message": "Notifikasi" },
@@ -24,7 +24,7 @@
   "menuLabel_blockSpam": { "message": "Blok Spam" },
   "menuLabel_siteSettings": { "message": "Pengaturan Situs" },
   "menuLabel_about": { "message": "Ihwal" },
-  "menuLabel_buyMeAcoffee": { "message": "Buy me a Coffee!" },
+  "menuLabel_buyMeAcoffee": { "message": "Buy me a Coffee" },
   "menuLabel_donate": { "message": "Kirimkan donasi" },
   "menuLabel_extensionActive": { "message": "ekstensi aktif" },
   "about_author": { "message": "Penulis" },

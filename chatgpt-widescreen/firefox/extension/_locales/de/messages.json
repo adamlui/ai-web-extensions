@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Breitbildmodus" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Verbessert ChatGPT mit Breit-/Vollbild-/Hochbild- + Spamblock-Modi. Funktioniert auch auf poe.com!" },
+  "appDesc": { "message": "Verbessert ChatGPT mit Breit-/Vollbild-/Hochbild- + Spamblock-Modi. Funktioniert auch auf poe.com" },
   "menuLabel_settings": { "message": "Einstellungen" },
   "menuLabel_notif": { "message": "Meldung" },
   "menuLabel_notifs": { "message": "Benachrichtigungen" },

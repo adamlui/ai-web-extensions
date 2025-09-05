@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT ವೈಡ್ಸ್ಕ್ರೀನ್ ಮೋಡ್" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ವೈಡ್/ಫುಲ್/ಟಾಲ್-ಸ್ಕ್ರೀನ್ ಮೋಡ್‌ಗಳೊಂದಿಗೆ ChatGPT ಅನ್ನು ವರ್ಧಿಸುತ್ತದೆ. poe.com ನಲ್ಲಿ ಸಹ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ!" },
+  "appDesc": { "message": "ವೈಡ್/ಫುಲ್/ಟಾಲ್-ಸ್ಕ್ರೀನ್ ಮೋಡ್‌ಗಳೊಂದಿಗೆ ChatGPT ಅನ್ನು ವರ್ಧಿಸುತ್ತದೆ. poe.com ನಲ್ಲಿ ಸಹ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ" },
   "menuLabel_settings": { "message": "ಸೆಟ್ಟಿಂಗ್‍ಗಳು" },
   "menuLabel_notif": { "message": "ಸೂಚನೆ" },
   "menuLabel_notifs": { "message": "ಸೂಚನೆಗಳುName" },
@@ -105,6 +105,6 @@
   "btnLabel_dismiss": { "message": "ವಜಾಗೊಳಿಸಿ" },
   "link_viewChanges": { "message": "ಬದಲಾವಣೆಗಳನ್ನು ವೀಕ್ಷಿಸಿ" },
   "state_disabled": { "message": "à²¸à²à²à³à²¯à²¾à²¤à³à²®à² à²¸à²¹ à²¸à²à²¸à³à²à²¾à²°à² (FPU)" },
-  "state_on": { "message": "-" },
+  "state_on": { "message": "ಆನ್" },
   "state_off": { "message": "ಆಫ್" }
 }

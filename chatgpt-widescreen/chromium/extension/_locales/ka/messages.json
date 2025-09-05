@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT ფართო ეკრანის რეჟიმი" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "აძლიერებს ChatGPT-ს ფართო/სრული/სიმაღლის ეკრანზე + სპამბლოკის რეჟიმებით. ასევე მუშაობს poe.com-ზე!" },
+  "appDesc": { "message": "აძლიერებს ChatGPT-ს ფართო/სრული/სიმაღლის ეკრანზე + სპამბლოკის რეჟიმებით. ასევე მუშაობს poe.com-ზე" },
   "menuLabel_settings": { "message": "&მორგება" },
   "menuLabel_notif": { "message": "შეტყობინება" },
   "menuLabel_notifs": { "message": "გაფრთხილებები" },

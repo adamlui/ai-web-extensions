@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Uburyo bwa ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Gutezimbere ChatGPT hamwe nubugari / bwuzuye / muremure-muremure + uburyo bwa spamblock. Ikora kandi poe.com!" },
+  "appDesc": { "message": "Gutezimbere ChatGPT hamwe nubugari / bwuzuye / muremure-muremure + uburyo bwa spamblock. Ikora kandi poe.com" },
   "menuLabel_settings": { "message": "Amagenamiterere" },
   "menuLabel_notif": { "message": "Imenyesha" },
   "menuLabel_notifs": { "message": "Amamenyesha" },

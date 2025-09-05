@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT laiekraanirežiim" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Täiustab ChatGPT-d lai/täis-/kõrgekraaniga + rämpspostiblokeeringu režiimidega. Töötab ka saidil poe.com!" },
+  "appDesc": { "message": "Täiustab ChatGPT-d lai/täis-/kõrgekraaniga + rämpspostiblokeeringu režiimidega. Töötab ka saidil poe.com" },
   "menuLabel_settings": { "message": "Seaded" },
   "menuLabel_notif": { "message": "Teatamine" },
   "menuLabel_notifs": { "message": "Teated" },

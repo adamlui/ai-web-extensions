@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ໂໝດຫນ້າຈໍກວ້າງ ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ປັບປຸງ ChatGPT ດ້ວຍ ຫນ້າ ຈໍກວ້າງ/ເຕັມ/ສູງ + ໂຫມດ spamblock. ຍັງເຮັດວຽກຢູ່ໃນ poe.com!" },
+  "appDesc": { "message": "ປັບປຸງ ChatGPT ດ້ວຍ ຫນ້າ ຈໍກວ້າງ/ເຕັມ/ສູງ + ໂຫມດ spamblock. ຍັງເຮັດວຽກຢູ່ໃນ poe.com" },
   "menuLabel_settings": { "message": "ການຕັ້ງຄ່າ" },
   "menuLabel_notif": { "message": "ແຈ້ງການ" },
   "menuLabel_notifs": { "message": "ການແຈ້ງເຕືອນ" },

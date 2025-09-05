@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Sikini Lahi" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Fakalahi ʻa e ChatGPT ʻaki ʻa e ngaahi founga kehekehe/kakato/maʻolunga + spamblock. Ngaue foki ʻi he poe.com!" },
+  "appDesc": { "message": "Fakalahi ʻa e ChatGPT ʻaki ʻa e ngaahi founga kehekehe/kakato/maʻolunga + spamblock. Ngaue foki ʻi he poe.com" },
   "menuLabel_settings": { "message": "Ngaahi fokotuʻutuʻu" },
   "menuLabel_notif": { "message": "Fanongonongo" },
   "menuLabel_notifs": { "message": "Ngaahi Fakatokanga" },

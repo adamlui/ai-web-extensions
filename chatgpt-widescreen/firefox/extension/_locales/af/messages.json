@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Wydskerm Modus" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Verbeter ChatGPT met wye/vol/hoë skerm + spamblok-modusse. Werk ook op poe.com!" },
+  "appDesc": { "message": "Verbeter ChatGPT met wye/vol/hoë skerm + spamblok-modusse. Werk ook op poe.com" },
   "menuLabel_settings": { "message": "bevel" },
   "menuLabel_notif": { "message": "Kennisgewing" },
   "menuLabel_notifs": { "message": "Kennisgewings" },

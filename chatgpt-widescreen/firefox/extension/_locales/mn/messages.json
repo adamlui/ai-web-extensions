@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Өргөн Дэлгэц" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Өргөн/бүрэн/өндөр дэлгэц + спамблок горимоор ChatGPT-ийг сайжруулдаг. Мөн poe.com дээр ажилладаг!" },
+  "appDesc": { "message": "Өргөн/бүрэн/өндөр дэлгэц + спамблок горимоор ChatGPT-ийг сайжруулдаг. Мөн poe.com дээр ажилладаг" },
   "menuLabel_settings": { "message": "Системийн тохиргоо" },
   "menuLabel_notif": { "message": "Сонордуулга" },
   "menuLabel_notifs": { "message": "Мэдэгдлүүд" },

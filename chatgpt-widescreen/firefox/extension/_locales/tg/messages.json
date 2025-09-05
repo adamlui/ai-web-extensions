@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Ҳолати экрани васеъ ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ChatGPT-ро бо режимҳои васеъ/пурра/баланд-экран + спамблок такмил медиҳад. Инчунин дар poe.com кор мекунад!" },
+  "appDesc": { "message": "ChatGPT-ро бо режимҳои васеъ/пурра/баланд-экран + спамблок такмил медиҳад. Инчунин дар poe.com кор мекунад" },
   "menuLabel_settings": { "message": "Танзимот" },
   "menuLabel_notif": { "message": "Огоҳинома" },
   "menuLabel_notifs": { "message": "Огоҳиҳо" },

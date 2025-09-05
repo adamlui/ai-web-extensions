@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ናይ ChatGPT ሰፊሕ ስክሪን ኣገባብ" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ChatGPT ብሰፊሕ/ምሉእ/ነዊሕ ማያ + ስፓምቦክ ሞድታት የደልድሎ ። ኣብ poe.com እውን ይሰርሕ!" },
+  "appDesc": { "message": "ChatGPT ብሰፊሕ/ምሉእ/ነዊሕ ማያ + ስፓምቦክ ሞድታት የደልድሎ ። ኣብ poe.com እውን ይሰርሕ" },
   "menuLabel_settings": { "message": "መቓናት" },
   "menuLabel_notif": { "message": "ኣፍልጦ" },
   "menuLabel_notifs": { "message": "ኣፍልጦታት" },

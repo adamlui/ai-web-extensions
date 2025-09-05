@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT वाइडस्क्रीन मोड" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "विस्तृत/पूर्ण/लम्बी - स्क्रीन + स्पैमब्लॉक मोड के साथ चैटजीपीटी को बढ़ाता है। poe.com पर भी काम करता है!" },
+  "appDesc": { "message": "विस्तृत/पूर्ण/लम्बी - स्क्रीन + स्पैमब्लॉक मोड के साथ चैटजीपीटी को बढ़ाता है। poe.com पर भी काम करता है" },
   "menuLabel_settings": { "message": "सेटिंग्स" },
   "menuLabel_notif": { "message": "अधिसूचना" },
   "menuLabel_notifs": { "message": "नोटिफ़िकेशन" },

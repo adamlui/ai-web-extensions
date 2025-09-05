@@ -2,7 +2,7 @@
   "appDesc": { "message": "Füügt ChatGPT Äntwerten op DuckDuckGo Sidebar (ugedriwwen duerch GPT-4o!)" },
   "menuLabel_proxyAPImode": { "message": "Proxy-API-Modus" },
   "menuLabel_preferred": { "message": "Am léifsten" },
-  "menuLabel_autoAnswer": { "message": "CAA -" },
+  "menuLabel_autoAnswer": { "message": "Automatesch Äntwert" },
   "menuLabel_autoSummarizeResults": { "message": "Fakten an Erënnerungen" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "wann streamen" },

@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Modalità Widescreen ta' ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Ittejjeb ChatGPT b' modi ta' imblokk tal-ispam b' skrin wiesa'/sħiħ/twil +. Jaħdem ukoll fuq poe.com!" },
+  "appDesc": { "message": "Ittejjeb ChatGPT b' modi ta' imblokk tal-ispam b' skrin wiesa'/sħiħ/twil +. Jaħdem ukoll fuq poe.com" },
   "menuLabel_settings": { "message": "Settings" },
   "menuLabel_notif": { "message": "Notifika" },
   "menuLabel_notifs": { "message": "Notifiki" },
@@ -52,7 +52,7 @@
   "tooltip_newChat": { "message": "Chat ġdida" },
   "tooltip_goto": { "message": "MUR GĦAL" },
   "helptip_adjustSettingsRelatedTo": { "message": "Irranġa s-settings marbuta ma'" },
-  "helptip_the": { "message": "Il-" },
+  "helptip_the": { "message": "l-" },
   "helptip_btns": { "message": "Buttuni" },
   "helptip_widescreenWidth": { "message": "Irranġa l-ammont ta' Widescreen biex tapplika" },
   "helptip_tallerChatboxHeight": { "message": "Irranġa l-ammont ta' Taller Chatbox biex tapplika (teħtieġ test biex tara minn qabel)" },

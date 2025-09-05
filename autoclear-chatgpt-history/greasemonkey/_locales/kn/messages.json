@@ -48,6 +48,6 @@
   "link_viewChanges": { "message": "ಬದಲಾವಣೆಗಳನ್ನು ವೀಕ್ಷಿಸಿ" },
   "state_enabled": { "message": "ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ" },
   "state_disabled": { "message": "ಅಂಗವಿಕಲ" },
-  "state_on": { "message": "-" },
+  "state_on": { "message": "ಆನ್" },
   "state_off": { "message": "ಆಫ್" }
 }

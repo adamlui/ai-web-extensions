@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Режим Широкого Экрана ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Улучшает ChatGPT с широким/полным/высоким экраном + режимы спам-блока. Также работает на poe.com!" },
+  "appDesc": { "message": "Улучшает ChatGPT с широким/полным/высоким экраном + режимы спам-блока. Также работает на poe.com" },
   "menuLabel_settings": { "message": "Настройки" },
   "menuLabel_notif": { "message": "Уведомление" },
   "menuLabel_notifs": { "message": "Уведомление" },
@@ -52,7 +52,7 @@
   "tooltip_newChat": { "message": "Новый чат" },
   "tooltip_goto": { "message": "&#1055;&#1077;&#1088;&#1077;&#1081;&#1076;&#1080;&#1090;&#1077; &#1074;" },
   "helptip_adjustSettingsRelatedTo": { "message": "Настройте параметры, связанные с" },
-  "helptip_the": { "message": "-" },
+  "helptip_the": { "message": "то" },
   "helptip_btns": { "message": "Кнопки" },
   "helptip_widescreenWidth": { "message": "Отрегулируйте количество широкоэкранных экранов для применения" },
   "helptip_tallerChatboxHeight": { "message": "Отрегулируйте количество Taller Chatbox для применения (требуется текст для предварительного просмотра)" },

@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Режим на широк екран на ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Го подобрува ChatGPT со режими со широк/цел/висок екран + спам-блокирање. Исто така, работи poe.com!" },
+  "appDesc": { "message": "Го подобрува ChatGPT со режими со широк/цел/висок екран + спам-блокирање. Исто така, работи poe.com" },
   "menuLabel_settings": { "message": "Поставки" },
   "menuLabel_notif": { "message": "Известување" },
   "menuLabel_notifs": { "message": "Известувања" },

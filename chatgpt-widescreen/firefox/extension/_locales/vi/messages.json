@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Chế độ màn hình rộng ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Cải thiện ChatGPT với chế độ màn hình rộng/toàn màn hình/cao + chế độ chặn thư rác. Cũng hoạt động trên poe.com!" },
+  "appDesc": { "message": "Cải thiện ChatGPT với chế độ màn hình rộng/toàn màn hình/cao + chế độ chặn thư rác. Cũng hoạt động trên poe.com" },
   "menuLabel_settings": { "message": "Cài đặt" },
   "menuLabel_notif": { "message": "Thông báo" },
   "menuLabel_notifs": { "message": "Thông báo" },

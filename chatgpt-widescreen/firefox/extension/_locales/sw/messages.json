@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Hali ya Kuenea ya ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Huboresha ChatGPT kwa kutumia skrini pana/iliyojaa/refu + na njia za kuzuia taka. Pia hufanya kazi kwenye poe.com!" },
+  "appDesc": { "message": "Huboresha ChatGPT kwa kutumia skrini pana/iliyojaa/refu + na njia za kuzuia taka. Pia hufanya kazi kwenye poe.com" },
   "menuLabel_settings": { "message": "Mipangilio" },
   "menuLabel_notif": { "message": "Arifa" },
   "menuLabel_notifs": { "message": "Arifa" },

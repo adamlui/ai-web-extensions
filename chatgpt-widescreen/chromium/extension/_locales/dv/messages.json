@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ޗެޓްޖީޕީޓީ ވައިޑްސްކްރީން މޯޑް" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ވައިޑް/ފުލް/ޓޯލް-ސްކްރީން މޯޑްތަކާއެކު ޗެޓްޖީޕީޓީ އިތުރުކޮށްދެއެވެ. އަދި poe.com ގައި ވެސް މަސައްކަތް ކުރެއެވެ!" },
+  "appDesc": { "message": "ވައިޑް/ފުލް/ޓޯލް-ސްކްރީން މޯޑްތަކާއެކު ޗެޓްޖީޕީޓީ އިތުރުކޮށްދެއެވެ. އަދި poe.com ގައި ވެސް މަސައްކަތް ކުރެއެވެ" },
   "menuLabel_settings": { "message": "ސެޓިންގސް" },
   "menuLabel_notif": { "message": "ނޮޓިފިކޭޝަން" },
   "menuLabel_notifs": { "message": "notifications" },

@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Modo de Tela Ampla do ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Melhora o ChatGPT com modos de ecrã panorâmico/ecrã completo/alto + bloqueio de spam. Também funciona em poe.com!" },
+  "appDesc": { "message": "Melhora o ChatGPT com modos de ecrã panorâmico/ecrã completo/alto + bloqueio de spam. Também funciona em poe.com" },
   "menuLabel_settings": { "message": "Definições" },
   "menuLabel_notif": { "message": "Notificação" },
   "menuLabel_notifs": { "message": "Notificações" },

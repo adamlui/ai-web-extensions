@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Širokozaslonski način ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Izboljša ChatGPT z načini širokega/celozaslonskega/visokega zaslona. Deluje tudi na poe.com!" },
+  "appDesc": { "message": "Izboljša ChatGPT z načini širokega/celozaslonskega/visokega zaslona. Deluje tudi na poe.com" },
   "menuLabel_settings": { "message": "Nastavitve" },
   "menuLabel_notif": { "message": "Vročitev" },
   "menuLabel_notifs": { "message": "Obvestila" },

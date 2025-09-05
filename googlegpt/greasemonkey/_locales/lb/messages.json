@@ -1,6 +1,6 @@
 {
   "appDesc": { "message": "Füügt AI Äntwerten op Google Sich bäi (ugedriwwe vu Google Gemma + GPT-4o!)" },
-  "menuLabel_autoAnswer": { "message": "CAA -" },
+  "menuLabel_autoAnswer": { "message": "Automatesch Äntwert" },
   "menuLabel_autoSummarizeResults": { "message": "Fakten an Erënnerungen" },
   "menuLabel_autoFocusChatbar": { "message": "Auto-Focus Chatbar" },
   "menuLabel_whenStreaming": { "message": "wann streamen" },

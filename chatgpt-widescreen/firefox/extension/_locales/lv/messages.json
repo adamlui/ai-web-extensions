@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT platekrāna režīms" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Uzlabo ChatGPT ar plata/pilna/augsta ekrāna + surogātpasta bloķēšanas režīmiem. Darbojas arī vietnē poe.com!" },
+  "appDesc": { "message": "Uzlabo ChatGPT ar plata/pilna/augsta ekrāna + surogātpasta bloķēšanas režīmiem. Darbojas arī vietnē poe.com" },
   "menuLabel_settings": { "message": "Iestatījumi" },
   "menuLabel_notif": { "message": "Paziņojums" },
   "menuLabel_notifs": { "message": "Ziņojumi" },

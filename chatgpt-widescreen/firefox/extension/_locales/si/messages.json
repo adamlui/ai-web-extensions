@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Widescreen ප්‍රකාරය" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "පුළුල්/පූර්ණ/උස තිරය + spamblock මාතයන් සමග ChatGPT වැඩි දියුණු කරයි. poe.com හි ද ක් ‍ රියා කරයි!" },
+  "appDesc": { "message": "පුළුල්/පූර්ණ/උස තිරය + spamblock මාතයන් සමග ChatGPT වැඩි දියුණු කරයි. poe.com හි ද ක් ‍ රියා කරයි" },
   "menuLabel_settings": { "message": "සැකසුම්" },
   "menuLabel_notif": { "message": "දැනුම්දීම" },
   "menuLabel_notifs": { "message": "නිෙව්දන" },

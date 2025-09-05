@@ -1,7 +1,7 @@
 {
   "appName": { "message": "حالت صفحه عریض ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ChatGPT را با حالت های عریض/تمام/صفحه بلند + هرزنامه بهبود می بخشد. همچنین روی poe.com کار می کند!" },
+  "appDesc": { "message": "ChatGPT را با حالت های عریض/تمام/صفحه بلند + هرزنامه بهبود می بخشد. همچنین روی poe.com کار می کند" },
   "menuLabel_settings": { "message": "تنظیمات" },
   "menuLabel_notif": { "message": "اطلاعیه" },
   "menuLabel_notifs": { "message": "اعلان‌ها" },

@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ម៉ូដអេក្រង់ធំទូលាយ ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ធ្វើឱ្យ ChatGPT ប្រសើរឡើងជាមួយនឹងអេក្រង់ធំទូលាយ/ពេញ/ខ្ពស់ + របៀបរារាំងសារឥតបានការ។ ដំណើរការផងដែរនៅលើ poe.com!" },
+  "appDesc": { "message": "ធ្វើឱ្យ ChatGPT ប្រសើរឡើងជាមួយនឹងអេក្រង់ធំទូលាយ/ពេញ/ខ្ពស់ + របៀបរារាំងសារឥតបានការ។ ដំណើរការផងដែរនៅលើ poe.com" },
   "menuLabel_settings": { "message": "ការកំណត់មុខងារ" },
   "menuLabel_notif": { "message": "ការ​ជូន​ដំណឹង" },
   "menuLabel_notifs": { "message": "ការជូនដំណឹង" },

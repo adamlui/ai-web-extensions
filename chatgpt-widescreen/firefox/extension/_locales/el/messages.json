@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Λειτουργία ευρείας οθόνης ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Βελτιώνει το ChatGPT με λειτουργίες ευρείας/πλήρης/ψηλής οθόνης. Λειτουργεί επίσης στο poe.com!" },
+  "appDesc": { "message": "Βελτιώνει το ChatGPT με λειτουργίες ευρείας/πλήρης/ψηλής οθόνης. Λειτουργεί επίσης στο poe.com" },
   "menuLabel_settings": { "message": "Ρυθμίσεις" },
   "menuLabel_notif": { "message": "Κοινοποίηση" },
   "menuLabel_notifs": { "message": "Ειδοποιήσεις" },

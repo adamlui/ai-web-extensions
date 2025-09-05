@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT plačiaekranis režimas" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Patobulina ChatGPT plataus / viso / aukšto ekrano + spambloko režimais. Taip pat veikia poe.com!" },
+  "appDesc": { "message": "Patobulina ChatGPT plataus / viso / aukšto ekrano + spambloko režimais. Taip pat veikia poe.com" },
   "menuLabel_settings": { "message": "Nustatymai" },
   "menuLabel_notif": { "message": "Pranešimu" },
   "menuLabel_notifs": { "message": "Pranešimai" },

@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT ሰፊ ማያ ገጽ ሁነታ" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "ChatGPTን በሰፊ/ሙሉ/ረጅም ስክሪን + አይፈለጌ መልእክት ማገድን ያሻሽላል። እንዲሁም poe.com ላይ ይሰራል!" },
+  "appDesc": { "message": "ChatGPTን በሰፊ/ሙሉ/ረጅም ስክሪን + አይፈለጌ መልእክት ማገድን ያሻሽላል። እንዲሁም poe.com ላይ ይሰራል" },
   "menuLabel_settings": { "message": "ቅንብሮች" },
   "menuLabel_notif": { "message": "ማሳወቂያ" },
   "menuLabel_notifs": { "message": "ማሳወቅያዎች" },

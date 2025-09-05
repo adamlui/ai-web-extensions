@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT వైడ్ స్క్రీన్ మోడ్" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "విస్తృత/పూర్తి/పొడవైన స్క్రీన్ + స్పాంబ్‌లాక్ మోడ్‌లతో ChatGPT ని మెరుగుపరుస్తుంది. poe.com లో కూడా పని చేస్తుంది!" },
+  "appDesc": { "message": "విస్తృత/పూర్తి/పొడవైన స్క్రీన్ + స్పాంబ్‌లాక్ మోడ్‌లతో ChatGPT ని మెరుగుపరుస్తుంది. poe.com లో కూడా పని చేస్తుంది" },
   "menuLabel_settings": { "message": "అమర్పులు" },
   "menuLabel_notif": { "message": "నోటిఫికేషన్" },
   "menuLabel_notifs": { "message": "నోటిఫికేషన్‌లు" },

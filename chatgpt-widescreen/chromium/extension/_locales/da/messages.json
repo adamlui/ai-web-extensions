@@ -1,7 +1,7 @@
 {
   "appName": { "message": "ChatGPT Widescreen-tilstand" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Forbedrer ChatGPT med bred/fuld/høj skærm + spamblokeringstilstande. Virker også på poe.com!" },
+  "appDesc": { "message": "Forbedrer ChatGPT med bred/fuld/høj skærm + spamblokeringstilstande. Virker også på poe.com" },
   "menuLabel_settings": { "message": "Indstillinger" },
   "menuLabel_notif": { "message": "Meddelelse" },
   "menuLabel_notifs": { "message": "Notifikationer" },

@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Modalità Schermo Intero di ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Migliora ChatGPT con modalità wide/full/tall-screen + spamblock. Funziona anche su poe.com!" },
+  "appDesc": { "message": "Migliora ChatGPT con modalità wide/full/tall-screen + spamblock. Funziona anche su poe.com" },
   "menuLabel_settings": { "message": "Impostazioni" },
   "menuLabel_notif": { "message": "Notifica" },
   "menuLabel_notifs": { "message": "Notifiche" },

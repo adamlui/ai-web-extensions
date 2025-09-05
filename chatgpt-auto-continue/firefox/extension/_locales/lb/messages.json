@@ -6,7 +6,7 @@
   "menuLabel_notif": { "message": "Notifikatioun" },
   "menuLabel_notifs": { "message": "Noriichten" },
   "menuLabel_autoScroll": { "message": "Auto-Scroll" },
-  "menuLabel_anchor": { "message": "CAA -" },
+  "menuLabel_anchor": { "message": "Anker" },
   "menuLabel_modeNotifs": { "message": "Modus-Noriichten" },
   "menuLabel_about": { "message": "Iwwer Qt" },
   "menuLabel_open": { "message": "Opmaachen" },

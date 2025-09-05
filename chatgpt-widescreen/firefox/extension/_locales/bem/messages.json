@@ -1,7 +1,7 @@
 {
   "appName": { "message": "Umusango wa Cikope Icakulisha ica ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Ukuwamya ChatGPT ne misango iyakulisha/iyakumanina/iyakulisha + iyakucingilila. Kabili ilabomba pa poe.com!" },
+  "appDesc": { "message": "Ukuwamya ChatGPT ne misango iyakulisha/iyakumanina/iyakulisha + iyakucingilila. Kabili ilabomba pa poe.com" },
   "menuLabel_settings": { "message": "Ifilundwa" },
   "menuLabel_notif": { "message": "Ishiwi" },
   "menuLabel_notifs": { "message": "Ifyebo" },
