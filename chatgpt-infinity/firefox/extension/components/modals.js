@@ -82,62 +82,6 @@ window.modals = {
         return alert
     },
 
-    donate() { // requires lib/browser.js + <app|env>
-        const { ui: { scheme }} = env
-
-        // Show modal
-        const donateModal = modals.alert(
-            `💖 ${browserAPI.getMsg('alert_showYourSupport')}`, // title
-                `<p>${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_isOSS')}.</p>` // msg
-                + `<p>${browserAPI.getMsg('alert_despiteAffliction')} `
-                    + '<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Long_COVID">'
-                        + `${browserAPI.getMsg('alert_longCOVID')}</a> `
-                    + `${browserAPI.getMsg('alert_since2020')}, ${browserAPI.getMsg('alert_byDonatingResults')}.</p>`
-                + `<p>${browserAPI.getMsg('alert_yourContrib')}, <b>${browserAPI.getMsg('alert_noMatterSize')}</b>, `
-                    + `${browserAPI.getMsg('alert_directlySupports')}.</p>`
-                + `<p>${browserAPI.getMsg('alert_tyForSupport')}!</p>`
-                + '<img src="https://cdn.jsdelivr.net/gh/adamlui/adamlui/images/siggie/'
-                    + `${ scheme == 'dark' ? 'white' : 'black' }.png" `
-                    + 'style="height: 54px ; margin: 5px 0 -2px 5px"></img>'
-                + `<p>—<b><a target="_blank" rel="noopener" href="${app.author.url}">`
-                    + `${browserAPI.getMsg('appAuthor')}</a></b>, ${browserAPI.getMsg('about_author').toLowerCase()}</p>`,
-            [ // buttons
-                function paypal(){},
-                function githubSponsors(){},
-                function cashApp(){}
-            ], '', 478 // modal width
-        )
-
-        // Format text
-        donateModal.querySelectorAll('p').forEach(p => // v-pad text, shrink line height
-            p.style.cssText = 'padding: 8px 0 ; line-height: 20px')
-
-        // Hack buttons
-        const btns = donateModal.querySelectorAll('button')
-        btns.forEach((btn, idx) => {
-
-            // Replace link buttons w/ clones that don't dismiss modal
-            if (!/dismiss/i.test(btn.textContent)) {
-                btn.replaceWith(btn = btn.cloneNode(true))
-                btn.onclick = () => this.safeWinOpen(app.urls.donate[
-                    btn.textContent == 'Cash App' ? 'cashapp'
-                  : btn.textContent == 'Github Sponsors' ? 'github' : 'paypal'
-                ])
-            }
-
-            // Format buttons
-            if (idx == 0) btn.style.display = 'none' // hide Dismiss button
-            else {
-                btn.style.cssText = 'padding: 8px 6px !important ; margin-top: -14px ;'
-                                  + ' width: 107px ; line-height: 14px'
-                if (idx == btns.length -1) // de-emphasize right-most button
-                    btn.classList.remove('primary-modal-btn')
-            }
-        })
-
-        return donateModal
-    },
-
     feedback() {
 
         // Init buttons
