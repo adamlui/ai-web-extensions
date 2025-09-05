@@ -284,6 +284,8 @@ This script exists thanks to code, translations, issues & ideas from the followi
     <img width=47 title="@panosru" src="https://avatars.githubusercontent.com/u/400362?first-contrib=2025.8.12-added-preserve-chatgpt-project-list-scrollability"></img></a>
 <a href="https://github.com/banagale">
     <img width=47 title="@banagale" src="https://avatars.githubusercontent.com/u/1409710?first-contrib=2025.8.21-reported-chatgpt-chatbar-broke"></img></a>
+<a href="https://github.com/ahnupeng" target="_blank" rel="noopener">
+    <img width=47 title="@ahnupeng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/5319112?first-contrib=2025.9.4-suggested-allow-edit-slider-vals&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/dependabot">
     <img width=46 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp">

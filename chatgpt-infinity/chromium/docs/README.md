@@ -157,6 +157,8 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     <img width=47 title="Copilot Autofix" src="https://github.githubassets.com/favicons/favicon.svg?first-contrib=2024.12.9-cmd-injection-autofix"></a>
 <a href="https://github.com/9romise">
     <img width=47 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></img></a>
+<a href="https://github.com/ahnupeng" target="_blank" rel="noopener">
+    <img width=50 title="@ahnupeng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/5319112?first-contrib=2025.9.4-suggested-allow-edit-slider-vals&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/dependabot">
     <img width=47 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp">

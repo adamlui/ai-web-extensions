@@ -171,6 +171,8 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     <img width=47 title="@14790897" src="https://avatars.githubusercontent.com/u/121866954?first-contrib=2025.5.19-revealed-cwm-stopped-working-leading-to-locales-url-correction"></img></a>
 <a href="https://github.com/zkisaboss">
     <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></img></a>
+<a href="https://github.com/ahnupeng" target="_blank" rel="noopener">
+    <img width=50 title="@ahnupeng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/5319112?first-contrib=2025.9.4-suggested-allow-edit-slider-vals&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/dependabot">
     <img width=47 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp">
