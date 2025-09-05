@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.9.5.5
+// @version                  2025.9.5.6
 // @license                  MIT
 // @icon                     data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22170.667%22%20height=%22170.667%22%3E%3Cstyle%3E:root%7B--fill:%23000%7D@media%20(prefers-color-scheme:dark)%7B:root%7B--fill:%23fff%7D%7D%3C/style%3E%3Cpath%20fill=%22var(--fill)%22%20d=%22M82.346%20159.79c-18.113-1.815-31.78-9.013-45.921-24.184C23.197%20121.416%2017.333%20106.18%2017.333%2086c0-21.982%205.984-36.245%2021.87-52.131C55.33%2017.74%2069.27%2011.867%2091.416%2011.867c17.574%200%2029.679%203.924%2044.309%2014.363l8.57%206.116-8.705%208.705-8.704%208.704-4.288-3.608c-13.91-11.704-35.932-14.167-53.085-5.939-3.4%201.631-9.833%206.601-14.297%2011.045C44.669%2061.753%2040.95%2070.811%2040.95%2086c0%2014.342%203.594%2023.555%2013.26%2033.995%2019.088%2020.618%2048.46%2022.539%2070.457%204.608l5.333-4.348%2011.333%203.844c6.234%202.114%2011.54%203.857%2011.791%203.873.252.015-2.037%203.008-5.087%206.65-6.343%207.577-20.148%2017.217-30.493%2021.295-8.764%203.454-23.358%205.06-35.198%203.873zM92%2086.333V74.667h60.648l-11.41%2011.41-11.411%2011.41-18.914.257L92%2098z%22/%3E%3C/svg%3E
 // @icon64                   data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22170.667%22%20height=%22170.667%22%3E%3Cstyle%3E:root%7B--fill:%23000%7D@media%20(prefers-color-scheme:dark)%7B:root%7B--fill:%23fff%7D%7D%3C/style%3E%3Cpath%20fill=%22var(--fill)%22%20d=%22M82.346%20159.79c-18.113-1.815-31.78-9.013-45.921-24.184C23.197%20121.416%2017.333%20106.18%2017.333%2086c0-21.982%205.984-36.245%2021.87-52.131C55.33%2017.74%2069.27%2011.867%2091.416%2011.867c17.574%200%2029.679%203.924%2044.309%2014.363l8.57%206.116-8.705%208.705-8.704%208.704-4.288-3.608c-13.91-11.704-35.932-14.167-53.085-5.939-3.4%201.631-9.833%206.601-14.297%2011.045C44.669%2061.753%2040.95%2070.811%2040.95%2086c0%2014.342%203.594%2023.555%2013.26%2033.995%2019.088%2020.618%2048.46%2022.539%2070.457%204.608l5.333-4.348%2011.333%203.844c6.234%202.114%2011.54%203.857%2011.791%203.873.252.015-2.037%203.008-5.087%206.65-6.343%207.577-20.148%2017.217-30.493%2021.295-8.764%203.454-23.358%205.06-35.198%203.873zM92%2086.333V74.667h60.648l-11.41%2011.41-11.411%2011.41-18.914.257L92%2098z%22/%3E%3C/svg%3E
@@ -472,9 +472,9 @@
             onload: resp => resolve(JSON.parse(resp.responseText))
         })),
         msgs: await new Promise(resolve => {
-            const msgHostDir = app.urls.resourceHost + '/greasemonkey/_locales/',
-                  msgLocaleDir = ( env.browser.language ? env.browser.language.replace('-', '_') : 'en' ) + '/'
-            let msgHref = msgHostDir + msgLocaleDir + 'messages.json', msgXHRtries = 0
+            const msgHostDir = `${app.urls.resourceHost}/greasemonkey/_locales/`,
+                  msgLocaleDir = `${ env.browser.language ? env.browser.language.replace('-', '_') : 'en' }/`
+            let msgHref = `${ msgHostDir + msgLocaleDir }messages.json`, msgXHRtries = 0
             function fetchMsgs() { xhr({ method: 'GET', url: msgHref, onload: handleMsgs })}
             function handleMsgs(resp) {
                 try { // to return localized messages.json
@@ -487,7 +487,7 @@
                     msgXHRtries++ ; if (msgXHRtries == 3) return resolve({}) // try original/region-stripped/EN only
                     msgHref = env.browser.language.includes('-') && msgXHRtries == 1 ? // if regional lang on 1st try...
                         msgHref.replace(/(_locales\/[^_]+)_[^_]+(\/)/, '$1$2') // ...strip region before retrying
-                            : ( msgHostDir + 'en/messages.json' ) // else use default English messages
+                            : `${msgHostDir}en/messages.json` // else use default English messages
                     fetchMsgs()
                 }
             }
@@ -2230,9 +2230,9 @@
 
             // Center text
             aboutModal.querySelector('h2').remove() // remove empty title h2
-            aboutModal.querySelector('p').style.cssText = (
-                'overflow-wrap: anywhere ; line-height: 1.55 ;'
-              + `margin: ${ env.browser.isPhone ? '21px 0 -20px' : '15px 0 -28px 17px' }` )
+            aboutModal.querySelector('p').style.cssText = `
+                overflow-wrap: anywhere ; line-height: 1.55 ;
+                margin: ${ env.browser.isPhone ? '21px 0 -20px' : '15px 0 -28px 17px' }`
 
             // Hack buttons
             aboutModal.querySelectorAll('button').forEach(btn => {
@@ -2464,7 +2464,8 @@
 
             // Center title/button cluster
             schemeModal.querySelector('h2').style.justifySelf = 'center'
-            schemeModal.querySelector('.modal-buttons').style.cssText = 'justify-content: center ; margin: 20px 0 9px !important'
+            schemeModal.querySelector('.modal-buttons').style.cssText = `
+                justify-content: center ; margin: 20px 0 9px !important`
 
             // Hack buttons
             const schemeEmojis = { 'light': '☀️', 'dark': '🌘', 'auto': '🌗'}
@@ -2529,9 +2530,9 @@
 
                 // Init logo
                 const settingsIcon = icons.app.googlegpt.create()
-                settingsIcon.style.cssText += `width: ${ env.browser.isPortrait ? 64 : 65 }px ;`
-                                            + `margin: 13px 0 ${ env.browser.isPortrait ? '-35' : '-27' }px ;`
-                                            + `position: relative ; top: -42px ; ${
+                settingsIcon.style.cssText += `width: ${ env.browser.isPortrait ? 64 : 65 }px ;
+                                               margin: 13px 0 ${ env.browser.isPortrait ? '-35' : '-27' }px ;
+                                               position: relative ; top: -42px ; ${
                                                    env.browser.isPortrait ? 'left: 6px' : '' }`
                 // Init title
                 const settingsTitleDiv = dom.create.elem('div', { id: `${app.slug}-settings-title` }),
@@ -2775,8 +2776,8 @@
 
             // Prefix icon to title
             const modalTitle = shareChatModal.querySelector('h2'), titleIcon = icons.create({ key: 'speechBalloons' })
-            titleIcon.style.cssText = 'height: 23px ; width: 23px ; position: relative ; top: 5px ; right: 8px ;'
-                                    + `fill: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }`
+            titleIcon.style.cssText = `height: 23px ; width: 23px ; position: relative ; top: 5px ; right: 8px ;
+                                       fill: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }`
             modalTitle.prepend(titleIcon)
 
             // Hide Dismiss button, localize other labels
@@ -2812,66 +2813,67 @@
                   --bg-transition: background-color 0.25s ease !important } /* dim */`
 
                 // Main modal styles
-              + '@keyframes modal-zoom-fade-out {'
-                  + '0% { opacity: 1 } 50% { opacity: 0.25 ; transform: scale(1.05) }'
-                  + '100% { opacity: 0 ; transform: scale(1.35) }}'
-              + '.chatgpt-modal > div {'
-                  + 'padding: 17px 20px 24px 20px !important ;' // increase alert padding
-                  + 'background-color: white ; color: #202124 }'
-              + '.chatgpt-modal p { margin: 14px 0 -29px 4px ; font-size: 1.28em ; line-height: 1.57 }' // pos/size modal msg
-              + '.modal-buttons {'
-                  + `margin: 42px 4px ${ env.browser.isMobile ? '2px 4px' : '-3px -4px' } !important ; width: 100% }`
-              + '.chatgpt-modal button {' // this.alert() buttons
-                  + `min-width: 113px ; padding: ${ env.browser.isMobile ? '5px' : '4px 15px' } !important ;`
-                  + 'cursor: pointer ; border-radius: 0 !important ; height: 39px ;'
-                  + 'border: 1px solid ' + ( env.ui.app.scheme == 'dark' ? 'white' : 'black' ) + ' !important }'
-              + '.primary-modal-btn { background: black !important ; color: white !important }'
-              + '.chatgpt-modal button:hover { background-color: #9cdaff !important ; color: black !important }'
-              + ( env.ui.app.scheme == 'dark' ? // darkmode chatgpt.alert() styles
-                  ( '.chatgpt-modal > div, .chatgpt-modal button:not(.primary-modal-btn) {'
-                      + 'color: white !important }'
-                  + '.primary-modal-btn { background: hsl(186 100% 69%) !important ; color: black !important }'
-                  + '.chatgpt-modal a { color: #00cfff !important }'
-                  + '.chatgpt-modal button:hover {'
-                      + 'background-color: #00cfff !important ; color: black !important }' ) : '' )
-              + `.${modals.class} { display: grid ; place-items: center }` // for centered icon/logo
-              + '[class*=modal-close-btn] {'
-                  + 'position: absolute !important ; float: right ; top: 14px !important ; right: 16px !important ;'
-                  + 'cursor: pointer ; width: 33px ; height: 33px ; border-radius: 20px }'
-              + `[class*=modal-close-btn] path {${ env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white'
-                                                                             : 'stroke: #9f9f9f ; fill: #9f9f9f' }}`
-              + ( env.ui.app.scheme == 'dark' ?  // invert dark mode hover paths
-                    '[class*=modal-close-btn]:hover path { stroke: black ; fill: black }' : '' )
-              + '[class*=modal-close-btn]:hover { background-color: #f2f2f2 }' // hover underlay
-              + '[class*=modal-close-btn] svg { margin: 11.5px }' // center SVG for hover underlay
-              + '[class*=-modal] h2 {'
-                  + 'font-size: 1.65rem ; line-height: 32px ; padding: 0 ; margin: 9px 0 -3px !important ;'
-                  + `${ env.browser.isMobile ? 'text-align: center' // center on mobile
-                                             : 'justify-self: start' }}` // left-align on desktop
-              + '[class*=-modal] p { justify-self: start ; font-size: 20px }'
-              + `[class*=-modal] button {
+              + `@keyframes modal-zoom-fade-out {
+                    0% { opacity: 1 } 50% { opacity: 0.25 ; transform: scale(1.05) }
+                    100% { opacity: 0 ; transform: scale(1.35) }}
+                .chatgpt-modal > div {
+                    padding: 17px 20px 24px 20px !important ; /* increase alert padding */
+                    background-color: white ; color: #202124 }
+                .chatgpt-modal p { margin: 14px 0 -29px 4px ; font-size: 1.28em ; line-height: 1.57 }
+                .modal-buttons {
+                    margin: 42px 4px ${ env.browser.isMobile ? '2px 4px' : '-3px -4px' } !important ; width: 100% }
+                .chatgpt-modal button { /* this.alert() buttons */
+                    min-width: 113px ; padding: ${ env.browser.isMobile ? '5px' : '4px 15px' } !important ;
+                    cursor: pointer ; border-radius: 0 !important ; height: 39px ;
+                    border: 1px solid ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }!important }
+                .primary-modal-btn { background: black !important ; color: white !important }
+                .chatgpt-modal button:hover { background-color: #9cdaff !important ; color: black !important }
+                ${ env.ui.app.scheme == 'dark' ? // darkmode chatgpt.alert() styles
+                    `.chatgpt-modal > div, .chatgpt-modal button:not(.primary-modal-btn) {
+                        color: white !important }
+                    .primary-modal-btn { background: hsl(186 100% 69%) !important ; color: black !important }
+                    .chatgpt-modal a { color: #00cfff !important }
+                    .chatgpt-modal button:hover {
+                        background-color: #00cfff !important ; color: black !important }` : '' }
+                .${modals.class} { display: grid ; place-items: center } /* for centered icon/logo */
+                [class*=modal-close-btn] {
+                    position: absolute !important ; float: right ; top: 14px !important ; right: 16px !important ;
+                    cursor: pointer ; width: 33px ; height: 33px ; border-radius: 20px }
+                [class*=modal-close-btn] path {${ env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white'
+                                                                              : 'stroke: #9f9f9f ; fill: #9f9f9f' }}
+                ${ env.ui.app.scheme == 'dark' ? // invert dark mode hover paths
+                    '[class*=modal-close-btn]:hover path { stroke: black ; fill: black }' : '' }
+                [class*=modal-close-btn]:hover { background-color: #f2f2f2 } /* hover underlay */
+                [class*=modal-close-btn] svg { margin: 11.5px } /* center SVG for hover underlay */
+                [class*=-modal] h2 {
+                    font-size: 1.65rem ; line-height: 32px ; padding: 0 ; margin: 9px 0 -3px !important ;
+                    ${ env.browser.isMobile ? 'text-align: center' // center on mobile
+                                            : 'justify-self: start' }} /* left-align on desktop */
+                [class*=-modal] p { justify-self: start ; font-size: 20px }
+                [class*=-modal] button {
                     color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
-                    font-size: 12px !important ; background: none }`
-              + '[class*=-modal-bg] {'
-                  + 'pointer-events: auto ;' // override any disabling from site modals
-                  + 'position: fixed ; top: 0 ; left: 0 ; width: 100% ; height: 100% ;' // expand to full view-port
-                  + 'display: flex ; justify-content: center ; align-items: center ; z-index: 9999 ;' // align
-                  + `transition: var(--bg-transition) ; /* dim */
-                        -webkit-transition: var(--bg-transition) ; -moz-transition: var(--bg-transition) ;
-                        -o-transition: var(--bg-transition) ; -ms-transition: var(--bg-transition) }`
-              + '[class*=-modal-bg].animated > div {'
-                  + 'z-index: 13456 ; opacity: 0.98 ; transform: translateX(0) translateY(0) }'
-              + '[class$=-modal] {' // native modals + chatgpt.alert()s
-                  + 'position: absolute ;' // to be click-draggable
-                  + 'opacity: 0 ;' // to fade-in
-                  + `background-image: linear-gradient(180deg, ${
-                       env.ui.app.scheme == 'dark' ? '#99a8a6 -200px, black 200px' : '#b6ebff -296px, white 171px' }) ;`
-                  + `border: 1px solid ${ env.ui.app.scheme == 'dark' ? 'white' : '#b5b5b5' } !important ;`
-                  + `color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };`
-                  + 'transform: translateX(-3px) translateY(7px) ;' // offset to move-in from
-                  + `transition: var(--fg-transition) ; /* fade-in + move-in */
-                        -webkit-transition: var(--fg-transition) ; -moz-transition: var(--fg-transition) ;
-                        -o-transition: var(--fg-transition) ; -ms-transition:  var(--fg-transition) }
+                    font-size: 12px !important ; background: none }
+                [class*=-modal-bg] {
+                    pointer-events: auto ; /* override any disabling from site modals */
+                    position: fixed ; top: 0 ; left: 0 ; width: 100% ; height: 100% ; /* expand to full view-port */
+                    display: flex ; justify-content: center ; align-items: center ; z-index: 9999 ; /* align */
+                    transition: var(--bg-transition) ; /* dim */
+                       -webkit-transition: var(--bg-transition) ; -moz-transition: var(--bg-transition) ;
+                       -o-transition: var(--bg-transition) ; -ms-transition: var(--bg-transition) }
+                [class*=-modal-bg].animated > div {
+                    z-index: 13456 ; opacity: 0.98 ; transform: translateX(0) translateY(0) }
+                [class$=-modal] { /* native modals + chatgpt.alert()s */
+                    position: absolute ; /* to be click-draggable */
+                    opacity: 0 ; /* to fade-in */
+                    background-image: linear-gradient(180deg, ${
+                       env.ui.app.scheme == 'dark' ? '#99a8a6 -200px, black 200px'
+                                                   : '#b6ebff -296px, white 171px' }) ;
+                    border: 1px solid ${ env.ui.app.scheme == 'dark' ? 'white' : '#b5b5b5' } !important ;
+                    color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
+                    transform: translateX(-3px) translateY(7px) ; /* offset to move-in from */
+                    transition: var(--fg-transition) ; /* fade-in + move-in */
+                       -webkit-transition: var(--fg-transition) ; -moz-transition: var(--fg-transition) ;
+                       -o-transition: var(--fg-transition) ; -ms-transition:  var(--fg-transition) }
                     ${ env.browser.isMobile ? '' : `[class$=-modal] button:hover { transform: var(--modal-btn-zoom) }`}
                     ${ config.fgAnimationsDisabled ? '' : `[class$=-modal] button {
                         ${ env.browser.isMobile ? '' : 'will-change: transform ;' }
@@ -2887,74 +2889,74 @@
                     margin: 12px 23px ; border-radius: 15px ;
                     ${ env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: black ; fill: black' };
                   --shadow: 0 30px 60px rgba(0,0,0,0.12) ;
-                        box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) }`
-              + `#${app.slug}-settings-title {`
-                  + 'font-weight: bold ; line-height: 19px ; text-align: center ;'
-                  + `margin: 0 -6px ${ env.browser.isPortrait ? 2 : -15 }px 0 }`
-              + `#${app.slug}-settings-title h4 {`
-                  + `font-size: ${ env.browser.isPortrait ? 22 : 29 }px ; font-weight: bold ;`
-                  + `margin: 0 0 ${ env.browser.isPortrait ? 9 : 27 }px }`
-              + `#${app.slug}-settings ul {`
-                  + 'list-style: none ; padding: 0 ; margin-bottom: 2px ;' // hide bullets, close bottom gap
-                  + `width: ${ env.browser.isPortrait ? 100 : 50 }% }` // set width based on column cnt
-              + ( env.browser.isPhone ? '' : ( `#${app.slug}-settings ul:first-of-type {` // color desktop middle separator
-                  + `border-right: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}` ))
-              + `#${app.slug}-settings li {`
-                  + `color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };` // for text
-                  + `fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };` // for icons
-                  + `stroke: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };` // for icons
-                  + 'height: 24px ; padding: 6px 10px ; font-size: 13.5px ;'
-                  + `border-bottom: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };` // add separators
-                  + 'border-radius: 3px ;' // slightly round highlight strip
-                  + `${ config.fgAnimationsDisabled || env.browser.isMobile ? '' :
+                        box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) }
+                #${app.slug}-settings-title {
+                    font-weight: bold ; line-height: 19px ; text-align: center ;
+                    margin: 0 -6px ${ env.browser.isPortrait ? 2 : -15 }px 0 }
+                #${app.slug}-settings-title h4 {
+                    font-size: ${ env.browser.isPortrait ? 22 : 29 }px ; font-weight: bold ;
+                    margin: 0 0 ${ env.browser.isPortrait ? 9 : 27 }px }
+                #${app.slug}-settings ul {
+                    list-style: none ; padding: 0 ; margin-bottom: 2px ; /* hide bullets, close bottom gap */
+                    width: ${ env.browser.isPortrait ? 100 : 50 }% } /* set width based on column cnt */
+                ${ env.browser.isPhone ? '' : `#${app.slug}-settings ul:first-of-type { /* color desktop middle sep */
+                    border-right: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}`}
+                #${app.slug}-settings li {
+                    color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
+                    fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
+                    stroke: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
+                    height: 24px ; padding: 6px 10px ; font-size: 13.5px ;
+                    border-bottom: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }; /* add separators */
+                    border-radius: 3px ; /* slightly round highlight strip */
+                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' :
                         `transition: var(--settings-li-transition) ;
                             -webkit-transition: var(--settings-li-transition) ;
                             -moz-transition: var(--settings-li-transition) ;
                             -o-transition: var(--settings-li-transition) ;
-                            -ms-transition: var(--settings-li-transition)` }}`
-              + `#${app.slug}-settings li.active {`
-                  + `color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };` // for text
-                  + `fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };` // for icons
-                  + `stroke: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }}` // for icons
-              + `#${app.slug}-settings li label { padding-right: 20px }` // right-pad labels so toggles don't hug
-              + `#${app.slug}-settings li:last-of-type { border-bottom: none }` // remove last bottom-border
-              + `#${app.slug}-settings li, #${app.slug}-settings li label { cursor: pointer }` // add finger on hover
-              + `#${app.slug}-settings li:hover {`
-                  + 'background: rgba(100,149,237,0.88) ; color: white ; fill: white ; stroke: white ;'
-                  + `${ env.browser.isMobile ? '' : 'transform: scale(1.15)' }}`
-              + `#${app.slug}-settings li > input { float: right } /* pos toggles */
-                 #${app.slug}-settings li > .track {
+                            -ms-transition: var(--settings-li-transition)` }}
+                #${app.slug}-settings li.active {
+                    color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };
+                    fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };
+                    stroke: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }}
+                #${app.slug}-settings li label { padding-right: 20px } /* right-pad labels so toggles don't hug */
+                #${app.slug}-settings li:last-of-type { border-bottom: none } /* remove last bottom-border */
+                #${app.slug}-settings li, #${app.slug}-settings li label { cursor: pointer } /* add finger on hover */
+                #${app.slug}-settings li:hover {
+                    background: rgba(100,149,237,0.88) ; color: white ; fill: white ; stroke: white ;
+                    ${ env.browser.isMobile ? '' : 'transform: scale(1.15)' }}
+                #${app.slug}-settings li > input { float: right } /* pos toggles */
+                #${app.slug}-settings li > .track {
                     position: relative ; left: -1px ; bottom: -5.5px ; float: right ;
                     background-color: #ccc ; width: 26px ; height: 13px ; border-radius: 28px ;
                     ${ config.fgAnimationsDisabled ? '' :
                         `transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
                             -o-transition: 0.4s ; -ms-transition: 0.4s` }}
-                 #${app.slug}-settings li .knob {
+                #${app.slug}-settings li .knob {
                     position: absolute ; left: 1px ; bottom: 1px ; content: "" ;
                     background-color: white ; width: 11px ; height: 11px ; border-radius: 28px ;
                     ${ config.fgAnimationsDisabled ? '' :
                         `transition: 0.2s ; -webkit-transition: 0.2s ; -moz-transition: 0.2s ;
-                            -o-transition: 0.2s ; -ms-transition: 0.2s` }}`
-              + '#scheme-settings-entry > span { margin: 3px -2px 0 }' // align Scheme status
-              + '#scheme-settings-entry > span > svg {' // v-align/left-pad Scheme status icon
-                  + 'position: relative ; top: 2px ; margin-left: 4px }'
-              + ( config.fgAnimationsDisabled ? '' // spin cycle arrows icon when scheme is Auto
-                  : ( '#scheme-settings-entry svg[class*=arrowsCyclic],'
-                            + '.chatgpt-notif svg[class*=arrowsCyclic] { animation: rotate 5s linear infinite }' ))
-              + `#about-settings-entry span { color: ${ env.ui.app.scheme == 'dark' ? '#28ee28' : 'green' }}`
-              + '#about-settings-entry > span {' // outer About status span
-                  + `width: ${ env.browser.isPortrait ? '15vw' : '95px' }; height: 20px ; overflow: hidden ;`
-                  + `${ env.browser.isPortrait ? 'position: relative ; bottom: 3px ;' : '' }` // v-align
-                  + `${ config.fgAnimationsDisabled ? '' : ( // fade edges
-                            'mask-image: linear-gradient('
-                                + 'to right, transparent, black 20%, black 89%, transparent) ;'
-                  + '-webkit-mask-image: linear-gradient('
-                                + 'to right, transparent, black 20%, black 89%, transparent)' )}}`
-              + '#about-settings-entry > span > div {'
-                  + `text-wrap: nowrap ; ${
-                        config.fgAnimationsDisabled ? '' : 'animation: ticker linear 75s infinite' }}`
-              + '@keyframes ticker { 0% { transform: translateX(100%) } 100% { transform: translateX(-2000%) }}'
-              + `.about-em { color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'green' } !important }`
+                            -o-transition: 0.2s ; -ms-transition: 0.2s` }}
+                #scheme-settings-entry > span { margin: 3px -2px 0 } /* align Scheme status */
+                #scheme-settings-entry > span > svg { /* v-align/left-pad Scheme status icon */
+                    position: relative ; top: 2px ; margin-left: 4px }
+                ${ config.fgAnimationsDisabled ? '' // spin cycle arrows icon when scheme is Auto
+                    : `#scheme-settings-entry svg[class*=arrowsCyclic],
+                               .chatgpt-notif svg[class*=arrowsCyclic] { animation: rotate 5s linear infinite }` }
+                #about-settings-entry span { color: ${ env.ui.app.scheme == 'dark' ? '#28ee28' : 'green' }}
+                #about-settings-entry > span { /* outer About status span */
+                    width: ${ env.browser.isPortrait ? '15vw' : '95px' }; height: 20px ; overflow: hidden ;
+                    ${ env.browser.isPortrait ? 'position: relative ; bottom: 3px ;' : '' } /* v-align */
+                    ${ config.fgAnimationsDisabled ? '' : // fade edges
+                            `mask-image: linear-gradient(
+                                to right, transparent, black 20%, black 89%, transparent) ;
+                     -webkit-mask-image: linear-gradient(
+                                to right, transparent, black 20%, black 89%, transparent) ;`}}
+                #about-settings-entry > span > div {
+                    text-wrap: nowrap ; ${
+                        config.fgAnimationsDisabled ? '' : 'animation: ticker linear 75s infinite' }}
+                @keyframes ticker { 0% { transform: translateX(100%) } 100% { transform: translateX(-2000%) }}
+                .about-em { color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'green' } !important }`
             )
         },
 
