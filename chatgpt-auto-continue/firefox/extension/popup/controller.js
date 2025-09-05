@@ -93,6 +93,7 @@
                 entry.slider.value = parseInt(entry.slider.value) - Math.sign(deltaY) *2
                 entry.slider.dispatchEvent(new Event('input'))
             }
+        }
 
         if (entryData.dependencies) { // hide/show according to toggle state
             const toDisable = Object.values(entryData.dependencies).flat().some(dep => !settings.typeIsEnabled(dep))
@@ -144,7 +145,6 @@
                     })
                     depDiv.classList.toggle('disabled', toDisable)
                 }
-            }
         }
 
         return entry.div
