@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.9.5
+// @version               2025.9.5.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1877,8 +1877,7 @@
                 if (event.button != 0) return // prevent non-left-click drag
                 event.preventDefault() // prevent text selection
                 isDragging = true ; startX = event.clientX ; startLeft = sliderThumb.offsetLeft
-                document.body.append
-(fontSizeSlider.cursorOverlay)
+                document.body.append(fontSizeSlider.cursorOverlay)
             })
             document.addEventListener(inputEvents.move, event => {
                 if (isDragging) moveThumb(startLeft + event.clientX - startX) })
@@ -1900,8 +1899,7 @@
                 const clientX = event.clientX || event.touches?.[0]?.clientX
                 moveThumb(clientX - slider.getBoundingClientRect().left - sliderThumb.offsetWidth / 2)
                 isDragging = true ; startX = clientX ; startLeft = sliderThumb.offsetLeft // manually init dragging
-                document.body.append
-(fontSizeSlider.cursorOverlay)
+                document.body.append(fontSizeSlider.cursorOverlay)
             })
 
             function moveThumb(newLeft) {
