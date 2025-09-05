@@ -64,7 +64,8 @@
             if (entryData.step || env.browser.isFF) // use val from entryData or default to 2% in FF for being laggy
                 entry.slider.step = entryData.step || ( 0.02 * entry.slider.max - entry.slider.min )
             entry.label.textContent += `: ${entry.slider.value}${ entryData.labelSuffix || '' }`
-            entry.label.append(entry.editLink = dom.create.elem('span', { class: 'edit-link' }))
+            entry.label.append(entry.editLink = dom.create.elem('span',
+                { class: 'edit-link', role: 'button', tabindex: '0', 'aria-label': entryData.helptip }))
             entry.editLink.textContent = browserAPI.getMsg('promptLabel_edit')
             entry.slider.style.setProperty('--track-fill-percent', `${ entry.slider.value / entry.slider.max *100 }%`)
             entry.slider.oninput = ({ target: { value }}) => { // update label/color
