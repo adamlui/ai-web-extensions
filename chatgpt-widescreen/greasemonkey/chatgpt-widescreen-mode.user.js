@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.5.3
+// @version             2025.9.5.4
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -567,13 +567,13 @@
             // Create entries
             const settingsUL = settingsModal.querySelector('ul'),
                   objToParse = ctgKey == 'siteSettings' ? sites : settings.controls
-            Object.entries(objToParse).forEach(([key, ctrl]) => {
-                if (ctgKey != 'siteSettings' && ctrl.category != ctgKey) return
+            Object.entries(objToParse).forEach(([key, entryData]) => {
+                if (ctgKey != 'siteSettings' && entryData.category != ctgKey) return
 
                 // Refine Site Settings data
                 if (ctgKey == 'siteSettings') {
                     const siteHomeURL = sites[key].urls.homepage.replace(/^https?:\/\//, '')
-                    ctrl = {
+                    entryData = {
                         type: 'toggle', label: siteHomeURL,
                         helptip: `${app.msgs.helptip_run} ${app.name} on ${siteHomeURL}`
                     }
@@ -581,14 +581,14 @@
 
                 // Create/append entry/label elems
                 const entry = {
-                    row: dom.create.elem('li', { id: key, title: ctrl.helptip || '' }),
+                    row: dom.create.elem('li', { id: key, title: entryData.helptip || '' }),
                     label: dom.create.elem('label')
                 }
-                entry.label.textContent = `${ctrl.label}`
+                entry.label.textContent = `${entryData.label}`
                 entry.row.append(entry.label) ; settingsUL.append(entry.row)
 
                 // Create/append toggles/listeners
-                if (ctrl.type == 'toggle') {
+                if (entryData.type == 'toggle') {
 
                     // Create/append toggle elems
                     entry.toggle = {
@@ -616,7 +616,7 @@
                              notify(`${app.name} 🧩 ${
                                 app.msgs[`state_${config[`${key}Disabled`] ? 'off' : 'on' }`].toUpperCase()}`)
                         else if (ctgKey != 'siteSettings')
-                            notify(`${ctrl.label}: ${toolbarMenu.state.words[+settings.typeIsEnabled(key)]}`)
+                            notify(`${entryData.label}: ${toolbarMenu.state.words[+settings.typeIsEnabled(key)]}`)
 
                         // Enable/disable dependent entries
                         for (const [ctrlKey, ctrlData] of Object.entries(
@@ -627,36 +627,37 @@
                             }
                     }
 
-                } else if (ctrl.type == 'slider') {
+                } else if (entryData.type == 'slider') {
 
                     // Create/append slider elems
                     entry.row.classList.add('active')
                     entry.row.append(entry.slider = dom.create.elem('input',
-                        { type: 'range', min: ctrl.min || 0, max: ctrl.max || 100, value: config[key] }))
-                    if (ctrl.step || env.browser.isFF) // use val from ctrl data or default to 2% in FF for being laggy
-                        entry.slider.step = ctrl.step || (0.02 * entry.slider.max - entry.slider.min)
-                    entry.label.textContent += `: ${entry.slider.value}${ ctrl.labelSuffix || '' }`
+                        { type: 'range', min: entryData.min || 0, max: entryData.max || 100, value: config[key] }))
+                    if (entryData.step || env.browser.isFF) // use val from ctrl data or default to 2% in FF for being laggy
+                        entry.slider.step = entryData.step || (0.02 * entry.slider.max - entry.slider.min)
+                    entry.label.textContent += `: ${entry.slider.value}${ entryData.labelSuffix || '' }`
                     entry.label.append(entry.editLink = dom.create.elem('span',
-                        { class: 'edit-link', role: 'button', tabindex: '0', 'aria-label': ctrl.helptip }))
+                        { class: 'edit-link', role: 'button', tabindex: '0', 'aria-label': entryData.helptip }))
                     entry.editLink.textContent = app.msgs.promptLabel_edit
                     entry.slider.style.setProperty(
                         '--track-fill-percent', `${ entry.slider.value / entry.slider.max *100 }%`)
 
                     // Add listeners
                     entry.editLink.onclick = () => {
-                        const userVal = prompt(`${app.msgs.prompt_enterNewVal} ${ctrl.label}:`, entry.slider.value)
+                        const userVal = prompt(`${app.msgs.prompt_enterNewVal} ${entryData.label}:`, entry.slider.value)
                         if (!userVal) return
                         const numVal = parseInt(userVal.replace(/\D/g, '')) ; if (isNaN(numVal)) return
-                        const clampedVal = Math.max(ctrl.min || 0, Math.min(ctrl.max || 100, numVal))
+                        const clampedVal = Math.max(entryData.min || 0, Math.min(entryData.max || 100, numVal))
                         entry.slider.value = clampedVal
-                        settings.save(ctrl.key, clampedVal) ; sync.configToUI({ updatedKey: ctrl.key })
-                        entry.label.textContent = `${ctrl.label}: ${clampedVal}${ ctrl.labelSuffix || '' }`
+                        settings.save(entryData.key, clampedVal) ; sync.configToUI({ updatedKey: entryData.key })
+                        entry.label.textContent = `${entryData.label}: ${clampedVal}${ entryData.labelSuffix || '' }`
                         entry.label.append(entry.editLink)
                         entry.slider.style.setProperty('--track-fill-percent', `${ clampedVal / entry.slider.max *100 }%`)
                     }
                     entry.slider.oninput = ({ target: { value }}) => { // update UI
                         settings.save(key, parseInt(value)) ; sync.configToUI({ updatedKey: key })
-                        entry.label.textContent = `${ctrl.label}: ${value}${ ctrl.labelSuffix || '' }`
+                        entry.label.textContent = `${entryData.label}: ${value}${ entryData.labelSuffix || '' }`
+                        entry.label.append(entry.editLink)
                         entry.slider.style.setProperty('--track-fill-percent', `${ value / entry.slider.max *100 }%`)
                     }
                     entry.row.onwheel = event => { // move slider by 2 steps
@@ -665,8 +666,9 @@
                     }
                 }
 
-                if (ctrl.dependencies) {
-                    const toDisable = Object.values(ctrl.dependencies).flat().some(dep => !settings.typeIsEnabled(dep))
+                if (entryData.dependencies) {
+                    const toDisable = Object.values(entryData.dependencies).flat()
+                        .some(dep => !settings.typeIsEnabled(dep))
                     entry.row.style.display = toDisable ? 'none' : ''
                 }
             })
