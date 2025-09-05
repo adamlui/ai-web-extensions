@@ -15,8 +15,6 @@
   "about_poweredBy": { "message": "Powered by" },
   "about_openSourceCode": { "message": "Open source code" },
   "about_latestChanges": { "message": "Latest changes" },
-  "promptLabel_edit": { "message": "Edit" },
-  "prompt_enterNewVal": { "message": "Enter new value for" },
   "prompt_updateInt": { "message": "Update refresh interval (in secs)" },
   "helptip_toggleVis": { "message": "Show Auto-Refresh toggle in sidebar" },
   "helptip_modeNotifs": { "message": "Show notifications when toggling modes/settings" },
