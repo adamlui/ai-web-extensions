@@ -853,9 +853,9 @@
             update: {
 
                 navicon({ preload } = {}) {
-                    const baseURL = 'https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@579fa7c/assets/images/icons/auto-refresh',
-                          schemeMap = { light: 'black', dark: 'white' },
-                          fileName = 'icon32.png'
+                    const baseURL = `${
+                        app.urls.resourceHost.replace(/@\w+/, '@579fa7c')}/assets/images/icons/auto-refresh`
+                    const schemeMap = { light: 'black', dark: 'white' }, fileName = 'icon32.png'
                     if (preload)
                         Object.keys(schemeMap).forEach(scheme =>
                             new Image().src = `${baseURL}/${schemeMap[scheme]}/${fileName}`)
