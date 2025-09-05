@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.4
+// @version             2025.9.5
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -310,7 +310,7 @@
     window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        commitHashes: { app: '35d08aa' } // for cached <app|messages>.json + sites.json5
+        commitHashes: { app: '73d0cee' } // for cached <app|messages>.json + sites.json5
     }
     app.urls = {
         resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.commitHashes.app}` }
@@ -636,10 +636,23 @@
                     if (ctrl.step || env.browser.isFF) // use val from ctrl data or default to 2% in FF for being laggy
                         entry.slider.step = ctrl.step || (0.02 * entry.slider.max - entry.slider.min)
                     entry.label.textContent += `: ${entry.slider.value}${ ctrl.labelSuffix || '' }`
+                    entry.label.append(entry.editLink = dom.create.elem('span', { class: 'edit-link' }))
+                    entry.editLink.textContent = browserAPI.getMsg('promptLabel_edit')
                     entry.slider.style.setProperty(
                         '--track-fill-percent', `${ entry.slider.value / entry.slider.max *100 }%`)
 
                     // Add listeners
+                    entry.editLink.onclick = () => {
+                        const userVal = prompt(`${browserAPI.getMsg('prompt_enterNewVal')} ${ctrl.label}:`, entry.slider.value)
+                        if (!userVal) return
+                        const numVal = parseInt(userVal.replace(/\D/g, '')) ; if (isNaN(numVal)) return
+                        const clampedVal = Math.max(ctrl.min || 0, Math.min(ctrl.max || 100, numVal))
+                        entry.slider.value = clampedVal
+                        settings.save(ctrl.key, clampedVal) ; sync.configToUI({ updatedKey: ctrl.key })
+                        entry.label.textContent = `${ctrl.label}: ${clampedVal}${ ctrl.labelSuffix || '' }`
+                        entry.label.append(entry.editLink)
+                        entry.slider.style.setProperty('--track-fill-percent', `${ clampedVal / entry.slider.max *100 }%`)
+                    }
                     entry.slider.oninput = ({ target: { value }}) => { // update UI
                         settings.save(key, parseInt(value)) ; sync.configToUI({ updatedKey: key })
                         entry.label.textContent = `${ctrl.label}: ${value}${ ctrl.labelSuffix || '' }`
@@ -808,7 +821,10 @@
            transition: transform 0.05s ease
         }
         .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-thumb:hover { transform: scaleX(1.325) }
-        .${app.slug}-settings-modal button { display: none }`
+        .${app.slug}-settings-modal button { display: none }
+        .${app.slug}-settings-modal .edit-link {
+            text-transform: uppercase ; font-size: 0.65em ; margin-left: 0.75em ; opacity: 0.7 ; cursor: pointer }
+        .${app.slug}-settings-modal .edit-link:hover { opacity: 1 }`
     ))
 
     // Restore PREV SESSION's state
