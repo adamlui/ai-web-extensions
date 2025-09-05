@@ -25,18 +25,18 @@ window.buttons = {
                 if (!env.browser.isMobile) // store/add tooltip listeners
                     ['onmouseenter', 'onmouseleave'].forEach(eventType =>
                         this.copy[eventType] = this.copy.listeners[eventType] = tooltip.toggle)
-                this.copy.listeners.onclick = this.copy.onclick = event => { // copy text, update icon + tooltip status
-                    const copyBtn = event.currentTarget
+                this.copy.listeners.onclick = this.copy.onclick = ({ currentTarget }) => { // copy text, update icon + tooltip status
+                    const copyBtn = currentTarget
                     if (!copyBtn.firstChild.matches('[id$=copy-icon]')) return // since clicking on Copied icon
                     const textContainer = (
-                        event.currentTarget.parentNode.className.includes('reply-header')
+                        currentTarget.parentNode.className.includes('reply-header')
                             ? app.div.querySelector('.reply-pre') // reply container
-                                : event.currentTarget.closest('code') // code container
+                                : currentTarget.closest('code') // code container
                     )
                     const textToCopy = textContainer.textContent.replace(/^>> /, '').trim()
                     copyBtn.style.cursor = 'default' // remove finger
                     copyBtn.firstChild.replaceWith(copySVGs.copied.cloneNode(true)) // change to Copied icon
-                    tooltip.update(event.currentTarget) // to 'Copied to clipboard!'
+                    tooltip.update(currentTarget) // to 'Copied to clipboard!'
                     setTimeout(() => { // restore icon/cursor/tooltip after a bit
                         copyBtn.firstChild.replaceWith(copySVGs.copy.cloneNode(true))
                         copyBtn.style.cursor = 'pointer'
@@ -54,11 +54,11 @@ window.buttons = {
                 })
                 this.share.append(icons.create({ key: 'arrowShare', size: 16 }))
                 if (!env.browser.isMobile) this.share.onmouseenter = this.share.onmouseleave = tooltip.toggle
-                this.share.onclick = event => {
+                this.share.onclick = ({ currentTarget }) => {
                     if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
                     this.share.style.cursor = 'default' // remove finger
                     if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
-                    tooltip.update(event.currentTarget) // to 'Generating HTML...'
+                    tooltip.update(currentTarget) // to 'Generating HTML...'
                     xhr({
                         method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
                         headers: { 'Content-Type': 'application/json', 'Referer': location.href },
@@ -81,12 +81,12 @@ window.buttons = {
                 regenSVGwrapper.append(icons.create({ key: 'arrowsCyclic', size: 14 }))
                 this.regen.append(regenSVGwrapper)
                 if (!env.browser.isMobile) this.regen.onmouseenter = this.regen.onmouseleave = tooltip.toggle
-                this.regen.onclick = event => {
+                this.regen.onclick = ({ currentTarget }) => {
                     get.reply({ msgs: app.msgChain, src: 'regen' })
                     regenSVGwrapper.style.cursor = 'default' // remove finger
                     if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
-                    tooltip.update(event.currentTarget) // to 'Regenerating...'
+                    tooltip.update(currentTarget) // to 'Regenerating...'
                     show.reply.chatbarFocused = false ; show.reply.userInteracted = true
                 }
 
@@ -114,7 +114,7 @@ window.buttons = {
                 speakSVGscroller.append(speakSVGs.speak) ; speakSVGwrapper.append(speakSVGscroller)
                 this.speak.append(speakSVGwrapper)
                 if (!env.browser.isMobile) this.speak.onmouseenter = this.speak.onmouseleave = tooltip.toggle
-                this.speak.onclick = async event => {
+                this.speak.onclick = async ({ currentTarget }) => {
                     if (this.speak.contains(speakSVGs.generating[0])) return
                     if (window.currentlyPlayingAudio) {
                         window.currentlyPlayingAudio.stop() ; handleAudioEnded() ; return }
@@ -130,7 +130,7 @@ window.buttons = {
                             'linear-gradient(to right, transparent, black 20%, black 81%, transparent)' )
                     }
 
-                    tooltip.update(event.currentTarget) // to 'Generating audio...'
+                    tooltip.update(currentTarget) // to 'Generating audio...'
 
                     // Init Sogou TTS dialect map
                     window.sgtDialectMap ||= await get.json(`${app.urls.aiwebAssets}/data/sogou-tts-lang-codes.json`)

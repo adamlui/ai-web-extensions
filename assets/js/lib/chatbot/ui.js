@@ -22,7 +22,7 @@ window.ui = {
                     // Add click listener
                     btn.onclick = {
                         about: () => modals.open('about'),
-                        arrows: event => { toggle.expandedMode() ; tooltip.update(event.currentTarget) },
+                        arrows: ({ currentTarget }) => { toggle.expandedMode() ; tooltip.update(currentTarget) },
                         chevron: () => {
                             if (app.div.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
                                 fontSizeSlider.toggle('off')
@@ -31,7 +31,7 @@ window.ui = {
                         pin: () => (btn.onmouseenter = btn.onmouseleave = btn.onclick = menus.hover.toggle),
                         settings: () => modals.open('settings'),
                         'font-size': () => fontSizeSlider.toggle(),
-                        wsb: event => { toggle.sidebar('wider') ; tooltip.update(event.currentTarget) }
+                        wsb: ({ currentTarget }) => { toggle.sidebar('wider') ; tooltip.update(currentTarget) }
                     }[btnType]
 
                     // Add hover listener

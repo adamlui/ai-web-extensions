@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.5.2
+// @version                2025.9.5.3
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -1519,13 +1519,13 @@
                     ;['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
                 })
                 downloadBtn.append(downloadSVGs.download)
-                downloadBtn.onclick = event => { // download code, update icon + tooltip status
+                downloadBtn.onclick = ({ currentTarget }) => { // download code, update icon + tooltip status
                     if (!downloadBtn.firstChild.matches('[id$=download-icon]')) return // since clicking on DL'd icon
 
                     // Update cursor/icon/tooltip
                     downloadBtn.style.cursor = 'default' // remove finger
                     downloadBtn.firstChild.replaceWith(downloadSVGs.downloaded.cloneNode(true)) // change to DL'd icon
-                    tooltip.update(event.currentTarget) // to 'Code downloaded!'
+                    tooltip.update(currentTarget) // to 'Code downloaded!'
                     setTimeout(() => { // restore icon/cursor/tooltip after a bit
                         downloadBtn.firstChild.replaceWith(downloadSVGs.download.cloneNode(true))
                         downloadBtn.style.cursor = 'pointer'
@@ -1880,8 +1880,8 @@
                 isDragging = true ; startX = event.clientX ; startLeft = sliderThumb.offsetLeft
                 document.body.append(fontSizeSlider.cursorOverlay)
             })
-            document.addEventListener(inputEvents.move, event => {
-                if (isDragging) moveThumb(startLeft + event.clientX - startX) })
+            document.addEventListener(inputEvents.move, ({ clientX }) => {
+                if (isDragging) moveThumb(startLeft + clientX - startX) })
             document.addEventListener(inputEvents.up, () => {
                 isDragging = false
                 if (fontSizeSlider.cursorOverlay?.isConnected) fontSizeSlider.cursorOverlay.remove()
