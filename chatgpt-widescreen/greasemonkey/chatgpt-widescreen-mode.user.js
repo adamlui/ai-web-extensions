@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.5.2
+// @version             2025.9.5.3
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -637,7 +637,7 @@
                         entry.slider.step = ctrl.step || (0.02 * entry.slider.max - entry.slider.min)
                     entry.label.textContent += `: ${entry.slider.value}${ ctrl.labelSuffix || '' }`
                     entry.label.append(entry.editLink = dom.create.elem('span',
-                { class: 'edit-link', role: 'button', tabindex: '0', 'aria-label': entryData.helptip }))
+                        { class: 'edit-link', role: 'button', tabindex: '0', 'aria-label': ctrl.helptip }))
                     entry.editLink.textContent = app.msgs.promptLabel_edit
                     entry.slider.style.setProperty(
                         '--track-fill-percent', `${ entry.slider.value / entry.slider.max *100 }%`)
