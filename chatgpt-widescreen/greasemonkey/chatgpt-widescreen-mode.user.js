@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.5.13
+// @version             2025.9.5.14
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -264,7 +264,7 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f06fa5f/chromium/extension/lib/ui.js#sha256-niLmd2EMi/LCgGgs0MfX7AykWzzfQ9bXCo/6X08M6Ik=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@a129ece/chromium/extension/components/buttons.js#sha256-l5x86OZfyuMBGh3F3NRMW7mQC4OYCBTHB1vZkZweCAU=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@511d193/chromium/extension/components/icons.js#sha256-6eK7coHHFB4zBfl8XXtjojrnfbBOFiEgYfQtz/Whv2E=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@5e59287/chromium/extension/components/modals.js#sha256-3jOuVSq5ErJmNHRxqMXjRh+dXd6J2M5n3Dj1MfCVkqQ=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@09bf95c/chromium/extension/components/modals.js#sha256-PeLoY0xY0A9aIVOVz0Y5oI1XRN1ZQ0BnXMT97VA7FEE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@a129ece/chromium/extension/components/tooltip.js#sha256-fPsgKIJ15fKzKqfBed9VZ/cfIUs8vzJqwLd4E7PHs6E=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
