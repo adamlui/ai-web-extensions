@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.5.2
+// @version                2025.9.5.3
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -89,7 +89,7 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/chatbot/session.js#sha256-S6MOdBjx8Hci4GDvYl4JlhSdrDk2oaRLU9DrdxyiIss=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3732152/assets/js/lib/chatbot/ui.js#sha256-j2G0yOX1nHMYmwhV9oLlycdX05oZHLxqCW4voSfbchQ=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@097390b/assets/js/lib/chatbot/userscript.js#sha256-vSxD0QfVwnupLHK4sClIGsaSbg8Y6JDiXsi6usrZfhE=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@9b048ff/assets/js/lib/dom.js/dist/dom.min.js#sha256-IGNj9Eoecq7QgY7SAs75wONajgN9Wg0NmCjKTCfu9CY=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@1e84c2e/assets/js/lib/dom.js/dist/dom.min.js#sha256-xovdxRnmYD/eCgBiGCu5+Vd3+WWIvLUKVtU/MnRueeU=
 // @require                https://cdn.jsdelivr.net/npm/generate-ip@2.4.4/dist/generate-ip.min.js#sha256-aQQKAQcMgCu8IpJp9HKs387x0uYxngO+Fb4pc5nSF4I=
 // @require                https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js#sha256-g3pvpbDHNrUrveKythkPMF2j/J7UFoHbUyFQcFe1yEY=
 // @require                https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js#sha256-n0UwfFeU7SR6DQlfOmLlLvIhWmeyMnIDp/2RmVmuedE=
@@ -1091,8 +1091,7 @@
                 ui.addListeners.btns.appHeader()
 
                 // Create/append 'by KudoAI'
-                const bylineSpan = dom.create.elem('span', { class: 'byline no-user-select' })
-                bylineSpan.textContent = 'by '
+                const bylineSpan = dom.create.elem('span', { class: 'byline no-user-select', textContent: 'by ' })
                 bylineSpan.append(dom.create.anchor(app.urls.publisher, 'KudoAI'))
                 appHeaderDiv.querySelector(`.${app.slug}-name`).insertAdjacentElement('afterend', bylineSpan)
                 update.bylineVisibility()
@@ -1141,9 +1140,9 @@
             // Show API used in bubble header
             if (!show.reply.updatedAPIinHeader) {
                 show.reply.updatedAPIinHeader = true
-                const preHeaderLabel = app.div.querySelector('.reply-header-txt'),
-                      apiBeacon = dom.create.elem('span', { class: 'api-btn', style: 'cursor: pointer' })
-                apiBeacon.textContent = '⦿'
+                const preHeaderLabel = app.div.querySelector('.reply-header-txt')
+                const apiBeacon = dom.create.elem('span',
+                    { class: 'api-btn', style: 'cursor: pointer', textContent: '⦿' })
                 apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = menus.hover.toggle
                 apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
                 preHeaderLabel.replaceChildren(
@@ -1659,10 +1658,9 @@
                 // Init title
                 const settingsTitleDiv = dom.create.elem('div', { id: `${app.slug}-settings-title` }),
                       settingsTitleIcon = icons.create({ key: 'sliders' }),
-                      settingsTitleH4 = dom.create.elem('h4')
+                      settingsTitleH4 = dom.create.elem('h4', { textContent: app.msgs.menuLabel_settings})
                 settingsTitleIcon.style.cssText += 'width: 20.5px ; height: 20.5px ; margin-right: 8px ;'
                                                  + 'position: relative ; right: 2px ; top: 2.5px'
-                settingsTitleH4.textContent = app.msgs.menuLabel_settings
                 settingsTitleH4.prepend(settingsTitleIcon) ; settingsTitleDiv.append(settingsTitleH4)
 
                 // Init settings lists
@@ -1687,7 +1685,7 @@
                     // Create/append item/label elems
                     const settingEntry = dom.create.elem('li',
                         { id: `${key}-settings-entry`, title: setting.helptip || '' })
-                    const settingLabel = dom.create.elem('label') ; settingLabel.textContent = setting.label
+                    const settingLabel = dom.create.elem('label', { textContent: setting.label })
                     settingEntry.append(settingLabel);
                     (settingsLists[env.browser.isPortrait ? 0 : +(idx >= settingEntryCap)]).append(settingEntry)
 
