@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.8.25
+// @version                2025.9.5
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1223,7 +1223,8 @@
                 if (event.button != 0) return // prevent non-left-click drag
                 event.preventDefault() // prevent text selection
                 isDragging = true ; startX = event.clientX ; startLeft = sliderThumb.offsetLeft
-                document.body.appendChild(fontSizeSlider.cursorOverlay)
+                document.body.append
+(fontSizeSlider.cursorOverlay)
             })
             document.addEventListener(inputEvents.move, event => {
                 if (isDragging) moveThumb(startLeft + event.clientX - startX) })
@@ -1245,7 +1246,8 @@
                 const clientX = event.clientX || event.touches?.[0]?.clientX
                 moveThumb(clientX - slider.getBoundingClientRect().left - sliderThumb.offsetWidth / 2)
                 isDragging = true ; startX = clientX ; startLeft = sliderThumb.offsetLeft // manually init dragging
-                document.body.appendChild(fontSizeSlider.cursorOverlay)
+                document.body.append
+(fontSizeSlider.cursorOverlay)
             })
 
             function moveThumb(newLeft) {
