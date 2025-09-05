@@ -32,7 +32,7 @@
     "lint:all": "eslint .",
     "lint:fix": "eslint . --fix --cache",
     "lint:fix-all": "eslint . --fix",
-    "build:js": "minify-js assets dist --no-mangle",
+    "build:js": "minify-js assets/js/lib/dom.js dist --no-mangle",
     "bump:res": "node utils/bump/resources --cache",
     "bump:resources": "node utils/bump/resources --cache",
     "bump:res-search": "node utils/bump/resources",
