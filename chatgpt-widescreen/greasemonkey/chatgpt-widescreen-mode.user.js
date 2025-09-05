@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.5
+// @version             2025.9.5.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -310,7 +310,7 @@
     window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        commitHashes: { app: '73d0cee' } // for cached <app|messages>.json + sites.json5
+        commitHashes: { app: '443d626' } // for cached <app|messages>.json + sites.json5
     }
     app.urls = {
         resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.commitHashes.app}` }
@@ -637,13 +637,13 @@
                         entry.slider.step = ctrl.step || (0.02 * entry.slider.max - entry.slider.min)
                     entry.label.textContent += `: ${entry.slider.value}${ ctrl.labelSuffix || '' }`
                     entry.label.append(entry.editLink = dom.create.elem('span', { class: 'edit-link' }))
-                    entry.editLink.textContent = browserAPI.getMsg('promptLabel_edit')
+                    entry.editLink.textContent = app.msgs.promptLabel_edit
                     entry.slider.style.setProperty(
                         '--track-fill-percent', `${ entry.slider.value / entry.slider.max *100 }%`)
 
                     // Add listeners
                     entry.editLink.onclick = () => {
-                        const userVal = prompt(`${browserAPI.getMsg('prompt_enterNewVal')} ${ctrl.label}:`, entry.slider.value)
+                        const userVal = prompt(`${app.msgs.prompt_enterNewVal} ${ctrl.label}:`, entry.slider.value)
                         if (!userVal) return
                         const numVal = parseInt(userVal.replace(/\D/g, '')) ; if (isNaN(numVal)) return
                         const clampedVal = Math.max(ctrl.min || 0, Math.min(ctrl.max || 100, numVal))
