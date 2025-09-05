@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.5.4
+// @version             2025.9.5.5
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -310,7 +310,7 @@
     window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        commitHashes: { app: '443d626' } // for cached <app|messages>.json + sites.json5
+        commitHashes: { app: '325a9bb' } // for cached <app|messages>.json + sites.json5
     }
     app.urls = {
         resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.commitHashes.app}` }
@@ -645,14 +645,17 @@
                     // Add listeners
                     entry.editLink.onclick = () => {
                         const userVal = prompt(`${app.msgs.prompt_enterNewVal} ${entryData.label}:`, entry.slider.value)
-                        if (!userVal) return
-                        const numVal = parseInt(userVal.replace(/\D/g, '')) ; if (isNaN(numVal)) return
-                        const clampedVal = Math.max(entryData.min || 0, Math.min(entryData.max || 100, numVal))
-                        entry.slider.value = clampedVal
-                        settings.save(entryData.key, clampedVal) ; sync.configToUI({ updatedKey: entryData.key })
-                        entry.label.textContent = `${entryData.label}: ${clampedVal}${ entryData.labelSuffix || '' }`
+                        if (userVal == null) return // user cancelled so do nothing
+                        if (!/\d/.test(userVal)) return alert(`${
+                            app.msgs.error_enterValidNum} ${app.msgs.error_between} ${
+                                entryData.min || '0' } ${app.msgs.and} ${ entryData.max || '100' }!`)
+                        let validVal = parseInt(userVal.replace(/\D/g, '')) ; if (isNaN(validVal)) return
+                        validVal = Math.max(entryData.min || 0, Math.min(entryData.max || 100, validVal))
+                        entry.slider.value = validVal ; settings.save(entryData.key, validVal)
+                        sync.configToUI({ updatedKey: entryData.key })
+                        entry.label.textContent = `${entryData.label}: ${validVal}${ entryData.labelSuffix || '' }`
                         entry.label.append(entry.editLink)
-                        entry.slider.style.setProperty('--track-fill-percent', `${ clampedVal / entry.slider.max *100 }%`)
+                        entry.slider.style.setProperty('--track-fill-percent', `${ validVal / entry.slider.max *100 }%`)
                     }
                     entry.slider.oninput = ({ target: { value }}) => { // update UI
                         settings.save(key, parseInt(value)) ; sync.configToUI({ updatedKey: key })
