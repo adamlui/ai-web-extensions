@@ -21,7 +21,7 @@ export default [
                 chatgpt: 'readonly', chrome: 'readonly', config: 'writable', dom: 'readonly', env: 'writable',
                 icons: 'writable', infinity: 'readonly', modals: 'writable', notify: 'readonly', settings: 'writable',
                 syncConfigToUI: 'readonly', styles: 'writable', sync: 'readonly', toggles: 'writable',
-                toolbarMenu: 'writable', ui: 'readonly', updateCheck: 'readonly'
+                toolbarMenu: 'writable', ui: 'readonly', updateCheck: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },

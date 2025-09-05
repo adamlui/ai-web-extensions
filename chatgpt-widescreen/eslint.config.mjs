@@ -22,7 +22,7 @@ export default [
                 dom: 'readonly', env: 'writable', icons: 'writable', importScripts: 'readonly', JSON5: 'readonly',
                 modals: 'readonly', notify: 'readonly', settings: 'writable', sites: 'writable', styles: 'readonly',
                 sync: 'readonly', toggleMode: 'readonly', toolbarMenu: 'writable', tooltip: 'writable', ui: 'readonly',
-                updateCheck: 'readonly'
+                updateCheck: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
