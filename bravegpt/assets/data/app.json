@@ -4,6 +4,7 @@
     { "name": "Adam Lui", "url": "https://github.com/adamlui" }, { "name": "KudoAI", "url": "https://www.kudoai.com" }],
   "urls": {
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
+    "apis": { "chatShare": "https://chat-share.kudoai.workers.dev" },
     "app": "https://www.bravegpt.com",
     "assets": "https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@latest/assets",
     "chatgptjs": "https://chatgpt.js.org",
