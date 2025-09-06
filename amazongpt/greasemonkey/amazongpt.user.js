@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.5.9
+// @version                2025.9.5.10
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -156,7 +156,7 @@
     const remoteData = {
         app: await new Promise(resolve => xhr({
             method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
-            onload: resp => resolve(JSON.parse(resp.responseText))
+            onload: ({ responseText }) => resolve(JSON.parse(responseText))
         })),
         msgs: await new Promise(resolve => {
             const msgHostDir = `${app.urls.resourceHost}/greasemonkey/_locales/`,
@@ -196,11 +196,11 @@
         suggestOpenAI:    `${app.msgs.alert_try} ${app.msgs.alert_switchingOff} ${app.msgs.mode_proxy}`
     }
     app.katexDelimiters = await new Promise(resolve => xhr({ // used in show.reply()
-        method: 'GET', onload: resp => resolve(JSON.parse(resp.responseText)),
+        method: 'GET', onload: ({ responseText }) => resolve(JSON.parse(responseText)),
         url: `${app.urls.aiwebAssets}/data/katex-delimiters.json`
     }))
     window.apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
-        method: 'GET', onload: resp => resolve(JSON5.parse(resp.responseText)),
+        method: 'GET', onload: ({ responseText }) => resolve(JSON5.parse(responseText)),
         url: `${app.urls.aiwebAssets}/data/ai-chat-apis.json5`
     })))
     apis.AIchatOS.userID = '#/chat/' + Date.now()
@@ -1861,8 +1861,8 @@
                     function downloadChat() {
                         xhr({
                             method: 'GET', url: shareURL,
-                            onload: resp => {
-                                const html = resp.responseText, dlLink = dom.create.anchor(
+                            onload: ({ responseText }) => {
+                                const html = responseText, dlLink = dom.create.anchor(
                                     URL.createObjectURL(new Blob([html], { type: 'text/html' })))
                                 dlLink.download /* filename */ = html.match(/<title>([^<]+)<\/title>/i)[1] // page title
                                     .replace(/\s*[—|/]+\s*/g, ' ') // convert symbols to space for hyphen-casing

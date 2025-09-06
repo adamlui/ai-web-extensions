@@ -36,15 +36,20 @@ window.session = {
             if (accessToken) { log.debug(accessToken) ; resolve(accessToken) }
             else {
                 log.debug(`No token found. Fetching from ${apis.OpenAI.endpoints.session}...`)
-                xhr({ url: apis.OpenAI.endpoints.session, onload: resp => {
-                    if (session.isBlockedByCF(resp.responseText)) return feedback.appAlert('checkCloudflare')
-                    try {
-                        const newAccessToken = JSON.parse(resp.responseText).accessToken
-                        GM_setValue(app.configKeyPrefix + '_openAItoken', newAccessToken)
-                        log.debug(`Success! newAccessToken = ${newAccessToken}`)
-                        resolve(newAccessToken)
-                    } catch { if (get.reply.api == 'OpenAI') return feedback.appAlert('login') }
-        }})}})
+                xhr({
+                    url: apis.OpenAI.endpoints.session,
+                    onload: ({ responseText }) => {
+                        if (session.isBlockedByCF(responseText)) return feedback.appAlert('checkCloudflare')
+                        try {
+                            const newAccessToken = JSON.parse(responseText).accessToken
+                            GM_setValue(app.configKeyPrefix + '_openAItoken', newAccessToken)
+                            log.debug(`Success! newAccessToken = ${newAccessToken}`)
+                            resolve(newAccessToken)
+                        } catch { if (get.reply.api == 'OpenAI') return feedback.appAlert('login') }
+                    }
+                })
+            }
+        })
     },
 
     isBlockedByCF(resp) { // requires log

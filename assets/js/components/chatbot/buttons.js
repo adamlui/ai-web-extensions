@@ -63,8 +63,8 @@ window.buttons = {
                         method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
                         headers: { 'Content-Type': 'application/json', 'Referer': location.href },
                         data: JSON.stringify({ messages: prompts.stripAugments(app.msgChain) }),
-                        onload: resp => {
-                            const shareURL = JSON.parse(resp.responseText).url
+                        onload: ({ responseText }) => {
+                            const shareURL = JSON.parse(responseText).url
                             show.reply.shareURL = shareURL ; modals.shareChat(shareURL)
                             this.share.style.animation = '' ; this.share.style.cursor = 'pointer'
                         }

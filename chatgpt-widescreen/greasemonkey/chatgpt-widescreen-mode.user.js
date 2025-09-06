@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.5.18
+// @version             2025.9.5.19
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -316,7 +316,7 @@
     const remoteData = {
         app: await new Promise(resolve => xhr({
             method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
-            onload: resp => resolve(JSON.parse(resp.responseText))
+            onload: ({ responseText }) => resolve(JSON.parse(responseText))
         })),
         msgs: await new Promise(resolve => {
             const msgHostDir = `${app.urls.resourceHost}/chromium/extension/_locales/`,
@@ -344,7 +344,7 @@
     Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
     window.sites = Object.assign(Object.create(null), await new Promise(resolve => xhr({
         method: 'GET', url: `${app.urls.resourceHost}/assets/data/sites.json5`,
-        onload: resp => resolve(JSON5.parse(resp.responseText))
+        onload: ({ responseText }) => resolve(JSON5.parse(responseText))
     })))
     const chatbarElem = await dom.get.loadedElem(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input)
     chatbar.nativeWidth = dom.get.computedWidth(chatbarElem) // for ChatGPT WCB + styles.widescreen.css math
@@ -398,10 +398,10 @@
     window.updateCheck = () => xhr({
         method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
         headers: { 'Cache-Control': 'no-cache' },
-        onload: resp => {
+        onload: ({ responseText }) => {
 
             // Compare versions, alert if update found
-            app.latestVer = /@version +(.*)/.exec(resp.responseText)?.[1]
+            app.latestVer = /@version +(.*)/.exec(responseText)?.[1]
             if (app.latestVer) for (let i = 0 ; i < 4 ; i++) { // loop thru subver's
                 const currentSubVer = parseInt(app.version.split('.')[i], 10) || 0,
                       latestSubVer = parseInt(app.latestVer.split('.')[i], 10) || 0
