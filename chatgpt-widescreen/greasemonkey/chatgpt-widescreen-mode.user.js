@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.5.15
+// @version             2025.9.5.17
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -258,6 +258,7 @@
 // @require             https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@152a535/chromium/extension/lib/browser.js#sha256-7teBecqrjkazKH6oetGyxKlBkAk5U9ota/LNCB3Q+Jw=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@dd4f5ac/chromium/extension/lib/chatbar.js#sha256-YUVTAFP+pS5dYG//S0j8anbrR4IdGaqyfMzyHYJLmKk=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ca09ef2/chromium/extension/lib/feedback.js#sha256-+pCdFOvlfPkjBY2uk+6waX+K+NPkJ6teEBY2qSlUnuo=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@01bcbd6/chromium/extension/lib/settings.js#sha256-gfnbziJG+aHUeYEYi55OUTC/mHpy4DF3SeDGX32s+i8=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@22c8c58/chromium/extension/lib/styles.js#sha256-B2atf6x6EB2a1cEFMmfVjalQA2OKeIkyAFWYpzQF7is=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@0697e67/chromium/extension/lib/sync.js#sha256-TgnlMU6Y+2hW2YDsPuzvndeYQ2lZEqWOGmF++7CQ7nE=
@@ -421,43 +422,6 @@
         return words.join(' ') // join'em back together
     }
 
-    // Define FEEDBACK functions
-
-    window.notify = function(msg, pos = '', notifDuration = '', shadow = '') {
-        if (!styles.toast.node) styles.update({ key: 'toast' })
-        if (config.notifDisabled
-            && !new RegExp(`${app.msgs.menuLabel_show} ${app.msgs.menuLabel_notifs}`, 'i').test(msg)
-        ) return
-
-        // Strip state word to append colored one later
-        const foundState = toolbarMenu.state.words.find(word => msg.includes(word))
-        if (foundState) msg = msg.replace(foundState, '')
-
-        // Show notification
-        chatgpt.notify(`${app.symbol} ${msg}`, pos ||( config.notifBottom ? 'bottom' : '' ),
-            notifDuration, shadow || env.ui.scheme == 'light')
-        const notif = document.querySelector('.chatgpt-notif:last-child')
-        notif.classList.add(app.slug) // for styles.toast
-
-        // Append styled state word
-        if (foundState) {
-            const stateStyles = {
-                on: {
-                    light: 'color: #5cef48 ; text-shadow: rgba(255,250,169,0.38) 2px 1px 5px',
-                    dark:  'color: #5cef48 ; text-shadow: rgb(55,255,0) 3px 0 10px'
-                },
-                off: {
-                    light: 'color: #ef4848 ; text-shadow: rgba(255,169,225,0.44) 2px 1px 5px',
-                    dark:  'color: #ef4848 ; text-shadow: rgba(255, 116, 116, 0.87) 3px 0 9px'
-                }
-            }
-            const styledStateSpan = dom.create.elem('span')
-            styledStateSpan.style.cssText = stateStyles[
-                foundState == toolbarMenu.state.words[0] ? 'off' : 'on'][env.ui.scheme]
-            styledStateSpan.append(foundState) ; notif.append(styledStateSpan)
-        }
-    }
-
     // Define UI functions
 
     window.toggleMode = async (mode, state) => {
@@ -608,10 +572,10 @@
                         )
                         sync.configToUI({ updatedKey: key })
                         if (ctgKey == 'siteSettings' && env.site == key) // notify if setting of active site toggled
-                             notify(`${app.name} 🧩 ${
+                             feedback.notify(`${app.name} 🧩 ${
                                 app.msgs[`state_${config[`${key}Disabled`] ? 'off' : 'on' }`].toUpperCase()}`)
                         else if (ctgKey != 'siteSettings')
-                            notify(`${entryData.label}: ${toolbarMenu.state.words[+settings.typeIsEnabled(key)]}`)
+                            feedback.notify(`${entryData.label}: ${toolbarMenu.state.words[+settings.typeIsEnabled(key)]}`)
 
                         // Enable/disable dependent entries
                         for (const [ctrlKey, ctrlData] of Object.entries(
@@ -937,7 +901,7 @@
         if ((event.key == 'F11' || event.keyCode == 122) && !config.fullscreen) config.f11 = true
         else if ((event.key.startsWith('Esc') || event.keyCode == 27) && chatgpt.isTyping())
             try { chatgpt.stop() ; requestAnimationFrame(() => !chatgpt.isTyping() &&
-                      notify(app.msgs.notif_chatStopped, 'bottom-right')) } catch (err) {}
+                      feedback.notify(app.msgs.notif_chatStopped, 'bottom-right')) } catch (err) {}
     })
 
 })()
