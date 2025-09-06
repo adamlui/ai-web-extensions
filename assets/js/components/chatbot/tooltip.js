@@ -3,7 +3,8 @@ window.tooltip = { // requires dom.js + <app|config|env>
     stylize() { // requires dom.js + app.slug
         document.head.append(this.styles = dom.create.style(`.${app.slug}-tooltip {
             background-color: /* bubble style */
-                rgba(0,0,0,0.64) ; padding: 4px 6px 4px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
+                rgba(0,0,0,0.64) ; padding: ${ app.slug == 'googlegpt' ? '6px 7px' : '4px 6px 4px' };
+            border-radius: 6px ; border: 1px solid #d9d9e3 ;
             font-size: ${
                 /amazon|duck/.test(app.slug) ? 0.87 : app.slug == 'bravegpt' ? 0.58 : /* googlegpt */ 0.75 }rem ;
             color: white ; fill: white ; stroke: white ; /* font/icon style */
@@ -83,7 +84,7 @@ window.tooltip = { // requires dom.js + <app|config|env>
             appDiv: app.div, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv: tooltip.div }
         const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
         tooltip.div.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top
-            -( app.slug == 'bravegpt' ? 36 : app.slug == 'googlegpt' ? 33 : 39 )}px`
+            -( app.slug == 'bravegpt' ? 36 : app.slug == 'googlegpt' ? 37 : 39 )}px`
         tooltip.div.style.right = `${
             rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
     }
