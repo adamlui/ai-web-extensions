@@ -21,7 +21,7 @@ const colors = {
 const log = {}, { nc, dg, bw, by, bg, br } = colors
 const lvlColors = { hash: dg, info: bw, working: by, success: bg, error: br }
 Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) {
-    const formattedMsg = lvlColors[lvl] + (log.endedWithLineBreak ? msg.trimStart() : msg) + nc
+    const formattedMsg = lvlColors[lvl] +( log.endedWithLineBreak ? msg.trimStart() : msg ) + nc
     console.log(formattedMsg) ; log.endedWithLineBreak = msg.toString().endsWith('\n')
 })
 
@@ -29,7 +29,7 @@ export { colors, log }
 
 export function bumpUserJSver(userJSfilePath) {
     const date = new Date(),
-          today = `${date.getFullYear()}.${date.getMonth() +1}.${date.getDate()}`, // YYYY.M.D format
+          today = `${date.getFullYear()}.${ date.getMonth() +1 }.${date.getDate()}`, // YYYY.M.D format
           reVersion = /(@version\s+)([\d.]+)/,
           userJScontent = fs.readFileSync(userJSfilePath, 'utf-8'),
           currentVer = userJScontent.match(reVersion)[2]
