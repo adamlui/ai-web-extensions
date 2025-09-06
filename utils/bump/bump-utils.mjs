@@ -19,9 +19,9 @@ const colors = {
 }
 
 const log = {}, { nc, dg, bw, by, bg, br } = colors
-;['hash', 'info', 'working', 'success', 'error'].forEach(lvl => log[lvl] = function(msg) {
-    const logColor = lvl == 'hash' ? dg : lvl == 'info' ? bw : lvl == 'working' ? by : lvl == 'success' ? bg : br,
-          formattedMsg = logColor + ( log.endedWithLineBreak ? msg.trimStart() : msg ) + nc
+const lvlColors = { hash: dg, info: bw, working: by, success: bg, error: br }
+Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) {
+    const formattedMsg = lvlColors[lvl] + (log.endedWithLineBreak ? msg.trimStart() : msg) + nc
     console.log(formattedMsg) ; log.endedWithLineBreak = msg.toString().endsWith('\n')
 })
 
@@ -66,21 +66,21 @@ export async function findUserJS(dir = global.monorepoRoot) {
 
 export async function generateSRIhash(resURL, algorithm = 'sha256') {
     const sriHash = ssri.fromData(
-        Buffer.from(await (await this.fetchData(resURL)).arrayBuffer()), { algorithms: [algorithm] }).toString()
+        Buffer.from(await (await fetch(resURL)).arrayBuffer()), { algorithms: [algorithm] }).toString()
     this.log.hash(`${sriHash}\n`)
     return sriHash
 }
 
 export async function getLatestCommitHash(repo, path) {
     const endpoint = `https://api.github.com/repos/${repo}/commits`,
-          latestCommitHash = (await (await this.fetchData(`${endpoint}?path=${ path || '' }`)).json())[0]?.sha
+          latestCommitHash = (await (await fetch(`${endpoint}?path=${ path || '' }`)).json())[0]?.sha
     if (latestCommitHash) this.log.hash(`${latestCommitHash}\n`)
     return latestCommitHash
 }
 
 export async function isValidResource(resURL) {
     try {
-        const resIsValid = !(await (await this.fetchData(resURL)).text()).startsWith('Package size exceeded')
+        const resIsValid = !(await (await fetch(resURL)).text()).startsWith('Package size exceeded')
         if (!resIsValid) this.log.error(`\nInvalid resource: ${resURL}\n`)
         return resIsValid
     } catch (err) { return this.log.error(`\nCannot validate resource: ${resURL}\n`) }
