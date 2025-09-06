@@ -17,15 +17,13 @@ const colors = {
     bg: '\x1b[1;92m',     // bright green
     br: '\x1b[1;91m'      // bright red
 }
-
-const log = {}, { nc, dg, bw, by, bg, br } = colors
+const { nc, dg, bw, by, bg, br } = colors
 const lvlColors = { hash: dg, info: bw, working: by, success: bg, error: br }
-Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) {
-    const formattedMsg = lvlColors[lvl] +( log.endedWithLineBreak ? msg.trimStart() : msg ) + nc
+
+export const log = {} ; Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) {
+    const formattedMsg = lvlColors[lvl] + (log.endedWithLineBreak ? msg.trimStart() : msg) + nc
     console.log(formattedMsg) ; log.endedWithLineBreak = msg.toString().endsWith('\n')
 })
-
-export { colors, log }
 
 export function bumpUserJSver(userJSfilePath) {
     const date = new Date(),
