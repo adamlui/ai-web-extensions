@@ -41,7 +41,7 @@ export function bumpUserJSver(userJSfilePath) {
     } else // bump to today
         newVer = today
     fs.writeFileSync(userJSfilePath, userJScontent.replace(reVersion, `$1${newVer}`), 'utf-8')
-    console.log(`Updated: ${colors.bw}v${currentVer}${colors.nc} → ${colors.bg}v${newVer}${colors.nc}`)
+    this.log.success(`${nc}Updated: ${bw}v${currentVer}${nc} → ${bg}v${newVer}${nc}`)
 }
 
 export async function findUserJS(dir = global.monorepoRoot) {
