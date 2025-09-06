@@ -7,7 +7,6 @@
 
 (async () => {
 
-
     // Import LIBS
     const fs = require('fs'), // to read/write files
           path = require('path') // to manipulate paths
