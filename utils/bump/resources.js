@@ -15,7 +15,7 @@
     // Init CACHE vars
     const cache = { mode: process.argv.includes('--cache'), paths: { root: '.cache/' }}
     cache.paths.bumpUtils = path.join(__dirname, `${cache.paths.root}bump-utils.min.mjs`)
-    cache.paths.userJSpaths = path.join(__dirname, `${cache.paths.root}userJSpaths.json`)
+    cache.paths.userJSpaths = path.join(__dirname, `${cache.paths.root}user-js-paths.json`)
 
     // Import BUMP UTILS
     fs.mkdirSync(path.dirname(cache.paths.bumpUtils), { recursive: true })
