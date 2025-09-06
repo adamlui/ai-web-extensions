@@ -13,9 +13,9 @@ window.replyBubble = {
         this.bubbleDiv.append(this.preHeader, this.replyPre)
     },
 
-    insert() { // requires <app|update>
+    insert() { // requires app.div
         if (!this.bubbleDiv) this.create()
-        app.div.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
+        app.div.append(this.replyTip, this.bubbleDiv) ; this.updateMaxHeight()
     },
 
     updateMaxHeight() { // requires <app|config>
