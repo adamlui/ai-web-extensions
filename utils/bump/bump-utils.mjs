@@ -5,6 +5,7 @@
 import fs from 'fs' // to read/write files
 import ssri from 'ssri' // to generate SHA-256 hashes
 import path from 'path' // to manipulate paths
+import { fileURLToPath } from 'url' // to init monorepo root
 
 const colors = {
     nc: '\x1b[0m',        // no color
@@ -61,7 +62,7 @@ export function fetchData(url) {
 export async function findUserJS(dir = this.findUserJS.monorepoRoot) {
     const userJSfiles = []
     if (!dir && !this.findUserJS.monorepoRoot) { // no arg passed, init monorepo root
-        dir = __dirname
+        dir = path.dirname(fileURLToPath(import.meta.url))
         while (!fs.existsSync(path.join(dir, 'package.json')))
             dir = path.dirname(dir) // traverse up to closest manifest dir
         this.findUserJS.monorepoRoot = dir
