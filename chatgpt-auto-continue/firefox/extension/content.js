@@ -12,7 +12,7 @@
     // Add CHROME MSG listener for background/popup requests to sync modes/settings
     chrome.runtime.onMessage.addListener(({ action, options }) => {
         ({
-            notify: () => notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
+            notify: () => feedback.notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
             showAbout: () => chatgpt.isLoaded().then(() => modals.open('about')),
             syncConfigToUI: () => sync.configToUI(options)
@@ -21,8 +21,8 @@
 
     // Import JS resources
     for (const resource of [
-        'components/modals.js', 'lib/browser.js', 'lib/chatgpt.min.js',
-        'lib/dom.min.js', 'lib/settings.js', 'lib/styles.js', 'lib/sync.js', 'lib/ui.js'
+        'components/modals.js', 'lib/browser.js', 'lib/chatgpt.min.js', 'lib/dom.min.js',
+        'lib/feedback.js', 'lib/settings.js', 'lib/styles.js', 'lib/sync.js', 'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -37,44 +37,6 @@
 
     // Define FUNCTIONS
 
-    function notify(msg, pos = '', notifDuration = '', shadow = '') {
-        if (!styles.toast.node) styles.update({ key: 'toast' })
-        if (config.notifDisabled
-            && !new RegExp(`${browserAPI.getMsg('menuLabel_show')} ${browserAPI.getMsg('menuLabel_notifs')}`, 'i')
-                .test(msg)
-        ) return
-
-        // Strip state word to append colored one later
-        const foundState = [
-            browserAPI.getMsg('state_on').toUpperCase(), browserAPI.getMsg('state_off').toUpperCase()
-        ].find(word => msg.includes(word))
-        if (foundState) msg = msg.replace(foundState, '')
-
-        // Show notification
-        chatgpt.notify(`${app.symbol} ${msg}`, pos ||( config.notifBottom ? 'bottom' : '' ),
-            notifDuration, shadow || env.ui.scheme == 'light')
-        const notif = document.querySelector('.chatgpt-notif:last-child')
-        notif.classList.add(app.slug) // for styles.toast
-
-        // Append styled state word
-        if (foundState) {
-            const stateStyles = {
-                on: {
-                    light: 'color: #5cef48 ; text-shadow: rgba(255,250,169,0.38) 2px 1px 5px',
-                    dark:  'color: #5cef48 ; text-shadow: rgb(55,255,0) 3px 0 10px'
-                },
-                off: {
-                    light: 'color: #ef4848 ; text-shadow: rgba(255,169,225,0.44) 2px 1px 5px',
-                    dark:  'color: #ef4848 ; text-shadow: rgba(255, 116, 116, 0.87) 3px 0 9px'
-                }
-            }
-            const styledStateSpan = dom.create.elem('span')
-            styledStateSpan.style.cssText = stateStyles[
-                foundState == browserAPI.getMsg('state_off').toUpperCase() ? 'off' : 'on'][env.ui.scheme]
-            styledStateSpan.append(foundState) ; notif.append(styledStateSpan)
-        }
-    }
-
     window.checkBtnsToClick = () => {
         checkBtnsToClick.active = !config.extensionDisabled ; if (!checkBtnsToClick.active) return
         let continueBtnClicked = false // to increase delay before next check if true to avoid repeated clicks
@@ -85,7 +47,7 @@
             btn.click()
             if (btnType == 'Continue') {
                 continueBtnClicked = true
-                notify(browserAPI.getMsg('notif_chatAutoContinued'), 'bottom-right')
+                feedback.notify(browserAPI.getMsg('notif_chatAutoContinued'), 'bottom-right')
                 if (config.autoScroll) try { chatgpt.scrollToBottom() } catch(err) {}
         }})
         setTimeout(checkBtnsToClick, continueBtnClicked ? 5000 : 500)
@@ -105,7 +67,7 @@
         checkBtnsToClick()
 
     // NOTIFY of status on load
-        notify(`${browserAPI.getMsg('mode_autoContinue')}: ${ browserAPI.getMsg('state_on').toUpperCase()}`)
+        feedback.notify(`${browserAPI.getMsg('mode_autoContinue')}: ${ browserAPI.getMsg('state_on').toUpperCase()}`)
     }
 
     // Monitor SCHEME PREF changes to update sidebar toggle + modal colors

@@ -1,4 +1,4 @@
-// Requires components/buttons.js + lib/<browser|chatbar|settings|styles>.js +  <config|env> + notify()
+// Requires components/buttons.js + lib/<browser|chatbar|feedback|settings|styles>.js +  <config|env>
 
 window.sync = {
 
@@ -46,8 +46,8 @@ window.sync = {
                 mode == 'fullWindow' && config.widescreen && config.widerChatbox ?
                     111 : 0) // delay if toggled to/from active WCB to avoid wrong width
             if (config.widerChatbox) styles.update({ key: 'chatbar' }) // sync WCB
-            notify(`${browserAPI.getMsg('mode_' + mode)} ${
-                      browserAPI.getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
+            feedback.notify(`${browserAPI.getMsg('mode_' + mode)} ${
+                               browserAPI.getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
         }
         if (typeof GM_info != 'undefined') toolbarMenu.refresh()
         config.modeSynced = true ; setTimeout(() => config.modeSynced = false, 100) // prevent repetition

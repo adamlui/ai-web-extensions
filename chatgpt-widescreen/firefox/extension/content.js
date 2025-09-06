@@ -11,9 +11,9 @@
 
     // Import JS resources
     for (const resource of [
-        'lib/browser.js', 'lib/chatbar.js', 'lib/chatgpt.min.js', 'lib/dom.min.js', 'lib/settings.js', 'lib/styles.js',
-        'lib/sync.js', 'lib/ui.js', 'components/buttons.js', 'components/icons.js', 'components/modals.js',
-        'components/tooltip.js'
+        'lib/browser.js', 'lib/chatbar.js', 'lib/chatgpt.min.js', 'lib/dom.min.js', 'lib/feedback.js',
+        'lib/settings.js', 'lib/styles.js', 'lib/sync.js', 'lib/ui.js', 'components/buttons.js', 'components/icons.js',
+        'components/modals.js', 'components/tooltip.js'
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
@@ -27,7 +27,7 @@
     // Add CHROME MSG listener for background/popup requests to sync modes/settings
     chrome.runtime.onMessage.addListener(({ action, options }) => {
         ({
-            notify: () => notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
+            notify: () => feedback.notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
             showAbout: async () => { if (env.site == 'chatgpt') await chatgpt.isLoaded() ; modals.open('about') },
             syncConfigToUI: () => sync.configToUI(options)
@@ -50,44 +50,6 @@
     await settings.load('extensionDisabled', settings.siteDisabledKeys, sites[env.site].availFeatures)
 
     // Define FUNCTIONS
-
-    window.notify = function(msg, pos = '', notifDuration = '', shadow = '') {
-        if (!styles.toast.node) styles.update({ key: 'toast' })
-        if (config.notifDisabled
-            && !new RegExp(`${browserAPI.getMsg('menuLabel_show')} ${browserAPI.getMsg('menuLabel_notifs')}`, 'i')
-                .test(msg)
-        ) return
-
-        // Strip state word to append colored one later
-        const foundState = [
-            browserAPI.getMsg('state_on').toUpperCase(), browserAPI.getMsg('state_off').toUpperCase()
-        ].find(word => msg.includes(word))
-        if (foundState) msg = msg.replace(foundState, '')
-
-        // Show notification
-        chatgpt.notify(`${app.symbol} ${msg}`, pos ||( config.notifBottom ? 'bottom' : '' ),
-            notifDuration, shadow || env.ui.scheme == 'light')
-        const notif = document.querySelector('.chatgpt-notif:last-child')
-        notif.classList.add(app.slug) // for styles.toast
-
-        // Append styled state word
-        if (foundState) {
-            const stateStyles = {
-                on: {
-                    light: 'color: #5cef48 ; text-shadow: rgba(255,250,169,0.38) 2px 1px 5px',
-                    dark:  'color: #5cef48 ; text-shadow: rgb(55,255,0) 3px 0 10px'
-                },
-                off: {
-                    light: 'color: #ef4848 ; text-shadow: rgba(255,169,225,0.44) 2px 1px 5px',
-                    dark:  'color: #ef4848 ; text-shadow: rgba(255, 116, 116, 0.87) 3px 0 9px'
-                }
-            }
-            const styledStateSpan = dom.create.elem('span')
-            styledStateSpan.style.cssText = stateStyles[
-                foundState == browserAPI.getMsg('state_off').toUpperCase() ? 'off' : 'on'][env.ui.scheme]
-            styledStateSpan.append(foundState) ; notif.append(styledStateSpan)
-        }
-    }
 
     window.toggleMode = async (mode, state) => {
         switch (state) {
@@ -280,7 +242,7 @@
         if ((event.key == 'F11' || event.keyCode == 122) && !config.fullscreen) config.f11 = true
         else if ((event.key.startsWith('Esc') || event.keyCode == 27) && chatgpt.isTyping())
             try { chatgpt.stop() ; requestAnimationFrame(() => !chatgpt.isTyping() &&
-                    notify(browserAPI.getMsg('notif_chatStopped'), 'bottom-right')) } catch (err) {}
+                    feedback.notify(browserAPI.getMsg('notif_chatStopped'), 'bottom-right')) } catch (err) {}
     })
 
 })()

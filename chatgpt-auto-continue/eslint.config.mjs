@@ -19,7 +19,7 @@ export default [
             globals: {
                 ...globals.browser, ...globals.greasemonkey, ...globals.node, app: 'writable', browserAPI: 'readonly',
                 chatgpt: 'readonly', checkBtnsToClick: 'readonly', chrome: 'readonly', config: 'writable',
-                dom: 'readonly', env: 'writable', icons: 'writable', modals: 'writable', notify: 'readonly',
+                dom: 'readonly', env: 'writable', feedback: 'readonly', icons: 'writable', modals: 'writable',
                 settings: 'writable', styles: 'writable', sync: 'readonly', toolbarMenu: 'writable', ui: 'readonly',
                 updateCheck: 'readonly', xhr: 'writable'
             }
