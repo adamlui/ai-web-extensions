@@ -55,7 +55,7 @@
     userJSfiles.forEach(userJSfilePath => {
         const userJScontent = fs.readFileSync(userJSfilePath, 'utf-8'),
               resURLs = [...userJScontent.matchAll(new RegExp(regEx.jsURL.source, 'gm'))].map(match => match[1])
-        if (resURLs.length > 0) { urlMap[userJSfilePath] = resURLs ; resCnt += resURLs.length }
+        if (resURLs?.length) { urlMap[userJSfilePath] = resURLs ; resCnt += resURLs.length }
     })
     bump.log.success(`${resCnt} potentially bumpable resource(s) found.`)
 
@@ -119,8 +119,8 @@
     }
 
     // Log final summary
-    bump.log[urlsUpdatedCnt > 0 ? 'success' : 'info'](
-        `\n${ urlsUpdatedCnt > 0 ? 'Success! ' : '' }${
+    bump.log[urlsUpdatedCnt ? 'success' : 'info'](
+        `\n${ urlsUpdatedCnt ? 'Success! ' : '' }${
               urlsUpdatedCnt} resource(s) bumped across ${filesUpdatedCnt} file(s).`
     )
 

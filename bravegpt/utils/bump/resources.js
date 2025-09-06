@@ -88,13 +88,13 @@
         fs.writeFileSync(userJSfilePath, userJScontent.replace(resURL, updatedURL), 'utf-8')
         bump.log.success(`${resName} bumped!\n`) ; urlsUpdatedCnt++
     }
-    if (urlsUpdatedCnt > 0) {
+    if (urlsUpdatedCnt) {
         console.log(`${ !bump.log.endedWithLineBreak ? '\n' : '' }Bumping userscript version...`)
         bump.bumpUserJSver(userJSfilePath)
     }
 
     // Log final summary
-    bump.log[urlsUpdatedCnt > 0 ? 'success' : 'info'](
-        `\n${ urlsUpdatedCnt > 0 ? 'Success! ' : '' }${urlsUpdatedCnt} resource(s) bumped.`)
+    bump.log[urlsUpdatedCnt ? 'success' : 'info'](
+        `\n${ urlsUpdatedCnt ? 'Success! ' : '' }${urlsUpdatedCnt} resource(s) bumped.`)
 
 })()
