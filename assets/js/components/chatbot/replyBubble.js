@@ -1,4 +1,4 @@
-// Requires components/buttons.js + lib/dom.js + <app|update>
+// Requires components/buttons.js + lib/dom.js + <app|config>
 
 window.replyBubble = {
 
