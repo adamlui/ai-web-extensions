@@ -7,8 +7,8 @@
 
     // Import LIBS
     const fs = require('fs'), // to read/write files
-          path = require('path') // to manipulate paths
-    const bumpUtilsFilePath = path.join(__dirname, '.cache/bump-utils.mjs')
+          path = require('path'), // to manipulate paths
+          bumpUtilsFilePath = path.join(__dirname, '.cache/bump-utils.mjs')
     fs.writeFileSync(bumpUtilsFilePath, Buffer.from(await (await fetch(
         'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.mjs')).arrayBuffer()))
     const bump = await import(require('url').pathToFileURL(bumpUtilsFilePath))
