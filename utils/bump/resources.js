@@ -12,9 +12,10 @@
           path = require('path'), // to manipulate paths
           bumpUtilsFilePath = path.join(__dirname, '.cache/bump-utils.mjs')
     fs.mkdirSync(path.dirname(bumpUtilsFilePath), { recursive: true })
-    fs.writeFileSync(bumpUtilsFilePath, Buffer.from(await (await fetch(
-        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.mjs')).arrayBuffer()))
-    const bump = await import(require('url').pathToFileURL(bumpUtilsFilePath))
+    fs.writeFileSync(bumpUtilsFilePath, (await (await fetch(
+        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
+    ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
+    const bump = await import('file://' + bumpUtilsFilePath)
 
     // Init CACHE vars
     const cache = { mode: process.argv.includes('--cache'), filePath: path.join(__dirname, '.cache/userJSpaths.json') }
