@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.5.7
+// @version                2025.9.5.8
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -827,6 +827,7 @@
                            -o-transition: box-shadow 0.15s ease ; -ms-transition: box-shadow 0.15s ease }
                 ${ isParticlizedDS ? '' : // add inset shadow to chatbar on hover
                     `#${app.slug}-chatbar:hover:not(:focus) {
+                        outline: ${ env.ui.app.scheme == 'light' ? 'black' : 'white' } auto 5px ;
                       --chatbar-hover-inset-shadow: 0 ${
                             env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 7px' } rgba(15,17,17,0.15) inset ;
                         box-shadow: var(--chatbar-hover-inset-shadow) ;

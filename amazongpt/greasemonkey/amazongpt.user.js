@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.5.7
+// @version                2025.9.5.8
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -607,6 +607,7 @@
                            -o-transition: box-shadow 0.15s ease ; -ms-transition: box-shadow 0.15s ease }
                 ${ isParticlizedDS ? '' : // add inset shadow to chatbar on hover
                     `#${app.slug}-chatbar:hover:not(:focus) {
+                        outline: ${ env.ui.app.scheme == 'light' ? 'black' : 'white' } auto 5px ;
                       --chatbar-hover-inset-shadow: 0 ${
                             env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 7px' } rgba(15,17,17,0.15) inset ;
                         box-shadow: var(--chatbar-hover-inset-shadow) ;
