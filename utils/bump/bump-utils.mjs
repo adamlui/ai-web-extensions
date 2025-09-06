@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// bump-utils.js for finding/bumping/hasing etc.
+// bump-utils.mjs for finding/bumping/hasing etc.
 // Latest miniified release: https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs
 
 import fs from 'fs' // to read/write files
