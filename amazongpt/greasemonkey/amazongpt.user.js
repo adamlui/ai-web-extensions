@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.5.11
+// @version                2025.9.5.12
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1862,9 +1862,9 @@
                         xhr({
                             method: 'GET', url: shareURL,
                             onload: ({ responseText }) => {
-                                const html = responseText, dlLink = dom.create.anchor(
-                                    URL.createObjectURL(new Blob([html], { type: 'text/html' })))
-                                dlLink.download /* filename */ = html.match(/<title>([^<]+)<\/title>/i)[1] // page title
+                                const dlLink = dom.create.anchor(
+                                    URL.createObjectURL(new Blob([responseText], { type: 'text/html' })))
+                                dlLink.download /* filename */ = responseText.match(/<title>([^<]+)<\/title>/i)[1]
                                     .replace(/\s*[—|/]+\s*/g, ' ') // convert symbols to space for hyphen-casing
                                     .replace(/\.{2,}/g, '') // strip ellipsis
                                     .toLowerCase().trim().replace(/\s+/g, '-') // hyphen-case
