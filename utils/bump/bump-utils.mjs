@@ -42,23 +42,6 @@ export function bumpUserJSver(userJSfilePath) {
     console.log(`Updated: ${colors.bw}v${currentVer}${colors.nc} → ${colors.bg}v${newVer}${colors.nc}`)
 }
 
-export function fetchData(url) {
-    if (typeof fetch == 'undefined') // polyfill for Node.js < v21
-        return new Promise((resolve, reject) => {
-            try { // to use http or https module
-                const protocol = url.match(/^([^:]+):\/\//)[1]
-                if (!/^https?$/.test(protocol)) reject(new Error('Invalid fetchData() URL.'))
-                require(protocol).get(url, resp => {
-                    let rawData = ''
-                    resp.on('data', chunk => rawData += chunk)
-                    resp.on('end', () => resolve({ json: () => JSON.parse(rawData) }))
-                }).on('error', err => reject(new Error(err.message)))
-            } catch (err) { reject(new Error('Environment not supported.'))
-        }})
-    else // use fetch() from Node.js v21+
-        return fetch(url)
-}
-
 export async function findUserJS(dir = global.monorepoRoot) {
     const userJSfiles = []
     if (!dir && !global.monorepoRoot) { // no arg passed, init monorepo root
