@@ -79,18 +79,18 @@ export async function findUserJS(dir = global.monorepoRoot) {
     return userJSfiles
 }
 
-export async function getLatestCommitHash(repo, path) {
-    const endpoint = `https://api.github.com/repos/${repo}/commits`,
-          latestCommitHash = (await (await this.fetchData(`${endpoint}?path=${ path || '' }`)).json())[0]?.sha
-    if (latestCommitHash) this.log.hash(`${latestCommitHash}\n`)
-    return latestCommitHash
-}
-
 export async function generateSRIhash(resURL, algorithm = 'sha256') {
     const sriHash = ssri.fromData(
         Buffer.from(await (await this.fetchData(resURL)).arrayBuffer()), { algorithms: [algorithm] }).toString()
     this.log.hash(`${sriHash}\n`)
     return sriHash
+}
+
+export async function getLatestCommitHash(repo, path) {
+    const endpoint = `https://api.github.com/repos/${repo}/commits`,
+          latestCommitHash = (await (await this.fetchData(`${endpoint}?path=${ path || '' }`)).json())[0]?.sha
+    if (latestCommitHash) this.log.hash(`${latestCommitHash}\n`)
+    return latestCommitHash
 }
 
 export async function isValidResource(resURL) {
