@@ -59,20 +59,20 @@ export function fetchData(url) {
         return fetch(url)
 }
 
-export async function findUserJS(dir = this.findUserJS.monorepoRoot) {
+export async function findUserJS(dir = global.monorepoRoot) {
     const userJSfiles = []
-    if (!dir && !this.findUserJS.monorepoRoot) { // no arg passed, init monorepo root
+    if (!dir && !global.monorepoRoot) { // no arg passed, init monorepo root
         dir = path.dirname(fileURLToPath(import.meta.url))
         while (!fs.existsSync(path.join(dir, 'package.json')))
             dir = path.dirname(dir) // traverse up to closest manifest dir
-        this.findUserJS.monorepoRoot = dir
+        global.monorepoRoot = dir
     }
     dir = path.resolve(dir)
     fs.readdirSync(dir).forEach(async entry => {
         if (/^(?:\.|node_modules$)/.test(entry)) return
         const entryPath = path.join(dir, entry)
         if (fs.statSync(entryPath).isDirectory()) // recursively search subdirs
-            userJSfiles.push(...await this.findUserJS(entryPath))
+            userJSfiles.push(...await findUserJS(entryPath))
         else if (entry.endsWith('.user.js')) {
             console.log(entryPath) ; userJSfiles.push(entryPath) }
     })
