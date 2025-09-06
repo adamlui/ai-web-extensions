@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.9.6
+// @version               2025.9.6.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -200,7 +200,7 @@
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f7e2f2d/assets/js/components/chatbot/buttons.js#sha256-Srg5wWTmP3Zv2OkTLEHeX7HKeKjeYnRgdIFhdRJMuik=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0329ace/assets/js/components/chatbot/icons.js#sha256-p89CrELJj8rguE8M4IjdMA4CYwX7iid+RNzvX3oOT2A=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@bfdb063/assets/js/components/chatbot/menus.js#sha256-ZOZBraa/OmK/AKDtJucT9+i5uuq3suasT3kjJl0UBdA=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@97173cc/assets/js/components/chatbot/replyBubble.js#sha256-sOVj/ESmlNMLCA13w2ZzqP5hVtcnqlQpbY9yvkFWNek=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@1dfd40d/assets/js/components/chatbot/replyBubble.js#sha256-VsTgaqE8IrQP7ywc7KE9OGL63uLfEO8DdwK2po6CXas=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@6fd9b53/assets/js/components/chatbot/tooltip.js#sha256-RbmcNuh/DiKIH+Ch2KYrIo48pLAUd/445leqYwBGEXw=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@bb5451a/assets/js/lib/chatbot/api.js#sha256-nCFc1tcSAfGJT260Sn07YGEczKPrhXdj8UlrKi+ac8M=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@ecaeb55/assets/js/lib/chatbot/feedback.js#sha256-9Hm3fBS96DtWFdT5VwGDGvwZMpYIRfxGAQRaCGECeqA=
@@ -531,18 +531,6 @@
     }
 
     window.update = {
-
-        replyPreMaxHeight() { // for various mode toggles
-            const replyPre = app.div.querySelector('.reply-pre'),
-                  relatedQueries = app.div.querySelector(`.${app.slug}-related-queries`),
-                  shorterPreHeight = innerHeight - relatedQueries?.offsetHeight - 304,
-                  longerPreHeight = innerHeight - 278
-            if (replyPre) replyPre.style.maxHeight = (
-                config.stickySidebar ? (
-                    relatedQueries?.offsetHeight > 0 ? `${shorterPreHeight}px` : `${longerPreHeight}px` )
-              : config.anchored ? `${ longerPreHeight - ( config.expanded ? 115 : 365 ) }px` : 'none'
-            )
-        },
 
         appBottomPos() { app.div.style.bottom = `${ config.minimized ? 48 - app.div.offsetHeight : -32 }px` },
 
@@ -1123,7 +1111,7 @@
 
             // Apply changed state to UI
             app.div.classList.toggle('anchored', config.anchored)
-            update.rqVisibility() ; update.replyPreMaxHeight() ; update.bylineVisibility()
+            update.rqVisibility() ; replyBubble.updateMaxHeight() ; update.bylineVisibility()
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const anchorToggle = document.querySelector('[id*=anchor] input')
                 if (anchorToggle.checked != config.anchored) modals.settings.toggle.switch(anchorToggle)
@@ -1244,7 +1232,7 @@
                 get.related(app.msgChain[app.msgChain.length - 1]?.content || searchQuery)
                     .then(queries => show.related(queries))
                     .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
-            update.replyPreMaxHeight()
+            replyBubble.updateMaxHeight()
             feedback.notify(`${app.msgs.menuLabel_relatedQueries} ${menus.toolbar.state.words[+!config.rqDisabled]}`)
         },
 
@@ -1261,7 +1249,7 @@
 
             // Apply new state to UI
             app.div.classList.toggle(mode, config[configKeyName])
-            update.replyPreMaxHeight() ; update.bylineVisibility()
+            replyBubble.updateMaxHeight() ; update.bylineVisibility()
             if (mode == 'wider') // toggle icons everywhere
             document.querySelectorAll(`#${app.slug} svg.widescreenTall, #${app.slug} svg.widescreenWide`)
                 .forEach(icon => icon.replaceWith(
@@ -1603,7 +1591,7 @@
                     }, (idx+1) *50)
                 })
 
-                update.replyPreMaxHeight() ; get.related.replyIsQuestion = null
+                replyBubble.updateMaxHeight() ; get.related.replyIsQuestion = null
             }
         },
 
@@ -1813,7 +1801,7 @@
                 ;[replyPre, ...replyPre.querySelectorAll('*')].forEach(elem =>
                     renderMathInElement(elem, { delimiters: app.katexDelimiters, throwOnError: false }))
 
-                if (config.stickySidebar) update.replyPreMaxHeight()
+                if (config.stickySidebar) replyBubble.updateMaxHeight()
                 saveAppDiv() // to fight Brave mutations
 
                 // Auto-scroll if active

@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.6
+// @version                2025.9.6.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -80,7 +80,7 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f7e2f2d/assets/js/components/chatbot/buttons.js#sha256-Srg5wWTmP3Zv2OkTLEHeX7HKeKjeYnRgdIFhdRJMuik=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0329ace/assets/js/components/chatbot/icons.js#sha256-p89CrELJj8rguE8M4IjdMA4CYwX7iid+RNzvX3oOT2A=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@bfdb063/assets/js/components/chatbot/menus.js#sha256-ZOZBraa/OmK/AKDtJucT9+i5uuq3suasT3kjJl0UBdA=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@97173cc/assets/js/components/chatbot/replyBubble.js#sha256-sOVj/ESmlNMLCA13w2ZzqP5hVtcnqlQpbY9yvkFWNek=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@1dfd40d/assets/js/components/chatbot/replyBubble.js#sha256-VsTgaqE8IrQP7ywc7KE9OGL63uLfEO8DdwK2po6CXas=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@6fd9b53/assets/js/components/chatbot/tooltip.js#sha256-RbmcNuh/DiKIH+Ch2KYrIo48pLAUd/445leqYwBGEXw=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@bb5451a/assets/js/lib/chatbot/api.js#sha256-nCFc1tcSAfGJT260Sn07YGEczKPrhXdj8UlrKi+ac8M=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@ecaeb55/assets/js/lib/chatbot/feedback.js#sha256-9Hm3fBS96DtWFdT5VwGDGvwZMpYIRfxGAQRaCGECeqA=
@@ -374,12 +374,6 @@
     }
 
     window.update = {
-
-        replyPreMaxHeight() { // for various mode toggles
-            const replyPre = app.div.querySelector('.reply-pre'),
-                  longerPreHeight = innerHeight - 255
-            if (replyPre) replyPre.style.maxHeight = `${ longerPreHeight - ( config.expanded ? 115 : 365 )}px`
-        },
 
         appBottomPos() { app.div.style.bottom = `${ config.minimized ? 55 - app.div.offsetHeight : -7 }px` },
 
