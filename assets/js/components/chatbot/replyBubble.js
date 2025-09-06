@@ -16,5 +16,17 @@ window.replyBubble = {
     insert() { // requires <app|update>
         if (!this.bubbleDiv) this.create()
         app.div.append(this.replyTip, this.bubbleDiv) ; update.replyPreMaxHeight()
+    },
+
+    updateMaxHeight() { // requires <app|config>
+        const replyPre = app.div.querySelector('.reply-pre'),
+              relatedQueries = app.div.querySelector(`.${app.slug}-related-queries`),
+              shorterPreHeight = innerHeight - relatedQueries?.offsetHeight - 245,
+              longerPreHeight = innerHeight - 255
+        if (replyPre) replyPre.style.maxHeight = (
+            config.stickySidebar ? (
+                relatedQueries?.offsetHeight > 0 ? `${shorterPreHeight}px` : `${longerPreHeight}px` )
+            : config.anchored ? `${ longerPreHeight - ( config.expanded ? 115 : 365 ) }px` : 'none'
+        )
     }
 };
