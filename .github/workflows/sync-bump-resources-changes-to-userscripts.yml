@@ -1,0 +1,61 @@
+name: Sync utils/bump/resources.js to adamlui/userscripts
+
+on:
+  push:
+    branches: [main]
+    paths: [utils/bump/resources.js]
+
+permissions:
+  contents: read
+
+jobs:
+  sync-resources:
+    if: (github.repository == 'adamlui/ai-web-extensions') && (github.event.commits[0].committer.username != 'kudo-sync-bot')
+    runs-on: ubuntu-latest
+    env:
+      TZ: PST8PDT
+
+    steps:
+
+      - name: Checkout adamlui/ai-web-extensions
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.REPO_SYNC_PAT }}
+          repository: adamlui/ai-web-extensions
+          path: adamlui/ai-web-extensions
+
+      - name: Checkout adamlui/userscripts
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.REPO_SYNC_PAT }}
+          repository: adamlui/userscripts
+          path: adamlui/userscripts
+
+      - name: Sync resources.js
+        run: |
+          cp -f ${{ github.workspace }}/adamlui/ai-web-extensions/utils/bump/resources.js \
+                ${{ github.workspace }}/adamlui/userscripts/utils/bump/resources.js
+
+      - name: Escape backticks in commit msg
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          echo "ESCAPED_MSG<<EOF" >> $GITHUB_ENV
+          echo "$COMMIT_MSG" | sed 's/`/\`/g' >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Config committer
+        run: |
+          gpg --batch --import <(echo "${{ secrets.GPG_PRIVATE_KEY }}")
+          git config --global commit.gpgsign true
+          git config --global user.name "kudo-sync-bot"
+          git config --global user.email "auto-sync@kudoai.com"
+          git config --global user.signingkey "${{ secrets.GPG_PRIVATE_ID }}"
+
+      - name: Push changes to adamlui/userscripts
+        run: |
+          cd ${{ github.workspace }}/adamlui/userscripts
+          git pull # sync w/ concurrent updates
+          git add utils/bump/resources.js
+          git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/blob/main/utils/bump/resources.js]" || true
+          git push
