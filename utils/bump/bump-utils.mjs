@@ -27,14 +27,14 @@ export { colors, log }
 
 export function bumpUserJSver(userJSfilePath) {
     const date = new Date(),
-            today = `${date.getFullYear()}.${date.getMonth() +1}.${date.getDate()}`, // YYYY.M.D format
-            reVersion = /(@version\s+)([\d.]+)/,
-            userJScontent = fs.readFileSync(userJSfilePath, 'utf-8'),
-            currentVer = userJScontent.match(reVersion)[2]
+          today = `${date.getFullYear()}.${date.getMonth() +1}.${date.getDate()}`, // YYYY.M.D format
+          reVersion = /(@version\s+)([\d.]+)/,
+          userJScontent = fs.readFileSync(userJSfilePath, 'utf-8'),
+          currentVer = userJScontent.match(reVersion)[2]
     let newVer
     if (currentVer.startsWith(today)) { // bump sub-ver
         const verParts = currentVer.split('.'),
-                subVer = verParts.length > 3 ? parseInt(verParts[3], 10) +1 : 1
+              subVer = verParts.length > 3 ? parseInt(verParts[3], 10) +1 : 1
         newVer = `${today}.${subVer}`
     } else // bump to today
         newVer = today
@@ -81,7 +81,7 @@ export async function findUserJS(dir = global.monorepoRoot) {
 
 export async function getLatestCommitHash(repo, path) {
     const endpoint = `https://api.github.com/repos/${repo}/commits`,
-            latestCommitHash = (await (await this.fetchData(`${endpoint}?path=${ path || '' }`)).json())[0]?.sha
+          latestCommitHash = (await (await this.fetchData(`${endpoint}?path=${ path || '' }`)).json())[0]?.sha
     if (latestCommitHash) this.log.hash(`${latestCommitHash}\n`)
     return latestCommitHash
 }
