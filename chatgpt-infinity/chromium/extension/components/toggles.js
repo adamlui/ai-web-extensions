@@ -1,4 +1,4 @@
-// Requires lib/<browser|chatgpt|dom.min>.js + <app|env> + <notify|sync.configToUI>()
+// Requires lib/<browser|chatgpt|dom|feedback>.js + <app|env> + sync.configToUI()
 
 window.toggles = {
 
@@ -32,7 +32,7 @@ window.toggles = {
             this.div.onclick = () => { // toggle Infinity mode
                 settings.save('infinityMode', !this.toggleInput.checked)
                 sync.configToUI({ updatedKey: 'infinityMode' })
-                notify(`${browserAPI.getMsg('menuLabel_infinityMode')}: ${
+                feedback.notify(`${browserAPI.getMsg('menuLabel_infinityMode')}: ${
                     browserAPI.getMsg(`state_${ config.infinityMode ? 'on' : 'off' }`).toUpperCase()}`)
             }
         },
