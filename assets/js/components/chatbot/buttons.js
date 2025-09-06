@@ -64,8 +64,7 @@ window.buttons = {
                         headers: { 'Content-Type': 'application/json', 'Referer': location.href },
                         data: JSON.stringify({ messages: prompts.stripAugments(app.msgChain) }),
                         onload: ({ responseText }) => {
-                            const shareURL = JSON.parse(responseText).url
-                            show.reply.shareURL = shareURL ; modals.shareChat(shareURL)
+                            modals.shareChat(show.reply.shareURL = JSON.parse(responseText).url)
                             this.share.style.animation = '' ; this.share.style.cursor = 'pointer'
                         }
                     })
