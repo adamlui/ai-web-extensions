@@ -21,8 +21,7 @@
     fs.writeFileSync(cache.paths.bumpUtils, (await (await fetch(
         'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
     ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
-    const bump = await import(`file://${cache.paths.bumpUtils}`)
-    fs.unlinkSync(cache.paths.bumpUtils)
+    const bump = await import(`file://${cache.paths.bumpUtils}`) ; fs.unlinkSync(cache.paths.bumpUtils)
 
     // Init REGEX
     const regEx = {
