@@ -60,7 +60,7 @@ window.buttons = {
                     if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
                     tooltip.update(currentTarget) // to 'Generating HTML...'
                     xhr({
-                        method: 'POST', url: 'https://chat-share.kudoai.workers.dev',
+                        method: 'POST', url: app.urls.apis.chatShare,
                         headers: { 'Content-Type': 'application/json', 'Referer': location.href },
                         data: JSON.stringify({ messages: prompts.stripAugments(app.msgChain) }),
                         onload: ({ responseText }) => {
