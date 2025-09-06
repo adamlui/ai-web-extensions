@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.9.5.15
+// @version               2025.9.6
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -197,7 +197,7 @@
 // @require               https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.3/dist/chatgpt.min.js#sha256-jeA6TrwGYL3u5epUnl+2cbbGPhvFRocIMwQbQjNedZs=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require               https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@de1188e/assets/js/components/chatbot/buttons.js#sha256-UR27p4Hlsz8XwQHf5XapMgVwnOKnfkDHcKMudyNNLks=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f7e2f2d/assets/js/components/chatbot/buttons.js#sha256-Srg5wWTmP3Zv2OkTLEHeX7HKeKjeYnRgdIFhdRJMuik=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0329ace/assets/js/components/chatbot/icons.js#sha256-p89CrELJj8rguE8M4IjdMA4CYwX7iid+RNzvX3oOT2A=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@bfdb063/assets/js/components/chatbot/menus.js#sha256-ZOZBraa/OmK/AKDtJucT9+i5uuq3suasT3kjJl0UBdA=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@97173cc/assets/js/components/chatbot/replyBubble.js#sha256-sOVj/ESmlNMLCA13w2ZzqP5hVtcnqlQpbY9yvkFWNek=
@@ -270,7 +270,7 @@
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
-            app: '5e3ff21', // for cached <app|messages>.json
+            app: '66ac514', // for cached <app|messages>.json
             aiweb: '70ba16f' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         }
     }
