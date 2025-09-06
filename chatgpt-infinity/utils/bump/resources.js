@@ -13,7 +13,7 @@
     fs.writeFileSync(bumpUtilsFilePath, (await (await fetch(
         'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
     ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
-    const bump = await import('file://' + bumpUtilsFilePath)
+    const bump = await import(`file://${bumpUtilsFilePath}`)
 
     // Init REPO context
     const repoName = (() => {
