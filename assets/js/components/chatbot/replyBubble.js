@@ -20,13 +20,17 @@ window.replyBubble = {
 
     updateMaxHeight() { // requires <app|config>
         const replyPre = app.div.querySelector('.reply-pre'),
-              relatedQueries = app.div.querySelector(`.${app.slug}-related-queries`),
-              shorterPreHeight = innerHeight - relatedQueries?.offsetHeight - 245,
-              longerPreHeight = innerHeight - 255
+              relatedQueries = app.div.querySelector(`.${app.slug}-related-queries`)
+        const heights = {
+            shorter: innerHeight - relatedQueries?.offsetHeight -(
+                app.slug == 'bravegpt' ? 304 : app.slug == 'duckduckgpt' ? 245 : /* googlegpt */ 328 ),
+            longer: innerHeight -(
+                app.slug == 'bravegpt' ? 278 : app.slug == 'duckduckgpt' ? 255 : /* googlegpt */ 309 )
+        }
         if (replyPre) replyPre.style.maxHeight = (
             config.stickySidebar ? (
-                relatedQueries?.offsetHeight > 0 ? `${shorterPreHeight}px` : `${longerPreHeight}px` )
-            : config.anchored ? `${ longerPreHeight - ( config.expanded ? 115 : 365 ) }px` : 'none'
+                relatedQueries?.offsetHeight > 0 ? `${heights.shorter}px` : `${heights.longer}px` )
+            : config.anchored ? `${ heights.longer - ( config.expanded ? 115 : 365 ) }px` : 'none'
         )
     }
 };
