@@ -241,8 +241,10 @@
     document.addEventListener('keydown', event => {
         if ((event.key == 'F11' || event.keyCode == 122) && !config.fullscreen) config.f11 = true
         else if ((event.key.startsWith('Esc') || event.keyCode == 27) && chatgpt.isTyping())
-            try { chatgpt.stop() ; requestAnimationFrame(() => !chatgpt.isTyping() &&
-                    feedback.notify(browserAPI.getMsg('notif_chatStopped'), 'bottom-right')) } catch (err) {}
+            try {
+                chatgpt.stop() ; requestAnimationFrame(() => !chatgpt.isTyping()
+                    && feedback.notify(browserAPI.getMsg('notif_chatStopped'), 'bottom-right'))
+            } catch (err) {}
     })
 
 })()
