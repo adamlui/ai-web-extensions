@@ -42,7 +42,8 @@
     const projectNames = {}
     manifestPaths.forEach(manifestPath => {
         const projectName = manifestPath.split(/[\\/]/)[3] ; if (projectName) projectNames[projectName] = true })
-    const sortedProjects = Object.keys(projectNames).sort() ; sortedProjects.forEach(project => console.log(project))
+    const sortedProjects = Object.keys(projectNames).sort((a, b) => a.localeCompare(b))
+    sortedProjects.forEach(project => console.log(project))
     console.log() // line break
 
     // Iterate thru PROJECTS
