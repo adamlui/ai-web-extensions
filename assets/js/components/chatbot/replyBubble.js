@@ -29,7 +29,7 @@ window.replyBubble = {
         if (replyPre) replyPre.style.maxHeight = (
             config.stickySidebar ? (
                 relatedQueries?.offsetHeight > 0 ? `${heights.shorter}px` : `${heights.longer}px` )
-          : config.anchored ? `${ heights.longer - ( config.expanded ? 115 : 365 ) }px` : 'none'
+          : config.anchored ? `${ heights.longer -( config.expanded ? 115 : 365 )}px` : 'none'
         )
     }
 };
