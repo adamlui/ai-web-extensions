@@ -21,14 +21,14 @@
     "translate": "py chromium/utils/translate-en-messages.py",
     "translate:chrome": "py chromium/utils/translate-en-messages.py",
     "translate:chromium": "py chromium/utils/translate-en-messages.py",
-    "bump": "bash utils/bump.sh",
-    "bump:ext": "bash utils/bump.sh",
-    "bump:ext-nc": "bash utils/bump.sh --no-commit",
-    "bump:ext-np": "bash utils/bump.sh --no-push",
-    "bump:extension": "bash utils/bump.sh",
-    "bump:extensions": "bash utils/bump.sh",
-    "bump:manifest": "bash utils/bump.sh",
-    "bump:manifests": "bash utils/bump.sh"
+    "bump": "node utils/bump/extension-manifests",
+    "bump:ext": "node utils/bump/extension-manifests",
+    "bump:ext-nc": "node utils/bump/extension-manifests --no-commit",
+    "bump:ext-np": "node utils/bump/extension-manifests --no-push",
+    "bump:extension": "node utils/bump/extension-manifests",
+    "bump:extensions": "node utils/bump/extension-manifests",
+    "bump:manifest": "node utils/bump/extension-manifests",
+    "bump:manifests": "node utils/bump/extension-manifests"
   },
   "devDependencies": {
     "@eslint/json": "^0.13.2",
