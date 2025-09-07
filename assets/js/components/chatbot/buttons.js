@@ -209,9 +209,9 @@ window.buttons = {
 
             insert() { // requires components/replyBubble.js + lib/dom.js
                 if (!this.share) this.create() ; if (!replyBubble.preHeader) replyBubble.create()
-                const preHeaderBtnsDiv = dom.create.elem('div', { class: 'reply-header-btns' })
-                preHeaderBtnsDiv.append(this.copy, this.share, this.regen, this.speak)
-                replyBubble.preHeader.append(preHeaderBtnsDiv)
+                replyBubble.preHeader.append(
+                    this.preHeaderBtnsDiv ||= dom.create.elem('div', { class: 'reply-header-btns' }))
+                this.preHeaderBtnsDiv.append(this.copy, this.share, this.regen, this.speak)
             }
         }
     }
