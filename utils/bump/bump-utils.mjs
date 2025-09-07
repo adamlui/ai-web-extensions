@@ -40,7 +40,7 @@ export function bumpDateVer({ filePath, verbose = true }) { // bumps YYYY.M.D ve
     return { oldVer, newVer }
 }
 
-export async function findUserJS({ dir = global.monorepoRoot, verbose = true }) {
+export async function findUserJS({ dir = global.monorepoRoot, verbose = true } = {}) {
     const userJSfiles = []
     if (!dir && !global.monorepoRoot) { // no arg passed, init monorepo root
         dir = path.dirname(fileURLToPath(import.meta.url))
@@ -60,7 +60,7 @@ export async function findUserJS({ dir = global.monorepoRoot, verbose = true }) 
     return userJSfiles
 }
 
-export function findExtensionManifests({ dir = global.monorepoRoot, verbose = true }) {
+export function findExtensionManifests({ dir = global.monorepoRoot, verbose = true } = {}) {
     const manifestFiles = []
     if (!dir && !global.monorepoRoot) {
         dir = path.dirname(fileURLToPath(import.meta.url))
