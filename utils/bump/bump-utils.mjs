@@ -30,13 +30,11 @@ export function bumpDateVer(filePath) { // bumps YYYY.M.D versions
     const fileContent = fs.readFileSync(filePath, 'utf-8'),
           oldVer = fileContent.match(/(?:@version|"version"):?\s*"?([\d.]+)"?/)?.[1]
     if (!oldVer) return
-    const date = new Date(), today = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}` ; let newVer
-    if (oldVer == today) // bump sub-ver to 1
-        newVer = `${today}.1`
-    else if (oldVer.indexOf(`${today}.`) == 0) // bump sub-ver to 2+
-        newVer = `${today}.${parseInt(oldVer.split('.').pop()) + 1}`
-    else // bump to today
-        newVer = today
+    const date = new Date(), today = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`
+    const newVer = oldVer == today ? `${today}.1` // bump sub-ver to 1
+                 : oldVer.indexOf(`${today}.`) == 0 ? `${ // bump sub-ver to 2+
+                       today}.${parseInt(oldVer.split('.').pop()) + 1}`
+                 : today // bump to today
     fs.writeFileSync(filePath, fileContent.replace(new RegExp(`("?)${oldVer}("?)`), `$1${newVer}$2`), 'utf-8')
     this.log.success(`${nc}Updated: ${bw}v${oldVer}${nc} → ${bg}v${newVer}${nc}\n`)
     return { oldVer, newVer }
