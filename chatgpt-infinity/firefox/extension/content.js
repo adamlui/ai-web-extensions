@@ -103,15 +103,4 @@
             env.ui.scheme = displayedScheme ; toggles.sidebar.update.scheme() ; modals.stylize() }
     }
 
-    // Disable distracting SIDEBAR CLICK-ZOOM effect
-    if (!document.documentElement.hasAttribute('sidebar-click-zoom-observed')) {
-        new MutationObserver(mutations => mutations.forEach(({ target }) => {
-            if (target.closest('[class*=sidebar]') // include sidebar elems
-                && !target.closest('[class*=sidebar-toggle]') // exclude our toggles.sidebar's elems
-                && target.style.transform != 'none' // click-zoom occurred
-            ) target.style.transform = 'none'
-        })).observe(document.body, { attributes: true, subtree: true, attributeFilter: ['style'] })
-        document.documentElement.setAttribute('sidebar-click-zoom-observed', true)
-    }
-
 })()
