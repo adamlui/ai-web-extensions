@@ -26,38 +26,20 @@ const log = {} ; Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) 
 
 export { colors, log }
 
-export function bumpExtensionVer(manifestPath) {
-    const date = new Date(),
-          today = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`, // YYYY.M.D format
-          manifestContent = fs.readFileSync(manifestPath, 'utf-8'),
-          oldVer = manifestContent.match(/"version":\s*"([0-9.]*)"/)[1]
-    let newVer
+export function bumpDateVer(filePath) { // bumps YYYY.M.D versions
+    const fileContent = fs.readFileSync(filePath, 'utf-8'),
+          oldVer = fileContent.match(/(?:@version|"version"):?\s*"?([\d.]+)"?/)?.[1]
+    if (!oldVer) return
+    const date = new Date(), today = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}` ; let newVer
     if (oldVer == today) // bump sub-ver to 1
         newVer = `${today}.1`
     else if (oldVer.indexOf(`${today}.`) == 0) // bump sub-ver to 2+
         newVer = `${today}.${parseInt(oldVer.split('.').pop()) + 1}`
     else // bump to today
         newVer = today
-    fs.writeFileSync(manifestPath, manifestContent.replace(`"version": "${oldVer}"`, `"version": "${newVer}"`))
-    this.log.success(`${nc}Updated: ${bw}v${oldVer}${nc} → ${bg}v${newVer}${nc}\n`)
+    fs.writeFileSync(filePath, fileContent.replace(new RegExp(`("?)${oldVer}("?)`), `$1${newVer}$2`), 'utf-8')
+    this.log.success(`${nc}Updated: ${bw}v${oldVer}${nc} → ${bg}v${newVer}${nc}`)
     return { oldVer, newVer }
-}
-
-export function bumpUserJSver(userJSfilePath) {
-    const date = new Date(),
-          today = `${date.getFullYear()}.${ date.getMonth() +1 }.${date.getDate()}`, // YYYY.M.D format
-          reVersion = /(@version\s+)([\d.]+)/,
-          userJScontent = fs.readFileSync(userJSfilePath, 'utf-8'),
-          currentVer = userJScontent.match(reVersion)[2]
-    let newVer
-    if (currentVer == today) // bump sub-ver to 1
-        newVer = `${today}.1`
-    else if (currentVer.startsWith(`${today}.`)) // bump sub-ver to 2+
-        newVer = `${today}.${parseInt(currentVer.split('.').pop()) + 1}`
-    else // bump to today
-        newVer = today
-    fs.writeFileSync(userJSfilePath, userJScontent.replace(reVersion, `$1${newVer}`), 'utf-8')
-    this.log.success(`${nc}Updated: ${bw}v${currentVer}${nc} → ${bg}v${newVer}${nc}`)
 }
 
 export async function findUserJS(dir = global.monorepoRoot) {
