@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.9.7
+// @version               2025.9.7.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -197,10 +197,10 @@
 // @require               https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.3/dist/chatgpt.min.js#sha256-jeA6TrwGYL3u5epUnl+2cbbGPhvFRocIMwQbQjNedZs=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require               https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f7e2f2d/assets/js/components/chatbot/buttons.js#sha256-Srg5wWTmP3Zv2OkTLEHeX7HKeKjeYnRgdIFhdRJMuik=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@cc60313/assets/js/components/chatbot/buttons.js#sha256-SKlhJO503awp8matfnXaUyhN638Isl6wf0MJXKFEY/w=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0329ace/assets/js/components/chatbot/icons.js#sha256-p89CrELJj8rguE8M4IjdMA4CYwX7iid+RNzvX3oOT2A=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@bfdb063/assets/js/components/chatbot/menus.js#sha256-ZOZBraa/OmK/AKDtJucT9+i5uuq3suasT3kjJl0UBdA=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@6d19ba4/assets/js/components/chatbot/replyBubble.js#sha256-ltqs0lv63Ltb1RevzOO0dczixuUhrIEYOn1Pg6p7tbM=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@cc60313/assets/js/components/chatbot/replyBubble.js#sha256-bczWxw8F3pvTd06QBysf4Hw4jxLDdmewJEAA0cyR970=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@6fd9b53/assets/js/components/chatbot/tooltip.js#sha256-RbmcNuh/DiKIH+Ch2KYrIo48pLAUd/445leqYwBGEXw=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@bb5451a/assets/js/lib/chatbot/api.js#sha256-nCFc1tcSAfGJT260Sn07YGEczKPrhXdj8UlrKi+ac8M=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@ecaeb55/assets/js/lib/chatbot/feedback.js#sha256-9Hm3fBS96DtWFdT5VwGDGvwZMpYIRfxGAQRaCGECeqA=
@@ -271,7 +271,7 @@
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
             app: '66ac514', // for cached <app|messages>.json
-            aiweb: '70ba16f' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
+            aiweb: 'cc60313' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         }
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@${app.commitHashes.app}` }
@@ -414,6 +414,7 @@
     if (!config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!config.fontSize) settings.save('fontSize', 12.8791) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env
+    if (config.preferredAPI == 'GPTforLove') config.preferredAPI = null // since 502
     log.debug(`Success! config = ${log.prettifyObj(config)}`)
 
     // Define UI functions
