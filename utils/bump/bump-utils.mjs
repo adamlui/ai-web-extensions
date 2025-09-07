@@ -26,7 +26,7 @@ const log = {} ; Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) 
 
 export { colors, log }
 
-export function bumpDateVer(filePath) { // bumps YYYY.M.D versions
+export function bumpDateVer({ filePath, verbose = true }) { // bumps YYYY.M.D versions
     const fileContent = fs.readFileSync(filePath, 'utf-8'),
           oldVer = fileContent.match(/(?:@version|"version"):?\s*"?([\d.]+)"?/)?.[1]
     if (!oldVer) return
@@ -36,11 +36,11 @@ export function bumpDateVer(filePath) { // bumps YYYY.M.D versions
                        today}.${parseInt(oldVer.split('.').pop()) + 1}`
                  : today // bump to today
     fs.writeFileSync(filePath, fileContent.replace(new RegExp(`("?)${oldVer}("?)`), `$1${newVer}$2`), 'utf-8')
-    this.log.success(`${nc}Updated: ${bw}v${oldVer}${nc} → ${bg}v${newVer}${nc}\n`)
+    if (verbose) this.log.success(`${nc}Updated: ${bw}v${oldVer}${nc} → ${bg}v${newVer}${nc}\n`)
     return { oldVer, newVer }
 }
 
-export async function findUserJS(dir = global.monorepoRoot) {
+export async function findUserJS({ dir = global.monorepoRoot, verbose = true }) {
     const userJSfiles = []
     if (!dir && !global.monorepoRoot) { // no arg passed, init monorepo root
         dir = path.dirname(fileURLToPath(import.meta.url))
@@ -55,12 +55,12 @@ export async function findUserJS(dir = global.monorepoRoot) {
         if (fs.statSync(entryPath).isDirectory()) // recursively search subdirs
             userJSfiles.push(...await findUserJS(entryPath))
         else if (entry.endsWith('.user.js')) {
-            console.log(entryPath) ; userJSfiles.push(entryPath) }
+            if (verbose) console.log(entryPath) ; userJSfiles.push(entryPath) }
     })
     return userJSfiles
 }
 
-export function findExtensionManifests(dir = global.monorepoRoot) {
+export function findExtensionManifests({ dir = global.monorepoRoot, verbose = true }) {
     const manifestFiles = []
     if (!dir && !global.monorepoRoot) {
         dir = path.dirname(fileURLToPath(import.meta.url))
@@ -74,23 +74,23 @@ export function findExtensionManifests(dir = global.monorepoRoot) {
             if (/^(?:\.|node_modules$)/.test(entry)) return
             const entryPath = path.join(currentDir, entry)
             if (fs.statSync(entryPath).isDirectory()) search(entryPath)
-            else if (entry == 'manifest.json') { console.log(entryPath) ; manifestFiles.push(entryPath) }
+            else if (entry == 'manifest.json') { if (verbose) console.log(entryPath) ; manifestFiles.push(entryPath) }
         })
     })(dir)
     return manifestFiles
 }
 
-export async function generateSRIhash(resURL, algorithm = 'sha256') {
+export async function generateSRIhash({ resURL, algorithm = 'sha256', verbose = true }) {
     const sriHash = ssri.fromData(
         Buffer.from(await (await fetch(resURL)).arrayBuffer()), { algorithms: [algorithm] }).toString()
-    this.log.hash(`${sriHash}\n`)
+    if (verbose) this.log.hash(`${sriHash}\n`)
     return sriHash
 }
 
-export async function getLatestCommitHash(repo, path) {
+export async function getLatestCommitHash({ repo, path, verbose = true }) {
     const endpoint = `https://api.github.com/repos/${repo}/commits`,
           latestCommitHash = (await (await fetch(`${endpoint}?path=${ path || '' }`)).json())[0]?.sha
-    if (latestCommitHash) this.log.hash(`${latestCommitHash}\n`)
+    if (verbose && latestCommitHash) this.log.hash(`${latestCommitHash}\n`)
     return latestCommitHash
 }
 

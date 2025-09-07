@@ -45,7 +45,7 @@
 
     // Fetch latest commit hash for adamlui/ai-web-extensions
     bump.log.working('\nFetching latest commit hash for adamlui/ai-web-extensions...\n')
-    const latestCommitHashes = { aiweb: await bump.getLatestCommitHash('adamlui/ai-web-extensions') }
+    const latestCommitHashes = { aiweb: await bump.getLatestCommitHash({ repo: 'adamlui/ai-web-extensions' }) }
 
     bump.log.working('\nProcessing resource(s)...\n')
     let urlsUpdatedCnt = 0
@@ -53,7 +53,8 @@
     // Fetch latest commit hash for repo/chrom<e|ium>/extension
     if (resURLs.some(url => url.includes(repoName))) {
         console.log('Fetching latest commit hash for Chromium extension...')
-        latestCommitHashes.chromium = await bump.getLatestCommitHash(`adamlui/${repoName}`, 'chromium/extension')
+        latestCommitHashes.chromium = await bump.getLatestCommitHash(
+            { repo: `adamlui/${repoName}`, path: 'chromium/extension' })
     }
 
     // Process each resource
@@ -74,7 +75,7 @@
 
         // Generate/compare/update SRI hash
         console.log(`${ !bump.log.endedWithLineBreak ? '\n' : '' }Generating SRI (SHA-256) hash for ${resName}...`)
-        const newSRIhash = await bump.generateSRIhash(updatedURL)
+        const newSRIhash = await bump.generateSRIhash({ resURL: updatedURL })
         if (regEx.hash.sri.exec(resURL)?.[0] == newSRIhash) { // SRI hash didn't change
             console.log(`${resName} already up-to-date!`) ; bump.log.endedWithLineBreak = false
             continue // ...so skip resource

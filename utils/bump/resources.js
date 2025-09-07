@@ -21,7 +21,7 @@
     fs.writeFileSync(cache.paths.bumpUtils, (await (await fetch(
         'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
     ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
-    const bump = await import('./bump-utils.mjs')
+    const bump = await import(`file://${cache.paths.bumpUtils}`) ; fs.unlinkSync(cache.paths.bumpUtils)
 
     // Init REGEX
     const regEx = {
@@ -61,7 +61,7 @@
 
     // Fetch latest commit hash for adamlui/ai-web-extensions
     bump.log.working('\nFetching latest commit hash for adamlui/ai-web-extensions...\n')
-    const latestCommitHashes = { aiweb: await bump.getLatestCommitHash('adamlui/ai-web-extensions') }
+    const latestCommitHashes = { aiweb: await bump.getLatestCommitHash({ repo: 'adamlui/ai-web-extensions' }) }
 
     // Process each userscript
     let urlsUpdatedCnt = 0 ; let filesUpdatedCnt = 0
@@ -76,7 +76,8 @@
         // Fetch latest commit hash for repo/chromium/extension
         if (urlMap[userJSfilePath].some(url => url.includes(repoName))) {
             console.log('Fetching latest commit hash for Chromium extension...')
-            latestCommitHashes.chromium = await bump.getLatestCommitHash(`adamlui/${repoName}`, 'chromium/extension')
+            latestCommitHashes.chromium = await bump.getLatestCommitHash(
+            { repo: `adamlui/${repoName}`, path: 'chromium/extension' })
         }
 
         // Process each resource
@@ -98,7 +99,7 @@
 
             // Generate/compare/update SRI hash
             console.log(`${ !bump.log.endedWithLineBreak ? '\n' : '' }Generating SRI (SHA-256) hash for ${resName}...`)
-            const newSRIhash = await bump.generateSRIhash(updatedURL)
+            const newSRIhash = await bump.generateSRIhash({ resURL: updatedURL })
             if (regEx.hash.sri.exec(resURL)?.[0] == newSRIhash) { // SRI hash didn't change
                 console.log(`${resName} already up-to-date!`) ; bump.log.endedWithLineBreak = false
                 continue // ...so skip resource
@@ -114,7 +115,7 @@
         }
         if (fileUpdated) {
             console.log(`${ !bump.log.endedWithLineBreak ? '\n' : '' }Bumping userscript version...`)
-            bump.bumpDateVer(userJSfilePath) ; filesUpdatedCnt++
+            bump.bumpDateVer({ filePath: userJSfilePath }) ; filesUpdatedCnt++
         }
     }
 

@@ -54,7 +54,7 @@
         }
 
         console.log(`Bumping version in ${chromiumOnly ? 'Chromium' : ffOnly ? 'Firefox' : ''} manifest...`)
-        const { oldVer, newVer } = bump.bumpDateVer(manifestPath)
+        const { oldVer, newVer } = bump.bumpDateVer({ filePath: manifestPath })
         bumpedManifests[`${platformManifestPath}/manifest.json`] = `${oldVer};${newVer}`
     }
 
