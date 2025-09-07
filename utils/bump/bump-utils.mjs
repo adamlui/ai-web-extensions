@@ -19,11 +19,12 @@ const colors = {
 }
 const { nc, dg, bw, by, bg, br } = colors
 const lvlColors = { hash: dg, info: bw, working: by, success: bg, error: br }
-
-export const log = {} ; Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) {
+const log = {} ; Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) {
     const formattedMsg = lvlColors[lvl] +( log.endedWithLineBreak ? msg.trimStart() : msg ) + nc
     console.log(formattedMsg) ; log.endedWithLineBreak = msg.toString().endsWith('\n')
 })
+
+export { colors, log }
 
 export function bumpUserJSver(userJSfilePath) {
     const date = new Date(),
@@ -60,6 +61,26 @@ export async function findUserJS(dir = global.monorepoRoot) {
             console.log(entryPath) ; userJSfiles.push(entryPath) }
     })
     return userJSfiles
+}
+
+export function findExtensionManifests(dir = global.monorepoRoot) {
+    const manifestFiles = []
+    if (!dir && !global.monorepoRoot) {
+        dir = path.dirname(fileURLToPath(import.meta.url))
+        while (!fs.existsSync(path.join(dir, 'package.json')))
+            dir = path.dirname(dir)
+        global.monorepoRoot = dir
+    }
+    dir = path.resolve(dir)
+    ;(function search(currentDir) {
+        fs.readdirSync(currentDir).forEach(entry => {
+            if (/^(?:\.|node_modules$)/.test(entry)) return
+            const entryPath = path.join(currentDir, entry)
+            if (fs.statSync(entryPath).isDirectory()) search(entryPath)
+            else if (entry == 'manifest.json') { console.log(entryPath) ; manifestFiles.push(entryPath) }
+        })
+    })(dir)
+    return manifestFiles
 }
 
 export async function generateSRIhash(resURL, algorithm = 'sha256') {
