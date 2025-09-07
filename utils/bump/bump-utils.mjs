@@ -38,7 +38,7 @@ export function bumpDateVer(filePath) { // bumps YYYY.M.D versions
     else // bump to today
         newVer = today
     fs.writeFileSync(filePath, fileContent.replace(new RegExp(`("?)${oldVer}("?)`), `$1${newVer}$2`), 'utf-8')
-    this.log.success(`${nc}Updated: ${bw}v${oldVer}${nc} → ${bg}v${newVer}${nc}`)
+    this.log.success(`${nc}Updated: ${bw}v${oldVer}${nc} → ${bg}v${newVer}${nc}\n`)
     return { oldVer, newVer }
 }
 
