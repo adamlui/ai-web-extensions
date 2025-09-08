@@ -24,7 +24,8 @@
 
     // Import BUMP UTILS
     let bump
-    if (devMode) bump = await import('./bump-utils.mjs')
+    if (devMode) // bypass cache for latest bump-utils.mjs
+        bump = await import('./bump-utils.mjs')
     else { // import sparsely updated remote bump-utils.min.mjs
         fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
         fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
