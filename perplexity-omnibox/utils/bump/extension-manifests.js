@@ -10,7 +10,7 @@
     // Import LIBS
     const fs = require('fs'),
           path = require('path'),
-          { execSync } = require('child_process')
+          { execSync, spawnSync } = require('child_process')
 
     // Init CACHE vars
     const cache = { paths: { root: '.cache/' }}
@@ -42,10 +42,10 @@
         if (!chromiumOnly && !ffOnly) {
             console.log(`Checking last commit details for ${platformManifestPath}...`)
             try {
-                const latestCommitMsg = execSync(
-                    `git log -1 --format=%s -- "${path.relative(process.cwd(), path.dirname(manifestPath))}"`,
+                const latestCommitMsg = spawnSync('git',
+                    ['log', '-1', '--format=%s', '--', path.relative(process.cwd(), path.dirname(manifestPath))],
                     { encoding: 'utf8' }
-                ).trim()
+                ).stdout.trim()
                 bump.log.hash(`${latestCommitMsg}\n`)
                 if (/bump.*(?:ersion|manifest)/i.test(latestCommitMsg)) {
                     console.log('No changes found. Skipping...\n') ; continue }
@@ -78,7 +78,7 @@
         // git add/commit/push
         try {
             execSync('git add ./**/manifest.json')
-            execSync('git', ['commit', '-n', '-m', commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
+            spawnSync('git', ['commit', '-n', '-m', commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
             if (!noPush) {
                 bump.log.working('\nPulling latest changes from remote to sync local repository...\n')
                 execSync('git pull')
