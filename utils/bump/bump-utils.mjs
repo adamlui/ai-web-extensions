@@ -34,7 +34,7 @@ export function bumpDateVer({ filePath, verbose = true } = {}) { // bumps YYYY.M
     const date = new Date(), today = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`
     const newVer = oldVer == today ? `${today}.1` // bump sub-ver to 1
                  : oldVer.startsWith(`${today}.`) ? `${ // bump sub-ver to 2+
-                       today}.${parseInt(oldVer.split('.').pop()) + 1}`
+                       today}.${ parseInt(oldVer.split('.').pop()) +1 }`
                  : today // bump to today
     fs.writeFileSync(filePath, fileContent.replace(new RegExp(`("?)${oldVer}("?)`), `$1${newVer}$2`), 'utf-8')
     if (verbose) this.log.success(`${nc}Updated: ${bw}v${oldVer}${nc} → ${bg}v${newVer}${nc}\n`)
