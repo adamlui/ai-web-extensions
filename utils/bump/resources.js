@@ -25,7 +25,7 @@
     // Import BUMP UTILS
     let bump
     if (devMode) bump = await import('./bump-utils.mjs')
-    else {
+    else { // import sparsely updated remote bump-utils.min.mjs
         fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
         fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
             'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
