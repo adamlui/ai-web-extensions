@@ -31,7 +31,7 @@
           noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
 
     // Init manifest PATHS
-    bump.log.working('Searching for extension manifests...\n')
+    bump.log.working('\nSearching for extension manifests...\n')
     let manifestPaths = bump.findFileBySuffix({ suffix: 'manifest.json' })
     if (chromiumOnly) manifestPaths = manifestPaths.filter(path => /chrom/i.test(path))
     else if (ffOnly) manifestPaths = manifestPaths.filter(path => /firefox/i.test(path))
