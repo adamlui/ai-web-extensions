@@ -43,7 +43,9 @@
             console.log(`Checking last commit details for ${platformManifestPath}...`)
             try {
                 const latestCommitMsg = execSync(
-                    `git log -1 --format=%s -- "${platformManifestPath}"`, { encoding: 'utf8' }).trim()
+                    `git log -1 --format=%s -- "${path.relative(process.cwd(), path.dirname(manifestPath))}"`,
+                    { encoding: 'utf8' }
+                ).trim()
                 bump.log.hash(`${latestCommitMsg}\n`)
                 if (/bump.*(?:ersion|manifest)/i.test(latestCommitMsg)) {
                     console.log('No changes found. Skipping...\n') ; continue }
@@ -76,7 +78,7 @@
         // git add/commit/push
         try {
             execSync('git add ./**/manifest.json')
-            execSync(`git commit -n -m "${commitMsg}"`)
+            execSync('git', ['commit', '-n', '-m', commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
             if (!noPush) {
                 bump.log.working('\nPulling latest changes from remote to sync local repository...\n')
                 execSync('git pull')
