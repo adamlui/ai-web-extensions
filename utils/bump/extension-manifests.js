@@ -2,11 +2,21 @@
 
 // Bumps extension manifests if changes detected + git commit/push
 // NOTE: Pass --cache to use cachePaths.manifestPaths for faster init
+// NOTE: Pass --dev to use cachePaths.bumpUtils for faster init
 // NOTE: Pass --chrom<e|ium> to forcibly bump Chromium manifests only
 // NOTE: Pass --<ff|firefox> to forcibly bump Firefox manifests only
 // NOTE: Pass --no-<commit|push> to skip git commit/push
 
 (async () => {
+
+    // Parse ARGS
+    const args = process.argv.slice(2),
+          cacheMode = args.some(arg => arg == '--cache'),
+          devMode = args.some(arg => arg == '--dev'),
+          chromiumOnly = args.some(arg => /chrom/i.test(arg)),
+          ffOnly = args.some(arg => /f{2}/i.test(arg)),
+          noCommit = args.some(arg => ['--no-commit', '-nc'].includes(arg)),
+          noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
 
     // Import LIBS
     const fs = require('fs'),
@@ -19,19 +29,15 @@
     cachePaths.manifestPaths = path.join(__dirname, `${cachePaths.root}manifest-paths.json`)
 
     // Import BUMP UTILS
-    fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
-    fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
-        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
-    ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
-    const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
-
-    // Parse ARGS
-    const args = process.argv.slice(2),
-          cacheMode = args.some(arg => arg == '--cache'),
-          chromiumOnly = args.some(arg => /chrom/i.test(arg)),
-          ffOnly = args.some(arg => /f{2}/i.test(arg)),
-          noCommit = args.some(arg => ['--no-commit', '-nc'].includes(arg)),
-          noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
+    let bump
+    if (devMode) bump = await import('./bump-utils.mjs')
+    else {
+        fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
+        fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
+            'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
+        ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
+        bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
+    }
 
     // Collect extension manifests
     bump.log.working(`\n${ cacheMode ? 'Collecting' : 'Searching for' } extension manifests...\n`)

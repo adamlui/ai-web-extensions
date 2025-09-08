@@ -3,8 +3,14 @@
 // Bumps @require'd JS in userscripts
 // NOTE: Doesn't git commit to allow script editing from breaking changes
 // NOTE: Pass --cache to use cachePaths.userJSpaths for faster init
+// NOTE: Pass --dev to use cachePaths.bumpUtils for faster init
 
 (async () => {
+
+    // Parse ARGS
+    const args = process.argv.slice(2),
+          cacheMode = args.some(arg => arg == '--cache'),
+          devMode = args.some(arg => arg == '--dev')
 
     // Import LIBS
     const fs = require('fs'), // to read/write files
@@ -16,15 +22,15 @@
     cachePaths.userJSpaths = path.join(__dirname, `${cachePaths.root}userscript-paths.json`)
 
     // Import BUMP UTILS
-    fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
-    fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
-        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
-    ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
-    const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
-
-    // Parse ARGS
-    const args = process.argv.slice(2),
-          cacheMode = args.some(arg => arg == '--cache')
+    let bump
+    if (devMode) bump = await import('./bump-utils.mjs')
+    else {
+        fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
+        fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
+            'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
+        ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
+        bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
+    }
 
     // Init REGEX
     const regEx = {
