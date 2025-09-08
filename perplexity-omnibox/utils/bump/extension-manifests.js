@@ -20,7 +20,7 @@
           path = require('path'),
           { execSync, spawnSync } = require('child_process')
 
-    // Init CACHE vars
+    // Init CACHE paths
     const cachePaths = { root: '.cache/' }
     cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump-utils.min.mjs`)
 
