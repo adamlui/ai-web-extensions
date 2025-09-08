@@ -91,7 +91,6 @@
         } catch (err) { bump.log.error('Git operation failed: ' + err.message) }
     }
 
-
     // Final SUMMARY log
     console.log('') // line break
     Object.entries(bumpedManifests).forEach(([manifest, versions]) => {
