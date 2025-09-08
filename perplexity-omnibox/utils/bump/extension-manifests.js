@@ -27,8 +27,8 @@
     const args = process.argv.slice(2),
           chromiumOnly = args.some(arg => /chrom/i.test(arg)),
           ffOnly = args.some(arg => /f{2}/i.test(arg)),
-          noCommit = args.includes('--no-commit'),
-          noPush = args.includes('--no-push')
+          noCommit = args.some(arg => ['--no-commit', '-nc'].includes(arg)),
+          noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
 
     // Init manifest PATHS
     const manifestPaths = ['chromium/extension/manifest.json']
