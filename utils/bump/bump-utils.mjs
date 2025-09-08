@@ -41,23 +41,37 @@ export function bumpDateVer({ filePath, verbose = true } = {}) { // bumps YYYY.M
     return { oldVer, newVer }
 }
 
-export function findFileBySuffix({ suffix, dir = global.monorepoRoot, verbose = true } = {}) {
+export function findFileBySuffix({
+    suffix, // string filename ending to search for (e.g., '.user.js', 'manifest.json')
+    dir = global.monorepoRoot, // string dir to start search from
+    verbose = true, // boolean to log found files to console
+    recursive = true, // boolean to search subdirs recursively
+    dotFolders = false, // boolean to include hidden folders
+    dotFiles = false, // boolean to include hidden files
+    ignoreFiles = [] // array of filenames to exclude from results
+} = {}) {
+
     if (!suffix) throw new Error(`'suffix' option required by findFileBySuffix()`)
-    const foundFiles = []
     if (!dir && !global.monorepoRoot) {
         dir = path.dirname(fileURLToPath(import.meta.url))
         while (!fs.existsSync(path.join(dir, 'package.json'))) dir = path.dirname(dir)
         global.monorepoRoot = dir
     }
-    dir = path.resolve(dir)
+
+    const foundFiles = []
     ;(function search(currentDir) {
-        fs.readdirSync(currentDir).forEach(entry => {
-            if (/^(?:\.|node_modules$)/.test(entry)) return
-            const entryPath = path.join(currentDir, entry)
-            if (fs.statSync(entryPath).isDirectory()) search(entryPath)
-            else if (entry.endsWith(suffix)) { if (verbose) console.log(entryPath) ; foundFiles.push(entryPath) }
-        })
-    })(dir)
+        for (const entry of fs.readdirSync(currentDir)) {
+            if (entry.startsWith('.') && !dotFolders && fs.statSync(path.join(currentDir, entry)).isDirectory())
+                continue // skip dotfolders if disabled
+            if (entry == 'node_modules') continue
+            const entryPath = path.join(currentDir, entry), stat = fs.statSync(entryPath)
+            if (stat.isDirectory() && recursive) search(entryPath)
+            else if (stat.isFile() && entry.endsWith(suffix)
+                && (dotFiles || !entry.startsWith('.'))
+                && !ignoreFiles.includes(entry)
+            ) { foundFiles.push(entryPath) ; if (verbose) console.log(entryPath) }
+        }
+    })(path.resolve(dir))
     return foundFiles
 }
 
