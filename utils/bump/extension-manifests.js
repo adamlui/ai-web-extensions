@@ -14,7 +14,7 @@
           { execSync, spawnSync } = require('child_process')
 
     // Init CACHE vars
-    const cache = { mode: process.argv.includes('--cache'), paths: { root: '.cache/' }}
+    const cache = { paths: { root: '.cache/' }}
     cache.paths.bumpUtils = path.join(__dirname, `${cache.paths.root}bump-utils.min.mjs`)
     cache.paths.manifestPaths = path.join(__dirname, `${cache.paths.root}manifest-paths.json`)
 
@@ -27,15 +27,16 @@
 
     // Parse ARGS
     const args = process.argv.slice(2),
+          cacheMode = args.some(arg => arg == '--cache'),
           chromiumOnly = args.some(arg => /chrom/i.test(arg)),
           ffOnly = args.some(arg => /f{2}/i.test(arg)),
           noCommit = args.some(arg => ['--no-commit', '-nc'].includes(arg)),
           noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
 
     // Collect extension manifests
-    bump.log.working(`\n${ cache.mode ? 'Collecting' : 'Searching for' } extension manifests...\n`)
+    bump.log.working(`\n${ cacheMode ? 'Collecting' : 'Searching for' } extension manifests...\n`)
     let manifestPaths = []
-    if (cache.mode) {
+    if (cacheMode) {
         try { // create missing cache file
             fs.mkdirSync(path.dirname(cache.paths.manifestPaths), { recursive: true })
             const fd = fs.openSync(cache.paths.manifestPaths,

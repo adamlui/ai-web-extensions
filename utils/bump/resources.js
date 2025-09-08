@@ -11,7 +11,7 @@
           path = require('path') // to manipulate paths
 
     // Init CACHE vars
-    const cache = { mode: process.argv.includes('--cache'), paths: { root: '.cache/' }}
+    const cache = { paths: { root: '.cache/' }}
     cache.paths.bumpUtils = path.join(__dirname, `${cache.paths.root}bump-utils.min.mjs`)
     cache.paths.userJSpaths = path.join(__dirname, `${cache.paths.root}userscript-paths.json`)
 
@@ -22,6 +22,10 @@
     ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
     const bump = await import(`file://${cache.paths.bumpUtils}`) ; fs.unlinkSync(cache.paths.bumpUtils)
 
+    // Parse ARGS
+    const args = process.argv.slice(2),
+          cacheMode = args.some(arg => arg == '--cache')
+
     // Init REGEX
     const regEx = {
         hash: { commit: /(@|\?v=)([^/#]+)/, sri: /[^#]+$/ },
@@ -30,9 +34,9 @@
     }
 
     // Collect userscripts
-    bump.log.working(`\n${ cache.mode ? 'Collecting' : 'Searching for' } userscripts...\n`)
+    bump.log.working(`\n${ cacheMode ? 'Collecting' : 'Searching for' } userscripts...\n`)
     let userJSfiles = []
-    if (cache.mode) {
+    if (cacheMode) {
         try { // create missing cache file
             fs.mkdirSync(path.dirname(cache.paths.userJSpaths), { recursive: true })
             const fd = fs.openSync(cache.paths.userJSpaths,
