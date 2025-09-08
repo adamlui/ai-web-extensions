@@ -11,13 +11,15 @@
 (async () => {
 
     // Parse ARGS
-    const args = process.argv.slice(2),
-          cacheMode = args.some(arg => arg.startsWith('--cache')),
-          devMode = args.some(arg => arg.startsWith('--dev')),
-          chromiumOnly = args.some(arg => /chrom/i.test(arg)),
-          ffOnly = args.some(arg => /f{2}/i.test(arg)),
-          noCommit = args.some(arg => ['--no-commit', '-nc'].includes(arg)),
-          noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
+    const args = process.argv.slice(2)
+    const config = {
+        cacheMode: args.some(arg => arg.startsWith('--cache')),
+        devMode: args.some(arg => arg.startsWith('--dev')),
+        chromiumOnly: args.some(arg => /chrom/i.test(arg)),
+        ffOnly: args.some(arg => /f{2}/i.test(arg)),
+        noCommit: args.some(arg => ['--no-commit', '-nc'].includes(arg)),
+        noPush: args.some(arg => ['--no-push', '-np'].includes(arg))
+    }
 
     // Import LIBS
     const fs = require('fs'),
@@ -31,7 +33,7 @@
 
     // Import BUMP UTILS
     let bump
-    if (devMode) // bypass cache for latest bump-utils.mjs
+    if (config.devMode) // bypass cache for latest bump-utils.mjs
         bump = await import('./bump-utils.mjs')
     else { // import sparsely updated remote bump-utils.min.mjs
         fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
@@ -42,9 +44,9 @@
     }
 
     // Collect extension manifests
-    bump.log.working(`\n${ cacheMode ? 'Collecting' : 'Searching for' } extension manifests...\n`)
+    bump.log.working(`\n${ config.cacheMode ? 'Collecting' : 'Searching for' } extension manifests...\n`)
     let manifestPaths = []
-    if (cacheMode) {
+    if (config.cacheMode) {
         try { // create missing cache file
             fs.mkdirSync(path.dirname(cachePaths.manifestPaths), { recursive: true })
             const fd = fs.openSync(cachePaths.manifestPaths,
@@ -61,8 +63,8 @@
         manifestPaths = await bump.findFileBySuffix({ suffix: 'manifest.json' }) ; console.log('') }
 
     // Filter manifests by platform if specified
-    if (chromiumOnly) manifestPaths = manifestPaths.filter(path => /chrom/i.test(path))
-    else if (ffOnly) manifestPaths = manifestPaths.filter(path => /firefox/i.test(path))
+    if (config.chromiumOnly) manifestPaths = manifestPaths.filter(path => /chrom/i.test(path))
+    else if (config.ffOnly) manifestPaths = manifestPaths.filter(path => /firefox/i.test(path))
 
     // Extract extension project NAMES
     bump.log.working('\nExtracting extension project names...\n')
@@ -84,7 +86,7 @@
 
             // Check latest commit for extension changes if forcible platform flag not set
             const platformManifestPath = path.dirname(manifestPath.replace(process.cwd() + path.sep, '').replace(/\\/g, '/'))
-            if (!chromiumOnly && !ffOnly) {
+            if (!config.chromiumOnly && !config.ffOnly) {
                 console.log(`Checking last commit details for ${platformManifestPath}...`)
                 try {
                     const latestCommitMsg = spawnSync('git',
@@ -97,7 +99,8 @@
                 } catch (err) { bump.log.error('Error checking git history\n') }
             }
 
-            console.log(`Bumping version in ${ chromiumOnly ? 'Chromium' : ffOnly ? 'Firefox' : '' } manifest...`)
+            console.log(`Bumping version in ${
+                config.chromiumOnly ? 'Chromium' : config.ffOnly ? 'Firefox' : '' } manifest...`)
             const { oldVer, newVer } = bump.bumpDateVer({ filePath: manifestPath })
             bumpedManifests[`${platformManifestPath}/manifest.json`] = `${oldVer};${newVer}`
         }
@@ -110,7 +113,7 @@
     } else bump.log.success(`${Object.keys(bumpedManifests).length} manifest${pluralSuffix} bumped!`)
 
     // ADD/COMMIT/PUSH bump(s)
-    if (!noCommit) {
+    if (!config.noCommit) {
         bump.log.working(`\nCommitting bump${pluralSuffix} to Git...\n`)
 
         // Init commit msg
@@ -124,14 +127,14 @@
         try {
             execSync('git add ./**/manifest.json')
             spawnSync('git', ['commit', '-n', '-m', commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
-            if (!noPush) {
+            if (!config.noPush) {
                 bump.log.working('\nPulling latest changes from remote to sync local repository...\n')
                 execSync('git pull')
                 bump.log.working('\nPushing bump${pluralSuffix} to Git...\n')
                 execSync('git push')
             }
             bump.log.success(`Success! ${Object.keys(bumpedManifests).length} manifest${pluralSuffix} updated${
-                !noCommit ? '/committed' : '' }${ !noPush ? '/pushed' : '' } to GitHub`)
+                !config.noCommit ? '/committed' : '' }${ !config.noPush ? '/pushed' : '' } to GitHub`)
         } catch (err) { bump.log.error('Git operation failed: ' + err.message) }
     }
 

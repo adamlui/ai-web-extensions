@@ -9,11 +9,13 @@
 (async () => {
 
     // Parse ARGS
-    const args = process.argv.slice(2),
-          chromiumOnly = args.some(arg => /chrom/i.test(arg)),
-          ffOnly = args.some(arg => /f{2}/i.test(arg)),
-          noCommit = args.some(arg => ['--no-commit', '-nc'].includes(arg)),
-          noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
+    const args = process.argv.slice(2)
+    const config = {
+        chromiumOnly: args.some(arg => /chrom/i.test(arg)),
+        ffOnly: args.some(arg => /f{2}/i.test(arg)),
+        noCommit: args.some(arg => ['--no-commit', '-nc'].includes(arg)),
+        noPush: args.some(arg => ['--no-push', '-np'].includes(arg))
+    }
 
     // Import LIBS
     const fs = require('fs'),
@@ -40,7 +42,7 @@
 
         // Check latest commit for extension changes if forcible platform flag not set
         const platformManifestPath = path.dirname(manifestPath)
-        if (!chromiumOnly && !ffOnly) {
+        if (!config.chromiumOnly && !config.ffOnly) {
             console.log(`Checking last commit details for ${platformManifestPath}...`)
             try {
                 const latestCommitMsg = spawnSync('git',
@@ -53,7 +55,8 @@
             } catch (err) { bump.log.error('Error checking git history\n') }
         }
 
-        console.log(`Bumping version in ${chromiumOnly ? 'Chromium' : ffOnly ? 'Firefox' : ''} manifest...`)
+        console.log(`Bumping version in ${
+            config.chromiumOnly ? 'Chromium' : config.ffOnly ? 'Firefox' : ''} manifest...`)
         const { oldVer, newVer } = bump.bumpDateVer({ filePath: manifestPath })
         bumpedManifests[`${platformManifestPath}/manifest.json`] = `${oldVer};${newVer}`
     }
@@ -66,7 +69,7 @@
 
 
     // ADD/COMMIT/PUSH bump(s)
-    if (!noCommit) {
+    if (!config.noCommit) {
         bump.log.working(`\nCommitting bump${pluralSuffix} to Git...\n`)
 
         // Init commit msg
@@ -80,14 +83,14 @@
         try {
             execSync('git add ./**/manifest.json')
             spawnSync('git', ['commit', '-n', '-m', commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
-            if (!noPush) {
+            if (!config.noPush) {
                 bump.log.working('\nPulling latest changes from remote to sync local repository...\n')
                 execSync('git pull')
                 bump.log.working('\nPushing bump${pluralSuffix} to Git...\n')
                 execSync('git push')
             }
             bump.log.success(`Success! ${Object.keys(bumpedManifests).length} manifest${pluralSuffix} updated${
-                !noCommit ? '/committed' : '' }${ !noPush ? '/pushed' : '' } to GitHub`)
+                !config.noCommit ? '/committed' : '' }${ !config.noPush ? '/pushed' : '' } to GitHub`)
         } catch (err) { bump.log.error('Git operation failed: ' + err.message) }
     }
 

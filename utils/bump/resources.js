@@ -9,9 +9,11 @@
 (async () => {
 
     // Parse ARGS
-    const args = process.argv.slice(2),
-          cacheMode = args.some(arg => arg.startsWith('--cache')),
-          devMode = args.some(arg => arg.startsWith('--dev'))
+    const args = process.argv.slice(2)
+    const config = {
+        cacheMode: args.some(arg => arg.startsWith('--cache')),
+        devMode:  args.some(arg => arg.startsWith('--dev'))
+    }
 
     // Import LIBS
     const fs = require('fs'), // to read/write files
@@ -24,7 +26,7 @@
 
     // Import BUMP UTILS
     let bump
-    if (devMode) // bypass cache for latest bump-utils.mjs
+    if (config.devMode) // bypass cache for latest bump-utils.mjs
         bump = await import('./bump-utils.mjs')
     else { // import sparsely updated remote bump-utils.min.mjs
         fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
@@ -42,9 +44,9 @@
     }
 
     // Collect userscripts
-    bump.log.working(`\n${ cacheMode ? 'Collecting' : 'Searching for' } userscripts...\n`)
+    bump.log.working(`\n${ config.cacheMode ? 'Collecting' : 'Searching for' } userscripts...\n`)
     let userJSfiles = []
-    if (cacheMode) {
+    if (config.cacheMode) {
         try { // create missing cache file
             fs.mkdirSync(path.dirname(cachePaths.userJSpaths), { recursive: true })
             const fd = fs.openSync(cachePaths.userJSpaths,
