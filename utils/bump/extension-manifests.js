@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 // Bumps extension manifests if changes detected + git commit/push
+// NOTE: Pass --cache to use cache.paths.manifestPaths for faster init
 // NOTE: Pass --chrom<e|ium> to forcibly bump Chromium manifests only
 // NOTE: Pass --<ff|firefox> to forcibly bump Firefox manifests only
 // NOTE: Pass --no-<commit|push> to skip git commit/push
@@ -15,6 +16,7 @@
     // Init CACHE vars
     const cache = { mode: process.argv.includes('--cache'), paths: { root: '.cache/' }}
     cache.paths.bumpUtils = path.join(__dirname, `${cache.paths.root}bump-utils.min.mjs`)
+    cache.paths.manifestPaths = path.join(__dirname, `${cache.paths.root}manifest-paths.json`)
 
     // Import BUMP UTILS
     fs.mkdirSync(path.dirname(cache.paths.bumpUtils), { recursive: true })
@@ -30,12 +32,28 @@
           noCommit = args.some(arg => ['--no-commit', '-nc'].includes(arg)),
           noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
 
-    // Init manifest PATHS
-    bump.log.working('Searching for extension manifests...\n')
-    let manifestPaths = bump.findFileBySuffix({ suffix: 'manifest.json' })
+    // Collect extension manifests
+    bump.log.working(`\n${ cache.mode ? 'Collecting' : 'Searching for' } extension manifests...\n`)
+    let manifestPaths = []
+    if (cache.mode) {
+        try { // create missing cache file
+            fs.mkdirSync(path.dirname(cache.paths.manifestPaths), { recursive: true })
+            const fd = fs.openSync(cache.paths.manifestPaths,
+                fs.constants.O_CREAT | fs.constants.O_EXCL | fs.constants.O_RDWR)
+            bump.log.error(`Cache file missing. Generating ${cache.paths.manifestPaths}...\n`)
+            manifestPaths = await bump.findFileBySuffix({ suffix: 'manifest.json' }) ; console.log('')
+            fs.writeFileSync(fd, JSON.stringify(manifestPaths, null, 2), 'utf-8')
+            bump.log.success(`\nCache file created @ ${cache.paths.manifestPaths}`)
+        } catch (err) { // use existing cache file
+            manifestPaths = JSON.parse(fs.readFileSync(cache.paths.manifestPaths, 'utf-8'))
+            console.log(manifestPaths) ; console.log('')
+        }
+    } else { // use bump.findFileBySuffix()
+        manifestPaths = await bump.findFileBySuffix({ suffix: 'manifest.json' }) ; console.log('') }
+
+    // Filter manifests by platform if specified
     if (chromiumOnly) manifestPaths = manifestPaths.filter(path => /chrom/i.test(path))
     else if (ffOnly) manifestPaths = manifestPaths.filter(path => /firefox/i.test(path))
-    console.log('') // line break
 
     // Extract extension project NAMES
     bump.log.working('\nExtracting extension project names...\n')
