@@ -1,16 +1,17 @@
 #!/usr/bin/env node
 
 // Bumps @require'd JS in userscripts
+
 // NOTE: Doesn't git commit to allow script editing from breaking changes
 // NOTE: Pass --cache to use cachePaths.userJSpaths for faster init
-// NOTE: Pass --dev to use cachePaths.bumpUtils for faster init
+// NOTE: Pass --dev to not use cachePaths.bumpUtils for latest ver
 
 (async () => {
 
     // Parse ARGS
     const args = process.argv.slice(2),
-          cacheMode = args.some(arg => arg == '--cache'),
-          devMode = args.some(arg => arg == '--dev')
+          cacheMode = args.some(arg => arg.startsWith('--cache')),
+          devMode = args.some(arg => arg.startsWith('--dev'))
 
     // Import LIBS
     const fs = require('fs'), // to read/write files

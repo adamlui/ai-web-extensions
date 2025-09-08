@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
 // Bumps extension manifests if changes detected + git commit/push
+
 // NOTE: Pass --cache to use cachePaths.manifestPaths for faster init
-// NOTE: Pass --dev to use cachePaths.bumpUtils for faster init
+// NOTE: Pass --dev to not use cachePaths.bumpUtils for latest ver
 // NOTE: Pass --chrom<e|ium> to forcibly bump Chromium manifests only
 // NOTE: Pass --<ff|firefox> to forcibly bump Firefox manifests only
 // NOTE: Pass --no-<commit|push> to skip git commit/push
@@ -11,8 +12,8 @@
 
     // Parse ARGS
     const args = process.argv.slice(2),
-          cacheMode = args.some(arg => arg == '--cache'),
-          devMode = args.some(arg => arg == '--dev'),
+          cacheMode = args.some(arg => arg.startsWith('--cache')),
+          devMode = args.some(arg => arg.startsWith('--dev')),
           chromiumOnly = args.some(arg => /chrom/i.test(arg)),
           ffOnly = args.some(arg => /f{2}/i.test(arg)),
           noCommit = args.some(arg => ['--no-commit', '-nc'].includes(arg)),
