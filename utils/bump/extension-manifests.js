@@ -32,7 +32,7 @@
 
     // Init manifest PATHS
     bump.log.working('Searching for extension manifests...\n')
-    let manifestPaths = bump.findExtensionManifests()
+    let manifestPaths = bump.findFileBySuffix({ suffix: 'manifest.json' })
     if (chromiumOnly) manifestPaths = manifestPaths.filter(path => /chrom/i.test(path))
     else if (ffOnly) manifestPaths = manifestPaths.filter(path => /firefox/i.test(path))
     console.log('') // line break

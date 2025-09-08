@@ -40,28 +40,9 @@ export function bumpDateVer({ filePath, verbose = true }) { // bumps YYYY.M.D ve
     return { oldVer, newVer }
 }
 
-export async function findUserJS({ dir = global.monorepoRoot, verbose = true } = {}) {
-    const userJSfiles = []
-    if (!dir && !global.monorepoRoot) { // no arg passed, init monorepo root
-        dir = path.dirname(fileURLToPath(import.meta.url))
-        while (!fs.existsSync(path.join(dir, 'package.json')))
-            dir = path.dirname(dir) // traverse up to closest manifest dir
-        global.monorepoRoot = dir
-    }
-    dir = path.resolve(dir)
-    fs.readdirSync(dir).forEach(async entry => {
-        if (/^(?:\.|node_modules$)/.test(entry)) return
-        const entryPath = path.join(dir, entry)
-        if (fs.statSync(entryPath).isDirectory()) // recursively search subdirs
-            userJSfiles.push(...await findUserJS(entryPath))
-        else if (entry.endsWith('.user.js')) {
-            if (verbose) console.log(entryPath) ; userJSfiles.push(entryPath) }
-    })
-    return userJSfiles
-}
-
-export function findExtensionManifests({ dir = global.monorepoRoot, verbose = true } = {}) {
-    const manifestFiles = []
+export function findFileBySuffix({ suffix, dir = global.monorepoRoot, verbose = true }) {
+    if (!suffix) throw new Error(`'suffix' option is required`)
+    const foundFiles = []
     if (!dir && !global.monorepoRoot) {
         dir = path.dirname(fileURLToPath(import.meta.url))
         while (!fs.existsSync(path.join(dir, 'package.json')))
@@ -74,10 +55,10 @@ export function findExtensionManifests({ dir = global.monorepoRoot, verbose = tr
             if (/^(?:\.|node_modules$)/.test(entry)) return
             const entryPath = path.join(currentDir, entry)
             if (fs.statSync(entryPath).isDirectory()) search(entryPath)
-            else if (entry == 'manifest.json') { if (verbose) console.log(entryPath) ; manifestFiles.push(entryPath) }
+            else if (entry.endsWith(suffix)) { if (verbose) console.log(entryPath) ; foundFiles.push(entryPath) }
         })
     })(dir)
-    return manifestFiles
+    return foundFiles
 }
 
 export async function generateSRIhash({ resURL, algorithm = 'sha256', verbose = true }) {

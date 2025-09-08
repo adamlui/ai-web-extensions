@@ -39,15 +39,15 @@
             const fd = fs.openSync(cache.paths.userJSpaths,
                 fs.constants.O_CREAT | fs.constants.O_EXCL | fs.constants.O_RDWR)
             bump.log.error(`Cache file missing. Generating ${cache.paths.userJSpaths}...\n`)
-            userJSfiles = await bump.findUserJS() ; console.log('')
+            userJSfiles = await bump.findFileBySuffix({ suffix: '.user.js' }) ; console.log('')
             fs.writeFileSync(fd, JSON.stringify(userJSfiles, null, 2), 'utf-8')
             bump.log.success(`\nCache file created @ ${cache.paths.userJSpaths}`)
         } catch (err) { // use existing cache file
             userJSfiles = JSON.parse(fs.readFileSync(cache.paths.userJSpaths, 'utf-8'))
             console.log(userJSfiles) ; console.log('')
         }
-    } else { // use bump.findUserJS()
-        userJSfiles = await bump.findUserJS() ; console.log('') }
+    } else { // use bump.findFileBySuffix()
+        userJSfiles = await bump.findFileBySuffix({ suffix: '.user.js' }) ; console.log('') }
 
     // Collect resources
     bump.log.working('\nCollecting resources...\n')
