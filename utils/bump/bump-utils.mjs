@@ -72,7 +72,7 @@ export async function generateSRIhash({ resURL, algorithm = 'sha256', verbose = 
 export async function getLatestCommitHash({ repo, path = '', verbose = true } = {}) {
     if (!repo) throw new Error(`'repo' option required by getLatestCommitHash()`)
     const endpoint = `https://api.github.com/repos/${repo}/commits`,
-          latestCommitHash = (await (await fetch(`${endpoint}?path=${ path || '' }`)).json())[0]?.sha
+          latestCommitHash = (await (await fetch(`${endpoint}?path=${path}`)).json())[0]?.sha
     if (verbose && latestCommitHash) this.log.hash(`${latestCommitHash}\n`)
     return latestCommitHash
 }
