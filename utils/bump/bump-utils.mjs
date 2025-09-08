@@ -46,8 +46,7 @@ export function findFileBySuffix({ suffix, dir = global.monorepoRoot, verbose = 
     const foundFiles = []
     if (!dir && !global.monorepoRoot) {
         dir = path.dirname(fileURLToPath(import.meta.url))
-        while (!fs.existsSync(path.join(dir, 'package.json')))
-            dir = path.dirname(dir)
+        while (!fs.existsSync(path.join(dir, 'package.json'))) dir = path.dirname(dir)
         global.monorepoRoot = dir
     }
     dir = path.resolve(dir)
