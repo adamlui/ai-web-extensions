@@ -77,11 +77,12 @@ export async function getLatestCommitHash({ repo, path = '', verbose = true } = 
     return latestCommitHash
 }
 
-export async function isValidResource({ resURL } = {}) {
+export async function isValidResource({ resURL, verbose = true } = {}) {
     if (!resURL) throw new Error(`'resURL' option required by isValidResource()`)
     try {
         const resIsValid = !(await (await fetch(resURL)).text()).startsWith('Package size exceeded')
-        if (!resIsValid) this.log.error(`\nInvalid resource: ${resURL}\n`)
+        if (verbose) this.log[resIsValid ? 'info' : 'error'](
+            `\n${ resIsValid ? 'V' : 'Inv' }alid resource: ${resURL}\n`)
         return resIsValid
     } catch (err) { return this.log.error(`\nCannot validate resource: ${resURL}\n`) }
 }
