@@ -31,7 +31,7 @@
           noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
 
     // Init manifest PATHS
-    bump.log.working('\nSearching for extension manifests...\n')
+    bump.log.working('Searching for extension manifests...\n')
     let manifestPaths = bump.findFileBySuffix({ suffix: 'manifest.json' })
     if (chromiumOnly) manifestPaths = manifestPaths.filter(path => /chrom/i.test(path))
     else if (ffOnly) manifestPaths = manifestPaths.filter(path => /firefox/i.test(path))
@@ -44,7 +44,7 @@
         const projectName = manifestPath.split(/[\\/]/)[3] ; if (projectName) projectNames[projectName] = true })
     const sortedProjects = Object.keys(projectNames).sort((a, b) => a.localeCompare(b))
     sortedProjects.forEach(project => console.log(project))
-    console.log() // line break
+    console.log('') // line break
 
     // Iterate thru PROJECTS
     const bumpedManifests = {}
@@ -110,7 +110,7 @@
     }
 
     // Final SUMMARY log
-    console.log() // line break
+    console.log('') // line break
     Object.entries(bumpedManifests).forEach(([manifest, versions]) => {
         const [oldVer, newVer] = versions.split(';')
         console.log(`  ± ${manifest} ${

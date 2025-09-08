@@ -93,7 +93,7 @@
 
 
     // Final SUMMARY log
-    console.log() // line break
+    console.log('') // line break
     Object.entries(bumpedManifests).forEach(([manifest, versions]) => {
         const [oldVer, newVer] = versions.split(';')
         console.log(`  ± ${manifest} ${
