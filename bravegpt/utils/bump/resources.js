@@ -10,15 +10,15 @@
           path = require('path') // to manipulate paths
 
     // Init CACHE vars
-    const cache = { mode: process.argv.includes('--cache'), paths: { root: '.cache/' }}
-    cache.paths.bumpUtils = path.join(__dirname, `${cache.paths.root}bump-utils.min.mjs`)
+    const cachePaths = { root: '.cache/' }
+    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump-utils.min.mjs`)
 
     // Import BUMP UTILS
-    fs.mkdirSync(path.dirname(cache.paths.bumpUtils), { recursive: true })
-    fs.writeFileSync(cache.paths.bumpUtils, (await (await fetch(
+    fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
+    fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
         'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
     ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
-    const bump = await import(`file://${cache.paths.bumpUtils}`) ; fs.unlinkSync(cache.paths.bumpUtils)
+    const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
 
     // Init REPO context
     const repoName = (() => {

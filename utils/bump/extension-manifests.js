@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Bumps extension manifests if changes detected + git commit/push
-// NOTE: Pass --cache to use cache.paths.manifestPaths for faster init
+// NOTE: Pass --cache to use cachePaths.manifestPaths for faster init
 // NOTE: Pass --chrom<e|ium> to forcibly bump Chromium manifests only
 // NOTE: Pass --<ff|firefox> to forcibly bump Firefox manifests only
 // NOTE: Pass --no-<commit|push> to skip git commit/push
@@ -14,16 +14,16 @@
           { execSync, spawnSync } = require('child_process')
 
     // Init CACHE vars
-    const cache = { paths: { root: '.cache/' }}
-    cache.paths.bumpUtils = path.join(__dirname, `${cache.paths.root}bump-utils.min.mjs`)
-    cache.paths.manifestPaths = path.join(__dirname, `${cache.paths.root}manifest-paths.json`)
+    const cachePaths = { root: '.cache/' }
+    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump-utils.min.mjs`)
+    cachePaths.manifestPaths = path.join(__dirname, `${cachePaths.root}manifest-paths.json`)
 
     // Import BUMP UTILS
-    fs.mkdirSync(path.dirname(cache.paths.bumpUtils), { recursive: true })
-    fs.writeFileSync(cache.paths.bumpUtils, (await (await fetch(
+    fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
+    fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
         'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
     ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
-    const bump = await import(`file://${cache.paths.bumpUtils}`) ; fs.unlinkSync(cache.paths.bumpUtils)
+    const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
 
     // Parse ARGS
     const args = process.argv.slice(2),
@@ -38,15 +38,15 @@
     let manifestPaths = []
     if (cacheMode) {
         try { // create missing cache file
-            fs.mkdirSync(path.dirname(cache.paths.manifestPaths), { recursive: true })
-            const fd = fs.openSync(cache.paths.manifestPaths,
+            fs.mkdirSync(path.dirname(cachePaths.manifestPaths), { recursive: true })
+            const fd = fs.openSync(cachePaths.manifestPaths,
                 fs.constants.O_CREAT | fs.constants.O_EXCL | fs.constants.O_RDWR)
-            bump.log.error(`Cache file missing. Generating ${cache.paths.manifestPaths}...\n`)
+            bump.log.error(`Cache file missing. Generating ${cachePaths.manifestPaths}...\n`)
             manifestPaths = await bump.findFileBySuffix({ suffix: 'manifest.json' }) ; console.log('')
             fs.writeFileSync(fd, JSON.stringify(manifestPaths, null, 2), 'utf-8')
-            bump.log.success(`\nCache file created @ ${cache.paths.manifestPaths}`)
+            bump.log.success(`\nCache file created @ ${cachePaths.manifestPaths}`)
         } catch (err) { // use existing cache file
-            manifestPaths = JSON.parse(fs.readFileSync(cache.paths.manifestPaths, 'utf-8'))
+            manifestPaths = JSON.parse(fs.readFileSync(cachePaths.manifestPaths, 'utf-8'))
             console.log(manifestPaths) ; console.log('')
         }
     } else { // use bump.findFileBySuffix()

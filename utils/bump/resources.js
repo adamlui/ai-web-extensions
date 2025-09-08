@@ -2,7 +2,7 @@
 
 // Bumps @require'd JS in userscripts
 // NOTE: Doesn't git commit to allow script editing from breaking changes
-// NOTE: Pass --cache to use cache.paths.userJSpaths for faster init
+// NOTE: Pass --cache to use cachePaths.userJSpaths for faster init
 
 (async () => {
 
@@ -11,16 +11,16 @@
           path = require('path') // to manipulate paths
 
     // Init CACHE vars
-    const cache = { paths: { root: '.cache/' }}
-    cache.paths.bumpUtils = path.join(__dirname, `${cache.paths.root}bump-utils.min.mjs`)
-    cache.paths.userJSpaths = path.join(__dirname, `${cache.paths.root}userscript-paths.json`)
+    const cachePaths = { root: '.cache/' }
+    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump-utils.min.mjs`)
+    cachePaths.userJSpaths = path.join(__dirname, `${cachePaths.root}userscript-paths.json`)
 
     // Import BUMP UTILS
-    fs.mkdirSync(path.dirname(cache.paths.bumpUtils), { recursive: true })
-    fs.writeFileSync(cache.paths.bumpUtils, (await (await fetch(
+    fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
+    fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
         'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
     ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
-    const bump = await import(`file://${cache.paths.bumpUtils}`) ; fs.unlinkSync(cache.paths.bumpUtils)
+    const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
 
     // Parse ARGS
     const args = process.argv.slice(2),
@@ -38,15 +38,15 @@
     let userJSfiles = []
     if (cacheMode) {
         try { // create missing cache file
-            fs.mkdirSync(path.dirname(cache.paths.userJSpaths), { recursive: true })
-            const fd = fs.openSync(cache.paths.userJSpaths,
+            fs.mkdirSync(path.dirname(cachePaths.userJSpaths), { recursive: true })
+            const fd = fs.openSync(cachePaths.userJSpaths,
                 fs.constants.O_CREAT | fs.constants.O_EXCL | fs.constants.O_RDWR)
-            bump.log.error(`Cache file missing. Generating ${cache.paths.userJSpaths}...\n`)
+            bump.log.error(`Cache file missing. Generating ${cachePaths.userJSpaths}...\n`)
             userJSfiles = await bump.findFileBySuffix({ suffix: '.user.js' }) ; console.log('')
             fs.writeFileSync(fd, JSON.stringify(userJSfiles, null, 2), 'utf-8')
-            bump.log.success(`\nCache file created @ ${cache.paths.userJSpaths}`)
+            bump.log.success(`\nCache file created @ ${cachePaths.userJSpaths}`)
         } catch (err) { // use existing cache file
-            userJSfiles = JSON.parse(fs.readFileSync(cache.paths.userJSpaths, 'utf-8'))
+            userJSfiles = JSON.parse(fs.readFileSync(cachePaths.userJSpaths, 'utf-8'))
             console.log(userJSfiles) ; console.log('')
         }
     } else { // use bump.findFileBySuffix()
