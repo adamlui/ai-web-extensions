@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 // Bumps extension manifests if changes detected + git commit/push
+
 // NOTE: Pass --chrom<e|ium> to forcibly bump Chromium manifest only
 // NOTE: Pass --<ff|firefox> to forcibly bump Firefox manifest only
 // NOTE: Pass --no-<commit|push> to skip git commit/push
