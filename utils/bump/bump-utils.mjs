@@ -66,9 +66,9 @@ export function findFileBySuffix({
             if (entry == 'node_modules') continue
             const entryPath = path.join(currentDir, entry), stat = fs.statSync(entryPath)
             if (stat.isDirectory() && recursive) search(entryPath)
-            else if (stat.isFile() && entry.endsWith(suffix)
-                && (dotFiles || !entry.startsWith('.'))
-                && !ignoreFiles.includes(entry)
+            else if (stat.isFile() && entry.endsWith(suffix) // file w/ `suffix`
+                && (dotFiles || !entry.startsWith('.')) // not dotfile if disabled
+                && !ignoreFiles.includes(entry) // not ignored file
             ) { foundFiles.push(entryPath) ; if (verbose) console.log(entryPath) }
         }
     })(path.resolve(dir))
