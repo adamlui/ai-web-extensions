@@ -26,7 +26,8 @@ const log = {} ; Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) 
 
 export { colors, log }
 
-export function bumpDateVer({ filePath, verbose = true }) { // bumps YYYY.M.D versions
+export function bumpDateVer({ filePath, verbose = true } = {}) { // bumps YYYY.M.D versions
+    if (!filePath) throw new Error(`'filePath' option required by bumpDateVer()`)
     const fileContent = fs.readFileSync(filePath, 'utf-8'),
           oldVer = fileContent.match(/(?:@version|"version"):?\s*"?([\d.]+)"?/)?.[1]
     if (!oldVer) return
@@ -40,8 +41,8 @@ export function bumpDateVer({ filePath, verbose = true }) { // bumps YYYY.M.D ve
     return { oldVer, newVer }
 }
 
-export function findFileBySuffix({ suffix, dir = global.monorepoRoot, verbose = true }) {
-    if (!suffix) throw new Error(`'suffix' option is required`)
+export function findFileBySuffix({ suffix, dir = global.monorepoRoot, verbose = true } = {}) {
+    if (!suffix) throw new Error(`'suffix' option required by findFileBySuffix()`)
     const foundFiles = []
     if (!dir && !global.monorepoRoot) {
         dir = path.dirname(fileURLToPath(import.meta.url))
@@ -61,14 +62,16 @@ export function findFileBySuffix({ suffix, dir = global.monorepoRoot, verbose = 
     return foundFiles
 }
 
-export async function generateSRIhash({ resURL, algorithm = 'sha256', verbose = true }) {
+export async function generateSRIhash({ resURL, algorithm = 'sha256', verbose = true } = {}) {
+    if (!resURL) throw new Error(`'resURL' option required by generateSRIhash()`)
     const sriHash = ssri.fromData(
         Buffer.from(await (await fetch(resURL)).arrayBuffer()), { algorithms: [algorithm] }).toString()
     if (verbose) this.log.hash(`${sriHash}\n`)
     return sriHash
 }
 
-export async function getLatestCommitHash({ repo, path, verbose = true }) {
+export async function getLatestCommitHash({ repo, path = '', verbose = true } = {}) {
+    if (!repo) throw new Error(`'repo' option required by getLatestCommitHash()`)
     const endpoint = `https://api.github.com/repos/${repo}/commits`,
           latestCommitHash = (await (await fetch(`${endpoint}?path=${ path || '' }`)).json())[0]?.sha
     if (verbose && latestCommitHash) this.log.hash(`${latestCommitHash}\n`)
@@ -76,6 +79,7 @@ export async function getLatestCommitHash({ repo, path, verbose = true }) {
 }
 
 export async function isValidResource(resURL) {
+    if (!resURL) throw new Error(`'resURL' option required by isValidResource()`)
     try {
         const resIsValid = !(await (await fetch(resURL)).text()).startsWith('Package size exceeded')
         if (!resIsValid) this.log.error(`\nInvalid resource: ${resURL}\n`)
