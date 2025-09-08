@@ -86,9 +86,8 @@
                 bump.log.working('\nPushing bump${pluralSuffix} to Git...\n')
                 execSync('git push')
             }
-            const gitAction = `updated${ !noCommit ? '/committed' : '' }${ !noPush ? '/pushed' : '' }`
-            bump.log.success(
-                `Success! ${Object.keys(bumpedManifests).length} manifest${pluralSuffix} ${gitAction} to GitHub`)
+            bump.log.success(`Success! ${Object.keys(bumpedManifests).length} manifest${pluralSuffix} updated${
+                !noCommit ? '/committed' : '' }${ !noPush ? '/pushed' : '' } to GitHub`)
         } catch (err) { bump.log.error('Git operation failed: ' + err.message) }
     }
 
