@@ -52,7 +52,7 @@ export function findFileBySuffix({
 } = {}) {
 
     if (!suffix) throw new Error(`'suffix' option required by findFileBySuffix()`)
-    if (!dir && !global.monorepoRoot) {
+    if (!dir && !global.monorepoRoot) { // init missing dir
         dir = path.dirname(fileURLToPath(import.meta.url))
         while (!fs.existsSync(path.join(dir, 'package.json'))) dir = path.dirname(dir)
         global.monorepoRoot = dir
