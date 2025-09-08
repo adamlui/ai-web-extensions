@@ -7,6 +7,13 @@
 
 (async () => {
 
+    // Parse ARGS
+    const args = process.argv.slice(2),
+          chromiumOnly = args.some(arg => /chrom/i.test(arg)),
+          ffOnly = args.some(arg => /f{2}/i.test(arg)),
+          noCommit = args.some(arg => ['--no-commit', '-nc'].includes(arg)),
+          noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
+
     // Import LIBS
     const fs = require('fs'),
           path = require('path'),
@@ -22,13 +29,6 @@
         'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
     ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
     const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
-
-    // Parse ARGS
-    const args = process.argv.slice(2),
-          chromiumOnly = args.some(arg => /chrom/i.test(arg)),
-          ffOnly = args.some(arg => /f{2}/i.test(arg)),
-          noCommit = args.some(arg => ['--no-commit', '-nc'].includes(arg)),
-          noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
 
     // Init manifest PATHS
     const manifestPaths = ['chromium/extension/manifest.json']

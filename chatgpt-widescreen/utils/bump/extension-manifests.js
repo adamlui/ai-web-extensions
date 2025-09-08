@@ -16,19 +16,19 @@
     const cachePaths = { root: '.cache/' }
     cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump-utils.min.mjs`)
 
-    // Import BUMP UTILS
-    fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
-    fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
-        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
-    ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
-    const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
-
     // Parse ARGS
     const args = process.argv.slice(2),
           chromiumOnly = args.some(arg => /chrom/i.test(arg)),
           ffOnly = args.some(arg => /f{2}/i.test(arg)),
           noCommit = args.some(arg => ['--no-commit', '-nc'].includes(arg)),
           noPush = args.some(arg => ['--no-push', '-np'].includes(arg))
+
+    // Import BUMP UTILS
+    fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
+    fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
+        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
+    ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
+    const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
 
     // Init manifest PATHS
     const chromiumManifestPath = 'chromium/extension/manifest.json',
