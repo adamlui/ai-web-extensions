@@ -82,7 +82,7 @@
         // Process each resource
         let fileUpdated = false
         for (const resURL of urlMap[userJSfilePath]) {
-            if (!await bump.isValidResource(resURL)) continue // to next resource
+            if (!await bump.isValidResource({ resURL })) continue // to next resource
             const resName = regEx.resName.exec(resURL)?.[0] || 'resource' // dir/filename for logs
 
             // Compare/update commit hash
@@ -94,7 +94,7 @@
                 }
             resLatestCommitHash = resLatestCommitHash.substring(0, 7) // abbr it
             let updatedURL = resURL.replace(regEx.hash.commit, `$1${resLatestCommitHash}`) // update hash
-            if (!await bump.isValidResource(updatedURL)) continue // to next resource
+            if (!await bump.isValidResource({ resURL: updatedURL })) continue // to next resource
 
             // Generate/compare/update SRI hash
             console.log(`${ !bump.log.endedWithLineBreak ? '\n' : '' }Generating SRI (SHA-256) hash for ${resName}...`)
@@ -104,7 +104,7 @@
                 continue // ...so skip resource
             }
             updatedURL = updatedURL.replace(regEx.hash.sri, newSRIhash) // update hash
-            if (!await bump.isValidResource(updatedURL)) continue // to next resource
+            if (!await bump.isValidResource({ resURL: updatedURL })) continue // to next resource
 
             // Write updated URL to userscript
             console.log(`Writing updated URL for ${resName}...`)

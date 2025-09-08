@@ -77,7 +77,7 @@ export async function getLatestCommitHash({ repo, path = '', verbose = true } = 
     return latestCommitHash
 }
 
-export async function isValidResource(resURL) {
+export async function isValidResource({ resURL } = {}) {
     if (!resURL) throw new Error(`'resURL' option required by isValidResource()`)
     try {
         const resIsValid = !(await (await fetch(resURL)).text()).startsWith('Package size exceeded')
