@@ -26,7 +26,7 @@ window.icons = {
 
         amazongpt: {
             create(color = '') {
-                const icon = dom.create.elem('img') ; icon.id = `${app.slug}-icon`
+                const icon = dom.create.elem('img', { id: `${app.slug}-icon` })
                 icons.app.amazongpt.update(icon, color)
                 return icon
             },
@@ -46,24 +46,16 @@ window.icons = {
         },
 
         bravegpt: {
-            create() {
-                const icon = dom.create.elem('img')
-                icon.src = GM_getResourceText('bgptIcon')
-                return icon
-            }
+            create() { return dom.create.elem('img', { src: GM_getResourceText('bgptIcon') })}
         },
 
         duckduckgpt: {
-            create() {
-                const icon = dom.create.elem('img')
-                icon.src = GM_getResourceText('ddgptIcon')
-                return icon
-            }
+            create() { return dom.create.elem('img', { src: GM_getResourceText('ddgptIcon') })}
         },
 
         googlegpt: {
             create(color = '') {
-                const icon = dom.create.elem('img') ; icon.id = `${app.slug}-icon`
+                const icon = dom.create.elem('img', { id: `${app.slug}-icon` })
                 icons.app.googlegpt.update(icon, color)
                 return icon
             },
