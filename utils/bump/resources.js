@@ -31,8 +31,7 @@
     else { // import sparsely updated remote bump-utils.min.mjs
         fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
         fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
-            'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()
-        ).replace(/^\/\*\*[\s\S]*?\*\/\s*/, '')) // strip JSD header minification comment
+            'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()))
         bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
     }
 

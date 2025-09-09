@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 // bump-utils.mjs for finding/bumping/hashing etc.
 // Source: https://github.com/adamlui/ai-web-extensions/blob/main/utils/bump/bump-utils.mjs
 // Latest miniified release: https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs
