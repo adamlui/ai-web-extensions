@@ -28,7 +28,7 @@
     let bump
     if (config.devMode) // bypass cache for latest bump-utils.mjs
         bump = await import('./bump-utils.mjs')
-    else { // import sparsely updated remote bump-utils.min.mjs
+    else { // import remote bump-utils.min.mjs updated every ~12h
         fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
         fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
             'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()))

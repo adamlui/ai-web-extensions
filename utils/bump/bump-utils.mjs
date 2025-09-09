@@ -1,6 +1,6 @@
 // bump-utils.mjs for finding/bumping/hashing etc.
 // Source: https://github.com/adamlui/ai-web-extensions/blob/main/utils/bump/bump-utils.mjs
-// Latest miniified release: https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs
+// Latest minified build: https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs
 
 import fs from 'fs' // to read/write files
 import ssri from 'ssri' // to generate SHA-256 hashes
