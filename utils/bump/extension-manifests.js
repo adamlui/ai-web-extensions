@@ -43,7 +43,7 @@
         bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
     }
 
-    // Collect extension manifests
+    // Collect extension MANIFESTS
     bump.log.working(`\n${ config.cacheMode ? 'Collecting' : 'Searching for' } extension manifests...\n`)
     let manifestPaths = []
     if (config.cacheMode) {
@@ -61,8 +61,6 @@
         }
     } else { // use bump.findFileBySuffix()
         manifestPaths = await bump.findFileBySuffix({ suffix: 'manifest.json' }) ; console.log('') }
-
-    // Filter manifests by platform if specified
     if (config.chromiumOnly) manifestPaths = manifestPaths.filter(path => /chrom/i.test(path))
     else if (config.ffOnly) manifestPaths = manifestPaths.filter(path => /firefox/i.test(path))
 
