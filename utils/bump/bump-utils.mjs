@@ -62,14 +62,13 @@ export function findFileBySuffix({
     ;(function search(currentDir) {
         for (const entry of fs.readdirSync(currentDir)) {
             const entryPath = path.join(currentDir, entry), stat = fs.statSync(entryPath)
-            if (entry == 'node_modules'
-               || (entry.startsWith('.') && !dotFolders && stat.isDirectory()) // dotfolder but disabled
-            ) continue // skip it
-            if (stat.isDirectory() && recursive) search(entryPath)
-            else if (stat.isFile() && entry.endsWith(suffix) // file w/ `suffix`
-                && (dotFiles || !entry.startsWith('.')) // not dotfile if disabled
-                && !ignoreFiles.includes(entry) // not ignored file
-            ) { foundFiles.push(entryPath) ; if (verbose) console.log(entryPath) }
+            if (stat.isDirectory()) {
+                if (entry == 'node_modules' || (entry.startsWith('.') && !dotFolders)) continue
+                if (recursive) search(entryPath)
+            } else if (stat.isFile()) {
+                if (ignoreFiles.includes(entry) || (entry.startsWith('.') && !dotFiles)) continue
+                if (entry.endsWith(suffix)) { foundFiles.push(entryPath) ; if (verbose) console.log(entryPath) }
+            }
         }
     })(path.resolve(dir))
     return foundFiles
