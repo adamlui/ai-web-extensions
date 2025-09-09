@@ -9,7 +9,7 @@
             <img height=14 src="https://assets.aiwebextensions.com/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;English |
-        <a href="zh-cn/#readme">简体中文</a>
+        <a href="docs/zh-cn/#readme">简体中文</a>
     </h6>
 </div>
 
