@@ -31,7 +31,7 @@ export function bumpDateVer({ filePath, verbose = true } = {}) { // bumps YYYY.M
     const fileContent = fs.readFileSync(filePath, 'utf-8'),
           oldVer = fileContent.match(/(?:@version|"version"):?\s*"?([\d.]+)"?/)?.[1]
     if (!oldVer) return this.log.info(`No version found in ${filePath}`)
-    const date = new Date(), today = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`
+    const date = new Date(), today = `${date.getFullYear()}.${ date.getMonth() +1 }.${date.getDate()}`
     const newVer = oldVer == today ? `${today}.1` // bump sub-ver to 1
                  : oldVer.startsWith(`${today}.`) ? // bump sub-ver to 2+
                        `${today}.${ parseInt(oldVer.split('.').pop()) +1 }`
