@@ -67,7 +67,6 @@
            bump.log.info('Completed. No manifests bumped.') ; process.exit(0)
     } else bump.log.success(`${Object.keys(bumpedManifests).length} manifest${pluralSuffix} bumped!`)
 
-
     // ADD/COMMIT/PUSH bump(s)
     if (!config.noCommit) {
         bump.log.working(`\nCommitting bump${pluralSuffix} to Git...\n`)
