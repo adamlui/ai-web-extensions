@@ -97,7 +97,8 @@ export async function getLatestCommitHash({ repo, path = '', source = 'github', 
         } catch (err) { continue } // to next source
     }
     if (verbose && latestCommitHash) { this.log.hash(`${latestCommitHash}\n`) ; return latestCommitHash }
-    else if (!latestCommitHash) throw new Error(`Cannot fetch latest commit hash for: ${repo}`)
+    else if (!latestCommitHash)
+        throw new Error(`Cannot fetch latest commit hash for: ${repo}${ path ? '/' + path : '' }`)
 }
 
 export async function isValidResource({ resURL, verbose = true } = {}) {
