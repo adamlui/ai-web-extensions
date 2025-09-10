@@ -82,10 +82,11 @@
         try {
             execSync('git add ./**/manifest.json')
             spawnSync('git', ['commit', '-n', '-m', commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
+            console.log('') // line break
             if (!config.noPush) {
                 bump.log.working('\nPulling latest changes from remote to sync local repository...\n')
                 execSync('git pull')
-                bump.log.working('\nPushing bump${pluralSuffix} to Git...\n')
+                bump.log.working(`\nPushing bump${pluralSuffix} to Git...\n`)
                 execSync('git push')
             }
             bump.log.success(`Success! ${Object.keys(bumpedManifests).length} manifest${pluralSuffix} updated${
