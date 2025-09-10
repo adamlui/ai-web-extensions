@@ -1,5 +1,6 @@
 window.deepseek = {
-    selectors: { btns: { send: 'div[role=button]:has([d^="M7 16c-.595 0-1.077-"])' }, chatbox: '#chat-input' },
+    selectors: {
+        btns: { send: 'div[role=button]:has([d^="M8.3125"])' }, chatbox: '#chat-input, textarea' },
 
     getChatbox() { return document.querySelector(this.selectors.chatbox) },
     getSendButton() { return document.querySelector(this.selectors.btns.send) },
