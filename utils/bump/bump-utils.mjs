@@ -74,10 +74,12 @@ export function findFileBySuffix({
 
 export async function generateSRIhash({ resURL, algorithm = 'sha256', verbose = true } = {}) {
     if (!resURL) throw new Error(`'resURL' option required by generateSRIhash()`)
-    const sriHash = ssri.fromData(
-        Buffer.from(await (await fetch(resURL)).arrayBuffer()), { algorithms: [algorithm] }).toString()
-    if (verbose) this.log.hash(`${sriHash}\n`)
-    return sriHash
+    try {
+        const sriHash = ssri.fromData(
+            Buffer.from(await (await fetch(resURL)).arrayBuffer()), { algorithms: [algorithm] }).toString()
+        if (verbose) this.log.hash(`${sriHash}\n`)
+        return sriHash
+    } catch (err) { throw new Error(`Cannot generate SRI hash for: ${resURL}`) }
 }
 
 export async function getLatestCommitHash({ repo, path = '', source = 'github', verbose = true } = {}) {
@@ -103,5 +105,5 @@ export async function isValidResource({ resURL, verbose = true } = {}) {
         if (verbose) this.log[resIsValid ? 'info' : 'error'](
             `\n${ resIsValid ? 'V' : 'Inv' }alid resource: ${resURL}\n`)
         return resIsValid
-    } catch (err) { return this.log.error(`\nCannot validate resource: ${resURL}\n`) }
+    } catch (err) { throw new Error(`Cannot validate resource: ${resURL}`) }
 }
