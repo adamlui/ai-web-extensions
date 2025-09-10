@@ -80,12 +80,20 @@ export async function generateSRIhash({ resURL, algorithm = 'sha256', verbose = 
     return sriHash
 }
 
-export async function getLatestCommitHash({ repo, path = '', verbose = true } = {}) {
+export async function getLatestCommitHash({ repo, path = '', source = 'github', verbose = true } = {}) {
     if (!repo) throw new Error(`'repo' option required by getLatestCommitHash()`)
-    const endpoint = `https://api.github.com/repos/${repo}/commits`,
-          latestCommitHash = (await (await fetch(`${endpoint}?path=${path}`)).json())[0]?.sha
-    if (verbose && latestCommitHash) this.log.hash(`${latestCommitHash}\n`)
-    return latestCommitHash
+    const endpoints = {
+        github: `https://api.github.com/repos/${repo}/commits`,
+        gitlab: `https://gitlab.com/api/v4/projects/${encodeURIComponent(repo)}/repository/commits`
+    }
+    let latestCommitHash
+    for (const src of [source, source == 'github' ? 'gitlab' : 'github']) {
+        const data = await (await fetch(`${endpoints[src]}?path=${path}&per_page=1`)).json()
+        latestCommitHash = data[0]?.sha || data[0]?.id
+        if (latestCommitHash) break
+    }
+    if (verbose && latestCommitHash) { this.log.hash(`${latestCommitHash}\n`) ; return latestCommitHash }
+    else if (!latestCommitHash) throw new Error(`Cannot fetch latest commit hash for: ${repo}`)
 }
 
 export async function isValidResource({ resURL, verbose = true } = {}) {
