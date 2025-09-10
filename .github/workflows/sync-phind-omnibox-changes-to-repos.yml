@@ -20,6 +20,7 @@ jobs:
       - name: Checkout adamlui/ai-web-extensions
         uses: actions/checkout@v5
         with:
+          token: ${{ secrets.REPO_SYNC_PAT }}
           path: adamlui/ai-web-extensions
           fetch-depth: 2
 
