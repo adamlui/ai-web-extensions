@@ -3,6 +3,7 @@ name: Update usercount/jsDelivr shields in root readmes
 on:
   schedule:
     - cron: "25 2 * * 2" # every Tue @ 2:25 AM
+  workflow_dispatch:
 
 permissions:
   contents: read
