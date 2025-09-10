@@ -90,9 +90,11 @@ export async function getLatestCommitHash({ repo, path = '', source = 'github', 
     }
     let latestCommitHash
     for (const src of [source, source == 'github' ? 'gitlab' : 'github']) {
-        const data = await (await fetch(`${endpoints[src]}?path=${path}&per_page=1`)).json()
-        latestCommitHash = data[0]?.sha || data[0]?.id
-        if (latestCommitHash) break
+        try {
+            const data = await (await fetch(`${endpoints[src]}?path=${path}&per_page=1`)).json()
+            latestCommitHash = data[0]?.sha || data[0]?.id
+            if (latestCommitHash) break
+        } catch (err) { continue } // to next source
     }
     if (verbose && latestCommitHash) { this.log.hash(`${latestCommitHash}\n`) ; return latestCommitHash }
     else if (!latestCommitHash) throw new Error(`Cannot fetch latest commit hash for: ${repo}`)
