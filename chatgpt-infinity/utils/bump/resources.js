@@ -45,8 +45,7 @@
 
     // Fetch latest commit hash for adamlui/ai-web-extensions
     bump.log.working('\nFetching latest commit hash for adamlui/ai-web-extensions...\n')
-    const latestCommitHashes = {
-        aiweb: await bump.getLatestCommitHash({ repo: 'adamlui/ai-web-extensions', source: 'gitlab' })}
+    const latestCommitHashes = { aiweb: await bump.getLatestCommitHash({ repo: 'adamlui/ai-web-extensions' })}
 
     bump.log.working('\nProcessing resource(s)...\n')
     let urlsUpdatedCnt = 0
@@ -55,7 +54,7 @@
     if (resURLs.some(url => url.includes(repoName))) {
         console.log('Fetching latest commit hash for Chromium extension...')
         latestCommitHashes.chromium = await bump.getLatestCommitHash(
-            { repo: `adamlui/${repoName}`, path: 'chromium/extension', source: 'gitlab' })
+            { repo: `adamlui/${repoName}`, path: 'chromium/extension' })
     }
 
     // Process each resource
