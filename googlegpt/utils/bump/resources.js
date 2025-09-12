@@ -45,8 +45,7 @@
 
     // Fetch latest commit hash for adamlui/ai-web-extensions
     bump.log.working('\nFetching latest commit hash for adamlui/ai-web-extensions...\n')
-    const latestCommitHashes = {
-        aiweb: await bump.getLatestCommitHash({ repo: 'adamlui/ai-web-extensions' })}
+    const latestCommitHashes = { aiweb: await bump.getLatestCommitHash({ repo: 'adamlui/ai-web-extensions' })}
 
     bump.log.working('\nProcessing resource(s)...\n')
     let urlsUpdatedCnt = 0
