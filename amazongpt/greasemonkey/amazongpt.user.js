@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.12
+// @version                2025.9.12.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -924,7 +924,7 @@
                 responseType: config.streamingDisabled || !config.proxyAPIenabled ? 'text' : 'stream',
                 onerror: err => { log.error(err)
                     if (!config.proxyAPIenabled)
-                        feedback.appAlert(!config.openAIkey ? 'login' : ['OpenAI', 'notWorking', 'suggestProxy'])
+                        feedback.appAlert(!config.openAIkey ? 'login' : ['OpenAI', 'apiNotWorking', 'suggestProxy'])
                     else api.tryNew(get.reply)
                 },
                 onload: resp => api.process.text(resp, { caller: get.reply, callerAPI: reqAPI }),

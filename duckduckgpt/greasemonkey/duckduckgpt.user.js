@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.12
+// @version                2025.9.12.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -1456,7 +1456,7 @@
                 responseType: config.streamingDisabled || !config.proxyAPIenabled ? 'text' : 'stream',
                 onerror: err => { log.error(err)
                     if (!config.proxyAPIenabled)
-                        feedback.appAlert(!config.openAIkey ? 'login' : ['OpenAI', 'notWorking', 'suggestProxy'])
+                        feedback.appAlert(!config.openAIkey ? 'login' : ['OpenAI', 'apiNotWorking', 'suggestProxy'])
                     else api.tryNew(get.reply)
                 },
                 onload: resp => api.process.text(resp, { caller: get.reply, callerAPI: reqAPI }),
