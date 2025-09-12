@@ -22,56 +22,53 @@ window.icons = {
             return log.error(`No <svg|src> data found for key '${key}'`)
     },
 
-    app: { // requires lib/dom.js + GM_getResourceText()
-
-        amazongpt: {
-            create(color = '') {
-                const icon = dom.create.elem('img', { id: `${app.slug}-icon` })
-                icons.app.amazongpt.update(icon, color)
-                return icon
-            },
-
-            update(targetIcons = [], color = '') {
-                if (!Array.isArray(targetIcons)) targetIcons = [targetIcons]
-                if (!targetIcons.length) targetIcons = document.querySelectorAll(`#${app.slug}-icon`)
-                targetIcons.forEach(icon => {
-                    icon.src = GM_getResourceText(`amzgpt${
-                        color == 'white' || !color && env.ui.app.scheme == 'dark' ? 'DS' : 'LS' }icon`)
-                    icon.style.filter = icon.style.webkitFilter = (
-                        'drop-shadow(5px 5px 15px rgba(0,0,0,0.3))' // drop shadow
-                        + ( env.ui.app.scheme == 'dark' ? // RGB shift
-                            'drop-shadow(2px 1px 0 #ff5b5b) drop-shadow(-1px -1px 0 rgb(73,215,73,0.75))' : '' ))
-                })
-            }
+    amazongpt: {
+        create(color = '') {
+            const icon = dom.create.elem('img', { id: `${app.slug}-icon` })
+            icons.app.amazongpt.update(icon, color)
+            return icon
         },
 
-        bravegpt: {
-            create() { return dom.create.elem('img', { src: GM_getResourceText('bgptIcon') })}
+        update(targetIcons = [], color = '') {
+            if (!Array.isArray(targetIcons)) targetIcons = [targetIcons]
+            if (!targetIcons.length) targetIcons = document.querySelectorAll(`#${app.slug}-icon`)
+            targetIcons.forEach(icon => {
+                icon.src = GM_getResourceText(`amzgpt${
+                    color == 'white' || !color && env.ui.app.scheme == 'dark' ? 'DS' : 'LS' }icon`)
+                icon.style.filter = icon.style.webkitFilter = (
+                    'drop-shadow(5px 5px 15px rgba(0,0,0,0.3))' // drop shadow
+                    + ( env.ui.app.scheme == 'dark' ? // RGB shift
+                        'drop-shadow(2px 1px 0 #ff5b5b) drop-shadow(-1px -1px 0 rgb(73,215,73,0.75))' : '' ))
+            })
+        }
+    },
+
+    bravegpt: {
+        create() { return dom.create.elem('img', { src: GM_getResourceText('bgptIcon') })}
+    },
+
+    duckduckgpt: {
+        create() { return dom.create.elem('img', { src: GM_getResourceText('ddgptIcon') })}
+    },
+
+    googlegpt: {
+        create(color = '') {
+            const icon = dom.create.elem('img', { id: `${app.slug}-icon` })
+            icons.app.googlegpt.update(icon, color)
+            return icon
         },
 
-        duckduckgpt: {
-            create() { return dom.create.elem('img', { src: GM_getResourceText('ddgptIcon') })}
-        },
-
-        googlegpt: {
-            create(color = '') {
-                const icon = dom.create.elem('img', { id: `${app.slug}-icon` })
-                icons.app.googlegpt.update(icon, color)
-                return icon
-            },
-
-            update(targetIcons = [], color = '') {
-                if (!Array.isArray(targetIcons)) targetIcons = [targetIcons]
-                if (!targetIcons.length) targetIcons = document.querySelectorAll(`#${app.slug}-icon`)
-                targetIcons.forEach(icon => {
-                    icon.src = GM_getResourceText(`ggptIcon${color ? color[0].toUpperCase() + color.slice(1)
-                        : env.ui.app.scheme == 'dark' ? 'White' : 'Black' }`)
-                    icon.style.filter = icon.style.webkitFilter = (
-                        'drop-shadow(5px 5px 15px rgba(0,0,0,0.3))' // drop shadow
-                        + 'drop-shadow(2px 1px 0 #ff5b5b) drop-shadow(-1px -1px 0 rgb(73,215,73,0.75))' // RGB shift
-                            + ( env.ui.app.scheme == 'light' ? 'drop-shadow(white 1px 1px)' : '' ))
-                })
-            }
+        update(targetIcons = [], color = '') {
+            if (!Array.isArray(targetIcons)) targetIcons = [targetIcons]
+            if (!targetIcons.length) targetIcons = document.querySelectorAll(`#${app.slug}-icon`)
+            targetIcons.forEach(icon => {
+                icon.src = GM_getResourceText(`ggptIcon${color ? color[0].toUpperCase() + color.slice(1)
+                    : env.ui.app.scheme == 'dark' ? 'White' : 'Black' }`)
+                icon.style.filter = icon.style.webkitFilter = (
+                    'drop-shadow(5px 5px 15px rgba(0,0,0,0.3))' // drop shadow
+                    + 'drop-shadow(2px 1px 0 #ff5b5b) drop-shadow(-1px -1px 0 rgb(73,215,73,0.75))' // RGB shift
+                        + ( env.ui.app.scheme == 'light' ? 'drop-shadow(white 1px 1px)' : '' ))
+            })
         }
     },
 
