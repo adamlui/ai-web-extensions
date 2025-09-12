@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.9
+// @version                2025.9.11
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -199,7 +199,7 @@
 // @require                https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require                https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@cc60313/assets/js/components/chatbot/buttons.js#sha256-SKlhJO503awp8matfnXaUyhN638Isl6wf0MJXKFEY/w=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@485996c/assets/js/components/chatbot/icons.js#sha256-/cQlKwuHy1ODqyrO9yvTX6bti0JtQFrPyunkKGIm+tg=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@c8fc898/assets/js/components/chatbot/icons.js#sha256-k6XvDmtB/ZYU3PEhvfDd1HKeoNOdEgwZnGll5MzOBHI=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@bfdb063/assets/js/components/chatbot/menus.js#sha256-ZOZBraa/OmK/AKDtJucT9+i5uuq3suasT3kjJl0UBdA=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@485996c/assets/js/components/chatbot/replyBubble.js#sha256-/F0kipD9jDAtlnlfL4Q3cbboS5bPx9ierlnRU897eqQ=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@6fd9b53/assets/js/components/chatbot/tooltip.js#sha256-RbmcNuh/DiKIH+Ch2KYrIo48pLAUd/445leqYwBGEXw=
@@ -2338,7 +2338,7 @@
                    && !(env.ui.site.isCentered && settings.controls[key].centered == false))
 
                 // Init logo
-                const settingsIcon = icons.app.duckduckgpt.create()
+                const settingsIcon = icons.duckduckgpt.create()
                 settingsIcon.style.cssText = `width: 65px ; position: relative ; top: -32px ; margin-bottom: 4px ;
                                               filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.3))`
                 // Init title

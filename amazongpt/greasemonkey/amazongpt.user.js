@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.9
+// @version                2025.9.11
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -78,7 +78,7 @@
 // @require                https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require                https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@cc60313/assets/js/components/chatbot/buttons.js#sha256-SKlhJO503awp8matfnXaUyhN638Isl6wf0MJXKFEY/w=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@485996c/assets/js/components/chatbot/icons.js#sha256-/cQlKwuHy1ODqyrO9yvTX6bti0JtQFrPyunkKGIm+tg=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@c8fc898/assets/js/components/chatbot/icons.js#sha256-k6XvDmtB/ZYU3PEhvfDd1HKeoNOdEgwZnGll5MzOBHI=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@bfdb063/assets/js/components/chatbot/menus.js#sha256-ZOZBraa/OmK/AKDtJucT9+i5uuq3suasT3kjJl0UBdA=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@485996c/assets/js/components/chatbot/replyBubble.js#sha256-/F0kipD9jDAtlnlfL4Q3cbboS5bPx9ierlnRU897eqQ=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@6fd9b53/assets/js/components/chatbot/tooltip.js#sha256-RbmcNuh/DiKIH+Ch2KYrIo48pLAUd/445leqYwBGEXw=
@@ -721,7 +721,7 @@
         },
 
         scheme(newScheme) {
-            env.ui.app.scheme = newScheme ; logos.amazongpt.update() ; icons.app.amazongpt.update() ; update.appStyle()
+            env.ui.app.scheme = newScheme ; logos.amazongpt.update() ; icons.amazongpt.update() ; update.appStyle()
             update.risingParticles() ; update.replyPrefix() ; modals.settings.updateSchemeStatus()
         }
     }
@@ -1644,7 +1644,7 @@
                     !(env.browser.isMobile && settings.controls[key].mobile == false))
 
                 // Init logo
-                const settingsIcon = icons.app.amazongpt.create()
+                const settingsIcon = icons.amazongpt.create()
                 settingsIcon.style.cssText += `width: 65px ; margin-bottom: ${ env.browser.isPortrait ? -4 : 4 }px ;
                     position: relative ; top: -30px ; right: ${ env.browser.isPortrait ? -5 : 7 }px`
 
