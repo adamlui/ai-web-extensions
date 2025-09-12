@@ -4,7 +4,6 @@
   "short_name": "__MSG_prefix_ask__ Brave AI",
   "description": "__MSG_appDesc__",
   "version": "2025.9.7.5",
-  "author": "Adam Lui",
   "homepage_url": "https://braveomnibox.com",
   "default_locale": "en",
   "icons": {

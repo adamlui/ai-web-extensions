@@ -4,7 +4,6 @@
   "short_name": "__MSG_prefix_ask__ Perplexity.ai",
   "description": "__MSG_appDesc__",
   "version": "2025.9.1.1",
-  "author": "Adam Lui",
   "homepage_url": "https://perplexityomnibox.com",
   "default_locale": "en",
   "icons": {

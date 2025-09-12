@@ -4,7 +4,6 @@
   "short_name": "ChatGPT 🖥️",
   "description": "__MSG_appDesc__",
   "version": "2025.9.7.2",
-  "author": "Adam Lui",
   "homepage_url": "https://chatgptwidescreen.com",
   "default_locale": "en",
   "icons": {
