@@ -10,8 +10,8 @@ const deepseekChatURL = 'https://chat.deepseek.com'
 })()
 
 function tabIsLoaded(tabId) {
-    return new Promise(resolve => chrome.tabs.onUpdated.addListener(function loadedListener(id, info) {
-        if (id == tabId && info.status == 'complete') {
+    return new Promise(resolve => chrome.tabs.onUpdated.addListener(function loadedListener(id, { status }) {
+        if (id == tabId && status == 'complete') {
             chrome.tabs.onUpdated.removeListener(loadedListener) ; setTimeout(resolve, 500) }
     }))
 }

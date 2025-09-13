@@ -10,8 +10,8 @@ const deepseekChatURL = 'https://chat.deepseek.com'
 })()
 
 function tabIsLoaded(tabId) {
-    return new Promise(resolve => chrome.tabs.onUpdated.addListener(function loadedListener(id, info) {
-        if (id == tabId && info.status == 'complete') {
+    return new Promise(resolve => chrome.tabs.onUpdated.addListener(function loadedListener(id, { status }) {
+        if (id == tabId && status == 'complete') {
             chrome.tabs.onUpdated.removeListener(loadedListener) ; setTimeout(resolve, 500) }
     }))
 }
@@ -25,9 +25,9 @@ chrome.action.onClicked.addListener(async () => {
 })
 
 // Query DeepSeek on omnibox query submitted
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (changeInfo.status == 'complete' && tab.url.startsWith(deepseekChatURL)) {
-        const query = new URL(tab.url).searchParams.get('q')
+chrome.tabs.onUpdated.addListener((tabId, { status }, { url }) => {
+    if (status == 'complete' && url.startsWith(deepseekChatURL)) {
+        const query = new URL(url).searchParams.get('q')
         if (query) chrome.tabs.sendMessage(tabId, query)
     }
 })

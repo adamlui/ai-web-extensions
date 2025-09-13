@@ -53,8 +53,8 @@ chrome.runtime.onMessage.addListener(async ({ action }) => {
                             url: sitesEnabled[Math.floor(Math.random() * sitesEnabled.length)] || aiHomeURLs[0] })
                     })
         if (activeTab != aiTab) await new Promise(resolve => // after new tab loads
-            chrome.tabs.onUpdated.addListener(function loadedListener(tabId, info) {
-                if (tabId == aiTab.id && info.status == 'complete') {
+            chrome.tabs.onUpdated.addListener(function loadedListener(tabId, { status }) {
+                if (tabId == aiTab.id && status == 'complete') {
                     chrome.tabs.onUpdated.removeListener(loadedListener) ; setTimeout(resolve, 1500)
         }}))
         chrome.tabs.sendMessage(aiTab.id, { action: 'showAbout' })
