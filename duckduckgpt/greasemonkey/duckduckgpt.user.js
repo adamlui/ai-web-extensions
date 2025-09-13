@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.13
+// @version                2025.9.13.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -986,8 +986,7 @@
 
             // Init chosen advertiser's campaigns data
             const campaignsData = await get.json(
-                `https://cdn.jsdelivr.net/gh/KudoAI/ads-library/advertisers/${
-                    chosenAdvertiser}/text/campaigns.json`
+                `https://cdn.jsdelivr.net/gh/KudoAI/ads-library/advertisers/${chosenAdvertiser}/text/campaigns.json`
             ).catch(err => log.error(err.message)) ; if (!campaignsData) return
 
             // Init vars for ad selection
