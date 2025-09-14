@@ -20,13 +20,14 @@
     env.browser.isPortrait = env.browser.isMobile && ( innerWidth < innerHeight )
 
     // Add CHROME MSG listener for background/popup requests to sync modes/settings
-    chrome.runtime.onMessage.addListener(({ action, options, fromBG }) => {
+    chrome.runtime.onMessage.addListener(({ action, options, source }) => {
         ({
             notify: () => feedback.notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
-            showAbout: () => chatgpt.isLoaded().then(() => modals.open('about')),
+            showAbout: () => source == 'service-worker.js' && chatgpt.isLoaded().then(() => modals.open('about')),
             syncConfigToUI: () => {
-                fromBG && settings.save('infinityMode', false) // disable Infinity mode 1st to not transfer between tabs
+                if (source == 'service-worker.js') // disable Infinity mode 1st to not transfer between tabs
+                    settings.save('infinityMode', false)
                 sync.configToUI(options)
             }
         }[action]?.() || console.warn(`Chome msg listener warning: "${action}"`))

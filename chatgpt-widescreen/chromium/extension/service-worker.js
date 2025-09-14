@@ -60,6 +60,6 @@ chrome.runtime.onMessage.addListener(async ({ action }) => {
                 if (tabId == aiTab.id && status == 'complete') {
                     chrome.tabs.onUpdated.removeListener(loadedListener) ; setTimeout(resolve, 1500)
         }}))
-        chrome.tabs.sendMessage(aiTab.id, { action: 'showAbout' })
+        chrome.tabs.sendMessage(aiTab.id, { action: 'showAbout', source: 'service-worker.js' })
     }
 })

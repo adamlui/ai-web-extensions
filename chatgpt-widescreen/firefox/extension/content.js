@@ -25,11 +25,15 @@
     ui.getScheme().then(scheme => env.ui.scheme = scheme)
 
     // Add CHROME MSG listener for background/popup requests to sync modes/settings
-    chrome.runtime.onMessage.addListener(({ action, options }) => {
+    chrome.runtime.onMessage.addListener(({ action, options, source }) => {
         ({
             notify: () => feedback.notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
-            showAbout: async () => { if (env.site == 'chatgpt') await chatgpt.isLoaded() ; modals.open('about') },
+            showAbout: async () => {
+                if (source != 'background.js') return
+                if (env.site == 'chatgpt') await chatgpt.isLoaded()
+                modals.open('about')
+            },
             syncConfigToUI: () => sync.configToUI(options)
         }[action]?.() || console.warn(`Chome msg listener warning: "${action}"`))
     })
