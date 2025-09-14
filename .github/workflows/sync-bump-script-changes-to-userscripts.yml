@@ -30,19 +30,11 @@ jobs:
           path: adamlui/userscripts
 
       - name: Sync bump scripts
-        run: |          
-          if [[ "${{ github.event.head_commit.modified }}" == *"utils/bump/chatbots.js"* ]] ; then
-            cp -f ${{ github.workspace }}/adamlui/ai-web-extensions/utils/bump/chatbots.js \
-                  ${{ github.workspace }}/adamlui/userscripts/utils/bump/chatbots.js
-            CHATBOTS_MODIFIED=true
-          fi
-          if [[ "${{ github.event.head_commit.modified }}" == *"utils/bump/resources.js"* ]] ; then
-            cp -f ${{ github.workspace }}/adamlui/ai-web-extensions/utils/bump/resources.js \
-                  ${{ github.workspace }}/adamlui/userscripts/utils/bump/resources.js
-            RESOURCES_MODIFIED=true
-          fi
-          echo "CHATBOTS_MODIFIED=$CHATBOTS_MODIFIED" >> $GITHUB_ENV
-          echo "RESOURCES_MODIFIED=$RESOURCES_MODIFIED" >> $GITHUB_ENV
+        run: |
+          for filename in "chatbots.js" "resources.js" ; do
+            cp -f ${{ github.workspace }}/adamlui/ai-web-extensions/utils/bump/${filename} \
+                  ${{ github.workspace }}/adamlui/userscripts/utils/bump/${filename}
+          done
 
       - name: Escape backticks in commit msg
         env:
@@ -64,11 +56,6 @@ jobs:
         run: |
           cd ${{ github.workspace }}/adamlui/userscripts
           git pull # sync w/ concurrent updates
-          if [[ "${{ env.CHATBOTS_MODIFIED }}" == "true" ]] ; then
-            git add utils/bump/chatbots.js ; FILES_UPDATED=true ; fi
-          if [[ "${{ env.RESOURCES_MODIFIED }}" == "true" ]] ; then
-            git add utils/bump/resources.js ; FILES_UPDATED=true ; fi
-          if [[ "$FILES_UPDATED" == "true" ]] ; then
-            git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/utils/bump]" || true
-            git push
-          else echo "No files to update" ; fi
+          git add utils/bump/chatbots.js utils/bump/resources.js
+          git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/utils/bump]" || true
+          git push
