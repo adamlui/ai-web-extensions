@@ -33,7 +33,7 @@ chrome.runtime.onMessage.addListener(async ({ action }) => {
     if (action == 'showAbout') {
         const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true })
         const chatgptTab = new URL(activeTab.url).hostname == 'chatgpt.com' ? activeTab
-            : await chrome.tabs.create({ url: 'https://chatgpt.com/' })
+                         : await chrome.tabs.create({ url: 'https://chatgpt.com/' })
         if (activeTab != chatgptTab) await new Promise(resolve => // after new tab loads
             chrome.tabs.onUpdated.addListener(function loadedListener(tabId, { status }) {
                 if (tabId == chatgptTab.id && status == 'complete') {
