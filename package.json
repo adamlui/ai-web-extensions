@@ -33,6 +33,8 @@
     "lint:fix": "eslint . --fix --cache",
     "lint:fix-all": "eslint . --fix",
     "build:js": "minify-js assets/js/lib/dom.js dist --no-mangle",
+    "bump:chatbots": "node utils/bump/chatbots --cache",
+    "bump:chatbots-nc": "node utils/bump/chatbots --cache --no-commit",
     "bump:res": "node utils/bump/resources --cache",
     "bump:resources": "node utils/bump/resources --cache",
     "bump:res-search": "node utils/bump/resources",
