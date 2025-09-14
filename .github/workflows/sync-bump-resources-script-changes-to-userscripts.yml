@@ -1,15 +1,15 @@
-name: Sync utils/bump/resources.js to adamlui/userscripts
+name: Sync utils/bump scripts to adamlui/userscripts
 
 on:
   push:
     branches: [main]
-    paths: [utils/bump/resources.js]
+    paths: [utils/bump/chatbots.js, utils/bump/resources.js]
 
 permissions:
   contents: read
 
 jobs:
-  sync-resources:
+  sync-bump-scripts:
     if: (github.repository == 'adamlui/ai-web-extensions') && (github.event.commits[0].committer.username != 'kudo-sync-bot')
     runs-on: ubuntu-latest
     env:
@@ -29,10 +29,20 @@ jobs:
           repository: adamlui/userscripts
           path: adamlui/userscripts
 
-      - name: Sync resources.js
-        run: |
-          cp -f ${{ github.workspace }}/adamlui/ai-web-extensions/utils/bump/resources.js \
-                ${{ github.workspace }}/adamlui/userscripts/utils/bump/resources.js
+      - name: Sync bump scripts
+        run: |          
+          if [[ "${{ github.event.head_commit.modified }}" == *"utils/bump/chatbots.js"* ]] ; then
+            cp -f ${{ github.workspace }}/adamlui/ai-web-extensions/utils/bump/chatbots.js \
+                  ${{ github.workspace }}/adamlui/userscripts/utils/bump/chatbots.js
+            CHATBOTS_MODIFIED=true
+          fi
+          if [[ "${{ github.event.head_commit.modified }}" == *"utils/bump/resources.js"* ]] ; then
+            cp -f ${{ github.workspace }}/adamlui/ai-web-extensions/utils/bump/resources.js \
+                  ${{ github.workspace }}/adamlui/userscripts/utils/bump/resources.js
+            RESOURCES_MODIFIED=true
+          fi
+          echo "CHATBOTS_MODIFIED=$CHATBOTS_MODIFIED" >> $GITHUB_ENV
+          echo "RESOURCES_MODIFIED=$RESOURCES_MODIFIED" >> $GITHUB_ENV
 
       - name: Escape backticks in commit msg
         env:
@@ -54,6 +64,11 @@ jobs:
         run: |
           cd ${{ github.workspace }}/adamlui/userscripts
           git pull # sync w/ concurrent updates
-          git add utils/bump/resources.js
-          git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/blob/main/utils/bump/resources.js]" || true
-          git push
+          if [[ "${{ env.CHATBOTS_MODIFIED }}" == "true" ]] ; then
+            git add utils/bump/chatbots.js ; FILES_UPDATED=true ; fi
+          if [[ "${{ env.RESOURCES_MODIFIED }}" == "true" ]] ; then
+            git add utils/bump/resources.js ; FILES_UPDATED=true ; fi
+          if [[ "$FILES_UPDATED" == "true" ]] ; then
+            git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/utils/bump]" || true
+            git push
+          else echo "No files to update" ; fi
