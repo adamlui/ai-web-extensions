@@ -18,9 +18,9 @@
     }
 
     // Import LIBS
-    const fs = require('fs'),
-          path = require('path'),
-          { execSync, spawnSync } = require('child_process')
+    const fs = require('fs'), // to read/write files
+          path = require('path'), // to manipulate paths
+          { execSync, spawnSync } = require('child_process') // for git cmds
 
     // Init CACHE paths
     const cachePaths = { root: '.cache/' }
