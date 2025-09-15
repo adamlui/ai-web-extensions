@@ -354,10 +354,9 @@
                                 replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
                                     : toTitleCase(replyLang) )
                             settings.save('replyLanguage', replyLang || env.browser.language)
-                            modals.alert(( app.msgs.alert_replyLangUpdated ) + '!', // title
-                                ( app.msgs.appName ) + ' ' // msg
-                                    + ( app.msgs.alert_willReplyIn ) + ' '
-                                    + ( replyLang || app.msgs.alert_yourSysLang) + '.'
+                            modals.alert(`${app.msgs.alert_replyLangUpdated}!`, // title
+                                `${app.msgs.appName} ${ // msg
+                                    app.msgs.alert_willReplyIn} ${ replyLang || app.msgs.alert_yourSysLang }.`
                             )
                         }
                     } else if (key == 'replyTopic') {
@@ -368,10 +367,9 @@
                             settings.save('replyTopic',
                                 !replyTopic || re_all.test(replyTopic) ? app.msgs.menuLabel_all : replyTopic)
                             modals.alert(`${app.msgs.alert_replyTopicUpdated}!`,
-                                `${app.msgs.appName} ${app.msgs.alert_willAnswer} `
-                                    + ( !replyTopic || re_all.test(replyTopic) ? app.msgs.alert_onAllTopics
-                                        : `${app.msgs.alert_onTopicOf} ${replyTopic}` )
-                                    + '!'
+                                `${app.msgs.appName} ${app.msgs.alert_willAnswer} ${
+                                    !replyTopic || re_all.test(replyTopic) ? app.msgs.alert_onAllTopics
+                                        : `${app.msgs.alert_onTopicOf} ${replyTopic}` }!`
                             )
                         }
                     } else if (key == 'replyInterval') {
@@ -379,10 +377,9 @@
                         if (replyInterval == null) return // user cancelled so do nothing
                         else if (!isNaN(parseInt(replyInterval, 10)) && parseInt(replyInterval, 10) > 4) {
                             settings.save('replyInterval', parseInt(replyInterval, 10))
-                            modals.alert(( app.msgs.alert_replyIntUpdated ) + '!', // title
-                                ( app.msgs.appName ) + ' ' // msg
-                                    + ( app.msgs.alert_willReplyEvery ) + ' '
-                                    + replyInterval + ' ' + ( app.msgs.unit_seconds ) + '.'
+                            modals.alert(`${app.msgs.alert_replyIntUpdated}!`, // title
+                                `${app.msgs.appName} ${ // msg
+                                    app.msgs.alert_willReplyEvery} ${replyInterval} ${app.msgs.unit_seconds}.`
                             )
                         }
                     }

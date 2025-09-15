@@ -126,7 +126,7 @@
                             replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
                                 : toTitleCase(replyLang) )
                         settings.save('replyLanguage', replyLang || chrome.i18n.getUILanguage())
-                        siteAlert(browserAPI.getMsg('alert_replyLangUpdated') + '!',
+                        siteAlert(`${browserAPI.getMsg('alert_replyLangUpdated')}!`,
                             `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willReplyIn')} `
                                 + `${ replyLang || browserAPI.getMsg('alert_yourSysLang') }.`
                         )
@@ -140,11 +140,11 @@
                             !replyTopic || re_all.test(replyTopic) ? browserAPI.getMsg('menuLabel_all')
                                                                    : replyTopic)
                         siteAlert(`${browserAPI.getMsg('alert_replyTopicUpdated')}!`,
-                            `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willAnswer')} `
-                                + ( !replyTopic || re_all.test(replyTopic) ?
-                                         browserAPI.getMsg('alert_onAllTopics')
-                                    : `${browserAPI.getMsg('alert_onTopicOf')} ${replyTopic}`
-                                ) + '!'
+                            `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willAnswer')} ${
+                                !replyTopic || re_all.test(replyTopic) ?
+                                        browserAPI.getMsg('alert_onAllTopics')
+                                   : `${browserAPI.getMsg('alert_onTopicOf')} ${replyTopic}`
+                             }!`
                         )
                     }
                 } else if (entryData.key == 'replyInterval') {
@@ -153,9 +153,10 @@
                     if (replyInterval == null) return // user cancelled so do nothing
                     else if (!isNaN(parseInt(replyInterval, 10)) && parseInt(replyInterval, 10) > 4) {
                         settings.save('replyInterval', parseInt(replyInterval, 10))
-                        siteAlert(browserAPI.getMsg('alert_replyIntUpdated') + '!',
-                            browserAPI.getMsg('appName') + ' ' + browserAPI.getMsg('alert_willReplyEvery')
-                            + ' ' + replyInterval + ' ' + browserAPI.getMsg('unit_seconds') + '.')
+                        siteAlert(`${browserAPI.getMsg('alert_replyIntUpdated')}!`,
+                            `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willReplyEvery')} ${
+                                replyInterval} ${browserAPI.getMsg('unit_seconds')}.`
+                        )
                     }
                 }
                 sync.configToUI({ updatedKey: entryData.key }) ; close() // popup
