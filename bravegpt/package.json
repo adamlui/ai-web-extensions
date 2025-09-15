@@ -23,8 +23,7 @@
     "lint:fix": "eslint . --fix --cache",
     "lint:fix-all": "eslint . --fix",
     "translate": "py greasemonkey/utils/translate-en-messages.py",
-    "bump:res": "node utils/bump/resources",
-    "bump:resources": "node utils/bump/resources"
+    "bump:res": "node utils/bump/resources"
   },
   "devDependencies": {
     "@eslint/json": "^0.13.2",

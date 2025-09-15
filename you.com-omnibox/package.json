@@ -26,8 +26,6 @@
     "bump:ext": "node utils/bump/extension-manifests",
     "bump:ext-nc": "node utils/bump/extension-manifests --no-commit",
     "bump:ext-np": "node utils/bump/extension-manifests --no-push",
-    "bump:extensions": "node utils/bump/extension-manifests",
-    "bump:manifests": "node utils/bump/extension-manifests",
     "bump:chrome": "node utils/bump/extension-manifests --chrome",
     "bump:chromium": "node utils/bump/extension-manifests --chrome",
     "bump:ff": "node utils/bump/extension-manifests --ff",
