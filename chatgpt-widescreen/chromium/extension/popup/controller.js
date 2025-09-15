@@ -77,7 +77,7 @@
                 if (userVal == null) return // user cancelled so do nothing
                 if (!/\d/.test(userVal)) return alert(`${
                     browserAPI.getMsg('error_enterValidNum')} ${browserAPI.getMsg('error_between')} ${
-                        entryData.min || '0' } ${browserAPI.getMsg('error_and')} ${ entryData.max || '100' }!`)
+                        entryData.min || 0 } ${browserAPI.getMsg('error_and')} ${ entryData.max || 100 }!`)
                 let validVal = parseInt(userVal.replace(/\D/g, '')) ; if (isNaN(validVal)) return
                 validVal = Math.max(entryData.min || 0, Math.min(entryData.max || 100, validVal))
                 entry.slider.value = validVal ; settings.save(entryData.key, validVal)
