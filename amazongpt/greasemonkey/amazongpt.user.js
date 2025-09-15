@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.14
+// @version                2025.9.15
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1547,22 +1547,19 @@
         },
 
         replyLang() { // requires <app|config|env|log|modals|settings>
-            while (true) {
-                let replyLang = prompt(`${app.msgs.prompt_updateReplyLang}:`, config.replyLang)
-                if (replyLang == null) break // user cancelled so do nothing
-                else if (!/\d/.test(replyLang)) {
-                    replyLang = ( // auto-case for menu/alert aesthetics
-                        replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
-                            : log.toTitleCase(replyLang) )
-                    settings.save('replyLang', replyLang || env.browser.language)
-                    modals.alert(`${app.msgs.alert_langUpdated}!`, // title
-                        `${app.name} ${ // msg
-                           app.msgs.alert_willReplyIn} ${ replyLang || app.msgs.alert_yourSysLang }.`,
-                        '', '', 375) // modal width
-                    if (modals.settings.get()) // update settings menu status label
-                        document.querySelector('#replyLang-settings-entry span').textContent = replyLang
-                    break
-                }
+            let replyLang = prompt(`${app.msgs.prompt_updateReplyLang}:`, config.replyLang)
+            if (replyLang == null) return // user cancelled so do nothing
+            else if (!/\d/.test(replyLang)) {
+                replyLang = ( // auto-case for menu/alert aesthetics
+                    replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
+                        : log.toTitleCase(replyLang) )
+                settings.save('replyLang', replyLang || env.browser.language)
+                modals.alert(`${app.msgs.alert_langUpdated}!`, // title
+                    `${app.name} ${ // msg
+                        app.msgs.alert_willReplyIn} ${ replyLang || app.msgs.alert_yourSysLang }.`,
+                    '', '', 375) // modal width
+                if (modals.settings.get()) // update settings menu status label
+                    document.querySelector('#replyLang-settings-entry span').textContent = replyLang
             }
         },
 
