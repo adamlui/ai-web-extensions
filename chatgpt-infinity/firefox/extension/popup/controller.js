@@ -118,19 +118,19 @@
             else {
                 const re_all = new RegExp(`^(${browserAPI.getMsg('menuLabel_all')}|all|any|every)$`, 'i')
                 if (entryData.key == 'replyLanguage') {
-                        let replyLang = await (await sitePrompt(
-                            `${browserAPI.getMsg('prompt_updateReplyLang')}:`, config.replyLanguage)).input
-                        if (replyLang == null) return // user cancelled so do nothing
-                        else if (!/\d/.test(replyLang)) { // valid reply language set
-                            replyLang = ( // auto-case for menu/alert aesthetics
-                                replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
-                                    : toTitleCase(replyLang) )
-                            settings.save('replyLanguage', replyLang || chrome.i18n.getUILanguage())
-                            siteAlert(browserAPI.getMsg('alert_replyLangUpdated') + '!',
-                                `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willReplyIn')} `
-                                  + `${ replyLang || browserAPI.getMsg('alert_yourSysLang') }.`
-                            )
-                        }
+                    let replyLang = await (await sitePrompt(
+                        `${browserAPI.getMsg('prompt_updateReplyLang')}:`, config.replyLanguage)).input
+                    if (replyLang == null) return // user cancelled so do nothing
+                    else if (!/\d/.test(replyLang)) { // valid reply language set
+                        replyLang = ( // auto-case for menu/alert aesthetics
+                            replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
+                                : toTitleCase(replyLang) )
+                        settings.save('replyLanguage', replyLang || chrome.i18n.getUILanguage())
+                        siteAlert(browserAPI.getMsg('alert_replyLangUpdated') + '!',
+                            `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willReplyIn')} `
+                                + `${ replyLang || browserAPI.getMsg('alert_yourSysLang') }.`
+                        )
+                    }
                 } else if (entryData.key == 'replyTopic') {
                     let replyTopic = await (await sitePrompt(browserAPI.getMsg('prompt_updateReplyTopic')
                         + ' (' + browserAPI.getMsg('prompt_orEnter') + ' \'ALL\'):', config.replyTopic)).input
