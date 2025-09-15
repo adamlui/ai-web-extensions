@@ -118,20 +118,17 @@
             else {
                 const re_all = new RegExp(`^(${browserAPI.getMsg('menuLabel_all')}|all|any|every)$`, 'i')
                 if (entryData.key == 'replyLanguage') {
-                    while (true) {
-                        let replyLang = prompt(`${browserAPI.getMsg('prompt_updateReplyLang')}:`, config.replyLanguage)
-                        if (replyLang == null) break // user cancelled so do nothing
-                        else if (!/\d/.test(replyLang)) { // valid reply language set
-                            replyLang = ( // auto-case for menu/alert aesthetics
-                                replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
-                                    : toTitleCase(replyLang) )
-                            settings.save('replyLanguage', replyLang || chrome.i18n.getUILanguage())
-                            siteAlert(browserAPI.getMsg('alert_replyLangUpdated') + '!',
-                                `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willReplyIn')} `
-                                  + `${ replyLang || browserAPI.getMsg('alert_yourSysLang') }.`
-                            )
-                            break
-                        }
+                    let replyLang = prompt(`${browserAPI.getMsg('prompt_updateReplyLang')}:`, config.replyLanguage)
+                    if (replyLang == null) return // user cancelled so do nothing
+                    else if (!/\d/.test(replyLang)) { // valid reply language set
+                        replyLang = ( // auto-case for menu/alert aesthetics
+                            replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
+                                : toTitleCase(replyLang) )
+                        settings.save('replyLanguage', replyLang || chrome.i18n.getUILanguage())
+                        siteAlert(browserAPI.getMsg('alert_replyLangUpdated') + '!',
+                            `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willReplyIn')} `
+                                + `${ replyLang || browserAPI.getMsg('alert_yourSysLang') }.`
+                        )
                     }
                 } else if (entryData.key == 'replyTopic') {
                     let replyTopic = prompt(browserAPI.getMsg('prompt_updateReplyTopic')
@@ -150,17 +147,14 @@
                         )
                     }
                 } else if (entryData.key == 'replyInterval') {
-                    while (true) {
-                        const replyInterval = prompt(
-                            `${browserAPI.getMsg('prompt_updateReplyInt')}:`, config.replyInterval)
-                        if (replyInterval == null) break // user cancelled so do nothing
-                        else if (!isNaN(parseInt(replyInterval, 10)) && parseInt(replyInterval, 10) > 4) {
-                            settings.save('replyInterval', parseInt(replyInterval, 10))
-                            siteAlert(browserAPI.getMsg('alert_replyIntUpdated') + '!',
-                                browserAPI.getMsg('appName') + ' ' + browserAPI.getMsg('alert_willReplyEvery')
-                                + ' ' + replyInterval + ' ' + browserAPI.getMsg('unit_seconds') + '.')
-                            break
-                        }
+                    const replyInterval = prompt(
+                        `${browserAPI.getMsg('prompt_updateReplyInt')}:`, config.replyInterval)
+                    if (replyInterval == null) return // user cancelled so do nothing
+                    else if (!isNaN(parseInt(replyInterval, 10)) && parseInt(replyInterval, 10) > 4) {
+                        settings.save('replyInterval', parseInt(replyInterval, 10))
+                        siteAlert(browserAPI.getMsg('alert_replyIntUpdated') + '!',
+                            browserAPI.getMsg('appName') + ' ' + browserAPI.getMsg('alert_willReplyEvery')
+                            + ' ' + replyInterval + ' ' + browserAPI.getMsg('unit_seconds') + '.')
                     }
                 }
                 sync.configToUI({ updatedKey: entryData.key }) ; close() // popup
