@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.16.5
+// @version                2025.9.16.6
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2838,7 +2838,7 @@
     })
     app.divParent.div.prepend(...app.elems)
     app.elems.forEach((elem, idx) => // fade in staggered
-        setTimeout(() => elem.classList.add('active'), idx * 550 - 200))
+        setTimeout(() => elem.classList.add('active'), idx *550 -200))
 
     // REPLACE appDivParent max-width w/ min-width for better UI
     if (!env.browser.isMobile) Object.assign(app.divParent.div.style, { maxWidth: '', minWidth: '448px' })
