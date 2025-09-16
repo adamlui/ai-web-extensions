@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.16.1
+// @version                2025.9.16.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -834,27 +834,31 @@
 
     window.get = {
 
-        json(url) {
+        json(url) { // requires lib/json5.js
             return new Promise((resolve, reject) => {
-                let retryCnt = 0;
-                (function getData(url) { xhr({
-                    method: 'GET', url: url, onload: resp => {
-                        if (resp.status == 404 && retryCnt < 1) { // try other format
-                            retryCnt++ ; getData(url.endsWith('.json') ? url + '5' : url.slice(0, -1))
-                        } else handleResp(resp, resolve, reject)
-                    },
-                    onerror: err => reject(new Error(`LOAD ERROR: ${err.message}`))
-                })})(url)
+                let retryCnt = 0 ; getData(url)
 
-                function handleResp(resp, resolve, reject) {
-                    if (resp.status >= 300) { // status error
-                        const errType = resp.status >= 300 && resp.status < 400 ? 'REDIRECT'
-                                      : resp.status >= 400 && resp.status < 500 ? 'CLIENT' : 'SERVER'
-                        return reject(new Error(`${errType} ERROR: ${resp.status}`))
-                    }
-                    try { resolve(JSON5.parse(resp.responseText)) }
-                    catch (err) { reject(new Error(`PARSE ERROR: ${err.message}`)) }
+                function getData(currentURL) {
+                    xhr({
+                        method: 'GET', url: currentURL,
+                        onload: ({ responseText, status }) => {
+                            if (status >= 300 && status != 404) {
+                                const errType = status < 400 ? 'REDIRECT' : status < 500 ? 'CLIENT' : 'SERVER'
+                                return reject(new Error(`${errType} ERROR: ${status}`))
+                            }
+                            try {
+                                resolve(currentURL.endsWith('.json') ? JSON.parse(responseText)
+                                                                     : JSON5.parse(responseText))
+                            } catch (err) {
+                                retryCnt < 1 ? tryAltDataFormat() : reject(new Error(`PARSE ERROR: ${err.message}`)) }
+                        },
+                        onerror: err => {
+                            retryCnt < 1 ? tryAltDataFormat() : reject(new Error(`LOAD ERROR: ${err.message}`)) }
+                    })
                 }
+
+                function tryAltDataFormat() {
+                    retryCnt++ ; getData(url.endsWith('.json') ? url + '5' : url.slice(0, -1)) }
             })
         },
 
