@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.16.3
+// @version                2025.9.16.4
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -150,7 +150,7 @@
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
             app: 'bce1796', // for cached <app|messages>.json
-            aiweb: 'cc60313' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
+            aiweb: '02c1241' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         }
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@${app.commitHashes.app}` }
@@ -270,7 +270,6 @@
     if (!config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!config.fontSize) settings.save('fontSize', 14) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env
-    if (config.preferredAPI == 'GPTforLove') config.preferredAPI = null // since 502
     log.debug(`Success! config = ${log.prettifyObj(config)}`)
 
     // Define UI functions

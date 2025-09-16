@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.9.16.3
+// @version               2025.9.16.4
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -272,7 +272,7 @@
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
             app: '66ac514', // for cached <app|messages>.json
-            aiweb: 'cc60313' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
+            aiweb: '02c1241' // for cached <ai-chat-apis|code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         }
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@${app.commitHashes.app}` }
@@ -416,7 +416,6 @@
     if (!config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!config.fontSize) settings.save('fontSize', 12.8791) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env
-    if (config.preferredAPI == 'GPTforLove') config.preferredAPI = null // since 502
     log.debug(`Success! config = ${log.prettifyObj(config)}`)
 
     // Define UI functions
