@@ -26,17 +26,18 @@ export { colors, log }
 
 export function bumpVersion({ format = 'dateVer', type, filePath, verbose = true } = {}) {
     if (!filePath) throw new Error(`'filePath' option required by bumpVersion()`)
-    if (format == 'semVer' && !type) throw new Error(`'type' option required by bumpVersion({ format: 'semVer' })`)
+    if (format == 'semVer' && !/major|minor|patch/i.test(type))
+        throw new Error(`'type' option <major|minor|patch> required by bumpVersion({ format: 'semVer' })`)
     const fileContent = fs.readFileSync(filePath, 'utf-8'),
           oldVer = fileContent.match(/(?:@version|"version"):?\s*"?([\d.]+)"?/)?.[1]
     if (!oldVer) return this.log.info(`No version found in ${filePath}`)
     let newVer
-    if (format == 'dateVer') {
+    if (format == 'dateVer') { // YYYY.M.D
         const date = new Date(), today = `${date.getFullYear()}.${ date.getMonth() +1 }.${date.getDate()}`
         newVer = oldVer == today ? `${today}.1`
                : oldVer.startsWith(`${today}.`) ? `${today}.${ parseInt(oldVer.split('.').pop()) +1 }`
                : today
-    } else if (format == 'semVer') {
+    } else if (format == 'semVer') { // major.minor.patch
         const [major, minor, patch] = oldVer.split('.').map(Number)
         newVer = type == 'major' ? `${ major +1 }.0.0`
                : type == 'minor' ? `${major}.${ minor +1 }.0`
