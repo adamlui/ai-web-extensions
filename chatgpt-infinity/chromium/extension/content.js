@@ -2,7 +2,7 @@
 
     // Add WINDOW MSG listener for userscript request to self-disable
     addEventListener('message', event => {
-        if (event.origin != location.origin || event.data.source != 'chatgpt-infinity.user.js') return
+        if (event.origin != location.origin || !event.data.source.endsWith('chatgpt-infinity.user.js')) return
         postMessage({ source: 'chatgpt-infinity/*/extension/content.js' }, location.origin)
     })
 
@@ -21,9 +21,10 @@
         ({
             notify: () => feedback.notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
-            showAbout: () => source == 'service-worker.js' && chatgpt.isLoaded().then(() => modals.open('about')),
+            showAbout: () =>
+                source.endsWith('service-worker.js') && chatgpt.isLoaded().then(() => modals.open('about')),
             syncConfigToUI: () => {
-                if (source == 'service-worker.js') // disable Infinity mode 1st to not transfer between tabs
+                if (source.endsWith('service-worker.js')) // disable Infinity mode 1st to not transfer between tabs
                     settings.save('infinityMode', false)
                 sync.configToUI(options)
             }
