@@ -65,7 +65,7 @@
             console.log('')
         }
 
-    // PROCEE each userscript
+    // PROCESS each userscript
     let filesUpdatedCnt = 0
     const bumpedChatbots = {}
     for (const chatbotFile of chatbotFiles) {
