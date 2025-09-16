@@ -24,16 +24,24 @@ const log = {} ; Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) 
 
 export { colors, log }
 
-export function bumpDateVer({ filePath, verbose = true } = {}) { // bumps YYYY.M.D versions
-    if (!filePath) throw new Error(`'filePath' option required by bumpDateVer()`)
+export function bumpVersion({ format = 'dateVer', type, filePath, verbose = true } = {}) {
+    if (!filePath) throw new Error(`'filePath' option required by bumpVersion()`)
+    if (format == 'semVer' && !type) throw new Error(`'type' option required by bumpVersion({ format: 'semVer' })`)
     const fileContent = fs.readFileSync(filePath, 'utf-8'),
           oldVer = fileContent.match(/(?:@version|"version"):?\s*"?([\d.]+)"?/)?.[1]
     if (!oldVer) return this.log.info(`No version found in ${filePath}`)
-    const date = new Date(), today = `${date.getFullYear()}.${ date.getMonth() +1 }.${date.getDate()}`
-    const newVer = oldVer == today ? `${today}.1` // bump sub-ver to 1
-                 : oldVer.startsWith(`${today}.`) ? // bump sub-ver to 2+
-                       `${today}.${ parseInt(oldVer.split('.').pop()) +1 }`
-                 : today // bump to today
+    let newVer
+    if (format == 'dateVer') {
+        const date = new Date(), today = `${date.getFullYear()}.${ date.getMonth() +1 }.${date.getDate()}`
+        newVer = oldVer == today ? `${today}.1`
+               : oldVer.startsWith(`${today}.`) ? `${today}.${ parseInt(oldVer.split('.').pop()) +1 }`
+               : today
+    } else if (format == 'semVer') {
+        const [major, minor, patch] = oldVer.split('.').map(Number)
+        newVer = type == 'major' ? `${ major +1 }.0.0`
+               : type == 'minor' ? `${major}.${ minor +1 }.0`
+               : type == 'patch' ? `${major}.${minor}.${ patch +1 }` : ''
+    }
     fs.writeFileSync(filePath, fileContent.replace(new RegExp(`("?)${oldVer}("?)`), `$1${newVer}$2`), 'utf-8')
     if (verbose) this.log.success(`${nc}Updated: ${bw}v${oldVer}${nc} → ${bg}v${newVer}${nc}\n`)
     return { oldVer, newVer }
