@@ -5,8 +5,9 @@
         document.documentElement.classList.add('dark')
 
     // Import JS resources
-    for (const resource of ['components/icons.js', 'lib/browser.js', 'lib/dom.min.js', 'lib/settings.js'])
-        await import(chrome.runtime.getURL(resource))
+    for (const resource of
+        ['components/icons.js', 'lib/browser.js', 'lib/dom.min.js', 'lib/settings.js', 'lib/string.js']
+    ) await import(chrome.runtime.getURL(resource))
 
     // Init DATA
     window.env = {
@@ -124,7 +125,7 @@
                     else if (!/\d/.test(replyLang)) { // valid reply language set
                         replyLang = ( // auto-case for menu/alert aesthetics
                             replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
-                                : toTitleCase(replyLang) )
+                                : string.toTitleCase(replyLang) )
                         settings.save('replyLanguage', replyLang || chrome.i18n.getUILanguage())
                         siteAlert(`${browserAPI.getMsg('alert_replyLangUpdated')}!`,
                             `${browserAPI.getMsg('appName')} ${browserAPI.getMsg('alert_willReplyIn')} `
@@ -267,13 +268,6 @@
             Object.assign(ctgChildrenDiv.style, { height: 0, transition: '' })
             Object.assign(caret.style, { transform: 'rotate(-90deg)', transition: '' }) // point it right
         }
-    }
-
-    function toTitleCase(str) {
-        if (!str) return ''
-        const words = str.toLowerCase().split(' ')
-        for (let i = 0 ; i < words.length ; i++) words[i] = words[i][0].toUpperCase() + words[i].slice(1)
-        return words.join(' ')
     }
 
     // Run MAIN routine
