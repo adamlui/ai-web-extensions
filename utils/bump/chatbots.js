@@ -71,7 +71,7 @@
     for (const chatbotFile of chatbotFiles) {
         const chatbotName = path.basename(chatbotFile, '.user.js')
         bump.log.working(`\nProcessing ${chatbotName}...\n`)
-        const bumpResult = bump.bumpDateVer({ filePath: chatbotFile })
+        const bumpResult = bump.bumpVersion({ format: 'dateVer', filePath: chatbotFile })
         if (bumpResult) {
             const { oldVer, newVer } = bumpResult
             bump.log.success(`${chatbotName} version bumped!\n`)

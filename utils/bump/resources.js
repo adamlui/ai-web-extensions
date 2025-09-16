@@ -127,7 +127,7 @@
         }
         if (fileUpdated) {
             console.log(`${ !bump.log.endedWithLineBreak ? '\n' : '' }Bumping userscript version...`)
-            bump.bumpDateVer({ filePath: userJSfilePath }) ; filesUpdatedCnt++
+            bump.bumpVersion({ format: 'dateVer', filePath: userJSfilePath }) ; filesUpdatedCnt++
         }
     }
 
