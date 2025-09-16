@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.9.15.1
+// @version               2025.9.16
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1063,8 +1063,7 @@
         },
 
         replyPrefix() {
-            const firstP = app.div.querySelector('pre p')
-            if (!firstP) return
+            const firstP = app.div.querySelector('pre p') ; if (!firstP) return
             const prefixNeeded = env.ui.app.scheme == 'dark'
                 && !config.bgAnimationsDisabled && !/shuffle|summarize/.test(get.reply.src)
             const prefixExists = firstP.textContent.startsWith('>> ')
