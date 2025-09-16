@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.9.16.2
+// @version               2025.9.16.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1834,11 +1834,11 @@
 
     // Define COMPONENTS
 
-    window.fontSizeSlider = { // requires dom.js + <app|config|inputEvents>
+    window.fontSizeSlider = { // requires lib/<dom|settings>.js + <app|config|env|inputEvents>
         fadeInDelay: 5, // ms
         hWheelDistance: 10, // px
 
-        createAppend() { // requires dom.js + <app|config|inputEvents>
+        createAppend() { // requires lib/<dom|settings>.js + <app|config|env|inputEvents>
 
             // Create/ID/classify slider elems
             fontSizeSlider.cursorOverlay = dom.create.elem('div', { class: 'cursor-overlay' })
