@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.16.4
+// @version                2025.9.16.5
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2818,8 +2818,7 @@
 
     // Create/classify/fill feedback FOOTER
     app.footer = dom.create.elem('footer', { class: 'fade-in anchored-hidden' })
-    app.footer.append(app.footerContent = dom.create.anchor(
-        '#', browserAPI.getMsg('link_shareFeedback'), { target: '_self' }))
+    app.footer.append(app.footerContent = dom.create.anchor('#', app.msgs.link_shareFeedback, { target: '_self' }))
     app.footerContent.onclick = () => modals.open('feedback')
 
     // Check for active TEXT CAMPAIGNS to replace footer CTA
