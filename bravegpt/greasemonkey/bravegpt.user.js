@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.9.16.4
+// @version               2025.9.16.5
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -183,7 +183,6 @@
 // @compatible            whale
 // @match                 *://search.brave.com/search*
 // @include               https://auth0.openai.com
-// @connect               am.aifree.site
 // @connect               api.binjie.fun
 // @connect               api.openai.com
 // @connect               api11.gptforlove.com

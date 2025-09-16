@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.16.8
+// @version                2025.9.16.9
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -183,7 +183,6 @@
 // @compatible             whale
 // @match                  *://duckduckgo.com/?*
 // @include                https://auth0.openai.com
-// @connect                am.aifree.site
 // @connect                api.binjie.fun
 // @connect                api.openai.com
 // @connect                api11.gptforlove.com
