@@ -136,7 +136,7 @@
                     let replyTopic = await (await sitePrompt(browserAPI.getMsg('prompt_updateReplyTopic')
                         + ' (' + browserAPI.getMsg('prompt_orEnter') + ' \'ALL\'):', config.replyTopic)).input
                     if (replyTopic != null) { // user didn't cancel
-                        replyTopic = toTitleCase(replyTopic.toString()) // for menu/alert aesthetics
+                        replyTopic = string.toTitleCase(replyTopic.toString()) // for menu/alert aesthetics
                         settings.save('replyTopic',
                             !replyTopic || re_all.test(replyTopic) ? browserAPI.getMsg('menuLabel_all')
                                                                    : replyTopic)
