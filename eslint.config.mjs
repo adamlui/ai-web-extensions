@@ -23,12 +23,13 @@ export default [
                 deepseek: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly',
                 fontSizeSlider: 'writable', get: 'readonly', GM_cookie: 'readonly', hljs: 'readonly', icons: 'writable',
                 importScripts: 'readonly', infinity: 'readonly', inputEvents: 'readonly', JSON5: 'readonly',
-                ipv4: 'readonly', log: 'readonly', marked: 'readonly', menus: 'writable', modals: 'writable',
-                notify: 'readonly', prompts: 'readonly', renderMathInElement: 'readonly', replyBubble: 'writable',
-                session: 'readonly', settings: 'writable', show: 'readonly', sites: 'writable', styles: 'readonly',
-                sync: 'readonly', syncConfigToUI: 'readonly', toggle: 'readonly', toggleMode: 'readonly',
-                toggles: 'writable', toolbarMenu: 'writable', tooltip: 'writable', ui: 'readonly', update: 'readonly',
-                updateCheck: 'readonly', userscript: 'readonly', xhr: 'writable'
+                ipv4: 'readonly', log: 'readonly', logos: 'readonly', marked: 'readonly', menus: 'writable',
+                modals: 'writable', notify: 'readonly', prompts: 'readonly', renderMathInElement: 'readonly',
+                replyBubble: 'writable', session: 'readonly', settings: 'writable', show: 'readonly', sites: 'writable',
+                string: 'readonly', styles: 'readonly', sync: 'readonly', syncConfigToUI: 'readonly',
+                toggle: 'readonly', toggleMode: 'readonly', toggles: 'writable', toolbarMenu: 'writable',
+                tooltip: 'writable', ui: 'readonly', update: 'readonly', updateCheck: 'readonly',
+                userscript: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
