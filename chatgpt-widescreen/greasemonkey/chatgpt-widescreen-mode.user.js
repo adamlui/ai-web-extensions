@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.19.1
+// @version             2025.9.20
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -797,12 +797,25 @@
                 var(--track-empty-color) var(--track-fill-percent), var(--track-empty-color) 100%
             )
         }
+        .${app.slug}-settings-modal li > input[type=range]::-moz-range-track {
+            height: 5px ; border-radius: 10px ;
+            background: linear-gradient(to right,
+                var(--track-filled-color) 0%, var(--track-filled-color) var(--track-fill-percent),
+                var(--track-empty-color) var(--track-fill-percent), var(--track-empty-color) 100%
+            )
+        }
         .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-thumb {
            -webkit-appearance: none ; width: 12px ; height: 26.5px ; background: var(--thumb-color) ;
-           margin-top: -10.5px ; border: 4px solid var(--thumb-border) ; border-radius: 16px ; cursor: ew-resize ;
-           transition: transform 0.05s ease
+            margin-top: -10.5px ; border: 4px solid var(--thumb-border) ; border-radius: 16px ; cursor: ew-resize ;
+            transition: transform 0.05s ease
+        }
+        .${app.slug}-settings-modal li > input[type=range]::-moz-range-thumb {
+            width: 4px ; height: 19px ; background: var(--thumb-color) ;
+            margin-top: -11px ; border: 4px solid var(--thumb-border) ; border-radius: 16px ; cursor: ew-resize ;
+            transition: transform 0.05s ease
         }
         .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-thumb:hover { transform: scaleX(1.325) }
+        .${app.slug}-settings-modal li > input[type=range]::-moz-range-thumb:hover { transform: scaleX(1.325) }
         .${app.slug}-settings-modal button { display: none }
         .${app.slug}-settings-modal .edit-link {
             text-transform: uppercase ; font-size: 0.65em ; margin-left: 0.75em ; opacity: 0.7 ; cursor: pointer }
