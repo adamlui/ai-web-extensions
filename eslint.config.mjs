@@ -27,9 +27,9 @@ export default [
                 modals: 'writable', notify: 'readonly', prompts: 'readonly', renderMathInElement: 'readonly',
                 replyBubble: 'writable', session: 'readonly', settings: 'writable', show: 'readonly', sites: 'writable',
                 string: 'readonly', styles: 'readonly', sync: 'readonly', syncConfigToUI: 'readonly',
-                toggle: 'readonly', toggleMode: 'readonly', toggles: 'writable', toolbarMenu: 'writable',
-                tooltip: 'writable', ui: 'readonly', update: 'readonly', updateCheck: 'readonly',
-                userscript: 'readonly', xhr: 'writable'
+                themes: 'readonly', toggle: 'readonly', toggleMode: 'readonly', toggles: 'writable',
+                toolbarMenu: 'writable', tooltip: 'writable', ui: 'readonly', update: 'readonly',
+                updateCheck: 'readonly', userscript: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
