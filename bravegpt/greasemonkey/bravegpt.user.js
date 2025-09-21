@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.9.16.6
+// @version               2025.9.20
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -459,7 +459,7 @@
                     background-position-y: 81% ;
                     background-color: #ffffff00 ; /* clear bg */
                     color: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.85 : 1 }) ;
-                    font-size: 10px ; font-family: "Roboto", sans-serif ; text-transform: uppercase }
+                    font-size: 0.8em ; font-family: "Roboto", sans-serif ; text-transform: uppercase }
                 ${selectors.btn.svg} {
                     stroke: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.65 : 1 }) ;
                     ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
@@ -489,7 +489,7 @@
                 ${selectors.btn.modal} {
                   --modal-btn-y-offset: 2px ; --glow-color: #a0fdff ;
                   --modal-btn-zoom: scale(1.075) ;
-                  --modal-btn-transition: transform 0.1s ease, background 0.2s ease, box-shadow 5s ease ;
+                  --modal-btn-transition: transform 0.1s ease, background 0.2s ease, box-shadow 0.5s ease ;
                     ${ config.fgAnimationsDisabled ? /* override chatgpt.js transitions */
                         `transition: none ;
                             -webkit-transition: none ; -moz-transition: none ;
