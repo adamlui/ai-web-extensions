@@ -16,7 +16,7 @@
 <br><br>
 
 <a href="#">
-    <img height=31 src="https://img.shields.io/badge/Users-708-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img height=31 src="https://img.shields.io/badge/Users-709-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com">
     <img alt="[Top 10 Trending DeepSeek Mozilla Add-on]" height=31 src="https://img.shields.io/badge/Trending-Top_10_DeepSeek_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.deepseekomnibox.com/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
