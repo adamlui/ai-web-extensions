@@ -246,5 +246,5 @@ jobs:
         run: |
           cd ${{ github.workspace }}/adamlui/ai-web-extensions
           git pull # again to sync w/ concurrent workflow updates
-          git add . && git commit -n -m "${{ env.COMMIT_MSG }}" || true
+          git add . && git commit -n -m "$COMMIT_MSG" || true
           git push
