@@ -28,15 +28,11 @@ window.api = {
     createReqData(api, msgs) { // returns payload for POST / query string for GET // requires <apis|CryptoJS|log>
         log.caller = `api.createReqData('${api}', msgs)`
         msgs = msgs.map(({ api, regenerated, time, ...rest }) => rest) // eslint-disable-line no-unused-vars
-        const time = Date.now(), lastUserMsg = msgs[msgs.length - 1]
+        const lastUserMsg = msgs[msgs.length - 1]
         const reqData = api == 'OpenAI' ? { messages: msgs, model: 'gpt-3.5-turbo', max_tokens: 4000 }
             : api == 'AIchatOS' ? {
                 network: true, prompt: lastUserMsg.content,
                 userId: apis.AIchatOS.userID, withoutContext: false
-        } : api == 'FREEGPT' ? {
-                messages: msgs, pass: null,
-                sign: CryptoJS.SHA256(`${time}:${lastUserMsg.content}:`).toString(CryptoJS.enc.Hex),
-                time: time
         } : api == 'GPTforLove' ? {
                 prompt: lastUserMsg.content, secret: session.generateGPTFLkey(),
                 systemMessage: 'You are ChatGPT, the version is GPT-4o, a large language model trained by OpenAI. '

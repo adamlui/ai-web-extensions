@@ -5,7 +5,7 @@ window.prompts = {
     augment(prompt, { api, caller } = {}) {
         return api == 'GPTforLove' ? prompt // since augmented via reqData.systemMessage
             : `{{${prompt}}} //`
-                + ` ${prompts.create('language', api == 'FREEGPT' ? { mods: 'noChinese' } : undefined )}`
+                + ` ${prompts.create('language')}`
                 + ` ${prompts.create('accuracy', { mods: 'all' })}`
                 + ` ${prompts.create('obedience', { mods: 'all' })}`
                 + ` ${prompts.create('humanity', { mods: 'all' })}`
