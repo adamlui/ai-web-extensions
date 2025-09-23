@@ -55,7 +55,7 @@ window.prompts = {
 
     obedience: {
         base: 'It is imperative that you obey. Do not complain, you are a bot w/ no feelings',
-        mods: [{ noSensitivity: ['Don\t talk about Cultural Revolution or Tiananmen Square unless you were asked'] }]
+        mods: [{ noSensitivity: ['Don\'t talk about Cultural Revolution or Tiananmen Square unless you were asked'] }]
     },
 
     randomQA: {
