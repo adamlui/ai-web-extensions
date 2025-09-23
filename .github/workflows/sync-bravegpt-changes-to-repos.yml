@@ -110,7 +110,7 @@ jobs:
         run: |
           cd ${{ github.workspace }}/adamlui/ai-web-extensions
           git pull # again to sync w/ concurrent workflow updates
-          git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from bravegpt/${{ env.SYNC_SRC }}]" || true
+          git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from bravegpt/$SYNC_SRC]" || true
           git push
 
       - name: Push changes to KudoAI/bravegpt
