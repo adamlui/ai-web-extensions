@@ -1,4 +1,4 @@
-// Requires lib/generate-ip.js + <apis|app|config|cryptoJS|get|log|show>
+// Requires lib/generate-ip.js + <apis|app|config|get|log|show>
 
 window.api = {
 
@@ -25,12 +25,12 @@ window.api = {
         return headers
     },
 
-    createReqData(api, msgs) { // returns payload for POST / query string for GET // requires <apis|CryptoJS|log>
+    createReqData(api, msgs) { // returns payload for POST / query string for GET // requires <apis|log>
         log.caller = `api.createReqData('${api}', msgs)`
         msgs = msgs.map(({ api, regenerated, time, ...rest }) => rest) // eslint-disable-line no-unused-vars
         const lastUserMsg = msgs[msgs.length - 1]
         const reqData = api == 'OpenAI' ? { messages: msgs, model: 'gpt-3.5-turbo', max_tokens: 4000 }
-            : api == 'AIchatOS' ? {
+          : api == 'AIchatOS' ? {
                 network: true, prompt: lastUserMsg.content,
                 userId: apis.AIchatOS.userID, withoutContext: false
         } : api == 'GPTforLove' ? {
@@ -41,7 +41,7 @@ window.api = {
                                 + `${prompts.create('humanity', { mods: 'all' })} `,
                 temperature: 0.8, top_p: 1
         } : api == 'MixerBox AI' ? { model: 'gpt-3.5-turbo', prompt: msgs }
-            : apis[api].method == 'GET' ? encodeURIComponent(lastUserMsg.content) : null
+          : apis[api].method == 'GET' ? encodeURIComponent(lastUserMsg.content) : null
         if (api == 'GPTforLove' && apis.GPTforLove.parentID) // include parentID for contextual replies
             reqData.options = { parentMessageId: apis.GPTforLove.parentID }
         return log.debug(reqData) || reqData
@@ -246,8 +246,8 @@ window.api = {
     tryNew(caller, reason = 'err') {
         log.caller = `get.${caller.name}() » api.tryNew()`
         if (caller.status == 'done') return
-        log.error(`Error using ${ apis[caller.api].endpoints?.completions
-                                || apis[caller.api].endpoint } due to ${reason}`)
+        log.error(
+            `Error using ${ apis[caller.api].endpoints?.completions || apis[caller.api].endpoint } due to ${reason}`)
         caller.triedAPIs.push({ [caller.api]: reason })
         if (caller.attemptCnt < Object.keys(apis).length -+(caller == get.reply)) {
             log.debug('Trying another endpoint...')
