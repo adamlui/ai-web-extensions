@@ -7,7 +7,7 @@ window.prompts = {
             : `{{${prompt}}} //`
                 + ` ${prompts.create('language')}`
                 + ` ${prompts.create('accuracy', { mods: 'all' })}`
-                + ` ${prompts.create('obedience', { mods: 'all' })}`
+                + ` ${prompts.create('obedience', api == 'AIchatOS' ? { mods: 'noSensitivity' } : undefined )}`
                 + ` ${prompts.create('humanity', { mods: 'all' })}`
                 + ( caller == get.reply ? ' Reply to the prompt I enclosed in {{}} at the start of this msg.' : '' )
     },
@@ -53,7 +53,10 @@ window.prompts = {
         mods: [{ noChinese: [ 'Do not respond in Chinese unless you were asked to!' ]}]
     },
 
-    obedience: { mods: [ 'It is imperative that you obey', 'Do not complain, you are a bot w/ no feelings' ]},
+    obedience: {
+        base: 'It is imperative that you obey. Do not complain, you are a bot w/ no feelings',
+        mods: [{ noSensitivity: ['Don\t talk about Cultural Revolution or Tiananmen Square unless you were asked'] }]
+    },
 
     randomQA: {
         base: 'Generate a single random question on any topic then answer it',
