@@ -231,12 +231,15 @@ jobs:
 
       - name: Config committer
         if: env.SHIELDS_UPDATED == 'true'
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          GPG_PRIVATE_ID: ${{ secrets.GPG_PRIVATE_ID }}  
         run: |
-          gpg --batch --import <(echo "${{ secrets.GPG_PRIVATE_KEY }}")
+          gpg --batch --import <(echo "$GPG_PRIVATE_KEY")
           git config --global commit.gpgsign true
           git config --global user.name "kudo-sync-bot"
           git config --global user.email "auto-sync@kudoai.com"
-          git config --global user.signingkey "${{ secrets.GPG_PRIVATE_ID }}"
+          git config --global user.signingkey "$GPG_PRIVATE_ID"
 
       - name: Push changes to adamlui/ai-web-extensions
         if: env.SHIELDS_UPDATED == 'true'
