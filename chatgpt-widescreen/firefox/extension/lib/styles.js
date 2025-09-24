@@ -69,11 +69,6 @@ window.styles = {
             const tcbHeight = tcbMinHeight +(
                 ( site == 'chatgpt' ? 68 : 80 ) -tcbMinHeight ) * config.tallerChatboxHeight /100
             return (async () => config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
-                ${ site != 'chatgpt' ? ''
-                    : `main { /* prevent h-scrollbar on sync.mode('fullWindow) => delayed chatbar.tweak() */
-                        overflow: clip !important }
-                    ${ !await chatbar.is.dark() ? '' // color 'Attach File' white
-                        : `svg:has(path[d^="M9 7C9 4.238"]) + span { color: white }`}`}
                 ${ config.tcbDisabled ? '' // heighten chatbox
                     : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
                         { max-height: ${tcbHeight}vh }
