@@ -255,7 +255,7 @@ This script exists thanks to code, translations, issues & ideas from the followi
 <a href="#">
     <img title="Chrome Web Store Team" src="https://assets.chatgptwidescreen.com/images/icons/web-stores/chrome-web-store/icon48.png?e2a66b7&first-contrib=2024.12.7-hidden-footer-stopped-working-email"></a>
 <a href="#">
-    <img width=47 title="Copilot Autofix" src="https://github.githubassets.com/favicons/favicon.svg?first-contrib=2024.12.9-cmd-injection-autofix"></a>
+    <img width=46 title="Copilot Autofix" src="https://github.githubassets.com/favicons/favicon.svg?first-contrib=2024.12.9-cmd-injection-autofix"></a>
 <a href="https://github.com/wobfan">
     <img width=46 title="@wobfan" src="https://avatars.githubusercontent.com/u/30731925?first-contrib=2025.1.11-enable-widescreen-by-default-suggestion"></img></a>
 <a href="https://github.com/cleuton4k">
@@ -269,27 +269,27 @@ This script exists thanks to code, translations, issues & ideas from the followi
 <a href="https://addons.mozilla.org/firefox/user/17585562/">
     <img width=46 title="Aria Dahl" src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.5.10-requested-show-notifs-at-bottom"></img></a>
 <a href="https://github.com/14790897">
-    <img width=47 title="@14790897" src="https://avatars.githubusercontent.com/u/121866954?first-contrib=2025.5.19-revealed-cwm-stopped-working-leading-to-locales-url-correction"></img></a>
+    <img width=46 title="@14790897" src="https://avatars.githubusercontent.com/u/121866954?first-contrib=2025.5.19-revealed-cwm-stopped-working-leading-to-locales-url-correction"></img></a>
 <a href="https://github.com/shtirlitsDva">
-    <img width=47 title="@shtirlitsDva" src="https://avatars.githubusercontent.com/u/12258139?first-contrib=2025.5.22-reported-taller-chatbox-buried-on-chatgpt-homepage"></img></a>
+    <img width=46 title="@shtirlitsDva" src="https://avatars.githubusercontent.com/u/12258139?first-contrib=2025.5.22-reported-taller-chatbox-buried-on-chatgpt-homepage"></img></a>
 <a href="https://github.com/lijiachang">
-    <img width=47 title="@lijiachang" src="https://avatars.githubusercontent.com/u/28041718?first-contrib=2025.5.22-reported-poe-btn-became-undefined"></img></a>
+    <img width=46 title="@lijiachang" src="https://avatars.githubusercontent.com/u/28041718?first-contrib=2025.5.22-reported-poe-btn-became-undefined"></img></a>
 <a href="#">
-    <img width=47 title="T. H." src="https://lh3.googleusercontent.com/a-/ALV-UjXUG8oXqPfr4ipnBg_byILlBIaZbi6Ie-vnd_BsKK5F7ZMTme1LMw=s48-w48-h48?first-contrib=2025.6.5-found-no-wider-chatbox-on-install-confusing-leading-to-new-default-val"></img></a>
+    <img width=46 title="T. H." src="https://lh3.googleusercontent.com/a-/ALV-UjXUG8oXqPfr4ipnBg_byILlBIaZbi6Ie-vnd_BsKK5F7ZMTme1LMw=s48-w48-h48?first-contrib=2025.6.5-found-no-wider-chatbox-on-install-confusing-leading-to-new-default-val"></img></a>
 <a href="https://github.com/GonzRon">
-    <img width=47 title="@GonzRon" src="https://avatars.githubusercontent.com/u/18006895?first-contrib=2025.7.14-reported-chatgpt-projects-unscrollable"></img></a>
+    <img width=46 title="@GonzRon" src="https://avatars.githubusercontent.com/u/18006895?first-contrib=2025.7.14-reported-chatgpt-projects-unscrollable"></img></a>
 <a href="https://github.com/JangGeol9">
-    <img width=47 title="@JangGeol9" src="https://avatars.githubusercontent.com/u/131735042?first-contrib=2025.7.22-reported-widescreen-broke"></img></a>
+    <img width=46 title="@JangGeol9" src="https://avatars.githubusercontent.com/u/131735042?first-contrib=2025.7.22-reported-widescreen-broke"></img></a>
 <a href="https://github.com/xeruf">
-    <img width=47 title="@xeruf" src="https://avatars.githubusercontent.com/u/13354331?first-contrib=2025.7.30-reported-chatgpt-widescreen-tables-stopped-working"></img></a>
+    <img width=46 title="@xeruf" src="https://avatars.githubusercontent.com/u/13354331?first-contrib=2025.7.30-reported-chatgpt-widescreen-tables-stopped-working"></img></a>
 <a href="https://github.com/panosru">
-    <img width=47 title="@panosru" src="https://avatars.githubusercontent.com/u/400362?first-contrib=2025.8.12-added-preserve-chatgpt-project-list-scrollability"></img></a>
+    <img width=46 title="@panosru" src="https://avatars.githubusercontent.com/u/400362?first-contrib=2025.8.12-added-preserve-chatgpt-project-list-scrollability"></img></a>
 <a href="https://github.com/banagale">
-    <img width=47 title="@banagale" src="https://avatars.githubusercontent.com/u/1409710?first-contrib=2025.8.21-reported-chatgpt-chatbar-broke"></img></a>
+    <img width=46 title="@banagale" src="https://avatars.githubusercontent.com/u/1409710?first-contrib=2025.8.21-reported-chatgpt-chatbar-broke"></img></a>
 <a href="https://github.com/ahnupeng" target="_blank" rel="noopener">
-    <img width=47 title="@ahnupeng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/5319112?first-contrib=2025.9.4-suggested-allow-edit-slider-vals&h=47&w=47&mask=circle&maxage=7d"></a>
+    <img width=46 title="@ahnupeng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/5319112?first-contrib=2025.9.4-suggested-allow-edit-slider-vals&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/welsalex" target="_blank" rel="noopener">
-    <img width=47 title="@welsalex" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/104450471?first-contrib=2025.9.22-reported-chat-history-hidden&h=47&w=47&mask=circle&maxage=7d"></a>
+    <img width=46 title="@welsalex" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/104450471?first-contrib=2025.9.22-reported-chat-history-hidden&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/dependabot">
     <img width=46 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp">
