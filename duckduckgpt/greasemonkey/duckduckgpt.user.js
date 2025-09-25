@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.23.1
+// @version                2025.9.24
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -1036,12 +1036,14 @@
             const validModes = ['get', 'summarize'], modeKey = `auto${log.toTitleCase(mode)}`
             let conflictingModeToggled = false // to extend this notif duration
             settings.save(modeKey, !config[modeKey])
-            if (config[modeKey]) { // this Auto-Gen mode toggled on, disable other one + Manual-Gen
+            if (config[modeKey]) { // this Auto-Gen mode toggled on, disable other one + Manual-Gen + do it
                 const otherMode = validModes[+(mode == validModes[0])]
                 if (config[`auto${log.toTitleCase(otherMode)}`]) {
                     toggle.autoGen(otherMode) ; conflictingModeToggled = true }
                 ['prefix', 'suffix'].forEach(mode => {
                     if (config[`${mode}Enabled`]) { toggle.manualGen(mode) ; conflictingModeToggled = true }})
+                app.div.querySelector(
+                    `button[class*=standby]:has(svg.${mode == 'get' ? 'send' : 'summarize' })`)?.click()
             }
             feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+config[modeKey]]}`,
                 null, conflictingModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown

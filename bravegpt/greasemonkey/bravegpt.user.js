@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.9.23.1
+// @version               2025.9.24
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1025,12 +1025,14 @@
                   modeKey = `auto${log.toTitleCase(mode)}${ mode == 'get' ? 'Disabled' : '' }`
             let conflictingModeToggled = false // to extend this notif duration
             settings.save(modeKey, !config[modeKey])
-            if (settings.typeIsEnabled(modeKey)) { // this Auto-Gen mode toggled on, disable other one + Manual-Gen
+            if (settings.typeIsEnabled(modeKey)) { // this Auto-Gen mode toggled on, disable other one + Manual-Gen + do it
                 const otherMode = validModes[+(mode == validModes[0])],
                       otherModeKey = `auto${log.toTitleCase(otherMode)}${ otherMode == 'get' ? 'Disabled' : '' }`
                 if (settings.typeIsEnabled(otherModeKey)) { toggle.autoGen(otherMode) ; conflictingModeToggled = true }
                 ['prefix', 'suffix'].forEach(mode => {
                     if (config[`${mode}Enabled`]) { toggle.manualGen(mode) ; conflictingModeToggled = true }})
+                app.div.querySelector(
+                    `button[class*=standby]:has(svg.${mode == 'get' ? 'send' : 'summarize' })`)?.click()
             }
             feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+settings.typeIsEnabled(modeKey)]}`,
                 null, conflictingModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
