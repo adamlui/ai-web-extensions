@@ -68,7 +68,7 @@ window.styles = {
             const tcbMinHeight = site == 'chatgpt' ? 25 : /* poe */ 50
             const tcbHeight = tcbMinHeight +(
                 ( site == 'chatgpt' ? 68 : 80 ) -tcbMinHeight ) * config.tallerChatboxHeight /100
-            return (async () => config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
+            return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
                 ${ config.tcbDisabled ? '' // heighten chatbox
                     : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
                         { max-height: ${tcbHeight}vh }
@@ -91,7 +91,6 @@ window.styles = {
                 ${ config.blockSpamDisabled ? ''
                     : `${styles.getAllSelectors(selectors.spam).join(',')} { display: none !important }
                         body { pointer-events: unset !important }` /* free click lock from blocking modals */ }`
-            )()
         }
     },
 
