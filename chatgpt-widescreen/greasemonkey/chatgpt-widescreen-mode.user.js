@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.28
+// @version             2025.9.28.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -539,6 +539,7 @@
             const settingsModal = modals.alert(
                 `${category.symbol} ${category.label}`, '<ul></ul>', undefined, undefined, 365)
             settingsModal.classList.add(`${app.slug}-settings-modal`)
+            settingsModal.style.cssText += 'padding-bottom: 10px !important'
 
             // Create entries
             const settingsUL = settingsModal.querySelector('ul'),
@@ -757,7 +758,7 @@
         }
         .${app.slug}-settings-modal h2 { text-align: center }
         .${app.slug}-settings-modal ul { /* entries list */
-            cursor: pointer ; font-size: 18px ; margin: 16px 0 -10px ; min-height: 100px ; list-style: none }
+            cursor: pointer ; font-size: 18px ; margin: 16px 0 -10px ; list-style: none }
         .${app.slug}-settings-modal li { /* entry row */
             color: ${ env.ui.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
             height: 37px ; padding: 6px 10px 4px ; font-size: 15.5px ; align-content: center ;
