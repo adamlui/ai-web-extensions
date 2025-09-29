@@ -52,9 +52,9 @@ chrome.runtime.onMessage.addListener(async ({ action }) => {
                         .then(({ chatgptDisabled, poeDisabled }) => {
                             const sitesEnabled = [!chatgptDisabled && aiHomeURLs[0], !poeDisabled && aiHomeURLs[1]]
                                 .filter(Boolean)
-                        return chrome.tabs.create({
-                            url: sitesEnabled[Math.floor(Math.random() * sitesEnabled.length)] || aiHomeURLs[0] })
-                    })
+                            return chrome.tabs.create({
+                                url: sitesEnabled[Math.floor(Math.random() * sitesEnabled.length)] || aiHomeURLs[0] })
+                        })
         if (activeTab != aiTab) await new Promise(resolve => // after new tab loads
             chrome.tabs.onUpdated.addListener(function loadedListener(tabId, { status }) {
                 if (tabId == aiTab.id && status == 'complete') {
