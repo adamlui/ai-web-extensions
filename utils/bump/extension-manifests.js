@@ -52,7 +52,7 @@
                 fs.constants.O_CREAT | fs.constants.O_EXCL | fs.constants.O_RDWR)
             bump.log.error(`Cache file missing. Generating ${cachePaths.manifestPaths}...\n`)
             manifestPaths = await bump.findFileBySuffix({ suffix: 'manifest.json' }) ; console.log('')
-            fs.writeFileSync(fd, JSON.stringify(manifestPaths, null, 2), 'utf-8')
+            fs.writeFileSync(fd, JSON.stringify(manifestPaths, undefined, 2), 'utf-8')
             bump.log.success(`\nCache file created @ ${cachePaths.manifestPaths}`)
         } catch (err) { // use existing cache file
             manifestPaths = JSON.parse(fs.readFileSync(cachePaths.manifestPaths, 'utf-8'))

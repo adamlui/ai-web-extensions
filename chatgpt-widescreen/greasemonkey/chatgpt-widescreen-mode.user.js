@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.27
+// @version             2025.9.28
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -535,8 +535,9 @@
         settings(ctgKey) { // for categories
 
             // Create modal
-            const category = settings.categories[ctgKey],
-                  settingsModal = modals.alert(`${category.symbol} ${category.label}`, '<ul></ul>', null, null, 365)
+            const category = settings.categories[ctgKey]
+            const settingsModal = modals.alert(
+                `${category.symbol} ${category.label}`, '<ul></ul>', undefined, undefined, 365)
             settingsModal.classList.add(`${app.slug}-settings-modal`)
 
             // Create entries

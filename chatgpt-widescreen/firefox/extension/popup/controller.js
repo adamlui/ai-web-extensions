@@ -159,7 +159,7 @@
 
     function extensionIsDisabled() { return !!( config.extensionDisabled || config[`${env.site}Disabled`] )}
 
-    function notify(msg, pos = !config.toastMode ? 'bottom-right' : null) {
+    function notify(msg, pos = !config.toastMode ? 'bottom-right' : undefined) {
         if (config.notifDisabled
             && !new RegExp(`${browserAPI.getMsg('menuLabel_show')} ${browserAPI.getMsg('menuLabel_notifs')}`, 'i')
                 .test(msg)

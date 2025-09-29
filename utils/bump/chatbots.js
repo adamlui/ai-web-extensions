@@ -53,7 +53,7 @@
                 chatbotFiles.push(...(await bump.findFileBySuffix({ suffix: `${chatbot}.user.js` })))
                 console.log('')
             }
-            fs.writeFileSync(fd, JSON.stringify(chatbotFiles, null, 2), 'utf-8')
+            fs.writeFileSync(fd, JSON.stringify(chatbotFiles, undefined, 2), 'utf-8')
             bump.log.success(`\nCache file created @ ${cachePaths.chatbotPaths}`)
         } catch (err) { // use existing cache file
             chatbotFiles = JSON.parse(fs.readFileSync(cachePaths.chatbotPaths, 'utf-8'))

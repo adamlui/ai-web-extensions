@@ -195,7 +195,7 @@
         return !deps || Object.values(deps).flat(Infinity).some(depKey => settings.typeIsEnabled(depKey))
     }
 
-    function notify(msg, pos = !config.toastMode ? 'bottom-right' : null) {
+    function notify(msg, pos = !config.toastMode ? 'bottom-right' : undefined) {
         if (config.notifDisabled
             && !new RegExp(`${browserAPI.getMsg('menuLabel_show')} ${browserAPI.getMsg('menuLabel_notifs')}`, 'i')
                 .test(msg)

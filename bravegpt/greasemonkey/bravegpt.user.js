@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.9.24.1
+// @version               2025.9.28
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1004,7 +1004,7 @@
                 if (anchorToggle.checked != config.anchored) modals.settings.toggle.switch(anchorToggle)
             }
             feedback.notify(`${app.msgs.mode_anchor} ${menus.toolbar.state.words[+config.anchored]}`,
-                null, sidebarModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
+                null, sidebarModeToggled ? 2.75 : undefined) // +1s duration if conflicting mode notif shown
         },
 
         animations(layer) {
@@ -1035,7 +1035,7 @@
                     `button[class*=standby]:has(svg.${ mode == 'get' ? 'send' : 'summarize' })`)?.click()
             }
             feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+settings.typeIsEnabled(modeKey)]}`,
-                null, conflictingModeToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown
+                null, conflictingModeToggled ? 2.75 : undefined) // +1s duration if conflicting mode notif shown
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
                 if (modeToggle.checked != settings.typeIsEnabled(modeKey)) modals.settings.toggle.switch(modeToggle)
@@ -1066,7 +1066,7 @@
                         toggle.autoGen(mode) ; autoGenToggled = true }
                 })
             feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+config[modeKey]]}`,
-                null, autoGenToggled ? 2.75 : null) // +1s duration if conflicting mode notif shown)
+                null, autoGenToggled ? 2.75 : undefined) // +1s duration if conflicting mode notif shown)
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
                 if (modeToggle.checked != config[modeKey]) modals.settings.toggle.switch(modeToggle)
@@ -1152,7 +1152,7 @@
             if (mode == 'sticky' && prevStickyState == config.stickySidebar) return
             feedback.notify(`${ app.msgs[`menuLabel_${ mode }Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
                        menus.toolbar.state.words[+config[configKeyName]]}`,
-                null, anchorModeDisabled ? 2.75 : null) // +1s duration if conflicting mode notif shown
+                null, anchorModeDisabled ? 2.75 : undefined) // +1s duration if conflicting mode notif shown
         },
 
         streaming() {
