@@ -36,8 +36,8 @@ window.styles = {
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
                 chatgpt: `main form { max-width: ${
                     toWiden ? wcbWidth : chatbar.nativeWidth }px !important ; align-self: center }`,
-                poe: `[class*=ChatHomeMain_inputContainer], [class^=ChatPageMainFooter_footerInner] { width: ${
-                    toWiden ? wcbWidth : chatbar.nativeWidth }px !important ; margin-right: 15px }`
+                poe: toWiden && `[class*=ChatHomeMain_inputContainer], [class^=ChatPageMainFooter_footerInner] {
+                    width: ${wcbWidth}px }`
             }[site]
         }
     },
