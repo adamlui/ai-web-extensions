@@ -65,8 +65,7 @@ window.tooltip = { // requires dom.js + <app|config|env>
 
         // Update text
         tooltip.div.textContent = baseText
-        tooltip.nativeRpadding = tooltip.nativeRpadding
-            || parseFloat(window.getComputedStyle(tooltip.div).paddingRight)
+        tooltip.nativeRpadding ??= parseFloat(window.getComputedStyle(tooltip.div).paddingRight)
         clearInterval(tooltip.dotCycler)
         if (baseText.endsWith('...')) { // animate the dots
             const noDotText = baseText.slice(0, -3), dotWidth = 2.75 ; let dotCnt = 3
