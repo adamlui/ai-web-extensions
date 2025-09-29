@@ -56,10 +56,11 @@
             entry.div.append(icons.create({ key: 'caretDown', size: 11, class: 'menu-caret menu-right-elem' }))
 
         else if (entryData.type == 'slider') { // append slider, add listeners, remove .highlight-on-hover
+            const minVal = entryData.min ?? 0, maxVal = entryData.max ?? 100
 
             // Create/append slider elems
             entry.div.append(entry.slider = dom.create.elem('input', { class: 'slider', type: 'range',
-                min: entryData.min || 0, max: entryData.max || 100, value: config[entryData.key] }))
+                min: minVal, max: maxVal || 100, value: config[entryData.key] }))
             entry.div.classList.remove('highlight-on-hover')
             if (entryData.step || env.browser.isFF) // use val from entryData or default to 2% in FF for being laggy
                 entry.slider.step = entryData.step || ( 0.02 * entry.slider.max - entry.slider.min )
@@ -72,14 +73,14 @@
 
             // Add listeners
             entry.editLink.onclick = () => {
-                const userVal = prompt(
-                    `${browserAPI.getMsg('prompt_enterNewVal')} ${entryData.label}:`, entry.slider.value)
+                const promptMsg = `${browserAPI.getMsg('prompt_enterNewVal')} ${entryData.label} (${minVal}–${maxVal}):`
+                const userVal = prompt(promptMsg, entry.slider.value)
                 if (userVal == null) return // user cancelled so do nothing
                 if (!/\d/.test(userVal)) return alert(`${
                     browserAPI.getMsg('error_enterValidNum')} ${browserAPI.getMsg('error_between')} ${
-                        entryData.min || 0 } ${browserAPI.getMsg('error_and')} ${ entryData.max || 100 }!`)
+                        minVal} ${browserAPI.getMsg('error_and')} ${maxVal}!`)
                 let validVal = parseInt(userVal.replace(/\D/g, '')) ; if (isNaN(validVal)) return
-                validVal = Math.max(entryData.min || 0, Math.min(entryData.max || 100, validVal))
+                validVal = Math.max(minVal, Math.min(maxVal, validVal))
                 entry.slider.value = validVal ; settings.save(entryData.key, validVal)
                 sync.configToUI({ updatedKey: entryData.key })
                 entry.label.textContent = `${entryData.label}: ${validVal}${ entryData.labelSuffix || '' }`

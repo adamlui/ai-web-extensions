@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.29.1
+// @version             2025.9.29.2
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -606,11 +606,12 @@
                     }
 
                 } else if (entryData.type == 'slider') {
+                    const minVal = entryData.min ?? 0, maxVal = entryData.max ?? 100
 
                     // Create/append slider elems
                     entry.row.classList.add('active')
                     entry.row.append(entry.slider = dom.create.elem('input',
-                        { type: 'range', min: entryData.min || 0, max: entryData.max || 100, value: config[key] }))
+                        { type: 'range', min: minVal, max: maxVal, value: config[key] }))
                     if (entryData.step || env.browser.isFF) // use val from ctrl data or default to 2% in FF for being laggy
                         entry.slider.step = entryData.step || (0.02 * entry.slider.max - entry.slider.min)
                     entry.label.textContent += `: ${entry.slider.value}${ entryData.labelSuffix || '' }`
@@ -622,13 +623,14 @@
 
                     // Add listeners
                     entry.editLink.onclick = () => {
-                        const userVal = prompt(`${app.msgs.prompt_enterNewVal} ${entryData.label}:`, entry.slider.value)
+                        const promptMsg = `${app.msgs.prompt_enterNewVal} ${entryData.label} (${minVal}–${maxVal}):`,
+                              userVal = prompt(promptMsg, entry.slider.value)
                         if (userVal == null) return // user cancelled so do nothing
                         if (!/\d/.test(userVal)) return alert(`${
                             app.msgs.error_enterValidNum} ${app.msgs.error_between} ${
-                                entryData.min || '0' } ${app.msgs.and} ${ entryData.max || '100' }!`)
+                                minVal} ${app.msgs.and} ${maxVal}!`)
                         let validVal = parseInt(userVal.replace(/\D/g, '')) ; if (isNaN(validVal)) return
-                        validVal = Math.max(entryData.min || 0, Math.min(entryData.max || 100, validVal))
+                        validVal = Math.max(minVal, Math.min(maxVal, validVal))
                         entry.slider.value = validVal ; settings.save(entryData.key, validVal)
                         sync.configToUI({ updatedKey: entryData.key })
                         entry.label.textContent = `${entryData.label}: ${validVal}${ entryData.labelSuffix || '' }`
