@@ -2,29 +2,29 @@ window.tooltip = { // requires dom.js + <app|config|env>
 
     stylize() { // requires dom.js + app.slug
         document.head.append(this.styles = dom.create.style(`.${app.slug}-tooltip {
-            background-color: /* bubble style */
-                rgba(0,0,0,0.64) ; padding: ${ app.slug == 'googlegpt' ? '6px 7px' : '4px 6px 4px' };
-            border-radius: 6px ; border: 1px solid #d9d9e3 ;
+          --shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ; --transition: opacity 0.15s, transform 0.15s ;
+            background-color: rgba(0,0,0,0.64) ; padding: ${ app.slug == 'googlegpt' ? '6px 7px' : '4px 6px 4px' };
+            border: 1px solid #d9d9e3 ; border-radius: 6px ;
             font-size: ${
                 /amazon|duck/.test(app.slug) ? 0.87 : app.slug == 'bravegpt' ? 0.58 : /* googlegpt */ 0.75 }rem ;
             color: white ; fill: white ; stroke: white ; /* font/icon style */
             position: absolute ; /* for this.update() calcs */
-          --shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ;
-                box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)
             opacity: 0 ; height: fit-content ; z-index: 1250 ; /* visibility */
-            transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
-               -o-transition: opacity 0.15s ; -ms-transition: opacity 0.15s }`
-        ))
+            box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
+            transition: var(--transition) ; -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
+                -ms-transition: var(--transition) ; -o-transition: var(--transition)
+        }`))
     },
 
     toggle(stateOrEvent) { // requires dom.js + <app|env>
         if (env.browser.isMobile) return
+        const togglingOn = stateOrEvent?.type == 'mouseenter' || stateOrEvent == 'on'
         tooltip.div ||= dom.create.elem('div', { class: `${app.slug}-tooltip no-user-select` })
         if (!tooltip.div.isConnected) app.div.append(tooltip.div)
         if (!tooltip.styles) tooltip.stylize()
         if (typeof stateOrEvent == 'object') // mouse event, update text/pos
             tooltip.update(stateOrEvent.currentTarget)
-        tooltip.div.style.opacity = +( stateOrEvent?.type == 'mouseenter' || stateOrEvent == 'on' )
+        tooltip.div.style.opacity = +togglingOn ; tooltip.div.style.transform = `scale(${ togglingOn ? 1 : 0.8 })`
     },
 
     update(btn) { // requires <app|config>
@@ -80,12 +80,11 @@ window.tooltip = { // requires dom.js + <app|config|env>
             tooltip.div.style.paddingRight = tooltip.nativeRpadding
 
         // Update position
-        const elems = {
-            appDiv: app.div, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]'), tooltipDiv: tooltip.div }
+        const elems = { appDiv: app.div, btn, btnsDiv: btn.closest('[id*=btns], [class*=btns]') }
         const rects = {} ; Object.keys(elems).forEach(key => rects[key] = elems[key]?.getBoundingClientRect())
         tooltip.div.style.top = `${ rects[rects.btnsDiv ? 'btnsDiv' : 'btn'].top - rects.appDiv.top
             -( app.slug == 'bravegpt' ? 36 : app.slug == 'googlegpt' ? 37 : 39 )}px`
         tooltip.div.style.right = `${
-            rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - rects.tooltipDiv.width/2 }px`
+            rects.appDiv.right -( rects.btn.left + rects.btn.right )/2 - tooltip.div.offsetWidth /2 }px`
     }
 };
