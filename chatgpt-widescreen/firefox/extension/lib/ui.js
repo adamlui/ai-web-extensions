@@ -1,4 +1,4 @@
-// Requires lib/dom.js + env.site + sites
+// Requires lib/dom.js + <env|sites>
 
 window.ui = {
     async getScheme() {
@@ -6,7 +6,7 @@ window.ui = {
             || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
     },
 
-    async isFullWin() {
+    async isFullWin() { // requires lib/dom.js + <env|sites>
         const { site } = env
         if (site == 'poe') return styles.fullWin.node.isConnected
         else if (!sites[site].hasSidebar) return true
