@@ -6,14 +6,12 @@ window.styles = {
         return Object.values(obj).flatMap(val => typeof val == 'object' ? this.getAllSelectors(val) : val) },
 
     get outerDivSelector() { // requires env.site
-        const { site } = env
-        return site == 'chatgpt' ? 'div.text-base > div'
+        return env.site == 'chatgpt' ? 'div.text-base > div'
             : /* poe */ 'div[class*=ChatHomeMain_centered], div[class*=ChatMessagesView]'
     },
 
     calcWSbounds() { // requires env.site
-        const { site } = env
-        window.wsMinWidth ||= chatbar.nativeWidth +( site == 'chatgpt' ? 128 : /* poe */ 20 )
+        window.wsMinWidth ||= chatbar.nativeWidth +( env.site == 'chatgpt' ? 128 : /* poe */ 20 )
         window.wsMaxWidth ||= document.querySelector(this.outerDivSelector)?.parentNode?.offsetWidth -25
     },
 

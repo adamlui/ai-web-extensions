@@ -184,8 +184,7 @@ window.buttons = {
                     buttons[type].style.fill = buttons[type].style.stroke = buttons.color })
         },
 
-        svg(mode, state = '') { // requires env
-            const { site } = env
+        svg(mode, state = '') { // requires env.site
             if (!buttons.widescreen) buttons.create()
 
             // Pick appropriate button/elements
@@ -202,7 +201,7 @@ window.buttons = {
             const btnSVG = btn?.querySelector('svg') || dom.create.svgElem('svg')
             if (mode == 'fullWindow') { // stylize full-window button
                 btnSVG.setAttribute('stroke-width', '2')
-                const btnSize = site == 'chatgpt' ? 17 : 18
+                const btnSize = env.site == 'chatgpt' ? 17 : 18
                 btnSVG.setAttribute('height', btnSize) ; btnSVG.setAttribute('width', btnSize)
             }
             btnSVG.setAttribute('viewBox', (
