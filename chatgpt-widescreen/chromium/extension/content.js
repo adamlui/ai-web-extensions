@@ -39,7 +39,8 @@
     ;({ app: window.app } = await chrome.storage.local.get('app'))
     ;({ sites: window.sites } = await chrome.storage.local.get('sites'))
 
-    const chatbarElem = await dom.get.loadedElem(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input)
+    let chatbarElem = await dom.get.loadedElem(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input)
+    if (env.site == 'poe') chatbarElem = chatbarElem.parentNode.parentNode
     chatbar.nativeWidth = dom.get.computedWidth(chatbarElem) // for ChatGPT WCB + styles.widescreen.css math
     chatbar.nativeHeight = dom.get.computedHeight(chatbarElem) // for TCB math
 

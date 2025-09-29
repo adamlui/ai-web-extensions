@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.28.1
+// @version             2025.9.29
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -362,7 +362,8 @@
         method: 'GET', url: `${app.urls.resourceHost}/assets/data/sites.json5`,
         onload: ({ responseText }) => resolve(JSON5.parse(responseText))
     })))
-    const chatbarElem = await dom.get.loadedElem(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input)
+    let chatbarElem = await dom.get.loadedElem(env.site == 'chatgpt' ? 'main form' : sites[env.site].selectors.input)
+    if (env.site == 'poe') chatbarElem = chatbarElem.parentNode.parentNode
     chatbar.nativeWidth = dom.get.computedWidth(chatbarElem) // for ChatGPT WCB + styles.widescreen.css math
     chatbar.nativeHeight = dom.get.computedHeight(chatbarElem) // for TCB math
 
