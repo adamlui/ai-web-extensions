@@ -4,25 +4,24 @@ window.tooltip = {
 
     stylize() { // requires lib/dom.js + app.slug
         document.head.append(this.styles = dom.create.style(`.${app.slug}-tooltip {
-            background-color: /* bubble style */
-                rgba(0,0,0,0.71) ; padding: 5px 6px ; border-radius: 6px ; border: 1px solid #d9d9e3 ;
-            font-size: 0.85rem ; color: white ; white-space: nowrap ; /* text style */
-          --shadow: 4px 6px 16px 0 rgb(0 0 0 / 38%) ;
-                box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
-            position: fixed ; opacity: 0 ; z-index: 99999 ; /* visibility */
-            transition: opacity 0.15s ; -webkit-transition: opacity 0.15s ; -moz-transition: opacity 0.15s ;
-               -ms-transition: opacity 0.15s ; -o-transition: opacity 0.15s ;
-            user-select: none ; webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none }`
-        ))
+          --shadow: 4px 6px 16px 0 rgb(0 0 0 / 38%) ; --transition: opacity 0.15s, transform 0.15s ;
+            background-color: rgba(0,0,0,0.71) ; padding: 5px 6px ; border: 1px solid #d9d9e3 ; border-radius: 6px ;
+            font-size: 0.85rem ; color: white ; white-space: nowrap ; position: fixed ; opacity: 0 ; z-index: 99999 ;
+            box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
+            transition: var(--transition) ; -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
+               -ms-transition: var(--transition) ; -o-transition: var(--transition) ;
+            user-select: none ; webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none
+        }`))
     },
 
     toggle(event) { // requires lib/dom.js + <app|env>
         if (env.browser.isMobile) return
+        const togglingOn = event.type == 'mouseenter'
         tooltip.div ||= dom.create.elem('div', { class: `${app.slug}-tooltip` })
         if (!tooltip.div.isConnected) event.currentTarget?.after(tooltip.div)
         if (!tooltip.styles) tooltip.stylize()
         tooltip.update(event.currentTarget)
-        tooltip.div.style.opacity = +(event.type == 'mouseenter')
+        tooltip.div.style.opacity = +togglingOn ; tooltip.div.style.transform = `scale(${ togglingOn ? 1 : 0.8 })`
     },
 
     async update(btn) { // requires lib/<browser|chatbar|chatgpt>.js + <config|env>
