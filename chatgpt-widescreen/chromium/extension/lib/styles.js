@@ -13,7 +13,7 @@ window.styles = {
 
     calcWSbounds() { // requires env.site
         const { site } = env
-        window.wsMinWidth ||= chatbar.nativeWidth +( site == 'chatgpt' ? 128 : /* poe */ 66 )
+        window.wsMinWidth ||= chatbar.nativeWidth +( site == 'chatgpt' ? 128 : /* poe */ 20 )
         window.wsMaxWidth ||= document.querySelector(this.outerDivSelector)?.parentNode?.offsetWidth -25
     },
 
