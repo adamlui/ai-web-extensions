@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.30.1
+// @version                2025.9.30.2
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2200,8 +2200,8 @@
                 feedback.notify(`${app.msgs.menuLabel_colorScheme}: ${(
                     scheme == 'light' ? app.msgs.scheme_light || 'Light'
                   : scheme == 'dark'  ? app.msgs.scheme_dark  || 'Dark'
-                                      : app.msgs.menuLabel_auto).toUpperCase()
-                }`)
+                                      : app.msgs.menuLabel_auto
+                ).toUpperCase()}`)
 
                 // Append scheme icon
                 const notifs = document.querySelectorAll('.chatgpt-notif'), notif = notifs[notifs.length -1]
