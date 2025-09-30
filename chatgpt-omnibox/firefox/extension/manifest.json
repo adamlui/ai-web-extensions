@@ -3,7 +3,7 @@
   "name": "__MSG_appName__",
   "short_name": "__MSG_prefix_ask__ ChatGPT",
   "description": "__MSG_appDesc__",
-  "version": "2025.7.28",
+  "version": "2025.9.30",
   "author": "Adam Lui",
   "homepage_url": "https://chatgptomnibox.com",
   "default_locale": "en",
