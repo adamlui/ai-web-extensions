@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.9.29.1
+// @version                2025.9.30
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -1160,9 +1160,11 @@
 
             // Notify of mode change
             if (mode == 'sticky' && prevStickyState == config.stickySidebar) return
-            feedback.notify(`${ app.msgs[`menuLabel_${ mode }Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
-                       menus.toolbar.state.words[+config[configKeyName]]}`,
-                undefined, anchorModeDisabled  ? 2.75 : undefined) // +1s duration if conflicting mode notif shown
+            feedback.notify(
+                `${ app.msgs[`menuLabel_${ mode }Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
+                    menus.toolbar.state.words[+config[configKeyName]]}`,
+                undefined, anchorModeDisabled  ? 2.75 : undefined // +1s duration if conflicting mode notif shown
+            )
         },
 
         streaming() {
@@ -1194,7 +1196,7 @@
             } else { // functional toggle
                 settings.save('streamingDisabled', !config.streamingDisabled)
                 feedback.notify(`${settings.controls.streamingDisabled.label} ${
-                          menus.toolbar.state.words[+!config.streamingDisabled]}`)
+                                   menus.toolbar.state.words[+!config.streamingDisabled]}`)
             }
         }
     }
@@ -2195,10 +2197,12 @@
             function schemeNotify(scheme) {
 
                 // Show notification
-                feedback.notify(`${app.msgs.menuLabel_colorScheme}: `
-                      + ( scheme == 'light' ? app.msgs.scheme_light || 'Light'
-                        : scheme == 'dark'  ? app.msgs.scheme_dark  || 'Dark'
-                                            : app.msgs.menuLabel_auto ).toUpperCase() )
+                feedback.notify(`${app.msgs.menuLabel_colorScheme}: ${(
+                    scheme == 'light' ? app.msgs.scheme_light || 'Light'
+                  : scheme == 'dark'  ? app.msgs.scheme_dark  || 'Dark'
+                                      : app.msgs.menuLabel_auto).toUpperCase()
+                }`)
+
                 // Append scheme icon
                 const notifs = document.querySelectorAll('.chatgpt-notif'), notif = notifs[notifs.length -1]
                 notif.append(icons.create({
