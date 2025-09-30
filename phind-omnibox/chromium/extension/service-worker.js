@@ -16,6 +16,14 @@ chrome.action.onClicked.addListener(async () => {
     chrome.tabs.update(activeTab.id, { url: `${phindURL}/search?q=${query}` })
 })
 
+// Suggest Phind on short prefix used
+chrome.omnibox.onInputChanged.addListener((text, suggest) => {
+    if (text.startsWith('@p')) suggest([{
+        content: `@phind ${text.slice(2)}`,
+        description: `${chrome.i18n.getMessage('prefix_ask')} Phind AI: ${text.slice(2)}`
+    }])
+})
+
 // Query Phind on omnibox query submitted
 chrome.omnibox.onInputEntered.addListener(query =>
     chrome.tabs.update({ url: `${phindURL}/search?q=${query}` }))

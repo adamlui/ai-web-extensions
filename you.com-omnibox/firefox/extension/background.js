@@ -16,6 +16,14 @@ chrome.action.onClicked.addListener(async () => {
     chrome.tabs.update(activeTab.id, { url: `${youURL}/search?q=${query}&tbm=youchat` })
 })
 
+// Suggest You.com on short prefix used
+chrome.omnibox.onInputChanged.addListener((text, suggest) => {
+    if (text.startsWith('@y')) suggest([{
+        content: `@you ${text.slice(2)}`,
+        description: `${chrome.i18n.getMessage('prefix_ask')} You.com AI: ${text.slice(2)}`
+    }])
+})
+
 // Query You.com on omnibox query submitted
 chrome.omnibox.onInputEntered.addListener(query =>
     chrome.tabs.update({ url: `${youURL}/search?q=${query}&tbm=youchat` }))

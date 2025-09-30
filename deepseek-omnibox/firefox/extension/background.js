@@ -24,6 +24,14 @@ chrome.action.onClicked.addListener(async () => {
     tabIsLoaded(updatedTab.id).then(() => chrome.tabs.sendMessage(updatedTab.id, query))
 })
 
+// Suggest DeepSeek on short prefix used
+chrome.omnibox.onInputChanged.addListener((text, suggest) => {
+    if (text.startsWith('@d')) suggest([{
+        content: `@deepseek ${text.slice(2)}`,
+        description: `${chrome.i18n.getMessage('prefix_ask')} DeepSeek AI: ${text.slice(2)}`
+    }])
+})
+
 // Query DeepSeek on omnibox query submitted
 chrome.omnibox.onInputEntered.addListener(async query => {
     const tab = await chrome.tabs.update({ url: deepseekChatURL })
