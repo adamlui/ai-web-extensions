@@ -25,9 +25,7 @@ chrome.action.onClicked.addListener(async () => {
 })
 
 // Query DeepSeek on omnibox query submitted
-chrome.tabs.onUpdated.addListener((tabId, { status }, { url }) => {
-    if (status == 'complete' && url.startsWith(deepseekChatURL)) {
-        const query = new URL(url).searchParams.get('q')
-        if (query) chrome.tabs.sendMessage(tabId, query)
-    }
+chrome.omnibox.onInputEntered.addListener(async query => {
+    const tab = await chrome.tabs.update({ url: deepseekChatURL })
+    tabIsLoaded(tab.id).then(() => chrome.tabs.sendMessage(tab.id, query))
 })

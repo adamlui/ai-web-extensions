@@ -15,3 +15,7 @@ chrome.action.onClicked.addListener(async () => {
           query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi'
     chrome.tabs.update(activeTab.id, { url: `${youURL}/search?q=${query}&tbm=youchat` })
 })
+
+// Query You.com on omnibox query submitted
+chrome.omnibox.onInputEntered.addListener(query =>
+    chrome.tabs.update({ url: `${youURL}/search?q=${query}&tbm=youchat` }))

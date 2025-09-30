@@ -16,15 +16,7 @@
   },
   "permissions": ["activeTab"],
   "action": { "default_title": "__MSG_prefix_ask__ ChatGPT" },
-  "chrome_settings_overrides": {
-    "search_provider": {
-      "name": "__MSG_prefix_ask__ ChatGPT",
-      "search_url": "https://chatgpt.com?q={searchTerms}",
-      "favicon_url": "icons/icon16.png",
-      "keyword": "@chatgpt",
-      "is_default": false
-    }
-  },
+  "omnibox": { "keyword" : "@chatgpt" },
   "background": { "scripts": [ "background.js" ]},
   "browser_specific_settings": { "gecko": { "id": "chatgpt.omnibox@adamlui.com", "strict_min_version": "109.0" }}
 }
