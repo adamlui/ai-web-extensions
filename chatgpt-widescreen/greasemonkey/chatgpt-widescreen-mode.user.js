@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.9.29.3
+// @version             2025.9.30
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -628,7 +628,7 @@
                         if (userVal == null) return // user cancelled so do nothing
                         if (!/\d/.test(userVal)) return alert(`${
                             app.msgs.error_enterValidNum} ${app.msgs.error_between} ${
-                                minVal} ${app.msgs.and} ${maxVal}!`)
+                                minVal} ${app.msgs.error_and} ${maxVal}!`)
                         let validVal = parseInt(userVal.replace(/\D/g, '')) ; if (isNaN(validVal)) return
                         validVal = Math.max(minVal, Math.min(maxVal, validVal))
                         entry.slider.value = validVal ; settings.save(entryData.key, validVal)
