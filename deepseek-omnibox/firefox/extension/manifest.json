@@ -17,7 +17,7 @@
   "permissions": ["activeTab"],
   "action": { "default_title": "__MSG_prefix_ask__ DeepSeek AI" },
   "omnibox": { "keyword" : "@deepseek" },
-  "web_accessible_resources": [{ "matches": ["<all_urls>"], "resources": ["lib/deepseek.js", "lib/dom.min.js"] }],
+  "web_accessible_resources": [{ "matches": ["<all_urls>"], "resources": ["lib/*"] }],
   "content_scripts": [{
     "matches": ["https://chat.deepseek.com/*"], "run_at": "document_end", "js": ["content.js"] }],
   "background": { "scripts": ["background.js"] },
