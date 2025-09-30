@@ -18,7 +18,7 @@
 <a href="#">
     <img height=31 src="https://img.shields.io/amo/users/deepseek-omnibox?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com">
-    <img alt="[Top 10 Trending DeepSeek Mozilla Add-on]" height=31 src="https://img.shields.io/badge/Trending-Top_10_DeepSeek_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[Top 5 Trending DeepSeek Firefox Add-on]" height=31 src="https://img.shields.io/badge/Trending-Top_5_DeepSeek_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com/reviews">
     <img alt="[Mozilla Add-ons Ratings]" height=31 src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></img></a>
 <a href="https://ff.deepseekomnibox.com">

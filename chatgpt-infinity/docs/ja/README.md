@@ -19,7 +19,7 @@
 <a href="#">
     <img src="https://img.shields.io/badge/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC-150,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.chatgptinfinity.com">
-    <img alt="[トレンドトップ75 ChatGPT Mozilla Androidアドオン]" height=31 src="https://img.shields.io/badge/%E3%83%88%E3%83%AC%E3%83%B3%E3%83%89-ChatGPT%20Android%E3%82%A2%E3%83%89%E3%82%AA%E3%83%B3%20%E3%83%88%E3%83%83%E3%83%9775-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[トップ5 人気の ChatGPT Firefox Android プラグイン]" height=31 src="https://img.shields.io/badge/%E7%83%AD%E9%97%A8-%E5%89%8D5_ChatGPT_Android_%E6%8F%92%E4%BB%B6-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-shield">
     <img alt="[Google によって特集される]" src="https://img.shields.io/badge/%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E7%89%B9%E9%9B%86%E3%81%95%E3%82%8C%E3%82%8B-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://edge.chatgptinfinity.com">

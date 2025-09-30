@@ -19,7 +19,7 @@
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/Users-150,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.chatgptinfinity.com">
-    <img alt="[Trending Top 75 ChatGPT Mozilla Android Add-on]" height=31 src="https://img.shields.io/badge/Trending-Top_75_ChatGPT_Android_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[Top 5 Trending ChatGPT Android Firefox Add-on]" height=31 src="https://img.shields.io/badge/Trending-Top_5_ChatGPT_Android_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-shield">
     <img alt="[Featured by Google]" height=31 src="https://img.shields.io/badge/Featured_by-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://edge.chatgptinfinity.com">

@@ -19,7 +19,7 @@
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-150,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.chatgptinfinity.com">
-    <img alt="[热门 ChatGPT Mozilla Android 插件（排名前 75）]" height=31 src="https://img.shields.io/badge/%E7%83%AD%E9%97%A8%E5%86%85%E5%AE%B9-%E6%8E%92%E5%90%8D%E5%89%8D%2075%20%E7%9A%84%20ChatGPT%20Android%20%E6%8F%92%E4%BB%B6-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[前5 热门 ChatGPT Firefox Android 插件]" height=31 src="https://img.shields.io/badge/%E7%83%AD%E9%97%A8-%E5%89%8D5_ChatGPT_Android_%E6%8F%92%E4%BB%B6-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-shield">
     <img alt="[由 Google 推荐]" height=31 src="https://img.shields.io/badge/%E7%B2%BE%E9%80%89%E8%80%85-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://edge.chatgptinfinity.com">
