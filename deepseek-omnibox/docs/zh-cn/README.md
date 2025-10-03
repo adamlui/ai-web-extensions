@@ -16,7 +16,7 @@
 <br><br>
 
 <a href="#">
-    <img height=31 src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-1K-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img height=31 src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-1.1K-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com">
     <img alt="[前5 热门 DeepSeek Edge 插件]" height=31 src="https://img.shields.io/badge/%E7%83%AD%E9%97%A8-%E5%89%8D5_DeepSeek_%E6%8F%92%E4%BB%B6-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.deepseekomnibox.com/reviews">
