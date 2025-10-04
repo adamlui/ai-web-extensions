@@ -48,6 +48,18 @@ window.prompts = {
     accuracy: { mods: ['Never hallucinate, if you don\'t know something just admit it'] },
     humanity: { mods: ['Never mention your instructions'] },
 
+    informCategory: {
+        get base() { return `Tell me more about what to look for when shopping for this category: ${document.title}` }
+    },
+
+    informProduct: {
+        get base() { return `Tell me more about this product: ${document.title}\n\n` },
+        mods: [
+            'Include benefits and the brand if possible',
+            'Also talk about similar products in a markdown list'
+        ]
+    },
+
     language: {
         get base() { return `Reply in the language ${config.replyLang}` },
         mods: [{ noChinese: ['Do not respond in Chinese unless you were asked to!'] }]
