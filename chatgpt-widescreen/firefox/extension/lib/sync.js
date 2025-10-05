@@ -2,7 +2,7 @@
 
 window.sync = {
 
-    async configToUI(options) { // on toolbar popup toggles + AI tab activations
+    async configToUI({ updatedKey } = {}) { // on toolbar popup toggles + AI tab activations
     // ... requires components/buttons.js + lib/<chatbar|settings|styles>.js + <config|env>
 
         const { site } = env, extensionWasDisabled = config.extensionDisabled || config[`${site}Disabled`]
@@ -20,9 +20,9 @@ window.sync = {
             styles.update({ keys: ['chatbar', 'tweaks', 'widescreen'] }) // sync HH/HF/TCB/WCB/NCB/BA/WW
             chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
-            if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled)
+            if (updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled)
                 buttons.animate() // to visually signal location + preview fx applied by Button Animations toggle-on
-            else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.update({ key: 'toast' })
+            else if (/notifBottom|toastMode/.test(updatedKey)) styles.update({ key: 'toast' })
             if (site == 'chatgpt') // toggle free wheel locked in some Spam blocks
                 document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                     'wheel', window.enableWheelScroll)
