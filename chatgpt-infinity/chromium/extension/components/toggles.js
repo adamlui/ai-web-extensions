@@ -70,8 +70,7 @@ window.toggles = {
 
                 // Element styles
               + `.${this.class} { /* parent div */
-                    width: auto ; max-height: 37px ; padding: 0 5px ; user-select: none ; cursor: pointer ;
-                    opacity: 1 !important } /* overcome OpenAI click-dim */
+                    width: auto ; max-height: 37px ; padding: 0 5px ; user-select: none ; cursor: pointer }
                 .${this.class} > img { /* navicon */
                     width: 1.25rem ; height: 1.25rem ; margin-left: 2px ; margin-right: 4px }
                 .${this.class} > input { display: none } /* hide checkbox */
