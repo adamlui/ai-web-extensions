@@ -312,7 +312,7 @@
 
         // Init entry's elems
         const ssEntry = {
-            div: dom.create.elem('div', { id: `${site}-entry`, class: 'menu-entry highlight-on-hover' }),
+            div: dom.create.elem('div', { id: `${site}Entry`, class: 'menu-entry highlight-on-hover' }),
             switchLabelDiv: dom.create.elem('div', {
                 title: `${browserAPI.getMsg('helptip_run')} ${app.name} on ${sites[site].urls.homepage}`,
                 style: `display: flex ; height: 33px ; align-items: center ; flex-grow: 1 ;
