@@ -144,13 +144,12 @@ window.toggles = {
             state() {
                 if (!toggles.sidebar.div) return // since toggle never created = sidebar missing
                 toggles.sidebar.div.style.display = config.toggleHidden || config.extensionDisabled ? 'none' : 'flex'
-                toggles.sidebar.toggleInput.checked = config.infinityMode
+                const isOn = toggles.sidebar.toggleInput.checked = config.infinityMode
                 toggles.sidebar.toggleLabel.textContent = `${browserAPI.getMsg('menuLabel_infinityMode')} `
-                    + browserAPI.getMsg(`state_${ toggles.sidebar.toggleInput.checked ? 'enabled' : 'disabled' }`)
+                    + browserAPI.getMsg(`state_${ isOn ? 'enabled' : 'disabled' }`)
                 requestAnimationFrame(() => {
-                    toggles.sidebar.switchSpan.className = toggles.sidebar.toggleInput.checked ? 'enabled' : 'disabled'
-                    toggles.sidebar.knobSpan.style.transform = `translateX(${
-                        toggles.sidebar.toggleInput.checked ? 13 : 0 }px)`
+                    toggles.sidebar.switchSpan.className = isOn ? 'enabled' : 'disabled'
+                    toggles.sidebar.knobSpan.style.transform = `translateX(${ isOn ? 13 : 0 }px)`
                 }) // to trigger 1st transition fx
             }
         }
