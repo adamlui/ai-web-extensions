@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.10.9
+// @version             2025.10.9.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -535,6 +535,83 @@
 
         settings(ctgKey) { // for categories
 
+            // Stylize
+            (modals.settings.style = dom.create.style()).textContent = `
+                :root {
+                  --entry-highlighted-bg: rgba(100,149,237,0.88) ; --thumb-color: #000 ; --thumb-border: #fff ;
+                  --track-filled-color: #000 ; --track-empty-color: #e0e0e0 
+                }
+                .${app.slug}-settings-modal h2 { text-align: center }
+                .${app.slug}-settings-modal ul { /* entries list */
+                    cursor: pointer ; font-size: 18px ; margin: 16px 0 -10px ; list-style: none }
+                .${app.slug}-settings-modal li { /* entry row */
+                    color: ${ env.ui.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
+                    height: 37px ; padding: 6px 10px 4px ; font-size: 15.5px ; align-content: center ;
+                    border-bottom: 1px dotted ${ env.ui.scheme == 'dark' ? 'white' : 'black' };
+                    border-radius: 3px ; /* slightly round highlight strip */
+                    transition: 0.1s ease ; /* for hover-zoom */
+                       -webkit-transition: 0.1s ease ; -moz-transition: 0.1s ease ;
+                        o-transition: 0.1s ease ; -ms-transition: 0.1s ease
+                }
+                .${app.slug}-settings-modal li.active {
+                    color: ${ env.ui.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }}
+                .${app.slug}-settings-modal li:not(:has(input[type=range])):hover {
+                    padding: 4px 10px ; transform: scale(1.15) ; background: var(--entry-highlighted-bg) ; color: white }
+                .${app.slug}-settings-modal li:last-of-type { border-bottom: none } // remove last bottom-border
+                .${app.slug}-settings-modal li > label { cursor: pointer }
+                .${app.slug}-settings-modal li > input[type=checkbox] { display: none }
+                .${app.slug}-settings-modal .toggle-switch {
+                    position: relative ; left: -1px ; bottom: -4px ; float: right ;
+                    background-color: #ccc ; width: 26px ; height: 13px ; border-radius: 28px ;
+                    transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
+                       -o-transition: 0.4s ; -ms-transition: 0.4s
+                }
+                .${app.slug}-settings-modal .toggle-knob {
+                    position: absolute ; left: 1px ; bottom: 1px ; content: "" ;
+                    background-color: white ; width: 11px ; height: 11px ; border-radius: 28px ;
+                    transition: 0.2s ; -webkit-transition: 0.2s ; -moz-transition: 0.2s ;
+                       -o-transition: 0.2s ; -ms-transition: 0.2s
+                }
+                .${app.slug}-settings-modal li:has(input[type=range]) { display: flex ; flex-wrap: wrap; padding: 32px 8px   }
+                .${app.slug}-settings-modal li > input[type=range] {
+                  --track-fill-percent: 100% ; width: 100% ; cursor: pointer ; margin: 7px 0 ;
+                   -webkit-appearance: none ; appearance: none ; background: none
+                }
+                .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-runnable-track {
+                    height: 5px ; border-radius: 10px ;
+                    background: linear-gradient(to right,
+                        var(--track-filled-color) 0%, var(--track-filled-color) var(--track-fill-percent),
+                        var(--track-empty-color) var(--track-fill-percent), var(--track-empty-color) 100%
+                    )
+                }
+                .${app.slug}-settings-modal li > input[type=range]::-moz-range-track {
+                    height: 5px ; border-radius: 10px ;
+                    background: linear-gradient(to right,
+                        var(--track-filled-color) 0%, var(--track-filled-color) var(--track-fill-percent),
+                        var(--track-empty-color) var(--track-fill-percent), var(--track-empty-color) 100%
+                    )
+                }
+                .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-thumb {
+                   -webkit-appearance: none ; width: 12px ; height: 26.5px ; background: var(--thumb-color) ;
+                    margin-top: -10.5px ; border: 4px solid var(--thumb-border) ; border-radius: 16px ;
+                    cursor: ew-resize ; transition: transform 0.05s ease
+                }
+                .${app.slug}-settings-modal li > input[type=range]::-moz-range-thumb {
+                    width: 4px ; height: 19px ; background: var(--thumb-color) ;
+                    margin-top: -11px ; border: 4px solid var(--thumb-border) ; border-radius: 16px ;
+                    cursor: ew-resize ; transition: transform 0.05s ease
+                }
+                .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-thumb:hover {
+                    transform: scaleX(1.325) }
+                .${app.slug}-settings-modal li > input[type=range]::-moz-range-thumb:hover { transform: scaleX(1.325) }
+                .${app.slug}-settings-modal button { display: none }
+                .${app.slug}-settings-modal .edit-link {
+                    text-transform: uppercase ; font-size: 0.65em ; margin-left: 0.75em ;
+                    opacity: 0.7 ; cursor: pointer
+                }
+                .${app.slug}-settings-modal .edit-link:hover { opacity: 1 }`
+            if (!modals.settings.style.isConnected) document.head.append(modals.settings.style)
+
             // Create modal
             const category = settings.categories[ctgKey]
             const settingsModal = modals.alert(
@@ -755,78 +832,6 @@
             href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/${
                 color}.min.css`
     })))
-    document.head.append(dom.create.style( // settings modal styles
-       `:root {
-          --entry-highlighted-bg: rgba(100,149,237,0.88) ; --thumb-color: #000 ; --thumb-border: #fff ;
-          --track-filled-color: #000 ; --track-empty-color: #e0e0e0 
-        }
-        .${app.slug}-settings-modal h2 { text-align: center }
-        .${app.slug}-settings-modal ul { /* entries list */
-            cursor: pointer ; font-size: 18px ; margin: 16px 0 -10px ; list-style: none }
-        .${app.slug}-settings-modal li { /* entry row */
-            color: ${ env.ui.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
-            height: 37px ; padding: 6px 10px 4px ; font-size: 15.5px ; align-content: center ;
-            border-bottom: 1px dotted ${ env.ui.scheme == 'dark' ? 'white' : 'black' };
-            border-radius: 3px ; /* slightly round highlight strip */
-            transition: 0.1s ease ; /* for hover-zoom */
-                -webkit-transition: 0.1s ease ; -moz-transition: 0.1s ease ;
-                -o-transition: 0.1s ease ; -ms-transition: 0.1s ease
-        }
-        .${app.slug}-settings-modal li.active {
-            color: ${ env.ui.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }}
-        .${app.slug}-settings-modal li:not(:has(input[type=range])):hover {
-            padding: 4px 10px ; transform: scale(1.15) ; background: var(--entry-highlighted-bg) ; color: white }
-        .${app.slug}-settings-modal li:last-of-type { border-bottom: none } // remove last bottom-border
-        .${app.slug}-settings-modal li > label { cursor: pointer }
-        .${app.slug}-settings-modal li > input[type=checkbox] { display: none }
-        .${app.slug}-settings-modal .toggle-switch {
-            position: relative ; left: -1px ; bottom: -4px ; float: right ;
-            background-color: #ccc ; width: 26px ; height: 13px ; border-radius: 28px ;
-            transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
-                -o-transition: 0.4s ; -ms-transition: 0.4s
-        }
-        .${app.slug}-settings-modal .toggle-knob {
-            position: absolute ; left: 1px ; bottom: 1px ; content: "" ;
-            background-color: white ; width: 11px ; height: 11px ; border-radius: 28px ;
-            transition: 0.2s ; -webkit-transition: 0.2s ; -moz-transition: 0.2s ;
-                -o-transition: 0.2s ; -ms-transition: 0.2s
-        }
-        .${app.slug}-settings-modal li:has(input[type=range]) { display: flex ; flex-wrap: wrap; padding: 32px 8px   }
-        .${app.slug}-settings-modal li > input[type=range] {
-          --track-fill-percent: 100% ; width: 100% ; cursor: pointer ; margin: 7px 0 ;
-           -webkit-appearance: none ; appearance: none ; background: none
-        }
-        .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-runnable-track {
-            height: 5px ; border-radius: 10px ;
-            background: linear-gradient(to right,
-                var(--track-filled-color) 0%, var(--track-filled-color) var(--track-fill-percent),
-                var(--track-empty-color) var(--track-fill-percent), var(--track-empty-color) 100%
-            )
-        }
-        .${app.slug}-settings-modal li > input[type=range]::-moz-range-track {
-            height: 5px ; border-radius: 10px ;
-            background: linear-gradient(to right,
-                var(--track-filled-color) 0%, var(--track-filled-color) var(--track-fill-percent),
-                var(--track-empty-color) var(--track-fill-percent), var(--track-empty-color) 100%
-            )
-        }
-        .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-thumb {
-           -webkit-appearance: none ; width: 12px ; height: 26.5px ; background: var(--thumb-color) ;
-            margin-top: -10.5px ; border: 4px solid var(--thumb-border) ; border-radius: 16px ; cursor: ew-resize ;
-            transition: transform 0.05s ease
-        }
-        .${app.slug}-settings-modal li > input[type=range]::-moz-range-thumb {
-            width: 4px ; height: 19px ; background: var(--thumb-color) ;
-            margin-top: -11px ; border: 4px solid var(--thumb-border) ; border-radius: 16px ; cursor: ew-resize ;
-            transition: transform 0.05s ease
-        }
-        .${app.slug}-settings-modal li > input[type=range]::-webkit-slider-thumb:hover { transform: scaleX(1.325) }
-        .${app.slug}-settings-modal li > input[type=range]::-moz-range-thumb:hover { transform: scaleX(1.325) }
-        .${app.slug}-settings-modal button { display: none }
-        .${app.slug}-settings-modal .edit-link {
-            text-transform: uppercase ; font-size: 0.65em ; margin-left: 0.75em ; opacity: 0.7 ; cursor: pointer }
-        .${app.slug}-settings-modal .edit-link:hover { opacity: 1 }`
-    ))
 
     // Restore PREV SESSION's state
     if (!config[`${env.site}Disabled`]) {
