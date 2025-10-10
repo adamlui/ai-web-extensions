@@ -10,14 +10,13 @@ window.toggles = {
             // Init toggle elems
             this.div = document.createElement('div') ; this.div.className = this.class
             this.navicon = document.createElement('img')
-            this.toggleInput = document.createElement('input')
             this.toggleLabel = document.createElement('label')
             this.switchSpan = document.createElement('span')
             this.knobSpan = document.createElement('span')
 
             // Assemble elems into parent div
             this.switchSpan.append(this.knobSpan)
-            this.div.append(this.navicon, this.toggleInput, this.toggleLabel, this.switchSpan)
+            this.div.append(this.navicon, this.toggleLabel, this.switchSpan)
 
             // Stylize elems
             this.stylize() // create/append stylesheet
@@ -30,7 +29,7 @@ window.toggles = {
                 this.div.style.setProperty('--item-background-color',
                     `var(--sidebar-surface-${ type == 'mouseover' ? 'secondary' : 'primary' })`)
             this.div.onclick = () => { // toggle Infinity mode
-                settings.save('infinityMode', !this.toggleInput.checked)
+                settings.save('infinityMode', !config.infinityMode)
                 sync.configToUI({ updatedKey: 'infinityMode' })
                 feedback.notify(`${browserAPI.getMsg('menuLabel_infinityMode')}: ${
                     browserAPI.getMsg(`state_${ config.infinityMode ? 'on' : 'off' }`).toUpperCase()}`)
@@ -144,7 +143,7 @@ window.toggles = {
             state() {
                 if (!toggles.sidebar.div) return // since toggle never created = sidebar missing
                 toggles.sidebar.div.style.display = config.toggleHidden || config.extensionDisabled ? 'none' : 'flex'
-                const isOn = toggles.sidebar.toggleInput.checked = config.infinityMode
+                const isOn = config.infinityMode
                 toggles.sidebar.toggleLabel.textContent = `${browserAPI.getMsg('menuLabel_infinityMode')} `
                     + browserAPI.getMsg(`state_${ isOn ? 'enabled' : 'disabled' }`)
                 requestAnimationFrame(() => {
