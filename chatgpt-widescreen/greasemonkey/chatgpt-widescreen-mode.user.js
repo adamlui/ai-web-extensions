@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.10.9.2
+// @version             2025.10.10
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -644,6 +644,7 @@
 
                 // Create/append toggles/listeners
                 if (entryData.type == 'toggle') {
+                    const configKeyName = ctgKey == 'siteSettings' ? `${key}Disabled` : key
 
                     // Create/append toggle elems
                     entry.toggle = {
@@ -652,7 +653,7 @@
                         knob: dom.create.elem('span', { class: 'toggle-knob' })
                     }
                     entry.toggle.input.checked = (
-                        ctgKey == 'siteSettings' ? !config[`${key}Disabled`] : settings.typeIsEnabled(key) )
+                        ctgKey == 'siteSettings' ? !config[configKeyName] : settings.typeIsEnabled(key) )
                     entry.toggle.switch.append(entry.toggle.knob)
                     entry.row.append(entry.toggle.input, entry.toggle.switch)
 
@@ -662,16 +663,14 @@
                     // Add click listener
                     entry.row.onclick = () => {
                         modals.toggleUtils.switchToggle(entry.toggle.input)
-                        settings.save(
-                            ctgKey == 'siteSettings' ? `${key}Disabled` : key,
-                            ctgKey == 'siteSettings' ? !config[`${key}Disabled`] : !config[key]
-                        )
+                        settings.save(configKeyName, !config[configKeyName])
                         sync.configToUI({ updatedKey: key })
                         if (ctgKey == 'siteSettings' && env.site == key) // notify if setting of active site toggled
                              feedback.notify(`${app.name} 🧩 ${
-                                app.msgs[`state_${config[`${key}Disabled`] ? 'off' : 'on' }`].toUpperCase()}`)
+                                app.msgs[`state_${ config[configKeyName] ? 'off' : 'on' }`].toUpperCase()}`)
                         else if (ctgKey != 'siteSettings')
-                            feedback.notify(`${entryData.label}: ${toolbarMenu.state.words[+settings.typeIsEnabled(key)]}`)
+                            feedback.notify(`${entryData.label}: ${
+                                toolbarMenu.state.words[+settings.typeIsEnabled(key)]}`)
 
                         // Enable/disable dependent entries
                         for (const [ctrlKey, ctrlData] of Object.entries(
