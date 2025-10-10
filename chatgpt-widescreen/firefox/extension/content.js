@@ -2,7 +2,7 @@
 
     // Add WINDOW MSG listener for userscript request to self-disable
     addEventListener('message', event => {
-        if (event.origin != location.origin || !event.data.source?.endsWith('chatgpt-widescreen-mode.user.js')) return
+        if (event.origin != location.origin || !event.data?.source?.endsWith('chatgpt-widescreen-mode.user.js')) return
         postMessage({ source: 'chatgpt-widescreen/*/extension/content.js' }, location.origin)
     })
 
