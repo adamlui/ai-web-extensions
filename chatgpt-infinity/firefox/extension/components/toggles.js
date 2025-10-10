@@ -72,7 +72,6 @@ window.toggles = {
                     width: auto ; max-height: 37px ; padding: 0 5px ; user-select: none ; cursor: pointer }
                 .${this.class} > img { /* navicon */
                     width: 1.25rem ; height: 1.25rem ; margin-left: 2px ; margin-right: 4px }
-                .${this.class} > input { display: none } /* hide checkbox */
                 .${this.class} > span { /* switch span */
                     position: relative ; width: 30px ; height: 15px ; border-radius: 28px ;
                     background-color: var(--switch-disabled-bg-color) ;
