@@ -73,7 +73,8 @@
 
             // Add listeners
             entry.editLink.onclick = () => {
-                const promptMsg = `${browserAPI.getMsg('prompt_enterNewVal')} ${entryData.label} (${minVal}–${maxVal}):`
+                const promptMsg = `${browserAPI.getMsg('prompt_enterNewVal')} ${entryData.label} (${
+                    browserAPI.getMsg('error_between')} ${minVal}–${maxVal}):`
                 const userVal = prompt(promptMsg, entry.slider.value)
                 if (userVal == null) return // user cancelled so do nothing
                 if (!/\d/.test(userVal)) return alert(`${

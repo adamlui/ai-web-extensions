@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.10.5
+// @version             2025.10.9
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -623,8 +623,9 @@
 
                     // Add listeners
                     entry.editLink.onclick = () => {
-                        const promptMsg = `${app.msgs.prompt_enterNewVal} ${entryData.label} (${minVal}–${maxVal}):`,
-                              userVal = prompt(promptMsg, entry.slider.value)
+                        const promptMsg = `${app.msgs.prompt_enterNewVal} ${entryData.label} (${
+                            app.msgs.error_between} ${minVal}–${maxVal}):`
+                        const userVal = prompt(promptMsg, entry.slider.value)
                         if (userVal == null) return // user cancelled so do nothing
                         if (!/\d/.test(userVal)) return alert(`${
                             app.msgs.error_enterValidNum} ${app.msgs.error_between} ${
