@@ -28,6 +28,7 @@ window.sync = {
                 document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                     'wheel', window.enableWheelScroll)
         }
+        if (typeof GM_info != 'undefined') toolbarMenu.refresh() // prefixes/suffixes
 
         function suppressNotifs() {
             if (config.notifDisabled) return
