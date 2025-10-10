@@ -91,7 +91,7 @@
     }
     if (urlsUpdatedCnt) {
         console.log(`${ !bump.log.endedWithLineBreak ? '\n' : '' }Bumping userscript version...`)
-        bump.bumpUserJSver(userJSfilePath)
+        bump.bumpVersion({ format: 'dateVer', filePath: userJSfilePath })
     }
 
     // Log final summary
