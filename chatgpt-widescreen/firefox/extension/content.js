@@ -2,7 +2,7 @@
 
     // Add WINDOW MSG listener for userscript request to self-disable
     addEventListener('message', event => {
-        if (event.origin != location.origin || !event.data.source.endsWith('chatgpt-widescreen-mode.user.js')) return
+        if (event.origin != location.origin || !event.data.source?.endsWith('chatgpt-widescreen-mode.user.js')) return
         postMessage({ source: 'chatgpt-widescreen/*/extension/content.js' }, location.origin)
     })
 
@@ -27,7 +27,7 @@
             notify: () => feedback.notify(...['msg', 'pos', 'notifDuration', 'shadow'].map(arg => options[arg])),
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
             showAbout: async () => {
-                if (!source.endsWith('background.js')) return
+                if (!source?.endsWith('background.js')) return
                 if (env.site == 'chatgpt') await chatgpt.isLoaded()
                 modals.open('about')
             },
