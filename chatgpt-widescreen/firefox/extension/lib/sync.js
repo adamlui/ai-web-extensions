@@ -36,6 +36,7 @@ window.sync = {
             setTimeout( // ...temporarily
                 () => settings.save('notifDisabled', false),
                 updatedKey == 'widescreen' ? 1 : typeof GM_info != 'undefined' ? 555 : 15
+            )
         }
     },
 
