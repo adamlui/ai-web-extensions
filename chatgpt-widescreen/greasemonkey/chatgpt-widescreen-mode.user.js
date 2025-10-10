@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.10.10
+// @version             2025.10.10.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -496,7 +496,7 @@
 
     env.ui.hasTallChatbar = await chatbar.is.tall()
 
-    sync.configToUI = async function(options) { // from toolbar menu toggles
+    sync.configToUI = async function({ updatedKey } = {}) { // from toolbar menu toggles
     // ... requires components/buttons.js + lib/<chatbar|settings|styles>.js + <config|env|toolbarMenu>
 
         const { site } = env, scriptWasDisabled = !config[`${site}Disabled`]
@@ -513,10 +513,10 @@
             styles.update({ keys: ['chatbar', 'tweaks', 'widescreen'] }) // sync HH/HF/TCB/WCB/NCB/BA/WW
             chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
-            if (options?.updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
+            if (updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
                 // ...to visually signal location + preview fx applied by Button Animations toggle-on
                 buttons.animate()
-            else if (/notifBottom|toastMode/.test(options?.updatedKey)) styles.update({ key: 'toast' })
+            else if (/notifBottom|toastMode/.test(updatedKey)) styles.update({ key: 'toast' })
             if (site != 'poe') // toggle free wheel locked in some Spam blocks
                 document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                     'wheel', window.enableWheelScroll)
@@ -527,7 +527,7 @@
             if (config.notifDisabled) return
             settings.save('notifDisabled', true) // suppress notifs for cleaner UI
             setTimeout( // ...temporarily
-                () => settings.save('notifDisabled', false), options?.updatedKey == 'widescreen' ? 1 : 555)
+                () => settings.save('notifDisabled', false), updatedKey == 'widescreen' ? 1 : 555)
         }
     }
 
