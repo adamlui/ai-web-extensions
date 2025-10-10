@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.10.10.1
+// @version             2025.10.10.2
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -499,8 +499,8 @@
     sync.configToUI = async function({ updatedKey } = {}) { // from toolbar menu toggles
     // ... requires components/buttons.js + lib/<chatbar|settings|styles>.js + <config|env|toolbarMenu>
 
-        const { site } = env, scriptWasDisabled = !config[`${site}Disabled`]
-        if (!scriptWasDisabled && config[`${site}Disabled`]) { // reset UI
+        const { site } = env
+        if (updatedKey == `${site}Disabled` && config[`${site}Disabled`]) { // reset UI
             [styles.chatbar.node, styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
                 .forEach(target => target.remove())
             chatbar.reset()
@@ -664,7 +664,7 @@
                     entry.row.onclick = () => {
                         modals.toggleUtils.switchToggle(entry.toggle.input)
                         settings.save(configKeyName, !config[configKeyName])
-                        sync.configToUI({ updatedKey: key })
+                        sync.configToUI({ updatedKey: configKeyName })
                         if (ctgKey == 'siteSettings' && env.site == key) // notify if setting of active site toggled
                              feedback.notify(`${app.name} 🧩 ${
                                 app.msgs[`state_${ config[configKeyName] ? 'off' : 'on' }`].toUpperCase()}`)

@@ -267,7 +267,7 @@
     masterToggle.div.onclick = () => {
         env.extensionWasDisabled = extensionIsDisabled()
         masterToggle.switch.classList.toggle('on') ; settings.save('extensionDisabled', !config.extensionDisabled)
-        Object.keys(sync).forEach(key => sync[key]()) // sync fade + storage to UI
+        sync.configToUI({ updatedKey: 'extensionDisabled' }) ; sync.fade()
         if (env.extensionWasDisabled ^ extensionIsDisabled()) notify(`${app.name} 🧩 ${
             browserAPI.getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
     }
@@ -339,7 +339,8 @@
         ssEntry.switchLabelDiv.onclick = () => { // toggle site setting
             env.extensionWasDisabled = extensionIsDisabled()
             ssEntry.switch.classList.toggle('on')
-            settings.save(`${site}Disabled`, !config[`${site}Disabled`]) ; sync.configToUI()
+            settings.save(`${site}Disabled`, !config[`${site}Disabled`])
+            sync.configToUI({ updatedKey: `${site}Disabled` })
             siteSettings.labelDiv.classList.toggle('anchored', env.site == site && config[`${site}Disabled`])
             if (env.site == site) { // fade/notify if setting of active site toggled
                 sync.fade()

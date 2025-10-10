@@ -5,14 +5,15 @@ window.sync = {
     async configToUI({ updatedKey } = {}) { // on toolbar popup toggles + AI tab activations
     // ... requires components/buttons.js + lib/<chatbar|settings|styles>.js + <config|env>
 
-        const { site } = env, extensionWasDisabled = config.extensionDisabled || config[`${site}Disabled`]
+        const { site } = env
         await settings.load('extensionDisabled', settings.siteDisabledKeys, sites[site].availFeatures)
-        if (!extensionWasDisabled && ( config.extensionDisabled || config[`${site}Disabled`] )) { // reset UI
+        const isDisabled = config.extensionDisabled || config[`${site}Disabled`]
+        if (new RegExp(`^(?:extension|${site})Disabled$`).test(updatedKey) && isDisabled) { // reset UI
             [styles.chatbar.node, styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
                 .forEach(target => target?.remove())
             chatbar.reset()
             if (site == 'chatgpt') document.body.removeEventListener('wheel', window.enableWheelScroll)
-        } else if (!config.extensionDisabled && !config[`${site}Disabled`]) { // sync modes/tweaks/btns
+        } else if (!isDisabled) { // sync modes/tweaks/btns
             if (config.widescreen ^ styles.widescreen.node?.isConnected) { // sync Widescreen
                 suppressNotifs() ; toggleMode('widescreen') }
             if (sites[site].hasSidebar && ( config.fullWindow ^ await ui.isFullWin() )) { // sync Full-Window
