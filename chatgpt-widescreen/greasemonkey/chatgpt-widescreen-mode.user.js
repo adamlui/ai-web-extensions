@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.10.10.2
+// @version             2025.10.10.3
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -263,7 +263,7 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ca09ef2/chromium/extension/lib/feedback.js#sha256-+pCdFOvlfPkjBY2uk+6waX+K+NPkJ6teEBY2qSlUnuo=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@01bcbd6/chromium/extension/lib/settings.js#sha256-gfnbziJG+aHUeYEYi55OUTC/mHpy4DF3SeDGX32s+i8=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ab7ee52/chromium/extension/lib/styles.js#sha256-yfYZ1Ca4u8LZvGyeFVxwONyfGru9+o/iCnSu7mqugyk=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@8ce8ed5/chromium/extension/lib/sync.js#sha256-G77GAeQUZqbehg2wXoFPPGZTFIxklaG4iKT34njG/Rs=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@a032909/chromium/extension/lib/sync.js#sha256-rMm7AeUJCSY42XQZ2xz3pEUCk6zuAFLhLJoGoHeeLz4=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ab7ee52/chromium/extension/lib/ui.js#sha256-5WwgnfGRtHsRP06nmjhqARB0T508syxAh5UWFMEFA+c=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ab7ee52/chromium/extension/components/buttons.js#sha256-B1h7ZHhgwuEy8XoER0AjnWC36Rq8MViHoaZM26k7XHY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@511d193/chromium/extension/components/icons.js#sha256-6eK7coHHFB4zBfl8XXtjojrnfbBOFiEgYfQtz/Whv2E=
@@ -495,41 +495,6 @@
     }
 
     env.ui.hasTallChatbar = await chatbar.is.tall()
-
-    sync.configToUI = async function({ updatedKey } = {}) { // from toolbar menu toggles
-    // ... requires components/buttons.js + lib/<chatbar|settings|styles>.js + <config|env|toolbarMenu>
-
-        const { site } = env
-        if (updatedKey == `${site}Disabled` && config[`${site}Disabled`]) { // reset UI
-            [styles.chatbar.node, styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
-                .forEach(target => target.remove())
-            chatbar.reset()
-            if (site != 'poe') document.body.removeEventListener('wheel', window.enableWheelScroll)
-        } else if (!config[`${site}Disabled`]) { // sync modes/tweaks/btns
-            if (config.widescreen ^ styles.widescreen.node.isConnected) { // sync Widescreen
-                suppressNotifs() ; toggleMode('widescreen') }
-            if (sites[site].hasSidebar && ( config.fullWindow ^ await ui.isFullWin() )) { // sync Full-Window
-                suppressNotifs() ; toggleMode('fullWindow') }
-            styles.update({ keys: ['chatbar', 'tweaks', 'widescreen'] }) // sync HH/HF/TCB/WCB/NCB/BA/WW
-            chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
-            buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
-            if (updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled) // apply/remove fx
-                // ...to visually signal location + preview fx applied by Button Animations toggle-on
-                buttons.animate()
-            else if (/notifBottom|toastMode/.test(updatedKey)) styles.update({ key: 'toast' })
-            if (site != 'poe') // toggle free wheel locked in some Spam blocks
-                document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
-                    'wheel', window.enableWheelScroll)
-        }
-        toolbarMenu.refresh() // to update state symbol/suffix + toggles visibility on site toggle
-
-        function suppressNotifs() {
-            if (config.notifDisabled) return
-            settings.save('notifDisabled', true) // suppress notifs for cleaner UI
-            setTimeout( // ...temporarily
-                () => settings.save('notifDisabled', false), updatedKey == 'widescreen' ? 1 : 555)
-        }
-    }
 
     Object.assign(modals, { // userscript modals/utils
 
