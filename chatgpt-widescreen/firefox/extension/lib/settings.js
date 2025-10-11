@@ -119,6 +119,11 @@ window.settings = {
             label: settings.getMsg('menuLabel_btnVisibility'),
             helptip: settings.getMsg('helptip_btnVisibility')
         }},
+        get tooltipAnimations() { return {
+            type: 'toggle', defaultVal: false, category: 'btnSettings',
+            label: settings.getMsg('menuLabel_tooltipAnimations'),
+            helptip: settings.getMsg('helptip_tooltipAnimations')
+        }},
         get notifDisabled() { return {
             type: 'toggle', defaultVal: false, category: 'notifSettings',
             label: `${settings.getMsg('menuLabel_show')} ${settings.getMsg('menuLabel_notifs')}`,

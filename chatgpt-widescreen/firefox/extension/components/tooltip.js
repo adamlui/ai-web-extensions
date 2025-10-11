@@ -21,7 +21,8 @@ window.tooltip = {
         if (!tooltip.div.isConnected) event.currentTarget?.after(tooltip.div)
         if (!tooltip.styles) tooltip.stylize()
         tooltip.update(event.currentTarget)
-        tooltip.div.style.opacity = +togglingOn ; tooltip.div.style.transform = `scale(${ togglingOn ? 1 : 0.8 })`
+        tooltip.div.style.opacity = +togglingOn
+        tooltip.div.style.transform = `scale(${ !togglingOn && config.tooltipAnimations ? 0.8 : 1 })`
     },
 
     async update(btn) { // requires lib/<browser|chatbar|chatgpt>.js + <config|env>
