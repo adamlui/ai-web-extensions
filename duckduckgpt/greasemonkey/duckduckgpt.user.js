@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.11.4
+// @version                2025.10.11.5
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -428,8 +428,7 @@
         appBottomPos() { app.div.style.bottom = `${ config.minimized ? 61 - app.div.offsetHeight : -7 }px` },
 
         appStyle() { // used in toggle.animations() + update.scheme() + main's app init
-            const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled,
-                  willNotZoom = config.fgAnimationsDisabled || env.browser.isMobile
+            const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled
             modals.stylize() // update modal styles
             if (!app.styles?.isConnected) document.head.append(app.styles ||= dom.create.style())
             app.styles.textContent = (
@@ -571,7 +570,7 @@
                     background-color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#4a4a4a' };
                   --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
-                    ${ willNotZoom ? '' : `transition: var(--font-size-slider-thumb-transition) 
+                    ${ config.fgAnimationsDisabled ? '' : `transition: var(--font-size-slider-thumb-transition) 
                            -webkit-transition: var(--font-size-slider-thumb-transition) ;
                            -moz-transition: var(--font-size-slider-thumb-transition) ;
                            -o-transition: var(--font-size-slider-thumb-transition) ;
@@ -737,7 +736,7 @@
                     border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;
                   --rq-shadow: 1px 4px 8px -6px rgba(169,169,169,0.75) ; box-shadow: var(--rq-shadow) ;
                         -webkit-box-shadow: var(--rq-shadow) ; -moz-box-shadow: var(--rq-shadow) ;
-                    ${ willNotZoom ? '' : `transition: var(--rq-transition) ;
+                    ${ config.fgAnimationsDisabled ? '' : `transition: var(--rq-transition) ;
                            -webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;
                            -o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)` }}
                 .${app.slug}-related-query:hover, .${app.slug}-related-query:focus {
@@ -2500,7 +2499,7 @@
                   --modal-btn-zoom: scale(1.055) ; --modal-btn-transition: transform 0.15s ease ;
                   --settings-li-transition: transform 0.1s ease ; /* for Settings entry hover-zoom */
                   --fg-transition: opacity 0.65s cubic-bezier(0.165,0.84,0.44,1), /* fade-in */
-                                     transform 0.55s cubic-bezier(0.165,0.84,0.44,1) !important ; /* move-in */
+                                   transform 0.55s cubic-bezier(0.165,0.84,0.44,1) !important ; /* move-in */
                   --bg-transition: background-color 0.25s ease !important } /* dim */`
 
                 // Main modal styles

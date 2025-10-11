@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.11.2
+// @version                2025.10.11.3
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -279,8 +279,7 @@
         appBottomPos() { app.div.style.bottom = `${ config.minimized ? 55 - app.div.offsetHeight : -7 }px` },
 
         appStyle() { // used in toggle.animations() + update.scheme() + main's app init
-            const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled,
-                  willNotZoom = config.fgAnimationsDisabled || env.browser.isMobile
+            const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled
             modals.stylize() // update modal styles
             if (!app.styles?.isConnected) document.head.append(app.styles ||= dom.create.style())
             app.styles.textContent = (
@@ -407,7 +406,7 @@
                     background-color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#4a4a4a' };
                   --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
-                    ${ willNotZoom ? '' : `transition: var(--font-size-slider-thumb-transition) 
+                    ${ config.fgAnimationsDisabled ? '' : `transition: var(--font-size-slider-thumb-transition) 
                            -webkit-transition: var(--font-size-slider-thumb-transition) ;
                            -moz-transition: var(--font-size-slider-thumb-transition) ;
                            -o-transition: var(--font-size-slider-thumb-transition) ;
@@ -1812,7 +1811,7 @@
                   --modal-btn-zoom: scale(1.055) ; --modal-btn-transition: transform 0.15s ease ;
                   --settings-li-transition: transform 0.1s ease ; /* for Settings entry hover-zoom */
                   --fg-transition: opacity 0.65s cubic-bezier(0.165,0.84,0.44,1), /* fade-in */
-                                     transform 0.55s cubic-bezier(0.165,0.84,0.44,1) !important ; /* move-in */
+                                   transform 0.55s cubic-bezier(0.165,0.84,0.44,1) !important ; /* move-in */
                   --bg-transition: background-color 0.25s ease !important } /* dim */`
 
                 // Main modal styles
