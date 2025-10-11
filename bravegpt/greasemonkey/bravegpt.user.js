@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.11.4
+// @version               2025.10.11.6
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1498,7 +1498,7 @@
 
                 // Create/append header div
                 const appHeaderDiv = dom.create.elem('div',
-                    { class: 'app-header', style: 'height: auto ; margin: -8px 0' })
+                    { class: 'app-header', style: 'height: auto ; min-height: 36px ; margin: -8px 0' })
                 app.div.append(appHeaderDiv)
 
                 // Create/append title
