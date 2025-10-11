@@ -20,7 +20,8 @@
     "review": {
       "chrome": "https://chrome.chatgptautocontinue.com/reviews",
       "edge": "https://edge.chatgptautocontinue.com",
-      "firefox": "https://ff.chatgptautocontinue.com"
+      "firefox": "https://ff.chatgptautocontinue.com",
+      "softonic": "https://chatgpt-auto-continue-2kh.en.softonic.com"
     },
     "support": "https://support.chatgptautocontinue.com",
     "uninstall": "https://forms.gle/SxKz5tvFb9DRAhRt5",

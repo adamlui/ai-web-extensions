@@ -20,7 +20,8 @@
       "chrome": "https://chrome.chatgptwidescreen.com/reviews",
       "edge": "https://edge.chatgptwidescreen.com",
       "firefox": "https://ff.chatgptwidescreen.com",
-      "productHunt": "https://www.producthunt.com/products/chatgpt-widescreen-mode/reviews/new"
+      "productHunt": "https://www.producthunt.com/products/chatgpt-widescreen-mode/reviews/new",
+      "softonic": "https://chatgpt-widescreen-mode.en.softonic.com"
     },
     "support": "https://support.chatgptwidescreen.com",
     "uninstall": "https://forms.gle/F2n55B38LYP9uxXM8",

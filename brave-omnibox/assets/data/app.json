@@ -17,7 +17,8 @@
     "review": {
       "chrome": "https://chrome.braveomnibox.com/reviews",
       "edge": "https://edge.braveomnibox.com/reviews",
-      "firefox": "https://ff.braveomnibox.com"
+      "firefox": "https://ff.braveomnibox.com",
+      "softonic": "https://brave-omnibox.en.softonic.com"
     },
     "support": "https://support.braveomnibox.com",
     "uninstall": "https://forms.gle/Jetu6BSezVws8nXb9"

@@ -22,7 +22,8 @@
       "chrome": "https://chrome.chatgptinfinity.com/reviews",
       "edge": "https://edge.chatgptinfinity.com",
       "firefox": "https://ff.chatgptinfinity.com",
-      "productHunt": "https://www.producthunt.com/products/chatgpt-infinity/reviews/new"
+      "productHunt": "https://www.producthunt.com/products/chatgpt-infinity/reviews/new",
+      "softonic": "https://chatgpt-infinity.en.softonic.com"
     },
     "support": "https://support.chatgptinfinity.com",
     "uninstall": "https://forms.gle/T1hCZ5A5yAnPfLTn8",

@@ -16,7 +16,8 @@
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
       "chrome": "https://chrome.perplexityomnibox.com/reviews",
-      "edge": "https://edge.perplexityomnibox.com/reviews"
+      "edge": "https://edge.perplexityomnibox.com/reviews",
+      "softonic": "https://perplexity-omnibox.en.softonic.com"
     },
     "support": "https://support.perplexityomnibox.com",
     "uninstall": "https://forms.gle/UmVid74JscT6oc3f8"
