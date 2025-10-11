@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.11.1
+// @version                2025.10.11.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1343,7 +1343,10 @@
             drag: {
 
                 mousedown(event) { // find modal, update styles, attach listeners, init XY offsets
-                    if (event.button != 0) return // prevent non-left-click drag
+                    if ( // prevent drag when...
+                        event.button != 0 // non-left-click
+                     || event.target.closest('ul') // entry elem
+                    ) return
                     if (!/auto|default/.test(getComputedStyle(event.target).cursor))
                         return // prevent drag on interactive elems
                     modals.draggingModal = event.currentTarget
