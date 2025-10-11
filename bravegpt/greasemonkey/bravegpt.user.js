@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.11.10
+// @version               2025.10.11.11
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -449,7 +449,7 @@
                                     bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
                                     width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
                   --app-shadow-transition: box-shadow 0.15s ease ; /* for app:hover to not trigger on hover-off */
-                  --standby-btn-zoom: scale(1.055) ; --standby-btn-transition: all 0.18s ease ;
+                  --standby-btn-zoom: scale(1.015) ; --standby-btn-transition: all 0.18s ease ;
                   --btn-transition: transform 0.15s ease, /* for hover-zoom */
                                     opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
                   --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
@@ -606,8 +606,7 @@
                               -o-transition: var(--standby-btn-transition) ;
                               -ms-transition: var(--standby-btn-transition)` }}
                 .${app.slug}-standby-btn:hover {
-                    color: var(--content-color) ;
-                    transform: var(--skew) ${ env.browser.isMobile ? '' : 'var(--standby-btn-zoom)' }}
+                    color: var(--content-color) ; border-radius: 2px ; transform: var(--skew) var(--standby-btn-zoom) }
                 .${app.slug}-standby-btn > span { transform: var(--counter-skew) }
                 .${app.slug}-standby-btn > svg {
                     position: relative ; stroke: var(--content-color) ; fill: stroke: var(--content-color) ;
