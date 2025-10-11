@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.11
+// @version                2025.10.11.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2372,7 +2372,7 @@
                 // Create close button
                 const closeBtn = dom.create.elem('div',
                     { title: app.msgs.tooltip_close, class: `${app.slug}-modal-close-btn no-mobile-tap-outline` })
-                closeBtn.append(icons.create({ key: 'x' }))
+                closeBtn.append(icons.create({ key: 'x', size: 11 }))
 
                 // Assemble/append elems
                 settingsModal.append(settingsIcon, settingsTitleDiv, closeBtn, settingsListContainer)

@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.4
+// @version                2025.10.11
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1685,7 +1685,7 @@
                 // Create close button
                 const closeBtn = dom.create.elem('div',
                     { title: app.msgs.tooltip_close, class: `${app.slug}-modal-close-btn no-mobile-tap-outline` })
-                closeBtn.append(icons.create({ key: 'x' }))
+                closeBtn.append(icons.create({ key: 'x', size: 11 }))
 
                 // Assemble/append elems
                 settingsModal.append(settingsIcon, settingsTitleDiv, closeBtn, settingsListContainer)
