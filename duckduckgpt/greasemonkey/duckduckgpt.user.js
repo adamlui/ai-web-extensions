@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.4
+// @version                2025.10.11
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -203,7 +203,7 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@485996c/assets/js/components/chatbot/replyBubble.js#sha256-/F0kipD9jDAtlnlfL4Q3cbboS5bPx9ierlnRU897eqQ=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@81bd554/assets/js/components/chatbot/tooltip.js#sha256-XA9qhdh8zyjofZbbwvbsh5oPxyHK2nS/cJONI+Tfuts=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@58d6a4b/assets/js/lib/chatbot/api.js#sha256-UyfKgAjMDNy7BAToonBPi+eXah8Th/j7Nq5n/IPPzBI=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@effacfc/assets/js/lib/chatbot/feedback.js#sha256-AkCUJQ9BsE/vgfQnCJovRJ8JN28XsUQYY036YwjNZ4Q=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8112473/assets/js/lib/chatbot/feedback.js#sha256-ri8OzNa/8sQINDn7bW84F2OuVYZxubMSm/Zpli/cPnQ=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f4da9d4/assets/js/lib/chatbot/log.js#sha256-kjt26UXbx44I0/iDOf50F/LbRtsYcSwMHrexImR4D5A=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@1905225/assets/js/lib/chatbot/prompts.js#sha256-knOM9aAD5WcFCF5CvjMRFKfhdDC01vGVyrC6+cpXwLg=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@4565425/assets/js/lib/chatbot/session.js#sha256-cH2e3l2bZQRekQHxaeSShdNguqD41evEOkMrrVIydHQ=
@@ -498,17 +498,7 @@
                        -webkit-transition: var(--app-transition) ; -moz-transition: var(--app-transition) ;
                        -o-transition: var(--app-transition) ; -ms-transition: var(--app-transition) }
                 #${app.slug}:has(.${app.slug}-alert) { /* app alerts */
-                    border: var(--app-border) ; box-shadow: var(--app-shadow) ;
-                   -webkit-box-shadow: var(--app-shadow) ; -moz-box-shadow: var(--app-shadow) ;
-                    ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${env.ui.app.scheme}-scheme)`
-                                                   : 'background-image: var(--app-gradient-bg)' }}
-                #${app.slug}:has(.${app.slug}-alert):hover, #${app.slug}:has(.${app.slug}-alert):active {
-                    box-shadow: var(--app-hover-shadow-${env.ui.app.scheme}-scheme) ;
-                    transition: var(--app-shadow-transition) ;
-                       -webkit-transition: var(--app-shadow-transition) ;
-                       -moz-transition: var(--app-shadow-transition) ;
-                       -o-transition: var(--app-shadow-transition) ;
-                       -ms-transition: var(--app-shadow-transition) }
+                    border: var(--app-border) ; background-image: var(--app-gradient-bg) }
                 ${ env.browser.isPhone ? '' : env.ui.app.scheme != env.ui.site.scheme ?
                       // add hover shadow to bordered/un-anchored desktop app div
                         `#${app.slug}:hover, #${app.slug}:active {

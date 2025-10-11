@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.10.4
+// @version                  2025.10.11
 // @license                  MIT
 // @icon                     data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22170.667%22%20height=%22170.667%22%3E%3Cstyle%3E:root%7B--fill:%23000%7D@media%20(prefers-color-scheme:dark)%7B:root%7B--fill:%23fff%7D%7D%3C/style%3E%3Cpath%20fill=%22var(--fill)%22%20d=%22M82.346%20159.79c-18.113-1.815-31.78-9.013-45.921-24.184C23.197%20121.416%2017.333%20106.18%2017.333%2086c0-21.982%205.984-36.245%2021.87-52.131C55.33%2017.74%2069.27%2011.867%2091.416%2011.867c17.574%200%2029.679%203.924%2044.309%2014.363l8.57%206.116-8.705%208.705-8.704%208.704-4.288-3.608c-13.91-11.704-35.932-14.167-53.085-5.939-3.4%201.631-9.833%206.601-14.297%2011.045C44.669%2061.753%2040.95%2070.811%2040.95%2086c0%2014.342%203.594%2023.555%2013.26%2033.995%2019.088%2020.618%2048.46%2022.539%2070.457%204.608l5.333-4.348%2011.333%203.844c6.234%202.114%2011.54%203.857%2011.791%203.873.252.015-2.037%203.008-5.087%206.65-6.343%207.577-20.148%2017.217-30.493%2021.295-8.764%203.454-23.358%205.06-35.198%203.873zM92%2086.333V74.667h60.648l-11.41%2011.41-11.411%2011.41-18.914.257L92%2098z%22/%3E%3C/svg%3E
 // @icon64                   data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22170.667%22%20height=%22170.667%22%3E%3Cstyle%3E:root%7B--fill:%23000%7D@media%20(prefers-color-scheme:dark)%7B:root%7B--fill:%23fff%7D%7D%3C/style%3E%3Cpath%20fill=%22var(--fill)%22%20d=%22M82.346%20159.79c-18.113-1.815-31.78-9.013-45.921-24.184C23.197%20121.416%2017.333%20106.18%2017.333%2086c0-21.982%205.984-36.245%2021.87-52.131C55.33%2017.74%2069.27%2011.867%2091.416%2011.867c17.574%200%2029.679%203.924%2044.309%2014.363l8.57%206.116-8.705%208.705-8.704%208.704-4.288-3.608c-13.91-11.704-35.932-14.167-53.085-5.939-3.4%201.631-9.833%206.601-14.297%2011.045C44.669%2061.753%2040.95%2070.811%2040.95%2086c0%2014.342%203.594%2023.555%2013.26%2033.995%2019.088%2020.618%2048.46%2022.539%2070.457%204.608l5.333-4.348%2011.333%203.844c6.234%202.114%2011.54%203.857%2011.791%203.873.252.015-2.037%203.008-5.087%206.65-6.343%207.577-20.148%2017.217-30.493%2021.295-8.764%203.454-23.358%205.06-35.198%203.873zM92%2086.333V74.667h60.648l-11.41%2011.41-11.411%2011.41-18.914.257L92%2098z%22/%3E%3C/svg%3E
@@ -392,7 +392,7 @@
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@485996c/assets/js/components/chatbot/replyBubble.js#sha256-/F0kipD9jDAtlnlfL4Q3cbboS5bPx9ierlnRU897eqQ=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@81bd554/assets/js/components/chatbot/tooltip.js#sha256-XA9qhdh8zyjofZbbwvbsh5oPxyHK2nS/cJONI+Tfuts=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@58d6a4b/assets/js/lib/chatbot/api.js#sha256-UyfKgAjMDNy7BAToonBPi+eXah8Th/j7Nq5n/IPPzBI=
-// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@effacfc/assets/js/lib/chatbot/feedback.js#sha256-AkCUJQ9BsE/vgfQnCJovRJ8JN28XsUQYY036YwjNZ4Q=
+// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8112473/assets/js/lib/chatbot/feedback.js#sha256-ri8OzNa/8sQINDn7bW84F2OuVYZxubMSm/Zpli/cPnQ=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f4da9d4/assets/js/lib/chatbot/log.js#sha256-kjt26UXbx44I0/iDOf50F/LbRtsYcSwMHrexImR4D5A=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@1905225/assets/js/lib/chatbot/prompts.js#sha256-knOM9aAD5WcFCF5CvjMRFKfhdDC01vGVyrC6+cpXwLg=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@4565425/assets/js/lib/chatbot/session.js#sha256-cH2e3l2bZQRekQHxaeSShdNguqD41evEOkMrrVIydHQ=
@@ -638,7 +638,6 @@
                         : `1px solid #${ env.ui.app.scheme == 'light' ? 'dadce0' : '3b3b3b' }`};
                   --app-gradient-bg: linear-gradient(180deg, ${
                         env.ui.app.scheme == 'dark' ? '#99a8a6 -245px, black 185px' : '#b6ebff -163px, white 65px' }) ;
-                  --app-shadow: 0 2px 3px rgb(0,0,0,0.06) ;
                   --app-hover-shadow-light-scheme: 0 9px 28px rgba(0,0,0,0.09) ;
                   --app-hover-shadow-dark-scheme: 0 9px 28px rgba(0,0,0,0.39) ;
                   --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06' : '11,0.22' }) ;
@@ -699,17 +698,7 @@
                        -webkit-transition: var(--app-transition) ; -moz-transition: var(--app-transition) ;
                        -o-transition: var(--app-transition) ; -ms-transition: var(--app-transition) }
                 #${app.slug}:has(.${app.slug}-alert) { /* app alerts */
-                    border: var(--app-border) ; box-shadow: var(--app-shadow) ;
-                    -webkit-box-shadow: var(--app-shadow) ; -moz-box-shadow: var(--app-shadow) ;
-                    ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${env.ui.app.scheme}-scheme)`
-                                                   : 'background-image: var(--app-gradient-bg)' }}
-                #${app.slug}:has(.${app.slug}-alert):hover, #${app.slug}:has(.${app.slug}-alert):active {
-                    box-shadow: var(--app-hover-shadow-${env.ui.app.scheme}-scheme) ;
-                    transition: var(--app-shadow-transition) ;
-                       -webkit-transition: var(--app-shadow-transition) ;
-                       -moz-transition: var(--app-shadow-transition) ;
-                       -o-transition: var(--app-shadow-transition) ;
-                       -ms-transition: var(--app-shadow-transition) }
+                    border: var(--app-border) ; background-image: var(--app-gradient-bg) }
                 ${ env.browser.isPhone ? '' : env.ui.app.scheme != env.ui.site.scheme ?
                       // add hover shadow to bordered/un-anchored desktop app div
                         `#${app.slug}:hover, #${app.slug}:active {
