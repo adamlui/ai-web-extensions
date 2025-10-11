@@ -6,8 +6,8 @@ window.feedback = {
         alerts = alerts.flat() // flatten array args nested by spread operator
         app.div.textContent = ''
         const alertP = dom.create.elem('p', { class: `${app.slug}-alert no-user-select` })
-        if (app.slug == 'bravegpt' || app.slug == 'googlegpt' && !alerts.includes('waitingResponse'))
-            alertP.style.marginBottom = '-20px' // counteract app.div padding
+        if (app.slug == 'bravegpt') alertP.style.marginBottom = '-20px' // counteract app.div padding
+        else if (app.slug == 'googlegpt' && !alerts.includes('waitingResponse')) alertP.style.marginBottom = '18px'
 
         alerts.forEach((alert, idx) => { // process each alert for display
             let msg = app.alerts[alert] || alert // use string verbatim if not found in app.alerts
