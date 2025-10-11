@@ -1,10 +1,12 @@
-// Requires components/icons.js + lib/dom.js + <apis|app|config|env|log|modals|settings|toggle>
+// Requires components/<icons|tooltip>.js + lib/dom.js + <apis|app|config|env|log|modals|settings|toggle>
 
 window.menus = {
 
     hover: {
-        createAppend(menuType) { // requires lib/dom.js
-            const menu = this[menuType] ; if (!this.styles) this.stylize()
+        createAppend(menuType) { // requires components/tooltip.js + lib/dom.js
+            const menu = this[menuType]
+            if (!tooltip.styles?.isConnected) tooltip.stylize()
+            if (!this.styles?.isConnected) this.stylize()
             app.div.append(menu.div = dom.create.elem('div', {
                 id: `${app.slug}-${menuType}-menu`, style: 'width: max-content',
                 class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select`
@@ -20,7 +22,8 @@ window.menus = {
         },
 
         stylize() { // requires lib/dom.js + app.slug
-            document.head.append(this.styles = dom.create.style(`
+            if (!this.styles?.isConnected) document.head.append(this.styles ||= dom.create.style())
+            this.styles.textContent = `
                 .${app.slug}-menu > ul { color: white } .${app.slug}-menu > ul > li::marker { color: #ffff0000 }
                 .${app.slug}-menu > ul > li:first-of-type > svg { /* header entry icon */
                     width: 13px ; height: 13px ; top: 2px ; position: relative ; margin-right: 3px }
@@ -29,7 +32,6 @@ window.menus = {
                 .${app.slug}-menu-item .checkmark {
                     position: relative ; float: right ; margin-right: -20px ; top: 3.5px ; fill: #b3f96d }
                 .${app.slug}-menu-item:hover .checkmark { fill: green }`
-            ))
         },
 
         toggle(event) { // visibility
