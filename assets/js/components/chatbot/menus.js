@@ -5,8 +5,7 @@ window.menus = {
     hover: {
         createAppend(menuType) { // requires components/tooltip.js + lib/dom.js
             const menu = this[menuType]
-            if (!tooltip.styles?.isConnected) tooltip.stylize()
-            if (!this.styles?.isConnected) this.stylize()
+            for (const elem of [tooltip, this]) if (!elem.styles?.isConnected) elem.stylize()
             app.div.append(menu.div = dom.create.elem('div', {
                 id: `${app.slug}-${menuType}-menu`, style: 'width: max-content',
                 class: `${app.slug}-menu ${app.slug}-tooltip fade-in-less no-user-select`
