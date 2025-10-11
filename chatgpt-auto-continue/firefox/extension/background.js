@@ -4,7 +4,7 @@ const chatgptURL = 'https://chatgpt.com/'
 ;(async () => {
     const app = {
         version: chrome.runtime.getManifest().version,
-        commitHashes: { app: '4dd9d96' }, // for cached app.json
+        commitHashes: { app: 'e81440b' }, // for cached app.json
         runtime: (() => {
             return typeof chrome != 'undefined' && chrome.runtime ? (
                 typeof browser != 'undefined' ? 'Firefox add-on'
