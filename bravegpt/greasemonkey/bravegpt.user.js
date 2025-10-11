@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.11.2
+// @version               2025.10.11.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -804,7 +804,8 @@
                         border: var(--app-border) ;
                         ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${env.ui.app.scheme}-scheme)`
                                                        : 'background-image: var(--app-gradient-bg)' }}
-                    #${app.slug} #${app.slug}-logo { width: calc(100% - 118px) } /* widen logo till btns */
+                    #${app.slug} #${app.slug}-logo { /* widen logo till btns */
+                        width: calc(100% - 118px) ; max-width: 182px }
                     #${app.slug} .byline { display: none !important } /* hide byline */
                     #${app.slug} .reply-tip { display: none } /* hide reply tip */
                     .${app.slug}-related-queries { padding: 0 } /* remove RQ parent padding */
@@ -1497,7 +1498,7 @@
 
                 // Create/append header div
                 const appHeaderDiv = dom.create.elem('div',
-                    { class: 'app-header', style: 'height: 36px ; margin: -8px 0' })
+                    { class: 'app-header', style: 'height: auto ; margin: -8px 0' })
                 app.div.append(appHeaderDiv)
 
                 // Create/append title
