@@ -3,7 +3,8 @@
     "availFeatures": [
       "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenFooter",
       "hiddenHeader", "justifyText", "ncbDisabled", "notifBottom", "notifDisabled", "tallerChatboxHeight",
-      "tcbDisabled", "toastMode", "widerChatbox", "widerChatboxWidth", "widescreen", "widescreenWidth"
+      "tcbDisabled", "toastMode", "tooltipAnimations", "widerChatbox", "widerChatboxWidth", "widescreen",
+      "widescreenWidth"
     ],
     "selectors": {
       "btns": {
@@ -49,7 +50,7 @@
     "availFeatures": [
       "blockSpamDisabled", "btnAnimationsDisabled", "btnsVisible", "fullerWindows", "fullWindow", "hiddenHeader",
       "justifyText", "ncbDisabled", "notifBottom", "notifDisabled", "tallerChatboxHeight", "tcbDisabled", "toastMode",
-      "widerChatbox", "widerChatboxWidth", "widescreen", "widescreenWidth"
+      "tooltipAnimations", "widerChatbox", "widerChatboxWidth", "widescreen", "widescreenWidth"
     ],
     "hasSidebar": true,
     "selectors": {
