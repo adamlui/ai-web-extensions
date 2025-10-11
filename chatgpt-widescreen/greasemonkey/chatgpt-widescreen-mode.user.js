@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.10.11.1
+// @version             2025.10.11.2
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -504,8 +504,14 @@
             if (!modals.settings.style?.isConnected) document.head.append(modals.settings.style ||= dom.create.style())
             modals.settings.style.textContent = `
                 :root {
-                  --entry-highlighted-bg: rgba(100,149,237,0.88) ; --thumb-color: #000 ; --thumb-border: #fff ;
-                  --track-filled-color: #000 ; --track-empty-color: #e0e0e0 
+                  --entry-highlighted-bg: rgba(100,149,237,0.88) ;
+                    ${ env.ui.scheme == 'dark' ? `
+                      --track-filled-color: white ; --track-empty-color: #b2b2b2 ;
+                      --thumb-color: white ; --thumb-border: black`
+                        : ` /* light scheme */
+                      --track-filled-color: #000 ; --track-empty-color: #e0e0e0 ;
+                      --thumb-color: #000 ; --thumb-border: #fff`
+                    }
                 }
                 .${app.slug}-settings-modal h2 { text-align: center }
                 .${app.slug}-settings-modal ul { /* entries list */
