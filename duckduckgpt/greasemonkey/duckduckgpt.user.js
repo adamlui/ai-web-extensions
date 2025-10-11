@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.11.6
+// @version                2025.10.11.7
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -1743,7 +1743,7 @@
             // Assemble/insert elems
             slider.append(sliderThumb, sliderTip)
             app.div.insertBefore(slider, app.div.querySelector(`.${app.slug}-tooltip,` // desktop
-                                                           + '.reply-bubble')) // mobile
+                                                             + '.reply-bubble')) // mobile
             // Init thumb pos
             setTimeout(() => {
                 const iniLeft = (config.fontSize - config.minFontSize) / (config.maxFontSize - config.minFontSize)
@@ -2079,9 +2079,7 @@
         },
 
         init(modal) { // requires lib/dom.js
-            if (!this.styles) this.stylize() // to init/append stylesheet
-
-            // Add classes
+            this.stylize()
             modal.classList.add('no-user-select', this.class) ; modal.parentNode.classList.add(`${this.class}-bg`)
 
             // Add listeners
@@ -2501,7 +2499,7 @@
         },
 
         stylize() {
-            if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
+            if (!this.styles?.isConnected) document.head.append(this.styles ||= dom.create.style())
             this.styles.textContent = (
 
                 // Vars

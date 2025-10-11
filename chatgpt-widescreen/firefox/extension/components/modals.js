@@ -113,7 +113,7 @@ window.modals = {
     },
 
     init(modal) { // requires lib/dom.js
-        if (!this.styles) this.stylize() // to init/append stylesheet
+        this.stylize()
         modal.classList.add(this.class) ; modal.parentNode.classList.add(`${this.class}-bg`)
         dom.addRisingParticles(modal)
     },
@@ -147,7 +147,7 @@ window.modals = {
 
     stylize() { // requires lib/dom.js + env
         const { browser: { isMobile }, ui: { scheme }} = env
-        if (!this.styles) document.head.append(this.styles = dom.create.elem('style'))
+        if (!this.styles?.isConnected) document.head.append(this.styles ||= dom.create.style())
         this.styles.textContent = `
             .${this.class} { /* modals */
                 user-select: none ; -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ;
