@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.11.3
+// @version                2025.10.11.4
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -305,16 +305,26 @@
                                     opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
                   --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
                   --reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ; /* for Anchor changes */
+                  --fade-in-transition: opacity 0.4s ease ;
                   --fade-in-less-transition: opacity 0.2s ease } /* used by Font Size slider */`
 
                 // Animations
-             + `.fade-in { opacity: 0 ; transform: translateY(10px) }
-                .fade-in-less { opacity: 0 ;
+             + `.fade-in {
+                    opacity: 0 ; transform: translateY(10px) ;
+                    transition: var(--fade-in-less-transition) ;
+                       -webkit-transition: var(--fade-in-transition) ;
+                       -moz-transition: var(--fade-in-transition) ;
+                       -o-transition: var(--fade-in-transition) ;
+                       -ms-transition: var(--fade-in-transition)
+                }
+                .fade-in-less {
+                    opacity: 0 ;
                     transition: var(--fade-in-less-transition) ;
                        -webkit-transition: var(--fade-in-less-transition) ;
                        -moz-transition: var(--fade-in-less-transition) ;
                        -o-transition: var(--fade-in-less-transition) ;
-                       -ms-transition: var(--fade-in-less-transition) }
+                       -ms-transition: var(--fade-in-less-transition)
+                }
                 .fade-in.active, .fade-in-less.active { opacity: 1 ; transform: translateY(0) }
                 @keyframes btn-zoom-fade-out {
                     0% { opacity: 1 } 55% { opacity: 0.25 ; transform: scale(1.85) }

@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.11.7
+// @version               2025.10.11.8
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -455,16 +455,26 @@
                   --font-size-slider-thumb-transition: transform 0.05s ease ; /* for hover-zoom */
                   --reply-pre-transition: max-height 0.167s cubic-bezier(0, 0, 0.2, 1) ; /* for Anchor changes */
                   --rq-transition: opacity 0.55s ease, transform 0.1s ease !important ; /* for fade-in + hover-zoom */
+                  --fade-in-transition: opacity 0.4s ease ;
                   --fade-in-less-transition: opacity 0.2s ease } /* used by Font Size slider + Pin menu */`
 
                 // Animations
-             + `.fade-in { opacity: 0 ; transform: translateY(10px) }
-                .fade-in-less { opacity: 0 ;
+             + `.fade-in {
+                    opacity: 0 ; transform: translateY(10px) ;
+                    transition: var(--fade-in-less-transition) ;
+                       -webkit-transition: var(--fade-in-transition) ;
+                       -moz-transition: var(--fade-in-transition) ;
+                       -o-transition: var(--fade-in-transition) ;
+                       -ms-transition: var(--fade-in-transition)
+                }
+                .fade-in-less {
+                    opacity: 0 ;
                     transition: var(--fade-in-less-transition) ;
                        -webkit-transition: var(--fade-in-less-transition) ;
                        -moz-transition: var(--fade-in-less-transition) ;
                        -o-transition: var(--fade-in-less-transition) ;
-                       -ms-transition: var(--fade-in-less-transition) }
+                       -ms-transition: var(--fade-in-less-transition)
+                }
                 .fade-in.active, .fade-in-less.active { opacity: 1 ; transform: translateY(0) }
                 @keyframes btn-zoom-fade-out {
                     0% { opacity: 1 } 55% { opacity: 0.25 ; transform: scale(1.85) }
