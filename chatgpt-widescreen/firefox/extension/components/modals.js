@@ -85,7 +85,7 @@ window.modals = {
     feedback() {
 
         // Init buttons
-        const modalBtns = [ function productHunt(){} ]
+        const modalBtns = [function productHunt(){}, function softonic(){}]
         if (!browserAPI.runtime.includes('Greasemonkey')) modalBtns.unshift(
             browserAPI.runtime.includes('Firefox') ? function firefoxAddons(){}
           : browserAPI.runtime.includes('Edge') ? function edgeAddons(){}
@@ -105,7 +105,8 @@ window.modals = {
                 btn.textContent == 'Chrome Web Store' ? 'chrome'
               : btn.textContent == 'Edge Addons' ? 'edge'
               : btn.textContent == 'Firefox Addons' ? 'firefox'
-              : 'productHunt'
+              : btn.textContent == 'Product Hunt' ? 'productHunt'
+              : 'softonic'
             ])
         })
 
