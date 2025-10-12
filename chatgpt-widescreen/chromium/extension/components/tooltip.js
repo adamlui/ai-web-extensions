@@ -22,7 +22,7 @@ window.tooltip = {
         if (!tooltip.styles) tooltip.stylize()
         tooltip.update(event.currentTarget) // update text/pos
         tooltip.div.style.opacity = +togglingOn // update visibility
-        if (config.tooltipAnimations) // zoom
+        if (config.tooltipAnimations) // update zoom
             tooltip.div.style.transform = `scale(${ togglingOn ? 1 : 0.8 })`
     },
 
