@@ -9,12 +9,13 @@ window.modals = {
         const { browser: { isPortrait }, ui: { scheme }} = env
 
         // Init buttons
-        const modalBtns = [ function getSupport(){}, function moreAIextensions(){} ]
-        if (browserAPI.runtime.includes('Greasemonkey')) { // add Check for Updates + Discuss
+        const modalBtns = [
+            function getSupport(){},
+            function rateUs() { modals.open('feedback') },
+            function moreAIextensions(){}
+        ]
+        if (browserAPI.runtime.includes('Greasemonkey')) // add Check for Updates
             modalBtns.unshift(function checkForUpdates(){ updateCheck() })
-            modalBtns.splice(1, 0, function discuss(){})
-        } else // add Rate Us
-            modalBtns.splice(1, 0, function rateUs(){})
 
         // Show modal
         const runtime = /chromium|firefox|greasemonkey/.exec(browserAPI.runtime.toLowerCase())?.[0] || ''
@@ -51,16 +52,10 @@ window.modals = {
                 + `height: ${ browserAPI.runtime.includes('Greasemonkey') ? 58 : 55 }px`
 
             // Replace link buttons w/ clones that don't dismiss modal
-            if (/support|rate|discuss|extensions/i.test(btn.textContent)) {
+            if (/support|extensions/i.test(btn.textContent)) {
                 btn.replaceWith(btn = btn.cloneNode(true))
-                btn.onclick = () => this.safeWinOpen(
-                    btn.textContent.includes(browserAPI.getMsg('btnLabel_getSupport')) ? app.urls.support
-                  : btn.textContent.includes(browserAPI.getMsg('btnLabel_rateUs')) ? app.urls.review[
-                        browserAPI.runtime.includes('Edge') ? 'edge'
-                      : browserAPI.runtime.includes('Firefox') ? 'firefox' : 'chrome']
-                  : btn.textContent.includes(browserAPI.getMsg('btnLabel_discuss')) ? app.urls.discuss
-                  : app.urls.relatedExtensions
-                )
+                btn.onclick = () => this.safeWinOpen(app.urls[
+                    btn.textContent.includes(browserAPI.getMsg('btnLabel_getSupport')) ? 'support' : 'relatedExtensions' ])
             }
 
             // Prepend emoji + localize labels
@@ -87,6 +82,36 @@ window.modals = {
               alert = document.getElementById(alertID).firstChild
         this.init(alert) // add classes + rising particles bg
         return alert
+    },
+
+    feedback() {
+
+        // Init buttons
+        const modalBtns = [function softonic(){}]
+        if (!browserAPI.runtime.includes('Greasemonkey')) modalBtns.unshift(
+            browserAPI.runtime.includes('Firefox') ? function firefoxAddons(){}
+          : browserAPI.runtime.includes('Edge') ? function edgeAddons(){}
+          : function chromeWebStore(){}
+        )
+
+        // Show modal
+        const feedbackModal = modals.alert(`${browserAPI.getMsg('alert_choosePlatform')}:`, '', modalBtns)
+
+        // Hack buttons
+        feedbackModal.querySelectorAll('button').forEach((btn, idx) => {
+            if (idx == 0) btn.style.display = 'none' // hide Dismiss button
+
+            // Replace buttons w/ clones that don't dismiss modal
+            btn.replaceWith(btn = btn.cloneNode(true))
+            btn.onclick = () => this.safeWinOpen(app.urls.review[
+                btn.textContent == 'Chrome Web Store' ? 'chrome'
+              : btn.textContent == 'Edge Addons' ? 'edge'
+              : btn.textContent == 'Firefox Addons' ? 'firefox'
+              : 'softonic'
+            ])
+        })
+
+        return feedbackModal
     },
 
     init(modal) { // requires lib/dom.js
