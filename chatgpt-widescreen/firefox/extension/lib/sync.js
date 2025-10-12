@@ -23,8 +23,8 @@ window.sync = {
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
             if (updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled)
                 buttons.animate() // to visually signal location + preview fx applied by Button Animations toggle-on
-            else if (updatedKey == 'tooltipAnimations' && tooltip.div && !config.tooltipAnimations)
-                tooltip.div.style.transform = 'scale(1)' // reset to full zoom
+            else if (updatedKey == 'tooltipAnimations' && tooltip.div)
+                tooltip.div.style.transform = `scale(${ config.tooltipAnimations ? 0.8 : 1 })`
             else if (/notifBottom|toastMode/.test(updatedKey)) styles.update({ key: 'toast' })
             if (site == 'chatgpt') // toggle free wheel locked in some Spam blocks
                 document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
