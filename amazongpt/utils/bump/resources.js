@@ -49,7 +49,7 @@
     bump.log.working('\nProcessing resource(s)...\n')
     let urlsUpdatedCnt = 0
 
-    // Fetch latest commit hash for repo/chrom<e|ium>/extension
+    // Fetch latest commit hash for repo/chromium/extension
     if (resURLs.some(url => url.includes(repoName))) {
         console.log('Fetching latest commit hash for Chromium extension...')
         latestCommitHashes.chromium = await bump.getLatestCommitHash(
