@@ -20,9 +20,10 @@ window.tooltip = {
         tooltip.div ||= dom.create.elem('div', { class: `${app.slug}-tooltip` })
         if (!tooltip.div.isConnected) event.currentTarget?.after(tooltip.div)
         if (!tooltip.styles) tooltip.stylize()
-        tooltip.update(event.currentTarget)
-        tooltip.div.style.opacity = +togglingOn
-        tooltip.div.style.transform = `scale(${ !togglingOn && config.tooltipAnimations ? 0.8 : 1 })`
+        tooltip.update(event.currentTarget) // update text/pos
+        tooltip.div.style.opacity = +togglingOn // update visibility
+        if (config.tooltipAnimations) // zoom
+            tooltip.div.style.transform = `scale(${ togglingOn ? 1 : 0.8 })`
     },
 
     async update(btn) { // requires lib/<browser|chatbar|chatgpt>.js + <config|env>
