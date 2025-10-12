@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "మోడ్ ‌ లు/సెట్టింగ్ ‌ లను టోగుల్ చేసేటప్పుడు నోటిఫికేషన్ ‌ లను చూపించండి" },
   "helptip_notifBottom": { "message": "స్క్రీన్ దిగువన యాంకర్ నోటిఫికేషన్ ‌ లు" },
   "helptip_toastMode": { "message": "టోస్ట్ బుడగలు లోకి/సెంటర్ నోటిఫికేషన్ ‌ లను కుదించండి" },
+  "alert_choosePlatform": { "message": "ప్లాట్ ‌ ఫారమ్ ‌ ను ఎంచుకోండి" },
   "alert_updateAvail": { "message": "ఎటువంటి నవీకరణ అందుబాటులోలేదు" },
   "alert_newerVer": { "message": "కు అప్ ‌ డేట్" },
   "alert_isAvail": { "message": "అందుబాటులో ఉంది" },

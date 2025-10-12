@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "မုဒ်များ/ဆက်တင်များကို ပြောင်းလဲချိန်တွင် အသိပေးချက်များကို ပြသပါ" },
   "helptip_notifBottom": { "message": "မျက်နှာပြင် ၏ အောက်ခြေရှိ အန်စာတုံး အသိပေးချက်များ" },
   "helptip_toastMode": { "message": "မုန့်ဖုတ်ဆိုဒါများသို့ ကျုံ့ပါ/အလယ်အလတ် အသိပေးချက်များ" },
+  "alert_choosePlatform": { "message": "ပလက်ဖောင်းကို ရွေးပါ" },
   "alert_updateAvail": { "message": "အသစ်မထွက်သေး" },
   "alert_newerVer": { "message": "သို့ အပ်ဒိတ်တစ်ခု" },
   "alert_isAvail": { "message": "ရရှိနိုင်ပါသည်" },

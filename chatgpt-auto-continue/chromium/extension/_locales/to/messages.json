@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Fakaʻasi ʻa e fanongonongo ʻi he taimi ʻoku toggling ai ʻa e ngaahi founga/fokotuʻutuʻu" },
   "helptip_notifBottom": { "message": "Fakamafola ʻa e ngaahi fanongonongo ki lalo ʻi he screen" },
   "helptip_toastMode": { "message": "Fakasiʻisiʻi/fakasenita ʻa e ngaahi fanongonongo ki he toast bubbles" },
+  "alert_choosePlatform": { "message": "Choose a platform" },
   "alert_updateAvail": { "message": "ʻOku lava ke maʻu e fakamatala fakamuimuitaha" },
   "alert_newerVer": { "message": "Ko ha fakamatala fakamuimuitaha ki he" },
   "alert_isAvail": { "message": "ʻoku lava ke maʻu" },

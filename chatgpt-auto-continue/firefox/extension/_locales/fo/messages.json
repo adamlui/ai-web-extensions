@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Vís boð, tá ið tú skiftir stillingar/stillingar" },
   "helptip_notifBottom": { "message": "Ankarafrágreiðingar til botn á skjánum" },
   "helptip_toastMode": { "message": "Shrink/center notifications into toast bubbles" },
+  "alert_choosePlatform": { "message": "Vel eina platform" },
   "alert_updateAvail": { "message": "Dagføring er klár" },
   "alert_newerVer": { "message": "Núverandi tíðindi" },
   "alert_isAvail": { "message": "tað er tøkt" },

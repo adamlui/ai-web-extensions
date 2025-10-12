@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "ਜਦੋਂ ਟੌਗਲਿੰਗ ਮੋਡ/ਸੈਟਿੰਗ ਹੋਵੇ ਤਾਂ ਨੋਟੀਫਿਕੇਸ਼ਨ ਵੇਖੋ" },
   "helptip_notifBottom": { "message": "ਐਂਕਰ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸਕਰੀਨ ਦੇ ਹੇਠਾਂ" },
   "helptip_toastMode": { "message": "ਟੋਸਟ ਬੁਲਬਲੇ ਵਿੱਚ ਸੁੰਗੜੋ/ਸੈਂਟਰ ਨੋਟੀਫਿਕੇਸ਼ਨ" },
+  "alert_choosePlatform": { "message": "ਇੱਕ ਪਲੇਟਫਾਰਮ ਚੁਣੋ" },
   "alert_updateAvail": { "message": "ਕੋਈ ਵੇਰਵਾ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ" },
   "alert_newerVer": { "message": "ਨੂੰ ਇੱਕ ਅੱਪਡੇਟ" },
   "alert_isAvail": { "message": "ਉਪਲੱਬਧ ਹੈ" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Afișați notificările la comutarea modurilor/setărilor" },
   "helptip_notifBottom": { "message": "Notificări de ancorare în partea de jos a ecranului" },
   "helptip_toastMode": { "message": "Micșorați/centrați notificările în bule de pâine prăjită" },
+  "alert_choosePlatform": { "message": "Alegeți o platformă" },
   "alert_updateAvail": { "message": "Actualizare disponibilă" },
   "alert_newerVer": { "message": "Actualizare" },
   "alert_isAvail": { "message": "este disponibil" },

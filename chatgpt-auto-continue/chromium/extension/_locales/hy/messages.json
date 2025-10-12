@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Ցույց տալ ծանուցումները, երբ փոխվում են ռեժիմները/կարգավորումները" },
   "helptip_notifBottom": { "message": "Էկրանի ներքևի մասում խարիսխով ծանուցումներ" },
   "helptip_toastMode": { "message": "Նեղացնել/կենտրոնացնել ծանուցումները տոստի պղպջակների մեջ" },
+  "alert_choosePlatform": { "message": "Ընտրեք հարթակ" },
   "alert_updateAvail": { "message": "Թարմացումը հասանելի է" },
   "alert_newerVer": { "message": "Թարմացում" },
   "alert_isAvail": { "message": "առկա է" },

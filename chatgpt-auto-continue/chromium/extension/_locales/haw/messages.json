@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "E hōʻike i nā leka hoʻomaopopo i ka wā e hoʻololi ai i nā ʻano" },
   "helptip_notifBottom": { "message": "Hoʻolaha heleuma ma lalo o ka pale" },
   "helptip_toastMode": { "message": "E hōʻemi i nā ʻōlelo hoʻolaha i waena o nā ʻōpala toast" },
+  "alert_choosePlatform": { "message": "E koho i kahi paepae" },
   "alert_updateAvail": { "message": "Loaʻa ka hōʻano hou" },
   "alert_newerVer": { "message": "He mea hou i" },
   "alert_isAvail": { "message": "loaʻa" },

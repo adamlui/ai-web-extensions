@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Tunjukkan pemberitahuan apabila menogol mod/tetapan" },
   "helptip_notifBottom": { "message": "Pemberitahuan sauh ke bahagian bawah skrin" },
   "helptip_toastMode": { "message": "Kecilkan/ketengahkan pemberitahuan ke dalam buih roti bakar" },
+  "alert_choosePlatform": { "message": "Pilih platform" },
   "alert_updateAvail": { "message": "Kemas kini tersedia" },
   "alert_newerVer": { "message": "Pengemaskinian kepada" },
   "alert_isAvail": { "message": "tersedia" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Mostra les notificacions quan es canvien els modes o la configuració" },
   "helptip_notifBottom": { "message": "Notificacions d'ancoratge a la part inferior de la pantalla" },
   "helptip_toastMode": { "message": "Redueix/centra les notificacions a bombolles de torrades" },
+  "alert_choosePlatform": { "message": "Tria una plataforma" },
   "alert_updateAvail": { "message": "Nova versió disponible" },
   "alert_newerVer": { "message": "Una actualització a" },
   "alert_isAvail": { "message": "està disponible" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Sýna tilkynningar þegar skipt er um ham/stillingar" },
   "helptip_notifBottom": { "message": "Festið tilkynningar neðst á skjáinn" },
   "helptip_toastMode": { "message": "Minnkaðu/miðjaðu tilkynningar í ristaðar bólur" },
+  "alert_choosePlatform": { "message": "Veldu verkvang" },
   "alert_updateAvail": { "message": "Ný uppfærsla í boði" },
   "alert_newerVer": { "message": "Breyting á" },
   "alert_isAvail": { "message": "er í boði" },

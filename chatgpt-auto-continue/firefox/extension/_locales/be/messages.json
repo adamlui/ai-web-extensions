@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Паказваць апавяшчэнні пры пераключэнні рэжымаў/налад" },
   "helptip_notifBottom": { "message": "Апавяшчэнні аб якары ўнізе экрана" },
   "helptip_toastMode": { "message": "Паменшыць/цэнтралізаваць апавяшчэнні ў бурбалкі для тостаў" },
+  "alert_choosePlatform": { "message": "Выберыце платформу" },
   "alert_updateAvail": { "message": "Ёсць абнаўленне" },
   "alert_newerVer": { "message": "Абнаўленне да" },
   "alert_isAvail": { "message": "даступны" },

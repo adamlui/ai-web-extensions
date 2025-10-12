@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Bontsha dikitsiso fa o fetola mekgwa/diseting" },
   "helptip_notifBottom": { "message": "Tsenya dikitsiso kwa tlase ga sekerini" },
   "helptip_toastMode": { "message": "Ngotlela/tsenya dikitsiso mo gare go nna dipudula tsa borotho jo bo bakilweng" },
+  "alert_choosePlatform": { "message": "Tlhopha polateforomo ya thelebišene" },
   "alert_updateAvail": { "message": "Diphetogo tse di leng teng" },
   "alert_newerVer": { "message": "Ntšhwafatso ya" },
   "alert_isAvail": { "message": "e teng" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Zobrazit oznámení při přepínání režimů/nastavení" },
   "helptip_notifBottom": { "message": "Oznámení o ukotvení do spodní části obrazovky" },
   "helptip_toastMode": { "message": "Zmenšit/vycentrovat upozornění na toastové bubliny" },
+  "alert_choosePlatform": { "message": "Vyberte platformu" },
   "alert_updateAvail": { "message": "Aktualizace k dispozici" },
   "alert_newerVer": { "message": "Aktualizace na" },
   "alert_isAvail": { "message": "je k dispozici" },

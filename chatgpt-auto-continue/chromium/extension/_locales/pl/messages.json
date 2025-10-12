@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Pokaż powiadomienia podczas przełączania trybów/ustawień" },
   "helptip_notifBottom": { "message": "Zakotwicz powiadomienia na dole ekranu" },
   "helptip_toastMode": { "message": "Zmniejsz/wyśrodkuj powiadomienia w dymkach tostów" },
+  "alert_choosePlatform": { "message": "Wybierz platformę" },
   "alert_updateAvail": { "message": "Aktualizacja dostępna" },
   "alert_newerVer": { "message": "Aktualizuj" },
   "alert_isAvail": { "message": "jest dostępna" },

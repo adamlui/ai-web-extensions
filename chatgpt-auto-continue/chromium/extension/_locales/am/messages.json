@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "ሁነቶችን/ቅንብሮችን በሚገፉበት ጊዜ ማሳወቂያዎችን ያሳዩ" },
   "helptip_notifBottom": { "message": "መልህቅ ማሳወቂያዎች ወደ ታችኛው ማያ ገጽ" },
   "helptip_toastMode": { "message": "Shrink/ማዕከል ማሳወቂያዎች ወደ ቶስት አረፋዎች" },
+  "alert_choosePlatform": { "message": "መድረክ ይምረጡ" },
   "alert_updateAvail": { "message": "ዝመና ይገኛል" },
   "alert_newerVer": { "message": "አንድ ዝማኔ ወደ" },
   "alert_isAvail": { "message": "ይገኛል" },

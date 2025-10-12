@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Mostrar notificaciones al alternar modos/configuraciones" },
   "helptip_notifBottom": { "message": "Anclar notificaciones a la parte inferior de la pantalla" },
   "helptip_toastMode": { "message": "Reducir/centrar las notificaciones en burbujas de pan tostado" },
+  "alert_choosePlatform": { "message": "Elija una plataforma" },
   "alert_updateAvail": { "message": "Actualización disponible" },
   "alert_newerVer": { "message": "Una actualización a" },
   "alert_isAvail": { "message": "está disponible" },

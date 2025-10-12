@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Bonisa imiyalezo xa kuguqulwa iindlela/iisetingi" },
   "helptip_notifBottom": { "message": "Imiyalezo ye-ankile ukuya ezantsi kwesikrini" },
   "helptip_toastMode": { "message": "Nciphisa imiyalezo ibe ziibhubhu ze-toast" },
+  "alert_choosePlatform": { "message": "Khetha iwebhusayithi" },
   "alert_updateAvail": { "message": "Uhlaziyo luyafumaneka" },
   "alert_newerVer": { "message": "Inkcazelo ehlaziyiweyo" },
   "alert_isAvail": { "message": "iyafumaneka" },

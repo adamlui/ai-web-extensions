@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "ສະແດງການແຈ້ງເຕືອນເມື່ອປິດການໃຊ້ງານໂໝດ/ການຕັ້ງຄ່າ" },
   "helptip_notifBottom": { "message": "ການແຈ້ງເຕືອນ Anchor ກັບທາງລຸ່ມຂອງຫນ້າຈໍ" },
   "helptip_toastMode": { "message": "ການສັ່ນສະເທືອນ/ການແຈ້ງເຕືອນຂອງສູນເປັນຟອງນ້ຳເຜີ້ງ" },
+  "alert_choosePlatform": { "message": "ເລືອກແພລະຕະຟອມ" },
   "alert_updateAvail": { "message": "ອັບເດດທີ່ມີຢູ່" },
   "alert_newerVer": { "message": "ການອັບເດດ" },
   "alert_isAvail": { "message": "ມີ" },

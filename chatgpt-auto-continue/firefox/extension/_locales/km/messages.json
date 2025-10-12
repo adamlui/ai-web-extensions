@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "បង្ហាញការជូនដំណឹងនៅពេលបិទបើកម៉ូដ/ការកំណត់" },
   "helptip_notifBottom": { "message": "ការជូនដំណឹងយុថ្កាទៅផ្នែកខាងក្រោមនៃអេក្រង់" },
   "helptip_toastMode": { "message": "បង្រួមការជូនដំណឹង/កណ្តាលទៅជាពពុះដុតនំ" },
+  "alert_choosePlatform": { "message": "ជ្រើសរើសវេទិកា" },
   "alert_updateAvail": { "message": "ការអាប់ដេតមាន" },
   "alert_newerVer": { "message": "អាប់ដេតទៅ" },
   "alert_isAvail": { "message": "មាន" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Намоиши огоҳиҳо ҳангоми гузаштан аз режимҳо/танзимотҳо" },
   "helptip_notifBottom": { "message": "Огоҳиномаҳои лангар ба поёни экран" },
   "helptip_toastMode": { "message": "Хурд кардани/маркази огоҳиномаҳо ба ҳубобчаҳои тобнок" },
+  "alert_choosePlatform": { "message": "Интихоб кардани платформа" },
   "alert_updateAvail": { "message": "I-update ang magagamit" },
   "alert_newerVer": { "message": "Ang isang pag-update sa" },
   "alert_isAvail": { "message": "дастрас аст" },

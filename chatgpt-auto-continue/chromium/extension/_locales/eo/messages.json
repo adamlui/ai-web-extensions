@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Montri sciigojn kiam ŝanĝi reĝimojn/agordojn" },
   "helptip_notifBottom": { "message": "Ankrosciigoj al la fundo de la ekrano" },
   "helptip_toastMode": { "message": "Ŝrumpu/centrosciigojn en toastvezikojn" },
+  "alert_choosePlatform": { "message": "Elekti platformon" },
   "alert_updateAvail": { "message": "Neniu priskribo disponebla" },
   "alert_newerVer": { "message": "Ĝisdatigo al" },
   "alert_isAvail": { "message": "estas disponebla" },

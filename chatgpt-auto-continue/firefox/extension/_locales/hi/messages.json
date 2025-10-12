@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "मोड/सेटिंग टॉगल करते समय नोटिफ़िकेशन दिखाएँ" },
   "helptip_notifBottom": { "message": "स्क्रीन के निचले हिस्से में एंकर नोटिफ़िकेशन" },
   "helptip_toastMode": { "message": "टोस्ट बुलबुले में नोटिफ़िकेशन सिकोड़ें/बीच में रखें" },
+  "alert_choosePlatform": { "message": "कोई प्लैटफ़ॉर्म चुनें" },
   "alert_updateAvail": { "message": "अद्यतन उपलब्ध है" },
   "alert_newerVer": { "message": "पर एक अपडेट" },
   "alert_isAvail": { "message": "उपलब्ध है।" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Montre notifikasyon lè toggling mòd/anviwònman" },
   "helptip_notifBottom": { "message": "Anchor notifikasyon nan pati anba ekran an" },
   "helptip_toastMode": { "message": "Redui/notifikasyon sant nan ti boul toast" },
+  "alert_choosePlatform": { "message": "Chwazi yon platfòm" },
   "alert_updateAvail": { "message": "Mizajou ki disponib" },
   "alert_newerVer": { "message": "Yon aktyalizasyon pou" },
   "alert_isAvail": { "message": "ki disponib" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Seall brathan nuair a thogras tu modhan/roghainnean" },
   "helptip_notifBottom": { "message": "Ag acair brathan gu bonn na sgrìn" },
   "helptip_toastMode": { "message": "Crùb/meadhan notifications into toast bubbles" },
+  "alert_choosePlatform": { "message": "Tagh àrd - ùrlar" },
   "alert_updateAvail": { "message": "Chan eil ùrachadh ri fhaighinn" },
   "alert_newerVer": { "message": "Ùrachadh gu" },
   "alert_isAvail": { "message": "tha e ri fhaotainn" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "خبرتیاوې وښایاست کله چې د حالتونو/ترتیباتو ته اشاره وکړئ" },
   "helptip_notifBottom": { "message": "د سکرین پای ته د لنگر خبرتیاوې" },
   "helptip_toastMode": { "message": "خبرتیاوې په ټیسټ بلبلونو کې واچوئ/د مرکز خبرتیاوې" },
+  "alert_choosePlatform": { "message": "یو پلیټ فارم غوره کړئ" },
   "alert_updateAvail": { "message": "اوسمهالیزې شته" },
   "alert_newerVer": { "message": "ته تازه معلومات" },
   "alert_isAvail": { "message": "شتون لري" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "གོ་རིམ་/སྒྲིག་གཞི་ཚུ་སེལ་འཐུ་འབད་བའི་སྐབས་བརྡ་སྟོན་ཚུ་སྟོན་འབད།" },
   "helptip_notifBottom": { "message": "ཨེན་ཀ་ར་བརྡ་སྟོན་ཚུ་ ཌེཀསི་ཀེནཌ་གི་འོག་ལུ་" },
   "helptip_toastMode": { "message": "འོག་གི་ཤོག་ལེབ་ཚུ་ ཀྲུང་གོ་བོད་ཀྱི་དྲ་བ།" },
+  "alert_choosePlatform": { "message": "ས་གོ་ཅིག་བཟོ།" },
   "alert_updateAvail": { "message": "ད་ལྟོ་མཐུན་བཟོ་ནི།" },
   "alert_newerVer": { "message": "ད་ལྟོའི་དུས་ཚོད། བསྒྱུར་བཅོས་འབད་" },
   "alert_isAvail": { "message": "འཐོབ་ཚུགས་" },

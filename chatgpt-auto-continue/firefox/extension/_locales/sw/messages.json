@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Onyesha arifa wakati wa kugeuza modi/mipangilio" },
   "helptip_notifBottom": { "message": "Arifa za nanga hadi chini ya skrini" },
   "helptip_toastMode": { "message": "Arifa za kupunguza/katikati kwenye viputo vya toast" },
+  "alert_choosePlatform": { "message": "Chagua tovuti" },
   "alert_updateAvail": { "message": "Sasisho lipo" },
   "alert_newerVer": { "message": "Sasisho kwa" },
   "alert_isAvail": { "message": "inapatikana" },

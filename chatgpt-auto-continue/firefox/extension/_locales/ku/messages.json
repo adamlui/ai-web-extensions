@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Dema ku modên / mîhengan biguherînin, agahdariyan nîşan bidin" },
   "helptip_notifBottom": { "message": "Agahdariyên lengerê li binê ekranê" },
   "helptip_toastMode": { "message": "Agahdariyan biçûk bike/navenda nav bilbilên toastê bike" },
+  "alert_choosePlatform": { "message": "Platformek hilbijêre" },
   "alert_updateAvail": { "message": "نوێکردنەوە بەردەستە" },
   "alert_newerVer": { "message": "نوێکردنەوەی بۆ" },
   "alert_isAvail": { "message": "بەردەستە" },

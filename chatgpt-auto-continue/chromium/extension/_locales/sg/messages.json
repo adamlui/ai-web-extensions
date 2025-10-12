@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Fa awango na ngoi so mo yeke toggling mode/settings" },
   "helptip_notifBottom": { "message": "A yeke wara a-avertissement na gbe ti écran ni" },
   "helptip_toastMode": { "message": "Riviera Maison Informations In Toast Bubbles" },
+  "alert_choosePlatform": { "message": "Soro mbeni platforme" },
   "alert_updateAvail": { "message": "Nduru tënë so ayeke dä" },
   "alert_newerVer": { "message": "Mbeni ye so a sara na yâ ti fini dunia" },
   "alert_isAvail": { "message": "yeke available" },

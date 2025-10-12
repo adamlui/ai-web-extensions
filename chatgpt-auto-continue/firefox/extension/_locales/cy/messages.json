@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Dangos hysbysiadau wrth toglo moddau/gosodiadau" },
   "helptip_notifBottom": { "message": "Angori hysbysiadau i waelod y sgrin" },
   "helptip_toastMode": { "message": "Lleihau/canoli hysbysiadau i swigod tost" },
+  "alert_choosePlatform": { "message": "Dewiswch blatfform" },
   "alert_updateAvail": { "message": "Diweddariad ar gael" },
   "alert_newerVer": { "message": "Diweddariad i" },
   "alert_isAvail": { "message": "ar gael" },

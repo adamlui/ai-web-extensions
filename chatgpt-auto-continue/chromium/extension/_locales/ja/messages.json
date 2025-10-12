@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "モード/設定の切り替え時に通知を表示する" },
   "helptip_notifBottom": { "message": "通知を画面下部に固定する" },
   "helptip_toastMode": { "message": "トーストバブルに通知を縮小/中央揃え" },
+  "alert_choosePlatform": { "message": "プラットフォームを選択" },
   "alert_updateAvail": { "message": "利用可能なアップデート" },
   "alert_newerVer": { "message": "に更新します" },
   "alert_isAvail": { "message": "利用可能" },

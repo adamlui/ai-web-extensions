@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Показывать уведомления при переключении режимов/настроек" },
   "helptip_notifBottom": { "message": "Привязка уведомлений к нижней части экрана" },
   "helptip_toastMode": { "message": "Уведомления об усадке/центре в тостовые пузыри" },
+  "alert_choosePlatform": { "message": "Выберите платформу" },
   "alert_updateAvail": { "message": "Доступны обновления" },
   "alert_newerVer": { "message": "Обновление для" },
   "alert_isAvail": { "message": "доступно" },

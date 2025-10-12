@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Értesítések megjelenítése üzemmódok/beállítások közötti váltáskor" },
   "helptip_notifBottom": { "message": "Értesítések horgonyzása a képernyő aljára" },
   "helptip_toastMode": { "message": "Zsugorodási/középre igazítási értesítések pirítós buborékokká" },
+  "alert_choosePlatform": { "message": "Válasszon platformot" },
   "alert_updateAvail": { "message": "Frissítés érhető el" },
   "alert_newerVer": { "message": "Frissítés" },
   "alert_isAvail": { "message": "elérhető" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "모드/설정을 전환할 때 알림 표시" },
   "helptip_notifBottom": { "message": "화면 하단에 앵커 알림" },
   "helptip_toastMode": { "message": "알림을 축소/가운데에 놓아 토스트 버블로 만들기" },
+  "alert_choosePlatform": { "message": "플랫폼 선택" },
   "alert_updateAvail": { "message": "업데이트 사용 가능" },
   "alert_newerVer": { "message": "다음으로 업데이트" },
   "alert_isAvail": { "message": "사용가능" },

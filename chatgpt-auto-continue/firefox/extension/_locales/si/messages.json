@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "ප් ‍ රකාර/සැකසුම් ටොගල් කිරීමේදී දැනුම්දීම් පෙන්වන්න" },
   "helptip_notifBottom": { "message": "තිරයේ පහළට නැංගුරම් දැනුම්දීම්" },
   "helptip_toastMode": { "message": "ටෝස්ට් බුබුලු බවට හැකිලීම/මධ් ‍ යම දැනුම්දීම්" },
+  "alert_choosePlatform": { "message": "වේදිකාවක් තෝරන්න" },
   "alert_updateAvail": { "message": "යාවත්කාලීනය තිබේ" },
   "alert_newerVer": { "message": "වෙත යාවත්කාලීන කිරීමක්" },
   "alert_isAvail": { "message": "ලබා ගත හැක" },

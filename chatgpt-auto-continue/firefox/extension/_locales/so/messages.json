@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Muuji ogeysiisyada marka hababka toggling/dejinta" },
   "helptip_notifBottom": { "message": "Ogeysiisyada Anchor ilaa hoose ee shaashadda" },
   "helptip_toastMode": { "message": "Ogeysiisyada Shrink/Xarunta ee xumbada toast" },
+  "alert_choosePlatform": { "message": "Dooro barxad" },
   "alert_updateAvail": { "message": "Cusboonaysiinta la heli karo" },
   "alert_newerVer": { "message": "Cusbooneysiin ku socota" },
   "alert_isAvail": { "message": "waa la heli karaa" },

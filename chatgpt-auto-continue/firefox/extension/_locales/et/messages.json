@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Kuva teated režiimide/seadete vahetamisel" },
   "helptip_notifBottom": { "message": "Ankru teatised ekraani alumisse ossa" },
   "helptip_toastMode": { "message": "Kahanda/tsentreeri teated röstsaia mullidesse" },
+  "alert_choosePlatform": { "message": "Vali platvorm" },
   "alert_updateAvail": { "message": "Saadaval on uuendus" },
   "alert_newerVer": { "message": "Uuendus kuni" },
   "alert_isAvail": { "message": "on saadaval" },

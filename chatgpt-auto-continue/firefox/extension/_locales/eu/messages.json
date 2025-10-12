@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Erakutsi jakinarazpenak moduak/ezarpenak aldatzean" },
   "helptip_notifBottom": { "message": "Ainguratu jakinarazpenak pantailaren behealdean" },
   "helptip_toastMode": { "message": "Txikitu/zentratu jakinarazpenak burbuiletan" },
+  "alert_choosePlatform": { "message": "Aukeratu plataforma bat" },
   "alert_updateAvail": { "message": "Ez dago azalpenik erabilgarri" },
   "alert_newerVer": { "message": "Eguneratze bat" },
   "alert_isAvail": { "message": "eskuragarri dago" },

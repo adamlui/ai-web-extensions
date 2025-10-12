@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "הצג התראות בעת החלפת מצבים/הגדרות" },
   "helptip_notifBottom": { "message": "התראות עוגן לתחתית המסך" },
   "helptip_toastMode": { "message": "כווץ/מרכז התראות לבועות טוסט" },
+  "alert_choosePlatform": { "message": "בחירת פלטפורמה" },
   "alert_updateAvail": { "message": "עדכון זמין" },
   "alert_newerVer": { "message": "עדכון ל" },
   "alert_isAvail": { "message": "%s זמין" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Показване на известия при превключване на режими/настройки" },
   "helptip_notifBottom": { "message": "Анкерни известия в долната част на екрана" },
   "helptip_toastMode": { "message": "Свиване/центриране на известията в препечени балончета" },
+  "alert_choosePlatform": { "message": "Избор на платформа" },
   "alert_updateAvail": { "message": "Налице е актуализация" },
   "alert_newerVer": { "message": "Обнови" },
   "alert_isAvail": { "message": "е налична" },

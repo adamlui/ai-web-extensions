@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Whakaatuhia nga panui i te wa e whakakakahu ana i nga tikanga/tautuhinga" },
   "helptip_notifBottom": { "message": "Nga panui anchor ki raro o te mata" },
   "helptip_toastMode": { "message": "Nga korero whakaheke/pokapū ki nga pungarehu toast" },
+  "alert_choosePlatform": { "message": "Kōwhiri i tētahi papa" },
   "alert_updateAvail": { "message": "Ngā whakahōu e wātea ana" },
   "alert_newerVer": { "message": "He whakahoutanga" },
   "alert_isAvail": { "message": "kei te wātea ahau" },

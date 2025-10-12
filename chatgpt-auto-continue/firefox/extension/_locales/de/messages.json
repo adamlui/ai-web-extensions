@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Benachrichtigungen anzeigen, wenn Modi/Einstellungen umgeschaltet werden" },
   "helptip_notifBottom": { "message": "Benachrichtigungen am unteren Bildschirmrand verankern" },
   "helptip_toastMode": { "message": "Benachrichtigungen in Toastblasen verkleinern/zentrieren" },
+  "alert_choosePlatform": { "message": "Wählen Sie eine Plattform" },
   "alert_updateAvail": { "message": "Update verfügbar" },
   "alert_newerVer": { "message": "Ein Update zu" },
   "alert_isAvail": { "message": "ist verfügbar" },

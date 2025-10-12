@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Uri n-notifiki meta tibdel il-modi/settings" },
   "helptip_notifBottom": { "message": "Ankra n-notifiki fil-qiegħ tal-iskrin" },
   "helptip_toastMode": { "message": "Notifiki ta' tnaqqis/ċentru f' bżieżaq toast" },
+  "alert_choosePlatform": { "message": "AGĦŻEL PJATTAFORMA" },
   "alert_updateAvail": { "message": "Aġġornament disponibbli" },
   "alert_newerVer": { "message": "Aġġornament għal" },
   "alert_isAvail": { "message": "huwa disponibbli" },

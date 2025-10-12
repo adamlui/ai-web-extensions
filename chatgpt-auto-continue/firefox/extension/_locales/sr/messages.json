@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Prikaži obaveštenja prilikom prebacivanja režima/podešavanja" },
   "helptip_notifBottom": { "message": "Pričvrstite obaveštenja na dno ekrana" },
   "helptip_toastMode": { "message": "Obavještenja o skupljanju/centriranju u mjehuriće tosta" },
+  "alert_choosePlatform": { "message": "Izaberite platformu" },
   "alert_updateAvail": { "message": "Dostupna nadogradnja" },
   "alert_newerVer": { "message": "Ažuriranje za" },
   "alert_isAvail": { "message": "je dostupna" },

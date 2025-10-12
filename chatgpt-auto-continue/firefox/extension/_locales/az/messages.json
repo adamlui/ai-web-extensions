@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Rejimləri/parametrləri dəyişdikdə bildirişləri göstər" },
   "helptip_notifBottom": { "message": "Anker bildirişləri ekranın aşağısına" },
   "helptip_toastMode": { "message": "Tost köpüklərinə/mərkəz bildirişlərini bağlayın" },
+  "alert_choosePlatform": { "message": "Platforma seçin" },
   "alert_updateAvail": { "message": "Mövcud Güncelle" },
   "alert_newerVer": { "message": "Yenilənmə" },
   "alert_isAvail": { "message": "mövcuddur" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "عرض الإشعارات عند تبديل الأوضاع/الإعدادات" },
   "helptip_notifBottom": { "message": "قم بتثبيت الإشعارات في أسفل الشاشة" },
   "helptip_toastMode": { "message": "تقليص/توسيط الإشعارات في فقاعات الخبز المحمص" },
+  "alert_choosePlatform": { "message": "اختيار منصة" },
   "alert_updateAvail": { "message": "تحديث متوفر" },
   "alert_newerVer": { "message": "تحديث إلى" },
   "alert_isAvail": { "message": "متوفر" },

@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Onetsani zidziwitso pamene toggling modes/zoikamo" },
   "helptip_notifBottom": { "message": "Anchor zidziwitso pansi pazenera" },
   "helptip_toastMode": { "message": "Shrink/pakati zidziwitso mu toast bubbles" },
+  "alert_choosePlatform": { "message": "Sankhani nsanja" },
   "alert_updateAvail": { "message": "Sinthani likupezeka" },
   "alert_newerVer": { "message": "An pomwe kuti" },
   "alert_isAvail": { "message": "likupezeka" },

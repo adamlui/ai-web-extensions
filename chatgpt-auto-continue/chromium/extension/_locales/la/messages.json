@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Notificationes quod toggling modes/settings" },
   "helptip_notifBottom": { "message": "Notificationes anchor ad praescripta" },
   "helptip_toastMode": { "message": "Shinere/center notifications in toastibus" },
+  "alert_choosePlatform": { "message": "Mutare platform" },
   "alert_updateAvail": { "message": "Updateis available" },
   "alert_newerVer": { "message": "Omnia ad" },
   "alert_isAvail": { "message": "est disponibus" },

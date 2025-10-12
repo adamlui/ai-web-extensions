@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Notifikatiounen uweisen wann Dir Modi/Astellunge wiesselt" },
   "helptip_notifBottom": { "message": "Anker Notifikatiounen ënnen vum Bildschierm" },
   "helptip_toastMode": { "message": "Reduzéieren/Zentrum Notifikatiounen an Toast Bubbles" },
+  "alert_choosePlatform": { "message": "Wielt eng Plattform" },
   "alert_updateAvail": { "message": "Aktualiséierung verfügbar" },
   "alert_newerVer": { "message": "An UPDATE fir" },
   "alert_isAvail": { "message": "ass verfügbar" },

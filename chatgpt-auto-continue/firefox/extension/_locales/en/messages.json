@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Show notifications when toggling modes/settings" },
   "helptip_notifBottom": { "message": "Anchor notifications to bottom of screen" },
   "helptip_toastMode": { "message": "Shrink/center notifications into toast bubbles" },
+  "alert_choosePlatform": { "message": "Choose a platform" },
   "alert_updateAvail": { "message": "Update available" },
   "alert_newerVer": { "message": "An update to" },
   "alert_isAvail": { "message": "is available" },

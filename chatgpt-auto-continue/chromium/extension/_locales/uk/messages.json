@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Показувати сповіщення при перемиканні режимів/налаштувань" },
   "helptip_notifBottom": { "message": "Прив 'язати сповіщення до нижньої частини екрана" },
   "helptip_toastMode": { "message": "Зменшення/центрування сповіщень у бульбашки для тостів" },
+  "alert_choosePlatform": { "message": "Виберіть платформу" },
   "alert_updateAvail": { "message": "Доступне оновлення" },
   "alert_newerVer": { "message": "Оновлення для" },
   "alert_isAvail": { "message": "не доступно" },

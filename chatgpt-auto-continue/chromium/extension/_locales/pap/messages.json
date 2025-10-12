@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Ver Informe Ampliado de Modalidad E Instalacion Sl" },
   "helptip_notifBottom": { "message": "Notificacion Ancora Al Fondo De Screenshot" },
   "helptip_toastMode": { "message": "Página principal > Ciencia > Toast bubbles Toast bubbles" },
+  "alert_choosePlatform": { "message": "Elegí un plataforma" },
   "alert_updateAvail": { "message": "Actualizacion Disponible" },
   "alert_newerVer": { "message": "Un update pa" },
   "alert_isAvail": { "message": "ta disponibel" },

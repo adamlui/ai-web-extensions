@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "ಮೋಡ್‌ಗಳು/ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಟಾಗಲ್ ಮಾಡುವಾಗ ಅಧಿಸೂಚನೆಗಳನ್ನು ತೋರಿಸಿ" },
   "helptip_notifBottom": { "message": "ಪರದೆಯ ಕೆಳಭಾಗಕ್ಕೆ ಆಂಕರ್ ಅಧಿಸೂಚನೆಗಳು" },
   "helptip_toastMode": { "message": "ಟೋಸ್ಟ್ ಗುಳ್ಳೆಗಳಾಗಿ/ಕೇಂದ್ರದ ಅಧಿಸೂಚನೆಗಳನ್ನು ಕುಗ್ಗಿಸಿ" },
+  "alert_choosePlatform": { "message": "ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಆಯ್ಕೆಮಾಡಿ" },
   "alert_updateAvail": { "message": "ಹೊಸ ಅಪ್ಡೇಟ್ ಲಭ್ಯವಿದೆ" },
   "alert_newerVer": { "message": "ಗೆ ಅಪ್ ಡೇಟ್ ಮಾಡಿ" },
   "alert_isAvail": { "message": "ಲಭ್ಯವಿದೆ" },

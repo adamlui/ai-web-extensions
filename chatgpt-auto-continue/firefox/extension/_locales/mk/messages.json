@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Прикажи известувања кога се префрлаат режимите/подесувањата" },
   "helptip_notifBottom": { "message": "Прицврстете ги известувањата на дното на екранот" },
   "helptip_toastMode": { "message": "Известувања за смалување/центрирање во меурчиња за тост" },
+  "alert_choosePlatform": { "message": "Изберете платформа" },
   "alert_updateAvail": { "message": "Достапна надградба" },
   "alert_newerVer": { "message": "Ажурирање на" },
   "alert_isAvail": { "message": "е достапен" },

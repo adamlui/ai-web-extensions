@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Tampilkan pemberitahuan saat mengaktifkan mode/pengaturan" },
   "helptip_notifBottom": { "message": "Jangkar pemberitahuan ke bagian bawah layar" },
   "helptip_toastMode": { "message": "Kecilkan/pusatkan pemberitahuan ke dalam gelembung roti panggang" },
+  "alert_choosePlatform": { "message": "Pilih platform" },
   "alert_updateAvail": { "message": "Pembaruan tersedia" },
   "alert_newerVer": { "message": "Pembaruan untuk" },
   "alert_isAvail": { "message": "Install package not available" },

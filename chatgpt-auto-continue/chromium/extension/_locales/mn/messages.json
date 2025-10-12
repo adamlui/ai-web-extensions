@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Модель/тохиргоонуудыг өөрчлөх үед мэдэгдлүүдийг харуулах" },
   "helptip_notifBottom": { "message": "Дэлгэцийн доод хэсэгт зангууны мэдэгдэл" },
   "helptip_toastMode": { "message": "Хошуу бөмбөлөгөнд мэдэгдлийг буулгана уу" },
+  "alert_choosePlatform": { "message": "Платформыг сонгоно уу" },
   "alert_updateAvail": { "message": "Шинэчлэх (update) боломжтой" },
   "alert_newerVer": { "message": "Шинэчлэлт" },
   "alert_isAvail": { "message": "авах боломжтой" },

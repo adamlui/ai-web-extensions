@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "Rejimlar/sozlamalarni almashtirishda bildirishnomalarni ko'rsatish" },
   "helptip_notifBottom": { "message": "Bildirishnomalarni ekranning pastki qismiga mahkamlang" },
   "helptip_toastMode": { "message": "Bildirishnomalarni tost pufakchalariga qisqartiring/markazlang" },
+  "alert_choosePlatform": { "message": "Platformani tanlang" },
   "alert_updateAvail": { "message": "Mavjud yangilanishlar" },
   "alert_newerVer": { "message": "Yangilash" },
   "alert_isAvail": { "message": "mavjud" },

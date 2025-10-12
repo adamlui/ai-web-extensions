@@ -31,6 +31,7 @@
   "helptip_modeNotifs": { "message": "މޯޑްސް/ސެޓިންގސް ޓޮގްލް ކުރާއިރު ނޮޓިފިކޭޝަންތައް ދައްކާށެވެ" },
   "helptip_notifBottom": { "message": "ސްކްރީންގެ ތިރިއަށް ނޮޓިފިކޭޝަންތައް އެންކަރ ކުރުން" },
   "helptip_toastMode": { "message": "ނޮޓިފިކޭޝަންތައް ޓޯސްޓް ބަބުލްތަކަށް ޝްރިންކް/ސެންޓަރ ކުރުން" },
+  "alert_choosePlatform": { "message": "ޕްލެޓްފޯމެއް ހޮވާށެވެ" },
   "alert_updateAvail": { "message": "ލިބެން ހުރި އަޕްޑޭޓް" },
   "alert_newerVer": { "message": "އަޕްޑޭޓެއް" },
   "alert_isAvail": { "message": "ލިބެން ހުންނާނެ" },
