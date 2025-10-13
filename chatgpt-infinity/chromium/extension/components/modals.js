@@ -94,6 +94,7 @@ window.modals = {
 
         // Show modal
         const feedbackModal = modals.alert(`${browserAPI.getMsg('alert_choosePlatform')}:`, '', modalBtns)
+        feedbackModal.style.display = 'inline-table' // allow many buttons to fit
 
         // Hack buttons
         feedbackModal.querySelectorAll('button').forEach((btn, idx) => {
