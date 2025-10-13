@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.12.3
+// @version                2025.10.12.4
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2661,8 +2661,6 @@
             width: 409,
 
             available() {
-
-                // Show modal
                 const updateAvailModal = modals.alert(`🚀 ${app.msgs.alert_updateAvail}!`, // title
                     `${app.msgs.alert_newerVer} ${app.name} ` // msg
                         + `(v${app.latestVer}) ${app.msgs.alert_isAvail}!  `
@@ -2673,14 +2671,11 @@
                         modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
                     }, '', modals.update.width
                 )
-
-                // Localize button labels if needed
-                if (!env.browser.language.startsWith('en')) {
+                if (!env.browser.language.startsWith('en')) { // localize button labels
                     const updateBtns = updateAvailModal.querySelectorAll('button')
                     updateBtns[1].textContent = app.msgs.btnLabel_update
                     updateBtns[0].textContent = app.msgs.btnLabel_dismiss
                 }
-
                 return updateAvailModal
             },
 
