@@ -82,15 +82,16 @@ window.modals = {
         return alert
     },
 
-    feedback() {
+    feedback() { // requires lib/browser.js + env.installStore
 
         // Init buttons
         const modalBtns = [function productHunt(){}, function softonic(){}]
-        if (!browserAPI.runtime.includes('Greasemonkey')) modalBtns.unshift(
-            browserAPI.runtime.includes('Firefox') ? function firefoxAddons(){}
-          : browserAPI.runtime.includes('Edge') ? function edgeAddons(){}
-          : function chromeWebStore(){}
-        )
+        if (!browserAPI.runtime.includes('Greasemonkey'))
+            modalBtns.unshift( // append extension store button
+                browserAPI.runtime.includes('Firefox') ? function firefoxAddons(){}
+              : env.installStore == 'chrome' ? function chromeWebStore(){}
+              : function edgeAddons(){}
+            )
 
         // Show modal
         const feedbackModal = modals.alert(`${browserAPI.getMsg('alert_choosePlatform')}:`, '', modalBtns)
