@@ -15,11 +15,11 @@
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.commitHashes.app}` }
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
-    if (/firefox/i.test(app.runtime)) app.installStore = 'amo'
+    if (/firefox/i.test(app.runtime)) app.installStore = 'firefox'
     else { // determine Chrome or Edge store
         const self = await chrome.management.getSelf()
-        if (self.updateUrl?.includes('google.com')) app.installStore = 'cws'
-        else if (self.updateUrl?.includes('microsoft.com')) app.installStore = 'ews'
+        if (self.updateUrl?.includes('google.com')) app.installStore = 'chrome'
+        else if (self.updateUrl?.includes('microsoft.com')) app.installStore = 'edge'
     }
     chrome.storage.local.set({ app }) // save to browser storage
     chrome.runtime.setUninstallURL(app.urls.uninstall)
