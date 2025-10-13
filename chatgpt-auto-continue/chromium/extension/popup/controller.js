@@ -15,6 +15,7 @@
         menu: { isDark: document.documentElement.classList.contains('dark') },
         browser: { displaysEnglish: chrome.i18n.getUILanguage().startsWith('en') }
     }
+    env.onMatchedPage = chrome.runtime.getManifest().content_scripts[0].matches.toString().includes(env.site)
     ;({ app: window.app } = await chrome.storage.local.get('app'))
 
     // Define FUNCTIONS
@@ -160,6 +161,13 @@
                 .test(msg)
         ) return
         sendMsgToActiveTab('notify', { msg, pos })
+    }
+
+    function openFeedbackModalOrReviewPage() {
+        if (env.onMatchedPage)
+            chrome.tabs.query({ active: true, currentWindow: true }, tabs =>
+                chrome.tabs.sendMessage(tabs[0].id, { action: 'showFeedback' }))
+        else open(app.urls.review[app.installStore])
     }
 
     async function sendMsgToActiveTab(action, options) {
@@ -332,12 +340,12 @@
     }))
 
     // Create/append REVIEW entry
-    const platform = /chromium|edge|firefox/.exec(browserAPI.runtime.toLowerCase())?.[0] || '',
-          reviewURL = app.urls.review[platform != 'chromium' ? platform : 'chrome']
+    const reviewURL = app.urls.review[app.installStore]
     footer.before(createMenuEntry({
         key: 'reviewEntry', type: 'link', symbol: '⭐', url: reviewURL, helptip: reviewURL,
         label: `${settings.getMsg('btnLabel_leaveReview')}`
     }))
+    document.getElementById('reviewEntry').onclick = () => { openFeedbackModalOrReviewPage() ; close() }
 
     // Init FOOTER
     const footerElems = { // left-to-right
@@ -353,8 +361,7 @@
         + `/assets/images/badges/powered-by-chatgpt.js/${ env.menu.isDark ? 'white' : 'black' }/with-robot/95x19.png`
     footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
     footerElems.review.span.append(icons.create({key: 'star', size: 13, style: 'position: relative ; top: 1px' }))
-    footerElems.review.span.onclick = () => {
-        open(app.urls.review[/edge|firefox/.exec(app.runtime.toLowerCase())?.[0] || 'chrome']) ; close() }
+    footerElems.review.span.onclick = () => { openFeedbackModalOrReviewPage() ; close() }
     footerElems.coffee.span.append(
         icons.create({ key: 'coffeeCup', size: 23, style: 'position: relative ; left: 1px' }))
     footerElems.coffee.span.onclick = () => { open(app.urls.donate['ko-fi']) ; close() }

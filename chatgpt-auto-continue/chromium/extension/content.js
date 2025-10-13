@@ -13,6 +13,7 @@
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
             showAbout: () =>
                 source?.endsWith('service-worker.js') && chatgpt.isLoaded().then(() => modals.open('about')),
+            showFeedback: () => chatgpt.isLoaded().then(() => modals.open('feedback')),
             syncConfigToUI: () => sync.configToUI(options)
         }[action]?.() || console.warn(`Chome msg listener warning: "${action}"`))
     })

@@ -23,6 +23,7 @@
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
             showAbout: () =>
                 source?.endsWith('service-worker.js') && chatgpt.isLoaded().then(() => modals.open('about')),
+            showFeedback: () => chatgpt.isLoaded().then(() => modals.open('feedback')),
             syncConfigToUI: () => {
                 if (source?.endsWith('service-worker.js')) // disable Infinity mode 1st to not transfer between tabs
                     settings.save('infinityMode', false)
