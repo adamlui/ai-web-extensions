@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.12
+// @version                2025.10.12.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2525,18 +2525,22 @@
                     border: 1px solid ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }!important ;
                     ${ env.ui.app.scheme == 'dark' ? 'background: none ; color: white' : '' }}
                 .primary-modal-btn { background: black !important ; color: white !important }
-                .chatgpt-modal button:hover { background-color: #9cdaff !important ; color: black !important }
+                .chatgpt-modal button:hover {
+                    ${ env.ui.app.scheme == 'light' ? // reduce intensity of light scheme hover glow
+                        '--btn-shadow: 2px 1px 43px #00cfff70 ;' : '' }
+                    color: inherit !important ; background-color: inherit !important /* remove color hacks */
+                }
                 ${ env.ui.app.scheme == 'dark' ? // darkmode chatgpt.alert() styles
                     `.chatgpt-modal > div, .chatgpt-modal button:not(.primary-modal-btn) {
                         color: white !important }
                     .primary-modal-btn { background: #00cfff !important ; color: black !important }
-                    .chatgpt-modal a { color: #00cfff !important }
-                    .chatgpt-modal button:hover {
-                        background-color: #00cfff !important ; color: black !important }` : '' }
+                    .chatgpt-modal a { color: #00cfff !important }` : ''
+                }
                 .${modals.class} { display: grid ; place-items: center } /* for centered icon/logo */
                 [class*=modal-close-btn] {
                     position: absolute !important ; float: right ; top: 14px !important ; right: 16px !important ;
-                    cursor: pointer ; width: 33px ; height: 33px ; border-radius: 20px }
+                    cursor: pointer ; width: 33px ; height: 33px ; border-radius: 20px
+                }
                 [class*=modal-close-btn] path {${ env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white'
                                                                               : 'stroke: #9f9f9f ; fill: #9f9f9f' }}
                 ${ env.ui.app.scheme == 'dark' ? // invert dark mode hover paths
