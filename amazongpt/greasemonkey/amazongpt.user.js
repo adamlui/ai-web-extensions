@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.12
+// @version                2025.10.12.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1354,10 +1354,9 @@
                 mousedown(event) { // find modal, update styles, attach listeners, init XY offsets
                     if ( // prevent drag when...
                         event.button != 0 // non-left-click
-                     || event.target.closest('ul') // entry elem
+                        || !/auto|default/.test(getComputedStyle(event.target).cursor) // cursor changed
+                        || event.target.closest('ul') // entry elem
                     ) return
-                    if (!/auto|default/.test(getComputedStyle(event.target).cursor))
-                        return // prevent drag on interactive elems
                     modals.draggingModal = event.currentTarget
                     event.preventDefault() // prevent sub-elems like icons being draggable
                     Object.assign(modals.draggingModal.style, { // update styles
@@ -1842,7 +1841,7 @@
                 .chatgpt-modal button:hover {
                     ${ env.ui.app.scheme == 'light' ? // reduce intensity of light scheme hover glow
                         '--btn-shadow: 2px 1px 43px #00cfff70 ;' : '' }
-                    color: inherit !important ; background-color: inherit !important /* remove color hacks */
+                    color: inherit ; background-color: inherit /* remove color hacks */
                 }
                 ${ env.ui.app.scheme == 'dark' ? // darkmode chatgpt.alert() styles
                     `.chatgpt-modal > div, .chatgpt-modal button:not(.primary-modal-btn) {

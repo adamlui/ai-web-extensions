@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.12.2
+// @version                2025.10.12.3
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2022,10 +2022,9 @@
                 mousedown(event) { // find modal, update styles, attach listeners, init XY offsets
                     if ( // prevent drag when...
                         event.button != 0 // non-left-click
-                     || event.target.closest('ul') // entry elem
+                        || !/auto|default/.test(getComputedStyle(event.target).cursor) // cursor changed
+                        || event.target.closest('ul') // entry elem
                     ) return
-                    if (!/auto|default/.test(getComputedStyle(event.target).cursor))
-                        return // prevent drag on interactive elems
                     modals.draggingModal = event.currentTarget
                     event.preventDefault() // prevent sub-elems like icons being draggable
                     Object.assign(modals.draggingModal.style, { // update styles
