@@ -21,6 +21,7 @@
     ;({ app: window.app } = await chrome.storage.local.get('app'))
     ;({ sites: window.sites } = await chrome.storage.local.get('sites'))
     app.name = env.browser.displaysEnglish ? app.name : browserAPI.getMsg('appName') // for shorter notifs
+    env.onMatchedPage = chrome.runtime.getManifest().content_scripts[0].matches.toString().includes(env.site)
 
     // Define FUNCTIONS
 
@@ -418,12 +419,11 @@
     footerElems.moreExt.span.onclick = () => { open(app.urls.relatedExtensions) ; close() }
 
     // AUTO-EXPAND categories
-    const onMatchedPage = chrome.runtime.getManifest().content_scripts[0].matches.toString().includes(env.site)
-    if (!onMatchedPage || config[`${env.site}Disabled`]) { // auto-expand Site Settings
-        if (!onMatchedPage) // disable label from triggering unneeded collapse
+    if (!env.onMatchedPage || config[`${env.site}Disabled`]) { // auto-expand Site Settings
+        if (!env.onMatchedPage) // disable label from triggering unneeded collapse
             siteSettings.labelDiv.classList.add('anchored')
-        setTimeout(() => toggleCategorySettingsVisiblity({ key: 'siteSettings', transitions: onMatchedPage }),
-            !onMatchedPage ? 0 // no delay since emptyish already
+        setTimeout(() => toggleCategorySettingsVisiblity({ key: 'siteSettings', transitions: env.onMatchedPage }),
+            !env.onMatchedPage ? 0 // no delay since emptyish already
           : !env.browser.isFF ? 250 // some delay since other settings appear
           : 335 // more in FF since no transition
         )
