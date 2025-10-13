@@ -18,6 +18,15 @@ const appReady = (async () => {
     return app // to install listener
 })()
 
+appReady.then(async app => {
+    const self = await chrome.management.getSelf()
+    console.log('chrome.management info:', self)
+    if (self.updateUrl?.includes('chrome.google.com')) app.installStore = 'Chrome Web Store'
+    else if (self.updateUrl?.includes('microsoft.com')) app.installStore = 'Edge Add-ons Store'
+    else app.installStore = 'unknown'
+    console.log('app.installStore:', app.installStore)
+})
+
 // Launch WELCOME PAGE on install
 chrome.runtime.onInstalled.addListener(({ reason }) => {
     if (reason == 'install') // to exclude updates
