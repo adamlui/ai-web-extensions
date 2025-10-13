@@ -13,19 +13,16 @@ const appReady = (async () => {
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@${app.commitHashes.app}` }
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
+    if (/firefox/i.test(app.runtime)) app.installStore = 'amo'
+    else { // determine Chrome or Edge store
+        const self = await chrome.management.getSelf()
+        if (self.updateUrl?.includes('google.com')) app.installStore = 'cws'
+        else if (self.updateUrl?.includes('microsoft.com')) app.installStore = 'ews'
+    }
     chrome.storage.local.set({ app }) // save to browser storage
     chrome.runtime.setUninstallURL(app.urls.uninstall)
     return app // to install listener
 })()
-
-appReady.then(async app => {
-    const self = await chrome.management.getSelf()
-    console.log('chrome.management info:', self)
-    if (self.updateUrl?.includes('chrome.google.com')) app.installStore = 'Chrome Web Store'
-    else if (self.updateUrl?.includes('microsoft.com')) app.installStore = 'Edge Add-ons Store'
-    else app.installStore = 'unknown'
-    console.log('app.installStore:', app.installStore)
-})
 
 // Launch WELCOME PAGE on install
 chrome.runtime.onInstalled.addListener(({ reason }) => {
