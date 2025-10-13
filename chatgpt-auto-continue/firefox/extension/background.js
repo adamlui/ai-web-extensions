@@ -1,7 +1,7 @@
 const chatgptURL = 'https://chatgpt.com/'
 
 // Init APP data
-;(async () => {
+const appReady = (async () => {
     const app = {
         version: chrome.runtime.getManifest().version,
         commitHashes: { app: 'e81440b' }, // for cached app.json
@@ -18,6 +18,15 @@ const chatgptURL = 'https://chatgpt.com/'
     chrome.storage.local.set({ app }) // save to browser storage
     chrome.runtime.setUninstallURL(app.urls.uninstall)
 })()
+
+appReady.then(async app => {
+    const self = await chrome.management.getSelf()
+    console.log('chrome.management info:', self)
+    if (self.updateUrl?.includes('chrome.google.com')) app.installStore = 'Chrome Web Store'
+    else if (self.updateUrl?.includes('microsoft.com')) app.installStore = 'Edge Add-ons Store'
+    else app.installStore = 'unknown'
+    console.log('app.installStore:', app.installStore)
+})
 
 // Launch CHATGPT on install
 chrome.runtime.onInstalled.addListener(({ reason }) => {
