@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.12.1
+// @version                2025.10.12.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1978,9 +1978,6 @@
             width: 488,
 
             available() {
-                log.debug(`Update v${app.latestVer} found!`)
-
-                // Show modal
                 const updateAvailModal = modals.alert(`🚀 ${app.msgs.alert_updateAvail}!`, // title
                     `${app.msgs.alert_newerVer} ${app.name} ` // msg
                         + `(v${app.latestVer}) ${app.msgs.alert_isAvail}!  `
@@ -1991,20 +1988,16 @@
                         modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
                     }, '', modals.update.width
                 )
-
-                // Localize button labels if needed
-                if (!env.browser.language.startsWith('en')) {
+                if (!env.browser.language.startsWith('en')) { // localize button labels
                     log.debug('Localizing button labels in non-English alert...')
                     const updateBtns = updateAvailModal.querySelectorAll('button')
                     updateBtns[1].textContent = app.msgs.btnLabel_update
                     updateBtns[0].textContent = app.msgs.btnLabel_dismiss
                 }
-
                 return updateAvailModal
             },
 
             unavailable() {
-                log.debug('No update found.')
                 return modals.alert(`${app.msgs.alert_upToDate}!`, // title
                     `${app.name} (v${app.version}) ${app.msgs.alert_isUpToDate}!`, // msg
                     '', '', modals.update.width
