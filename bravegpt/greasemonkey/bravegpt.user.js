@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.14.1
+// @version               2025.10.14.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -425,7 +425,8 @@
         appBottomPos() { app.div.style.bottom = `${ config.minimized ? 48 - app.div.offsetHeight : -32 }px` },
 
         appStyle() { // used in toggle.animations() + update.scheme() + main's app init
-            const isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled
+            const { scheme: appScheme } = env.ui.app,
+                  isParticlizedDS = appScheme == 'dark' && !config.bgAnimationsDisabled
             modals.stylize() // update modal styles
             if (!app.styles?.isConnected) document.head.append(app.styles ||= dom.create.style())
             app.styles.textContent = (
@@ -442,10 +443,10 @@
                   --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;
                   --app-border: ${ isParticlizedDS ? 'none' : '1px solid var(--color-divider-subtle)' };
                   --app-gradient-bg: linear-gradient(180deg, ${
-                        env.ui.app.scheme == 'dark' ? '#99a8a6 -245px, black 185px' : '#b6ebff -163px, white 65px' }) ;
+                        appScheme == 'dark' ? '#99a8a6 -245px, black 185px' : '#b6ebff -163px, white 65px' }) ;
                   --app-hover-shadow-light-scheme: 0 9px 28px rgba(0,0,0,0.09) ;
                   --app-hover-shadow-dark-scheme:  0 9px 28px rgba(0,0,0,0.39) ;
-                  --app-anchored-shadow: 0 15px 52px rgb(0,0,${ env.ui.app.scheme == 'light' ? '7,0.06' : '11,0.22' }) ;
+                  --app-anchored-shadow: 0 15px 52px rgb(0,0,${ appScheme == 'light' ? '7,0.06' : '11,0.22' }) ;
                   --app-transition: opacity 0.5s ease, transform 0.5s ease, /* for 1st fade-in */
                                     bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
                                     width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
@@ -500,8 +501,8 @@
                     position: fixed ; top: 0 ; left: 0 ; width: 100% ; height: 100% ;
                     z-index: 9999 ; cursor: ew-resize }
                 #${app.slug} { /* main app div */
-                    color: var(--font-color-${env.ui.app.scheme}-scheme) ;
-                    background: var(--app-bg-color-${env.ui.app.scheme}-scheme) ;
+                    color: var(--font-color-${appScheme}-scheme) ;
+                    background: var(--app-bg-color-${appScheme}-scheme) ;
                     position: sticky ; z-index: 1111 ; padding: 24px 22px 42px ; border-radius: 18px ;
                     word-wrap: break-word ; white-space: pre-wrap ;
                     transition: var(--app-transition) ;
@@ -509,10 +510,10 @@
                        -o-transition: var(--app-transition) ; -ms-transition: var(--app-transition) }
                 #${app.slug}:has(.${app.slug}-alert) { /* app alerts */
                     border: var(--app-border) ; background-image: var(--app-gradient-bg) }
-                ${ env.browser.isPhone ? '' : env.ui.app.scheme != env.ui.site.scheme ?
+                ${ env.browser.isPhone ? '' : appScheme != env.ui.site.scheme ?
                       // add hover shadow to bordered/un-anchored desktop app div
                         `#${app.slug}:hover, #${app.slug}:active {
-                            box-shadow: var(--app-hover-shadow-${env.ui.app.scheme}-scheme) ;
+                            box-shadow: var(--app-hover-shadow-${appScheme}-scheme) ;
                             transition: var(--app-shadow-transition) ;
                                -webkit-transition: var(--app-shadow-transition) ;
                                -moz-transition: var(--app-shadow-transition) ;
@@ -528,10 +529,10 @@
                         position: relative ; left: auto ; width: auto ; opacity: 1 }
                 #${app.slug} p { margin: 0 }
                 #${app.slug} .alert-link {
-                    color: ${ env.ui.app.scheme == 'light' ? '#190cb0' : 'white ; text-decoration: underline' }}
+                    color: ${ appScheme == 'light' ? '#190cb0' : 'white ; text-decoration: underline' }}
                 .${app.slug}-name {
                     font-size: 20px ; font-family: var(--brand-font) ; text-decoration: none ;
-                    color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' } !important }
+                    color: ${ appScheme == 'dark' ? 'white' : 'black' } !important }
                 .byline { /* header byline */
                     position: relative ; bottom: 5.5px ; margin-left: 7px ; color: #aaa ; font-size: 11px ;
                   --byline-transition: 0.15s ease-in-out ; transition: var(--byline-transition) ;
@@ -539,7 +540,7 @@
                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
                 .byline a { color: #aaa ; text-decoration: none !important }
                 .byline a:hover {
-                    color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
+                    color: ${ appScheme == 'dark' ? 'white' : 'black' };
                     transition: var(--byline-transition) ;
                        -webkit-transition: var(--byline-transition) ; -moz-transition: var(--byline-transition) ;
                        -o-transition: var(--byline-transition) ; -ms-transition: var(--byline-transition) }
@@ -547,11 +548,9 @@
                     display: flex ; direction: rtl ; gap: 2px ; float: right ; position: relative ; bottom: 3px }
                 .${app.slug}-header-btn {
                     float: right ; cursor: pointer ; position: relative ; top: 4px ;
-                    ${ env.ui.app.scheme == 'dark' ? 'fill: white ; stroke: white'
-                                                   : 'fill: #adadad ; stroke: #adadad' }}
+                    ${ appScheme == 'dark' ? 'fill: white ; stroke: white' : 'fill: #adadad ; stroke: #adadad' }}
                 .${app.slug}-header-btn:hover svg { /* highlight/zoom header button on hover */
-                    ${ env.ui.app.scheme == 'dark' ? 'fill: #d9d9d9 ; stroke: #d9d9d9'
-                                                   : 'fill: black ; stroke: black' };
+                    ${ appScheme == 'dark' ? 'fill: #d9d9d9 ; stroke: #d9d9d9' : 'fill: black ; stroke: black' };
                     ${ env.browser.isMobile ? '' : 'transform: scale(1.285)' }}
                 ${ config.fgAnimationsDisabled ? '' :
                    `.${app.slug}-header-btn, .${app.slug}-header-btn svg { /* smooth header button fade-in + hover-zoom */
@@ -559,10 +558,10 @@
                        -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
                        -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition) }`}
                 .${app.slug}-header-btn:active {
-                    ${ env.ui.app.scheme == 'dark' ? 'fill: #999999 ; stroke: #999999'
-                                                   : 'fill: #638ed4 ; stroke: #638ed4' }}
+                    ${ appScheme == 'dark' ? 'fill: #999999 ; stroke: #999999'
+                                           : 'fill: #638ed4 ; stroke: #638ed4' }}
                 #${app.slug}-logo, .${app.slug}-header-btn svg {
-                    filter: drop-shadow(${ env.ui.app.scheme == 'dark' ? '#7171714d 10px' : '#aaaaaa21 7px' } 7px 3px) }
+                    filter: drop-shadow(${ appScheme == 'dark' ? '#7171714d 10px' : '#aaaaaa21 7px' } 7px 3px) }
                 #${app.slug} .loading {
                     margin-bottom: -55px ; /* offset vs. app div bottom-padding footer accomodation */
                     color: #b6b8ba ; fill: #b6b8ba ; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite }
@@ -581,7 +580,7 @@
                 #${app.slug}-font-size-slider-thumb {
                     z-index: 2 ; width: 7px ; height: 25px ; border-radius: 30% ; position: relative ;
                     top: -8px ; cursor: ew-resize ;
-                    background-color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#4a4a4a' };
+                    background-color: ${ appScheme == 'dark' ? 'white' : '#4a4a4a' };
                   --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
                     ${ config.fgAnimationsDisabled ? '' : `transition: var(--font-size-slider-thumb-transition) 
@@ -593,7 +592,7 @@
                 .${app.slug}-standby-btns { margin: 14px 0 22px }
                 .${app.slug}-standby-btn {
                   --skew: skew(-13deg) ; --counter-skew: skew(13deg) ; border-radius: 8px ;
-                  --content-color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
+                  --content-color: ${ appScheme == 'dark' ? 'white' : 'black' };
                     display: flex ; align-items: center ; justify-content: center ; gap: 8px ;
                     width: 90% ; height: 47px ; margin-bottom: 9px ; padding: 12px 0 ;
                     cursor: pointer ; transform: var(--skew) ; border: 1px solid var(--content-color) ;
@@ -625,16 +624,16 @@
                     float: left ; left: 7px ; margin: 4px -13px 0 -3px ; /* positioning */
                     border-bottom-style: solid ; border-bottom-width: 20px ; border-top: 0 ; border-bottom-color:
                         ${ // hide reply tip for terminal aesthetic
-                            isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${env.ui.app.scheme}-scheme)` }}
+                            isParticlizedDS ? '#0000' : `var(--reply-header-bg-color-${appScheme}-scheme)` }}
                 #${app.slug} .reply-header {
                     display: flex ; align-items: center ; position: relative ; width: 100% ;
                     top: 12px ; padding: 16px 14px ; height: 18px ; border-radius: 12px 12px 0 0 ;
-                    ${ env.ui.app.scheme == 'light' ? 'border-bottom: 1px solid white'
-                                  : isParticlizedDS ? 'border: 1px solid ; border-bottom-color: transparent' : '' };
-                    background: var(--reply-header-bg-color-${env.ui.app.scheme}-scheme) ;
-                    color:      var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) ;
-                    fill:       var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) ;
-                    stroke:     var(--reply-header-fg-color-${env.ui.app.scheme}-scheme) }
+                    ${ appScheme == 'light' ? 'border-bottom: 1px solid white'
+                          : isParticlizedDS ? 'border: 1px solid ; border-bottom-color: transparent' : '' };
+                    background: var(--reply-header-bg-color-${appScheme}-scheme) ;
+                    color:      var(--reply-header-fg-color-${appScheme}-scheme) ;
+                    fill:       var(--reply-header-fg-color-${appScheme}-scheme) ;
+                    stroke:     var(--reply-header-fg-color-${appScheme}-scheme) }
                 #${app.slug} .reply-header-txt { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
                 #${app.slug} .reply-header-btns { margin: 10.5px -5px 0 }
                 #${app.slug} .reply-pre {
@@ -642,12 +641,12 @@
                     font-family: Consolas, Menlo, Monaco, monospace ;
                     line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;
                     position: relative ; z-index: 1 ; /* allow top-margin to overlap header in light scheme */
-                    margin-top: ${ env.ui.app.scheme == 'light' ? 10 : 12 }px ; padding: 1.2em 1.2em 0 1.2em ;
+                    margin-top: ${ appScheme == 'light' ? 10 : 12 }px ; padding: 1.2em 1.2em 0 1.2em ;
                     border-radius: 0 0 12px 12px ; overflow: auto ;
                     ${ config.bgAnimationsDisabled ? // classic opaque bg
-                        `background: var(--pre-bg-color-${env.ui.app.scheme}-scheme) ;
-                         color: var(--font-color-${env.ui.app.scheme}-scheme)`
-                    : env.ui.app.scheme == 'dark' ? // slightly tranluscent bg
+                        `background: var(--pre-bg-color-${appScheme}-scheme) ;
+                         color: var(--font-color-${appScheme}-scheme)`
+                    : appScheme == 'dark' ? // slightly tranluscent bg
                         'background: #2b3a40cf ; color: var(--font-color-dark-scheme) ; border: 1px solid white'
                     : /* light scheme */ `background: var(--pre-bg-color-light-scheme) ;
                          color: var(--font-color-light-scheme) ; border: none` };
@@ -658,7 +657,7 @@
                             -o-transition: var(--reply-pre-transition) ;
                             -ms-transition: var(--reply-pre-transition)` }}
                 #${app.slug} .reply-pre a, #${app.slug} .reply-pre a:visited { color: #4495d4 }
-                #${app.slug} .reply-pre a:hover { color: ${ env.ui.app.scheme == 'dark' ? 'white' : '#ea7a28' }}
+                #${app.slug} .reply-pre a:hover { color: ${ appScheme == 'dark' ? 'white' : '#ea7a28' }}
                 #${app.slug} .code-header {
                     display: flex ; direction: rtl ; gap: 9px ; align-items: center ;
                     height: 11px ; margin: 3px -2px 0 }
@@ -687,13 +686,13 @@
 
               // Chatbar styles
              + `#${app.slug}-chatbar {
-                    border: solid 1px ${ isParticlizedDS ? '#aaa' : env.ui.app.scheme == 'dark' ? '#777' : '#555' };
+                    border: solid 1px ${ isParticlizedDS ? '#aaa' : appScheme == 'dark' ? '#777' : '#555' };
                     border-radius: 15px 16px 15px 0 ; margin: -6px 0 -7px 0 ; padding: 12px 51px 12px 10px ;
-                    position: relative ; z-index: 555 ; color: ${ env.ui.app.scheme == 'dark' ? '#eee' : '#222' };
+                    position: relative ; z-index: 555 ; color: ${ appScheme == 'dark' ? '#eee' : '#222' };
                     height: 43px ; line-height: 17px ; width: 100% ; max-height: 200px ; resize: none ;
-                    background: ${ env.ui.app.scheme == 'light' ? '#eeeeee9e'
+                    background: ${ appScheme == 'light' ? '#eeeeee9e'
                         : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }`};
-                    ${ env.ui.app.scheme == 'dark' ? '' :
+                    ${ appScheme == 'dark' ? '' :
                         `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
                         box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
                        -moz-box-shadow: var(--chatbar-inset-shadow) ;` }
@@ -702,9 +701,9 @@
                            -o-transition: box-shadow 0.15s ease ; -ms-transition: box-shadow 0.15s ease }
                 ${ isParticlizedDS ? '' : // add inset shadow to chatbar on hover
                     `#${app.slug}-chatbar:hover:not(:focus) {
-                        outline: ${ env.ui.app.scheme == 'light' ? 'black' : 'white' } auto 5px ;
+                        outline: ${ appScheme == 'light' ? 'black' : 'white' } auto 5px ;
                       --chatbar-hover-inset-shadow: 0 ${
-                            env.ui.app.scheme == 'dark' ? '3px 2px' : '1px 7px' } rgba(15,17,17,0.15) inset ;
+                            appScheme == 'dark' ? '3px 2px' : '1px 7px' } rgba(15,17,17,0.15) inset ;
                         box-shadow: var(--chatbar-hover-inset-shadow) ;
                        -webkit-box-shadow: var(--chatbar-hover-inset-shadow) ;
                        -moz-box-shadow: var(--chatbar-hover-inset-shadow) ;
@@ -714,8 +713,7 @@
                 #${app.slug}-chatbar:focus-visible { /* fallback outline chatbar + reduce inset shadow on focus */
                     outline: -webkit-focus-ring-color auto 1px ;
                     ${ isParticlizedDS ? '' :
-                        `--inset-shadow: 0 ${
-                                env.ui.app.scheme == 'dark' ? '3px -1px' : '1px 2px' } rgba(0,0,0,0.3) inset ;
+                        `--inset-shadow: 0 ${ appScheme == 'dark' ? '3px -1px' : '1px 2px' } rgba(0,0,0,0.3) inset ;
                         box-shadow: var(--inset-shadow) ;
                        -webkit-box-shadow: var(--inset-shadow) ; -moz-box-shadow: var(--inset-shadow)` }
                 }
@@ -724,14 +722,14 @@
                     border: none ; float: right ; position: relative ; background: none ; cursor: pointer ;
                     bottom: ${ env.browser.isFF ? 26 : 30 }px ;
                     transform: scale(1.05) ; margin-right: 3px ; /* zoom 'em a bit */
-                    color:  var(--chatbar-btn-color-${env.ui.app.scheme}-scheme) ;
-                    fill:   var(--chatbar-btn-color-${env.ui.app.scheme}-scheme) ;
-                    stroke: var(--chatbar-btn-color-${env.ui.app.scheme}-scheme)
+                    color:  var(--chatbar-btn-color-${appScheme}-scheme) ;
+                    fill:   var(--chatbar-btn-color-${appScheme}-scheme) ;
+                    stroke: var(--chatbar-btn-color-${appScheme}-scheme)
                 }
                 .${app.slug}-chatbar-btn:hover {
-                    color:  var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
-                    fill:   var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
-                    stroke: var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme)
+                    color:  var(--chatbar-btn-hover-color-${appScheme}-scheme) ;
+                    fill:   var(--chatbar-btn-hover-color-${appScheme}-scheme) ;
+                    stroke: var(--chatbar-btn-hover-color-${appScheme}-scheme)
                 }`
 
               // Related Queries styles
@@ -742,10 +740,10 @@
                     font-size: 0.77em ; cursor: pointer ; will-change: transform ;
                     box-sizing: border-box ; width: fit-content ; max-width: 100% ; /* confine to outer div */
                     margin: 4px 12px 7px 0 ; padding: 8px 13px 7px 14px ;
-                    color: ${ env.ui.app.scheme == 'dark' ? ( config.bgAnimationsDisabled ? '#ccc' : '#f2f2f2' )
-                                                 : '#767676' };
-                    background: ${ env.ui.app.scheme == 'dark' ? '#7e7e7e4f' : '#fdfdfdb0' };
-                    border: 1px solid ${ env.ui.app.scheme == 'dark' ? (
+                    color: ${ appScheme == 'dark' ? ( config.bgAnimationsDisabled ? '#ccc' : '#f2f2f2' )
+                                                  : '#767676' };
+                    background: ${ appScheme == 'dark' ? '#7e7e7e4f' : '#fdfdfdb0' };
+                    border: 1px solid ${ appScheme == 'dark' ? (
                         config.bgAnimationsDisabled ? '#5f5f5f' : '#777' ) : '#e1e1e1' };
                     border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;
                   --rq-shadow: 1px 4px 8px -6px rgba(169,169,169,0.75) ; box-shadow: var(--rq-shadow) ;
@@ -755,11 +753,11 @@
                            -o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)` }}
                 .${app.slug}-related-query:hover, .${app.slug}-related-query:focus {
                     ${ config.fgAnimationsDisabled ? '' : 'transform: scale(1.055) !important ;' }
-                    background: ${ env.ui.app.scheme == 'dark' ? '#a2a2a270'
+                    background: ${ appScheme == 'dark' ? '#a2a2a270'
                         : '#dae5ffa3 ; color: #000000a8 ; border-color: #a3c9ff' }}
                 .${app.slug}-related-query svg { /* related query icon */
                     float: left ; margin: 0.09em 6px 0 0 ;
-                    color: ${ env.ui.app.scheme == 'dark' ? '#aaa' : '#c1c1c1' }}`
+                    color: ${ appScheme == 'dark' ? '#aaa' : '#c1c1c1' }}`
 
               // Footer styles
              + `#${app.slug} .feedback {
@@ -768,7 +766,7 @@
                 #${app.slug} footer {
                     text-align: right ; margin: ${ env.browser.isFF ? 32 : 27 }px 18px -26px 0 ; padding-bottom: 12px }
                 #${app.slug} footer a:hover {
-                    color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }; text-decoration: none }`
+                    color: ${ appScheme == 'dark' ? 'white' : 'black' }; text-decoration: none }`
 
               // Notif styles
              + `.chatgpt-notif {
@@ -798,7 +796,7 @@
              + `#${app.slug}.anchored {
                     position: fixed ; bottom: -7px ; right: 35px ; width: 441px ; z-index: 8888 ;
                     border: var(--app-border) ; box-shadow: var(--app-anchored-shadow) ;
-                    ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${env.ui.app.scheme}-scheme)`
+                    ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${appScheme}-scheme)`
                                                    : 'background-image: var(--app-gradient-bg)' }}
                 #${app.slug}.expanded { width: 538px !important }
                 #${app.slug}.anchored .anchored-hidden { display: none } /* hide non-Anchor elems in mode */
@@ -815,7 +813,7 @@
              + `@media screen and (max-width: 480px) {
                     #${app.slug} {
                         border: var(--app-border) ;
-                        ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${env.ui.app.scheme}-scheme)`
+                        ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${appScheme}-scheme)`
                                                        : 'background-image: var(--app-gradient-bg)' }}
                     #${app.slug} #${app.slug}-logo { /* widen logo till btns */
                         width: calc(100% - 118px) ; max-width: 182px }
