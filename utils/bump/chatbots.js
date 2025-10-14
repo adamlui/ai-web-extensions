@@ -17,7 +17,7 @@
         cacheMode: args.some(arg => arg.startsWith('--cache')),
         devMode:  args.some(arg => arg.startsWith('--dev')),
         commitMsg: (() => {
-            const msgIdx = args.findIndex(arg => /^--?(?:m|commit-msg)$/.test(arg))
+            const msgIdx = args.findIndex(arg => ['--commit-msg', '-m'].includes(arg))
             return msgIdx != -1 && args[msgIdx +1] ? args[msgIdx +1].replace(/^"|"$/g, '') : null
         })(),
         noPush: args.some(arg => ['--no-push', '-np'].includes(arg))
