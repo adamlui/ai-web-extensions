@@ -64,10 +64,8 @@
             console.log(chatbotFiles) ; console.log('')
         }
     else // use bump.findFileBySuffix()
-        for (const chatbot of chatbots) {
+        for (const chatbot of chatbots)
             chatbotFiles.push(...(await bump.findFileBySuffix({ suffix: `${chatbot}.user.js` })))
-            console.log('')
-        }
 
     // PROCESS each userscript
     let filesUpdatedCnt = 0
