@@ -171,9 +171,7 @@
     }
 
     function openFeedbackModalOrReviewPage() {
-        if (env.onMatchedPage)
-            chrome.tabs.query({ active: true, currentWindow: true }, tabs =>
-                chrome.tabs.sendMessage(tabs[0].id, { action: 'showFeedback' }))
+        if (env.onMatchedPage) sendMsgToActiveTab('showFeedback')
         else open(app.urls.review[app.sourceWebStore])
         close()
     }
