@@ -82,14 +82,14 @@ window.modals = {
         return alert
     },
 
-    feedback() { // requires lib/browser.js + app.installStore
+    feedback() { // requires lib/browser.js + app.sourceWebStore
 
         // Init buttons
         const modalBtns = [function productHunt(){}, function softonic(){}]
         if (!browserAPI.runtime.includes('Greasemonkey'))
             modalBtns.unshift( // append extension store button
                 browserAPI.runtime.includes('Firefox') ? function firefoxAddons(){}
-              : app.installStore == 'chrome' ? function chromeWebStore(){}
+              : app.sourceWebStore == 'chrome' ? function chromeWebStore(){}
               : function edgeAddons(){}
             )
 

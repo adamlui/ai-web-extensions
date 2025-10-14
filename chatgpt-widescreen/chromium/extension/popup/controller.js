@@ -174,7 +174,7 @@
         if (env.onMatchedPage)
             chrome.tabs.query({ active: true, currentWindow: true }, tabs =>
                 chrome.tabs.sendMessage(tabs[0].id, { action: 'showFeedback' }))
-        else open(app.urls.review[app.installStore])
+        else open(app.urls.review[app.sourceWebStore])
     }
 
     async function sendMsgToActiveTab(action, options) {
@@ -394,7 +394,7 @@
     }
 
     // Create/append REVIEW entry
-    const reviewURL = app.urls.review[app.installStore]
+    const reviewURL = app.urls.review[app.sourceWebStore]
     footer.before(createMenuEntry({
         key: 'reviewEntry', type: 'link', symbol: '⭐', url: reviewURL, helptip: reviewURL,
         label: `${settings.getMsg('btnLabel_leaveReview')}`
