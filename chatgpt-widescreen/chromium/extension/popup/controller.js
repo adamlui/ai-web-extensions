@@ -175,6 +175,7 @@
             chrome.tabs.query({ active: true, currentWindow: true }, tabs =>
                 chrome.tabs.sendMessage(tabs[0].id, { action: 'showFeedback' }))
         else open(app.urls.review[app.sourceWebStore])
+        close()
     }
 
     async function sendMsgToActiveTab(action, options) {
@@ -399,7 +400,7 @@
         key: 'reviewEntry', type: 'link', symbol: '⭐', url: reviewURL, helptip: reviewURL,
         label: `${settings.getMsg('btnLabel_leaveReview')}`
     }))
-    document.getElementById('reviewEntry').onclick = () => { openFeedbackModalOrReviewPage() ; close() }
+    document.getElementById('reviewEntry').onclick = openFeedbackModalOrReviewPage
 
     // Init FOOTER
     const footerElems = { // left-to-right
@@ -415,7 +416,7 @@
         + `/assets/images/badges/powered-by-chatgpt.js/${ env.menu.isDark ? 'white' : 'black' }/with-robot/95x19.png`
     footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }
     footerElems.review.span.append(icons.create({key: 'star', size: 13, style: 'position: relative ; top: 1px' }))
-    footerElems.review.span.onclick = () => { openFeedbackModalOrReviewPage() ; close() }
+    footerElems.review.span.onclick = openFeedbackModalOrReviewPage
     footerElems.coffee.span.append(
         icons.create({ key: 'coffeeCup', size: 23, style: 'position: relative ; left: 1px' }))
     footerElems.coffee.span.onclick = () => { open(app.urls.donate['ko-fi']) ; close() }
