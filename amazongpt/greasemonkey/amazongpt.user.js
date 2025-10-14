@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.14
+// @version                2025.10.14.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -291,7 +291,8 @@
                   --reply-header-bg-color-light-scheme: #d7d4d4 ;
                   --reply-header-bg-color-dark-scheme: ${ !isParticlizedDS ? '#545454' : '#0e0e0e24' };
                   --reply-header-fg-color-light-scheme: white ; --reply-header-fg-color-dark-scheme: white ;
-                  --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: white ;
+                  --chatbar-btn-color-light-scheme: lightgrey ; --chatbar-btn-color-dark-scheme: #fff ;
+                  --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: #fff ;
                   --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;
                   --app-border: ${ isParticlizedDS ? 'none'
                         : `1px solid #${ env.ui.app.scheme == 'light' ? 'dadce0' : '3b3b3b' }`};
@@ -525,18 +526,22 @@
                     ${ isParticlizedDS ? '' :
                         `--inset-shadow: 0 ${
                                 env.ui.app.scheme == 'dark' ? '3px -1px' : '1px 2px' } rgba(0,0,0,0.3) inset ;
-                        box-shadow: var(--inset-shadow) ; -webkit-box-shadow: var(--inset-shadow) ;
-                       -moz-box-shadow: var(--inset-shadow)`}}
+                        box-shadow: var(--inset-shadow) ;
+                       -webkit-box-shadow: var(--inset-shadow) ; -moz-box-shadow: var(--inset-shadow)` }
+                }
                 .${app.slug}-chatbar-btn {
                     z-index: 560 ; border: none ; float: right ; position: relative ;
                     bottom: 50px ; background: none ; cursor: pointer ;
                     transform: scale(1.05) ; /* zoom 'em a bit */
-                    ${ env.ui.app.scheme == 'dark' ? 'color: #aaa ; fill: #aaa ; stroke: #aaa'
-                                                   : 'color: lightgrey ; fill: lightgrey ; stroke: lightgrey' }}
+                    color:  var(--chatbar-btn-color-${env.ui.app.scheme}-scheme) ;
+                    fill:   var(--chatbar-btn-color-${env.ui.app.scheme}-scheme) ;
+                    stroke: var(--chatbar-btn-color-${env.ui.app.scheme}-scheme)
+                }
                 .${app.slug}-chatbar-btn:hover {
                     color:  var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
                     fill:   var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
-                    stroke: var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) }`
+                    stroke: var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme)
+                }`
 
               // Footer styles
              + `#${app.slug} + footer { margin: 2px 0 25px ; position: relative }

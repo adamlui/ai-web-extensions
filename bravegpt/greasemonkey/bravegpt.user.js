@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.14
+// @version               2025.10.14.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -437,7 +437,8 @@
                   --reply-header-bg-color-light-scheme: #d7d4d4 ;
                   --reply-header-bg-color-dark-scheme: ${ !isParticlizedDS ? '#545454' : '#0e0e0e24' };
                   --reply-header-fg-color-light-scheme: white ; --reply-header-fg-color-dark-scheme: white ;
-                  --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: white ;
+                  --chatbar-btn-color-light-scheme: lightgrey ; --chatbar-btn-color-dark-scheme: #fff ;
+                  --chatbar-btn-hover-color-light-scheme: #638ed4 ; --chatbar-btn-hover-color-dark-scheme: #fff ;
                   --font-color-light-scheme: #4e4e4e ; --font-color-dark-scheme: #e3e3e3 ;
                   --app-border: ${ isParticlizedDS ? 'none' : '1px solid var(--color-divider-subtle)' };
                   --app-gradient-bg: linear-gradient(180deg, ${
@@ -715,19 +716,23 @@
                     ${ isParticlizedDS ? '' :
                         `--inset-shadow: 0 ${
                                 env.ui.app.scheme == 'dark' ? '3px -1px' : '1px 2px' } rgba(0,0,0,0.3) inset ;
-                        box-shadow: var(--inset-shadow) ; -webkit-box-shadow: var(--inset-shadow) ;
-                       -moz-box-shadow: var(--inset-shadow)`}}
+                        box-shadow: var(--inset-shadow) ;
+                       -webkit-box-shadow: var(--inset-shadow) ; -moz-box-shadow: var(--inset-shadow)` }
+                }
                 .${app.slug}-chatbar-btn {
                     z-index: 560 ;
                     border: none ; float: right ; position: relative ; background: none ; cursor: pointer ;
                     bottom: ${ env.browser.isFF ? 26 : 30 }px ;
                     transform: scale(1.05) ; margin-right: 3px ; /* zoom 'em a bit */
-                    ${ env.ui.app.scheme == 'dark' ? 'color: #aaa ; fill: #aaa ; stroke: #aaa'
-                                                   : 'color: lightgrey ; fill: lightgrey ; stroke: lightgrey' }}
+                    color:  var(--chatbar-btn-color-${env.ui.app.scheme}-scheme) ;
+                    fill:   var(--chatbar-btn-color-${env.ui.app.scheme}-scheme) ;
+                    stroke: var(--chatbar-btn-color-${env.ui.app.scheme}-scheme)
+                }
                 .${app.slug}-chatbar-btn:hover {
                     color:  var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
                     fill:   var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
-                    stroke: var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) }`
+                    stroke: var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme)
+                }`
 
               // Related Queries styles
              + `.${app.slug}-related-queries {
