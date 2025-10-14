@@ -6,7 +6,7 @@
 // NOTE: Pass --dev to not use cachePaths.bumpUtils for latest ver
 // NOTE: Pass --chrom<e|ium> to forcibly bump Chromium manifests only
 // NOTE: Pass --<ff|firefox> to forcibly bump Firefox manifests only
-// NOTE: Pass --no-<commit|push> to skip git commit/push
+// NOTE: Pass --<no-<commit|push>|nc|np> to skip git commit/push
 
 (async () => {
 

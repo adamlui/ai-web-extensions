@@ -5,7 +5,7 @@
 // NOTE: Pass --cache to use cachePaths.chatbotPaths for faster init
 // NOTE: Pass --dev to not use cachePaths.bumpUtils for latest ver
 // NOTE: Pass <--commit-msg|-m> "msg" to commit w/ msg
-// NOTE: Pass --no-push to skip git push
+// NOTE: Pass <--no-push|-np> to skip git push
 
 (async () => {
 
