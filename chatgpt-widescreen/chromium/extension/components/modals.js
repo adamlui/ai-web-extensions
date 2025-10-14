@@ -24,8 +24,8 @@ window.modals = {
             modalBtns.unshift(function checkForUpdates(){ updateCheck() })
 
         // Show modal
-        const labelStyles = `text-transform: uppercase ; font-size: 17px ; font-weight: bold ;
-                             color: ${ scheme == 'dark' ? 'white' : '#494141' }`
+        const labelStyles = 'text-transform: uppercase ; font-size: 17px ; font-weight: bold ;'
+                          + `color: ${ scheme == 'dark' ? 'white' : '#494141' }`
         const aboutModal = modals.alert(
             `${app.symbol} ${i18n.getMsg('appName')}`, // title
             `<span style="${labelStyles}">🧠 ${i18n.getMsg('about_author')}:</span> `
