@@ -4,7 +4,8 @@
 
 // NOTE: Pass --cache to use cachePaths.chatbotPaths for faster init
 // NOTE: Pass --dev to not use cachePaths.bumpUtils for latest ver
-// NOTE: Pass --no-<commit|push> to skip git commit/push
+// NOTE: Pass <--commit-msg|-m> "msg" to commit w/ msg
+// NOTE: Pass --no-push to skip git push
 
 (async () => {
 
@@ -15,7 +16,10 @@
     const config = {
         cacheMode: args.some(arg => arg.startsWith('--cache')),
         devMode:  args.some(arg => arg.startsWith('--dev')),
-        noCommit: args.some(arg => ['--no-commit', '-nc'].includes(arg)),
+        commitMsg: (() => {
+            const msgIdx = args.findIndex(arg => /^--?(?:m|commit-msg)$/.test(arg))
+            return msgIdx != -1 && args[msgIdx +1] ? args[msgIdx +1].replace(/^"|"$/g, '') : null
+        })(),
         noPush: args.some(arg => ['--no-push', '-np'].includes(arg))
     }
 
@@ -90,19 +94,11 @@
     } else bump.log.success(`${filesUpdatedCnt} chatbot${pluralSuffix} bumped!`)
 
     // ADD/COMMIT/PUSH bump(s)
-    if (!config.noCommit) {
+    if (config.commitMsg) {
         bump.log.working(`\nCommitting bump${pluralSuffix} to Git...\n`)
-
-        // Init commit msg
-        let commitMsg = 'Bumped `@version`' ; const uniqueVers = {}
-        Object.values(bumpedChatbots).forEach(({ newVer }) => { uniqueVers[newVer] = true })
-        if (Object.keys(uniqueVers).length == 1)
-            commitMsg += ` to \`${Object.keys(uniqueVers)[0]}\``
-
-        // git add/commit/push
         try {
             execSync('git add ./*.user.js')
-            spawnSync('git', ['commit', '-n', '-m', commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
+            spawnSync('git', ['commit', '-n', '-m', config.commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
             console.log('') // line break
             if (!config.noPush) {
                 bump.log.working('\nPulling latest changes from remote to sync local repository...\n')
@@ -110,9 +106,12 @@
                 bump.log.working(`\nPushing bump${pluralSuffix} to Git...\n`)
                 execSync('git push')
             }
-            bump.log.success(`Success! ${filesUpdatedCnt} chatbot${pluralSuffix} updated${
-                !config.noCommit ? '/committed' : '' }${ !config.noPush ? '/pushed' : '' } to GitHub`)
+            bump.log.success(`Success! ${filesUpdatedCnt} chatbot${pluralSuffix} updated/committed${
+                !config.noPush ? '/pushed' : '' } to GitHub`)
         } catch (err) { bump.log.error('Git operation failed: ' + err.message) }
+    } else {
+        bump.log.info(`\nNo commit message provided. Skipping git operations.`)
+        bump.log.info(`TIP: Use --commit-msg "msg" or -m "msg" to commit changes.`)
     }
 
     // Final SUMMARY log
