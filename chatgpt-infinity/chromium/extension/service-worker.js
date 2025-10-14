@@ -2,23 +2,13 @@
 const appReady = (async () => {
     const app = {
         version: chrome.runtime.getManifest().version,
-        commitHashes: { app: '2b84319' }, // for cached app.json
-        runtime: (() => {
-            return typeof chrome != 'undefined' && chrome.runtime ? (
-                typeof browser != 'undefined' ? 'Firefox add-on'
-                    : `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
-            ) : 'unknown'
-        })()
+        commitHashes: { app: '2b84319' } // for cached app.json
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@${app.commitHashes.app}` }
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
-    if (/firefox/i.test(app.runtime)) app.sourceWebStore = 'firefox'
-    else { // determine Chrome or Edge store
-        const self = await chrome.management.getSelf()
-        if (self.updateUrl?.includes('google.com')) app.sourceWebStore = 'chrome'
-        else if (self.updateUrl?.includes('microsoft.com')) app.sourceWebStore = 'edge'
-    }
+    app.sourceWebStore = navigator.userAgent.includes('Firefox') ? 'firefox'
+        : (await chrome.management.getSelf()).updateUrl?.includes('google.com') ? 'chrome' : 'edge'
     chrome.storage.local.set({ app }) // save to browser storage
     chrome.runtime.setUninstallURL(app.urls.uninstall)
     return app // to install listener

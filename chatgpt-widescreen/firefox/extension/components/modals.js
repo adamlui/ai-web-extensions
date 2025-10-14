@@ -5,6 +5,12 @@ window.modals = {
     stack: [], // of types of undismissed modals
     get class() { return `${app.slug}-modal` },
 
+    get runtime() {
+        return typeof GM_info != 'undefined' ? 'greasemonkey'
+            : navigator.userAgent.includes('Firefox') ? 'firefox'
+            : 'chromium'
+    },
+
     about() { // requires lib/browser.js + <app|env>
         const { browser: { isPortrait }, ui: { scheme }} = env
 
@@ -14,11 +20,10 @@ window.modals = {
             function rateUs() { modals.open('feedback') },
             function moreAIextensions(){}
         ]
-        if (browserAPI.runtime.includes('Greasemonkey')) // add Check for Updates
+        if (this.runtime == 'greasemonkey') // add Check for Updates
             modalBtns.unshift(function checkForUpdates(){ updateCheck() })
 
         // Show modal
-        const runtime = /chromium|firefox|greasemonkey/.exec(browserAPI.runtime.toLowerCase())?.[0] || ''
         const labelStyles = 'text-transform: uppercase ; font-size: 17px ; font-weight: bold ;'
                           + `color: ${ scheme == 'dark' ? 'white' : '#494141' }`
         const aboutModal = modals.alert(
@@ -32,8 +37,8 @@ window.modals = {
                 + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
                     + app.urls.github + '</a>\n'
             + `<span style="${labelStyles}">🚀 ${browserAPI.getMsg('about_latestChanges')}:</span> `
-                + `<a href="${app.urls.github}/commits/main/${runtime}" target="_blank" rel="nopener">`
-                    + `${app.urls.github}/commits/main/${runtime}</a>\n`
+                + `<a href="${app.urls.github}/commits/main/${this.runtime}" target="_blank" rel="nopener">`
+                    + `${app.urls.github}/commits/main/${this.runtime}</a>\n`
             + `<span style="${labelStyles}">⚡ ${browserAPI.getMsg('about_poweredBy')}:</span> `
                 + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`,
             modalBtns, '', 747
@@ -49,7 +54,7 @@ window.modals = {
         aboutModal.querySelector('.modal-buttons').style.justifyContent = 'center'
         aboutModal.querySelectorAll('button').forEach(btn => {
             btn.style.cssText = 'min-width: 136px ; text-align: center ;'
-                + `height: ${ browserAPI.runtime.includes('Greasemonkey') ? 58 : 55 }px`
+                + `height: ${ this.runtime == 'greasemonkey' ? 58 : 55 }px`
 
             // Replace link buttons w/ clones that don't dismiss modal
             if (/support|extensions/i.test(btn.textContent)) {
@@ -86,9 +91,9 @@ window.modals = {
 
         // Init buttons
         const modalBtns = [function productHunt(){}, function softonic(){}]
-        if (!browserAPI.runtime.includes('Greasemonkey'))
+        if (!this.runtime == 'greasemonkey')
             modalBtns.unshift( // append extension store button
-                browserAPI.runtime.includes('Firefox') ? function firefoxAddons(){}
+                this.runtime == 'firefox' ? function firefoxAddons(){}
               : app.sourceWebStore == 'chrome' ? function chromeWebStore(){}
               : function edgeAddons(){}
             )

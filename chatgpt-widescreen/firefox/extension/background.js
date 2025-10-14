@@ -4,23 +4,13 @@
     // Init APP data
     const app = {
         version: chrome.runtime.getManifest().version,
-        commitHashes: { app: 'fd9aa83' }, // for cached app.json + sites.json5
-        runtime: (() => {
-            return typeof chrome != 'undefined' && chrome.runtime ? (
-                typeof browser != 'undefined' ? 'Firefox add-on'
-                    : `Chromium ${ navigator.userAgent.includes('Edg') ? 'Edge add-on' : 'extension' }`
-            ) : 'unknown'
-        })()
+        commitHashes: { app: 'fd9aa83' } // for cached app.json + sites.json5
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.commitHashes.app}` }
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
-    if (/firefox/i.test(app.runtime)) app.sourceWebStore = 'firefox'
-    else { // determine Chrome or Edge store
-        const self = await chrome.management.getSelf()
-        if (self.updateUrl?.includes('google.com')) app.sourceWebStore = 'chrome'
-        else if (self.updateUrl?.includes('microsoft.com')) app.sourceWebStore = 'edge'
-    }
+    app.sourceWebStore = navigator.userAgent.includes('Firefox') ? 'firefox'
+        : (await chrome.management.getSelf()).updateUrl?.includes('google.com') ? 'chrome' : 'edge'
     chrome.storage.local.set({ app }) // save to browser storage
     chrome.runtime.setUninstallURL(app.urls.uninstall)
 
