@@ -8,7 +8,7 @@
 
     // Import JS resources
     for (const resource of [
-        'components/modals.js', 'components/toggles.js', 'lib/browser.js', 'lib/chatgpt.min.js', 'lib/dom.min.js',
+        'components/modals.js', 'components/toggles.js', 'lib/i18n.js', 'lib/chatgpt.min.js', 'lib/dom.min.js',
         'lib/feedback.js', 'lib/infinity.js', 'lib/settings.js', 'lib/styles.js', 'lib/sync.js', 'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
 
@@ -42,7 +42,7 @@
     if (!config.replyLanguage) // init reply language if unset
         settings.save('replyLanguage', chrome.i18n.getUILanguage())
     if (!config.replyTopic) // init reply topic if unset
-        settings.save('replyTopic', browserAPI.getMsg('menuLabel_all'))
+        settings.save('replyTopic', i18n.getMsg('menuLabel_all'))
     if (!config.replyInterval) settings.save('replyInterval', 7) // init refresh interval to 7 secs if unset
 
     // Define FUNCTIONS
@@ -81,7 +81,7 @@
     // Auto-start if enabled
     if (config.autoStart) {
         settings.save('infinityMode', true) ; sync.configToUI({ updatedKey: 'infinityMode' })
-        feedback.notify(`${browserAPI.getMsg('menuLabel_autoStart')}: ${browserAPI.getMsg('state_on').toUpperCase()}`)
+        feedback.notify(`${i18n.getMsg('menuLabel_autoStart')}: ${i18n.getMsg('state_on').toUpperCase()}`)
     }
 
     // Monitor NODE CHANGES to maintain sidebar toggle visibility

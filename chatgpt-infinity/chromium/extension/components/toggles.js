@@ -5,7 +5,7 @@ window.toggles = {
     sidebar: {
         get class() { return `${app.slug}-sidebar-toggle` },
 
-        create() { // requires lib/browser.js + <notify|sync.configToUI>()
+        create() { // requires lib/i18n.js + <notify|sync.configToUI>()
 
             // Init toggle elems
             this.div = document.createElement('div') ; this.div.className = this.class
@@ -31,8 +31,8 @@ window.toggles = {
             this.div.onclick = () => { // toggle Infinity mode
                 settings.save('infinityMode', !config.infinityMode)
                 sync.configToUI({ updatedKey: 'infinityMode' })
-                feedback.notify(`${browserAPI.getMsg('menuLabel_infinityMode')}: ${
-                    browserAPI.getMsg(`state_${ config.infinityMode ? 'on' : 'off' }`).toUpperCase()}`)
+                feedback.notify(`${i18n.getMsg('menuLabel_infinityMode')}: ${
+                    i18n.getMsg(`state_${ config.infinityMode ? 'on' : 'off' }`).toUpperCase()}`)
             }
         },
 
@@ -143,8 +143,8 @@ window.toggles = {
                 if (!toggles.sidebar.div) return // since toggle never created = sidebar missing
                 toggles.sidebar.div.style.display = config.toggleHidden || config.extensionDisabled ? 'none' : 'flex'
                 const isOn = config.infinityMode
-                toggles.sidebar.toggleLabel.textContent = `${browserAPI.getMsg('menuLabel_infinityMode')} `
-                    + browserAPI.getMsg(`state_${ isOn ? 'enabled' : 'disabled' }`)
+                toggles.sidebar.toggleLabel.textContent = `${i18n.getMsg('menuLabel_infinityMode')} `
+                    + i18n.getMsg(`state_${ isOn ? 'enabled' : 'disabled' }`)
                 requestAnimationFrame(() => {
                     toggles.sidebar.switchSpan.className = isOn ? 'enabled' : 'disabled'
                     toggles.sidebar.knobSpan.style.transform = `translateX(${ isOn ? 13 : 0 }px)`

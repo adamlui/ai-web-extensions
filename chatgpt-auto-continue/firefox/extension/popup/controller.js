@@ -5,7 +5,7 @@
         document.documentElement.classList.add('dark')
 
     // Import JS resources
-    for (const resource of ['components/icons.js', 'lib/browser.js', 'lib/dom.min.js', 'lib/settings.js'])
+    for (const resource of ['components/icons.js', 'lib/i18n.js', 'lib/dom.min.js', 'lib/settings.js'])
         await import(chrome.runtime.getURL(resource))
 
     // Init DATA
@@ -63,19 +63,19 @@
             entry.label.textContent += `: ${entry.slider.value}${ entryData.labelSuffix || '' }`
             entry.label.append(entry.editLink = dom.create.elem('span', {
                 class: 'edit-link', role: 'button', tabindex: '0', 'aria-label': entryData.helptip,
-                textContent: browserAPI.getMsg('promptLabel_edit')
+                textContent: i18n.getMsg('promptLabel_edit')
             }))
             entry.slider.style.setProperty('--track-fill-percent', `${ entry.slider.value / entry.slider.max *100 }%`)
 
             // Add listeners
             entry.editLink.onclick = () => {
-                const promptMsg = `${browserAPI.getMsg('prompt_enterNewVal')} ${entryData.label} (${
-                    browserAPI.getMsg('error_between')} ${minVal}–${maxVal}):`
+                const promptMsg = `${i18n.getMsg('prompt_enterNewVal')} ${entryData.label} (${
+                    i18n.getMsg('error_between')} ${minVal}–${maxVal}):`
                 const userVal = prompt(promptMsg, entry.slider.value)
                 if (userVal == null) return // user cancelled so do nothing
                 if (!/\d/.test(userVal)) return alert(`${
-                    browserAPI.getMsg('error_enterValidNum')} ${browserAPI.getMsg('error_between')} ${
-                        minVal} ${browserAPI.getMsg('error_and')} ${maxVal}!`)
+                    i18n.getMsg('error_enterValidNum')} ${i18n.getMsg('error_between')} ${
+                        minVal} ${i18n.getMsg('error_and')} ${maxVal}!`)
                 let validVal = parseInt(userVal.replace(/\D/g, '')) ; if (isNaN(validVal)) return
                 validVal = Math.max(minVal, Math.min(maxVal, validVal))
                 entry.slider.value = validVal ; settings.save(entryData.key, validVal)
@@ -117,7 +117,7 @@
                     entry.leftElem.classList.toggle('on')
                     settings.save(entryData.key, !config[entryData.key])
                     sync.configToUI({ updatedKey: entryData.key })
-                    requestAnimationFrame(() => notify(`${entryData.label} ${browserAPI.getMsg(`state_${
+                    requestAnimationFrame(() => notify(`${entryData.label} ${i18n.getMsg(`state_${
                         settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`))
                 },
                 link: () => { open(entryData.url) ; close() }
@@ -157,7 +157,7 @@
 
     function notify(msg, pos = !config.toastMode ? 'bottom-right' : undefined) {
         if (config.notifDisabled
-            && !new RegExp(`${browserAPI.getMsg('menuLabel_show')} ${browserAPI.getMsg('menuLabel_notifs')}`, 'i')
+            && !new RegExp(`${i18n.getMsg('menuLabel_show')} ${i18n.getMsg('menuLabel_notifs')}`, 'i')
                 .test(msg)
         ) return
         sendMsgToActiveTab('notify', { msg, pos })
@@ -240,7 +240,7 @@
         Object.entries(elemToLocalize.dataset).forEach(([dataAttr, dataVal]) => {
             if (!dataAttr.startsWith('locale')) return
             const propToLocalize = dataAttr[6].toLowerCase() + dataAttr.slice(7), // convert to valid DOM prop
-                  localizedTxt = dataVal.split(' ').map(key => browserAPI.getMsg(key) || key).join(' ')
+                  localizedTxt = dataVal.split(' ').map(key => i18n.getMsg(key) || key).join(' ')
             elemToLocalize[propToLocalize] = localizedTxt
         })
     )
@@ -265,8 +265,8 @@
     masterToggle.div.onclick = () => {
         masterToggle.switch.classList.toggle('on') ; settings.save('extensionDisabled', !config.extensionDisabled)
         Object.keys(sync).forEach(key => sync[key]()) // sync fade + storage to UI
-        notify(`${browserAPI.getMsg('appName')} 🧩 ${
-                  browserAPI.getMsg(`state_${ config.extensionDisabled ? 'off' : 'on' }`).toUpperCase()}`)
+        notify(`${i18n.getMsg('appName')} 🧩 ${
+                  i18n.getMsg(`state_${ config.extensionDisabled ? 'off' : 'on' }`).toUpperCase()}`)
     }
 
     // Create CHILD menu entries on chatgpt.com
@@ -355,7 +355,7 @@
         moreExt: { span: footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]') }
     }
     footerElems.chatgptjs.logo.parentNode.title = env.browser.displaysEnglish ? ''
-        : `${browserAPI.getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
+        : `${i18n.getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
     footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@858b952'
         + `/assets/images/badges/powered-by-chatgpt.js/${ env.menu.isDark ? 'white' : 'black' }/with-robot/95x19.png`
     footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }

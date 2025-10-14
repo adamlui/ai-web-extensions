@@ -5,7 +5,7 @@
         document.documentElement.classList.add('dark')
 
     // Import JS resources
-    for (const resource of ['components/icons.js', 'lib/browser.js', 'lib/dom.min.js', 'lib/settings.js'])
+    for (const resource of ['components/icons.js', 'lib/i18n.js', 'lib/dom.min.js', 'lib/settings.js'])
         await import(chrome.runtime.getURL(resource))
 
     // Init DATA
@@ -20,7 +20,7 @@
     }
     ;({ app: window.app } = await chrome.storage.local.get('app'))
     ;({ sites: window.sites } = await chrome.storage.local.get('sites'))
-    app.name = env.browser.displaysEnglish ? app.name : browserAPI.getMsg('appName') // for shorter notifs
+    app.name = env.browser.displaysEnglish ? app.name : i18n.getMsg('appName') // for shorter notifs
     env.onMatchedPage = chrome.runtime.getManifest().content_scripts[0].matches.toString().includes(env.site)
 
     // Define FUNCTIONS
@@ -68,19 +68,19 @@
             entry.label.textContent += `: ${entry.slider.value}${ entryData.labelSuffix || '' }`
             entry.label.append(entry.editLink = dom.create.elem('span', {
                 class: 'edit-link', role: 'button', tabindex: '0', 'aria-label': entryData.helptip,
-                textContent: browserAPI.getMsg('promptLabel_edit')
+                textContent: i18n.getMsg('promptLabel_edit')
             }))
             entry.slider.style.setProperty('--track-fill-percent', `${ entry.slider.value / entry.slider.max *100 }%`)
 
             // Add listeners
             entry.editLink.onclick = () => {
-                const promptMsg = `${browserAPI.getMsg('prompt_enterNewVal')} ${entryData.label} (${
-                    browserAPI.getMsg('error_between')} ${minVal}–${maxVal}):`
+                const promptMsg = `${i18n.getMsg('prompt_enterNewVal')} ${entryData.label} (${
+                    i18n.getMsg('error_between')} ${minVal}–${maxVal}):`
                 const userVal = prompt(promptMsg, entry.slider.value)
                 if (userVal == null) return // user cancelled so do nothing
                 if (!/\d/.test(userVal)) return alert(`${
-                    browserAPI.getMsg('error_enterValidNum')} ${browserAPI.getMsg('error_between')} ${
-                        minVal} ${browserAPI.getMsg('error_and')} ${maxVal}!`)
+                    i18n.getMsg('error_enterValidNum')} ${i18n.getMsg('error_between')} ${
+                        minVal} ${i18n.getMsg('error_and')} ${maxVal}!`)
                 let validVal = parseInt(userVal.replace(/\D/g, '')) ; if (isNaN(validVal)) return
                 validVal = Math.max(minVal, Math.min(maxVal, validVal))
                 entry.slider.value = validVal ; settings.save(entryData.key, validVal)
@@ -122,7 +122,7 @@
                     entry.leftElem.classList.toggle('on')
                     settings.save(entryData.key, !config[entryData.key])
                     sync.configToUI({ updatedKey: entryData.key })
-                    requestAnimationFrame(() => notify(`${entryData.label} ${browserAPI.getMsg(`state_${
+                    requestAnimationFrame(() => notify(`${entryData.label} ${i18n.getMsg(`state_${
                         settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`))
                 },
                 link: () => { open(entryData.url) ; close() }
@@ -164,7 +164,7 @@
 
     function notify(msg, pos = !config.toastMode ? 'bottom-right' : undefined) {
         if (config.notifDisabled
-            && !new RegExp(`${browserAPI.getMsg('menuLabel_show')} ${browserAPI.getMsg('menuLabel_notifs')}`, 'i')
+            && !new RegExp(`${i18n.getMsg('menuLabel_show')} ${i18n.getMsg('menuLabel_notifs')}`, 'i')
                 .test(msg)
         ) return
         sendMsgToActiveTab('notify', { msg, pos })
@@ -249,7 +249,7 @@
         Object.entries(elemToLocalize.dataset).forEach(([dataAttr, dataVal]) => {
             if (!dataAttr.startsWith('locale')) return
             const propToLocalize = dataAttr[6].toLowerCase() + dataAttr.slice(7), // convert to valid DOM prop
-                  localizedTxt = dataVal.split(' ').map(key => browserAPI.getMsg(key) || key).join(' ')
+                  localizedTxt = dataVal.split(' ').map(key => i18n.getMsg(key) || key).join(' ')
             elemToLocalize[propToLocalize] = localizedTxt
         })
     )
@@ -276,7 +276,7 @@
         masterToggle.switch.classList.toggle('on') ; settings.save('extensionDisabled', !config.extensionDisabled)
         sync.configToUI({ updatedKey: 'extensionDisabled' }) ; sync.fade()
         if (env.extensionWasDisabled ^ extensionIsDisabled()) notify(`${app.name} 🧩 ${
-            browserAPI.getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
+            i18n.getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
     }
 
     // Create CHILD menu entries on matched pages
@@ -322,13 +322,13 @@
         const ssEntry = {
             div: dom.create.elem('div', { id: `${site}Entry`, class: 'menu-entry highlight-on-hover' }),
             switchLabelDiv: dom.create.elem('div', {
-                title: `${browserAPI.getMsg('helptip_run')} ${app.name} on ${sites[site].urls.homepage}`,
+                title: `${i18n.getMsg('helptip_run')} ${app.name} on ${sites[site].urls.homepage}`,
                 style: `display: flex ; height: 33px ; align-items: center ; flex-grow: 1 ;
                         margin-left: -2px ; padding-left: 2px /* fill .menu-entry left-padding */` }),
             switch: dom.create.elem('div', { class: 'toggle menu-icon' }),
             track: dom.create.elem('span', { class: 'track' }), label: dom.create.elem('span'),
             faviconDiv: dom.create.elem('div', {
-                title: `${browserAPI.getMsg('tooltip_goto')} https://${sites[site].urls.homepage}`,
+                title: `${i18n.getMsg('tooltip_goto')} https://${sites[site].urls.homepage}`,
                 class: 'menu-right-elem' }),
             favicon: dom.create.elem('img', { src: sites[site].urls.favicon, width: 15 }),
             openIcon: icons.create({ key: 'open', size: 17, fill: 'black' })
@@ -352,7 +352,7 @@
             if (env.site == site) { // fade/notify if setting of active site toggled
                 sync.fade()
                 if (env.extensionWasDisabled ^ extensionIsDisabled()) notify(`${app.name} 🧩 ${
-                    browserAPI.getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
+                    i18n.getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
             }
         }
         ssEntry.faviconDiv.onmouseenter = ssEntry.faviconDiv.onmouseleave = ({ type }) =>
@@ -409,7 +409,7 @@
         moreExt: { span: footer.querySelector('span[data-locale-title=btnLabel_moreAIextensions]') }
     }
     footerElems.chatgptjs.logo.parentNode.title = env.browser.displaysEnglish ? ''
-        : `${browserAPI.getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
+        : `${i18n.getMsg('about_poweredBy')} chatgpt.js` // add localized tooltip to English logo for non-English users
     footerElems.chatgptjs.logo.src = 'https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@858b952'
         + `/assets/images/badges/powered-by-chatgpt.js/${ env.menu.isDark ? 'white' : 'black' }/with-robot/95x19.png`
     footerElems.chatgptjs.logo.onclick = () => { open(app.urls.chatgptjs) ; close() }

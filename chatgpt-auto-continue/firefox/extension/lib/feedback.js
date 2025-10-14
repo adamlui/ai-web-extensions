@@ -4,13 +4,13 @@ window.feedback = {
     notify(msg, pos = '', notifDuration = '', shadow = '') {
         if (!styles.toast.node) styles.update({ key: 'toast' })
         if (config.notifDisabled
-            && !new RegExp(`${browserAPI.getMsg('menuLabel_show')} ${browserAPI.getMsg('menuLabel_notifs')}`, 'i')
+            && !new RegExp(`${i18n.getMsg('menuLabel_show')} ${i18n.getMsg('menuLabel_notifs')}`, 'i')
                 .test(msg)
         ) return
 
         // Strip state word to append colored one later
         const foundState = [
-            browserAPI.getMsg('state_on').toUpperCase(), browserAPI.getMsg('state_off').toUpperCase()
+            i18n.getMsg('state_on').toUpperCase(), i18n.getMsg('state_off').toUpperCase()
         ].find(word => msg.includes(word))
         if (foundState) msg = msg.replace(foundState, '')
 
@@ -34,7 +34,7 @@ window.feedback = {
             }
             const styledStateSpan = dom.create.elem('span')
             styledStateSpan.style.cssText = stateStyles[
-                foundState == browserAPI.getMsg('state_off').toUpperCase() ? 'off' : 'on'][env.ui.scheme]
+                foundState == i18n.getMsg('state_off').toUpperCase() ? 'off' : 'on'][env.ui.scheme]
             styledStateSpan.append(foundState) ; notif.append(styledStateSpan)
         }
     }

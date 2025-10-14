@@ -18,7 +18,7 @@
 
     // Import JS resources
     for (const resource of [
-        'components/modals.js', 'lib/browser.js', 'lib/chatgpt.min.js', 'lib/dom.min.js',
+        'components/modals.js', 'lib/i18n.js', 'lib/chatgpt.min.js', 'lib/dom.min.js',
         'lib/feedback.js', 'lib/settings.js', 'lib/styles.js', 'lib/sync.js', 'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
 
@@ -44,7 +44,7 @@
             btn.click()
             if (btnType == 'Continue') {
                 continueBtnClicked = true
-                feedback.notify(browserAPI.getMsg('notif_chatAutoContinued'), 'bottom-right')
+                feedback.notify(i18n.getMsg('notif_chatAutoContinued'), 'bottom-right')
                 if (config.autoScroll) try { chatgpt.scrollToBottom() } catch(err) {}
         }})
         setTimeout(checkBtnsToClick, continueBtnClicked ? 5000 : 500)
@@ -64,7 +64,7 @@
         checkBtnsToClick()
 
     // NOTIFY of status on load
-        feedback.notify(`${browserAPI.getMsg('mode_autoContinue')}: ${ browserAPI.getMsg('state_on').toUpperCase()}`)
+        feedback.notify(`${i18n.getMsg('mode_autoContinue')}: ${ i18n.getMsg('state_on').toUpperCase()}`)
     }
 
     // Monitor SCHEME PREF changes to update sidebar toggle + modal colors

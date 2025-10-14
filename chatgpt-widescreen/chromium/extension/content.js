@@ -8,7 +8,7 @@
 
     // Import JS resources
     for (const resource of [
-        'lib/browser.js', 'lib/chatbar.js', 'lib/chatgpt.min.js', 'lib/dom.min.js', 'lib/feedback.js',
+        'lib/i18n.js', 'lib/chatbar.js', 'lib/chatgpt.min.js', 'lib/dom.min.js', 'lib/feedback.js',
         'lib/settings.js', 'lib/styles.js', 'lib/sync.js', 'lib/ui.js', 'components/buttons.js', 'components/icons.js',
         'components/modals.js', 'components/tooltip.js'
     ]) await import(chrome.runtime.getURL(resource))
@@ -103,7 +103,7 @@
                 } else styles.fullWin.node.remove()
                 if (site != 'chatgpt') sync.mode('fullWindow') // since they don't monitor sidebar
             } else if (mode == 'fullscreen') {
-                if (config.f11) modals.alert(browserAPI.getMsg('alert_pressF11'), `${browserAPI.getMsg('alert_f11reason')}.`)
+                if (config.f11) modals.alert(i18n.getMsg('alert_pressF11'), `${i18n.getMsg('alert_f11reason')}.`)
                 else document.exitFullscreen()
                     .catch(err => console.error(app.symbol + ' » Failed to exit fullscreen', err))
             }
@@ -249,7 +249,7 @@
         else if ((event.key.startsWith('Esc') || event.keyCode == 27) && chatgpt.isTyping())
             try {
                 chatgpt.stop() ; requestAnimationFrame(() => !chatgpt.isTyping()
-                    && feedback.notify(browserAPI.getMsg('notif_chatStopped'), 'bottom-right'))
+                    && feedback.notify(i18n.getMsg('notif_chatStopped'), 'bottom-right'))
             } catch (err) {}
     })
 

@@ -11,7 +11,7 @@ window.modals = {
             : 'chromium'
     },
 
-    about() { // requires lib/browser.js + <app|env>
+    about() { // requires lib/i18n.js + <app|env>
         const { browser: { isPortrait }, ui: { scheme }} = env
 
         // Init buttons
@@ -27,19 +27,19 @@ window.modals = {
         const labelStyles = 'text-transform: uppercase ; font-size: 17px ; font-weight: bold ;'
                           + `color: ${ scheme == 'dark' ? 'white' : '#494141' }`
         const aboutModal = modals.alert(
-            `${app.symbol} ${browserAPI.getMsg('appName')}`, // title
-            `<span style="${labelStyles}">🧠 ${browserAPI.getMsg('about_author')}:</span> `
-                + `<a href="${app.author.url}">${browserAPI.getMsg('appAuthor')}</a> ${browserAPI.getMsg('about_and')}`
-                    + ` <a href="${app.urls.contributors}">${browserAPI.getMsg('about_contributors')}</a>\n`
-            + `<span style="${labelStyles}">🏷️ ${browserAPI.getMsg('about_version')}:</span> `
+            `${app.symbol} ${i18n.getMsg('appName')}`, // title
+            `<span style="${labelStyles}">🧠 ${i18n.getMsg('about_author')}:</span> `
+                + `<a href="${app.author.url}">${i18n.getMsg('appAuthor')}</a> ${i18n.getMsg('about_and')}`
+                    + ` <a href="${app.urls.contributors}">${i18n.getMsg('about_contributors')}</a>\n`
+            + `<span style="${labelStyles}">🏷️ ${i18n.getMsg('about_version')}:</span> `
                 + `<span class="about-em">${app.version}</span>\n`
-            + `<span style="${labelStyles}">📜 ${browserAPI.getMsg('about_openSourceCode')}:</span> `
+            + `<span style="${labelStyles}">📜 ${i18n.getMsg('about_openSourceCode')}:</span> `
                 + `<a href="${app.urls.github}" target="_blank" rel="nopener">`
                     + app.urls.github + '</a>\n'
-            + `<span style="${labelStyles}">🚀 ${browserAPI.getMsg('about_latestChanges')}:</span> `
+            + `<span style="${labelStyles}">🚀 ${i18n.getMsg('about_latestChanges')}:</span> `
                 + `<a href="${app.urls.github}/commits/main/${this.runtime}" target="_blank" rel="nopener">`
                     + `${app.urls.github}/commits/main/${this.runtime}</a>\n`
-            + `<span style="${labelStyles}">⚡ ${browserAPI.getMsg('about_poweredBy')}:</span> `
+            + `<span style="${labelStyles}">⚡ ${i18n.getMsg('about_poweredBy')}:</span> `
                 + `<a href="${app.urls.chatgptjs}" target="_blank" rel="noopener">chatgpt.js</a>`,
             modalBtns, '', 747
         )
@@ -60,18 +60,18 @@ window.modals = {
             if (/support|extensions/i.test(btn.textContent)) {
                 btn.replaceWith(btn = btn.cloneNode(true))
                 btn.onclick = () => this.safeWinOpen(app.urls[
-                    btn.textContent.includes(browserAPI.getMsg('btnLabel_getSupport')) ? 'support' : 'relatedExtensions' ])
+                    btn.textContent.includes(i18n.getMsg('btnLabel_getSupport')) ? 'support' : 'relatedExtensions' ])
             }
 
             // Prepend emoji + localize labels
             if (/updates/i.test(btn.textContent))
-                btn.textContent = `🚀 ${browserAPI.getMsg('btnLabel_checkForUpdates')}`
+                btn.textContent = `🚀 ${i18n.getMsg('btnLabel_checkForUpdates')}`
             else if (/support/i.test(btn.textContent))
-                btn.textContent = `🧠 ${browserAPI.getMsg('btnLabel_getSupport')}`
+                btn.textContent = `🧠 ${i18n.getMsg('btnLabel_getSupport')}`
             else if (/rate/i.test(btn.textContent))
-                btn.textContent = `⭐ ${browserAPI.getMsg('btnLabel_rateUs')}`
+                btn.textContent = `⭐ ${i18n.getMsg('btnLabel_rateUs')}`
             else if (/extensions/i.test(btn.textContent))
-                btn.textContent = `🤖 ${browserAPI.getMsg('btnLabel_moreAIextensions')}`
+                btn.textContent = `🤖 ${i18n.getMsg('btnLabel_moreAIextensions')}`
 
             // Hide Dismiss button
             else btn.style.display = 'none'
@@ -87,7 +87,7 @@ window.modals = {
         return alert
     },
 
-    feedback() { // requires lib/browser.js + app.sourceWebStore
+    feedback() { // requires lib/i18n.js + app.sourceWebStore
 
         // Init buttons
         const modalBtns = [function productHunt(){}, function softonic(){}]
@@ -99,7 +99,7 @@ window.modals = {
             )
 
         // Show modal
-        const feedbackModal = modals.alert(`${browserAPI.getMsg('alert_choosePlatform')}:`, '', modalBtns)
+        const feedbackModal = modals.alert(`${i18n.getMsg('alert_choosePlatform')}:`, '', modalBtns)
         feedbackModal.style.display = 'inline-table' // allow many buttons to fit
 
         // Hack buttons

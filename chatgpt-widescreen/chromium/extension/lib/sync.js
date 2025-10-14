@@ -52,8 +52,8 @@ window.sync = {
                 mode == 'fullWindow' && config.widescreen && config.widerChatbox ?
                     111 : 0) // delay if toggled to/from active WCB to avoid wrong width
             if (config.widerChatbox) styles.update({ key: 'chatbar' }) // sync WCB
-            feedback.notify(`${browserAPI.getMsg('mode_' + mode)} ${
-                               browserAPI.getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
+            feedback.notify(`${i18n.getMsg('mode_' + mode)} ${
+                               i18n.getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
         }
         if (typeof GM_info != 'undefined') toolbarMenu.refresh()
         config.modeSynced = true ; setTimeout(() => config.modeSynced = false, 100) // prevent repetition
