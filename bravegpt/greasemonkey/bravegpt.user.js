@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.12.4
+// @version               2025.10.14
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -720,9 +720,10 @@
                 .${app.slug}-chatbar-btn {
                     z-index: 560 ;
                     border: none ; float: right ; position: relative ; background: none ; cursor: pointer ;
-                    bottom: ${ env.browser.isFF ? 28 : 32 }px ;
+                    bottom: ${ env.browser.isFF ? 26 : 30 }px ;
+                    transform: scale(1.05) ; margin-right: 3px ; /* zoom 'em a bit */
                     ${ env.ui.app.scheme == 'dark' ? 'color: #aaa ; fill: #aaa ; stroke: #aaa'
-                                                    : 'color: lightgrey ; fill: lightgrey ; stroke: lightgrey' }}
+                                                   : 'color: lightgrey ; fill: lightgrey ; stroke: lightgrey' }}
                 .${app.slug}-chatbar-btn:hover {
                     color:  var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
                     fill:   var(--chatbar-btn-hover-color-${env.ui.app.scheme}-scheme) ;
