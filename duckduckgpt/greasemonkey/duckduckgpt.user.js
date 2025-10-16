@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.15.1
+// @version                2025.10.15.2
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -1865,8 +1865,9 @@
             const aboutModal = modals.alert(
                 `${app.symbol} ${app.msgs.appName}`, // title
                 `<span style="${labelStyles}">🧠 ${app.msgs.about_author}:</span> `
-                    + `<a href="${app.author[0].url}">${app.author[0].name}</a> ${app.msgs.about_and}`
-                        + ` <a href="${app.urls.contributors}">${app.msgs.about_contributors}</a>\n`
+                    + `<a href="${app.author[0].url}" target="_blank" rel="nopener">${app.author[0].name}</a> `
+                        + `${app.msgs.about_and} <a href="${app.urls.contributors}" target="_blank" rel="nopener">`
+                        + `${app.msgs.about_contributors}</a>\n`
                 + `<span style="${labelStyles}">🏷️ ${app.msgs.about_version}:</span> `
                     + `<span class="about-em">${app.version}</span>\n`
                 + `<span style="${labelStyles}">📜 ${app.msgs.about_openSourceCode}:</span> `

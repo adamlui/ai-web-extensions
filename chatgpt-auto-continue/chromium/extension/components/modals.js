@@ -29,8 +29,9 @@ window.modals = {
         const aboutModal = modals.alert(
             `${app.symbol} ${i18n.getMsg('appName')}`, // title
             `<span style="${labelStyles}">🧠 ${i18n.getMsg('about_author')}:</span> `
-                + `<a href="${app.author.url}">${i18n.getMsg('appAuthor')}</a> ${i18n.getMsg('about_and')}`
-                    + ` <a href="${app.urls.contributors}">${i18n.getMsg('about_contributors')}</a>\n`
+                + `<a href="${app.author.url}" target="_blank" rel="nopener">${i18n.getMsg('appAuthor')}</a> `
+                    + `${i18n.getMsg('about_and')} <a href="${app.urls.contributors} target="_blank" rel="nopener"">`
+                    + `${i18n.getMsg('about_contributors')}</a>\n`
             + `<span style="${labelStyles}">🏷️ ${i18n.getMsg('about_version')}:</span> `
                 + `<span class="about-em">${app.version}</span>\n`
             + `<span style="${labelStyles}">📜 ${i18n.getMsg('about_openSourceCode')}:</span> `

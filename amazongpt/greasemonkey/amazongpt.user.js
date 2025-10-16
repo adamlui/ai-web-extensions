@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.15.1
+// @version                2025.10.15.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1233,8 +1233,9 @@
             const aboutModal = modals.alert(
                 `${app.symbol} ${app.msgs.appName}`, // title
                 `<span style="${labelStyles}">🧠 ${app.msgs.about_author}:</span> `
-                    + `<a href="${app.author[0].url}">${app.author[0].name}</a> ${app.msgs.about_and}`
-                        + ` <a href="${app.urls.contributors}">${app.msgs.about_contributors}</a>\n`
+                    + `<a href="${app.author[0].url}" target="_blank" rel="nopener">${app.author[0].name}</a> `
+                        + `${app.msgs.about_and} <a href="${app.urls.contributors}" target="_blank" rel="nopener">`
+                        + `${app.msgs.about_contributors}</a>\n`
                 + `<span style="${labelStyles}">🏷️ ${app.msgs.about_version}:</span> `
                     + `<span class="about-em">${app.version}</span>\n`
                 + `<span style="${labelStyles}">📜 ${app.msgs.about_openSourceCode}:</span> `
