@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.16
+// @version               2025.10.16.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -2067,7 +2067,6 @@
                         document.removeEventListener(eventType, modals.handlers.drag[eventType]))
                     modals.draggingModal = null
                 }
-
             }
         },
 
@@ -2092,8 +2091,7 @@
             // Hack BG
             dom.addRisingParticles(modal)
             setTimeout(() => { // dim bg
-                modal.parentNode.style.backgroundColor = `rgba(67,70,72,${
-                    env.ui.app.scheme == 'dark' ? 0.62 : 0.33 })`
+                modal.parentNode.style.backgroundColor = `rgba(67,70,72,${ env.ui.app.scheme == 'dark' ? 0.62 : 0.33 })`
                 modal.parentNode.classList.add('animated')
             }, 100) // delay for transition fx
         },
@@ -2500,6 +2498,7 @@
         },
 
         stylize() {
+            const { scheme: appScheme } = env.ui.app
             if (!this.styles?.isConnected) document.head.append(this.styles ||= dom.create.style())
             this.styles.textContent = (
 
@@ -2521,20 +2520,20 @@
                     ${ env.browser.isPhone ? 'padding: 25px 31px !important' : '' }
                 }
                 .chatgpt-modal p { margin: 14px 0 -20px 4px ; font-size: 18px } /* pos/size modal msg */
-                .chatgpt-modal a { color: #${ env.ui.app.scheme == 'dark' ? '00cfff' : '1e9ebb' } !important }
+                .chatgpt-modal a { color: #${ appScheme == 'dark' ? '00cfff' : '1e9ebb' } !important }
                 .modal-buttons {
                     margin: 38px 0 1px ${ env.browser.isMobile ? 0 : -7 }px !important ; width: 100% }
                 .chatgpt-modal button { /* this.alert() buttons */
                     min-width: 123px ; padding: ${ env.browser.isMobile ? '5px' : '4px 8px' } !important ;
                     cursor: pointer ; border-radius: 0 !important ; height: 39px ;
-                    border: 1px solid ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }!important }
+                    border: 1px solid ${ appScheme == 'dark' ? 'white' : 'black' }!important }
                 .primary-modal-btn { background: black !important ; color: white !important }
                 .chatgpt-modal button:hover {
-                    ${ env.ui.app.scheme == 'light' ? // reduce intensity of light scheme hover glow
+                    ${ appScheme == 'light' ? // reduce intensity of light scheme hover glow
                         '--btn-shadow: 2px 1px 43px #00cfff70 ;' : '' }
                     color: inherit !important ; background-color: inherit !important /* remove color hacks */
                 }
-                ${ env.ui.app.scheme == 'dark' ? // darkmode chatgpt.alert() styles
+                ${ appScheme == 'dark' ? // darkmode chatgpt.alert() styles
                     `.chatgpt-modal > div, .chatgpt-modal button:not(.primary-modal-btn) {
                         color: white !important }
                     .primary-modal-btn { background: #00cfff !important ; color: black !important }
@@ -2546,9 +2545,8 @@
                     cursor: pointer ; width: 33px ; height: 33px ; border-radius: 20px
                 }
                 [class*=modal-close-btn] path {${
-                    env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white'
-                                                : 'stroke: #9f9f9f ; fill: #9f9f9f' }}
-                ${ env.ui.app.scheme == 'dark' ?  // invert dark mode hover paths
+                    appScheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: #9f9f9f ; fill: #9f9f9f' }}
+                ${ appScheme == 'dark' ?  // invert dark mode hover paths
                     '[class*=modal-close-btn]:hover path { stroke: black ; fill: black }' : '' }
                 [class*=modal-close-btn]:hover { background-color: #f2f2f2 } /* hover underlay */
                 [class*=modal-close-btn] svg { margin: 11.5px } /* center SVG for hover underlay */
@@ -2571,10 +2569,9 @@
                     position: absolute ; /* to be click-draggable */
                     opacity: 0 ; /* to fade-in */
                     background-image: linear-gradient(180deg, ${
-                       env.ui.app.scheme == 'dark' ? '#99a8a6 -200px, black 200px'
-                                                   : '#b6ebff -296px, white 171px' }) ;
-                    border: 1px solid ${ env.ui.app.scheme == 'dark' ? 'white' : '#b5b5b5' } !important ;
-                    color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' };
+                       appScheme == 'dark' ? '#99a8a6 -200px, black 200px' : '#b6ebff -296px, white 171px' }) ;
+                    border: 1px solid ${ appScheme == 'dark' ? 'white' : '#b5b5b5' } !important ;
+                    color: ${ appScheme == 'dark' ? 'white' : 'black' };
                     transform: translateX(-3px) translateY(7px) ; /* offset to move-in from */
                     transition: var(--fg-transition) ; /* fade-in + move-in */
                         -webkit-transition: var(--fg-transition) ; -moz-transition: var(--fg-transition) ;
@@ -2593,7 +2590,7 @@
                     font-family: var(--brand-font) ;
                     min-width: ${ env.browser.isPortrait ? 288 : 758 }px ; max-width: 75vw ; margin: 12px 23px ;
                     word-wrap: break-word ; border-radius: 15px ;
-                    ${ env.ui.app.scheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: black ; fill: black' };
+                    ${ appScheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: black ; fill: black' };
                   --shadow: 0 30px 60px rgba(0,0,0,0.12) ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) }
                 #${app.slug}-settings-title {
@@ -2606,13 +2603,13 @@
                     list-style: none ; padding: 0 ; margin: 0 ; /* hide bullets, override Brave ul margins */
                     width: ${ env.browser.isPortrait ? 100 : 50 }% } /* set width based on column cnt */
                 ${ env.browser.isPhone ? '' : `#${app.slug}-settings ul:first-of-type { /* color desktop middle sep */
-                    border-right: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }}`}
+                    border-right: 1px dotted ${ appScheme == 'dark' ? 'white' : 'black' }}`}
                 #${app.slug}-settings li {
-                    color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
-                    fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
-                    stroke: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
+                    color: ${ appScheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
+                    fill: ${ appScheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
+                    stroke: ${ appScheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
                     height: 37px ; padding: 7px 10px ; font-size: 14.5px ;
-                    border-bottom: 1px dotted ${ env.ui.app.scheme == 'dark' ? 'white' : 'black' }; /* add separators */
+                    border-bottom: 1px dotted ${ appScheme == 'dark' ? 'white' : 'black' }; /* add separators */
                     border-radius: 3px ; /* slightly round highlight strip */
                     ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' :
                         `transition: var(--settings-li-transition) ;
@@ -2621,9 +2618,9 @@
                             -o-transition: var(--settings-li-transition) ;
                             -ms-transition: var(--settings-li-transition)` }}
                 #${app.slug}-settings li.active {
-                    color: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }; /* for text */
-                    fill: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }; /* for icons */
-                    stroke: ${ env.ui.app.scheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }} /* for icons */
+                    color: ${ appScheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }; /* for text */
+                    fill: ${ appScheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }; /* for icons */
+                    stroke: ${ appScheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }} /* for icons */
                 #${app.slug}-settings li label { padding-right: 20px } /* right-pad labels so toggles don't hug */
                 #${app.slug}-settings li:last-of-type { border-bottom: none } /* remove last bottom-border /*
                 #${app.slug}-settings li, #${app.slug}-settings li label { cursor: pointer } /* add finger on hover */
@@ -2649,7 +2646,7 @@
                 ${ config.fgAnimationsDisabled ? '' // spin cycle arrows icon when scheme is Auto
                     : `#scheme-settings-entry svg[class*=arrowsCyclic],'
                             + '.chatgpt-notif svg[class*=arrowsCyclic] { animation: rotate 5s linear infinite }`}
-                #about-settings-entry span { color: ${ env.ui.app.scheme == 'dark' ? '#28ee28' : 'green' }}
+                #about-settings-entry span { color: ${ appScheme == 'dark' ? '#28ee28' : 'green' }}
                 #about-settings-entry > span { /* outer About status span */
                     width: ${ env.browser.isPortrait ? '15vw' : '95px' }; height: 20px ; overflow: hidden ;
                     ${ config.fgAnimationsDisabled ? '' : // fade edges
@@ -2661,7 +2658,7 @@
                     text-wrap: nowrap ; ${
                         config.fgAnimationsDisabled ? '' : 'animation: ticker linear 75s infinite' }}
                 @keyframes ticker { 0% { transform: translateX(100%) } 100% { transform: translateX(-2000%) }}
-                .about-em { color: ${ env.ui.app.scheme == 'dark' ? 'white' : 'green' } !important }`
+                .about-em { color: ${ appScheme == 'dark' ? 'white' : 'green' } !important }`
             )
         },
 
