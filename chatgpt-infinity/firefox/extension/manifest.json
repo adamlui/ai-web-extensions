@@ -3,7 +3,7 @@
   "name": "__MSG_appName__",
   "short_name": "ChatGPT ∞",
   "description": "__MSG_appDesc__",
-  "version": "2025.10.13.1",
+  "version": "2025.10.15",
   "author": "Adam Lui",
   "homepage_url": "https://chatgptinfinity.com",
   "default_locale": "en",
