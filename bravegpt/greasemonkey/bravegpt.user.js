@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.16.1
+// @version               2025.10.16.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1957,7 +1957,7 @@
             apiModal.querySelector('h2').style.justifySelf = 'center' // center title
             const btnsDiv = apiModal.querySelector('.modal-buttons')
             btnsDiv.style.cssText = `margin-top: 23px !important ; ${ env.browser.isPhone ? ''
-                : 'flex-wrap: wrap ; justify-content: center ; gap: 9px' }`  // gridify desktop btns
+                : 'flex-wrap: wrap ; justify-content: center ; gap: 9px' }` // gridify wide view btns
             btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
                 if (idx == 0) btn.style.display = 'none' // hide Dismiss button
                 else btn.classList.toggle('primary-modal-btn', // emphasize preferred API

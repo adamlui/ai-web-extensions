@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.16.1
+// @version                2025.10.16.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1328,7 +1328,7 @@
             apiModal.querySelector('h2').style.justifySelf = 'center' // center title
             const btnsDiv = apiModal.querySelector('.modal-buttons')
             btnsDiv.style.cssText = `margin: 0 !important ; ${ env.browser.isPhone ? ''
-                : 'flex-wrap: wrap ; justify-content: center ; gap: 9px' }`  // gridify desktop btns
+                : 'flex-wrap: wrap ; justify-content: center ; gap: 9px' }` // gridify wide view btns
             btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
                 if (idx == 0) btn.style.display = 'none' // hide Dismiss button
                 else btn.classList.toggle('primary-modal-btn', // emphasize preferred API
