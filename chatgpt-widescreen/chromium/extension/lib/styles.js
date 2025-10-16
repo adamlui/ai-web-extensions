@@ -101,9 +101,10 @@ window.styles = {
             return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
                 chatgpt: `
                     ${outerDivSelector} { max-width: ${wsWidth}px !important } /* widen outer div */
-                    div[class*=tableContainer] { min-width: 100vw }  /* widen tables */
-                    div[class*=tableWrapper] { min-width: ${wsWidth}px }
-                    div[class*=tableWrapper] > table { width: 100% }`,
+                    /* widen tables */
+                        div[class*=tableContainer] { margin: 0 ; width: auto }  
+                        div[class*=tableWrapper] { margin: 0 ; min-width: ${wsWidth}px }
+                        div[class*=tableWrapper] > table { width: 100% }`,
                 poe: `
                     ${outerDivSelector} { width: calc(${wsWidth}px - 4%) !important } /* widen outer div */
                     div[class^=Message] { max-width: 100% !important }` // widen speech bubbles
