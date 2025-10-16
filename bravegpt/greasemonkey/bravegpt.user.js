@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.15.2
+// @version               2025.10.16
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1956,8 +1956,8 @@
             // Re-style elems
             apiModal.querySelector('h2').style.justifySelf = 'center' // center title
             const btnsDiv = apiModal.querySelector('.modal-buttons')
-            btnsDiv.style.cssText = ` /* y-pad, gridify */
-                margin: 18px 0px 14px !important ; display: grid ; grid-template-columns: repeat(3, 1fr) ; gap: 10px`
+            btnsDiv.style.cssText = `margin-top: 23px !important ; ${ env.browser.isPhone ? ''
+                : 'flex-wrap: wrap ; justify-content: center ; gap: 9px' }`  // gridify desktop btns
             btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
                 if (idx == 0) btn.style.display = 'none' // hide Dismiss button
                 else btn.classList.toggle('primary-modal-btn', // emphasize preferred API
@@ -1983,8 +1983,9 @@
 
             // Re-style button cluster
             const btnsDiv = feedbackModal.querySelector('.modal-buttons')
-            btnsDiv.style.cssText += `display: flex ; flex-wrap: wrap ; justify-content: center ;
-                                      margin: 18px 0 6px !important` // close gap between title/btns
+            if (!env.browser.isPhone) // gridify wide view btns
+                btnsDiv.style.cssText = 'flex-wrap: wrap ; justify-content: center ; gap: 3px'
+
             // Hack buttons
             btns = btnsDiv.querySelectorAll('button')
             btns.forEach((btn, idx) => {
@@ -2513,8 +2514,12 @@
                 // Main modal styles
               + `@keyframes modal-zoom-fade-out {
                     0% { opacity: 1 } 50% { opacity: 0.25 ; transform: scale(1.05) }
-                    100% { opacity: 0 ; transform: scale(1.35) }}
-                .chatgpt-modal > div { background-color: white !important ; color: #202124 }
+                    100% { opacity: 0 ; transform: scale(1.35) }
+                }
+                .chatgpt-modal > div {
+                    background-color: white !important ; color: #202124 ;
+                    ${ env.browser.isPhone ? 'padding: 25px 31px !important' : '' }
+                }
                 .chatgpt-modal p { margin: 14px 0 -20px 4px ; font-size: 18px } /* pos/size modal msg */
                 .chatgpt-modal a { color: #${ env.ui.app.scheme == 'dark' ? '00cfff' : '1e9ebb' } !important }
                 .modal-buttons {

@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.15.2
+// @version                2025.10.16
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -1958,8 +1958,8 @@
             // Re-style elems
             apiModal.querySelector('h2').style.justifySelf = 'center' // center title
             const btnsDiv = apiModal.querySelector('.modal-buttons')
-            btnsDiv.style.cssText = ` /* y-pad, gridify */
-                margin: 18px 0px 14px !important ; display: grid ; grid-template-columns: repeat(3, 1fr) ; gap: 10px`
+            btnsDiv.style.cssText = `margin: 18px 0px 6px !important ; ${ env.browser.isPhone ? ''
+                : 'flex-wrap: wrap ; justify-content: center ; gap: 9px' }`  // gridify desktop btns
             btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
                 if (idx == 0) btn.style.display = 'none' // hide Dismiss button
                 else btn.classList.toggle('primary-modal-btn', // emphasize preferred API
@@ -1985,8 +1985,9 @@
 
             // Re-style button cluster
             const btnsDiv = feedbackModal.querySelector('.modal-buttons')
-            btnsDiv.style.cssText += `display: flex ; flex-wrap: wrap ; justify-content: center ;
-                                      margin-top: -2px !important` // close gap between title/btns
+            btnsDiv.style.cssText = `margin-top: 12px !important ; ${ env.browser.isPhone ? ''
+                : 'flex-wrap: wrap ; justify-content: center ; gap: 9px' }`  // gridify desktop btns
+
             // Hack buttons
             btns = btnsDiv.querySelectorAll('button')
             btns.forEach((btn, idx) => {
@@ -2516,14 +2517,16 @@
                 // Main modal styles
               + `@keyframes modal-zoom-fade-out {
                     0% { opacity: 1 } 50% { opacity: 0.25 ; transform: scale(1.05) }
-                    100% { opacity: 0 ; transform: scale(1.35) }}
+                    100% { opacity: 0 ; transform: scale(1.35) }
+                }
                 .chatgpt-modal > div {
-                    padding: 20px 25px 24px 31px !important ; /* increase alert padding */
-                    background-color: white !important ; color: black }
+                    background-color: white !important ; color: black ;
+                    padding: 20px 25px 24px 31px !important /* increase alert padding */
+                }
                 .chatgpt-modal p { margin: -8px 0 -14px 4px ; font-size: 1.55rem } /* pos/size modal msg */
                 .chatgpt-modal a { color: #${ env.ui.app.scheme == 'dark' ? '00cfff' : '1e9ebb' } !important }
                 .modal-buttons {
-                    margin: 24px -5px -3px ${ env.browser.isMobile ? -5 : -15 }px !important ; width: 100% }
+                    margin: 24px -5px -3px ${ env.browser.isMobile ? -5 : -11 }px !important ; width: 100% }
                 .chatgpt-modal button { /* this.alert() buttons */
                     min-width: 121px ; padding: ${ env.browser.isMobile ? '7px' : '4px 15px' } !important ;
                     cursor: pointer ; border-radius: 0 !important ; height: 39px ;

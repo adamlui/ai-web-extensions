@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.15.2
+// @version                2025.10.16
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1327,8 +1327,8 @@
             // Re-style elems
             apiModal.querySelector('h2').style.justifySelf = 'center' // center title
             const btnsDiv = apiModal.querySelector('.modal-buttons')
-            btnsDiv.style.cssText = ` /* y-pad, gridify */
-                margin: 18px 0px 14px !important ; display: grid ; grid-template-columns: repeat(3, 1fr) ; gap: 10px`
+            btnsDiv.style.cssText = `margin: 0 !important ; ${ env.browser.isPhone ? ''
+                : 'flex-wrap: wrap ; justify-content: center ; gap: 9px' }`  // gridify desktop btns
             btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
                 if (idx == 0) btn.style.display = 'none' // hide Dismiss button
                 else btn.classList.toggle('primary-modal-btn', // emphasize preferred API
@@ -1829,10 +1829,12 @@
                 // Main modal styles
               + `@keyframes modal-zoom-fade-out {
                     0% { opacity: 1 } 50% { opacity: 0.25 ; transform: scale(1.05) }
-                    100% { opacity: 0 ; transform: scale(1.35) }}
+                    100% { opacity: 0 ; transform: scale(1.35) }
+                }
                 .chatgpt-modal > div {
-                    padding: 20px 30px 24px 17px !important ; /* increase alert padding */
-                    background-color: white !important ; color: black }
+                    background-color: white !important ; color: black ;
+                    padding: ${ env.browser.isPhone ? '22px' : '20px 30px 24px 17px' }!important
+                }
                 .chatgpt-modal p { margin: -8px 0 -14px 4px ; font-size: 22px ; line-height: 31px }
                 .chatgpt-modal a { color: #${ env.ui.app.scheme == 'dark' ? '00cfff' : '1e9ebb' } !important }
                 .modal-buttons {
