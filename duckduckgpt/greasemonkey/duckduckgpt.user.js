@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.15
+// @version                2025.10.15.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2032,7 +2032,7 @@
                     modals.draggingModal = event.currentTarget
                     event.preventDefault() // prevent sub-elems like icons being draggable
                     Object.assign(modals.draggingModal.style, { // update styles
-                        transform: 'scale(1.05)', willChange: 'transform',
+                        transform: 'scale(1.05)',
                         transition: '0.1s', '-webkit-transition': '0.1s', '-moz-transition': '0.1s',
                             '-o-transition': '0.1s', '-ms-transition': '0.1s'
                     })
@@ -2059,7 +2059,7 @@
 
                 mouseup() { // restore styles/pointer events, remove listeners, reset modals.draggingModal
                     Object.assign(modals.draggingModal.style, { // restore styles
-                        cursor: 'inherit', transform: 'scale(1)', willChange: 'auto',
+                        cursor: 'inherit', transform: 'scale(1)',
                         transition: 'inherit', '-webkit-transition': 'inherit', '-moz-transition': 'inherit',
                             '-o-transition': 'inherit', '-ms-transition': 'inherit'
                     })

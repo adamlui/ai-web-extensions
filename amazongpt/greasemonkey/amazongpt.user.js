@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.15
+// @version                2025.10.15.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1364,7 +1364,7 @@
                     modals.draggingModal = event.currentTarget
                     event.preventDefault() // prevent sub-elems like icons being draggable
                     Object.assign(modals.draggingModal.style, { // update styles
-                        transform: 'scale(1.05)', willChange: 'transform',
+                        transform: 'scale(1.05)',
                         transition: '0.1s', '-webkit-transition': '0.1s', '-moz-transition': '0.1s',
                             '-o-transition': '0.1s', '-ms-transition': '0.1s'
                     })
@@ -1388,7 +1388,7 @@
 
                 mouseup() { // restore styles/pointer events, remove listeners, reset modals.draggingModal
                     Object.assign(modals.draggingModal.style, { // restore styles
-                        cursor: 'inherit', transform: 'scale(1)', willChange: 'auto',
+                        cursor: 'inherit', transform: 'scale(1)',
                         transition: 'inherit', '-webkit-transition': 'inherit', '-moz-transition': 'inherit',
                             '-o-transition': 'inherit', '-ms-transition': 'inherit'
                     })
