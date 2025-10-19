@@ -8,6 +8,7 @@
 // NOTE: Pass <--no-push|-np> to skip git push
 
 (async () => {
+    'use strict'
 
     const chatbots = ['amazongpt', 'bravegpt', 'duckduckgpt', 'googlegpt']
 

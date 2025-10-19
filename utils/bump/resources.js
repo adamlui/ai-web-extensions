@@ -7,6 +7,7 @@
 // NOTE: Pass --dev to not use cachePaths.bumpUtils for latest ver
 
 (async () => {
+    'use strict'
 
     // Parse ARGS
     const args = process.argv.slice(2)
