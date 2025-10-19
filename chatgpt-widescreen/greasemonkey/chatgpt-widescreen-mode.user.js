@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.10.19
+// @version             2025.10.19.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -841,7 +841,7 @@
             }
 
             // Remove buttons on Canvas mode toggle-on
-            if (canvasWasOpen ^ chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }
+            if (canvasWasOpen != chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }
 
         // Update Widescreen styles on Poe nav
         } else if (location.pathname != prevPath && config.widescreen) {
@@ -866,7 +866,7 @@
     if (sites[env.site].selectors.btns.sidebar && sites[env.site].hasSidebar) {
         const sidebarObserver = new ResizeObserver( // sync config.fullWindow ⇆ sidebar width + update styles
             async () => {
-                if ((config.fullWindow ^ await ui.isFullWin()) && !config.modeSynced) sync.mode('fullWindow')
+                if ((config.fullWindow != await ui.isFullWin()) && !config.modeSynced) sync.mode('fullWindow')
                 if (env.site == 'chatgpt' && config.widescreen) {
                     styles.update({ key: 'widescreen' }) // for new window.wsMaxWidth
                     if (config.widerChatbox) styles.update({ key: 'chatbar' })

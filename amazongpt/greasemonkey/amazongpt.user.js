@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.19
+// @version                2025.10.19.1 
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1650,7 +1650,7 @@
                             else {
                                 settings.save(key, !config[key]) // update config
                                 feedback.notify(`${settings.controls[key].label} ${
-                                    menus.toolbar.state.words[+(key.includes('Disabled') ^ config[key])]}`)
+                                    menus.toolbar.state.words[+(key.includes('Disabled') != config[key])]}`)
                             }
                         }
 

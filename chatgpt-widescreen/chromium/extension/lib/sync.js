@@ -14,9 +14,9 @@ window.sync = {
             chatbar.reset()
             if (site == 'chatgpt') document.body.removeEventListener('wheel', window.enableWheelScroll)
         } else if (!isDisabled) { // sync modes/tweaks/btns
-            if (config.widescreen ^ styles.widescreen.node?.isConnected) { // sync Widescreen
+            if (config.widescreen != styles.widescreen.node?.isConnected) { // sync Widescreen
                 suppressNotifs() ; toggleMode('widescreen') }
-            if (sites[site].hasSidebar && ( config.fullWindow ^ await ui.isFullWin() )) { // sync Full-Window
+            if (sites[site].hasSidebar && (config.fullWindow != await ui.isFullWin())) { // sync Full-Window
                 suppressNotifs() ; toggleMode('fullWindow') }
             styles.update({ keys: ['chatbar', 'tweaks', 'widescreen'] }) // sync HH/HF/TCB/WCB/NCB/BA/WW
             chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos

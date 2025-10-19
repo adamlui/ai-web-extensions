@@ -275,7 +275,7 @@
         env.extensionWasDisabled = extensionIsDisabled()
         masterToggle.switch.classList.toggle('on') ; settings.save('extensionDisabled', !config.extensionDisabled)
         sync.configToUI({ updatedKey: 'extensionDisabled' }) ; sync.fade()
-        if (env.extensionWasDisabled ^ extensionIsDisabled()) notify(`${app.name} 🧩 ${
+        if (env.extensionWasDisabled != extensionIsDisabled()) notify(`${app.name} 🧩 ${
             i18n.getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
     }
 
@@ -351,7 +351,7 @@
             siteSettings.labelDiv.classList.toggle('anchored', env.site == site && config[`${site}Disabled`])
             if (env.site == site) { // fade/notify if setting of active site toggled
                 sync.fade()
-                if (env.extensionWasDisabled ^ extensionIsDisabled()) notify(`${app.name} 🧩 ${
+                if (env.extensionWasDisabled != extensionIsDisabled()) notify(`${app.name} 🧩 ${
                     i18n.getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
             }
         }

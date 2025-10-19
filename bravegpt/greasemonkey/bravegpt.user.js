@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.19
+// @version               2025.10.19.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1149,7 +1149,7 @@
                     icons.create({ key: `widescreen${ config.widerSidebar ? 'Wide' : 'Tall' }`})))
             if (modals.settings.get()) { // update visual state of Settings toggles
                 const sidebarToggle = document.querySelector(`[id*=${mode}] input`)
-                if (sidebarToggle.checked ^ config[`${mode}Sidebar`]) modals.settings.toggle.switch(sidebarToggle)
+                if (sidebarToggle.checked != config[`${mode}Sidebar`]) modals.settings.toggle.switch(sidebarToggle)
             }
 
             // Notify of mode change
@@ -2333,7 +2333,7 @@
                             else {
                                 settings.save(key, !config[key]) // update config
                                 feedback.notify(`${settings.controls[key].label} ${
-                                    menus.toolbar.state.words[+(key.includes('Disabled') ^ config[key])]}`)
+                                    menus.toolbar.state.words[+(key.includes('Disabled') != config[key])]}`)
                             }
                         }
 
