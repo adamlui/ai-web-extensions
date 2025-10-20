@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.20.1
+// @version                2025.10.20.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1344,7 +1344,14 @@
 
             dismiss: { // to dismiss native modals
                 click(event) {
-                    const clickedElem = event.target
+                    const clickedElem = event.target,
+                          settingsCrown = document.querySelector(`#${app.slug}-settings > img`)
+                    if (settingsCrown) { // return if cursor within bounds
+                        const crownRect = settingsCrown.getBoundingClientRect()
+                        if (event.clientX >= crownRect.left && event.clientX <= crownRect.right
+                            && event.clientY >= crownRect.top && event.clientY <= crownRect.bottom
+                        ) return
+                    }
                     if (clickedElem == event.currentTarget || clickedElem.closest('[class*=-close-btn]'))
                         modals.hide((clickedElem.closest('[class*=-modal-bg]') || clickedElem).firstChild)
                 },
