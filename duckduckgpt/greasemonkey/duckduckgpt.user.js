@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.20
+// @version                2025.10.20.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2535,9 +2535,9 @@
                     ${ appScheme == 'dark' ? 'background: none ; color: white' : '' }}
                 .primary-modal-btn { background: black !important ; color: white !important }
                 .chatgpt-modal button:hover {
-                    ${ appScheme == 'light' ? // reduce intensity of light scheme hover glow
-                        '--btn-shadow: 2px 1px 43px #00cfff70 ;' : '' }
-                    color: inherit !important ; background-color: inherit !important /* remove color hacks */
+                  --btn-shadow: ${ appScheme == 'light' ? '2px 1px 43px #00cfff70' : '2px 1px 54px #00cfff' };
+                    color: inherit !important ; /* remove color hack */
+                    background-color: rgb(${ appScheme == 'light' ? '192 223 227 / 5%' : '43 156 171 / 43%' }) !important
                 }
                 ${ appScheme == 'dark' ? // darkmode chatgpt.alert() styles
                     `.chatgpt-modal > div, .chatgpt-modal button:not(.primary-modal-btn) {

@@ -192,10 +192,12 @@ window.modals = {
                 border: 1px solid ${ scheme == 'dark' ? 'white' : 'black' } !important ;
                 padding: 8px !important ; min-width: 102px /* resize */
             }
+            .${this.class} button:not([class*=primary]) { background: none }
             .${this.class} button:hover {
                 ${ scheme == 'light' ? // reduce intensity of light scheme hover glow
                     '--btn-shadow: 2px 1px 43px #00cfff70 ;' : '' }
-                color: inherit !important ; background-color: inherit !important /* remove color hacks */
+                color: inherit !important ; /* remove color hack */
+                background-color: rgb(${ scheme == 'light' ? '192 223 227 / 5%' : '43 156 171 / 43%' })
             }
             ${ !isMobile ? `.${this.class} .modal-buttons { margin-left: -13px !important }` : '' }
             .about-em { color: ${ scheme == 'dark' ? 'white' : 'green' } !important }`
