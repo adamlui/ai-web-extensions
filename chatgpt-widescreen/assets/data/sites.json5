@@ -33,7 +33,7 @@
         },
         "modals": {
           "deepResearch": "div[data-testid=modal-deep-research-mini-nux]", // https://i.imgur.com/3GLab1m.png
-          "guest": "div[data-testid^=modal-no-auth]" // https://i.imgur.com/ItLsJLT.png
+          "guest": "div[data-testid^=modal-no-auth]:has(a[href=\"#\"])" // https://i.imgur.com/ItLsJLT.png
         },
         "popups": {
           "announcement": // https://imgur.com/a/TIKFbeA
