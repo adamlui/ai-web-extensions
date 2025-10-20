@@ -77,7 +77,7 @@
                     Object.entries(sidebars).forEach(([side, bar]) => // push fat/visible ones to hide
                         bar && dom.get.computedWidth(bar) > 100 && sidebarsToHide.push({ side, bar }))
                     sidebarsToHide.forEach(({ side, bar }) => { // hide'em
-                        if (side == 'left') sidebarToggle.click() ; else bar.style.display = 'none' })
+                        if (side == 'left') sidebarToggle?.click() ; else bar.style.display = 'none' })
                 } else { // poe
                     document.head.append(styles.fullWin.node)
                     sync.mode('fullWindow') // since it doesn't monitor sidebar

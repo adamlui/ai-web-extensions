@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.19.2
+// @version               2025.10.20
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1186,7 +1186,7 @@
                 msg = msg.replace(switchPhrase, `<a class="alert-link" href="#">${switchPhrase}</a>`)
                 const alert = modals.alert(`${app.msgs.mode_streaming} ${app.msgs.alert_unavailable}`, msg)
                 alert.querySelector('[href="#"]').onclick = () => {
-                    alert.querySelector('.modal-close-btn').click() ; toggle.proxyMode() }
+                    alert.querySelector('.modal-close-btn')?.click() ; toggle.proxyMode() }
             } else { // functional toggle
                 settings.save('streamingDisabled', !config.streamingDisabled)
                 feedback.notify(`${settings.controls.streamingDisabled.label} ${

@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.10.19.1
+// @version             2025.10.20
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -466,7 +466,7 @@
                     Object.entries(sidebars).forEach(([side, bar]) => // push fat/visible ones to hide
                         bar && dom.get.computedWidth(bar) > 100 && sidebarsToHide.push({ side, bar }))
                     sidebarsToHide.forEach(({ side, bar }) => { // hide'em
-                        if (side == 'left') sidebarToggle.click() ; else bar.style.display = 'none' })
+                        if (side == 'left') sidebarToggle?.click() ; else bar.style.display = 'none' })
                 } else { // poe
                     document.head.append(styles.fullWin.node)
                     sync.mode('fullWindow') // since it doesn't monitor sidebar
