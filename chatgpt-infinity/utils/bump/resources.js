@@ -4,6 +4,7 @@
 // NOTE: Doesn't git commit to allow script editing from breaking changes
 
 (async () => {
+    'use strict'
 
     // Import LIBS
     const fs = require('fs'), // to read/write files

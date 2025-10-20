@@ -7,6 +7,7 @@
 // NOTE: Pass --<no-<commit|push>|nc|np> to skip git commit/push
 
 (async () => {
+    'use strict'
 
     // Parse ARGS
     const args = process.argv.slice(2)
