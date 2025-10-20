@@ -6,7 +6,7 @@ const appReady = (async () => {
     // Init APP data
     const app = {
         version: chrome.runtime.getManifest().version,
-        commitHashes: { app: 'fd9aa83' } // for cached app.json + sites.json5
+        commitHashes: { app: 'f71d10a' } // for cached app.json + sites.json5
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.commitHashes.app}` }
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
