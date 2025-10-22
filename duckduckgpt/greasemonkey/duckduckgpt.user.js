@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.21.1
+// @version                2025.10.21.2
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -262,8 +262,8 @@
     } ; ['Chromium', 'Firefox', 'Chrome', 'Edge', 'Brave', 'Mobile'].forEach(platform =>
         env.browser[`is${ platform == 'Firefox' ? 'FF' : platform }`] = chatgpt.browser['is' + platform]())
     Object.assign(env.browser, {
-        get isPortrait() { return this.isMobile && (innerWidth < innerHeight) },
-        get isPhone() { return this.isMobile && innerWidth <= 480 }
+        get isPortrait() { return env.browser.isMobile && (innerWidth < innerHeight) },
+        get isPhone() { return env.browser.isMobile && innerWidth <= 480 }
     })
     env.userLocale = env.browser.language.includes('-') ? env.browser.language.split('-')[1].toLowerCase() : ''
     env.scriptManager.supportsStreaming = /Tampermonkey|ScriptCat/.test(env.scriptManager.name)

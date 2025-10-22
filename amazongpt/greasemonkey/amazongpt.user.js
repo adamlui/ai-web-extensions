@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.21
+// @version                2025.10.21.1
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -140,8 +140,8 @@
     } ; ['Chromium', 'Firefox', 'Chrome', 'Edge', 'Brave', 'Mobile'].forEach(platform =>
         env.browser[`is${ platform == 'Firefox' ? 'FF' : platform }`] = chatgpt.browser['is' + platform]())
     Object.assign(env.browser, {
-        get isPortrait() { return this.isMobile && (innerWidth < innerHeight) },
-        get isPhone() { return this.isMobile && innerWidth <= 480 }
+        get isPortrait() { return env.browser.isMobile && (innerWidth < innerHeight) },
+        get isPhone() { return env.browser.isMobile && innerWidth <= 480 }
     })
     env.scriptManager.supportsStreaming = /Tampermonkey|ScriptCat/.test(env.scriptManager.name)
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
