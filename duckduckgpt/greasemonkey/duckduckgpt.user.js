@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.20.3
+// @version                2025.10.21
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -449,13 +449,10 @@
                         : `1px solid #${ appScheme == 'light' ? 'e5e5e5' : '3b3b3b' }`};
                   --app-gradient-bg: linear-gradient(180deg, ${
                         appScheme == 'dark' ? '#99a8a6 -245px, black 185px' : '#b6ebff -163px, white 65px' }) ;
-                  --app-hover-shadow-light-scheme: 0 1px 4px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.08) ;
-                  --app-hover-shadow-dark-scheme:  0 1px 4px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.38) ;
                   --app-anchored-shadow: 0 15px 52px rgb(0,0,${ appScheme == 'light' ? '7,0.06' : '11,0.22' }) ;
                   --app-transition: opacity 0.5s ease, transform 0.5s ease, /* for 1st fade-in */
                                     bottom 0.1s cubic-bezier(0,0,0.2,1), /* smoothen Anchor Y min/restore */
                                     width 0.167s cubic-bezier(0,0,0.2,1) ; /* smoothen Anchor X expand/shrink */
-                  --app-shadow-transition: box-shadow 0.15s ease ; /* for app:hover to not trigger on hover-off */
                   --standby-btn-zoom: scale(1.015) ; --standby-btn-transition: all 0.18s ease ;
                   --btn-transition: transform 0.15s ease, /* for hover-zoom */
                                     opacity 0.25s ease-in-out ; /* + btn-zoom-fade-out + .app-hover-only shows */
@@ -510,16 +507,6 @@
                        -o-transition: var(--app-transition) ; -ms-transition: var(--app-transition) }
                 #${app.slug}:has(.${app.slug}-alert) { /* app alerts */
                     border: var(--app-border) ; background-image: var(--app-gradient-bg) }
-                ${ env.browser.isPhone ? '' : appScheme != env.ui.site.scheme ?
-                      // add hover shadow to bordered/un-anchored desktop app div
-                        `#${app.slug}:hover, #${app.slug}:active {
-                            box-shadow: var(--app-hover-shadow-${appScheme}-scheme) ;
-                            transition: var(--app-shadow-transition) ;
-                               -webkit-transition: var(--app-shadow-transition) ;
-                               -moz-transition: var(--app-shadow-transition) ;
-                               -o-transition: var(--app-shadow-transition) ;
-                               -ms-transition: var(--app-shadow-transition) }`
-                    : '' }
                 #${app.slug} .app-hover-only { /* hide app-hover-only elems */
                     position: absolute ; left: -9999px ; opacity: 0 ; /* using position to support transitions */
                     width: 0 } /* to support width calcs */
