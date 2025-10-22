@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.21.3
+// @version                2025.10.22
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2395,6 +2395,7 @@
             get() { return document.getElementById(`${app.slug}-settings`) },
 
             show() {
+                modals.settings.stylize()
                 const settingsContainer = modals.settings.get()?.parentNode || modals.settings.createAppend()
                 settingsContainer.style.display = '' // show modal
                 if (env.browser.isMobile) { // scale 93% to viewport sides
@@ -2403,6 +2404,93 @@
                     settingsModal.style.transform = `scale(${modals.settings.scaleRatio})`
                 }
                 return settingsContainer.firstChild
+            },
+
+            stylize() {
+                const { scheme: appScheme } = env.ui.app
+                if (!this.styles?.isConnected) document.head.append(this.styles ||= dom.create.style())
+                this.styles.textContent = `
+                    #${app.slug}-settings {
+                        min-width: ${ env.browser.isPortrait ? 288 : 698 }px ; max-width: 75vw ;
+                        word-wrap: break-word ; border-radius: 15px ;
+                        ${ appScheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: black ; fill: black' };
+                      --shadow: 0 30px 60px rgba(0,0,0,0.12) ; box-shadow: var(--shadow) ;
+                           -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow)
+                    }
+                    #${app.slug}-settings-title {
+                        font-weight: bold ; line-height: 19px ; text-align: center ; margin: 0 3px -3px 0 }
+                    #${app.slug}-settings-title h4 {
+                        font-size: ${ env.browser.isPortrait ? 26 : 31 }px ; font-weight: bold ; margin-top: -39px }
+                    #${app.slug}-settings ul {
+                        align-content: center ; /* for symmetrized gaps when odd num of entries */
+                        list-style: none ; padding: 0 ; margin-bottom: 2px ; /* hide bullets, close bottom gap */
+                        width: ${ env.browser.isPortrait ? 100 : 50 }% /* set width based on column cnt */
+                    }
+                    ${ env.browser.isCompact ? '' : `#${app.slug}-settings ul:first-of-type { /* color desktop middle sep */
+                        border-right: 1px dotted ${ appScheme == 'dark' ? 'white' : 'black' }}`}
+                    #${app.slug}-settings li {
+                        color: ${ appScheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
+                        fill: ${ appScheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
+                        stroke: ${ appScheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
+                        height: 25px ; padding: 4px 10px ; font-size: 14.5px ;
+                        border-bottom: 1px dotted ${ appScheme == 'dark' ? 'white' : 'black' }; /* add separator */
+                        border-radius: 3px ; /* slightly round highlight strip */
+                        ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' :
+                            `transition: var(--settings-li-transition) ;
+                                -webkit-transition: var(--settings-li-transition) ;
+                                -moz-transition: var(--settings-li-transition) ;
+                                -o-transition: var(--settings-li-transition) ;
+                                -ms-transition: var(--settings-li-transition)` }
+                    }
+                    #${app.slug}-settings li.active {
+                        color: ${ appScheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };
+                        fill: ${ appScheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };
+                        stroke: ${ appScheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }
+                    }
+                    #${app.slug}-settings li label { padding-right: 20px } /* right-pad labels so toggles don't hug */
+                    #${app.slug}-settings li:last-of-type { border-bottom: none } /* remove last bottom-border */
+                    #${app.slug}-settings li, #${app.slug}-settings li label { cursor: pointer } /* add finger on hover */
+                    #${app.slug}-settings li:hover {
+                        background: rgba(100,149,237,0.88) ; color: white ; fill: white ; stroke: white ;
+                        ${ env.browser.isMobile ? '' : 'transform: scale(1.15)' }
+                    }
+                    #${app.slug}-settings li > input { float: right } /* pos toggles */
+                    #${app.slug}-settings li > .track {
+                        position: relative ; left: -1px ; bottom: -5.5px ; float: right ;
+                        background-color: #ccc ; width: 26px ; height: 13px ; border-radius: 28px ;
+                        ${ config.fgAnimationsDisabled ? '' :
+                            `transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
+                                -o-transition: 0.4s ; -ms-transition: 0.4s` }
+                    }
+                    #${app.slug}-settings li .knob {
+                        position: absolute ; left: 1px ; bottom: 1px ; content: "" ;
+                        background-color: white ; width: 11px ; height: 11px ; border-radius: 28px ;
+                        ${ config.fgAnimationsDisabled ? '' :
+                            `transition: 0.2s ; -webkit-transition: 0.2s ; -moz-transition: 0.2s ;
+                                -o-transition: 0.2s ; -ms-transition: 0.2s` }
+                    }
+                    #scheme-settings-entry > span { margin: 3px -2px 0 } /* align Scheme status */
+                    #scheme-settings-entry > span > svg { /* v-align/left-pad Scheme status icon */
+                        position: relative ; top: 2px ; margin-left: 4px }
+                    ${ config.fgAnimationsDisabled ? '' // spin cycle arrows icon when scheme is Auto
+                        : `#scheme-settings-entry svg[class*=arrowsCyclic],
+                                .chatgpt-notif svg[class*=arrowsCyclic] { animation: rotate 5s linear infinite }`
+                    }
+                    #about-settings-entry span { color: ${ appScheme == 'dark' ? '#28ee28' : 'green' }}
+                    #about-settings-entry > span { /* outer About status span */
+                        width: ${ env.browser.isPortrait ? '15vw' : '95px' }; height: 20px ; overflow: hidden ;
+                        ${ config.fgAnimationsDisabled ? '' : // fade edges
+                                `mask-image: linear-gradient(
+                                    to right, transparent, black 20%, black 89%, transparent) ;
+                        -webkit-mask-image: linear-gradient(
+                                    to right, transparent, black 20%, black 89%, transparent) ;`}
+                    }
+                    #about-settings-entry > span > div {
+                        text-wrap: nowrap ;
+                        ${ config.fgAnimationsDisabled ? '' : 'animation: ticker linear 75s infinite' }
+                    }
+                    @keyframes ticker { 0% { transform: translateX(100%) } 100% { transform: translateX(-2000%) }}
+                    .about-em { color: ${ appScheme == 'dark' ? 'white' : 'green' } !important }`
             },
 
             toggle: {
@@ -2586,79 +2674,6 @@
                            -moz-transition: var(--modal-btn-transition) ;
                            -o-transition: var(--modal-btn-transition) ;
                            -ms-transition: var(--modal-btn-transition) }`}`
-
-              // Settings modal
-              + `#${app.slug}-settings {
-                    min-width: ${ env.browser.isPortrait ? 288 : 698 }px ; max-width: 75vw ;
-                    word-wrap: break-word ; border-radius: 15px ;
-                    ${ appScheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: black ; fill: black' };
-                  --shadow: 0 30px 60px rgba(0,0,0,0.12) ;
-                        box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) }
-                #${app.slug}-settings-title {
-                    font-weight: bold ; line-height: 19px ; text-align: center ; margin: 0 3px -3px 0 }
-                #${app.slug}-settings-title h4 {
-                    font-size: ${ env.browser.isPortrait ? 26 : 31 }px ; font-weight: bold ; margin-top: -39px }
-                #${app.slug}-settings ul {
-                    align-content: center ; /* for symmetrized gaps when odd num of entries */
-                    list-style: none ; padding: 0 ; margin-bottom: 2px ; /* hide bullets, close bottom gap */
-                    width: ${ env.browser.isPortrait ? 100 : 50 }% } /* set width based on column cnt */
-                ${ env.browser.isCompact ? '' : `#${app.slug}-settings ul:first-of-type { /* color desktop middle sep */
-                    border-right: 1px dotted ${ appScheme == 'dark' ? 'white' : 'black' }}`}
-                #${app.slug}-settings li {
-                    color: ${ appScheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
-                    fill: ${ appScheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
-                    stroke: ${ appScheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
-                    height: 25px ; padding: 4px 10px ; font-size: 14.5px ;
-                    border-bottom: 1px dotted ${ appScheme == 'dark' ? 'white' : 'black' }; /* add separator */
-                    border-radius: 3px ; /* slightly round highlight strip */
-                    ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' :
-                        `transition: var(--settings-li-transition) ;
-                            -webkit-transition: var(--settings-li-transition) ;
-                            -moz-transition: var(--settings-li-transition) ;
-                            -o-transition: var(--settings-li-transition) ;
-                            -ms-transition: var(--settings-li-transition)` }}
-                #${app.slug}-settings li.active {
-                    color: ${ appScheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };
-                    fill: ${ appScheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' };
-                    stroke: ${ appScheme == 'dark' ? 'rgb(255,255,255)' : 'rgba(0,0,0)' }}
-                #${app.slug}-settings li label { padding-right: 20px } /* right-pad labels so toggles don't hug */
-                #${app.slug}-settings li:last-of-type { border-bottom: none } /* remove last bottom-border */
-                #${app.slug}-settings li, #${app.slug}-settings li label { cursor: pointer } /* add finger on hover */
-                #${app.slug}-settings li:hover {
-                    background: rgba(100,149,237,0.88) ; color: white ; fill: white ; stroke: white ;
-                    ${ env.browser.isMobile ? '' : 'transform: scale(1.15)' }}
-                #${app.slug}-settings li > input { float: right } /* pos toggles */
-                #${app.slug}-settings li > .track {
-                    position: relative ; left: -1px ; bottom: -5.5px ; float: right ;
-                    background-color: #ccc ; width: 26px ; height: 13px ; border-radius: 28px ;
-                    ${ config.fgAnimationsDisabled ? '' :
-                        `transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
-                            -o-transition: 0.4s ; -ms-transition: 0.4s` }}
-                #${app.slug}-settings li .knob {
-                    position: absolute ; left: 1px ; bottom: 1px ; content: "" ;
-                    background-color: white ; width: 11px ; height: 11px ; border-radius: 28px ;
-                    ${ config.fgAnimationsDisabled ? '' :
-                        `transition: 0.2s ; -webkit-transition: 0.2s ; -moz-transition: 0.2s ;
-                            -o-transition: 0.2s ; -ms-transition: 0.2s` }}
-                #scheme-settings-entry > span { margin: 3px -2px 0 } /* align Scheme status */
-                #scheme-settings-entry > span > svg { /* v-align/left-pad Scheme status icon */
-                    position: relative ; top: 2px ; margin-left: 4px }
-                ${ config.fgAnimationsDisabled ? '' // spin cycle arrows icon when scheme is Auto
-                    : `#scheme-settings-entry svg[class*=arrowsCyclic],
-                               .chatgpt-notif svg[class*=arrowsCyclic] { animation: rotate 5s linear infinite }`}
-                #about-settings-entry span { color: ${ appScheme == 'dark' ? '#28ee28' : 'green' }}
-                #about-settings-entry > span { /* outer About status span */
-                    width: ${ env.browser.isPortrait ? '15vw' : '95px' }; height: 20px ; overflow: hidden ;
-                    ${ config.fgAnimationsDisabled ? '' : // fade edges
-                            `mask-image: linear-gradient(
-                                to right, transparent, black 20%, black 89%, transparent) ;
-                     -webkit-mask-image: linear-gradient(
-                                to right, transparent, black 20%, black 89%, transparent) ;`}}
-                #about-settings-entry > span > div {
-                    text-wrap: nowrap ; ${
-                        config.fgAnimationsDisabled ? '' : 'animation: ticker linear 75s infinite' }}
-                @keyframes ticker { 0% { transform: translateX(100%) } 100% { transform: translateX(-2000%) }}
-                .about-em { color: ${ appScheme == 'dark' ? 'white' : 'green' } !important }`
             )
         },
 
