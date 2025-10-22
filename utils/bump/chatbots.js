@@ -109,16 +109,15 @@
                 !config.noPush ? '/pushed' : '' } to GitHub`)
         } catch (err) { bump.log.error('Git operation failed: ' + err.message) }
     } else {
-        bump.log.info(`\nNo commit message provided. Skipping git operations.`)
+        bump.log.working(`\nNo commit message provided. Skipping git operations.`)
         bump.log.info(`TIP: Use --commit-msg "msg" or -m "msg" to commit changes.`)
     }
 
     // Final SUMMARY log
     console.log('') // line break
-    Object.entries(bumpedChatbots).forEach(([chatbotFile, { oldVer, newVer }]) => {
-        const chatbotName = path.basename(chatbotFile, '.user.js')
-        console.log(`  ± ${chatbotName}.user.js ${
+    Object.entries(bumpedChatbots).forEach(([chatbotFile, { oldVer, newVer }]) =>
+        console.log(`  ± ${path.basename(chatbotFile)} ${
             bump.colors.bw}v${oldVer}${bump.colors.nc} → ${bump.colors.bg}v${newVer}${bump.colors.nc}`)
-    })
+    )
 
 })()
