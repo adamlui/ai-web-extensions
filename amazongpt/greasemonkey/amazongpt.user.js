@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.21.1
+// @version                2025.10.21.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -141,7 +141,7 @@
         env.browser[`is${ platform == 'Firefox' ? 'FF' : platform }`] = chatgpt.browser['is' + platform]())
     Object.assign(env.browser, {
         get isPortrait() { return env.browser.isMobile && (innerWidth < innerHeight) },
-        get isPhone() { return env.browser.isMobile && innerWidth <= 480 }
+        get isCompact() { return innerWidth <= 480 }
     })
     env.scriptManager.supportsStreaming = /Tampermonkey|ScriptCat/.test(env.scriptManager.name)
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
@@ -403,7 +403,7 @@
                     color: #b6b8ba ; fill: #b6b8ba ; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite }
                 #${app.slug} section.loading { padding-left: 5px } /* left-pad loading status when sending replies */
                 #${app.slug}-font-size-slider-track {
-                    width: 98% ; height: 7px ; margin: -2px auto ${ env.browser.isPhone ? -8 : -13 }px ;
+                    width: 98% ; height: 7px ; margin: -2px auto ${ env.browser.isCompact ? -8 : -13 }px ;
                     padding: 15px 0 ; background-color: #ccc ; box-sizing: content-box; background-clip: content-box ;
                    -webkit-background-clip: content-box }
                 #${app.slug}-font-size-slider-track::before { /* to add finger cursor to unpadded core only */
@@ -590,7 +590,7 @@
         },
 
         bylineVisibility() {
-            if (env.browser.isPhone) return // since byline hidden by app.styles
+            if (env.browser.isCompact) return // since byline hidden by app.styles
 
             // Init header elems
             const headerElems = { byline: app.div.querySelector('.byline') }
@@ -1268,7 +1268,7 @@
             aboutModal.querySelector('h2').remove() // remove empty title h2
             aboutModal.querySelector('p').style.cssText = `
                 overflow-wrap: anywhere ; line-height: 1.55 ;
-                margin: ${ env.browser.isPhone ? '6px 0 -16px' : '0 0 0 21px' }`
+                margin: ${ env.browser.isCompact ? '6px 0 -16px' : '0 0 0 21px' }`
 
             // Hack buttons
             aboutModal.querySelectorAll('button').forEach(btn => {
@@ -1330,7 +1330,7 @@
             // Re-style elems
             apiModal.querySelector('h2').style.justifySelf = 'center' // center title
             const btnsDiv = apiModal.querySelector('.modal-buttons')
-            btnsDiv.style.cssText = `margin: 0 !important ; ${ env.browser.isPhone ? ''
+            btnsDiv.style.cssText = `margin: 0 !important ; ${ env.browser.isCompact ? ''
                 : 'flex-wrap: wrap ; justify-content: center ; gap: 9px' }` // gridify wide view btns
             btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
                 if (idx == 0) btn.style.display = 'none' // hide Dismiss button
@@ -1844,7 +1844,7 @@
                 }
                 .chatgpt-modal > div {
                     background-color: white !important ; color: black ;
-                    padding: ${ env.browser.isPhone ? '22px' : '20px 30px 24px 17px' }!important
+                    padding: ${ env.browser.isCompact ? '22px' : '20px 30px 24px 17px' }!important
                 }
                 .chatgpt-modal p { margin: -8px 0 -14px 4px ; font-size: 22px ; line-height: 31px }
                 .chatgpt-modal a { color: #${ appScheme == 'dark' ? '00cfff' : '1e9ebb' } !important }
@@ -1930,7 +1930,7 @@
                     align-content: center ; /* for symmetrized gaps when odd num of entries */
                     list-style: none ; padding: 0 ; margin: 0 0 2px -3px ; /* hide bullets, close bottom gap */
                     width: ${ env.browser.isPortrait ? 100 : 50 }% } /* set width based on column cnt */
-                ${ env.browser.isPhone ? '' : `#${app.slug}-settings ul:first-of-type { /* color desktop middle sep */
+                ${ env.browser.isCompact ? '' : `#${app.slug}-settings ul:first-of-type { /* color desktop middle sep */
                     border-right: 1px dotted ${ appScheme == 'dark' ? 'white' : 'black' }}`}
                 #${app.slug}-settings li {
                     color: ${ appScheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };

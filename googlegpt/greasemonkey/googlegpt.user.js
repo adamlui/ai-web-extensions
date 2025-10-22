@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2025.10.21.2
+// @version                  2025.10.21.3
 // @license                  MIT
 // @icon                     data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22170.667%22%20height=%22170.667%22%3E%3Cstyle%3E:root%7B--fill:%23000%7D@media%20(prefers-color-scheme:dark)%7B:root%7B--fill:%23fff%7D%7D%3C/style%3E%3Cpath%20fill=%22var(--fill)%22%20d=%22M82.346%20159.79c-18.113-1.815-31.78-9.013-45.921-24.184C23.197%20121.416%2017.333%20106.18%2017.333%2086c0-21.982%205.984-36.245%2021.87-52.131C55.33%2017.74%2069.27%2011.867%2091.416%2011.867c17.574%200%2029.679%203.924%2044.309%2014.363l8.57%206.116-8.705%208.705-8.704%208.704-4.288-3.608c-13.91-11.704-35.932-14.167-53.085-5.939-3.4%201.631-9.833%206.601-14.297%2011.045C44.669%2061.753%2040.95%2070.811%2040.95%2086c0%2014.342%203.594%2023.555%2013.26%2033.995%2019.088%2020.618%2048.46%2022.539%2070.457%204.608l5.333-4.348%2011.333%203.844c6.234%202.114%2011.54%203.857%2011.791%203.873.252.015-2.037%203.008-5.087%206.65-6.343%207.577-20.148%2017.217-30.493%2021.295-8.764%203.454-23.358%205.06-35.198%203.873zM92%2086.333V74.667h60.648l-11.41%2011.41-11.411%2011.41-18.914.257L92%2098z%22/%3E%3C/svg%3E
 // @icon64                   data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22170.667%22%20height=%22170.667%22%3E%3Cstyle%3E:root%7B--fill:%23000%7D@media%20(prefers-color-scheme:dark)%7B:root%7B--fill:%23fff%7D%7D%3C/style%3E%3Cpath%20fill=%22var(--fill)%22%20d=%22M82.346%20159.79c-18.113-1.815-31.78-9.013-45.921-24.184C23.197%20121.416%2017.333%20106.18%2017.333%2086c0-21.982%205.984-36.245%2021.87-52.131C55.33%2017.74%2069.27%2011.867%2091.416%2011.867c17.574%200%2029.679%203.924%2044.309%2014.363l8.57%206.116-8.705%208.705-8.704%208.704-4.288-3.608c-13.91-11.704-35.932-14.167-53.085-5.939-3.4%201.631-9.833%206.601-14.297%2011.045C44.669%2061.753%2040.95%2070.811%2040.95%2086c0%2014.342%203.594%2023.555%2013.26%2033.995%2019.088%2020.618%2048.46%2022.539%2070.457%204.608l5.333-4.348%2011.333%203.844c6.234%202.114%2011.54%203.857%2011.791%203.873.252.015-2.037%203.008-5.087%206.65-6.343%207.577-20.148%2017.217-30.493%2021.295-8.764%203.454-23.358%205.06-35.198%203.873zM92%2086.333V74.667h60.648l-11.41%2011.41-11.411%2011.41-18.914.257L92%2098z%22/%3E%3C/svg%3E
@@ -453,7 +453,7 @@
         env.browser[`is${ platform == 'Firefox' ? 'FF' : platform }`] = chatgpt.browser['is' + platform]())
     Object.assign(env.browser, {
         get isPortrait() { return env.browser.isMobile && (innerWidth < innerHeight) },
-        get isPhone() { return env.browser.isMobile && innerWidth <= 480 }
+        get isCompact() { return innerWidth <= 480 }
     })
     env.userLocale = location.hostname.endsWith('.com') ? 'us' : location.hostname.split('.').pop()
     env.scriptManager.supportsStreaming = /Tampermonkey|ScriptCat/.test(env.scriptManager.name)
@@ -756,7 +756,7 @@
                     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite }
                 #${app.slug} section.loading { padding: 15px 0 14px 5px } /* pad loading status when sending replies */
                 #${app.slug}-font-size-slider-track {
-                    width: 98% ; height: 7px ; margin: 3px auto ${ env.browser.isPhone ? -6 : -11 }px ;
+                    width: 98% ; height: 7px ; margin: 3px auto ${ env.browser.isCompact ? -6 : -11 }px ;
                     padding: 15px 0 ; background-color: #ccc ; box-sizing: content-box; background-clip: content-box ;
                    -webkit-background-clip: content-box }
                 #${app.slug}-font-size-slider-track::before { /* to add finger cursor to unpadded core only */
@@ -1010,7 +1010,7 @@
         },
 
         bylineVisibility() {
-            if (env.browser.isPhone) return // since byline hidden by app.styles
+            if (env.browser.isCompact) return // since byline hidden by app.styles
 
             // Init header elems
             const headerElems = { byline: app.div.querySelector('.byline') }
@@ -2098,7 +2098,7 @@
             aboutModal.querySelector('h2').remove() // remove empty title h2
             aboutModal.querySelector('p').style.cssText = `
                 overflow-wrap: anywhere ; line-height: 1.55 ;
-                margin: ${ env.browser.isPhone ? '21px 0 -20px' : '15px 0 -28px 17px' }`
+                margin: ${ env.browser.isCompact ? '21px 0 -20px' : '15px 0 -28px 17px' }`
 
             // Hack buttons
             aboutModal.querySelectorAll('button').forEach(btn => {
@@ -2160,7 +2160,7 @@
             // Re-style elems
             apiModal.querySelector('h2').style.justifySelf = 'center' // center title
             const btnsDiv = apiModal.querySelector('.modal-buttons')
-            btnsDiv.style.cssText = `margin: 18px 0px 4px !important ; ${ env.browser.isPhone ? ''
+            btnsDiv.style.cssText = `margin: 18px 0px 4px !important ; ${ env.browser.isCompact ? ''
                 : 'flex-wrap: wrap ; justify-content: center ; gap: 9px' }` // gridify wide view btns
             btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
                 if (idx == 0) btn.style.display = 'none' // hide Dismiss button
@@ -2690,7 +2690,7 @@
                 }
                 .chatgpt-modal > div {
                     background-color: white ; color: #202124 ;
-                    padding: ${ env.browser.isPhone ? '31px' : '25px 31px' }!important
+                    padding: ${ env.browser.isCompact ? '31px' : '25px 31px' }!important
                 }
                 .chatgpt-modal p { margin: 14px 0 -29px 4px ; font-size: 1.28em ; line-height: 1.57 }
                 .modal-buttons {
@@ -2775,7 +2775,7 @@
                     align-content: center ; /* for symmetrized gaps when odd num of entries */
                     list-style: none ; padding: 0 ; margin-bottom: 2px ; /* hide bullets, close bottom gap */
                     width: ${ env.browser.isPortrait ? 100 : 50 }% } /* set width based on column cnt */
-                ${ env.browser.isPhone ? '' : `#${app.slug}-settings ul:first-of-type { /* color desktop middle sep */
+                ${ env.browser.isCompact ? '' : `#${app.slug}-settings ul:first-of-type { /* color desktop middle sep */
                     border-right: 1px dotted ${ appScheme == 'dark' ? 'white' : 'black' }}`}
                 #${app.slug}-settings li {
                     color: ${ appScheme == 'dark' ? 'rgb(255,255,255,0.65)' : 'rgba(0,0,0,0.45)' };
