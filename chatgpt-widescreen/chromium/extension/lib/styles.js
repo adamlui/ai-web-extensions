@@ -2,8 +2,13 @@
 
 window.styles = {
 
-    getAllSelectors(obj) { // used in this.tweaks.styles for spam selectors
-        return Object.values(obj).flatMap(val => typeof val == 'object' ? this.getAllSelectors(val) : val) },
+    getAllSelectors(obj, { type } = {}) { // used in this.tweaks.styles for spam selectors
+        const selectors = Object.values(obj).flatMap(val =>
+            typeof val == 'object' ? this.getAllSelectors(val, { type }) : val)
+        return type == 'css' ? selectors.filter(sel => !sel.startsWith('//'))
+             : type == 'xpath' ? selectors.filter(sel => sel.startsWith('//'))
+             : /* no type */ selectors
+    },
 
     get outerDivSelector() { // requires env.site
         return env.site == 'chatgpt' ? 'div.text-base > div'

@@ -62,7 +62,7 @@ window.sync = {
 
     spamBlock() { // requires env.site + sites
         const selectors = sites[env.site]?.selectors?.spam ; if (!selectors) return
-        styles.getAllSelectors(selectors).filter(sel => sel.startsWith('//')).forEach(sel => {
+        styles.getAllSelectors(selectors, { type: 'xpath' }).forEach(sel => {
             try {
                 const result = document.evaluate(sel, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
                 for (let i = 0 ; i < result.snapshotLength ; i++)
