@@ -20,12 +20,12 @@ window.styles = {
         window.wsMaxWidth ||= document.querySelector(this.outerDivSelector)?.parentNode?.offsetWidth -25
     },
 
-    async update({ key, keys, autoAppend }) { // requires lib/dom.js
+    update({ key, keys, autoAppend }) { // requires lib/dom.js
         if (!key && !keys) return console.error('Option \'key\' or \'keys\' required by styles.update()')
         ;[].concat(keys || key).forEach(async key => {
             const style = this[key] ; style.node ||= dom.create.style()
             if ((autoAppend ?? style.autoAppend) && !style.node.isConnected) document.head.append(style.node)
-            style.node.textContent = await style.css
+            style.node.textContent = style.css
         })
     },
 
