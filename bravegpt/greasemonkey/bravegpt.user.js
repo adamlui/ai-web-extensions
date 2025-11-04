@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.10.22
+// @version               2025.11.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -2394,7 +2394,7 @@
                 modals.settings.stylize()
                 const settingsContainer = modals.settings.get()?.parentNode || modals.settings.createAppend()
                 settingsContainer.style.display = '' // show modal
-                if (env.browser.isMobile) { // scale 93% to viewport sides
+                if (env.browser.isCompact) { // scale 93% to viewport sides
                     const settingsModal = settingsContainer.querySelector(`#${app.slug}-settings`)
                     modals.settings.scaleRatio ||= 0.93 * innerWidth / settingsModal.scrollWidth
                     settingsModal.style.transform = `scale(${modals.settings.scaleRatio})`

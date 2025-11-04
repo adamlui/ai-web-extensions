@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.10.22
+// @version                2025.11.3
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1724,7 +1724,7 @@
                 modals.settings.stylize()
                 const settingsContainer = modals.settings.get()?.parentNode || modals.settings.createAppend()
                 settingsContainer.style.display = '' // show modal
-                if (env.browser.isMobile) { // scale 93% to viewport sides
+                if (env.browser.isCompact) { // scale 93% to viewport sides
                     const settingsModal = settingsContainer.querySelector(`#${app.slug}-settings`)
                     modals.settings.scaleRatio ||= 0.93 * innerWidth / settingsModal.scrollWidth
                     settingsModal.style.transform = `scale(${modals.settings.scaleRatio})`
