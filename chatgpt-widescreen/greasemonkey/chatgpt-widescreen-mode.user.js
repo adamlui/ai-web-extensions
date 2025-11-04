@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.11.2
+// @version             2025.11.4
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -262,8 +262,8 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@882c0c5/chromium/extension/lib/feedback.js#sha256-mhqPUMG1+fq9dybeU8n5B+eXuuCeUd5lLpJXRS3en1Y=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@882c0c5/chromium/extension/lib/i18n.js#sha256-byvnlCP8l97tNJfgZeXDL+fLIKmS3GaiGwy5JNdmKYI=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@c4b372d/chromium/extension/lib/settings.js#sha256-W7Dzfld01bDMsK3OnsTBLuUdtCgdoWR3Cl6ucMbzek0=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ce7b078/chromium/extension/lib/styles.js#sha256-CWZ64rV6tQRfQpcsOR2f0YUbKgMLhZFelXTxCqBdqGk=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@f2cc4bd/chromium/extension/lib/sync.js#sha256-r0/chKRn75oNfRFL4J32zzIuBPnrW1pk/gzbZcemsAM=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@6033dd7/chromium/extension/lib/styles.js#sha256-nd6HWECxWP+m/VCRIIzTGYth05xUN459GJMp4CMDxGc=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@6033dd7/chromium/extension/lib/sync.js#sha256-RM5RswmLzWMgt9AvjZjbjttIONBEY/83paVZH5Q8a2g=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ab7ee52/chromium/extension/lib/ui.js#sha256-5WwgnfGRtHsRP06nmjhqARB0T508syxAh5UWFMEFA+c=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ab7ee52/chromium/extension/components/buttons.js#sha256-B1h7ZHhgwuEy8XoER0AjnWC36Rq8MViHoaZM26k7XHY=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@511d193/chromium/extension/components/icons.js#sha256-6eK7coHHFB4zBfl8XXtjojrnfbBOFiEgYfQtz/Whv2E=
@@ -326,7 +326,7 @@
     window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        commitHashes: { app: 'ce211e1' } // for cached <app|messages>.json + sites.json5
+        commitHashes: { app: '660fbb9' } // for cached <app|messages>.json + sites.json5
     }
     app.urls = {
         resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.commitHashes.app}` }
@@ -820,7 +820,7 @@
         }
     }
 
-    // Monitor NODE CHANGES to maintain button visibility + update colors/styles
+    // Monitor NODE CHANGES to maintain button visibility + update colors/styles + spam block
     let isTempChat = false, canvasWasOpen = chatgpt.canvasIsOpen(), prevPath = location.pathname
     new MutationObserver(async () => {
 
@@ -848,6 +848,9 @@
             styles.update({ keys: ['widescreen', 'chatbar'] })
             prevPath = location.pathname
         }
+
+        // Apply Spam Block
+        if (!config.blockSpamDisabled && sites[env.site]?.selectors?.spam) sync.spamBlock()
 
     }).observe(document[env.site == 'poe' ? 'head' : 'body'], { attributes: true, subtree: true })
 
