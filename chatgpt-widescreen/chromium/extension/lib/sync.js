@@ -21,7 +21,12 @@ window.sync = {
             styles.update({ keys: ['chatbar', 'tweaks', 'widescreen'] }) // sync HH/HF/TCB/WCB/NCB/BA/WW
             chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
-            if (updatedKey == 'blockSpamDisabled') sync.spamBlock()
+            if (updatedKey == 'blockSpamDisabled') {
+                sync.spamBlock()
+                if (site == 'chatgpt') // toggle free wheel locked in some Spam blocks
+                    document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
+                        'wheel', window.enableWheelScroll)
+            }
             else if (updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled)
                 buttons.animate() // to visually signal location + preview fx applied by Button Animations toggle-on
             else if (updatedKey == 'tooltipAnimations' && tooltip.div)
@@ -66,8 +71,5 @@ window.sync = {
                     result.snapshotItem(i).style.display = config.blockSpamDisabled ? '' : 'none'
             } catch (err) { console.warn('Invalid XPath selector:', sel, err) }
         })
-        if (site == 'chatgpt') // toggle free wheel locked in some Spam blocks
-            document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
-                'wheel', window.enableWheelScroll)
     }
 };
