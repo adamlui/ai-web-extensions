@@ -95,8 +95,7 @@ window.styles = {
                     .${buttons.class}:hover { transform: scale(${ site == 'chatgpt' ? 1.285 : 1.15 })}`
                 }
                 ${ config.blockSpamDisabled ? '' : `
-                    ${styles.getAllSelectors(selectors.spam).filter(sel => !sel.startsWith('//')).join(',')}
-                        { display: none !important }
+                    ${styles.getAllSelectors(selectors.spam, { type: 'css' }).join(',')} { display: none !important }
                     body { pointer-events: unset !important }` /* free click lock from blocking modals */
                 }`
         }
