@@ -21,17 +21,15 @@ window.sync = {
             styles.update({ keys: ['chatbar', 'tweaks', 'widescreen'] }) // sync HH/HF/TCB/WCB/NCB/BA/WW
             chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
-            if (updatedKey == 'blockSpamDisabled') {
-                sync.spamBlock()
-                if (site == 'chatgpt') // toggle free wheel locked in some Spam blocks
-                    document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
-                        'wheel', window.enableWheelScroll)
-            }
+            if (updatedKey == 'blockSpamDisabled') sync.spamBlock()
             else if (updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled)
                 buttons.animate() // to visually signal location + preview fx applied by Button Animations toggle-on
             else if (updatedKey == 'tooltipAnimations' && tooltip.div)
                 tooltip.div.style.transform = `scale(${ config.tooltipAnimations ? 0.8 : 1 })`
             else if (/notifBottom|toastMode/.test(updatedKey)) styles.update({ key: 'toast' })
+            if (site == 'chatgpt') // toggle free wheel locked in some Spam blocks
+                document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
+                    'wheel', window.enableWheelScroll)
         }
         if (typeof GM_info != 'undefined') toolbarMenu.refresh() // prefixes/suffixes
 
