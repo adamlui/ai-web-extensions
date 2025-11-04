@@ -27,9 +27,6 @@ window.sync = {
             else if (updatedKey == 'tooltipAnimations' && tooltip.div)
                 tooltip.div.style.transform = `scale(${ config.tooltipAnimations ? 0.8 : 1 })`
             else if (/notifBottom|toastMode/.test(updatedKey)) styles.update({ key: 'toast' })
-            if (site == 'chatgpt') // toggle free wheel locked in some Spam blocks
-                document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
-                    'wheel', window.enableWheelScroll)
         }
         if (typeof GM_info != 'undefined') toolbarMenu.refresh() // prefixes/suffixes
 
@@ -60,16 +57,17 @@ window.sync = {
         config.modeSynced = true ; setTimeout(() => config.modeSynced = false, 100) // prevent repetition
     },
 
-    spamBlock() {
-        if (!sites[env.site]?.selectors?.spam) return
-        const xpathSelectors = styles.getAllSelectors(sites[env.site].selectors.spam)
-            .filter(sel => sel.startsWith('//'))
-        xpathSelectors.forEach(selector => {
+    spamBlock() { // requires env.site + sites
+        const { site } = env ; if (!sites[site]?.selectors?.spam) return
+        styles.getAllSelectors(sites[site].selectors.spam).filter(sel => sel.startsWith('//')).forEach(sel => {
             try {
-                const result = document.evaluate(selector, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
+                const result = document.evaluate(sel, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
                 for (let i = 0 ; i < result.snapshotLength ; i++)
                     result.snapshotItem(i).style.display = config.blockSpamDisabled ? '' : 'none'
-            } catch (err) { console.warn('Invalid XPath selector:', selector, err) }
+            } catch (err) { console.warn('Invalid XPath selector:', sel, err) }
         })
+        if (site == 'chatgpt') // toggle free wheel locked in some Spam blocks
+            document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
+                'wheel', window.enableWheelScroll)
     }
 };
