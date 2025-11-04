@@ -22,6 +22,7 @@
       "sidebar": "div#stage-slideover-sidebar, div.bg-token-sidebar-surface-primary",
       "spam": {
         "banners": {
+          "login": "//aside[.//button[contains(., 'Log in')]]",
           "tos": "div.bottom-full:has(a[href=\"https://openai.com/terms\"])" // https://i.imgur.com/8BUOhn1.png
         },
         "btns": {
