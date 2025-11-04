@@ -156,7 +156,7 @@
         }
     }
 
-    // Monitor NODE CHANGES to maintain button visibility + update colors/styles
+    // Monitor NODE CHANGES to maintain button visibility + update colors/styles + spam block
     let isTempChat = false, canvasWasOpen = chatgpt.canvasIsOpen(), prevPath = location.pathname
     new MutationObserver(async () => {
 
@@ -184,6 +184,9 @@
             styles.update({ keys: ['widescreen', 'chatbar'] })
             prevPath = location.pathname
         }
+
+        // Apply Spam Block
+        if (!config.blockSpamDisabled && sites[env.site]?.selectors?.spam) sync.spamBlock()
 
     }).observe(document[env.site == 'poe' ? 'head' : 'body'], { attributes: true, subtree: true })
 

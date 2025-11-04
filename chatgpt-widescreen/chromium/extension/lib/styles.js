@@ -67,28 +67,33 @@ window.styles = {
             const tcbHeight = tcbMinHeight +(
                 ( site == 'chatgpt' ? 68 : 80 ) -tcbMinHeight ) * config.tallerChatboxHeight /100
             return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
-                ${ config.tcbDisabled ? '' // heighten chatbox
-                    : `${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
+                ${ config.tcbDisabled ? '' : `
+                    ${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
                         { max-height: ${tcbHeight}vh }
-                       ${ site == 'chatgpt' && location.pathname == '/' ? // anchor to bottom for visible overflow
-                            'div#thread-bottom-container { position: absolute ; bottom: 0 }' : '' }`}
-                ${ !config.hiddenHeader ? ''
-                    : `${selectors.header} { display: none !important }
-                       ${ site == 'chatgpt' ? 'div[class*=--header-height] { padding-top: 52px }' : '' }`}
-                ${ !config.hiddenFooter ? ''
-                    : `${selectors.footer}${ site == 'chatgpt' ? `, ${selectors.btns.help}` : '' }
-                        { display: none }`}
-                ${ !config.justifyText ? ''
-                    : `${ site == 'chatgpt' ? 'div[data-message-author-role]'
-                                : /* poe */ 'div[class*=messageTextContainer]' }
-                        { text-align: justify }` }
-                ${ !config.ncbDisabled ? '' : '#newChat-btn { display: none }' }
-                ${ config.btnAnimationsDisabled ? '' : // zoom chatbar buttons on hover
-                   `.${buttons.class} { will-change: transform } /* prevent wobble */
-                    .${buttons.class}:hover { transform: scale(${ site == 'chatgpt' ? 1.285 : 1.15 })}`}
-                ${ config.blockSpamDisabled ? ''
-                    : `${styles.getAllSelectors(selectors.spam).join(',')} { display: none !important }
-                        body { pointer-events: unset !important }` /* free click lock from blocking modals */ }`
+                    ${ site == 'chatgpt' && location.pathname == '/' ? // anchor to bottom for visible overflow
+                        'div#thread-bottom-container { position: absolute ; bottom: 0 }' : '' }`
+                }
+                ${ !config.hiddenHeader ? '' : `
+                    ${selectors.header} { display: none !important }
+                    ${ site == 'chatgpt' ? 'div[class*=--header-height] { padding-top: 52px }' : '' }`
+                }
+                ${ !config.hiddenFooter ? '' : `
+                    ${selectors.footer}${ site == 'chatgpt' ? `, ${selectors.btns.help}` : '' } { display: none }`}
+                ${ !config.justifyText ? '' : `
+                    ${ site == 'chatgpt' ? 'div[data-message-author-role]'
+                               : /* poe */ 'div[class*=messageTextContainer]' }
+                        { text-align: justify }`
+                }
+                ${ !config.ncbDisabled ? '' : '#newChat-btn { display: none }'}
+                ${ config.btnAnimationsDisabled ? '' : ` // zoom chatbar buttons on hover
+                    .${buttons.class} { will-change: transform } /* prevent wobble */
+                    .${buttons.class}:hover { transform: scale(${ site == 'chatgpt' ? 1.285 : 1.15 })}`
+                }
+                ${ config.blockSpamDisabled ? '' : `
+                    ${styles.getAllSelectors(selectors.spam).filter(sel => !sel.startsWith('//')).join(',')}
+                        { display: none !important }
+                    body { pointer-events: unset !important }` /* free click lock from blocking modals */
+                }`
         }
     },
 
