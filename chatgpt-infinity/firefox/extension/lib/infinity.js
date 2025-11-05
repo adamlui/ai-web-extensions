@@ -4,8 +4,8 @@ window.infinity = {
 
     async activate() {
         const activatePrompt = 'Generate a single random question'
-            + ( config.replyLanguage ? ( ' in ' + config.replyLanguage ) : '' )
-            + ( ' on ' + ( config.replyTopic == 'ALL' ? 'ALL topics' : 'the topic of ' + config.replyTopic ))
+            +( config.replyLanguage ? ( ' in ' + config.replyLanguage ) : '' )
+            +( ' on ' + ( config.replyTopic == 'ALL' ? 'ALL topics' : 'the topic of ' + config.replyTopic ))
             + ' then answer it. Don\'t type anything else.'
         if (env.browser.isMobile && chatgpt.sidebar.isOn()) chatgpt.sidebar.hide()
         if (!new URL(location).pathname.startsWith('/g/')) // not on GPT page
@@ -14,8 +14,8 @@ window.infinity = {
         chatgpt.send(activatePrompt)
         await new Promise(resolve => setTimeout(resolve, 3000)) // sleep 3s
         if (!document.querySelector('[data-message-author-role]') // new chat reset due to OpenAI bug
-            && config.infinityMode) // ...and toggle still active
-                chatgpt.send(activatePrompt) // ...so prompt again
+            && config.infinityMode // ...and toggle still active
+        ) chatgpt.send(activatePrompt) // ...so prompt again
         await chatgpt.isIdle()
         if (config.infinityMode && !infinity.isActive) // double-check in case de-activated before scheduled
             infinity.isActive = setTimeout(infinity.continue, parseInt(config.replyInterval, 10) * 1000)
