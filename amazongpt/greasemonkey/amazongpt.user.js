@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.11.3
+// @version                2025.11.5
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -139,10 +139,7 @@
         }
     } ; ['Chromium', 'Firefox', 'Chrome', 'Edge', 'Brave', 'Mobile'].forEach(platform =>
         env.browser[`is${ platform == 'Firefox' ? 'FF' : platform }`] = chatgpt.browser['is' + platform]())
-    Object.assign(env.browser, {
-        get isPortrait() { return env.browser.isMobile && (innerWidth < innerHeight) },
-        get isCompact() { return innerWidth <= 480 }
-    })
+    Object.assign(env.browser, { get isCompact() { return innerWidth <= 480 }})
     env.scriptManager.supportsStreaming = /Tampermonkey|ScriptCat/.test(env.scriptManager.name)
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
                                       && parseInt(env.scriptManager.version.split('.')[0]) >= 5
@@ -1568,8 +1565,8 @@
 
                 // Init logo
                 const settingsIcon = icons.amazongpt.create()
-                settingsIcon.style.cssText += `width: 65px ; margin-bottom: ${ env.browser.isPortrait ? -4 : 4 }px ;
-                    position: relative ; top: -30px ; right: ${ env.browser.isPortrait ? -5 : 7 }px`
+                settingsIcon.style.cssText += `width: 65px ; margin-bottom: ${ env.browser.isCompact ? -4 : 4 }px ;
+                    position: relative ; top: -30px ; right: ${ env.browser.isCompact ? -5 : 7 }px`
 
                 // Init title
                 const settingsTitleDiv = dom.create.elem('div', { id: `${app.slug}-settings-title` }),
@@ -1583,7 +1580,7 @@
                 const settingsLists = [], middleGap = 30 // px
                 const settingsListContainer = dom.create.elem('div')
                 const settingsListCnt = (
-                    env.browser.isMobile && ( env.browser.isPortrait || settingsKeys.length < 8 )) ? 1 : 2
+                    env.browser.isMobile && ( env.browser.isCompact || settingsKeys.length < 8 )) ? 1 : 2
                 const settingEntryCap = Math.floor(settingsKeys.length /2)
                 for (let i = 0 ; i < settingsListCnt ; i++) settingsLists.push(dom.create.elem('ul'))
                 settingsListContainer.style.width = '95%' // pad vs. parent
@@ -1603,7 +1600,7 @@
                         { id: `${key}-settings-entry`, title: setting.helptip || '' })
                     const settingLabel = dom.create.elem('label', { textContent: setting.label })
                     settingEntry.append(settingLabel);
-                    (settingsLists[env.browser.isPortrait ? 0 : +(idx >= settingEntryCap)]).append(settingEntry)
+                    (settingsLists[env.browser.isCompact ? 0 : +(idx >= settingEntryCap)]).append(settingEntry)
 
                     // Create/prepend icons
                     const settingIcon = icons.create({ key: setting.icon })
@@ -1737,7 +1734,7 @@
                 if (!this.styles?.isConnected) document.head.append(this.styles ||= dom.create.style())
                 this.styles.textContent = `
                     #${app.slug}-settings {
-                        min-width: ${ env.browser.isPortrait ? 288 : 755 }px ; max-width: 75vw ; margin: 12px 23px ;
+                        min-width: ${ env.browser.isCompact ? 288 : 755 }px ; max-width: 75vw ; margin: 12px 23px ;
                         word-wrap: break-word ; border-radius: 15px ;
                         ${ appScheme == 'dark' ? 'stroke: white ; fill: white' : 'stroke: black ; fill: black' };
                       --shadow: 0 30px 60px rgba(0,0,0,0.12) ; box-shadow: var(--shadow) ;
@@ -1748,11 +1745,11 @@
                         margin: 0 ${ env.browser.isMobile ? 6 : 24 }px 8px 0
                     }
                     #${app.slug}-settings-title h4 {
-                        font-size: ${ env.browser.isPortrait ? 26 : 31 }px ; font-weight: bold ; margin-top: -25px }
+                        font-size: ${ env.browser.isCompact ? 26 : 31 }px ; font-weight: bold ; margin-top: -25px }
                     #${app.slug}-settings ul {
                         align-content: center ; /* for symmetrized gaps when odd num of entries */
                         list-style: none ; padding: 0 ; margin: 0 0 2px -3px ; /* hide bullets, close bottom gap */
-                        width: ${ env.browser.isPortrait ? 100 : 50 }% /* set width based on column cnt */
+                        width: ${ env.browser.isCompact ? 100 : 50 }% /* set width based on column cnt */
                     }
                     ${ env.browser.isCompact ? '' : `#${app.slug}-settings ul:first-of-type { /* color desktop middle sep */
                         border-right: 1px dotted ${ appScheme == 'dark' ? 'white' : 'black' }}`}
@@ -1809,7 +1806,7 @@
                     }
                     #about-settings-entry span { color: ${ appScheme == 'dark' ? '#28ee28' : 'green' }}
                     #about-settings-entry > span { /* outer About status span */
-                        width: ${ env.browser.isPortrait ? '15vw' : '95px' }; height: 20px ; overflow: hidden ;
+                        width: ${ env.browser.isCompact ? '15vw' : '95px' }; height: 20px ; overflow: hidden ;
                         ${ config.fgAnimationsDisabled ? '' : // fade edges
                                 `mask-image: linear-gradient(
                                     to right, transparent, black 20%, black 89%, transparent) ;

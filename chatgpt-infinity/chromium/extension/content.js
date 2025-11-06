@@ -14,7 +14,7 @@
 
     // Init ENV context
     window.env = { browser: { isMobile: chatgpt.browser.isMobile() }, ui: { scheme: ui.getScheme() }}
-    env.browser.isPortrait = env.browser.isMobile && ( innerWidth < innerHeight )
+    Object.assign(env.browser, { get isCompact() { return innerWidth <= 480 }})
 
     // Add CHROME MSG listener for background/popup requests to sync modes/settings
     chrome.runtime.onMessage.addListener(({ action, options, source }) => {

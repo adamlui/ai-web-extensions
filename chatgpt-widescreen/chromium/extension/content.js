@@ -18,7 +18,7 @@
         browser: { isFF: navigator.userAgent.includes('Firefox'), isMobile: chatgpt.browser.isMobile() },
         site: location.hostname.split('.').slice(-2, -1)[0], ui: {}
     }
-    env.browser.isPortrait = env.browser.isMobile && ( innerWidth < innerHeight )
+    Object.assign(env.browser, { get isCompact() { return innerWidth <= 480 }})
     ui.getScheme().then(scheme => env.ui.scheme = scheme)
 
     // Add CHROME MSG listener for background/popup requests to sync modes/settings

@@ -12,7 +12,7 @@ window.modals = {
     },
 
     about() { // requires lib/i18n.js + <app|env>
-        const { browser: { isPortrait }, ui: { scheme }} = env
+        const { browser: { isCompact }, ui: { scheme }} = env
 
         // Init buttons
         const modalBtns = [
@@ -49,7 +49,7 @@ window.modals = {
         aboutModal.querySelector('h2').style.cssText = `
             text-align: center ; font-size: 51px ; line-height: 46px ; padding: 15px 0`
         aboutModal.querySelector('p').style.cssText = `
-            text-align: center ; overflow-wrap: anywhere ; margin: ${ isPortrait ? '6px 0 -16px' : '3px 0 29px' }`
+            text-align: center ; overflow-wrap: anywhere ; margin: ${ isCompact ? '6px 0 -16px' : '3px 0 29px' }`
 
         // Hack buttons
         aboutModal.querySelector('.modal-buttons').style.justifyContent = 'center'

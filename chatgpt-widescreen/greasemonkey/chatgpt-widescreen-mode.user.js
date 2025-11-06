@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2025.11.4.1
+// @version             2025.11.5
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -318,7 +318,7 @@
         },
         site: location.hostname.split('.').slice(-2, -1)[0], ui: {}
     }
-    env.browser.isPortrait = env.browser.isMobile && ( innerWidth < innerHeight )
+    Object.assign(env.browser, { get isCompact() { return innerWidth <= 480 }})
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
                                       && parseInt(env.scriptManager.version.split('.')[0]) >= 5
     ui.getScheme().then(scheme => env.ui.scheme = scheme)
