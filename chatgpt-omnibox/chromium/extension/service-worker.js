@@ -12,7 +12,7 @@ const chatgptURL = 'https://chatgpt.com'
 // Launch ChatGPT on toolbar icon click
 chrome.action.onClicked.addListener(async () => {
     const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
-          query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi'
+          query = new URL(activeTab?.url || 'about:blank').searchParams.get('q') || chrome.i18n.getMessage('query_hi')
     chrome.tabs.create({ url: `${chatgptURL}/?q=${query}` })
 })
 
