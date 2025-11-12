@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPTアドレスバー" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "アドレスバーに@chatgptと入力して、ChatGPTから回答を取得します" },
-  "prefix_ask": { "message": "ニュースをニュースする" }
+  "prefix_ask": { "message": "ニュースをニュースする" },
+  "query_hi": { "message": "こんにちは" }
 }

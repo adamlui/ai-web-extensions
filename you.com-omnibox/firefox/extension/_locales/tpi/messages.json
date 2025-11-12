@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Tik @you long adres bar bilong kisim ol result bilong You.com AI" },
-  "prefix_ask": { "message": "Askim" }
+  "prefix_ask": { "message": "Askim" },
+  "query_hi": { "message": "tok pisin" }
 }

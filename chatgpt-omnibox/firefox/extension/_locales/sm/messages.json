@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Ituaiga @chatgpt i le tuatusi pa e maua ai tali mai ChatGPT" },
-  "prefix_ask": { "message": "Fesili" }
+  "prefix_ask": { "message": "Fesili" },
+  "query_hi": { "message": "Malo" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Ituaiga @you i le tuatusi pa e maua ai iʻuga mai You.com AI" },
-  "prefix_ask": { "message": "Fesili" }
+  "prefix_ask": { "message": "Fesili" },
+  "query_hi": { "message": "Malo" }
 }

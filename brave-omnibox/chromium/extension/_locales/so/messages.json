@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Nooca @brave ee bar cinwaanka si aad u hesho natiijooyinka Brave AI" },
-  "prefix_ask": { "message": "Weydii" }
+  "prefix_ask": { "message": "Weydii" },
+  "query_hi": { "message": "ASC" }
 }

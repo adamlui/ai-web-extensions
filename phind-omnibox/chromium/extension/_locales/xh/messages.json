@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Chwetheza @phind kwibha yedilesi ukuze ufumane iziphumo kwi-Phind AI" },
-  "prefix_ask": { "message": "Buza" }
+  "prefix_ask": { "message": "Buza" },
+  "query_hi": { "message": "Mholo" }
 }

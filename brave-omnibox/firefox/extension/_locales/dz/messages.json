@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "@brave འདི་ཁ་བྱང་གི་ཐིག་ཁྲམ་ནང་བཙུགས་ཏེ་ Brave AI ལས་ གྲུབ་འབྲས་ཚུ་ཐོབ་ཚུགས།" },
-  "prefix_ask": { "message": "དྲིས་ལན།" }
+  "prefix_ask": { "message": "དྲིས་ལན།" },
+  "query_hi": { "message": "Kuzu" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "Адам ЛуиCity name (optional, probably" },
   "appDesc": { "message": "@deepseek in address bar upang makatanggap ng mga tugon mula sa DeepSeek" },
-  "prefix_ask": { "message": "& Пурсидан" }
+  "prefix_ask": { "message": "& Пурсидан" },
+  "query_hi": { "message": "Ð¥Ð°Ð¹Ñ!" }
 }

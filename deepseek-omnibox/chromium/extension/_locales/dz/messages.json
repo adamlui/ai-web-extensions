@@ -2,5 +2,6 @@
   "appName": { "message": "ཨོམ་ནི་བོཀསི་ཁ་འཐེན་འབད།" },
   "appAuthor": { "message": "ཨ་དམ་ལུའུ་" },
   "appDesc": { "message": "@catgpt འདི་ DeepSeekལས་ལན་ཐོབ་ནིའི་དོན་ལུ་ཁ་བྱང་གི་བཱར་ནང་ཐིབ།" },
-  "prefix_ask": { "message": "དྲིས་ལན།" }
+  "prefix_ask": { "message": "དྲིས་ལན།" },
+  "query_hi": { "message": "Kuzu" }
 }

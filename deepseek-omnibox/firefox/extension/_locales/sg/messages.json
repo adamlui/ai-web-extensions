@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Ti wara kiringo tënë na DeepSeek, zia @deepseek na yâ ti adress bar" },
-  "prefix_ask": { "message": "Bibia Be Ye Ye" }
+  "prefix_ask": { "message": "Bibia Be Ye Ye" },
+  "query_hi": { "message": "Mbi yeke na ngia" }
 }

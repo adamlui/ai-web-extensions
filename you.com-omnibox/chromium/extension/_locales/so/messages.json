@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Nooca @you ee bar cinwaanka si aad u hesho natiijooyinka You.com AI" },
-  "prefix_ask": { "message": "Weydii" }
+  "prefix_ask": { "message": "Weydii" },
+  "query_hi": { "message": "ASC" }
 }

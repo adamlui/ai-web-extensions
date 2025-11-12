@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Perplexity AI-യിൽ നിന്ന് ഫലങ്ങൾ ലഭിക്കുന്നതിന് വിലാസ ബാറിൽ @perplexity എന്ന് ടൈപ്പ് ചെയ്യുക" },
-  "prefix_ask": { "message": "ചോദിക്കുക" }
+  "prefix_ask": { "message": "ചോദിക്കുക" },
+  "query_hi": { "message": "ഹായ്" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Andika @chatgpt kwenye upau wa anwani ili upate majibu kutoka kwa ChatGPT" },
-  "prefix_ask": { "message": "Omba" }
+  "prefix_ask": { "message": "Omba" },
+  "query_hi": { "message": "kukimbia maisha y" }
 }

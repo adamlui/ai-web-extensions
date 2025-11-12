@@ -2,5 +2,6 @@
   "appName": { "message": "Kotak Omni ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Taip @chatgpt dalam bar alamat untuk mendapatkan jawapan daripada ChatGPT" },
-  "prefix_ask": { "message": "Tanya" }
+  "prefix_ask": { "message": "Tanya" },
+  "query_hi": { "message": "Loghat Kelantan" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "アドレスバーに @brave と入力して、Brave AI から結果を取得します" },
-  "prefix_ask": { "message": "ニュースをニュースする" }
+  "prefix_ask": { "message": "ニュースをニュースする" },
+  "query_hi": { "message": "こんにちは" }
 }

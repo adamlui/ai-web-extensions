@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Phind AI нәтижелерін алу үшін @phind мекенжай жолағына теріңіз" },
-  "prefix_ask": { "message": "& Сұрау" }
+  "prefix_ask": { "message": "& Сұрау" },
+  "query_hi": { "message": "Сәлем" }
 }

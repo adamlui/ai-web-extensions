@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Perplexity AI မှရလဒ်များရယူရန် @perplexity ကိုလိပ်စာဘားတွင်ရိုက်ထည့်ပါ" },
-  "prefix_ask": { "message": "မေးပါ" }
+  "prefix_ask": { "message": "မေးပါ" },
+  "query_hi": { "message": "မင်္ဂလာပါ" }
 }

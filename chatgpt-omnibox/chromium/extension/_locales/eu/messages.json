@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Idatzi @chatgpt helbide-barran ChatGPT-en erantzunak lortzeko" },
-  "prefix_ask": { "message": "Galdetu" }
+  "prefix_ask": { "message": "Galdetu" },
+  "query_hi": { "message": "Kaixo" }
 }

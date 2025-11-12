@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "آدم لوي" },
   "appDesc": { "message": "اكتب @deepseek في شريط العناوين للحصول على إجابات من DeepSeek" },
-  "prefix_ask": { "message": "اطرح" }
+  "prefix_ask": { "message": "اطرح" },
+  "query_hi": { "message": "مرحبًا،" }
 }

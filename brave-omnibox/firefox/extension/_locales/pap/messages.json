@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Skirbi @brave den e bara di adrès pa haña resultadonan di Brave AI" },
-  "prefix_ask": { "message": "Puntra" }
+  "prefix_ask": { "message": "Puntra" },
+  "query_hi": { "message": "Halo" }
 }

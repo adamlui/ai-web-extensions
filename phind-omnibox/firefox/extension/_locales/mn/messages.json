@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Phind AI-ийн үр дүнг авахын тулд @phind хаягийн мөрийг бичнэ үү" },
-  "prefix_ask": { "message": "Асуух" }
+  "prefix_ask": { "message": "Асуух" },
+  "query_hi": { "message": "" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Brave AI natijalarini olish uchun manzil satriga @brave yozing" },
-  "prefix_ask": { "message": "& Soʻrash" }
+  "prefix_ask": { "message": "& Soʻrash" },
+  "query_hi": { "message": "Salom " }
 }

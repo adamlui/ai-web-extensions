@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "刘展鹏 (Adam Lui)" },
   "appDesc": { "message": "在地址栏中输入 @perplexity 以获取 Perplexity AI 的结果" },
-  "prefix_ask": { "message": "發問" }
+  "prefix_ask": { "message": "發問" },
+  "query_hi": { "message": "嗨" }
 }

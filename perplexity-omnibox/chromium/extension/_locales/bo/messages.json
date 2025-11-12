@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "ཁ་བྱང་ཕྲ་རིང་ནང་ @perplexity ཡིག་འཇུག་བྱས་ནས་ Perplexity AI ནས་གྲུབ་འབྲས་ཐོབ་ཐུབ།" },
-  "prefix_ask": { "message": "དྲིས་ལན །" }
+  "prefix_ask": { "message": "དྲིས་ལན །" },
+  "query_hi": { "message": "ཨ་རོགས" }
 }

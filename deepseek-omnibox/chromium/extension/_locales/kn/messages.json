@@ -2,5 +2,6 @@
   "appName": { "message": "ಚಾಟ್‌ಜಿಪಿಟಿ ಓಮ್ನಿಬಾಕ್ಸ್" },
   "appAuthor": { "message": "ಆಡಮ್ ಲುಯಿ" },
   "appDesc": { "message": "DeepSeek ಯಿಂದ ಉತ್ತರಗಳನ್ನು ಪಡೆಯಲು ವಿಳಾಸ ಪಟ್ಟಿಯಲ್ಲಿ @deepseek ಎಂದು ಟೈಪ್ ಮಾಡಿ" },
-  "prefix_ask": { "message": "ಕೇಳಿ" }
+  "prefix_ask": { "message": "ಕೇಳಿ" },
+  "query_hi": { "message": "Hi" }
 }

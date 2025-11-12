@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "검색주소창에 @phind 를 입력하여 Phind AI 의 결과를 가져옵니다" },
-  "prefix_ask": { "message": "질문하기" }
+  "prefix_ask": { "message": "질문하기" },
+  "query_hi": { "message": "Hi" }
 }

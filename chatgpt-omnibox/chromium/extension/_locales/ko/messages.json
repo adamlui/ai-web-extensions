@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT 검색주소창" },
   "appAuthor": { "message": "아담 루이" },
   "appDesc": { "message": "주소창에 @chatgpt를 입력하여 ChatGPT로부터 답변을 받습니다" },
-  "prefix_ask": { "message": "질문하기" }
+  "prefix_ask": { "message": "질문하기" },
+  "query_hi": { "message": "Hi" }
 }

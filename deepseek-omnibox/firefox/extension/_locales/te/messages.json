@@ -2,5 +2,6 @@
   "appName": { "message": "చాట్ జిపిటి ఓమ్నిబాక్స్" },
   "appAuthor": { "message": "ఆడమ్ లూయి" },
   "appDesc": { "message": "DeepSeek నుండి సమాధానాలను పొందడానికి చిరునామా పట్టీలో @deepseek అని టైప్ చేయండి" },
-  "prefix_ask": { "message": "అడగండి" }
+  "prefix_ask": { "message": "అడగండి" },
+  "query_hi": { "message": "నాకు కుక్కలంటే ఎప్పటికీ ఇష్టం" }
 }

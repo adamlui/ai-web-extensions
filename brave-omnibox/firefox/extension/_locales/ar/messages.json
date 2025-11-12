@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "اكتب @brave في شريط العناوين للحصول على نتائج من Brave AI" },
-  "prefix_ask": { "message": "اطرح" }
+  "prefix_ask": { "message": "اطرح" },
+  "query_hi": { "message": "مرحبًا،" }
 }

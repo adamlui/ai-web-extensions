@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "アドレスバーに @phind と入力して、Phind AI から結果を取得します" },
-  "prefix_ask": { "message": "ニュースをニュースする" }
+  "prefix_ask": { "message": "ニュースをニュースする" },
+  "query_hi": { "message": "こんにちは" }
 }

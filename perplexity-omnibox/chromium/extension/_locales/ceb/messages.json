@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Type @perplexity sa address bar aron makakuha mga sangputanan gikan sa Perplexity AI" },
-  "prefix_ask": { "message": "Dugay ra" }
+  "prefix_ask": { "message": "Dugay ra" },
+  "query_hi": { "message": "Kay" }
 }

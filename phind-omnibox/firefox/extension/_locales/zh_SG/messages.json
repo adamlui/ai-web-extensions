@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "刘展鹏 (Adam Lui)" },
   "appDesc": { "message": "在地址栏中输入 @phind 以获取 Phind AI 的结果" },
-  "prefix_ask": { "message": "發問" }
+  "prefix_ask": { "message": "發問" },
+  "query_hi": { "message": "嗨" }
 }

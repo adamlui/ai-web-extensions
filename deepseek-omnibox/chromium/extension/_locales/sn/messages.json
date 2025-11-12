@@ -2,5 +2,6 @@
   "appName": { "message": "Taura nesu" },
   "appAuthor": { "message": "Taura nesu" },
   "appDesc": { "message": "Nyora @deepseek mukero bar kuti uwane mhinduro kubva kuDeepSeek" },
-  "prefix_ask": { "message": "Bvunza" }
+  "prefix_ask": { "message": "Bvunza" },
+  "query_hi": { "message": "muve nezuva rakanaka" }
 }

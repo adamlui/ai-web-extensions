@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Nhập @chatgptvào thanh địa chỉ để nhận câu trả lời từ ChatGPT" },
-  "prefix_ask": { "message": "Hỏi" }
+  "prefix_ask": { "message": "Hỏi" },
+  "query_hi": { "message": "Xin chào" }
 }

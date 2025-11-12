@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "آدام لویی" },
   "appDesc": { "message": "برای دریافت پاسخ از DeepSeek، @deepseek را در نوار آدرس تایپ کنید" },
-  "prefix_ask": { "message": "پرسیدن از" }
+  "prefix_ask": { "message": "پرسیدن از" },
+  "query_hi": { "message": "سلام" }
 }

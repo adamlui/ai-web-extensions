@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Введіть @you в адресному рядку, щоб отримати результати від You.com AI" },
-  "prefix_ask": { "message": "Запитати" }
+  "prefix_ask": { "message": "Запитати" },
+  "query_hi": { "message": "Вітаю" }
 }

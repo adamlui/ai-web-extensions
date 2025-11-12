@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Lembani @brave mu bar ya adilesi kuti mupeze zotsatira kuchokera ku Brave AI" },
-  "prefix_ask": { "message": "Lumikizanani nafe" }
+  "prefix_ask": { "message": "Lumikizanani nafe" },
+  "query_hi": { "message": "hi" }
 }

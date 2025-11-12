@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Πληκτρολογήστε @brave στη γραμμή διευθύνσεων για να λάβετε αποτελέσματα από την Brave AI" },
-  "prefix_ask": { "message": "Ρωτήστε" }
+  "prefix_ask": { "message": "Ρωτήστε" },
+  "query_hi": { "message": "Γεια σας" }
 }

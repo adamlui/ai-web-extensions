@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Digita @you nella barra degli indirizzi per ottenere risultati da You.com AI" },
-  "prefix_ask": { "message": "Chiedi" }
+  "prefix_ask": { "message": "Chiedi" },
+  "query_hi": { "message": "Ciao" }
 }

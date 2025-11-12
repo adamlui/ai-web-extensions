@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Idatzi @you helbide-barran You.com AI-ren emaitzak lortzeko" },
-  "prefix_ask": { "message": "Galdetu" }
+  "prefix_ask": { "message": "Galdetu" },
+  "query_hi": { "message": "Kaixo" }
 }

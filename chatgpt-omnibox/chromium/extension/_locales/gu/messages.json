@@ -2,5 +2,6 @@
   "appName": { "message": "ચેટજીપીટી ઓમ્નીબોક્સ" },
   "appAuthor": { "message": "આદમ લુઈ" },
   "appDesc": { "message": "ChatGPT તરફથી જવાબો મેળવવા માટે સરનામાં પટ્ટીમાં @chatgpt લખો" },
-  "prefix_ask": { "message": "પૂછો" }
+  "prefix_ask": { "message": "પૂછો" },
+  "query_hi": { "message": "નમસ્કાર! " }
 }

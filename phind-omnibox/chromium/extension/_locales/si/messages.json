@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Phind AI වෙතින් ප් ‍ රතිඵල ලබා ගැනීමට ලිපින තීරුවේ @phind ටයිප් කරන්න" },
-  "prefix_ask": { "message": "අසන්න" }
+  "prefix_ask": { "message": "අසන්න" },
+  "query_hi": { "message": "හායි!" }
 }

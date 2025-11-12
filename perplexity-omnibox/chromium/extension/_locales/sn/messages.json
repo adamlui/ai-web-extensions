@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Type @perplexity mu kero nomuzariro kuwana migumisiro kubva Perplexity AI" },
-  "prefix_ask": { "message": "Bvunza" }
+  "prefix_ask": { "message": "Bvunza" },
+  "query_hi": { "message": "muve nezuva rakanaka" }
 }

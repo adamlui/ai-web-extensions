@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "له ChatGPT څخه ځوابونه ترلاسه کولو لپاره په ادرس بار کې @chatgpt ولیکئ" },
-  "prefix_ask": { "message": "پوښتنه" }
+  "prefix_ask": { "message": "پوښتنه" },
+  "query_hi": { "message": "ستړی مه شي يا سلام کول" }
 }

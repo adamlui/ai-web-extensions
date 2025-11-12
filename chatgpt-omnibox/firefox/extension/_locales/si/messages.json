@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "ඇඩම් ලූයි" },
   "appDesc": { "message": "ChatGPT වෙතින් පිළිතුරු ලබා ගැනීමට ලිපින තීරුවේ @chatgpt ටයිප් කරන්න" },
-  "prefix_ask": { "message": "අසන්න" }
+  "prefix_ask": { "message": "අසන්න" },
+  "query_hi": { "message": "හායි!" }
 }

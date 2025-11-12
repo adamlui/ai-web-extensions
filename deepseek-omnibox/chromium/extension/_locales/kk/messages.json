@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "Адам Луи" },
   "appDesc": { "message": "DeepSeek жауаптарын алу үшін @deepseek мекенжай жолағына теріңіз" },
-  "prefix_ask": { "message": "& Сұрау" }
+  "prefix_ask": { "message": "& Сұрау" },
+  "query_hi": { "message": "Сәлем" }
 }

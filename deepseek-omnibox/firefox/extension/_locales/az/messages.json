@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "DeepSeek-dən cavab almaq üçün ünvan panelində @deepseek yazın" },
-  "prefix_ask": { "message": "Soruşmag" }
+  "prefix_ask": { "message": "Soruşmag" },
+  "query_hi": { "message": "Salam" }
 }

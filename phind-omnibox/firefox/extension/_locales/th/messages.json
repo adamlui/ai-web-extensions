@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "พิมพ์ @phind ในแถบที่อยู่เพื่อรับผลลัพธ์จาก Phind AI" },
-  "prefix_ask": { "message": "ถาม" }
+  "prefix_ask": { "message": "ถาม" },
+  "query_hi": { "message": "nakatutok kasanayan" }
 }

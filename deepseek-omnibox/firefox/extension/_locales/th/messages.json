@@ -2,5 +2,6 @@
   "appName": { "message": "แถบอเนกประสงค์ DeepSeek" },
   "appAuthor": { "message": "อดัมลุย" },
   "appDesc": { "message": "พิมพ์ @deepseek ในแถบที่อยู่เพื่อรับคำตอบจาก DeepSeek" },
-  "prefix_ask": { "message": "ถาม" }
+  "prefix_ask": { "message": "ถาม" },
+  "query_hi": { "message": "nakatutok kasanayan" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Di barika navnîşanê de @perplexity binivîsin da ku ji Perplexity AI encam bistînin" },
-  "prefix_ask": { "message": "Bipirse" }
+  "prefix_ask": { "message": "Bipirse" },
+  "query_hi": { "message": "Merheba" }
 }

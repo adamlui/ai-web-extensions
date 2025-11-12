@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Πληκτρολογήστε @perplexity στη γραμμή διευθύνσεων για να λάβετε αποτελέσματα από την Perplexity AI" },
-  "prefix_ask": { "message": "Ρωτήστε" }
+  "prefix_ask": { "message": "Ρωτήστε" },
+  "query_hi": { "message": "Γεια σας" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Idatzi @perplexity helbide-barran Perplexity AI-ren emaitzak lortzeko" },
-  "prefix_ask": { "message": "Galdetu" }
+  "prefix_ask": { "message": "Galdetu" },
+  "query_hi": { "message": "Kaixo" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "آدم لوي" },
   "appDesc": { "message": "اكتب @chatgpt في شريط العناوين للحصول على إجابات من ChatGPT" },
-  "prefix_ask": { "message": "اطرح" }
+  "prefix_ask": { "message": "اطرح" },
+  "query_hi": { "message": "مرحبًا،" }
 }

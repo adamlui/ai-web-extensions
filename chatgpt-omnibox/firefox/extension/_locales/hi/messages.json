@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "एडम लुई" },
   "appDesc": { "message": "ChatGPT से जवाब पाने के लिए पता बार में @chatgpt टाइप करें" },
-  "prefix_ask": { "message": "पूछें" }
+  "prefix_ask": { "message": "पूछें" },
+  "query_hi": { "message": "मैं यहाँ आपका दिल चुराने आया हूँ" }
 }

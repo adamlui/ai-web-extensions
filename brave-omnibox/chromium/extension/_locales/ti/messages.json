@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "ካብ Brave AI ውጽኢት ንምርካብ ኣብ ናይ ኣድራሻ ባር @brave ዓይነት" },
-  "prefix_ask": { "message": "ሕተት" }
+  "prefix_ask": { "message": "ሕተት" },
+  "query_hi": { "message": "ሰላም" }
 }

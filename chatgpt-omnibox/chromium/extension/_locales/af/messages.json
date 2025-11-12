@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Tik @chatgpt in adresbalk om antwoorde van ChatGPT te kry" },
-  "prefix_ask": { "message": "Vra" }
+  "prefix_ask": { "message": "Vra" },
+  "query_hi": { "message": "my gunsteling vervoer is 'n motor" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Soraty eo amin'ny adiresy bara ny @you mba hahazoana ny vokatra avy amin'ny You.com AI" },
-  "prefix_ask": { "message": "Manontania hoe " }
+  "prefix_ask": { "message": "Manontania hoe " },
+  "query_hi": { "message": "Raha toa ka" }
 }

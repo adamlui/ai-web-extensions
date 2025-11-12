@@ -2,5 +2,6 @@
   "appName": { "message": "I-DeepSeek Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Thayipha i-@deepseek kubha yekheli ukuze uthole izimpendulo ku-DeepSeek" },
-  "prefix_ask": { "message": "Buza" }
+  "prefix_ask": { "message": "Buza" },
+  "query_hi": { "message": "Sawubona" }
 }

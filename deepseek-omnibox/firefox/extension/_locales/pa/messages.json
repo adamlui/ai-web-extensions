@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "ਐਡਮ ਲੂਈ" },
   "appDesc": { "message": "ਚੈਟਜੀਪੀਟੀ ਤੋਂ ਜਵਾਬ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਐਡਰੈੱਸ ਬਾਰ ਵਿੱਚ @deepseek ਟਾਈਪ ਕਰੋ" },
-  "prefix_ask": { "message": "ਪੁੱਛੋ" }
+  "prefix_ask": { "message": "ਪੁੱਛੋ" },
+  "query_hi": { "message": "ਹੈਲੋ," }
 }

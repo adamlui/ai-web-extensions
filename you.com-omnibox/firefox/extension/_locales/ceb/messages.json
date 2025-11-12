@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Type @you sa address bar aron makakuha mga sangputanan gikan sa You.com AI" },
-  "prefix_ask": { "message": "Dugay ra" }
+  "prefix_ask": { "message": "Dugay ra" },
+  "query_hi": { "message": "Kay" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Phind AI natijalarini olish uchun manzil satriga @phind yozing" },
-  "prefix_ask": { "message": "& Soʻrash" }
+  "prefix_ask": { "message": "& Soʻrash" },
+  "query_hi": { "message": "Salom " }
 }

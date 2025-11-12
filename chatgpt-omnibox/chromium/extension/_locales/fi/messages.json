@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omniboxi" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Kirjoita @chatgpt osoitepalkkiin saadaksesi vastauksia ChatGPT: ltä" },
-  "prefix_ask": { "message": "Kysy" }
+  "prefix_ask": { "message": "Kysy" },
+  "query_hi": { "message": "Hei" }
 }

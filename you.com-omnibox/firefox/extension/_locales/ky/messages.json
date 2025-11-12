@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "You.com AI ден натыйжаларды алуу үчүн @you дарек тилкесине жазыңыз" },
-  "prefix_ask": { "message": "Сура" }
+  "prefix_ask": { "message": "Сура" },
+  "query_hi": { "message": "Салам. " }
 }

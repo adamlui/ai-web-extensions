@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "You.com AI سے نتائج حاصل کرنے کے لیے ایڈریس بار میں @you ٹائپ کریں" },
-  "prefix_ask": { "message": "Public files of %s%.0s" }
+  "prefix_ask": { "message": "Public files of %s%.0s" },
+  "query_hi": { "message": "ہیلو" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Skriv @perplexity adresselinjen for at få resultater fra Perplexity AI" },
-  "prefix_ask": { "message": "Spørg" }
+  "prefix_ask": { "message": "Spørg" },
+  "query_hi": { "message": "Hej" }
 }

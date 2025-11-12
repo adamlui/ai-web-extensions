@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Skriv @phind adresselinjen for at få resultater fra Phind AI" },
-  "prefix_ask": { "message": "Spørg" }
+  "prefix_ask": { "message": "Spørg" },
+  "query_hi": { "message": "Hej" }
 }

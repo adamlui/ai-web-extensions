@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "You.com AI natijalarini olish uchun manzil satriga @you yozing" },
-  "prefix_ask": { "message": "& Soʻrash" }
+  "prefix_ask": { "message": "& Soʻrash" },
+  "query_hi": { "message": "Salom " }
 }

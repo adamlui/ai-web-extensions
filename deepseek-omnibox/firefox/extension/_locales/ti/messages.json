@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "ኣዳም ሉዊ" },
   "appDesc": { "message": "ካብ DeepSeek መልሲ ንምርካብ ኣብ ናይ ኣድራሻ ባር @deepseek ዓይነት" },
-  "prefix_ask": { "message": "ሕተት" }
+  "prefix_ask": { "message": "ሕተት" },
+  "query_hi": { "message": "ሰላም" }
 }

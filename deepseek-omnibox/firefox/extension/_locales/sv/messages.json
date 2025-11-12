@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek-fält" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Skriv @deepseek i adressfältet för att få svar från DeepSeek" },
-  "prefix_ask": { "message": "Fråga" }
+  "prefix_ask": { "message": "Fråga" },
+  "query_hi": { "message": "Hej" }
 }

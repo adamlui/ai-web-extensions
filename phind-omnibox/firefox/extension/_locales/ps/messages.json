@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "د Phind AI څخه د پایلو ترلاسه کولو لپاره په ادرس بار کې @phind ټایپ کړئ" },
-  "prefix_ask": { "message": "پوښتنه" }
+  "prefix_ask": { "message": "پوښتنه" },
+  "query_hi": { "message": "ستړی مه شي يا سلام کول" }
 }

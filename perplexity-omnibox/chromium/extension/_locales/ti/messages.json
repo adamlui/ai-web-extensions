@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "ካብ Perplexity AI ውጽኢት ንምርካብ ኣብ ናይ ኣድራሻ ባር @perplexity ዓይነት" },
-  "prefix_ask": { "message": "ሕተት" }
+  "prefix_ask": { "message": "ሕተት" },
+  "query_hi": { "message": "ሰላም" }
 }

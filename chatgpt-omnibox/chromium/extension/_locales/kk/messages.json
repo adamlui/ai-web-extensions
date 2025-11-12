@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "Адам Луи" },
   "appDesc": { "message": "ChatGPT жауаптарын алу үшін @chatgpt мекенжай жолағына теріңіз" },
-  "prefix_ask": { "message": "& Сұрау" }
+  "prefix_ask": { "message": "& Сұрау" },
+  "query_hi": { "message": "Сәлем" }
 }

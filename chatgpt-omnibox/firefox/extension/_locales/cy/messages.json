@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Teipiwch @chatgpt yn y bar cyfeiriad i gael atebion gan ChatGPT" },
-  "prefix_ask": { "message": "Gofyn" }
+  "prefix_ask": { "message": "Gofyn" },
+  "query_hi": { "message": "Smae" }
 }

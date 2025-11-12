@@ -2,5 +2,6 @@
   "appName": { "message": "Kotak Omni DeepSeek" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Taip @deepseek dalam bar alamat untuk mendapatkan jawapan daripada DeepSeek" },
-  "prefix_ask": { "message": "Tanya" }
+  "prefix_ask": { "message": "Tanya" },
+  "query_hi": { "message": "Loghat Kelantan" }
 }

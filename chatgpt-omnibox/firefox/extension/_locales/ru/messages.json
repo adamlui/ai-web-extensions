@@ -2,5 +2,6 @@
   "appName": { "message": "Омнибокс ChatGPT" },
   "appAuthor": { "message": "Адам Луи" },
   "appDesc": { "message": "Введите @chatgpt в адресной строке, чтобы получить ответы от ChatGPT" },
-  "prefix_ask": { "message": "Спросить" }
+  "prefix_ask": { "message": "Спросить" },
+  "query_hi": { "message": "Привет" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek cím- és keresősáv" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Írja be a @deepseek parancsot a címsávba, hogy válaszokat kapjon a DeepSeek-től" },
-  "prefix_ask": { "message": "Kérdés" }
+  "prefix_ask": { "message": "Kérdés" },
+  "query_hi": { "message": "Sziasztok" }
 }

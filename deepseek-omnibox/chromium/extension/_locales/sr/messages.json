@@ -2,5 +2,6 @@
   "appName": { "message": "Omniboks DeepSeek" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Unesite @deepseek u traku za adresu da biste dobili odgovore od DeepSeek-a" },
-  "prefix_ask": { "message": "Питај" }
+  "prefix_ask": { "message": "Питај" },
+  "query_hi": { "message": "Zdravo" }
 }

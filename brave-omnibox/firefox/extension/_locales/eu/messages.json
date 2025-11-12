@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Idatzi @brave helbide-barran Brave AI-ren emaitzak lortzeko" },
-  "prefix_ask": { "message": "Galdetu" }
+  "prefix_ask": { "message": "Galdetu" },
+  "query_hi": { "message": "Kaixo" }
 }

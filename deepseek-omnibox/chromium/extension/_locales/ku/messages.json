@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Di barika navnîşanê de @deepseek binivîsin ku ji DeepSeek bersivan bistînin" },
-  "prefix_ask": { "message": "Bipirse" }
+  "prefix_ask": { "message": "Bipirse" },
+  "query_hi": { "message": "Merheba" }
 }

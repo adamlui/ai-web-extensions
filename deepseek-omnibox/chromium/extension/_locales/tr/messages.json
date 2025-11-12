@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Çok Amaçlı Adres Çubuğu" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "DeepSeek'den yanıt almak için adres çubuğuna @deepseek yazın" },
-  "prefix_ask": { "message": "Sor" }
+  "prefix_ask": { "message": "Sor" },
+  "query_hi": { "message": "Merhaba," }
 }

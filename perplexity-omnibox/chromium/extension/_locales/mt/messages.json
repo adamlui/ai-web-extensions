@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Ikteb @perplexity fil-bar tal-indirizzi biex tikseb riżultati minn Perplexity AI" },
-  "prefix_ask": { "message": "PKO" }
+  "prefix_ask": { "message": "PKO" },
+  "query_hi": { "message": "HI =" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Thayipha @perplexity kubha yekheli ukuze uthole imiphumela evela ku-Perplexity AI" },
-  "prefix_ask": { "message": "Buza" }
+  "prefix_ask": { "message": "Buza" },
+  "query_hi": { "message": "Sawubona" }
 }

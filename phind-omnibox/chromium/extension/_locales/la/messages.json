@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Type @phind in linea barre ad resultatum Phind AI" },
-  "prefix_ask": { "message": "rogate" }
+  "prefix_ask": { "message": "rogate" },
+  "query_hi": { "message": "" }
 }

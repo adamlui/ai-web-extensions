@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Brave AI нәтижелерін алу үшін @brave мекенжай жолағына теріңіз" },
-  "prefix_ask": { "message": "& Сұрау" }
+  "prefix_ask": { "message": "& Сұрау" },
+  "query_hi": { "message": "Сәлем" }
 }

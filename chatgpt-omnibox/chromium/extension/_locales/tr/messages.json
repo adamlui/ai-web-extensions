@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Çok Amaçlı Adres Çubuğu" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "ChatGPT'den yanıt almak için adres çubuğuna @chatgpt yazın" },
-  "prefix_ask": { "message": "Sor" }
+  "prefix_ask": { "message": "Sor" },
+  "query_hi": { "message": "Merhaba," }
 }

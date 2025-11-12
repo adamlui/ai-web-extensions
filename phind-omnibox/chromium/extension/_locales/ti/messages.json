@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "ካብ Phind AI ውጽኢት ንምርካብ ኣብ ናይ ኣድራሻ ባር @phind ዓይነት" },
-  "prefix_ask": { "message": "ሕተት" }
+  "prefix_ask": { "message": "ሕተት" },
+  "query_hi": { "message": "ሰላም" }
 }

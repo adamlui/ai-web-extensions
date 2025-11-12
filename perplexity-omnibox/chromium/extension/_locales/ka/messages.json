@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Აკრიფეთ @perplexity მისამართის ზოლში, რომ მიიღოთ შედეგები Perplexity AI-სგან" },
-  "prefix_ask": { "message": "კითხვა" }
+  "prefix_ask": { "message": "კითხვა" },
+  "query_hi": { "message": "გამარჯობა" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Perplexity AI سے نتائج حاصل کرنے کے لیے ایڈریس بار میں @perplexity ٹائپ کریں" },
-  "prefix_ask": { "message": "Public files of %s%.0s" }
+  "prefix_ask": { "message": "Public files of %s%.0s" },
+  "query_hi": { "message": "ہیلو" }
 }

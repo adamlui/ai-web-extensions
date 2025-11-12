@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Di barika navnîşanê de @phind binivîsin da ku ji Phind AI encam bistînin" },
-  "prefix_ask": { "message": "Bipirse" }
+  "prefix_ask": { "message": "Bipirse" },
+  "query_hi": { "message": "Merheba" }
 }

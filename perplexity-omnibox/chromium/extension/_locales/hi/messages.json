@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Perplexity AI से परिणाम प्राप्त करने के लिए एड्रेस बार में @perplexity टाइप करें" },
-  "prefix_ask": { "message": "पूछें" }
+  "prefix_ask": { "message": "पूछें" },
+  "query_hi": { "message": "मैं यहाँ आपका दिल चुराने आया हूँ" }
 }

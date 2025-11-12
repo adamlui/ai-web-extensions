@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "ኣዳም ሉዊ" },
   "appDesc": { "message": "ካብ ChatGPT መልሲ ንምርካብ ኣብ ናይ ኣድራሻ ባር @chatgpt ዓይነት" },
-  "prefix_ask": { "message": "ሕተት" }
+  "prefix_ask": { "message": "ሕተት" },
+  "query_hi": { "message": "ሰላም" }
 }

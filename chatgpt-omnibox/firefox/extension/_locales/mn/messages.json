@@ -2,5 +2,6 @@
   "appName": { "message": "ЧатGPT Omnibox" },
   "appAuthor": { "message": "Адам Луй" },
   "appDesc": { "message": "ЧатGPT-аас хариулт авахын тулд @chatgpt хаягийн мөрийг бичнэ үү" },
-  "prefix_ask": { "message": "Асуух" }
+  "prefix_ask": { "message": "Асуух" },
+  "query_hi": { "message": "" }
 }

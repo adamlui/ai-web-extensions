@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "刘展鹏 (Adam Lui)" },
   "appDesc": { "message": "在地址栏中输入 @you 以获取 You.com AI 的结果" },
-  "prefix_ask": { "message": "發問" }
+  "prefix_ask": { "message": "發問" },
+  "query_hi": { "message": "您好" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Lai saņemtu atbildes no DeepSeek, adreses joslā ierakstiet @deepseek" },
-  "prefix_ask": { "message": "DzÄst failu" }
+  "prefix_ask": { "message": "DzÄst failu" },
+  "query_hi": { "message": "Hi" }
 }

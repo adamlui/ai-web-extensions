@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Tajpu @phind en adresbreto por ricevi rezultojn de Phind AI" },
-  "prefix_ask": { "message": "& Demandu" }
+  "prefix_ask": { "message": "& Demandu" },
+  "query_hi": { "message": "Hej!" }
 }

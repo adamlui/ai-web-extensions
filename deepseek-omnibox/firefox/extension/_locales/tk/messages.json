@@ -2,5 +2,6 @@
   "appName": { "message": "ÇatGPT Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "ÇatGPT-denjogap almak üçin @deepseek-i ýazyň" },
-  "prefix_ask": { "message": "Sor" }
+  "prefix_ask": { "message": "Sor" },
+  "query_hi": { "message": "shattaf" }
 }

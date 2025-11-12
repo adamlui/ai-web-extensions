@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Soraty eo amin'ny adiresy bara ny @phind mba hahazoana ny vokatra avy amin'ny Phind AI" },
-  "prefix_ask": { "message": "Manontania hoe " }
+  "prefix_ask": { "message": "Manontania hoe " },
+  "query_hi": { "message": "Raha toa ka" }
 }

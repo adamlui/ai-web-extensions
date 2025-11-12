@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Type @phind in address bar go bona dipholo go tswa go Phind AI" },
-  "prefix_ask": { "message": "ASK" }
+  "prefix_ask": { "message": "ASK" },
+  "query_hi": { "message": "Dumela" }
 }

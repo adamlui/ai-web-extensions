@@ -2,5 +2,6 @@
   "appName": { "message": "ޗެޓްޖީޕީޓީ އޯމްނިބޮކްސް އެވެ" },
   "appAuthor": { "message": "އާދަމް ލުއި އެވެ" },
   "appDesc": { "message": "ޗެޓްޖީޕީޓީ އިން ޖަވާބު ހޯދުމަށް އެޑްރެސް ބާރ ގައި @chatgpt ލިޔެލާށެވެ" },
-  "prefix_ask": { "message": "އެހުން" }
+  "prefix_ask": { "message": "އެހުން" },
+  "query_hi": { "message": "hi\n" }
 }

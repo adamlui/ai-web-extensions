@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Tik @phind in adresbalk om resultate van Phind AI te kry" },
-  "prefix_ask": { "message": "Vra" }
+  "prefix_ask": { "message": "Vra" },
+  "query_hi": { "message": "my gunsteling vervoer is 'n motor" }
 }

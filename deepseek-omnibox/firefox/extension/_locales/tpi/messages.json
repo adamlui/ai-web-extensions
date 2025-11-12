@@ -2,5 +2,6 @@
   "appName": { "message": "Toktok bilong Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Tik @deepseek long adres bar bilong kisim bekim long DeepSeek" },
-  "prefix_ask": { "message": "Askim" }
+  "prefix_ask": { "message": "Askim" },
+  "query_hi": { "message": "tok pisin" }
 }

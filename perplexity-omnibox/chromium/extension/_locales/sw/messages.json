@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Andika @perplexity katika upau wa anwani ili kupata matokeo kutoka Perplexity AI" },
-  "prefix_ask": { "message": "Omba" }
+  "prefix_ask": { "message": "Omba" },
+  "query_hi": { "message": "kukimbia maisha y" }
 }

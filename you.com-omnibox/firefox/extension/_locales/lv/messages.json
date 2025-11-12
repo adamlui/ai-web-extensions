@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Ierakstiet @you adreses joslā, lai iegūtu rezultātus no You.com AI" },
-  "prefix_ask": { "message": "DzÄst failu" }
+  "prefix_ask": { "message": "DzÄst failu" },
+  "query_hi": { "message": "Hi" }
 }

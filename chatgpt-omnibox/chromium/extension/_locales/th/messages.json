@@ -2,5 +2,6 @@
   "appName": { "message": "แถบอเนกประสงค์ ChatGPT" },
   "appAuthor": { "message": "อดัมลุย" },
   "appDesc": { "message": "พิมพ์ @chatgpt ในแถบที่อยู่เพื่อรับคำตอบจาก ChatGPT" },
-  "prefix_ask": { "message": "ถาม" }
+  "prefix_ask": { "message": "ถาม" },
+  "query_hi": { "message": "nakatutok kasanayan" }
 }

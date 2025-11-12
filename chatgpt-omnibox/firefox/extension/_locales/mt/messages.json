@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Ikteb @chatgpt fil-bar tal-indirizzi biex tikseb tweġibiet mingħand ChatGPT" },
-  "prefix_ask": { "message": "PKO" }
+  "prefix_ask": { "message": "PKO" },
+  "query_hi": { "message": "HI =" }
 }

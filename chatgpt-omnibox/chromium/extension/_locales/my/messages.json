@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "အာဒံ Lui" },
   "appDesc": { "message": "ChatGPT ထံမှ အဖြေများရယူရန် @chatgpt ကို လိပ်စာဘားတွင် ရိုက်ထည့်ပါ" },
-  "prefix_ask": { "message": "မေးပါ" }
+  "prefix_ask": { "message": "မေးပါ" },
+  "query_hi": { "message": "မင်္ဂလာပါ" }
 }

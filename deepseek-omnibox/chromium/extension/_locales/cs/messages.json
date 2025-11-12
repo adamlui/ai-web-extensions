@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Odpovědi od DeepSeek získáte zadáním @deepseek do adresního řádku" },
-  "prefix_ask": { "message": "Dotázat" }
+  "prefix_ask": { "message": "Dotázat" },
+  "query_hi": { "message": "Ahoj" }
 }

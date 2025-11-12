@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Brave AI ден натыйжаларды алуу үчүн @brave дарек тилкесине жазыңыз" },
-  "prefix_ask": { "message": "Сура" }
+  "prefix_ask": { "message": "Сура" },
+  "query_hi": { "message": "Салам. " }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT-fält" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Skriv @chatgpt i adressfältet för att få svar från ChatGPT" },
-  "prefix_ask": { "message": "Fråga" }
+  "prefix_ask": { "message": "Fråga" },
+  "query_hi": { "message": "Hej" }
 }

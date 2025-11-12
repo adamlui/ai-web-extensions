@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "אדם לוי" },
   "appDesc": { "message": "טיפּ @deepseek אין אַדרעס באַר צו באַקומען ענטפֿערס פֿון DeepSeek" },
-  "prefix_ask": { "message": "פרעגן" }
+  "prefix_ask": { "message": "פרעגן" },
+  "query_hi": { "message": "הי" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "ཁ་བརྡ ། omnibox" },
   "appAuthor": { "message": "ཨ་དམ་ལུའུ་ཡེ །" },
   "appDesc": { "message": "འདྲ་བཤུ་@deepseek ཁ་བྱང་བཱར་ནང་དུ་འཚོལ་ནས་DeepSeekནས་ལན་འཚོལ་བ །" },
-  "prefix_ask": { "message": "དྲིས་ལན །" }
+  "prefix_ask": { "message": "དྲིས་ལན །" },
+  "query_hi": { "message": "ཨ་རོགས" }
 }

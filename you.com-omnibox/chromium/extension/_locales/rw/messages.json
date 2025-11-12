@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Andika @you muri adresse kugirango ubone ibisubizo bivuye muri You.com AI" },
-  "prefix_ask": { "message": "Public files of %s%.0s" }
+  "prefix_ask": { "message": "Public files of %s%.0s" },
+  "query_hi": { "message": "Muraho" }
 }

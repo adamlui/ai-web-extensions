@@ -2,5 +2,6 @@
   "appName": { "message": "Phind Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Nooca @phind ee bar cinwaanka si aad u hesho natiijooyinka Phind AI" },
-  "prefix_ask": { "message": "Weydii" }
+  "prefix_ask": { "message": "Weydii" },
+  "query_hi": { "message": "ASC" }
 }

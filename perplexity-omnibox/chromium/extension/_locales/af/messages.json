@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Tik @perplexity in adresbalk om resultate van Perplexity AI te kry" },
-  "prefix_ask": { "message": "Vra" }
+  "prefix_ask": { "message": "Vra" },
+  "query_hi": { "message": "my gunsteling vervoer is 'n motor" }
 }

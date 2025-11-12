@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "ஆடம் லூய்" },
   "appDesc": { "message": "DeepSeek இலிருந்து பதில்களைப் பெற முகவரிப் பட்டியில் @deepseek என்று தட்டச்சு செய்யவும்" },
-  "prefix_ask": { "message": "கேளுங்கள்." }
+  "prefix_ask": { "message": "கேளுங்கள்." },
+  "query_hi": { "message": "வணக்கம்" }
 }

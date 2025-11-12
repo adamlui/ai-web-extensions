@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Írja be a @perplexity parancsot a címsávba, hogy eredményeket kapjon a Perplexity AI-tól" },
-  "prefix_ask": { "message": "Kérdés" }
+  "prefix_ask": { "message": "Kérdés" },
+  "query_hi": { "message": "Sziasztok" }
 }

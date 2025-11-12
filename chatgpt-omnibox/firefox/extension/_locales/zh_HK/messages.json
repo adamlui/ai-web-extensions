@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT 網址列" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "在地址欄中輸入 @chatgpt 以從 ChatGPT 獲取答案" },
-  "prefix_ask": { "message": "詢問" }
+  "prefix_ask": { "message": "詢問" },
+  "query_hi": { "message": "你好" }
 }

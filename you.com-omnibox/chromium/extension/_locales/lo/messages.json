@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "ພິມ @you ໃນແຖບທີ່ຢູ່ເພື່ອໃຫ້ໄດ້ຜົນຈາກ You.com AI" },
-  "prefix_ask": { "message": "ຖາມ" }
+  "prefix_ask": { "message": "ຖາມ" },
+  "query_hi": { "message": "Hi" }
 }

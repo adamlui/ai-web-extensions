@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Напишете @brave во лентата за адреси за да добиете резултати од Brave AI" },
-  "prefix_ask": { "message": "Прашај" }
+  "prefix_ask": { "message": "Прашај" },
+  "query_hi": { "message": "google transleter" }
 }

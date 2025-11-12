@@ -2,5 +2,6 @@
   "appName": { "message": "Omniboks ChatGPT" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Unesite @chatgpt u traku za adresu da biste dobili odgovore od ChatGPT-a" },
-  "prefix_ask": { "message": "Питај" }
+  "prefix_ask": { "message": "Питај" },
+  "query_hi": { "message": "Zdravo" }
 }

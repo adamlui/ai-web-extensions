@@ -2,5 +2,6 @@
   "appName": { "message": "Omnibox DeepSeek" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Ketik @deepseek di bilah alamat untuk mendapatkan jawaban dari DeepSeek" },
-  "prefix_ask": { "message": "Tanya" }
+  "prefix_ask": { "message": "Tanya" },
+  "query_hi": { "message": "matamu sangat indah" }
 }

@@ -2,5 +2,6 @@
   "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Nhập @deepseekvào thanh địa chỉ để nhận câu trả lời từ DeepSeek" },
-  "prefix_ask": { "message": "Hỏi" }
+  "prefix_ask": { "message": "Hỏi" },
+  "query_hi": { "message": "Xin chào" }
 }

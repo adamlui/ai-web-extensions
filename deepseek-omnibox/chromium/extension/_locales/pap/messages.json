@@ -2,5 +2,6 @@
   "appName": { "message": "Tutor di Arabo a Omnibox" },
   "appAuthor": { "message": "Adam Lui cantidad" },
   "appDesc": { "message": "Tipi di @deepseek in bar di adresa di DeepSeek" },
-  "prefix_ask": { "message": "Puntra" }
+  "prefix_ask": { "message": "Puntra" },
+  "query_hi": { "message": "Halo" }
 }

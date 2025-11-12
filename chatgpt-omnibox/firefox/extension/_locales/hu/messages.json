@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT cím- és keresősáv" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Írja be a @chatgpt parancsot a címsávba, hogy válaszokat kapjon a ChatGPT-től" },
-  "prefix_ask": { "message": "Kérdés" }
+  "prefix_ask": { "message": "Kérdés" },
+  "query_hi": { "message": "Sziasztok" }
 }

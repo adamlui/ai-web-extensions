@@ -2,5 +2,6 @@
   "appName": { "message": "ChatGPT Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Įveskite @chatgpt adreso juostoje, kad gautumėte atsakymus iš „ChatGPT“" },
-  "prefix_ask": { "message": "Klauskite" }
+  "prefix_ask": { "message": "Klauskite" },
+  "query_hi": { "message": "Sveiki," }
 }

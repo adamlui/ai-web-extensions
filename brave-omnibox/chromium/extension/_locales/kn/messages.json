@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Brave AI ಯಿಂದ ಫಲಿತಾಂಶಗಳನ್ನು ಪಡೆಯಲು ವಿಳಾಸ ಪಟ್ಟಿಯಲ್ಲಿ @brave ಎಂದು ಟೈಪ್ ಮಾಡಿ" },
-  "prefix_ask": { "message": "ಕೇಳಿ" }
+  "prefix_ask": { "message": "ಕೇಳಿ" },
+  "query_hi": { "message": "Hi" }
 }

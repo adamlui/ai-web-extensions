@@ -2,5 +2,6 @@
   "appName": { "message": "Brave Omnibox" },
   "appAuthor": { "message": "劉展鵬 (Adam Lui)" },
   "appDesc": { "message": "在網址列中輸入 @brave 以取得 Brave AI 的結果" },
-  "prefix_ask": { "message": "問" }
+  "prefix_ask": { "message": "問" },
+  "query_hi": { "message": "你好" }
 }

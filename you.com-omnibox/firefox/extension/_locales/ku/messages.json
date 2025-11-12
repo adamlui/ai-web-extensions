@@ -2,5 +2,6 @@
   "appName": { "message": "You.com Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Di barika navnîşanê de @you binivîsin da ku ji You.com AI encam bistînin" },
-  "prefix_ask": { "message": "Bipirse" }
+  "prefix_ask": { "message": "Bipirse" },
+  "query_hi": { "message": "Merheba" }
 }

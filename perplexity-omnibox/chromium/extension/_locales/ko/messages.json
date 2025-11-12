@@ -2,5 +2,6 @@
   "appName": { "message": "Perplexity Omnibox" },
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "검색주소창에 @perplexity 를 입력하여 Perplexity AI 의 결과를 가져옵니다" },
-  "prefix_ask": { "message": "질문하기" }
+  "prefix_ask": { "message": "질문하기" },
+  "query_hi": { "message": "Hi" }
 }
