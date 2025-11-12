@@ -20,8 +20,8 @@ function tabIsLoaded(tabId) {
 chrome.action.onClicked.addListener(async () => {
     const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
           query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi',
-          updatedTab = await chrome.tabs.update(activeTab.id, { url: deepseekChatURL })
-    tabIsLoaded(updatedTab.id).then(() => chrome.tabs.sendMessage(updatedTab.id, query))
+          newTab = await chrome.tabs.create({ url: deepseekChatURL })
+    tabIsLoaded(newTab.id).then(() => chrome.tabs.sendMessage(newTab.id, query))
 })
 
 // Suggest DeepSeek on short prefix used

@@ -13,7 +13,7 @@ const chatgptURL = 'https://chatgpt.com'
 chrome.action.onClicked.addListener(async () => {
     const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
           query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi'
-    chrome.tabs.update(activeTab.id, { url: `${chatgptURL}/?q=${query}` })
+    chrome.tabs.create({ url: `${chatgptURL}/?q=${query}` })
 })
 
 // Suggest ChatGPT on short prefix used

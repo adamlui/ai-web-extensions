@@ -13,7 +13,7 @@ const phindURL = 'https://www.phind.com'
 chrome.action.onClicked.addListener(async () => {
     const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
           query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi'
-    chrome.tabs.update(activeTab.id, { url: `${phindURL}/search?q=${query}` })
+    chrome.tabs.create({ url: `${phindURL}/search?q=${query}` })
 })
 
 // Suggest Phind on short prefix used

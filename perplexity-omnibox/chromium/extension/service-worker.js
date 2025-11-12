@@ -13,7 +13,7 @@ const perplexityURL = 'https://www.perplexity.ai'
 chrome.action.onClicked.addListener(async () => {
     const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
           query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi'
-    chrome.tabs.update(activeTab.id, { url: `${perplexityURL}/search/new?q=${query}` })
+    chrome.tabs.create({ url: `${perplexityURL}/search/new?q=${query}` })
 })
 
 // Suggest Perplexity on short prefix used

@@ -13,7 +13,7 @@ const youURL = 'https://you.com/'
 chrome.action.onClicked.addListener(async () => {
     const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
           query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi'
-    chrome.tabs.update(activeTab.id, { url: `${youURL}/search?q=${query}&tbm=youchat` })
+    chrome.tabs.create({ url: `${youURL}/search?q=${query}&tbm=youchat` })
 })
 
 // Suggest You.com on short prefix used

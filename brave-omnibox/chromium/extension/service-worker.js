@@ -13,7 +13,7 @@ const braveURL = 'https://search.brave.com'
 chrome.action.onClicked.addListener(async () => {
     const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
           query = activeTab.url ? new URL(activeTab.url).searchParams.get('q') || 'hi' : 'hi'
-    chrome.tabs.update(activeTab.id, { url: `${braveURL}/search?q=${query}&summary=1` })
+    chrome.tabs.create({ url: `${braveURL}/search?q=${query}&summary=1` })
 })
 
 // Suggest Brave AI on short prefix used
