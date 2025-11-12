@@ -3,5 +3,5 @@
   "appAuthor": { "message": "Adam Lui" },
   "appDesc": { "message": "Type @deepseek in address bar to get answers from DeepSeek" },
   "prefix_ask": { "message": "Ask" },
-  "query_hi": { "message": "Hi" }
+  "query_hi": { "message": "Hi there" }
 }
