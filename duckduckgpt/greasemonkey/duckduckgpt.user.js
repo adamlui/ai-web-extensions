@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.11.5
+// @version                2025.11.15
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -425,7 +425,7 @@
 
     window.update = {
 
-        appBottomPos() { app.div.style.bottom = `${ config.minimized ? 61 - app.div.offsetHeight : -7 }px` },
+        appBottomPos() { app.div.style.bottom = `${ config.minimized ? 55 - app.div.offsetHeight : -7 }px` },
 
         appStyle() { // used in toggle.animations() + update.scheme() + main's app init
             const { scheme: appScheme } = env.ui.app,
