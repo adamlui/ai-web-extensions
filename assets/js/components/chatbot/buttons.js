@@ -12,13 +12,13 @@ window.buttons = {
                 // Copy button
                 this.copy = dom.create.elem('btn', {
                     id: `${app.slug}-copy-btn`, class: 'no-mobile-tap-outline',
-                    style: this.styles + 'display: flex'
+                    style: this.styles + 'display: flex ; margin-top: 1.5px'
                 })
                 const copySVGs = {
                     copy: icons.create({ key: 'copy' }), copied: icons.create({ key: 'checkmarkDouble' })}
                 Object.entries(copySVGs).forEach(([svgType, svg]) => {
                     svg.id = `${app.slug}-${svgType}-icon`
-                    ;['width', 'height'].forEach(attr => svg.setAttribute(attr, 15))
+                    ;['width', 'height'].forEach(attr => svg.setAttribute(attr, 13))
                 })
                 this.copy.append(copySVGs.copy)
                 this.copy.listeners = {}
