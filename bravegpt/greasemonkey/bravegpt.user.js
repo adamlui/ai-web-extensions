@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2025.11.16.2
+// @version               2025.11.16.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -196,7 +196,7 @@
 // @require               https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.4/dist/chatgpt.min.js#sha256-tYhvHliPyfsEyE9hTEyGudofjnp2Hpz/iWOllkm9o4w=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require               https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0e00ee9/assets/js/components/chatbot/buttons.js#sha256-HlJLvtahKYN1DwrA3C2e4KAT16HvkV/iXPttdxGvEL8=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@ca40a32/assets/js/components/chatbot/buttons.js#sha256-XyHsbS34mpfSK+aOLuMyN6T9u5tXlf0K7JW7sw4CqK4=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@2255fee/assets/js/components/chatbot/icons.js#sha256-nAcuQD4FVFzUN1pS6pOjw2V3IvkDwYV+P3m5IN8nsdo=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3230687/assets/js/components/chatbot/menus.js#sha256-1Nk1i+914uf/6PJTXk/0MdpnnYsOhREIpIokhEt8JJU=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@485996c/assets/js/components/chatbot/replyBubble.js#sha256-/F0kipD9jDAtlnlfL4Q3cbboS5bPx9ierlnRU897eqQ=
@@ -215,6 +215,7 @@
 // @require               https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js#sha256-n0UwfFeU7SR6DQlfOmLlLvIhWmeyMnIDp/2RmVmuedE=
 // @require               https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js#sha256-e1fUJ6xicGd9r42DgN7SzHMzb5FJoWe44f4NbvZmBK4=
 // @require               https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js#sha256-Ffq85bZYmLMrA/XtJen4kacprUwNbYdxEKd0SqhHqJQ=
+// @require               https://unpkg.com/tone@15.1.22/build/Tone.js#sha256-4pCVL6Q9mnp4AYKoPG/M9E15y3riy6EC7x8rnZgSTiI=
 // @resource bgptIcon     https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@a76e718/assets/images/icons/bravegpt/icon64.png.b64#sha256-Abqr6XIwT+g72ig2haUUkniR89b5UlxL28cAI6BVT/c=
 // @resource bgptLSlogo   https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@a76e718/assets/images/logos/bravegpt/lightmode/logo730x155.png.b64#sha256-gGomHdYcs/AE4Ep8dAJhPFbCX6uyHmb38vi9hWYJZLI=
 // @resource bgptDSlogo   https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@a76e718/assets/images/logos/bravegpt/darkmode/logo730x155.png.b64#sha256-2Qx4bTS8s7dKj4m2dsJdPnijThaYRwYQMi30+KjtopI=
@@ -245,6 +246,7 @@
 // ✓ highlight.js (https://highlightjs.org) © 2006 Ivan Sagalaev under the BSD 3-Clause license
 // ✓ KaTeX (https://katex.org) © 2013–2020 Khan Academy & other contributors under the MIT license
 // ✓ Marked (https://marked.js.org) © 2018+ MarkedJS © 2011–2018 Christopher Jeffrey under the MIT license
+// ✓ Tone.js (https://tonejs.github.io) © 2014–2025 Yotam Mann under the MIT license
 
 // Documentation: https://docs.bravegpt.com
 
