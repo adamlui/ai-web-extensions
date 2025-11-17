@@ -178,9 +178,10 @@ window.buttons = {
                                     buttons.reply.bubble.speak.style.cursor = 'pointer'
                                     const player = new Tone.Player(buffer), speed = 1.5
                                     const fx = { // applied in top-down order
-                                        pitchShifter: new Tone.PitchShift(12 * Math.log2(1/speed)),
-                                        phaser: new Tone.Phaser({ frequency: 55, octaves: 5, baseFrequency: 1000 }),
-                                        eq: new Tone.EQ3({
+                                        pitchShifter: new Tone.PitchShift(12 * Math.log2(1/speed)), // keep og pitch
+                                        phaser: new Tone.Phaser({ // make robotic
+                                            frequency: 55, octaves: 5, baseFrequency: 1000 }),
+                                        eq: new Tone.EQ3({ // apply smile curve
                                             low: 9, mid: 0, high: 9, lowFrequency: 300, highFrequency: 500 })
                                     }
                                     let outputNode = player
