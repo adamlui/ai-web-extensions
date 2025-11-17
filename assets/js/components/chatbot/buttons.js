@@ -186,11 +186,9 @@ window.buttons = {
                                             low: 12, mid: 0, high: 9, lowFrequency: 300, highFrequency: 500 })
                                     }
                                     let outputNode = player
-                                    Object.values(fx).forEach((nextEffect, idx, fx) => { // chain 'em
-                                        const isLastEffect = idx == fx.length -1
-                                        outputNode.connect(isLastEffect ? nextEffect.toDestination() : nextEffect)
-                                        outputNode = nextEffect
-                                    })
+                                    Object.values(fx).forEach(effect => { // chain 'em
+                                        outputNode.connect(effect) ; outputNode = effect })
+                                    outputNode.toDestination()
                                     player.playbackRate = speed ; player.start()
                                     window.currentlyPlayingAudio = player ; player.onstop = handleAudioEnded
                                 }).catch(() => {
