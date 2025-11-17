@@ -28,8 +28,8 @@ export default [
                 renderMathInElement: 'readonly', replyBubble: 'writable', session: 'readonly', settings: 'writable',
                 show: 'readonly', sites: 'writable', string: 'readonly', styles: 'readonly', sync: 'readonly',
                 syncConfigToUI: 'readonly', themes: 'readonly', toggle: 'readonly', toggleMode: 'readonly',
-                toggles: 'writable', toolbarMenu: 'writable', tooltip: 'writable', ui: 'readonly', update: 'readonly',
-                updateCheck: 'readonly', userscript: 'readonly', xhr: 'writable'
+                toggles: 'writable', Tone: 'readonly', toolbarMenu: 'writable', tooltip: 'writable', ui: 'readonly',
+                update: 'readonly', updateCheck: 'readonly', userscript: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
