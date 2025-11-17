@@ -1,4 +1,4 @@
-// Requires components/replyBubble.js + lib/dom.js + <app|get|prompts|show|tooltip|xhr>
+// Requires components/replyBubble.js + lib/<dom|Tone>.js + <app|get|prompts|show|tooltip|xhr>
 
 window.buttons = {
     reply: {
@@ -6,7 +6,7 @@ window.buttons = {
             types: ['copy', 'share', 'regen', 'speak'], // right-to-left
             styles: 'float: right ; cursor: pointer ;',
 
-            create() { // requires lib/dom.js + <app|get|prompts|show|tooltip|xhr>
+            create() { // requires lib/<dom|Tone>.js + <app|get|prompts|show|tooltip|xhr>
                 if (this.share) return
 
                 // Copy button
@@ -134,13 +134,9 @@ window.buttons = {
                     // Init Sogou TTS dialect map
                     window.sgtDialectMap ||= await get.json(`${app.urls.aiwebAssets}/data/sogou-tts-lang-codes.json`)
                         .catch(err => log.error(err.message)) ; if (!window.sgtDialectMap) return
-                    const sgtSpeakRates = {
-                        en: 2, ar: 1.5, cs: 1.4, da: 1.3, de: 1.5, es: 1.5, fi: 1.4, fr: 1.2, hu: 1.5, it: 1.4,
-                        ja: 1.5, nl: 1.3, pl: 1.4, pt: 1.5, ru: 1.3, sv: 1.4, tr: 1.6, vi: 1.5, 'zh-CHS': 2
-                    }
                     Object.entries(window.sgtDialectMap).forEach(([sgtCode, langData]) => {
                         langData.isoOrNamePattern = new RegExp(langData.isoOrNamePattern, 'i')
-                        langData.rate = sgtSpeakRates[sgtCode] ; langData.sgtCode = sgtCode
+                        langData.sgtCode = sgtCode
                     })
 
                     // Init other config/data
@@ -149,10 +145,7 @@ window.buttons = {
                     const sgtDialectData = Object.values(window.sgtDialectMap).find(langData =>
                         langData.isoOrNamePattern.test(config.replyLang)
                     ) || window.sgtDialectMap.en
-                    const payload = {
-                        text: wholeAnswer, curTime: Date.now(), spokenDialect: sgtDialectData.sgtCode,
-                        rate: sgtDialectData.rate.toString()
-                    }
+                    const payload = { text: wholeAnswer, curTime: Date.now(), spokenDialect: sgtDialectData.sgtCode }
                     const key = CryptoJS.enc.Utf8.parse('76350b1840ff9832eb6244ac6d444366')
                     const iv = CryptoJS.enc.Utf8.parse(
                         atob('AAAAAAAAAAAAAAAAAAAAAA==') || '76350b1840ff9832eb6244ac6d444366')
@@ -183,12 +176,12 @@ window.buttons = {
                                 const audioContext = new (window.webkitAudioContext || window.AudioContext)()
                                 audioContext.decodeAudioData(resp.response, buffer => {
                                     buttons.reply.bubble.speak.style.cursor = 'pointer'
-                                    const audioSrc = audioContext.createBufferSource()
-                                    audioSrc.buffer = buffer
-                                    audioSrc.connect(audioContext.destination) // connect source to speakers
-                                    audioSrc.start(0) // play audio
-                                    window.currentlyPlayingAudio = audioSrc
-                                    audioSrc.onended = handleAudioEnded
+                                    const player = new Tone.Player(buffer), speed = 1.5,
+                                          pitchShifter = new Tone.PitchShift(12 * Math.log2(1/speed)) // keep og pitch
+                                    player.playbackRate = speed
+                                    player.connect(pitchShifter.toDestination())
+                                    player.start()
+                                    window.currentlyPlayingAudio = player ; player.onstop = handleAudioEnded
                                 }).catch(() => {
                                     buttons.reply.bubble.speak.style.cursor = 'pointer'
                                     window.currentlyPlayingAudio = chatgpt.speak(wholeAnswer, cjsSpeakConfig)
