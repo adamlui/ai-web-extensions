@@ -176,10 +176,13 @@ window.buttons = {
                                 const audioContext = new (window.webkitAudioContext || window.AudioContext)()
                                 audioContext.decodeAudioData(resp.response, buffer => {
                                     buttons.reply.bubble.speak.style.cursor = 'pointer'
-                                    const player = new Tone.Player(buffer), speed = 1.5,
-                                          pitchShifter = new Tone.PitchShift(12 * Math.log2(1/speed)) // keep og pitch
+                                    const player = new Tone.Player(buffer)
+                                    const speed = 1.5
+                                    const pitchShifter = new Tone.PitchShift(12 * Math.log2(1/speed)) // keep og pitch
+                                    const eq = new Tone.EQ3({
+                                        low: 12, mid: 0, high: 12, lowFrequency: 300, highFrequency: 500 })
                                     player.playbackRate = speed
-                                    player.connect(pitchShifter.toDestination())
+                                    player.connect(pitchShifter.connect(eq.toDestination()))
                                     player.start()
                                     window.currentlyPlayingAudio = player ; player.onstop = handleAudioEnded
                                 }).catch(() => {
