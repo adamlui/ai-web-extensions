@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.11.16.3
+// @version                2025.11.16.4
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -710,7 +710,7 @@
                 }
                 .${app.slug}-chatbar-btn {
                     z-index: 560 ; border: none ; float: right ; position: relative ; background: none ;
-                    cursor: pointer ; bottom: ${ env.browser.isFF ? 50 : 55 }px ;
+                    cursor: pointer ; bottom: ${ env.browser.isFF ? 50 : 53.5 }px ;
                     transform: scale(1.05) ; margin-right: 3px ; /* zoom 'em a bit */
                     color:  var(--chatbar-btn-color-${appScheme}-scheme) ;
                     fill:   var(--chatbar-btn-color-${appScheme}-scheme) ;
