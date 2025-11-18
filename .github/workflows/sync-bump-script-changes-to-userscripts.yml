@@ -18,12 +18,12 @@ jobs:
     steps:
 
       - name: Checkout adamlui/ai-web-extensions
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v5.0.1
         with:
           path: adamlui/ai-web-extensions
 
       - name: Checkout adamlui/userscripts
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v5.0.1
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           repository: adamlui/userscripts
