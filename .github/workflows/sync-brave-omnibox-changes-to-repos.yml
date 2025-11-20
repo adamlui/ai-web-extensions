@@ -18,14 +18,14 @@ jobs:
     steps:
 
       - name: Checkout adamlui/ai-web-extensions
-        uses: actions/checkout@v5.0.1
+        uses: actions/checkout@v6.0.0
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           path: adamlui/ai-web-extensions
           fetch-depth: 2
 
       - name: Checkout adamlui/brave-omnibox
-        uses: actions/checkout@v5.0.1
+        uses: actions/checkout@v6.0.0
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           repository: adamlui/brave-omnibox
