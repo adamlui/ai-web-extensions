@@ -73,7 +73,7 @@
 // @name:pa             ChatGPT ਵਾਇਡਸਕ੍ਰੀਨ ਮੋਡ 🖥️
 // @name:pl             ChatGPT Tryb szerokoekranowy 🖥️
 // @name:ps             ChatGPT د ډیسپلې موډ 🖥️
-// @name:pt             ChatGPT Modo Tela Larga 🖥️
+// @name:pt             Modo Ecrã Largo do ChatGPT 🖥️
 // @name:pt-BR          ChatGPT Modo Tela Larga 🖥️
 // @name:ro             ChatGPT Mod ecran lat 🖥️
 // @name:ru             ChatGPT Режим широкоформатного экрана 🖥️
@@ -190,7 +190,7 @@
 // @description:pa      ਚੈਟਜੀਪੀਟੀ ਨੂੰ ਵਿਆਪਕ/ਪੂਰਨ/ਉੱਚ ਸਕ੍ਰੀਨ + ਸਪੈਮ ਬਲੌਕ ਮੋਡ ਨਾਲ ਸੁਧਾਰਦਾ ਹੈ। ਇਹ poe.com 'ਤੇ ਵੀ ਕੰਮ ਕਰਦਾ ਹੈ!
 // @description:pl      Ulepsza ChatGPT za pomocą trybów szerokiego/pełnego/wysokiego ekranu + blokady spamu. Działa również na poe.com!
 // @description:ps      ChatGPT ته د پراخ/مکمل/لوړ سکرین + سپیم بلاک کولو حالتونو سره وده ورکوي. دا په poe.com کې هم کار کوي!
-// @description:pt      Melhora o ChatGPT com modos de tela larga/completa/alta + modos de bloqueio de spam. Também funciona em poe.com!
+// @description:pt      Melhora o ChatGPT com modos de ecrã largo/completo/alto e bloqueio de spam. Também funciona em poe.com!
 // @description:pt-BR   Melhora o ChatGPT com modos de tela larga/completa/alta + modos de bloqueio de spam. Também funciona em poe.com!
 // @description:ro      Îmbunătățește ChatGPT cu moduri de ecran larg/complet/înalt + moduri de blocare a spamului. De asemenea, funcționează pe poe.com!
 // @description:ru      Улучшает ChatGPT с режимами широкого/полного/высокого экрана и блокировки спама. Также работает на poe.com!
