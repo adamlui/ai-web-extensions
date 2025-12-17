@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.11.16.6
+// @version                2025.12.16
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2449,7 +2449,7 @@
                     }
                     #${app.slug}-settings li label { padding-right: 20px } /* right-pad labels so toggles don't hug */
                     #${app.slug}-settings li:last-of-type { border-bottom: none } /* remove last bottom-border */
-                    #${app.slug}-settings li, #${app.slug}-settings li label { cursor: pointer } /* add finger on hover */
+                    #${app.slug}-settings :where(li, li label) { cursor: pointer } /* add finger on hover */
                     #${app.slug}-settings li:hover {
                         background: rgba(100,149,237,0.88) ; color: white ; fill: white ; stroke: white ;
                         ${ env.browser.isMobile ? '' : 'transform: scale(1.15)' }

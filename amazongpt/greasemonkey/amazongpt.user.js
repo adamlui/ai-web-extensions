@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.11.16.5
+// @version                2025.12.16
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1780,7 +1780,7 @@
                         font-weight: normal /* override Amazon boldening */
                     }
                     #${app.slug}-settings li:last-of-type { border-bottom: none } /* remove last bottom-border */
-                    #${app.slug}-settings li, #${app.slug}-settings li label { cursor: pointer } /* add finger on hover */
+                    #${app.slug}-settings :where(li, li label) { cursor: pointer } /* add finger on hover */
                     #${app.slug}-settings li:hover {
                         background: rgba(100,149,237,0.88) ; color: white ; fill: white ; stroke: white ;
                         ${ env.browser.isMobile ? '' : 'transform: scale(1.15)' }
