@@ -91,6 +91,8 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></img></a>
 <a href="https://github.com/nhan000">
     <img width=50 title="@nhan000" src="https://avatars.githubusercontent.com/u/85216095?first-contrib=2025.9.23-reported-stopped-working"></img></a>
+<a href="https://github.com/CStarker">
+    <img width=50 title="@CStarker" src="https://avatars.githubusercontent.com/u/44135221?first-contrib=2025.12.25-reported-stopped-working"></img></a>
 <a href="https://github.com/dependabot">
     <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://chatgpt.com">
