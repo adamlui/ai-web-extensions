@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2025.12.16
+// @version                2026.1.3
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -911,17 +911,12 @@
 
                     // Download code
                     const code = codeBlock.textContent.replace(/^>> /, '').trim() + '\n'
-                    const dlLink = dom.create.anchor(URL.createObjectURL(new Blob([code], { type: 'text/plain' })))
-                    const now = new Date(), formattedDate = [ // YYYY-MM-DD
-                        now.getFullYear(),
-                        String(now.getMonth() +1).padStart(2, '0'),
-                        String(now.getDate()).padStart(2, '0')
-                    ].join('-')
-                    dlLink.download /* filename */ = `${app.slug}_${blockLang.name.toLowerCase() || 'code'}_${
-                        formattedDate}_${Date.now().toString(36)}${
-                        blockLang.fileExtension ? '.' + blockLang.fileExtension : '' }`
-                    document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download code
-                    URL.revokeObjectURL(dlLink.href) // prevent memory leaks
+                    const date = new Date().toISOString().split('T')[0] // YYYY-MM-DD
+                    const download = `${app.slug}_${blockLang.name.toLowerCase() || 'code'}_${
+                        date}_${Date.now().toString(36)}${blockLang.fileExtension ? '.' + blockLang.fileExtension : ''}`
+                    const href = URL.createObjectURL(new Blob([code], { type: 'text/plain' }))
+                    const a = dom.create.anchor(href, '', { download, style: 'display: none' })
+                    document.body.append(a) ; a.click() ; a.remove() ; URL.revokeObjectURL(href)
                 }
                 downloadBtn.onmouseenter = downloadBtn.onmouseleave = tooltip.toggle
 
@@ -1875,15 +1870,14 @@
                         xhr({
                             method: 'GET', url: shareURL,
                             onload: ({ responseText }) => {
-                                const dlLink = dom.create.anchor(
-                                    URL.createObjectURL(new Blob([responseText], { type: 'text/html' })))
-                                dlLink.download /* filename */ = responseText.match(/<title>([^<]+)<\/title>/i)[1]
+                                const download = responseText.match(/<title>([^<]+)<\/title>/i)[1]
                                     .replace(/\s*[—|/]+\s*/g, ' ') // convert symbols to space for hyphen-casing
                                     .replace(/\.{2,}/g, '') // strip ellipsis
                                     .toLowerCase().trim().replace(/\s+/g, '-') // hyphen-case
                                     + '.html'
-                                document.body.append(dlLink) ; dlLink.click() ; dlLink.remove() // download HTML
-                                URL.revokeObjectURL(dlLink.href) // prevent memory leaks
+                                const href = URL.createObjectURL(new Blob([responseText], { type: 'text/html' }))
+                                const a = dom.create.anchor(href, '', { download, style: 'display: none' })
+                                document.body.append(a) ; a.click() ; a.remove() ; URL.revokeObjectURL(href)
                             },
                             onerror: err => log.error('Failed to download chat:', err)
                         })
