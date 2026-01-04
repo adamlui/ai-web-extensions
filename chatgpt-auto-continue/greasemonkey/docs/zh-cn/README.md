@@ -78,7 +78,7 @@
 </a>
 <br><br>
 
-ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/KudoAI/chatgpt.js) 库 © 2023–2025 KudoAI 和 MIT 许可下的贡献者的代码。
+ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/KudoAI/chatgpt.js) 库 © 2023–2026 KudoAI 和 MIT 许可下的贡献者的代码。
 
 </div>
 </h6>

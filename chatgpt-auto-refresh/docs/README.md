@@ -126,7 +126,7 @@
 <br><br>
 
 ChatGPT Auto Refresh relies on code from the powerful <a href="https://github.com/KudoAI/chatgpt.js">chatgpt.js</a> library
-<br>© 2023–2025 <a href="https://www.kudoai.com">KudoAI</a> & contributors under the MIT license.
+<br>© 2023–2026 <a href="https://www.kudoai.com">KudoAI</a> & contributors under the MIT license.
 
 </div>
 </h6>

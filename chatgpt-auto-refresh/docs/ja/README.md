@@ -128,7 +128,7 @@
 <br><br>
 
 ChatGPT 自動更新 は強力な <a href="https://github.com/KudoAI/chatgpt.js">chatgpt.js</a> ライブラリのコードに依存しています
-<br>© 2023–2025 <a href="https://www.kudoai.com">KudoAI</a> & MIT ライセンスの下での貢献者。
+<br>© 2023–2026 <a href="https://www.kudoai.com">KudoAI</a> & MIT ライセンスの下での貢献者。
 
 </div>
 </h6>

@@ -12,7 +12,7 @@
 
 # 🏛️ MIT 许可证
 
-**版权所有 © 2023–2025 [刘展鹏 (Adam Lui)](https://github.com/adamlui) & [贡献者](https://docs.chatgptwidescreen.com/zh-cn/#-贡献者)**
+**版权所有 © 2023–2026 [刘展鹏 (Adam Lui)](https://github.com/adamlui) & [贡献者](https://docs.chatgptwidescreen.com/zh-cn/#-贡献者)**
 
 特此免费向任何获得副本的人授予许可本软件和相关文档文件（『软件』），处理在软件中不受限制，包括但不限于权利使用、复制、修改、合并、发布、分发、再许可和/或出售该软件的副本，并允许该软件是提供这样做，但须满足以下条件：
 

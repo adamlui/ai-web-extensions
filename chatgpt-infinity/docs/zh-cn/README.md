@@ -125,7 +125,7 @@
 </a>
 <br><br>
 
-ChatGPT 无穷 依赖于强大的 [chatgpt.js](https://github.com/KudoAI/chatgpt.js) 库 © 2023–2025 KudoAI 和贡献者在 MIT 许可下的代码。
+ChatGPT 无穷 依赖于强大的 [chatgpt.js](https://github.com/KudoAI/chatgpt.js) 库 © 2023–2026 KudoAI 和贡献者在 MIT 许可下的代码。
 
 </div>
 </h6>

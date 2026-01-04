@@ -592,8 +592,8 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
     <img src="https://assets.googlegpt.io/images/logos/dependencies/collage/black.png">
 </picture>
 
-[chatgpt.js](https://chatgpt.js.org) © 2023–2025 [KudoAI](https://kudoai.com) & contributors under the MIT license
-<br>[generate-ip](https://generate-ip.org) © 2024–2025 [Adam Lui](https://github.com/adamlui) & contributors under the MIT license
+[chatgpt.js](https://chatgpt.js.org) © 2023–2026 [KudoAI](https://kudoai.com) & contributors under the MIT license
+<br>[generate-ip](https://generate-ip.org) © 2024–2026 [Adam Lui](https://github.com/adamlui) & contributors under the MIT license
 <br>[highlight.js](https://highlightjs.org) © 2006 [Ivan Sagalaev](https://github.com/isagalaev) under the BSD 3-Clause license
 <br>[KaTeX](https://katex.org) © 2013–2020 [Khan Academy](https://www.khanacademy.org) & other contributors under the MIT license
 <br>[Marked](https://marked.js.org) © 2018+ [MarkedJS](https://github.com/markedjs) © 2011–2018 [Christopher Jeffrey](https://github.com/chjj) under the MIT license

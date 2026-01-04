@@ -70,7 +70,7 @@
 <br><br>
 
 ChatGPT Auto-Talk relies on code from the powerful [chatgpt.js](https://github.com/KudoAI/chatgpt.js) library
-<br>© 2023–2025 KudoAI & contributors under the MIT license.
+<br>© 2023–2026 KudoAI & contributors under the MIT license.
 
 </div>
 </h6>
