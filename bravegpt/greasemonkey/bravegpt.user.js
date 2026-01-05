@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.1.4
+// @version               2026.1.5
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1874,7 +1874,7 @@
             const aboutHeaderLogo = logos.bravegpt.create() ; aboutHeaderLogo.width = 375
             aboutHeaderLogo.style.cssText = `max-width: 98% ; margin: 1px ${
                 env.browser.isMobile ? 'auto' : '16%' } 0`
-            aboutModal.firstChild.nextSibling.before(aboutHeaderLogo) // after close btn
+            aboutModal.firstChild.nextElementSibling.before(aboutHeaderLogo) // after close btn
 
             // Center text
             aboutModal.querySelector('h2').remove() // remove empty title h2

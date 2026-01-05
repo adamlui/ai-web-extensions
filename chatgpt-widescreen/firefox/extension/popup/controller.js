@@ -218,7 +218,7 @@
         const transitionDuration = 350, // ms
               ctgDiv = document.getElementById(key),
               caret = ctgDiv.querySelector('.menu-caret'),
-              ctgChildrenDiv = ctgDiv.nextSibling,
+              ctgChildrenDiv = ctgDiv.nextElementSibling,
               ctgChild = ctgChildrenDiv.querySelectorAll('.menu-entry')
         if (action != 'hide' && dom.get.computedHeight(ctgChildrenDiv) == 0) { // show category settings
             ctgDiv.classList.toggle('expanded', true)
