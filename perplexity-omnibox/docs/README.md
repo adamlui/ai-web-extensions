@@ -242,12 +242,12 @@ Made with ❤️ by [Adam Lui][link-author]
      BADGE DEFINITIONS
      ═══════════════════════════════════════════════════════════════════════════════ -->
 
-[badge-users]: https://img.shields.io/badge/Users-6.5K-2563eb?style=for-the-badge&logo=weightsandbiases&logoColor=white
+[badge-users]: https://img.shields.io/badge/Users-5.8K-2563eb?style=for-the-badge&logo=weightsandbiases&logoColor=white
 [badge-trending]: https://img.shields.io/badge/Top_20-Edge_Add--on-7bfce9?style=for-the-badge&logo=microsoft-edge&logoColor=white
 [badge-rating]: https://img.shields.io/chrome-web-store/stars/ckhgddjdjkphbaediggjdddjdjgkalom?style=for-the-badge&logo=googlechrome&logoColor=white&color=10b981&label=Chrome
 [badge-jsdelivr]: https://img.shields.io/jsdelivr/gh/hm/adamlui/perplexity-omnibox?style=flat-square&logo=jsdelivr&logoColor=white&color=2bbbd8&label=jsDelivr
 [badge-codefactor]: https://img.shields.io/codefactor/grade/github/adamlui/perplexity-omnibox?style=flat-square&logo=codefactor&logoColor=white&color=b3ff68&label=Code%20Quality
-[badge-sonar]: https://img.shields.io/badge/Vulnerabilities-6.5K-gold?style=flat-square&logo=sonarcloud&logoColor=white
+[badge-sonar]: https://img.shields.io/badge/Vulnerabilities-5.8K-gold?style=flat-square&logo=sonarcloud&logoColor=white
 [badge-license]: https://img.shields.io/badge/License-MIT-e11d48?style=flat-square&logo=opensourceinitiative&logoColor=white
 
 <!-- ═══════════════════════════════════════════════════════════════════════════════
