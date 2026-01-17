@@ -292,6 +292,8 @@ This script exists thanks to code, translations, issues & ideas from the followi
     <img width=46 title="@welsalex" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/104450471?first-contrib=2025.9.22-reported-chat-history-hidden&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/ricardojsmarques" target="_blank" rel="noopener">
     <img width=46 title="@ricardojsmarques" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/6832221?first-contrib=2025.12.2-improved-portuguese-translations&h=47&w=47&mask=circle&maxage=7d"></a>
+<a href="https://github.com/r0ckf0x" target="_blank" rel="noopener">
+    <img width=46 title="@r0ckf0x" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/13733494?first-contrib=2026.1.12-reported-hidden-header-funky&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/dependabot">
     <img width=46 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
 <a href="https://github.com/ImgBotApp">
