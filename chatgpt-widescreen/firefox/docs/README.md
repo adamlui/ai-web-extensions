@@ -280,6 +280,8 @@ This extension exists thanks to code, translations, issues & ideas from the foll
     <img width=46 title="@ahnupeng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/5319112?first-contrib=2025.9.4-suggested-allow-edit-slider-vals&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/welsalex" target="_blank" rel="noopener">
     <img width=46 title="@welsalex" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/104450471?first-contrib=2025.9.22-reported-chat-history-hidden&h=47&w=47&mask=circle&maxage=7d"></a>
+<a href="https://github.com/ricardojsmarques" target="_blank" rel="noopener">
+    <img width=46 title="@ricardojsmarques" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/6832221?first-contrib=2025.12.2-improved-portuguese-translations&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/r0ckf0x" target="_blank" rel="noopener">
     <img width=46 title="@r0ckf0x" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/13733494?first-contrib=2026.1.12-reported-hidden-header-funky&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/dependabot">
