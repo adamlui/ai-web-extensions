@@ -66,7 +66,7 @@ window.styles = {
 
     tweaks: {
         autoAppend: true,
-        get css() { // requires lib/dom.js + <config|env>
+        get css() { // requires <config|env>
             const { site } = env, { [site]: { selectors }} = sites
             const tcbMinHeight = site == 'chatgpt' ? 25 : /* poe */ 50
             const tcbHeight = tcbMinHeight +(
