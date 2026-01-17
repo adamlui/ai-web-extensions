@@ -66,7 +66,7 @@ window.styles = {
 
     tweaks: {
         autoAppend: true,
-        get css() { // requires <config|env>
+        get css() { // requires lib/dom.js + <config|env>
             const { site } = env, { [site]: { selectors }} = sites
             const tcbMinHeight = site == 'chatgpt' ? 25 : /* poe */ 50
             const tcbHeight = tcbMinHeight +(
@@ -80,7 +80,10 @@ window.styles = {
                 }
                 ${ !config.hiddenHeader ? '' : `
                     ${selectors.header} { display: none !important }
-                    ${ site == 'chatgpt' ? 'div[class*=--header-height] { padding-top: 52px }' : '' }`
+                    ${ site == 'chatgpt' // raise reply header if site header wasn't transparent to fill new gap
+                        && getComputedStyle(document.querySelector(selectors.header))
+                            .backgroundColor != 'rgba(0, 0, 0, 0)' ?
+                                'div[class*=top-9][class*=--header-height] { top: 38px }' : '' }`
                 }
                 ${ !config.hiddenFooter ? '' : `
                     ${selectors.footer}${ site == 'chatgpt' ? `, ${selectors.btns.help}` : '' } { display: none }`}
