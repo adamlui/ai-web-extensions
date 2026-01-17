@@ -5,12 +5,11 @@ on:
     - cron: "25 2 * * 2" # every Tue @ 2:25 AM
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
   update-root-usercount-jsd-shields:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     env:
       TZ: PST8PDT
 

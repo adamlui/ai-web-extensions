@@ -5,13 +5,12 @@ on:
     branches: [main]
     paths: [chatgpt-auto-talk/**]
 
-permissions:
-  contents: read
-
 jobs:
   build:
     if: (github.repository == 'adamlui/ai-web-extensions') && (github.event.commits[0].committer.username != 'kudo-sync-bot')
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     env:
       TZ: PST8PDT
 
