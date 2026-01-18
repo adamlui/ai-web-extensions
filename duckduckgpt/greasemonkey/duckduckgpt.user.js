@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.1.5
+// @version                2026.1.18
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -1156,7 +1156,7 @@
             // Notify of mode change
             if (mode == 'sticky' && prevStickyState == config.stickySidebar) return
             feedback.notify(
-                `${ app.msgs[`menuLabel_${ mode }Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
+                `${ app.msgs[`menuLabel_${mode}Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
                     menus.toolbar.state.words[+config[configKeyName]]}`,
                 undefined, anchorModeDisabled  ? 2.75 : undefined // +1s duration if conflicting mode notif shown
             )
