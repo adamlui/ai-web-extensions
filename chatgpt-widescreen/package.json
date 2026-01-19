@@ -7,10 +7,22 @@
   "homepage": "https://www.chatgptwidescreen.com",
   "license": "MIT",
   "funding": [
-    { "type": "cashapp", "url": "https://cash.app/$AdamLui" },
-    { "type": "github", "url": "http://github.com/sponsors/adamlui" },
-    { "type": "ko-fi", "url": "https://ko-fi.com/adamlui" },
-    { "type": "paypal", "url": "https://paypal.me/adamlui" }
+    {
+      "type": "cashapp",
+      "url": "https://cash.app/$AdamLui"
+    },
+    {
+      "type": "github",
+      "url": "http://github.com/sponsors/adamlui"
+    },
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/adamlui"
+    },
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/adamlui"
+    }
   ],
   "scripts": {
     "prepare": "husky",
@@ -37,7 +49,7 @@
     "bump:firefox": "node utils/bump/extension-manifests --ff"
   },
   "devDependencies": {
-    "@adamlui/minify.js": "^1.10.0",
+    "@adamlui/minify.js": "^2.0.0",
     "@eslint/json": "^0.14.0",
     "@eslint/markdown": "^7.5.1",
     "@html-eslint/eslint-plugin": "^0.53.0",
