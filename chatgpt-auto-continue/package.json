@@ -7,10 +7,22 @@
   "homepage": "https://www.chatgptautocontinue.com",
   "license": "MIT",
   "funding": [
-    { "type": "cashapp", "url": "https://cash.app/$AdamLui" },
-    { "type": "github", "url": "http://github.com/sponsors/adamlui" },
-    { "type": "ko-fi", "url": "https://ko-fi.com/adamlui" },
-    { "type": "paypal", "url": "https://paypal.me/adamlui" }
+    {
+      "type": "cashapp",
+      "url": "https://cash.app/$AdamLui"
+    },
+    {
+      "type": "github",
+      "url": "http://github.com/sponsors/adamlui"
+    },
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/adamlui"
+    },
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/adamlui"
+    }
   ],
   "scripts": {
     "prepare": "husky",
@@ -23,8 +35,8 @@
     "translate:chromium": "py chromium/utils/translate-en-messages.py",
     "translate:ff": "py firefox/utils/translate-en-messages.py",
     "translate:firefox": "py firefox/utils/translate-en-messages.py",
-    "build:js-pages": "minify-js pages --no-mangle",
-    "build:pages-js": "minify-js pages --no-mangle",
+    "build:js-pages": "minify-js pages --no-mangle --relative-output",
+    "build:pages-js": "npm run build:js-pages",
     "preview:pages": "http-server pages",
     "bump": "node utils/bump/extension-manifests",
     "bump:res": "node utils/bump/resources",
