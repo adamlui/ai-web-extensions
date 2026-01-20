@@ -49,7 +49,7 @@
     "bump:firefox": "node utils/bump/extension-manifests --ff"
   },
   "devDependencies": {
-    "@adamlui/minify.js": "^2.0.0",
+    "@adamlui/minify.js": "^2.1.0",
     "@eslint/css": "^0.14.1",
     "@eslint/json": "^0.14.0",
     "@eslint/markdown": "^7.5.1",
