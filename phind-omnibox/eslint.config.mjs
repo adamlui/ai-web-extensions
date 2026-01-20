@@ -48,5 +48,5 @@ export default [
             'markdown/require-alt-text': 'off' // allow missing img alts
         }
     },
-    { files: ['**/*.mjs'], languageOptions: { sourceType: 'module' }} 
+    { files: ['**/*.mjs'], languageOptions: { sourceType: 'module' }}
 ]
