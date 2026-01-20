@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "@adamlui/minify.js": "^2.0.0",
+    "@eslint/css": "^0.14.1",
     "@eslint/json": "^0.14.0",
     "@eslint/markdown": "^7.5.1",
     "@html-eslint/eslint-plugin": "^0.53.0",
@@ -61,8 +62,5 @@
     "http-server": "^14.1.1",
     "husky": "^9.1.7",
     "ssri": "^13.0.0"
-  },
-  "dependencies": {
-    "@eslint/css": "^0.14.1"
   }
 }
