@@ -26,7 +26,7 @@
 <a href="https://chrome.deepseekomnibox.com">
     <img height=31 alt="[Chrome 网上应用店]" src="https://img.shields.io/chrome-web-store/v/gcgfmipiaiopmjcmggnnehnehhdjdkgi?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></a>
 <a href="../LICENSE.md">
-    <img alt="[许可证: MIT]" height=31 src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-fc4f2d.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[许可证: MIT]" height=31 src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="#">
     <img height=31 src="https://img.shields.io/chrome-web-store/size/gcgfmipiaiopmjcmggnnehnehhdjdkgi?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge&label=%E6%89%A9%E5%B1%95%E5%A4%A7%E5%B0%8F"></img></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/deepseek-omnibox">

@@ -28,7 +28,7 @@
 <a href="https://www.codefactor.io/repository/github/adamlui/ai-web-extensions">
     <img alt="[CodeFactor grade]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/ai-web-extensions?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></img></a>
 <a href="LICENSE.md">
-    <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-fc4f2d.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://github.com/adamlui/ai-web-extensions/commits">
     <img alt="[GitHub commits]" height=31 src="https://img.shields.io/github/commit-activity/m/adamlui/ai-web-extensions?label=Commits&logo=github&logoColor=white&labelColor=464646&color=869da0&style=for-the-badge"></img></a>
 <a href="https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=adamlui_ai-web-extensions">

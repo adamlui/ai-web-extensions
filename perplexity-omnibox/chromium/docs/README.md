@@ -14,7 +14,7 @@
 <a href="https://chrome.perplexityomnibox.com">
     <img height=31 alt="[Chrome Web Store]" src="https://img.shields.io/chrome-web-store/v/ckhgddjdjkphbaediggjdddjdjgkalom?label=Latest+Release&logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></a>
 <a href="../LICENSE.md">
-    <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-fc4f2d.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="#">
     <img height=31 src="https://img.shields.io/chrome-web-store/size/ckhgddjdjkphbaediggjdddjdjgkalom?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></img></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/perplexity-omnibox">
