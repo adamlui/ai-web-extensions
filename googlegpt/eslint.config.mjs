@@ -5,7 +5,6 @@ import json from '@eslint/json'
 import markdown from '@eslint/markdown'
 import regexp from 'eslint-plugin-regexp'
 import stylisticJS from '@stylistic/eslint-plugin'
-import yml from 'eslint-plugin-yml'
 
 export default [
     { ignores: ['**/*cache', '**/*.min.{js,mjs}', '**/package-lock.json'] },
@@ -61,6 +60,5 @@ export default [
             'markdown/require-alt-text': 'off' // allow missing img alts
         }
     },
-    { files: ['**/*.mjs'], languageOptions: { sourceType: 'module' }},
-    { files: ['**/*.{yaml,yml}'], ...yml.configs['flat/standard'][1] }
+    { files: ['**/*.mjs'], languageOptions: { sourceType: 'module' }}
 ]
