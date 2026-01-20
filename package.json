@@ -1,10 +1,21 @@
 {
-  "author": {
-    "name": "Adam Lui",
-    "email": "adam@kudoai.com",
-    "url": "https://github.com/adamlui"
-  },
+  "name": "ai-web-extensions",
+  "description": "AI browser extensions & userscripts to augment your web experience",
+  "author": "Adam Lui <adam@kudoai.com> (https://github.com/adamlui)",
+  "keywords": [
+    "ai",
+    "chatgpt",
+    "deepseek",
+    "extensions",
+    "javascript",
+    "userscripts",
+    "web"
+  ],
   "homepage": "https://www.aiwebextensions.org",
+  "bugs": {
+    "url": "https://github.com/adamlui/ai-web-extensions/issues",
+    "email": "adam@kudoai.com"
+  },
   "license": "MIT",
   "funding": [
     {
@@ -24,6 +35,10 @@
       "url": "https://paypal.me/adamlui"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamlui/ai-web-extensions.git"
+  },
   "scripts": {
     "prepare": "husky",
     "dev:chatbots": "node utils/dev/chatbots",
@@ -46,7 +61,7 @@
     "bump:firefox": "node utils/bump/extension-manifests --ff"
   },
   "devDependencies": {
-    "@adamlui/minify.js": "^2.1.0",
+    "@adamlui/minify.js": "^2.0.0",
     "@adamlui/scss-to-css": "^1.12.0",
     "@eslint/css": "^0.14.1",
     "@eslint/json": "^0.14.0",
