@@ -1,5 +1,5 @@
 // Copyright © 2025–2026 Adam Lui (https://github.com/adamlui) under the MIT license
-// Source: https://github.com/adamlui/ai-web-extensions/blob/main/assets/js/lib/dom.js/src/dom.js
+// Source: https://github.com/adamlui/ai-web-extensions/blob/main/assets/js/lib/dom.js/dom.js
 
 window.dom = {
 
