@@ -17,10 +17,10 @@ export default [
             ecmaVersion: 'latest', sourceType: 'script',
             globals: {
                 ...globals.browser, ...globals.greasemonkey, ...globals.node, app: 'writable', chatgpt: 'readonly',
-                chrome: 'readonly', config: 'writable', dom: 'readonly', env: 'writable', feedback: 'readonly',
-                i18n: 'readonly', icons: 'writable', infinity: 'readonly', modals: 'writable', settings: 'writable',
-                string: 'readonly', styles: 'writable', sync: 'readonly', toggles: 'writable', toolbarMenu: 'writable',
-                ui: 'readonly', updateCheck: 'readonly', xhr: 'writable'
+                chrome: 'readonly', config: 'writable', css: 'readonly', dom: 'readonly', env: 'writable',
+                feedback: 'readonly', i18n: 'readonly', icons: 'writable', infinity: 'readonly', modals: 'writable',
+                settings: 'writable', string: 'readonly', styles: 'writable', sync: 'readonly', toggles: 'writable',
+                toolbarMenu: 'writable', ui: 'readonly', updateCheck: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },

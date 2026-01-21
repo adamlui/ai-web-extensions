@@ -19,7 +19,7 @@ export default [
                 ...globals.browser, ...globals.greasemonkey, ...globals.node, api: 'readonly', apis: 'writable',
                 app: 'writable', buttons: 'writable', chatbar: 'writable', chatgpt: 'readonly',
                 checkBtnsToClick: 'readonly', chrome: 'readonly', config: 'writable', CryptoJS: 'readonly',
-                deepseek: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly',
+                css: 'readonly', deepseek: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly',
                 fontSizeSlider: 'writable', get: 'readonly', GM_cookie: 'readonly', hljs: 'readonly', i18n: 'readonly',
                 icons: 'writable', importScripts: 'readonly', infinity: 'readonly', inputEvents: 'readonly',
                 JSON5: 'readonly', ipv4: 'readonly', log: 'readonly', logos: 'readonly', marked: 'readonly',
