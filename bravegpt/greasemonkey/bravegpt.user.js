@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.1.18.1
+// @version               2026.1.21
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -209,6 +209,8 @@
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@1861401/assets/js/lib/chatbot/themes.js#sha256-ujpN5pwFdqQjF4UCsu7Pgge1aHbl6jNmbmcvw3AwoVM=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3b0bccd/assets/js/lib/chatbot/ui.js#sha256-oN097tZtsr57Do6gpjDuRTQ1iLr3HzFxWmUmICvYD3c=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@4565425/assets/js/lib/chatbot/userscript.js#sha256-DTD+Tj/9angBw8/Q4e8PMz2SBwueqvNzeY8PwZlMgbs=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@ed7d80f/assets/js/lib/css.js/dist/css.min.js#sha256-BCcXA39Aq/Thsxgzl5di1FFCVQK5JiVQykPs8KBVxl8=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@ed7d80f/assets/js/lib/css.js/dist/css.min.js#sha256-BCcXA39Aq/Thsxgzl5di1FFCVQK5JiVQykPs8KBVxl8=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3683a79/assets/js/lib/dom.js/dist/dom.min.js#sha256-Xl5ghi373aMe12nN4vOKB+C5IJQY43AtjVAdB0K3Dag=
 // @require               https://cdn.jsdelivr.net/npm/generate-ip@2.4.5/dist/generate-ip.min.js#sha256-PI9snFGy1YvX4fiT8SJ01RveRSa6vZujEJxk8y/jvVs=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js#sha256-g3pvpbDHNrUrveKythkPMF2j/J7UFoHbUyFQcFe1yEY=
@@ -1490,7 +1492,7 @@
 
             // Build answer interface up to reply section if missing
             if (!app.div.querySelector('.reply-pre')) {
-                app.div.textContent = '' ; dom.addRisingParticles(app.div)
+                app.div.textContent = '' ; css.addRisingParticles(app.div)
 
                 // Create/append header div
                 const appHeaderDiv = dom.create.elem('div',
@@ -2081,7 +2083,7 @@
             }
 
             // Hack BG
-            dom.addRisingParticles(modal)
+            css.addRisingParticles(modal)
             setTimeout(() => { // dim bg
                 modal.parentNode.style.backgroundColor = `rgba(67,70,72,${ env.ui.app.scheme == 'dark' ? 0.62 : 0.33 })`
                 modal.parentNode.classList.add('animated')
