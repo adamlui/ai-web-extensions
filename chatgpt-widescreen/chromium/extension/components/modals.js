@@ -1,4 +1,4 @@
-// Requires lib/<browser|chatgpt|dom>.js + <app|env>
+// Requires lib/<browser|chatgpt|css|dom>.js + <app|env>
 
 window.modals = {
 
@@ -121,10 +121,10 @@ window.modals = {
         return feedbackModal
     },
 
-    init(modal) { // requires lib/dom.js
+    init(modal) { // requires lib/<css|dom>.js
         this.stylize()
         modal.classList.add(this.class) ; modal.parentNode.classList.add(`${this.class}-bg`)
-        dom.addRisingParticles(modal)
+        css.addRisingParticles(modal)
     },
 
     observeRemoval(modal, modalType, modalSubType) { // to maintain stack for proper nav

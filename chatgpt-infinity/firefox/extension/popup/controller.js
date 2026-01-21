@@ -6,7 +6,7 @@
 
     // Import JS resources
     for (const resource of
-        ['components/icons.js', 'lib/i18n.js', 'lib/dom.min.js', 'lib/settings.js', 'lib/string.js']
+        ['components/icons.js', 'lib/i18n.js', 'lib/css.min.js', 'lib/dom.min.js', 'lib/settings.js', 'lib/string.js']
     ) await import(chrome.runtime.getURL(resource))
 
     // Init DATA
@@ -298,7 +298,7 @@
             href: `https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@71695ca/assets/styles/rising-particles/dist/${
                 color}.min.css`
     })))
-    dom.addRisingParticles(document.body, { lightScheme: env.menu.isDark ? 'white' : 'gray' })
+    css.addRisingParticles(document.body, { lightScheme: env.menu.isDark ? 'white' : 'gray' })
 
     // Init MASTER TOGGLE
     const masterToggle = {
