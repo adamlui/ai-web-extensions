@@ -22,27 +22,29 @@ window.css = {
         targetNode.prepend(particlesDivsWrapper)
     },
 
-    extractSelectors(obj, type = 'all') {
-        if (!obj || typeof obj != 'object')
-            throw new TypeError('First parameter must be an object')
+    selectors: {
+        extract(obj, type = 'all') {
+            if (!obj || typeof obj != 'object')
+                throw new TypeError('First parameter must be an object')
 
-        const validTypes = ['all', 'css', 'xpath']
-        if (!validTypes.includes(type))
-            throw new TypeError(`Type must be one of: ${validTypes.join(', ')}`)
+            const validTypes = ['all', 'css', 'xpath']
+            if (!validTypes.includes(type))
+                throw new TypeError(`Type must be one of: ${validTypes.join(', ')}`)
 
-        const selectors = Object.values(obj).flatMap(val => {
-            if (val && typeof val == 'object') return this.extractSelectors(val, type) // recurse into nested objs
-            return typeof val == 'string' ? [val] : [] // only include strings
-        })
+            const selectors = Object.values(obj).flatMap(val => {
+                if (val && typeof val == 'object') return this.extract(val, type) // recurse into nested objs
+                return typeof val == 'string' ? [val] : [] // only include strings
+            })
 
-        return type == 'css' ? selectors.filter(sel => sel && !sel.startsWith('//'))
-             : type == 'xpath' ? selectors.filter(sel => sel && sel.startsWith('//'))
-             : selectors
-    },
+            return type == 'css' ? selectors.filter(sel => sel && !sel.startsWith('//'))
+                : type == 'xpath' ? selectors.filter(sel => sel && sel.startsWith('//'))
+                : selectors
+        },
 
-    selectorize(classList) {
-        return classList.toString()
-            .replace(/([:[\]\\])/g, '\\$1') // escape special chars :[]\
-            .replace(/^| /g, '.') // prefix w/ dot, convert spaces to dots
+        fromClasses(classList) {
+            return classList.toString()
+                .replace(/([:[\]\\])/g, '\\$1') // escape special chars :[]\
+                .replace(/^| /g, '.') // prefix w/ dot, convert spaces to dots
+        }
     }
 };
