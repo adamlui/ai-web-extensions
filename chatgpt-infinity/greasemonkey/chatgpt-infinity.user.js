@@ -219,7 +219,7 @@
 // @connect             gm.chatgptinfinity.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.5/dist/chatgpt.min.js#sha256-0NMJgflkEQlWbXxtN4SD+wogV6ss2TY6JAu4A0hmM0k=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@1e84c2e/assets/js/lib/dom.js/dist/dom.min.js#sha256-xovdxRnmYD/eCgBiGCu5+Vd3+WWIvLUKVtU/MnRueeU=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3683a79/assets/js/lib/dom.js/dist/dom.min.js#sha256-Xl5ghi373aMe12nN4vOKB+C5IJQY43AtjVAdB0K3Dag=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@ff6eedb/chromium/extension/components/modals.js#sha256-G0sjxPRhA0PsKskC7GsAuD9uhNS3DHta0p8aC6YMXR4=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@b77f642/chromium/extension/components/toggles.js#sha256-VT68kKbQKSx8ki9Y/0BipNoc0e3RjTnoDotCBB761Vg=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@b77f642/chromium/extension/lib/feedback.js#sha256-mhqPUMG1+fq9dybeU8n5B+eXuuCeUd5lLpJXRS3en1Y=
