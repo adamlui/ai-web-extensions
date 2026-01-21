@@ -3,7 +3,7 @@
 
 window.css = {
     extractSelectors(obj, type = 'all') {
-        if (!obj || typeof obj !== 'object')
+        if (!obj || typeof obj != 'object')
             throw new TypeError('First parameter must be an object')
 
         const validTypes = ['all', 'css', 'xpath']
