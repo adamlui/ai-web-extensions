@@ -36,9 +36,9 @@ window.css = {
                 return typeof val == 'string' ? [val] : [] // only include strings
             })
 
-            return type == 'css' ? selectors.filter(sel => sel && !sel.startsWith('//'))
-                : type == 'xpath' ? selectors.filter(sel => sel && sel.startsWith('//'))
-                : selectors
+            return type == 'css'   ? selectors.filter(sel => !sel?.startsWith('//'))
+                 : type == 'xpath' ? selectors.filter(sel =>  sel?.startsWith('//'))
+                 : selectors
         },
 
         fromClasses(classList) {
