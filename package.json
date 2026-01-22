@@ -2,15 +2,6 @@
   "name": "ai-web-extensions",
   "description": "AI browser extensions & userscripts to augment your web experience",
   "author": "Adam Lui <adam@kudoai.com> (https://github.com/adamlui)",
-  "keywords": [
-    "ai",
-    "chatgpt",
-    "deepseek",
-    "extensions",
-    "javascript",
-    "userscripts",
-    "web"
-  ],
   "homepage": "https://www.aiwebextensions.org",
   "bugs": {
     "url": "https://github.com/adamlui/ai-web-extensions/issues",
