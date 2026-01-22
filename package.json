@@ -47,7 +47,6 @@
     "lint:all": "eslint .",
     "lint:fix": "eslint . --fix --cache",
     "lint:fix-all": "eslint . --fix",
-    "build:js": "minify-js assets/js/lib dist --ignores=chatbot/ --relative-output --no-mangle",
     "bump:chatbots": "node utils/bump/chatbots --cache",
     "bump:chatbots-nc": "node utils/bump/chatbots --cache",
     "bump:chatbots-np": "node utils/bump/chatbots --cache --no-push",
@@ -61,7 +60,6 @@
     "bump:firefox": "node utils/bump/extension-manifests --ff"
   },
   "devDependencies": {
-    "@adamlui/minify.js": "^2.0.0",
     "@adamlui/scss-to-css": "^1.12.0",
     "@eslint/css": "^0.14.1",
     "@eslint/json": "^0.14.0",
