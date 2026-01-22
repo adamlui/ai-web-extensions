@@ -1,7 +1,11 @@
 {
   "name": "ai-web-extensions",
   "description": "AI browser extensions & userscripts to augment your web experience",
-  "author": "Adam Lui <adam@kudoai.com> (https://github.com/adamlui)",
+  "author": {
+    "name": "Adam Lui",
+    "email": "adam@kudoai.com",
+    "url": "https://github.com/adamlui"
+  },
   "homepage": "https://www.aiwebextensions.org",
   "bugs": {
     "url": "https://github.com/adamlui/ai-web-extensions/issues",
