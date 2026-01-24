@@ -22,7 +22,7 @@ window.tooltip = {
         if (!tooltip.styles) tooltip.stylize()
         tooltip.update(event.currentTarget) // update text/pos
         tooltip.div.style.opacity = +togglingOn // update visibility
-        if (config.tooltipAnimations) // update zoom
+        if (app.config.tooltipAnimations) // update zoom
             tooltip.div.style.transform = `scale(${ togglingOn ? 1 : 0.8 })`
     },
 
@@ -36,7 +36,7 @@ window.tooltip = {
             : parseFloat(/matrix\(([^)]+)\)/.exec(btnTransform)[1].split(',')[0])
         const unscaledTop = btnRect.top +( btnRect.height - btnRect.height / btnScale )/2
         this.div.textContent = i18n.getMsg(`tooltip_${btnType}${
-            !/full|wide/i.test(btnType) ? '' : (config[btnType] ? 'OFF' : 'ON')}`)
+            !/full|wide/i.test(btnType) ? '' : (app.config[btnType] ? 'OFF' : 'ON')}`)
         this.div.style.left = `${ btnRect.left +( btnRect.width /2 ) -( this.div.offsetWidth /2 )
             -( site == 'poe' || await chatbar.is.tall() ? 0 : chatgpt.sidebar.isOn() ? 260 : 52 )}px`
         this.div.style.top = `${ unscaledTop - this.div.offsetHeight -( site == 'chatgpt' ? -75 : /* poe */ 19 )}px`

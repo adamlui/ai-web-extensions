@@ -57,7 +57,7 @@ window.buttons = {
                 this.share.onclick = ({ currentTarget }) => {
                     if (show.reply.shareURL) return modals.shareChat(show.reply.shareURL)
                     this.share.style.cursor = 'default' // remove finger
-                    if (!config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
+                    if (!app.config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
                     tooltip.update(currentTarget) // to 'Generating HTML...'
                     xhr({
                         method: 'POST', url: app.urls.apis.chatShare,
@@ -83,7 +83,7 @@ window.buttons = {
                 this.regen.onclick = ({ currentTarget }) => {
                     get.reply({ msgs: app.msgChain, src: 'regen' })
                     regenSVGwrapper.style.cursor = 'default' // remove finger
-                    if (config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
+                    if (app.config.fgAnimationsDisabled) regenSVGwrapper.style.transform = 'rotate(90deg)'
                     else regenSVGwrapper.style.animation = 'rotate 1s infinite cubic-bezier(0, 1.05, 0.79, 0.44)'
                     tooltip.update(currentTarget) // to 'Regenerating...'
                     show.reply.chatbarFocused = false ; show.reply.userInteracted = true
@@ -123,7 +123,7 @@ window.buttons = {
                     // Update icon to Generating ones
                     speakSVGscroller.textContent = '' // rid Speak icon
                     speakSVGscroller.append(speakSVGs.generating[0], speakSVGs.generating[1]) // add Generating icons
-                    if (!config.fgAnimationsDisabled) { // animate icons
+                    if (!app.config.fgAnimationsDisabled) { // animate icons
                         speakSVGscroller.style.animation = 'icon-scroll 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite'
                         speakSVGwrapper.style.maskImage = ( // fade edges
                             'linear-gradient(to right, transparent, black 20%, black 81%, transparent)' )
@@ -143,7 +143,7 @@ window.buttons = {
                     const wholeAnswer = app.div.querySelector('.reply-pre').textContent
                     const cjsSpeakConfig = { voice: 2, pitch: 1, speed: 1.5, onend: handleAudioEnded }
                     const sgtDialectData = Object.values(window.sgtDialectMap).find(langData =>
-                        langData.isoOrNamePattern.test(config.replyLang)
+                        langData.isoOrNamePattern.test(app.config.replyLang)
                     ) || window.sgtDialectMap.en
                     const payload = { text: wholeAnswer, curTime: Date.now(), spokenDialect: sgtDialectData.sgtCode }
                     const key = CryptoJS.enc.Utf8.parse('76350b1840ff9832eb6244ac6d444366')
@@ -162,7 +162,7 @@ window.buttons = {
                             // Update icons to Playing ones
                             speakSVGscroller.textContent = '' // rid Generating icons
                             speakSVGscroller.append(speakSVGs.playing[0], speakSVGs.playing[1]) // add Playing icons
-                            if (!config.fgAnimationsDisabled) // animate icons
+                            if (!app.config.fgAnimationsDisabled) // animate icons
                                 speakSVGscroller.style.animation = 'icon-scroll 0.5s linear infinite'
 
                             if (this.speak.matches(':hover')) // restore tooltip

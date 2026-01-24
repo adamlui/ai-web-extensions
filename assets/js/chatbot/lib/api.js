@@ -1,4 +1,4 @@
-// Requires lib/generate-ip.js + <apis|app|config|get|log|show>
+// Requires lib/generate-ip.js + <apis|app|get|log|show>
 
 window.api = {
 
@@ -7,7 +7,7 @@ window.api = {
             ...triedAPIs.filter(entry => Object.values(entry)[0] != 'timeout')) // replace w/ err'd APIs
     },
 
-    createHeaders(api) { // requires lib/generate-ip.js + apis
+    createHeaders(api) { // requires lib/generate-ip.js + <apis|app>
         const ip = ipv4.generate({ verbose: false })
         const headers = {
             'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate, br, zstd',
@@ -21,7 +21,7 @@ window.api = {
             'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors'
         })
         Object.assign(headers, apis[api].expectedOrigin.headers) // API-specific ones
-        if (api == 'OpenAI') headers.Authorization = `Bearer ${config.openAIkey}`
+        if (api == 'OpenAI') headers.Authorization = `Bearer ${app.config.openAIkey}`
         return headers
     },
 
@@ -47,17 +47,17 @@ window.api = {
         return log.debug(reqData) || reqData
     },
 
-    pick(caller) { // requires <apis|config|get|log>
+    pick(caller) { // requires <apis|app|get|log>
         log.caller = `get.${caller.name}() » api.pick()`
         const untriedAPIs = Object.keys(apis).filter(api =>
             !caller.triedAPIs.some(entry => // exclude tried APIs
                 Object.prototype.hasOwnProperty.call(entry, api))
                 && ( caller == get.related || ( // handle get.reply exclusions
                     api != 'OpenAI' // exclude OpenAI since api.pick in get.reply only in Proxy Mode
-                    && ( // exclude unpreferred APIs if config.preferredAPI
-                        !config.preferredAPI || api == config.preferredAPI)
-                    && ( // exclude unstreamable APIs if !config.streamingDisabled
-                        config.streamingDisabled || apis[api].streamable)
+                    && ( // exclude unpreferred APIs if app.config.preferredAPI
+                        !app.config.preferredAPI || api == app.config.preferredAPI)
+                    && ( // exclude unstreamable APIs if !app.config.streamingDisabled
+                        app.config.streamingDisabled || apis[api].streamable)
                     && !( // exclude GET APIs if msg history established while not shuffling
                         apis[api].method == 'GET' && get.reply.src != 'shuffle' && app.msgChain.length > 2)
                     && !( // exclude APIs that don't support long prompts while summarizing
@@ -74,9 +74,9 @@ window.api = {
     process: {
         initFailFlags(api) { return apis[api].respPatterns?.fail ? new RegExp(apis[api].respPatterns.fail) : null },
 
-        stream(resp, { caller, callerAPI }) { // requires <apis|app|config|env|log|show>
+        stream(resp, { caller, callerAPI }) { // requires <apis|app|env|log|show>
             log.caller = `api.process.stream(resp, { caller: get.${caller.name}, callerAPI: '${callerAPI}' })`
-            if (config.streamingDisabled || !config.proxyAPIenabled) return
+            if (app.config.streamingDisabled || !app.config.proxyAPIenabled) return
             const reader = resp.response.getReader(), reFailFlags = this.initFailFlags(callerAPI)
             let textToShow = '', isDone = false
             reader.read().then(chunk => handleChunk(chunk, callerAPI))
@@ -155,7 +155,7 @@ window.api = {
         text(resp, { caller, callerAPI }) {
             log.caller = `api.process.text(resp, { caller: get.${caller.name}, callerAPI: '${callerAPI}' })`
             return new Promise(resolve => {
-                if (caller == get.reply && config.proxyAPIenabled && !config.streamingDisabled
+                if (caller == get.reply && app.config.proxyAPIenabled && !app.config.streamingDisabled
                     || caller.status == 'done') return
                 const reFailFlags = this.initFailFlags(callerAPI) ; let textToShow = ''
                 if (resp.status != 200) {
@@ -257,8 +257,8 @@ window.api = {
         } else {
             log.debug('No remaining untried endpoints')
             if (caller == get.reply)
-                feedback.appAlert(`${ config.preferredAPI ? 'api' : 'proxy' }NotWorking`,
-                    `suggest${ config.preferredAPI ? 'DiffAPI' : 'OpenAI' }`)
+                feedback.appAlert(`${ app.config.preferredAPI ? 'api' : 'proxy' }NotWorking`,
+                    `suggest${ app.config.preferredAPI ? 'DiffAPI' : 'OpenAI' }`)
         }
     }
 };

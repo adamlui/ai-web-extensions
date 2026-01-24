@@ -7,34 +7,34 @@ window.sync = {
 
         const { site } = env
         await settings.load('extensionDisabled', settings.siteDisabledKeys, sites[site].availFeatures)
-        const isDisabled = config.extensionDisabled || config[`${site}Disabled`]
+        const isDisabled = app.config.extensionDisabled || app.config[`${site}Disabled`]
         if (new RegExp(`^(?:extension|${site})Disabled$`).test(updatedKey) && isDisabled) { // reset UI
             [styles.chatbar.node, styles.tweaks.node, styles.widescreen.node, styles.fullWin.node, buttons]
                 .forEach(target => target?.remove())
             chatbar.reset()
             if (site == 'chatgpt') document.body.removeEventListener('wheel', window.enableWheelScroll)
         } else if (!isDisabled) { // sync modes/tweaks/btns
-            if (config.widescreen != styles.widescreen.node?.isConnected) { // sync Widescreen
+            if (app.config.widescreen != styles.widescreen.node?.isConnected) { // sync Widescreen
                 suppressNotifs() ; toggleMode('widescreen') }
-            if (sites[site].hasSidebar && (config.fullWindow != await ui.isFullWin())) { // sync Full-Window
+            if (sites[site].hasSidebar && (app.config.fullWindow != await ui.isFullWin())) { // sync Full-Window
                 suppressNotifs() ; toggleMode('fullWindow') }
             styles.update({ keys: ['chatbar', 'tweaks', 'widescreen'] }) // sync HH/HF/TCB/WCB/NCB/BA/WW
             chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
             buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
             if (updatedKey == 'blockSpamDisabled') sync.spamBlock()
-            else if (updatedKey == 'btnAnimationsDisabled' && !config.btnAnimationsDisabled)
+            else if (updatedKey == 'btnAnimationsDisabled' && !app.config.btnAnimationsDisabled)
                 buttons.animate() // to visually signal location + preview fx applied by Button Animations toggle-on
             else if (updatedKey == 'tooltipAnimations' && tooltip.div)
-                tooltip.div.style.transform = `scale(${ config.tooltipAnimations ? 0.8 : 1 })`
+                tooltip.div.style.transform = `scale(${ app.config.tooltipAnimations ? 0.8 : 1 })`
             else if (/notifBottom|toastMode/.test(updatedKey)) styles.update({ key: 'toast' })
             if (site == 'chatgpt') // toggle free wheel locked in some Spam blocks
-                document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
+                document.body[`${ app.config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                     'wheel', window.enableWheelScroll)
         }
         if (typeof GM_info != 'undefined') toolbarMenu.refresh() // prefixes/suffixes
 
         function suppressNotifs() {
-            if (config.notifDisabled) return
+            if (app.config.notifDisabled) return
             settings.save('notifDisabled', true) // suppress notifs for cleaner UI
             setTimeout( // ...temporarily
                 () => settings.save('notifDisabled', false),
@@ -48,16 +48,16 @@ window.sync = {
                       : mode == 'fullWindow' ? await ui.isFullWin()
                       : chatgpt.isFullScreen() )
         settings.save(mode, state) ; buttons.update.svg(mode)
-        if (!config.extensionDisabled && !config[`${env.site}Disabled`]) { // tweak UI
+        if (!app.config.extensionDisabled && !config[`${env.site}Disabled`]) { // tweak UI
             if (env.site == 'chatgpt') setTimeout(() => chatbar.tweak(), // update inner width
-                mode == 'fullWindow' && config.widescreen && config.widerChatbox ?
+                mode == 'fullWindow' && app.config.widescreen && app.config.widerChatbox ?
                     111 : 0) // delay if toggled to/from active WCB to avoid wrong width
-            if (config.widerChatbox) styles.update({ key: 'chatbar' }) // sync WCB
+            if (app.config.widerChatbox) styles.update({ key: 'chatbar' }) // sync WCB
             feedback.notify(`${i18n.getMsg('mode_' + mode)} ${
                                i18n.getMsg(`state_${ state ? 'on' : 'off' }`).toUpperCase()}`)
         }
         if (typeof GM_info != 'undefined') toolbarMenu.refresh()
-        config.modeSynced = true ; setTimeout(() => config.modeSynced = false, 100) // prevent repetition
+        app.config.modeSynced = true ; setTimeout(() => app.config.modeSynced = false, 100) // prevent repetition
     },
 
     spamBlock() { // requires env.site + sites
@@ -66,7 +66,7 @@ window.sync = {
             try {
                 const result = document.evaluate(sel, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
                 for (let i = 0 ; i < result.snapshotLength ; i++)
-                    result.snapshotItem(i).style.display = config.blockSpamDisabled ? '' : 'none'
+                    result.snapshotItem(i).style.display = app.config.blockSpamDisabled ? '' : 'none'
             } catch (err) { console.warn('Invalid XPath selector:', sel, err) }
         })
     }

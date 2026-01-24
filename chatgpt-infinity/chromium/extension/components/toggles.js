@@ -29,10 +29,10 @@ window.toggles = {
                 this.div.style.setProperty('--item-background-color',
                     `var(--sidebar-surface-${ type == 'mouseover' ? 'secondary' : 'primary' })`)
             this.div.onclick = () => { // toggle Infinity mode
-                settings.save('infinityMode', !config.infinityMode)
+                settings.save('infinityMode', !app.config.infinityMode)
                 sync.configToUI({ updatedKey: 'infinityMode' })
                 feedback.notify(`${i18n.getMsg('menuLabel_infinityMode')}: ${
-                    i18n.getMsg(`state_${ config.infinityMode ? 'on' : 'off' }`).toUpperCase()}`)
+                    i18n.getMsg(`state_${ app.config.infinityMode ? 'on' : 'off' }`).toUpperCase()}`)
             }
         },
 
@@ -141,8 +141,8 @@ window.toggles = {
 
             state() {
                 if (!toggles.sidebar.div) return // since toggle never created = sidebar missing
-                toggles.sidebar.div.style.display = config.toggleHidden || config.extensionDisabled ? 'none' : 'flex'
-                const isOn = config.infinityMode
+                toggles.sidebar.div.style.display = app.config.toggleHidden || app.config.extensionDisabled ? 'none' : 'flex'
+                const isOn = app.config.infinityMode
                 toggles.sidebar.toggleLabel.textContent = `${i18n.getMsg('menuLabel_infinityMode')} `
                     + i18n.getMsg(`state_${ isOn ? 'enabled' : 'disabled' }`)
                 requestAnimationFrame(() => {

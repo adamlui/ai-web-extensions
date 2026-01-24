@@ -39,17 +39,17 @@ window.settings = {
         get replyLanguage() { return { type: 'prompt', symbol: '🌐', category: 'replySettings',
             label: settings.getMsg('menuLabel_replyLang'),
             helptip: settings.getMsg('prompt_updateReplyLang'),
-            status: config.replyLanguage
+            status: app.config.replyLanguage
         }},
         get replyTopic() { return { type: 'prompt', symbol: '🧠', category: 'replySettings',
             label: settings.getMsg('menuLabel_replyTopic'),
             helptip: settings.getMsg('prompt_updateReplyTopic'),
-            status: config.replyTopic
+            status: app.config.replyTopic
         }},
         get replyInterval() { return { type: 'prompt', symbol: '⌚', category: 'replySettings',
             label: settings.getMsg('menuLabel_replyInt'),
             helptip: settings.getMsg('prompt_updateReplyInt'),
-            status: `${config.replyInterval}s`
+            status: `${app.config.replyInterval}s`
         }},
         get notifBottom() { return {
             type: 'toggle', defaultVal: false, category: 'notifSettings',
@@ -74,16 +74,16 @@ window.settings = {
         const reInvertFlags = /disabled|hidden/i
         return reInvertFlags.test(key) // flag in control key name
             && !reInvertFlags.test(this.msgKeys.get(this.controls[key]?.label) || '') // but not in label msg key name
-                ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
+                ? !config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
     },
 
     load(...keys) {
         keys = keys.flat() // flatten array args nested by spread operator
         if (typeof GM_info != 'undefined') // synchronously load from userscript manager storage
-            keys.forEach(key => config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
+            keys.forEach(key => app.config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
         else // asynchronously load from browser extension storage
             return Promise.all(keys.map(async key =>
-                config[key] = processKey(key, (await chrome.storage.local.get(key))[key])))
+                app.config[key] = processKey(key, (await chrome.storage.local.get(key))[key])))
         function processKey(key, val) {
             const ctrl = settings.controls?.[key]
             if (val != undefined && ( // validate stored val
@@ -99,6 +99,6 @@ window.settings = {
             GM_setValue(`${app.configKeyPrefix}_${key}`, val)
         else // save to browser extension storage
             chrome.storage.local.set({ [key]: val })
-        config[key] = val // save to memory
+        app.config[key] = val // save to memory
     }
 };

@@ -1,4 +1,4 @@
-// Requires <app|config|env>
+// Requires <app|env>
 
 window.log = {
 
@@ -35,7 +35,7 @@ window.log = {
 
 } ; ['info', 'error', 'debug'].forEach(logType =>
     log[logType] = function() {
-        if (logType == 'debug' && !config.debugMode) return
+        if (logType == 'debug' && !app.config.debugMode) return
 
         const args = [...arguments].map(arg => typeof arg == 'object' ? JSON.stringify(arg) : arg)
         const msgType = args.some(arg => /\.{3}$/.test(arg)) ? 'working'

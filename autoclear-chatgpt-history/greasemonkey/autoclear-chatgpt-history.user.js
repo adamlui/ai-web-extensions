@@ -334,7 +334,7 @@
 
         load(...keys) {
             keys.flat().forEach(key =>
-                config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
+                app.config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
             function processKey(key, val) {
                 const ctrl = settings.controls?.[key]
                 if (val != undefined && ( // validate stored val
@@ -345,13 +345,13 @@
             }
         },
 
-        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val },
+        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; app.config[key] = val },
 
         typeIsEnabled(key) { // for menu labels + notifs to return ON/OFF
             const reInvertSuffixes = /disabled|hidden/i
             return reInvertSuffixes.test(key) // flag in control key name
                 && !reInvertSuffixes.test(this.controls[key]?.label || '') // but not in label msg key name
-                    ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
+                    ? !config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
         }
     }
     settings.load(Object.keys(settings.controls))
@@ -379,7 +379,7 @@
                     entryData.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${entryData.label} ${
                         entryData.type == 'toggle' ? this.state.separator
                                                    + this.state.words[+settings.typeIsEnabled(key)]
-                      : entryData.type == 'slider' ? ': ' + config[key] + entryData.labelSuffix || ''
+                      : entryData.type == 'slider' ? ': ' + app.config[key] + entryData.labelSuffix || ''
                       : entryData.status ? ` — ${entryData.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     if (entryData.type == 'toggle') {
@@ -422,7 +422,7 @@
     // Define FEEDBACK functions
 
     function notify(msg, pos = '', notifDuration = '', shadow = '') {
-        if (config.notifDisabled && !msg.includes(app.msgs.menuLabel_modeNotifs)) return
+        if (app.config.notifDisabled && !msg.includes(app.msgs.menuLabel_modeNotifs)) return
 
         // Strip state word to append colored one later
         const foundState = toolbarMenu.state.words.find(word => msg.includes(word))
@@ -675,7 +675,7 @@
     }
 
     function syncConfigToUI({ updatedKey } = {}) {
-        if (updatedKey == 'autoclear' && config.autoclear) clearChatsAndGoHome()
+        if (updatedKey == 'autoclear' && app.config.autoclear) clearChatsAndGoHome()
         if (/autoclear|toggleHidden/.test(updatedKey)) toggles.sidebar.update.state()
         toolbarMenu.refresh() // prefixes/suffixes
     }
@@ -709,7 +709,7 @@
                     this.div.style.setProperty('--item-background-color',
                         `var(--sidebar-surface-${ type == 'mouseover' ? 'secondary' : 'primary' })`)
                 this.div.onclick = () => {
-                    settings.save('autoclear', !config.autoclear) ; syncConfigToUI({ updatedKey: 'autoclear' })
+                    settings.save('autoclear', !app.config.autoclear) ; syncConfigToUI({ updatedKey: 'autoclear' })
                     notify(`${app.msgs.mode_autoclear}: ${toolbarMenu.state.words[+config.autoclear]}`)
                 }
             },
@@ -819,8 +819,8 @@
 
                 state() {
                     if (!toggles.sidebar.div) return // since toggle never created = sidebar missing
-                    toggles.sidebar.div.style.display = config.toggleHidden ? 'none' : 'flex'
-                    const isOn = config.autoclear
+                    toggles.sidebar.div.style.display = app.config.toggleHidden ? 'none' : 'flex'
+                    const isOn = app.config.autoclear
                     toggles.sidebar.toggleLabel.textContent = `${app.msgs.mode_autoclear} `
                         + app.msgs[`state_${ isOn ? 'enabled' : 'disabled' }`]
                     requestAnimationFrame(() => {
@@ -842,11 +842,11 @@
     toggles.sidebar.insert()
 
     // AUTO-CLEAR on first visit if enabled
-    if (config.autoclear) clearChatsAndGoHome()
+    if (app.config.autoclear) clearChatsAndGoHome()
 
     // Monitor NODE CHANGES to maintain sidebar toggle visibility
     new MutationObserver(() => {
-        if (!config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
+        if (!app.config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
             && !document.querySelector(`.${toggles.sidebar.class}`)
             && toggles.sidebar.status != 'inserting'
         ) { toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }

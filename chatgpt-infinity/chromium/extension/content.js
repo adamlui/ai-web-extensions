@@ -39,11 +39,11 @@
     await settings.load('extensionDisabled', Object.keys(settings.controls)
         .filter(key => key != 'infinityMode')) // exclude infinityMode...
     settings.save('infinityMode', false) // ...to always init as false
-    if (!config.replyLanguage) // init reply language if unset
+    if (!app.config.replyLanguage) // init reply language if unset
         settings.save('replyLanguage', chrome.i18n.getUILanguage())
-    if (!config.replyTopic) // init reply topic if unset
+    if (!app.config.replyTopic) // init reply topic if unset
         settings.save('replyTopic', i18n.getMsg('menuLabel_all'))
-    if (!config.replyInterval) settings.save('replyInterval', 7) // init refresh interval to 7 secs if unset
+    if (!app.config.replyInterval) settings.save('replyInterval', 7) // init refresh interval to 7 secs if unset
 
     // Define FUNCTIONS
 
@@ -65,7 +65,7 @@
 
     // Add LISTENER to auto-disable Infinity Mode
     document.onvisibilitychange = () => {
-        if (config.infinityMode) {
+        if (app.config.infinityMode) {
             settings.save('infinityMode', false) ; sync.configToUI({ updatedKey: 'infinityMode' }) }
     }
 
@@ -79,14 +79,14 @@
     toggles.sidebar.insert()
 
     // Auto-start if enabled
-    if (config.autoStart) {
+    if (app.config.autoStart) {
         settings.save('infinityMode', true) ; sync.configToUI({ updatedKey: 'infinityMode' })
         feedback.notify(`${i18n.getMsg('menuLabel_autoStart')}: ${i18n.getMsg('state_on').toUpperCase()}`)
     }
 
     // Monitor NODE CHANGES to maintain sidebar toggle visibility
     new MutationObserver(() => {
-        if (!config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
+        if (!app.config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
             && !document.querySelector(`.${toggles.sidebar.class}`)
             && toggles.sidebar.status != 'inserting'
         ) { toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }

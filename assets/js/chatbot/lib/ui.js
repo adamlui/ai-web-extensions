@@ -40,7 +40,7 @@ window.ui = {
 
                     // Add zoom/fade-out to corner buttons
                     if (/about|settings/.test(btn.id)) btn.onmouseup = () => {
-                        if (config.fgAnimationsDisabled) return
+                        if (app.config.fgAnimationsDisabled) return
                         btn.style.animation = 'btn-zoom-fade-out 0.2s ease-out'
                         if (env.browser.isFF) // end animation 0.08s early to avoid icon overgrowth
                             setTimeout(handleAnimationEnded, 0.12 *1000)

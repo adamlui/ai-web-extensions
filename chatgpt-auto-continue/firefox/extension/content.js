@@ -35,17 +35,17 @@
     // Define FUNCTIONS
 
     window.checkBtnsToClick = () => {
-        checkBtnsToClick.active = !config.extensionDisabled ; if (!checkBtnsToClick.active) return
+        checkBtnsToClick.active = !app.config.extensionDisabled ; if (!checkBtnsToClick.active) return
         let continueBtnClicked = false // to increase delay before next check if true to avoid repeated clicks
-        const btnTypesToCheck = ['Continue'] ; if (config.autoScroll) btnTypesToCheck.push('Scroll')
+        const btnTypesToCheck = ['Continue'] ; if (app.config.autoScroll) btnTypesToCheck.push('Scroll')
         const btns = {} ; btnTypesToCheck.forEach(type => btns[type] = chatgpt[`get${type}Btn`]())
         Object.entries(btns).forEach(([btnType, btn]) => {
-            if (!btn || btnType == 'Scroll' && ( !config.autoScroll || !chatgpt.isTyping() )) return
+            if (!btn || btnType == 'Scroll' && ( !app.config.autoScroll || !chatgpt.isTyping() )) return
             btn.click()
             if (btnType == 'Continue') {
                 continueBtnClicked = true
                 feedback.notify(i18n.getMsg('notif_chatAutoContinued'), 'bottom-right')
-                if (config.autoScroll) try { chatgpt.scrollToBottom() } catch(err) {}
+                if (app.config.autoScroll) try { chatgpt.scrollToBottom() } catch(err) {}
         }})
         setTimeout(checkBtnsToClick, continueBtnClicked ? 5000 : 500)
     }
@@ -60,7 +60,7 @@
     })))
 
     // Observe DOM for need to continue generating response
-    if (!config.extensionDisabled) {
+    if (!app.config.extensionDisabled) {
         checkBtnsToClick()
 
     // NOTIFY of status on load

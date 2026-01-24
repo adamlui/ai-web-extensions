@@ -308,9 +308,9 @@
     // Init SETTINGS
     settings.load(Object.keys(settings.controls).filter(key => key != 'infinityMode')) // exclude infinityMode...
     settings.save('infinityMode', false) // ...to always init as false
-    if (!config.replyLanguage) settings.save('replyLanguage', env.browser.language) // init reply language if unset
-    if (!config.replyTopic) settings.save('replyTopic', app.msgs.menuLabel_all) // init reply topic if unset
-    if (!config.replyInterval) settings.save('replyInterval', 7) // init refresh interval to 7 secs if unset
+    if (!app.config.replyLanguage) settings.save('replyLanguage', env.browser.language) // init reply language if unset
+    if (!app.config.replyTopic) settings.save('replyTopic', app.msgs.menuLabel_all) // init reply topic if unset
+    if (!app.config.replyInterval) settings.save('replyInterval', 7) // init refresh interval to 7 secs if unset
 
     // Define MENU functions
 
@@ -343,14 +343,14 @@
                     entryData.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${entryData.label} ${
                         entryData.type == 'toggle' ? this.state.separator
                                                    + this.state.words[+settings.typeIsEnabled(key)]
-                      : entryData.type == 'slider' ? ': ' + config[key] + entryData.labelSuffix || ''
+                      : entryData.type == 'slider' ? ': ' + app.config[key] + entryData.labelSuffix || ''
                       : entryData.status ? ` — ${entryData.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     if (entryData.type == 'toggle') {
                         settings.save(key, !config[key])
                         feedback.notify(`${entryData.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
                     } else if (key == 'replyLanguage') {
-                        let replyLang = prompt(`${app.msgs.prompt_updateReplyLang}:`, config.replyLanguage)
+                        let replyLang = prompt(`${app.msgs.prompt_updateReplyLang}:`, app.config.replyLanguage)
                         if (replyLang == null) return // user cancelled so do nothing
                         else if (!/\d/.test(replyLang)) { // valid reply language set
                             replyLang = ( // auto-case for menu/alert aesthetics
@@ -364,7 +364,7 @@
                         }
                     } else if (key == 'replyTopic') {
                         let replyTopic = prompt(( app.msgs.prompt_updateReplyTopic )
-                            + ' (' + ( app.msgs.prompt_orEnter ) + ' \'ALL\'):', config.replyTopic)
+                            + ' (' + ( app.msgs.prompt_orEnter ) + ' \'ALL\'):', app.config.replyTopic)
                         if (replyTopic != null) { // user didn't cancel
                             replyTopic = string.toTitleCase(replyTopic.toString()) // for menu/alert aesthetics
                             settings.save('replyTopic',
@@ -376,7 +376,7 @@
                             )
                         }
                     } else if (key == 'replyInterval') {
-                        const replyInterval = prompt(`${app.msgs.prompt_updateReplyInt}:`, config.replyInterval)
+                        const replyInterval = prompt(`${app.msgs.prompt_updateReplyInt}:`, app.config.replyInterval)
                         if (replyInterval == null) return // user cancelled so do nothing
                         else if (!isNaN(parseInt(replyInterval, 10)) && parseInt(replyInterval, 10) > 4) {
                             settings.save('replyInterval', parseInt(replyInterval, 10))
@@ -487,7 +487,7 @@
     // Add LISTENER to auto-disable Infinity Mode
     if ('hidden' in document) // ...if Page Visibility API supported
         document.onvisibilitychange = () => {
-            if (config.infinityMode) {
+            if (app.config.infinityMode) {
                 settings.save('infinityMode', false) ; sync.configToUI({ updatedKey: 'infinityMode' }) }
         }
 
@@ -497,14 +497,14 @@
     toggles.sidebar.insert()
 
     // Auto-start if enabled
-    if (config.autoStart) {
+    if (app.config.autoStart) {
         settings.save('infinityMode', true) ; sync.configToUI({ updatedKey: 'infinityMode' })
         feedback.notify(`${app.msgs.menuLabel_autoStart}: ${app.msgs.state_on.toUpperCase()}`)
     }
 
     // Monitor NODE CHANGES to maintain sidebar toggle visibility
     new MutationObserver(() => {
-        if (!config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
+        if (!app.config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
             && !document.querySelector(`.${toggles.sidebar.class}`)
             && toggles.sidebar.status != 'inserting'
         ) { toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }

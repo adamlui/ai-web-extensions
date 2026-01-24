@@ -489,7 +489,7 @@
                 } else styles.fullWin.node.remove()
                 if (site != 'chatgpt') sync.mode('fullWindow') // since they don't monitor sidebar
             } else if (mode == 'fullscreen') {
-                if (config.f11) modals.alert(app.msgs.alert_pressF11, `${app.msgs.alert_f11reason}.`)
+                if (app.config.f11) modals.alert(app.msgs.alert_pressF11, `${app.msgs.alert_f11reason}.`)
                 else document.exitFullscreen().catch(
                     err => console.error(app.symbol + ' » Failed to exit fullscreen', err))
             }
@@ -640,7 +640,7 @@
                         sync.configToUI({ updatedKey: configKeyName })
                         if (ctgKey == 'siteSettings' && env.site == key) // notify if setting of active site toggled
                              feedback.notify(`${app.name} 🧩 ${
-                                app.msgs[`state_${ config[configKeyName] ? 'off' : 'on' }`].toUpperCase()}`)
+                                app.msgs[`state_${ app.config[configKeyName] ? 'off' : 'on' }`].toUpperCase()}`)
                         else if (ctgKey != 'siteSettings')
                             feedback.notify(`${entryData.label}: ${
                                 toolbarMenu.state.words[+settings.typeIsEnabled(key)]}`)
@@ -660,7 +660,7 @@
                     // Create/append slider elems
                     entry.row.classList.add('active')
                     entry.row.append(entry.slider = dom.create.elem('input',
-                        { type: 'range', min: minVal, max: maxVal, value: config[key] }))
+                        { type: 'range', min: minVal, max: maxVal, value: app.config[key] }))
                     if (entryData.step || env.browser.isFF) // use val from ctrl data or default to 2% in FF for being laggy
                         entry.slider.step = entryData.step || (0.02 * entry.slider.max - entry.slider.min)
                     entry.label.textContent += `: ${entry.slider.value}${ entryData.labelSuffix || '' }`
@@ -792,9 +792,9 @@
     }
 
     // Init FULL-MODE states
-    config.fullscreen = chatgpt.isFullScreen()
+    app.config.fullscreen = chatgpt.isFullScreen()
     if (sites[env.site].selectors.btns.sidebar) // site has native FW state
-         config.fullWindow = await ui.isFullWin() // ...so match it
+         app.config.fullWindow = await ui.isFullWin() // ...so match it
     else settings.load('fullWindow') // otherwise load CWM's saved state
 
     // Create/append STYLES
@@ -807,16 +807,16 @@
 
     // Restore PREV SESSION's state
     if (!config[`${env.site}Disabled`]) {
-        if (config.btnsVisible) buttons.insert()
-        if (config.widescreen) toggleMode('widescreen', true)
-        if (config.fullWindow && sites[env.site].hasSidebar) {
+        if (app.config.btnsVisible) buttons.insert()
+        if (app.config.widescreen) toggleMode('widescreen', true)
+        if (app.config.fullWindow && sites[env.site].hasSidebar) {
             if (sites[env.site].selectors.btns.sidebar) // site has own FW config
                 sync.mode('fullWindow') // ...so sync w/ it
             else toggleMode('fullWindow', true) // otherwise self-toggle
         }
         if (env.site != 'poe') { // toggle free wheel locked in some Spam blocks
             window.enableWheelScroll = event => event.stopPropagation()
-            document.body[`${ config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
+            document.body[`${ app.config.blockSpamDisabled ? 'remove' : 'add' }EventListener`](
                 'wheel', window.enableWheelScroll)
         }
     }
@@ -826,7 +826,7 @@
     new MutationObserver(async () => {
 
         // Maintain button visibility on nav
-        if (config[`${env.site}Disabled`] || !config.btnsVisible) return
+        if (app.config[`${env.site}Disabled`] || !app.config.btnsVisible) return
         else if (!buttons.fullscreen?.isConnected && !chatgpt.canvasIsOpen()
             && await chatbar.get() && buttons.state.status != 'inserting'
         ) { buttons.state.status = 'missing' ; buttons.insert() }
@@ -845,13 +845,13 @@
             if (canvasWasOpen != chatgpt.canvasIsOpen()) { buttons.remove() ; canvasWasOpen = !canvasWasOpen }
 
         // Update Widescreen styles on Poe nav
-        } else if (location.pathname != prevPath && config.widescreen) {
+        } else if (location.pathname != prevPath && app.config.widescreen) {
             styles.update({ keys: ['widescreen', 'chatbar'] })
             prevPath = location.pathname
         }
 
         // Apply Spam Block
-        if (!config.blockSpamDisabled && sites[env.site]?.selectors?.spam) sync.spamBlock()
+        if (!app.config.blockSpamDisabled && sites[env.site]?.selectors?.spam) sync.spamBlock()
 
     }).observe(document[env.site == 'poe' ? 'head' : 'body'], { attributes: true, subtree: true })
 
@@ -866,14 +866,14 @@
             env.ui.scheme = displayedScheme ; modals.stylize() ; buttons.stylize() ; buttons.update.color() }
     }
 
-    // Monitor SIDEBARS to update config.fullWindow for sites w/ native toggle
+    // Monitor SIDEBARS to update app.config.fullWindow for sites w/ native toggle
     if (sites[env.site].selectors.btns.sidebar && sites[env.site].hasSidebar) {
-        const sidebarObserver = new ResizeObserver( // sync config.fullWindow ⇆ sidebar width + update styles
+        const sidebarObserver = new ResizeObserver( // sync app.config.fullWindow ⇆ sidebar width + update styles
             async () => {
-                if ((config.fullWindow != await ui.isFullWin()) && !config.modeSynced) sync.mode('fullWindow')
-                if (env.site == 'chatgpt' && config.widescreen) {
+                if ((app.config.fullWindow != await ui.isFullWin()) && !app.config.modeSynced) sync.mode('fullWindow')
+                if (env.site == 'chatgpt' && app.config.widescreen) {
                     styles.update({ key: 'widescreen' }) // for new window.wsMaxWidth
-                    if (config.widerChatbox) styles.update({ key: 'chatbar' })
+                    if (app.config.widerChatbox) styles.update({ key: 'chatbar' })
                 }
             }
         )
@@ -900,20 +900,20 @@
     // Add RESIZE LISTENER to update full screen setting/button + disable F11 flag + update widescreen/chatbar styles
     addEventListener('resize', () => {
         const fullscreenState = chatgpt.isFullScreen()
-        if (config.fullscreen && !fullscreenState) { // exiting full screen
-            sync.mode('fullscreen') ; config.f11 = false
-        } else if (!config.fullscreen && fullscreenState) // entering full screen
+        if (app.config.fullscreen && !fullscreenState) { // exiting full screen
+            sync.mode('fullscreen') ; app.config.f11 = false
+        } else if (!app.config.fullscreen && fullscreenState) // entering full screen
             sync.mode('fullscreen')
-        if (config.widescreen) {
+        if (app.config.widescreen) {
             styles.update({ key: 'widescreen' }) // for new window.wsMaxWidth
-            if (config.widerChatbox) styles.update({ key: 'chatbar' })
+            if (app.config.widerChatbox) styles.update({ key: 'chatbar' })
         }
         if (env.site == 'chatgpt') chatbar.tweak() // update chatgpt.com chatbar inner width
     })
 
     // Add KEY LISTENER to enable flag on F11 + stop generating text on ESC
     document.addEventListener('keydown', event => {
-        if ((event.key == 'F11' || event.keyCode == 122) && !config.fullscreen) config.f11 = true
+        if ((event.key == 'F11' || event.keyCode == 122) && !app.config.fullscreen) app.config.f11 = true
         else if ((event.key.startsWith('Esc') || event.keyCode == 27) && chatgpt.isTyping())
             try {
                 chatgpt.stop() ; requestAnimationFrame(() => !chatgpt.isTyping()

@@ -3,7 +3,7 @@
 window.feedback = {
     notify(msg, pos = '', notifDuration = '', shadow = '') {
         if (!styles.toast.node) styles.update({ key: 'toast' })
-        if (config.notifDisabled
+        if (app.config.notifDisabled
             && !new RegExp(`${i18n.getMsg('menuLabel_show')} ${i18n.getMsg('menuLabel_notifs')}`, 'i')
                 .test(msg)
         ) return
@@ -15,7 +15,7 @@ window.feedback = {
         if (foundState) msg = msg.replace(foundState, '')
 
         // Show notification
-        chatgpt.notify(`${app.symbol} ${msg}`, pos ||( config.notifBottom ? 'bottom' : '' ),
+        chatgpt.notify(`${app.symbol} ${msg}`, pos ||( app.config.notifBottom ? 'bottom' : '' ),
             notifDuration, shadow || env.ui.scheme == 'light')
         const notif = document.querySelector('.chatgpt-notif:last-child')
         notif.classList.add(app.slug) // for styles.toast

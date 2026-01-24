@@ -61,7 +61,7 @@ window.prompts = {
     },
 
     language: {
-        get base() { return `Reply in the language ${config.replyLang}` },
+        get base() { return `Reply in the language ${app.config.replyLang}` },
         mods: [{ noChinese: ['Do not respond in Chinese unless you were asked to!'] }]
     },
 

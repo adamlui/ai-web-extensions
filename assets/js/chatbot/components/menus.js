@@ -1,4 +1,4 @@
-// Requires components/<icons|tooltip>.js + lib/dom.js + <apis|app|config|env|log|modals|settings|toggle>
+// Requires components/<icons|tooltip>.js + lib/dom.js + <apis|app|env|log|modals|settings|toggle>
 
 window.menus = {
 
@@ -98,7 +98,7 @@ window.menus = {
             })
         },
 
-        api: { // requires <apis|config>
+        api: { // requires <apis|app>
             directionBias: 'down',
             get entries() { return [
                 { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
@@ -107,29 +107,31 @@ window.menus = {
                     onclick: () => {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
                         feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                            `${ config.anchored ? 'top' : 'bottom' }-right`)
+                            `${ app.config.anchored ? 'top' : 'bottom' }-right`)
                     },
                     get isActive() {
-                        return !config.preferredAPI && api == app.msgs.menuLabel_random || config.preferredAPI == api }
+                        return !app.config.preferredAPI && api == app.msgs.menuLabel_random
+                             || app.config.preferredAPI == api
+                    }
                 }))
             ]}
         },
 
-        pin: { // requires <app|config|toggle>
+        pin: { // requires <app|toggle>
             directionBias: 'up',
             get entries() { return [
                 { label: `${app.msgs.menuLabel_pinTo}...`, iconType: 'pin' },
                 { label: app.msgs.menuLabel_nothing, iconType: 'cancel',
                     onclick: () => { toggle.sidebar('sticky', 'off') ; toggle.anchorMode('off') },
-                    get isActive() { return !config.stickySidebar && !config.anchored }
+                    get isActive() { return !app.config.stickySidebar && !app.config.anchored }
                 },
                 { label: app.msgs.menuLabel_sidebar, iconType: 'sidebar',
                     onclick: () => toggle.sidebar('sticky'),
-                    get isActive() { return config.stickySidebar }
+                    get isActive() { return app.config.stickySidebar }
                 },
                 { label: app.msgs.menuLabel_bottom, iconType: 'anchor',
                     onclick: () => toggle.anchorMode(),
-                    get isActive() { return config.anchored }
+                    get isActive() { return app.config.anchored }
                 }
             ]}
         }
@@ -148,7 +150,7 @@ window.menus = {
             this.register()
         },
 
-        register() { // requires <app|config|env|modals|settings|toggle>
+        register() { // requires <app|env|modals|settings|toggle>
 
             // Add Proxy API Mode toggle
             const pmLabel = this.state.symbols[+config.proxyAPIenabled] + ' '

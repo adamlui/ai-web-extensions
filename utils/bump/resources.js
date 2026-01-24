@@ -27,7 +27,7 @@
 
     // Import BUMP UTILS
     let bump
-    if (config.devMode) // bypass cache for latest bump-utils.mjs
+    if (app.config.devMode) // bypass cache for latest bump-utils.mjs
         bump = await import('./bump-utils.mjs')
     else { // import remote bump-utils.min.mjs updated every ~12h
         fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
@@ -44,9 +44,9 @@
     }
 
     // Collect userscripts
-    bump.log.working(`\n${ config.cacheMode ? 'Collecting' : 'Searching for' } userscripts...\n`)
+    bump.log.working(`\n${ app.config.cacheMode ? 'Collecting' : 'Searching for' } userscripts...\n`)
     let userJSfiles = []
-    if (config.cacheMode) {
+    if (app.config.cacheMode) {
         try { // create missing cache file
             fs.mkdirSync(path.dirname(cachePaths.userJSpaths), { recursive: true })
             const fd = fs.openSync(cachePaths.userJSpaths,

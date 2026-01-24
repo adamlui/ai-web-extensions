@@ -62,7 +62,7 @@
 
             // Create/append slider elems
             entry.div.append(entry.slider = dom.create.elem('input', { class: 'slider', type: 'range',
-                min: minVal, max: maxVal, value: config[entryData.key] }))
+                min: minVal, max: maxVal, value: app.config[entryData.key] }))
             entry.div.classList.remove('highlight-on-hover')
             if (entryData.step || env.browser.isFF) // use val from entryData or default to 2% in FF for being laggy
                 entry.slider.step = entryData.step || ( 0.02 * entry.slider.max - entry.slider.min )
@@ -161,10 +161,10 @@
         return !deps || Object.values(deps).flat(Infinity).some(depKey => settings.typeIsEnabled(depKey))
     }
 
-    function extensionIsDisabled() { return !!( config.extensionDisabled || config[`${env.site}Disabled`] )}
+    function extensionIsDisabled() { return !!( app.config.extensionDisabled || app.config[`${env.site}Disabled`] )}
 
-    function notify(msg, pos = !config.toastMode ? 'bottom-right' : undefined) {
-        if (config.notifDisabled
+    function notify(msg, pos = !app.config.toastMode ? 'bottom-right' : undefined) {
+        if (app.config.notifDisabled
             && !new RegExp(`${i18n.getMsg('menuLabel_show')} ${i18n.getMsg('menuLabel_notifs')}`, 'i')
                 .test(msg)
         ) return
@@ -188,7 +188,7 @@
             // Toolbar icon
             chrome.action.setIcon({ path: Object.fromEntries(
                 Object.keys(chrome.runtime.getManifest().icons).map(dimension =>
-                    [dimension, `../icons/${ config.extensionDisabled ? 'faded/' : '' }icon${dimension}.png`]
+                    [dimension, `../icons/${ app.config.extensionDisabled ? 'faded/' : '' }icon${dimension}.png`]
             ))})
 
             // Menu elems
@@ -271,10 +271,10 @@
         track: dom.create.elem('span', { class: 'track', style: 'position: relative ; top: 7.5px' })
     }
     masterToggle.div.append(masterToggle.switch) ; masterToggle.switch.append(masterToggle.track)
-    await settings.load('extensionDisabled') ; masterToggle.switch.classList.toggle('on', !config.extensionDisabled)
+    await settings.load('extensionDisabled') ; masterToggle.switch.classList.toggle('on', !app.config.extensionDisabled)
     masterToggle.div.onclick = () => {
         env.extensionWasDisabled = extensionIsDisabled()
-        masterToggle.switch.classList.toggle('on') ; settings.save('extensionDisabled', !config.extensionDisabled)
+        masterToggle.switch.classList.toggle('on') ; settings.save('extensionDisabled', !app.config.extensionDisabled)
         sync.configToUI({ updatedKey: 'extensionDisabled' }) ; sync.fade()
         if (env.extensionWasDisabled != extensionIsDisabled()) notify(`${app.name} 🧩 ${
             i18n.getMsg(`state_${ extensionIsDisabled() ? 'off' : 'on' }`).toUpperCase()}`)
@@ -339,8 +339,8 @@
         ssEntry.div.append(ssEntry.switchLabelDiv, ssEntry.faviconDiv) ; siteSettings.entriesDiv.append(ssEntry.div)
         await settings.load(`${site}Disabled`) ; ssEntry.switch.classList.toggle('on', !config[`${site}Disabled`])
         if (env.site == site) {
-            env.siteDisabled = config[`${site}Disabled`] // to auto-expand toggles later if true
-            if (config[`${site}Disabled`]) siteSettings.labelDiv.classList.add('anchored')
+            env.siteDisabled = app.config[`${site}Disabled`] // to auto-expand toggles later if true
+            if (app.config[`${site}Disabled`]) siteSettings.labelDiv.classList.add('anchored')
         }
 
         // Add listeners
@@ -349,7 +349,7 @@
             ssEntry.switch.classList.toggle('on')
             settings.save(`${site}Disabled`, !config[`${site}Disabled`])
             sync.configToUI({ updatedKey: `${site}Disabled` })
-            siteSettings.labelDiv.classList.toggle('anchored', env.site == site && config[`${site}Disabled`])
+            siteSettings.labelDiv.classList.toggle('anchored', env.site == site && app.config[`${site}Disabled`])
             if (env.site == site) { // fade/notify if setting of active site toggled
                 sync.fade()
                 if (env.extensionWasDisabled != extensionIsDisabled()) notify(`${app.name} 🧩 ${
@@ -425,7 +425,7 @@
     footerElems.moreExt.span.onclick = () => { open(app.urls.relatedExtensions) ; close() }
 
     // AUTO-EXPAND categories
-    if (!env.onMatchedPage || config[`${env.site}Disabled`]) { // auto-expand Site Settings
+    if (!env.onMatchedPage || app.config[`${env.site}Disabled`]) { // auto-expand Site Settings
         if (!env.onMatchedPage) // disable label from triggering unneeded collapse
             siteSettings.labelDiv.classList.add('anchored')
         setTimeout(() => toggleCategorySettingsVisiblity({ key: 'siteSettings', transitions: env.onMatchedPage }),

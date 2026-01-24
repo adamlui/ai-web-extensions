@@ -34,7 +34,7 @@
 
     // Import BUMP UTILS
     let bump
-    if (config.devMode) // bypass cache for latest bump-utils.mjs
+    if (app.config.devMode) // bypass cache for latest bump-utils.mjs
         bump = await import('./bump-utils.mjs')
     else { // import remote bump-utils.min.mjs updated every ~12h
         fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
@@ -44,9 +44,9 @@
     }
 
     // Collect extension MANIFESTS
-    bump.log.working(`\n${ config.cacheMode ? 'Collecting' : 'Searching for' } extension manifests...\n`)
+    bump.log.working(`\n${ app.config.cacheMode ? 'Collecting' : 'Searching for' } extension manifests...\n`)
     let manifestPaths = []
-    if (config.cacheMode) {
+    if (app.config.cacheMode) {
         try { // create missing cache file
             fs.mkdirSync(path.dirname(cachePaths.manifestPaths), { recursive: true })
             const fd = fs.openSync(cachePaths.manifestPaths,
@@ -61,8 +61,8 @@
         }
     } else { // use bump.findFileBySuffix()
         manifestPaths = await bump.findFileBySuffix({ suffix: 'manifest.json' }) ; console.log('') }
-    if (config.chromiumOnly) manifestPaths = manifestPaths.filter(path => /chrom/i.test(path))
-    else if (config.ffOnly) manifestPaths = manifestPaths.filter(path => /firefox/i.test(path))
+    if (app.config.chromiumOnly) manifestPaths = manifestPaths.filter(path => /chrom/i.test(path))
+    else if (app.config.ffOnly) manifestPaths = manifestPaths.filter(path => /firefox/i.test(path))
 
     // Extract extension project NAMES
     bump.log.working('\nExtracting extension project names...\n')
@@ -84,7 +84,7 @@
 
             // Check latest commit for extension changes if forcible platform flag not set
             const platformManifestPath = path.dirname(manifestPath.replace(process.cwd() + path.sep, '').replace(/\\/g, '/'))
-            if (!config.chromiumOnly && !config.ffOnly) {
+            if (!app.config.chromiumOnly && !app.config.ffOnly) {
                 console.log(`Checking last commit details for ${platformManifestPath}...`)
                 try {
                     const latestCommitMsg = spawnSync('git',
@@ -98,7 +98,7 @@
             }
 
             console.log(`Bumping version in ${
-                config.chromiumOnly ? 'Chromium' : config.ffOnly ? 'Firefox' : '' } manifest...`)
+                app.config.chromiumOnly ? 'Chromium' : app.config.ffOnly ? 'Firefox' : '' } manifest...`)
             const { oldVer, newVer } = bump.bumpVersion({ format: 'dateVer', filePath: manifestPath })
             bumpedManifests[`${platformManifestPath}/manifest.json`] = `${oldVer};${newVer}`
         }
@@ -111,7 +111,7 @@
     } else bump.log.success(`${Object.keys(bumpedManifests).length} manifest${pluralSuffix} bumped!`)
 
     // ADD/COMMIT/PUSH bump(s)
-    if (!config.noCommit) {
+    if (!app.config.noCommit) {
         bump.log.working(`\nCommitting bump${pluralSuffix} to Git...\n`)
 
         // Init commit msg
@@ -126,14 +126,14 @@
             execSync('git add ./**/manifest.json')
             spawnSync('git', ['commit', '-n', '-m', commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
             console.log('') // line break
-            if (!config.noPush) {
+            if (!app.config.noPush) {
                 bump.log.working('\nPulling latest changes from remote to sync local repository...\n')
                 execSync('git pull')
                 bump.log.working(`\nPushing bump${pluralSuffix} to Git...\n`)
                 execSync('git push')
             }
             bump.log.success(`Success! ${Object.keys(bumpedManifests).length} manifest${pluralSuffix} updated${
-                !config.noCommit ? '/committed' : '' }${ !config.noPush ? '/pushed' : '' } to GitHub`)
+                !app.config.noCommit ? '/committed' : '' }${ !app.config.noPush ? '/pushed' : '' } to GitHub`)
         } catch (err) { bump.log.error('Git operation failed: ' + err.message) }
     }
 

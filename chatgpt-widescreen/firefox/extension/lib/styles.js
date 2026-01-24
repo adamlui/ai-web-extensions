@@ -33,10 +33,10 @@ window.styles = {
         autoAppend: true,
         get css() { // requires lib/chatbar.js + <config|env>
             styles.calcWSbounds()
-            const { site } = env, toWiden = config.widerChatbox && config.widescreen
+            const { site } = env, toWiden = app.config.widerChatbox && app.config.widescreen
             const wcbWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth )
-                * Math.min(config.widerChatboxWidth, config.widescreenWidth) /100 -20
-            return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
+                * Math.min(app.config.widerChatboxWidth, app.config.widescreenWidth) /100 -20
+            return app.config.extensionDisabled || app.config[`${site}Disabled`] ? '' : {
                 chatgpt: `main form { max-width: ${
                     toWiden ? wcbWidth : chatbar.nativeWidth }px !important ; align-self: center }`,
                 poe: toWiden && `[class*=ChatHomeMain_inputContainer], [class^=ChatPageMainFooter_footerInner] {
@@ -53,11 +53,11 @@ window.styles = {
     toast: {
         autoAppend: true,
         get css() { // requires <app|config|env>
-            return !config.toastMode ? '' : // flatten notifs into toast alerts
+            return !app.config.toastMode ? '' : // flatten notifs into toast alerts
                 `div.${app.slug}.chatgpt-notif {
                     position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;
                     ${ env.ui.scheme == 'dark' ? 'border: 2px solid white ;' : '' }
-                    margin-${ config.notifBottom ? 'bottom: 105px' : 'top: 42px' };
+                    margin-${ app.config.notifBottom ? 'bottom: 105px' : 'top: 42px' };
                     transform: translate(-50%, -50%) scale(0.6) !important }
                 div.${app.slug}.chatgpt-notif > div.notif-close-btn {
                     top: 18px ; right: 7px ; transform: scale(2) }`
@@ -70,34 +70,34 @@ window.styles = {
             const { site } = env, { [site]: { selectors }} = sites
             const tcbMinHeight = site == 'chatgpt' ? 25 : /* poe */ 50
             const tcbHeight = tcbMinHeight +(
-                ( site == 'chatgpt' ? 68 : 80 ) -tcbMinHeight ) * config.tallerChatboxHeight /100
-            return config.extensionDisabled || config[`${env.site}Disabled`] ? '' : `
-                ${ config.tcbDisabled ? '' : `
+                ( site == 'chatgpt' ? 68 : 80 ) -tcbMinHeight ) * app.config.tallerChatboxHeight /100
+            return app.config.extensionDisabled || app.config[`${env.site}Disabled`] ? '' : `
+                ${ app.config.tcbDisabled ? '' : `
                     ${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
                         { max-height: ${tcbHeight}vh }
                     ${ site == 'chatgpt' && location.pathname == '/' ? // anchor to bottom for visible overflow
                         'div#thread-bottom-container { position: absolute ; bottom: 0 }' : '' }`
                 }
-                ${ !config.hiddenHeader ? '' : `
+                ${ !app.config.hiddenHeader ? '' : `
                     ${selectors.header} { display: none !important }
                     ${ site == 'chatgpt' // raise reply header if site header wasn't transparent to fill new gap
                         && getComputedStyle(document.querySelector(selectors.header))
                             .backgroundColor != 'rgba(0, 0, 0, 0)' ?
                                 'div[class*=top-9][class*=--header-height] { top: 38px }' : '' }`
                 }
-                ${ !config.hiddenFooter ? '' : `
+                ${ !app.config.hiddenFooter ? '' : `
                     ${selectors.footer}${ site == 'chatgpt' ? `, ${selectors.btns.help}` : '' } { display: none }`}
-                ${ !config.justifyText ? '' : `
+                ${ !app.config.justifyText ? '' : `
                     ${ site == 'chatgpt' ? 'div[data-message-author-role]'
                                : /* poe */ 'div[class*=messageTextContainer]' }
                         { text-align: justify }`
                 }
-                ${ !config.ncbDisabled ? '' : '#newChat-btn { display: none }'}
-                ${ config.btnAnimationsDisabled ? '' : ` // zoom chatbar buttons on hover
+                ${ !app.config.ncbDisabled ? '' : '#newChat-btn { display: none }'}
+                ${ app.config.btnAnimationsDisabled ? '' : ` // zoom chatbar buttons on hover
                     .${buttons.class} { will-change: transform } /* prevent wobble */
                     .${buttons.class}:hover { transform: scale(${ site == 'chatgpt' ? 1.285 : 1.15 })}`
                 }
-                ${ config.blockSpamDisabled ? '' : `
+                ${ app.config.blockSpamDisabled ? '' : `
                     ${styles.getAllSelectors(selectors.spam, { type: 'css' }).join(',')} { display: none !important }
                     body { pointer-events: unset !important }` /* free click lock from blocking modals */
                 }`
@@ -109,8 +109,8 @@ window.styles = {
         get css() { // requires <config|env>
             styles.calcWSbounds()
             const { site } = env, outerDivSelector = styles.outerDivSelector
-            const wsWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth ) * config.widescreenWidth /100
-            return config.extensionDisabled || config[`${site}Disabled`] ? '' : {
+            const wsWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth ) * app.config.widescreenWidth /100
+            return app.config.extensionDisabled || app.config[`${site}Disabled`] ? '' : {
                 chatgpt: `
                     ${outerDivSelector} { max-width: ${wsWidth}px !important } /* widen outer div */
                     /* widen tables */

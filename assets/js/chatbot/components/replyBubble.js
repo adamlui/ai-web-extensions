@@ -1,4 +1,4 @@
-// Requires components/buttons.js + lib/dom.js + <app|config>
+// Requires components/buttons.js + lib/dom.js + app
 
 window.replyBubble = {
 
@@ -18,7 +18,7 @@ window.replyBubble = {
         app.div.append(this.replyTip, this.bubbleDiv) ; this.updateMaxHeight()
     },
 
-    updateMaxHeight() { // requires <app|config>
+    updateMaxHeight() { // requires app
         const replyPre = app.div.querySelector('.reply-pre'),
               relatedQueries = app.div.querySelector(`.${app.slug}-related-queries`),
               offsets = { bravegpt: [304, 278], duckduckgpt: [245, 255], googlegpt: [328, 309] }
@@ -27,9 +27,9 @@ window.replyBubble = {
             longer: innerHeight -( offsets[app.slug]?.[1] || 0 )
         }
         if (replyPre) replyPre.style.maxHeight = (
-            config.stickySidebar ? (
+            app.config.stickySidebar ? (
                 relatedQueries?.offsetHeight > 0 ? `${heights.shorter}px` : `${heights.longer}px` )
-          : config.anchored ? `${ heights.longer -( config.expanded ? 115 : 365 )}px` : 'none'
+          : app.config.anchored ? `${ heights.longer -( app.config.expanded ? 115 : 365 )}px` : 'none'
         )
     }
 };

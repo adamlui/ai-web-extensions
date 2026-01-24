@@ -36,7 +36,7 @@
 
     // Import BUMP UTILS
     let bump
-    if (config.devMode) // bypass cache for latest bump-utils.mjs
+    if (app.config.devMode) // bypass cache for latest bump-utils.mjs
         bump = await import('./bump-utils.mjs')
     else { // import remote bump-utils.min.mjs updated every ~12h
         fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
@@ -46,9 +46,9 @@
     }
 
     // COLLECT chatbot userscripts
-    bump.log.working(`\n${ config.cacheMode ? 'Collecting' : 'Searching for' } chatbot userscripts...\n`)
+    bump.log.working(`\n${ app.config.cacheMode ? 'Collecting' : 'Searching for' } chatbot userscripts...\n`)
     let chatbotFiles = []
-    if (config.cacheMode)
+    if (app.config.cacheMode)
         try { // create missing cache file
             fs.mkdirSync(path.dirname(cachePaths.chatbotPaths), { recursive: true })
             const fd = fs.openSync(cachePaths.chatbotPaths,
@@ -93,20 +93,20 @@
     } else bump.log.success(`${filesUpdatedCnt} chatbot${pluralSuffix} bumped!`)
 
     // ADD/COMMIT/PUSH bump(s)
-    if (config.commitMsg) {
+    if (app.config.commitMsg) {
         bump.log.working(`\nCommitting bump${pluralSuffix} to Git...\n`)
         try {
             execSync('git add ./*.user.js')
-            spawnSync('git', ['commit', '-n', '-m', config.commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
+            spawnSync('git', ['commit', '-n', '-m', app.config.commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
             console.log('') // line break
-            if (!config.noPush) {
+            if (!app.config.noPush) {
                 bump.log.working('\nPulling latest changes from remote to sync local repository...\n')
                 execSync('git pull')
                 bump.log.working(`\nPushing bump${pluralSuffix} to Git...\n`)
                 execSync('git push')
             }
             bump.log.success(`Success! ${filesUpdatedCnt} chatbot${pluralSuffix} updated/committed${
-                !config.noPush ? '/pushed' : '' } to GitHub`)
+                !app.config.noPush ? '/pushed' : '' } to GitHub`)
         } catch (err) { bump.log.error('Git operation failed: ' + err.message) }
     } else {
         bump.log.working(`\nNo commit message provided. Skipping git operations.`)

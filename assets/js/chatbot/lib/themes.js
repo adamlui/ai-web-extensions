@@ -1,4 +1,4 @@
-// Requires lib/dom.js + <app|config|env>
+// Requires lib/dom.js + <app|env>
 
 window.themes = {
     apply(theme) { // requires lib/dom.js
@@ -23,7 +23,7 @@ window.themes = {
         }
     },
 
-    styles: { // requres <config|env>
+    styles: { // requres <app|env>
         get lines() { const { selectors } = themes ; return `
 
             /* General button styles */
@@ -43,13 +43,13 @@ window.themes = {
                 font-size: 0.8em ; font-family: "Roboto", sans-serif ; text-transform: uppercase }
             ${selectors.btn.svg} {
                 stroke: rgba(var(--content-color), ${ env.ui.app.scheme == 'light' ? 0.65 : 1 }) ;
-                ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
+                ${ app.config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
                         -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
                         -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
             ${selectors.btn.span} { font-weight: 600 ; display: inline-block } /* text */
             ${selectors.btn.before}, ${selectors.btn.after} { /* top/bottom lines */
                 content: "" ; position: absolute ; background: rgb(var(--content-color)) ;
-                ${ config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
+                ${ app.config.fgAnimationsDisabled ? '' : `transition: var(--btn-transition) ;
                         -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
                         -o-transition: var(--btn-transition) ; -ms-transition: var(--btn-transition)` }}
             ${selectors.btn.before} { top: 0 ; left: 10% ; width: 65% ; height: 1px } /* top line */
@@ -71,7 +71,7 @@ window.themes = {
                 --modal-btn-y-offset: 2px ; --glow-color: #a0fdff ;
                 --modal-btn-zoom: scale(1.075) ;
                 --modal-btn-transition: transform 0.1s ease, background 0.2s ease, box-shadow 0.5s ease ;
-                ${ config.fgAnimationsDisabled ? /* override chatgpt.js transitions */
+                ${ app.config.fgAnimationsDisabled ? /* override chatgpt.js transitions */
                     `transition: none ;
                         -webkit-transition: none ; -moz-transition: none ;
                         -o-transition: none ; -ms-transition: none`

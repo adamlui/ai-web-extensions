@@ -157,19 +157,19 @@ window.settings = {
         const reInvertFlags = /disabled|hidden/i
         return reInvertFlags.test(key) // flag in control key name
             && !reInvertFlags.test(this.msgKeys.get(this.controls[key]?.label) || '') // but not in label msg key name
-                ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
+                ? !config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
     },
 
     load(...keys) {
         keys = keys.flat() // flatten array args nested by spread operator
         if (typeof GM_info != 'undefined') // synchronously load from userscript manager storage
-            keys.forEach(key => config[key] = processKey(key,
+            keys.forEach(key => app.config[key] = processKey(key,
                 GM_getValue(!this.browserwideKeys.includes(key) ? `${app.configKeyPrefix}_${key}` : key, undefined)))
         else // asynchronously load from browser extension storage
             return Promise.all(keys.map(async key => {
                 const storageKey = !this.browserwideKeys.includes(key) ? `${env.site}_${key}` : key,
                       result = await chrome.storage.local.get(storageKey)
-                config[key] = processKey(key, result[storageKey])
+                app.config[key] = processKey(key, result[storageKey])
             }))
         function processKey(key, val) {
             const ctrl = settings.controls?.[key]
@@ -187,6 +187,6 @@ window.settings = {
         else // save to browser extension storage
             chrome.storage.local.set({
                 [ !this.browserwideKeys.includes(key) ? `${env.site}_${key}` : key ] : val })
-        config[key] = val // save to memory
+        app.config[key] = val // save to memory
     }
 };

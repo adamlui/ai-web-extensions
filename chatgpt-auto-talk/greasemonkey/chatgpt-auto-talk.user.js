@@ -335,7 +335,7 @@
 
         load(...keys) {
             keys.flat().forEach(key =>
-                config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
+                app.config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
             function processKey(key, val) {
                 const ctrl = settings.controls?.[key]
                 if (val != undefined && ( // validate stored val
@@ -346,13 +346,13 @@
             }
         },
 
-        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val },
+        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; app.config[key] = val },
 
         typeIsEnabled(key) { // for menu labels + notifs to return ON/OFF
             const reInvertSuffixes = /disabled|hidden/i
             return reInvertSuffixes.test(key) // flag in control key name
                 && !reInvertSuffixes.test(this.controls[key]?.label || '') // but not in label msg key name
-                    ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
+                    ? !config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
         }
     }
     settings.load(Object.keys(settings.controls))
@@ -380,7 +380,7 @@
                     entryData.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${entryData.label} ${
                         entryData.type == 'toggle' ? this.state.separator
                                                    + this.state.words[+settings.typeIsEnabled(key)]
-                      : entryData.type == 'slider' ? ': ' + config[key] + entryData.labelSuffix || ''
+                      : entryData.type == 'slider' ? ': ' + app.config[key] + entryData.labelSuffix || ''
                       : entryData.status ? ` — ${entryData.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     settings.save(key, !config[key]) ; syncConfigToUI({ updatedKey: key })
@@ -668,7 +668,7 @@
             hide(targetNode) { if (targetNode) targetNode.style.cssText = '' },
 
             show(targetNode) {
-                if (!config.outlineText || !targetNode) return
+                if (!app.config.outlineText || !targetNode) return
                 this.durations ||= { iniDelay: 500 /* ms */, pulse: 5 /* s */ }
                 this.color = `rgba(${ chatgpt.isDarkMode() ? '223,225,227' : '0,157,255' },0.7)`
                 setTimeout(() => targetNode.style.cssText = `
@@ -703,7 +703,7 @@
             ])
             if (actionBtn?.matches?.(chatgpt.selectors.btns.stop)) {
                 actionBtn.click() // stop playing
-                if (config.outlineText) this.outline.hide(this.get.talkingDiv()) // rid outline
+                if (app.config.outlineText) this.outline.hide(this.get.talkingDiv()) // rid outline
             }
             document.querySelector('textarea')?.click()
         }
@@ -720,8 +720,8 @@
         if (/autoTalkDisabled|toggleHidden/.test(updatedKey)) {
             toggles.sidebar.update.state()
             if (updatedKey == 'autoTalkDisabled')
-                message[config.autoTalkDisabled || config.playNewRepliesOnly ? 'stopPlaying' : 'playLast']()
-        } else if (updatedKey == 'outlineText' && !config.outlineText) message.outline.hide(message.get.talkingDiv())
+                message[config.autoTalkDisabled || app.config.playNewRepliesOnly ? 'stopPlaying' : 'playLast']()
+        } else if (updatedKey == 'outlineText' && !app.config.outlineText) message.outline.hide(message.get.talkingDiv())
         toolbarMenu.refresh() // prefixes/suffixes
     }
 
@@ -754,9 +754,9 @@
                     this.div.style.setProperty('--item-background-color',
                         `var(--sidebar-surface-${ type == 'mouseover' ? 'secondary' : 'primary' })`)
                 this.div.onclick = () => {
-                    settings.save('autoTalkDisabled', !config.autoTalkDisabled)
+                    settings.save('autoTalkDisabled', !app.config.autoTalkDisabled)
                     syncConfigToUI({ updatedKey: 'autoTalkDisabled' })
-                    notify(`${app.msgs.mode_autoTalk}: ${toolbarMenu.state.words[+!config.autoTalkDisabled]}`)
+                    notify(`${app.msgs.mode_autoTalk}: ${toolbarMenu.state.words[+!app.config.autoTalkDisabled]}`)
                 }
             },
 
@@ -868,8 +868,8 @@
 
                 state() {
                     if (!toggles.sidebar.div) return // since toggle never created = sidebar missing
-                    toggles.sidebar.div.style.display = config.toggleHidden ? 'none' : 'flex'
-                    const isOn = !config.autoTalkDisabled
+                    toggles.sidebar.div.style.display = app.config.toggleHidden ? 'none' : 'flex'
+                    const isOn = !app.config.autoTalkDisabled
                     toggles.sidebar.toggleLabel.textContent = `${app.msgs.mode_autoTalk} `
                         + app.msgs[`state_${ isOn ? 'enabled' : 'disabled' }`]
                     requestAnimationFrame(() => {
@@ -893,14 +893,14 @@
     // Observe body for need to AUTO-PLAY response
     let locationPath = location.pathname // to track nav
     const playObserver = new MutationObserver(mutations => {
-        if (config.autoTalkDisabled
+        if (app.config.autoTalkDisabled
             || !navigator.userActivation?.hasBeenActive // auto-play not allowed by browser
             || location.search == '?temporary-chat=true' // ChatGPT fails to play msg
             || document.querySelector(chatgpt.selectors.btns.login) // no Play btn
         ) return
         if (locationPath != location.pathname) { // nav'd to diff page, play last msg if applicable
             locationPath = location.pathname ; if (!/\/c\/[\w-]+$/.test(locationPath)) return
-            if (config.playNewRepliesOnly) { // temp disable observer for options btns to load w/o re-triggers
+            if (app.config.playNewRepliesOnly) { // temp disable observer for options btns to load w/o re-triggers
                 playObserver.disconnect()
                 setTimeout(() => playObserver.observe(document.body, { childList: true, subtree: true }), 1000)
             } else message.playLast()
@@ -914,7 +914,7 @@
 
     // Monitor NODE CHANGES to maintain sidebar toggle visibility
     new MutationObserver(() => {
-        if (!config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
+        if (!app.config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
             && !document.querySelector(`.${toggles.sidebar.class}`)
             && toggles.sidebar.status != 'inserting'
         ) { toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }

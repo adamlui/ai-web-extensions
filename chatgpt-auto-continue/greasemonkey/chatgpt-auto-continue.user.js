@@ -345,7 +345,7 @@
                     entryData.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${entryData.label} ${
                         entryData.type == 'toggle' ? this.state.separator
                                                    + this.state.words[+settings.typeIsEnabled(key)]
-                      : entryData.type == 'slider' ? ': ' + config[key] + entryData.labelSuffix || ''
+                      : entryData.type == 'slider' ? ': ' + app.config[key] + entryData.labelSuffix || ''
                       : entryData.status ? ` — ${entryData.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     settings.save(key, !config[key]) ; sync.configToUI({ updatedKey: key })
@@ -392,15 +392,15 @@
 
     window.checkBtnsToClick = () => {
         let continueBtnClicked = false // to increase delay before next check if true to avoid repeated clicks
-        const btnTypesToCheck = ['Continue'] ; if (config.autoScroll) btnTypesToCheck.push('Scroll')
+        const btnTypesToCheck = ['Continue'] ; if (app.config.autoScroll) btnTypesToCheck.push('Scroll')
         const btns = {} ; btnTypesToCheck.forEach(type => btns[type] = chatgpt[`get${type}Btn`]())
         Object.entries(btns).forEach(([btnType, btn]) => {
-            if (!btn || btnType == 'Scroll' && ( !config.autoScroll || !chatgpt.isTyping() )) return
+            if (!btn || btnType == 'Scroll' && ( !app.config.autoScroll || !chatgpt.isTyping() )) return
             btn.click()
             if (btnType == 'Continue') {
                 continueBtnClicked = true
                 feedback.notify(app.msgs.notif_chatAutoContinued, 'bottom-right')
-                if (config.autoScroll) try { chatgpt.scrollToBottom() } catch(err) {}
+                if (app.config.autoScroll) try { chatgpt.scrollToBottom() } catch(err) {}
         }})
         setTimeout(checkBtnsToClick, continueBtnClicked ? 5000 : 500)
     }

@@ -57,7 +57,7 @@
 
             // Create/append slider elems
             entry.div.append(entry.slider = dom.create.elem('input', { class: 'slider', type: 'range',
-                min: minVal, max: maxVal, value: config[entryData.key] }))
+                min: minVal, max: maxVal, value: app.config[entryData.key] }))
             entry.div.classList.remove('highlight-on-hover')
             if (entryData.step || env.browser.isFF) // use val from entryData or default to 2% in FF for being laggy
                 entry.slider.step = entryData.step || ( 0.02 * entry.slider.max - entry.slider.min )
@@ -123,7 +123,7 @@
                 const re_all = new RegExp(`^(${i18n.getMsg('menuLabel_all')}|all|any|every)$`, 'i')
                 if (entryData.key == 'replyLanguage') {
                     let replyLang = await (await sitePrompt(
-                        `${i18n.getMsg('prompt_updateReplyLang')}:`, config.replyLanguage)).input
+                        `${i18n.getMsg('prompt_updateReplyLang')}:`, app.config.replyLanguage)).input
                     if (replyLang == null) return // user cancelled so do nothing
                     else if (!/\d/.test(replyLang)) { // valid reply language set
                         replyLang = ( // auto-case for menu/alert aesthetics
@@ -137,7 +137,7 @@
                     }
                 } else if (entryData.key == 'replyTopic') {
                     let replyTopic = await (await sitePrompt(i18n.getMsg('prompt_updateReplyTopic')
-                        + ' (' + i18n.getMsg('prompt_orEnter') + ' \'ALL\'):', config.replyTopic)).input
+                        + ' (' + i18n.getMsg('prompt_orEnter') + ' \'ALL\'):', app.config.replyTopic)).input
                     if (replyTopic != null) { // user didn't cancel
                         replyTopic = string.toTitleCase(replyTopic.toString()) // for menu/alert aesthetics
                         settings.save('replyTopic',
@@ -153,7 +153,7 @@
                     }
                 } else if (entryData.key == 'replyInterval') {
                     const replyInterval = await (await sitePrompt(
-                        `${i18n.getMsg('prompt_updateReplyInt')}:`, config.replyInterval)).input
+                        `${i18n.getMsg('prompt_updateReplyInt')}:`, app.config.replyInterval)).input
                     if (replyInterval == null) return // user cancelled so do nothing
                     else if (!isNaN(parseInt(replyInterval, 10)) && parseInt(replyInterval, 10) > 4) {
                         settings.save('replyInterval', parseInt(replyInterval, 10))
@@ -198,8 +198,8 @@
         return !deps || Object.values(deps).flat(Infinity).some(depKey => settings.typeIsEnabled(depKey))
     }
 
-    function notify(msg, pos = !config.toastMode ? 'bottom-right' : undefined) {
-        if (config.notifDisabled
+    function notify(msg, pos = !app.config.toastMode ? 'bottom-right' : undefined) {
+        if (app.config.notifDisabled
             && !new RegExp(`${i18n.getMsg('menuLabel_show')} ${i18n.getMsg('menuLabel_notifs')}`, 'i')
                 .test(msg)
         ) return
@@ -226,7 +226,7 @@
             // Toolbar icon
             chrome.action.setIcon({ path: Object.fromEntries(
                 Object.keys(chrome.runtime.getManifest().icons).map(dimension =>
-                    [dimension, `../icons/${ config.extensionDisabled ? 'faded/' : '' }icon${dimension}.png`]
+                    [dimension, `../icons/${ app.config.extensionDisabled ? 'faded/' : '' }icon${dimension}.png`]
             ))})
 
             // Menu elems
@@ -234,8 +234,8 @@
                 .forEach((elem, idx) => {
                     if (elem.id && (elem.matches(`#${elem.id}:has(> div.link)`) || elem.id == 'aboutEntry'))
                         return // never disable link/About entries
-                    elem.style.transition = config.extensionDisabled ? '' : 'opacity 0.15s ease-in'
-                    const toDisable = config.extensionDisabled || !depIsEnabled(elem.id)
+                    elem.style.transition = app.config.extensionDisabled ? '' : 'opacity 0.15s ease-in'
+                    const toDisable = app.config.extensionDisabled || !depIsEnabled(elem.id)
                     if (elem.classList.contains('categorized-entries')) { // fade category strip
                         elem.style.transition = toDisable ? 'none' : 'var(--border-transition)'
                         elem.style.borderImage = elem.style.borderImage.replace(
@@ -307,12 +307,12 @@
         track: dom.create.elem('span', { class: 'track', style: 'position: relative ; top: 7.5px' })
     }
     masterToggle.div.append(masterToggle.switch) ; masterToggle.switch.append(masterToggle.track)
-    await settings.load('extensionDisabled') ; masterToggle.switch.classList.toggle('on', !config.extensionDisabled)
+    await settings.load('extensionDisabled') ; masterToggle.switch.classList.toggle('on', !app.config.extensionDisabled)
     masterToggle.div.onclick = () => {
-        masterToggle.switch.classList.toggle('on') ; settings.save('extensionDisabled', !config.extensionDisabled)
+        masterToggle.switch.classList.toggle('on') ; settings.save('extensionDisabled', !app.config.extensionDisabled)
         Object.keys(sync).forEach(key => sync[key]()) // sync fade + storage to UI
         notify(`${i18n.getMsg('appName')} 🧩 ${
-                  i18n.getMsg(`state_${ config.extensionDisabled ? 'off' : 'on' }`).toUpperCase()}`)
+                  i18n.getMsg(`state_${ app.config.extensionDisabled ? 'off' : 'on' }`).toUpperCase()}`)
     }
 
     // Create CHILD menu entries on chatgpt.com

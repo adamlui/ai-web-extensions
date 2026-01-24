@@ -333,7 +333,7 @@
 
         load(...keys) {
             keys.flat().forEach(key =>
-                config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
+                app.config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
             function processKey(key, val) {
                 const ctrl = settings.controls?.[key]
                 if (val != undefined && ( // validate stored val
@@ -344,17 +344,17 @@
             }
         },
 
-        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val },
+        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; app.config[key] = val },
 
         typeIsEnabled(key) { // for menu labels + notifs to return ON/OFF
             const reInvertSuffixes = /disabled|hidden/i
             return reInvertSuffixes.test(key) // flag in control key name
                 && !reInvertSuffixes.test(this.controls[key]?.label || '') // but not in label msg key name
-                    ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
+                    ? !config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
         }
     }
     settings.load(Object.keys(settings.controls))
-    if (!config.refreshInterval) settings.save('refreshInterval', 30) // init refresh interval to 30 secs if unset
+    if (!app.config.refreshInterval) settings.save('refreshInterval', 30) // init refresh interval to 30 secs if unset
 
     // Define MENU functions
 
@@ -373,7 +373,7 @@
         register() {
 
             // Init prompt setting status labels
-            settings.controls.refreshInterval.status = `${config.refreshInterval}s`
+            settings.controls.refreshInterval.status = `${app.config.refreshInterval}s`
 
             // Add toggles
             this.entryIDs = Object.keys(settings.controls).map(key => {
@@ -382,7 +382,7 @@
                     entryData.symbol || this.state.symbols[+settings.typeIsEnabled(key)] } ${entryData.label} ${
                         entryData.type == 'toggle' ? this.state.separator
                                                    + this.state.words[+settings.typeIsEnabled(key)]
-                      : entryData.type == 'slider' ? ': ' + config[key] + entryData.labelSuffix || ''
+                      : entryData.type == 'slider' ? ': ' + app.config[key] + entryData.labelSuffix || ''
                       : entryData.status ? ` — ${entryData.status}` : '' }`
                 return GM_registerMenuCommand(menuLabel, () => {
                     if (entryData.type == 'toggle') {
@@ -390,7 +390,7 @@
                         notify(`${entryData.label}: ${this.state.words[+settings.typeIsEnabled(key)]}`)
                     } else { // Refresh Interval prompt
                         const refreshInterval = prompt(
-                            `${app.msgs.prompt_updateInt}:`, config.refreshInterval)
+                            `${app.msgs.prompt_updateInt}:`, app.config.refreshInterval)
                         if (refreshInterval == null) return // user cancelled so do nothing
                         else if (!isNaN(parseInt(refreshInterval, 10)) && parseInt(refreshInterval, 10) > 0) {
                             settings.save('refreshInterval', parseInt(refreshInterval, 10))
@@ -399,8 +399,8 @@
                                 chatgpt.autoRefresh.activate(refreshInterval)
                             }
                             this.refresh()
-                            const minInterval = Math.max(2, config.refreshInterval - 10)
-                            const maxInterval = config.refreshInterval + 10
+                            const minInterval = Math.max(2, app.config.refreshInterval - 10)
+                            const maxInterval = app.config.refreshInterval + 10
                             modals.alert(`${app.msgs.alert_intUpdated}!`,
                                 `${app.msgs.alert_willRefresh} ${minInterval}–${maxInterval} ${app.msgs.unit_secs}`)
                         }
@@ -441,7 +441,7 @@
     // Define FEEDBACK functions
 
     function notify(msg, pos = '', notifDuration = '', shadow = '') {
-        if (config.notifDisabled && !msg.includes(app.msgs.menuLabel_modeNotifs)) return
+        if (app.config.notifDisabled && !msg.includes(app.msgs.menuLabel_modeNotifs)) return
 
         // Strip state word to append colored one later
         const foundState = toolbarMenu.state.words.find(word => msg.includes(word))
@@ -708,8 +708,8 @@
                     this.div.style.setProperty('--item-background-color',
                         `var(--sidebar-surface-${ type == 'mouseover' ? 'secondary' : 'primary' })`)
                 this.div.onclick = () => {
-                    settings.save('arDisabled', !config.arDisabled) ; syncConfigToUI({ updatedKey: 'arDisabled' })
-                    notify(`${app.msgs.menuLabel_autoRefresh}: ${toolbarMenu.state.words[+!config.arDisabled]}`)
+                    settings.save('arDisabled', !app.config.arDisabled) ; syncConfigToUI({ updatedKey: 'arDisabled' })
+                    notify(`${app.msgs.menuLabel_autoRefresh}: ${toolbarMenu.state.words[+!app.config.arDisabled]}`)
                 }
             },
 
@@ -818,8 +818,8 @@
 
                 state() {
                     if (!toggles.sidebar.div) return // since toggle never created = sidebar missing
-                    toggles.sidebar.div.style.display = config.toggleHidden ? 'none' : 'flex'
-                    const isOn = !config.arDisabled
+                    toggles.sidebar.div.style.display = app.config.toggleHidden ? 'none' : 'flex'
+                    const isOn = !app.config.arDisabled
                     toggles.sidebar.toggleLabel.textContent = `${app.msgs.menuLabel_autoRefresh} `
                         + app.msgs[`state_${ isOn ? 'enabled' : 'disabled' }`]
                     requestAnimationFrame(() => {
@@ -834,9 +834,9 @@
     // Define AUTO-REFRESH function
 
     function toggleAutoRefresh() {
-        if (!config.arDisabled && !chatgpt.autoRefresh.isActive)
-            chatgpt.autoRefresh.activate(config.refreshInterval)
-        else if (config.arDisabled && chatgpt.autoRefresh.isActive)
+        if (!app.config.arDisabled && !chatgpt.autoRefresh.isActive)
+            chatgpt.autoRefresh.activate(app.config.refreshInterval)
+        else if (app.config.arDisabled && chatgpt.autoRefresh.isActive)
             chatgpt.autoRefresh.deactivate()
     }
 
@@ -866,14 +866,14 @@
     }
 
     // Activate AUTO-REFRESH on first visit if enabled
-    if (!config.arDisabled) {
-        chatgpt.autoRefresh.activate(config.refreshInterval)
+    if (!app.config.arDisabled) {
+        chatgpt.autoRefresh.activate(app.config.refreshInterval)
         notify(`${app.msgs.menuLabel_autoRefresh}: ${app.msgs.state_on.toUpperCase()}`)
     }
 
     // Monitor NODE CHANGES to maintain sidebar toggle visibility
     new MutationObserver(() => {
-        if (!config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
+        if (!app.config.toggleHidden && document.querySelector(chatgpt.selectors.sidebar)
             && !document.querySelector(`.${toggles.sidebar.class}`)
             && toggles.sidebar.status != 'inserting'
         ) { toggles.sidebar.status = 'missing' ; toggles.sidebar.insert() }

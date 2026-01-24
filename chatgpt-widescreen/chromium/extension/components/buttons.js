@@ -107,12 +107,12 @@ window.buttons = {
             },
 
             visible() { // used in chatbar.tweak() for horizontal math
-                return this.valid().filter(type => !(type == 'newChat' && config.ncbDisabled)) }
+                return this.valid().filter(type => !(type == 'newChat' && app.config.ncbDisabled)) }
         }
     },
 
     async insert() { // requires lib/chatbar.js + <config|env>
-        if (!config.btnsVisible || this.state.status == 'inserting' || this.fullscreen?.isConnected) return
+        if (!app.config.btnsVisible || this.state.status == 'inserting' || this.fullscreen?.isConnected) return
         this.state.status = 'inserting' ; if (!this.fullscreen) await this.create()
 
         // Init elems
@@ -213,7 +213,7 @@ window.buttons = {
 
             // Update SVG elements
             btnSVG.textContent = ''
-            const svgElems = config[mode] || state.toLowerCase() == 'on' ? ONelems : OFFelems
+            const svgElems = app.config[mode] || state.toLowerCase() == 'on' ? ONelems : OFFelems
             svgElems.forEach(elem => btnSVG.append(elem))
 
             // Update SVG

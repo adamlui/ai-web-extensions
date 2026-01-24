@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.1.21
+// @version                2026.1.22
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -280,7 +280,8 @@
         commitHashes: {
             app: 'f4fcbdd', // for cached <app|messages>.json
             aiweb: '02c1241' // for cached ai-chat-apis.json5 + <code-languages|katex-delimiters|sogou-tts-lang-codes>.json
-        }
+        },
+        config: {}
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@${app.commitHashes.app}` }
     const remoteData = {
@@ -337,11 +338,10 @@
     apis.AIchatOS.userID = '#/chat/' + Date.now()
 
     // Init SETTINGS
-    window.config = {}
     window.settings = {
         load(...keys) {
             keys.flat().forEach(key =>
-                config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
+                app.config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
             function processKey(key, val) {
                 const ctrl = settings.controls?.[key]
                 if (val != undefined && ( // validate stored val
@@ -351,12 +351,12 @@
                 return val ?? (ctrl?.defaultVal ?? (ctrl?.type == 'slider' ? 100 : false))
             }
         },
-        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; config[key] = val },
+        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; app.config[key] = val },
         typeIsEnabled(key) {
             const reInvertFlags = /disabled|hidden/i
             return reInvertFlags.test(key) // flag in control key name
                 && !reInvertFlags.test(this.controls[key]?.label || '') // but not in label msg key name
-                    ? !config[key] : config[key] // so invert since flag reps opposite type state, else don't
+                    ? !app.config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
         }
     }
     settings.load('debugMode') ; log.debug('Initializing settings...')
@@ -418,24 +418,24 @@
         about: { type: 'modal', icon: 'questionMarkCircle',
             label: `${app.msgs.menuLabel_about} ${app.name}...` }
     }})
-    Object.assign(config, { lineHeightRatio: 1.28, maxFontSize: 24, minFontSize: 11 })
+    Object.assign(app.config, { lineHeightRatio: 1.28, maxFontSize: 24, minFontSize: 11 })
     settings.load(Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized', 'notFirstRun')
-    if (!config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
-    if (!config.fontSize) settings.save('fontSize', 14.948771158854168) // init reply font size if unset
+    if (!app.config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
+    if (!app.config.fontSize) settings.save('fontSize', 14.948771158854168) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env
-    if (!config.notFirstRun && env.browser.isMobile) settings.save('autoGet', true) // reverse default auto-get disabled if mobile
+    if (!app.config.notFirstRun && env.browser.isMobile) settings.save('autoGet', true) // reverse default auto-get disabled if mobile
     settings.save('notFirstRun', true)
-    log.debug(`Success! config = ${log.prettifyObj(config)}`)
+    log.debug(`Success! app.config = ${log.prettifyObj(app.config)}`)
 
     // Define UI functions
 
     window.update = {
 
-        appBottomPos() { app.div.style.bottom = `${ config.minimized ? 55 - app.div.offsetHeight : -7 }px` },
+        appBottomPos() { app.div.style.bottom = `${ app.config.minimized ? 55 - app.div.offsetHeight : -7 }px` },
 
         appStyle() { // used in toggle.animations() + update.scheme() + main's app init
             const { scheme: appScheme } = env.ui.app,
-                  isParticlizedDS = env.ui.app.scheme == 'dark' && !config.bgAnimationsDisabled
+                  isParticlizedDS = env.ui.app.scheme == 'dark' && !app.config.bgAnimationsDisabled
             modals.stylize() // update modal styles
             if (!app.styles?.isConnected) document.head.append(app.styles ||= dom.create.style())
             app.styles.textContent = (
@@ -543,7 +543,7 @@
                 .${app.slug}-header-btn:hover svg { /* highlight/zoom header button on hover */
                     ${ appScheme == 'dark' ? 'fill: #d9d9d9 ; stroke: #d9d9d9' : 'fill: black ; stroke: black' };
                     ${ env.browser.isMobile ? '' : 'transform: scale(1.285)' }}
-                ${ config.fgAnimationsDisabled ? '' :
+                ${ app.config.fgAnimationsDisabled ? '' :
                    `.${app.slug}-header-btn, .${app.slug}-header-btn svg { /* smooth header button fade-in + hover-zoom */
                     transition: var(--btn-transition) ;
                        -webkit-transition: var(--btn-transition) ; -moz-transition: var(--btn-transition) ;
@@ -573,7 +573,7 @@
                     background-color: ${ appScheme == 'dark' ? 'white' : '#4a4a4a' };
                   --shadow: rgba(0,0,0,0.21) 1px 1px 9px 0 ;
                         box-shadow: var(--shadow) ; -webkit-box-shadow: var(--shadow) ; -moz-box-shadow: var(--shadow) ;
-                    ${ config.fgAnimationsDisabled ? '' : `transition: var(--font-size-slider-thumb-transition) 
+                    ${ app.config.fgAnimationsDisabled ? '' : `transition: var(--font-size-slider-thumb-transition) 
                            -webkit-transition: var(--font-size-slider-thumb-transition) ;
                            -moz-transition: var(--font-size-slider-thumb-transition) ;
                            -o-transition: var(--font-size-slider-thumb-transition) ;
@@ -587,7 +587,7 @@
                     width: 90% ; height: 51px ; margin-bottom: 9px ; padding: 12px 0 ;
                     cursor: pointer ; transform: var(--skew) ; border: 1px solid var(--content-color) ;
                     background: none ; box-shadow: #aaaaaa12 7px 7px 3px 0px ; color: var(--content-color) ;
-                    ${ config.fgAnimationsDisabled ? ''
+                    ${ app.config.fgAnimationsDisabled ? ''
                         : `will-change: transform ;
                            transition: var(--standby-btn-transition) ;
                                -webkit-transition: var(--standby-btn-transition) ;
@@ -627,19 +627,19 @@
                 #${app.slug} .reply-header-txt { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
                 #${app.slug} .reply-header-btns { margin: 7.5px -5px 0 }
                 #${app.slug} .reply-pre {
-                    font-size: ${config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;
-                    line-height: ${ config.fontSize * config.lineHeightRatio }px ; overscroll-behavior: contain ;
+                    font-size: ${app.config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;
+                    line-height: ${ app.config.fontSize * app.config.lineHeightRatio }px ; overscroll-behavior: contain ;
                     position: relative ; z-index: 1 ; /* allow top-margin to overlap header in light scheme */
                     margin: ${ appScheme == 'light' ? 11 : 13 }px 0 7px 0 ; padding: 1.25em 1.25em 0 1.25em ;
                     border-radius: 0 0 12px 12px ; overflow: auto ;
-                    ${ config.bgAnimationsDisabled ? // classic opaque bg
+                    ${ app.config.bgAnimationsDisabled ? // classic opaque bg
                         `background: var(--pre-bg-color-${appScheme}-scheme) ;
                          color: var(--font-color-${appScheme}-scheme)`
                     : appScheme == 'dark' ? // slightly tranluscent bg
                         'background: #2b3a40cf ; color: var(--font-color-dark-scheme) ; border: 1px solid white'
                     : /* light scheme */ `background: var(--pre-bg-color-light-scheme) ;
                          color: var(--font-color-light-scheme) ; border: none` };
-                    ${ config.fgAnimationsDisabled ? '' : // smoothen Anchor mode expand/shrink
+                    ${ app.config.fgAnimationsDisabled ? '' : // smoothen Anchor mode expand/shrink
                         `transition: var(--reply-pre-transition) ;
                             -webkit-transition: var(--reply-pre-transition) ;
                             -moz-transition: var(--reply-pre-transition) ;
@@ -685,7 +685,7 @@
                     font-size: 0.92rem ; height: 19px ; width: 82.6% ; max-height: 200px ; resize: none ;
                     position: relative ; z-index: 555 ; color: #${ appScheme == 'dark' ? 'eee' : '222' };
                     background: ${ appScheme == 'light' ? '#eeeeee9e'
-                        : `#515151${ config.bgAnimationsDisabled ? '' : '9e' }`};
+                        : `#515151${ app.config.bgAnimationsDisabled ? '' : '9e' }`};
                     ${ appScheme == 'dark' ? '' :
                         `--chatbar-inset-shadow: 0 1px 2px rgba(15,17,17,0.1) inset ;
                         box-shadow: var(--chatbar-inset-shadow) ; -webkit-box-shadow: var(--chatbar-inset-shadow) ;
@@ -735,19 +735,19 @@
                     font-size: 0.88em ; cursor: pointer ; will-change: transform ;
                     box-sizing: border-box ; width: fit-content ; max-width: 100% ; /* confine to outer div */
                     margin: 4px 12px 8px 0 ; padding: 4px 10px 5px 10px ;
-                    color: ${ appScheme == 'dark' ? ( config.bgAnimationsDisabled ? '#ccc' : '#f2f2f2' )
+                    color: ${ appScheme == 'dark' ? ( app.config.bgAnimationsDisabled ? '#ccc' : '#f2f2f2' )
                                                   : '#767676' };
                     background: ${ appScheme == 'dark' ? '#7e7e7e4f' : '#fdfdfdb0' };
                     border: 1px solid ${ appScheme == 'dark' ? (
-                        config.bgAnimationsDisabled ? '#5f5f5f' : '#777' ) : '#e1e1e1' };
+                        app.config.bgAnimationsDisabled ? '#5f5f5f' : '#777' ) : '#e1e1e1' };
                     border-radius: 0 13px 12px 13px ; flex: 0 0 auto ;
                   --rq-shadow: 1px 4px 8px -6px rgba(169,169,169,0.75) ; box-shadow: var(--rq-shadow) ;
                         -webkit-box-shadow: var(--rq-shadow) ; -moz-box-shadow: var(--rq-shadow) ;
-                    ${ config.fgAnimationsDisabled ? '' : `transition: var(--rq-transition) ;
+                    ${ app.config.fgAnimationsDisabled ? '' : `transition: var(--rq-transition) ;
                            -webkit-transition: var(--rq-transition) ; -moz-transition: var(--rq-transition) ;
                            -o-transition: var(--rq-transition) ; -ms-transition: var(--rq-transition)` }}
                 .${app.slug}-related-query:hover, .${app.slug}-related-query:focus {
-                    ${ config.fgAnimationsDisabled ? '' : 'transform: scale(1.055) !important ;' }
+                    ${ app.config.fgAnimationsDisabled ? '' : 'transform: scale(1.055) !important ;' }
                     background: ${ appScheme == 'dark' ? '#a2a2a270'
                         : '#dae5ffa3 ; color: #000000a8 ; border-color: #a3c9ff' }}
                 .${app.slug}-related-query svg { /* related query icon */
@@ -790,8 +790,8 @@
              + `#${app.slug}.anchored {
                     position: fixed ; bottom: -7px ; right: 35px ; width: 388px ; z-index: 8888 ;
                     border: var(--app-border) ; box-shadow: var(--app-anchored-shadow) ;
-                    ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${appScheme}-scheme)`
-                                                   : 'background-image: var(--app-gradient-bg)' }}
+                    ${ app.config.bgAnimationsDisabled ? `background: var(--app-bg-color-${appScheme}-scheme)`
+                                                       : 'background-image: var(--app-gradient-bg)' }}
                 #${app.slug}.expanded { width: 528px !important }
                 #${app.slug}.anchored .anchored-hidden, #${app.slug}.anchored ~ .anchored-hidden {
                     /* hide non-Anchor elems in mode */ display: none } 
@@ -811,15 +811,15 @@
              + `@media screen and (max-width: 480px) {
                     #${app.slug} {
                         border: var(--app-border) ;
-                        ${ config.bgAnimationsDisabled ? `background: var(--app-bg-color-${appScheme}-scheme)`
-                                                       : 'background-image: var(--app-gradient-bg)' }}
+                        ${ app.config.bgAnimationsDisabled ? `background: var(--app-bg-color-${appScheme}-scheme)`
+                                                           : 'background-image: var(--app-gradient-bg)' }}
                     #${app.slug} #${app.slug}-logo { width: calc(100% - 118px) } /* widen logo till btns */
                     #${app.slug} .byline { display: none !important } /* hide byline */
                     #${app.slug} .reply-tip { display: none } /* hide reply tip */
                     .${app.slug}-related-queries { padding: 0 } /* remove RQ parent padding */
                 }`
             )
-            themes.apply(config.theme)
+            themes.apply(app.config.theme)
         },
 
         bylineVisibility() {
@@ -852,7 +852,7 @@
         chatbarWidth() {
             const chatbar = app.div.querySelector(`#${app.slug}-chatbar`)
             if (chatbar) chatbar.style.width = `${
-                config.widerSidebar && !config.anchored ? 85.6 : config.expanded ? 86.9 : 82.6 }%`
+                app.config.widerSidebar && !app.config.anchored ? 85.6 : app.config.expanded ? 86.9 : 82.6 }%`
         },
 
         async footerContent() {
@@ -960,7 +960,7 @@
         replyPrefix() {
             const firstP = app.div.querySelector('pre p') ; if (!firstP) return
             const prefixNeeded = env.ui.app.scheme == 'dark'
-                && !config.bgAnimationsDisabled && !/shuffle|summarize/.test(get.reply.src)
+                && !app.config.bgAnimationsDisabled && !/shuffle|summarize/.test(get.reply.src)
             const prefixExists = firstP.textContent.startsWith('>> ')
             if (prefixNeeded && !prefixExists) firstP.prepend('>> ')
             else if (!prefixNeeded && prefixExists) firstP.textContent = firstP.textContent.replace(/^>> /, '')
@@ -969,14 +969,14 @@
         risingParticles() {
             ['sm', 'med', 'lg'].forEach(size =>
                 document.querySelectorAll(`[id*=particles-${size}]`).forEach(particlesDiv =>
-                    particlesDiv.id = config.bgAnimationsDisabled ? `particles-${size}-off`
+                    particlesDiv.id = app.config.bgAnimationsDisabled ? `particles-${size}-off`
                     : `${ env.ui.app.scheme == 'dark' ? 'white' : 'gray' }-particles-${size}`))
         },
 
         rqVisibility() {
             const rqsDiv = app.div.querySelector(`.${app.slug}-related-queries`)
             if (rqsDiv) // update visibility based on latest setting
-                rqsDiv.style.display = config.rqDisabled || config.anchored ? 'none' : 'flex'
+                rqsDiv.style.display = app.config.rqDisabled || app.config.anchored ? 'none' : 'flex'
         },
 
         scheme(newScheme) {
@@ -990,54 +990,55 @@
     window.toggle = {
 
         anchorMode(state = '') {
-            const prevState = config.anchored // for restraining notif if no change from Pin menu 'Sidebar' click
+            const prevState = app.config.anchored // for restraining notif if no change from Pin menu 'Sidebar' click
             let sidebarModeToggled = false // to extend this notif duration
 
             // Save new state + disable incompatible Sidebar modes
-            if (state == 'on' || !state && !config.anchored) {
+            if (state == 'on' || !state && !app.config.anchored) {
                 settings.save('anchored', true)
                 ;['sticky', 'wider'].forEach(mode => {
-                    if (config[`${mode}Sidebar`]) { toggle.sidebar(mode) ; sidebarModeToggled = true }})
+                    if (app.config[`${mode}Sidebar`]) { toggle.sidebar(mode) ; sidebarModeToggled = true }})
             } else {
                 settings.save('anchored', false)
-                if (config.expanded) { toggle.expandedMode('off') ; sidebarModeToggled = true }
+                if (app.config.expanded) { toggle.expandedMode('off') ; sidebarModeToggled = true }
             }
-            if (prevState == config.anchored) return
+            if (prevState == app.config.anchored) return
 
             // Apply changed state to UI
-            app.div.classList.toggle('anchored', config.anchored)
+            app.div.classList.toggle('anchored', app.config.anchored)
             update.rqVisibility() ; replyBubble.updateMaxHeight() ; update.bylineVisibility() ; update.chatbarWidth()
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const anchorToggle = document.querySelector('[id*=anchor] input')
-                if (anchorToggle.checked != config.anchored) modals.settings.toggle.switch(anchorToggle)
+                if (anchorToggle.checked != app.config.anchored) modals.settings.toggle.switch(anchorToggle)
             }
-            feedback.notify(`${app.msgs.mode_anchor} ${menus.toolbar.state.words[+config.anchored]}`,
+            feedback.notify(`${app.msgs.mode_anchor} ${menus.toolbar.state.words[+app.config.anchored]}`,
                 undefined, sidebarModeToggled ? 2.75 : undefined) // +1s duration if conflicting mode notif shown
         },
 
         animations(layer) {
             const configKey = `${layer}AnimationsDisabled`
-            settings.save(configKey, !config[configKey])
+            settings.save(configKey, !app.config[configKey])
             update.appStyle() ; if (layer == 'bg') { update.risingParticles() ; update.replyPrefix() }
             if (layer == 'fg' && modals.settings.get()) { // toggle ticker-scroll of About status label
                 const aboutStatusLabel = document.querySelector('#about-settings-entry > span > div')
                 aboutStatusLabel.innerHTML = modals.settings.aboutContent[
-                    config.fgAnimationsDisabled ? 'short' : 'long']
-                aboutStatusLabel.style.float = config.fgAnimationsDisabled ? 'right' : ''
+                    app.config.fgAnimationsDisabled ? 'short' : 'long']
+                aboutStatusLabel.style.float = app.config.fgAnimationsDisabled ? 'right' : ''
             }
-            feedback.notify(`${settings.controls[configKey].label} ${menus.toolbar.state.words[+!config[configKey]]}`)
+            feedback.notify(
+                `${settings.controls[configKey].label} ${menus.toolbar.state.words[+!app.config[configKey]]}`)
         },
 
         autoGen(mode) {
             const validModes = ['get', 'summarize'], modeKey = `auto${log.toTitleCase(mode)}`
             let conflictingModeToggled = false // to extend this notif duration
-            settings.save(modeKey, !config[modeKey])
-            if (config[modeKey]) { // this Auto-Gen mode toggled on, disable other one + Manual-Gen + do it
+            settings.save(modeKey, !app.config[modeKey])
+            if (app.config[modeKey]) { // this Auto-Gen mode toggled on, disable other one + Manual-Gen + do it
                 const otherMode = validModes[+(mode == validModes[0])]
-                if (config[`auto${log.toTitleCase(otherMode)}`]) {
+                if (app.config[`auto${log.toTitleCase(otherMode)}`]) {
                     toggle.autoGen(otherMode) ; conflictingModeToggled = true }
                 ['prefix', 'suffix'].forEach(mode => {
-                    if (config[`${mode}Enabled`]) { toggle.manualGen(mode) ; conflictingModeToggled = true }})
+                    if (app.config[`${mode}Enabled`]) { toggle.manualGen(mode) ; conflictingModeToggled = true }})
                 app.div.querySelector(
                     `button[class*=standby]:has(svg.${ mode == 'get' ? 'send' : 'summarize' })`)?.click()
             }
@@ -1045,14 +1046,14 @@
                 undefined, conflictingModeToggled ? 2.75 : undefined) // +1s duration if conflicting mode notif shown
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
-                if (modeToggle.checked != config[modeKey]) modals.settings.toggle.switch(modeToggle)
+                if (modeToggle.checked != app.config[modeKey]) modals.settings.toggle.switch(modeToggle)
             }
         },
 
         expandedMode(state = '') {
-            const toExpand = state == 'on' || !state && !config.expanded
+            const toExpand = state == 'on' || !state && !app.config.expanded
             settings.save('expanded', toExpand) ; app.div.classList.toggle('expanded', toExpand)
-            if (config.minimized) toggle.minimized('off') // since user wants to see stuff
+            if (app.config.minimized) toggle.minimized('off') // since user wants to see stuff
             update.chatbarWidth()
             if (getComputedStyle(app.div).transitionProperty.includes('width')) // update byline visibility
                 app.div.addEventListener('transitionend', function onTransitionEnd(event) { // ...after width transition
@@ -1061,31 +1062,31 @@
             }})
             const expandBtn = app.div.querySelector(`#${app.slug}-arrows-btn`)
             if (expandBtn) expandBtn.firstChild.replaceWith(
-                icons.create({ key: `arrowsDiagonal${ config.expanded ? 'In' : 'Out' }`, size: 17 }))
+                icons.create({ key: `arrowsDiagonal${ app.config.expanded ? 'In' : 'Out' }`, size: 17 }))
         },
 
         manualGen(mode) { // Prefix/Suffix modes
             const modeKey = `${mode}Enabled`
             let autoGenToggled = false // to extend this notif duration
-            settings.save(modeKey, !config[modeKey])
-            if (config[modeKey]) // Manual-Gen toggled on, disable all Auto-Gen
+            settings.save(modeKey, !app.config[modeKey])
+            if (app.config[modeKey]) // Manual-Gen toggled on, disable all Auto-Gen
                 ['get', 'summarize'].forEach(mode => {
-                    if (config[`auto${log.toTitleCase(mode)}`]) { toggle.autoGen(mode) ; autoGenToggled = true }})
-            feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+config[modeKey]]}`,
+                    if (app.config[`auto${log.toTitleCase(mode)}`]) { toggle.autoGen(mode) ; autoGenToggled = true }})
+            feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+app.config[modeKey]]}`,
                 undefined, autoGenToggled ? 2.75 : undefined) // +1s duration if conflicting mode notif shown)
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
-                if (modeToggle.checked != config[modeKey]) modals.settings.toggle.switch(modeToggle)
+                if (modeToggle.checked != app.config[modeKey]) modals.settings.toggle.switch(modeToggle)
             }
         },
 
         minimized(state = '') {
-            const toMinimize = state == 'on' || !state && !config.minimized
+            const toMinimize = state == 'on' || !state && !app.config.minimized
             settings.save('minimized', toMinimize)
             const chevronBtn = app.div.querySelector('[id$=chevron-btn]')
             if (chevronBtn) { // update icon
                 chevronBtn.textContent = ''
-                chevronBtn.append(icons.create({ key: `chevron${ config.minimized ? 'Up' : 'Down' }`,
+                chevronBtn.append(icons.create({ key: `chevron${ app.config.minimized ? 'Up' : 'Down' }`,
                     size: 22, style: 'position: relative ; top: -1px' }))
                 chevronBtn.onclick = () => {
                     if (app.div.querySelector('[id$=font-size-slider-track]')?.classList.contains('active'))
@@ -1098,64 +1099,65 @@
         },
 
         proxyMode() {
-            settings.save('proxyAPIenabled', !config.proxyAPIenabled)
-            feedback.notify(`${app.msgs.menuLabel_proxyAPImode} ${menus.toolbar.state.words[+config.proxyAPIenabled]}`)
+            settings.save('proxyAPIenabled', !app.config.proxyAPIenabled)
+            feedback.notify(
+                `${app.msgs.menuLabel_proxyAPImode} ${menus.toolbar.state.words[+app.config.proxyAPIenabled]}`)
             menus.toolbar.refresh()
             if (modals.settings.get()) { // update visual states of Settings toggles
                 const proxyToggle = document.querySelector('[id*=proxy] input'),
                       preferredAPIentry = document.querySelector('[id*=preferredAPI]'),
                       streamingToggle = document.querySelector('[id*=streaming] input')
-                if (proxyToggle.checked != config.proxyAPIenabled) // Proxy state out-of-sync (from using toolbar menu)
+                if (proxyToggle.checked != app.config.proxyAPIenabled) // Proxy state out-of-sync (from using toolbar menu)
                     modals.settings.toggle.switch(proxyToggle)
-                preferredAPIentry.classList.toggle('active', config.proxyAPIenabled)
-                preferredAPIentry.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
-                if (streamingToggle.checked && !config.proxyAPIenabled // Streaming checked but OpenAI mode
+                preferredAPIentry.classList.toggle('active', app.config.proxyAPIenabled)
+                preferredAPIentry.style.pointerEvents = app.config.proxyAPIenabled ? '' : 'none'
+                if (streamingToggle.checked && !app.config.proxyAPIenabled // Streaming checked but OpenAI mode
                     || // ...or Streaming unchecked but enabled in Proxy mode
-                        !streamingToggle.checked && config.proxyAPIenabled && !config.streamingDisabled)
+                        !streamingToggle.checked && app.config.proxyAPIenabled && !app.config.streamingDisabled)
                             modals.settings.toggle.switch(streamingToggle)
             }
             const apiBeacon = app.div.querySelector(`#${app.slug} .api-btn`)
-            if (apiBeacon) apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
+            if (apiBeacon) apiBeacon.style.pointerEvents = app.config.proxyAPIenabled ? '' : 'none'
             if (app.div.querySelector(`.${app.slug}-alert`)) // re-send query if user alerted
                 get.reply({ msgs: app.msgChain, src: get.reply.src })
         },
 
         relatedQueries() {
-            settings.save('rqDisabled', !config.rqDisabled)
+            settings.save('rqDisabled', !app.config.rqDisabled)
             update.rqVisibility()
-            if (!config.rqDisabled && !app.div.querySelector(`.${app.slug}-related-queries`)) // get related queries for 1st time
+            if (!app.config.rqDisabled && !app.div.querySelector(`.${app.slug}-related-queries`)) // get related queries for 1st time
                 get.related(app.msgChain[app.msgChain.length - 1]?.content || searchQuery)
                     .then(queries => show.related(queries))
                     .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
             replyBubble.updateMaxHeight()
-            feedback.notify(`${app.msgs.menuLabel_relatedQueries} ${menus.toolbar.state.words[+!config.rqDisabled]}`)
+            feedback.notify(`${app.msgs.menuLabel_relatedQueries} ${menus.toolbar.state.words[+!app.config.rqDisabled]}`)
         },
 
         sidebar(mode, state = '') {
-            const configKeyName = mode + 'Sidebar',
-                  prevStickyState = config.stickySidebar // for hiding notif if no change from Pin menu 'Sidebar' click
+            const configKeyName = `${mode}Sidebar`,
+                  prevStickyState = app.config.stickySidebar // for hiding notif if no change from Pin menu 'Sidebar' click
             let anchorModeDisabled = false // to extend this notif duration
 
             // Save new state + disable incompatible Anchor mode
-            if (state == 'on' || !state && !config[configKeyName]) { // toggle on
-                if (mode == 'sticky' && config.anchored) { toggle.anchorMode() ; anchorModeDisabled = true }
+            if (state == 'on' || !state && !app.config[configKeyName]) { // toggle on
+                if (mode == 'sticky' && app.config.anchored) { toggle.anchorMode() ; anchorModeDisabled = true }
                 settings.save(configKeyName, true)
             } else settings.save(configKeyName, false)
 
             // Apply new state to UI
-            app.div.classList.toggle(mode, config[configKeyName])
+            app.div.classList.toggle(mode, app.config[configKeyName])
             replyBubble.updateMaxHeight() ; update.bylineVisibility() ; update.chatbarWidth()
             if (mode == 'wider') // toggle icons everywhere
             document.querySelectorAll(`#${app.slug} svg.widescreenTall, #${app.slug} svg.widescreenWide`)
                 .forEach(icon => icon.replaceWith(
-                    icons.create({ key: `widescreen${ config.widerSidebar ? 'Wide' : 'Tall' }`})))
+                    icons.create({ key: `widescreen${ app.config.widerSidebar ? 'Wide' : 'Tall' }`})))
             if (modals.settings.get()) { // update visual state of Settings toggles
                 const sidebarToggle = document.querySelector(`[id*=${mode}] input`)
-                if (sidebarToggle.checked != config[`${mode}Sidebar`]) modals.settings.toggle.switch(sidebarToggle)
+                if (sidebarToggle.checked != app.config[`${mode}Sidebar`]) modals.settings.toggle.switch(sidebarToggle)
             }
 
             // Notify of mode change
-            if (mode == 'sticky' && prevStickyState == config.stickySidebar) return
+            if (mode == 'sticky' && prevStickyState == app.config.stickySidebar) return
             feedback.notify(
                 `${ app.msgs[`menuLabel_${mode}Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
                     menus.toolbar.state.words[+config[configKeyName]]}`,
@@ -1179,7 +1181,7 @@
                         + ` <a target="_blank" rel="noopener" href="${scLink}">ScriptCat</a>.`
                         + ` (${app.msgs.alert_userscriptMgrNoStream}.)`
                 )
-            } else if (!config.proxyAPIenabled) { // alert OpenAI API unsupported, suggest Proxy Mode
+            } else if (!app.config.proxyAPIenabled) { // alert OpenAI API unsupported, suggest Proxy Mode
                 let msg = `${settings.controls.streamingDisabled.label} `
                         + `${app.msgs.alert_isCurrentlyOnlyAvailBy} `
                         + `${app.msgs.alert_switchingOn} ${app.msgs.mode_proxy}. `
@@ -1190,9 +1192,9 @@
                 alert.querySelector('[href="#"]').onclick = () => {
                     alert.querySelector('.modal-close-btn')?.click() ; toggle.proxyMode() }
             } else { // functional toggle
-                settings.save('streamingDisabled', !config.streamingDisabled)
+                settings.save('streamingDisabled', !app.config.streamingDisabled)
                 feedback.notify(`${settings.controls.streamingDisabled.label} ${
-                                   menus.toolbar.state.words[+!config.streamingDisabled]}`)
+                                   menus.toolbar.state.words[+!app.config.streamingDisabled]}`)
             }
         }
     }
@@ -1241,7 +1243,7 @@
 
             // Init OpenAI key
             if (get.related.api == 'OpenAI')
-                config.openAIkey = await Promise.race(
+                app.config.openAIkey = await Promise.race(
                     [session.getOAItoken(), new Promise(reject => setTimeout(reject, 3000))])
 
             // Try diff API after 7s of no response
@@ -1310,26 +1312,26 @@
             get.reply.attemptCnt = get.reply.attemptCnt || 1
 
             // Pick API
-            get.reply.api = config.proxyAPIenabled ? api.pick(get.reply) : 'OpenAI'
+            get.reply.api = app.config.proxyAPIenabled ? api.pick(get.reply) : 'OpenAI'
             if (!get.reply.api) // no more proxy APIs left untried
-                return feedback.appAlert(`${ config.preferredAPI ? 'api' : 'proxy' }NotWorking`,
-                    `suggest${ config.preferredAPI ? 'DiffAPI' : 'OpenAI' }`)
+                return feedback.appAlert(`${ app.config.preferredAPI ? 'api' : 'proxy' }NotWorking`,
+                    `suggest${ app.config.preferredAPI ? 'DiffAPI' : 'OpenAI' }`)
 
             // Init OpenAI key
-            if (!config.proxyAPIenabled)
-                config.openAIkey = await Promise.race(
+            if (!app.config.proxyAPIenabled)
+                app.config.openAIkey = await Promise.race(
                     [session.getOAItoken(), new Promise(reject => setTimeout(reject, 3000))])
 
             // Try diff API after 7-14s of no response
             else {
                 const iniAPI = get.reply.api ; clearTimeout(get.reply.timeout)
                 get.reply.timeout = setTimeout(() => {
-                    if (config.proxyAPIenabled // only do in Proxy mode
+                    if (app.config.proxyAPIenabled // only do in Proxy mode
                         && get.reply.status != 'done' && !get.reply.sender // still no reply received
                         && get.reply.api == iniAPI // not already trying diff API from err
                         && get.reply.triedAPIs.length != Object.keys(apis).length -1 // untried APIs remain
                     ) api.tryNew(get.reply, 'timeout')
-                }, ( config.streamingDisabled ? 10 : 7 *( config.preferredAPI ? 2 : 1 )) *1000)
+                }, ( app.config.streamingDisabled ? 10 : 7 *( app.config.preferredAPI ? 2 : 1 )) *1000)
             }
 
             // Augment query
@@ -1341,10 +1343,10 @@
             const reqData = api.createReqData(reqAPI, msgs)
             const xhrConfig = {
                 headers: api.createHeaders(reqAPI), method: reqMethod,
-                responseType: config.streamingDisabled || !config.proxyAPIenabled ? 'text' : 'stream',
+                responseType: app.config.streamingDisabled || !app.config.proxyAPIenabled ? 'text' : 'stream',
                 onerror: err => { log.error(err)
-                    if (!config.proxyAPIenabled)
-                        feedback.appAlert(!config.openAIkey ? 'login' : ['OpenAI', 'apiNotWorking', 'suggestProxy'])
+                    if (!app.config.proxyAPIenabled)
+                        feedback.appAlert(!app.config.openAIkey ? 'login' : ['OpenAI', 'apiNotWorking', 'suggestProxy'])
                     else api.tryNew(get.reply)
                 },
                 onload: resp => api.process.text(resp, { caller: get.reply, callerAPI: reqAPI }),
@@ -1356,7 +1358,7 @@
             xhr(xhrConfig)
 
             // Get/show Related Queries if enabled/missing/on 1st get.reply() attempt only
-            if (!config.rqDisabled && !rqDiv && get.reply.attemptCnt == 1)
+            if (!app.config.rqDisabled && !rqDiv && get.reply.attemptCnt == 1)
                 get.related(app.msgChain[app.msgChain.length - 1].content)
                     .then(queries => show.related(queries))
                     .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
@@ -1523,7 +1525,7 @@
                     var chevronBtn = dom.create.elem('btn', {
                         id: `${app.slug}-chevron-btn`, class: `${app.slug}-header-btn anchored-only`,
                         style: 'margin: -1.5px 1px 0 11px' })
-                    chevronBtn.append(icons.create({ key: `chevron${ config.minimized ? 'Up' : 'Down' }`,
+                    chevronBtn.append(icons.create({ key: `chevron${ app.config.minimized ? 'Up' : 'Down' }`,
                         size: 22, style: 'position: relative ; top: -1px' }))
                     headerBtnsDiv.append(chevronBtn)
                 }
@@ -1560,7 +1562,7 @@
                     var wsbBtn = dom.create.elem('btn', {
                         id: `${app.slug}-wsb-btn`, class: `${app.slug}-header-btn app-hover-only anchored-hidden`,
                         style: `margin: 0.5px 12px 0 0` })
-                    wsbBtn.append(icons.create({ key: `widescreen${ config.widerSidebar ? 'Wide' : 'Tall' }`}))
+                    wsbBtn.append(icons.create({ key: `widescreen${ app.config.widerSidebar ? 'Wide' : 'Tall' }`}))
                     headerBtnsDiv.append(wsbBtn)
 
                 // Create/append Expand/Shrink button
@@ -1568,7 +1570,7 @@
                         id: `${app.slug}-arrows-btn`, class: `${app.slug}-header-btn app-hover-only anchored-only`,
                         style: 'margin: 2.5px 10.5px 0 0' })
                     arrowsBtn.append(icons.create({
-                        key: `arrowsDiagonal${ config.expanded ? 'In' : 'Out' }`, size: 17 }))
+                        key: `arrowsDiagonal${ app.config.expanded ? 'In' : 'Out' }`, size: 17 }))
                     headerBtnsDiv.append(arrowsBtn)
                 }
 
@@ -1661,7 +1663,7 @@
                     const apiBeacon = dom.create.elem('span',
                         { class: 'api-btn', style: 'cursor: pointer', textContent: '⦿' })
                     apiBeacon.onmouseenter = apiBeacon.onmouseleave = apiBeacon.onclick = menus.hover.toggle
-                    apiBeacon.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
+                    apiBeacon.style.pointerEvents = app.config.proxyAPIenabled ? '' : 'none'
                     preHeaderLabel.replaceChildren(
                         apiBeacon, ` API ${app.msgs.componentLabel_used}: `, dom.create.elem('b'))
                     setTimeout(() => type(apiUsed, preHeaderLabel.lastChild, { speed: 1.5 }), 150)
@@ -1687,11 +1689,13 @@
                 ;[replyPre, ...replyPre.querySelectorAll('*')].forEach(elem =>
                     renderMathInElement(elem, { delimiters: app.katexDelimiters, throwOnError: false }))
 
-                if (config.stickySidebar) replyBubble.updateMaxHeight()
+                if (app.config.stickySidebar) replyBubble.updateMaxHeight()
 
                 // Auto-scroll if active
-                if (config.autoScroll && !env.browser.isMobile && config.proxyAPIenabled && !config.streamingDisabled) {
-                    if (config.stickySidebar || config.anchored) replyPre.scrollTop = replyPre.scrollHeight
+                if (app.config.autoScroll && !env.browser.isMobile
+                    && app.config.proxyAPIenabled && !app.config.streamingDisabled
+                ) {
+                    if (app.config.stickySidebar || app.config.anchored) replyPre.scrollTop = replyPre.scrollHeight
                     else scrollBy({ top: app.div.querySelector(`#${app.slug}-chatbar`)
                         .getBoundingClientRect().bottom - innerHeight +12 })
                 }
@@ -1700,15 +1704,15 @@
             // Focus chatbar conditionally
             if (!show.reply.chatbarFocused // do only once
                 && !env.browser.isMobile // exclude mobile devices to not auto-popup OSD keyboard
-                && ((!config.autoFocusChatbarDisabled && ( config.anchored // include Anchored mode if AF enabled
+                && ((!app.config.autoFocusChatbarDisabled && ( app.config.anchored // include Anchored mode if AF enabled
                         // ...or un-Anchored if fully above fold
                         || ( app.div.offsetHeight < innerHeight - app.div.getBoundingClientRect().top )))
                     // ...or Anchored if AF disabled & user interacted
-                    || (config.autoFocusChatbarDisabled && config.anchored && show.reply.userInteracted))
+                    || (app.config.autoFocusChatbarDisabled && app.config.anchored && show.reply.userInteracted))
             ) { app.div.querySelector(`#${app.slug}-chatbar`).focus() ; show.reply.chatbarFocused = true }
 
             // Update styles
-            if (config.anchored) update.appBottomPos() // restore minimized/restored state if anchored
+            if (app.config.anchored) update.appBottomPos() // restore minimized/restored state if anchored
             update.chatbarWidth()
 
             show.reply.userInteracted = false
@@ -1728,7 +1732,7 @@
             const slider = dom.create.elem('div',
                 { id: `${app.slug}-font-size-slider-track`, class: 'fade-in-less', style: 'display: none' })
             const sliderThumb = dom.create.elem('div',
-                { title: Math.floor(config.fontSize *10) /10 + 'px', id: `${app.slug}-font-size-slider-thumb` })
+                { title: Math.floor(app.config.fontSize *10) /10 + 'px', id: `${app.slug}-font-size-slider-thumb` })
             const sliderTip = dom.create.elem('div', { id: `${app.slug}-font-size-slider-tip` })
 
             // Assemble/insert elems
@@ -1737,9 +1741,10 @@
                                                              + '.reply-bubble')) // mobile
             // Init thumb pos
             setTimeout(() => {
-                const iniLeft = (config.fontSize - config.minFontSize) / (config.maxFontSize - config.minFontSize)
+                const iniLeft = (app.config.fontSize - app.config.minFontSize)
+                              / (app.config.maxFontSize - app.config.minFontSize)
                               * (slider.offsetWidth - sliderThumb.offsetWidth) // slider width
-                sliderThumb.style.left = iniLeft + 'px'
+                sliderThumb.style.left = `${iniLeft}px`
             }, fontSizeSlider.fadeInDelay) // to ensure visibility for accurate dimension calcs
 
             // Add event listeners for dragging thumb
@@ -1786,11 +1791,12 @@
                 // Adjust font size based on thumb position
                 const replyPre = app.div.querySelector('.reply-pre'),
                       fontSizePercent = newLeft / sliderWidth,
-                      fontSize = config.minFontSize + fontSizePercent * (config.maxFontSize - config.minFontSize)
-                replyPre.style.fontSize = fontSize + 'px'
-                replyPre.style.lineHeight = fontSize * config.lineHeightRatio + 'px'
+                      fontSize = app.config.minFontSize + fontSizePercent
+                               *(app.config.maxFontSize - app.config.minFontSize)
+                replyPre.style.fontSize = `${fontSize}px`
+                replyPre.style.lineHeight = `${ fontSize * app.config.lineHeightRatio }px`
                 settings.save('fontSize', fontSize)
-                sliderThumb.title = Math.floor(config.fontSize *10) /10 + 'px'
+                sliderThumb.title = `${ Math.floor(app.config.fontSize *10) /10 }px`
             }
 
             return slider
@@ -1935,8 +1941,8 @@
                             if (preferredAPIstatus.textContent != api) preferredAPIstatus.textContent = api
                         }
                         feedback.notify(`${app.msgs.menuLabel_preferred} API ${app.msgs.menuLabel_saved.toLowerCase()}`,
-                            `${ config.anchored ? 'top' : 'bottom' }-right`)
-                        if (app.div.querySelector(`.${app.slug}-alert`) && config.proxyAPIenabled)
+                            `${ app.config.anchored ? 'top' : 'bottom' }-right`)
+                        if (app.div.querySelector(`.${app.slug}-alert`) && app.config.proxyAPIenabled)
                             get.reply({ msgs: app.msgChain, src: get.reply.src }) // re-send query if user alerted
                     }
                     Object.defineProperty(onclick, 'name', { value: api.toLowerCase() })
@@ -1952,8 +1958,8 @@
             btnsDiv.querySelectorAll('button').forEach((btn, idx) => {
                 if (idx == 0) btn.style.display = 'none' // hide Dismiss button
                 else btn.classList.toggle('primary-modal-btn', // emphasize preferred API
-                    config.preferredAPI && config.preferredAPI.toLowerCase() == btn.textContent.toLowerCase()
-                        || btn.textContent == app.msgs.menuLabel_random && !config.preferredAPI)
+                    app.config.preferredAPI && app.config.preferredAPI.toLowerCase() == btn.textContent.toLowerCase()
+                        || btn.textContent == app.msgs.menuLabel_random && !app.config.preferredAPI)
             })
 
             return apiModal
@@ -2132,7 +2138,7 @@
         },
 
         replyLang() { // requires <app|config|env|log|modals|settings>
-            let replyLang = prompt(`${app.msgs.prompt_updateReplyLang}:`, config.replyLang)
+            let replyLang = prompt(`${app.msgs.prompt_updateReplyLang}:`, app.config.replyLang)
             if (replyLang == null) return // user cancelled so do nothing
             else if (!/\d/.test(replyLang)) {
                 replyLang = ( // auto-case for menu/alert aesthetics
@@ -2170,7 +2176,7 @@
 
                 // Emphasize active scheme
                 btn.classList.toggle('primary-modal-btn',
-                    config.scheme == btn.textContent.toLowerCase() || (btn.textContent == 'Auto' && !config.scheme))
+                    app.config.scheme == btn.textContent.toLowerCase() || (btn.textContent == 'Auto' && !app.config.scheme))
 
                 // Prepend emoji + localize labels
                 if (Object.prototype.hasOwnProperty.call(schemeEmojis, btnScheme))
@@ -2295,8 +2301,8 @@
                         // Init toggle input
                         const settingToggle = dom.create.elem('input', {
                             type: 'checkbox', disabled: true, style: 'display: none' })
-                        settingToggle.checked = settings.typeIsEnabled(key) // init based on config/name
-                            && !(key == 'streamingDisabled' && !config.proxyAPIenabled) // uncheck Streaming in OAI mode
+                        settingToggle.checked = settings.typeIsEnabled(key) // init based on app.config/name
+                            && !(key == 'streamingDisabled' && !app.config.proxyAPIenabled) // uncheck Streaming in OAI mode
 
                         // Create/classify switch
                         const switchSpan = dom.create.elem('span', { class: 'track' }),
@@ -2312,7 +2318,7 @@
                         settingEntry.onclick = () => {
                             if (!(key == 'streamingDisabled' // visually switch toggle if not Streaminng...
                                 && ( // ...in unsupported env...
-                                    !env.scriptManager.supportsStreaming || !config.proxyAPIenabled )
+                                    !env.scriptManager.supportsStreaming || !app.config.proxyAPIenabled )
                             )) modals.settings.toggle.switch(settingToggle)
 
                             // Call specialized toggle funcs
@@ -2330,13 +2336,13 @@
 
                             // ...or generically toggle/notify
                             else {
-                                settings.save(key, !config[key]) // update config
+                                settings.save(key, !app.config[key]) // update app.config
                                 feedback.notify(`${settings.controls[key].label} ${
-                                    menus.toolbar.state.words[+(key.includes('Disabled') != config[key])]}`)
+                                    menus.toolbar.state.words[+(key.includes('Disabled') != app.config[key])]}`)
                             }
                         }
 
-                    // Add .active + config status + listeners to pop-up settings
+                    // Add .active + app.config status + listeners to pop-up settings
                     } else {
                         settingEntry.classList.add('active')
                         const configStatusSpan = dom.create.elem('span', {
@@ -2355,18 +2361,18 @@
                                 for (let i = 0; i < 7; i++)
                                     modals.settings.aboutContent.long += modals.settings.aboutContent.long // make long af
                                 innerDiv.innerHTML = modals.settings.aboutContent[
-                                    config.fgAnimationsDisabled ? 'short' : 'long']
-                                innerDiv.style.float = config.fgAnimationsDisabled ? 'right' : ''
-                                configStatusSpan.append(innerDiv) ; settingEntry.onclick = () => modals.open('about')
+                                    app.config.fgAnimationsDisabled ? 'short' : 'long']
+                                innerDiv.style.float = app.config.fgAnimationsDisabled ? 'right' : ''
+                                app.configStatusSpan.append(innerDiv) ; settingEntry.onclick = () => modals.open('about')
                             },
                             preferredAPI: () => {
-                                configStatusSpan.textContent = config.preferredAPI || app.msgs.menuLabel_random
+                                app.configStatusSpan.textContent = app.config.preferredAPI || app.msgs.menuLabel_random
                                 settingEntry.onclick = () => modals.open('api')
-                                settingEntry.classList.toggle('active', config.proxyAPIenabled)
-                                settingEntry.style.pointerEvents = config.proxyAPIenabled ? '' : 'none'
+                                settingEntry.classList.toggle('active', app.config.proxyAPIenabled)
+                                settingEntry.style.pointerEvents = app.config.proxyAPIenabled ? '' : 'none'
                             },
                             replyLang: () => {
-                                configStatusSpan.textContent = config.replyLang
+                                app.configStatusSpan.textContent = app.config.replyLang
                                 settingEntry.onclick = () => modals.open('replyLang')
                             },
                             scheme: () => {
@@ -2434,7 +2440,7 @@
                         height: 25px ; padding: 4px 10px ; font-size: 14.5px ;
                         border-bottom: 1px dotted ${ appScheme == 'dark' ? 'white' : 'black' }; /* add separator */
                         border-radius: 3px ; /* slightly round highlight strip */
-                        ${ config.fgAnimationsDisabled || env.browser.isMobile ? '' :
+                        ${ app.config.fgAnimationsDisabled || env.browser.isMobile ? '' :
                             `transition: var(--settings-li-transition) ;
                                 -webkit-transition: var(--settings-li-transition) ;
                                 -moz-transition: var(--settings-li-transition) ;
@@ -2457,28 +2463,28 @@
                     #${app.slug}-settings li > .track {
                         position: relative ; left: -1px ; bottom: -5.5px ; float: right ;
                         background-color: #ccc ; width: 26px ; height: 13px ; border-radius: 28px ;
-                        ${ config.fgAnimationsDisabled ? '' :
+                        ${ app.config.fgAnimationsDisabled ? '' :
                             `transition: 0.4s ; -webkit-transition: 0.4s ; -moz-transition: 0.4s ;
                                 -o-transition: 0.4s ; -ms-transition: 0.4s` }
                     }
                     #${app.slug}-settings li .knob {
                         position: absolute ; left: 1px ; bottom: 1px ; content: "" ;
                         background-color: white ; width: 11px ; height: 11px ; border-radius: 28px ;
-                        ${ config.fgAnimationsDisabled ? '' :
+                        ${ app.config.fgAnimationsDisabled ? '' :
                             `transition: 0.2s ; -webkit-transition: 0.2s ; -moz-transition: 0.2s ;
                                 -o-transition: 0.2s ; -ms-transition: 0.2s` }
                     }
                     #scheme-settings-entry > span { margin: 3px -2px 0 } /* align Scheme status */
                     #scheme-settings-entry > span > svg { /* v-align/left-pad Scheme status icon */
                         position: relative ; top: 2px ; margin-left: 4px }
-                    ${ config.fgAnimationsDisabled ? '' // spin cycle arrows icon when scheme is Auto
+                    ${ app.config.fgAnimationsDisabled ? '' // spin cycle arrows icon when scheme is Auto
                         : `#scheme-settings-entry svg[class*=arrowsCyclic],
                                 .chatgpt-notif svg[class*=arrowsCyclic] { animation: rotate 5s linear infinite }`
                     }
                     #about-settings-entry span { color: ${ appScheme == 'dark' ? '#28ee28' : 'green' }}
                     #about-settings-entry > span { /* outer About status span */
                         width: ${ env.browser.isCompact ? '15vw' : '95px' }; height: 20px ; overflow: hidden ;
-                        ${ config.fgAnimationsDisabled ? '' : // fade edges
+                        ${ app.config.fgAnimationsDisabled ? '' : // fade edges
                                 `mask-image: linear-gradient(
                                     to right, transparent, black 20%, black 89%, transparent) ;
                         -webkit-mask-image: linear-gradient(
@@ -2486,7 +2492,7 @@
                     }
                     #about-settings-entry > span > div {
                         text-wrap: nowrap ;
-                        ${ config.fgAnimationsDisabled ? '' : 'animation: ticker linear 75s infinite' }
+                        ${ app.config.fgAnimationsDisabled ? '' : 'animation: ticker linear 75s infinite' }
                     }
                     @keyframes ticker { 0% { transform: translateX(100%) } 100% { transform: translateX(-2000%) }}
                     .about-em { color: ${ appScheme == 'dark' ? 'white' : 'green' } !important }`
@@ -2517,10 +2523,10 @@
                 if (schemeStatusSpan) {
                     schemeStatusSpan.textContent = ''
                     schemeStatusSpan.append( // status txt + icon
-                        document.createTextNode(app.msgs[/dark|light/.test(config.scheme) ? `scheme_${config.scheme}`
+                        document.createTextNode(app.msgs[/dark|light/.test(app.config.scheme) ? `scheme_${app.config.scheme}`
                                                                                           : 'menuLabel_auto']),
                         icons.create({ size: 12,
-                            key: config.scheme == 'dark' ? 'moon' : config.scheme == 'light' ? 'sun' : 'arrowsCyclic' })
+                            key: app.config.scheme == 'dark' ? 'moon' : app.config.scheme == 'light' ? 'sun' : 'arrowsCyclic' })
                     )
                 }
             }
@@ -2665,7 +2671,7 @@
                        -webkit-transition: var(--fg-transition) ; -moz-transition: var(--fg-transition) ;
                        -o-transition: var(--fg-transition) ; -ms-transition:  var(--fg-transition) }
                     ${ env.browser.isMobile ? '' : `[class$=-modal] button:hover { transform: var(--modal-btn-zoom) }`}
-                    ${ config.fgAnimationsDisabled ? '' : `[class$=-modal] button {
+                    ${ app.config.fgAnimationsDisabled ? '' : `[class$=-modal] button {
                         ${ env.browser.isMobile ? '' : 'will-change: transform ;' }
                         transition: var(--modal-btn-transition) ;
                            -webkit-transition: var(--modal-btn-transition) ;
@@ -2712,15 +2718,15 @@
 
     // Init UI props
     env.ui = {
-        app: { scheme: config.scheme || ui.getScheme() },
+        app: { scheme: app.config.scheme || ui.getScheme() },
         site: { isCentered: !!document.documentElement.className.includes('center'), scheme: ui.getScheme() }
     }
 
     // Create/ID/classify/listenerize/stylize APP container
     app.div = dom.create.elem('div', { id: app.slug, class: 'fade-in' })
-    themes.apply(config.theme) ; ui.addListeners.appDiv()
+    themes.apply(app.config.theme) ; ui.addListeners.appDiv()
     ;['anchored', 'expanded', 'sticky', 'wider'].forEach(mode =>
-        (config[mode] || config[`${mode}Sidebar`]) && app.div.classList.add(mode))
+        (app.config[mode] || app.config[`${mode}Sidebar`]) && app.div.classList.add(mode))
     update.appStyle()
     ;['rpg', 'rpw'].forEach(cssType => // rising particles
         document.head.append(dom.create.style(GM_getResourceText(`${cssType}CSS`))))
@@ -2760,21 +2766,21 @@
 
     // AUTO-GEN reply or show STANDBY mode
     app.msgChain = [] ; const searchQuery = new URL(location.href).searchParams.get('q')
-    if (config.autoGet || config.autoSummarize // Auto-Gen on
-        || (config.prefixEnabled || config.suffixEnabled) // or Manual-Gen on
+    if (app.config.autoGet || app.config.autoSummarize // Auto-Gen on
+        || (app.config.prefixEnabled || app.config.suffixEnabled) // or Manual-Gen on
             && [config.prefixEnabled && location.href.includes('q=%2F'), // prefix required/present
-                config.suffixEnabled // suffix required/present
+                app.config.suffixEnabled // suffix required/present
                     && /q=.*?(?:%3F|？|%EF%BC%9F)(?:&|$)/.test(location.href)
-            ].filter(Boolean).length == (config.prefixEnabled + config.suffixEnabled) // validate both Manual-Gen modes
+            ].filter(Boolean).length == (app.config.prefixEnabled + app.config.suffixEnabled) // validate both Manual-Gen modes
     ) { // auto-gen reply
         app.msgChain.push({
             time: Date.now(), role: 'user',
-            content: config.autoSummarize ? prompts.create('summarizeResults') : searchQuery
+            content: app.config.autoSummarize ? prompts.create('summarizeResults') : searchQuery
         })
         get.reply({ msgs: app.msgChain, src: 'query' })
     } else { // show Standby mode
         show.reply({ standby: true })
-        if (!config.rqDisabled)
+        if (!app.config.rqDisabled)
             get.related(searchQuery)
                 .then(queries => show.related(queries))
                 .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
@@ -2786,7 +2792,7 @@
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener( // for browser/system scheme pref changes
         'change', () => requestAnimationFrame(handleSchemePrefChange))
     function handleSchemePrefChange() {
-        if (config.scheme) return // since light/dark hard-set
+        if (app.config.scheme) return // since light/dark hard-set
         const displayedScheme = ui.getScheme()
         if (env.ui.app.scheme != displayedScheme) update.scheme(displayedScheme)
     }

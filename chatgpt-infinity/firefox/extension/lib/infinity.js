@@ -4,8 +4,8 @@ window.infinity = {
 
     async activate() {
         const activatePrompt = 'Generate a single random question'
-            +( config.replyLanguage ? ( ' in ' + config.replyLanguage ) : '' )
-            +( ' on ' + ( config.replyTopic == 'ALL' ? 'ALL topics' : 'the topic of ' + config.replyTopic ))
+            +( app.config.replyLanguage ? ( ' in ' + app.config.replyLanguage ) : '' )
+            +( ' on ' + ( app.config.replyTopic == 'ALL' ? 'ALL topics' : 'the topic of ' + app.config.replyTopic ))
             + ' then answer it. Don\'t type anything else.'
         if (env.browser.isMobile && chatgpt.sidebar.isOn()) chatgpt.sidebar.hide()
         if (!new URL(location).pathname.startsWith('/g/')) // not on GPT page
@@ -14,19 +14,19 @@ window.infinity = {
         chatgpt.send(activatePrompt)
         await new Promise(resolve => setTimeout(resolve, 3000)) // sleep 3s
         if (!document.querySelector('[data-message-author-role]') // new chat reset due to OpenAI bug
-            && config.infinityMode // ...and toggle still active
+            && app.config.infinityMode // ...and toggle still active
         ) chatgpt.send(activatePrompt) // ...so prompt again
         await chatgpt.isIdle()
-        if (config.infinityMode && !infinity.isActive) // double-check in case de-activated before scheduled
-            infinity.isActive = setTimeout(infinity.continue, parseInt(config.replyInterval, 10) * 1000)
+        if (app.config.infinityMode && !infinity.isActive) // double-check in case de-activated before scheduled
+            infinity.isActive = setTimeout(infinity.continue, parseInt(app.config.replyInterval, 10) * 1000)
     },
 
     async continue() {
-        if (!config.autoScrollDisabled) try { chatgpt.scrollToBottom() } catch(err) {}
+        if (!app.config.autoScrollDisabled) try { chatgpt.scrollToBottom() } catch(err) {}
         chatgpt.send('Do it again.')
         await chatgpt.isIdle() // before starting delay till next iteration
         if (infinity.isActive) // replace timer
-            infinity.isActive = setTimeout(infinity.continue, parseInt(config.replyInterval, 10) * 1000)
+            infinity.isActive = setTimeout(infinity.continue, parseInt(app.config.replyInterval, 10) * 1000)
     },
 
     deactivate() {
@@ -39,8 +39,8 @@ window.infinity = {
             infinity.deactivate() ; setTimeout(() => infinity.activate(), 750)
         } else {
             clearTimeout(infinity.isActive) ; infinity.isActive = null ; await chatgpt.isIdle()
-            if (config.infinityMode && !infinity.isActive) // double-check in case de-activated before scheduled
-                infinity.isActive = setTimeout(infinity.continue, parseInt(config.replyInterval, 10) * 1000)
+            if (app.config.infinityMode && !infinity.isActive) // double-check in case de-activated before scheduled
+                infinity.isActive = setTimeout(infinity.continue, parseInt(app.config.replyInterval, 10) * 1000)
         }
     }
 };

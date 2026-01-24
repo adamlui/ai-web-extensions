@@ -1,4 +1,4 @@
-window.tooltip = { // requires dom.js + <app|config|env>
+window.tooltip = { // requires dom.js + <app|env>
 
     stylize() { // requires dom.js + app.slug
         document.head.append(this.styles = dom.create.style(`.${app.slug}-tooltip {
@@ -27,13 +27,13 @@ window.tooltip = { // requires dom.js + <app|config|env>
         tooltip.div.style.opacity = +togglingOn ; tooltip.div.style.transform = `scale(${ togglingOn ? 1 : 0.8 })`
     },
 
-    update(btn) { // requires <app|config>
+    update(btn) { // requires app
         if (!this.div) return // since nothing to update
         const btnType = /-([\w-]+)-btn$/.exec(btn.id)?.[1]
         const baseText = {
             about: app.msgs.menuLabel_about,
-            arrows: app.msgs[`tooltip_${ config.expanded ? 'shrink' : 'expand' }`],
-            chevron: app.msgs[`tooltip_${ config.minimized ? 'restore' : 'minimize' }`],
+            arrows: app.msgs[`tooltip_${ app.config.expanded ? 'shrink' : 'expand' }`],
+            chevron: app.msgs[`tooltip_${ app.config.minimized ? 'restore' : 'minimize' }`],
             copy:
                 btn.firstChild.id.includes('-copy-') ?
                     `${app.msgs.tooltip_copy}${ btn.closest('code') ? ''
@@ -60,7 +60,7 @@ window.tooltip = { // requires dom.js + <app|config|env>
                 : btn.querySelector('svg').id.includes('generating-') ? `${app.msgs.tooltip_generatingAudio}...`
                 : `${app.msgs.tooltip_playing} ${app.msgs.tooltip_reply.toLowerCase()}...`,
             summarize: app.msgs.tooltip_summarizeResults,
-            wsb: ( config.widerSidebar ? `${app.msgs.prefix_exit} ` : '' ) + app.msgs.menuLabel_widerSidebar
+            wsb: `${ app.config.widerSidebar ? `${app.msgs.prefix_exit} ` : '' }${app.msgs.menuLabel_widerSidebar}`
         }[btnType]
 
         // Update text
@@ -70,10 +70,10 @@ window.tooltip = { // requires dom.js + <app|config|env>
         if (baseText.endsWith('...')) { // animate the dots
             const noDotText = baseText.slice(0, -3), dotWidth = 2.75 ; let dotCnt = 3
             tooltip.dotCycler = setInterval(() => {
-                dotCnt = (dotCnt % 3) + 1 // cycle thru 1 → 2 → 3
+                dotCnt = ( dotCnt % 3 ) +1 // cycle thru 1 → 2 → 3
                 tooltip.div.textContent = noDotText + '.'.repeat(dotCnt)
                 tooltip.div.style.paddingRight = `${ // adjust based on dotCnt
-                    tooltip.nativeRpadding + (3 - dotCnt) * dotWidth }px`
+                    tooltip.nativeRpadding +( 3 - dotCnt ) * dotWidth }px`
             }, 350)
         } else // restore native right-padding
             tooltip.div.style.paddingRight = tooltip.nativeRpadding
