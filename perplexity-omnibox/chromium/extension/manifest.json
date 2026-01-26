@@ -3,7 +3,7 @@
   "name": "__MSG_appName__",
   "short_name": "__MSG_prefix_ask__ Perplexity.ai",
   "description": "__MSG_appDesc__",
-  "version": "2025.11.11.2",
+  "version": "2026.1.26",
   "homepage_url": "https://perplexityomnibox.com",
   "default_locale": "en",
   "icons": {
