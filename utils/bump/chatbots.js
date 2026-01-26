@@ -54,10 +54,8 @@
             const fd = fs.openSync(cachePaths.chatbotPaths,
                 fs.constants.O_CREAT | fs.constants.O_EXCL | fs.constants.O_RDWR)
             bump.log.error(`Cache file missing. Generating ${cachePaths.chatbotPaths}...\n`)
-            for (const chatbot of chatbots) {
+            for (const chatbot of chatbots)
                 chatbotFiles.push(...(await bump.findFileBySuffix({ suffix: `${chatbot}.user.js` })))
-                console.log('')
-            }
             fs.writeFileSync(fd, JSON.stringify(chatbotFiles, undefined, 2), 'utf-8')
             bump.log.success(`\nCache file created @ ${cachePaths.chatbotPaths}`)
         } catch (err) { // use existing cache file
