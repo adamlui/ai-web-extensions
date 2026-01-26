@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.1.26
+// @version             2026.1.26.1
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -256,8 +256,8 @@
 // @connect             gm.chatgptwidescreen.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.5/dist/chatgpt.min.js#sha256-0NMJgflkEQlWbXxtN4SD+wogV6ss2TY6JAu4A0hmM0k=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@ed7d80f/assets/js/lib/css.js/dist/css.min.js#sha256-BCcXA39Aq/Thsxgzl5di1FFCVQK5JiVQykPs8KBVxl8=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3683a79/assets/js/lib/dom.js/dist/dom.min.js#sha256-Xl5ghi373aMe12nN4vOKB+C5IJQY43AtjVAdB0K3Dag=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/userscripts@ff2baba/assets/js/lib/css.js/dist/css.min.js#sha256-zf9s8C0cZ/i+gnaTIUxa0+RpDYpsJVlyuV5L2q4KUdA=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/userscripts@ff2baba/assets/js/lib/dom.js/dist/dom.min.js#sha256-nTc2by3ZAz6AR7B8fOqjloJNETvjAepe15t2qlghMDo=
 // @require             https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ab7ee52/chromium/extension/lib/chatbar.js#sha256-SRE9UyuH01owWuLBPnjy0EuYAu5EdDAZtyRWogzEhno=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@42999e8/chromium/extension/lib/feedback.js#sha256-ikwP7pqkAsaulLjYWWf6V9dA0hSY3JoFCtkC4fPynzc=
@@ -400,7 +400,7 @@
 
             // ...or create settings categories
             : Object.entries(settings.categories)
-                .filter(([key]) => !config[`${env.site}Disabled`] || key == 'siteSettings')
+                .filter(([key]) => !app.config[`${env.site}Disabled`] || key == 'siteSettings')
                 .map(([key, category]) => GM_registerMenuCommand(
                     `${ category.symbol ? category.symbol + ' ' : '' }${category.label}`, () => modals.settings(key),
                     env.scriptManager.supportsTooltips ? { title: ' ' } : undefined
@@ -626,7 +626,7 @@
                         knob: dom.create.elem('span', { class: 'toggle-knob' })
                     }
                     entry.toggle.input.checked = (
-                        ctgKey == 'siteSettings' ? !config[configKeyName] : settings.typeIsEnabled(key) )
+                        ctgKey == 'siteSettings' ? !app.config[configKeyName] : settings.typeIsEnabled(key) )
                     entry.toggle.switch.append(entry.toggle.knob)
                     entry.row.append(entry.toggle.input, entry.toggle.switch)
 
@@ -636,7 +636,7 @@
                     // Add click listener
                     entry.row.onclick = () => {
                         modals.toggleUtils.switchToggle(entry.toggle.input)
-                        settings.save(configKeyName, !config[configKeyName])
+                        settings.save(configKeyName, !app.config[configKeyName])
                         sync.configToUI({ updatedKey: configKeyName })
                         if (ctgKey == 'siteSettings' && env.site == key) // notify if setting of active site toggled
                              feedback.notify(`${app.name} 🧩 ${
@@ -806,7 +806,7 @@
     })))
 
     // Restore PREV SESSION's state
-    if (!config[`${env.site}Disabled`]) {
+    if (!app.config[`${env.site}Disabled`]) {
         if (app.config.btnsVisible) buttons.insert()
         if (app.config.widescreen) toggleMode('widescreen', true)
         if (app.config.fullWindow && sites[env.site].hasSidebar) {

@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.1.26.2
+// @version               2026.1.26.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -198,10 +198,10 @@
 // @require               https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/buttons.js#sha256-bam0MF6WM+Lyt5Wgop3rfHPYZHmOPXq4ZxbUXort2+M=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/icons.js#sha256-nAcuQD4FVFzUN1pS6pOjw2V3IvkDwYV+P3m5IN8nsdo=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/menus.js#sha256-3c/0V6/lug+yy7AGCI99Em7G+QGYcnfYpbN3VZSv4go=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@787f07b/assets/js/chatbot/components/menus.js#sha256-YaV3USVJvvChUwPjoF2jwRwbKVBdjoFfLS6ThEnZchE=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/replyBubble.js#sha256-zN/oMInc63biUtC+qNfP48vntQiEw2zyCIVszeBxLmg=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/tooltip.js#sha256-/xPw7DnS8F9dBH/s0ffMrErweHgFBeKpkUM4tUDy4vo=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/api.js#ha256-9mC3x8yqdVp3WpWMreBsTzunXu1+VSm0bXvVOQz3ODs=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@787f07b/assets/js/chatbot/lib/api.js#sha256-9mC3x8yqdVp3WpWMreBsTzunXu1+VSm0bXvVOQz3ODs=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/feedback.js#sha256-ri8OzNa/8sQINDn7bW84F2OuVYZxubMSm/Zpli/cPnQ=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/log.js#sha256-puXwoSKgog6EhgDzlJrAzMnGRM6kLMTT8NF0jYncIt8=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/prompts.js#sha256-Z9QsKpAcqSoclxyPTkPfe8/K3s9eDrbSYgumr/GYyLc=
@@ -209,9 +209,8 @@
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/themes.js#sha256-NSiOkXoRC/fF8zdmnbIk9XL5tKWWP5MU2NOfdJ9G0NU=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/ui.js#sha256-+UnPhc4zxrdWEuLU8PFrnpAW9TFS2c1hOGbcby2HlEU=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/userscript.js#sha256-DTD+Tj/9angBw8/Q4e8PMz2SBwueqvNzeY8PwZlMgbs=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@ed7d80f/assets/js/lib/css.js/dist/css.min.js#sha256-BCcXA39Aq/Thsxgzl5di1FFCVQK5JiVQykPs8KBVxl8=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@ed7d80f/assets/js/lib/css.js/dist/css.min.js#sha256-BCcXA39Aq/Thsxgzl5di1FFCVQK5JiVQykPs8KBVxl8=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3683a79/assets/js/lib/dom.js/dist/dom.min.js#sha256-Xl5ghi373aMe12nN4vOKB+C5IJQY43AtjVAdB0K3Dag=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/userscripts@ff2baba/assets/js/lib/css.js/dist/css.min.js#sha256-zf9s8C0cZ/i+gnaTIUxa0+RpDYpsJVlyuV5L2q4KUdA=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/userscripts@ff2baba/assets/js/lib/dom.js/dist/dom.min.js#sha256-nTc2by3ZAz6AR7B8fOqjloJNETvjAepe15t2qlghMDo=
 // @require               https://cdn.jsdelivr.net/npm/generate-ip@2.4.5/dist/generate-ip.min.js#sha256-PI9snFGy1YvX4fiT8SJ01RveRSa6vZujEJxk8y/jvVs=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js#sha256-g3pvpbDHNrUrveKythkPMF2j/J7UFoHbUyFQcFe1yEY=
 // @require               https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js#sha256-n0UwfFeU7SR6DQlfOmLlLvIhWmeyMnIDp/2RmVmuedE=
@@ -353,7 +352,7 @@
             const reInvertFlags = /disabled|hidden/i
             return reInvertFlags.test(key) // flag in control key name
                 && !reInvertFlags.test(this.controls[key]?.label || '') // but not in label msg key name
-                    ? !config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
+                    ? !app.config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
         }
     }
     settings.load('debugMode') ; log.debug('Initializing settings...')
@@ -420,7 +419,7 @@
     if (!app.config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!app.config.fontSize) settings.save('fontSize', 12.8791) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env
-    log.debug(`Success! config = ${log.prettifyObj(app.config)}`)
+    log.debug(`Success! app.config = ${log.prettifyObj(app.config)}`)
 
     // Define UI functions
 
@@ -1004,7 +1003,7 @@
 
         animations(layer) {
             const configKey = `${layer}AnimationsDisabled`
-            settings.save(configKey, !config[configKey])
+            settings.save(configKey, !app.config[configKey])
             update.appStyle() ; if (layer == 'bg') { update.risingParticles() ; update.replyPrefix() }
             if (layer == 'fg' && modals.settings.get()) { // toggle ticker-scroll of About status label
                 const aboutStatusLabel = document.querySelector('#about-settings-entry > span > div')
@@ -1019,7 +1018,7 @@
             const validModes = ['get', 'summarize'],
                   modeKey = `auto${log.toTitleCase(mode)}${ mode == 'get' ? 'Disabled' : '' }`
             let conflictingModeToggled = false // to extend this notif duration
-            settings.save(modeKey, !config[modeKey])
+            settings.save(modeKey, !app.config[modeKey])
             if (settings.typeIsEnabled(modeKey)) { // this Auto-Gen mode toggled on, disable other one + Manual-Gen + do it
                 const otherMode = validModes[+(mode == validModes[0])],
                       otherModeKey = `auto${log.toTitleCase(otherMode)}${ otherMode == 'get' ? 'Disabled' : '' }`
@@ -1054,7 +1053,7 @@
         manualGen(mode) { // Prefix/Suffix modes
             const modeKey = `${mode}Enabled`
             let autoGenToggled = false // to extend this notif duration
-            settings.save(modeKey, !config[modeKey])
+            settings.save(modeKey, !app.config[modeKey])
             if (app.config[modeKey]) // Manual-Gen toggled on, disable all Auto-Gen
                 ['get', 'summarize'].forEach(mode => {
                     if (settings.typeIsEnabled(`auto${log.toTitleCase(mode)}${ mode == 'get' ? 'Disabled' : '' }`)) {
@@ -1126,7 +1125,7 @@
             let anchorModeDisabled = false // to extend this notif duration
 
             // Save new state + disable incompatible Anchor mode
-            if (state == 'on' || !state && !config[configKeyName]) { // toggle on
+            if (state == 'on' || !state && !app.config[configKeyName]) { // toggle on
                 if (mode == 'sticky' && app.config.anchored) { toggle.anchorMode() ; anchorModeDisabled = true }
                 settings.save(configKeyName, true)
             } else settings.save(configKeyName, false)
@@ -2328,7 +2327,7 @@
 
                             // ...or generically toggle/notify
                             else {
-                                settings.save(key, !config[key]) // update config
+                                settings.save(key, !app.config[key]) // update config
                                 feedback.notify(`${settings.controls[key].label} ${
                                     menus.toolbar.state.words[+(key.includes('Disabled') != app.config[key])]}`)
                             }

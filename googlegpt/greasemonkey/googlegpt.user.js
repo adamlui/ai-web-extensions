@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2026.1.26.2
+// @version                  2026.1.26.3
 // @license                  MIT
 // @icon                     data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22170.667%22%20height=%22170.667%22%3E%3Cstyle%3E:root%7B--fill:%23000%7D@media%20(prefers-color-scheme:dark)%7B:root%7B--fill:%23fff%7D%7D%3C/style%3E%3Cpath%20fill=%22var(--fill)%22%20d=%22M82.346%20159.79c-18.113-1.815-31.78-9.013-45.921-24.184C23.197%20121.416%2017.333%20106.18%2017.333%2086c0-21.982%205.984-36.245%2021.87-52.131C55.33%2017.74%2069.27%2011.867%2091.416%2011.867c17.574%200%2029.679%203.924%2044.309%2014.363l8.57%206.116-8.705%208.705-8.704%208.704-4.288-3.608c-13.91-11.704-35.932-14.167-53.085-5.939-3.4%201.631-9.833%206.601-14.297%2011.045C44.669%2061.753%2040.95%2070.811%2040.95%2086c0%2014.342%203.594%2023.555%2013.26%2033.995%2019.088%2020.618%2048.46%2022.539%2070.457%204.608l5.333-4.348%2011.333%203.844c6.234%202.114%2011.54%203.857%2011.791%203.873.252.015-2.037%203.008-5.087%206.65-6.343%207.577-20.148%2017.217-30.493%2021.295-8.764%203.454-23.358%205.06-35.198%203.873zM92%2086.333V74.667h60.648l-11.41%2011.41-11.411%2011.41-18.914.257L92%2098z%22/%3E%3C/svg%3E
 // @icon64                   data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22170.667%22%20height=%22170.667%22%3E%3Cstyle%3E:root%7B--fill:%23000%7D@media%20(prefers-color-scheme:dark)%7B:root%7B--fill:%23fff%7D%7D%3C/style%3E%3Cpath%20fill=%22var(--fill)%22%20d=%22M82.346%20159.79c-18.113-1.815-31.78-9.013-45.921-24.184C23.197%20121.416%2017.333%20106.18%2017.333%2086c0-21.982%205.984-36.245%2021.87-52.131C55.33%2017.74%2069.27%2011.867%2091.416%2011.867c17.574%200%2029.679%203.924%2044.309%2014.363l8.57%206.116-8.705%208.705-8.704%208.704-4.288-3.608c-13.91-11.704-35.932-14.167-53.085-5.939-3.4%201.631-9.833%206.601-14.297%2011.045C44.669%2061.753%2040.95%2070.811%2040.95%2086c0%2014.342%203.594%2023.555%2013.26%2033.995%2019.088%2020.618%2048.46%2022.539%2070.457%204.608l5.333-4.348%2011.333%203.844c6.234%202.114%2011.54%203.857%2011.791%203.873.252.015-2.037%203.008-5.087%206.65-6.343%207.577-20.148%2017.217-30.493%2021.295-8.764%203.454-23.358%205.06-35.198%203.873zM92%2086.333V74.667h60.648l-11.41%2011.41-11.411%2011.41-18.914.257L92%2098z%22/%3E%3C/svg%3E
@@ -388,10 +388,10 @@
 // @require                  https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/buttons.js#sha256-bam0MF6WM+Lyt5Wgop3rfHPYZHmOPXq4ZxbUXort2+M=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/icons.js#sha256-nAcuQD4FVFzUN1pS6pOjw2V3IvkDwYV+P3m5IN8nsdo=
-// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/menus.js#sha256-3c/0V6/lug+yy7AGCI99Em7G+QGYcnfYpbN3VZSv4go=
+// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@787f07b/assets/js/chatbot/components/menus.js#sha256-YaV3USVJvvChUwPjoF2jwRwbKVBdjoFfLS6ThEnZchE=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/replyBubble.js#sha256-zN/oMInc63biUtC+qNfP48vntQiEw2zyCIVszeBxLmg=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/tooltip.js#sha256-/xPw7DnS8F9dBH/s0ffMrErweHgFBeKpkUM4tUDy4vo=
-// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/api.js#ha256-9mC3x8yqdVp3WpWMreBsTzunXu1+VSm0bXvVOQz3ODs=
+// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@787f07b/assets/js/chatbot/lib/api.js#sha256-9mC3x8yqdVp3WpWMreBsTzunXu1+VSm0bXvVOQz3ODs=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/feedback.js#sha256-ri8OzNa/8sQINDn7bW84F2OuVYZxubMSm/Zpli/cPnQ=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/log.js#sha256-puXwoSKgog6EhgDzlJrAzMnGRM6kLMTT8NF0jYncIt8=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/prompts.js#sha256-Z9QsKpAcqSoclxyPTkPfe8/K3s9eDrbSYgumr/GYyLc=
@@ -399,8 +399,8 @@
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/themes.js#sha256-NSiOkXoRC/fF8zdmnbIk9XL5tKWWP5MU2NOfdJ9G0NU=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/ui.js#sha256-+UnPhc4zxrdWEuLU8PFrnpAW9TFS2c1hOGbcby2HlEU=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/userscript.js#sha256-DTD+Tj/9angBw8/Q4e8PMz2SBwueqvNzeY8PwZlMgbs=
-// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@ed7d80f/assets/js/lib/css.js/dist/css.min.js#sha256-BCcXA39Aq/Thsxgzl5di1FFCVQK5JiVQykPs8KBVxl8=
-// @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3683a79/assets/js/lib/dom.js/dist/dom.min.js#sha256-Xl5ghi373aMe12nN4vOKB+C5IJQY43AtjVAdB0K3Dag=
+// @require                  https://cdn.jsdelivr.net/gh/adamlui/userscripts@ff2baba/assets/js/lib/css.js/dist/css.min.js#sha256-zf9s8C0cZ/i+gnaTIUxa0+RpDYpsJVlyuV5L2q4KUdA=
+// @require                  https://cdn.jsdelivr.net/gh/adamlui/userscripts@ff2baba/assets/js/lib/dom.js/dist/dom.min.js#sha256-nTc2by3ZAz6AR7B8fOqjloJNETvjAepe15t2qlghMDo=
 // @require                  https://cdn.jsdelivr.net/npm/generate-ip@2.4.5/dist/generate-ip.min.js#sha256-PI9snFGy1YvX4fiT8SJ01RveRSa6vZujEJxk8y/jvVs=
 // @require                  https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js#sha256-g3pvpbDHNrUrveKythkPMF2j/J7UFoHbUyFQcFe1yEY=
 // @require                  https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js#sha256-n0UwfFeU7SR6DQlfOmLlLvIhWmeyMnIDp/2RmVmuedE=
@@ -543,7 +543,7 @@
             const reInvertFlags = /disabled|hidden/i
             return reInvertFlags.test(key) // flag in control key name
                 && !reInvertFlags.test(this.controls[key]?.label || '') // but not in label msg key name
-                    ? !config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
+                    ? !app.config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
         }
     }
     settings.load('debugMode') ; log.debug('Initializing settings...')
@@ -613,7 +613,7 @@
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env
     if (!app.config.notFirstRun && env.browser.isMobile) settings.save('autoGet', true) // reverse default auto-get disabled if mobile
     settings.save('notFirstRun', true)
-    log.debug(`Success! config = ${log.prettifyObj(app.config)}`)
+    log.debug(`Success! app.config = ${log.prettifyObj(app.config)}`)
 
     // Define UI functions
 
@@ -1211,7 +1211,7 @@
 
         animations(layer) {
             const configKey = `${layer}AnimationsDisabled`
-            settings.save(configKey, !config[configKey])
+            settings.save(configKey, !app.config[configKey])
             update.appStyle() ; if (layer == 'bg') { update.risingParticles() ; update.replyPrefix() }
             if (layer == 'fg' && modals.settings.get()) { // toggle ticker-scroll of About status label
                 const aboutStatusLabel = document.querySelector('#about-settings-entry > span > div')
@@ -1225,7 +1225,7 @@
         autoGen(mode) {
             const validModes = ['get', 'summarize'], modeKey = `auto${log.toTitleCase(mode)}`
             let conflictingModeToggled = false // to extend this notif duration
-            settings.save(modeKey, !config[modeKey])
+            settings.save(modeKey, !app.config[modeKey])
             if (app.config[modeKey]) { // this Auto-Gen mode toggled on, disable other one + Manual-Gen + do it
                 const otherMode = validModes[+(mode == validModes[0])]
                 if (app.config[`auto${log.toTitleCase(otherMode)}`]) {
@@ -1261,7 +1261,7 @@
         manualGen(mode) { // Prefix/Suffix modes
             const modeKey = `${mode}Enabled`
             let autoGenToggled = false // to extend this notif duration
-            settings.save(modeKey, !config[modeKey])
+            settings.save(modeKey, !app.config[modeKey])
             if (app.config[modeKey]) // Manual-Gen toggled on, disable all Auto-Gen
                 ['get', 'summarize'].forEach(mode => {
                     if (app.config[`auto${log.toTitleCase(mode)}`]) { toggle.autoGen(mode) ; autoGenToggled = true }})
@@ -1331,7 +1331,7 @@
             let anchorModeDisabled = false // to extend this notif duration
 
             // Save new state + disable incompatible Anchor mode
-            if (state == 'on' || !state && !config[configKeyName]) { // toggle on
+            if (state == 'on' || !state && !app.config[configKeyName]) { // toggle on
                 if (mode == 'sticky' && app.config.anchored) { toggle.anchorMode() ; anchorModeDisabled = true }
                 settings.save(configKeyName, true)
             } else settings.save(configKeyName, false)
@@ -2503,7 +2503,7 @@
 
                             // ...or generically toggle/notify
                             else {
-                                settings.save(key, !config[key]) // update config
+                                settings.save(key, !app.config[key]) // update config
                                 feedback.notify(`${settings.controls[key].label} ${
                                     menus.toolbar.state.words[+(key.includes('Disabled') != app.config[key])]}`)
                             }
