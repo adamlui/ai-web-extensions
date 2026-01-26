@@ -3,7 +3,7 @@
   "name": "__MSG_appName__",
   "short_name": "ChatGPT 🖥️",
   "description": "__MSG_appDesc__",
-  "version": "2026.1.26",
+  "version": "2026.1.26.1",
   "homepage_url": "https://chatgptwidescreen.com",
   "default_locale": "en",
   "icons": {
