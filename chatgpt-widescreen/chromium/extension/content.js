@@ -8,7 +8,7 @@
 
     // Import JS resources
     for (const resource of [
-        'lib/i18n.js', 'lib/chatbar.js', 'lib/chatgpt.min.js', 'lib/dom.min.js', 'lib/feedback.js',
+        'lib/i18n.js', 'lib/chatbar.js', 'lib/chatgpt.min.js', 'lib/css.min.js', 'lib/dom.min.js', 'lib/feedback.js',
         'lib/settings.js', 'lib/styles.js', 'lib/sync.js', 'lib/ui.js', 'components/buttons.js', 'components/icons.js',
         'components/modals.js', 'components/tooltip.js'
     ]) await import(chrome.runtime.getURL(resource))

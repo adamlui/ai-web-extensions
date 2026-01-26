@@ -8,9 +8,9 @@
 
     // Import JS resources
     for (const resource of [
-        'lib/i18n.js', 'lib/chatbar.js', 'lib/chatgpt.min.js', 'lib/dom.min.js', 'lib/feedback.js',
-        'lib/settings.js', 'lib/styles.js', 'lib/sync.js', 'lib/ui.js', 'components/buttons.js', 'components/icons.js',
-        'components/modals.js', 'components/tooltip.js'
+        'components/modals.js', 'components/toggles.js', 'lib/i18n.js', 'lib/chatgpt.min.js', 'lib/css.min.js',
+        'lib/dom.min.js', 'lib/feedback.js', 'lib/infinity.js', 'lib/settings.js', 'lib/styles.js', 'lib/sync.js',
+        'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
 
     // Init ENV context
