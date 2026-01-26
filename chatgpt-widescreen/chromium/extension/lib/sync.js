@@ -20,7 +20,7 @@ window.sync = {
                 suppressNotifs() ; toggleMode('fullWindow') }
             styles.update({ keys: ['chatbar', 'tweaks', 'widescreen'] }) // sync HH/HF/TCB/WCB/NCB/BA/WW
             chatbar.tweak() // update ChatGPT chatbar inner width or hack Poe btn pos
-            buttons[config.btnsVisible ? 'insert' : 'remove']() // update button visibility
+            buttons[app.config.btnsVisible ? 'insert' : 'remove']() // update button visibility
             if (updatedKey == 'blockSpamDisabled') sync.spamBlock()
             else if (updatedKey == 'btnAnimationsDisabled' && !app.config.btnAnimationsDisabled)
                 buttons.animate() // to visually signal location + preview fx applied by Button Animations toggle-on

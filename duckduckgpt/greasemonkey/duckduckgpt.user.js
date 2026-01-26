@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.1.26.2
+// @version                2026.1.26.3
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2770,7 +2770,7 @@
     app.msgChain = [] ; const searchQuery = new URL(location.href).searchParams.get('q')
     if (app.config.autoGet || app.config.autoSummarize // Auto-Gen on
         || (app.config.prefixEnabled || app.config.suffixEnabled) // or Manual-Gen on
-            && [config.prefixEnabled && location.href.includes('q=%2F'), // prefix required/present
+            && [app.config.prefixEnabled && location.href.includes('q=%2F'), // prefix required/present
                 app.config.suffixEnabled // suffix required/present
                     && /q=.*?(?:%3F|？|%EF%BC%9F)(?:&|$)/.test(location.href)
             ].filter(Boolean).length == (app.config.prefixEnabled + app.config.suffixEnabled) // validate both Manual-Gen modes
