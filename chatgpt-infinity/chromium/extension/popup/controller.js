@@ -115,7 +115,8 @@
             if (entryData.type == 'category') toggleCategorySettingsVisiblity({ key: entryData.key })
             else if (entryData.type == 'toggle') {
                 entry.leftElem.classList.toggle('on')
-                settings.save(entryData.key, !app.config[entryData.key]) ; sync.configToUI({ updatedKey: entryData.key })
+                settings.save(entryData.key, !app.config[entryData.key])
+                sync.configToUI({ updatedKey: entryData.key })
                 requestAnimationFrame(() => notify(`${entryData.label} ${i18n.getMsg(`state_${
                     settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`))
             } else if (entryData.type == 'link') { open(entryData.url) ; close() }
