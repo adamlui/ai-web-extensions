@@ -37,6 +37,7 @@
   "scripts": {
     "prepare": "husky",
     "dev:chatbots": "node utils/dev/chatbots",
+    "dev:chatbot": "npm run dev:chatbots",
     "build:css": "scss-to-css . dist",
     "lint": "eslint . --cache",
     "lint:all": "eslint .",
@@ -45,6 +46,9 @@
     "bump:chatbots": "node utils/bump/chatbots --cache",
     "bump:chatbots-nc": "node utils/bump/chatbots --cache",
     "bump:chatbots-np": "node utils/bump/chatbots --cache --no-push",
+    "bump:chatbot": "npm run bump:chatbots",
+    "bump:chatbot-nc": "npm run bump:chatbots-nc",
+    "bump:chatbot-np": "npm run bump:chatbots-np",
     "bump:res": "node utils/bump/resources --cache",
     "bump:ext": "node utils/bump/extension-manifests --cache",
     "bump:ext-nc": "node utils/bump/extension-manifests --cache --no-commit",
