@@ -1,4 +1,4 @@
-// Requires components/tooltip.js + lib/<chatbar|chatgpt|dom|styles>.js + <app|config|env|sites> + toggleMode()
+// Requires components/tooltip.js + lib/<chatbar|chatgpt|dom|styles>.js + <app|env|sites> + toggleMode()
 
 window.buttons = {
 
@@ -111,7 +111,7 @@ window.buttons = {
         }
     },
 
-    async insert() { // requires lib/chatbar.js + <config|env>
+    async insert() { // requires lib/chatbar.js + <app|env>
         if (!app.config.btnsVisible || this.state.status == 'inserting' || this.fullscreen?.isConnected) return
         this.state.status = 'inserting' ; if (!this.fullscreen) await this.create()
 

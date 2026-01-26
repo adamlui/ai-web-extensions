@@ -1,9 +1,9 @@
-// Requires components/buttons.js + lib/<browser|chatbar|feedback|settings|styles>.js +  <config|env>
+// Requires components/buttons.js + lib/<browser|chatbar|feedback|settings|styles>.js +  <app|env>
 
 window.sync = {
 
     async configToUI({ updatedKey } = {}) { // on toolbar popup toggles + AI tab activations
-    // ... requires components/buttons.js + lib/<chatbar|settings|styles>.js + <config|env>
+    // ... requires components/buttons.js + lib/<chatbar|settings|styles>.js + <app|env>
 
         const { site } = env
         await settings.load('extensionDisabled', settings.siteDisabledKeys, sites[site].availFeatures)

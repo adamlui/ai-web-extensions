@@ -1,4 +1,4 @@
-// Requires components/buttons.js + lib/<browser|chatgpt|dom>.js + <app|config|env>
+// Requires components/buttons.js + lib/<browser|chatgpt|dom>.js + <app|env>
 
 window.tooltip = {
 
@@ -26,7 +26,7 @@ window.tooltip = {
             tooltip.div.style.transform = `scale(${ togglingOn ? 1 : 0.8 })`
     },
 
-    async update(btn) { // requires lib/<browser|chatbar|chatgpt>.js + <config|env>
+    async update(btn) { // requires lib/<browser|chatbar|chatgpt>.js + <app|env>
         if (!this.div) return
         const { site } = env
         const btnType = btn.id.replace(/-btn$/, '')

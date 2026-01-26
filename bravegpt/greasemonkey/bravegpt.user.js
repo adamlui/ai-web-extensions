@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.1.26.5
+// @version               2026.1.26.6
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1717,11 +1717,11 @@
 
     // Define COMPONENTS
 
-    window.fontSizeSlider = { // requires lib/<dom|settings>.js + <app|config|env|inputEvents>
+    window.fontSizeSlider = { // requires lib/<dom|settings>.js + <app|env|inputEvents>
         fadeInDelay: 5, // ms
         hWheelDistance: 10, // px
 
-        createAppend() { // requires lib/<dom|settings>.js + <app|config|env|inputEvents>
+        createAppend() { // requires lib/<dom|settings>.js + <app|env|inputEvents>
 
             // Create/ID/classify slider elems
             fontSizeSlider.cursorOverlay = dom.create.elem('div', { class: 'cursor-overlay' })
@@ -1923,7 +1923,7 @@
             return alert
         },
 
-        api() { // requires lib/feedback.js + <apis|app|config|get|settings>
+        api() { // requires lib/feedback.js + <apis|app|get|settings>
 
             // Show modal
             const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
@@ -2127,7 +2127,7 @@
             }
         },
 
-        replyLang() { // requires <app|config|env|log|modals|settings>
+        replyLang() { // requires <app|env|log|modals|settings>
             let replyLang = prompt(`${app.msgs.prompt_updateReplyLang}:`, app.config.replyLang)
             if (replyLang == null) return // user cancelled so do nothing
             else if (!/\d/.test(replyLang)) {

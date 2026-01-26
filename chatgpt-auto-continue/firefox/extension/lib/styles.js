@@ -1,4 +1,4 @@
-// Requires lib/dom.js + <app|config|env>
+// Requires lib/dom.js + <app|env>
 
 window.styles = {
 
@@ -13,7 +13,7 @@ window.styles = {
 
     toast: {
         autoAppend: true,
-        get css() { // requires <app|config|env>
+        get css() { // requires <app|env>
             return !app.config.toastMode ? '' : // flatten notifs into toast alerts
                 `div.${app.slug}.chatgpt-notif {
                     position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;

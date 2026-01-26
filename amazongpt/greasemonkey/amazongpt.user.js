@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.1.26.4
+// @version                2026.1.26.5
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -1100,11 +1100,11 @@
 
     // Define COMPONENTS
 
-    window.fontSizeSlider = { // requires lib/<dom|settings>.js + <app|config|env|inputEvents>
+    window.fontSizeSlider = { // requires lib/<dom|settings>.js + <app|env|inputEvents>
         fadeInDelay: 5, // ms
         hWheelDistance: 10, // px
 
-        createAppend() { // requires lib/<dom|settings>.js + <app|config|env|inputEvents>
+        createAppend() { // requires lib/<dom|settings>.js + <app|env|inputEvents>
 
             // Create/ID/classify slider elems
             fontSizeSlider.cursorOverlay = dom.create.elem('div', { class: 'cursor-overlay' })
@@ -1307,7 +1307,7 @@
             return alert
         },
 
-        api() { // requires lib/feedback.js + <apis|app|config|get|settings>
+        api() { // requires lib/feedback.js + <apis|app|get|settings>
 
             // Show modal
             const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
@@ -1472,7 +1472,7 @@
                 document.addEventListener('keydown', modals.handlers.dismiss.key) ; modals.handlers.dismiss.key.added = true }
         },
 
-        replyLang() { // requires <app|config|env|log|modals|settings>
+        replyLang() { // requires <app|env|log|modals|settings>
             let replyLang = prompt(`${app.msgs.prompt_updateReplyLang}:`, app.config.replyLang)
             if (replyLang == null) return // user cancelled so do nothing
             else if (!/\d/.test(replyLang)) {

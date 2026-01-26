@@ -1,4 +1,4 @@
-// Requires components/chatbar.js + lib/dom.js + <app|config|env|sites>
+// Requires components/chatbar.js + lib/dom.js + <app|env|sites>
 
 window.styles = {
 
@@ -31,7 +31,7 @@ window.styles = {
 
     chatbar: {
         autoAppend: true,
-        get css() { // requires lib/chatbar.js + <config|env>
+        get css() { // requires lib/chatbar.js + <app|env>
             styles.calcWSbounds()
             const { site } = env, toWiden = app.config.widerChatbox && app.config.widescreen
             const wcbWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth )
@@ -52,7 +52,7 @@ window.styles = {
 
     toast: {
         autoAppend: true,
-        get css() { // requires <app|config|env>
+        get css() { // requires <app|env>
             return !app.config.toastMode ? '' : // flatten notifs into toast alerts
                 `div.${app.slug}.chatgpt-notif {
                     position: absolute ; left: 50% ; right: 21% !important ; text-align: center ;
@@ -66,7 +66,7 @@ window.styles = {
 
     tweaks: {
         autoAppend: true,
-        get css() { // requires <config|env>
+        get css() { // requires <app|env>
             const { site } = env, { [site]: { selectors }} = sites
             const tcbMinHeight = site == 'chatgpt' ? 25 : /* poe */ 50
             const tcbHeight = tcbMinHeight +(
@@ -106,7 +106,7 @@ window.styles = {
 
     widescreen: {
         autoAppend: false,
-        get css() { // requires <config|env>
+        get css() { // requires <app|env>
             styles.calcWSbounds()
             const { site } = env, outerDivSelector = styles.outerDivSelector
             const wsWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth )
