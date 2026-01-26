@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.1.26.3
+// @version                2026.1.26.4
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -214,6 +214,7 @@
     // Init SETTINGS
     window.settings = {
         load(...keys) {
+            app.config ??= {}
             keys.flat().forEach(key =>
                 app.config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
             function processKey(key, val) {
@@ -225,7 +226,8 @@
                 return val ?? (ctrl?.defaultVal ?? (ctrl?.type == 'slider' ? 100 : false))
             }
         },
-        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; app.config[key] = val },
+        save(key, val) {
+            app.config ??= {} ; GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; app.config[key] = val },
         typeIsEnabled(key) {
             const reInvertFlags = /disabled|hidden/i
             return reInvertFlags.test(key) // flag in control key name
