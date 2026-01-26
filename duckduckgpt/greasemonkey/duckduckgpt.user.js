@@ -1042,7 +1042,7 @@
                 app.div.querySelector(
                     `button[class*=standby]:has(svg.${ mode == 'get' ? 'send' : 'summarize' })`)?.click()
             }
-            feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+config[modeKey]]}`,
+            feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+app.config[modeKey]]}`,
                 undefined, conflictingModeToggled ? 2.75 : undefined) // +1s duration if conflicting mode notif shown
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
@@ -1160,7 +1160,7 @@
             if (mode == 'sticky' && prevStickyState == app.config.stickySidebar) return
             feedback.notify(
                 `${ app.msgs[`menuLabel_${mode}Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
-                    menus.toolbar.state.words[+config[configKeyName]]}`,
+                    menus.toolbar.state.words[+app.config[configKeyName]]}`,
                 undefined, anchorModeDisabled  ? 2.75 : undefined // +1s duration if conflicting mode notif shown
             )
         },

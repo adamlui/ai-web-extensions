@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.1.26.1
+// @version                2026.1.26.2
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -268,12 +268,12 @@
         about: { type: 'modal', icon: 'questionMarkCircle',
             label: `${app.msgs.menuLabel_about} ${app.name}...` }
     }})
-    Object.assign(config, { lineHeightRatio: 1.28, maxFontSize: 24, minFontSize: 11 })
+    Object.assign(app.config, { lineHeightRatio: 1.28, maxFontSize: 24, minFontSize: 11 })
     settings.load(Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized')
     if (!app.config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!app.config.fontSize) settings.save('fontSize', 14) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env
-    log.debug(`Success! config = ${log.prettifyObj(config)}`)
+    log.debug(`Success! config = ${log.prettifyObj(app.config)}`)
 
     // Define UI functions
 
@@ -653,7 +653,7 @@
                     app.config.fgAnimationsDisabled ? 'short' : 'long']
                 aboutStatusLabel.style.float = app.config.fgAnimationsDisabled ? 'right' : ''
             }
-            feedback.notify(`${settings.controls[configKey].label} ${menus.toolbar.state.words[+!config[configKey]]}`)
+            feedback.notify(`${settings.controls[configKey].label} ${menus.toolbar.state.words[+!app.config[configKey]]}`)
         },
 
         expandedMode(state = '') {
@@ -690,7 +690,7 @@
 
         proxyMode() {
             settings.save('proxyAPIenabled', !app.config.proxyAPIenabled)
-            feedback.notify(`${app.msgs.menuLabel_proxyAPImode} ${menus.toolbar.state.words[+config.proxyAPIenabled]}`)
+            feedback.notify(`${app.msgs.menuLabel_proxyAPImode} ${menus.toolbar.state.words[+app.config.proxyAPIenabled]}`)
             menus.toolbar.refresh()
             if (modals.settings.get()) { // update visual states of Settings toggles
                 const proxyToggle = document.querySelector('[id*=proxy] input'),

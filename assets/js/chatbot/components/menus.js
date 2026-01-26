@@ -153,9 +153,9 @@ window.menus = {
         register() { // requires <app|env|modals|settings|toggle>
 
             // Add Proxy API Mode toggle
-            const pmLabel = this.state.symbols[+config.proxyAPIenabled] + ' '
+            const pmLabel = this.state.symbols[+app.config.proxyAPIenabled] + ' '
                           + settings.controls.proxyAPIenabled.label + ' '
-                          + this.state.separator + this.state.words[+config.proxyAPIenabled]
+                          + this.state.separator + this.state.words[+app.config.proxyAPIenabled]
             this.entryIDs = [GM_registerMenuCommand(pmLabel, toggle.proxyMode,
                 env.scriptManager.supportsTooltips ? { title: settings.controls.proxyAPIenabled.helptip }
                                                    : undefined)]

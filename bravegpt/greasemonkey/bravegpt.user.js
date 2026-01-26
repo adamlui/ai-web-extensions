@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.1.26.1
+// @version               2026.1.26.2
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -415,12 +415,12 @@
         about: { type: 'modal', icon: 'questionMarkCircle',
             label: `${app.msgs.menuLabel_about} ${app.name}...` }
     }})
-    Object.assign(config, { lineHeightRatio: 1.313, maxFontSize: 24, minFontSize: 11  })
+    Object.assign(app.config, { lineHeightRatio: 1.313, maxFontSize: 24, minFontSize: 11  })
     settings.load(Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized')
     if (!app.config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!app.config.fontSize) settings.save('fontSize', 12.8791) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env
-    log.debug(`Success! config = ${log.prettifyObj(config)}`)
+    log.debug(`Success! config = ${log.prettifyObj(app.config)}`)
 
     // Define UI functions
 
@@ -998,7 +998,7 @@
                 const anchorToggle = document.querySelector('[id*=anchor] input')
                 if (anchorToggle.checked != app.config.anchored) modals.settings.toggle.switch(anchorToggle)
             }
-            feedback.notify(`${app.msgs.mode_anchor} ${menus.toolbar.state.words[+config.anchored]}`,
+            feedback.notify(`${app.msgs.mode_anchor} ${menus.toolbar.state.words[+app.config.anchored]}`,
                 undefined, sidebarModeToggled ? 2.75 : undefined) // +1s duration if conflicting mode notif shown
         },
 
@@ -1012,7 +1012,7 @@
                     app.config.fgAnimationsDisabled ? 'short' : 'long']
                 aboutStatusLabel.style.float = app.config.fgAnimationsDisabled ? 'right' : ''
             }
-            feedback.notify(`${settings.controls[configKey].label} ${menus.toolbar.state.words[+!config[configKey]]}`)
+            feedback.notify(`${settings.controls[configKey].label} ${menus.toolbar.state.words[+!app.config[configKey]]}`)
         },
 
         autoGen(mode) {
@@ -1060,7 +1060,7 @@
                     if (settings.typeIsEnabled(`auto${log.toTitleCase(mode)}${ mode == 'get' ? 'Disabled' : '' }`)) {
                         toggle.autoGen(mode) ; autoGenToggled = true }
                 })
-            feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+config[modeKey]]}`,
+            feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+app.config[modeKey]]}`,
                 undefined, autoGenToggled ? 2.75 : undefined) // +1s duration if conflicting mode notif shown)
             if (modals.settings.get()) { // update visual state of Settings toggle
                 const modeToggle = document.querySelector(`[id*=${modeKey}] input`)
@@ -1088,7 +1088,7 @@
 
         proxyMode() {
             settings.save('proxyAPIenabled', !app.config.proxyAPIenabled)
-            feedback.notify(`${app.msgs.menuLabel_proxyAPImode} ${menus.toolbar.state.words[+config.proxyAPIenabled]}`)
+            feedback.notify(`${app.msgs.menuLabel_proxyAPImode} ${menus.toolbar.state.words[+app.config.proxyAPIenabled]}`)
             menus.toolbar.refresh()
             if (modals.settings.get()) { // update visual states of Settings toggles
                 const proxyToggle = document.querySelector('[id*=proxy] input'),
@@ -1147,7 +1147,7 @@
             if (mode == 'sticky' && prevStickyState == app.config.stickySidebar) return
             feedback.notify(
                 `${ app.msgs[`menuLabel_${mode}Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
-                    menus.toolbar.state.words[+config[configKeyName]]}`,
+                    menus.toolbar.state.words[+app.config[configKeyName]]}`,
                 undefined, anchorModeDisabled  ? 2.75 : undefined // +1s duration if conflicting mode notif shown
             )
         },
