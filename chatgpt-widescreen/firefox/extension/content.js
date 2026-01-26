@@ -137,7 +137,7 @@
     })))
 
     // Restore PREV SESSION's state
-    if (!app.config.extensionDisabled && !config[`${env.site}Disabled`]) {
+    if (!app.config.extensionDisabled && !app.config[`${env.site}Disabled`]) {
         if (app.config.btnsVisible) buttons.insert()
         if (app.config.widescreen) toggleMode('widescreen', true)
         if (app.config.fullWindow && sites[env.site].hasSidebar) {

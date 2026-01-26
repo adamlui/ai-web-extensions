@@ -48,7 +48,7 @@ window.sync = {
                       : mode == 'fullWindow' ? await ui.isFullWin()
                       : chatgpt.isFullScreen() )
         settings.save(mode, state) ; buttons.update.svg(mode)
-        if (!app.config.extensionDisabled && !config[`${env.site}Disabled`]) { // tweak UI
+        if (!app.config.extensionDisabled && !app.config[`${env.site}Disabled`]) { // tweak UI
             if (env.site == 'chatgpt') setTimeout(() => chatbar.tweak(), // update inner width
                 mode == 'fullWindow' && app.config.widescreen && app.config.widerChatbox ?
                     111 : 0) // delay if toggled to/from active WCB to avoid wrong width

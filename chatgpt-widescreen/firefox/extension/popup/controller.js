@@ -121,7 +121,7 @@
                 category: () => toggleCategorySettingsVisiblity({ key: entryData.key }),
                 toggle: () => {
                     entry.leftElem.classList.toggle('on')
-                    settings.save(entryData.key, !config[entryData.key])
+                    settings.save(entryData.key, !app.config[entryData.key])
                     sync.configToUI({ updatedKey: entryData.key })
                     requestAnimationFrame(() => notify(`${entryData.label} ${i18n.getMsg(`state_${
                         settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`))
@@ -337,7 +337,7 @@
         ssEntry.switch.append(ssEntry.track) ; ssEntry.label.textContent = sites[site].urls.homepage
         ssEntry.switchLabelDiv.append(ssEntry.switch, ssEntry.label) ; ssEntry.faviconDiv.append(ssEntry.favicon)
         ssEntry.div.append(ssEntry.switchLabelDiv, ssEntry.faviconDiv) ; siteSettings.entriesDiv.append(ssEntry.div)
-        await settings.load(`${site}Disabled`) ; ssEntry.switch.classList.toggle('on', !config[`${site}Disabled`])
+        await settings.load(`${site}Disabled`) ; ssEntry.switch.classList.toggle('on', !app.config[`${site}Disabled`])
         if (env.site == site) {
             env.siteDisabled = app.config[`${site}Disabled`] // to auto-expand toggles later if true
             if (app.config[`${site}Disabled`]) siteSettings.labelDiv.classList.add('anchored')
@@ -347,7 +347,7 @@
         ssEntry.switchLabelDiv.onclick = () => { // toggle site setting
             env.extensionWasDisabled = extensionIsDisabled()
             ssEntry.switch.classList.toggle('on')
-            settings.save(`${site}Disabled`, !config[`${site}Disabled`])
+            settings.save(`${site}Disabled`, !app.config[`${site}Disabled`])
             sync.configToUI({ updatedKey: `${site}Disabled` })
             siteSettings.labelDiv.classList.toggle('anchored', env.site == site && app.config[`${site}Disabled`])
             if (env.site == site) { // fade/notify if setting of active site toggled

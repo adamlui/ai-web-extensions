@@ -157,7 +157,7 @@ window.settings = {
         const reInvertFlags = /disabled|hidden/i
         return reInvertFlags.test(key) // flag in control key name
             && !reInvertFlags.test(this.msgKeys.get(this.controls[key]?.label) || '') // but not in label msg key name
-                ? !config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
+                ? !app.config[key] : app.config[key] // so invert since flag reps opposite type state, else don't
     },
 
     load(...keys) {

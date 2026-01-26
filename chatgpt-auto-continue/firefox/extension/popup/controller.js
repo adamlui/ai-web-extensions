@@ -116,7 +116,7 @@
                 category: () => toggleCategorySettingsVisiblity({ key: entryData.key }),
                 toggle: () => {
                     entry.leftElem.classList.toggle('on')
-                    settings.save(entryData.key, !config[entryData.key])
+                    settings.save(entryData.key, !app.config[entryData.key])
                     sync.configToUI({ updatedKey: entryData.key })
                     requestAnimationFrame(() => notify(`${entryData.label} ${i18n.getMsg(`state_${
                         settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`))
