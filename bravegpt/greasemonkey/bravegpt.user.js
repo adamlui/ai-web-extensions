@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.1.21
+// @version               2026.1.26
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1689,7 +1689,9 @@
                 saveAppDiv() // to fight Brave mutations
 
                 // Auto-scroll if active
-                if (app.config.autoScroll && !env.browser.isMobile && app.config.proxyAPIenabled && !app.config.streamingDisabled) {
+                if (app.config.autoScroll && !env.browser.isMobile && app.config.proxyAPIenabled
+                    && !app.config.streamingDisabled
+                ) {
                     if (app.config.stickySidebar || app.config.anchored) replyPre.scrollTop = replyPre.scrollHeight
                     scrollBy({
                         top: app.div.querySelector('footer').getBoundingClientRect().bottom - innerHeight + 13 })
@@ -1735,7 +1737,8 @@
                                                            + '.reply-bubble')) // mobile
             // Init thumb pos
             setTimeout(() => {
-                const iniLeft = (app.config.fontSize - app.config.minFontSize) / (app.config.maxFontSize - app.config.minFontSize)
+                const iniLeft = (app.config.fontSize - app.config.minFontSize)
+                              / (app.config.maxFontSize - app.config.minFontSize)
                               * (slider.offsetWidth - sliderThumb.offsetWidth) // slider width
                 sliderThumb.style.left = iniLeft + 'px'
             }, fontSizeSlider.fadeInDelay) // to ensure visibility for accurate dimension calcs
@@ -1782,9 +1785,10 @@
                 sliderThumb.style.left = newLeft + 'px'
 
                 // Adjust font size based on thumb position
-                const replyPre = app.div.querySelector('.reply-pre'),
-                      fontSizePercent = newLeft / sliderWidth,
-                      fontSize = app.config.minFontSize + fontSizePercent * (app.config.maxFontSize - app.config.minFontSize)
+                const replyPre = app.div.querySelector('.reply-pre')
+                const fontSizePercent = newLeft / sliderWidth
+                const fontSize = app.config.minFontSize + fontSizePercent *(
+                        app.config.maxFontSize - app.config.minFontSize)
                 replyPre.style.fontSize = fontSize + 'px'
                 replyPre.style.lineHeight = fontSize * app.config.lineHeightRatio + 'px'
                 settings.save('fontSize', fontSize)

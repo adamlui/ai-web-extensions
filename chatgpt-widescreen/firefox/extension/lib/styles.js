@@ -109,7 +109,8 @@ window.styles = {
         get css() { // requires <config|env>
             styles.calcWSbounds()
             const { site } = env, outerDivSelector = styles.outerDivSelector
-            const wsWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth ) * app.config.widescreenWidth /100
+            const wsWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth )
+                          * app.config.widescreenWidth /100
             return app.config.extensionDisabled || app.config[`${site}Disabled`] ? '' : {
                 chatgpt: `
                     ${outerDivSelector} { max-width: ${wsWidth}px !important } /* widen outer div */
