@@ -28,7 +28,7 @@
           "yearInReview": "div[class*=hidden-until-loaded]:has(video[src*=bubble-square-2025])" // https://imgur.com/a/O7km4JE
         },
         "btns": {
-          "getPlus" : "div:has(> button path[d^=\"M17.665 10C17.665\"])" // https://imgur.com/a/3nmJ7s6
+          "getPlus" : "div[class*=\"lg:block\"]:has(button > svg > use[href$=\".svg#102c34\"])" // https://imgur.com/a/3nmJ7s6
         },
         "modals": {
           "deepResearch": "div[data-testid=modal-deep-research-mini-nux]", // https://i.imgur.com/3GLab1m.png
