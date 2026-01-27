@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.1.26.8
+// @version                2026.1.27
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -194,7 +194,7 @@
 // @connect                duckduckgpt.com
 // @connect                fanyi.sogou.com
 // @connect                raw.githubusercontent.com
-// @require                https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.8.5/dist/chatgpt.min.js#sha256-0NMJgflkEQlWbXxtN4SD+wogV6ss2TY6JAu4A0hmM0k=
+// @require                https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.9.0/dist/chatgpt.min.js#sha256-XyrLEk81vg4/zgOeYDWtugRQKJvrWEefACp0EfwMVHE=
 // @require                https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require                https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/buttons.js#sha256-bam0MF6WM+Lyt5Wgop3rfHPYZHmOPXq4ZxbUXort2+M=
