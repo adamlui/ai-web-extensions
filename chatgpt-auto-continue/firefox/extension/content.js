@@ -21,6 +21,7 @@
         'components/modals.js', 'lib/i18n.js', 'lib/chatgpt.min.js', 'lib/css.min.js', 'lib/dom.min.js',
         'lib/feedback.js', 'lib/settings.js', 'lib/styles.js', 'lib/sync.js', 'lib/ui.js'
     ]) await import(chrome.runtime.getURL(resource))
+
     // Init ENV context
     window.env = { browser: { isMobile: chatgpt.browser.isMobile() }, ui: { scheme: ui.getScheme() }}
     Object.assign(env.browser, { get isCompact() { return innerWidth <= 480 }})
