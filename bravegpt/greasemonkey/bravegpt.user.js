@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.1.26.8
+// @version               2026.1.26.9
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -415,7 +415,7 @@
             label: `${app.msgs.menuLabel_about} ${app.name}...` }
     }})
     Object.assign(app.config, { lineHeightRatio: 1.313, maxFontSize: 24, minFontSize: 11  })
-    settings.load(Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized', 'notFirstRun')
+    settings.load(Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized', 'aiSafetyWarned')
     if (!app.config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!app.config.fontSize) settings.save('fontSize', 12.8791) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env
@@ -2714,7 +2714,7 @@
     // Init UI props
     env.ui = { app: { scheme: app.config.scheme || ui.getScheme() }, site: { scheme: ui.getScheme() }}
 
-    if (!app.config.notFirstRun) {
+    if (!app.config.aiSafetyWarned) {
         modals.alert('⚠️ Important Notice:',
             `<b>${app.name}</b> is powered by AI technology. While designed to be helpful:\n\n`
                 + '• <b>AI can make mistakes</b> - Always verify important information\n'
@@ -2723,7 +2723,7 @@
                 + 'Use responsibly!',
             null, null, 388
         )
-        settings.save('notFirstRun', true)
+        settings.save('aiSafetyWarned', true)
     }
 
     // Create/ID/classify/listenerize/stylize APP container
