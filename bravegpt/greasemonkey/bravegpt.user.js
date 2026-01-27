@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.1.26.6
+// @version               2026.1.26.7
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -333,9 +333,9 @@
     apis.AIchatOS.userID = '#/chat/' + Date.now()
 
     // Init SETTINGS
+    app.config ??= {}
     window.settings = {
         load(...keys) {
-            app.config ??= {}
             keys.flat().forEach(key =>
                 app.config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
             function processKey(key, val) {
@@ -347,8 +347,7 @@
                 return val ?? (ctrl?.defaultVal ?? (ctrl?.type == 'slider' ? 100 : false))
             }
         },
-        save(key, val) {
-            app.config ??= {} ; GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; app.config[key] = val },
+        save(key, val) { GM_setValue(`${app.configKeyPrefix}_${key}`, val) ; app.config[key] = val },
         typeIsEnabled(key) {
             const reInvertFlags = /disabled|hidden/i
             return reInvertFlags.test(key) // flag in control key name
