@@ -14,15 +14,14 @@ export default [
             ecmaVersion: 'latest', sourceType: 'script',
             globals: {
                 ...globals.browser, ...globals.greasemonkey, ...globals.node, api: 'readonly', apis: 'writable',
-                app: 'writable', buttons: 'writable', chatgpt: 'readonly', chrome: 'readonly', config: 'writable',
-                CryptoJS: 'readonly', css: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly',
-                fontSizeSlider: 'writable', get: 'readonly', GM_cookie: 'readonly', hljs: 'readonly', icons: 'readonly',
-                inputEvents: 'readonly', ipv4: 'readonly', JSON5: 'readonly', log: 'readonly', logos: 'readonly',
-                marked: 'readonly', menus: 'writable', modals: 'readonly', prompts: 'readonly',
-                renderMathInElement: 'readonly', replyBubble: 'writable', session: 'readonly', settings: 'writable',
-                show: 'readonly', themes: 'readonly', toggle: 'readonly', Tone: 'readonly', toolbarMenu: 'writable',
-                tooltip: 'writable', ui: 'readonly', update: 'readonly', updateCheck: 'readonly',
-                userscript: 'readonly', xhr: 'writable'
+                app: 'writable', buttons: 'writable', chatgpt: 'readonly', chrome: 'readonly', CryptoJS: 'readonly',
+                css: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly', fontSizeSlider: 'writable',
+                get: 'readonly', GM_cookie: 'readonly', hljs: 'readonly', icons: 'readonly', inputEvents: 'readonly',
+                ipv4: 'readonly', JSON5: 'readonly', log: 'readonly', logos: 'readonly', marked: 'readonly',
+                menus: 'writable', modals: 'readonly', prompts: 'readonly', renderMathInElement: 'readonly',
+                replyBubble: 'writable', session: 'readonly', settings: 'writable', show: 'readonly',
+                themes: 'readonly', toggle: 'readonly', Tone: 'readonly', toolbarMenu: 'writable', tooltip: 'writable',
+                ui: 'readonly', update: 'readonly', updateCheck: 'readonly', userscript: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
