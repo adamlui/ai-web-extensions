@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.1.26.6
+// @version                2026.1.26.7
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2722,7 +2722,6 @@
     }
 
     if (!app.config.notFirstRun) {
-        if (env.browser.isMobile) settings.save('autoGet', true) // reverse default auto-get disabled if mobile
         modals.alert('⚠️ Important Notice:',
             `<b>${app.name}</b> is powered by AI technology. While designed to be helpful:\n\n`
                 + '• <b>AI can make mistakes</b> - Always verify important information\n'
