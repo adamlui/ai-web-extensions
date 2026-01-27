@@ -1,6 +1,5 @@
 // Requires app
 
-app.config ??= {}
 window.settings = {
 
     categories: {
@@ -71,6 +70,7 @@ window.settings = {
     },
 
     typeIsEnabled(key) { // for menu labels + notifs to return ON/OFF for type w/o suffix
+        app.config ??= {}
         const reInvertFlags = /disabled|hidden/i
         return reInvertFlags.test(key) // flag in control key name
             && !reInvertFlags.test(this.msgKeys.get(this.controls[key]?.label) || '') // but not in label msg key name
@@ -78,6 +78,7 @@ window.settings = {
     },
 
     load(...keys) {
+        app.config ??= {}
         keys = keys.flat() // flatten array args nested by spread operator
         if (typeof GM_info != 'undefined') // synchronously load from userscript manager storage
             keys.forEach(key => app.config[key] = processKey(key, GM_getValue(`${app.configKeyPrefix}_${key}`, undefined)))
@@ -95,6 +96,7 @@ window.settings = {
     },
 
     save(key, val) {
+        app.config ??= {}
         if (typeof GM_info != 'undefined') // save to userscript manager storage
             GM_setValue(`${app.configKeyPrefix}_${key}`, val)
         else // save to browser extension storage
