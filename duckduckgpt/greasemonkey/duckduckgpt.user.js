@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.1.26.7
+// @version                2026.1.26.8
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -420,7 +420,7 @@
             label: `${app.msgs.menuLabel_about} ${app.name}...` }
     }})
     Object.assign(app.config, { lineHeightRatio: 1.28, maxFontSize: 24, minFontSize: 11 })
-    settings.load(Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized', 'notFirstRun')
+    settings.load(Object.keys(settings.controls), 'expanded', 'fontSize', 'minimized', 'aiSafetyWarned')
     if (!app.config.replyLang) settings.save('replyLang', env.browser.language) // init reply language if unset
     if (!app.config.fontSize) settings.save('fontSize', 14.948771158854168) // init reply font size if unset
     if (!env.scriptManager.supportsStreaming) settings.save('streamingDisabled', true) // disable Streaming in unspported env
@@ -2721,7 +2721,7 @@
         site: { isCentered: !!document.documentElement.className.includes('center'), scheme: ui.getScheme() }
     }
 
-    if (!app.config.notFirstRun) {
+    if (!app.config.aiSafetyWarned) {
         modals.alert('⚠️ Important Notice:',
             `<b>${app.name}</b> is powered by AI technology. While designed to be helpful:\n\n`
                 + '• <b>AI can make mistakes</b> - Always verify important information\n'
@@ -2730,7 +2730,7 @@
                 + 'Use responsibly!',
             null, null, 388
         )
-        settings.save('notFirstRun', true)
+        settings.save('aiSafetyWarned', true)
     }
 
     // Create/ID/classify/listenerize/stylize APP container
