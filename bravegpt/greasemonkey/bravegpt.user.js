@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.1.27
+// @version               2026.1.27.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -330,7 +330,7 @@
             Object.entries(JSON5.parse(responseText)).filter(([, api]) => !api.disabled))),
         url: `${app.urls.aiwebAssets}/data/ai-chat-apis.json5`
     })))
-    apis.AIchatOS.userID = '#/chat/' + Date.now()
+    apis.AIchatOS.userID = `#/chat/${Date.now()}`
 
     // Init SETTINGS
     app.config ??= {}
