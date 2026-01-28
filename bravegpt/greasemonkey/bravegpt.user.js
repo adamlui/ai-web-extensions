@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.1.27.2
+// @version               2026.1.27.3
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -2756,7 +2756,6 @@
     app.footerContent = dom.create.anchor('#', app.msgs.link_shareFeedback, { target: '_self', class: braveClassList })
     app.footerContent.onclick = () => modals.open('feedback')
 
-    apis.AIchatOS.userID = `#/chat/${Date.now()}`
     // AUTO-GEN reply or show STANDBY mode
     app.msgChain = [] ; const searchQuery = new URL(location.href).searchParams.get('q')
     if (!app.config.autoGetDisabled || app.config.autoSummarize // Auto-Gen on
