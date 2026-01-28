@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.1.27.2
+// @version                2026.1.27.3
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2768,12 +2768,6 @@
 
     // REPLACE appDivParent max-width w/ min-width for better UI
     if (!env.browser.isMobile) Object.assign(app.divParent.div.style, { maxWidth: '', minWidth: '448px' })
-
-    // REFERRALIZE links to support author
-    setTimeout(() => document.querySelectorAll('a[href^="https://www.amazon."]').forEach(anchor => {
-        const url = new URL(anchor.href) ; url.searchParams.set('tag', 'kudo-ai-20')
-        anchor.href = url.toString()
-    }), 1500)
 
     // AUTO-GEN reply or show STANDBY mode
     app.msgChain = [] ; const searchQuery = new URL(location.href).searchParams.get('q')
