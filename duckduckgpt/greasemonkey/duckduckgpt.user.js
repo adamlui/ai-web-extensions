@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.1.27
+// @version                2026.1.27.1
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -2362,16 +2362,16 @@
                                 innerDiv.innerHTML = modals.settings.aboutContent[
                                     app.config.fgAnimationsDisabled ? 'short' : 'long']
                                 innerDiv.style.float = app.config.fgAnimationsDisabled ? 'right' : ''
-                                app.configStatusSpan.append(innerDiv) ; settingEntry.onclick = () => modals.open('about')
+                                configStatusSpan.append(innerDiv) ; settingEntry.onclick = () => modals.open('about')
                             },
                             preferredAPI: () => {
-                                app.configStatusSpan.textContent = app.config.preferredAPI || app.msgs.menuLabel_random
+                                configStatusSpan.textContent = app.config.preferredAPI || app.msgs.menuLabel_random
                                 settingEntry.onclick = () => modals.open('api')
                                 settingEntry.classList.toggle('active', app.config.proxyAPIenabled)
                                 settingEntry.style.pointerEvents = app.config.proxyAPIenabled ? '' : 'none'
                             },
                             replyLang: () => {
-                                app.configStatusSpan.textContent = app.config.replyLang
+                                configStatusSpan.textContent = app.config.replyLang
                                 settingEntry.onclick = () => modals.open('replyLang')
                             },
                             scheme: () => {
