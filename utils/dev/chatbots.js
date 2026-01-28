@@ -9,11 +9,11 @@
 
     // Import LIBS
     const { resolve, dirname } = require('path'),
-        spawn = require('cross-spawn')
+            spawn = require('cross-spawn')
 
     // Init UI COLORS
     const br = '\x1b[91m', // bright red
-        nc = '\x1b[0m'   // no color
+          nc = '\x1b[0m'   // no color
 
     // Init PATHS
     const repoRoot = (dir => {
