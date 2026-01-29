@@ -18,8 +18,6 @@
     <img alt="[由 Google 推荐]" height=31 src="https://img.shields.io/badge/%E7%B2%BE%E9%80%89%E8%80%85-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.chatgptwidescreen.com/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
     <img alt="[Chrome 网上应用店评分]" height=31 src="https://img.shields.io/chrome-web-store/stars/jgnjpnmofkalfliddjelaciggjgnphgm?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></img></a>
-<a href="https://ff.chatgptwidescreen.com">
-    <img alt="[曾 #1 热门 ChatGPT Firefox 插件]" height=31 src="https://img.shields.io/badge/%E6%9B%BE%E7%83%AD%E9%97%A8-%231_ChatGPT_Firefox_%E6%8F%92%E4%BB%B6-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.chatgptwidescreen.com/reviews">
     <img alt="[Mozilla Add-ons 评级]" height=31 src="https://img.shields.io/amo/stars/chatgpt-widescreen?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></img></a>
 <a href="LICENSE.md">

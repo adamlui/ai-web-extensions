@@ -18,8 +18,6 @@
     <img alt="[Featured by Google]" height=31 src="https://img.shields.io/badge/Featured_by-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://chrome.chatgptwidescreen.com/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
     <img alt="[Chrome Web Store Ratings]" height=31 src="https://img.shields.io/chrome-web-store/stars/jgnjpnmofkalfliddjelaciggjgnphgm?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></img></a>
-<a href="https://ff.chatgptwidescreen.com">
-    <img alt="[Trended #1 ChatGPT Firefox Add-on]" height=31 src="https://img.shields.io/badge/Trended-%231_ChatGPT_Add--on-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
 <a href="https://ff.chatgptwidescreen.com/reviews">
     <img alt="[Mozilla Add-ons Ratings]" height=31 src="https://img.shields.io/amo/stars/chatgpt-widescreen?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></img></a>
 <a href="../LICENSE.md">
