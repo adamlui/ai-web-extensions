@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.1.28
+// @version             2026.2.5
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -339,7 +339,7 @@
         msgs: await new Promise(resolve => {
             const msgHostDir = `${app.urls.resourceHost}/chromium/extension/_locales/`,
                   msgLocaleDir = `${ env.browser.language ? env.browser.language.replace('-', '_') : 'en' }/`
-            let msgHref = `${ msgHostDir + msgLocaleDir }messages.json`, msgXHRtries = 0
+            let msgHref = `${ msgHostDir + msgLocaleDir }messages.json`, msgFetchesTried = 0
             function fetchMsgs() { xhr({ method: 'GET', url: msgHref, onload: handleMsgs })}
             function handleMsgs(resp) {
                 try { // to return localized messages.json
@@ -349,8 +349,8 @@
                             flatMsgs[key] = msgs[key].message
                     resolve(flatMsgs)
                 } catch (err) { // if bad response
-                    msgXHRtries++ ; if (msgXHRtries == 3) return resolve({}) // try original/region-stripped/EN only
-                    msgHref = env.browser.language.includes('-') && msgXHRtries == 1 ? // if regional lang on 1st try...
+                    msgFetchesTried++ ; if (msgFetchesTried == 3) return resolve({}) // try original/region-stripped/EN only
+                    msgHref = env.browser.language.includes('-') && msgFetchesTried == 1 ? // if regional lang on 1st try...
                         msgHref.replace(/(_locales\/[^_]+)_[^_]+(\/)/, '$1$2') // ...strip region before retrying
                             : `${msgHostDir}en/messages.json` // else use default English messages
                     fetchMsgs()
