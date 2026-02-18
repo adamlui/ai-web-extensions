@@ -26,13 +26,13 @@
     "bump:res": "node utils/bump/resources"
   },
   "devDependencies": {
-    "@eslint/json": "^1.0.0",
+    "@eslint/json": "^1.0.1",
     "@eslint/markdown": "^7.5.1",
-    "@stylistic/eslint-plugin": "^5.7.1",
-    "eslint": "^9.39.2",
+    "@stylistic/eslint-plugin": "^5.8.0",
+    "eslint": "^10.0.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-regexp": "^3.0.0",
     "husky": "^9.1.7",
-    "ssri": "^13.0.0"
+    "ssri": "^13.0.1"
   }
 }

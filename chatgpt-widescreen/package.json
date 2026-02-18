@@ -49,18 +49,18 @@
     "bump:firefox": "node utils/bump/extension-manifests --ff"
   },
   "devDependencies": {
-    "@adamlui/minify.js": "^2.2.1",
+    "@adamlui/minify.js": "^2.3.0",
     "@eslint/css": "^0.14.1",
-    "@eslint/json": "^1.0.0",
+    "@eslint/json": "^1.0.1",
     "@eslint/markdown": "^7.5.1",
-    "@html-eslint/eslint-plugin": "^0.54.2",
-    "@html-eslint/parser": "^0.54.0",
-    "@stylistic/eslint-plugin": "^5.7.1",
-    "eslint": "^9.39.2",
+    "@html-eslint/eslint-plugin": "^0.55.0",
+    "@html-eslint/parser": "^0.55.0",
+    "@stylistic/eslint-plugin": "^5.8.0",
+    "eslint": "^10.0.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-regexp": "^3.0.0",
     "http-server": "^14.1.1",
     "husky": "^9.1.7",
-    "ssri": "^13.0.0"
+    "ssri": "^13.0.1"
   }
 }
