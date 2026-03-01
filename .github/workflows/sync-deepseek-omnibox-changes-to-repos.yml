@@ -61,7 +61,7 @@ jobs:
 
       - name: Sync deepseek-omnibox/ to adamlui/deepseek-omnibox/
         run: |
-          rsync -avhr --delete --filter='P /.*' \
+          rsync -avhc --delete --filter='P /.*' \
             ${{ github.workspace }}/adamlui/ai-web-extensions/deepseek-omnibox/ \
             ${{ github.workspace }}/adamlui/deepseek-omnibox/
 

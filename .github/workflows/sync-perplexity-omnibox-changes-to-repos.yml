@@ -31,7 +31,7 @@ jobs:
 
       - name: Sync perplexity-omnibox/ to adamlui/perplexity-omnibox/
         run: |
-          rsync -avhr --delete --filter='P /.*' \
+          rsync -avhc --delete --filter='P /.*' \
             ${{ github.workspace }}/adamlui/ai-web-extensions/perplexity-omnibox/ \
             ${{ github.workspace }}/adamlui/perplexity-omnibox/
 

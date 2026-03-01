@@ -75,13 +75,13 @@ jobs:
 
       - name: Sync googlegpt/ to KudoAI/googlegpt/
         run: |
-          rsync -avhr --delete --filter='P /.*' \
+          rsync -avhc --delete --filter='P /.*' \
             ${{ github.workspace }}/adamlui/ai-web-extensions/googlegpt/ \
             ${{ github.workspace }}/KudoAI/googlegpt/
 
       - name: Sync googlegpt/greasemonkey/ to adamlui/userscripts/chatgpt/googlegpt/
         run: |
-          rsync -avhr --delete \
+          rsync -avhc --delete \
             ${{ github.workspace }}/adamlui/ai-web-extensions/googlegpt/greasemonkey/ \
             ${{ github.workspace }}/adamlui/userscripts/chatgpt/googlegpt/
 

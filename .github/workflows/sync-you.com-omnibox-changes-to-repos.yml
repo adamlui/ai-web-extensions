@@ -61,7 +61,7 @@ jobs:
 
       - name: Sync you.com-omnibox/ to adamlui/you.com-omnibox/
         run: |
-          rsync -avhr --delete --filter='P /.*' \
+          rsync -avhc --delete --filter='P /.*' \
             ${{ github.workspace }}/adamlui/ai-web-extensions/you.com-omnibox/ \
             ${{ github.workspace }}/adamlui/you.com-omnibox/
 

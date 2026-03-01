@@ -61,7 +61,7 @@ jobs:
 
       - name: Sync phind-omnibox/ to adamlui/phind-omnibox/
         run: |
-          rsync -avhr --delete --filter='P /.*' \
+          rsync -avhc --delete --filter='P /.*' \
             ${{ github.workspace }}/adamlui/ai-web-extensions/phind-omnibox/ \
             ${{ github.workspace }}/adamlui/phind-omnibox/
 

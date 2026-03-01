@@ -61,7 +61,7 @@ jobs:
 
       - name: Sync chatgpt-omnibox/ to adamlui/chatgpt-omnibox/
         run: |
-          rsync -avhr --delete --filter='P /.*' \
+          rsync -avhc --delete --filter='P /.*' \
             ${{ github.workspace }}/adamlui/ai-web-extensions/chatgpt-omnibox/ \
             ${{ github.workspace }}/adamlui/chatgpt-omnibox/
 

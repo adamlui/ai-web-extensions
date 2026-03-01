@@ -61,7 +61,7 @@ jobs:
 
       - name: Sync brave-omnibox/ to adamlui/brave-omnibox/
         run: |
-          rsync -avhr --delete --filter='P /.*' \
+          rsync -avhc --delete --filter='P /.*' \
             ${{ github.workspace }}/adamlui/ai-web-extensions/brave-omnibox/ \
             ${{ github.workspace }}/adamlui/brave-omnibox/
 

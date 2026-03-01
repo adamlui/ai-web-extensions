@@ -75,13 +75,13 @@ jobs:
 
       - name: Sync chatgpt-auto-talk/ to adamlui/chatgpt-auto-talk/
         run: |
-          rsync -avhr --delete --filter='P /.*' \
+          rsync -avhc --delete --filter='P /.*' \
             ${{ github.workspace }}/adamlui/ai-web-extensions/chatgpt-auto-talk/ \
             ${{ github.workspace }}/adamlui/chatgpt-auto-talk/
 
       - name: Sync chatgpt-auto-talk/greasemonkey/ to adamlui/userscripts/chatgpt/chatgpt-auto-talk/
         run: |
-          rsync -avhr --delete \
+          rsync -avhc --delete \
             ${{ github.workspace }}/adamlui/ai-web-extensions/chatgpt-auto-talk/greasemonkey/ \
             ${{ github.workspace }}/adamlui/userscripts/chatgpt/chatgpt-auto-talk/
 
