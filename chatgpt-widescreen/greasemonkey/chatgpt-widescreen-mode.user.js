@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.2.5
+// @version             2026.3.5
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -337,10 +337,10 @@
             onload: ({ responseText }) => resolve(JSON.parse(responseText))
         })),
         msgs: await new Promise(resolve => {
-            const msgHostDir = `${app.urls.resourceHost}/chromium/extension/_locales/`,
-                  msgLocaleDir = `${ env.browser.language ? env.browser.language.replace('-', '_') : 'en' }/`
-            let msgHref = `${ msgHostDir + msgLocaleDir }messages.json`, msgFetchesTried = 0
-            function fetchMsgs() { xhr({ method: 'GET', url: msgHref, onload: handleMsgs })}
+            const msgBaseURL = `${app.urls.resourceHost}/chromium/extension/_locales`,
+                  locale = `${ env.browser.language ? env.browser.language.replace('-', '_') : 'en' }`
+            let msgURL = `${msgBaseURL}/${locale}/messages.json`, msgFetchesTried = 0
+            function fetchMsgs() { xhr({ method: 'GET', url: msgURL, onload: handleMsgs })}
             function handleMsgs(resp) {
                 try { // to return localized messages.json
                     const msgs = JSON.parse(resp.responseText), flatMsgs = {}
@@ -350,9 +350,9 @@
                     resolve(flatMsgs)
                 } catch (err) { // if bad response
                     msgFetchesTried++ ; if (msgFetchesTried == 3) return resolve({}) // try original/region-stripped/EN only
-                    msgHref = env.browser.language.includes('-') && msgFetchesTried == 1 ? // if regional lang on 1st try...
-                        msgHref.replace(/(_locales\/[^_]+)_[^_]+(\/)/, '$1$2') // ...strip region before retrying
-                            : `${msgHostDir}en/messages.json` // else use default English messages
+                    msgURL = env.browser.language.includes('-') && msgFetchesTried == 1 ? // if regional lang on 1st try...
+                        msgURL.replace(/(_locales\/[^_]+)_[^_]+(\/)/, '$1$2') // ...strip region before retrying
+                            : `${msgBaseURL}/en/messages.json` // else use default English messages
                     fetchMsgs()
                 }
             }
