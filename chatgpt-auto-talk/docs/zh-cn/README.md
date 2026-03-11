@@ -16,7 +16,7 @@
 <a href="LICENSE.md">
     <img height=31 alt="[许可证: MIT]" src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/adamlui/chatgpt-auto-talk/blob/main/greasemonkey/chatgpt-auto-talk.user.js">
-    <img height=32 src="https://img.shields.io/github/size/adamlui/chatgpt-auto-talk/greasemonkey/chatgpt-auto-talk.user.js?label=%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></img></a>
+    <img height=32 src="https://img.shields.io/github/size/adamlui/chatgpt-auto-talk/greasemonkey/chatgpt-auto-talk.user.js?label=%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-auto-talk">
     <img height=31 alt="[CodeFactor 等级]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-auto-talk?label=%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_auto_talk&utm_content=github_shield">
@@ -79,30 +79,30 @@ ChatGPT 自动谈话 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 该项目的存在得益于以下贡献者的代码、测试、问题、翻译和想法：
 
 <a href="https://github.com/adamlui">
-    <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2024.7.16"></img></a>
+    <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2024.7.16"></a>
 <a href="https://github.com/MLBott">
-    <img width=50 title="@MLBott" src="https://avatars.githubusercontent.com/u/7270299?first-contrib=2024.9.26-play-btn-selector-changed-alert"></img></a>
+    <img width=50 title="@MLBott" src="https://avatars.githubusercontent.com/u/7270299?first-contrib=2024.9.26-play-btn-selector-changed-alert"></a>
 <a href="https://github.com/9romise">
-    <img width=50 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></img></a>
+    <img width=50 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></a>
 <a href="https://github.com/RoonMoonlight">
-    <img width=50 title="@RoonMoonlight" src="https://avatars.githubusercontent.com/u/25527589?first-contrib=2025.6.19-reported-stopped-working"></img></a>
+    <img width=50 title="@RoonMoonlight" src="https://avatars.githubusercontent.com/u/25527589?first-contrib=2025.6.19-reported-stopped-working"></a>
 <a href="https://github.com/zkisaboss">
-    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></img></a>
+    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></a>
 <a href="https://github.com/nhan000">
-    <img width=50 title="@nhan000" src="https://avatars.githubusercontent.com/u/85216095?first-contrib=2025.9.23-reported-stopped-working"></img></a>
+    <img width=50 title="@nhan000" src="https://avatars.githubusercontent.com/u/85216095?first-contrib=2025.9.23-reported-stopped-working"></a>
 <a href="https://github.com/CStarker">
-    <img width=50 title="@CStarker" src="https://avatars.githubusercontent.com/u/44135221?first-contrib=2025.12.25-reported-stopped-working"></img></a>
+    <img width=50 title="@CStarker" src="https://avatars.githubusercontent.com/u/44135221?first-contrib=2025.12.25-reported-stopped-working"></a>
 <a href="https://github.com/dependabot">
-    <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
+    <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></a>
 <a href="https://chatgpt.com">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/chatgpt/black-on-white/icon50.png">
-        <img title="ChatGPT" src="https://assets.chatgptautocontinue.com/images/icons/chatgpt/white-on-gray/icon50.png"></img>
+        <img title="ChatGPT" src="https://assets.chatgptautocontinue.com/images/icons/chatgpt/white-on-gray/icon50.png">
     </picture></a>
 <a href="https://https://chat.deepseek.com/">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon64.png">
-        <img width=50 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon64.png"></img>
+        <img width=50 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon64.png">
     </picture></a>
 
 <img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">

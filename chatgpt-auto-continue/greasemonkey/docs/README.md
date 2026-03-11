@@ -18,7 +18,7 @@
 <a href="../LICENSE.md">
     <img height=31 alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/adamlui/chatgpt-auto-continue/blob/main/greasemonkey/chatgpt-auto-continue.user.js">
-    <img height=32 src="https://img.shields.io/github/size/adamlui/chatgpt-auto-continue/greasemonkey/chatgpt-auto-continue.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></img></a>
+    <img height=32 src="https://img.shields.io/github/size/adamlui/chatgpt-auto-continue/greasemonkey/chatgpt-auto-continue.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-auto-continue">
     <img height=31 alt="[CodeFactor grade]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-auto-continue?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_auto_continue&utm_content=github_shield">
@@ -102,53 +102,53 @@ ChatGPT Auto-Continue relies on code from the powerful [chatgpt.js](https://gith
 This project exists thanks to code, testing, issues, translations & ideas from the following contributors:
 
 <a href="https://github.com/adamlui">
-    <img width=47 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.04.28"></img></a>
+    <img width=47 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.04.28"></a>
 <a href="https://github.com/a12930">
-    <img width=47 title="@a12930" src="https://avatars.githubusercontent.com/u/84412716?first-contrib=2023.08.02-ux-update-bug-report"></img></a>
+    <img width=47 title="@a12930" src="https://avatars.githubusercontent.com/u/84412716?first-contrib=2023.08.02-ux-update-bug-report"></a>
 <a href="https://github.com/thijsi123">
-    <img width=47 title="@thijsi123" src="https://avatars.githubusercontent.com/u/64159148?first-contrib=2023.08.10-observer-freeze-bug-report"></img></a>
+    <img width=47 title="@thijsi123" src="https://avatars.githubusercontent.com/u/64159148?first-contrib=2023.08.10-observer-freeze-bug-report"></a>
 <a href="https://github.com/SapitoSucio">
-    <img width=47 title="@SapitoSucio" src="https://avatars.githubusercontent.com/u/7357354?first-contrib=2023.10.31-observer-freeze-bug-report"></img></a>
+    <img width=47 title="@SapitoSucio" src="https://avatars.githubusercontent.com/u/7357354?first-contrib=2023.10.31-observer-freeze-bug-report"></a>
 <a href="https://github.com/whz-pku">
-    <img width=47 title="@whz-pku" src="https://avatars.githubusercontent.com/u/158176338?first-contrib=2024.3.1-button-click-fails-bug-report"></img></a>
+    <img width=47 title="@whz-pku" src="https://avatars.githubusercontent.com/u/158176338?first-contrib=2024.3.1-button-click-fails-bug-report"></a>
 <a href="https://github.com/vw911">
-    <img width=47 title="@vw911" src="https://avatars.githubusercontent.com/u/144692196?first-contrib=2024.5.14-post-gpt-4o-ui-update-broke-script-alert"></img></a>
+    <img width=47 title="@vw911" src="https://avatars.githubusercontent.com/u/144692196?first-contrib=2024.5.14-post-gpt-4o-ui-update-broke-script-alert"></a>
 <a href="https://greasyfork.org/users/670188-hacker09">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/web-stores/greasy-fork/white/icon50.png">
         <img width=47 src="https://assets.chatgptautocontinue.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.27-portuguese-translation-corrections" title="hacker09">
     </picture></a>
 <a href="https://github.com/ChinaGodMan">
-    <img width=47 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2024.9.7-improved-chinese-msgs"></img></a>
+    <img width=47 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2024.9.7-improved-chinese-msgs"></a>
 <a href="https://github.com/Mailootje">
-    <img width=47 title="@Mailootje" src="https://avatars.githubusercontent.com/u/69102590?first-contrib=2024.9.15-stopped-working-alert"></img></a>
+    <img width=47 title="@Mailootje" src="https://avatars.githubusercontent.com/u/69102590?first-contrib=2024.9.15-stopped-working-alert"></a>
 <a href="https://github.com/andrew-bierman">
-    <img width=47 title="@andrew-bierman" src="https://avatars.githubusercontent.com/u/94939237?first-contrib=2024.9.25-dark-reader-interference-alert"></img></a>
+    <img width=47 title="@andrew-bierman" src="https://avatars.githubusercontent.com/u/94939237?first-contrib=2024.9.25-dark-reader-interference-alert"></a>
 <a href="https://github.com/thepick">
-    <img width=47 title="@thepick" src="https://avatars.githubusercontent.com/u/12082594?first-contrib=2024.10.11-gpt-editor-bug-report"></img></a>
+    <img width=47 title="@thepick" src="https://avatars.githubusercontent.com/u/12082594?first-contrib=2024.10.11-gpt-editor-bug-report"></a>
 <a href="#">
     <img width=47 title="Copilot Autofix" src="https://github.githubassets.com/favicons/favicon.svg?first-contrib=2024.12.9-cmd-injection-autofix"></a>
 <a href="https://github.com/9romise">
-    <img width=47 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></img></a>
+    <img width=47 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></a>
 <a href="https://github.com/14790897">
-    <img width=47 title="@14790897" src="https://avatars.githubusercontent.com/u/121866954?first-contrib=2025.5.19-revealed-cwm-stopped-working-leading-to-locales-url-correction"></img></a>
+    <img width=47 title="@14790897" src="https://avatars.githubusercontent.com/u/121866954?first-contrib=2025.5.19-revealed-cwm-stopped-working-leading-to-locales-url-correction"></a>
 <a href="https://github.com/zkisaboss">
-    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></img></a>
+    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></a>
 <a href="https://github.com/zkisaboss">
-    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></img></a>
+    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></a>
 <a href="https://github.com/ahnupeng" target="_blank" rel="noopener">
     <img width=50 title="@ahnupeng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/5319112?first-contrib=2025.9.4-suggested-allow-edit-slider-vals&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/dependabot">
-    <img width=47 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
+    <img width=47 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></a>
 <a href="https://chatgpt.com">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/chatgpt/black-on-white/icon50.png">
-        <img width=47 title="ChatGPT" src="https://assets.chatgptautocontinue.com/images/icons/chatgpt/white-on-gray/icon50.png"></img>
+        <img width=47 title="ChatGPT" src="https://assets.chatgptautocontinue.com/images/icons/chatgpt/white-on-gray/icon50.png">
     </picture></a>
 <a href="https://https://chat.deepseek.com/">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon48.png">
-        <img width=47 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon48.png"></img>
+        <img width=47 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon48.png">
     </picture></a>
 
 #

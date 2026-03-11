@@ -17,21 +17,21 @@
 <div align="center">
 
 <a href="#">
-    <img height=31 src="https://img.shields.io/badge/Users-150,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img height=31 src="https://img.shields.io/badge/Users-150,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-shield">
-    <img alt="[Featured by Google]" height=31 src="https://img.shields.io/badge/Featured_by-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[Featured by Google]" height=31 src="https://img.shields.io/badge/Featured_by-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://edge.chatgptinfinity.com">
-    <img alt="[Microsoft Edge]" height=31 src="https://img.shields.io/badge/%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-8afc25?logo=data:image/svg%2bxml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTIxLjg2IDE3Ljg2cS4xNCAwIC4yNS4xMi4xLjEzLjEuMjV0LS4xMS4zM2wtLjMyLjQ2LS40My41My0uNDQuNXEtLjIxLjI1LS4zOC40MmwtLjIyLjIzcS0uNTguNTMtMS4zNCAxLjA0LS43Ni41MS0xLjYuOTEtLjg2LjQtMS43NC42NHQtMS42Ny4yNHEtLjkgMC0xLjY5LS4yOC0uOC0uMjgtMS40OC0uNzgtLjY4LS41LTEuMjItMS4xNy0uNTMtLjY2LS45Mi0xLjQ0LS4zOC0uNzctLjU4LTEuNi0uMi0uODMtLjItMS42NyAwLTEgLjMyLTEuOTYuMzMtLjk3Ljg3LTEuOC4xNC45NS41NSAxLjc3LjQxLjgyIDEuMDIgMS41LjYuNjggMS4zOCAxLjIxLjc4LjU0IDEuNjQuOS44Ni4zNiAxLjc3LjU2LjkyLjIgMS44LjIgMS4xMiAwIDIuMTgtLjI0IDEuMDYtLjIzIDIuMDYtLjcybC4yLS4xLjItLjA1em0tMTUuNS0xLjI3cTAgMS4xLjI3IDIuMTUuMjcgMS4wNi43OCAyLjAzLjUxLjk2IDEuMjQgMS43Ny43NC44MiAxLjY2IDEuNC0xLjQ3LS4yLTIuOC0uNzQtMS4zMy0uNTUtMi40OC0xLjM3LTEuMTUtLjgzLTIuMDgtMS45LS45Mi0xLjA3LTEuNTgtMi4zM1QuMzYgMTQuOTRRMCAxMy41NCAwIDEyLjA2cTAtLjgxLjMyLTEuNDkuMzEtLjY4LjgzLTEuMjMuNTMtLjU1IDEuMi0uOTYuNjYtLjQgMS4zNS0uNjYuNzQtLjI3IDEuNS0uMzkuNzgtLjEyIDEuNTUtLjEyLjcgMCAxLjQyLjEuNzIuMTIgMS40LjM1LjY4LjIzIDEuMzIuNTcuNjMuMzUgMS4xNi44My0uMzUgMC0uNy4wNy0uMzMuMDctLjY1LjIzdi0uMDJxLS42My4yOC0xLjIuNzQtLjU3LjQ2LTEuMDUgMS4wNC0uNDguNTgtLjg3IDEuMjYtLjM4LjY3LS42NSAxLjM5LS4yNy43MS0uNDIgMS40NC0uMTUuNzItLjE1IDEuMzh6TTExLjk2LjA2cTEuNyAwIDMuMzMuMzkgMS42My4zOCAzLjA3IDEuMTUgMS40My43NyAyLjYyIDEuOTMgMS4xOCAxLjE2IDEuOTggMi43LjQ5Ljk0Ljc2IDEuOTYuMjggMSAuMjggMi4wOCAwIC44OS0uMjMgMS43LS4yNC44LS42OSAxLjQ4LS40NS42OC0xLjEgMS4yMi0uNjQuNTMtMS40NS44OC0uNTQuMjQtMS4xMS4zNi0uNTguMTMtMS4xNi4xMy0uNDIgMC0uOTctLjAzLS41NC0uMDMtMS4xLS4xMi0uNTUtLjEtMS4wNS0uMjgtLjUtLjE5LS44NC0uNS0uMTItLjA5LS4yMy0uMjQtLjEtLjE2LS4xLS4zMyAwLS4xNS4xNi0uMzUuMTYtLjIuMzUtLjUuMi0uMjguMzYtLjY4LjE2LS40LjE2LS45NSAwLTEuMDYtLjQtMS45Ni0uNC0uOTEtMS4wNi0xLjY0LS42Ni0uNzQtMS41Mi0xLjI4LS44Ni0uNTUtMS43OS0uODktLjg0LS4zLTEuNzItLjQ0LS44Ny0uMTQtMS43Ni0uMTQtMS41NSAwLTMuMDYuNDVULjk0IDcuNTVxLjcxLTEuNzQgMS44MS0zLjEzIDEuMS0xLjM4IDIuNTItMi4zNVE2LjY4IDEuMSA4LjM3LjU4cTEuNy0uNTIgMy41OC0uNTJaIi8+PC9zdmc+&logoColor=white&labelColor=464646&color=7bfce9&label=Rating&style=for-the-badge"></img></a>
+    <img alt="[Microsoft Edge]" height=31 src="https://img.shields.io/badge/%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-8afc25?logo=data:image/svg%2bxml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTIxLjg2IDE3Ljg2cS4xNCAwIC4yNS4xMi4xLjEzLjEuMjV0LS4xMS4zM2wtLjMyLjQ2LS40My41My0uNDQuNXEtLjIxLjI1LS4zOC40MmwtLjIyLjIzcS0uNTguNTMtMS4zNCAxLjA0LS43Ni41MS0xLjYuOTEtLjg2LjQtMS43NC42NHQtMS42Ny4yNHEtLjkgMC0xLjY5LS4yOC0uOC0uMjgtMS40OC0uNzgtLjY4LS41LTEuMjItMS4xNy0uNTMtLjY2LS45Mi0xLjQ0LS4zOC0uNzctLjU4LTEuNi0uMi0uODMtLjItMS42NyAwLTEgLjMyLTEuOTYuMzMtLjk3Ljg3LTEuOC4xNC45NS41NSAxLjc3LjQxLjgyIDEuMDIgMS41LjYuNjggMS4zOCAxLjIxLjc4LjU0IDEuNjQuOS44Ni4zNiAxLjc3LjU2LjkyLjIgMS44LjIgMS4xMiAwIDIuMTgtLjI0IDEuMDYtLjIzIDIuMDYtLjcybC4yLS4xLjItLjA1em0tMTUuNS0xLjI3cTAgMS4xLjI3IDIuMTUuMjcgMS4wNi43OCAyLjAzLjUxLjk2IDEuMjQgMS43Ny43NC44MiAxLjY2IDEuNC0xLjQ3LS4yLTIuOC0uNzQtMS4zMy0uNTUtMi40OC0xLjM3LTEuMTUtLjgzLTIuMDgtMS45LS45Mi0xLjA3LTEuNTgtMi4zM1QuMzYgMTQuOTRRMCAxMy41NCAwIDEyLjA2cTAtLjgxLjMyLTEuNDkuMzEtLjY4LjgzLTEuMjMuNTMtLjU1IDEuMi0uOTYuNjYtLjQgMS4zNS0uNjYuNzQtLjI3IDEuNS0uMzkuNzgtLjEyIDEuNTUtLjEyLjcgMCAxLjQyLjEuNzIuMTIgMS40LjM1LjY4LjIzIDEuMzIuNTcuNjMuMzUgMS4xNi44My0uMzUgMC0uNy4wNy0uMzMuMDctLjY1LjIzdi0uMDJxLS42My4yOC0xLjIuNzQtLjU3LjQ2LTEuMDUgMS4wNC0uNDguNTgtLjg3IDEuMjYtLjM4LjY3LS42NSAxLjM5LS4yNy43MS0uNDIgMS40NC0uMTUuNzItLjE1IDEuMzh6TTExLjk2LjA2cTEuNyAwIDMuMzMuMzkgMS42My4zOCAzLjA3IDEuMTUgMS40My43NyAyLjYyIDEuOTMgMS4xOCAxLjE2IDEuOTggMi43LjQ5Ljk0Ljc2IDEuOTYuMjggMSAuMjggMi4wOCAwIC44OS0uMjMgMS43LS4yNC44LS42OSAxLjQ4LS40NS42OC0xLjEgMS4yMi0uNjQuNTMtMS40NS44OC0uNTQuMjQtMS4xMS4zNi0uNTguMTMtMS4xNi4xMy0uNDIgMC0uOTctLjAzLS41NC0uMDMtMS4xLS4xMi0uNTUtLjEtMS4wNS0uMjgtLjUtLjE5LS44NC0uNS0uMTItLjA5LS4yMy0uMjQtLjEtLjE2LS4xLS4zMyAwLS4xNS4xNi0uMzUuMTYtLjIuMzUtLjUuMi0uMjguMzYtLjY4LjE2LS40LjE2LS45NSAwLTEuMDYtLjQtMS45Ni0uNC0uOTEtMS4wNi0xLjY0LS42Ni0uNzQtMS41Mi0xLjI4LS44Ni0uNTUtMS43OS0uODktLjg0LS4zLTEuNzItLjQ0LS44Ny0uMTQtMS43Ni0uMTQtMS41NSAwLTMuMDYuNDVULjk0IDcuNTVxLjcxLTEuNzQgMS44MS0zLjEzIDEuMS0xLjM4IDIuNTItMi4zNVE2LjY4IDEuMSA4LjM3LjU4cTEuNy0uNTIgMy41OC0uNTJaIi8+PC9zdmc+&logoColor=white&labelColor=464646&color=7bfce9&label=Rating&style=for-the-badge"></a>
 <a href="../LICENSE.md">
-    <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-infinity">
-    <img alt="[CodeFactor grade]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-infinity?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></img></a>
+    <img alt="[CodeFactor grade]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-infinity?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_infinity&utm_content=github_shield">
-    <img alt="[Powered by chatgpt.js]" height=31 src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[Powered by chatgpt.js]" height=31 src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=adamlui_chatgpt-infinity">
-    <img alt="[SonarCloud vulnerabiliities]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-infinity%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonarcloud&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></img></a>
+    <img alt="[SonarCloud vulnerabiliities]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-infinity%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonarcloud&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></a>
 <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
-    <img alt="[Mentioned in Awesome]" height=31 src="https://img.shields.io/badge/Mentioned_in-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></img></a>
+    <img alt="[Mentioned in Awesome]" height=31 src="https://img.shields.io/badge/Mentioned_in-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-infinity?tab=stats">
     <img alt="[jsDelivr stats]" height=31 src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-infinity?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
@@ -177,58 +177,58 @@ If you've tested it to work in a browser not listed, simply create a [pull reque
 This project exists thanks to code, testing, issues, translations & ideas from the following contributors:
 
 <a href="https://github.com/adamlui">
-    <img width=47 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.04.28"></img></a>
+    <img width=47 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.04.28"></a>
 <a href="https://github.com/Zin6969">
-    <img width=47 title="@Zin6969" src="https://avatars.githubusercontent.com/u/131989355?first-contrib=2023.04.30-doc-translations"></img></a>
+    <img width=47 title="@Zin6969" src="https://avatars.githubusercontent.com/u/131989355?first-contrib=2023.04.30-doc-translations"></a>
 <a href="https://github.com/Joker1718">
-    <img width=47 title="@Joker1718" src="https://avatars.githubusercontent.com/u/82336164?first-contrib=2023.11.18-first-button-bug-report"></img></a>
+    <img width=47 title="@Joker1718" src="https://avatars.githubusercontent.com/u/82336164?first-contrib=2023.11.18-first-button-bug-report"></a>
 <a href="https://github.com/xspeed1989">
-    <img width=47 title="@xspeed1989" src="https://avatars.githubusercontent.com/u/5162926?first-contrib=2023.11.27-ui-change-report"></img></a>
+    <img width=47 title="@xspeed1989" src="https://avatars.githubusercontent.com/u/5162926?first-contrib=2023.11.27-ui-change-report"></a>
 <a href="https://github.com/Chipsum">
-    <img width=47 title="@Chipsum" src="https://avatars.githubusercontent.com/u/37517008?first-contrib=2023.12.05-first-button-bug-report"></img></a>
+    <img width=47 title="@Chipsum" src="https://avatars.githubusercontent.com/u/37517008?first-contrib=2023.12.05-first-button-bug-report"></a>
 <a href="https://github.com/sanchomuzax">
-    <img width=47 title="@sanchomuzax" src="https://avatars.githubusercontent.com/u/2911588?first-contrib=2023.2.26-truncate-toggle-label-idea"></img></a>
+    <img width=47 title="@sanchomuzax" src="https://avatars.githubusercontent.com/u/2911588?first-contrib=2023.2.26-truncate-toggle-label-idea"></a>
 <a href="https://greasyfork.org/users/1000404-misspent">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/white/icon50.png">
         <img width=47 src="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.7.29-share-box-popup-bug-alert" title="misspent">
     </picture></a>
 <a href="https://github.com/eltociear">
-    <img width=47 title="@eltociear" src="https://avatars.githubusercontent.com/u/22633385?first-contrib=2024.6.22-add-japanese-readme"></img></a>
+    <img width=47 title="@eltociear" src="https://avatars.githubusercontent.com/u/22633385?first-contrib=2024.6.22-add-japanese-readme"></a>
 <a href="https://greasyfork.org/users/936309-kskwin123">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/white/icon50.png">
         <img width=47 src="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.4-auto-start-feature-request" title="KSKwin123">
     </picture></a>
 <a href="#">
-    <img width=47 title="free palestine" src="https://lh3.googleusercontent.com/a/ACg8ocKGoXwUzABUkuXPI3tc-sMOrziK_6dyr1M7sPYOF54zfZcDFA=s50-w50-h50?first-contrib=2024.6.25-custom-gpt-support-request"></img></a>
+    <img width=47 title="free palestine" src="https://lh3.googleusercontent.com/a/ACg8ocKGoXwUzABUkuXPI3tc-sMOrziK_6dyr1M7sPYOF54zfZcDFA=s50-w50-h50?first-contrib=2024.6.25-custom-gpt-support-request"></a>
 <a href="https://greasyfork.org/users/670188-hacker09">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/white/icon50.png">
         <img width=47 src="https://assets.chatgptinfinity.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.27-portuguese-translation-corrections" title="hacker09">
     </picture></a>
 <a href="https://github.com/Ivanaix">
-    <img width=47 title="@Ivanaix" src="https://avatars.githubusercontent.com/u/175084540?first-contrib=2024.9.2-chat-reset-bug-alert"></img></a>
+    <img width=47 title="@Ivanaix" src="https://avatars.githubusercontent.com/u/175084540?first-contrib=2024.9.2-chat-reset-bug-alert"></a>
 <a href="https://github.com/ChinaGodMan">
-    <img width=47 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2024.9.7-improved-chinese-msgs"></img></a>
+    <img width=47 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2024.9.7-improved-chinese-msgs"></a>
 <a href="https://github.com/adityadeshmukh10">
-    <img width=47 title="@adityadeshmukh10" src="https://avatars.githubusercontent.com/u/110899566?first-contrib=2024.10.15-doc-typo-fix"></img></a>
+    <img width=47 title="@adityadeshmukh10" src="https://avatars.githubusercontent.com/u/110899566?first-contrib=2024.10.15-doc-typo-fix"></a>
 <a href="#">
     <img width=47 title="Copilot Autofix" src="https://github.githubassets.com/favicons/favicon.svg?first-contrib=2024.12.9-cmd-injection-autofix"></a>
 <a href="https://github.com/9romise">
-    <img width=47 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></img></a>
+    <img width=47 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></a>
 <a href="https://github.com/cyber-sec0">
-    <img width=50 title="@cyber-sec0" src="https://avatars.githubusercontent.com/u/91571849?first-contrib=2025.4.1-reported-kiwi-browser-no-longer-maintained"></img></a>
+    <img width=50 title="@cyber-sec0" src="https://avatars.githubusercontent.com/u/91571849?first-contrib=2025.4.1-reported-kiwi-browser-no-longer-maintained"></a>
 <a href="https://github.com/14790897">
-    <img width=47 title="@14790897" src="https://avatars.githubusercontent.com/u/121866954?first-contrib=2025.5.19-revealed-cwm-stopped-working-leading-to-locales-url-correction"></img></a>
+    <img width=47 title="@14790897" src="https://avatars.githubusercontent.com/u/121866954?first-contrib=2025.5.19-revealed-cwm-stopped-working-leading-to-locales-url-correction"></a>
 <a href="https://github.com/zkisaboss">
-    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></img></a>
+    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></a>
 <a href="https://github.com/ahnupeng" target="_blank" rel="noopener">
     <img width=50 title="@ahnupeng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/5319112?first-contrib=2025.9.4-suggested-allow-edit-slider-vals&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/dependabot">
-    <img width=47 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
+    <img width=47 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></a>
 <a href="https://github.com/ImgBotApp">
-    <img width=47 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></img></a>
+    <img width=47 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></a>
 <a href="https://chatgpt.com">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/chatgpt/black-on-white/icon50.png">
@@ -237,7 +237,7 @@ This project exists thanks to code, testing, issues, translations & ideas from t
 <a href="https://https://chat.deepseek.com/">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon48.png">
-        <img width=47 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon48.png"></img>
+        <img width=47 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon48.png">
     </picture></a>
 
 <img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">

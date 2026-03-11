@@ -5,7 +5,7 @@
 <a href="../LICENSE.md">
     <img height=31 alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/adamlui/autoclear-chatgpt-history/blob/main/greasemonkey/autoclear-chatgpt-history.user.js">
-    <img height=32 src="https://img.shields.io/github/size/adamlui/autoclear-chatgpt-history/greasemonkey/autoclear-chatgpt-history.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></img></a>
+    <img height=32 src="https://img.shields.io/github/size/adamlui/autoclear-chatgpt-history/greasemonkey/autoclear-chatgpt-history.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/autoclear-chatgpt-history">
     <img height=31 alt="[CodeFactor grade]" src="https://img.shields.io/codefactor/grade/github/adamlui/autoclear-chatgpt-history?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=autoclear_chatgpt_history&utm_content=github_shield">
@@ -103,23 +103,23 @@ Autoclear ChatGPT History is compatible w/ the following browsers using [ScriptC
 This project exists thanks to code, testing, issues, translations & ideas from the following contributors:
 
 <a href="https://github.com/adamlui">
-    <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.02.26"></img></a>
+    <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.02.26"></a>
 <a href="https://github.com/Tripp1e">
-    <img width=50 title="@Tripp1e" src="https://avatars.githubusercontent.com/u/102437240?first-contrib=2023.02.25-autoclear-idea"></img></a>
+    <img width=50 title="@Tripp1e" src="https://avatars.githubusercontent.com/u/102437240?first-contrib=2023.02.25-autoclear-idea"></a>
 <a href="https://github.com/XiaoYingYo">
-    <img width=50 title="@XiaoYingYo" src="https://avatars.githubusercontent.com/u/54934866?first-contrib=2023.03.23-freegpt-support"></img></a>
+    <img width=50 title="@XiaoYingYo" src="https://avatars.githubusercontent.com/u/54934866?first-contrib=2023.03.23-freegpt-support"></a>
 <a href="https://github.com/Zin6969">
-    <img width=50 title="@Zin6969" src="https://avatars.githubusercontent.com/u/131989355?first-contrib=2023.04.27-doc-translations"></img></a>
+    <img width=50 title="@Zin6969" src="https://avatars.githubusercontent.com/u/131989355?first-contrib=2023.04.27-doc-translations"></a>
 <a href="https://github.com/xspeed1989">
-    <img width=50 title="@xspeed1989" src="https://avatars.githubusercontent.com/u/5162926?first-contrib=2023.11.27-ui-change-report"></img></a>
+    <img width=50 title="@xspeed1989" src="https://avatars.githubusercontent.com/u/5162926?first-contrib=2023.11.27-ui-change-report"></a>
 <a href="https://github.com/Chipsum">
-    <img width=50 title="@Chipsum" src="https://avatars.githubusercontent.com/u/37517008?first-contrib=2023.12.05-first-button-bug-report"></img></a>
+    <img width=50 title="@Chipsum" src="https://avatars.githubusercontent.com/u/37517008?first-contrib=2023.12.05-first-button-bug-report"></a>
 <a href="https://github.com/Yash-Singh1">
-    <img width=50 title="@Yash-Singh1" src="https://avatars.githubusercontent.com/u/53054099?first-contrib=2023.1.31-added-eslint-plugin-userscripts"></img></a>
+    <img width=50 title="@Yash-Singh1" src="https://avatars.githubusercontent.com/u/53054099?first-contrib=2023.1.31-added-eslint-plugin-userscripts"></a>
 <a href="https://github.com/dreirund">
-    <img width=50 title="@dreirund" src="https://avatars.githubusercontent.com/u/1590519?first-contrib=2024.02.16-add-sri-hashes-suggestion"></img></a>
+    <img width=50 title="@dreirund" src="https://avatars.githubusercontent.com/u/1590519?first-contrib=2024.02.16-add-sri-hashes-suggestion"></a>
 <a href="https://github.com/sanchomuzax">
-    <img width=50 title="@sanchomuzax" src="https://avatars.githubusercontent.com/u/2911588?first-contrib=2023.2.26-truncate-toggle-label-idea"></img></a>
+    <img width=50 title="@sanchomuzax" src="https://avatars.githubusercontent.com/u/2911588?first-contrib=2023.2.26-truncate-toggle-label-idea"></a>
 <a href="https://greasyfork.org/users/670188-hacker09">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/white/icon50.png">
@@ -131,28 +131,28 @@ This project exists thanks to code, testing, issues, translations & ideas from t
         <img width=50 src="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.6.17-bitdefender-false-positive-alert" title="boris 2">
     </picture></a>
 <a href="https://github.com/schmorp">
-    <img width=50 title="@schmorp" src="https://avatars.githubusercontent.com/u/42950150?first-contrib=2024.8.30-stopped-working-bug-report"></img></a>
+    <img width=50 title="@schmorp" src="https://avatars.githubusercontent.com/u/42950150?first-contrib=2024.8.30-stopped-working-bug-report"></a>
 <a href="https://github.com/dliedke">
-    <img width=50 title="@dliedke" src="https://avatars.githubusercontent.com/u/16479450?first-contrib=2024.9.3-stopped-working-bug-report-testing"></img></a>
+    <img width=50 title="@dliedke" src="https://avatars.githubusercontent.com/u/16479450?first-contrib=2024.9.3-stopped-working-bug-report-testing"></a>
 <a href="https://github.com/ChinaGodMan">
-    <img width=50 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2024.9.7-improved-chinese-msgs"></img></a>
+    <img width=50 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2024.9.7-improved-chinese-msgs"></a>
 <a href="https://github.com/9romise">
-    <img width=50 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></img></a>
+    <img width=50 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></a>
 <a href="https://github.com/zkisaboss">
-    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></img></a>
+    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></a>
 <a href="https://github.com/ImgBotApp">
-    <img width=50 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></img></a>
+    <img width=50 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></a>
 <a href="https://github.com/dependabot">
-    <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
+    <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></a>
 <a href="https://chatgpt.com">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.autoclearchatgpt.com/images/icons/chatgpt/black-on-white/icon50.png">
-        <img title="ChatGPT" src="https://assets.autoclearchatgpt.com/images/icons/chatgpt/white-on-gray/icon50.png"></img>
+        <img title="ChatGPT" src="https://assets.autoclearchatgpt.com/images/icons/chatgpt/white-on-gray/icon50.png">
     </picture></a>
 <a href="https://https://chat.deepseek.com/">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon64.png">
-        <img width=50 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon64.png"></img>
+        <img width=50 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon64.png">
     </picture></a>
 
 <img height=6px width="100%" src="https://assets.autoclearchatgpt.com/images/separators/gradient-aqua.png">

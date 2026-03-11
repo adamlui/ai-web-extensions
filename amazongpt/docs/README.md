@@ -14,7 +14,7 @@
 <a href="../LICENSE.md">
     <img height=32 alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/amazongpt/blob/main/greasemonkey/amazongpt.user.js">
-    <img height=32 src="https://img.shields.io/github/size/KudoAI/amazongpt/greasemonkey/amazongpt.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></img></a>
+    <img height=32 src="https://img.shields.io/github/size/KudoAI/amazongpt/greasemonkey/amazongpt.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/Clones-912/month-869da0?logo=github&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/kudoai/amazongpt">
@@ -620,34 +620,34 @@
 This app exists thanks to code, translations, issues & ideas from the following contributors:
 
 <a href="https://github.com/adamlui">
-    <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554"></img></a>
+    <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554"></a>
 <a href="https://github.com/piederecho">
-    <img width=50 title="@piederecho" src="https://avatars.githubusercontent.com/u/5135365?first-contrib=2017.12.21-published-btn-w-diagonal-borders-to-codepen-adapted-in-standby-btns-and-chatbar"></img></a>
+    <img width=50 title="@piederecho" src="https://avatars.githubusercontent.com/u/5135365?first-contrib=2017.12.21-published-btn-w-diagonal-borders-to-codepen-adapted-in-standby-btns-and-chatbar"></a>
 <a href="https://github.com/shawnrossouw">
-    <img width=50 title="@shawnrossouw" src="https://avatars.githubusercontent.com/u/46893447?first-contrib=2019.7.18-published-futuristic-btn-to-codepen-adapted-in-modal-btns"></img></a>
+    <img width=50 title="@shawnrossouw" src="https://avatars.githubusercontent.com/u/46893447?first-contrib=2019.7.18-published-futuristic-btn-to-codepen-adapted-in-modal-btns"></a>
 <a href="https://github.com/pasThal">
-    <img width=50 title="@pasThal" src="https://avatars.githubusercontent.com/u/175899275?first-contrib=2024.10.6-opera-gx-compatible-report"></img></a>
+    <img width=50 title="@pasThal" src="https://avatars.githubusercontent.com/u/175899275?first-contrib=2024.10.6-opera-gx-compatible-report"></a>
 <a href="https://github.com/mberetvas">
-    <img width=50 title="@mberetvas" src="https://avatars.githubusercontent.com/u/100215730?first-contrib=2024.11.2-fix-belgium-amazon-match"></img></a>
+    <img width=50 title="@mberetvas" src="https://avatars.githubusercontent.com/u/100215730?first-contrib=2024.11.2-fix-belgium-amazon-match"></a>
 <a href="https://github.com/bao3">
-    <img width=50 title="@bao3" src="https://avatars.githubusercontent.com/u/499205?first-contrib=2024.11.24-safari-ios-compatible-report"></img></a>
+    <img width=50 title="@bao3" src="https://avatars.githubusercontent.com/u/499205?first-contrib=2024.11.24-safari-ios-compatible-report"></a>
 <a href="https://github.com/ChinaGodMan">
-    <img width=50 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2025.1.3-showed-googlegpt-header-distorts-reply-bubble-on-skinny-phones"></img></a>
+    <img width=50 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2025.1.3-showed-googlegpt-header-distorts-reply-bubble-on-skinny-phones"></a>
 <a href="https://greasyfork.org/users/1406320-happyhojjat">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://amazongpt.kudoai.com/assets/images/icons/web-stores/greasy-fork/white/icon50.png?v=dc250b9">
         <img width=50 src="https://amazongpt.kudoai.com/assets/images/icons/web-stores/greasy-fork/black/icon50.png?v=dc250b9&first-contrib=2025.1.12-reported-googlegpt-reply-lang-setting-stopped-persisting" title="happyhojjat">
     </picture></a>
 <a href="https://github.com/cyber-sec0">
-    <img width=50 title="@cyber-sec0" src="https://avatars.githubusercontent.com/u/91571849?first-contrib=2025.4.1-reported-kiwi-browser-no-longer-maintained"></img></a>
+    <img width=50 title="@cyber-sec0" src="https://avatars.githubusercontent.com/u/91571849?first-contrib=2025.4.1-reported-kiwi-browser-no-longer-maintained"></a>
 <a href="https://github.com/carterlion13sAltAcc">
-    <img width=50 title="@carterlion13sAltAcc" src="https://avatars.githubusercontent.com/u/181794823?first-contrib=2025.4.13-api-selector-feat-request"></img></a>
+    <img width=50 title="@carterlion13sAltAcc" src="https://avatars.githubusercontent.com/u/181794823?first-contrib=2025.4.13-api-selector-feat-request"></a>
 <a href="https://github.com/anhtahaylove">
-    <img width=50 title="@anhtahaylove" src="https://avatars.githubusercontent.com/u/37265396?first-contrib=2025.10.3-reported-reply-missing-from-product-pages"></img></a>
+    <img width=50 title="@anhtahaylove" src="https://avatars.githubusercontent.com/u/37265396?first-contrib=2025.10.3-reported-reply-missing-from-product-pages"></a>
 <a href="https://github.com/ImgBotApp">
-    <img width=50 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></img></a>
+    <img width=50 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></a>
 <a href="https://github.com/dependabot">
-    <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></img></a>
+    <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></a>
 <a href="https://chatgpt.com">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/chatgpt/black-on-white/icon50.png">
