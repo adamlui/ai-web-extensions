@@ -30,7 +30,7 @@
 <a href="https://www.codefactor.io/repository/github/adamlui/deepseek-omnibox">
     <img alt="[CodeFactor 等级]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/deepseek-omnibox?label=%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=adamlui_deepseek-omnibox">
-    <img alt="[SonarCloud 漏洞]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_deepseek-omnibox%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonarcloud&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=gold"></a>
+    <img alt="[SonarCloud 漏洞]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_deepseek-omnibox%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=gold"></a>
 <br><br>
 
 <a href="https://chrome.deepseekomnibox.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">

@@ -247,7 +247,7 @@ Made with ❤️ by [Adam Lui][link-author]
 [badge-rating]: https://img.shields.io/chrome-web-store/stars/ckhgddjdjkphbaediggjdddjdjgkalom?style=for-the-badge&logo=googlechrome&logoColor=white&color=10b981&label=Chrome
 [badge-jsdelivr]: https://img.shields.io/jsdelivr/gh/hm/adamlui/perplexity-omnibox?style=flat-square&logo=jsdelivr&logoColor=white&color=2bbbd8&label=jsDelivr
 [badge-codefactor]: https://img.shields.io/codefactor/grade/github/adamlui/perplexity-omnibox?style=flat-square&logo=codefactor&logoColor=white&color=b3ff68&label=Code%20Quality
-[badge-sonar]: https://img.shields.io/badge/Vulnerabilities-6.8K-gold?style=flat-square&logo=sonarcloud&logoColor=white
+[badge-sonar]: https://img.shields.io/badge/Vulnerabilities-6.8K-gold?style=flat-square&logo=sonar&logoColor=white
 [badge-license]: https://img.shields.io/badge/License-MIT-e11d48?style=flat-square&logo=opensourceinitiative&logoColor=white
 
 <!-- ═══════════════════════════════════════════════════════════════════════════════
