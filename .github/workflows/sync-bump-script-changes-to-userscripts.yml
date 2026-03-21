@@ -8,7 +8,7 @@ on:
 jobs:
   sync-bump-scripts:
     if: (github.repository == 'adamlui/ai-web-extensions') && (github.event.commits[0].committer.username != 'kudo-sync-bot')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     env:
@@ -17,12 +17,12 @@ jobs:
     steps:
 
       - name: Checkout adamlui/ai-web-extensions
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
         with:
           path: adamlui/ai-web-extensions
 
       - name: Checkout adamlui/userscripts
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           repository: adamlui/userscripts

@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     if: (github.repository == 'adamlui/ai-web-extensions') && (github.event.commits[0].committer.username != 'kudo-sync-bot')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     env:
@@ -17,14 +17,14 @@ jobs:
     steps:
 
       - name: Checkout adamlui/ai-web-extensions
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           path: adamlui/ai-web-extensions
           fetch-depth: 2
 
       - name: Checkout adamlui/brave-omnibox
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           repository: adamlui/brave-omnibox
