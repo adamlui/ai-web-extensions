@@ -22,7 +22,7 @@
     "lint:all": "eslint .",
     "lint:fix": "eslint . --fix --cache",
     "lint:fix-all": "eslint . --fix",
-    "translate": "py greasemonkey/utils/translate-en-messages.py"
+    "translate": "translate-messages"
   },
   "devDependencies": {
     "@eslint/json": "^1.2.0",

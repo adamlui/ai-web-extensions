@@ -30,3 +30,28 @@ updates:
     groups:
       dev-dependencies:
         dependency-type: development
+
+  - package-ecosystem: pip
+    directories:
+      - /amazongpt
+      - /autoclear-chatgpt-history
+      - /brave-omnibox
+      - /bravegpt
+      - /chatgpt-auto-continue
+      - /chatgpt-auto-refresh
+      - /chatgpt-auto-talk
+      - /chatgpt-infinity
+      - /chatgpt-omnibox
+      - /chatgpt-widescreen
+      - /deepseek-omnibox
+      - /duckduckgpt
+      - /googlegpt
+      - /perplexity-omnibox
+      - /phind-omnibox
+      - /you.com-omnibox
+    schedule:
+      interval: daily
+    groups:
+      dev-dependencies:
+        dependency-type: development
+    versioning-strategy: increase
