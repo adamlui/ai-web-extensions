@@ -23,13 +23,13 @@
     "translate:ff": "npm run translate:firefox",
     "translate:firefox": "cd firefox && translate-messages",
     "bump": "node utils/bump/extension-manifests",
-    "bump:ext": "node utils/bump/extension-manifests",
-    "bump:ext-nc": "node utils/bump/extension-manifests --no-commit",
-    "bump:ext-np": "node utils/bump/extension-manifests --no-push",
-    "bump:chrome": "node utils/bump/extension-manifests --chrome",
-    "bump:chromium": "node utils/bump/extension-manifests --chrome",
-    "bump:ff": "node utils/bump/extension-manifests --ff",
-    "bump:firefox": "node utils/bump/extension-manifests --ff"
+    "bump:ext": "npm run bump",
+    "bump:ext-nc": "npm run bump -- --no-commit",
+    "bump:ext-np": "npm run bump -- --no-push",
+    "bump:chrome": "npm run bump:chromium",
+    "bump:chromium": "npm run bump -- --chrome",
+    "bump:ff": "npm run bump:firefox",
+    "bump:firefox": "npm run bump -- --ff"
   },
   "devDependencies": {
     "@eslint/json": "^1.2.0",

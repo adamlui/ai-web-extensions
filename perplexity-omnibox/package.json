@@ -18,13 +18,13 @@
     "lint:all": "eslint .",
     "lint:fix": "eslint . --fix --cache",
     "lint:fix-all": "eslint . --fix",
-    "translate": "npm run translate:chromium",
+    "translate": "npm run translate",
     "translate:chrome": "npm run translate:chromium",
     "translate:chromium": "cd chromium && translate-messages",
     "bump": "node utils/bump/extension-manifests",
-    "bump:ext": "node utils/bump/extension-manifests",
-    "bump:ext-nc": "node utils/bump/extension-manifests --no-commit",
-    "bump:ext-np": "node utils/bump/extension-manifests --no-push"
+    "bump:ext": "npm run bump",
+    "bump:ext-nc": "npm run bump -- --no-commit",
+    "bump:ext-np": "npm run bump -- --no-push"
   },
   "devDependencies": {
     "@eslint/json": "^1.2.0",
