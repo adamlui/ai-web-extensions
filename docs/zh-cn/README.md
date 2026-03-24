@@ -31,7 +31,7 @@
     <img alt="[许可证: MIT]" height=31 src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/adamlui/ai-web-extensions/commits">
     <img alt="[GitHub 提交]" height=31 src="https://img.shields.io/github/commit-activity/m/adamlui/ai-web-extensions?label=%E6%8F%90%E4%BA%A4&logo=github&logoColor=white&labelColor=464646&color=869da0&style=for-the-badge"></a>
-<a href="https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=adamlui_ai-web-extensions">
+<a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_ai-web-extensions">
     <img alt="[SonarCloud 漏洞]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_ai-web-extensions%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=gold"></a>
 <a href="#">
     <img height=31 src="https://img.shields.io/badge/jsDelivr_%E8%AF%B7%E6%B1%82-950,000+/month-7bb7fc.svg?logo=jsdelivr&logoColor=white&labelColor=464646&style=for-the-badge"></a>

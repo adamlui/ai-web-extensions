@@ -259,7 +259,7 @@ Made with ❤️ by [Adam Lui][link-author]
 [link-reviews]: https://chrome.perplexityomnibox.com/reviews
 [link-jsdelivr]: https://www.jsdelivr.com/package/gh/adamlui/perplexity-omnibox?tab=stats
 [link-codefactor]: https://www.codefactor.io/repository/github/adamlui/perplexity-omnibox
-[link-sonar]: https://sonarcloud.io/component_measures?metric=new_vulnerabilities&id=adamlui_perplexity-omnibox
+[link-sonar]: https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_perplexity-omnibox
 [link-license]: ../LICENSE.md
 [link-warp]: https://www.warp.dev/chatgptjs
 [link-wiki]: https://github.com/adamlui/perplexity-omnibox/wiki
