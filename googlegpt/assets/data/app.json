@@ -5,16 +5,16 @@
   "urls": {
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
     "apis": { "chatShare": "https://chat-share.kudoai.workers.dev" },
-    "app": "https://www.googlegpt.io",
+    "app": "https://github.com/KudoAI/googlegpt/#readme",
     "assets": "https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@latest/assets",
     "chatgptjs": "https://chatgpt.js.org",
-    "contributors": "https://docs.googlegpt.io/#-contributors",
+    "contributors": "https://github.com/KudoAI/googlegpt/tree/main/docs/#-contributors",
     "discuss": "https://github.com/KudoAI/googlegpt/discussions",
     "donate": { "github": "https://github.com/sponsors/KudoAI" },
     "github": "https://github.com/KudoAI/googlegpt",
     "publisher": "https://www.kudoai.com",
     "relatedExtensions": "https://aiwebextensions.com",
-    "support": "https://support.googlegpt.io",
-    "update": { "gm": "https://gm.googlegpt.io" }
+    "support": "https://github.com/KudoAI/googlegpt/issues",
+    "update": { "gm": "https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js" }
   }
 }

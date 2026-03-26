@@ -669,8 +669,8 @@ This app exists thanks to code, translations, issues & ideas from the following 
     <img width=50 title="@bao3" src="https://avatars.githubusercontent.com/u/499205?first-contrib=2024.11.24-safari-ios-compatible-report"></a>
 <a href="https://greasyfork.org/users/1030895-universedev">
     <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/white/icon50.png">
-        <img width=50 src="https://assets.googlegpt.io/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.12.12-support-other-extensions-idea" title="UniverseDev">
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.12.12-support-other-extensions-idea" title="UniverseDev">
     </picture></a>
 <a href="https://greasyfork.org/users/1406320-happyhojjat">
     <picture>
@@ -738,10 +738,10 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.com/adamlui/chatgpt-infinity/#readme) / 
 [Discuss](https://chatgptinfinity.com/discuss)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/app/white/icon32.png"><img width=17 src="https://assets.googlegpt.io/images/icons/app/black/icon32.png"></picture> [GoogleGPT](https://googlegpt.io) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.googlegpt.io/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/app/white/icon32.png"><img width=17 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/app/black/icon32.png"></picture> [GoogleGPT](https://github.com/KudoAI/googlegpt/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/badges/awesome/badge.svg"></a>
 
 > Bring the magic of AI to Google Search (powered by Google Gemma + GPT-4o!)
-<br>[Install](https://gm.googlegpt.io) /
+<br>[Install](https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js) /
 [Readme](https://github.kudoai.com/googlegpt/#readme) /
 [Discuss](https://github.kudoai.com/googlegpt/discussions)
 

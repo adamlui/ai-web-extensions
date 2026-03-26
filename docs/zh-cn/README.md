@@ -511,17 +511,17 @@
 
 <h3>
     <a href="../../googlegpt">
-        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.googlegpt.io/images/icons/app/white/icon32.png"><img width=19 src="https://assets.googlegpt.io/images/icons/app/black/icon32.png"></picture></a>
+        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/app/white/icon32.png"><img width=19 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/app/black/icon32.png"></picture></a>
     <a href="../../googlegpt">GoogleGPT</a>&nbsp;
     <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
-        <img src="https://assets.googlegpt.io/images/badges/awesome/badge.svg"></a>
+        <img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/badges/awesome/badge.svg"></a>
 </h3>
 
 <details>
     <summary>在 Google 搜索中添加 AI 聊天和搜索摘要，由最新的法学硕士提供支持！</summary>
     <br><blockquote>
         <a href="../../googlegpt">
-            <img width=511 src="https://assets.googlegpt.io/images/screenshots/desktop/javascript-arrays-query/darkmode.png?v=a363ecf"></a>
+            <img width=511 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@a363ecf/assets/images/screenshots/desktop/javascript-arrays-query/darkmode.png"></a>
     </blockquote>
 </details>
 
