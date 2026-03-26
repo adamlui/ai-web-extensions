@@ -52,7 +52,7 @@
     "@adamlui/minify.js": "^2.5.1",
     "@eslint/css": "^1.0.0",
     "@eslint/json": "^1.2.0",
-    "@eslint/markdown": "^7.5.1",
+    "@eslint/markdown": "^8.0.0",
     "@html-eslint/eslint-plugin": "^0.58.1",
     "@html-eslint/parser": "^0.58.0",
     "@stylistic/eslint-plugin": "^5.10.0",
