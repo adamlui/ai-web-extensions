@@ -449,9 +449,9 @@
         <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a>
     <a href="https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/hghigiebpackbakklainbimglgiepfei">
         Edge</a> /
-    <a href="../deepseek-omnibox/#readme">
+    <a href="../../deepseek-omnibox/#readme">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
-    <a href="../deepseek-omnibox/#readme">
+    <a href="../../deepseek-omnibox/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>

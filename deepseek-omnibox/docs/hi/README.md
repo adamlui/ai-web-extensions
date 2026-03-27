@@ -23,7 +23,7 @@
     <img alt="[क्रोम वेब स्टोर रेटिंग]" height=31 src="https://img.shields.io/chrome-web-store/stars/gcgfmipiaiopmjcmggnnehnehhdjdkgi?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></a>
 <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox/reviews">
     <img alt="[Mozilla Add-ons रेटिंग]" height=31 src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></a>
-<a href="../LICENSE.md">
+<a href="LICENSE.md">
     <img alt="[लाइसेंस: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/deepseek-omnibox">
     <img alt="[CodeFactor ग्रेड]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/deepseek-omnibox?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
