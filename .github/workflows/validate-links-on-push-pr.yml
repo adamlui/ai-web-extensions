@@ -25,6 +25,7 @@ jobs:
         with:
           path: .lycheecache
           key: cache-lychee-${{ github.sha }}
+          restore-keys: cache-lychee-
 
       - name: Validate links
         uses: lycheeverse/lychee-action@v2.8.0
