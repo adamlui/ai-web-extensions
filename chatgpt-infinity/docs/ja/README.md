@@ -235,7 +235,7 @@ ChatGPT Infinity は、強力な [chatgpt.js](https://github.com/KudoAI/chatgpt.
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/chatgpt/black-on-white/icon50.png">
         <img width=47 title="ChatGPT" src="https://assets.chatgptinfinity.com/images/icons/chatgpt/white-on-gray/icon50.png" title="ChatGPT">
     </picture></a>
-<a href="https://https://chat.deepseek.com/">
+<a href="https://chat.deepseek.com/">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon48.png">
         <img width=47 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon48.png">

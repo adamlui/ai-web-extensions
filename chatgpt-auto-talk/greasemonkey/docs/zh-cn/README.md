@@ -99,7 +99,7 @@ ChatGPT 自动谈话 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/chatgpt/black-on-white/icon50.png">
         <img title="ChatGPT" src="https://assets.chatgptautocontinue.com/images/icons/chatgpt/white-on-gray/icon50.png">
     </picture></a>
-<a href="https://https://chat.deepseek.com/">
+<a href="https://chat.deepseek.com/">
     <picture>
         <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon64.png">
         <img width=50 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon64.png">

@@ -612,9 +612,9 @@ Type @phind in browser address bar to get results from Phind AI.
 Type @you in browser address bar to get results from You.com AI.
 
 <blockquote>
-    <a href="https://https://addons.mozilla.org/firefox/addon/you-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/you-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
-    <a href="https://https://addons.mozilla.org/firefox/addon/you-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/you-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="you.com-omnibox/#readme">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>

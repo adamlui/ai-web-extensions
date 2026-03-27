@@ -14,7 +14,7 @@
     "github": "https://github.com/adamlui/you-omnibox",
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
-    "review": { "firefox": "https://https://addons.mozilla.org/firefox/addon/you-omnibox" },
+    "review": { "firefox": "https://addons.mozilla.org/firefox/addon/you-omnibox" },
     "support": "https://github.com/adamlui/you-omnibox/issues",
     "uninstall": "https://forms.gle/HkJFqQ7LEFCxNz6a6"
   }
