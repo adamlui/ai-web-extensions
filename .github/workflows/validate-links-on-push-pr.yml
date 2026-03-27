@@ -1,0 +1,28 @@
+name: Validate links on push + PR
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lychee:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.2
+
+      - name: Validate links
+        uses: lycheeverse/lychee-action@v2.8.0
+        with:
+          # Check all files, ignore ok/redir/blocked/rate-limited
+          args: . --verbose --no-progress --accept 200..299,300..399,403,429
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
