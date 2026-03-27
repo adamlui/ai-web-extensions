@@ -30,12 +30,12 @@ jobs:
       - name: Validate links
         uses: lycheeverse/lychee-action@v2.8.0
         with:
-          # Check all files, ignore ok/redir/blocked/rate-limited, exclude commonly down domains
+          # Check all files, ignore ok/redir/blocked/rate-limited/LinkedIn-anti-botted, exclude commonly down domains
           args: >-
             . --no-progress
-            --accept 200..299,300..399,403,429
+            --accept 200..299,300..399,403,429,999
             --cache --max-cache-age 3d
-            --exclude ghostbrowser\.com --exclude linkedin\.com --exclude elonsucks\.org
+            --exclude ghostbrowser\.com --exclude elonsucks\.org
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
