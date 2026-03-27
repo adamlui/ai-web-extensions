@@ -685,6 +685,8 @@ This app exists thanks to code, translations, issues & ideas from the following 
     <img width=50 title="@carterlion13sAltAcc" src="https://avatars.githubusercontent.com/u/181794823?first-contrib=2025.4.13-api-selector-feat-request"></a>
 <a href="https://github.com/Marwan087">
     <img width=50 title="@Marwan087" src="https://avatars.githubusercontent.com/u/81267128?first-contrib=2025.4.30-reported-standby-btn-content-illegible-when-bg-anim-off-in-googlegpt-dark-scheme"></a>
+<a href="https://github.com/bvolpato" target="_blank" rel="noopener">
+    <img width=50 title="@bvolpato" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/3207647?first-contrib=2026.3.27-created-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/ImgBotApp">
     <img width=50 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></a>
 <a href="https://github.com/dependabot">
