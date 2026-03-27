@@ -19,10 +19,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6.0.2
 
+      - name: Restore lychee cache
+        id: restore-cache
+        uses: actions/cache/restoree@v5.0.4
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.sha }}
+
       - name: Validate links
         uses: lycheeverse/lychee-action@v2.8.0
         with:
           # Check all files, ignore ok/redir/blocked/rate-limited, exclude commonly down domains
-          args: . --no-progress --accept 200..299,300..399,403,429 --exclude ghostbrowser\.com
+          args: >-
+            . --no-progress
+            --accept 200..299,300..399,403,429
+            --cache --max-cache-age 3d
+            --exclude ghostbrowser\.com
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Save lychee cache
+        uses: actions/cache/save@v5.0.4
+        if: always()
+        with:
+          path: .lycheecache
+          key: ${{ steps.restore-cache.outputs.cache-primary-key }}
