@@ -4,7 +4,7 @@
   "short_name": "__MSG_prefix_ask__ Perplexity.ai",
   "description": "__MSG_appDesc__",
   "version": "2026.1.26.1",
-  "homepage_url": "https://perplexityomnibox.com",
+  "homepage_url": "https://github.com/adamlui/perplexity-omnibox/#readme",
   "default_locale": "en",
   "icons": {
     "16": "icons/icon16.png",

@@ -121,31 +121,31 @@
 
 <h3>
     <a href="brave-omnibox">
-        <img width=20 src="https://assets.braveomnibox.com/images/icons/brave/icon32.png"></a>
+        <img width=20 src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/icons/brave/icon32.png></a>
     <a href="brave-omnibox">Brave Omnibox</a>&nbsp;
-    <a href="https://edge.braveomnibox.com">
-        <img height=20 alt="Trended on Microsoft Edge Add-ons" title="Trended on Microsoft Edge Add-ons" src="https://assets.braveomnibox.com/images/badges/microsoft-store/trending/trended-badge-500x91.png"></a>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/brave-omnibox/meolmkblenpohjlndodfbgpcfioampim">
+        <img height=20 alt="Trended on Microsoft Edge Add-ons" title="Trended on Microsoft Edge Add-ons" src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/badges/microsoft-store/trending/trended-badge-500x91.png></a>
 </h3>
 
 <details><summary>Type @brave in browser address bar to get results from Brave AI.</summary>
     <br><blockquote>
         <a href="brave-omnibox">
-            <img width=600 src="https://assets.braveomnibox.com/images/tiles/marquee/edge/tile625x250.png"></a>
+            <img width=600 src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/tiles/marquee/edge/tile625x250.png></a>
     </blockquote>
 </details>
 
 <blockquote>
-    <a href="https://chrome.braveomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://chromewebstore.google.com/detail/brave-omnibox/obnaimomofoogphlhlaipeflcbneamnj?utm_source=github&utm_medium=referral&utm_content=platform-link">
         <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a>
-    <a href="https://chrome.braveomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://chromewebstore.google.com/detail/brave-omnibox/obnaimomofoogphlhlaipeflcbneamnj?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Chrome</a> /
-    <a href="https://ff.braveomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/brave-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
-    <a href="https://ff.braveomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/brave-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
-    <a href="https://edge.braveomnibox.com">
+    <a href="https://microsoftedge.microsoft.com/addons/detail/brave-omnibox/meolmkblenpohjlndodfbgpcfioampim">
         <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a>
-    <a href="https://edge.braveomnibox.com">
+    <a href="https://microsoftedge.microsoft.com/addons/detail/brave-omnibox/meolmkblenpohjlndodfbgpcfioampim">
         Edge</a> /
     <a href="brave-omnibox/#readme">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
@@ -346,16 +346,16 @@ Auto-play ChatGPT responses.
 
 <h3>
     <a href="chatgpt-omnibox">
-        <img width=19 src="https://assets.chatgptomnibox.com/images/icons/chatgpt/with-magnifying-glass/icon32.png?v=de19d04"></a>
+        <img width=19 src=https://cdn.jsdelivr.net/gh/adamlui/chatgpt-omnibox@de19d04/assets/images/icons/chatgpt/with-magnifying-glass/icon32.png></a>
     <a href="chatgpt-omnibox">ChatGPT Omnibox</a>
 </h3>
 
 Type @chatgpt in browser address bar to get answers from ChatGPT.
 
 <blockquote>
-    <a href="https://ff.chatgptomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.orgfirefox/addon/chatgpt-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
-    <a href="https://ff.chatgptomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.orgfirefox/addon/chatgpt-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="chatgpt-omnibox/#readme">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
@@ -418,12 +418,12 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
 
 <h3>
     <a href="deepseek-omnibox">
-        <img width=18 src="https://assets.deepseekomnibox.com/images/icons/deepseek-omnibox/purple-gradient/icon32.png"></a>
+        <img width=18 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/icons/deepseek-omnibox/purple-gradient/icon32.png></a>
     <a href="deepseek-omnibox">DeepSeek Omnibox</a>&nbsp;
-    <a href="https://ff.deepseekomnibox.com/reviews">
+    <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox/reviews">
         <picture>
-            <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.deepseekomnibox.com/images/badges/5-star/blue-stars.png">
-            <img height=22 alt="[5-stars on Mozilla Add-ons Store]" title="5-stars on Mozilla Add-ons Store" src="https://assets.deepseekomnibox.com/images/badges/5-star/yellow-stars-in-white-pill.png">
+            <source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/badges/5-star/blue-stars.png>
+            <img height=22 alt="[5-stars on Mozilla Add-ons Store]" title="5-stars on Mozilla Add-ons Store" src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/badges/5-star/yellow-stars-in-white-pill.png>
         </picture>
     </a>
 </h3>
@@ -431,22 +431,22 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
 <details><summary>Type @deepseek in browser address bar to get answers from DeepSeek AI.</summary>
     <br><blockquote>
         <a href="deepseek-omnibox">
-            <img width=600 src="https://assets.deepseekomnibox.com/images/tiles/marquee/chrome/tile625x250.png"></a>
+            <img width=600 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/tiles/marquee/chrome/tile625x250.png></a>
     </blockquote>
 </details>
 
 <blockquote>
-    <a href="https://chrome.deepseekomnibox.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://chromewebstore.google.com/detail/deepseek-omnibox/gcgfmipiaiopmjcmggnnehnehhdjdkgi/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a>
-    <a href="https://chrome.deepseekomnibox.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://chromewebstore.google.com/detail/deepseek-omnibox/gcgfmipiaiopmjcmggnnehnehhdjdkgi/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Chrome</a> /
-    <a href="https://ff.deepseekomnibox.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
-    <a href="https://ff.deepseekomnibox.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
-    <a href="https://edge.deepseekomnibox.com">
+    <a href="https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/hghigiebpackbakklainbimglgiepfei">
         <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a>
-    <a href="https://edge.deepseekomnibox.com">
+    <a href="https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/hghigiebpackbakklainbimglgiepfei">
         Edge</a> /
     <a href="deepseek-omnibox/#readme">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
@@ -543,28 +543,28 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
 
 <h3>
     <a href="perplexity-omnibox">
-        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.perplexityomnibox.com/images/icons/perplexity/white/icon32.png"><img width=20 src="https://assets.perplexityomnibox.com/images/icons/perplexity/turquoise/icon32.png"></picture></a>
+        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/icons/perplexity/white/icon32.png><img width=20 src=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/icons/perplexity/turquoise/icon32.png></picture></a>
     <a href="perplexity-omnibox">Perplexity Omnibox</a>&nbsp;
-    <a href="https://edge.perplexityomnibox.com">
-        <img height=20 alt="Trended on Microsoft Edge Add-ons" title="Trended on Microsoft Edge Add-ons" src="https://assets.braveomnibox.com/images/badges/microsoft-store/trending/trended-badge-500x91.png"></a>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih">
+        <img height=20 alt="Trended on Microsoft Edge Add-ons" title="Trended on Microsoft Edge Add-ons" src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/badges/microsoft-store/trending/trended-badge-500x91.png></a>
 </h3>
 
 <details>
     <summary>Type @perplexity in browser address bar to get results from Perplexity AI.</summary>
     <br><blockquote>
         <a href="perplexity-omnibox">
-            <img width=600 src="https://assets.perplexityomnibox.com/images/tiles/marquee/edge/tile625x250.png"></a>
+            <img width=600 src=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/tiles/marquee/edge/tile625x250.png></a>
     </blockquote>
 </details>
 
 <blockquote>
-    <a href="https://chrome.perplexityomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom?utm_source=github&utm_medium=referral&utm_content=platform-link">
         <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a>
-    <a href="https://chrome.perplexityomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Chrome</a> /
-    <a href="https://edge.perplexityomnibox.com">
+    <a href="https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih">
         <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a>
-    <a href="https://edge.perplexityomnibox.com">
+    <a href="https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih">
         Edge</a> /
     <a href="perplexity-omnibox/#readme">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
@@ -580,16 +580,16 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
 
 <h3>
     <a href="phind-omnibox">
-        <img width=17 src="https://assets.phindomnibox.com/images/icons/phind/purple-gradient/icon32.png"></a>
+        <img width=17 src=https://cdn.jsdelivr.net/gh/adamlui/phind-omnibox/assets/images/icons/phind/purple-gradient/icon32.png></a>
     <a href="phind-omnibox">Phind Omnibox</a>
 </h3>
 
 Type @phind in browser address bar to get results from Phind AI.
 
 <blockquote>
-    <a href="https://ff.phindomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/phind-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
-    <a href="https://ff.phindomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/phind-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="phind-omnibox/#readme">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
@@ -605,16 +605,16 @@ Type @phind in browser address bar to get results from Phind AI.
 
 <h3>
     <a href="you.com-omnibox">
-        <img width=17 src="https://assets.youomnibox.com/images/icons/you.com/purple-gradient/icon32.png"></a>
+        <img width=17 src=https://cdn.jsdelivr.net/gh/adamlui/you-omnibox/assets/images/icons/you.com/purple-gradient/icon32.png></a>
     <a href="you.com-omnibox">You.com Omnibox</a>
 </h3>
 
 Type @you in browser address bar to get results from You.com AI.
 
 <blockquote>
-    <a href="https://ff.youomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://https://addons.mozilla.org/firefox/addon/you-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
-    <a href="https://ff.youomnibox.com?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://https://addons.mozilla.org/firefox/addon/you-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="you.com-omnibox/#readme">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>

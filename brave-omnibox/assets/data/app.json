@@ -2,7 +2,7 @@
   "name": "Brave Omnibox", "symbol": "🦁", "slug": "brave-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "app": "https://braveomnibox.com",
+    "app": "https://github.com/adamlui/brave-omnibox/#readme",
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox@latest/assets",
     "discuss": "https://github.com/adamlui/brave-omnibox/discussions",
     "donate": {
@@ -15,12 +15,12 @@
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
-      "chrome": "https://chrome.braveomnibox.com/reviews",
-      "edge": "https://edge.braveomnibox.com/reviews",
-      "firefox": "https://ff.braveomnibox.com",
+      "chrome": "https://chromewebstore.google.com/detail/brave-omnibox/obnaimomofoogphlhlaipeflcbneamnj/reviews",
+      "edge": "https://microsoftedge.microsoft.com/addons/detail/brave-omnibox/meolmkblenpohjlndodfbgpcfioampim/reviews",
+      "firefox": "https://addons.mozilla.org/firefox/addon/brave-omnibox",
       "softonic": "https://brave-omnibox.en.softonic.com"
     },
-    "support": "https://support.braveomnibox.com",
+    "support": "https://github.com/adamlui/brave-omnibox/issues",
     "uninstall": "https://forms.gle/Jetu6BSezVws8nXb9"
   }
 }

@@ -16,7 +16,7 @@ Repository: https://github.com/adamlui/perplexity-omnibox
      ═══════════════════════════════════════════════════════════════════════════════ -->
 
 <img 
-  src="https://assets.perplexityomnibox.com/images/tiles/marquee/edge/tile1400x560.png" 
+  src=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/tiles/marquee/edge/tile1400x560.png 
   alt="Perplexity Omnibox Hero Banner" 
   width="100%"
 />
@@ -52,16 +52,16 @@ Repository: https://github.com/adamlui/perplexity-omnibox
      INSTALLATION BUTTONS
      ═══════════════════════════════════════════════════════════════════════════════ -->
 
-<a href="https://chrome.perplexityomnibox.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
+<a href="https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom/?utm_source=github&utm_medium=referral&utm_content=install-button">
   <img 
-    src="https://assets.perplexityomnibox.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png" 
+    src=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png 
     alt="Get for Chrome" 
     height="58"
   />
 </a>
-<a href="https://edge.perplexityomnibox.com">
+<a href="https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih">
   <img 
-    src="https://assets.perplexityomnibox.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png" 
+    src=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png 
     alt="Get for Edge" 
     height="58"
   />
@@ -254,9 +254,9 @@ Made with ❤️ by [Adam Lui][link-author]
      LINK DEFINITIONS
      ═══════════════════════════════════════════════════════════════════════════════ -->
 
-[link-chrome]: https://chrome.perplexityomnibox.com
-[link-edge]: https://edge.perplexityomnibox.com
-[link-reviews]: https://chrome.perplexityomnibox.com/reviews
+[link-chrome]: https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom
+[link-edge]: https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih
+[link-reviews]: https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom/reviews
 [link-jsdelivr]: https://www.jsdelivr.com/package/gh/adamlui/perplexity-omnibox?tab=stats
 [link-codefactor]: https://www.codefactor.io/repository/github/adamlui/perplexity-omnibox
 [link-sonar]: https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_perplexity-omnibox

@@ -2,7 +2,7 @@
   "name": "Perplexity Omnibox", "symbol": "🤖", "slug": "perplexity-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "app": "https://perplexityomnibox.com",
+    "app": "https://github.com/adamlui/perplexity-omnibox/#readme",
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@latest/assets",
     "discuss": "https://github.com/adamlui/perplexity-omnibox/discussions",
     "donate": {
@@ -15,11 +15,11 @@
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
-      "chrome": "https://chrome.perplexityomnibox.com/reviews",
-      "edge": "https://edge.perplexityomnibox.com/reviews",
+      "chrome": "https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom/reviews",
+      "edge": "https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih/reviews",
       "softonic": "https://perplexity-omnibox.en.softonic.com"
     },
-    "support": "https://support.perplexityomnibox.com",
+    "support": "https://github.com/adamlui/perplexity-omnibox/issues",
     "uninstall": "https://forms.gle/UmVid74JscT6oc3f8"
   }
 }

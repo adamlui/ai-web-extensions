@@ -1,12 +1,12 @@
 <div align="right">
     <h6>
         <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.youomnibox.com/images/icons/earth/white/icon32.svg">
-            <img height=14 src="https://assets.youomnibox.com/images/icons/earth/black/icon32.svg">
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/adamlui/you-omnibox/assets/images/icons/earth/white/icon32.svg>
+            <img height=14 src=https://cdn.jsdelivr.net/gh/adamlui/you-omnibox/assets/images/icons/earth/black/icon32.svg>
         </picture>
         &nbsp;English |
-        <a href="https://docs.youomnibox.com/zh-cn/SECURITY.md">简体中文</a> |
-        <a href="https://docs.youomnibox.com/hi/SECURITY.md">हिंदी</a>
+        <a href="https://github.com/adamlui/you-omnibox/docs/zh-cn/SECURITY.md">简体中文</a> |
+        <a href="https://github.com/adamlui/you-omnibox/docs/hi/SECURITY.md">हिंदी</a>
     </h6>
 </div>
 

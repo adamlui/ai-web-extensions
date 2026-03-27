@@ -1,3 +1,3 @@
 # 🔎 Phind Omnibox
 
-Install link: https://ff.phindomnibox.com
+Install link: https://addons.mozilla.org/firefox/addon/phind-omnibox

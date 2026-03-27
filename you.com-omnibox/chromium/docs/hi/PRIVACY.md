@@ -1,8 +1,8 @@
 <div align="right">
     <h6>
         <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.youomnibox.com/images/icons/earth/white/icon32.svg">
-            <img height=14 src="https://assets.youomnibox.com/images/icons/earth/black/icon32.svg">
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/adamlui/you-omnibox/assets/images/icons/earth/white/icon32.svg>
+            <img height=14 src=https://cdn.jsdelivr.net/gh/adamlui/you-omnibox/assets/images/icons/earth/black/icon32.svg>
         </picture>
         &nbsp;हिंदी |
         <a href="../PRIVACY.md">English</a> |

@@ -1,8 +1,8 @@
 <div align="right">
     <h6>
         <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.deepseekomnibox.com/images/icons/earth/white/icon32.svg">
-            <img height=14 src="https://assets.deepseekomnibox.com/images/icons/earth/black/icon32.svg">
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/icons/earth/white/icon32.svg>
+            <img height=14 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/icons/earth/black/icon32.svg>
         </picture>
         &nbsp;简体中文 |
         <a href="../../#readme">English</a> |
@@ -12,16 +12,16 @@
 
 <div align="center">
  
-<img width="100%" src="https://assets.deepseekomnibox.com/images/tiles/marquee/chrome/tile1400x560.png">
+<img width="100%" src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/tiles/marquee/chrome/tile1400x560.png>
 <br><br>
 
 <a href="#">
     <img height=31 src="https://img.shields.io/amo/users/deepseek-omnibox?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge&label=%E7%94%A8%E6%88%B7"></a>
-<a href="https://ff.deepseekomnibox.com">
+<a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox">
     <img alt="[前5 热门 DeepSeek Edge 插件]" height=31 src="https://img.shields.io/badge/%E7%83%AD%E9%97%A8-%E5%89%8D5_DeepSeek_%E6%8F%92%E4%BB%B6-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></a>
-<a href="https://ff.deepseekomnibox.com/reviews">
+<a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox/reviews">
     <img alt="[Mozilla Add-ons 评级]" height=31 src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></a>
-<a href="https://ff.deepseekomnibox.com">
+<a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox">
     <img height=31 alt="[Mozilla 附加组件商店]" src="https://img.shields.io/amo/v/deepseek-omnibox?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="../LICENSE.md">
     <img alt="[许可证: MIT]" height=31 src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
@@ -33,8 +33,8 @@
     <img alt="[SonarCloud 漏洞]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_deepseek-omnibox%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=gold"></a>
 <br><br>
 
-<a href="https://ff.deepseekomnibox.com">
-    <img alt="[获取 Firefox 版本]" height=60 src="https://assets.deepseekomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+<a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox">
+    <img alt="[获取 Firefox 版本]" height=60 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png></a>
 
 </div>
 
@@ -46,7 +46,7 @@
 - **超轻量 —** < 100 KB
 - **注重隐私 —** 不收集任何个人数据
 
-<img height=6px width="100%" src="https://assets.deepseekomnibox.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/separators/aqua-gradient.png>
 
 <div id="sponsors" align="center">
 <br>
@@ -67,7 +67,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://assets.deepseekomnibox.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/separators/aqua-gradient.png>
 
 <a href="https://github.com/adamlui/deepseek-omnibox/issues">获取支持</a> /
 <a href="https://github.com/adamlui">联系作者</a> /

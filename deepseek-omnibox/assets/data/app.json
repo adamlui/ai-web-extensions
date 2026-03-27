@@ -2,7 +2,7 @@
   "name": "DeepSeek Omnibox", "symbol": "🐋", "slug": "deepseek-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "app": "https://deepseekomnibox.com",
+    "app": "https://github.com/adamlui/deepseek-omnibox/#readme",
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox@latest/assets",
     "discuss": "https://github.com/adamlui/deepseek-omnibox/discussions",
     "donate": {
@@ -15,13 +15,13 @@
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
-      "chrome": "https://chrome.deepseekomnibox.com/reviews",
-      "edge": "https://edge.deepseekomnibox.com/reviews",
-      "firefox": "https://ff.deepseekomnibox.com",
+      "chrome": "https://chromewebstore.google.com/detail/deepseek-omnibox/gcgfmipiaiopmjcmggnnehnehhdjdkgi/reviews",
+      "edge": "https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/hghigiebpackbakklainbimglgiepfei/reviews",
+      "firefox": "https://addons.mozilla.org/firefox/addon/deepseek-omnibox",
       "g2": "https://www.g2.com/products/deepseek-omnibox/take_survey",
       "softonic": "https://deepseek-omnibox.en.softonic.com/"
     },
-    "support": "https://support.deepseekomnibox.com",
+    "support": "https://github.com/adamlui/deepseek-omnibox/issues",
     "uninstall": "https://forms.gle/8oGuKJMsyrJCxpKj9"
   }
 }

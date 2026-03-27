@@ -1,9 +1,9 @@
 <div align="center">
  
-<img width="100%" src="https://assets.braveomnibox.com/images/tiles/marquee/edge/tile1400x560.png">
+<img width="100%" src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/tiles/marquee/edge/tile1400x560.png>
 <br><br>
 
-<a href="https://ff.braveomnibox.com">
+<a href="https://addons.mozilla.org/firefox/addon/brave-omnibox">
     <img height=31 alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/brave-omnibox?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="../LICENSE.md">
     <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
@@ -17,8 +17,8 @@
     <img alt="jsDelivr stats" height=31 src="https://img.shields.io/jsdelivr/gh/hm/adamlui/brave-omnibox?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<a href="https://ff.braveomnibox.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
-    <img alt="[Get for Firefox]" height=60 src="https://assets.braveomnibox.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+<a href="https://addons.mozilla.org/firefox/addon/brave-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-badge">
+    <img alt="[Get for Firefox]" height=60 src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png></a>
 
 </div>
 
@@ -31,7 +31,7 @@
 - **Multi-browser support —** All Chromium browsers supported (e.g. Chrome, Edge, Opera)
 - **Privacy focused —** No personal data collected
 
-<img height=6px width="100%" src="https://assets.braveomnibox.com/images/separators/aqua-gradient.png">
+<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/separators/aqua-gradient.png>
 
 <a href="https://github.com/adamlui/brave-omnibox/issues">Get support</a> /
 <a href="https://github.com/adamlui">Contact author</a> /

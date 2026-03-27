@@ -1,3 +1,3 @@
 # You.com Omnibox for Firefox
 
-Install link: https://ff.youomnibox.com
+Install link: https://https://addons.mozilla.org/firefox/addon/you-omnibox
