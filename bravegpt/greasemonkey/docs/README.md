@@ -651,7 +651,7 @@ This app exists thanks to code, translations, issues & ideas from the following 
     <img width=50 title="@Nord1cWarr1or" src="https://avatars.githubusercontent.com/u/47604048?first-contrib=2023.04.01-proxy-ip-bug-report"></a>
 <a href="https://github.com/afkvido">
     <img width=50 title="@afkvido" src="https://avatars.githubusercontent.com/u/69060894?first-contrib=2023.05.16-katex-idea"></a>
-<a href="https://github.com/AliAlSarre">
+<a href="#">
     <img width=50 title="@AliAlSarre" src="https://avatars.githubusercontent.com/u/129722778?first-contrib=2023.05.23-css-readability"></a>
 <a href="https://github.com/Cozy888">
     <img width=50 title="@Cozy888" src="https://avatars.githubusercontent.com/u/95589456?first-contrib=2023.09.05-brave-ui-update"></a>
@@ -752,7 +752,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 > Keeps ChatGPT sessions fresh, eliminating chat time limits + network errors + Cloudflare checks.
 <br>[Install](https://github.com/adamlui/chatgpt-auto-refresh/#-installation) /
 [Readme](https://github.com/adamlui/chatgpt-auto-refresh/#readme) /
-[Discuss](https://chatgptautorefresh.com/discuss)
+[Discuss](https://github.com/adamlui/chatgpt-auto-refresh/discussions)
 
 ### <img width=17 src="https://assets.ddgpt.com/images/icons/app/icon48.png"> [DuckDuckGPT](https://duckduckgpt.com) &nbsp;<a href="https://www.producthunt.com/posts/duckduckgpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light" width="112" height="24" /></a>
 

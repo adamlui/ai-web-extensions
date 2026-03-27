@@ -353,9 +353,9 @@ Auto-play ChatGPT responses.
 Type @chatgpt in browser address bar to get answers from ChatGPT.
 
 <blockquote>
-    <a href="https://addons.mozilla.orgfirefox/addon/chatgpt-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/chatgpt-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
-    <a href="https://addons.mozilla.orgfirefox/addon/chatgpt-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/chatgpt-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="chatgpt-omnibox/#readme">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
@@ -605,16 +605,16 @@ Type @phind in browser address bar to get results from Phind AI.
 
 <h3>
     <a href="you.com-omnibox">
-        <img width=17 src=https://cdn.jsdelivr.net/gh/adamlui/you-omnibox/assets/images/icons/you.com/purple-gradient/icon32.png></a>
+        <img width=17 src=https://cdn.jsdelivr.net/gh/adamlui/you.com-omnibox/assets/images/icons/you.com/purple-gradient/icon32.png></a>
     <a href="you.com-omnibox">You.com Omnibox</a>
 </h3>
 
 Type @you in browser address bar to get results from You.com AI.
 
 <blockquote>
-    <a href="https://addons.mozilla.org/firefox/addon/you-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/you.com-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
-    <a href="https://addons.mozilla.org/firefox/addon/you-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
+    <a href="https://addons.mozilla.org/firefox/addon/you.com-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="you.com-omnibox/#readme">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>

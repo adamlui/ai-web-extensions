@@ -141,7 +141,7 @@ For even more epic ChatGPT apps, go here: https://github.com/adamlui/ai-web-exte
 > Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 <br>[Install](https://amazongpt.kudoai.com/#-installation) /
 [Readme](https://amazongpt.kudoai.com/#readme) /
-[Discuss](https://amazongpt.kudoai.com/discussions)
+[Discuss](https://github.com/KudoAI/amazongpt/discussions)
 
 ### <img width=16 src="https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/icon32.png?65fcf31"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 

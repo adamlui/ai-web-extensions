@@ -182,11 +182,11 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     <img width=50 title="@NoahXcl" src="https://avatars.githubusercontent.com/u/81360639?first-contrib=2023.04.16"></a>
 <a href="https://github.com/selfboot">
     <img width=50 title="@selfboot" src="https://avatars.githubusercontent.com/u/2769831?first-contrib=2023.04.17"></a>
-<a href="https://github.com/maplepicker">
+<a href="#">
     <img width=50 title="@maplepicker" src="https://avatars.githubusercontent.com/u/116735067?first-contrib=2023.04.18"></a>
 <a href="https://github.com/Cloudkkk">
     <img width=50 title="@Cloudkkk" src="https://avatars.githubusercontent.com/u/58101940?first-contrib=2023.04.19"></a>
-<a href="https://github.com/chenzhihao1040728129">
+<a href="#">
     <img width=50 title="@chenzhihao1040728129" src="https://avatars.githubusercontent.com/u/49114216?first-contrib=2023.04.23"></a>
 <a href="https://greasyfork.org/users/1041317-dlzrncsb">
     <picture>
@@ -201,7 +201,7 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     <img width=50 title="@h-h-h-h" src="https://avatars.githubusercontent.com/u/13482553?first-contrib=2023.10.05-chat-reset-fix"></a>
 <a href="https://github.com/xspeed1989">
     <img width=50 title="@xspeed1989" src="https://avatars.githubusercontent.com/u/5162926?first-contrib=2023.11.27-ui-change-report"></a>
-<a href="https://github.com/Chipsum">
+<a href="#">
     <img width=50 title="@Chipsum" src="https://avatars.githubusercontent.com/u/37517008?first-contrib=2023.12.05-first-button-bug-report"></a>
 <a href="https://github.com/Yash-Singh1">
     <img width=50 title="@Yash-Singh1" src="https://avatars.githubusercontent.com/u/53054099?first-contrib=2023.2.3-added-eslint-plugin-userscripts"></a>

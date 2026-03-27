@@ -104,7 +104,7 @@ This project exists thanks to code, testing, issues, translations & ideas from t
 
 <a href="https://github.com/adamlui">
     <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.02.26"></a>
-<a href="https://github.com/Tripp1e">
+<a href="#">
     <img width=50 title="@Tripp1e" src="https://avatars.githubusercontent.com/u/102437240?first-contrib=2023.02.25-autoclear-idea"></a>
 <a href="https://github.com/XiaoYingYo">
     <img width=50 title="@XiaoYingYo" src="https://avatars.githubusercontent.com/u/54934866?first-contrib=2023.03.23-freegpt-support"></a>
@@ -112,7 +112,7 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     <img width=50 title="@Zin6969" src="https://avatars.githubusercontent.com/u/131989355?first-contrib=2023.04.27-doc-translations"></a>
 <a href="https://github.com/xspeed1989">
     <img width=50 title="@xspeed1989" src="https://avatars.githubusercontent.com/u/5162926?first-contrib=2023.11.27-ui-change-report"></a>
-<a href="https://github.com/Chipsum">
+<a href="#">
     <img width=50 title="@Chipsum" src="https://avatars.githubusercontent.com/u/37517008?first-contrib=2023.12.05-first-button-bug-report"></a>
 <a href="https://github.com/Yash-Singh1">
     <img width=50 title="@Yash-Singh1" src="https://avatars.githubusercontent.com/u/53054099?first-contrib=2023.1.31-added-eslint-plugin-userscripts"></a>

@@ -5,8 +5,8 @@
             <img height=14 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/icons/earth/black/icon32.svg>
         </picture>
         &nbsp;English |
-        <a href="https://github.com/adamlui/deepseek-omnibox/docs/zh-cn/SECURITY.md">简体中文</a> |
-        <a href="https://github.com/adamlui/deepseek-omnibox/docs/hi/SECURITY.md">हिंदी</a>
+        <a href="https://github.com/adamlui/deepseek-omnibox/tree/main/docs/zh-cn/SECURITY.md">简体中文</a> |
+        <a href="https://github.com/adamlui/deepseek-omnibox/tree/main/docs/hi/SECURITY.md">हिंदी</a>
     </h6>
 </div>
 

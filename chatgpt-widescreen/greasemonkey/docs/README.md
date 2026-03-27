@@ -162,7 +162,7 @@ This script exists thanks to code, translations, issues & ideas from the followi
     <img width=46 title="@nhan000" src="https://avatars.githubusercontent.com/u/85216095?first-contrib=2023.04.11-paginator-bug-report"></a>
 <a href="https://github.com/Zin6969">
     <img width=46 title="@Zin6969" src="https://avatars.githubusercontent.com/u/131989355?first-contrib=2023.04.27-doc-translations"></a>
-<a href="https://github.com/AliAlSarre">
+<a href="#">
     <img width=46 title="@AliAlSarre" src="https://avatars.githubusercontent.com/u/129722778?first-contrib=2023.05.23-css-readability"></a>
 <a href="https://github.com/RdJNL">
     <img width=46 title="@RdJNL" src="https://avatars.githubusercontent.com/u/8948329?first-contrib=2023.6.6-buttons-invisible-alert"></a>

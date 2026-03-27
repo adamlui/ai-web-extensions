@@ -625,7 +625,7 @@ This app exists thanks to code, translations, issues & ideas from the following 
     <img width=50 title="@luetage" src="https://avatars.githubusercontent.com/u/13988217?first-contrib=2023.04.21-ddg-dark-theme-bug-report"></a>
 <a href="https://github.com/afkvido">
     <img width=50 title="@afkvido" src="https://avatars.githubusercontent.com/u/69060894?first-contrib=2023.05.16-katex-idea"></a>
-<a href="https://github.com/AliAlSarre">
+<a href="#">
     <img width=50 title="@AliAlSarre" src="https://avatars.githubusercontent.com/u/129722778?first-contrib=2023.05.23-css-readability"></a>
 <a href="https://github.com/wznmickey">
     <img width=50 title="@wznmickey" src="https://avatars.githubusercontent.com/u/44784663?first-contrib=2023.05.26-ddg-centered-mode-bug-report"></a>
@@ -729,14 +729,14 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 > Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 <br>[Install](https://amazongpt.kudoai.com/#-installation) /
 [Readme](https://amazongpt.kudoai.com/#readme) /
-[Discuss](https://amazongpt.kudoai.com/discussions)
+[Discuss](https://github.com/KudoAI/amazongpt/discussions)
 
 ### <img width=16 src="https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/icon32.png?65fcf31"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 
 > Generate endless answers from all-knowing ChatGPT (in any language!)
 <br>[Install](https://github.com/adamlui/chatgpt-infinity/#-installation) / 
 [Readme](https://github.com/adamlui/chatgpt-infinity/#readme) / 
-[Discuss](https://chatgptinfinity.com/discuss)
+[Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
 ### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/app/white/icon32.png"><img width=17 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/app/black/icon32.png"></picture> [GoogleGPT](https://github.com/KudoAI/googlegpt/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/badges/awesome/badge.svg"></a>
 

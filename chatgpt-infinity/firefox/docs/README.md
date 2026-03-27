@@ -112,7 +112,7 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     <img width=47 title="@Joker1718" src="https://avatars.githubusercontent.com/u/82336164?first-contrib=2023.11.18-first-button-bug-report"></a>
 <a href="https://github.com/xspeed1989">
     <img width=47 title="@xspeed1989" src="https://avatars.githubusercontent.com/u/5162926?first-contrib=2023.11.27-ui-change-report"></a>
-<a href="https://github.com/Chipsum">
+<a href="#">
     <img width=47 title="@Chipsum" src="https://avatars.githubusercontent.com/u/37517008?first-contrib=2023.12.05-first-button-bug-report"></a>
 <a href="https://github.com/sanchomuzax">
     <img width=47 title="@sanchomuzax" src="https://avatars.githubusercontent.com/u/2911588?first-contrib=2023.2.26-truncate-toggle-label-idea"></a>

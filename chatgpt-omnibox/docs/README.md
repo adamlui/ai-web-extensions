@@ -1,3 +1,3 @@
 # ChatGPT Omnibox for Firefox
 
-Install link: https://addons.mozilla.orgfirefox/addon/chatgpt-omnibox
+Install link: https://addons.mozilla.org/firefox/addon/chatgpt-omnibox

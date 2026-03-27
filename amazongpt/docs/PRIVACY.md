@@ -4,4 +4,4 @@ AmazonGPT does not collect nor store any user data. No information is shared wit
 
 ## Updates
 
-To view revisions to this policy, visit https://github.com/KuduoAI/amazongpt/commits/main/docs/PRIVACY.md.
+To view revisions to this policy, visit https://github.com/KudoAI/amazongpt/commits/main/docs/PRIVACY.md.
