@@ -631,7 +631,7 @@ This app exists thanks to code, translations, issues & ideas from the following 
     <img width=50 title="@wznmickey" src="https://avatars.githubusercontent.com/u/44784663?first-contrib=2023.05.26-ddg-centered-mode-bug-report"></a>
 <a href="https://github.com/gitttt54">
     <img width=50 title="@gitttt54" src="https://avatars.githubusercontent.com/u/96403800?first-contrib=2023.06.24-reply-language-idea"></a>
-<a href="https://github.com/mozzribo">
+<a href="#">
     <img width=50 title="@mozzribo" src="https://avatars.githubusercontent.com/u/12557024?first-contrib=2023.06.29-fatter-sidebar-idea"></a>
 <a href="https://github.com/PeterDaveHello">
     <img width=50 title="@PeterDaveHello" src="https://avatars.githubusercontent.com/u/3691490?first-contrib=2023.10.15-taiwanese-msg-improvements"></a>
