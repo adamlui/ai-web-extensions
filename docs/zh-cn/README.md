@@ -27,7 +27,7 @@
     <img height=31 src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-200,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/ai-web-extensions">
     <img alt="[CodeFactor 等级]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/ai-web-extensions?label=%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
-<a href="../LICENSE.md">
+<a href="LICENSE.md">
     <img alt="[许可证: MIT]" height=31 src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/adamlui/ai-web-extensions/commits">
     <img alt="[GitHub 提交]" height=31 src="https://img.shields.io/github/commit-activity/m/adamlui/ai-web-extensions?label=%E6%8F%90%E4%BA%A4&logo=github&logoColor=white&labelColor=464646&color=869da0&style=for-the-badge"></a>
@@ -225,7 +225,7 @@
         <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="https://gm.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Greasemonkey</a> /
-    <a href="../chatgpt-auto-continue/docs/zh-cn/#readme">
+    <a href="../../chatgpt-auto-continue/docs/zh-cn/#readme">
         <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../chatgpt-auto-continue/docs/zh-cn/#readme">
         自述文件</a> /
@@ -418,9 +418,9 @@
 <!-- DEEPSEEK OMNIBOX -->
 
 <h3>
-    <a href="../deepseek-omnibox">
+    <a href="../../deepseek-omnibox/#readme">
         <img width=18 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/icons/deepseek-omnibox/purple-gradient/icon32.png></a>
-    <a href="../deepseek-omnibox">DeepSeek Omnibox</a>&nbsp;
+    <a href="../../deepseek-omnibox/#readme">DeepSeek Omnibox</a>&nbsp;
     <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox/reviews">
         <picture>
             <source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/badges/5-star/blue-stars.png>
@@ -431,7 +431,7 @@
 
 <details><summary>在地址栏中输入 @deepseek 以从 DeepSeek AI 获得答案。</summary>
     <br><blockquote>
-        <a href="../deepseek-omnibox">
+        <a href="../../deepseek-omnibox/#readme">
             <img width=600 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/tiles/marquee/chrome/tile625x250.png></a>
     </blockquote>
 </details>
