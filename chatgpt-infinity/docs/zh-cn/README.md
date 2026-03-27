@@ -222,6 +222,8 @@ ChatGPT 无穷 与以下浏览器兼容:
     <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></a>
 <a href="https://github.com/ahnupeng" target="_blank" rel="noopener">
     <img width=50 title="@ahnupeng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/5319112?first-contrib=2025.9.4-suggested-allow-edit-slider-vals&h=47&w=47&mask=circle&maxage=7d"></a>
+<a href="https://github.com/bvolpato" target="_blank" rel="noopener">
+    <img width=50 title="@bvolpato" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/3207647?first-contrib=2026.3.27-created-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/dependabot">
     <img width=47 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></a>
 <a href="https://github.com/ImgBotApp">
