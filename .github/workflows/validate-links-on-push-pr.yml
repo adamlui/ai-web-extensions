@@ -23,6 +23,6 @@ jobs:
         uses: lycheeverse/lychee-action@v2.8.0
         with:
           # Check all files, ignore ok/redir/blocked/rate-limited
-          args: . --verbose --no-progress --accept 200..299,300..399,403,429
+          args: . --no-progress --accept 200..299,300..399,403,429
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
