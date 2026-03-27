@@ -23,7 +23,7 @@
     <img alt="[Mozilla Add-ons 评级]" height=31 src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></a>
 <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox">
     <img height=31 alt="[Mozilla 附加组件商店]" src="https://img.shields.io/amo/v/deepseek-omnibox?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
-<a href="../LICENSE.md">
+<a href="LICENSE.md">
     <img alt="[许可证: MIT]" height=31 src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="#">
     <img height=31 src="https://img.shields.io/chrome-web-store/size/gcgfmipiaiopmjcmggnnehnehhdjdkgi?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge&label=%E6%89%A9%E5%B1%95%E5%A4%A7%E5%B0%8F"></a>
