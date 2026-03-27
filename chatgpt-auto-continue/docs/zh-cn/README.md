@@ -7,7 +7,7 @@
             <img height=14 src="https://assets.chatgptautocontinue.com/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;简体中文 |
-        <a href="../../#readme">English</a>
+        <a href="../#readme">English</a>
     </h6>
 </div>
 
