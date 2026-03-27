@@ -5,7 +5,7 @@
             <img height=14 src="https://assets.chatgptinfinity.com/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;简体中文 |
-        <a href="../../LICENSE.md">English</a> |
+        <a href="../LICENSE.md">English</a> |
         <a href="../ja/LICENSE.md">日本語</a> |
         <a href="../hi/LICENSE.md">हिंदी</a>
     </h6>
