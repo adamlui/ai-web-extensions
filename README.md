@@ -5,7 +5,7 @@
 <div align="right">
     <h6>
         <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/earth/white/icon32.svg?v=asdf">
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/earth/white/icon32.svg">
             <img height=14 src="https://assets.aiwebextensions.com/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;English |
