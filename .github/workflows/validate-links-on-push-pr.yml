@@ -35,7 +35,7 @@ jobs:
             . --no-progress
             --accept 200..299,300..399,403,429
             --cache --max-cache-age 3d
-            --exclude ghostbrowser\.com
+            --exclude ghostbrowser\.com --exclude linkedin\.com --exclude elonsucks\.org
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
