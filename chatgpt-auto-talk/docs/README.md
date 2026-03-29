@@ -93,6 +93,10 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     <img width=50 title="@nhan000" src="https://avatars.githubusercontent.com/u/85216095?first-contrib=2025.9.23-reported-stopped-working"></a>
 <a href="https://github.com/CStarker">
     <img width=50 title="@CStarker" src="https://avatars.githubusercontent.com/u/44135221?first-contrib=2025.12.25-reported-stopped-working"></a>
+<a href="https://github.com/bvolpato" target="_blank" rel="noopener">
+    <img width=50 title="@bvolpato" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/3207647?first-contrib=2026.3.29-created-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
+<a href="https://github.com/MichaIng" target="_blank" rel="noopener">
+    <img width=50 title="@MichaIng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/28480705?first-contrib=2026.3.29-add-index-files-to-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
 <a href="https://github.com/dependabot">
     <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></a>
 <a href="https://chatgpt.com">
