@@ -20,7 +20,7 @@
     <img alt="jsDelivr stats" height=31 src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-infinity?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<a href="https://gm.chatgptinfinity.com"><img height=45 alt="[Install this script]" src="https://assets.chatgptinfinity.com/images/buttons/greasy-fork/install-button.svg"></a><a href="#installation"><img height=45 alt="[How to install]" title="How to install" src="https://assets.chatgptinfinity.com/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://gm.chatgptinfinity.com"><img height=45 alt="[Install this script]" src="https://assets.chatgptinfinity.com/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://assets.chatgptinfinity.com/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions) / 
 [Get support](https://support.chatgptinfinity.com) / 
