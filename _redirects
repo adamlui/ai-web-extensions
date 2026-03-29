@@ -8,20 +8,20 @@
 /:project/pages/* /:project/pages/:splat 200
 
 # Redirect non-Pages paths to GitHub
-/amazongpt* https://github.com/adamlui/ai-web-extensions/tree/main/amazongpt#readme 301
-/autoclear-chatgpt-history* https://github.com/adamlui/ai-web-extensions/tree/main/autoclear-chatgpt-history#readme 301
-/brave-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/brave-omnibox#readme 301
-/bravegpt* https://github.com/adamlui/ai-web-extensions/tree/main/bravegpt#readme 301
-/chatgpt-auto-continue* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-auto-continue#readme 301
-/chatgpt-auto-refresh* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-auto-refresh#readme 301
-/chatgpt-auto-talk* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-auto-talk#readme 301
-/chatgpt-infinity* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-infinity#readme 301
-/chatgpt-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-omnibox#readme 301
-/chatgpt-widescreen* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-widescreen#readme 301
-/deepseek-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/deepseek-omnibox#readme 301
-/duckduckgpt* https://github.com/adamlui/ai-web-extensions/tree/main/duckduckgpt#readme 301
-/googlegpt* https://github.com/adamlui/ai-web-extensions/tree/main/googlegpt#readme 301
-/perplexity-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/perplexity-omnibox#readme 301
-/phind-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/phind-omnibox#readme 301
-/you.com-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/you.com-omnibox#readme 301
-/* https://github.com/adamlui/ai-web-extensions#readme 301
+/amazongpt* https://github.com/adamlui/ai-web-extensions/tree/main/amazongp/#readme 301
+/autoclear-chatgpt-history* https://github.com/adamlui/ai-web-extensions/tree/main/autoclear-chatgpt-histor/#readme 301
+/brave-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/brave-omnibo/#readme 301
+/bravegpt* https://github.com/adamlui/ai-web-extensions/tree/main/bravegp/#readme 301
+/chatgpt-auto-continue* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-auto-continu/#readme 301
+/chatgpt-auto-refresh* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-auto-refres/#readme 301
+/chatgpt-auto-talk* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-auto-tal/#readme 301
+/chatgpt-infinity* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-infinit/#readme 301
+/chatgpt-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-omnibo/#readme 301
+/chatgpt-widescreen* https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-widescree/#readme 301
+/deepseek-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/deepseek-omnibo/#readme 301
+/duckduckgpt* https://github.com/adamlui/ai-web-extensions/tree/main/duckduckgp/#readme 301
+/googlegpt* https://github.com/adamlui/ai-web-extensions/tree/main/googlegp/#readme 301
+/perplexity-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/perplexity-omnibo/#readme 301
+/phind-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/phind-omnibo/#readme 301
+/you.com-omnibox* https://github.com/adamlui/ai-web-extensions/tree/main/you.com-omnibo/#readme 301
+/* https://github.com/adamlui/ai-web-extension/#readme 301
