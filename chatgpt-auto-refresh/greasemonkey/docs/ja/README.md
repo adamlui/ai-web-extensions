@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 <div align="right">
     <h6>
         <picture>
@@ -294,4 +296,4 @@ ChatGPT 自動更新 は、[ScriptCat](https://docs.scriptcat.org)、[Violentmon
 <img height=6px width="100%" src="https://assets.chatgptautorefresh.com/images/separators/gradient-aqua.png">
   
 <a href="https://github.com/adamlui/userscripts">**その他のユーザースクリプト**</a> /
-<a href="#日本語--english--简体中文">トップに戻る ↑</a>
+<a href="#top">トップに戻る ↑</a>
