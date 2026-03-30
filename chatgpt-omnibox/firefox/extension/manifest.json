@@ -16,7 +16,15 @@
   },
   "permissions": ["activeTab"],
   "action": { "default_title": "__MSG_prefix_ask__ ChatGPT" },
-  "omnibox": { "keyword" : "@chatgpt" },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "__MSG_prefix_ask__ ChatGPT",
+      "search_url": "https://chatgpt.com?q={searchTerms}",
+      "favicon_url": "icons/icon16.png",
+      "keyword": "@chatgpt",
+      "is_default": false
+    }
+  },
   "web_accessible_resources": [{ "matches": ["<all_urls>"], "resources": ["lib/*"] }],
   "content_scripts": [{
     "matches": ["https://chatgpt.com/*"], "run_at": "document_end", "js": ["content.js"] }],

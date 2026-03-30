@@ -16,7 +16,15 @@
   },
   "permissions": ["activeTab"],
   "action": { "default_title": "__MSG_prefix_ask__ DeepSeek AI" },
-  "omnibox": { "keyword" : "@deepseek" },
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "__MSG_prefix_ask__ DeepSeek AI",
+      "search_url": "https://chat.deepseek.com?q={searchTerms}",
+      "favicon_url": "icons/icon16.png",
+      "keyword": "@deepseek",
+      "is_default": false
+    }
+  },
   "web_accessible_resources": [{ "matches": ["<all_urls>"], "resources": ["lib/*"] }],
   "content_scripts": [{
     "matches": ["https://chat.deepseek.com/*"], "run_at": "document_end", "js": ["content.js"] }],

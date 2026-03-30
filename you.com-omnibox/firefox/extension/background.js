@@ -15,7 +15,3 @@ chrome.action.onClicked.addListener(async () => {
           query = new URL(activeTab?.url || 'about:blank').searchParams.get('q') || chrome.i18n.getMessage('query_hi')
     chrome.tabs.create({ url: `${youURL}/search?q=${query}&tbm=youchat` })
 })
-
-// Query You.com on omnibox query submitted
-chrome.omnibox.onInputEntered.addListener(query =>
-    chrome.tabs.update({ url: `${youURL}/search?q=${query}&tbm=youchat` }))

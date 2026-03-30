@@ -25,6 +25,14 @@ chrome.action.onClicked.addListener(async () => {
 })
 
 // Query ChatGPT on omnibox query submitted
+chrome.tabs.onUpdated.addListener((tabId, { status }, { url }) => {
+    if (status == 'complete' && url.startsWith(chatgptURL)) {
+        const query = new URL(url).searchParams.get('q')
+        if (query) chrome.tabs.sendMessage(tabId, query)
+    }
+})
+
+// Query ChatGPT on omnibox query submitted
 chrome.omnibox.onInputEntered.addListener(async query => {
     const tab = await chrome.tabs.update({ url: `${chatgptURL}/?q=${query}` })
     tabIsLoaded(tab.id).then(() => chrome.tabs.sendMessage(tab.id, query))
