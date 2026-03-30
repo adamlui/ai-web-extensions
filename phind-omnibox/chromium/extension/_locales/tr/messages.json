@@ -1,7 +1,0 @@
-{
-  "appName": { "message": "Phind Omnibox" },
-  "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Phind AI'dan sonuç almak için adres çubuğuna @phind yazın" },
-  "prefix_ask": { "message": "Sor" },
-  "query_hi": { "message": "Merhaba," }
-}

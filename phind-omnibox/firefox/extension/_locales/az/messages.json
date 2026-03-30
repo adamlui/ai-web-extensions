@@ -1,7 +1,0 @@
-{
-  "appName": { "message": "Phind Omnibox" },
-  "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Phind AI-dən nəticələr əldə etmək üçün ünvan çubuğunda @phind yazın" },
-  "prefix_ask": { "message": "Soruşmag" },
-  "query_hi": { "message": "Salam" }
-}

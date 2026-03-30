@@ -1,7 +1,0 @@
-{
-  "appName": { "message": "Phind Omnibox" },
-  "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Momo @phind roto i te pae wāhitau ki te tiki hua i Phind AI" },
-  "prefix_ask": { "message": "" },
-  "query_hi": { "message": "Kia ora" }
-}

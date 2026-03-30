@@ -1,7 +1,0 @@
-{
-  "appName": { "message": "Phind Omnibox" },
-  "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Tape @phind nan ba adrès la pou jwenn rezilta Phind AI" },
-  "prefix_ask": { "message": "Mande" },
-  "query_hi": { "message": "Alo / Salut" }
-}

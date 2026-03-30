@@ -1,7 +1,0 @@
-{
-  "appName": { "message": "Phind Omnibox" },
-  "appAuthor": { "message": "Adam Lui" },
-  "appDesc": { "message": "Wpisz @phind w pasku adresu, aby uzyskać wyniki od Phind AI" },
-  "prefix_ask": { "message": "Zapytaj" },
-  "query_hi": { "message": "Witaj" }
-}

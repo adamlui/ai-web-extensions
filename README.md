@@ -576,31 +576,6 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
         Discuss</a>
 </blockquote>
 
-<!-- PHIND OMNIBOX -->
-
-<h3>
-    <a href="phind-omnibox">
-        <img width=17 src=https://cdn.jsdelivr.net/gh/adamlui/phind-omnibox/assets/images/icons/phind/purple-gradient/icon32.png></a>
-    <a href="phind-omnibox">Phind Omnibox</a>
-</h3>
-
-Type @phind in browser address bar to get results from Phind AI.
-
-<blockquote>
-    <a href="https://addons.mozilla.org/firefox/addon/phind-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
-    <a href="https://addons.mozilla.org/firefox/addon/phind-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        Firefox</a> /
-    <a href="phind-omnibox/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
-    <a href="phind-omnibox/#readme">
-        Readme</a> /
-    <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
-    <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        Discuss</a>
-</blockquote>
-
 <!-- YOU.COM OMNIBOX -->
 
 <h3>

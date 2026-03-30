@@ -23,7 +23,6 @@ updates:
       - /duckduckgpt
       - /googlegpt
       - /perplexity-omnibox
-      - /phind-omnibox
       - /you.com-omnibox
     schedule:
       interval: daily
@@ -47,7 +46,6 @@ updates:
       - /duckduckgpt
       - /googlegpt
       - /perplexity-omnibox
-      - /phind-omnibox
       - /you.com-omnibox
     schedule:
       interval: daily

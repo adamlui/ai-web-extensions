@@ -38,7 +38,6 @@ jobs:
             ["chatgpt-omnibox"]="ChatGPT Omnibox"
             ["chatgpt-widescreen"]="ChatGPT Widescreen"
             ["deepseek-omnibox"]="DeepSeek Omnibox"
-            ["phind-omnibox"]="Phind Omnibox"
             ["you-com-omnibox"]="You.com Omnibox"
           )
 
@@ -63,7 +62,6 @@ jobs:
             "adamlui/deepseek-omnibox"
             "adamlui/chatgpt-widescreen"
             "adamlui/perplexity-omnibox"
-            "adamlui/phind-omnibox"
             "adamlui/you.com-omnibox"
             "KudoAI/amazongpt"
             "KudoAI/bravegpt"
