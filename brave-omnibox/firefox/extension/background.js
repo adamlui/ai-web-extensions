@@ -13,7 +13,7 @@ const braveURL = 'https://search.brave.com'
 chrome.action.onClicked.addListener(async () => {
     const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true }),
           query = new URL(activeTab?.url || 'about:blank').searchParams.get('q') || chrome.i18n.getMessage('query_hi')
-    chrome.tabs.create({ url: `${braveURL}/search?q=${query}&summary=1` })
+    chrome.tabs.create({ url: `${braveURL}/ask?q=${query}` })
 })
 
 // Suggest Brave AI on short prefix used
@@ -26,4 +26,4 @@ chrome.omnibox.onInputChanged.addListener((text, suggest) => {
 
 // Query Brave AI on omnibox query submitted
 chrome.omnibox.onInputEntered.addListener(query =>
-    chrome.tabs.update({ url: `${braveURL}/search?q=${query}&summary=1` }))
+    chrome.tabs.update({ url: `${braveURL}/ask?q=${query} ` }))
