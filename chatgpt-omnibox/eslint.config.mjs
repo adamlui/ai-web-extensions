@@ -6,12 +6,12 @@ import markdown from '@eslint/markdown'
 import stylisticJS from '@stylistic/eslint-plugin'
 
 export default [
-    { ignores: ['**/package-lock.json'] },
+    { ignores: ['**/*.min.{js,mjs}', '**/package-lock.json'] },
     {
         files: ['**/*.{js,mjs}'],
         languageOptions: {
             ecmaVersion: 'latest', sourceType: 'script',
-            globals: { ...globals.browser, ...globals.node, chrome: 'readonly' }
+            globals: { ...globals.browser, ...globals.node, chatgpt: 'readonly', chrome: 'readonly', dom: 'readonly' }
         },
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS },
         rules: {

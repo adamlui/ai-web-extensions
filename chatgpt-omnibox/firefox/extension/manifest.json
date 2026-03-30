@@ -17,6 +17,9 @@
   "permissions": ["activeTab"],
   "action": { "default_title": "__MSG_prefix_ask__ ChatGPT" },
   "omnibox": { "keyword" : "@chatgpt" },
+  "web_accessible_resources": [{ "matches": ["<all_urls>"], "resources": ["lib/*"] }],
+  "content_scripts": [{
+    "matches": ["https://chatgpt.com/*"], "run_at": "document_end", "js": ["content.js"] }],
   "background": { "scripts": [ "background.js" ]},
   "browser_specific_settings": { "gecko": { "id": "chatgpt.omnibox@adamlui.com", "strict_min_version": "109.0" }}
 }
