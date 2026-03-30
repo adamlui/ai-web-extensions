@@ -16,14 +16,6 @@ chrome.action.onClicked.addListener(async () => {
     chrome.tabs.create({ url: `${braveURL}/ask?q=${query}` })
 })
 
-// Suggest Brave AI on short prefix used
-chrome.omnibox.onInputChanged.addListener((text, suggest) => {
-    if (text.startsWith('@b')) suggest([{
-        content: `@brave ${text.slice(2)}`,
-        description: `${chrome.i18n.getMessage('prefix_ask')} Brave AI: ${text.slice(2)}`
-    }])
-})
-
 // Query Brave AI on omnibox query submitted
 chrome.omnibox.onInputEntered.addListener(query =>
     chrome.tabs.update({ url: `${braveURL}/ask?q=${query} ` }))

@@ -24,14 +24,6 @@ chrome.action.onClicked.addListener(async () => {
     tabIsLoaded(newTab.id).then(() => chrome.tabs.sendMessage(newTab.id, query))
 })
 
-// Suggest ChatGPT on short prefix used
-chrome.omnibox.onInputChanged.addListener((text, suggest) => {
-    if (text.startsWith('@c')) suggest([{
-        content: `@chatgpt ${text.slice(2)}`,
-        description: `${chrome.i18n.getMessage('prefix_ask')} ChatGPT: ${text.slice(2)}`
-    }])
-})
-
 // Query ChatGPT on omnibox query submitted
 chrome.omnibox.onInputEntered.addListener(async query => {
     const tab = await chrome.tabs.update({ url: `${chatgptURL}/?q=${query}` })
