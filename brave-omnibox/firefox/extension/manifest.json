@@ -18,7 +18,7 @@
   "action": { "default_title": "__MSG_prefix_ask__ Brave AI" },
   "chrome_settings_overrides": {
     "search_provider": {
-      "name": "__MSG_prefix_ask__ Brave AI",
+      "name": "Brave AI",
       "search_url": "https://search.brave.com/ask?q={searchTerms}",
       "favicon_url": "icons/icon16.png",
       "keyword": "@brave",

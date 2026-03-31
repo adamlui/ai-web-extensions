@@ -18,7 +18,7 @@
   "action": { "default_title": "__MSG_prefix_ask__ DeepSeek AI" },
   "chrome_settings_overrides": {
     "search_provider": {
-      "name": "__MSG_prefix_ask__ DeepSeek AI",
+      "name": "DeepSeek AI",
       "search_url": "https://chat.deepseek.com?q={searchTerms}",
       "favicon_url": "icons/icon16.png",
       "keyword": "@deepseek",

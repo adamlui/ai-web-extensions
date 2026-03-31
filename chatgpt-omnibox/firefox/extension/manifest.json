@@ -18,7 +18,7 @@
   "action": { "default_title": "__MSG_prefix_ask__ ChatGPT" },
   "chrome_settings_overrides": {
     "search_provider": {
-      "name": "__MSG_prefix_ask__ ChatGPT",
+      "name": "ChatGPT",
       "search_url": "https://chatgpt.com?q={searchTerms}",
       "favicon_url": "icons/icon16.png",
       "keyword": "@chatgpt",
