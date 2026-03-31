@@ -356,7 +356,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 ### <img width=16 src="https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/icon32.png?65fcf31"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 > Generate endless answers from all-knowing ChatGPT (in any language!)
 <br>[Install](https://docs.chatgptinfinity.com/#-greasemonkey-userscript) /
-[Readme](https://docs.chatgptinfinity.com/#-readme) /
+[Readme](https://docs.chatgptinfinity.com/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
 <img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">

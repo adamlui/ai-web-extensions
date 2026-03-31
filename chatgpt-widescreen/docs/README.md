@@ -415,7 +415,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 
 > Generate endless answers from all-knowing ChatGPT (in any language!)
 <br>[Install](https://docs.chatgptinfinity.com/#-installation) /
-[Readme](https://docs.chatgptinfinity.com/#-readme) /
+[Readme](https://docs.chatgptinfinity.com/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
 <img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
