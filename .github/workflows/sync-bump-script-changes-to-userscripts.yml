@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   sync-bump-scripts:
-    if: (github.repository == 'adamlui/ai-web-extensions') && !contains(github.event.head_commit.message, '[auto-sync]')
+    if: (github.repository == 'adamlui/ai-web-extensions') && !contains(github.event.head_commit.message, '[auto-sync')
     runs-on: ubuntu-24.04
     permissions:
       contents: read
