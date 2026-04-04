@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths: [chatgpt-auto-talk/**]
 
+concurrency:
+  group: sync-changes-to-repos
+
 jobs:
   build:
     if: (github.repository == 'adamlui/ai-web-extensions') && (github.event.commits[0].committer.username != 'kudo-sync-bot')
