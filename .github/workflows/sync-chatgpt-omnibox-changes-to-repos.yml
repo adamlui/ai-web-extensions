@@ -92,13 +92,13 @@ jobs:
         if: env.SYNC_SRC
         run: |
           cd ${{ github.workspace }}/adamlui/ai-web-extensions
-          git pull # again to sync w/ concurrent workflow updates
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from chatgpt-omnibox/$SYNC_SRC]" || true
+          git pull --rebase
           git push
 
       - name: Push changes to adamlui/chatgpt-omnibox
         run: |
           cd ${{ github.workspace }}/adamlui/chatgpt-omnibox
-          git pull # again to sync w/ concurrent workflow updates
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-omnibox]" || true
+          git pull --rebase
           git push

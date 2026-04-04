@@ -112,20 +112,20 @@ jobs:
         if: env.SYNC_SRC
         run: |
           cd ${{ github.workspace }}/adamlui/ai-web-extensions
-          git pull # again to sync w/ concurrent workflow updates
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from chatgpt-auto-refresh/$SYNC_SRC]" || true
+          git pull --rebase
           git push
 
       - name: Push changes to adamlui/chatgpt-auto-refresh
         run: |
           cd ${{ github.workspace }}/adamlui/chatgpt-auto-refresh
-          git pull # again to sync w/ concurrent workflow updates
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-auto-refresh]" || true
+          git pull --rebase
           git push
 
       - name: Push changes to adamlui/userscripts
         run: |
           cd ${{ github.workspace }}/adamlui/userscripts
-          git pull # again to sync w/ concurrent workflow updates
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-auto-refresh]" || true
+          git pull --rebase
           git push

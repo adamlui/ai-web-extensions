@@ -61,7 +61,7 @@ jobs:
       - name: Push changes to adamlui/userscripts
         run: |
           cd ${{ github.workspace }}/adamlui/userscripts
-          git pull # sync w/ concurrent updates
           git add utils/bump/chatbots.js utils/bump/resources.js
           git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/utils/bump]" || true
+          git pull --rebase
           git push

@@ -92,13 +92,13 @@ jobs:
         if: env.SYNC_SRC
         run: |
           cd ${{ github.workspace }}/adamlui/ai-web-extensions
-          git pull # again to sync w/ concurrent workflow updates
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from deepseek-omnibox/$SYNC_SRC]" || true
+          git pull --rebase
           git push
 
       - name: Push changes to adamlui/deepseek-omnibox
         run: |
           cd ${{ github.workspace }}/adamlui/deepseek-omnibox
-          git pull # again to sync w/ concurrent workflow updates
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/deepseek-omnibox]" || true
+          git pull --rebase
           git push

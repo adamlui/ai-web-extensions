@@ -112,20 +112,20 @@ jobs:
         if: env.SYNC_SRC
         run: |
           cd ${{ github.workspace }}/adamlui/ai-web-extensions
-          git pull # again to sync w/ concurrent workflow updates
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from duckduckgpt/$SYNC_SRC]" || true
+          git pull --rebase
           git push
 
       - name: Push changes to KudoAI/duckduckgpt
         run: |
           cd ${{ github.workspace }}/KudoAI/duckduckgpt
-          git pull # again to sync w/ concurrent workflow updates
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/duckduckgpt]" || true
+          git pull --rebase
           git push
 
       - name: Push changes to adamlui/userscripts
         run: |
           cd ${{ github.workspace }}/adamlui/userscripts
-          git pull # again to sync w/ concurrent workflow updates
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/duckduckgpt]" || true
+          git pull --rebase
           git push
