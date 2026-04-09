@@ -5,7 +5,7 @@
   "description": "__MSG_appDesc__",
   "version": "2026.3.30.2",
   "author": "Adam Lui",
-  "homepage_url": "https://github.com/adamlui/chatgpt-omnibox/#readme",
+  "homepage_url": "https://github.com/KudoAI/chatgpt-omnibox/#readme",
   "default_locale": "en",
   "icons": {
     "16": "icons/icon16.png",

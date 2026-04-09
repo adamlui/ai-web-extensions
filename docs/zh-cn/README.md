@@ -120,17 +120,17 @@
 
 <h3>
     <a href="../../brave-omnibox">
-        <img width=20 src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/icons/brave/icon32.png></a>
+        <img width=20 src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox/assets/images/icons/brave/icon32.png></a>
     <a href="../../brave-omnibox">Brave Omnibox</a>&nbsp;
     <a href="https://microsoftedge.microsoft.com/addons/detail/brave-omnibox/meolmkblenpohjlndodfbgpcfioampim">
-        <img height=20 alt="[Microsoft Edge 附加组件的流行趋势]" title="Microsoft Edge 附加组件的流行趋势" src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/badges/microsoft-store/trending/trended-badge-500x91.png></a>
+        <img height=20 alt="[Microsoft Edge 附加组件的流行趋势]" title="Microsoft Edge 附加组件的流行趋势" src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox/assets/images/badges/microsoft-store/trending/trended-badge-500x91.png></a>
 </h3>
 
 <details>
     <summary>在浏览器地址栏中输入 @brave 以获取 Brave AI 的结果。</summary>
     <br><blockquote>
         <a href="../../brave-omnibox">
-            <img width=600 src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/tiles/marquee/edge/tile625x250.png></a>
+            <img width=600 src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox/assets/images/tiles/marquee/edge/tile625x250.png></a>
     </blockquote>
 </details>
 
@@ -346,7 +346,7 @@
 
 <h3>
     <a href="../../chatgpt-omnibox">
-        <img width=19 src=https://cdn.jsdelivr.net/gh/adamlui/chatgpt-omnibox@de19d04/assets/images/icons/chatgpt/with-magnifying-glass/icon32.png></a>
+        <img width=19 src=https://cdn.jsdelivr.net/gh/KudoAI/chatgpt-omnibox@de19d04/assets/images/icons/chatgpt/with-magnifying-glass/icon32.png></a>
     <a href="../../chatgpt-omnibox">ChatGPT Omnibox</a>
 </h3>
 
@@ -417,12 +417,12 @@
 
 <h3>
     <a href="../../deepseek-omnibox/#readme">
-        <img width=18 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/icons/deepseek-omnibox/purple-gradient/icon32.png></a>
+        <img width=18 src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/icons/deepseek-omnibox/purple-gradient/icon32.png></a>
     <a href="../../deepseek-omnibox/#readme">DeepSeek Omnibox</a>&nbsp;
     <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox/reviews">
         <picture>
-            <source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/badges/5-star/blue-stars.png>
-            <img height=22 alt="[Mozilla 附加组件商店 5 星评价]" title="Mozilla 附加组件商店 5 星评价" src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/badges/5-star/yellow-stars-in-white-pill.png>
+            <source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/badges/5-star/blue-stars.png>
+            <img height=22 alt="[Mozilla 附加组件商店 5 星评价]" title="Mozilla 附加组件商店 5 星评价" src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/badges/5-star/yellow-stars-in-white-pill.png>
         </picture>
     </a>
 </h3>
@@ -430,7 +430,7 @@
 <details><summary>在地址栏中输入 @deepseek 以从 DeepSeek AI 获得答案。</summary>
     <br><blockquote>
         <a href="../../deepseek-omnibox/#readme">
-            <img width=600 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/tiles/marquee/chrome/tile625x250.png></a>
+            <img width=600 src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/tiles/marquee/chrome/tile625x250.png></a>
     </blockquote>
 </details>
 
@@ -542,17 +542,17 @@
 
 <h3>
     <a href="../../perplexity-omnibox">
-        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/icons/perplexity/white/icon32.png><img width=20 src=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/icons/perplexity/turquoise/icon32.png></picture></a>
+        <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/icons/perplexity/white/icon32.png><img width=20 src=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/icons/perplexity/turquoise/icon32.png></picture></a>
     <a href="../../perplexity-omnibox">Perplexity Omnibox</a>&nbsp;
     <a href="https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih">
-        <img height=20 alt="[Microsoft Edge 附加组件的流行趋势]" title="Microsoft Edge 附加组件的流行趋势" src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/badges/microsoft-store/trending/trended-badge-500x91.png></a>
+        <img height=20 alt="[Microsoft Edge 附加组件的流行趋势]" title="Microsoft Edge 附加组件的流行趋势" src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox/assets/images/badges/microsoft-store/trending/trended-badge-500x91.png></a>
 </h3>
 
 <details>
     <summary>在浏览器地址栏中输入 @perplexity 以获取 Perplexity AI 的结果。</summary>
     <br><blockquote>
         <a href="../../perplexity-omnibox">
-            <img width=600 src=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/tiles/marquee/edge/tile625x250.png></a>
+            <img width=600 src=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/tiles/marquee/edge/tile625x250.png></a>
     </blockquote>
 </details>
 
@@ -579,7 +579,7 @@
 
 <h3>
     <a href="../../you.com-omnibox">
-        <img width=17 src=https://cdn.jsdelivr.net/gh/adamlui/you.com-omnibox/assets/images/icons/you.com/purple-gradient/icon32.png></a>
+        <img width=17 src=https://cdn.jsdelivr.net/gh/KudoAI/you.com-omnibox/assets/images/icons/you.com/purple-gradient/icon32.png></a>
     <a href="../../you.com-omnibox">You.com Omnibox</a>
 </h3>
 

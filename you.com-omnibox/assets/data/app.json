@@ -2,20 +2,20 @@
   "name": "You.com Omnibox", "symbol": "🤖", "slug": "you-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "app": "https://github.com/adamlui/you-omnibox/#readme",
-    "assets": "https://cdn.jsdelivr.net/gh/adamlui/you.com-omnibox@latest/assets",
-    "discuss": "https://github.com/adamlui/you-omnibox/discussions",
+    "app": "https://github.com/KudoAI/you-omnibox/#readme",
+    "assets": "https://cdn.jsdelivr.net/gh/KudoAI/you.com-omnibox@latest/assets",
+    "discuss": "https://github.com/KudoAI/you-omnibox/discussions",
     "donate": {
       "cashapp": "https://cash.app/$adamlui",
       "github": "https://github.com/sponsors/adamlui",
       "ko-fi": "https://ko-fi.com/adamlui",
       "paypal": "https://paypal.me/adamlui"
     },
-    "github": "https://github.com/adamlui/you-omnibox",
+    "github": "https://github.com/KudoAI/you-omnibox",
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": { "firefox": "https://addons.mozilla.org/firefox/addon/you-omnibox" },
-    "support": "https://github.com/adamlui/you-omnibox/issues",
+    "support": "https://github.com/KudoAI/you-omnibox/issues",
     "uninstall": "https://forms.gle/HkJFqQ7LEFCxNz6a6"
   }
 }

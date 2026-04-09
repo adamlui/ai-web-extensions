@@ -3,7 +3,7 @@ const deepseekChatURL = 'https://chat.deepseek.com'
 // Init APP data
 ;(async () => {
     const app = { commitHashes: { app: 'cb69047' }} // for cached app.json
-    app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox@${app.commitHashes.app}` }
+    app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@${app.commitHashes.app}` }
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     chrome.runtime.setUninstallURL(app.urls.uninstall)

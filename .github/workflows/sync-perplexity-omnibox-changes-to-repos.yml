@@ -1,4 +1,4 @@
-name: Sync perplexity-omnibox/ to adamlui/perplexity-omnibox/
+name: Sync perplexity-omnibox/ to KudoAI/perplexity-omnibox/
 
 on:
   push:
@@ -25,18 +25,18 @@ jobs:
           token: ${{ secrets.REPO_SYNC_PAT }}
           path: adamlui/ai-web-extensions
 
-      - name: Checkout adamlui/perplexity-omnibox
+      - name: Checkout KudoAI/perplexity-omnibox
         uses: actions/checkout@v6.0.2
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
-          repository: adamlui/perplexity-omnibox
-          path: adamlui/perplexity-omnibox
+          repository: KudoAI/perplexity-omnibox
+          path: KudoAI/perplexity-omnibox
 
-      - name: Sync perplexity-omnibox/ to adamlui/perplexity-omnibox/
+      - name: Sync perplexity-omnibox/ to KudoAI/perplexity-omnibox/
         run: |
           rsync -avhc --delete --filter='P /.*' \
             ${{ github.workspace }}/adamlui/ai-web-extensions/perplexity-omnibox/ \
-            ${{ github.workspace }}/adamlui/perplexity-omnibox/
+            ${{ github.workspace }}/KudoAI/perplexity-omnibox/
 
       - name: Escape backticks in commit msg
         env:
@@ -58,9 +58,9 @@ jobs:
           git config --global user.email "auto-sync@kudoai.com"
           git config --global user.signingkey "$GPG_PRIVATE_ID"
 
-      - name: Push changes to adamlui/perplexity-omnibox
+      - name: Push changes to KudoAI/perplexity-omnibox
         run: |
-          cd ${{ github.workspace }}/adamlui/perplexity-omnibox
+          cd ${{ github.workspace }}/KudoAI/perplexity-omnibox
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/perplexity-omnibox]" || true
           git pull --rebase
           git push

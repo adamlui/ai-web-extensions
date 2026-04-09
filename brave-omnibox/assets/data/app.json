@@ -2,16 +2,16 @@
   "name": "Brave Omnibox", "symbol": "🦁", "slug": "brave-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "app": "https://github.com/adamlui/brave-omnibox/#readme",
-    "assets": "https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox@latest/assets",
-    "discuss": "https://github.com/adamlui/brave-omnibox/discussions",
+    "app": "https://github.com/KudoAI/brave-omnibox/#readme",
+    "assets": "https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox@latest/assets",
+    "discuss": "https://github.com/KudoAI/brave-omnibox/discussions",
     "donate": {
       "cashapp": "https://cash.app/$adamlui",
       "github": "https://github.com/sponsors/adamlui",
       "ko-fi": "https://ko-fi.com/adamlui",
       "paypal": "https://paypal.me/adamlui"
     },
-    "github": "https://github.com/adamlui/brave-omnibox",
+    "github": "https://github.com/KudoAI/brave-omnibox",
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
@@ -20,7 +20,7 @@
       "firefox": "https://addons.mozilla.org/firefox/addon/brave-omnibox",
       "softonic": "https://brave-omnibox.en.softonic.com"
     },
-    "support": "https://github.com/adamlui/brave-omnibox/issues",
+    "support": "https://github.com/KudoAI/brave-omnibox/issues",
     "uninstall": "https://forms.gle/Jetu6BSezVws8nXb9"
   }
 }

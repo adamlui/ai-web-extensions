@@ -2,20 +2,20 @@
   "name": "ChatGPT Omnibox", "symbol": "🤖", "slug": "chatgpt-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "app": "https://github.com/adamlui/chatgpt-omnibox/#readme",
-    "assets": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-omnibox@latest/assets",
-    "discuss": "https://github.com/adamlui/chatgpt-omnibox/discussions",
+    "app": "https://github.com/KudoAI/chatgpt-omnibox/#readme",
+    "assets": "https://cdn.jsdelivr.net/gh/KudoAI/chatgpt-omnibox@latest/assets",
+    "discuss": "https://github.com/KudoAI/chatgpt-omnibox/discussions",
     "donate": {
       "cashapp": "https://cash.app/$adamlui",
       "github": "https://github.com/sponsors/adamlui",
       "ko-fi": "https://ko-fi.com/adamlui",
       "paypal": "https://paypal.me/adamlui"
     },
-    "github": "https://github.com/adamlui/chatgpt-omnibox",
+    "github": "https://github.com/KudoAI/chatgpt-omnibox",
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": { "firefox": "https://addons.mozilla.orgfirefox/addon/chatgpt-omnibox" },
-    "support": "https://github.com/adamlui/chatgpt-omnibox/issues",
+    "support": "https://github.com/KudoAI/chatgpt-omnibox/issues",
     "uninstall": "https://forms.gle/bdwdJyr3SEfsqtjy9"
   }
 }

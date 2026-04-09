@@ -3,7 +3,7 @@ const perplexityURL = 'https://www.perplexity.ai'
 // Init APP data
 ;(async () => {
     const app = { commitHashes: { app: '4514837' }} // for cached app.json
-    app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@${app.commitHashes.app}` }
+    app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox@${app.commitHashes.app}` }
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
     Object.assign(app, { ...remoteAppData, urls: { ...app.urls, ...remoteAppData.urls }})
     chrome.runtime.setUninstallURL(app.urls.uninstall)

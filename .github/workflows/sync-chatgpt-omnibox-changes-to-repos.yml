@@ -1,4 +1,4 @@
-name: Sync _locales/ between chatgpt-omnibox/<chromium|firefox>/extension/, then chatgpt-omnibox/ to adamlui/chatgpt-omnibox/
+name: Sync _locales/ between chatgpt-omnibox/<chromium|firefox>/extension/, then chatgpt-omnibox/ to KudoAI/chatgpt-omnibox/
 
 on:
   push:
@@ -26,12 +26,12 @@ jobs:
           path: adamlui/ai-web-extensions
           fetch-depth: 2
 
-      - name: Checkout adamlui/chatgpt-omnibox
+      - name: Checkout KudoAI/chatgpt-omnibox
         uses: actions/checkout@v6.0.2
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
-          repository: adamlui/chatgpt-omnibox
-          path: adamlui/chatgpt-omnibox
+          repository: KudoAI/chatgpt-omnibox
+          path: KudoAI/chatgpt-omnibox
 
       - name: Sync _locales/ between chatgpt-omnibox/<chromium|firefox>/extension/
         run: |
@@ -62,11 +62,11 @@ jobs:
           # Expose sync src for commit msg in self-push step
           echo "SYNC_SRC=$sync_src" >> $GITHUB_ENV
 
-      - name: Sync chatgpt-omnibox/ to adamlui/chatgpt-omnibox/
+      - name: Sync chatgpt-omnibox/ to KudoAI/chatgpt-omnibox/
         run: |
           rsync -avhc --delete --filter='P /.*' \
             ${{ github.workspace }}/adamlui/ai-web-extensions/chatgpt-omnibox/ \
-            ${{ github.workspace }}/adamlui/chatgpt-omnibox/
+            ${{ github.workspace }}/KudoAI/chatgpt-omnibox/
 
       - name: Escape backticks in commit msg
         env:
@@ -96,9 +96,9 @@ jobs:
           git pull --rebase
           git push
 
-      - name: Push changes to adamlui/chatgpt-omnibox
+      - name: Push changes to KudoAI/chatgpt-omnibox
         run: |
-          cd ${{ github.workspace }}/adamlui/chatgpt-omnibox
+          cd ${{ github.workspace }}/KudoAI/chatgpt-omnibox
           git add . && git commit -n -m "$ESCAPED_MSG ↞ [auto-sync from https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-omnibox]" || true
           git pull --rebase
           git push

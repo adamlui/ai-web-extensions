@@ -1,6 +1,6 @@
 <div align="center">
  
-<img width="100%" src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/tiles/marquee/edge/tile1400x560.png>
+<img width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox/assets/images/tiles/marquee/edge/tile1400x560.png>
 <br><br>
 
 <a href="https://addons.mozilla.org/firefox/addon/brave-omnibox">
@@ -9,16 +9,16 @@
     <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="#">
     <img height=31 src="https://img.shields.io/chrome-web-store/size/obnaimomofoogphlhlaipeflcbneamnj?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
-<a href="https://www.codefactor.io/repository/github/adamlui/brave-omnibox">
-    <img alt="[CodeFactor grade]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/brave-omnibox?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
+<a href="https://www.codefactor.io/repository/github/KudoAI/brave-omnibox">
+    <img alt="[CodeFactor grade]" height=31 src="https://img.shields.io/codefactor/grade/github/KudoAI/brave-omnibox?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_brave-omnibox">
     <img alt="[SonarCloud vulnerabilities]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_brave-omnibox%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></a>
-<a href="https://www.jsdelivr.com/package/gh/adamlui/brave-omnibox?tab=stats">
-    <img alt="jsDelivr stats" height=31 src="https://img.shields.io/jsdelivr/gh/hm/adamlui/brave-omnibox?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
+<a href="https://www.jsdelivr.com/package/gh/KudoAI/brave-omnibox?tab=stats">
+    <img alt="jsDelivr stats" height=31 src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/brave-omnibox?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
 <a href="https://addons.mozilla.org/firefox/addon/brave-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-badge">
-    <img alt="[Get for Firefox]" height=60 src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png></a>
+    <img alt="[Get for Firefox]" height=60 src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png></a>
 
 </div>
 
@@ -31,8 +31,8 @@
 - **Multi-browser support —** All Chromium browsers supported (e.g. Chrome, Edge, Opera)
 - **Privacy focused —** No personal data collected
 
-<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/adamlui/brave-omnibox/assets/images/separators/aqua-gradient.png>
+<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox/assets/images/separators/aqua-gradient.png>
 
-<a href="https://github.com/adamlui/brave-omnibox/issues">Get support</a> /
+<a href="https://github.com/KudoAI/brave-omnibox/issues">Get support</a> /
 <a href="https://github.com/adamlui">Contact author</a> /
 <a href="https://aiwebextensions.com">More AI web extensions</a>

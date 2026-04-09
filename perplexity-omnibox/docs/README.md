@@ -6,7 +6,7 @@
 
 Author: Adam Lui
 License: MIT
-Repository: https://github.com/adamlui/perplexity-omnibox
+Repository: https://github.com/KudoAI/perplexity-omnibox
 -->
 
 <div align="center">
@@ -16,7 +16,7 @@ Repository: https://github.com/adamlui/perplexity-omnibox
      ═══════════════════════════════════════════════════════════════════════════════ -->
 
 <img 
-  src=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/tiles/marquee/edge/tile1400x560.png 
+  src=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/tiles/marquee/edge/tile1400x560.png 
   alt="Perplexity Omnibox Hero Banner" 
   width="100%"
 />
@@ -54,14 +54,14 @@ Repository: https://github.com/adamlui/perplexity-omnibox
 
 <a href="https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom/?utm_source=github&utm_medium=referral&utm_content=install-button">
   <img 
-    src=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png 
+    src=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png 
     alt="Get for Chrome" 
     height="58"
   />
 </a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih">
   <img 
-    src=https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png 
+    src=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png 
     alt="Get for Edge" 
     height="58"
   />
@@ -245,8 +245,8 @@ Made with ❤️ by [Adam Lui][link-author]
 [badge-users]: https://img.shields.io/badge/Users-6.7K-2563eb?style=for-the-badge&logo=weightsandbiases&logoColor=white
 [badge-trending]: https://img.shields.io/badge/Top_20-Edge_Add--on-7bfce9?style=for-the-badge&logo=microsoft-edge&logoColor=white
 [badge-rating]: https://img.shields.io/chrome-web-store/stars/ckhgddjdjkphbaediggjdddjdjgkalom?style=for-the-badge&logo=googlechrome&logoColor=white&color=10b981&label=Chrome
-[badge-jsdelivr]: https://img.shields.io/jsdelivr/gh/hm/adamlui/perplexity-omnibox?style=flat-square&logo=jsdelivr&logoColor=white&color=2bbbd8&label=jsDelivr
-[badge-codefactor]: https://img.shields.io/codefactor/grade/github/adamlui/perplexity-omnibox?style=flat-square&logo=codefactor&logoColor=white&color=b3ff68&label=Code%20Quality
+[badge-jsdelivr]: https://img.shields.io/jsdelivr/gh/hm/KudoAI/perplexity-omnibox?style=flat-square&logo=jsdelivr&logoColor=white&color=2bbbd8&label=jsDelivr
+[badge-codefactor]: https://img.shields.io/codefactor/grade/github/KudoAI/perplexity-omnibox?style=flat-square&logo=codefactor&logoColor=white&color=b3ff68&label=Code%20Quality
 [badge-sonar]: https://img.shields.io/badge/Vulnerabilities-6.7K-gold?style=flat-square&logo=sonar&logoColor=white
 [badge-license]: https://img.shields.io/badge/License-MIT-e11d48?style=flat-square&logo=opensourceinitiative&logoColor=white
 
@@ -257,17 +257,17 @@ Made with ❤️ by [Adam Lui][link-author]
 [link-chrome]: https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom
 [link-edge]: https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih
 [link-reviews]: https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom/reviews
-[link-jsdelivr]: https://www.jsdelivr.com/package/gh/adamlui/perplexity-omnibox?tab=stats
-[link-codefactor]: https://www.codefactor.io/repository/github/adamlui/perplexity-omnibox
+[link-jsdelivr]: https://www.jsdelivr.com/package/gh/KudoAI/perplexity-omnibox?tab=stats
+[link-codefactor]: https://www.codefactor.io/repository/github/KudoAI/perplexity-omnibox
 [link-sonar]: https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_perplexity-omnibox
 [link-license]: ../LICENSE.md
 [link-warp]: https://www.warp.dev/chatgptjs
-[link-wiki]: https://github.com/adamlui/perplexity-omnibox/wiki
-[link-issues]: https://github.com/adamlui/perplexity-omnibox/issues
-[link-issues-bug]: https://github.com/adamlui/perplexity-omnibox/issues/new?labels=bug
-[link-issues-feature]: https://github.com/adamlui/perplexity-omnibox/issues/new?labels=enhancement
-[link-pulls]: https://github.com/adamlui/perplexity-omnibox/pulls
-[link-stargazers]: https://github.com/adamlui/perplexity-omnibox/stargazers
-[link-releases]: https://github.com/adamlui/perplexity-omnibox/releases
+[link-wiki]: https://github.com/KudoAI/perplexity-omnibox/wiki
+[link-issues]: https://github.com/KudoAI/perplexity-omnibox/issues
+[link-issues-bug]: https://github.com/KudoAI/perplexity-omnibox/issues/new?labels=bug
+[link-issues-feature]: https://github.com/KudoAI/perplexity-omnibox/issues/new?labels=enhancement
+[link-pulls]: https://github.com/KudoAI/perplexity-omnibox/pulls
+[link-stargazers]: https://github.com/KudoAI/perplexity-omnibox/stargazers
+[link-releases]: https://github.com/KudoAI/perplexity-omnibox/releases
 [link-ai-extensions]: https://aiwebextensions.com
 [link-author]: https://github.com/adamlui

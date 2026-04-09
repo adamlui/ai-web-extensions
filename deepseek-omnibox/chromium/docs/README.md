@@ -1,8 +1,8 @@
 <div align="right">
     <h6>
         <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/icons/earth/white/icon32.svg>
-            <img height=14 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/icons/earth/black/icon32.svg>
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/icons/earth/white/icon32.svg>
+            <img height=14 src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/icons/earth/black/icon32.svg>
         </picture>
         &nbsp;English |
         <a href="zh-cn/#readme">简体中文</a> |
@@ -12,7 +12,7 @@
 
 <div align="center">
  
-<img width="100%" src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/tiles/marquee/chrome/tile1400x560.png>
+<img width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/tiles/marquee/chrome/tile1400x560.png>
 <br><br>
 
 <a href="#">
@@ -29,16 +29,16 @@
     <img alt="[License: MIT]" height=31 src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="#">
     <img height=31 src="https://img.shields.io/chrome-web-store/size/gcgfmipiaiopmjcmggnnehnehhdjdkgi?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
-<a href="https://www.codefactor.io/repository/github/adamlui/deepseek-omnibox">
-    <img alt="[CodeFactor grade]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/deepseek-omnibox?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
+<a href="https://www.codefactor.io/repository/github/KudoAI/deepseek-omnibox">
+    <img alt="[CodeFactor grade]" height=31 src="https://img.shields.io/codefactor/grade/github/KudoAI/deepseek-omnibox?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_deepseek-omnibox">
     <img alt="[SonarCloud vulnerabilities]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_deepseek-omnibox%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></a>
 <br><br>
 
 <a href="https://chromewebstore.google.com/detail/deepseek-omnibox/gcgfmipiaiopmjcmggnnehnehhdjdkgi/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
-    <img alt="[Get for Chrome]" height=60 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png></a>
+    <img alt="[Get for Chrome]" height=60 src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/hghigiebpackbakklainbimglgiepfei">
-    <img alt="[Get for Edge]" height=60 src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png></a>
+    <img alt="[Get for Edge]" height=60 src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png></a>
 
 </div>
 
@@ -51,7 +51,7 @@
 - **Multi-browser support —** All Chromium browsers supported (e.g. Chrome, Edge, Opera)
 - **Privacy focused —** No personal data collected
 
-<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/separators/aqua-gradient.png>
+<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/separators/aqua-gradient.png>
 
 <div id="sponsors" align="center">
 <br>
@@ -72,8 +72,8 @@
 
 </div>
 
-<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/adamlui/deepseek-omnibox/assets/images/separators/aqua-gradient.png>
+<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/separators/aqua-gradient.png>
 
-<a href="https://github.com/adamlui/deepseek-omnibox/issues">Get support</a> /
+<a href="https://github.com/KudoAI/deepseek-omnibox/issues">Get support</a> /
 <a href="https://github.com/adamlui">Contact author</a> /
 <a href="https://aiwebextensions.com">More AI web extensions</a>

@@ -2,16 +2,16 @@
   "name": "Perplexity Omnibox", "symbol": "🤖", "slug": "perplexity-omnibox",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
-    "app": "https://github.com/adamlui/perplexity-omnibox/#readme",
-    "assets": "https://cdn.jsdelivr.net/gh/adamlui/perplexity-omnibox@latest/assets",
-    "discuss": "https://github.com/adamlui/perplexity-omnibox/discussions",
+    "app": "https://github.com/KudoAI/perplexity-omnibox/#readme",
+    "assets": "https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox@latest/assets",
+    "discuss": "https://github.com/KudoAI/perplexity-omnibox/discussions",
     "donate": {
       "cashapp": "https://cash.app/$adamlui",
       "github": "https://github.com/sponsors/adamlui",
       "ko-fi": "https://ko-fi.com/adamlui",
       "paypal": "https://paypal.me/adamlui"
     },
-    "github": "https://github.com/adamlui/perplexity-omnibox",
+    "github": "https://github.com/KudoAI/perplexity-omnibox",
     "publisher": "https://aiwebextensions.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
@@ -19,7 +19,7 @@
       "edge": "https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih/reviews",
       "softonic": "https://perplexity-omnibox.en.softonic.com"
     },
-    "support": "https://github.com/adamlui/perplexity-omnibox/issues",
+    "support": "https://github.com/KudoAI/perplexity-omnibox/issues",
     "uninstall": "https://forms.gle/UmVid74JscT6oc3f8"
   }
 }
