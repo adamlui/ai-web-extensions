@@ -53,20 +53,20 @@ jobs:
           JSD_GH_REPOS=( # for jsDelivr request counts
             "adamlui/ai-web-extensions"
             "adamlui/autoclear-chatgpt-history"
-            "KudoAI/brave-omnibox"
             "adamlui/chatgpt-auto-continue"
             "adamlui/chatgpt-auto-refresh"
             "adamlui/chatgpt-auto-talk"
             "adamlui/chatgpt-infinity"
+            "adamlui/chatgpt-widescreen"
+            "KudoAI/amazongpt"
+            "KudoAI/brave-omnibox"
+            "KudoAI/bravegpt"
             "KudoAI/chatgpt-omnibox"
             "KudoAI/deepseek-omnibox"
-            "adamlui/chatgpt-widescreen"
-            "KudoAI/perplexity-omnibox"
-            "KudoAI/you.com-omnibox"
-            "KudoAI/amazongpt"
-            "KudoAI/bravegpt"
             "KudoAI/duckduckgpt"
             "KudoAI/googlegpt"
+            "KudoAI/perplexity-omnibox"
+            "KudoAI/you.com-omnibox"
           )
 
           expand_num() { # expand nums abbreviated w/ 'k' or 'm' suffix to integers
