@@ -5,6 +5,10 @@ on:
     branches: [main]
     paths: [chatgpt-auto-continue/**]
 
+concurrency:
+  group: sync-changes-to-repos
+  cancel-in-progress: false
+
 jobs:
   build:
     if: (github.repository == 'adamlui/ai-web-extensions') && !contains(github.event.head_commit.message, '[auto-sync')
