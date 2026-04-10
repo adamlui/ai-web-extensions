@@ -1,5 +1,5 @@
 {
-  "appName": { "message": "ЧатGPT Omnibox" },
+  "appName": { "message": "DeepSeek Omnibox" },
   "appAuthor": { "message": "Адам Луй" },
   "appDesc": { "message": "ЧатGPT-аас хариулт авахын тулд @deepseek хаягийн мөрийг бичнэ үү" },
   "prefix_ask": { "message": "Асуух" },
