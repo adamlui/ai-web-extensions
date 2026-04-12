@@ -2,10 +2,11 @@
 // Source: https://github.com/adamlui/ai-web-extensions/blob/main/utils/bump/bump-utils.mjs
 // Latest minified build: https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs
 
-import fs from 'fs' // to read/write files
-import ssri from 'ssri' // to generate SHA-256 hashes
-import path from 'path' // to manipulate paths
 import { fileURLToPath } from 'url' // to init monorepo root
+import { execSync } from 'child_process' // to change Git author/committer
+import fs from 'fs' // to read/write files
+import path from 'path' // to manipulate paths
+import ssri from 'ssri' // to generate SHA-256 hashes
 
 const colors = {
     nc: '\x1b[0m',        // no color
@@ -108,6 +109,23 @@ export async function getLatestCommitHash({ repo, path = '', source = 'github', 
     if (verbose && latestCommitHash) { this.log.hash(`${latestCommitHash}\n`) ; return latestCommitHash }
     else if (!latestCommitHash)
         throw new Error(`Cannot fetch latest commit hash for: ${repo}${ path ? '/' + path : '' }`)
+}
+
+export function initKudoSyncBot() {
+    const gpgKeysPath = process.env.GPG_KEYS_PATH
+    let keyID = null
+    if (gpgKeysPath) {
+        const keyPath = path.join(gpgKeysPath, 'kudo-sync-bot-private-key.asc')
+        if (fs.existsSync(keyPath)) execSync(`gpg --batch --import "${keyPath}"`)
+        const keyIDpath = path.join(gpgKeysPath, 'kudo-sync-bot-key-id.txt')
+        if (fs.existsSync(keyIDpath)) keyID = fs.readFileSync(keyIDpath, 'utf8').trim()
+    }
+    if (keyID) process.env.GIT_COMMITTER_SIGNINGKEY = keyID
+    process.env.GIT_AUTHOR_NAME = 'kudo-sync-bot'
+    process.env.GIT_AUTHOR_EMAIL = 'auto-sync@kudoai.com'
+    process.env.GIT_COMMITTER_NAME = 'kudo-sync-bot'
+    process.env.GIT_COMMITTER_EMAIL = 'auto-sync@kudoai.com'
+    return true
 }
 
 export async function isValidResource({ resURL, verbose = true } = {}) {

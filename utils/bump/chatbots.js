@@ -95,6 +95,7 @@
         bump.log.working(`\nCommitting bump${pluralSuffix} to Git...\n`)
         try {
             execSync('git add ./*.user.js')
+            bump.initKudoSyncBot()
             spawnSync('git', ['commit', '-n', '-m', config.commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
             console.log('') // line break
             if (!config.noPush) {

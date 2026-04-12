@@ -84,6 +84,7 @@
         // git add/commit/push
         try {
             execSync('git add ./**/manifest.json')
+            bump.initKudoSyncBot()
             spawnSync('git', ['commit', '-n', '-m', commitMsg], { stdio: 'inherit', encoding: 'utf-8' })
             console.log('') // line break
             if (!config.noPush) {
