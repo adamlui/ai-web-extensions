@@ -3,7 +3,7 @@
 // Latest minified build: https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs
 
 import { fileURLToPath } from 'url' // to init monorepo root
-import { execSync } from 'child_process' // to change Git author/committer
+import { execFileSync } from 'child_process' // to change Git author/committer
 import fs from 'fs' // to read/write files
 import path from 'path' // to manipulate paths
 import ssri from 'ssri' // to generate SHA-256 hashes
@@ -116,7 +116,7 @@ export function initKudoSyncBot() {
     let keyID = null
     if (gpgKeysPath) {
         const keyPath = path.join(gpgKeysPath, 'kudo-sync-bot-private-key.asc')
-        if (fs.existsSync(keyPath)) execSync(`gpg --batch --import "${keyPath}"`)
+        if (fs.existsSync(keyPath)) execFileSync('gpg', ['--batch', '--import', keyPath])
         const keyIDpath = path.join(gpgKeysPath, 'kudo-sync-bot-key-id.txt')
         if (fs.existsSync(keyIDpath)) keyID = fs.readFileSync(keyIDpath, 'utf8').trim()
     }
