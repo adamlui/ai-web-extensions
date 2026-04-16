@@ -121,20 +121,20 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
             <td> <!-- Userscript manager -->
                 <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
                    title="Install Tampermonkey for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
                 <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
                    title="Install Tampermonkey for Chrome">
                         Tampermonkey</a><sup>1</sup>
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/scriptcat/icon16.png"></a>
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
                         ScriptCat</a>
                 or
                 <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
                    title="Install OrangeMonkey for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/orangemonkey/icon16.png"></a>
                 <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
                    title="Install OrangeMonkey for Chrome">
                         OrangeMonkey</a><sup>1,2</sup>
@@ -185,14 +185,14 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
             <td> <!-- Userscript manager -->
                 <a href="https://apps.apple.com/app/stay-for-safari/id1591620171"
                    title="Install Stay for Safari">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/stay/icon16.png"></a>
                 <a href="https://apps.apple.com/app/stay-for-safari/id1591620171"
                    title="Install Stay for Safari">
                         Stay</a>
                 or
                 <a href="https://apps.apple.com/app/userscripts/id1463298887"
                    title="Install Userscripts for Safari">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/userscripts/icon16.png"></a>
                 <a href="https://apps.apple.com/app/userscripts/id1463298887"
                    title="Install Userscripts for Safari">
                         Userscripts</a>
@@ -213,26 +213,26 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
             <td> <!-- Userscript manager -->
                 <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
                    title="Install Tampermonkey for Edge">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
                 <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
                    title="Install Tampermonkey for Edge">
                         Tampermonkey</a><sup>1</sup>
                 <a href="https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao"
                    title="Install Violentmonkey for Edge">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
                 <a href="https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao"
                    title="Install Violentmonkey for Edge">
                         Violentmonkey</a><sup>2</sup>
                 <a href="https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh"
                    title="Install ScriptCat for Edge">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/scriptcat/icon16.png"></a>
                 <a href="https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh"
                    title="Install ScriptCat for Edge">
                         ScriptCat</a>
                 or
                 <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
                    title="Install OrangeMonkey for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/orangemonkey/icon16.png"></a>
                 <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
                    title="Install OrangeMonkey for Chrome">
                         OrangeMonkey</a><sup>1,2</sup>
@@ -260,12 +260,12 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 Edge or dev builds (Android)
             </td>
             <td> <!-- Userscript manager -->
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png">
+                <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/tampermonkey/icon28.png">
                     Tampermonkey
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png">
+                <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/violentmonkey/icon25.png">
                     Violentmonkey
                 or
-                <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png">
+                <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/scriptcat/icon16.png">
                     ScriptCat
                 <i>(install from ≡ > Extensions)</i>
             </td>
@@ -298,20 +298,20 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
             <td> <!-- Userscript manager -->
                 <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
                    title="Install Tampermonkey for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
                 <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
                    title="Install Tampermonkey for Firefox">
                         Tampermonkey</a>
                 <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
                    title="Install Violentmonkey for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
                 <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
                    title="Install Violentmonkey for Firefox">
                         Violentmonkey</a><sup>2</sup>
                 or
                 <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
                    title="Install ScriptCat for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/scriptcat/icon16.png"></a>
                 <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
                    title="Install ScriptCat for Firefox">
                         ScriptCat</a>
@@ -344,20 +344,20 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
             <td> <!-- Userscript manager -->
                 <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
                    title="Install Tampermonkey for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
                 <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
                    title="Install Tampermonkey for Firefox">
                         Tampermonkey</a>
                 <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
                    title="Install Violentmonkey for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/violentmonkey/icon25.png"></a>
                 <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/"
                    title="Install Violentmonkey for Firefox">
                         Violentmonkey</a><sup>2</sup>
                 or
                 <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
                    title="Install ScriptCat for Firefox">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/scriptcat/icon16.png"></a>
                 <a href="https://addons.mozilla.org/firefox/addon/scriptcat/"
                    title="Install ScriptCat for Firefox">
                         ScriptCat</a>
@@ -419,14 +419,14 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
             <td> <!-- Userscript manager -->
                 <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
                    title="Install Tampermonkey for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
                 <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
                    title="Install Tampermonkey for Chrome">
                         Tampermonkey</a><sup>1</sup>
                 or
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/scriptcat/icon16.png"></a>
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
                         ScriptCat</a>
@@ -450,7 +450,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
             <td> <!-- Userscript manager -->
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/scriptcat/icon16.png"></a>
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
                         ScriptCat</a>
@@ -474,7 +474,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
             <td> <!-- Userscript manager -->
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/scriptcat/icon16.png"></a>
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
                         ScriptCat</a>
@@ -498,20 +498,20 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
             <td> <!-- Userscript manager -->
                 <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
                    title="Install Tampermonkey for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/tampermonkey/icon28.png"></a>
                 <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
                    title="Install Tampermonkey for Chrome">
                         Tampermonkey</a><sup>1</sup>
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/scriptcat/icon16.png"></a>
                 <a href="https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
                    title="Install ScriptCat for Chrome">
                         ScriptCat</a>
                 or
                 <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
                    title="Install OrangeMonkey for Chrome">
-                        <img width=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"></a>
+                        <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/orangemonkey/icon16.png"></a>
                 <a href="https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf"
                    title="Install OrangeMonkey for Chrome">
                         OrangeMonkey</a><sup>1,2</sup>
