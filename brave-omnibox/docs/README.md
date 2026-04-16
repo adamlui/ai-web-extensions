@@ -4,7 +4,7 @@
 <br><br>
 
 <a href="#">
-    <img height=31 src="https://img.shields.io/badge/Users-639-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img height=31 src="https://img.shields.io/badge/Users-654-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://chromewebstore.google.com/detail/brave-omnibox/obnaimomofoogphlhlaipeflcbneamnj/reviews?utm_source=github&utm_medium=referral&utm_content=chrome-rating-shield">
     <img alt="[Chrome Web Store Ratings]" height=31 src="https://img.shields.io/chrome-web-store/stars/ckhgddjdjkphbaediggjdddjdjgkalom?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/brave-omnibox/meolmkblenpohjlndodfbgpcfioampim">
