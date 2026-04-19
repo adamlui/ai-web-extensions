@@ -758,7 +758,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.com/adamlui/chatgpt-auto-refresh/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-auto-refresh/discussions)
 
-### <img width=17 src="https://assets.ddgpt.com/images/icons/app/icon48.png"> [DuckDuckGPT](https://duckduckgpt.com) &nbsp;<a href="https://www.producthunt.com/posts/duckduckgpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light" width="112" height="24" /></a>
+### <img width=17 src="https://assets.ddgpt.com/images/icons/app/icon48.png"> [DuckDuckGPT](https://duckduckgpt.com) &nbsp;<a href="https://www.producthunt.com/posts/duckduckgpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light" width="112" height="auto" /></a>
 
 > Bring the magic of ChatGPT to DuckDuckGo (powered by GPT-4o!)
 <br>[Install](https://github.com/KudoAI/duckduckgpt/#-installation) /
