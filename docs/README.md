@@ -162,7 +162,7 @@
         <img width=21 src="https://assets.bravegpt.com/images/icons/app/icon48.png"></a>
     <a href="bravegpt">BraveGPT</a>&nbsp;
     <a href="https://www.producthunt.com/posts/bravegpt">
-        <img width="112" height="24" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light"></a>
+        <img width="112" height="auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light"></a>
 </h3>
 
 <details>
@@ -478,7 +478,7 @@ Type @chatgpt in browser address bar to get answers from ChatGPT.
         <img width=20 src="https://assets.ddgpt.com/images/icons/app/icon48.png"></a>
     <a href="duckduckgpt">DuckDuckGPT</a>&nbsp;
     <a href="https://www.producthunt.com/posts/duckduckgpt">
-        <img width="112" height="24" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light"></a>
+        <img width="112" height="auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light"></a>
 </h3>
 
 <details>
