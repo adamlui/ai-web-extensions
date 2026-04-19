@@ -599,11 +599,17 @@ Type @you in browser address bar to get results from You.com AI.
         Discuss</a>
 </blockquote>
 
-<!-- SPONSOR BANNER -->
+<!-- CONTRIBUTORS -->
 
-<br>
+<img height=7px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
 
-<a href="https://github.com/sponsors/adamlui"><img width=830 src="https://assets.aiwebextensions.com/images/banners/sponsor/$10/bottom-padded/banner1660x270.png"></a>
+## 🧠 Contributors
+
+<a href="https://github.com/adamlui/ai-web-extensions/graphs/contributors">
+    <img height=45 width="auto" src="https://contrib.rocks/image?repo=adamlui/ai-web-extensions" /></a>
+<br><br>
+
+All contributions are very welcome!
 
 <!-- FOOTER -->
 
