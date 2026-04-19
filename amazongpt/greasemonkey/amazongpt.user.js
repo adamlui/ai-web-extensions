@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.4.15
+// @version                2026.4.19
 // @license                MIT
 // @icon                   https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon48.png?v=8e8ed1c
 // @icon64                 https://amazongpt.kudoai.com/assets/images/icons/app/black-gold-teal/icon64.png?v=8e8ed1c
@@ -446,7 +446,7 @@
                 #${app.slug} .reply-header-txt { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
                 #${app.slug} .reply-header-btns { margin: 7.5px -5px 0 }
                 #${app.slug} .reply-pre {
-                    font-size: ${app.config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;
+                    font-size: ${app.config.fontSize}px ; font-weight: bold ; white-space: pre-wrap ; min-width: 0 ;
                     line-height: ${ app.config.fontSize * app.config.lineHeightRatio }px ; overscroll-behavior: contain ;
                     position: relative ; z-index: 1 ; /* allow top-margin to overlap header in light scheme */
                     margin: ${ appScheme == 'light' ? 11 : 13 }px 0 7px 0 ; padding: 1.25em 1.25em 0 1.25em ;
