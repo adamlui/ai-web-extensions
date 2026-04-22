@@ -121,10 +121,11 @@
                 category: () => toggleCategorySettingsVisiblity({ key: entryData.key }),
                 toggle: () => {
                     entry.leftElem.classList.toggle('on')
+                    void entry.leftElem.offsetWidth // force layout flush for Chromium to notify
                     settings.save(entryData.key, !app.config[entryData.key])
                     sync.configToUI({ updatedKey: entryData.key })
-                    requestAnimationFrame(() => notify(`${entryData.label} ${i18n.getMsg(`state_${
-                        settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`))
+                    notify(`${entryData.label} ${i18n.getMsg(`state_${
+                        settings.typeIsEnabled(entryData.key) ? 'on' : 'off' }`).toUpperCase()}`)
                 },
                 link: () => { open(entryData.url) ; close() }
             })[entryData.type]()
