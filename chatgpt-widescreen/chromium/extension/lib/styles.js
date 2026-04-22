@@ -88,7 +88,7 @@ window.styles = {
                 }
                 ${ !app.config.hiddenFooter ? '' : `
                     ${selectors.footer}${ site == 'chatgpt' ? `, ${selectors.btns.help}` : '' }
-                    {${ site == 'chatgpt' ? 'opacity: 0 !important ; height: 15px !important' : 'display: none' }}`}
+                        {${ site == 'chatgpt' ? 'opacity: 0 !important ; height: 15px !important' : 'display: none' }}`}
                 ${ !app.config.justifyText ? '' : `
                     ${ site == 'chatgpt' ? 'div[data-message-author-role]'
                                : /* poe */ 'div[class*=messageTextContainer]' }
