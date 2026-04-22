@@ -68,16 +68,16 @@ window.styles = {
     tweaks: {
         autoAppend: true,
         get css() { // requires <app|env>
-            const { site } = env, { [site]: { selectors }} = sites
-            const tcbMinHeight = site == 'chatgpt' ? 25 : /* poe */ 50
-            const tcbHeight = tcbMinHeight +(
-                ( site == 'chatgpt' ? 68 : 80 ) -tcbMinHeight ) * app.config.tallerChatboxHeight /100
+            const { site } = env, { [site]: { selectors }} = sites,
+                  tcbMinHeight = site == 'chatgpt' ? 30 : 50,
+                  tcbMaxHeight = site == 'chatgpt' ? 68 : 80,
+                  tcbHeight = tcbMinHeight +( tcbMaxHeight - tcbMinHeight )* app.config.tallerChatboxHeight /100
             return app.config.extensionDisabled || app.config[`${env.site}Disabled`] ? '' : `
                 ${ app.config.tcbDisabled ? '' : `
                     ${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
                         { max-height: ${tcbHeight}vh }
                     ${ site == 'chatgpt' && location.pathname == '/' ? // anchor to bottom for visible overflow
-                        'div#thread-bottom-container { position: absolute ; bottom: 0 }' : '' }`
+                        'div#thread-bottom-container { position: sticky ; bottom: 0 }' : '' }`
                 }
                 ${ !app.config.hiddenHeader ? '' : `
                     ${selectors.header} { display: none !important }
