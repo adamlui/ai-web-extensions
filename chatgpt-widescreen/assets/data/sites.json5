@@ -23,7 +23,10 @@
       "spam": {
         "banners": {
           "login": "//aside[.//button[contains(., 'Log in')]]",
-          "promo": "aside[class*=promo-banner]", // https://imgur.com/a/WFWUs3r
+          "promo": {
+            "2025.12.30": "aside[class*=promo-banner]", // https://imgur.com/a/WFWUs3r
+            "2026.4.22": "section[aria-labelledby*=promo]" // https://imgur.com/a/VEpgTLU
+          },
           "tos": "div.bottom-full:has(a[href=\"https://openai.com/terms\"])", // https://i.imgur.com/8BUOhn1.png
           "yearInReview": "div[class*=hidden-until-loaded]:has(video[src*=bubble-square-2025])" // https://imgur.com/a/O7km4JE
         },
