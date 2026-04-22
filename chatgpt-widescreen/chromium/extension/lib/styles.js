@@ -69,9 +69,9 @@ window.styles = {
         autoAppend: true,
         get css() { // requires <app|env>
             const { site } = env, { [site]: { selectors }} = sites,
-                  tcbMinHeight = site == 'chatgpt' ? 30 : 50,
-                  tcbMaxHeight = site == 'chatgpt' ? 68 : 80,
-                  tcbHeight = tcbMinHeight +( tcbMaxHeight - tcbMinHeight )* app.config.tallerChatboxHeight /100
+                    tcbMinHeight = site == 'chatgpt' ? 30 : 50,
+                    tcbMaxHeight = site == 'chatgpt' ? 68 : 80,
+                    tcbHeight = tcbMinHeight +( tcbMaxHeight - tcbMinHeight )* app.config.tallerChatboxHeight /100
             return app.config.extensionDisabled || app.config[`${env.site}Disabled`] ? '' : `
                 ${ app.config.tcbDisabled ? '' : `
                     ${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
