@@ -28,7 +28,7 @@
                     settings.save('infinityMode', false)
                 sync.configToUI(options)
             }
-        }[action]?.() || console.warn(`Chome msg listener warning: "${action}"`))
+        }[action]())
     })
 
     // Import APP data

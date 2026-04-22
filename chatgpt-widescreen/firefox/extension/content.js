@@ -32,7 +32,7 @@
                 modals.open('about')
             },
             syncConfigToUI: () => sync.configToUI(options)
-        }[action]?.() || console.warn(`Chome msg listener warning: "${action}"`))
+        }[action]())
     })
 
     // Import DATA

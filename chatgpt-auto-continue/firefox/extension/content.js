@@ -13,7 +13,7 @@
             alert: () => modals.alert(...['title', 'msg', 'btns', 'checkbox', 'width'].map(arg => options[arg])),
             showAbout: () => source?.endsWith('background.js') && chatgpt.isLoaded().then(() => modals.open('about')),
             syncConfigToUI: () => sync.configToUI(options)
-        }[action]?.() || console.warn(`Chome msg listener warning: "${action}"`))
+        }[action]())
     })
 
     // Import JS resources
