@@ -16,7 +16,7 @@
         "sidebar": "div[style*=-sidebar-width] button[data-testid=close-sidebar-button], div[style*=-sidebar-rail-width] button[aria-controls=stage-slideover-sidebar]",
         "stop": "button[data-testid=stop-button]", "voice": "button[data-testid*=composer-speech-button]"
       },
-      "footer": "div#thread-bottom-container > div:last-of-type > div, span.text-sm.leading-none",
+      "footer": "div#thread-bottom-container > div:last-of-type",
       "header": "header#page-header", "input": "div#prompt-textarea",
       "rightbar": "div[class*=sidebar]:has(div[data-testid=screen-threadFlyOut])",
       "sidebar": "div#stage-slideover-sidebar, div.bg-token-sidebar-surface-primary",
