@@ -16,7 +16,7 @@ window.styles = {
     },
 
     calcWSbounds() { // requires env.site
-        window.wsMinWidth ||= chatbar.nativeWidth +( env.site == 'chatgpt' ? 128 : /* poe */ 20 )
+        window.wsMinWidth ||= chatbar.nativeWidth +( env.site == 'chatgpt' ? 0 : /* poe */ 20 )
         window.wsMaxWidth ||= document.querySelector(this.outerDivSelector)?.parentNode?.offsetWidth -25
     },
 
@@ -35,9 +35,10 @@ window.styles = {
             styles.calcWSbounds()
             const { site } = env, toWiden = app.config.widerChatbox && app.config.widescreen
             const wcbWidth = window.wsMinWidth +( window.wsMaxWidth - window.wsMinWidth )
-                * Math.min(app.config.widerChatboxWidth, app.config.widescreenWidth) /100 -20
+                * Math.min(app.config.widerChatboxWidth, app.config.widescreenWidth) /100
+                -( site == 'chatgpt' ? 0 : 20 )
             return app.config.extensionDisabled || app.config[`${site}Disabled`] ? '' : {
-                chatgpt: `main form { max-width: ${
+                chatgpt: `main form { width: ${
                     toWiden ? wcbWidth : chatbar.nativeWidth }px !important ; align-self: center }`,
                 poe: toWiden && `[class*=ChatHomeMain_inputContainer], [class^=ChatPageMainFooter_footerInner] {
                     width: ${wcbWidth}px }`
@@ -113,7 +114,7 @@ window.styles = {
                           * app.config.widescreenWidth /100
             return app.config.extensionDisabled || app.config[`${site}Disabled`] ? '' : {
                 chatgpt: `
-                    ${outerDivSelector} { max-width: ${wsWidth}px !important } /* widen outer div */
+                    ${outerDivSelector} { max-width: ${wsWidth}px !important ; margin: auto } /* widen outer div */
                     /* widen tables */
                         div[class*=tableContainer] { margin: 0 ; width: auto }  
                         div[class*=tableWrapper] { margin: 0 ; min-width: ${wsWidth}px }
