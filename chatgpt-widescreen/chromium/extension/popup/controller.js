@@ -121,7 +121,7 @@
                 category: () => toggleCategorySettingsVisiblity({ key: entryData.key }),
                 toggle: () => {
                     entry.leftElem.classList.toggle('on')
-                    void entry.leftElem.offsetWidth // force layout flush for Chromium to notify
+                    void entry.leftElem.offsetWidth // force layout flush of batched DOM updates in Chromium to notify
                     settings.save(entryData.key, !app.config[entryData.key])
                     sync.configToUI({ updatedKey: entryData.key })
                     notify(`${entryData.label} ${i18n.getMsg(`state_${
