@@ -2,7 +2,7 @@
 
 window.styles = {
 
-    getAllSelectors(obj, { type } = {}) { // used in this.tweaks.styles for spam selectors
+    getAllSelectors(obj, { type } = {}) { // used in this.tweaks.css for spam selectors
         const selectors = Object.values(obj).flatMap(val =>
             typeof val == 'object' ? this.getAllSelectors(val, { type }) : val)
         return type == 'css'   ? selectors.filter(sel => !sel.startsWith('//'))
