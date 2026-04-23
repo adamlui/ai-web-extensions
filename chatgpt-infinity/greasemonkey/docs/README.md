@@ -96,14 +96,14 @@ ChatGPT Infinity is compatible w/ the following browsers using [ScriptCat](https
 
 ### 🖥️ Desktop
 
-- [Google Chrome](https://www.chrome.com) (also available on [Chrome Web Store](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
-- [Mozilla Firefox](https://www.firefox.com) (also available on [Firefox Add-on Store](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
+- [Google Chrome](https://www.chrome.com) (also available on [Chrome Web Store](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
+- [Mozilla Firefox](https://www.firefox.com) (also available on [Firefox Add-on Store](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
 - [Microsoft Edge](https://www.microsoft.com/edge) (also available on [Microsoft Store](https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb))
 - [Opera](https://www.opera.com)
 - [Brave](https://brave.com)
 - [Vivaldi](https://vivaldi.com)
 - [Waterfox](https://www.waterfox.net)
-- [LibreWolf](https://librewolf.net) (also available on [Firefox Add-on Store](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
+- [LibreWolf](https://librewolf.net) (also available on [Firefox Add-on Store](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
 - [Ghost](https://ghostbrowser.com)
 - [QQ](https://browser.qq.com)
 - [Whale](https://whale.naver.com)
@@ -222,14 +222,14 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 
 ## 📜 Related apps
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautotalk.com/images/icons/openai/white/icon16.png"><img width=16 src="https://assets.chatgptautotalk.com/images/icons/openai/black/icon16.png"></picture> [ChatGPT Auto-Talk 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautotalk.com/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautotalk.com/images/icons/openai/white/icon16.png"><img width=16 src="https://assets.chatgptautotalk.com/images/icons/openai/black/icon16.png"></picture> [ChatGPT Auto-Talk 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@2f5a19c/assets/images/badges/awesome/badge.svg"></a>
 
 > Auto-play ChatGPT responses.
 <br>[Install](https://github.com/adamlui/chatgpt-auto-talk/#-installation) /
 [Readme](https://github.com/adamlui/chatgpt-auto-talk/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-auto-talk/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/app/white/icon32.png?v=7e2c739"><img height=16 src="https://assets.chatgptautocontinue.com/images/icons/app/black/icon32.png?v=7e2c739"></picture> [ChatGPT Auto-Continue](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT Auto-Continue](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
 
 > Automatically continue generating answers when ChatGPT responses get cut-off.<br>
 [Install](https://docs.chatgptautocontinue.com/#-installation) / 

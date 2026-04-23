@@ -1,6 +1,6 @@
 <div align="center">
  
-<img width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox/assets/images/tiles/marquee/edge/tile1400x560.png>
+<img width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox@d722a3b/assets/images/tiles/marquee/edge/tile1400x560.png">
 <br><br>
 
 <a href="#">
@@ -25,10 +25,10 @@
     <img alt="jsDelivr stats" height=31 src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/brave-omnibox?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<a href="https://chromewebstore.google.com/detail/brave-omnibox/obnaimomofoogphlhlaipeflcbneamnj/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
-    <img alt="[Get for Chrome]" height=60 src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png></a>
+<a href="https://chromewebstore.google.com/detail/brave-omnibox/obnaimomofoogphlhlaipeflcbneamnj/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+    <img alt="[Get for Chrome]" height=60 src="https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox@d722a3b/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/brave-omnibox/meolmkblenpohjlndodfbgpcfioampim">
-    <img alt="[Get for Edge]" height=60 src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png></a>
+    <img alt="[Get for Edge]" height=60 src="https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox@d722a3b/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 
 </div>
 
@@ -40,7 +40,7 @@
 - **Super lightweight —** < 100 KB
 - **Privacy focused —** No personal data collected
 
-<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox/assets/images/separators/aqua-gradient.png>
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox@d722a3b/assets/images/separators/aqua-gradient.png">
 
 <a href="https://github.com/KudoAI/brave-omnibox/issues">Get support</a> /
 <a href="https://github.com/adamlui">Contact author</a> /

@@ -36,14 +36,7 @@
     <img alt="[www.chatgptwidescreen.com]" height=31 src="https://img.shields.io/badge/web-www.chatgptwidescreen.com-lightgrey?logo=dribbble&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <br><br>
 
-</div>
-
-> [!IMPORTANT]
-> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox@8651933/assets/images/icons/perplexity/white/icon16.png"><img height="13" src="https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox@8651933/assets/images/icons/perplexity/purple-gradient/icon16.png"></picture> _**Perplexity.ai users:** ChatGPT Widescreen no longer supports Perplexity.ai due to the astounding number & frequency of breaking updates they make to the site._
-
-<div align="center">
-
-<a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
+<a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[Get for Chrome]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://edge.chatgptwidescreen.com">
     <img alt="[Get for Edge]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
@@ -90,7 +83,7 @@
 
 ## 🚀 Installation
 
-1. Install **ChatGPT Widescreen** from the [Chrome Web Store](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or the [Edge Add-on Store](https://edge.chatgptwidescreen.com)
+1. Install **ChatGPT Widescreen** from the [Chrome Web Store](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or the [Edge Add-on Store](https://edge.chatgptwidescreen.com)
 
 2. Visit [chatgpt.com](https://chatgpt.com) or [poe.com](https://poe.com) & mode toggles are added to chatbar!
 
@@ -356,7 +349,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://docs.bravegpt.com/#readme) /
 [Discuss](https://github.com/KudoAI/bravegpt/discussions)
 
-### <img width=16 src="https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/icon32.png?65fcf31"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 > Generate endless answers from all-knowing ChatGPT (in any language!)
 <br>[Install](https://docs.chatgptinfinity.com/#-installation) /
 [Readme](https://docs.chatgptinfinity.com/#readme) /

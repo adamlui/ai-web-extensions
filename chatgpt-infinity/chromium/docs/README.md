@@ -30,7 +30,7 @@
     <img alt="[jsDelivr stats]" height=31 src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-infinity?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
+<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[Get for Chrome]" height=60 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://edge.chatgptinfinity.com">
     <img alt="[Get for Edge]" height=60 src="https://assets.chatgptinfinity.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
@@ -62,7 +62,7 @@
 
 ## 🚀 Installation
 
-1. Install ChatGPT Infinity Chromium extension ([Chrome](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link), [Edge](https://edge.chatgptinfinity.com))
+1. Install ChatGPT Infinity Chromium extension ([Chrome](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme), [Edge](https://edge.chatgptinfinity.com))
 
 2. Visit [chatgpt.com](https://chatgpt.com) as normal, and a toggle appears in the sidebar and toolbar menu
 
@@ -210,7 +210,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.com/adamlui/chatgpt-auto-talk/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-auto-talk/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/app/white/icon32.png?v=7e2c739"><img height=16 src="https://assets.chatgptautocontinue.com/images/icons/app/black/icon32.png?v=7e2c739"></picture> [ChatGPT Auto-Continue](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT Auto-Continue](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
 
 > Automatically continue generating answers when ChatGPT responses get cut-off.<br>
 [Install](https://docs.chatgptautocontinue.com/#-installation) / 

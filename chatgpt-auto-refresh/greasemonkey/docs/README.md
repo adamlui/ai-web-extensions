@@ -3,8 +3,8 @@
 <div align="right">
     <h6>
         <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautorefresh.com/images/icons/earth/white/icon32.svg">
-            <img height=14 src="https://assets.chatgptautorefresh.com/images/icons/earth/black/icon32.svg">
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/earth/white/icon32.svg">
+            <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;English |
         <a href="zh-cn/#readme">简体中文</a>
@@ -279,13 +279,13 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://docs.chatgptwidescreen.com/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/app/white/icon32.png?v=7e2c739"><img height=16 src="https://assets.chatgptautocontinue.com/images/icons/app/black/icon32.png?v=7e2c739"></picture> [ChatGPT Auto-Continue](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT Auto-Continue](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
 > Automatically continue generating answers when ChatGPT responses get cut-off.<br>
 [Install](https://docs.chatgptautocontinue.com/#-installation) /
 [Readme](https://docs.chatgptautocontinue.com/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-auto-continue/discussions)
 
-### <img width=16 src="https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/icon32.png?65fcf31"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 > Generate endless answers from all-knowing ChatGPT (in any language!)
 <br>[Install](https://docs.chatgptinfinity.com/#-greasemonkey-userscript) / 
 [Readme](https://docs.chatgptinfinity.com/#readme) / 

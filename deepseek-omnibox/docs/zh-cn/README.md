@@ -1,8 +1,8 @@
 <div align="right">
     <h6>
         <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/icons/earth/white/icon32.svg>
-            <img height=14 src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/icons/earth/black/icon32.svg>
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/icons/earth/white/icon32.svg>
+            <img height=14 src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;简体中文 |
         <a href="../../#readme">English</a> |
@@ -12,7 +12,7 @@
 
 <div align="center">
  
-<img width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/tiles/marquee/chrome/tile1400x560.png>
+<img width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/tiles/marquee/chrome/tile1400x560.png">
 <br><br>
 
 <a href="#">
@@ -33,12 +33,12 @@
     <img alt="[SonarCloud 漏洞]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_deepseek-omnibox%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=gold"></a>
 <br><br>
 
-<a href="https://chromewebstore.google.com/detail/deepseek-omnibox/gcgfmipiaiopmjcmggnnehnehhdjdkgi/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
-    <img alt="[获取 Chrome 版本]" height=60 src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png></a>
+<a href="https://chromewebstore.google.com/detail/deepseek-omnibox/gcgfmipiaiopmjcmggnnehnehhdjdkgi/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+    <img alt="[获取 Chrome 版本]" height=60 src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/hghigiebpackbakklainbimglgiepfei">
-    <img alt="[获取 Edge 版本]" height=60 src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png></a>
+    <img alt="[获取 Edge 版本]" height=60 src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox">
-    <img alt="[获取 Firefox 版本]" height=60 src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png></a>
+    <img alt="[获取 Firefox 版本]" height=60 src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 
 </div>
 
@@ -51,7 +51,7 @@
 - **多浏览器支持 —** 支持 Firefox + 所有 Chromium 浏览器（例如 Chrome, Edge, Opera）
 - **注重隐私 —** 不收集任何个人数据
 
-<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/separators/aqua-gradient.png>
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/separators/aqua-gradient.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -72,7 +72,7 @@
 
 </div>
 
-<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/separators/aqua-gradient.png>
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/separators/aqua-gradient.png">
 
 <a href="https://github.com/KudoAI/deepseek-omnibox/issues">获取支持</a> /
 <a href="https://github.com/adamlui">联系作者</a> /

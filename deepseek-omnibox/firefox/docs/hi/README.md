@@ -1,8 +1,8 @@
 <div align="right">
     <h6>
         <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/icons/earth/white/icon32.svg>
-            <img height=14 src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/icons/earth/black/icon32.svg>
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/icons/earth/white/icon32.svg>
+            <img height=14 src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;हिंदी |
         <a href="../../#readme">English</a> |
@@ -12,7 +12,7 @@
 
 <div align="center">
  
-<img width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/tiles/marquee/chrome/tile1400x560.png>
+<img width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/tiles/marquee/chrome/tile1400x560.png">
 <br><br>
 
 <a href="#">
@@ -32,7 +32,7 @@
 <br><br>
 
 <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox">
-    <img alt="[Firefox के लिए प्राप्त करें]" height=60 src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png></a>
+    <img alt="[Firefox के लिए प्राप्त करें]" height=60 src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 
 </div>
 
@@ -44,7 +44,7 @@
 - **सुपर लाइटवेट —** < 100 KB
 - **गोपनीयता केंद्रित —** कोई व्यक्तिगत डेटा एकत्र नहीं किया जाता
 
-<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/separators/aqua-gradient.png>
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/separators/aqua-gradient.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -65,7 +65,7 @@
 
 </div>
 
-<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox/assets/images/separators/aqua-gradient.png>
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/separators/aqua-gradient.png">
 
 <a href="https://github.com/KudoAI/deepseek-omnibox/issues">समर्थन प्राप्त करें</a> /
 <a href="https://github.com/adamlui">लेखक से संपर्क करें</a> /

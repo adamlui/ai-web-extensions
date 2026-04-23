@@ -22,13 +22,6 @@
     <img alt="[www.chatgptwidescreen.com]" height=31 src="https://img.shields.io/badge/web-www.chatgptwidescreen.com-lightgrey?logo=dribbble&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <br><br>
 
-</div>
-
-> [!IMPORTANT]
-> <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox@8651933/assets/images/icons/perplexity/white/icon16.png"><img height="13" src="https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox@8651933/assets/images/icons/perplexity/purple-gradient/icon16.png"></picture> _**Perplexity.ai users:** ChatGPT Widescreen no longer supports Perplexity.ai due to the astounding number & frequency of breaking updates they make to the site._
-
-<div align="center">
-
 <a href="https://gm.chatgptwidescreen.com"><img height=45 alt="[Install this script]" src="https://assets.chatgptwidescreen.com/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://assets.chatgptwidescreen.com/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions) / 
@@ -126,13 +119,13 @@ ChatGPT Widescreen relies on code from the powerful [chatgpt.js](https://github.
 
 ChatGPT Widescreen is compatible w/ the following browsers using [ScriptCat](https://docs.scriptcat.org), [Violentmonkey](https://violentmonkey.github.io), [OrangeMonkey](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf), [OrangeMonkey Pro](https://chromewebstore.google.com/detail/orangemonkey-pro/ggdmdoodcfamjggeigifpjfnnjfbland) or [Tampermonkey](https://www.tampermonkey.net):
 
-- [Google Chrome](https://www.chrome.com) (also available on [Chrome Web Store](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
-- [Mozilla Firefox](https://www.firefox.com) (also available on [Firefox Add-on Store](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
+- [Google Chrome](https://www.chrome.com) (also available on [Chrome Web Store](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
+- [Mozilla Firefox](https://www.firefox.com) (also available on [Firefox Add-on Store](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
 - [Microsoft Edge](https://www.microsoft.com/edge) (also available on [Edge Add-on Store](https://edge.chatgptwidescreen.com))
 - [Opera](https://www.opera.com)
 - [Brave](https://brave.com)
 - [Vivaldi](https://vivaldi.com)
-- [LibreWolf](https://librewolf.net) (also available on [Firefox Add-on Store](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
+- [LibreWolf](https://librewolf.net) (also available on [Firefox Add-on Store](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
 - [Ghost](https://ghostbrowser.com)
 - [QQ](https://browser.qq.com)
 
@@ -340,7 +333,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 
 ## 📜 Related scripts
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautotalk.com/images/icons/openai/white/icon16.png"><img width=16 src="https://assets.chatgptautotalk.com/images/icons/openai/black/icon16.png"></picture> [ChatGPT Auto-Talk 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautotalk.com/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautotalk.com/images/icons/openai/white/icon16.png"><img width=16 src="https://assets.chatgptautotalk.com/images/icons/openai/black/icon16.png"></picture> [ChatGPT Auto-Talk 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@2f5a19c/assets/images/badges/awesome/badge.svg"></a>
 
 > Auto-play ChatGPT responses.
 <br>[Install](https://github.com/adamlui/chatgpt-auto-talk/#-installation) /
@@ -353,7 +346,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://docs.bravegpt.com/#readme) /
 [Discuss](https://github.com/KudoAI/bravegpt/discussions)
 
-### <img width=16 src="https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/icon32.png?65fcf31"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 > Generate endless answers from all-knowing ChatGPT (in any language!)
 <br>[Install](https://docs.chatgptinfinity.com/#-greasemonkey-userscript) /
 [Readme](https://docs.chatgptinfinity.com/#readme) /

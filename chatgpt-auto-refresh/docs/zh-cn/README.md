@@ -3,8 +3,8 @@
 <div align="right">
     <h6>
         <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautorefresh.com/images/icons/earth/white/icon32.svg">
-            <img height=14 src="https://assets.chatgptautorefresh.com/images/icons/earth/black/icon32.svg">
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/earth/white/icon32.svg">
+            <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;简体中文 |
         <a href="../../#readme">English</a> |
@@ -279,13 +279,13 @@ ChatGPT 自动刷新 与使用 [ScriptCat](https://docs.scriptcat.org)、[Violen
 [自述文件](https://docs.chatgptwidescreen.com/zh-cn/#readme) /
 [讨论](https://github.com/adamlui/chatgpt-widescreen/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/app/white/icon32.png?v=7e2c739"><img height=16 src="https://assets.chatgptautocontinue.com/images/icons/app/black/icon32.png?v=7e2c739"></picture> [ChatGPT 自动继续](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT 自动继续](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
 > 当 ChatGPT 响应被切断时自动继续生成答案。<br>
 [安装](https://docs.chatgptautocontinue.com/zh-cn/#-如何安装) /
 [自述文件](https://docs.chatgptautocontinue.com/zh-cn/#readme) /
 [讨论](https://github.com/adamlui/chatgpt-auto-continue/discussions)
 
-### <img width=16 src="https://assets.chatgptinfinity.com/images/icons/infinity-symbol/circled/icon32.png?65fcf31"> [ChatGPT无限](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT无限](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 > 从无所不知的 ChatGPT 生成无穷无尽的答案 (用任何语言!)
 <br>[安装](https://docs.chatgptinfinity.com/zh-cn#-greasemonkey-用户脚本) /
 [自述文件](https://docs.chatgptinfinity.com/zh-cn/#readme) /

@@ -1,6 +1,6 @@
 <div align="center">
  
-<img width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/tiles/marquee/edge/tile1400x560.png>
+<img width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/tiles/marquee/edge/tile1400x560.png">
 <br><br>
 
 <a href="#">
@@ -25,10 +25,10 @@
     <img alt="jsDelivr stats" height=31 src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/perplexity-omnibox?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<a href="https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
-    <img alt="[Get for Chrome]" height=60 src=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png></a>
+<a href="https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+    <img alt="[Get for Chrome]" height=60 src="https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih">
-    <img alt="[Get for Edge]" height=60 src=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png></a>
+    <img alt="[Get for Edge]" height=60 src="https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 
 </div>
 
@@ -41,7 +41,7 @@
 - **Multi-browser support —** All Chromium browsers supported (e.g. Chrome, Edge, Opera)
 - **Privacy focused —** No personal data collected
 
-<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/separators/aqua-gradient.png>
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/separators/aqua-gradient.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -62,7 +62,7 @@
 
 </div>
 
-<img height=6px width="100%" src=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/separators/aqua-gradient.png>
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/separators/aqua-gradient.png">
 
 <a href="https://github.com/KudoAI/perplexity-omnibox/issues">Get support</a> /
 <a href="https://github.com/adamlui">Contact author</a> /

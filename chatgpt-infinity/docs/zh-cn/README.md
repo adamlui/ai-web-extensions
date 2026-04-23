@@ -3,8 +3,8 @@
 <div align="right">
     <h6>
         <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/icons/earth/white/icon32.svg">
-            <img height=14 src="https://assets.chatgptinfinity.com/images/icons/earth/black/icon32.svg">
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/earth/white/icon32.svg">
+            <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;简体中文 |
         <a href="../#readme">English</a> |
@@ -36,11 +36,11 @@
     <img alt="[jsDelivr 统计数据]" height=31 src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-infinity?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20%E8%AF%B7%E6%B1%82&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
+<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[获取 Chrome 版本]" height=60 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://edge.chatgptinfinity.com">
     <img alt="[获取 Edge 版本]" height=60 src="https://assets.chatgptinfinity.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
-<a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-badge">
+<a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[获取 Firefox 版本]" height=60 src="https://assets.chatgptinfinity.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://gm.chatgptinfinity.com">
     <img alt="[获取 Greasemonkey 版本]" height=60 src="https://assets.chatgptinfinity.com/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
@@ -74,7 +74,7 @@
 
 ### <a href="#" title="Chrome"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/chrome/icon16.png"></a><a href="#" title="Edge"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"></a><a href="#" title="Firefox"><img height=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"></a> 浏览器扩展:
 
-1. 安装 ChatGPT 无限 扩展程序 ([Chrome](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link), [Edge](https://edge.chatgptinfinity.com), [Firefox](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
+1. 安装 ChatGPT 无限 扩展程序 ([Chrome](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme), [Edge](https://edge.chatgptinfinity.com), [Firefox](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
 
 2. 正常访问 [chatgpt.com](https://chatgpt.com)，侧边栏和工具栏菜单中会出现一个切换开关
 
@@ -134,16 +134,16 @@ ChatGPT 无穷 与以下浏览器兼容:
 
 ### 🖥️ 台式
 
-- **[Google Chrome](https://www.chrome.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Mozilla Firefox](https://www.firefox.com)** (通过 [Firefox 扩展程序](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) 或 [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Google Chrome](https://www.chrome.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Mozilla Firefox](https://www.firefox.com)** (通过 [Firefox 扩展程序](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
 - **[Microsoft Edge](https://www.microsoft.com/edge)** (通过 [Edge 扩大](https://edge.chatgptinfinity.com) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Opera](https://www.opera.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Brave](https://brave.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Vivaldi](https://vivaldi.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[LibreWolf](https://librewolf.net)** (通过 [Firefox 扩展程序](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) 或 [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Ghost](https://ghostbrowser.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[QQ](https://browser.qq.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
-- **[Whale](https://whale.naver.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Opera](https://www.opera.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Brave](https://brave.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Vivaldi](https://vivaldi.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[LibreWolf](https://librewolf.net)** (通过 [Firefox 扩展程序](https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Ghost](https://ghostbrowser.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[QQ](https://browser.qq.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
+- **[Whale](https://whale.naver.com)** (通过 [Chrome 扩大](https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://gm.chatgptinfinity.com))
 
 <br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptinfinity.com/images/logos/platforms/android/head-plus-word/white/logo150x24.png"><img alt="Android" width=111 src="https://assets.chatgptinfinity.com/images/logos/platforms/android/head-plus-word/green-head-black-word/logo150x24.png"></picture><br>
 
@@ -278,7 +278,7 @@ ChatGPT 无穷 与以下浏览器兼容:
 [自述文件](https://github.com/adamlui/chatgpt-auto-talk/tree/main/docs/zh-cn/#readme) /
 [讨论](https://github.com/adamlui/chatgpt-auto-talk/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/app/white/icon32.png?v=7e2c739"><img height=16 src="https://assets.chatgptautocontinue.com/images/icons/app/black/icon32.png?v=7e2c739"></picture> [ChatGPT 自动继续](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT 自动继续](https://chatgptautocontinue.com) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://assets.chatgptautocontinue.com/images/badges/awesome/badge.svg"></a>
 
 > 当 ChatGPT 响应被切断时自动继续生成答案。<br>
 [安装](https://docs.chatgptautocontinue.com/zh-cn/#-如何安装) / 

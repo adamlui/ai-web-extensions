@@ -1,6 +1,6 @@
 <a id="top"></a>
 
-# <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.autoclearchatgpt.com/images/icons/openai/white/icon32.png"><img width=23 src="https://assets.autoclearchatgpt.com/images/icons/openai/black/icon32.png"></picture> Autoclear ChatGPT History
+# <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@83f1921/assets/images/icons/openai/white/icon32.png"><img width=23 src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@83f1921/assets/images/icons/openai/black/icon32.png"></picture> Autoclear ChatGPT History
 
 <a href="../LICENSE.md">
     <img height=31 alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
