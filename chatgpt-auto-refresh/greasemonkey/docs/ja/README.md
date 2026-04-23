@@ -16,19 +16,19 @@
 # <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautorefresh.com/images/icons/openai/white/icon32.png"><img width=23 src="https://assets.chatgptautorefresh.com/images/icons/openai/black/icon32.png"></picture> ChatGPT 自動更新 ↻
 
 <a href="LICENSE.md">
-    <img height=31 alt="[ライセンス: MIT]" src="https://img.shields.io/badge/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[ライセンス: MIT]" src="https://img.shields.io/badge/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/adamlui/chatgpt-auto-refresh/blob/main/greasemonkey/chatgpt-auto-refresh.user.js">
     <img height=32 src="https://img.shields.io/github/size/adamlui/chatgpt-auto-refresh/greasemonkey/chatgpt-auto-refresh.user.js?label=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B5%E3%82%A4%E3%82%BA&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-auto-refresh">
-    <img height=31 alt="[コードの品質]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-auto-refresh?label=%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E5%93%81%E8%B3%AA&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[コードの品質]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-auto-refresh?label=%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E5%93%81%E8%B3%AA&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_auto_refresh&utm_content=github_shield">
-    <img height=31 alt="[搭載 chatgpt.js]" src="https://img.shields.io/badge/%E6%90%AD%E8%BC%89-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[搭載 chatgpt.js]" src="https://img.shields.io/badge/%E6%90%AD%E8%BC%89-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_chatgpt-auto-refresh">
-    <img height=31 alt="[SonarCloud 脆弱性]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-auto-refresh%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E8%84%86%E5%BC%B1%E6%80%A7&color=gold"></a>
+    <img style="height: 30px ; width: auto" alt="[SonarCloud 脆弱性]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-auto-refresh%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E8%84%86%E5%BC%B1%E6%80%A7&color=gold"></a>
 <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
-    <img height=31 alt="[言及されている Awesome]" src="https://img.shields.io/badge/%E8%A8%80%E5%8F%8A%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[言及されている Awesome]" src="https://img.shields.io/badge/%E8%A8%80%E5%8F%8A%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-auto-refresh?tab=stats">
-    <img height=31 alt="[jsDelivr 統計]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-auto-refresh?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88&labelColor=464646&color=2bbbd8"></a>
+    <img style="height: 30px ; width: auto" alt="[jsDelivr 統計]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-auto-refresh?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88&labelColor=464646&color=2bbbd8"></a>
 
 ### 背景リクエストを介して ChatGPT セッションを最新の状態に保ち、ネットワーク エラーと Cloudflare チェックを排除します。
 

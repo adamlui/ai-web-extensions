@@ -5,21 +5,21 @@
 <div align="center">
 
 <a href="https://ff.chatgptautocontinue.com/reviews">
-    <img alt="[Mozilla Add-ons Ratings]" height=31 src="https://img.shields.io/amo/stars/chatgpt-auto-continue?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></a>
+    <img alt="[Mozilla Add-ons Ratings]" style="height: 30px ; width: auto" src="https://img.shields.io/amo/stars/chatgpt-auto-continue?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></a>
 <a href="https://ff.chatgptautocontinue.com">
-    <img height=31 alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/chatgpt-auto-continue?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/chatgpt-auto-continue?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="../LICENSE.md">
-    <img height=31 alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="#">
-    <img height=31 src="https://img.shields.io/chrome-web-store/size/lbojnhaafilddefkdgmbplkafnckaoga?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" src="https://img.shields.io/chrome-web-store/size/lbojnhaafilddefkdgmbplkafnckaoga?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-auto-continue">
-    <img height=31 alt="[CodeFactor grade]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-auto-continue?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[CodeFactor grade]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-auto-continue?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_auto_continue&utm_content=github_shield">
-    <img height=31 alt="[Powered by chatgpt.js]" src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[Powered by chatgpt.js]" src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_chatgpt-auto-continue">
-    <img height=31 alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-auto-continue%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></a>
+    <img style="height: 30px ; width: auto" alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-auto-continue%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-auto-continue?tab=stats">
-    <img height=31 alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-auto-continue?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
+    <img style="height: 30px ; width: auto" alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-auto-continue?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
 <a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=install-button">

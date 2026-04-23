@@ -22,15 +22,15 @@
 <!-- SHIELDS -->
 
 <a href="#">
-    <img height=31 src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-200,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-200,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/ai-web-extensions">
-    <img alt="[CodeFactor 等级]" height=31 src="https://img.shields.io/codefactor/grade/github/adamlui/ai-web-extensions?label=%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
+    <img alt="[CodeFactor 等级]" style="height: 30px ; width: auto" src="https://img.shields.io/codefactor/grade/github/adamlui/ai-web-extensions?label=%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="./LICENSE.md">
-    <img alt="[许可证: MIT]" height=31 src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img alt="[许可证: MIT]" style="height: 30px ; width: auto" src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_ai-web-extensions">
-    <img alt="[SonarCloud 漏洞]" height=31 src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_ai-web-extensions%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=gold"></a>
+    <img alt="[SonarCloud 漏洞]" style="height: 30px ; width: auto" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_ai-web-extensions%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=gold"></a>
 <a href="#">
-    <img height=31 src="https://img.shields.io/badge/jsDelivr_%E8%AF%B7%E6%B1%82-1,000,000+/%E6%9C%88-7bb7fc.svg?logo=jsdelivr&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" src="https://img.shields.io/badge/jsDelivr_%E8%AF%B7%E6%B1%82-1,000,000+/%E6%9C%88-7bb7fc.svg?logo=jsdelivr&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 
 <!-- DESCRIPTION -->
 
