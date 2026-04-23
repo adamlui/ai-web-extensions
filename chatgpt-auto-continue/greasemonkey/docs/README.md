@@ -155,23 +155,6 @@ This project exists thanks to code, testing, issues, translations & ideas from t
         <img width=47 title="DeepSeek AI" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/black/icon48.png">
     </picture></a>
 
-#
-
-<div align="center">
-
-<br>
-
-<a href="https://github.com/adamlui/chatgpt-auto-continue/stargazers">
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=adamlui/chatgpt-auto-continue&type=Timeline&theme=dark" />
-        <img width=665 src="https://api.star-history.com/svg?repos=adamlui/chatgpt-auto-continue&type=Timeline" />
-    </picture>
-</a>
-
-<br>_Consider giving this repo a ⭐ if it helped you!_
-
-</div>
-
 <br>
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">

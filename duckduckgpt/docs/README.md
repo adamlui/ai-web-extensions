@@ -699,25 +699,6 @@ This app exists thanks to code, translations, issues & ideas from the following 
 
 </div>
 
-#
-
-</div>
-
-<div align="center">
-
-<br>
-
-<a href="https://github.com/KudoAI/duckduckgpt/stargazers">
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=KudoAI/duckduckgpt&type=Timeline&theme=dark" />
-        <img width=665 src="https://api.star-history.com/svg?repos=KudoAI/duckduckgpt&type=Timeline" />
-    </picture>
-</a>
-
-<br><i>Consider giving this project a ⭐ if it helped you!</i>
-
-</div>
-
 ## 🤖 More ChatGPT apps
 
 For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
