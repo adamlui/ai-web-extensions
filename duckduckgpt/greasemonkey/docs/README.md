@@ -6,7 +6,7 @@
     <img src="https://assets.ddgpt.com/images/logos/app/lightmode/logo371x65.png">
   </picture>
 </h1>
- 
+
 <a href="../LICENSE.md">
     <img height=31 alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/duckduckgpt/blob/main/greasemonkey/duckduckgpt.user.js">
