@@ -92,7 +92,7 @@
 
 <!-- BRAVE OMNIBOX -->
 
-### [<img width=20 src="https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox@d722a3b/assets/images/icons/brave/icon32.png">][brave-omnibox-readme] [Brave Omnibox][brave-omnibox-readme]&nbsp;[<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/5-star/blue-stars.png><img height=22 alt="[Chrome 网上应用店 5 星好评]" title="Chrome 网上应用店 5 星好评" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/5-star/yellow-stars-in-white-pill.png"></picture>](https://chromewebstore.google.com/detail/brave-omnibox/obnaimomofoogphlhlaipeflcbneamnj/reviews?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)
+### [<img width=20 src="https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox@d722a3b/assets/images/icons/brave/icon32.png">][brave-omnibox-readme] [Brave Omnibox][brave-omnibox-readme] &nbsp;[<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/5-star/blue-stars.png><img height=22 alt="[Chrome 网上应用店 5 星好评]" title="Chrome 网上应用店 5 星好评" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/5-star/yellow-stars-in-white-pill.png"></picture>](https://chromewebstore.google.com/detail/brave-omnibox/obnaimomofoogphlhlaipeflcbneamnj/reviews?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)
 
 <details>
     <summary>
@@ -391,7 +391,7 @@
 
 <!-- PERPLEXITY OMNIBOX -->
 
-### [<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/icons/perplexity/white/icon32.png><img width=20 src="https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/icons/perplexity/turquoise/icon32.png"></picture>][perplexity-omnibox-readme] [Perplexity Omnibox][perplexity-omnibox-readme]&nbsp;[<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/5-star/blue-stars.png><img height=22 alt="[Chrome 网上应用店 5 星好评]" title="Chrome 网上应用店 5 星好评" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/5-star/yellow-stars-in-white-pill.png"></picture>](https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom/reviews?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)
+### [<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/icons/perplexity/white/icon32.png><img width=20 src="https://cdn.jsdelivr.net/gh/KudoAI/perplexity-omnibox/assets/images/icons/perplexity/turquoise/icon32.png"></picture>][perplexity-omnibox-readme] [Perplexity Omnibox][perplexity-omnibox-readme] &nbsp;[<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset=https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/5-star/blue-stars.png><img height=22 alt="[Chrome 网上应用店 5 星好评]" title="Chrome 网上应用店 5 星好评" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/badges/5-star/yellow-stars-in-white-pill.png"></picture>](https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom/reviews?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)
 
 <details>
     <summary>
