@@ -261,13 +261,13 @@ This script exists thanks to code, translations, issues & ideas from the followi
 <a href="https://github.com/cleuton4k">
     <img width=46 title="@cleuton4k" src="https://avatars.githubusercontent.com/u/90144967?first-contrib=2025.4.4-btn-visibility-feat-request"></a>
 <a href="https://addons.mozilla.org/firefox/user/18948576/">
-    <img width=46 title="RandomFayerFoksUser" src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.4.19-reported-chatgpt-tables-dont-stretch"></a>
+    <img width=46 title="RandomFayerFoksUser" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.4.19-reported-chatgpt-tables-dont-stretch"></a>
 <a href="https://github.com/kiranwayne">
     <img width=46 title="@kiranwayne" src="https://avatars.githubusercontent.com/u/160079167?first-contrib=2025.4.22-requested-width-wlider-and-text-justification"></a>
 <a href="https://github.com/AnglusWang">
     <img width=46 title="@AnglusWang" src="https://avatars.githubusercontent.com/u/17423592?first-contrib=2025.4.26-reported-new-chat-btn-stopped-working"></a>
 <a href="https://addons.mozilla.org/firefox/user/17585562/">
-    <img width=46 title="Aria Dahl" src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.5.10-requested-show-notifs-at-bottom"></a>
+    <img width=46 title="Aria Dahl" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.5.10-requested-show-notifs-at-bottom"></a>
 <a href="https://github.com/14790897">
     <img width=46 title="@14790897" src="https://avatars.githubusercontent.com/u/121866954?first-contrib=2025.5.19-revealed-cwm-stopped-working-leading-to-locales-url-correction"></a>
 <a href="https://github.com/shtirlitsDva">

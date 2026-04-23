@@ -188,11 +188,11 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     </picture></a>
 <a href="https://chat.deepseek.com/">
     <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon48.png">
-        <img width=47 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon48.png">
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/white/icon48.png">
+        <img width=47 title="DeepSeek AI" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/black/icon48.png">
     </picture></a>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -213,7 +213,7 @@ This project exists thanks to code, testing, issues, translations & ideas from t
 
 </div>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 🤖 More ChatGPT apps
 

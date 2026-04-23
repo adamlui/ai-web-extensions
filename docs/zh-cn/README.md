@@ -5,8 +5,8 @@
 <div align="right">
     <h6>
         <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/earth/white/icon32.svg">
-            <img height=14 src="https://assets.aiwebextensions.com/images/icons/earth/black/icon32.svg">
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/earth/white/icon32.svg">
+            <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;简体中文 |
         <a href="../../#readme">English</a>
@@ -38,7 +38,7 @@
 
 ### AI 浏览器扩展和用户脚本可增强您的网络体验
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/rainbow-red-to-blue.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/rainbow-red-to-blue.png">
 
 </div>
 
@@ -48,7 +48,7 @@
 
 💡 **Tip:** _要显示屏幕截图，请点击扩展名称下方的 ▸ 或描述。_
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/rainbow-blue-to-red.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/rainbow-blue-to-red.png">
 
 <!-- AMAZONGPT -->
 
@@ -70,15 +70,15 @@
 
 <blockquote>
     <a href="../../amazongpt/#-installation">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../amazongpt/#-installation">
         Greasemonkey</a> /
     <a href="../../amazongpt/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../amazongpt/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -103,15 +103,15 @@
 
 <blockquote>
     <a href="../../autoclear-chatgpt-history/#-installation">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../autoclear-chatgpt-history/#-installation">
         Greasemonkey</a> /
     <a href="../../autoclear-chatgpt-history/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../autoclear-chatgpt-history/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -136,23 +136,23 @@
 
 <blockquote>
     <a href="https://chromewebstore.google.com/detail/brave-omnibox/obnaimomofoogphlhlaipeflcbneamnj?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/chrome/icon16.png"></a>
     <a href="https://chromewebstore.google.com/detail/brave-omnibox/obnaimomofoogphlhlaipeflcbneamnj?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Chrome</a> /
     <a href="https://addons.mozilla.org/firefox/addon/brave-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"></a>
     <a href="https://addons.mozilla.org/firefox/addon/brave-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="https://microsoftedge.microsoft.com/addons/detail/brave-omnibox/meolmkblenpohjlndodfbgpcfioampim">
-        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"></a>
     <a href="https://microsoftedge.microsoft.com/addons/detail/brave-omnibox/meolmkblenpohjlndodfbgpcfioampim">
         Edge</a> /
     <a href="../../brave-omnibox/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../brave-omnibox/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -177,13 +177,13 @@
 
 <blockquote>
     <a href="../../bravegpt/#-installation">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../bravegpt/#-installation">
         Greasemonkey</a> /
     <a href="../../bravegpt/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -208,40 +208,40 @@
 
 <blockquote>
     <a href="https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/chrome/icon16.png"></a>
     <a href="https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Chrome</a> /
     <a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"></a>
     <a href="https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="https://edge.chatgptautocontinue.com">
-        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"></a>
     <a href="https://edge.chatgptautocontinue.com">
         Edge</a> /
     <a href="https://gm.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="https://gm.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Greasemonkey</a> /
     <a href="../../chatgpt-auto-continue/docs/zh-cn/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../chatgpt-auto-continue/docs/zh-cn/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
 
 <!-- IDEA CTA -->
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <h3>有扩展的想法或要求吗？</h3>
 
 创建新讨论：https://github.com/adamlui/ai-web-extensions/discussions/new?category=ideas
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <!-- CHATGPT AUTO REFRESH -->
 
@@ -257,15 +257,15 @@
 
 <blockquote>
     <a href="../../chatgpt-auto-refresh/docs/zh-cn/#-如何安装">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../chatgpt-auto-refresh/docs/zh-cn/#-如何安装">
         Greasemonkey</a> /
     <a href="../../chatgpt-auto-refresh/docs/zh-cn/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../chatgpt-auto-refresh/docs/zh-cn/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -284,15 +284,15 @@
 
 <blockquote>
     <a href="../../chatgpt-auto-talk/docs/zh-cn/#-如何安装">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../chatgpt-auto-talk/docs/zh-cn/#-如何安装">
         Greasemonkey</a> /
     <a href="../../chatgpt-auto-talk/docs/zh-cn/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../chatgpt-auto-talk/docs/zh-cn/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -317,27 +317,27 @@
 
 <blockquote>
     <a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/chrome/icon16.png"></a>
     <a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Chrome</a> /
     <a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"></a>
     <a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="https://edge.chatgptinfinity.com">
-        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"></a>
     <a href="https://edge.chatgptinfinity.com">
         Edge</a> /
     <a href="https://gm.chatgptinfinity.com">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="https://gm.chatgptinfinity.com">
         Greasemonkey</a> /
     <a href="../../chatgpt-infinity/docs/zh-cn/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../chatgpt-infinity/docs/zh-cn/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -354,15 +354,15 @@
 
 <blockquote>
     <a href="https://addons.mozilla.org/firefox/addon/chatgpt-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"></a>
     <a href="https://addons.mozilla.org/firefox/addon/chatgpt-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="../../chatgpt-omnibox/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../chatgpt-omnibox/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -388,27 +388,27 @@
 
 <blockquote>
     <a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/chrome/icon16.png"></a>
     <a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Chrome</a> /
     <a href="https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"></a>
     <a href="https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="https://edge.chatgptwidescreen.com">
-        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"></a>
     <a href="https://edge.chatgptwidescreen.com">
         Edge</a> /
     <a href="https://gm.chatgptwidescreen.com">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="https://gm.chatgptwidescreen.com">
         Greasemonkey</a> /
     <a href="../../chatgpt-widescreen/docs/zh-cn/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../chatgpt-widescreen/docs/zh-cn/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -436,30 +436,30 @@
 
 <blockquote>
     <a href="https://chromewebstore.google.com/detail/deepseek-omnibox/gcgfmipiaiopmjcmggnnehnehhdjdkgi/?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/chrome/icon16.png"></a>
     <a href="https://chromewebstore.google.com/detail/deepseek-omnibox/gcgfmipiaiopmjcmggnnehnehhdjdkgi/?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Chrome</a> /
     <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"></a>
     <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/hghigiebpackbakklainbimglgiepfei">
-        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"></a>
     <a href="https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/hghigiebpackbakklainbimglgiepfei">
         Edge</a> /
     <a href="../../deepseek-omnibox/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../deepseek-omnibox/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
 
 <!-- WARP BANNER -->
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <div id="warp" align="center">
     <h5>贊助：</h5>
@@ -470,7 +470,7 @@
         Warp，存在于你的终端中的 AI Devtool</a></h3>
 </div>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <!-- DUCKDUCKGPT -->
 
@@ -492,15 +492,15 @@
 
 <blockquote>
     <a href="../../duckduckgpt/#-installation">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../duckduckgpt/#-installation">
         Greasemonkey</a> /
     <a href="../../duckduckgpt/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../duckduckgpt/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -525,15 +525,15 @@
 
 <blockquote>
     <a href="../../googlegpt/#-installation">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"><img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon16.png"><img height=13.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon16.png"></a>
     <a href="../../googlegpt/#-installation">
         Greasemonkey</a> /
     <a href="../../googlegpt/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../googlegpt/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -558,19 +558,19 @@
 
 <blockquote>
     <a href="https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=13 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a>
+        <img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/chrome/icon16.png"></a>
     <a href="https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Chrome</a> /
     <a href="https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih">
-        <img height=12 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a>
+        <img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"></a>
     <a href="https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih">
         Edge</a> /
     <a href="../../perplexity-omnibox/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../perplexity-omnibox/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
@@ -587,22 +587,22 @@
 
 <blockquote>
     <a href="https://addons.mozilla.org/firefox/addon/you-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
-        <img height=14 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a>
+        <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"></a>
     <a href="https://addons.mozilla.org/firefox/addon/you-omnibox?utm_source=github&utm_medium=referral&utm_content=platform-link">
         Firefox</a> /
     <a href="../../you.com-omnibox/#readme">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/paper-sheet/white.svg"><img height=13 src="https://assets.aiwebextensions.com/images/icons/paper-sheet/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/white.svg"><img height=13 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/paper-sheet/black.svg"></picture></a>
     <a href="../../you.com-omnibox/#readme">
         自述文件</a> /
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
-        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://assets.aiwebextensions.com/images/icons/speech-bubble-square/black.svg"></picture></a>
+        <picture><source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/white.svg"><img height=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/speech-bubble-square/black.svg"></picture></a>
     <a href="https://github.com/adamlui/ai-web-extensions/discussions">
         讨论</a>
 </blockquote>
 
 <!-- CONTRIBUTORS -->
 
-<img height=7px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=7px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 🧠 Contributors
 
@@ -614,7 +614,7 @@
 
 <!-- FOOTER -->
 
-<img height=7px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=7px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 [讨论](https://github.com/adamlui/ai-web-extensions/discussions) /
 [联系作者](https://github.com/adamlui) /

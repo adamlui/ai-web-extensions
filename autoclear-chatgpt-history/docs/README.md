@@ -155,8 +155,8 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     </picture></a>
 <a href="https://chat.deepseek.com/">
     <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon64.png">
-        <img width=50 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon64.png">
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/white/icon64.png">
+        <img width=50 title="DeepSeek AI" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/black/icon64.png">
     </picture></a>
 
 <img height=6px width="100%" src="https://assets.autoclearchatgpt.com/images/separators/gradient-aqua.png">

@@ -101,7 +101,7 @@
 
 ## 🚀 如何安装
 
-### <a href="#" title="Chrome"><img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a><a href="#" title="Edge"><img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a><a href="#" title="Firefox"><img height=17 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a> 浏览器扩展:
+### <a href="#" title="Chrome"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/chrome/icon16.png"></a><a href="#" title="Edge"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"></a><a href="#" title="Firefox"><img height=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"></a> 浏览器扩展:
 
 1. 安装 ChatGPT 宽屏模式扩展 ([Chrome](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link), [Edge](https://edge.chatgptwidescreen.com), [Firefox](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
 
@@ -118,7 +118,7 @@
 
 #
 
-### <a href="#" title="Tampermonkey"><img height=17 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a><a href="#" title="Violentmonkey"><img height=17.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a><a href="#" title="ScriptCat"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a><a href="#" title="OrangeMonkey"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"></a><a href="#" title="Stay"><img height=18 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon32.png"></a><a href="#" title="Userscripts"><img height=17 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon32.png"></a> Greasemonkey 用户脚本:
+### <a href="#" title="Tampermonkey"><img height=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"></a><a href="#" title="Violentmonkey"><img height=17.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"></a><a href="#" title="ScriptCat"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"></a><a href="#" title="OrangeMonkey"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"></a><a href="#" title="Stay"><img height=18 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon32.png"></a><a href="#" title="Userscripts"><img height=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon32.png"></a> Greasemonkey 用户脚本:
 
 1. 安装用户脚本管理器，例如：
     - ScriptCat 为了 [Chrome](https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf), [Firefox](https://addons.mozilla.org/firefox/addon/scriptcat/) 或 [Edge](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)
@@ -316,13 +316,13 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 <a href="https://github.com/cleuton4k">
     <img width=46 title="@cleuton4k" src="https://avatars.githubusercontent.com/u/90144967?first-contrib=2025.4.4-btn-visibility-feat-request"></a>
 <a href="https://addons.mozilla.org/firefox/user/18948576/">
-    <img width=46 title="RandomFayerFoksUser" src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.4.19-reported-chatgpt-tables-dont-stretch"></a>
+    <img width=46 title="RandomFayerFoksUser" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.4.19-reported-chatgpt-tables-dont-stretch"></a>
 <a href="https://github.com/kiranwayne">
     <img width=46 title="@kiranwayne" src="https://avatars.githubusercontent.com/u/160079167?first-contrib=2025.4.22-requested-width-wlider-and-text-justification"></a>
 <a href="https://github.com/AnglusWang">
     <img width=46 title="@AnglusWang" src="https://avatars.githubusercontent.com/u/17423592?first-contrib=2025.4.26-reported-new-chat-btn-stopped-working"></a>
 <a href="https://addons.mozilla.org/firefox/user/17585562/">
-    <img width=46 title="Aria Dahl" src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.5.10-requested-show-notifs-at-bottom"></a>
+    <img width=46 title="Aria Dahl" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/nightly/icon48.png?first-contrib=2025.5.10-requested-show-notifs-at-bottom"></a>
 <a href="https://github.com/14790897">
     <img width=46 title="@14790897" src="https://avatars.githubusercontent.com/u/121866954?first-contrib=2025.5.19-revealed-cwm-stopped-working-leading-to-locales-url-correction"></a>
 <a href="https://github.com/shtirlitsDva">

@@ -60,13 +60,13 @@
 
 ## 🚀 Installation
 
-### <a href="#" title="Chrome"><img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/chrome/icon16.png"></a><a href="#" title="Edge"><img height=16 src="https://assets.aiwebextensions.com/images/icons/browsers/edge/icon16.png"></a><a href="#" title="Firefox"><img height=17 src="https://assets.aiwebextensions.com/images/icons/browsers/firefox/icon16.png"></a> Browser extension:
+### <a href="#" title="Chrome"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/chrome/icon16.png"></a><a href="#" title="Edge"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"></a><a href="#" title="Firefox"><img height=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"></a> Browser extension:
 
 1. Install ChatGPT Auto-Continue extension ([Chrome](https://chrome.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link), [Edge](https://edge.chatgptautocontinue.com), [Firefox](https://ff.chatgptautocontinue.com/?utm_source=github&utm_medium=referral&utm_content=platform-link))
 
 2. Visit [chatgpt.com](https://chatgpt.com) as normal, and multi-reply conversations will automatically continue generating when cut-off!
 
-### <a href="#" title="Tampermonkey"><img height=17 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/tampermonkey/icon28.png"></a><a href="#" title="Violentmonkey"><img height=17.5 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/violentmonkey/icon25.png"></a><a href="#" title="ScriptCat"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/scriptcat/icon16.png"></a><a href="#" title="OrangeMonkey"><img height=16 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/orangemonkey/icon16.png"></a><a href="#" title="Stay"><img height=18 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/stay/icon32.png"></a><a href="#" title="Userscripts"><img height=17 src="https://assets.aiwebextensions.com/images/icons/userscript-managers/userscripts/icon32.png"></a> Greasemonkey userscript:
+### <a href="#" title="Tampermonkey"><img height=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/tampermonkey/icon28.png"></a><a href="#" title="Violentmonkey"><img height=17.5 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/violentmonkey/icon25.png"></a><a href="#" title="ScriptCat"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/scriptcat/icon16.png"></a><a href="#" title="OrangeMonkey"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/orangemonkey/icon16.png"></a><a href="#" title="Stay"><img height=18 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/stay/icon32.png"></a><a href="#" title="Userscripts"><img height=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/userscript-managers/userscripts/icon32.png"></a> Greasemonkey userscript:
 
 1. Install a userscript manager, such as:
     - ScriptCat for [Chrome](https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf), [Firefox](https://addons.mozilla.org/firefox/addon/scriptcat/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)
@@ -173,11 +173,11 @@ This project exists thanks to code, testing, issues, translations & ideas from t
     </picture></a>
 <a href="https://chat.deepseek.com/">
     <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/white/icon48.png">
-        <img width=47 title="DeepSeek AI" src="https://assets.aiwebextensions.com/images/icons/chatbots/deepseek/black/icon48.png">
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/white/icon48.png">
+        <img width=47 title="DeepSeek AI" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/black/icon48.png">
     </picture></a>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -198,7 +198,7 @@ This project exists thanks to code, testing, issues, translations & ideas from t
 
 </div>
 
-<img height=6px width="100%" src="https://assets.aiwebextensions.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 🤖 More ChatGPT apps
 
