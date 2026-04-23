@@ -28,7 +28,7 @@
 <a href="https://www.kudoai.com?utm_source=amazongpt&utm_content=github_shield">
     <img height=32 alt="[Built by KudoAI]" src="https://img.shields.io/badge/Built_by-KudoAI-a07bfc?logo=esbuild&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/KudoAI/amazongpt?tab=stats">
-    <img style="height: 28px ; width: auto" alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/amazongpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
+    <img style="height: 30px ; width: auto" alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/amazongpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
 <!-- HEADER INSTALL BUTTON -->

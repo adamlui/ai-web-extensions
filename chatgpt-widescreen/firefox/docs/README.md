@@ -5,15 +5,15 @@
 <div align="center">
 
 <a href="#">
-    <img style="height: 28px ; width: auto" src="https://img.shields.io/amo/users/chatgpt-widescreen?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" src="https://img.shields.io/amo/users/chatgpt-widescreen?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://ff.chatgptwidescreen.com/reviews">
     <img alt="[Mozilla Add-ons Ratings]" style="height: 28px ; width: auto" src="https://img.shields.io/amo/stars/chatgpt-widescreen?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></a>
 <a href="https://ff.chatgptwidescreen.com">
-    <img style="height: 28px ; width: auto" alt="[Mozilla Add-ons Store]" src="https://img.shields.io/amo/v/chatgpt-widescreen?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[Mozilla Add-ons Store]" src="https://img.shields.io/amo/v/chatgpt-widescreen?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="../LICENSE.md">
     <img alt="[License: MIT]" style="height: 28px ; width: auto" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="#">
-    <img style="height: 28px ; width: auto" src="https://img.shields.io/chrome-web-store/size/jgnjpnmofkalfliddjelaciggjgnphgm?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" src="https://img.shields.io/chrome-web-store/size/jgnjpnmofkalfliddjelaciggjgnphgm?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-widescreen">
     <img alt="[CodeFactor grade]" style="height: 28px ; width: auto" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-widescreen?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_widescreen&utm_content=github_shield">

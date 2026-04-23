@@ -17,7 +17,7 @@
 <div align="center">
 
 <a href="#">
-    <img style="height: 28px ; width: auto" src="https://img.shields.io/badge/Users-150,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" src="https://img.shields.io/badge/Users-150,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-shield">
     <img alt="[Featured by Google]" style="height: 28px ; width: auto" src="https://img.shields.io/badge/Featured_by-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://edge.chatgptinfinity.com">

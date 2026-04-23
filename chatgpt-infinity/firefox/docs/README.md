@@ -5,13 +5,13 @@
 <div align="center">
 
 <a href="#">
-    <img style="height: 28px ; width: auto" src="https://img.shields.io/amo/users/chatgpt-infinity?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" src="https://img.shields.io/amo/users/chatgpt-infinity?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://ff.chatgptinfinity.com">
-    <img style="height: 28px ; width: auto" alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/chatgpt-infinity?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/chatgpt-infinity?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="../LICENSE.md">
     <img alt="[License: MIT]" style="height: 28px ; width: auto" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="#">
-    <img style="height: 28px ; width: auto" src="https://img.shields.io/chrome-web-store/size/amikeononomkhphopbflomhnmdijjpmb?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" src="https://img.shields.io/chrome-web-store/size/amikeononomkhphopbflomhnmdijjpmb?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-infinity">
     <img alt="[CodeFactor grade]" style="height: 28px ; width: auto" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-infinity?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_infinity&utm_content=github_shield">

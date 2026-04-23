@@ -4,11 +4,11 @@
 <br><br>
 
 <a href="https://addons.mozilla.org/firefox/addon/brave-omnibox">
-    <img style="height: 28px ; width: auto" alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/brave-omnibox?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/brave-omnibox?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="../LICENSE.md">
     <img alt="[License: MIT]" style="height: 28px ; width: auto" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="#">
-    <img style="height: 28px ; width: auto" src="https://img.shields.io/chrome-web-store/size/obnaimomofoogphlhlaipeflcbneamnj?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" src="https://img.shields.io/chrome-web-store/size/obnaimomofoogphlhlaipeflcbneamnj?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/KudoAI/brave-omnibox">
     <img alt="[CodeFactor grade]" style="height: 28px ; width: auto" src="https://img.shields.io/codefactor/grade/github/KudoAI/brave-omnibox?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_brave-omnibox">

@@ -16,17 +16,17 @@
 <br><br>
 
 <a href="#">
-    <img style="height: 28px ; width: auto" src="https://img.shields.io/amo/users/deepseek-omnibox?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge&label=%E7%94%A8%E6%88%B7"></a>
+    <img style="height: 30px ; width: auto" src="https://img.shields.io/amo/users/deepseek-omnibox?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge&label=%E7%94%A8%E6%88%B7"></a>
 <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox">
     <img alt="[前5 热门 DeepSeek Edge 插件]" style="height: 28px ; width: auto" src="https://img.shields.io/badge/%E7%83%AD%E9%97%A8-%E5%89%8D5_DeepSeek_%E6%8F%92%E4%BB%B6-orange?logo=firefox&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox/reviews">
     <img alt="[Mozilla Add-ons 评级]" style="height: 28px ; width: auto" src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></a>
 <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox">
-    <img style="height: 28px ; width: auto" alt="[Mozilla 附加组件商店]" src="https://img.shields.io/amo/v/deepseek-omnibox?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
+    <img style="height: 30px ; width: auto" alt="[Mozilla 附加组件商店]" src="https://img.shields.io/amo/v/deepseek-omnibox?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
 <a href="LICENSE.md">
     <img alt="[许可证: MIT]" style="height: 28px ; width: auto" src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="#">
-    <img style="height: 28px ; width: auto" src="https://img.shields.io/chrome-web-store/size/gcgfmipiaiopmjcmggnnehnehhdjdkgi?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge&label=%E6%89%A9%E5%B1%95%E5%A4%A7%E5%B0%8F"></a>
+    <img style="height: 30px ; width: auto" src="https://img.shields.io/chrome-web-store/size/gcgfmipiaiopmjcmggnnehnehhdjdkgi?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge&label=%E6%89%A9%E5%B1%95%E5%A4%A7%E5%B0%8F"></a>
 <a href="https://www.codefactor.io/repository/github/KudoAI/deepseek-omnibox">
     <img alt="[CodeFactor 等级]" style="height: 28px ; width: auto" src="https://img.shields.io/codefactor/grade/github/KudoAI/deepseek-omnibox?label=%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_deepseek-omnibox">
