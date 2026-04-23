@@ -1,6 +1,6 @@
 <a id="top"></a>
 
-<a href="https://gm.chatgptwidescreen.com"><img src="https://assets.chatgptwidescreen.com/images/tiles/marquee/tile-1400x560.png"></a>
+<a href="https://gm.chatgptwidescreen.com"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@115fa4e/assets/images/tiles/marquee/tile-1400x560.png"></a>
 
 <div align="center">
 
@@ -119,7 +119,7 @@ ChatGPT Widescreen is compatible w/ the following browsers using [ScriptCat](htt
 
 - [Google Chrome](https://www.chrome.com) (also available on [Chrome Web Store](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
 - [Mozilla Firefox](https://www.firefox.com) (also available on [Firefox Add-on Store](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
-- [Microsoft Edge](https://www.microsoft.com/edge) (also available on [Edge Add-on Store](https://edge.chatgptwidescreen.com))
+- [Microsoft Edge](https://www.microsoft.com/edge) (also available on [Edge Add-on Store](https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa))
 - [Opera](https://www.opera.com)
 - [Brave](https://brave.com)
 - [Vivaldi](https://vivaldi.com)
