@@ -15,8 +15,6 @@
     <img height=31 alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/bravegpt/blob/main/greasemonkey/bravegpt.user.js">
     <img height=31 src="https://img.shields.io/github/size/KudoAI/bravegpt/greasemonkey/bravegpt.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
-<a href="https://github.com/KudoAI/bravegpt/commits">
-    <img height=31 alt="[GitHub commits]" src="https://img.shields.io/github/commit-activity/m/KudoAI/bravegpt?label=Commits&logo=github&logoColor=white&labelColor=464646&color=7bb7fc&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/KudoAI/bravegpt">
     <img height=31 alt="[CodeFactor grade]" src="https://img.shields.io/codefactor/grade/github/KudoAI/bravegpt?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=bravegpt&utm_content=github_shield">

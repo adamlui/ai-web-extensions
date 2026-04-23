@@ -19,8 +19,6 @@
     <img height=31 alt="[ライセンス: MIT]" src="https://img.shields.io/badge/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/adamlui/chatgpt-auto-refresh/blob/main/greasemonkey/chatgpt-auto-refresh.user.js">
     <img height=32 src="https://img.shields.io/github/size/adamlui/chatgpt-auto-refresh/greasemonkey/chatgpt-auto-refresh.user.js?label=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B5%E3%82%A4%E3%82%BA&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
-<a href="https://github.com/adamlui/chatgpt-auto-refresh/commits">
-    <img height=31 alt="[GitHub コミット]" src="https://img.shields.io/github/commit-activity/m/adamlui/chatgpt-auto-refresh?label=%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88&logo=github&logoColor=white&labelColor=464646&color=7bb7fc&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-auto-refresh">
     <img height=31 alt="[コードの品質]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-auto-refresh?label=%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E5%93%81%E8%B3%AA&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_auto_refresh&utm_content=github_shield">
