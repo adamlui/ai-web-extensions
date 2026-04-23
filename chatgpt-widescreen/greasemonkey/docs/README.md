@@ -18,8 +18,6 @@
     <img alt="[Mentioned in Awesome]" height=31 src="https://img.shields.io/badge/Mentioned_in-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-widescreen?tab=stats">
     <img alt="jsDelivr stats" height=31 src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-widescreen?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
-<a href="https://chatgptwidescreen.com?utm_source=chatgpt_widescreen&utm_content=github_shield">
-    <img alt="[www.chatgptwidescreen.com]" height=31 src="https://img.shields.io/badge/web-www.chatgptwidescreen.com-lightgrey?logo=dribbble&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <br><br>
 
 <a href="https://gm.chatgptwidescreen.com"><img height=45 alt="[Install this script]" src="https://assets.chatgptwidescreen.com/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://assets.chatgptwidescreen.com/images/buttons/greasy-fork/help-button.svg"></a>
