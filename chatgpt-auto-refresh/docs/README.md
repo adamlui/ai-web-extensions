@@ -14,19 +14,19 @@
 # <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautorefresh.com/images/icons/openai/white/icon32.png"><img width=23 src="https://assets.chatgptautorefresh.com/images/icons/openai/black/icon32.png"></picture> ChatGPT Auto Refresh ↻
 
 <a href="../LICENSE.md">
-    <img style="height: 30px ; width: auto" alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 28px ; width: auto" alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/adamlui/chatgpt-auto-refresh/blob/main/greasemonkey/chatgpt-auto-refresh.user.js">
     <img height=32 src="https://img.shields.io/github/size/adamlui/chatgpt-auto-refresh/greasemonkey/chatgpt-auto-refresh.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/adamlui/chatgpt-auto-refresh">
-    <img style="height: 30px ; width: auto" alt="[CodeFactor grade]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-auto-refresh?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
+    <img style="height: 28px ; width: auto" alt="[CodeFactor grade]" src="https://img.shields.io/codefactor/grade/github/adamlui/chatgpt-auto-refresh?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_auto_refresh&utm_content=github_shield">
-    <img style="height: 30px ; width: auto" alt="[Powered by chatgpt.js]" src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 28px ; width: auto" alt="[Powered by chatgpt.js]" src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_chatgpt-auto-refresh">
-    <img style="height: 30px ; width: auto" alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-auto-refresh%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></a>
+    <img style="height: 28px ; width: auto" alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-auto-refresh%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></a>
 <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
-    <img style="height: 30px ; width: auto" alt="[Mentioned in Awesome]" src="https://img.shields.io/badge/Mentioned_in-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img style="height: 28px ; width: auto" alt="[Mentioned in Awesome]" src="https://img.shields.io/badge/Mentioned_in-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-auto-refresh?tab=stats">
-    <img style="height: 30px ; width: auto" alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-auto-refresh?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
+    <img style="height: 28px ; width: auto" alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-auto-refresh?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 
 ### Keeps ChatGPT sessions fresh via background requests to eliminate network errors + Cloudflare checks.
 
