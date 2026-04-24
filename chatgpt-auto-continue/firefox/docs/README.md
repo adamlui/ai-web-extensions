@@ -17,7 +17,7 @@
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_auto_continue&utm_content=github_shield">
     <img alt="[Powered by chatgpt.js]" src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_chatgpt-auto-continue">
-    <img alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-auto-continue%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></a>
+    <img alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-auto-continue%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=ffef00"></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-auto-continue?tab=stats">
     <img alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-auto-continue?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>

@@ -23,7 +23,7 @@
 <a href="https://github.com/KudoAI/chatgpt.js?utm_source=chatgpt_auto_refresh&utm_content=github_shield">
     <img alt="[由 chatgpt.js 提供支持]" src="https://img.shields.io/badge/%E4%BE%9B%E7%94%B5-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_chatgpt-auto-refresh">
-    <img alt="[SonarCloud 漏洞]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-auto-refresh%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=gold"></a>
+    <img alt="[SonarCloud 漏洞]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-auto-refresh%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=ffef00"></a>
 <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
     <img alt="[提及于 Awesome]" src="https://img.shields.io/badge/%E6%8F%90%E5%8F%8A%E4%BA%8E-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-auto-refresh?tab=stats">

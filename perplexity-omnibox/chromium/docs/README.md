@@ -18,7 +18,7 @@
 <a href="https://www.codefactor.io/repository/github/KudoAI/perplexity-omnibox">
     <img alt="[CodeFactor grade]" src="https://img.shields.io/codefactor/grade/github/KudoAI/perplexity-omnibox?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_perplexity-omnibox">
-    <img alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_perplexity-omnibox%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></a>
+    <img alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_perplexity-omnibox%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=ffef00"></a>
 <a href="https://www.jsdelivr.com/package/gh/KudoAI/perplexity-omnibox?tab=stats">
     <img alt="jsDelivr stats" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/perplexity-omnibox?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>

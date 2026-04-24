@@ -20,7 +20,7 @@
 <a href="https://chatgpt.js.org?utm_source=googlegpt&utm_content=github_shield">
     <img alt="[Powered by chatgpt.js]" src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=KudoAI_googlegpt">
-    <img alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3DKudoAI_googlegpt%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></a>
+    <img alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3DKudoAI_googlegpt%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=ffef00"></a>
 <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
     <img alt="[Mentioned in Awesome]" src="https://img.shields.io/badge/Mentioned_in-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.kudoai.com?utm_source=googlegpt&utm_content=github_shield">
