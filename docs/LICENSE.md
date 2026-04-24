@@ -5,7 +5,7 @@
             <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;English |
-        <a href="docs/zh-cn/LICENSE.md">简体中文</a>
+        <a href="./zh-cn/LICENSE.md">简体中文</a>
     </h6>
 </div>
 
