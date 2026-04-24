@@ -4,8 +4,8 @@
 
 <div align="center">
 <picture>
-    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://amazongpt.kudoai.com/assets/images/logos/app/white-teal/logo1018x148.png">
-    <img alt="AmazonGPT" src="https://amazongpt.kudoai.com/assets/images/logos/app/black-gold/logo1018x148.png">
+    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/logos/app/white-teal/logo1018x148.png">
+    <img alt="AmazonGPT" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/logos/app/black-gold/logo1018x148.png">
 </picture>
 <br><br>
 
@@ -23,7 +23,7 @@
     <img height=32 alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3DKudoAI_amazongpt%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold"></a>
 <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
     <img height=32 alt="[Mentioned in Awesome]" src="https://img.shields.io/badge/Mentioned_in-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
-<a href="https://amazongpt.kudoai.com/assets/wolfram-award/letter.pdf?v=dc250b9">
+<a href="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/wolfram-award/letter.pdf">
     <img height=32 alt="[Wolfram Award Winner]" src="https://img.shields.io/badge/Winner-Wolfram_Award-3478d1?logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4NCjxzdmcgZmlsbD0id2hpdGUiIGhlaWdodD0iODAwcHgiIHdpZHRoPSI4MDBweCIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgDQogICAgIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KICAgIDxnPg0KICAgICAgICA8cGF0aCBkPSJNMzcyLjg3LDQ0NS4yMTdIMTM5LjEzYy0xOC40NDIsMC0zMy4zOTEsMTQuOTQ5LTMzLjM5MSwzMy4zOTF2MTYuNjk2YzAsOS4yMiw3LjQ3NSwxNi42OTYsMTYuNjk2LDE2LjY5NmgyNjcuMTMNCiAgICAgICAgICAgIGM5LjIyLDAsMTYuNjk2LTcuNDc1LDE2LjY5Ni0xNi42OTZ2LTE2LjY5NkM0MDYuMjYxLDQ2MC4xNjcsMzkxLjMxMiw0NDUuMjE3LDM3Mi44Nyw0NDUuMjE3eiIvPg0KICAgIDwvZz4NCjwvZz4NCjxnPg0KICAgIDxnPg0KICAgICAgICA8cGF0aCBkPSJNNDg5LjczOSwzMy4zOTFoLTgzLjQ3OFYxNi42OTZjMC05LjIyLTcuNDc1LTE2LjY5Ni0xNi42OTYtMTYuNjk2aC0yNjcuMTNjLTkuMjIsMC0xNi42OTYsNy40NzUtMTYuNjk2LDE2LjY5NnYxNi42OTYNCiAgICAgICAgICAgIEgyMi4yNjFjLTkuMjE3LDAtMTYuNjk2LDcuNDczLTE2LjY5NiwxNi42OTZ2NjYuNzgzYzAsNjQuNDQxLDUyLjQyNCwxMTYuODcsMTE2Ljg3LDExNi44N2g4LjY0Mw0KICAgICAgICAgICAgYzE3Ljg1MywyNi42NjQsNDQuMDY4LDQ3LjE1NSw3NC44MzUsNTguMDQ5djUzLjI1NmMtMTguNDQyLDAtMzMuMzkxLDE0Ljk0OS0zMy4zOTEsMzMuMzkxdjMzLjM5MWgxNjYuOTU3di0zMy4zOTENCiAgICAgICAgICAgIGMwLTE4LjQ0Mi0xNC45NDktMzMuMzkxLTMzLjM5MS0zMy4zOTF2LTUzLjI1NmMzMC43NjgtMTAuODkzLDU2Ljk4Mi0zMS4zODUsNzQuODM1LTU4LjA0OWg4LjY0Mw0KICAgICAgICAgICAgYzY0LjQ0NSwwLDExNi44Ny01Mi40MjksMTE2Ljg3LTExNi44N1Y1MC4wODdDNTA2LjQzNSw0MC44NjQsNDk4Ljk1NiwzMy4zOTEsNDg5LjczOSwzMy4zOTF6IE0zOC45NTcsMTE2Ljg3VjY2Ljc4M2g2Ni43ODMNCiAgICAgICAgICAgIHY4My40NzhjMCwxNy40MzYsMy4xMjIsMzQuMTA1LDguNTgzLDQ5LjY3NkM3Mi4wODQsMTk1Ljg0MiwzOC45NTcsMTYwLjE2NCwzOC45NTcsMTE2Ljg3eiBNMzMzLjY3NCwxNDAuNzY3bC0yNi43MjksMjYuMDQ5DQogICAgICAgICAgICBsNi4zMTUsMzYuNzg4YzEuMDc2LDYuMjYxLTEuNSwxMi41OTItNi42NDIsMTYuMzI2Yy01LjA0OSwzLjY2NC0xMS44NDUsNC4yODMtMTcuNTg3LDEuMjcyTDI1NiwyMDMuODM3bC0zMy4wMzMsMTcuMzY1DQogICAgICAgICAgICBjLTUuNjIsMi45NTEtMTIuNDM1LDIuNDc5LTE3LjU4Ny0xLjI3MmMtNS4xNDEtMy43MzMtNy43MTgtMTAuMDY1LTYuNjQyLTE2LjMyNmw2LjMxNS0zNi43ODhsLTI2LjcyOS0yNi4wNDkNCiAgICAgICAgICAgIGMtNC41NTUtNC40MzQtNi4xODUtMTEuMDctNC4yMjgtMTcuMTE0YzEuOTY4LTYuMDQ0LDcuMTk2LTEwLjQ1MSwxMy40NzgtMTEuMzY0bDM2LjkzNS01LjM2OWwxNi41MjItMzMuNDY3DQogICAgICAgICAgICBjMi44MDUtNS43MDEsOC42MDgtOS4zMSwxNC45NjctOS4zMWM2LjM1OSwwLDEyLjE2MywzLjYwOSwxNC45NjcsOS4zMWwxNi41MjIsMzMuNDY3bDM2LjkzNSw1LjM2OQ0KICAgICAgICAgICAgYzYuMjgzLDAuOTEzLDExLjUxMSw1LjMyLDEzLjQ3OCwxMS4zNjRDMzM5Ljg1OSwxMjkuNjk1LDMzOC4yMjgsMTM2LjMzMSwzMzMuNjc0LDE0MC43Njd6IE00NzMuMDQzLDExNi44Nw0KICAgICAgICAgICAgYzAsNDMuMjk0LTMzLjEyOCw3OC45NzMtNzUuMzY1LDgzLjA2OGM1LjQ2MS0xNS41NzEsOC41ODMtMzIuMjQsOC41ODMtNDkuNjc2VjY2Ljc4M2g2Ni43ODNWMTE2Ljg3eiIvPg0KICAgIDwvZz4NCjwvZz4NCjwvc3ZnPg==&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.kudoai.com?utm_source=amazongpt&utm_content=github_shield">
     <img height=32 alt="[Built by KudoAI]" src="https://img.shields.io/badge/Built_by-KudoAI-a07bfc?logo=esbuild&logoColor=white&labelColor=464646&style=for-the-badge"></a>
@@ -33,17 +33,17 @@
 
 <!-- HEADER INSTALL BUTTON -->
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <h3>🛒 Enhance Amazon shopping w/ AI chat & product/category summaries, powered by the latest LLMs 🤖</h3>
 
-<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img height=50 alt="[Install this script]" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img height=50 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/amazongpt/discussions) /
-[Get support](https://amazongpt.kudoai.com/issues) /
+[Get support](https://github.com/KudoAI/amazongpt/issues) /
 [Contact author](https://github.com/adamlui)
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 </div>
 
@@ -55,19 +55,19 @@
 
 ### Desktop:
 
-<img src="https://amazongpt.kudoai.com/assets/images/screenshots/desktop/mice-md-reply-darkmode.png?v=dc250b9">
+<img src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/screenshots/desktop/mice-md-reply-darkmode.png">
 
 <br><br>
 
 ### Mobile:
 
-<img src="https://amazongpt.kudoai.com/assets/images/screenshots/mobile/hey-there-reply-darkmode.png?v=dc250b9">
+<img src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/screenshots/mobile/hey-there-reply-darkmode.png">
 
 </div>
 
 <br><br>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <!-- GOLDEN SPONSORS -->
 
@@ -92,7 +92,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <!-- INSTALLATION -->
 
@@ -111,9 +111,9 @@
 
 ##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey_
 
-<br><a href="https://github.com/sponsors/KudoAI"><img src="https://amazongpt.kudoai.com/assets/images/banners/sponsor/$10/banner1660x260.png?v=dc250b9"></a>
+<br><a href="https://github.com/sponsors/KudoAI"><img src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/banners/sponsor/$10/banner1660x260.png"></a>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <!-- COMPATIBILITY -->
 
@@ -551,17 +551,17 @@
 
 <div align="center">
 
-<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img height=50 alt="[Install AmazonGPT]" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/install/amazongpt.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://amazongpt.kudoai.com/assets/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img height=50 alt="[Install AmazonGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/install/amazongpt.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/amazongpt/discussions) /
-[Get support](https://amazongpt.kudoai.com/issues) /
+[Get support](https://github.com/KudoAI/amazongpt/issues) /
 [More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
 
 </div>
 
 <br>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <!-- DEPENDENCIES -->
 
@@ -571,8 +571,8 @@
 <div align="center">
 
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://amazongpt.kudoai.com/assets/images/logos/dependencies/collage/white.png?v=dc250b9">
-    <img src="https://amazongpt.kudoai.com/assets/images/logos/dependencies/collage/black.png?v=dc250b9">
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/logos/dependencies/collage/white.png">
+    <img src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/logos/dependencies/collage/black.png">
 </picture>
 
 [chatgpt.js](https://chatgpt.js.org) © 2023–2026 [KudoAI](https://kudoai.com) & contributors under the MIT license
@@ -585,7 +585,7 @@
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <!-- CLOUDFLARE FUNDING -->
 
@@ -609,7 +609,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <!-- CONTRIBUTORS -->
 
@@ -633,8 +633,8 @@ This app exists thanks to code, translations, issues & ideas from the following 
     <img width=50 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2025.1.3-showed-googlegpt-header-distorts-reply-bubble-on-skinny-phones"></a>
 <a href="https://greasyfork.org/users/1406320-happyhojjat">
     <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://amazongpt.kudoai.com/assets/images/icons/web-stores/greasy-fork/white/icon50.png?v=dc250b9">
-        <img width=50 src="https://amazongpt.kudoai.com/assets/images/icons/web-stores/greasy-fork/black/icon50.png?v=dc250b9&first-contrib=2025.1.12-reported-googlegpt-reply-lang-setting-stopped-persisting" title="happyhojjat">
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/icons/web-stores/greasy-fork/white/icon50.png">
+        <img width=50 src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/icons/web-stores/greasy-fork/black/icon50.png&first-contrib=2025.1.12-reported-googlegpt-reply-lang-setting-stopped-persisting" title="happyhojjat">
     </picture></a>
 <a href="https://github.com/cyber-sec0">
     <img width=50 title="@cyber-sec0" src="https://avatars.githubusercontent.com/u/91571849?first-contrib=2025.4.1-reported-kiwi-browser-no-longer-maintained"></a>
@@ -655,7 +655,7 @@ This app exists thanks to code, translations, issues & ideas from the following 
     </picture></a>
 <br><br>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <!-- MORE CHATGPT APPS -->
 
@@ -664,7 +664,7 @@ This app exists thanks to code, translations, issues & ideas from the following 
 For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <!-- RELATED APPS -->
 
@@ -691,7 +691,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.kudoai.com/googlegpt/#readme) /
 [Discuss](https://github.kudoai.com/googlegpt/discussions)
 
-<img height=6px width="100%" src="https://amazongpt.kudoai.com/assets/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <a href="https://github.com/adamlui/ai-web-extensions">**More ChatGPT apps**</a> / 
 <a href="#top">Back to top ↑</a>
