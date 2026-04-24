@@ -247,7 +247,7 @@ Made with ❤️ by [Adam Lui][link-author]
 [badge-rating]: https://img.shields.io/chrome-web-store/stars/ckhgddjdjkphbaediggjdddjdjgkalom?style=for-the-badge&logo=googlechrome&logoColor=white&color=10b981&label=Chrome
 [badge-jsdelivr]: https://img.shields.io/jsdelivr/gh/hm/KudoAI/perplexity-omnibox?style=flat-square&logo=jsdelivr&logoColor=white&color=2bbbd8&label=jsDelivr
 [badge-codefactor]: https://img.shields.io/codefactor/grade/github/KudoAI/perplexity-omnibox?style=flat-square&logo=codefactor&logoColor=white&color=b3ff68&label=Code%20Quality
-[badge-sonar]: https://img.shields.io/badge/Vulnerabilities-6.6K-gold?style=flat-square&logo=sonar&logoColor=white
+[badge-sonar]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_perplexity-omnibox%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=flat-square&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=gold
 [badge-license]: https://img.shields.io/badge/License-MIT-e11d48?style=flat-square&logo=opensourceinitiative&logoColor=white
 
 <!-- ═══════════════════════════════════════════════════════════════════════════════
