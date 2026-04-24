@@ -67,32 +67,23 @@
 
 <br><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
+<!-- WARP BANNER -->
 
-<!-- GOLDEN SPONSORS -->
+<hr>
 
-<div id="golden-sponsors" align="center">
+<div align="center">
 
-<br>
+##### Supported by:
 
-### Supported by:
+[<img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">][warp-link]
 
-<div id="warp">
-    <br>
-    <a href="https://www.warp.dev/chatgptjs">
-        <img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">
-    </a>
-    <h3><a href="https://www.warp.dev/chatgptjs">
-        Warp, the AI Devtool that lives in your terminal</a></h3>
-    <i><a href="https://www.warp.dev/chatgptjs">
-        Available for MacOS, Linux, & Windows</a></i>
-</div>
+### [Warp, the AI Devtool that lives in your terminal][warp-link]
 
-<br><br>
+[warp-link]: https://www.warp.dev/chatgptjs
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
+<hr>
 
 <!-- INSTALLATION -->
 
