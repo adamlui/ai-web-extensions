@@ -3,7 +3,7 @@
   "name": "__MSG_appName__",
   "short_name": "ChatGPT 🖥️",
   "description": "__MSG_appDesc__",
-  "version": "2026.4.22",
+  "version": "2026.4.24",
   "author": "Adam Lui",
   "homepage_url": "https://chatgptwidescreen.com",
   "default_locale": "en",
