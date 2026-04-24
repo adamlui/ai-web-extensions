@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.4.19
+// @version                2026.4.24
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -626,7 +626,7 @@
                 #${app.slug} .reply-header-txt { flex-grow: 1 ; font-size: 12px ; font-family: monospace }
                 #${app.slug} .reply-header-btns { margin: 7.5px -5px 0 }
                 #${app.slug} .reply-pre {
-                    font-size: ${app.config.fontSize}px ; font-weight: bold ; white-space: pre-wrap ; min-width: 0 ;
+                    font-size: ${app.config.fontSize}px ; white-space: pre-wrap ; min-width: 0 ;
                     line-height: ${ app.config.fontSize * app.config.lineHeightRatio }px ; overscroll-behavior: contain ;
                     position: relative ; z-index: 1 ; /* allow top-margin to overlap header in light scheme */
                     margin: ${ appScheme == 'light' ? 11 : 13 }px 0 7px 0 ; padding: 1.25em 1.25em 0 1.25em ;
