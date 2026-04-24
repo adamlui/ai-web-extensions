@@ -156,90 +156,15 @@ ChatGPT Auto Refresh is compatible w/ the following browsers using [ScriptCat](h
 
 <img height=6px width="100%" src="https://assets.chatgptautorefresh.com/images/separators/gradient-aqua.png">
 
+<!-- CONTRIBUTORS -->
+
 ## 🧠 Contributors
 
-This project exists thanks to code, testing, issues, translations & ideas from the following contributors:
+<a href="https://github.com/adamlui/chatgpt-auto-refresh/graphs/contributors">
+    <img height=45 width="auto" src="https://contrib.rocks/image?repo=adamlui/chatgpt-auto-refresh" /></a>
+<br><br>
 
-<div align="center">
-
-<a href="https://github.com/adamlui">
-    <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.03.23"></a>
-<a href="https://github.com/Camouflager">
-    <img width=50 title="@Camouflager" src="https://avatars.githubusercontent.com/u/26111796?first-contrib=2023.04.02"></a>
-<a href="https://github.com/ArtificialTruth">
-    <img width=50 title="@ArtificialTruth" src="https://avatars.githubusercontent.com/u/3297866?first-contrib=2023.04.04"></a>
-<a href="https://github.com/Liumeng404">
-    <img width=50 title="@Liumeng404" src="https://avatars.githubusercontent.com/u/25640306?first-contrib=2023.04.05"></a>
-<a href="https://github.com/mzvast">
-    <img width=50 title="@mzvast" src="https://avatars.githubusercontent.com/u/8097465?first-contrib=2023.04.08"></a>
-<a href="https://github.com/halvabner">
-    <img width=50 title="@halvabner" src="https://avatars.githubusercontent.com/u/130675714?first-contrib=2023.04.13"></a>
-<a href="https://github.com/Cupcc">
-    <img width=50 title="@Cupcc" src="https://avatars.githubusercontent.com/u/53716543?first-contrib=2023.04.15"></a>
-<a href="https://github.com/gydx6">
-    <img width=50 title="@gydx6" src="https://avatars.githubusercontent.com/u/45654564?first-contrib=2023.04.16"></a>
-<a href="https://github.com/NoahXcl">
-    <img width=50 title="@NoahXcl" src="https://avatars.githubusercontent.com/u/81360639?first-contrib=2023.04.16"></a>
-<a href="https://github.com/selfboot">
-    <img width=50 title="@selfboot" src="https://avatars.githubusercontent.com/u/2769831?first-contrib=2023.04.17"></a>
-<a href="#">
-    <img width=50 title="@maplepicker" src="https://avatars.githubusercontent.com/u/116735067?first-contrib=2023.04.18"></a>
-<a href="https://github.com/Cloudkkk">
-    <img width=50 title="@Cloudkkk" src="https://avatars.githubusercontent.com/u/58101940?first-contrib=2023.04.19"></a>
-<a href="#">
-    <img width=50 title="@chenzhihao1040728129" src="https://avatars.githubusercontent.com/u/49114216?first-contrib=2023.04.23"></a>
-<a href="https://greasyfork.org/users/1041317-dlzrncsb">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautorefresh.com/images/icons/web-stores/greasy-fork/white/icon50.png">
-        <img width=50 src="https://assets.chatgptautorefresh.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.4.24-short-interval-complaint-leading-to-custom-interval-idea" title="dlzrncsb">
-    </picture></a>
-<a href="https://github.com/Zin6969">
-    <img width=50 title="@Zin6969" src="https://avatars.githubusercontent.com/u/131989355?first-contrib=2023.04.27"></a>
-<a href="https://github.com/nabilfreeman">
-    <img width=50 title="@nabilfreeman" src="https://avatars.githubusercontent.com/u/2470659?first-contrib=2023.08.03-chat-reset-issue"></a>
-<a href="https://github.com/h-h-h-h">
-    <img width=50 title="@h-h-h-h" src="https://avatars.githubusercontent.com/u/13482553?first-contrib=2023.10.05-chat-reset-fix"></a>
-<a href="https://github.com/xspeed1989">
-    <img width=50 title="@xspeed1989" src="https://avatars.githubusercontent.com/u/5162926?first-contrib=2023.11.27-ui-change-report"></a>
-<a href="#">
-    <img width=50 title="@Chipsum" src="https://avatars.githubusercontent.com/u/37517008?first-contrib=2023.12.05-first-button-bug-report"></a>
-<a href="https://github.com/Yash-Singh1">
-    <img width=50 title="@Yash-Singh1" src="https://avatars.githubusercontent.com/u/53054099?first-contrib=2023.2.3-added-eslint-plugin-userscripts"></a>
-<a href="https://github.com/sanchomuzax">
-    <img width=50 title="@sanchomuzax" src="https://avatars.githubusercontent.com/u/2911588?first-contrib=2023.2.26-shortened-hungarian-menu-label"></a>
-<a href="https://greasyfork.org/users/670188-hacker09">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautorefresh.com/images/icons/web-stores/greasy-fork/white/icon50.png">
-        <img width=50 src="https://assets.chatgptautorefresh.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2024.6.27-portuguese-translation-corrections" title="hacker09">
-    </picture></a>
-<a href="https://github.com/eltociear">
-    <img width=50 title="@eltociear" src="https://avatars.githubusercontent.com/u/22633385?first-contrib=2023.07.17-add-ja-doc-md"></a>
-<a href="https://github.com/ChinaGodMan">
-    <img width=50 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2024.9.7-improved-chinese-msgs"></a>
-<a href="https://github.com/9romise">
-    <img width=50 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></a>
-<a href="https://github.com/zkisaboss">
-    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></a>
-<a href="https://github.com/bvolpato" target="_blank" rel="noopener">
-    <img width=50 title="@bvolpato" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/3207647?first-contrib=2026.3.27-created-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
-<a href="https://github.com/MichaIng" target="_blank" rel="noopener">
-    <img width=50 title="@MichaIng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/28480705?first-contrib=2026.3.28-add-index-files-to-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
-<a href="https://github.com/ImgBotApp">
-    <img width=50 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></a>
-<a href="https://github.com/dependabot">
-    <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></a>
-<a href="https://chatgpt.com">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautorefresh.com/images/icons/chatgpt/black-on-white/icon50.png">
-        <img title="ChatGPT" src="https://assets.chatgptautorefresh.com/images/icons/chatgpt/white-on-gray/icon50.png">
-    </picture></a>
-<a href="https://chat.deepseek.com/">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/white/icon64.png">
-        <img width=50 title="DeepSeek AI" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/black/icon64.png">
-    </picture></a>
-
-</div>
+All contributions are very welcome!
 
 <img height=6px width="100%" src="https://assets.chatgptautorefresh.com/images/separators/gradient-aqua.png">
 

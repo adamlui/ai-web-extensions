@@ -615,81 +615,11 @@
 
 ## 🧠 Contributors
 
-This app exists thanks to code, translations, issues & ideas from the following contributors:
-
-<a href="https://github.com/adamlui">
-    <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554"></a>
-<a href="https://github.com/piederecho">
-    <img width=50 title="@piederecho" src="https://avatars.githubusercontent.com/u/5135365?first-contrib=2017.12.21-published-btn-w-diagonal-borders-to-codepen-adapted-in-standby-btns-and-chatbar"></a>
-<a href="https://github.com/shawnrossouw">
-    <img width=50 title="@shawnrossouw" src="https://avatars.githubusercontent.com/u/46893447?first-contrib=2019.7.18-published-futuristic-btn-to-codepen-adapted-in-modal-btns"></a>
-<a href="https://github.com/pasThal">
-    <img width=50 title="@pasThal" src="https://avatars.githubusercontent.com/u/175899275?first-contrib=2024.10.6-opera-gx-compatible-report"></a>
-<a href="https://github.com/mberetvas">
-    <img width=50 title="@mberetvas" src="https://avatars.githubusercontent.com/u/100215730?first-contrib=2024.11.2-fix-belgium-amazon-match"></a>
-<a href="https://github.com/bao3">
-    <img width=50 title="@bao3" src="https://avatars.githubusercontent.com/u/499205?first-contrib=2024.11.24-safari-ios-compatible-report"></a>
-<a href="https://github.com/ChinaGodMan">
-    <img width=50 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2025.1.3-showed-googlegpt-header-distorts-reply-bubble-on-skinny-phones"></a>
-<a href="https://greasyfork.org/users/1406320-happyhojjat">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/icons/web-stores/greasy-fork/white/icon50.png">
-        <img width=50 src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/icons/web-stores/greasy-fork/black/icon50.png&first-contrib=2025.1.12-reported-googlegpt-reply-lang-setting-stopped-persisting" title="happyhojjat">
-    </picture></a>
-<a href="https://github.com/cyber-sec0">
-    <img width=50 title="@cyber-sec0" src="https://avatars.githubusercontent.com/u/91571849?first-contrib=2025.4.1-reported-kiwi-browser-no-longer-maintained"></a>
-<a href="https://github.com/carterlion13sAltAcc">
-    <img width=50 title="@carterlion13sAltAcc" src="https://avatars.githubusercontent.com/u/181794823?first-contrib=2025.4.13-api-selector-feat-request"></a>
-<a href="https://github.com/bvolpato" target="_blank" rel="noopener">
-    <img width=50 title="@bvolpato" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/3207647?first-contrib=2026.3.27-created-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
-<a href="https://github.com/MichaIng" target="_blank" rel="noopener">
-    <img width=50 title="@MichaIng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/28480705?first-contrib=2026.3.28-add-index-files-to-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
-<a href="https://github.com/ImgBotApp">
-    <img width=50 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></a>
-<a href="https://github.com/dependabot">
-    <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></a>
-<a href="https://chatgpt.com">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/chatgpt/black-on-white/icon50.png">
-        <img title="ChatGPT" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/chatgpt/white-on-gray/icon50.png">
-    </picture></a>
+<a href="https://github.com/KudoAI/amazongpt/graphs/contributors">
+    <img height=45 width="auto" src="https://contrib.rocks/image?repo=KudoAI/amazongpt" /></a>
 <br><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
-
-<!-- MORE CHATGPT APPS -->
-
-## 🤖 More ChatGPT apps
-
-For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
-<br><br>
-
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
-
-<!-- RELATED APPS -->
-
-## 📜 Related apps
-
-### <img src="https://assets.bravegpt.com/images/icons/app/icon48.png" width=21> [BraveGPT](https://www.bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="auto" /></a>
-
-> Bring the magic of AI to Brave Search (powered by GPT-4o!)
-<br>[Install](https://github.com/KudoAI/bravegpt/#-installation) /
-[Readme](https://github.com/KudoAI/bravegpt/#readme) /
-[Discuss](https://github.com/KudoAI/bravegpt/discussions)
-
-### <img width=17 src="https://assets.ddgpt.com/images/icons/app/icon48.png"> [DuckDuckGPT](https://duckduckgpt.com) &nbsp;<a href="https://www.producthunt.com/posts/duckduckgpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light" width="112" height="auto" /></a>
-
-> Bring the magic of AI to DuckDuckGo (powered by GPT-4o!)
-<br>[Install](https://github.com/KudoAI/duckduckgpt/#-installation) /
-[Readme](https://github.com/KudoAI/duckduckgpt/#readme) /
-[Discuss](https://github.com/KudoAI/duckduckgpt/discussions)
-
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/app/white/icon32.png"><img width=17 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/app/black/icon32.png"></picture> [GoogleGPT](https://github.com/KudoAI/googlegpt/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@658fb06/assets/images/badges/awesome/badge.svg"></a>
-
-> Bring the magic of AI to Google Search (powered by Google Gemma + GPT-4o!)
-<br>[Install](https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js) /
-[Readme](https://github.kudoai.com/googlegpt/#readme) /
-[Discuss](https://github.kudoai.com/googlegpt/discussions)
+All contributions are very welcome!
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 

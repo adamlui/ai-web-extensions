@@ -75,40 +75,15 @@ ChatGPT Auto-Talk relies on code from the powerful [chatgpt.js](https://github.c
 </div>
 </h6>
 
+<!-- CONTRIBUTORS -->
+
 ## 🧠 Contributors
 
-This project exists thanks to code, testing, issues, translations & ideas from the following contributors:
+<a href="https://github.com/adamlui/chatgpt-auto-talk/graphs/contributors">
+    <img height=45 width="auto" src="https://contrib.rocks/image?repo=adamlui/chatgpt-auto-talk" /></a>
+<br><br>
 
-<a href="https://github.com/adamlui">
-    <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2024.7.16"></a>
-<a href="https://github.com/MLBott">
-    <img width=50 title="@MLBott" src="https://avatars.githubusercontent.com/u/7270299?first-contrib=2024.9.26-play-btn-selector-changed-alert"></a>
-<a href="https://github.com/9romise">
-    <img width=50 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></a>
-<a href="https://github.com/RoonMoonlight">
-    <img width=50 title="@RoonMoonlight" src="https://avatars.githubusercontent.com/u/25527589?first-contrib=2025.6.19-reported-stopped-working"></a>
-<a href="https://github.com/zkisaboss">
-    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></a>
-<a href="https://github.com/nhan000">
-    <img width=50 title="@nhan000" src="https://avatars.githubusercontent.com/u/85216095?first-contrib=2025.9.23-reported-stopped-working"></a>
-<a href="https://github.com/CStarker">
-    <img width=50 title="@CStarker" src="https://avatars.githubusercontent.com/u/44135221?first-contrib=2025.12.25-reported-stopped-working"></a>
-<a href="https://github.com/bvolpato" target="_blank" rel="noopener">
-    <img width=50 title="@bvolpato" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/3207647?first-contrib=2026.3.29-created-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
-<a href="https://github.com/MichaIng" target="_blank" rel="noopener">
-    <img width=50 title="@MichaIng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/28480705?first-contrib=2026.3.29-add-index-files-to-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
-<a href="https://github.com/dependabot">
-    <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></a>
-<a href="https://chatgpt.com">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautocontinue.com/images/icons/chatgpt/black-on-white/icon50.png">
-        <img title="ChatGPT" src="https://assets.chatgptautocontinue.com/images/icons/chatgpt/white-on-gray/icon50.png">
-    </picture></a>
-<a href="https://chat.deepseek.com/">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/white/icon64.png">
-        <img width=50 title="DeepSeek AI" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/black/icon64.png">
-    </picture></a>
+All contributions are very welcome!
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 

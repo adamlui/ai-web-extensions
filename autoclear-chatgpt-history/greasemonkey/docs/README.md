@@ -98,66 +98,15 @@ Autoclear ChatGPT History is compatible w/ the following browsers using [ScriptC
 
 <img height=6px width="100%" src="https://assets.autoclearchatgpt.com/images/separators/gradient-aqua.png">
 
+<!-- CONTRIBUTORS -->
+
 ## 🧠 Contributors
 
-This project exists thanks to code, testing, issues, translations & ideas from the following contributors:
+<a href="https://github.com/adamlui/autoclear-chatgpt-history/graphs/contributors">
+    <img height=45 width="auto" src="https://contrib.rocks/image?repo=adamlui/autoclear-chatgpt-history" /></a>
+<br><br>
 
-<a href="https://github.com/adamlui">
-    <img width=50 title="@adamlui" src="https://avatars.githubusercontent.com/u/10906554?first-contrib=2023.02.26"></a>
-<a href="#">
-    <img width=50 title="@Tripp1e" src="https://avatars.githubusercontent.com/u/102437240?first-contrib=2023.02.25-autoclear-idea"></a>
-<a href="https://github.com/XiaoYingYo">
-    <img width=50 title="@XiaoYingYo" src="https://avatars.githubusercontent.com/u/54934866?first-contrib=2023.03.23-freegpt-support"></a>
-<a href="https://github.com/Zin6969">
-    <img width=50 title="@Zin6969" src="https://avatars.githubusercontent.com/u/131989355?first-contrib=2023.04.27-doc-translations"></a>
-<a href="https://github.com/xspeed1989">
-    <img width=50 title="@xspeed1989" src="https://avatars.githubusercontent.com/u/5162926?first-contrib=2023.11.27-ui-change-report"></a>
-<a href="#">
-    <img width=50 title="@Chipsum" src="https://avatars.githubusercontent.com/u/37517008?first-contrib=2023.12.05-first-button-bug-report"></a>
-<a href="https://github.com/Yash-Singh1">
-    <img width=50 title="@Yash-Singh1" src="https://avatars.githubusercontent.com/u/53054099?first-contrib=2023.1.31-added-eslint-plugin-userscripts"></a>
-<a href="https://github.com/dreirund">
-    <img width=50 title="@dreirund" src="https://avatars.githubusercontent.com/u/1590519?first-contrib=2024.02.16-add-sri-hashes-suggestion"></a>
-<a href="https://github.com/sanchomuzax">
-    <img width=50 title="@sanchomuzax" src="https://avatars.githubusercontent.com/u/2911588?first-contrib=2023.2.26-truncate-toggle-label-idea"></a>
-<a href="https://greasyfork.org/users/670188-hacker09">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/white/icon50.png">
-        <img width=50 src="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.6.7-toggle-unreliable-alert" title="hacker09">
-    </picture></a>
-<a href="https://greasyfork.org/users/9946-boris-2">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/white/icon50.png">
-        <img width=50 src="https://assets.autoclearchatgpt.com/images/icons/web-stores/greasy-fork/black/icon50.png?first-contrib=2023.6.17-bitdefender-false-positive-alert" title="boris 2">
-    </picture></a>
-<a href="https://github.com/schmorp">
-    <img width=50 title="@schmorp" src="https://avatars.githubusercontent.com/u/42950150?first-contrib=2024.8.30-stopped-working-bug-report"></a>
-<a href="https://github.com/dliedke">
-    <img width=50 title="@dliedke" src="https://avatars.githubusercontent.com/u/16479450?first-contrib=2024.9.3-stopped-working-bug-report-testing"></a>
-<a href="https://github.com/ChinaGodMan">
-    <img width=50 title="@ChinaGodMan" src="https://avatars.githubusercontent.com/u/96548841?first-contrib=2024.9.7-improved-chinese-msgs"></a>
-<a href="https://github.com/9romise">
-    <img width=50 title="@9romise" src="https://avatars.githubusercontent.com/u/38204901?first-contrib=2024.12.13-revealed-unneeded-semicolons"></a>
-<a href="https://github.com/zkisaboss">
-    <img width=50 title="@zkisaboss" src="https://avatars.githubusercontent.com/u/51681731?first-contrib=2025.7.5-suggested-scheme-aware-icons"></a>
-<a href="https://github.com/bvolpato" target="_blank" rel="noopener">
-    <img width=50 title="@bvolpato" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/3207647?first-contrib=2026.3.27-created-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
-<a href="https://github.com/MichaIng" target="_blank" rel="noopener">
-    <img width=50 title="@MichaIng" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/28480705?first-contrib=2026.3.28-add-index-files-to-lychee-workflow&h=47&w=47&mask=circle&maxage=7d"></a>
-<a href="https://github.com/ImgBotApp">
-    <img width=50 title="@ImgBotApp" src="https://avatars.githubusercontent.com/u/31427850"></a>
-<a href="https://github.com/dependabot">
-    <img width=50 title="Dependabot" src="https://avatars.githubusercontent.com/in/29110"></a>
-<a href="https://chatgpt.com">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.autoclearchatgpt.com/images/icons/chatgpt/black-on-white/icon50.png">
-        <img title="ChatGPT" src="https://assets.autoclearchatgpt.com/images/icons/chatgpt/white-on-gray/icon50.png">
-    </picture></a>
-<a href="https://chat.deepseek.com/">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/white/icon64.png">
-        <img width=50 title="DeepSeek AI" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/chatbots/deepseek/black/icon64.png">
-    </picture></a>
+All contributions are very welcome!
 
 <img height=6px width="100%" src="https://assets.autoclearchatgpt.com/images/separators/gradient-aqua.png">
 
