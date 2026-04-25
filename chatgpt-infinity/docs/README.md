@@ -235,5 +235,5 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 
 <img height=6px width="100%" src="https://assets.chatgptinfinity.com/images/separators/gradient-aqua.png">
   
-<a href="https://github.com/adamlui/ai-web-extensions">**More ChatGPT add-ons**</a> / 
+<a href="https://github.com/adamlui/ai-web-extensions/#readme">**More ChatGPT add-ons**</a> / 
 <a href="#top">Back to top ↑</a>

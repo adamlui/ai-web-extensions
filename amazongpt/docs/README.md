@@ -616,5 +616,5 @@ All contributions are very welcome!
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
-<a href="https://github.com/adamlui/ai-web-extensions">**More ChatGPT apps**</a> / 
+<a href="https://github.com/adamlui/ai-web-extensions/#readme">**More ChatGPT apps**</a> / 
 <a href="#top">Back to top ↑</a>

@@ -232,5 +232,5 @@ ChatGPT 无穷 与以下浏览器兼容:
 
 <img height=6px width="100%" src="https://assets.chatgptinfinity.com/images/separators/gradient-aqua.png">
   
-<a href="https://github.com/adamlui/ai-web-extensions">**更多 ChatGPT 附加组件**</a> / 
+<a href="https://github.com/adamlui/ai-web-extensions/#readme">**更多 ChatGPT 附加组件**</a> / 
 <a href="#top">回到顶部 ↑</a>
