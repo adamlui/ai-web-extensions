@@ -155,14 +155,14 @@ ChatGPT Infinity は、強力な [chatgpt.js](https://github.com/KudoAI/chatgpt.
 
 <div align="center">
 
-<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
-    <img alt="[Chrome で入手]" height=75 src="https://assets.chatgptinfinity.com/images/buttons/add-to-chrome-button.png"></a>
+<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+    <img alt="[Get for Chrome]" height=60 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://edge.chatgptinfinity.com">
-    <img alt="[Edge で入手]" height=75 src="https://assets.chatgptinfinity.com/images/buttons/add-to-edge-button.png"></a>
-<a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
-    <img alt="[Firefox で入手]" height=75 src="https://assets.chatgptinfinity.com/images/buttons/add-to-firefox-button.png"></a>
+    <img alt="[Get for Edge]" height=60 src="https://assets.chatgptinfinity.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
+<a href="https://ff.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+    <img alt="[Get for Firefox]" height=60 src="https://assets.chatgptinfinity.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://gm.chatgptinfinity.com">
-    <img alt="[Greasemonkey で入手]" height=75 src="https://assets.chatgptinfinity.com/images/buttons/add-userscript-button.png"></a>
+    <img alt="[Get for Greasemonkey]" height=60 src="https://assets.chatgptinfinity.com/images/badges/greasemonkey/install-userscript/en/badge860x262.png"></a>
 
 <br>
 

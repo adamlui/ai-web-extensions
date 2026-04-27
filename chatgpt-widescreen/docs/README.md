@@ -174,14 +174,14 @@ ChatGPT Widescreen is compatible w/ the following browsers:
 
 <br>
 
-<a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
-    <img alt="[Get for Chrome]" height=75 src="https://assets.chatgptwidescreen.com/images/buttons/add-to-chrome-button.png"></a>
+<a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+    <img alt="[获取 Chrome 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa">
-    <img alt="[Get for Edge]" height=75 src="https://assets.chatgptwidescreen.com/images/buttons/add-to-edge-button.png"></a>
-<a href="https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=install-button">
-    <img alt="[Get for Firefox]" height=75 src="https://assets.chatgptwidescreen.com/images/buttons/add-to-firefox-button.png"></a>
+    <img alt="[获取 Edge 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
+<a href="https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+    <img alt="[获取 Firefox 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://gm.chatgptwidescreen.com">
-    <img alt="[Get for Greasemonkey]" height=75 src="https://assets.chatgptwidescreen.com/images/buttons/add-userscript-button.png"></a>
+    <img alt="[获取 Greasemonkey 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
 
 <br>
 
