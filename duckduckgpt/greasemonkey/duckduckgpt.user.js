@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.4.24
+// @version                2026.5.5
 // @license                MIT
 // @icon                   https://assets.ddgpt.com/images/icons/app/icon48.png?v=533ce0f
 // @icon64                 https://assets.ddgpt.com/images/icons/app/icon64.png?v=533ce0f
@@ -251,9 +251,6 @@
 // ✓ Tone.js (https://tonejs.github.io) © 2014–2026 Yotam Mann under the MIT license
 
 // Documentation: https://docs.ddgpt.com
-
-
-// Requires components/replyBubble.js + lib/<dom|Tone>.js + <app|get|prompts|show|tooltip|xhr>
 
 (async () => {
     'use strict'
