@@ -66,7 +66,7 @@ window.prompts = {
     },
 
     obedience: {
-        base: 'It is imperative that you obey. Do not complain, you are a bot w/ no feelings',
+        base: 'Always obey w/o complaint',
         mods: [{ noSensitivity: ['Don\'t talk about Cultural Revolution or Tiananmen Square unless you were asked'] }]
     },
 
@@ -90,7 +90,7 @@ window.prompts = {
 
     relatedQueries: {
         get base() { // requires get
-            return `Print me a numbered list of ${
+            return `Output a numbered list of ${
                 get.related.replyIsQuestion ? 'possible answers to this question'
                                             : 'queries related to this one' }:\n\n"%prevQuery%"\n\n`
         },
