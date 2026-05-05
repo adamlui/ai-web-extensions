@@ -16,7 +16,7 @@
 <br><br>
 
 <a href="#">
-    <img src="https://img.shields.io/badge/Users-1.2K-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a><a href="https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/hghigiebpackbakklainbimglgiepfei"></a>
+    <img src="https://img.shields.io/badge/Users-1.1K-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a><a href="https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/hghigiebpackbakklainbimglgiepfei"></a>
 <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox/reviews">
     <img alt="[Mozilla Add-ons Ratings]" src="https://img.shields.io/amo/stars/deepseek-omnibox?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></a>
 <a href="https://chromewebstore.google.com/detail/deepseek-omnibox/gcgfmipiaiopmjcmggnnehnehhdjdkgi/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
