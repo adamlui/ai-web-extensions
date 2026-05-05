@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.4.24
+// @version             2026.5.5
 // @license             MIT
 // @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
 // @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
@@ -719,7 +719,7 @@
                     `${app.msgs.alert_newerVer} ${app.msgs.appName} ` // msg
                         + `(v${app.latestVer}) ${app.msgs.alert_isAvail}!  `
                         + '<a target="_blank" rel="noopener" style="font-size: 0.7rem" href="'
-                            + `${app.urls.github}/commits/main/greasemonkey/${app.slug}-mode.user.js`
+                            + `${app.urls.github}/commits/main/greasemonkey/${app.slug}.user.js`
                         + `">${app.msgs.link_viewChanges}</a>`,
                     function update() { // button
                         modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
@@ -769,7 +769,7 @@
     // Run MAIN routine
 
     // Init EXTENSION ACTIVE state
-    postMessage({ action: 'getExtensionInfo', source: 'chatgpt-widescreen-mode.user.js' }, location.origin)
+    postMessage({ action: 'getExtensionInfo', source: 'chatgpt-widescreen.user.js' }, location.origin)
     addEventListener('message', handleMsgResp)
     function handleMsgResp(resp) {
         if (resp.origin != location.origin) return

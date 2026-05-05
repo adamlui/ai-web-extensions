@@ -22,7 +22,7 @@
 
     // Init REPO context
     const repoName = 'chatgpt-widescreen',
-          userJSfilePath = `./greasemonkey/${repoName}-mode.user.js`
+          userJSfilePath = `./greasemonkey/${repoName}.user.js`
 
     // Init REGEX
     const regEx = {

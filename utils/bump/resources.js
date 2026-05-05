@@ -79,11 +79,7 @@
     // Process each userscript
     let urlsUpdatedCnt = 0 ; let filesUpdatedCnt = 0
     for (const userJSfilePath of Object.keys(urlMap)) {
-
-        // Init repo name
         let repoName = userJSfilePath.split('\\').pop().replace('.user.js', '')
-        if (repoName.endsWith('-mode')) repoName = repoName.slice(0, -5) // for chatgpt-widescreen
-
         bump.log.working(`\nProcessing ${repoName}...\n`)
 
         // Fetch latest commit hash for repo/chromium/extension
