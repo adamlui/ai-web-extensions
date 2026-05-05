@@ -2,7 +2,7 @@
   "AIchatOS": {
     "endpoint": "https://api.binjie.fun/api/generateStream",
     "expectedOrigin": {
-      "url": "https://chat18.aichatos68.com",
+      "url": "https://iai.aichatos8.com.cn",
       "headers": { "Accept": "application/json, text/plain, * /*", "Priority": "u=0", "Sec-Fetch-Site": "cross-site" }
     },
     "method": "POST",
