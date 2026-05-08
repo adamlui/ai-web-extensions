@@ -233,7 +233,6 @@ Made with ❤️ by [Adam Lui][link-author]
 [link-codefactor]: https://www.codefactor.io/repository/github/KudoAI/perplexity-omnibox
 [link-sonar]: https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_perplexity-omnibox
 [link-license]: ../LICENSE.md
-[link-warp]: https://www.warp.dev/chatgptjs
 [link-wiki]: https://github.com/KudoAI/perplexity-omnibox/wiki
 [link-issues]: https://github.com/KudoAI/perplexity-omnibox/issues
 [link-issues-bug]: https://github.com/KudoAI/perplexity-omnibox/issues/new?labels=bug
