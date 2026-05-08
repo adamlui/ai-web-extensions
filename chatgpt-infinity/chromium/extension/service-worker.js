@@ -2,7 +2,7 @@
 const appReady = (async () => {
     const app = {
         version: chrome.runtime.getManifest().version,
-        commitHashes: { app: '2b84319' } // for cached app.json
+        commitHashes: { app: '1877368' } // for cached app.json
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@${app.commitHashes.app}` }
     const remoteAppData = await (await fetch(`${app.urls.resourceHost}/assets/data/app.json`)).json()
