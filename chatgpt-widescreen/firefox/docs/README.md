@@ -41,7 +41,7 @@
 
 **ChatGPT Widescreen** adds wide/full/tall-screen + spamblock modes to ChatGPT, enhancing your chat sessions by reducing scrolling & removing clutter, creating a more immersive viewing experience.
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 📺 Demo
 
@@ -53,7 +53,7 @@
 
 </div><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 💊 Benefits
 
@@ -67,7 +67,7 @@
 
 🌐 Works with: **chatgpt.com** + **poe.com**
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 🚀 Installation
 
@@ -86,7 +86,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## ⚡ Dependencies
 
@@ -107,7 +107,7 @@ ChatGPT Widescreen relies on code from the powerful [chatgpt.js](https://github.
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <br>
 
@@ -125,7 +125,7 @@ ChatGPT Widescreen relies on code from the powerful [chatgpt.js](https://github.
 
 <br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <!-- CONTRIBUTORS -->
 
@@ -137,7 +137,7 @@ ChatGPT Widescreen relies on code from the powerful [chatgpt.js](https://github.
 
 All contributions are very welcome!
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -158,14 +158,14 @@ All contributions are very welcome!
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 🤖 More ChatGPT apps
 
 For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 📜 Related apps
 
@@ -188,7 +188,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <a href="https://github.com/adamlui/ai-web-extensions/#readme">**More ChatGPT add-ons**</a> /
 <a href="#top">Back to top ↑</a>

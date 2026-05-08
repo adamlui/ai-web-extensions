@@ -49,7 +49,7 @@
 
 **ChatGPT 宽屏模式** 为 ChatGPT 添加了宽屏/全屏/高屏 + 垃圾邮件拦截模式，通过减少滚动和消除混乱来增强您的聊天会话，创造更身临其境的观看体验。
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 📺 演示
 
@@ -61,7 +61,7 @@
 
 </div><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 💊 好处
 
@@ -75,7 +75,7 @@
 
 🌐 适用于: **chatgpt.com** + **poe.com**
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 🗨️ 用户反馈
 
@@ -87,7 +87,7 @@
 
 <a href="https://chromewebstore.google.com/detail/chatgpt-widescreen-mode/jgnjpnmofkalfliddjelaciggjgnphgm/reviews"><img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/reviews/chrome-web-store.png"></a>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 🚀 如何安装
 
@@ -132,7 +132,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## ⚡ 依赖关系
 
@@ -153,7 +153,7 @@ ChatGPT 寬屏模式 依賴於強大的 [chatgpt.js](https://github.com/KudoAI/c
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 🌐 兼容性
 
@@ -189,7 +189,7 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <!-- CONTRIBUTORS -->
 
@@ -201,7 +201,7 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 
 非常欢迎一切贡献！
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -222,14 +222,14 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 🤖 更多 ChatGPT 应用
 
 如需更多精彩的 ChatGPT 应用程序，请访问: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 📜 相关应用
 
@@ -254,7 +254,7 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 [自述文件](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/zh-cn/#readme) /
 [讨论](https://github.com/adamlui/chatgpt-infinity/discussions)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 <a href="https://github.com/adamlui/chatgpt-addons">**更多 ChatGPT 插件**</a> /
 <a href="#top">回到顶部 ↑</a>
