@@ -37,7 +37,7 @@
 
 <div align="center">
 
-<img width=388 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/screenshots/continue-button-crossed.png"> <img width=321 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/screenshots/auto-continue-on-notification-checked.png">
+<img width=388 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/assets/images/screenshots/continue-button-crossed.png"> <img width=321 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/assets/images/screenshots/auto-continue-on-notification-checked.png">
 
 </div>
 

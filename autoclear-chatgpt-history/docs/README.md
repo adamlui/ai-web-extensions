@@ -27,7 +27,7 @@
 
 #
 
-![](https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/screenshots/demo.png)
+![](https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/assets/images/screenshots/demo.png)
 <br>
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
@@ -47,7 +47,7 @@
 
 <div align="center">
 
-![](https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/screenshots/sidebar-toggle-on.png)
+![](https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/assets/images/screenshots/sidebar-toggle-on.png)
 
 </div>
 
@@ -154,7 +154,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.com/KudoAI/bravegpt/#readme) / 
 [Discuss](https://github.com/KudoAI/bravegpt/discussions)
 
-### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen](https://github.com/adamlui/chatgpt-widescreen/#readme) <img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24" />
+### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen](https://github.com/adamlui/chatgpt-widescreen/#readme) <img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@9925794/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24" />
 
 > Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on poe.com!
 <br>[Install](https://github.com/adamlui/chatgpt-widescreen/#-installation) / 

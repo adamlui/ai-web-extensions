@@ -1,6 +1,6 @@
 <a id="top"></a>
 
-<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/tiles/marquee/tile-1400x560.png">
+<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/tiles/marquee/tile-1400x560.png">
 
 <div align="center">
 
@@ -43,7 +43,7 @@
 
 <div align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/screenshots/desktop/infinity-mode/chat/on-zoomed-out.png">
+<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/screenshots/desktop/infinity-mode/chat/on-zoomed-out.png">
 
 </div>
 
@@ -70,8 +70,8 @@
 
 <div align="center">
 
-<img width=268 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/screenshots/desktop/chrome/pin-instructions/en.png">
-<img width=268 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/screenshots/desktop/chrome/toolbar-menu/en.png">
+<img width=268 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/screenshots/desktop/chrome/pin-instructions/en.png">
+<img width=268 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/screenshots/desktop/chrome/toolbar-menu/en.png">
 
 </div>
 
@@ -166,7 +166,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#readme) / 
 [Discuss](https://github.com/adamlui/chatgpt-auto-continue/discussions)
 
-### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24" />
+### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@9925794/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24" />
 
 > Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on poe.com!
 <br>[Install](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#-installation) / 

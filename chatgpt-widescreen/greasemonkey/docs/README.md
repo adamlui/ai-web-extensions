@@ -39,7 +39,7 @@
 <div align="center">
 
 <a href="https://www.youtube.com/watch?v=xtOklfi3lZY&list=PLB4S0Z21beYNoCdS3WvAMSxW69OuZzuF1">
-    <img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/demo-vid/thumbnail.png">
+    <img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/demo-vid/thumbnail.png">
 </a>
 
 </div><br>
@@ -62,7 +62,7 @@
 
 ## 🗨️ User feedback
 
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js/feedback"><img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/reviews/greasy-fork.png"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js/feedback"><img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/reviews/greasy-fork.png"></a>
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
@@ -82,8 +82,8 @@
 <div align="center">
 
 <picture>
-    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/widescreen-button/en/lightmode.png">
-    <img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/widescreen-button/en/darkmode.png">
+    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/widescreen-button/en/lightmode.png">
+    <img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/widescreen-button/en/darkmode.png">
 </picture>
 
 *NOTE: Since full-window mode hides the sidebar, press '+' to start new chats*
@@ -118,12 +118,12 @@ ChatGPT Widescreen relies on code from the powerful [chatgpt.js](https://github.
 ChatGPT Widescreen is compatible w/ the following browsers using [ScriptCat](https://docs.scriptcat.org), [Violentmonkey](https://violentmonkey.github.io), [OrangeMonkey](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf), [OrangeMonkey Pro](https://chromewebstore.google.com/detail/orangemonkey-pro/ggdmdoodcfamjggeigifpjfnnjfbland) or [Tampermonkey](https://www.tampermonkey.net):
 
 - [Google Chrome](https://www.chrome.com) (also available on [Chrome Web Store](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
-- [Mozilla Firefox](https://www.firefox.com) (also available on [Firefox Add-on Store](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
+- [Mozilla Firefox](https://www.firefox.com) (also available on [Firefox Add-on Store](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
 - [Microsoft Edge](https://www.microsoft.com/edge) (also available on [Edge Add-on Store](https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa))
 - [Opera](https://www.opera.com)
 - [Brave](https://brave.com)
 - [Vivaldi](https://vivaldi.com)
-- [LibreWolf](https://librewolf.net) (also available on [Firefox Add-on Store](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
+- [LibreWolf](https://librewolf.net) (also available on [Firefox Add-on Store](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
 - [Ghost](https://ghostbrowser.com)
 - [QQ](https://browser.qq.com)
 

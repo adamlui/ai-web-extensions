@@ -12,7 +12,7 @@
     </h6>
 </div>
 
-<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/tiles/marquee/tile-1400x560.png">
+<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/tiles/marquee/tile-1400x560.png">
 
 <div align="center">
 
@@ -42,7 +42,7 @@
     <img alt="[Chrome で入手]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb">
     <img alt="[Edge で入手]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
-<a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+<a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[Firefox で入手]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js">
     <img alt="[Greasemonkey で入手]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/en/badge860x262.png"></a>
@@ -55,7 +55,7 @@
 
 <div align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/screenshots/desktop/infinity-mode/chat/on-zoomed-out.png">
+<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/screenshots/desktop/infinity-mode/chat/on-zoomed-out.png">
 
 </div>
 
@@ -81,8 +81,8 @@
 
 <div align="center">
 
-<img width=268 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/screenshots/desktop/chrome/pin-instructions/en.png">
-<img width=268 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/screenshots/desktop/chrome/toolbar-menu/en.png">
+<img width=268 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/screenshots/desktop/chrome/pin-instructions/en.png">
+<img width=268 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/screenshots/desktop/chrome/toolbar-menu/en.png">
 
 </div>
 
@@ -101,7 +101,7 @@
 
 <div align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/screenshots/sidebar-toggle/on-with-cursor.png">
+<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/screenshots/sidebar-toggle/on-with-cursor.png">
 
 <p>
 
@@ -135,17 +135,17 @@ ChatGPT Infinity は、強力な [chatgpt.js](https://github.com/KudoAI/chatgpt.
 ### 🖥️ デスクトップ
 
 - **[Google Chrome](https://www.chrome.com)**（[Chrome 拡張機能](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
-- **[Mozilla Firefox](https://www.firefox.com)**（[Firefox 拡張機能](https://addons.mozilla.org/firefox/addon/chatgpt-infinity//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
+- **[Mozilla Firefox](https://www.firefox.com)**（[Firefox 拡張機能](https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
 - **[Microsoft Edge](https://www.microsoft.com/edge)**（[Edge アドオン](https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
 - **[Opera](https://www.opera.com)**（[Chrome 拡張機能](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
 - **[Brave](https://brave.com)**（[Chrome 拡張機能](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
 - **[Vivaldi](https://vivaldi.com)**（[Chrome 拡張機能](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
-- **[LibreWolf](https://librewolf.net)**（[Firefox 拡張機能](https://addons.mozilla.org/firefox/addon/chatgpt-infinity//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
+- **[LibreWolf](https://librewolf.net)**（[Firefox 拡張機能](https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
 - **[Ghost](https://ghostbrowser.com)**（[Chrome 拡張機能](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
 - **[QQ](https://browser.qq.com)**（[Chrome 拡張機能](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
 - **[Whale](https://whale.naver.com)**（[Chrome 拡張機能](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme)または[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
 
-<br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/logos/platforms/android/head-plus-word/white/logo150x24.png"><img alt="Android" width=111 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/logos/platforms/android/head-plus-word/green-head-black-word/logo150x24.png"></picture><br>
+<br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/logos/platforms/android/head-plus-word/white/logo150x24.png"><img alt="Android" width=111 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/logos/platforms/android/head-plus-word/green-head-black-word/logo150x24.png"></picture><br>
 
 - **[Mozilla Firefox](https://www.mozilla.org/firefox/browsers/mobile/android/)**（[Greasemonkey ユーザースクリプト](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js)を介して）
 
@@ -159,7 +159,7 @@ ChatGPT Infinity は、強力な [chatgpt.js](https://github.com/KudoAI/chatgpt.
     <img alt="[Get for Chrome]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb">
     <img alt="[Get for Edge]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
-<a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+<a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[Get for Firefox]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js">
     <img alt="[Get for Greasemonkey]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/en/badge860x262.png"></a>
@@ -225,7 +225,7 @@ ChatGPT Infinity は、強力な [chatgpt.js](https://github.com/KudoAI/chatgpt.
 [README](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#readme) / 
 [議論](https://github.com/adamlui/chatgpt-auto-continue/discussions)
 
-### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT ワイドスクリーンモード](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24" />
+### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT ワイドスクリーンモード](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@9925794/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24" />
 
 > ワイド/フル/トールスクリーン+スパンブロックモードで ChatGPT を強化します。poe.com でも動作します！
 <br>[インストール](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#-installation) / 

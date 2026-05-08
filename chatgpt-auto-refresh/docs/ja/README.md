@@ -43,7 +43,7 @@
 <div align="center">
 
 ![](https://user-images.githubusercontent.com/10906554/234756105-cf367acc-644a-49ee-8586-43c51d43e359.png)
-<img width=355 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/screenshots/mode-notification-on.png">
+<img width=355 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/screenshots/mode-notification-on.png">
 
 </div>
 
@@ -57,7 +57,7 @@
 
 <div align="center">
     
-![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/alerts/cloudflare-stand-by.png)
+![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/alerts/cloudflare-stand-by.png)
 
 </div>
 
@@ -65,9 +65,9 @@
 
 <div align="center">
 
-![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/alerts/chatgpt-something-went-wrong.png)
-![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/alerts/chatgpt-network-error.png)
-<img width=333 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/alerts/chatgpt-error-generating-response.png">
+![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/alerts/chatgpt-something-went-wrong.png)
+![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/alerts/chatgpt-network-error.png)
+<img width=333 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/alerts/chatgpt-error-generating-response.png">
     
 </div>
 
@@ -87,7 +87,7 @@
 
 ## 🗨️ ユーザーのフィードバック
 
-<img width=535 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/reviews/greasy-fork.png">
+<img width=535 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/reviews/greasy-fork.png">
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
@@ -106,7 +106,7 @@
 
 <div align="center">
     
-![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/screenshots/sidebar-toggle-on.png)
+![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/screenshots/sidebar-toggle-on.png)
 
 </div>
 
@@ -200,7 +200,7 @@ ChatGPT 自動更新 は、[ScriptCat](https://docs.scriptcat.org)、[Violentmon
 
 ## 📜 関連スクリプト
 
-### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT ワイドスクリーン モード](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24">
+### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT ワイドスクリーン モード](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@9925794/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24">
 > ワイド/フル/トールスクリーン+スパンブロックモードで ChatGPT を強化します。poe.com でも動作します！
 <br>[インストール](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#-greasemonkey-userscript) /
 [Readme](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#readme) /

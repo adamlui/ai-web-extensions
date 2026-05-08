@@ -52,7 +52,7 @@
 <div align="center">
 
 <a href="https://www.youtube.com/watch?v=xtOklfi3lZY&list=PLB4S0Z21beYNoCdS3WvAMSxW69OuZzuF1">
-    <img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/demo-vid/thumbnail.png">
+    <img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/demo-vid/thumbnail.png">
 </a>
 
 </div><br>
@@ -75,7 +75,7 @@
 
 ## 🗨️ User feedback
 
-<a href="https://chromewebstore.google.com/detail/chatgpt-widescreen-mode/jgnjpnmofkalfliddjelaciggjgnphgm/reviews"><img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/reviews/chrome-web-store.png"></a>
+<a href="https://chromewebstore.google.com/detail/chatgpt-widescreen-mode/jgnjpnmofkalfliddjelaciggjgnphgm/reviews"><img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/reviews/chrome-web-store.png"></a>
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
@@ -88,14 +88,14 @@
 <div align="center">
 
 <picture>
-    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/widescreen-button/en/lightmode.png">
-    <img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/widescreen-button/en/darkmode.png">
+    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/widescreen-button/en/lightmode.png">
+    <img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/widescreen-button/en/darkmode.png">
 </picture>
 
 *NOTE: Since full-window mode hides the sidebar, press '+' to start new chats*
 
-![\[image\]](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/chrome/pin-instructions/en.png)
-![\[image\]](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/chrome/toolbar-menu/en.png)
+![\[image\]](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/chrome/pin-instructions/en.png)
+![\[image\]](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/chrome/toolbar-menu/en.png)
 
 *Pro tip: For easier access to extension toggles, (1) click <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/toolbar/chrome-puzzle-piece/gray.png"> in the browser's toolbar, (2) then <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/toolbar/push-pin/blue.png"> next to extension name.*
 

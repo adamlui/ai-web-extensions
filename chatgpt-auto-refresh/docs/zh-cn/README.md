@@ -41,8 +41,8 @@
 
 <div align="center">
 
-![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/screenshots/zh-cn/tm-menu-toggle.png)
-![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/screenshots/zh-cn/mode-notification-on.png)
+![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/screenshots/zh-cn/tm-menu-toggle.png)
+![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/screenshots/zh-cn/mode-notification-on.png)
 
 </div>
 
@@ -56,7 +56,7 @@
 
 <div align="center">
     
-![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/alerts/cloudflare-stand-by.png)
+![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/alerts/cloudflare-stand-by.png)
 
 </div>
 
@@ -64,9 +64,9 @@
 
 <div align="center">
 
-![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/alerts/chatgpt-something-went-wrong.png)
-![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/alerts/chatgpt-network-error.png)
-<img width=333 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/alerts/chatgpt-error-generating-response.png">
+![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/alerts/chatgpt-something-went-wrong.png)
+![](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/alerts/chatgpt-network-error.png)
+<img width=333 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/alerts/chatgpt-error-generating-response.png">
     
 </div>
 
@@ -86,7 +86,7 @@
 
 ## 🗨️ 用户反馈
 
-<img width=535 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/reviews/greasy-fork.png">
+<img width=535 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/reviews/greasy-fork.png">
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
@@ -105,7 +105,7 @@
 
 <div align="center">
 
-![自动刷新 启用](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/screenshots/zh-cn/sidebar-toggle-on.png)
+![自动刷新 启用](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/assets/images/screenshots/zh-cn/sidebar-toggle-on.png)
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
@@ -197,7 +197,7 @@ ChatGPT 自动刷新 与使用 [ScriptCat](https://docs.scriptcat.org)、[Violen
 
 ## 📜 相关脚本
 
-### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT 宽屏模式](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24">
+### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT 宽屏模式](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@9925794/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24">
 > 通过宽屏/全屏/高屏+垃圾邮件块模式增强 ChatGPT。也可以在 poe.com 上使用！<br>
 [安装](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/zh-cn/#-如何安装) /
 [自述文件](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/zh-cn/#readme) /
