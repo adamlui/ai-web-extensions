@@ -19,7 +19,7 @@
     <img src="https://img.shields.io/badge/Users-10,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://chromewebstore.google.com/detail/chatgpt-auto-continue/lbojnhaafilddefkdgmbplkafnckaoga/reviews?utm_source=github&utm_medium=referral&utm_content=chrome-rating-shield">
     <img alt="[Chrome Web Store Ratings]" src="https://img.shields.io/chrome-web-store/stars/lbojnhaafilddefkdgmbplkafnckaoga?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></a>
-<a href="https://addons.mozilla.org/firefox/addon/chatgpt-auto-continue//reviews">
+<a href="https://addons.mozilla.org/firefox/addon/chatgpt-auto-continue/reviews">
     <img alt="[Mozilla Add-ons Ratings]" src="https://img.shields.io/amo/stars/chatgpt-auto-continue?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></a>
 <a href="LICENSE.md">
     <img alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>

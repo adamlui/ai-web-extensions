@@ -6,7 +6,7 @@
 
 <a href="#">
     <img src="https://img.shields.io/amo/users/chatgpt-widescreen?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
-<a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//reviews">
+<a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/reviews">
     <img alt="[Mozilla Add-ons Ratings]" src="https://img.shields.io/amo/stars/chatgpt-widescreen?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/">
     <img alt="[Mozilla Add-ons Store]" src="https://img.shields.io/amo/v/chatgpt-widescreen?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
@@ -32,7 +32,7 @@
 <br>
 
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions) / 
-[Review](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//reviews?utm_source=github&utm_medium=referral&utm_content=review-link) / 
+[Review](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/reviews?utm_source=github&utm_medium=referral&utm_content=review-link) / 
 [Contact author](https://github.com/adamlui)
   
 </div>

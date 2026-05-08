@@ -62,7 +62,7 @@
 
 ## 🗨️ User feedback
 
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js/feedback"><img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/reviews/greasy-fork.png"></a>
+<img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/reviews/greasy-fork.png">
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 

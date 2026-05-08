@@ -19,7 +19,7 @@
     <img src="https://img.shields.io/badge/%E7%94%A8%E6%88%B7-10,000+-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://chromewebstore.google.com/detail/chatgpt-auto-continue/lbojnhaafilddefkdgmbplkafnckaoga/reviews?utm_source=github&utm_medium=referral&utm_content=chrome-rating-shield">
     <img alt="[Chrome 网上应用店评分]" src="https://img.shields.io/chrome-web-store/stars/lbojnhaafilddefkdgmbplkafnckaoga?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></a>
-<a href="https://addons.mozilla.org/firefox/addon/chatgpt-auto-continue//reviews">
+<a href="https://addons.mozilla.org/firefox/addon/chatgpt-auto-continue/reviews">
     <img alt="[Mozilla Add-ons 评级]" src="https://img.shields.io/amo/stars/chatgpt-auto-continue?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></a>
 <a href="LICENSE.md">
     <img alt="[许可证: MIT]" src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>

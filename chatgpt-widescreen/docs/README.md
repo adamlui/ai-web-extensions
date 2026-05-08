@@ -18,7 +18,7 @@
     <img alt="[Featured by Google]" src="https://img.shields.io/badge/Featured_by-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
     <img alt="[Chrome Web Store Ratings]" src="https://img.shields.io/chrome-web-store/stars/jgnjpnmofkalfliddjelaciggjgnphgm?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></a>
-<a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//reviews">
+<a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/reviews">
     <img alt="[Mozilla Add-ons Ratings]" src="https://img.shields.io/amo/stars/chatgpt-widescreen?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></a>
 <a href="LICENSE.md">
     <img alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
@@ -79,10 +79,9 @@
 
 ## 🗨️ User feedback
 
-#### <a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js/feedback">
-<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/web-stores/greasy-fork/white/icon25.png"><img width=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/web-stores/greasy-fork/black/icon25.png"></picture></a> Greasy Fork:
+#### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/web-stores/greasy-fork/white/icon25.png"><img width=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/web-stores/greasy-fork/black/icon25.png"></picture> Greasy Fork:
 
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js/feedback"><img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/reviews/greasy-fork.png"></a>
+<img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/reviews/greasy-fork.png">
 
 #### <a href="https://chromewebstore.google.com/detail/chatgpt-widescreen-mode/jgnjpnmofkalfliddjelaciggjgnphgm/reviews"><img width=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/web-stores/chrome-web-store/icon16.png"></a> Chrome Web Store:
 

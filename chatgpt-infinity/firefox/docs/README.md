@@ -30,7 +30,7 @@
 <br>
 
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions) / 
-[Review](https://addons.mozilla.org/firefox/addon/chatgpt-infinity//reviews?utm_source=github&utm_medium=referral&utm_content=review-link) / 
+[Review](https://addons.mozilla.org/firefox/addon/chatgpt-infinity/reviews?utm_source=github&utm_medium=referral&utm_content=review-link) / 
 [Contact author](https://github.com/adamlui)
   
 </div>

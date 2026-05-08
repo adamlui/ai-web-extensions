@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<a href="https://addons.mozilla.org/firefox/addon/chatgpt-auto-continue//reviews">
+<a href="https://addons.mozilla.org/firefox/addon/chatgpt-auto-continue/reviews">
     <img alt="[Mozilla Add-ons Ratings]" src="https://img.shields.io/amo/stars/chatgpt-auto-continue?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-auto-continue/">
     <img alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/chatgpt-auto-continue?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
@@ -28,7 +28,7 @@
 <br>
 
 [Discuss](https://github.com/adamlui/chatgpt-auto-continue/discussions) / 
-[Review](https://addons.mozilla.org/firefox/addon/chatgpt-auto-continue//reviews?utm_source=github&utm_medium=referral&utm_content=review-link) / 
+[Review](https://addons.mozilla.org/firefox/addon/chatgpt-auto-continue/reviews?utm_source=github&utm_medium=referral&utm_content=review-link) / 
 [Contact author](https://github.com/adamlui)
   
 </div>
