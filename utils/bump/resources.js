@@ -72,9 +72,12 @@
     })
     bump.log.success(`${resCnt} potentially bumpable resource(s) found.`)
 
-    // Fetch latest commit hash for adamlui/ai-web-extensions
-    bump.log.working('\nFetching latest commit hash for adamlui/ai-web-extensions...\n')
-    const latestCommitHashes = { aiweb: await bump.getLatestCommitHash({ repo: 'adamlui/ai-web-extensions' })}
+    // Fetch latest commit hashes
+    bump.log.working('\nFetching latest commit hashes...\n')
+    const latestCommitHashes = {
+        aiweb: await bump.getLatestCommitHash({ repo: 'adamlui/ai-web-extensions' }),
+        userscripts: await bump.getLatestCommitHash({ repo: 'adamlui/userscripts' })
+    }
 
     // Process each userscript
     let urlsUpdatedCnt = 0 ; let filesUpdatedCnt = 0
@@ -96,7 +99,11 @@
             const resName = regEx.resName.exec(resURL)?.[0] || 'resource' // dir/filename for logs
 
             // Compare/update commit hash
-            let resLatestCommitHash = latestCommitHashes[resURL.includes(repoName) ? 'chromium' : 'aiweb']
+            let resLatestCommitHash = latestCommitHashes[
+                resURL.includes('/ai-web-extensions@') ? 'aiweb'
+              : resURL.includes('/userscripts@') ? 'userscripts'
+              : 'chromium'
+            ]
             if (resLatestCommitHash.startsWith( // compare hashes
                 regEx.hash.commit.exec(resURL)?.[2] || '')) { // commit hash didn't change...
                     console.log(`${resName} already up-to-date!`) ; bump.log.endedWithLineBreak = false
