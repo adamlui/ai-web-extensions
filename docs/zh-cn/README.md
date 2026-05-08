@@ -148,7 +148,7 @@
 
 <!-- CHATGPT AUTO-CONTINUE -->
 
-### [<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/white/icon32.png"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/black/icon32.png"></picture>][cac-readme] [ChatGPT 自动继续][cac-readme] &nbsp;[<img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg">][awesome-chatgpt-userscripts]
+### [<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@1a53b2e/assets/images/icons/app/white/icon32.png"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@1a53b2e/assets/images/icons/app/black/icon32.png"></picture>][cac-readme] [ChatGPT 自动继续][cac-readme] &nbsp;[<img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg">][awesome-chatgpt-userscripts]
 
 <details>
     <summary>
