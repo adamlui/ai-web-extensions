@@ -11,7 +11,7 @@
     </h6>
 </div>
 
-# <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/icons/openai/white/icon32.png"><img width=23 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/icons/openai/black/icon32.png"></picture> ChatGPT Auto Refresh ↻
+# <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/white/icon32.png"><img width=23 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/black/icon32.png"></picture> ChatGPT Auto Refresh ↻
 
 <a href="../LICENSE.md">
     <img alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
@@ -30,7 +30,7 @@
 
 ### Keeps ChatGPT sessions fresh via background requests to eliminate network errors + Cloudflare checks.
 
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-refresh/refs/heads/main/greasemonkey/chatgpt-auto-refresh.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-refresh/refs/heads/main/greasemonkey/chatgpt-auto-refresh.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [Discuss](https://github.com/adamlui/chatgpt-auto-refresh/discussions) /
 [Get support](https://github.com/adamlui/chatgpt-auto-refresh/issues) /
@@ -45,7 +45,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 💡 What it does
 
@@ -69,7 +69,7 @@
     
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 💊 Benefits
 
@@ -81,13 +81,13 @@
 
 &nbsp;&nbsp;&nbsp;🤯 <mark>Works ***even in background tabs!***</mark>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 🗨️ User feedback
 
 <img width=535 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/reviews/greasy-fork.png">
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 🚀 Installation
 
@@ -108,7 +108,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## ⚡ Dependencies
 
@@ -129,7 +129,7 @@ ChatGPT Auto Refresh relies on code from the powerful <a href="https://github.co
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 🌐 Compatibility
 
@@ -148,13 +148,13 @@ ChatGPT Auto Refresh is compatible w/ the following browsers using [ScriptCat](h
 
 <br>
 
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-refresh/refs/heads/main/greasemonkey/chatgpt-auto-refresh.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-refresh/refs/heads/main/greasemonkey/chatgpt-auto-refresh.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [Discuss](https://github.com/adamlui/chatgpt-auto-refresh/discussions) / 
 [Get support](https://github.com/adamlui/chatgpt-auto-refresh/issues) /
 [More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 <!-- CONTRIBUTORS -->
 
@@ -166,7 +166,7 @@ ChatGPT Auto Refresh is compatible w/ the following browsers using [ScriptCat](h
 
 All contributions are very welcome!
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -187,36 +187,36 @@ All contributions are very welcome!
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 🤖 More ChatGPT apps
 
 For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 📜 Related scripts
 
-### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@02d9942/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24">
+### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24">
 > Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on poe.com!
 <br>[Install](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#-greasemonkey-userscript) /
 [Readme](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT Auto-Continue](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT Auto-Continue](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
 > Automatically continue generating answers when ChatGPT responses get cut-off.<br>
 [Install](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#-installation) /
 [Readme](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-auto-continue/discussions)
 
-### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 > Generate endless answers from all-knowing ChatGPT (in any language!)
 <br>[Install](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#-greasemonkey-userscript) / 
 [Readme](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#readme) / 
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
   
 <a href="https://github.com/adamlui/userscripts">**More userscripts**</a> /
 <a href="#top">Back to top ↑</a>

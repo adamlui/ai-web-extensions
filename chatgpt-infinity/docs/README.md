@@ -37,13 +37,13 @@
 <br><br>
 
 <a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[Get for Chrome]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
+    <img alt="[Get for Chrome]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb">
-    <img alt="[Get for Edge]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
+    <img alt="[Get for Edge]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[Get for Firefox]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+    <img alt="[Get for Firefox]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js">
-    <img alt="[Get for Greasemonkey]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/greasemonkey/install-userscript/en/badge860x262.png"></a>
+    <img alt="[Get for Greasemonkey]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/en/badge860x262.png"></a>
 
 </div>
 
@@ -78,7 +78,7 @@
 
 2. Visit [chatgpt.com](https://chatgpt.com) as normal, and a toggle appears in the sidebar and toolbar menu
 
-*Pro tip: For easier access to extension toggles, (1) click <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/icons/toolbar/chrome-puzzle-piece/gray.png"> in the browser's toolbar, (2) then <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/icons/toolbar/push-pin/blue.png"> next to extension name.*
+*Pro tip: For easier access to extension toggles, (1) click <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/toolbar/chrome-puzzle-piece/gray.png"> in the browser's toolbar, (2) then <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/toolbar/push-pin/blue.png"> next to extension name.*
 
 <div align="center">
 
@@ -157,13 +157,13 @@ If you've tested it to work in a browser not listed, simply create a [pull reque
 <div align="center">
 
 <a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[Get for Chrome]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
+    <img alt="[Get for Chrome]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb">
-    <img alt="[Get for Edge]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
+    <img alt="[Get for Edge]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[Get for Firefox]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+    <img alt="[Get for Firefox]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js">
-    <img alt="[Get for Greasemonkey]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/greasemonkey/install-userscript/en/badge860x262.png"></a>
+    <img alt="[Get for Greasemonkey]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/en/badge860x262.png"></a>
 
 <br>
 
@@ -212,28 +212,28 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 
 ## 📜 Related apps
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/assets/images/icons/openai/white/icon16.png"><img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/assets/images/icons/openai/black/icon16.png"></picture> [ChatGPT Auto-Talk 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/assets/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/white/icon16.png"><img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/black/icon16.png"></picture> [ChatGPT Auto-Talk 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
 
 > Auto-play ChatGPT responses.
 <br>[Install](https://github.com/adamlui/chatgpt-auto-talk/#-installation) /
 [Readme](https://github.com/adamlui/chatgpt-auto-talk/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-auto-talk/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT Auto-Continue](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT Auto-Continue](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
 
 > Automatically continue generating answers when ChatGPT responses get cut-off.<br>
 [Install](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#-installation) / 
 [Readme](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#readme) / 
 [Discuss](https://github.com/adamlui/chatgpt-auto-continue/discussions)
 
-### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@02d9942/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24" />
+### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24" />
 
 > Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on poe.com!
 <br>[Install](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#-installation) / 
 [Readme](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#readme) / 
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
   
 <a href="https://github.com/adamlui/ai-web-extensions/#readme">**More ChatGPT add-ons**</a> / 
 <a href="#top">Back to top ↑</a>

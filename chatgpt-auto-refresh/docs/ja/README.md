@@ -13,7 +13,7 @@
     </h6>
 </div>
 
-# <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/icons/openai/white/icon32.png"><img width=23 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/icons/openai/black/icon32.png"></picture> ChatGPT 自動更新 ↻
+# <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/white/icon32.png"><img width=23 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/black/icon32.png"></picture> ChatGPT 自動更新 ↻
 
 <a href="LICENSE.md">
     <img alt="[ライセンス: MIT]" src="https://img.shields.io/badge/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
@@ -32,7 +32,7 @@
 
 ### 背景リクエストを介して ChatGPT セッションを最新の状態に保ち、ネットワーク エラーと Cloudflare チェックを排除します。
 
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-refresh/refs/heads/main/greasemonkey/chatgpt-auto-refresh.user.js"><img height=45 alt="[このスクリプトをインストール]" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/buttons/greasy-fork/install-button.svg"></a><a href="#-インストール"><img height=45 alt="[インストール方法]" title="インストール方法" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-refresh/refs/heads/main/greasemonkey/chatgpt-auto-refresh.user.js"><img height=45 alt="[このスクリプトをインストール]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-インストール"><img height=45 alt="[インストール方法]" title="インストール方法" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [ディスカッション](https://github.com/adamlui/chatgpt-auto-refresh/discussions) /
 [サポートを受ける](https://github.com/adamlui/chatgpt-auto-refresh/issues) /
@@ -47,7 +47,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 💡 それが何をするか
 
@@ -71,7 +71,7 @@
     
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 💊 利点
 
@@ -83,13 +83,13 @@
 
 &nbsp;&nbsp;&nbsp;🤯 <mark>***バックグラウンド タブでも動作します!***</mark>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 🗨️ ユーザーのフィードバック
 
 <img width=535 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/reviews/greasy-fork.png">
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 🚀 インストール
 
@@ -110,7 +110,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## ⚡ 依存関係
 
@@ -131,7 +131,7 @@ ChatGPT 自動更新 は強力な <a href="https://github.com/KudoAI/chatgpt.js"
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 🌐 互換性
 
@@ -150,13 +150,13 @@ ChatGPT 自動更新 は、[ScriptCat](https://docs.scriptcat.org)、[Violentmon
 
 <br>
 
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-refresh/refs/heads/main/greasemonkey/chatgpt-auto-refresh.user.js"><img height=45 alt="[このスクリプトをインストール]" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/buttons/greasy-fork/install-button.svg"></a><a href="#-インストール"><img height=45 alt="[インストール方法]" title="インストール方法" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-refresh/refs/heads/main/greasemonkey/chatgpt-auto-refresh.user.js"><img height=45 alt="[このスクリプトをインストール]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-インストール"><img height=45 alt="[インストール方法]" title="インストール方法" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [ディスカッション](https://github.com/adamlui/chatgpt-auto-refresh/discussions) / 
 [サポートを受ける](https://github.com/adamlui/chatgpt-auto-refresh/issues) /
 [その他の ChatGPT ユーザースクリプト](https://github.com/adamlui/userscripts/tree/master/chatgpt)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 <!-- CONTRIBUTORS -->
 
@@ -168,7 +168,7 @@ ChatGPT 自動更新 は、[ScriptCat](https://docs.scriptcat.org)、[Violentmon
 
 どのような貢献も大歓迎です！
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -189,36 +189,36 @@ ChatGPT 自動更新 は、[ScriptCat](https://docs.scriptcat.org)、[Violentmon
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 🤖 その他の ChatGPT アプリ
 
 さらに多くの素晴らしい ChatGPT アプリについては、https://github.com/adamlui/ai-web-extensions をご覧ください。
 <br><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 📜 関連スクリプト
 
-### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT ワイドスクリーン モード](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@02d9942/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24">
+### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT ワイドスクリーン モード](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24">
 > ワイド/フル/トールスクリーン+スパンブロックモードで ChatGPT を強化します。poe.com でも動作します！
 <br>[インストール](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#-greasemonkey-userscript) /
 [Readme](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#readme) /
 [ディスカッション](https://github.com/adamlui/chatgpt-widescreen/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@7e2c739/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT 自動継続](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT 自動継続](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
 > ChatGPT の応答が中断されたときに、自動的に回答の生成を継続します。<br>
 [インストール](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#-インストール) /
 [Readme](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#readme) /
 [ディスカッション](https://github.com/adamlui/chatgpt-auto-continue/discussions)
 
-### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 > 全知の ChatGPT から無限の回答を生成します (どの言語でも!)
 <br>[インストール](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#-greasemonkey-userscript) / 
 [Readme](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#readme) / 
 [ディスカッション](https://github.com/adamlui/chatgpt-infinity/discussions)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
   
 <a href="https://github.com/adamlui/userscripts">**その他のユーザースクリプト**</a> /
 <a href="#top">トップに戻る ↑</a>

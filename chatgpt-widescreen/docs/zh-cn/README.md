@@ -35,13 +35,13 @@
 <br><br>
 
 <a href="https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[获取 Chrome 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
+    <img alt="[获取 Chrome 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa">
-    <img alt="[获取 Edge 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
+    <img alt="[获取 Edge 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[获取 Firefox 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+    <img alt="[获取 Firefox 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js">
-    <img alt="[获取 Greasemonkey 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
+    <img alt="[获取 Greasemonkey 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
 
 </div>
 
@@ -49,7 +49,7 @@
 
 **ChatGPT 宽屏模式** 为 ChatGPT 添加了宽屏/全屏/高屏 + 垃圾邮件拦截模式，通过减少滚动和消除混乱来增强您的聊天会话，创造更身临其境的观看体验。
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
 ## 📺 演示
 
@@ -61,7 +61,7 @@
 
 </div><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
 ## 💊 好处
 
@@ -75,20 +75,20 @@
 
 🌐 适用于: **chatgpt.com** + **poe.com**
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
 ## 🗨️ 用户反馈
 
 #### <a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js/feedback">
-<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/web-stores/greasy-fork/white/icon25.png"><img width=12 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/web-stores/greasy-fork/black/icon25.png"></picture></a> Greasy Fork:
+<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/web-stores/greasy-fork/white/icon25.png"><img width=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/web-stores/greasy-fork/black/icon25.png"></picture></a> Greasy Fork:
 
 <a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js/feedback"><img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/reviews/greasy-fork.png"></a>
 
-#### <a href="https://chromewebstore.google.com/detail/chatgpt-widescreen-mode/jgnjpnmofkalfliddjelaciggjgnphgm/reviews"><img width=14 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/web-stores/chrome-web-store/icon16.png"></a> Chrome Web Store:
+#### <a href="https://chromewebstore.google.com/detail/chatgpt-widescreen-mode/jgnjpnmofkalfliddjelaciggjgnphgm/reviews"><img width=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/web-stores/chrome-web-store/icon16.png"></a> Chrome Web Store:
 
 <a href="https://chromewebstore.google.com/detail/chatgpt-widescreen-mode/jgnjpnmofkalfliddjelaciggjgnphgm/reviews"><img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/reviews/chrome-web-store.png"></a>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
 ## 🚀 如何安装
 
@@ -98,7 +98,7 @@
 
 2. 访问 [chatgpt.com](https://chatgpt.com), 或 [poe.com](https://poe.com)，聊天栏已添加模式切换！
 
-*专业提示：更容易访问扩展开关, (1) 点击 <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/toolbar/chrome-puzzle-piece/gray.png"> 在浏览器的工具栏中, (2) 然后 <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/toolbar/push-pin/blue.png"> 在分机名称旁边.*
+*专业提示：更容易访问扩展开关, (1) 点击 <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/toolbar/chrome-puzzle-piece/gray.png"> 在浏览器的工具栏中, (2) 然后 <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/toolbar/push-pin/blue.png"> 在分机名称旁边.*
 
 <div align="center">
 
@@ -133,7 +133,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
 ## ⚡ 依赖关系
 
@@ -154,7 +154,7 @@ ChatGPT 寬屏模式 依賴於強大的 [chatgpt.js](https://github.com/KudoAI/c
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
 ## 🌐 兼容性
 
@@ -175,13 +175,13 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 <div align="center">
 
 <a href="https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[获取 Chrome 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
+    <img alt="[获取 Chrome 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa">
-    <img alt="[获取 Edge 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
+    <img alt="[获取 Edge 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[获取 Firefox 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+    <img alt="[获取 Firefox 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
 <a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js">
-    <img alt="[获取 Greasemonkey 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
+    <img alt="[获取 Greasemonkey 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
 
 <br>
 
@@ -190,7 +190,7 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
 <!-- CONTRIBUTORS -->
 
@@ -202,7 +202,7 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 
 非常欢迎一切贡献！
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -223,18 +223,18 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
 ## 🤖 更多 ChatGPT 应用
 
 如需更多精彩的 ChatGPT 应用程序，请访问: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
 ## 📜 相关应用
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/assets/images/icons/openai/white/icon16.png"><img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/assets/images/icons/openai/black/icon16.png"></picture> [ChatGPT 自动谈话 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/assets/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/white/icon16.png"><img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/black/icon16.png"></picture> [ChatGPT 自动谈话 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
 
 > 自动播放 ChatGPT 的回复。
 <br>[安装](https://github.com/adamlui/chatgpt-auto-talk/tree/main/docs/zh-cn/#-如何安装) /
@@ -248,14 +248,14 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 [自述文件](https://docs.bravegpt.com/#readme) /
 [讨论](https://github.com/KudoAI/bravegpt/discussions)
 
-### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT无限](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT无限](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 
 > 从无所不知的 ChatGPT 生成无穷无尽的答案 (用任何語言!)
 <br>[安装](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/zh-cn/#-如何安装) /
 [自述文件](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/zh-cn/#readme) /
 [讨论](https://github.com/adamlui/chatgpt-infinity/discussions)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/aqua.png">
 
 <a href="https://github.com/adamlui/chatgpt-addons">**更多 ChatGPT 插件**</a> /
 <a href="#top">回到顶部 ↑</a>
