@@ -67,26 +67,6 @@
 
 <br><br>
 
-<!-- WARP BANNER -->
-
-<hr>
-<br>
-
-<div align="center">
-
-##### Supported by:
-
-[<img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">][warp-link]
-
-### [Warp, the AI Devtool that lives in your terminal][warp-link]
-<br>
-
-[warp-link]: https://www.warp.dev/chatgptjs
-
-</div>
-
-<hr>
-
 <!-- INSTALLATION -->
 
 ## 🚀 Installation

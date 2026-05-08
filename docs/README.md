@@ -337,22 +337,6 @@ Type @chatgpt in Firefox browser address bar to get answers from ChatGPT.
 [deepseek-omnibox-edge]: https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/meolmkblenpohjlndodfbgpcfioampim
 [deepseek-omnibox-readme]: https://github.com/adamlui/ai-web-extensions/tree/main/deepseek-omnibox/#readme
 
-<!-- WARP BANNER -->
-
-<hr> 
-
-<div align="center">
-
-##### Supported by:
-
-[<img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">][warp-link]
-
-### [Warp, the AI Devtool that lives in your terminal][warp-link]
-
-</div>
-
-<hr>
-
 <!-- DUCKDUCKGPT -->
 
 ### [<img width=20 src="https://assets.ddgpt.com/images/icons/app/icon48.png">][ddgpt-readme] [DuckDuckGPT][ddgpt-readme] &nbsp;[<img width="112" height="auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light">](https://www.producthunt.com/posts/duckduckgpt)
@@ -470,4 +454,3 @@ All contributions are very welcome!
 [adamlui-github]: https://github.com/adamlui
 [aiweb-discuss]: https://github.com/adamlui/ai-web-extensions/discussions
 [awesome-chatgpt-userscripts]: https://github.com/awesome-scripts/awesome-userscripts#-chatgpt
-[warp-link]: https://www.warp.dev/chatgptjs

@@ -87,29 +87,6 @@ ChatGPT Auto-Continue relies on code from the powerful [chatgpt.js](https://gith
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
-
-<div id="sponsors" align="center">
-<br>
-
-### Supported by:
-
-<div id="warp">
-    <br><br>
-    <a href="https://www.warp.dev/chatgptjs" target="_blank">
-        <img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">
-    </a>
-    <h3><a href="https://www.warp.dev/chatgptjs" target="_blank">
-        Warp, the AI Devtool that lives in your terminal</a></h3>
-    <i><a href="https://www.warp.dev/chatgptjs" target="_blank">
-        Available for MacOS, Linux, & Windows</a></i>
-</div>
-<br><br>
-
-</div>
-
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
-
 ## 🤖 More ChatGPT apps
 
 For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions

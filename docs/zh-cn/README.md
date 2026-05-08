@@ -337,22 +337,6 @@
 [deepseek-omnibox-edge]: https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/meolmkblenpohjlndodfbgpcfioampim
 [deepseek-omnibox-readme]: https://github.com/adamlui/ai-web-extensions/tree/main/deepseek-omnibox/docs/zh-cn/#readme
 
-<!-- WARP BANNER -->
-
-<hr> 
-
-<div align="center">
-
-##### 支持单位：
-
-[<img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">][warp-link]
-
-### [Warp：常驻终端的 AI 开发工具][warp-link]
-
-</div>
-
-<hr>
-
 <!-- DUCKDUCKGPT -->
 
 ### [<img width=20 src="https://assets.ddgpt.com/images/icons/app/icon48.png">][ddgpt-readme] [DuckDuckGPT][ddgpt-readme] &nbsp;[<img width="112" height="auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light">](https://www.producthunt.com/posts/duckduckgpt)
@@ -459,4 +443,3 @@
 [adamlui-github]: https://github.com/adamlui
 [aiweb-discuss]: https://github.com/adamlui/ai-web-extensions/discussions
 [awesome-chatgpt-userscripts]: https://github.com/awesome-scripts/awesome-userscripts#-chatgpt
-[warp-link]: https://www.warp.dev/chatgptjs

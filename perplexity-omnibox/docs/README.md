@@ -181,32 +181,6 @@ Simply type `@perplexity` followed by your query in the address bar:
 
 ---
 
-## 💖 Sponsors
-
-<div align="center">
-
-<br>
-
-<a href="https://www.warp.dev/chatgptjs" target="_blank">
-  <img 
-    src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837" 
-    width="650" 
-    alt="Warp - The AI Terminal"
-  />
-</a>
-
-<br>
-
-### **[Warp][link-warp]** — The AI terminal for developers
-
-*Available for macOS, Linux & Windows*
-
-<br>
-
-</div>
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to:

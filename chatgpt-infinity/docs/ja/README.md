@@ -179,30 +179,7 @@ ChatGPT Infinity は、強力な [chatgpt.js](https://github.com/KudoAI/chatgpt.
     <img height=45 width="auto" src="https://contrib.rocks/image?repo=adamlui/chatgpt-infinity" /></a>
 <br><br>
 
-どのような貢献も大歓迎です！
-
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
-
-<div id="sponsors" align="center">
-<br>
-
-### サポート対象:
-
-<div id="warp">
-    <br><br>
-    <a href="https://www.warp.dev/chatgptjs" target="_blank">
-        <img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">
-    </a>
-    <h3><a href="https://www.warp.dev/chatgptjs" target="_blank">
-        ターミナルで使える AI 開発ツール Warp</a></h3>
-    <i><a href="https://www.warp.dev/chatgptjs" target="_blank">
-        MacOS、Linux、Windows で利用可能</a></i>
-</div>
-<br><br>
-
-</div>
-
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
+どのような貢献も大歓迎です！00%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
 ## 🤖 その他の ChatGPT アプリ
 

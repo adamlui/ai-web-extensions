@@ -46,27 +46,6 @@
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/separators/aqua-gradient.png">
 
-<div id="sponsors" align="center">
-<br>
-
-### इसके द्वारा समर्थित:
-
-<div id="warp">
-    <br><br>
-    <a href="https://www.warp.dev/chatgptjs" target="_blank">
-        <img width="600" src="https://assets.chatgptjs.org/images/banners/warp/banner-1500x500.png?v=476e837">
-    </a>
-    <h3><a href="https://www.warp.dev/chatgptjs" target="_blank">
-        Warp, आपके टर्मिनल में मौजूद AI Devtool</a></h3>
-    <i><a href="https://www.warp.dev/chatgptjs" target="_blank">
-        MacOS, Linux, और Windows के लिए उपलब्ध</a></i>
-</div>
-<br><br>
-
-</div>
-
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@b39f78d/assets/images/separators/aqua-gradient.png">
-
 <a href="https://github.com/KudoAI/deepseek-omnibox/issues">समर्थन प्राप्त करें</a> /
 <a href="https://github.com/adamlui">लेखक से संपर्क करें</a> /
 <a href="https://aiwebextensions.com">अधिक AI वेब एक्सटेंशन</a>
