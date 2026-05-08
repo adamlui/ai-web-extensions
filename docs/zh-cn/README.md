@@ -67,7 +67,7 @@
 
 <!-- AUTOCLEAR CHATGPT HISTORY -->
 
-### [<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@83f1921/assets/images/icons/openai/white/icon32.png"><img width=19 src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@83f1921/assets/images/icons/openai/black/icon32.png"></picture>][ach-readme] [自动清除 ChatGPT 历史记录][ach-readme] &nbsp;[<img src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/badges/awesome/badge.svg">](https://github.com/awesome-scripts/awesome-userscripts#privacy)
+### [<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@83f1921/assets/images/icons/openai/white/icon32.png"><img width=19 src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@83f1921/assets/images/icons/openai/black/icon32.png"></picture>][ach-readme] [自动清除 ChatGPT 历史记录][ach-readme] &nbsp;[<img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg">](https://github.com/awesome-scripts/awesome-userscripts#privacy)
 
 <details>
     <summary>

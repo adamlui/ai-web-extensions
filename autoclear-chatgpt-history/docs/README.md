@@ -19,7 +19,7 @@
 
 ### Auto-clears chat history when visiting chatgpt.com for maximum privacy
 
-<a href="https://raw.githubusercontent.com/adamlui/autoclear-chatgpt-history/refs/heads/main/greasemonkey/autoclear-chatgpt-history.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://raw.githubusercontent.com/adamlui/autoclear-chatgpt-history/refs/heads/main/greasemonkey/autoclear-chatgpt-history.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [Discuss](https://github.com/adamlui/autoclear-chatgpt-history/discussions) /
 [Get support](https://github.com/adamlui/autoclear-chatgpt-history/issues) /
@@ -30,7 +30,7 @@
 ![](https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/screenshots/demo.png)
 <br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 🚀 Installation
 
@@ -51,7 +51,7 @@
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## ⚡ Dependencies
 
@@ -72,7 +72,7 @@ Autoclear ChatGPT History relies on code from the powerful <a href="https://gith
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 🌐 Compatibility
 
@@ -90,13 +90,13 @@ Autoclear ChatGPT History is compatible w/ the following browsers using [ScriptC
 
 <br>
 
-<a href="https://raw.githubusercontent.com/adamlui/autoclear-chatgpt-history/refs/heads/main/greasemonkey/autoclear-chatgpt-history.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://raw.githubusercontent.com/adamlui/autoclear-chatgpt-history/refs/heads/main/greasemonkey/autoclear-chatgpt-history.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [Discuss](https://github.com/adamlui/autoclear-chatgpt-history/discussions) / 
 [Get support](https://github.com/adamlui/autoclear-chatgpt-history/issues) /
 [More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 <!-- CONTRIBUTORS -->
 
@@ -108,7 +108,7 @@ Autoclear ChatGPT History is compatible w/ the following browsers using [ScriptC
 
 All contributions are very welcome!
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -129,14 +129,14 @@ All contributions are very welcome!
 
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 🤖 More ChatGPT apps
 
 For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
 ## 📜 Related scripts
 
@@ -161,7 +161,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.com/adamlui/chatgpt-widescreen/#readme) / 
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
   
 <a href="https://github.com/adamlui/userscripts">**More userscripts**</a> / 
 <a href="#top">Back to top ↑</a>
