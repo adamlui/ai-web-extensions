@@ -4,10 +4,10 @@
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
-    "app": "https://chatgptautorefresh.com",
+    "app": "https://github.com/adamlui/chatgpt-auto-refresh/#readme",
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-refresh@latest/assets",
     "chatgptjs": "https://chatgpt.js.org",
-    "contributors": "https://docs.chatgptautorefresh.com/#-contributors",
+    "contributors": "https://github.com/adamlui/chatgpt-auto-refresh/tree/main/docs/#-contributors",
     "discuss": "https://github.com/adamlui/chatgpt-auto-refresh/discussions",
     "donate": {
       "cashapp": "https://cash.app/$adamlui",
@@ -17,7 +17,7 @@
     },
     "github": "https://github.com/adamlui/chatgpt-auto-refresh",
     "relatedExtensions": "https://aiwebextensions.com",
-    "support": "https://support.chatgptautorefresh.com",
-    "update": { "gm": "https://gm.chatgptautorefresh.com" }
+    "support": "https://github.com/adamlui/chatgpt-auto-refresh/issues",
+    "update": { "gm": "https://raw.githubusercontent.com/adamlui/chatgpt-auto-refresh/refs/heads/main/greasemonkey/chatgpt-auto-refresh.user.js" }
   }
 }

@@ -14,11 +14,11 @@
     <img alt="[#1 热门 Edge 插件]" src="https://img.shields.io/badge/%E7%83%AD%E9%97%A8-%231_Edge_%E6%8F%92%E4%BB%B6-7bfce9?logo=data:image/svg%2bxml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTIxLjg2IDE3Ljg2cS4xNCAwIC4yNS4xMi4xLjEzLjEuMjV0LS4xMS4zM2wtLjMyLjQ2LS40My41My0uNDQuNXEtLjIxLjI1LS4zOC40MmwtLjIyLjIzcS0uNTguNTMtMS4zNCAxLjA0LS43Ni41MS0xLjYuOTEtLjg2LjQtMS43NC42NHQtMS42Ny4yNHEtLjkgMC0xLjY5LS4yOC0uOC0uMjgtMS40OC0uNzgtLjY4LS41LTEuMjItMS4xNy0uNTMtLjY2LS45Mi0xLjQ0LS4zOC0uNzctLjU4LTEuNi0uMi0uODMtLjItMS42NyAwLTEgLjMyLTEuOTYuMzMtLjk3Ljg3LTEuOC4xNC45NS41NSAxLjc3LjQxLjgyIDEuMDIgMS41LjYuNjggMS4zOCAxLjIxLjc4LjU0IDEuNjQuOS44Ni4zNiAxLjc3LjU2LjkyLjIgMS44LjIgMS4xMiAwIDIuMTgtLjI0IDEuMDYtLjIzIDIuMDYtLjcybC4yLS4xLjItLjA1em0tMTUuNS0xLjI3cTAgMS4xLjI3IDIuMTUuMjcgMS4wNi43OCAyLjAzLjUxLjk2IDEuMjQgMS43Ny43NC44MiAxLjY2IDEuNC0xLjQ3LS4yLTIuOC0uNzQtMS4zMy0uNTUtMi40OC0xLjM3LTEuMTUtLjgzLTIuMDgtMS45LS45Mi0xLjA3LTEuNTgtMi4zM1QuMzYgMTQuOTRRMCAxMy41NCAwIDEyLjA2cTAtLjgxLjMyLTEuNDkuMzEtLjY4LjgzLTEuMjMuNTMtLjU1IDEuMi0uOTYuNjYtLjQgMS4zNS0uNjYuNzQtLjI3IDEuNS0uMzkuNzgtLjEyIDEuNTUtLjEyLjcgMCAxLjQyLjEuNzIuMTIgMS40LjM1LjY4LjIzIDEuMzIuNTcuNjMuMzUgMS4xNi44My0uMzUgMC0uNy4wNy0uMzMuMDctLjY1LjIzdi0uMDJxLS42My4yOC0xLjIuNzQtLjU3LjQ2LTEuMDUgMS4wNC0uNDguNTgtLjg3IDEuMjYtLjM4LjY3LS42NSAxLjM5LS4yNy43MS0uNDIgMS40NC0uMTUuNzItLjE1IDEuMzh6TTExLjk2LjA2cTEuNyAwIDMuMzMuMzkgMS42My4zOCAzLjA3IDEuMTUgMS40My43NyAyLjYyIDEuOTMgMS4xOCAxLjE2IDEuOTggMi43LjQ5Ljk0Ljc2IDEuOTYuMjggMSAuMjggMi4wOCAwIC44OS0uMjMgMS43LS4yNC44LS42OSAxLjQ4LS40NS42OC0xLjEgMS4yMi0uNjQuNTMtMS40NS44OC0uNTQuMjQtMS4xMS4zNi0uNTguMTMtMS4xNi4xMy0uNDIgMC0uOTctLjAzLS41NC0uMDMtMS4xLS4xMi0uNTUtLjEtMS4wNS0uMjgtLjUtLjE5LS44NC0uNS0uMTItLjA5LS4yMy0uMjQtLjEtLjE2LS4xLS4zMyAwLS4xNS4xNi0uMzUuMTYtLjIuMzUtLjUuMi0uMjguMzYtLjY4LjE2LS40LjE2LS45NSAwLTEuMDYtLjQtMS45Ni0uNC0uOTEtMS4wNi0xLjY0LS42Ni0uNzQtMS41Mi0xLjI4LS44Ni0uNTUtMS43OS0uODktLjg0LS4zLTEuNzItLjQ0LS44Ny0uMTQtMS43Ni0uMTQtMS41NSAwLTMuMDYuNDVULjk0IDcuNTVxLjcxLTEuNzQgMS44MS0zLjEzIDEuMS0xLjM4IDIuNTItMi4zNVE2LjY4IDEuMSA4LjM3LjU4cTEuNy0uNTIgMy41OC0uNTJaIi8+PC9zdmc+&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa">
     <img alt="[Microsoft Edge]" src="https://img.shields.io/badge/%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-8afc25?logo=data:image/svg%2bxml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTIxLjg2IDE3Ljg2cS4xNCAwIC4yNS4xMi4xLjEzLjEuMjV0LS4xMS4zM2wtLjMyLjQ2LS40My41My0uNDQuNXEtLjIxLjI1LS4zOC40MmwtLjIyLjIzcS0uNTguNTMtMS4zNCAxLjA0LS43Ni41MS0xLjYuOTEtLjg2LjQtMS43NC42NHQtMS42Ny4yNHEtLjkgMC0xLjY5LS4yOC0uOC0uMjgtMS40OC0uNzgtLjY4LS41LTEuMjItMS4xNy0uNTMtLjY2LS45Mi0xLjQ0LS4zOC0uNzctLjU4LTEuNi0uMi0uODMtLjItMS42NyAwLTEgLjMyLTEuOTYuMzMtLjk3Ljg3LTEuOC4xNC45NS41NSAxLjc3LjQxLjgyIDEuMDIgMS41LjYuNjggMS4zOCAxLjIxLjc4LjU0IDEuNjQuOS44Ni4zNiAxLjc3LjU2LjkyLjIgMS44LjIgMS4xMiAwIDIuMTgtLjI0IDEuMDYtLjIzIDIuMDYtLjcybC4yLS4xLjItLjA1em0tMTUuNS0xLjI3cTAgMS4xLjI3IDIuMTUuMjcgMS4wNi43OCAyLjAzLjUxLjk2IDEuMjQgMS43Ny43NC44MiAxLjY2IDEuNC0xLjQ3LS4yLTIuOC0uNzQtMS4zMy0uNTUtMi40OC0xLjM3LTEuMTUtLjgzLTIuMDgtMS45LS45Mi0xLjA3LTEuNTgtMi4zM1QuMzYgMTQuOTRRMCAxMy41NCAwIDEyLjA2cTAtLjgxLjMyLTEuNDkuMzEtLjY4LjgzLTEuMjMuNTMtLjU1IDEuMi0uOTYuNjYtLjQgMS4zNS0uNjYuNzQtLjI3IDEuNS0uMzkuNzgtLjEyIDEuNTUtLjEyLjcgMCAxLjQyLjEuNzIuMTIgMS40LjM1LjY4LjIzIDEuMzIuNTcuNjMuMzUgMS4xNi44My0uMzUgMC0uNy4wNy0uMzMuMDctLjY1LjIzdi0uMDJxLS42My4yOC0xLjIuNzQtLjU3LjQ2LTEuMDUgMS4wNC0uNDguNTgtLjg3IDEuMjYtLjM4LjY3LS42NSAxLjM5LS4yNy43MS0uNDIgMS40NC0uMTUuNzItLjE1IDEuMzh6TTExLjk2LjA2cTEuNyAwIDMuMzMuMzkgMS42My4zOCAzLjA3IDEuMTUgMS40My43NyAyLjYyIDEuOTMgMS4xOCAxLjE2IDEuOTggMi43LjQ5Ljk0Ljc2IDEuOTYuMjggMSAuMjggMi4wOCAwIC44OS0uMjMgMS43LS4yNC44LS42OSAxLjQ4LS40NS42OC0xLjEgMS4yMi0uNjQuNTMtMS40NS44OC0uNTQuMjQtMS4xMS4zNi0uNTguMTMtMS4xNi4xMy0uNDIgMC0uOTctLjAzLS41NC0uMDMtMS4xLS4xMi0uNTUtLjEtMS4wNS0uMjgtLjUtLjE5LS44NC0uNS0uMTItLjA5LS4yMy0uMjQtLjEtLjE2LS4xLS4zMyAwLS4xNS4xNi0uMzUuMTYtLjIuMzUtLjUuMi0uMjguMzYtLjY4LjE2LS40LjE2LS45NSAwLTEuMDYtLjQtMS45Ni0uNC0uOTEtMS4wNi0xLjY0LS42Ni0uNzQtMS41Mi0xLjI4LS44Ni0uNTUtMS43OS0uODktLjg0LS4zLTEuNzItLjQ0LS44Ny0uMTQtMS43Ni0uMTQtMS41NSAwLTMuMDYuNDVULjk0IDcuNTVxLjcxLTEuNzQgMS44MS0zLjEzIDEuMS0xLjM4IDIuNTItMi4zNVE2LjY4IDEuMSA4LjM3LjU4cTEuNy0uNTIgMy41OC0uNTJaIi8+PC9zdmc+&logoColor=white&labelColor=464646&color=7bfce9&label=%E7%AD%89%E7%BA%A7&style=for-the-badge"></a>
-<a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-shield">
+<a href="https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-shield">
     <img alt="[由 Google 推荐]" src="https://img.shields.io/badge/%E7%B2%BE%E9%80%89%E8%80%85-Google-8afc25?logo=googlechrome&logoColor=white&labelColor=464646&style=for-the-badge"></a>
-<a href="https://chrome.chatgptwidescreen.com/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
+<a href="https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
     <img alt="[Chrome 网上应用店评分]" src="https://img.shields.io/chrome-web-store/stars/jgnjpnmofkalfliddjelaciggjgnphgm?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></a>
-<a href="https://ff.chatgptwidescreen.com/reviews">
+<a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//reviews">
     <img alt="[Mozilla Add-ons 评级]" src="https://img.shields.io/amo/stars/chatgpt-widescreen?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=%E7%AD%89%E7%BA%A7"></a>
 <a href="LICENSE.md">
     <img alt="[许可证: MIT]" src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
@@ -32,18 +32,16 @@
     <img alt="[在 Awesome 中提及]" src="https://img.shields.io/badge/%E6%8F%90%E5%8F%8A%E4%BA%8E-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-widescreen?tab=stats">
     <img alt="[jsDelivr 统计数据]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-widescreen?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20%E8%AF%B7%E6%B1%82&labelColor=464646&color=2bbbd8"></a>
-<a href="https://chatgptwidescreen.com?utm_source=chatgpt_widescreen&utm_content=github_shield">
-    <img alt="[www.chatgptwidescreen.com]" src="https://img.shields.io/badge/%E7%BD%91%E7%AB%99-www.chatgptwidescreen.com-lightgrey?logo=dribbble&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <br><br>
 
-<a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[获取 Chrome 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
+<a href="https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+    <img alt="[获取 Chrome 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa">
-    <img alt="[获取 Edge 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
-<a href="https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[获取 Firefox 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
-<a href="https://gm.chatgptwidescreen.com">
-    <img alt="[获取 Greasemonkey 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
+    <img alt="[获取 Edge 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
+<a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+    <img alt="[获取 Firefox 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js">
+    <img alt="[获取 Greasemonkey 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
 
 </div>
 
@@ -51,19 +49,19 @@
 
 **ChatGPT 宽屏模式** 为 ChatGPT 添加了宽屏/全屏/高屏 + 垃圾邮件拦截模式，通过减少滚动和消除混乱来增强您的聊天会话，创造更身临其境的观看体验。
 
-<img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
 
 ## 📺 演示
 
 <div align="center">
 
 <a href="https://www.youtube.com/watch?v=xtOklfi3lZY&list=PLB4S0Z21beYNoCdS3WvAMSxW69OuZzuF1">
-    <img src="https://assets.chatgptwidescreen.com/images/screenshots/demo-vid/thumbnail.png">
+    <img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/demo-vid/thumbnail.png">
 </a>
 
 </div><br>
 
-<img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
 
 ## 💊 好处
 
@@ -77,35 +75,35 @@
 
 🌐 适用于: **chatgpt.com** + **poe.com**
 
-<img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
 
 ## 🗨️ 用户反馈
 
-#### <a href="https://gm.chatgptwidescreen.com/feedback">
-<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/white/icon25.png"><img width=12 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/greasy-fork/black/icon25.png"></picture></a> Greasy Fork:
+#### <a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js/feedback">
+<picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/web-stores/greasy-fork/white/icon25.png"><img width=12 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/web-stores/greasy-fork/black/icon25.png"></picture></a> Greasy Fork:
 
-<a href="https://gm.chatgptwidescreen.com/feedback"><img width=999 src="https://assets.chatgptwidescreen.com/images/reviews/greasy-fork.png"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js/feedback"><img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/reviews/greasy-fork.png"></a>
 
-#### <a href="https://chromewebstore.google.com/detail/chatgpt-widescreen-mode/jgnjpnmofkalfliddjelaciggjgnphgm/reviews"><img width=14 src="https://assets.chatgptwidescreen.com/images/icons/web-stores/chrome-web-store/icon16.png"></a> Chrome Web Store:
+#### <a href="https://chromewebstore.google.com/detail/chatgpt-widescreen-mode/jgnjpnmofkalfliddjelaciggjgnphgm/reviews"><img width=14 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/web-stores/chrome-web-store/icon16.png"></a> Chrome Web Store:
 
-<a href="https://chromewebstore.google.com/detail/chatgpt-widescreen-mode/jgnjpnmofkalfliddjelaciggjgnphgm/reviews"><img width=999 src="https://assets.chatgptwidescreen.com/images/reviews/chrome-web-store.png"></a>
+<a href="https://chromewebstore.google.com/detail/chatgpt-widescreen-mode/jgnjpnmofkalfliddjelaciggjgnphgm/reviews"><img width=999 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/reviews/chrome-web-store.png"></a>
 
-<img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
 
 ## 🚀 如何安装
 
 ### <a href="#" title="Chrome"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/chrome/icon16.png"></a><a href="#" title="Edge"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"></a><a href="#" title="Firefox"><img height=17 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"></a> 浏览器扩展:
 
-1. 安装 ChatGPT 宽屏模式扩展 ([Chrome](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme), [Edge](https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa), [Firefox](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
+1. 安装 ChatGPT 宽屏模式扩展 ([Chrome](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme), [Edge](https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa), [Firefox](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme))
 
 2. 访问 [chatgpt.com](https://chatgpt.com), 或 [poe.com](https://poe.com)，聊天栏已添加模式切换！
 
-*专业提示：更容易访问扩展开关, (1) 点击 <img height=12 width=12 src="https://assets.chatgptwidescreen.com/images/icons/toolbar/chrome-puzzle-piece/gray.png"> 在浏览器的工具栏中, (2) 然后 <img height=12 width=12 src="https://assets.chatgptwidescreen.com/images/icons/toolbar/push-pin/blue.png"> 在分机名称旁边.*
+*专业提示：更容易访问扩展开关, (1) 点击 <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/toolbar/chrome-puzzle-piece/gray.png"> 在浏览器的工具栏中, (2) 然后 <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/toolbar/push-pin/blue.png"> 在分机名称旁边.*
 
 <div align="center">
 
-<img width=268 src="https://assets.chatgptwidescreen.com/images/screenshots/chrome/pin-instructions/zh-cn.png">
-<img width=288 src="https://assets.chatgptwidescreen.com/images/screenshots/chrome/toolbar-menu/zh-cn.png">
+<img width=268 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/chrome/pin-instructions/zh-cn.png">
+<img width=288 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/chrome/toolbar-menu/zh-cn.png">
 
 </div>
 
@@ -120,22 +118,22 @@
     - Tampermonkey 为了 [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) 或 [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
     - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) 或 [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) 为了 Safari
 
-2. 安装 [ChatGPT 宽屏模式](https://gm.chatgptwidescreen.com) 用户脚本（将在上面安装的管理器中加载）
+2. 安装 [ChatGPT 宽屏模式](https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js) 用户脚本（将在上面安装的管理器中加载）
 
 3. 访问 [chatgpt.com](https://chatgpt.com), 或 [poe.com](https://poe.com)，聊天栏已添加模式切换！
 
 <div align="center">
 
 <picture>
-    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptwidescreen.com/images/screenshots/widescreen-button/zh-cn/lightmode.png">
-    <img src="https://assets.chatgptwidescreen.com/images/screenshots/widescreen-button/zh-cn/darkmode.png">
+    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/widescreen-button/zh-cn/lightmode.png">
+    <img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/screenshots/widescreen-button/zh-cn/darkmode.png">
 </picture>
 
 *注意：由于全窗口模式隐藏了侧边栏，请按“+”开始新的聊天*
 
 </div>
 
-<img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
 
 ## ⚡ 依赖关系
 
@@ -156,34 +154,34 @@ ChatGPT 寬屏模式 依賴於強大的 [chatgpt.js](https://github.com/KudoAI/c
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
 
 ## 🌐 兼容性
 
 ChatGPT 宽屏模式 与以下浏览器兼容:
 
-- **[Google Chrome](https://www.chrome.com)** (通过 [Chrome 扩展程序](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://gm.chatgptwidescreen.com))
-- **[Mozilla Firefox](https://www.firefox.com)** (通过 [Firefox 扩展程序](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://gm.chatgptwidescreen.com))
-- **[Microsoft Edge](https://www.microsoft.com/edge)** (通过 [Edge 扩展程序](https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa) 或 [Greasemonkey 用户脚本](https://gm.chatgptwidescreen.com))
-- **[Opera](https://www.opera.com)** (通过 [Chrome 扩展程序](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://gm.chatgptwidescreen.com))
-- **[Brave](https://brave.com)** (通过 [Chrome 扩展程序](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://gm.chatgptwidescreen.com))
-- **[Vivaldi](https://vivaldi.com)** (通过 [Chrome 扩展程序](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://gm.chatgptwidescreen.com))
-- **[LibreWolf](https://librewolf.net)** (通过 [Firefox 扩展程序](https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://gm.chatgptwidescreen.com))
-- **[Ghost](https://ghostbrowser.com)** (通过 [Chrome 扩展程序](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://gm.chatgptwidescreen.com))
-- **[QQ](https://browser.qq.com)** (通过 [Chrome 扩展程序](https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://gm.chatgptwidescreen.com))
+- **[Google Chrome](https://www.chrome.com)** (通过 [Chrome 扩展程序](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js))
+- **[Mozilla Firefox](https://www.firefox.com)** (通过 [Firefox 扩展程序](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js))
+- **[Microsoft Edge](https://www.microsoft.com/edge)** (通过 [Edge 扩展程序](https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa) 或 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js))
+- **[Opera](https://www.opera.com)** (通过 [Chrome 扩展程序](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js))
+- **[Brave](https://brave.com)** (通过 [Chrome 扩展程序](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js))
+- **[Vivaldi](https://vivaldi.com)** (通过 [Chrome 扩展程序](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js))
+- **[LibreWolf](https://librewolf.net)** (通过 [Firefox 扩展程序](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js))
+- **[Ghost](https://ghostbrowser.com)** (通过 [Chrome 扩展程序](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js))
+- **[QQ](https://browser.qq.com)** (通过 [Chrome 扩展程序](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js))
 
 <br>
 
 <div align="center">
 
-<a href="https://chrome.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[获取 Chrome 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
+<a href="https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+    <img alt="[获取 Chrome 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/chrome-web-store/available-in-the-chrome-web-store-green-square-border-light-498x152.png"></a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa">
-    <img alt="[获取 Edge 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
-<a href="https://ff.chatgptwidescreen.com/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
-    <img alt="[获取 Firefox 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
-<a href="https://gm.chatgptwidescreen.com">
-    <img alt="[获取 Greasemonkey 版本]" height=60 src="https://assets.chatgptwidescreen.com/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
+    <img alt="[获取 Edge 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
+<a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen//?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
+    <img alt="[获取 Firefox 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js">
+    <img alt="[获取 Greasemonkey 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
 
 <br>
 
@@ -192,7 +190,7 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 
 </div>
 
-<img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
 
 <!-- CONTRIBUTORS -->
 
@@ -204,7 +202,7 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 
 非常欢迎一切贡献！
 
-<img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
 
 <div id="sponsors" align="center">
 <br>
@@ -225,14 +223,14 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 
 </div>
 
-<img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
 
 ## 🤖 更多 ChatGPT 应用
 
 如需更多精彩的 ChatGPT 应用程序，请访问: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
-<img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
 
 ## 📜 相关应用
 
@@ -250,14 +248,14 @@ ChatGPT 宽屏模式 与以下浏览器兼容:
 [自述文件](https://docs.bravegpt.com/#readme) /
 [讨论](https://github.com/KudoAI/bravegpt/discussions)
 
-### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT无限](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT无限](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 
 > 从无所不知的 ChatGPT 生成无穷无尽的答案 (用任何語言!)
-<br>[安装](https://docs.chatgptinfinity.com/zh-cn/#-如何安装) /
-[自述文件](https://docs.chatgptinfinity.com/zh-cn/#readme) /
+<br>[安装](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/zh-cn/#-如何安装) /
+[自述文件](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/zh-cn/#readme) /
 [讨论](https://github.com/adamlui/chatgpt-infinity/discussions)
 
-<img height=6px width="100%" src="https://assets.chatgptwidescreen.com/images/separators/aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/separators/aqua.png">
 
 <a href="https://github.com/adamlui/chatgpt-addons">**更多 ChatGPT 插件**</a> /
 <a href="#top">回到顶部 ↑</a>

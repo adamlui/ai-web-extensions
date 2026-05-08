@@ -4,10 +4,10 @@
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
-    "app": "https://chatgptautocontinue.com",
+    "app": "https://github.com/adamlui/chatgpt-auto-continue/#readme",
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@latest/assets",
     "chatgptjs": "https://chatgpt.js.org",
-    "contributors": "https://docs.chatgptautocontinue.com/#-contributors",
+    "contributors": "https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#-contributors",
     "discuss": "https://github.com/adamlui/chatgpt-auto-continue/discussions",
     "donate": {
       "cashapp": "https://cash.app/$adamlui",
@@ -18,14 +18,14 @@
     "github": "https://github.com/adamlui/chatgpt-auto-continue",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
-      "chrome": "https://chrome.chatgptautocontinue.com/reviews",
-      "edge": "https://edge.chatgptautocontinue.com",
-      "firefox": "https://ff.chatgptautocontinue.com",
+      "chrome": "https://chromewebstore.google.com/detail/chatgpt-auto-continue/lbojnhaafilddefkdgmbplkafnckaoga/reviews",
+      "edge": "https://microsoftedge.microsoft.com/addons/detail/chatgpt-autocontinue/kaicnimcjamamnlbaeaneofmdjibgepl",
+      "firefox": "https://addons.mozilla.org/firefox/addon/chatgpt-auto-continue/",
       "softonic": "https://chatgpt-auto-continue-2kh.en.softonic.com"
     },
-    "support": "https://support.chatgptautocontinue.com",
+    "support": "https://github.com/adamlui/chatgpt-auto-continue/issues",
     "uninstall": "https://forms.gle/SxKz5tvFb9DRAhRt5",
-    "update": { "gm": "https://gm.chatgptautocontinue.com" },
-    "welcome": "https://chatgptautocontinue.com/welcome"
+    "update": { "gm": "https://raw.githubusercontent.com/adamlui/chatgpt-auto-continue/refs/heads/main/greasemonkey/chatgpt-auto-continue.user.js" },
+    "welcome": "https://aiwebextensions.com/chatgpt-auto-continue/pages/welcome"
   }
 }

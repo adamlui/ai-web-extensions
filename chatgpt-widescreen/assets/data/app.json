@@ -3,10 +3,10 @@
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
-    "app": "https://chatgptwidescreen.com",
+    "app": "https://github.com/adamlui/chatgpt-widescreen/#readme",
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@latest/assets",
     "chatgptjs": "https://chatgpt.js.org",
-    "contributors": "https://docs.chatgptwidescreen.com/#-contributors",
+    "contributors": "https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#-contributors",
     "discuss": "https://github.com/adamlui/chatgpt-widescreen/discussions",
     "donate": {
       "github": "https://github.com/sponsors/adamlui",
@@ -16,15 +16,15 @@
     "github": "https://github.com/adamlui/chatgpt-widescreen",
     "relatedExtensions": "https://aiwebextensions.com",
     "review": {
-      "chrome": "https://chrome.chatgptwidescreen.com/reviews",
-      "edge": "https://edge.chatgptwidescreen.com",
-      "firefox": "https://ff.chatgptwidescreen.com",
+      "chrome": "https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/reviews",
+      "edge": "https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa",
+      "firefox": "https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/",
       "productHunt": "https://www.producthunt.com/products/chatgpt-widescreen-mode/reviews/new",
       "softonic": "https://chatgpt-widescreen-mode.en.softonic.com"
     },
-    "support": "https://support.chatgptwidescreen.com",
+    "support": "https://github.com/adamlui/chatgpt-widescreen/issues",
     "uninstall": "https://forms.gle/F2n55B38LYP9uxXM8",
-    "update": { "gm": "https://gm.chatgptwidescreen.com" },
-    "welcome": "https://chatgptwidescreen.com/welcome"
+    "update": { "gm": "https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js" },
+    "welcome": "https://aiwebextensions.com/chatgpt-widescreen/pages/welcome"
   }
 }

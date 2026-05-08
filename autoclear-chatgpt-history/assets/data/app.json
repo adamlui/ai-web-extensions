@@ -4,10 +4,10 @@
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
-    "app": "https://autoclearchatgpt.com",
+    "app": "https://github.com/adamlui/autoclear-chatgpt-history/#readme",
     "assets": "https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@latest/assets",
     "chatgptjs": "https://chatgpt.js.org",
-    "contributors": "https://docs.autoclearchatgpt.com/#-contributors",
+    "contributors": "https://github.com/adamlui/autoclear-chatgpt-history/tree/main/docs/#-contributors",
     "discuss": "https://github.com/adamlui/autoclear-chatgpt-history/discussions",
     "donate": {
       "cashapp": "https://cash.app/$adamlui",
@@ -17,7 +17,7 @@
     },
     "github": "https://github.com/adamlui/autoclear-chatgpt-history",
     "relatedExtensions": "https://aiwebextensions.com",
-    "support": "https://support.autoclearchatgpt.com",
-    "update": { "gm": "https://gm.autoclearchatgpt.com" }
+    "support": "https://github.com/adamlui/autoclear-chatgpt-history/issues",
+    "update": { "gm": "https://raw.githubusercontent.com/adamlui/autoclear-chatgpt-history/refs/heads/main/greasemonkey/autoclear-chatgpt-history.user.js" }
   }
 }

@@ -11,7 +11,7 @@
     </h6>
 </div>
 
-<a href="https://gm.chatgptautocontinue.com"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@3f57d16/assets/images/tiles/marquee/tile1400x560.png"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-continue/refs/heads/main/greasemonkey/chatgpt-auto-continue.user.js"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@3f57d16/assets/images/tiles/marquee/tile1400x560.png"></a>
 
 <div align="center">
 
@@ -31,10 +31,10 @@
     <img alt="[jsDelivr 统计数据]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-auto-continue?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20%E8%AF%B7%E6%B1%82&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<a href="https://gm.chatgptautocontinue.com"><img height=45 alt="[安装这个脚本]" src="https://assets.chatgptautocontinue.com/images/buttons/greasy-fork/zh-cn/install-button.svg?54af935"></a><a href="#-如何安装"><img height=45 alt="[如何安装]" title="如何安装" src="https://assets.chatgptautocontinue.com/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-continue/refs/heads/main/greasemonkey/chatgpt-auto-continue.user.js"><img height=45 alt="[安装这个脚本]" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/buttons/greasy-fork/zh-cn/install-button.svg"></a><a href="#-如何安装"><img height=45 alt="[如何安装]" title="如何安装" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [讨论](https://github.com/adamlui/chatgpt-auto-continue/discussions) /
-[获取支持](https://support.chatgptautocontinue.com) /
+[获取支持](https://github.com/adamlui/chatgpt-auto-continue/issues) /
 [联系作者](https://github.com/adamlui)
 
 </div>
@@ -45,7 +45,7 @@
 
 <div align="center">
 
-<img width=388 src="https://assets.chatgptautocontinue.com/images/screenshots/continue-button-crossed.png"> <img width=268 src="https://assets.chatgptautocontinue.com/images/screenshots/zh-cn/auto-continue-on-notification-checked.png">
+<img width=388 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/screenshots/continue-button-crossed.png"> <img width=268 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/screenshots/zh-cn/auto-continue-on-notification-checked.png">
 
 </div>
 
@@ -60,7 +60,7 @@
     - Tampermonkey 为了 [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) 或 [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
     - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) 或 [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) 为了 Safari
 
-2. 安装 [ChatGPT 自动继续](https://gm.chatgptautocontinue.com) 用户脚本（将在上面安装的管理器中加载）
+2. 安装 [ChatGPT 自动继续](https://raw.githubusercontent.com/adamlui/chatgpt-auto-continue/refs/heads/main/greasemonkey/chatgpt-auto-continue.user.js) 用户脚本（将在上面安装的管理器中加载）
 
 3. 正常访问 [chatgpt.com](https://chatgpt.com)，多条回复对话中断时会自动继续生成!
 <br><br>
@@ -89,7 +89,7 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 
 <div align="center">
 
-<a href="https://gm.chatgptautocontinue.com"><img height=45 alt="安装此脚本" src="https://assets.chatgptautocontinue.com/images/buttons/greasy-fork/zh-cn/install-button.svg"></a><a href="#-如何安装"><img alt="[如何安装]" title="如何安装" height=45 src="https://assets.chatgptautocontinue.com/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-continue/refs/heads/main/greasemonkey/chatgpt-auto-continue.user.js"><img height=45 alt="安装此脚本" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/buttons/greasy-fork/zh-cn/install-button.svg"></a><a href="#-如何安装"><img alt="[如何安装]" title="如何安装" height=45 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [讨论](https://github.com/adamlui/chatgpt-auto-continue/discussions) / 
 [更多 ChatGPT 用户脚本](https://github.com/adamlui/userscripts/tree/master/chatgpt)
@@ -136,28 +136,28 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 
 ## 📜 相关脚本
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautotalk.com/images/icons/openai/white/icon16.png"><img width=16 src="https://assets.chatgptautotalk.com/images/icons/openai/black/icon16.png"></picture> [ChatGPT 自动谈话 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@2f5a19c/assets/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/images/icons/openai/white/icon16.png"><img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/images/icons/openai/black/icon16.png"></picture> [ChatGPT 自动谈话 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk@2f5a19c/assets/images/badges/awesome/badge.svg"></a>
 
 > 自动播放 ChatGPT 的回复。
 <br>[安装](https://github.com/adamlui/chatgpt-auto-talk/tree/main/docs/zh-cn/#-如何安装) /
 [自述文件](https://github.com/adamlui/chatgpt-auto-talk/tree/main/docs/zh-cn/#readme) /
 [讨论](https://github.com/adamlui/chatgpt-auto-talk/discussions)
 
-### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT无限](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT无限](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 
 > 从无所不知的 ChatGPT (任何语言!) 生成无穷无尽的答案。<br>
-[安装](https://docs.chatgptinfinity.com/zh-cn/#-如何安装) / 
-[自述文件](https://docs.chatgptinfinity.com/zh-cn/#readme) / 
+[安装](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/zh-cn/#-如何安装) / 
+[自述文件](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/zh-cn/#readme) / 
 [讨论](https://github.com/adamlui/chatgpt-infinity/discussions)
 
-### <img width=17 src="https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT 宽屏模式](https://chatgptwidescreen.com) &nbsp;<img src="https://assets.chatgptwidescreen.com/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg?v=02d9942" width="auto" height="24" />
+### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT 宽屏模式](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@02d9942/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24" />
 
 > 通过宽屏/全屏/高屏+垃圾邮件块模式增强 ChatGPT。也可以在 poe.com 上使用！<br>
-[安装](https://docs.chatgptwidescreen.com/zh-cn/#-如何安装) / 
-[自述文件](https://docs.chatgptwidescreen.com/zh-cn/#readme) / 
+[安装](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/zh-cn/#-如何安装) / 
+[自述文件](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/zh-cn/#readme) / 
 [讨论](https://github.com/adamlui/chatgpt-widescreen/discussions)
 
-<img height=6px width="100%" src="https://assets.chatgptautocontinue.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue/images/separators/gradient-aqua.png">
   
 <a href="https://github.com/adamlui/userscripts">**更多用户脚本**</a> / 
 <a href="#top">回到顶部 ↑</a>

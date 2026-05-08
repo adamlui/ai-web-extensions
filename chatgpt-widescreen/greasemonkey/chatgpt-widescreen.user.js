@@ -235,10 +235,10 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.5.5
+// @version             2026.5.8
 // @license             MIT
-// @icon                https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon48.png?v=844b16e
-// @icon64              https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon64.png?v=844b16e
+// @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/images/icons/widescreen-robot-emoji/icon48.png
+// @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/images/icons/widescreen-robot-emoji/icon64.png
 // @compatible          chrome
 // @compatible          firefox
 // @compatible          edge
@@ -253,7 +253,6 @@
 // @match               *://gitlab.com/*
 // @match               *://poe.com/*
 // @connect             cdn.jsdelivr.net
-// @connect             gm.chatgptwidescreen.com
 // @connect             raw.githubusercontent.com
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.9.0/dist/chatgpt.min.js#sha256-XyrLEk81vg4/zgOeYDWtugRQKJvrWEefACp0EfwMVHE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/userscripts@ff2baba/assets/js/lib/css.js/dist/css.min.js#sha256-zf9s8C0cZ/i+gnaTIUxa0+RpDYpsJVlyuV5L2q4KUdA=
@@ -280,14 +279,14 @@
 // @grant               GM_xmlhttpRequest
 // @grant               GM.xmlHttpRequest
 // @noframes
-// @downloadURL         https://gm.chatgptwidescreen.com
-// @updateURL           https://gm.chatgptwidescreen.com
-// @homepageURL         https://chatgptwidescreen.com
-// @supportURL          https://support.chatgptwidescreen.com
+// @downloadURL         https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js
+// @updateURL           https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js
+// @homepageURL         https://github.com/adamlui/chatgpt-widescreen/#readme
+// @supportURL          https://github.com/adamlui/chatgpt-widescreen/issues
 // @contributionURL     https://ko-fi.com/adamlui
 // ==/UserScript==
 
-// Documentation: https://docs.chatgptwidescreen.com
+// Documentation: https://github.com/adamlui/chatgpt-widescreen/tree/main/docs
 // NOTE: This script relies on the powerful chatgpt.js library @ https://chatgpt.js.org
 //  © 2023–2026 KudoAI & contributors under the MIT license.
 

@@ -11,7 +11,7 @@
     </h6>
 </div>
 
-# <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptautotalk.com/images/icons/openai/white/icon32.png"><img width=23 src="https://assets.chatgptautotalk.com/images/icons/openai/black/icon32.png"></picture> ChatGPT Auto-Talk 📣
+# <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/images/icons/openai/white/icon32.png"><img width=23 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/images/icons/openai/black/icon32.png"></picture> ChatGPT Auto-Talk 📣
 
 <a href="../LICENSE.md">
     <img alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
@@ -28,18 +28,18 @@
 
 ### Automatically play ChatGPT responses.
 
-<a href="https://gm.chatgptautotalk.com"><img height=45 alt="[Install this script]" src="https://assets.chatgptautotalk.com/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://assets.chatgptautotalk.com/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://raw.githubusercontent.com/adamlui/chatgpt-auto-talk/refs/heads/main/greasemonkey/chatgpt-auto-talk.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [Discuss](https://github.com/adamlui/chatgpt-auto-talk/discussions) /
-[Get support](https://support.chatgptautotalk.com) /
+[Get support](https://github.com/adamlui/chatgpt-auto-talk/issues) /
 [Contact author](https://github.com/adamlui)
 
 #
 
 <div align="center">
 
-<img width=305 src="https://assets.chatgptautotalk.com/images/screenshots/auto-talk-sidebar-toggle-enabled.png">
-<img src="https://assets.chatgptautotalk.com/images/screenshots/auto-talk-on-notif.png">
+<img width=305 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/images/screenshots/auto-talk-sidebar-toggle-enabled.png">
+<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/images/screenshots/auto-talk-on-notif.png">
 
 </div>
 
@@ -52,7 +52,7 @@
     - Tampermonkey for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
     - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) or [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) for Safari
 
-2. Install [ChatGPT Auto-Talk](https://gm.chatgptautotalk.com) userscript (will load in manager installed above)
+2. Install [ChatGPT Auto-Talk](https://raw.githubusercontent.com/adamlui/chatgpt-auto-talk/refs/heads/main/greasemonkey/chatgpt-auto-talk.user.js) userscript (will load in manager installed above)
 
 3. Visit [chatgpt.com](https://chatgpt.com) as normal, and replies will automatically be read aloud!
 
@@ -122,21 +122,21 @@ For even more epic ChatGPT apps, go here: https://github.com/adamlui/ai-web-exte
 [Readme](https://amazongpt.kudoai.com/#readme) /
 [Discuss](https://github.com/KudoAI/amazongpt/discussions)
 
-### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://chatgptinfinity.com) &nbsp;<a href="https://chrome.chatgptinfinity.com/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://assets.chatgptinfinity.com/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@c587927/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 
 > Generate endless answers from all-knowing ChatGPT (in any language!)
-<br>[Install](https://docs.chatgptinfinity.com/#-installation) / 
-[Readme](https://docs.chatgptinfinity.com/#readme) / 
+<br>[Install](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#-installation) / 
+[Readme](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#readme) / 
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
-### <img width=17 src="https://assets.chatgptwidescreen.com/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen](https://chatgptwidescreen.com) &nbsp;<img src="https://assets.chatgptwidescreen.com/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg?v=02d9942" width="auto" height="24" />
+### <img width=17 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/images/icons/widescreen-robot-emoji/icon32.png"> [ChatGPT Widescreen](https://github.com/adamlui/chatgpt-widescreen/#readme) &nbsp;<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@02d9942/images/badges/product-hunt/product-of-the-week-2-larger-centered-rounded-light.svg" width="auto" height="24" />
 
 > Enhances ChatGPT with wide/full/tall-screen + spamblock modes. Also works on poe.com!
-<br>[Install](https://docs.chatgptwidescreen.com/#-installation) / 
-[Readme](https://docs.chatgptwidescreen.com/#readme) / 
+<br>[Install](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#-installation) / 
+[Readme](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#readme) / 
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions)
 
-<img height=6px width="100%" src="https://assets.chatgptautotalk.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/images/separators/gradient-aqua.png">
 
 <a href="https://github.com/adamlui/userscripts">**More userscripts**</a> / 
 <a href="#top">Back to top ↑</a>
