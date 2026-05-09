@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.5.9
+// @version               2026.5.9.1
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -1466,9 +1466,14 @@
                                     chatbar.focus()
                                     ui.addListeners.replySection.chatbarAutoSizer() // since query not auto-sent
                                     chatbar.setSelectionRange(relatedQuery.indexOf('['), relatedQuery.indexOf(']') +1)
-                                } else // send placeholder-free related query
+                                } else { // send placeholder-free related query
                                     chatbar.dispatchEvent(new KeyboardEvent('keydown',
                                         { key: 'Enter', bubbles: true, cancelable: true }))
+                                    if (!app.config.rqDisabled)
+                                        get.related(relatedQuery)
+                                            .then(queries => show.related(queries))
+                                            .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
+                                }
                             }
                         }
                     }, (idx+1) *50)
