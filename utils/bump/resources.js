@@ -51,7 +51,7 @@
             fs.mkdirSync(path.dirname(cachePaths.userJSpaths), { recursive: true })
             const fd = fs.openSync(cachePaths.userJSpaths,
                 fs.constants.O_CREAT | fs.constants.O_EXCL | fs.constants.O_RDWR)
-            bump.log.error(`Cache file missing. Generating ${cachePaths.userJSpaths}...\n`)
+            bump.log.info(`Cache file missing. Generating ${cachePaths.userJSpaths}...\n`)
             userJSfiles = await bump.findFileBySuffix({ suffix: '.user.js' }) ; console.log('')
             fs.writeFileSync(fd, JSON.stringify(userJSfiles, undefined, 2), 'utf-8')
             bump.log.success(`\nCache file created @ ${cachePaths.userJSpaths}`)

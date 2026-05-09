@@ -51,7 +51,7 @@
             fs.mkdirSync(path.dirname(cachePaths.manifestPaths), { recursive: true })
             const fd = fs.openSync(cachePaths.manifestPaths,
                 fs.constants.O_CREAT | fs.constants.O_EXCL | fs.constants.O_RDWR)
-            bump.log.error(`Cache file missing. Generating ${cachePaths.manifestPaths}...\n`)
+            bump.log.info(`Cache file missing. Generating ${cachePaths.manifestPaths}...\n`)
             manifestPaths = await bump.findFileBySuffix({ suffix: 'manifest.json' }) ; console.log('')
             fs.writeFileSync(fd, JSON.stringify(manifestPaths, undefined, 2), 'utf-8')
             bump.log.success(`\nCache file created @ ${cachePaths.manifestPaths}`)

@@ -53,7 +53,7 @@
             fs.mkdirSync(path.dirname(cachePaths.chatbotPaths), { recursive: true })
             const fd = fs.openSync(cachePaths.chatbotPaths,
                 fs.constants.O_CREAT | fs.constants.O_EXCL | fs.constants.O_RDWR)
-            bump.log.error(`Cache file missing. Generating ${cachePaths.chatbotPaths}...\n`)
+            bump.log.info(`Cache file missing. Generating ${cachePaths.chatbotPaths}...\n`)
             for (const chatbot of chatbots)
                 chatbotFiles.push(...(await bump.findFileBySuffix({ suffix: `${chatbot}.user.js` })))
             fs.writeFileSync(fd, JSON.stringify(chatbotFiles, undefined, 2), 'utf-8')
