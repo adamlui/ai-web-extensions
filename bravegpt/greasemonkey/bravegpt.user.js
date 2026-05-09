@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.5.5.1
+// @version               2026.5.9
 // @license               MIT
 // @icon                  https://assets.bravegpt.com/images/icons/app/icon48.png?v=e8ca7c2
 // @icon64                https://assets.bravegpt.com/images/icons/app/icon64.png?v=e8ca7c2
@@ -976,7 +976,7 @@
     window.toggle = {
 
         anchorMode(state = '') {
-            const prevState = app.config.anchored // for restraining notif if no change from Pin menu 'Sidebar' click
+            const prevAnchored = app.config.anchored // for early exit if no change from Pin menu > Sidebar
             let sidebarModeToggled = false // to extend this notif duration
 
             // Save new state + disable incompatible Sidebar modes
@@ -988,7 +988,7 @@
                 settings.save('anchored', false)
                 if (app.config.expanded) { toggle.expandedMode('off') ; sidebarModeToggled = true }
             }
-            if (prevState == app.config.anchored) return
+            if (prevAnchored == app.config.anchored) return
 
             // Apply changed state to UI
             app.div.classList.toggle('anchored', app.config.anchored)
