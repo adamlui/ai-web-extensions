@@ -116,7 +116,7 @@ window.prompts = {
     summarizeResults: {
         get base() { // requires app
             const strResults = (
-                app.slug == 'bravegpt' ? document.querySelector('#results')
+                  app.slug == 'bravegpt' ? document.querySelector('#results')
                 : app.slug == 'duckduckgpt' ? document.querySelector('[data-area*=mainline]')
                 : /* googlegpt */ app.centerCol
             ).innerText.trim()
