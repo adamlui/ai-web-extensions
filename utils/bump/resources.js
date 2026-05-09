@@ -82,7 +82,7 @@
     // Process each userscript
     let urlsUpdatedCnt = 0 ; let filesUpdatedCnt = 0
     for (const userJSfilePath of Object.keys(urlMap)) {
-        let repoName = userJSfilePath.split('\\').pop().replace('.user.js', '')
+        const repoName = userJSfilePath.split('\\').pop().replace('.user.js', '')
         bump.log.working(`\nProcessing ${repoName}...\n`)
 
         // Fetch latest commit hash for repo/chromium/extension
