@@ -2,8 +2,8 @@
 
 <h1>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.ddgpt.com/images/logos/app/darkmode/logo371x65.png">
-    <img src="https://assets.ddgpt.com/images/logos/app/lightmode/logo371x65.png">
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/logos/app/darkmode/logo371x65.png">
+    <img src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/logos/app/lightmode/logo371x65.png">
   </picture>
 </h1>
 
@@ -26,7 +26,7 @@
 
 <h3>Enhance DuckDuckGo w/ AI chat & search summaries, powered by the latest LLMs</h3>
 
-<a href="https://gm.ddgpt.com"><img height=45 alt="[Install this script]" src="https://assets.ddgpt.com/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://assets.ddgpt.com/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://gm.ddgpt.com"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/duckduckgpt/discussions) /
 [Get support](https://github.com/KudoAI/duckduckgpt/issues) / 
@@ -34,16 +34,16 @@
 
 #
 
-<img src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/darkmode.png">
+<img src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/screenshots/desktop/how-to-becum-rich-query/darkmode.png">
 
 ### Mobile:
 
-<img src="https://assets.ddgpt.com/images/screenshots/mobile/hi-there-query/darkmode.png">
+<img src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/screenshots/mobile/hi-there-query/darkmode.png">
 
 <br>
 <br>
 
-<img height=8px width="100%" src="https://assets.ddgpt.com/images/separators/gradient-aqua.png">
+<img height=8px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/separators/gradient-aqua.png">
 
 ## 🚀 Installation
 
@@ -70,8 +70,8 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <div align='center'>
 
-![](https://assets.ddgpt.com/images/screenshots/desktop/proxy-mode/tm-menu.png)
-![](https://assets.ddgpt.com/images/screenshots/desktop/proxy-mode/notif.png)
+![](https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/screenshots/desktop/proxy-mode/tm-menu.png)
+![](https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/screenshots/desktop/proxy-mode/notif.png)
 
 </div>
 
@@ -510,7 +510,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <br>
 
-<a href="https://gm.ddgpt.com"><img height=45 alt="[Install DuckDuckGPT]" src="https://assets.ddgpt.com/images/buttons/greasy-fork/install/duckduckgpt.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://assets.ddgpt.com/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://gm.ddgpt.com"><img height=45 alt="[Install DuckDuckGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/install/duckduckgpt.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/duckduckgpt/discussions) /
 [Get support](https://github.com/KudoAI/duckduckgpt/issues) / 
@@ -537,8 +537,8 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 <div align="center">
 
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.ddgpt.com/images/logos/dependencies/collage/white.png">
-    <img src="https://assets.ddgpt.com/images/logos/dependencies/collage/black.png">
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/logos/dependencies/collage/white.png">
+    <img src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/logos/dependencies/collage/black.png">
 </picture>
 
 [chatgpt.js](https://chatgpt.js.org) © 2023–2026 [KudoAI](https://kudoai.com) & contributors under the MIT license
@@ -551,29 +551,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://assets.ddgpt.com/images/separators/gradient-aqua.png">
-
-<div align="center">
-
-<br>
-
-<h3>Serverless computing generously funded by:</h3>
-
-<br>
-
-<a href="https://www.cloudflare.com/?utm_source=duckduckgpt-github&utm_medium=referral&utm_content=partner-logo"
-   target="_blank" rel="noopener">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)"
-                srcset="https://assets.chatgptjs.org/images/logos/partners/cloudflare/white.png?v=962dcd1">
-        <img width=288 src="https://assets.chatgptjs.org/images/logos/partners/cloudflare/black.png?v=962dcd1">
-    </picture></a>
-
-<br>
-
-</div>
-
-<img height=6px width="100%" src="https://assets.ddgpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/separators/gradient-aqua.png">
 
 <!-- CONTRIBUTORS -->
 
@@ -613,7 +591,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.kudoai.com/googlegpt/#readme) /
 [Discuss](https://github.kudoai.com/googlegpt/discussions)
 
-<img height=6px width="100%" src="https://assets.ddgpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/separators/gradient-aqua.png">
 
 <a href="https://github.com/adamlui/userscripts">**More userscripts**</a> / 
 <a href="#top">Back to top ↑</a>

@@ -51,7 +51,7 @@
     <br>
     <blockquote>
         <a href="https://github.com/adamlui/ai-web-extensions/tree/main/amazongpt/#readme">
-            <img width=511 src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/screenshots/desktop/mice-md-reply-darkmode.png?v=80bceab"></a>
+            <img width=511 src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/screenshots/desktop/mice-md-reply-darkmode.png"></a>
     </blockquote>
 </details>
 
@@ -123,7 +123,7 @@
  
 <!-- BRAVEGPT -->
 
-### [<img width=21 src="https://assets.bravegpt.com/images/icons/app/icon48.png">][bravegpt-readme] [BraveGPT][bravegpt-readme] &nbsp;[<img width=112 height="auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light">](https://www.producthunt.com/posts/bravegpt)
+### [<img width=21 src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/icons/app/icon48.png">][bravegpt-readme] [BraveGPT][bravegpt-readme] &nbsp;[<img width=112 height="auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light">](https://www.producthunt.com/posts/bravegpt)
 
 <details>
     <summary>
@@ -132,7 +132,7 @@
     <br>
     <blockquote>
         <a href="https://github.com/adamlui/ai-web-extensions/tree/main/bravegpt/#readme">
-            <img width=511 src="https://assets.bravegpt.com/images/screenshots/desktop/bitcoin-query/darkmode.png?v=a0dd1de"></a>
+            <img width=511 src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@a0dd1de/assets/images/screenshots/desktop/bitcoin-query/darkmode.png"></a>
     </blockquote>
 </details>
 
@@ -339,7 +339,7 @@ Type @chatgpt in Firefox browser address bar to get answers from ChatGPT.
 
 <!-- DUCKDUCKGPT -->
 
-### [<img width=20 src="https://assets.ddgpt.com/images/icons/app/icon48.png">][ddgpt-readme] [DuckDuckGPT][ddgpt-readme] &nbsp;[<img width="112" height="auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light">](https://www.producthunt.com/posts/duckduckgpt)
+### [<img width=20 src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/icons/app/icon48.png">][ddgpt-readme] [DuckDuckGPT][ddgpt-readme] &nbsp;[<img width="112" height="auto" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light">](https://www.producthunt.com/posts/duckduckgpt)
 
 <details>
     <summary>
@@ -348,7 +348,7 @@ Type @chatgpt in Firefox browser address bar to get answers from ChatGPT.
     <br>
     <blockquote>
         <a href="https://github.com/adamlui/ai-web-extensions/tree/main/duckduckgpt/#readme">
-            <img width=511 src="https://assets.ddgpt.com/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png"></a>
+            <img width=511 src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/screenshots/desktop/how-to-becum-rich-query/lightmode.png"></a>
     </blockquote>
 </details>
 

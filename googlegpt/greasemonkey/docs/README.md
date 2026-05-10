@@ -577,28 +577,6 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
 
-<div align="center">
-
-<br>
-
-<h3>Serverless computing generously funded by:</h3>
-
-<br>
-
-<a href="https://www.cloudflare.com/?utm_source=googlegpt-github&utm_medium=referral&utm_content=partner-logo"
-   target="_blank" rel="noopener">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)"
-                srcset="https://assets.chatgptjs.org/images/logos/partners/cloudflare/white.png?v=962dcd1">
-        <img width=288 src="https://assets.chatgptjs.org/images/logos/partners/cloudflare/black.png?v=962dcd1">
-    </picture></a>
-
-<br>
-
-</div>
-
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
-
 <!-- CONTRIBUTORS -->
 
 ## 🧠 Contributors
@@ -634,7 +612,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#readme) / 
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
-### <img src="https://assets.bravegpt.com/images/icons/app/icon48.png" width=18> [BraveGPT](https://bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="auto" /></a>
+### <img src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/icons/app/icon48.png" width=18> [BraveGPT](https://bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="auto" /></a>
 
 > Bring the magic of ChatGPT to Brave Search (powered by GPT-4o!)
 <br>[Install](https://docs.bravegpt.com/#-installation) /

@@ -117,8 +117,8 @@
 
 <a href="https://chatgpt.js.org">
     <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://assets.chatgptjs.org/images/logos/chatgpt.js/with-reflection/darkmode/logo-6014x1334.png?v=8169c77">
-        <img width=546 src="https://assets.chatgptjs.org/images/logos/chatgpt.js/with-reflection/lightmode/logo-6014x1334.png?v=8169c77">
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@8169c77/assets/images/logos/chatgpt.js/with-reflection/darkmode/logo-6014x1334.png">
+        <img width=546 src="https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@8169c77/assets/images/logos/chatgpt.js/with-reflection/lightmode/logo-6014x1334.png">
     </picture>
 </a>
 <br><br>

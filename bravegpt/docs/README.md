@@ -4,8 +4,8 @@
 
 <div align="center">
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/logos/app/darkmode/logo730x155.png">
-    <img alt="BraveGPT" width=545 src="https://assets.bravegpt.com/images/logos/app/lightmode/logo730x155.png">
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/logos/app/darkmode/logo730x155.png">
+    <img alt="BraveGPT" width=545 src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/logos/app/lightmode/logo730x155.png">
 </picture>
 <br><br>
 
@@ -31,17 +31,17 @@
 
 <!-- HEADER INSTALL BUTTON -->
 
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
 
 <h3>Enhance Brave Search w/ AI chat & search summaries, powered by the latest LLMs</h3>
 
-<a href="https://gm.bravegpt.com"><img height=50 alt="[Install this script]" src="https://assets.bravegpt.com/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://assets.bravegpt.com/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://gm.bravegpt.com"><img height=50 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/bravegpt/discussions) /
 [Get support](https://github.com/KudoAI/bravegpt/issues) /
 [Contact author](https://github.com/adamlui)
 
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
 
 </div>
 
@@ -53,17 +53,17 @@
 
 ### Desktop:
 
-<img src="https://assets.bravegpt.com/images/screenshots/desktop/bitcoin-query/darkmode.png?v=a0dd1de">
+<img src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@a0dd1de/assets/images/screenshots/desktop/bitcoin-query/darkmode.png">
 
 #### Mobile:
 
-<img src="https://assets.bravegpt.com/images/screenshots/mobile/hi-query/darkmode.png">
+<img src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/screenshots/mobile/hi-query/darkmode.png">
 
 </div>
 
 <br><br>
 
-<img height=8px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<img height=8px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
 
 <!-- INSTALLATION -->
 
@@ -82,7 +82,7 @@
 
 ##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey_
 
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
 
 <!-- PROXY MODE -->
 
@@ -94,14 +94,14 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <div align='center'>
 
-![](https://assets.bravegpt.com/images/screenshots/desktop/proxy-mode/tm-menu.png)
-![](https://assets.bravegpt.com/images/screenshots/desktop/proxy-mode/notif.png)
+![](https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/screenshots/desktop/proxy-mode/tm-menu.png)
+![](https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/screenshots/desktop/proxy-mode/notif.png)
 
 </div>
 
 <br>
 
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
 
 <!-- COMPATIBILITY -->
 
@@ -540,7 +540,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <div align="center">
 
-<a href="https://gm.bravegpt.com"><img height=50 alt="[Install BraveGPT]" src="https://assets.bravegpt.com/images/buttons/greasy-fork/install/bravegpt.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://assets.bravegpt.com/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://gm.bravegpt.com"><img height=50 alt="[Install BraveGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/buttons/greasy-fork/install/bravegpt.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/bravegpt/discussions) /
 [Get support](https://github.com/KudoAI/bravegpt/issues) /
@@ -550,7 +550,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <br>
 
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
 
 <!-- DEPENDENCIES -->
 
@@ -560,8 +560,8 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 <div align="center">
 
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.bravegpt.com/images/logos/dependencies/collage/white.png">
-    <img src="https://assets.bravegpt.com/images/logos/dependencies/collage/black.png">
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/logos/dependencies/collage/white.png">
+    <img src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/logos/dependencies/collage/black.png">
 </picture>
 
 [chatgpt.js](https://chatgpt.js.org) © 2023–2026 [KudoAI](https://kudoai.com) & contributors under the MIT license
@@ -574,31 +574,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
-
-<!-- CLOUDFLARE FUNDING -->
-
-<div align="center">
-
-<br>
-
-<h3>Serverless computing generously funded by:</h3>
-
-<br>
-
-<a href="https://www.cloudflare.com/?utm_source=bravegpt-github&utm_medium=referral&utm_content=partner-logo"
-   target="_blank" rel="noopener">
-    <picture>
-        <source type="image/png" media="(prefers-color-scheme: dark)"
-                srcset="https://assets.chatgptjs.org/images/logos/partners/cloudflare/white.png?v=962dcd1">
-        <img width=288 src="https://assets.chatgptjs.org/images/logos/partners/cloudflare/black.png?v=962dcd1">
-    </picture></a>
-
-<br>
-
-</div>
-
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
 
 <!-- CONTRIBUTORS -->
 
@@ -610,7 +586,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 All contributions are very welcome!
 
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
 
 <!-- STAR HISTORY -->
 
@@ -629,7 +605,7 @@ All contributions are very welcome!
 
 </div>
 
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
 
 <!-- MORE CHATGPT APPS -->
 
@@ -638,7 +614,7 @@ All contributions are very welcome!
 For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
 
 <!-- RELATED SCRIPTS -->
 
@@ -651,7 +627,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.com/adamlui/chatgpt-auto-refresh/#readme) /
 [Discuss](https://github.com/adamlui/chatgpt-auto-refresh/discussions)
 
-### <img width=17 src="https://assets.ddgpt.com/images/icons/app/icon48.png"> [DuckDuckGPT](https://duckduckgpt.com) &nbsp;<a href="https://www.producthunt.com/posts/duckduckgpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light" width="112" height="auto" /></a>
+### <img width=17 src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/icons/app/icon48.png"> [DuckDuckGPT](https://duckduckgpt.com) &nbsp;<a href="https://www.producthunt.com/posts/duckduckgpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=379261&theme=light" width="112" height="auto" /></a>
 
 > Bring the magic of ChatGPT to DuckDuckGo (powered by GPT-4o!)
 <br>[Install](https://github.com/KudoAI/duckduckgpt/#-installation) /
@@ -665,7 +641,7 @@ For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extens
 [Readme](https://github.kudoai.com/googlegpt/#readme) /
 [Discuss](https://github.kudoai.com/googlegpt/discussions)
 
-<img height=6px width="100%" src="https://assets.bravegpt.com/images/separators/gradient-aqua.png">
+<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
 
 <a href="https://github.com/adamlui/userscripts">**More userscripts**</a> /
 <a href="#top">Back to top ↑</a>
