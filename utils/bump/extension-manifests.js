@@ -29,17 +29,17 @@
 
     // Init CACHE paths
     const cachePaths = { root: '.cache/' }
-    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump-utils.min.mjs`)
+    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump.min.mjs`)
     cachePaths.manifestPaths = path.join(__dirname, `${cachePaths.root}manifest-paths.json`)
 
     // Import BUMP UTILS
     let bump
-    if (config.devMode) // bypass cache for latest bump-utils.mjs
-        bump = await import('./bump-utils.mjs')
-    else { // import remote bump-utils.min.mjs updated every ~12h
+    if (config.devMode) // bypass cache for latest bump.mjs
+        bump = await import('./lib/bump.mjs')
+    else { // import remote bump.min.mjs updated every ~12h
         fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
         fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
-            'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()))
+            'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions/utils/bump/lib/bump.min.mjs')).text()))
         bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
     }
 

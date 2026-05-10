@@ -25,12 +25,12 @@
 
     // Init CACHE paths
     const cachePaths = { root: '.cache/' }
-    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump-utils.min.mjs`)
+    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump.min.mjs`)
 
     // Import BUMP UTILS
     fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
     fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
-        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs')).text()))
+        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions/utils/bump/lib/bump.min.mjs')).text()))
     const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
 
     // Init manifest PATHS

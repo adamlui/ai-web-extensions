@@ -1,6 +1,6 @@
-// bump-utils.mjs for finding/bumping/hashing etc.
-// Source: https://github.com/adamlui/ai-web-extensions/blob/main/utils/bump/bump-utils.mjs
-// Latest minified build: https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/bump-utils.min.mjs
+// bump.mjs for finding/bumping/hashing etc.
+// Source: https://github.com/adamlui/ai-web-extensions/blob/main/utils/bump/lib/bump.mjs
+// Latest minified build: https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/lib/bump.min.mjs
 
 import { fileURLToPath } from 'url' // to init monorepo root
 import { execFileSync } from 'child_process' // to change Git author/committer
