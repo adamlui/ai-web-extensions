@@ -29,7 +29,7 @@
     <img alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/googlegpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
 <h3>🤖 Bring AI chat & search summaries to Google Search, powered by the latest LLMs</h3>
 
@@ -41,8 +41,9 @@
     
 </div>
 
-<div align="center"><img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png"></div>
-<br><br>
+<div align="center"><img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png"></div>
+
+<br>
 
 <div align="center"><img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@a363ecf/assets/images/screenshots/desktop/javascript-arrays-query/darkmode.png">
 <br><br>
@@ -621,7 +622,7 @@ For even more ChatGPT extensions, visit:
 [Readme](https://docs.bravegpt.com/#readme) /
 [Discuss](https://github.com/KudoAI/bravegpt/discussions)
 
-<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
 <div align="center">
 

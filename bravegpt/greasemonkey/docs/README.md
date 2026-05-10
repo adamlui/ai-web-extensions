@@ -31,8 +31,7 @@
 
 <!-- HEADER INSTALL BUTTON -->
 
-<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
-<br><br>
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
 <h3>Enhance Brave Search w/ AI chat & search summaries, powered by the latest LLMs</h3>
 
@@ -42,9 +41,7 @@
 [Get support](https://github.com/KudoAI/bravegpt/issues) /
 [Contact author](https://github.com/adamlui)
 
-<br>
-
-<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
 </div>
 
@@ -635,7 +632,7 @@ For even more ChatGPT extensions, visit:
 [Readme](https://github.kudoai.com/googlegpt/#readme) /
 [Discuss](https://github.kudoai.com/googlegpt/discussions)
 
-<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
 <a href="https://github.com/adamlui/userscripts">**More userscripts**</a> /
 <a href="#top">Back to top ↑</a>

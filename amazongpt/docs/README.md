@@ -33,7 +33,7 @@
 
 <!-- HEADER INSTALL BUTTON -->
 
-<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
 <h3>🛒 Enhance Amazon shopping w/ AI chat & product/category summaries, powered by the latest LLMs 🤖</h3>
 
@@ -43,7 +43,7 @@
 [Get support](https://github.com/KudoAI/amazongpt/issues) /
 [Contact author](https://github.com/adamlui)
 
-<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
 </div>
 
@@ -572,7 +572,7 @@
 
 All contributions are very welcome!
 
-<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
 <div align="center">
 
