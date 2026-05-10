@@ -29,11 +29,11 @@
     <img alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/googlegpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
 
 <h3>🤖 Bring AI chat & search summaries to Google Search, powered by the latest LLMs</h3>
 
-<a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img height=50 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/googlegpt/discussions) / 
 [Get support](https://github.com/KudoAI/googlegpt/issues) / 
@@ -41,7 +41,7 @@
     
 </div>
 
-<div align="center"><img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png"></div>
+<div align="center"><img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png"></div>
 
 <br>
 
@@ -72,7 +72,7 @@
 
 <br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+<hr>
 
 ## 🚀 Installation
 
@@ -91,7 +91,7 @@
 
 <br><a href="https://github.com/sponsors/KudoAI"><img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/banners/sponsor/$10/banner1660x260.png"></a>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+<hr>
 
 ## 🕶️ Proxy Mode
 
@@ -108,7 +108,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+<hr>
 
 ## 🌐 Compatibility 
 
@@ -543,17 +543,19 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <br>
 
-<a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img height=48 alt="[Install GoogleGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/googlegpt.svg"></a><a href="#-installation"><img height=48 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
+<div align="center">
+
+<a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install GoogleGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/googlegpt.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/googlegpt/discussions) /
 [Get support](https://github.com/KudoAI/googlegpt/issues) / 
 [More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
 
-<br>
-
 </div>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+<br>
+
+<hr>
 
 ## ⚡ Dependencies
 
@@ -575,7 +577,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+<hr>
 
 <!-- CONTRIBUTORS -->
 
@@ -587,14 +589,15 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 All contributions are very welcome!
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+<hr>
 
 ## 🤖 More ChatGPT extensions
 
-For even more ChatGPT extensions, visit: https://github.com/adamlui/ai-web-extensions
-<br><br>
+For even more ChatGPT extensions, visit:
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+<https://github.com/adamlui/ai-web-extensions>
+
+<hr>
 
 ## 📜 Related scripts
 
@@ -619,7 +622,11 @@ For even more ChatGPT extensions, visit: https://github.com/adamlui/ai-web-exten
 [Readme](https://docs.bravegpt.com/#readme) /
 [Discuss](https://github.com/KudoAI/bravegpt/discussions)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
+
+<div align="center">
 
 <a href="https://github.com/adamlui/userscripts">**More userscripts**</a> / 
 <a href="#top">Back to top ↑</a>
+
+</div>

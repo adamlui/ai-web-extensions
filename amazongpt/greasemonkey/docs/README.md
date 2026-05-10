@@ -37,7 +37,7 @@
 
 <h3>🛒 Enhance Amazon shopping w/ AI chat & product/category summaries, powered by the latest LLMs 🤖</h3>
 
-<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img height=50 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/amazongpt/discussions) /
 [Get support](https://github.com/KudoAI/amazongpt/issues) /
@@ -524,7 +524,7 @@
 
 <div align="center">
 
-<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img height=50 alt="[Install AmazonGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/install/amazongpt.svg"></a><a href="#-installation"><img height=50 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js"><img style="height: 45px" alt="[Install AmazonGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/install/amazongpt.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/amazongpt/discussions) /
 [Get support](https://github.com/KudoAI/amazongpt/issues) /
@@ -572,5 +572,9 @@ All contributions are very welcome!
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
+<div align="center">
+
 <a href="https://github.com/adamlui/ai-web-extensions/#readme">**More ChatGPT extensions**</a> / 
 <a href="#top">Back to top ↑</a>
+
+</div>

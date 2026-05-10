@@ -1,5 +1,7 @@
 <a id="top"></a>
 
+<div align="center">
+
 <h1>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/logos/app/darkmode/logo371x65.png">
@@ -26,13 +28,13 @@
 
 <h3>Enhance DuckDuckGo w/ AI chat & search summaries, powered by the latest LLMs</h3>
 
-<a href="https://gm.ddgpt.com"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://gm.ddgpt.com"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/duckduckgpt/discussions) /
 [Get support](https://github.com/KudoAI/duckduckgpt/issues) / 
 [Contact author](https://github.com/adamlui)
 
-#
+<br>
 
 <img src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/screenshots/desktop/how-to-becum-rich-query/darkmode.png">
 
@@ -40,10 +42,11 @@
 
 <img src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/screenshots/mobile/hi-there-query/darkmode.png">
 
-<br>
-<br>
+<br><br>
 
-<img height=8px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/separators/gradient-aqua.png">
+</div>
+
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/separators/gradient-aqua.png">
 
 ## 🚀 Installation
 
@@ -60,7 +63,7 @@
 
 ##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey_
 
-<br>
+<hr>
 
 ## 🕵️ Proxy Mode
 
@@ -75,7 +78,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 </div>
 
-<br>
+<hr>
 
 ## 🌐 Compatibility 
 
@@ -510,12 +513,17 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <br>
 
-<a href="https://gm.ddgpt.com"><img height=45 alt="[Install DuckDuckGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/install/duckduckgpt.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/help.svg"></a>
+<div align="center">
+
+<a href="https://gm.ddgpt.com"><img style="height: 45px" alt="[Install DuckDuckGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/install/duckduckgpt.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [Discuss](https://github.com/KudoAI/duckduckgpt/discussions) /
 [Get support](https://github.com/KudoAI/duckduckgpt/issues) / 
 [More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
-<br><br>
+
+</div>
+
+<hr>
 
 ## 📣 Social links
 
@@ -529,7 +537,8 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 [![](https://img.shields.io/badge/Follow%20@adamlui-652-blue?logo=medium&style=social "Follow @adamlui on Medium")](https://adamlui.com?utm_source=duckduckgpt&utm_content=github_shield)
 [![](https://img.shields.io/youtube/channel/subscribers/UCgBMqK7SRL5R__3qM-YAcSg?label=Follow%20%40adamluitube&style=social "Follow @adamluitube on YouTube")](https://www.youtube.com/AdamLuiTube?sub_confirmation=1)
 [![](https://img.shields.io/github/followers/adamlui?label=Follow%20%40adamlui&style=social "Follow @adamlui on GitHub")](https://github.com/adamlui)
-<br><br>
+
+<hr>
 
 ## ⚡ Dependencies
 
@@ -551,9 +560,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/separators/gradient-aqua.png">
-
-<!-- CONTRIBUTORS -->
+<hr>
 
 ## 🧠 Contributors
 
@@ -563,10 +570,15 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 All contributions are very welcome!
 
+<hr>
+
 ## 🤖 More ChatGPT extensions
 
-For even more ChatGPT extensions, visit: https://github.com/adamlui/ai-web-extensions
-<br><br>
+For even more ChatGPT extensions, visit:
+
+<https://github.com/adamlui/ai-web-extensions>
+
+<hr>
 
 ## 📜 Related scripts
 
@@ -591,7 +603,11 @@ For even more ChatGPT extensions, visit: https://github.com/adamlui/ai-web-exten
 [Readme](https://github.kudoai.com/googlegpt/#readme) /
 [Discuss](https://github.kudoai.com/googlegpt/discussions)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@3ccf8be/assets/images/separators/gradient-aqua.png">
+
+<div align="center">
 
 <a href="https://github.com/adamlui/userscripts">**More userscripts**</a> / 
 <a href="#top">Back to top ↑</a>
+
+</div>
