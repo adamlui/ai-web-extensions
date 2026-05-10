@@ -33,7 +33,7 @@
 
 <!-- HEADER INSTALL BUTTON -->
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <h3>🛒 Enhance Amazon shopping w/ AI chat & product/category summaries, powered by the latest LLMs 🤖</h3>
 
@@ -43,7 +43,7 @@
 [Get support](https://github.com/KudoAI/amazongpt/issues) /
 [Contact author](https://github.com/adamlui)
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 </div>
 
@@ -65,7 +65,9 @@
 
 </div>
 
-<br><br>
+<br>
+
+<hr>
 
 <!-- INSTALLATION -->
 
@@ -86,7 +88,7 @@
 
 <br><a href="https://github.com/sponsors/KudoAI"><img src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/banners/sponsor/$10/banner1660x260.png"></a>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
+<hr>
 
 <!-- COMPATIBILITY -->
 
@@ -534,7 +536,7 @@
 
 <br>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
+<hr>
 
 <!-- DEPENDENCIES -->
 
@@ -558,7 +560,7 @@
 </div>
 </h6>
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
+<hr>
 
 <!-- CONTRIBUTORS -->
 
@@ -570,7 +572,7 @@
 
 All contributions are very welcome!
 
-<img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/separators/gradient-aqua.png">
 
 <div align="center">
 
