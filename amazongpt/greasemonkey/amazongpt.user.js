@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.5.9
+// @version                2026.5.10
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon64.png
@@ -120,15 +120,6 @@
 // @supportURL             https://amazongpt.kudoai.com/issues
 // @contributionURL        https://github.com/sponsors/KudoAI
 // ==/UserScript==
-
-// Dependencies:
-// ✓ chatgpt.js (https://chatgpt.js.org) © 2023–2026 KudoAI & contributors under the MIT license
-// ✓ dom.js © 2023–2026 Adam Lui under the MIT license
-// ✓ generate-ip (https://generate-ip.org) © 2024–2026 Adam Lui & contributors under the MIT license
-// ✓ highlight.js (https://highlightjs.org) © 2006 Ivan Sagalaev under the BSD 3-Clause license
-// ✓ KaTeX (https://katex.org) © 2013–2020 Khan Academy & other contributors under the MIT license
-// ✓ Marked (https://marked.js.org) © 2018+ MarkedJS © 2011–2018 Christopher Jeffrey under the MIT license
-// ✓ Tone.js (https://tonejs.github.io) © 2014–2026 Yotam Mann under the MIT license
 
 (async () => {
     'use strict'
