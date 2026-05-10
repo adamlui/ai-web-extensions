@@ -235,10 +235,10 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.5.8.1
+// @version             2026.5.9
 // @license             MIT
-// @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/images/icons/widescreen-robot-emoji/icon48.png
-// @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@844b16e/images/icons/widescreen-robot-emoji/icon64.png
+// @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon48.png
+// @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon64.png
 // @compatible          chrome
 // @compatible          firefox
 // @compatible          edge
