@@ -182,9 +182,9 @@ If you've tested it to work in a browser not listed, simply create a [pull reque
 
 All contributions are very welcome!
 
-## 🤖 More ChatGPT apps
+## 🤖 More ChatGPT extensions
 
-For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
+For even more ChatGPT extensions, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
 ## 📜 Related apps

@@ -116,7 +116,7 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 <br>
 
 [讨论](https://github.com/adamlui/chatgpt-auto-continue/discussions) / 
-[更多 ChatGPT 附加组件](https://github.com/adamlui/ai-web-extensions)
+[更多 ChatGPT 扩展](https://github.com/adamlui/ai-web-extensions)
 
 </div>
 
@@ -161,5 +161,5 @@ ChatGPT 自动继续 依赖于功能强大的 [chatgpt.js](https://github.com/Ku
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
   
-<a href="https://github.com/adamlui/ai-web-extensions/#readme">**更多 ChatGPT 附加组件**</a> / 
+<a href="https://github.com/adamlui/ai-web-extensions/#readme">**更多 ChatGPT 扩展**</a> / 
 <a href="#top">回到顶部 ↑</a>

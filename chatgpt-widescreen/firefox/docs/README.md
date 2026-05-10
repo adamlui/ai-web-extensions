@@ -119,7 +119,7 @@ ChatGPT Widescreen relies on code from the powerful [chatgpt.js](https://github.
 <br>
 
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions) / 
-[More ChatGPT apps](https://github.com/adamlui/ai-web-extensions)
+[More ChatGPT extensions](https://github.com/adamlui/ai-web-extensions)
   
 </div>
 
@@ -137,9 +137,9 @@ ChatGPT Widescreen relies on code from the powerful [chatgpt.js](https://github.
 
 All contributions are very welcome!
 
-## 🤖 More ChatGPT apps
+## 🤖 More ChatGPT extensions
 
-For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
+For even more ChatGPT extensions, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">

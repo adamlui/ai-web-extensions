@@ -85,9 +85,9 @@ ChatGPT Auto-Talk relies on code from the powerful [chatgpt.js](https://github.c
 
 All contributions are very welcome!
 
-## 🤖 More ChatGPT apps
+## 🤖 More ChatGPT extensions
 
-For even more epic ChatGPT apps, go here: https://github.com/adamlui/ai-web-extensions
+For even more ChatGPT extensions, go here: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
 ## 📜 Related scripts

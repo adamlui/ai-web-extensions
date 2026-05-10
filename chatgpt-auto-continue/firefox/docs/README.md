@@ -87,9 +87,9 @@ ChatGPT Auto-Continue relies on code from the powerful [chatgpt.js](https://gith
 
 </div>
 
-## 🤖 More ChatGPT apps
+## 🤖 More ChatGPT extensions
 
-For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
+For even more ChatGPT extensions, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
 ## 📜 Related apps

@@ -563,9 +563,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 All contributions are very welcome!
 
-## 🤖 More ChatGPT apps
+## 🤖 More ChatGPT extensions
 
-For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
+For even more ChatGPT extensions, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
 ## 📜 Related scripts

@@ -589,9 +589,9 @@ All contributions are very welcome!
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
 
-## 🤖 More ChatGPT apps
+## 🤖 More ChatGPT extensions
 
-For even more epic ChatGPT apps, visit: https://github.com/adamlui/ai-web-extensions
+For even more ChatGPT extensions, visit: https://github.com/adamlui/ai-web-extensions
 <br><br>
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/separators/gradient-aqua.png">
