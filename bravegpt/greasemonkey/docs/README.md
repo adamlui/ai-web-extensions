@@ -31,6 +31,9 @@
 
 <!-- HEADER INSTALL BUTTON -->
 
+<img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/separators/gradient-aqua.png">
+<br><br>
+
 <h3>Enhance Brave Search w/ AI chat & search summaries, powered by the latest LLMs</h3>
 
 <a href="https://gm.bravegpt.com"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/buttons/greasy-fork/help.svg"></a>
