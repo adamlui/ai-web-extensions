@@ -89,7 +89,7 @@ export async function generateSRIhash({ resURL, algorithm = 'sha256', verbose = 
             Buffer.from(await (await fetch(resURL)).arrayBuffer()), { algorithms: [algorithm] }).toString()
         if (verbose) this.log.hash(`${sriHash}\n`)
         return sriHash
-    } catch (err) { throw new Error(`Cannot generate SRI hash for: ${resURL}`) }
+    } catch (err) { throw new Error(`Cannot generate SRI hash for ${resURL}: ${err.message}`) }
 }
 
 export async function getLatestCommitHash({ repo, path = '', source = 'github', verbose = true } = {}) {
@@ -135,5 +135,5 @@ export async function isValidResource({ resURL, verbose = true } = {}) {
         if (verbose) this.log[resIsValid ? 'info' : 'error'](
             `\n${ resIsValid ? 'V' : 'Inv' }alid resource: ${resURL}\n`)
         return resIsValid
-    } catch (err) { throw new Error(`Cannot validate resource: ${resURL}`) }
+    } catch (err) { throw new Error(`Cannot validate ${resURL}: ${err.message}`) }
 }
