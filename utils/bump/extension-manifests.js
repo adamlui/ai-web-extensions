@@ -45,7 +45,7 @@
 
     // Collect extension MANIFESTS
     bump.log.working(`\n${ config.cacheMode ? 'Collecting' : 'Searching for' } extension manifests...\n`)
-    let manifestPaths = []
+    let manifestPaths
     if (config.cacheMode) {
         try { // create missing cache file
             fs.mkdirSync(path.dirname(cachePaths.manifestPaths), { recursive: true })

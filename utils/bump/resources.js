@@ -45,7 +45,7 @@
 
     // Collect userscripts
     bump.log.working(`\n${ config.cacheMode ? 'Collecting' : 'Searching for' } userscripts...\n`)
-    let userJSfiles = []
+    let userJSfiles
     if (config.cacheMode) {
         try { // create missing cache file
             fs.mkdirSync(path.dirname(cachePaths.userJSpaths), { recursive: true })
