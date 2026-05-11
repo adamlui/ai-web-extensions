@@ -3,7 +3,7 @@ import globals from 'globals'
 import css from '@eslint/css'
 import html from '@html-eslint/eslint-plugin'
 import htmlParser from '@html-eslint/parser'
-import importPlugin from 'eslint-plugin-import'
+import importPlugin from 'eslint-plugin-import-x'
 import json from '@eslint/json'
 import markdown from '@eslint/markdown'
 import regexp from 'eslint-plugin-regexp'
@@ -23,7 +23,7 @@ export default [
                 ui: 'readonly', updateCheck: 'readonly', xhr: 'writable'
             }
         },
-        plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
+        plugins: { 'import-x': importPlugin, 'js-styles': stylisticJS, regexp },
         rules: {
             ...js.configs.recommended.rules,
             ...importPlugin.flatConfigs.recommended.rules,
@@ -42,9 +42,9 @@ export default [
             'no-inner-declarations': 'off', // allow function declarations anywhere
             'no-useless-escape': 'off', // allow all escape chars cause ESLint sucks at detecting truly useless ones
             'no-unused-vars': ['error', { 'caughtErrors': 'none' }], // allow unused named args in catch blocks
-            'import/no-named-as-default-member': 'off', // allow accessing named exports via default import
-            'import/no-unresolved': ['error', { ignore: ['^(?:https?://)'] }] // allow dynamic imports from URLs...
-                // ...maintainer refuses to support (https://github.com/import-js/eslint-plugin-import/issues/3118)
+            'preserve-caught-error': 'off', // allow omit pass caught err as cause
+            'import-x/no-named-as-default-member': 'off', // allow accessing named exports via default import
+            'import-x/no-unresolved': ['error', { ignore: ['^(?:https?://)'] }] // allow dynamic imports from URLs
         }
     },
     { files: ['**/chatgpt.js'], languageOptions: { globals: { chatgpt: 'off' }}},

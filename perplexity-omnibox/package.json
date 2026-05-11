@@ -26,11 +26,13 @@
     "bump:ext-np": "npm run bump -- --no-push"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@eslint/json": "^1.2.0",
     "@eslint/markdown": "^8.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "eslint": "^9.39.4",
-    "eslint-plugin-import": "^2.32.0",
+    "eslint": "^10.3.0",
+    "eslint-plugin-import-x": "^4.16.2",
+    "globals": "^17.6.0",
     "husky": "^9.1.7"
   }
 }
