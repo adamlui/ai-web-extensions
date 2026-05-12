@@ -168,13 +168,11 @@ All contributions are very welcome!
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
-<div id="sponsors" align="center">
-<br>
-
 ## 🤖 More ChatGPT extensions
 
-For even more ChatGPT extensions, visit: https://github.com/adamlui/ai-web-extensions
-<br><br>
+For even more ChatGPT extensions, visit:
+
+<https://github.com/adamlui/ai-web-extensions>
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/separators/gradient-aqua.png">
 
