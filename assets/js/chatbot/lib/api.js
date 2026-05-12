@@ -25,8 +25,8 @@ window.api = {
         return headers
     },
 
-    createReqData(api, msgs) { // returns payload for POST / query string for GET // requires <apis|log>
-        log.caller = `api.createReqData('${api}', msgs)`
+    createReqData({ api, msgs }) { // returns payload for POST / query string for GET // requires <apis|log>
+        log.caller = `api.createReqData({ api: '${api}', msgs })`
         msgs = msgs.map(({ api, regenerated, time, ...rest }) => rest) // eslint-disable-line no-unused-vars
         const lastUserMsg = msgs[msgs.length - 1]
         const reqData = api == 'OpenAI' ? { messages: msgs, model: 'gpt-3.5-turbo', max_tokens: 4000 }
@@ -120,7 +120,7 @@ window.api = {
                     if (failMatch) {
                         log.debug('Text to show', textToShow) ; log.error('Fail flag detected', `'${failMatch[0]}'`)
                         if (env.browser.isChromium) clearTimeout(this.timeout) // skip handleProcessCompletion()
-                        if (caller.status != 'done' && !caller.sender) return api.tryNew(caller)
+                        if (caller.status != 'done' && !caller.sender) return api.tryNew({ caller })
                     } else if (caller.status != 'done') { // app waiting or sending
                         caller.sender = caller.sender || callerAPI // app is waiting, become sender
                         if (caller.sender == callerAPI // app is sending from this api
@@ -132,7 +132,7 @@ window.api = {
                 function handleProcessCompletion() {
                     if (env.browser.isChromium) clearTimeout(this.timeout)
                     if (app.div.querySelector('.loading')) // no text shown
-                        api.tryNew(caller)
+                        api.tryNew({ caller })
                     else { // text was shown
                         show.codeCornerBtns()
                         if (callerAPI == caller.sender) app.msgChain.push({
@@ -166,7 +166,7 @@ window.api = {
                                 : resp.status == 403 ? 'checkCloudflare'
                                 : resp.status == 429 ? ['tooManyRequests', 'suggestProxy']
                                                     : ['OpenAI', 'notWorking', 'suggestProxy'] )
-                    else api.tryNew(caller)
+                    else api.tryNew({ caller })
                 } else if (callerAPI == 'OpenAI' && resp.response) { // show response or return RQs from OpenAI
                     try { // to show response or return RQs
                         textToShow = JSON.parse(resp.response).choices[0].message.content
@@ -195,7 +195,7 @@ window.api = {
                         }
                     }
                 } else if (caller.status != 'done') { // proxy 200 response failure
-                    log.info('Response text', resp.responseText) ; api.tryNew(caller) }
+                    log.info('Response text', resp.responseText) ; api.tryNew({ caller }) }
 
                 function handleProcessCompletion() {
                     if (caller.status != 'done') {
@@ -206,7 +206,7 @@ window.api = {
                                 log.debug('Text to show', textToShow)
                                 log.error('Fail flag detected', `'${failMatch[0]}'`)
                             }
-                            api.tryNew(caller)
+                            api.tryNew({ caller })
                         } else {
                             caller.status = 'done' ; caller.attemptCnt = null
                             api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
@@ -228,7 +228,7 @@ window.api = {
                     log.debug('Response text', resp.response) ; log.error(app.alerts.parseFailed, err)
                     if (callerAPI == 'OpenAI' && caller == get.reply)
                         feedback.appAlert('OpenAI', 'notWorking', 'suggestProxy')
-                    else api.tryNew(caller)
+                    else api.tryNew({ caller })
                 }
 
                 /* eslint-disable regexp/no-super-linear-backtracking */
@@ -243,7 +243,7 @@ window.api = {
         })}
     },
 
-    tryNew(caller, reason = 'err') {
+    tryNew({ caller, reason = 'err' }) {
         log.caller = `get.${caller.name}() » api.tryNew()`
         if (caller.status == 'done') return
         log.error(
