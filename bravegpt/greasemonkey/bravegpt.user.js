@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.5.12
+// @version               2026.5.12.1
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon64.png
@@ -201,7 +201,7 @@
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@787f07b/assets/js/chatbot/components/menus.js#sha256-YaV3USVJvvChUwPjoF2jwRwbKVBdjoFfLS6ThEnZchE=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/replyBubble.js#sha256-zN/oMInc63biUtC+qNfP48vntQiEw2zyCIVszeBxLmg=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/tooltip.js#sha256-/xPw7DnS8F9dBH/s0ffMrErweHgFBeKpkUM4tUDy4vo=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@787f07b/assets/js/chatbot/lib/api.js#sha256-9mC3x8yqdVp3WpWMreBsTzunXu1+VSm0bXvVOQz3ODs=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@243615f/assets/js/chatbot/lib/api.js#sha256-6mVBI2EbHaT9uSDMNTLiDR9C+wsHd/lfHjyz3akpzaM=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/feedback.js#sha256-ri8OzNa/8sQINDn7bW84F2OuVYZxubMSm/Zpli/cPnQ=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/log.js#sha256-puXwoSKgog6EhgDzlJrAzMnGRM6kLMTT8NF0jYncIt8=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@4a5bc68/assets/js/chatbot/lib/prompts.js#sha256-C6W1N905YIIMvkVHoxOWlGShRE9pCqZdasKlGVvsia4=
@@ -1105,7 +1105,7 @@
             if (!app.config.rqDisabled && !app.div.querySelector(`.${app.slug}-related-queries`)) // get related queries for 1st time
                 get.related(app.msgChain[app.msgChain.length - 1]?.content || searchQuery)
                     .then(queries => show.related(queries))
-                    .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
+                    .catch(err => { log.error(err.message) ; api.tryNew({ caller: get.related }) })
             replyBubble.updateMaxHeight()
             feedback.notify(`${app.msgs.menuLabel_relatedQueries} ${menus.toolbar.state.words[+!app.config.rqDisabled]}`)
         },
@@ -1231,7 +1231,7 @@
                 if (get.related.status != 'done' // still no queries received
                     && get.related.api == iniAPI // not already trying diff API from err
                     && get.related.triedAPIs.length != Object.keys(apis).length // untried APIs remain
-                ) api.tryNew(get.related, 'timeout')
+                ) api.tryNew({ caller: get.related, reason: 'timeout' })
             }, 7000)
 
             // Augment query
@@ -1242,10 +1242,10 @@
             // Get related queries
             return new Promise(resolve => {
                 const reqMethod = apis[reqAPI].method
-                const reqData = api.createReqData(reqAPI, [{ role: 'user', content: rqPrompt }])
+                const reqData = api.createReqData({ api: reqAPI, msgs: [{ role: 'user', content: rqPrompt }]})
                 const xhrConfig = {
                     headers: api.createHeaders(reqAPI), method: reqMethod, responseType: 'text',
-                    onerror: err => { log.error(err) ; api.tryNew(get.related) },
+                    onerror: err => { log.error(err) ; api.tryNew({ caller: get.related }) },
                     onload: resp => api.process.text(resp, { caller: get.related, callerAPI: reqAPI }).then(resolve),
                     url: apis[reqAPI].endpoints?.completions || apis[reqAPI].endpoint
                 }
@@ -1309,7 +1309,7 @@
                         && get.reply.status != 'done' && !get.reply.sender // still no reply received
                         && get.reply.api == iniAPI // not already trying diff API from err
                         && get.reply.triedAPIs.length != Object.keys(apis).length -1 // untried APIs remain
-                    ) api.tryNew(get.reply, 'timeout')
+                    ) api.tryNew({ caller: get.reply, reason: 'timeout' })
                 }, ( app.config.streamingDisabled ? 10 : 7 *( app.config.preferredAPI ? 2 : 1 )) *1000)
             }
 
@@ -1319,14 +1319,14 @@
 
             // Get/show answer from AI
             const reqMethod = apis[reqAPI].method
-            const reqData = api.createReqData(reqAPI, msgs)
+            const reqData = api.createReqData({ api: reqAPI, msgs })
             const xhrConfig = {
                 headers: api.createHeaders(reqAPI), method: reqMethod,
                 responseType: app.config.streamingDisabled || !app.config.proxyAPIenabled ? 'text' : 'stream',
                 onerror: err => { log.error(err)
                     if (!app.config.proxyAPIenabled)
                         feedback.appAlert(!app.config.openAIkey ? 'login' : ['OpenAI', 'apiNotWorking', 'suggestProxy'])
-                    else api.tryNew(get.reply)
+                    else api.tryNew({ caller: get.reply })
                 },
                 onload: resp => api.process.text(resp, { caller: get.reply, callerAPI: reqAPI }),
                 onloadstart: resp => api.process.stream(resp, { caller: get.reply, callerAPI: reqAPI }),
@@ -1340,7 +1340,7 @@
             if (!app.config.rqDisabled && !rqDiv && get.reply.attemptCnt == 1)
                 get.related(app.msgChain[app.msgChain.length - 1].content)
                     .then(queries => show.related(queries))
-                    .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
+                    .catch(err => { log.error(err.message) ; api.tryNew({ caller: get.related }) })
 
             update.footerContent()
         }
@@ -1429,7 +1429,7 @@
                 log.debug('Re-getting related queries to answer reply question...')
                 get.related.replyIsQuestion = true
                 get.related(currentReply).then(queries => show.related(queries))
-                    .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
+                    .catch(err => { log.error(err.message) ; api.tryNew({ caller: get.related }) })
             }
 
             // Show the queries
@@ -1463,7 +1463,7 @@
                                         { key: 'Enter', bubbles: true, cancelable: true }))
                                     get.related(relatedQuery)
                                         .then(queries => show.related(queries))
-                                        .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
+                                        .catch(err => { log.error(err.message) ; api.tryNew({ caller: get.related }) })
                                 }
                             }
                         }
@@ -2771,7 +2771,7 @@
         if (!app.config.rqDisabled)
             get.related(searchQuery)
                 .then(queries => show.related(queries))
-                .catch(err => { log.error(err.message) ; api.tryNew(get.related) })
+                .catch(err => { log.error(err.message) ; api.tryNew({ caller: get.related }) })
     }
     saveAppDiv() // to fight Brave Svelte mutations
 

@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.5.12
+// @version                2026.5.12.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon64.png
@@ -81,7 +81,7 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@787f07b/assets/js/chatbot/components/menus.js#sha256-YaV3USVJvvChUwPjoF2jwRwbKVBdjoFfLS6ThEnZchE=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/replyBubble.js#sha256-zN/oMInc63biUtC+qNfP48vntQiEw2zyCIVszeBxLmg=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/tooltip.js#sha256-/xPw7DnS8F9dBH/s0ffMrErweHgFBeKpkUM4tUDy4vo=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@787f07b/assets/js/chatbot/lib/api.js#sha256-9mC3x8yqdVp3WpWMreBsTzunXu1+VSm0bXvVOQz3ODs=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@243615f/assets/js/chatbot/lib/api.js#sha256-6mVBI2EbHaT9uSDMNTLiDR9C+wsHd/lfHjyz3akpzaM=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/feedback.js#sha256-ri8OzNa/8sQINDn7bW84F2OuVYZxubMSm/Zpli/cPnQ=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/log.js#sha256-puXwoSKgog6EhgDzlJrAzMnGRM6kLMTT8NF0jYncIt8=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@4a5bc68/assets/js/chatbot/lib/prompts.js#sha256-C6W1N905YIIMvkVHoxOWlGShRE9pCqZdasKlGVvsia4=
@@ -818,7 +818,7 @@
                         && get.reply.status != 'done' && !get.reply.sender // still no reply received
                         && get.reply.api == iniAPI // not already trying diff API from err
                         && get.reply.triedAPIs.length != Object.keys(apis).length -1 // untried APIs remain
-                    ) api.tryNew(get.reply, 'timeout')
+                    ) api.tryNew({ caller: get.reply, reason: 'timeout' })
                 }, ( app.config.streamingDisabled ? 10 : 7 *( app.config.preferredAPI ? 2 : 1 )) *1000)
             }
 
@@ -828,14 +828,14 @@
 
             // Get/show answer from AI
             const reqMethod = apis[reqAPI].method
-            const reqData = api.createReqData(reqAPI, msgs)
+            const reqData = api.createReqData({ api: reqAPI, msgs })
             const xhrConfig = {
                 headers: api.createHeaders(reqAPI), method: reqMethod,
                 responseType: app.config.streamingDisabled || !app.config.proxyAPIenabled ? 'text' : 'stream',
                 onerror: err => { log.error(err)
                     if (!app.config.proxyAPIenabled)
                         feedback.appAlert(!app.config.openAIkey ? 'login' : ['OpenAI', 'apiNotWorking', 'suggestProxy'])
-                    else api.tryNew(get.reply)
+                    else api.tryNew({ caller: get.reply })
                 },
                 onload: resp => api.process.text(resp, { caller: get.reply, callerAPI: reqAPI }),
                 onloadstart: resp => api.process.stream(resp, { caller: get.reply, callerAPI: reqAPI }),
