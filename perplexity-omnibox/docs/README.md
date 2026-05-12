@@ -215,7 +215,7 @@ Made with ❤️ by [Adam Lui][link-author]
      BADGE DEFINITIONS
      ═══════════════════════════════════════════════════════════════════════════════ -->
 
-[badge-users]: https://img.shields.io/badge/Users-6.6K-2563eb?style=for-the-badge&logo=weightsandbiases&logoColor=white
+[badge-users]: https://img.shields.io/badge/Users-6.5K-2563eb?style=for-the-badge&logo=weightsandbiases&logoColor=white
 [badge-rating]: https://img.shields.io/chrome-web-store/stars/ckhgddjdjkphbaediggjdddjdjgkalom?style=for-the-badge&logo=googlechrome&logoColor=white&color=10b981&label=Chrome
 [badge-jsdelivr]: https://img.shields.io/jsdelivr/gh/hm/KudoAI/perplexity-omnibox?style=flat-square&logo=jsdelivr&logoColor=white&color=2bbbd8&label=jsDelivr
 [badge-codefactor]: https://img.shields.io/codefactor/grade/github/KudoAI/perplexity-omnibox?style=flat-square&logo=codefactor&logoColor=white&color=b3ff68&label=Code%20Quality
