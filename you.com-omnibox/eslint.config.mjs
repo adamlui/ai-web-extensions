@@ -1,6 +1,6 @@
-import js from '@eslint/js'
 import globals from 'globals'
 import importPlugin from 'eslint-plugin-import-x'
+import js from '@eslint/js'
 import json from '@eslint/json'
 import markdown from '@eslint/markdown'
 import stylisticJS from '@stylistic/eslint-plugin'
