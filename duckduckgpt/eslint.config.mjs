@@ -20,8 +20,9 @@ export default [
                 ipv4: 'readonly', JSON5: 'readonly', log: 'readonly', logos: 'readonly', marked: 'readonly',
                 menus: 'writable', modals: 'readonly', prompts: 'readonly', renderMathInElement: 'readonly',
                 replyBubble: 'writable', session: 'readonly', settings: 'writable', show: 'readonly',
-                themes: 'readonly', toggle: 'readonly', Tone: 'readonly', toolbarMenu: 'writable', tooltip: 'writable',
-                ui: 'readonly', update: 'readonly', updateCheck: 'readonly', userscript: 'readonly', xhr: 'writable'
+                string: 'readonly', themes: 'readonly', toggle: 'readonly', Tone: 'readonly', toolbarMenu: 'writable',
+                tooltip: 'writable', ui: 'readonly', update: 'readonly', updateCheck: 'readonly',
+                userscript: 'readonly', xhr: 'writable'
             }
         },
         plugins: { 'import-x': importPlugin, 'js-styles': stylisticJS, regexp },

@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.5.13.2
+// @version                2026.5.13.3
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon64.png
@@ -83,9 +83,10 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/components/tooltip.js#sha256-/xPw7DnS8F9dBH/s0ffMrErweHgFBeKpkUM4tUDy4vo=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@5045b1d/assets/js/chatbot/lib/api.js#sha256-x2DDQ4x8+Cj2l2FsgCA58thKWVGzDbrLTHm9i/kqigM=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/feedback.js#sha256-ri8OzNa/8sQINDn7bW84F2OuVYZxubMSm/Zpli/cPnQ=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/log.js#sha256-puXwoSKgog6EhgDzlJrAzMnGRM6kLMTT8NF0jYncIt8=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@beedf43/assets/js/chatbot/lib/log.js#sha256-++SE7OgyoPZhNJ+cLiqSraFJCs59qVUhRm0vr1dCznY=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@4a5bc68/assets/js/chatbot/lib/prompts.js#sha256-C6W1N905YIIMvkVHoxOWlGShRE9pCqZdasKlGVvsia4=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@5045b1d/assets/js/chatbot/lib/session.js#sha256-ihIX73HY2AgqKEQOwrqZgvEZqA+/Ho4r+Pr8h0XahhQ=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@beedf43/assets/js/chatbot/lib/string.js#sha256-FDNZnx3brYq3W6+KD7pbnffgiXQgnehgvZBOpT3PLrs=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/themes.js#sha256-NSiOkXoRC/fF8zdmnbIk9XL5tKWWP5MU2NOfdJ9G0NU=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@869e302/assets/js/chatbot/lib/ui.js#sha256-vrWD34JX8nwgw4s98PcUBbF1jf4f7pUlK3moB+jhV1M=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/userscript.js#sha256-DTD+Tj/9angBw8/Q4e8PMz2SBwueqvNzeY8PwZlMgbs=
@@ -1469,7 +1470,7 @@
             else if (!/\d/.test(replyLang)) {
                 replyLang = ( // auto-case for menu/alert aesthetics
                     replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
-                        : log.toTitleCase(replyLang) )
+                        : string.toTitleCase(replyLang) )
                 settings.save('replyLang', replyLang || env.browser.language)
                 modals.alert(`${app.msgs.alert_langUpdated}!`, // title
                     `${app.name} ${ // msg
@@ -1854,7 +1855,7 @@
 
             // Show modal
             const shareChatModal = modals.alert(
-                `${log.toTitleCase(app.msgs.btnLabel_convo)} ${app.msgs.tooltip_page} ${ // title
+                `${string.toTitleCase(app.msgs.btnLabel_convo)} ${app.msgs.tooltip_page} ${ // title
                     app.msgs.alert_generated.toLowerCase()}!`,
                 `<a target="_blank" rel="noopener" href="${shareURL}">${shareURL}</a>`, // link msg
                 [ // buttons
@@ -1896,7 +1897,7 @@
                     if (/copy/i.test(btn.textContent)) btn.textContent = `${app.msgs.tooltip_copy} URL`
                     else if (/visit/i.test(btn.textContent)) btn.textContent = app.msgs.btnLabel_visitPage
                     else if (/download/i.test(btn.textContent))
-                         btn.textContent = `${app.msgs.btnLabel_download} ${log.toTitleCase(app.msgs.btnLabel_convo)}`
+                         btn.textContent = `${app.msgs.btnLabel_download} ${string.toTitleCase(app.msgs.btnLabel_convo)}`
                 })
 
             // Style elements

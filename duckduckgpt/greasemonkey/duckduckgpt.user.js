@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.5.13.2
+// @version                2026.5.13.3
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@e73859f/assets/images/icons/app/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@e73859f/assets/images/icons/app/icon64.png
@@ -205,9 +205,10 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@5045b1d/assets/js/chatbot/lib/api.js#sha256-x2DDQ4x8+Cj2l2FsgCA58thKWVGzDbrLTHm9i/kqigM=
 
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/feedback.js#sha256-ri8OzNa/8sQINDn7bW84F2OuVYZxubMSm/Zpli/cPnQ=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/log.js#sha256-puXwoSKgog6EhgDzlJrAzMnGRM6kLMTT8NF0jYncIt8=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@beedf43/assets/js/chatbot/lib/log.js#sha256-++SE7OgyoPZhNJ+cLiqSraFJCs59qVUhRm0vr1dCznY=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@4a5bc68/assets/js/chatbot/lib/prompts.js#sha256-C6W1N905YIIMvkVHoxOWlGShRE9pCqZdasKlGVvsia4=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@5045b1d/assets/js/chatbot/lib/session.js#sha256-ihIX73HY2AgqKEQOwrqZgvEZqA+/Ho4r+Pr8h0XahhQ=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@beedf43/assets/js/chatbot/lib/string.js#sha256-FDNZnx3brYq3W6+KD7pbnffgiXQgnehgvZBOpT3PLrs=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/themes.js#sha256-NSiOkXoRC/fF8zdmnbIk9XL5tKWWP5MU2NOfdJ9G0NU=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@869e302/assets/js/chatbot/lib/ui.js#sha256-vrWD34JX8nwgw4s98PcUBbF1jf4f7pUlK3moB+jhV1M=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@30ce038/assets/js/chatbot/lib/userscript.js#sha256-DTD+Tj/9angBw8/Q4e8PMz2SBwueqvNzeY8PwZlMgbs=
@@ -1019,12 +1020,12 @@
         },
 
         autoGen(mode) {
-            const validModes = ['get', 'summarize'], modeKey = `auto${log.toTitleCase(mode)}`
+            const validModes = ['get', 'summarize'], modeKey = `auto${string.toTitleCase(mode)}`
             let conflictingModeToggled = false // to extend this notif duration
             settings.save(modeKey, !app.config[modeKey])
             if (app.config[modeKey]) { // this Auto-Gen mode toggled on, disable other one + Manual-Gen + do it
                 const otherMode = validModes[+(mode == validModes[0])]
-                if (app.config[`auto${log.toTitleCase(otherMode)}`]) {
+                if (app.config[`auto${string.toTitleCase(otherMode)}`]) {
                     toggle.autoGen(otherMode) ; conflictingModeToggled = true }
                 ['prefix', 'suffix'].forEach(mode => {
                     if (app.config[`${mode}Enabled`]) { toggle.manualGen(mode) ; conflictingModeToggled = true }})
@@ -1060,7 +1061,7 @@
             settings.save(modeKey, !app.config[modeKey])
             if (app.config[modeKey]) // Manual-Gen toggled on, disable all Auto-Gen
                 ['get', 'summarize'].forEach(mode => {
-                    if (app.config[`auto${log.toTitleCase(mode)}`]) { toggle.autoGen(mode) ; autoGenToggled = true }})
+                    if (app.config[`auto${string.toTitleCase(mode)}`]) { toggle.autoGen(mode) ; autoGenToggled = true }})
             feedback.notify(`${settings.controls[modeKey].label} ${menus.toolbar.state.words[+app.config[modeKey]]}`,
                 undefined, autoGenToggled ? 2.75 : undefined) // +1s duration if conflicting mode notif shown)
             if (modals.settings.get()) { // update visual state of Settings toggle
@@ -1148,7 +1149,7 @@
             // Notify of mode change
             if (mode == 'sticky' && prevStickyState == app.config.stickySidebar) return
             feedback.notify(
-                `${ app.msgs[`menuLabel_${mode}Sidebar`] || log.toTitleCase(mode) + ' Sidebar' } ${
+                `${ app.msgs[`menuLabel_${mode}Sidebar`] || string.toTitleCase(mode) + ' Sidebar' } ${
                     menus.toolbar.state.words[+app.config[configKeyName]]}`,
                 undefined, anchorModeDisabled  ? 2.75 : undefined // +1s duration if conflicting mode notif shown
             )
@@ -2137,7 +2138,7 @@
             else if (!/\d/.test(replyLang)) {
                 replyLang = ( // auto-case for menu/alert aesthetics
                     replyLang.length < 4 || replyLang.includes('-') ? replyLang.toUpperCase()
-                        : log.toTitleCase(replyLang) )
+                        : string.toTitleCase(replyLang) )
                 settings.save('replyLang', replyLang || env.browser.language)
                 modals.alert(`${app.msgs.alert_langUpdated}!`, // title
                     `${app.name} ${ // msg
@@ -2530,7 +2531,7 @@
 
             // Show modal
             const shareChatModal = modals.alert(
-                `${log.toTitleCase(app.msgs.btnLabel_convo)} ${app.msgs.tooltip_page} ${ // title
+                `${string.toTitleCase(app.msgs.btnLabel_convo)} ${app.msgs.tooltip_page} ${ // title
                     app.msgs.alert_generated.toLowerCase()}!`,
                 `<a target="_blank" rel="noopener" href="${shareURL}">${shareURL}</a>`, // link msg
                 [ // buttons
@@ -2572,7 +2573,7 @@
                     if (/copy/i.test(btn.textContent)) btn.textContent = `${app.msgs.tooltip_copy} URL`
                     else if (/visit/i.test(btn.textContent)) btn.textContent = app.msgs.btnLabel_visitPage
                     else if (/download/i.test(btn.textContent))
-                         btn.textContent = `${app.msgs.btnLabel_download} ${log.toTitleCase(app.msgs.btnLabel_convo)}`
+                         btn.textContent = `${app.msgs.btnLabel_download} ${string.toTitleCase(app.msgs.btnLabel_convo)}`
                 })
 
             // Style elements
