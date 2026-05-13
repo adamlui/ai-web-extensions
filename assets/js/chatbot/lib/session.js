@@ -1,15 +1,15 @@
- // Requires lib/<crypto-js|feedback>.js + <apis|app|env|get|log|Math|xhr> + GM_cookie + GM_<delete|get|set>Value()
+ // Requires lib/<crypto-js|feedback>.js + <app|env|get|log|Math|xhr> + GM_cookie + GM_<delete|get|set>Value()
 
 window.session = {
 
-    deleteOpenAIcookies() { // requires <apis|app|env> + GM_<cookie|deleteValue>
+    deleteOpenAIcookies() { // requires <app|env> + GM_<cookie|deleteValue>
         log.caller = 'session.deleteOpenAIcookies()'
         log.debug('Deleting OpenAI cookies...')
         GM_deleteValue(app.configKeyPrefix + '_openAItoken')
         if (env.scriptManager.name != 'Tampermonkey') return
-        GM_cookie.list({ url: apis.OpenAI.endpoints.auth }, (cookies, error) => {
+        GM_cookie.list({ url: app.apis.OpenAI.endpoints.auth }, (cookies, error) => {
             if (!error) { for (const cookie of cookies) {
-                GM_cookie.delete({ url: apis.OpenAI.endpoints.auth, name: cookie.name })
+                GM_cookie.delete({ url: app.apis.OpenAI.endpoints.auth, name: cookie.name })
         }}})
     },
 
@@ -28,16 +28,16 @@ window.session = {
         return log.debug(gptflKey) || gptflKey
     },
 
-    getOAItoken() { // requires lib/feedback.js + <apis|app|get|log|xhr> + GM_<get|set>Value()
+    getOAItoken() { // requires lib/feedback.js + <app|get|log|xhr> + GM_<get|set>Value()
         log.caller = 'session.getOAItoken()'
         log.debug('Getting OpenAI token...')
         return new Promise(resolve => {
             const accessToken = GM_getValue(app.configKeyPrefix + '_openAItoken')
             if (accessToken) { log.debug(accessToken) ; resolve(accessToken) }
             else {
-                log.debug(`No token found. Fetching from ${apis.OpenAI.endpoints.session}...`)
+                log.debug(`No token found. Fetching from ${app.apis.OpenAI.endpoints.session}...`)
                 xhr({
-                    url: apis.OpenAI.endpoints.session,
+                    url: app.apis.OpenAI.endpoints.session,
                     onload: ({ responseText }) => {
                         if (session.isBlockedByCF(responseText)) return feedback.appAlert('checkCloudflare')
                         try {

@@ -1,4 +1,4 @@
-// Requires components/<icons|tooltip>.js + lib/dom.js + <apis|app|env|log|modals|settings|toggle>
+// Requires components/<icons|tooltip>.js + lib/dom.js + <app|env|log|modals|settings|toggle>
 
 window.menus = {
 
@@ -98,11 +98,11 @@ window.menus = {
             })
         },
 
-        api: { // requires <apis|app>
+        api: { // requires app
             directionBias: 'down',
             get entries() { return [
                 { label: `${app.msgs.menuLabel_preferred} API:`, iconType: 'lightning' },
-                ...[app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')].map(api => ({
+                ...[app.msgs.menuLabel_random, ...Object.keys(app.apis).filter(api => api != 'OpenAI')].map(api => ({
                     label: api,
                     onclick: () => {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
