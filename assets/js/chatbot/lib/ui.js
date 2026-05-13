@@ -1,10 +1,10 @@
-// Requires component/<menus|tooltip>.js + <app|env|fontSizeSlider|get|inputEvents|modals|show|toggle|update>
+// Requires component/<menus|tooltip>.js + <app|env|fontSizeSlider|get|modals|show|toggle|update>
 
 window.ui = {
 
     addListeners: {
-        appDiv() { // requires <app|fontSizeSlider|inputEvents|update>
-            app.div.addEventListener(inputEvents.down, event => { // to dismiss visible font size slider
+        appDiv() { // requires <app|fontSizeSlider|update>
+            app.div.addEventListener(app.inputEvents.down, event => { // to dismiss visible font size slider
                 if (event.button != 0) return // prevent non-left-click dismissal
                 if (document.getElementById(`${app.slug}-font-size-slider-track`) // slider is visible
                     && !event.target.closest('[id*=font-size]') // not clicking slider elem
