@@ -10,7 +10,7 @@ import regexp from 'eslint-plugin-regexp'
 import stylisticJS from '@stylistic/eslint-plugin'
 
 export default [
-    { ignores: ['**/*cache', '**/*.min.{js,mjs}', '**/package-lock.json'] },
+    { ignores: ['**/*cache*', '**/*.min.{js,mjs}', '**/package-lock.json'] },
     {
         files: ['**/*.{js,mjs}'],
         languageOptions: {
