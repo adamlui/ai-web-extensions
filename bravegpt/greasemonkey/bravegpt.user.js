@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.5.12.1
+// @version               2026.5.13
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon64.png
@@ -259,8 +259,6 @@
     env.scriptManager.supportsStreaming = /Tampermonkey|ScriptCat/.test(env.scriptManager.name)
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
                                       && parseInt(env.scriptManager.version.split('.')[0]) >= 5
-    window.inputEvents = {} ; ['down', 'move', 'up'].forEach(action =>
-        inputEvents[action] = ( window.PointerEvent ? 'pointer' : env.browser.isMobile ? 'touch' : 'mouse' ) + action)
     window.xhr = typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
@@ -316,12 +314,15 @@
         method: 'GET', onload: ({ responseText }) => resolve(JSON.parse(responseText)),
         url: `${app.urls.aiwebAssets}/data/katex-delimiters.json`
     }))
-    window.apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
+    app.apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
         method: 'GET', onload: ({ responseText }) => resolve(Object.fromEntries(
             Object.entries(JSON5.parse(responseText)).filter(([, api]) => !api.disabled))),
         url: `${app.urls.aiwebAssets}/data/ai-chat-apis.json5`
     })))
-    apis.AIchatOS.userID = `#/chat/${Date.now()}`
+    app.apis.AIchatOS.userID = `#/chat/${Date.now()}`
+    app.inputEvents = {} ; ['down', 'move', 'up'].forEach(action =>
+        app.inputEvents[action] =
+            `${ window.PointerEvent ? 'pointer' : env.browser.isMobile ? 'touch' : 'mouse' }action`)
 
     // Init SETTINGS
     app.config ??= {}
@@ -1103,7 +1104,7 @@
             settings.save('rqDisabled', !app.config.rqDisabled)
             update.rqVisibility()
             if (!app.config.rqDisabled && !app.div.querySelector(`.${app.slug}-related-queries`)) // get related queries for 1st time
-                get.related(app.msgChain[app.msgChain.length - 1]?.content || searchQuery)
+                get.related(app.msgChain[app.msgChain.length -1]?.content || searchQuery)
                     .then(queries => show.related(queries))
                     .catch(err => { log.error(err.message) ; api.tryNew({ caller: get.related }) })
             replyBubble.updateMaxHeight()
@@ -1230,7 +1231,7 @@
             clearTimeout(get.related.timeout) ; get.related.timeout = setTimeout(() => {
                 if (get.related.status != 'done' // still no queries received
                     && get.related.api == iniAPI // not already trying diff API from err
-                    && get.related.triedAPIs.length != Object.keys(apis).length // untried APIs remain
+                    && get.related.triedAPIs.length != Object.keys(app.apis).length // untried APIs remain
                 ) api.tryNew({ caller: get.related, reason: 'timeout' })
             }, 7000)
 
@@ -1241,13 +1242,13 @@
 
             // Get related queries
             return new Promise(resolve => {
-                const reqMethod = apis[reqAPI].method
+                const reqMethod = app.apis[reqAPI].method
                 const reqData = api.createReqData({ api: reqAPI, msgs: [{ role: 'user', content: rqPrompt }]})
                 const xhrConfig = {
                     headers: api.createHeaders(reqAPI), method: reqMethod, responseType: 'text',
                     onerror: err => { log.error(err) ; api.tryNew({ caller: get.related }) },
                     onload: resp => api.process.text(resp, { caller: get.related, callerAPI: reqAPI }).then(resolve),
-                    url: apis[reqAPI].endpoints?.completions || apis[reqAPI].endpoint
+                    url: app.apis[reqAPI].endpoints?.completions || app.apis[reqAPI].endpoint
                 }
                 if (reqMethod == 'POST') xhrConfig.data = JSON.stringify(reqData)
                 else if (reqMethod == 'GET') xhrConfig.url += `?q=${reqData}`
@@ -1308,17 +1309,17 @@
                     if (app.config.proxyAPIenabled // only do in Proxy mode
                         && get.reply.status != 'done' && !get.reply.sender // still no reply received
                         && get.reply.api == iniAPI // not already trying diff API from err
-                        && get.reply.triedAPIs.length != Object.keys(apis).length -1 // untried APIs remain
+                        && get.reply.triedAPIs.length != Object.keys(app.apis).length -1 // untried APIs remain
                     ) api.tryNew({ caller: get.reply, reason: 'timeout' })
                 }, ( app.config.streamingDisabled ? 10 : 7 *( app.config.preferredAPI ? 2 : 1 )) *1000)
             }
 
             // Augment query
-            const reqAPI = get.reply.api, lastUserMsg = msgs[msgs.length - 1]
+            const reqAPI = get.reply.api, lastUserMsg = msgs[msgs.length -1]
             lastUserMsg.content = prompts.augment(lastUserMsg.content, { api: reqAPI, caller: get.reply })
 
             // Get/show answer from AI
-            const reqMethod = apis[reqAPI].method
+            const reqMethod = app.apis[reqAPI].method
             const reqData = api.createReqData({ api: reqAPI, msgs })
             const xhrConfig = {
                 headers: api.createHeaders(reqAPI), method: reqMethod,
@@ -1330,7 +1331,7 @@
                 },
                 onload: resp => api.process.text(resp, { caller: get.reply, callerAPI: reqAPI }),
                 onloadstart: resp => api.process.stream(resp, { caller: get.reply, callerAPI: reqAPI }),
-                url: apis[reqAPI].endpoints?.completions || apis[reqAPI].endpoint
+                url: app.apis[reqAPI].endpoints?.completions || app.apis[reqAPI].endpoint
             }
             if (reqMethod == 'POST') xhrConfig.data = JSON.stringify(reqData)
             else if (reqMethod == 'GET') xhrConfig.url += `?q=${reqData}`
@@ -1338,7 +1339,7 @@
 
             // Get/show Related Queries if enabled/missing/on 1st get.reply() attempt only
             if (!app.config.rqDisabled && !rqDiv && get.reply.attemptCnt == 1)
-                get.related(app.msgChain[app.msgChain.length - 1].content)
+                get.related(app.msgChain[app.msgChain.length -1].content)
                     .then(queries => show.related(queries))
                     .catch(err => { log.error(err.message) ; api.tryNew({ caller: get.related }) })
 
@@ -1712,11 +1713,11 @@
 
     // Define COMPONENTS
 
-    window.fontSizeSlider = { // requires lib/<dom|settings>.js + <app|env|inputEvents>
+    window.fontSizeSlider = { // requires lib/<dom|settings>.js + <app|env>
         fadeInDelay: 5, // ms
         hWheelDistance: 10, // px
 
-        createAppend() { // requires lib/<dom|settings>.js + <app|env|inputEvents>
+        createAppend() { // requires lib/<dom|settings>.js + <app|env>
 
             // Create/ID/classify slider elems
             fontSizeSlider.cursorOverlay = dom.create.elem('div', { class: 'cursor-overlay' })
@@ -1740,15 +1741,15 @@
 
             // Add event listeners for dragging thumb
             let isDragging = false, startX, startLeft
-            sliderThumb.addEventListener(inputEvents.down, event => {
+            sliderThumb.addEventListener(app.inputEvents.down, event => {
                 if (event.button != 0) return // prevent non-left-click drag
                 event.preventDefault() // prevent text selection
                 isDragging = true ; startX = event.clientX ; startLeft = sliderThumb.offsetLeft
                 document.body.append(fontSizeSlider.cursorOverlay)
             })
-            document.addEventListener(inputEvents.move, ({ clientX }) => {
+            document.addEventListener(app.inputEvents.move, ({ clientX }) => {
                 if (isDragging) moveThumb(startLeft + clientX - startX) })
-            document.addEventListener(inputEvents.up, () => {
+            document.addEventListener(app.inputEvents.up, () => {
                 isDragging = false
                 if (fontSizeSlider.cursorOverlay?.isConnected) fontSizeSlider.cursorOverlay.remove()
             })
@@ -1759,8 +1760,8 @@
                 moveThumb(sliderThumb.offsetLeft - Math.sign(event.deltaY) * fontSizeSlider.hWheelDistance)
             }
 
-            // Add event listener for seek/dragging by inputEvents.down on track
-            slider.addEventListener(inputEvents.down, event => {
+            // Add event listener for seek/dragging by app.inputEvents.down on track
+            slider.addEventListener(app.inputEvents.down, event => {
                 if (event.button != 0) return // prevent non-left-click drag
                 event.preventDefault() // prevent text selection
                 const clientX = event.clientX || event.touches?.[0]?.clientX
@@ -1921,7 +1922,7 @@
         api() { // requires lib/feedback.js + <apis|app|get|settings>
 
             // Show modal
-            const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(apis).filter(api => api != 'OpenAI')]
+            const modalBtns = [app.msgs.menuLabel_random, ...Object.keys(app.apis).filter(api => api != 'OpenAI')]
                 .map(api => { // to btn callback/label
                     function onclick() {
                         settings.save('preferredAPI', api == app.msgs.menuLabel_random ? false : api)
