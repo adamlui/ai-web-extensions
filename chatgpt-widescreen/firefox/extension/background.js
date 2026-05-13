@@ -26,7 +26,7 @@
 // Launch CHATGPT on install
 chrome.runtime.onInstalled.addListener(({ reason }) => {
     if (reason == 'install') // to exclude updates
-        chrome.tabs.create({ url: 'https://chatgpt.com/' })
+        chrome.tabs.create({ url: 'https://chatgpt.com' })
 })
 
 // Sync SETTINGS/MODES to activated tabs

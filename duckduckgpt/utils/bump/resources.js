@@ -11,8 +11,8 @@
           path = require('path') // to manipulate paths
 
     // Init CACHE paths
-    const cachePaths = { root: '.cache/' }
-    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump.min.mjs`)
+    const cachePaths = { root: '.cache' }
+    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}/bump.min.mjs`)
 
     // Import BUMP UTILS
     fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })

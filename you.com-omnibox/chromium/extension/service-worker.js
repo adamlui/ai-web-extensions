@@ -1,4 +1,4 @@
-const youURL = 'https://you.com/'
+const youURL = 'https://you.com'
 
 // Init APP data
 ;(async () => {

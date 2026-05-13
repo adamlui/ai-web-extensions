@@ -1,4 +1,4 @@
-const chatgptURL = 'https://chatgpt.com/'
+const chatgptURL = 'https://chatgpt.com'
 
 // Init APP data
 ;(async () => {

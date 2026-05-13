@@ -28,9 +28,9 @@
         { execSync, spawnSync } = require('child_process') // for git cmds
 
     // Init CACHE paths
-    const cachePaths = { root: '.cache/' }
-    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump.min.mjs`)
-    cachePaths.manifestPaths = path.join(__dirname, `${cachePaths.root}manifest-paths.json`)
+    const cachePaths = { root: '.cache' }
+    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}/bump.min.mjs`)
+    cachePaths.manifestPaths = path.join(__dirname, `${cachePaths.root}/manifest-paths.json`)
 
     // Import BUMP UTILS
     let bump

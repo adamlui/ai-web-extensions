@@ -21,9 +21,9 @@
           path = require('path') // to manipulate paths
 
     // Init CACHE paths
-    const cachePaths = { root: '.cache/' }
-    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}bump.min.mjs`)
-    cachePaths.userJSpaths = path.join(__dirname, `${cachePaths.root}userscript-paths.json`)
+    const cachePaths = { root: '.cache' }
+    cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}/bump.min.mjs`)
+    cachePaths.userJSpaths = path.join(__dirname, `${cachePaths.root}/userscript-paths.json`)
 
     // Import BUMP UTILS
     let bump
