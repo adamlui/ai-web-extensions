@@ -13,14 +13,14 @@ export default [
         languageOptions: {
             ecmaVersion: 'latest', sourceType: 'script',
             globals: {
-                ...globals.browser, ...globals.greasemonkey, ...globals.node, api: 'readonly', apis: 'writable',
-                app: 'writable', buttons: 'writable', chatgpt: 'readonly', CryptoJS: 'readonly', css: 'readonly',
-                dom: 'readonly', env: 'writable', feedback: 'readonly', fontSizeSlider: 'writable', get: 'readonly',
-                GM_cookie: 'readonly', hljs: 'readonly', icons: 'readonly', inputEvents: 'readonly', ipv4: 'readonly',
-                JSON5: 'readonly', log: 'readonly', marked: 'readonly', menus: 'writable', modals: 'readonly',
-                prompts: 'readonly', renderMathInElement: 'readonly', replyBubble: 'writable', session: 'readonly',
-                settings: 'writable', show: 'readonly', string: 'readonly', themes: 'readonly', toggle: 'readonly',
-                Tone: 'readonly', toolbarMenu: 'writable', tooltip: 'writable', ui: 'readonly', update: 'readonly',
+                ...globals.browser, ...globals.greasemonkey, ...globals.node, api: 'readonly', app: 'writable',
+                buttons: 'writable', chatgpt: 'readonly', CryptoJS: 'readonly', css: 'readonly', dom: 'readonly',
+                env: 'writable', feedback: 'readonly', fontSizeSlider: 'writable', get: 'readonly',
+                GM_cookie: 'readonly', hljs: 'readonly', icons: 'readonly', ipv4: 'readonly', JSON5: 'readonly',
+                log: 'readonly', marked: 'readonly', menus: 'writable', modals: 'readonly', prompts: 'readonly',
+                renderMathInElement: 'readonly', replyBubble: 'writable', session: 'readonly', settings: 'writable',
+                show: 'readonly', string: 'readonly', themes: 'readonly', toggle: 'readonly', Tone: 'readonly',
+                toolbarMenu: 'writable', tooltip: 'writable', ui: 'readonly', update: 'readonly',
                 updateCheck: 'readonly', userscript: 'readonly', xhr: 'writable'
             }
         },
