@@ -29,9 +29,7 @@ window.log = {
         .replace(/([{,](?=")|":)/g, '$1 ') // append spaces to { and "
         .replace(/((?<!\})\})/g, ' $1') // prepend spaces to }
         .replace(/"/g, '\'') // replace " w/ '
-    },
-
-    toTitleCase(str) { return str[0].toUpperCase() + str.slice(1) }
+    }
 
 } ; ['info', 'error', 'debug'].forEach(logType =>
     log[logType] = function() {
