@@ -20,8 +20,8 @@ export default [
                 chatbar: 'writable', chatgpt: 'readonly', chrome: 'readonly', css: 'readonly', dom: 'readonly',
                 env: 'writable', feedback: 'readonly', i18n: 'readonly', icons: 'writable', importScripts: 'readonly',
                 JSON5: 'readonly', modals: 'readonly', settings: 'writable', sites: 'writable', styles: 'readonly',
-                sync: 'readonly', toggleMode: 'readonly', toolbarMenu: 'writable', tooltip: 'writable', ui: 'readonly',
-                updateCheck: 'readonly', xhr: 'writable'
+                sync: 'readonly', toggleMode: 'readonly', tooltip: 'writable', ui: 'readonly', updateCheck: 'readonly',
+                xhr: 'writable'
             }
         },
         plugins: { 'import-x': importPlugin, 'js-styles': stylisticJS, regexp },
