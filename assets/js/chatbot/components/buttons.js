@@ -213,7 +213,7 @@ window.buttons = {
                 if (!this.share) this.create() ; if (!replyBubble.preHeader) replyBubble.create()
                 replyBubble.preHeader.append(
                     this.preHeaderBtnsDiv ||= dom.create.elem('div', { class: 'reply-header-btns' }))
-                this.preHeaderBtnsDiv.append(this.copy, this.share, this.regen, this.speak)
+                this.preHeaderBtnsDiv.append(this.copy, /*this.share,*/ this.regen, this.speak)
             }
         }
     }
