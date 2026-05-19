@@ -20,7 +20,7 @@
     <img alt="jsDelivr stats" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-widescreen?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<a href="https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions) / [Get support](https://github.com/adamlui/chatgpt-widescreen/issues) / [Contact author](https://github.com/adamlui)
 
@@ -103,7 +103,7 @@ ChatGPT Widescreen is compatible w/ the following browsers using [ScriptCat](htt
 
 <br>
 
-<a href="https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions) / [Get support](https://github.com/adamlui/chatgpt-widescreen/issues) /[More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
 
@@ -114,7 +114,7 @@ ChatGPT Widescreen is compatible w/ the following browsers using [ScriptCat](htt
 ## 🧠 Contributors
 
 <a href="https://github.com/adamlui/chatgpt-widescreen/graphs/contributors">
-    <img height=45 width="auto" src="https://contrib.rocks/image?repo=adamlui/chatgpt-widescreen" /></a>
+    <img style="height: 45px" width="auto" src="https://contrib.rocks/image?repo=adamlui/chatgpt-widescreen" /></a>
 <br><br>
 
 All contributions are very welcome!
