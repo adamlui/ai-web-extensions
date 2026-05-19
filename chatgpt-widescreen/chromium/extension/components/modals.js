@@ -114,6 +114,7 @@ window.modals = {
               : btn.textContent == 'Edge Addons' ? 'edge'
               : btn.textContent == 'Firefox Addons' ? 'firefox'
               : btn.textContent == 'Product Hunt' ? 'productHunt'
+              : btn.textContent == 'ScriptCat' ? 'scriptcat'
               : 'softonic'
             ])
         })
