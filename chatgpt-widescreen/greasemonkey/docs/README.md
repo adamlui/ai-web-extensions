@@ -104,7 +104,7 @@ ChatGPT Widescreen is compatible w/ the following browsers using [ScriptCat](htt
 <br>
 
 <a href="https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
-<br>
+
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions) / [Get support](https://github.com/adamlui/chatgpt-widescreen/issues) /[More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
@@ -138,11 +138,10 @@ For even more ChatGPT extensions, visit:
 > Add AI answers to Brave Search (powered by GPT-4o!)
 [Install](https://docs.bravegpt.com/#-installation) / [Readme](https://docs.bravegpt.com/#readme) / [Discuss](https://github.com/KudoAI/bravegpt/discussions)
 
-### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 style="height: 20px" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://github.com/adamlui/chatgpt-infinity/#readme)
 > Generate endless answers from all-knowing ChatGPT (in any language!)
 [Install](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#-greasemonkey-userscript) / [Readme](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#readme) / [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
 <img height=6px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/separators/gradient-aqua.png">
 
-<a href="https://github.com/adamlui/userscripts">**More userscripts**</a> /
-<a href="#top">Back to top ↑</a>
+<a href="https://github.com/adamlui/userscripts">**More userscripts**</a> / <a href="#top">Back to top ↑</a>
