@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.5.19.1
+// @version             2026.5.19.2
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -267,7 +267,7 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ab7ee52/chromium/extension/lib/ui.js#sha256-5WwgnfGRtHsRP06nmjhqARB0T508syxAh5UWFMEFA+c=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ec72d81/chromium/extension/components/buttons.js#sha256-YF42/8Y4esTibNcxfjYh+RFBQLDT+CDsm2euKwLkFkM=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@511d193/chromium/extension/components/icons.js#sha256-6eK7coHHFB4zBfl8XXtjojrnfbBOFiEgYfQtz/Whv2E=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@42999e8/chromium/extension/components/modals.js#sha256-w0l78/jLtg1IwwY0Tf9K9u9kcCMtWOAiAL4qklcch2g=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@56f630c/chromium/extension/components/modals.js#sha256-AxtxfsVxdvCLKuezf2J4maGTgxN7WEhQWD+U0RyIND4=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@d6d88a3/chromium/extension/components/tooltip.js#sha256-kzTw78VnWNeLtZ81hDjOM6+IldMj+bWAuYcpCDA1If0=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
