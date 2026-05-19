@@ -24,7 +24,7 @@
     },
     "support": "https://github.com/adamlui/chatgpt-widescreen/issues",
     "uninstall": "https://forms.gle/F2n55B38LYP9uxXM8",
-    "update": { "gm": "https://raw.githubusercontent.com/adamlui/chatgpt-widescreen/refs/heads/main/greasemonkey/chatgpt-widescreen.user.js" },
+    "update": { "gm": "https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.meta.js" },
     "welcome": "https://aiwebextensions.com/chatgpt-widescreen/pages/welcome"
   }
 }
