@@ -279,8 +279,8 @@
 // @grant               GM_xmlhttpRequest
 // @grant               GM.xmlHttpRequest
 // @noframes
-// @downloadURL         https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js
-// @updateURL           https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.meta.js
+// @downloadURL         https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js
+// @updateURL           https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.meta.js
 // @homepageURL         https://github.com/adamlui/chatgpt-widescreen/#readme
 // @supportURL          https://github.com/adamlui/chatgpt-widescreen/issues
 // @contributionURL     https://ko-fi.com/adamlui

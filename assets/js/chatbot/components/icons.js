@@ -47,10 +47,6 @@ window.icons = {
         create() { return dom.create.elem('img', { src: GM_getResourceText('bgptIcon') })}
     },
 
-    duckduckgpt: {
-        create() { return dom.create.elem('img', { src: GM_getResourceText('ddgptIcon') })}
-    },
-
     googlegpt: {
         create(color = '') {
             const icon = dom.create.elem('img', { id: `${app.slug}-icon` })

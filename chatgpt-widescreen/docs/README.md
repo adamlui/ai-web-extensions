@@ -40,7 +40,7 @@
     <img alt="[Get for Edge]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[Get for Firefox]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
-<a href="https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js">
+<a href="https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js">
     <img alt="[Get for Greasemonkey]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/en/badge860x262.png"></a>
 
 </div>
@@ -117,7 +117,7 @@
     - Tampermonkey for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
     - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) or [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) for Safari
 
-2. Install [ChatGPT Widescreen](https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js) userscript (will load in manager installed above)
+2. Install [ChatGPT Widescreen](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js) userscript (will load in manager installed above)
 
 3. Visit [chatgpt.com](https://chatgpt.com) or [poe.com](https://poe.com) & mode toggles are added to chatbar!
 
@@ -159,15 +159,15 @@ ChatGPT Widescreen relies on code from the powerful [chatgpt.js](https://github.
 
 ChatGPT Widescreen is compatible w/ the following browsers:
 
-- **[Google Chrome](https://www.chrome.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js))
-- **[Mozilla Firefox](https://www.firefox.com)** (via [Firefox add-on](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js))
-- **[Microsoft Edge](https://www.microsoft.com/edge)** (via [Edge add-on](https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js))
-- **[Opera](https://www.opera.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js))
-- **[Brave](https://brave.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js))
-- **[Vivaldi](https://vivaldi.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js))
-- **[LibreWolf](https://librewolf.net)** (via [Firefox add-on](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js))
-- **[Ghost](https://ghostbrowser.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js))
-- **[QQ](https://browser.qq.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js))
+- **[Google Chrome](https://www.chrome.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js))
+- **[Mozilla Firefox](https://www.firefox.com)** (via [Firefox add-on](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js))
+- **[Microsoft Edge](https://www.microsoft.com/edge)** (via [Edge add-on](https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js))
+- **[Opera](https://www.opera.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js))
+- **[Brave](https://brave.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js))
+- **[Vivaldi](https://vivaldi.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js))
+- **[LibreWolf](https://librewolf.net)** (via [Firefox add-on](https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js))
+- **[Ghost](https://ghostbrowser.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js))
+- **[QQ](https://browser.qq.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js))
 
 <div align="center">
 
@@ -179,7 +179,7 @@ ChatGPT Widescreen is compatible w/ the following browsers:
     <img alt="[获取 Edge 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[获取 Firefox 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
-<a href="https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js">
+<a href="https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js">
     <img alt="[获取 Greasemonkey 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
 
 <br>

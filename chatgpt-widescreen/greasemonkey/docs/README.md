@@ -1,6 +1,6 @@
 <a id="top"></a>
 
-<a href="https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@115fa4e/assets/images/tiles/marquee/tile-1400x560.png"></a>
+<a href="https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@115fa4e/assets/images/tiles/marquee/tile-1400x560.png"></a>
 
 <div align="center">
 
@@ -73,7 +73,7 @@
     - Tampermonkey for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
     - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) or [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) for Safari
 
-2. Install [ChatGPT Widescreen](https://scriptcat.org/scripts/code/6328/ChatGPT%20Widescreen%20%F0%9F%96%A5%EF%B8%8F.user.js) userscript (will load in manager installed above)
+2. Install [ChatGPT Widescreen](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js) userscript (will load in manager installed above)
 
 3. Visit [chatgpt.com](https://chatgpt.com) or [poe.com](https://poe.com) & mode toggles are added to chatbar!
 
