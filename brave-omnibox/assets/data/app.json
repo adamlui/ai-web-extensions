@@ -18,7 +18,7 @@
       "chrome": "https://chromewebstore.google.com/detail/brave-omnibox/obnaimomofoogphlhlaipeflcbneamnj/reviews",
       "edge": "https://microsoftedge.microsoft.com/addons/detail/brave-omnibox/meolmkblenpohjlndodfbgpcfioampim/reviews",
       "firefox": "https://addons.mozilla.org/firefox/addon/brave-omnibox",
-      "softonic": "https://brave-omnibox.en.softonic.com"
+      "softonic": "https://brave-omnibox.en.softonic.com/chrome/extension#add-user-review"
     },
     "support": "https://github.com/KudoAI/brave-omnibox/issues",
     "uninstall": "https://forms.gle/Jetu6BSezVws8nXb9"

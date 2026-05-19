@@ -16,7 +16,7 @@
     "review": {
       "chrome": "https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom/reviews",
       "edge": "https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih/reviews",
-      "softonic": "https://perplexity-omnibox.en.softonic.com"
+      "softonic": "https://perplexity-omnibox.en.softonic.com/chrome/extension#add-user-review"
     },
     "support": "https://github.com/KudoAI/perplexity-omnibox/issues",
     "uninstall": "https://forms.gle/UmVid74JscT6oc3f8"
