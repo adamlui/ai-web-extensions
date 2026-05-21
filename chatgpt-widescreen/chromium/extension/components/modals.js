@@ -1,4 +1,4 @@
-// Requires lib/<browser|chatgpt|css|dom>.js + <app|env>
+// Requires lib/<chatgpt|css|dom>.js + <app|env>
 
 window.modals = {
 

@@ -1,4 +1,4 @@
-// Requires components/buttons.js + lib/<browser|chatbar|feedback|settings|styles>.js +  <app|env>
+// Requires components/buttons.js + lib/<chatbar|feedback|settings|styles>.js +  <app|env>
 
 window.sync = {
 

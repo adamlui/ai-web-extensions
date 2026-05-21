@@ -1,4 +1,4 @@
-// Requires lib/<browser|chatgpt|dom|feedback>.js + <app|env> + sync.configToUI()
+// Requires lib/<chatgpt|dom|feedback>.js + <app|env> + sync.configToUI()
 
 window.toggles = {
 

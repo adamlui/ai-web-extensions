@@ -1,4 +1,4 @@
-// Requires lib/<browser|chatgpt|dom|styles>.js + <app|env>
+// Requires lib/<chatgpt|dom|styles>.js + <app|env>
 
 window.feedback = {
     notify(msg, pos = '', notifDuration = '', shadow = '') {
