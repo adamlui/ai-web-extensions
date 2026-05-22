@@ -6,8 +6,8 @@
             <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/icons/earth/white/icon32.svg">
             <img height=14 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/icons/earth/black/icon32.svg">
         </picture>
-        &nbsp;English |
-        <a href="https://github.com/KudoAI/googlegpt/tree/main/docs/zh-cn/#readme">简体中文</a> 
+        &nbsp;简体中文 |
+        <a href="https://github.com/KudoAI/googlegpt/#readme">English</a>
     </h6>
 </div>
 
@@ -23,60 +23,56 @@
 <br>
 
 <a href="../LICENSE.md">
-    <img alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img alt="[许可证：MIT]" src="https://img.shields.io/badge/执照-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/googlegpt/blob/main/greasemonkey/googlegpt.user.js">
-    <img height=32 src="https://img.shields.io/github/size/KudoAI/googlegpt/greasemonkey/googlegpt.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
+    <img height=32 src="https://img.shields.io/github/size/KudoAI/googlegpt/greasemonkey/googlegpt.user.js?label=文件大小&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/KudoAI/googlegpt">
-    <img alt="[CodeFactor grade]" src="https://img.shields.io/codefactor/grade/github/KudoAI/googlegpt?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
+    <img alt="[CodeFactor 评分]" src="https://img.shields.io/codefactor/grade/github/KudoAI/googlegpt?label=代码质量&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://chatgpt.js.org?utm_source=googlegpt&utm_content=github_shield">
-    <img alt="[Powered by chatgpt.js]" src="https://img.shields.io/badge/Powered_by-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img alt="[由 chatgpt.js 驱动]" src="https://img.shields.io/badge/由 chatgpt.js-驱动-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=KudoAI_googlegpt">
-    <img alt="[SonarCloud vulnerabilities]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3DKudoAI_googlegpt%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=Vulnerabilities&color=ffef00"></a>
+    <img alt="[SonarCloud 漏洞]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3DKudoAI_googlegpt%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=漏洞&color=ffef00"></a>
 <a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
-    <img alt="[Mentioned in Awesome]" src="https://img.shields.io/badge/Mentioned_in-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
-<a href="https://www.kudoai.com?utm_source=googlegpt&utm_content=github_shield">
-    <img alt="[Built by KudoAI]" src="https://img.shields.io/badge/Built_by-KudoAI-a07bfc?logo=esbuild&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img alt="[收录于 Awesome]" src="https://img.shields.io/badge/收录于-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/KudoAI/googlegpt?tab=stats">
-    <img alt="[jsDelivr stats]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/googlegpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
+    <img alt="[jsDelivr 统计数据]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/googlegpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr+请求&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
 <img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
-<h3>🤖 Bring AI chat & search summaries to Google Search, powered by the latest LLMs</h3>
+<h3>🤖 将由最新大型语言模型驱动的 AI 聊天与搜索摘要引入 Google 搜索</h3>
 
 <a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
-[Discuss](https://github.com/KudoAI/googlegpt/discussions) / 
-[Get support](https://github.com/KudoAI/googlegpt/issues) / 
-[Contact author](https://github.com/adamlui)
+[讨论][discuss] / [获取支持][support] / [联系作者][author]
     
 </div>
 
 <div align="center"><img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png"></div>
 <br><br>
 
-<div align="center"><img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@a363ecf/assets/images/screenshots/desktop/javascript-arrays-query/darkmode.png">
+<div align="center"><img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@a363ecf/assets/images/screenshots/zh-cn/desktop/javascript-arrays-query/darkmode.png">
 <br><br>
 
-<h3>Mobile compatible:</h3>
+<h3>兼容移动设备：</h3>
 
-<img width=265 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/screenshots/mobile/hi-there-query/darkmode.png">
+<img width=265 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/screenshots/zh-cn/mobile/hi-there-query/darkmode.png">
 
-<h3>Customizable color scheme:</h3>
+<h3>可自定义配色方案：</h3>
 
-<img width=400 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/screenshots/desktop/color-scheme-modal.gif">
+<img width=400 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/screenshots/zh-cn/desktop/color-scheme-modal.gif">
 
-<h3>Scalable display size:</h3>
+<h3>可伸缩显示尺寸：</h3>
 
-<img width=388 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/screenshots/desktop/font-size-slider.gif">
+<img width=388 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/screenshots/zh-cn/desktop/font-size-slider.gif">
 
-<h3>Math (KaTeX) rendering:</h3>
+<h3>数学（KaTeX）渲染：</h3>
 
-<img width=488 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/screenshots/desktop/math-formulas/dark-on-dark.png">
+<img width=488 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/screenshots/zh-cn/desktop/math-formulas/dark-on-dark.png">
 
-<h3>Highly customizable:</h3>
+<h3>高度可定制：</h3>
 
-<img width=633 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/screenshots/desktop/settings-modal.gif">
+<img width=633 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/screenshots/zh-cn/desktop/settings-modal.gif">
 
 </div>
 
@@ -84,30 +80,30 @@
 
 <hr>
 
-## 🚀 Installation
+## 🚀 安装
 
-1. Install a userscript manager, such as:
-    - **ScriptCat** for [Chrome](https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf), [Firefox](https://addons.mozilla.org/firefox/addon/scriptcat/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)
-    - **Tampermonkey** for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
-    - **Violentmonkey*** for [Firefox](https://addons.mozilla.org/firefox/addon/violentmonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao)
-    - **OrangeMonkey*** for [Chrome](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf)
-    - [**Stay**](https://apps.apple.com/app/stay-for-safari/id1591620171) or [**Userscripts**](https://apps.apple.com/app/userscripts/id1463298887) for Safari
+1. 安装一个用户脚本管理器，例如：
+    - **ScriptCat** 为了 [Chrome](https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf), [Firefox](https://addons.mozilla.org/firefox/addon/scriptcat/) 或者 [Edge](https://microsoftedge.microsoft.com/addons/detail/scriptcat/liilgpjgabokdklappibcjfablkpcekh)
+    - **Tampermonkey** 为了 [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) 或者 [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
+    - **Violentmonkey*** 为了 [Firefox](https://addons.mozilla.org/firefox/addon/violentmonkey/) 或者 [Edge](https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao)
+    - **OrangeMonkey*** 为了 [Chrome](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf)
+    - [**Stay**](https://apps.apple.com/app/stay-for-safari/id1591620171) 或者 [**Userscripts**](https://apps.apple.com/app/userscripts/id1463298887) 为了 Safari
 
-2. Install [**GoogleGPT**](https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js) userscript (will load in manager installed above)
+2. 安装 [**GoogleGPT**](https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js) 用户脚本（该脚本将加载至您此前安装的管理器中）
 
-3. Visit [**google.com**](https://google.com), type your search, engage bot!
-
-##### _*Streaming Mode not supported in Violentmonkey & OrangeMonkey_
+3. 访问 [**google.com**](https://google.com)，输入您的搜索内容，即可启用机器人！
+ 
+##### _*Violentmonkey 与 OrangeMonkey 不支持流式模式_
 
 <br><a href="https://github.com/sponsors/KudoAI"><img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/banners/sponsor/$10/banner1660x260.png"></a>
 
 <hr>
 
-## 🕶️ Proxy Mode
+## 🕶️ 代理模式
 
-Proxy API Mode (disabled by default) returns text responses using Google Gemma + GPT-4o, without the need for a chatgpt.com account.
+代理 API 模式（默认为禁用状态）通过结合使用 Google Gemma 与 GPT-4o 来返回文本响应，无需拥有 chatgpt.com 账号。
 
-When disabled, a ChatGPT account is required to fetch responses. If OpenAI API is acting unreliable, enable Proxy Mode like this:
+当此模式禁用时，必须使用 ChatGPT 账号才能获取响应。如果 OpenAI API 运行不稳定，请按如下步骤启用代理模式：
 
 <div align='center'>
 
@@ -120,9 +116,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <hr>
 
-## 🌐 Compatibility 
+## 🌐 兼容性 
 
-**GoogleGPT** is compatible w/ the following browsers:
+**GoogleGPT** 兼容以下浏览器：
 
 <table>
     <thead><th>Browser</th><th>Userscript manager</th><th>Install browser</th></thead>
@@ -132,7 +128,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://www.chrome.com" title="Chrome">
                     <img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/chrome/icon16.png"
                          width=16 alt="[Install]"></a>
-                Chrome, dev builds or Chromium-based browsers (Windows, macOS, Linux)
+                Chrome、开发者版本或基于 Chromium 的浏览器（Windows、macOS、Linux）
             </td>
             <td> <!-- Userscript manager -->
                 <a href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
@@ -224,7 +220,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://www.microsoft.com/edge" title="Edge">
                     <img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"
                          width=16 alt="[Install]"></a>
-                Edge or dev builds (Windows, macOS, Linux)
+                Edge 或开发版构建（Windows、macOS、Linux）
             </td>
             <td> <!-- Userscript manager -->
                 <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
@@ -273,7 +269,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://play.google.com/store/apps/details?id=com.microsoft.emmx" title="Edge for Android">
                     <img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/edge/icon16.png"
                          width=16 alt="[Install]"></a>
-                Edge or dev builds (Android)
+                Edge 或开发版构建（Android）
             </td>
             <td> <!-- Userscript manager -->
                 <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@2793398/assets/images/icons/userscript-managers/tampermonkey/icon28.png">
@@ -309,7 +305,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://www.firefox.com" title="Firefox">
                     <img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"
                          width=16 alt="[Install]"></a>
-                Firefox, dev builds or Gecko-based browsers (Windows, macOS, Linux)
+                Firefox、开发版或基于 Gecko 的浏览器（Windows、macOS、Linux）
             </td>
             <td> <!-- Userscript manager -->
                 <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
@@ -355,7 +351,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
                 <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" title="Firefox for Android">
                     <img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/browsers/firefox/icon16.png"
                          width=16 alt="[Install]"></a>
-                Firefox, dev builds or Gecko-based browsers (Android)
+                Firefox、开发版或基于 Gecko 的浏览器（Android）
             </td>
             <td> <!-- Userscript manager -->
                 <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/"
@@ -546,9 +542,9 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 </table>
 
 <h5>
-    <i>1. If you are installing Tampermonkey or OrangeMonkey for a Chromium browser, you must enable Developer Mode in chrome://extensions for userscripts to function</i><br><br>
-    <i>2. Violentmonkey & OrangeMonkey do not support Streaming Mode</i><br><br>
-    <i>3. If you are installing a userscript manager for an Opera browser, you must allow it access to search page results in opera://extensions</i>
+    <i>1. 如果您是在基于 Chromium 的浏览器上安装 Tampermonkey 或 OrangeMonkey，必须在 chrome://extensions 中开启“开发者模式”，用户脚本才能正常运行</i><br><br>
+    <i>2. Violentmonkey 和 OrangeMonkey 不支持“流式模式”</i><br><br>
+    <i>3. 如果您是在 Opera 浏览器上安装用户脚本管理器，必须在 opera://extensions 中允许其访问搜索结果页面</i>
 </h5>
 
 <br>
@@ -557,9 +553,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install GoogleGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/googlegpt.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
-[Discuss](https://github.com/KudoAI/googlegpt/discussions) /
-[Get support](https://github.com/KudoAI/googlegpt/issues) / 
-[More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
+[讨论][discuss] / [获取支持][support] / [更多 ChatGPT 用户脚本][userscripts]
 
 </div>
 
@@ -567,7 +561,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <hr>
 
-## ⚡ Dependencies
+## ⚡ 依赖项
 
 <h6>
 <div align="center">
@@ -577,11 +571,11 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
     <img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/logos/dependencies/collage/black.png">
 </picture>
 
-[chatgpt.js](https://chatgpt.js.org) © 2023–2026 [KudoAI](https://kudoai.com) & contributors under the MIT license
-<br>[generate-ip](https://generate-ip.org) © 2024–2026 [Adam Lui](https://github.com/adamlui) & contributors under the MIT license
-<br>[highlight.js](https://highlightjs.org) © 2006 [Ivan Sagalaev](https://github.com/isagalaev) under the BSD 3-Clause license
-<br>[KaTeX](https://katex.org) © 2013–2020 [Khan Academy](https://www.khanacademy.org) & other contributors under the MIT license
-<br>[Marked](https://marked.js.org) © 2018+ [MarkedJS](https://github.com/markedjs) © 2011–2018 [Christopher Jeffrey](https://github.com/chjj) under the MIT license
+[chatgpt.js](https://chatgpt.js.org) © 2023–2026 [KudoAI](https://kudoai.com) 及贡献者，基于 MIT 许可证发布。
+<br>[generate-ip](https://generate-ip.org) © 2024–2026 [Adam Lui][author] 及贡献者，基于 MIT 许可证
+<br>[highlight.js](https://highlightjs.org) © 2006 [Ivan Sagalaev](https://github.com/isagalaev)，基于 BSD 3-Clause 许可证
+<br>[KaTeX](https://katex.org) © 2013–2020 [Khan Academy](https://www.khanacademy.org) 及其他贡献者，基于 MIT 许可证
+<br>[Marked](https://marked.js.org) © 2018+ [MarkedJS](https://github.com/markedjs) © 2011–2018 [Christopher Jeffrey](https://github.com/chjj)，基于 MIT 许可证
 <br><br>
 
 </div>
@@ -591,46 +585,46 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <!-- CONTRIBUTORS -->
 
-## 🧠 Contributors
+## 🧠 贡献者
 
 <a href="https://github.com/KudoAI/duckduckgpt/graphs/contributors">
     <img height=45 width="auto" src="https://contrib.rocks/image?repo=KudoAI/duckduckgpt" /></a>
 <br><br>
 
-All contributions are very welcome!
+非常欢迎一切贡献！
 
 <hr>
 
-## 🤖 More ChatGPT extensions
+## 🤖 更多 ChatGPT 扩展
 
-For even more ChatGPT extensions, visit:
+如需更多 ChatGPT 扩展，请访问：
 
-<https://github.com/adamlui/ai-web-extensions>
+<https://github.com/adamlui/ai-web-extensions/tree/main/docs/zh-cn/#readme>
 
 <hr>
 
-## 📜 Related scripts
+## 📜 相关脚本
 
 ### <img src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/icons/app/black-gold-teal/icon48.png" width=17> [AmazonGPT](https://amazongpt.kudoai.com) &nbsp;<a href="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/wolfram-award/letter.pdf"><img height=20 src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/badges/wolfram-award/gold-badge.png"></a>
 
-> Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
-<br>[Install](https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js) /
-[Readme](https://amazongpt.kudoai.com/#readme) /
-[Discuss](https://github.com/KudoAI/amazongpt/discussions)
+> 为亚马逊购物体验增添 AI 聊天及商品/类目摘要功能——由最新大型语言模型（LLM）强力驱动！
+<br>[安装](https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js) /
+[自述文件](https://github.com/KudoAI/amazongpt/#readme) /
+[讨论](https://github.com/KudoAI/amazongpt/discussions)
 
-### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT 无限](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/zh-cn/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
 
-> Generate endless answers from all-knowing ChatGPT (in any language!)
-<br>[Install](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#-installation) / 
-[Readme](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#readme) / 
-[Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
+> 从全知全能的 ChatGPT 获取源源不断的答案（支持任意语言！）
+<br>[安装](https://github.com/adamlui/chatgpt-infinity/#-installation) / 
+[自述文件](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/zh-cn/#readme) / 
+[讨论](https://github.com/adamlui/chatgpt-infinity/discussions)
 
 ### <img src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/icons/app/icon48.png" width=18> [BraveGPT](https://bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="auto" /></a>
 
-> Bring the magic of ChatGPT to Brave Search (powered by GPT-4o!)
-<br>[Install](https://docs.bravegpt.com/#-installation) /
-[Readme](https://docs.bravegpt.com/#readme) /
-[Discuss](https://github.com/KudoAI/bravegpt/discussions)
+> 将 ChatGPT 的魔力带入 Brave Search
+<br>[安装](https://github.com/KudoAI/bravegpt/#-installation) /
+[自述文件](https://github.com/KudoAI/bravegpt/#readme) /
+[讨论](https://github.com/KudoAI/bravegpt/discussions)
 
 <img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
@@ -640,3 +634,8 @@ For even more ChatGPT extensions, visit:
 <a href="#top">Back to top ↑</a>
 
 </div>
+
+[author]: https://github.com/adamlui
+[discuss]: https://github.com/KudoAI/googlegpt/discussions
+[support]: https://github.com/KudoAI/googlegpt/issues
+[userscripts]: https://github.com/adamlui/userscripts/tree/master/chatgpt/docs/zh-cn/#readme
