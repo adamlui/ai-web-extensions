@@ -5,7 +5,7 @@
             <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;हिंदी |
-        <a href="../SECURITY.md">English</a>
+        <a href="https://github.com/adamlui/autoclear-chatgpt-history/blob/main/docs/SECURITY.md">English</a>
     </h6>
 </div>
 

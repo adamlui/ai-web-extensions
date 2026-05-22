@@ -5,7 +5,7 @@
             <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@a65228a/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;简体中文 |
-        <a href="../../LICENSE.md">English</a>
+        <a href="https://github.com/adamlui/chatgpt-auto-continue/blob/main/chromium/LICENSE.md">English</a>
     </h6>
 </div>
 

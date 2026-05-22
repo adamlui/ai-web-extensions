@@ -5,7 +5,7 @@
             <img height=14 src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;English |
-        <a href="hi/PRIVACY.md">हिंदी</a>
+        <a href="https://github.com/KudoAI/bravegpt/blob/main/docs/PRIVACY.md">हिंदी</a>
     </h6>
 </div>
 

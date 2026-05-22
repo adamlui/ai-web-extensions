@@ -5,8 +5,8 @@
             <img height=14 src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;हिंदी |
-        <a href="../SECURITY.md">English</a> |
-        <a href="../zh-cn/SECURITY.md">简体中文</a>
+        <a href="https://github.com/KudoAI/bravegpt/blob/main/docs/SECURITY.md">English</a>
+        <a href="https://github.com/KudoAI/bravegpt/blob/main/docs/zh-cn/SECURITY.md">简体中文</a>
     </h6>
 </div>
 

@@ -5,8 +5,8 @@
             <img height=14 src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox@d722a3b/assets/images/icons/earth/black/icon32.svg>
         </picture>
         &nbsp;हिंदी |
-        <a href="../PRIVACY.md">English</a> |
-        <a href="../zh-cn/PRIVACY.md">简体中文</a>
+        <a href="https://github.com/KudoAI/brave-omnibox/blob/main/chromium/docs/PRIVACY.md">English</a> |
+        <a href="https://github.com/KudoAI/brave-omnibox/blob/main/chromium/docs/zh-cn/PRIVACY.md">简体中文</a>
     </h6>
 </div>
 
