@@ -22,7 +22,7 @@
 
 <br>
 
-<a href="../LICENSE.md">
+<a href="https://github.com/KudoAI/googlegpt/blob/main/docs/zh-cn/LICENSE.md">
     <img alt="[许可证：MIT]" src="https://img.shields.io/badge/执照-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/googlegpt/blob/main/greasemonkey/googlegpt.user.js">
     <img height=32 src="https://img.shields.io/github/size/KudoAI/googlegpt/greasemonkey/googlegpt.user.js?label=文件大小&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
