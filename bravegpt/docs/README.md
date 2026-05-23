@@ -628,7 +628,7 @@ For even more ChatGPT extensions, visit:
 ### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/app/white/icon32.png"><img width=17 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/icons/app/black/icon32.png"></picture> [GoogleGPT](https://github.com/KudoAI/googlegpt/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts/#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@658fb06/assets/images/badges/awesome/badge.svg"></a>
 
 > Bring the magic of AI to Google Search (powered by Google Gemma + GPT-4o!)
-<br>[Install](https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js) /
+<br>[Install](https://scriptcat.org/scripts/code/6371/googlegpt.user.js) /
 [Readme](https://github.kudoai.com/googlegpt/#readme) /
 [Discuss](https://github.kudoai.com/googlegpt/discussions)
 

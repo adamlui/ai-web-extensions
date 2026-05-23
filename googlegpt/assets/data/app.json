@@ -15,6 +15,6 @@
     "publisher": "https://www.kudoai.com",
     "relatedExtensions": "https://aiwebextensions.com",
     "support": "https://github.com/KudoAI/googlegpt/issues",
-    "update": { "gm": "https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js" }
+    "update": { "gm": "https://scriptcat.org/scripts/code/6371/googlegpt.meta.js" }
   }
 }

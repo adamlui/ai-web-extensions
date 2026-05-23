@@ -42,7 +42,7 @@
 
 <h3>🤖 将由最新大型语言模型驱动的 AI 聊天与搜索摘要引入 Google 搜索</h3>
 
-<a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://scriptcat.org/scripts/code/6371/googlegpt.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [讨论][discuss] / [获取支持][support] / [联系作者][author]
     
@@ -89,7 +89,7 @@
     - **OrangeMonkey*** 为了 [Chrome](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf)
     - [**Stay**](https://apps.apple.com/app/stay-for-safari/id1591620171) 或者 [**Userscripts**](https://apps.apple.com/app/userscripts/id1463298887) 为了 Safari
 
-2. 安装 [**GoogleGPT**](https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js) 用户脚本（该脚本将加载至您此前安装的管理器中）
+2. 安装 [**GoogleGPT**](https://scriptcat.org/scripts/code/6371/googlegpt.user.js) 用户脚本（该脚本将加载至您此前安装的管理器中）
 
 3. 访问 [**google.com**](https://google.com)，输入您的搜索内容，即可启用机器人！
  
@@ -551,7 +551,7 @@
 
 <div align="center">
 
-<a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install GoogleGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/googlegpt.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://scriptcat.org/scripts/code/6371/googlegpt.user.js"><img style="height: 45px" alt="[Install GoogleGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/googlegpt.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
 [讨论][discuss] / [获取支持][support] / [更多 ChatGPT 用户脚本][userscripts]
 

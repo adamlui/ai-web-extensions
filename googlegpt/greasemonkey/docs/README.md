@@ -37,7 +37,7 @@
 
 <h3>🤖 Bring AI chat & search summaries to Google Search, powered by the latest LLMs</h3>
 
-<a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://scriptcat.org/scripts/code/6371/googlegpt.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 
 [Discuss][discuss] / [Get support][support] / [Contact author][author]
     
@@ -84,7 +84,7 @@
     - **OrangeMonkey*** for [Chrome](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf)
     - [**Stay**](https://apps.apple.com/app/stay-for-safari/id1591620171) or [**Userscripts**](https://apps.apple.com/app/userscripts/id1463298887) for Safari
 
-2. Install [**GoogleGPT**](https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js) userscript (will load in manager installed above)
+2. Install [**GoogleGPT**](https://scriptcat.org/scripts/code/6371/googlegpt.user.js) userscript (will load in manager installed above)
 
 3. Visit [**google.com**](https://google.com), type your search, engage bot!
 
@@ -546,7 +546,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <div align="center">
 
-<a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install GoogleGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/googlegpt.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
+<a href="https://scriptcat.org/scripts/code/6371/googlegpt.user.js"><img style="height: 45px" alt="[Install GoogleGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/googlegpt.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 
 [Discuss][discuss] / [Get support][support] / [Contact author][author] / [More ChatGPT userscripts][chatgpt-userscripts]
 
