@@ -176,7 +176,7 @@ window.settings = {
             const ctrl = settings.controls?.[key]
             if (val != undefined && ( // validate stored val
                     (ctrl?.type == 'toggle' && typeof val != 'boolean')
-                    || (ctrl?.type == 'slider' && isNaN(parseFloat(val)))
+                 || (ctrl?.type == 'slider' && isNaN(parseFloat(val)))
             )) val = undefined
             return val ?? (ctrl?.defaultVal ?? (ctrl?.type == 'slider' ? 100 : false))
         }
