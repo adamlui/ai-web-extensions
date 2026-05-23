@@ -38,7 +38,7 @@
 <h3>🤖 Bring AI chat & search summaries to Google Search, powered by the latest LLMs</h3>
 
 <a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
-<br>
+
 [Discuss][discuss] / [Get support][support] / [Contact author][author]
     
 </div>
@@ -547,12 +547,10 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 <div align="center">
 
 <a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install GoogleGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/googlegpt.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
-<br>
+
 [Discuss][discuss] / [Get support][support] / [Contact author][author] / [More ChatGPT userscripts][chatgpt-userscripts]
 
 </div>
-
-<br>
 
 <hr>
 
@@ -591,17 +589,17 @@ For even more ChatGPT extensions, visit:
 ### <img src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/icons/app/black-gold-teal/icon48.png" width=17> [AmazonGPT](https://amazongpt.kudoai.com)
 
 > Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
-<br>[Install](https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js) / [Readme](https://amazongpt.kudoai.com/#readme) / [Discuss](https://github.com/KudoAI/amazongpt/discussions)
+[Install](https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js) / [Readme](https://amazongpt.kudoai.com/#readme) / [Discuss](https://github.com/KudoAI/amazongpt/discussions)
 
 ### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://github.com/adamlui/chatgpt-infinity/#readme)
 
 > Generate endless answers from all-knowing ChatGPT (in any language!)
-<br>[Install](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#-installation) / [Readme](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#readme) / [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
+[Install](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#-installation) / [Readme](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#readme) / [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
 ### <img src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/icons/app/icon48.png" width=18> [BraveGPT](https://bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="auto" /></a>
 
 > Bring the magic of ChatGPT to Brave Search (powered by GPT-4o!)
-<br>[Install](https://docs.bravegpt.com/#-installation) / [Readme](https://docs.bravegpt.com/#readme) / [Discuss](https://github.com/KudoAI/bravegpt/discussions)
+[Install](https://docs.bravegpt.com/#-installation) / [Readme](https://docs.bravegpt.com/#readme) / [Discuss](https://github.com/KudoAI/bravegpt/discussions)
 
 <img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
