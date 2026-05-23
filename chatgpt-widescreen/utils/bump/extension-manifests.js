@@ -30,7 +30,7 @@
     // Import BUMP UTILS
     fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
     fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
-        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions/utils/bump/lib/bump.min.mjs')).text()))
+        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f63b650/utils/bump/lib/bump.min.mjs')).text()))
     const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
 
     // Init manifest PATHS
