@@ -32,7 +32,7 @@
     <img alt="[由 chatgpt.js 驱动]" src="https://img.shields.io/badge/由 chatgpt.js-驱动-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=KudoAI_googlegpt">
     <img alt="[SonarCloud 漏洞]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3DKudoAI_googlegpt%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=漏洞&color=ffef00"></a>
-<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
+<a href="https://github.com/awesome-scripts/awesome-userscripts/#-chatgpt">
     <img alt="[收录于 Awesome]" src="https://img.shields.io/badge/收录于-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/KudoAI/googlegpt?tab=stats">
     <img alt="[jsDelivr 统计数据]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/googlegpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr+请求&labelColor=464646&color=2bbbd8"></a>

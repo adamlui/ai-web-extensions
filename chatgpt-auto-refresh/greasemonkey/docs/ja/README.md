@@ -25,7 +25,7 @@
     <img alt="[搭載 chatgpt.js]" src="https://img.shields.io/badge/%E6%90%AD%E8%BC%89-chatgpt.js-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_chatgpt-auto-refresh">
     <img alt="[SonarCloud 脆弱性]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3Dadamlui_chatgpt-auto-refresh%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E8%84%86%E5%BC%B1%E6%80%A7&color=ffef00"></a>
-<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt">
+<a href="https://github.com/awesome-scripts/awesome-userscripts/#-chatgpt">
     <img alt="[言及されている Awesome]" src="https://img.shields.io/badge/%E8%A8%80%E5%8F%8A%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/adamlui/chatgpt-auto-refresh?tab=stats">
     <img alt="[jsDelivr 統計]" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-auto-refresh?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88&labelColor=464646&color=2bbbd8"></a>
@@ -183,7 +183,7 @@ ChatGPT 自動更新 は、[ScriptCat](https://docs.scriptcat.org)、[Violentmon
 [Readme](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/#readme) /
 [ディスカッション](https://github.com/adamlui/chatgpt-widescreen/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT 自動継続](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT 自動継続](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts/#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
 > ChatGPT の応答が中断されたときに、自動的に回答の生成を継続します。<br>
 [インストール](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#-インストール) /
 [Readme](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#readme) /
