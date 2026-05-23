@@ -25,17 +25,17 @@
 <a href="https://github.com/KudoAI/googlegpt/blob/main/docs/zh-cn/LICENSE.md">
     <img alt="[许可证：MIT]" src="https://img.shields.io/badge/执照-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/googlegpt/blob/main/greasemonkey/googlegpt.user.js">
-    <img height=32 src="https://img.shields.io/github/size/KudoAI/googlegpt/greasemonkey/googlegpt.user.js?label=文件大小&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
+    <img alt="[文件大小]" height=32 src="https://img.shields.io/github/size/KudoAI/googlegpt/greasemonkey/googlegpt.user.js?label=%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/KudoAI/googlegpt">
-    <img alt="[CodeFactor 评分]" src="https://img.shields.io/codefactor/grade/github/KudoAI/googlegpt?label=代码质量&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
+    <img alt="[CodeFactor 评分]" src="https://img.shields.io/codefactor/grade/github/KudoAI/googlegpt?label=%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F&logo=codefactor&logoColor=white&labelColor=464646&color=b3ff68&style=for-the-badge"></a>
 <a href="https://chatgpt.js.org?utm_source=googlegpt&utm_content=github_shield">
     <img alt="[由 chatgpt.js 驱动]" src="https://img.shields.io/badge/由 chatgpt.js-驱动-black?logo=gamejolt&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://sonarcloud.io/component_measures?metric=vulnerabilities&id=KudoAI_googlegpt">
-    <img alt="[SonarCloud 漏洞]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3DKudoAI_googlegpt%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=漏洞&color=ffef00"></a>
+    <img alt="[SonarCloud 漏洞]" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsonarcloud.io%2Fapi%2Fmeasures%2Fcomponent%3Fcomponent%3DKudoAI_googlegpt%26metricKeys%3Dvulnerabilities&query=%24.component.measures.0.value&style=for-the-badge&logo=sonar&logoColor=white&labelColor=464646&label=%E6%BC%8F%E6%B4%9E&color=ffef00"></a>
 <a href="https://github.com/awesome-scripts/awesome-userscripts/#-chatgpt">
     <img alt="[收录于 Awesome]" src="https://img.shields.io/badge/收录于-Awesome-cb48dc?logo=awesomelists&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.jsdelivr.com/package/gh/KudoAI/googlegpt?tab=stats">
-    <img alt="[jsDelivr 统计数据]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/googlegpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr+请求&labelColor=464646&color=2bbbd8"></a>
+    <img alt="[jsDelivr 统计数据]" src="https://img.shields.io/jsdelivr/gh/hm/KudoAI/googlegpt?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20%E8%AF%B7%E6%B1%82&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
 <img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
