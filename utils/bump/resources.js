@@ -9,8 +9,8 @@
     'use strict'
 
     // Parse ARGS
-    const args = process.argv.slice(2)
-    const config = { cacheMode: args.some(arg => arg.startsWith('--cache')) }
+    const args = process.argv.slice(2),
+          config = { cacheMode: args.some(arg => arg.startsWith('--cache')) }
 
     // Import LIBS
     const fs = require('fs'), // to read/write files
