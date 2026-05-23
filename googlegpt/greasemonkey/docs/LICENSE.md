@@ -5,8 +5,8 @@
             <img height=14 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;English |
-        <a href="docs/zh-cn/LICENSE.md">简体中文</a> |
-        <a href="docs/hi/LICENSE.md">हिंदी</a>
+        <a href="https://github.com/KudoAI/googlegpt/tree/main/docs/zh-cn/LICENSE.md">简体中文</a> |
+        <a href="https://github.com/KudoAI/googlegpt/tree/main/docs/hi/LICENSE.md">हिंदी</a>
     </h6>
 </div>
 
