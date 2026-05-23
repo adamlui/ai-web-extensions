@@ -2,11 +2,7 @@
 
 <div align="right">
     <h6>
-        <picture>
-            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/icons/earth/white/icon32.svg">
-            <img height=14 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/icons/earth/black/icon32.svg">
-        </picture>
-        &nbsp;English |
+        English |
         <a href="https://github.com/KudoAI/googlegpt/tree/main/docs/zh-cn/#readme">简体中文</a> 
     </h6>
 </div>
@@ -15,14 +11,11 @@
 
 <br>
 
-<picture>
-    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/logos/app/with-reflection/white.png">
-    <img alt="GoogleGPT" width=888 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/logos/app/with-reflection/black.png">
-</picture>
+<img alt="GoogleGPT" width=888 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/logos/app/with-reflection/black.png">
 
 <br>
 
-<a href="../LICENSE.md">
+<a href="https://github.com/KudoAI/googlegpt/blob/main/docs/LICENSE.md">
     <img alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/googlegpt/blob/main/greasemonkey/googlegpt.user.js">
     <img height=32 src="https://img.shields.io/github/size/KudoAI/googlegpt/greasemonkey/googlegpt.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
@@ -46,9 +39,7 @@
 
 <a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/this-script.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
-[Discuss](https://github.com/KudoAI/googlegpt/discussions) / 
-[Get support](https://github.com/KudoAI/googlegpt/issues) / 
-[Contact author](https://github.com/adamlui)
+[Discuss][discuss] / [Get support][support] / [Contact author][author]
     
 </div>
 
@@ -557,9 +548,7 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <a href="https://raw.githubusercontent.com/KudoAI/googlegpt/refs/heads/main/greasemonkey/googlegpt.user.js"><img style="height: 45px" alt="[Install GoogleGPT]" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/install/googlegpt.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/buttons/greasy-fork/help.svg"></a>
 <br>
-[Discuss](https://github.com/KudoAI/googlegpt/discussions) /
-[Get support](https://github.com/KudoAI/googlegpt/issues) / 
-[More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
+[Discuss][discuss] / [Get support][support] / [Contact author][author] / [More ChatGPT userscripts][chatgpt-userscripts]
 
 </div>
 
@@ -569,23 +558,11 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 ## ⚡ Dependencies
 
-<h6>
 <div align="center">
 
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/logos/dependencies/collage/white.png">
-    <img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/logos/dependencies/collage/black.png">
-</picture>
-
-[chatgpt.js](https://chatgpt.js.org) © 2023–2026 [KudoAI](https://kudoai.com) & contributors under the MIT license
-<br>[generate-ip](https://generate-ip.org) © 2024–2026 [Adam Lui](https://github.com/adamlui) & contributors under the MIT license
-<br>[highlight.js](https://highlightjs.org) © 2006 [Ivan Sagalaev](https://github.com/isagalaev) under the BSD 3-Clause license
-<br>[KaTeX](https://katex.org) © 2013–2020 [Khan Academy](https://www.khanacademy.org) & other contributors under the MIT license
-<br>[Marked](https://marked.js.org) © 2018+ [MarkedJS](https://github.com/markedjs) © 2011–2018 [Christopher Jeffrey](https://github.com/chjj) under the MIT license
-<br><br>
+<img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/logos/dependencies/collage/black.png">
 
 </div>
-</h6>
 
 <hr>
 
@@ -611,26 +588,20 @@ For even more ChatGPT extensions, visit:
 
 ## 📜 Related scripts
 
-### <img src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/icons/app/black-gold-teal/icon48.png" width=17> [AmazonGPT](https://amazongpt.kudoai.com) &nbsp;<a href="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/wolfram-award/letter.pdf"><img height=20 src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/badges/wolfram-award/gold-badge.png"></a>
+### <img src="https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@579eef3/assets/images/icons/app/black-gold-teal/icon48.png" width=17> [AmazonGPT](https://amazongpt.kudoai.com)
 
 > Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
-<br>[Install](https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js) /
-[Readme](https://amazongpt.kudoai.com/#readme) /
-[Discuss](https://github.com/KudoAI/amazongpt/discussions)
+<br>[Install](https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js) / [Readme](https://amazongpt.kudoai.com/#readme) / [Discuss](https://github.com/KudoAI/amazongpt/discussions)
 
-### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://github.com/adamlui/chatgpt-infinity/#readme) &nbsp;<a href="https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=featured-by-google-badge"><img height=20 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/chrome-web-store/featured-by-google/badge500x91.png"></a>
+### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/infinity-symbol/circled/icon32.png"> [ChatGPT Infinity](https://github.com/adamlui/chatgpt-infinity/#readme)
 
 > Generate endless answers from all-knowing ChatGPT (in any language!)
-<br>[Install](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#-installation) / 
-[Readme](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#readme) / 
-[Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
+<br>[Install](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#-installation) / [Readme](https://github.com/adamlui/chatgpt-infinity/tree/main/docs/#readme) / [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions)
 
 ### <img src="https://cdn.jsdelivr.net/gh/KudoAI/bravegpt/assets/images/icons/app/icon48.png" width=18> [BraveGPT](https://bravegpt.com) &nbsp;<a href="https://www.producthunt.com/posts/bravegpt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=385630&theme=light" width="112" height="auto" /></a>
 
 > Bring the magic of ChatGPT to Brave Search (powered by GPT-4o!)
-<br>[Install](https://docs.bravegpt.com/#-installation) /
-[Readme](https://docs.bravegpt.com/#readme) /
-[Discuss](https://github.com/KudoAI/bravegpt/discussions)
+<br>[Install](https://docs.bravegpt.com/#-installation) / [Readme](https://docs.bravegpt.com/#readme) / [Discuss](https://github.com/KudoAI/bravegpt/discussions)
 
 <img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
@@ -640,3 +611,8 @@ For even more ChatGPT extensions, visit:
 <a href="#top">Back to top ↑</a>
 
 </div>
+
+[author]: https://github.com/adamlui
+[chatgpt-userscripts]: https://github.com/adamlui/userscripts/tree/master/chatgpt
+[discuss]: https://github.com/KudoAI/googlegpt/discussions
+[support]: https://github.com/KudoAI/googlegpt/issues
