@@ -605,8 +605,7 @@ For even more ChatGPT extensions, visit:
 
 <div align="center">
 
-<a href="https://github.com/adamlui/userscripts">**More userscripts**</a> / 
-<a href="#top">Back to top ↑</a>
+<a href="https://github.com/adamlui/userscripts">**More userscripts**</a> / <a href="#top">Back to top ↑</a>
 
 </div>
 
