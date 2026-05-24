@@ -180,7 +180,7 @@ ChatGPT 自动刷新 与使用 [ScriptCat](https://docs.scriptcat.org)、[Violen
 [自述文件](https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/zh-cn/#readme) /
 [讨论](https://github.com/adamlui/chatgpt-widescreen/discussions)
 
-### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT 自动继续](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts/#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@86be032/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@86be032/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT 自动继续](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts/#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
 > 当 ChatGPT 响应被切断时自动继续生成答案。<br>
 [安装](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/zh-cn/#-如何安装) /
 [自述文件](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/zh-cn/#readme) /
