@@ -51,7 +51,7 @@
     chatgpt.isIdle = function() { // replace waiting for chat to start in case of interrupts
         return new Promise(resolve => { // when stop btn missing
             new MutationObserver((_, obs) => {
-                if (!chatgpt.getStopBtn()) { obs.disconnect(); resolve() }
+                if (!chatgpt.getStopButton()) { obs.disconnect(); resolve() }
             }).observe(document.body, { childList: true, subtree: true })
         })
     }

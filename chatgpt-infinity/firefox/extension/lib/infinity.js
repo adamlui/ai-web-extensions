@@ -30,7 +30,7 @@ window.infinity = {
     },
 
     deactivate() {
-        if (chatgpt.getStopBtn()) chatgpt.stop()
+        if (chatgpt.getStopButton()) chatgpt.stop()
         clearTimeout(infinity.isActive) ; infinity.isActive = null
     },
 
