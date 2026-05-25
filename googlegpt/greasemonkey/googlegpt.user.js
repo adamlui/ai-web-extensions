@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2026.5.25.1
+// @version                  2026.5.25.2
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@b8d34c0/assets/images/icons/app/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@b8d34c0/assets/images/icons/app/black/icon64.png
@@ -382,6 +382,7 @@
 // @connect                  chatgpt.com
 // @connect                  fanyi.sogou.com
 // @connect                  raw.githubusercontent.com
+// @connect                  scriptcat.org
 // @require                  https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4.4.0/dist/chatgpt.min.js#sha256-FA4s3czaGF1fDzc/vJBTbvxtSFhO2vkt1fRPstzkD1E=
 // @require                  https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require                  https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
@@ -2263,8 +2264,7 @@
             // Hack BG
             css.addRisingParticles(modal)
             setTimeout(() => { // dim bg
-                modal.parentNode.style.backgroundColor = `rgba(67,70,72,${
-                    env.ui.app.scheme == 'dark' ? 0.62 : 0.33 })`
+                modal.parentNode.style.backgroundColor = `rgba(67,70,72,${ env.ui.app.scheme == 'dark' ? 0.62 : 0.33 })`
                 modal.parentNode.classList.add('animated')
             }, 100) // delay for transition fx
         },
