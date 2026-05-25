@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.5.24
+// @version             2026.5.25
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -254,7 +254,7 @@
 // @match               *://poe.com/*
 // @connect             cdn.jsdelivr.net
 // @connect             scriptcat.org
-// @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@3.9.0/dist/chatgpt.min.js#sha256-XyrLEk81vg4/zgOeYDWtugRQKJvrWEefACp0EfwMVHE=
+// @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4.4.0/dist/chatgpt.min.js#sha256-FA4s3czaGF1fDzc/vJBTbvxtSFhO2vkt1fRPstzkD1E=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/userscripts@ff2baba/assets/js/lib/css.js/dist/css.min.js#sha256-zf9s8C0cZ/i+gnaTIUxa0+RpDYpsJVlyuV5L2q4KUdA=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/userscripts@ff2baba/assets/js/lib/dom.js/dist/dom.min.js#sha256-nTc2by3ZAz6AR7B8fOqjloJNETvjAepe15t2qlghMDo=
 // @require             https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
