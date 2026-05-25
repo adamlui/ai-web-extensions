@@ -11,6 +11,7 @@
     "contributors": "https://github.com/KudoAI/googlegpt/tree/main/docs/#-contributors",
     "discuss": "https://github.com/KudoAI/googlegpt/discussions",
     "donate": { "github": "https://github.com/sponsors/KudoAI" },
+    "download": { "gm": "https://scriptcat.org/scripts/code/6371/googlegpt.user.js" },
     "github": "https://github.com/KudoAI/googlegpt",
     "publisher": "https://www.kudoai.com",
     "relatedExtensions": "https://aiwebextensions.com",
