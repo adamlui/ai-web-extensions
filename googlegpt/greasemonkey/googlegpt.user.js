@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2026.5.23.3
+// @version                  2026.5.24
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@b8d34c0/assets/images/icons/app/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@b8d34c0/assets/images/icons/app/black/icon64.png
@@ -455,7 +455,7 @@
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
-            app: '6369632', // for cached <app|messages>.json
+            app: '545f482', // for cached <app|messages>.json
             aiweb: '0ae4dce' // for cached ai-chat-apis.json5 + <code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         }
     }
@@ -2862,7 +2862,7 @@
                             + `${app.urls.github}/commits/main/greasemonkey/${app.slug}.user.js`
                         + `">${app.msgs.link_viewChanges}</a>`,
                     function update() { // button
-                        modals.safeWinOpen(`${app.urls.update.gm}?t=${Date.now()}`)
+                        modals.safeWinOpen(`${app.urls.download.gm}?t=${Date.now()}`)
                     }, '', modals.update.width
                 )
                 if (!env.browser.language.startsWith('en')) { // localize button labels
