@@ -1,7 +1,7 @@
 // Requires lib/<settings|styles>.js + toolbarMenu.refresh() (Greasemonkey only)
 
 window.sync = {
-    configToUI: async function({ updatedKey } = {}) { // on toolbar popup toggles + ChatGPT tab activations
+    async configToUI({ updatedKey } = {}) { // on toolbar popup toggles + ChatGPT tab activations
         await settings.load('extensionDisabled', Object.keys(settings.controls))
         toggles.sidebar.update.state() // from extension/IM/TV toggled or tab newly active
         if (updatedKey == 'infinityMode') infinity[app.config.infinityMode ? 'activate' : 'deactivate']()
