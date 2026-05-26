@@ -27,7 +27,7 @@
     },
     "support": "https://github.com/adamlui/chatgpt-infinity/issues",
     "uninstall": "https://forms.gle/T1hCZ5A5yAnPfLTn8",
-    "update": { "gm": "https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js" },
+    "update": { "gm": "https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js" },
     "welcome": "https://aiwebextensions.com/chatgpt-infinity/pages/welcome"
   }
 }

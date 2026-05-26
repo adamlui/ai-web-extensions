@@ -90,7 +90,7 @@ ChatGPT Auto-Continue relies on code from the powerful [chatgpt.js](https://gith
 
 <div align="center">
 
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img alt="[How to install]" title="How to install" height=45 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img alt="[How to install]" title="How to install" height=45 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions) / 
 [More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)

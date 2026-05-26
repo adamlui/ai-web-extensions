@@ -253,7 +253,7 @@
 [ci-chrome]: https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme
 [ci-ff]: https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme
 [ci-edge]: https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb
-[ci-greasemonkey]: https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js
+[ci-greasemonkey]: https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js
 [ci-readme]: https://github.com/adamlui/ai-web-extensions/tree/main/chatgpt-infinity/docs/zh-cn/#readme
 
 <!-- CHATGPT OMNIBOX -->

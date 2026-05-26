@@ -42,7 +42,7 @@
     <img alt="[获取 Edge 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[获取 Firefox 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js">
+<a href="https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js">
     <img alt="[获取 Greasemonkey 版本]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/zh-cn/badge729x262.png"></a>
 
 </div>
@@ -96,7 +96,7 @@
     - Tampermonkey 为了 [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) 或 [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
     - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) 或 [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) 为了 Safari
 
-2. 安装 [ChatGPT 无穷](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js) 用户脚本（将在上面安装的管理器中加载）
+2. 安装 [ChatGPT 无穷](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js) 用户脚本（将在上面安装的管理器中加载）
 
 3. 访问 [chatgpt.com](https://chatgpt.com) & 侧边栏添加无限切换!
 
@@ -134,20 +134,20 @@ ChatGPT 无穷 与以下浏览器兼容:
 
 ### 🖥️ 台式
 
-- **[Google Chrome](https://www.chrome.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Mozilla Firefox](https://www.firefox.com)** (通过 [Firefox 扩展程序](https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Microsoft Edge](https://www.microsoft.com/edge)** (通过 [Edge 扩大](https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb) or [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Opera](https://www.opera.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Brave](https://brave.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Vivaldi](https://vivaldi.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[LibreWolf](https://librewolf.net)** (通过 [Firefox 扩展程序](https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Ghost](https://ghostbrowser.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[QQ](https://browser.qq.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Whale](https://whale.naver.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
+- **[Google Chrome](https://www.chrome.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Mozilla Firefox](https://www.firefox.com)** (通过 [Firefox 扩展程序](https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Microsoft Edge](https://www.microsoft.com/edge)** (通过 [Edge 扩大](https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb) or [Greasemonkey 用户脚本](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Opera](https://www.opera.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Brave](https://brave.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Vivaldi](https://vivaldi.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[LibreWolf](https://librewolf.net)** (通过 [Firefox 扩展程序](https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) 或 [Greasemonkey 用户脚本](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Ghost](https://ghostbrowser.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[QQ](https://browser.qq.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Whale](https://whale.naver.com)** (通过 [Chrome 扩大](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey 用户脚本](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
 
 <br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/logos/platforms/android/head-plus-word/white/logo150x24.png"><img alt="Android" width=111 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/logos/platforms/android/head-plus-word/green-head-black-word/logo150x24.png"></picture><br>
 
-- **[Mozilla Firefox](https://www.mozilla.org/firefox/browsers/mobile/android/)** (通过 [Greasemonkey 用户脚本](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
+- **[Mozilla Firefox](https://www.mozilla.org/firefox/browsers/mobile/android/)** (通过 [Greasemonkey 用户脚本](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
 
 <br>
 
@@ -159,7 +159,7 @@ ChatGPT 无穷 与以下浏览器兼容:
     <img alt="[Get for Edge]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[Get for Firefox]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js">
+<a href="https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js">
     <img alt="[Get for Greasemonkey]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/en/badge860x262.png"></a>
 
 <br>

@@ -42,7 +42,7 @@
     <img alt="[Get for Edge]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[Get for Firefox]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js">
+<a href="https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js">
     <img alt="[Get for Greasemonkey]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/en/badge860x262.png"></a>
 
 </div>
@@ -96,7 +96,7 @@
     - Tampermonkey for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
     - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) or [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) for Safari
 
-2. Install [ChatGPT Infinity](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js) userscript (will load in manager installed above)
+2. Install [ChatGPT Infinity](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js) userscript (will load in manager installed above)
 
 3. Visit [chatgpt.com](https://chatgpt.com) & Infinity toggle is added to sidebar!
 
@@ -135,20 +135,20 @@ ChatGPT Infinity relies on code from the powerful [chatgpt.js](https://github.co
 
 ### 🖥️ Desktop
 
-- **[Google Chrome](https://www.chrome.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Mozilla Firefox](https://www.firefox.com)** (via [Firefox add-on](https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Microsoft Edge](https://www.microsoft.com/edge)** (via [Edge add-on](https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb) or [Greasemonkey userscript](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Opera](https://www.opera.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Brave](https://brave.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Vivaldi](https://vivaldi.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[LibreWolf](https://librewolf.net)** (via [Firefox add-on](https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=plattform-link) or [Greasemonkey userscript](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Ghost](https://ghostbrowser.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[QQ](https://browser.qq.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
-- **[Whale](https://whale.naver.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
+- **[Google Chrome](https://www.chrome.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Mozilla Firefox](https://www.firefox.com)** (via [Firefox add-on](https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Microsoft Edge](https://www.microsoft.com/edge)** (via [Edge add-on](https://microsoftedge.microsoft.com/addons/detail/chatgpt-infinity/jgonecnbmehicpdpjkdekamhmlebfagb) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Opera](https://www.opera.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Brave](https://brave.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Vivaldi](https://vivaldi.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[LibreWolf](https://librewolf.net)** (via [Firefox add-on](https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=plattform-link) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Ghost](https://ghostbrowser.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[QQ](https://browser.qq.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
+- **[Whale](https://whale.naver.com)** (via [Chrome extension](https://chromewebstore.google.com/detail/chatgpt-infinity/amikeononomkhphopbflomhnmdijjpmb/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme) or [Greasemonkey userscript](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
 
 <br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/logos/platforms/android/head-plus-word/white/logo150x24.png"><img alt="Android" width=111 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/logos/platforms/android/head-plus-word/green-head-black-word/logo150x24.png"></picture><br>
 
-- **[Mozilla Firefox](https://www.mozilla.org/firefox/browsers/mobile/android/)** (via [Greasemonkey userscript](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js))
+- **[Mozilla Firefox](https://www.mozilla.org/firefox/browsers/mobile/android/)** (via [Greasemonkey userscript](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js))
 
 <br>
 
@@ -162,7 +162,7 @@ If you've tested it to work in a browser not listed, simply create a [pull reque
     <img alt="[Get for Edge]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/microsoft-store/get-it-from-microsoft-blue-square-border-light-457x157.png"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=ai-web-extensions-readme">
     <img alt="[Get for Firefox]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/firefox/available-for-firefox/raspberry-border-334x128.png"></a>
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js">
+<a href="https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js">
     <img alt="[Get for Greasemonkey]" height=60 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/greasemonkey/install-userscript/en/badge860x262.png"></a>
 
 <br>

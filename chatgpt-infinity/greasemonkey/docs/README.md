@@ -1,6 +1,6 @@
 <a id="top"></a>
 
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/tiles/marquee/tile-1400x560.png"></a>
+<a href="https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/tiles/marquee/tile-1400x560.png"></a>
 
 <div align="center">
 
@@ -20,7 +20,7 @@
     <img alt="jsDelivr stats" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-infinity?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions) / 
 [Get support](https://github.com/adamlui/chatgpt-infinity/issues) / 
@@ -60,7 +60,7 @@
     - Tampermonkey for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
     - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) or [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) for Safari
 
-2. Install [ChatGPT Infinity](https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js) userscript (will load in manager installed above)
+2. Install [ChatGPT Infinity](https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js) userscript (will load in manager installed above)
 
 3. Visit [chatgpt.com](https://chatgpt.com) as normal, and a toggle appears in the sidebar and toolbar menu
 
@@ -114,7 +114,7 @@ ChatGPT Infinity is compatible w/ the following browsers using [ScriptCat](https
 
 <br>
 
-<a href="https://raw.githubusercontent.com/adamlui/chatgpt-infinity/refs/heads/main/greasemonkey/chatgpt-infinity.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://scriptcat.org/scripts/code/6419/chatgpt-infinity.user.js"><img height=45 alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img height=45 alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 <br>
 [Discuss](https://github.com/adamlui/chatgpt-infinity/discussions) / 
 [More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
