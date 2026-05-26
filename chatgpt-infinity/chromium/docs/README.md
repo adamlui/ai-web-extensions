@@ -1,6 +1,6 @@
 <a id="top"></a>
 
-<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/tiles/marquee/tile-1400x560.png">
+<img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@fc4e527/assets/images/tiles/marquee/tile-1400x560.png">
 
 <div align="center">
 

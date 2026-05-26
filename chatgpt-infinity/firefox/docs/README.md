@@ -1,6 +1,6 @@
 <a id="top"></a>
 
-<a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=header-tile"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/tiles/marquee/tile-1400x560.png"></a>
+<a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity/?utm_source=github&utm_medium=referral&utm_content=header-tile"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@fc4e527/assets/images/tiles/marquee/tile-1400x560.png"></a>
 
 <div align="center">
 
