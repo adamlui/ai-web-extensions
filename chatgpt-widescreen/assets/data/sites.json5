@@ -27,7 +27,8 @@
           "login": "//aside[.//button[contains(., 'Log in')]]",
           "promo": {
             "2025.12.30": "aside[class*=promo-banner]", // https://imgur.com/a/WFWUs3r
-            "2026.4.22": "section[aria-labelledby*=promo]" // https://imgur.com/a/VEpgTLU
+            "2026.4.22": "section[aria-labelledby*=promo]", // https://imgur.com/a/VEpgTLU
+            "codex": "//aside[.//button[contains(., 'Download the app')]]", //https://imgur.com/a/V9060A4
           },
           "tos": "div.bottom-full:has(a[href=\"https://openai.com/terms\"])" // https://i.imgur.com/8BUOhn1.png
         },
