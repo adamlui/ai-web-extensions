@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.5.28
+// @version             2026.5.28.1
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -413,6 +413,14 @@
         }
     }
 
+    function toTitleCase(str) {
+        if (!str) return ''
+        const words = str.toLowerCase().split(' ')
+        for (let i = 0 ; i < words.length ; i++) // for each word
+            words[i] = words[i][0].toUpperCase() + words[i].slice(1) // title-case it
+        return words.join(' ') // join'em back together
+    }
+
     window.updateCheck = () => xhr({
         method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
         headers: { 'Cache-Control': 'no-cache' },
@@ -431,14 +439,6 @@
             // Alert to no update found, nav back to About
             modals.open('update', 'unavailable') ; modals.open('about')
     }})
-
-    function toTitleCase(str) {
-        if (!str) return ''
-        const words = str.toLowerCase().split(' ')
-        for (let i = 0 ; i < words.length ; i++) // for each word
-            words[i] = words[i][0].toUpperCase() + words[i].slice(1) // title-case it
-        return words.join(' ') // join'em back together
-    }
 
     // Define UI functions
 
