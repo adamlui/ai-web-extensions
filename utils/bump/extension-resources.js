@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// Replaces local chatgpt.min.js, css.min.js, dom.min.js with latest builds
+// Replaces local <chatgpt|css|dom>.min.js w/ latest builds
 
 (async () => {
     'use strict'
@@ -11,13 +11,11 @@
     // Import BUMP UTILS (still needed for findFileBySuffix)
     const cachePaths = { root: '.cache' }
     cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}/bump.min.mjs`)
-
     fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
     fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
         'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f63b650/utils/bump/lib/bump.min.mjs')).text()))
     const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
 
-    // Define the resources to update
     const resources = [
         {
             suffix: 'chatgpt.min.js',
