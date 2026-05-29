@@ -51,8 +51,8 @@
             userJSfiles = JSON.parse(fs.readFileSync(cachePaths.userJSpaths, 'utf-8'))
             console.log(userJSfiles) ; console.log('')
         }
-    } else
-        userJSfiles = await bump.findFileBySuffix({ suffix: '.user.js' }) ; console.log('')
+    } else {
+        userJSfiles = await bump.findFileBySuffix({ suffix: '.user.js' }) ; console.log('') }
 
     // Collect GH resources
     bump.log.working('\nCollecting GH resources...\n')
