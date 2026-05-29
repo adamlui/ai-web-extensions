@@ -4,7 +4,7 @@
     <h5>English | <a href="https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/zh-cn/#readme">简体中文</a></h5>
 </div>
 
-<a href="https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@115fa4e/assets/images/tiles/marquee/tile-1400x560.png"></a>
+<a href="https://scriptcat.org/script-show-page/6328"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@115fa4e/assets/images/tiles/marquee/tile-1400x560.png"></a>
 
 <div align="center">
 
@@ -24,7 +24,7 @@
     <img alt="jsDelivr stats" src="https://img.shields.io/jsdelivr/gh/hm/adamlui/chatgpt-widescreen?style=for-the-badge&logo=jsdelivr&logoColor=white&label=jsDelivr%20Requests&labelColor=464646&color=2bbbd8"></a>
 <br><br>
 
-<a href="https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://scriptcat.org/script-show-page/6328"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions) / [Get support](https://github.com/adamlui/chatgpt-widescreen/issues) / [Contact author](https://github.com/adamlui)
 
@@ -77,7 +77,7 @@
     - Tampermonkey for [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), [Firefox](https://addons.mozilla.org/firefox/addon/tampermonkey/) or [Edge](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
     - [Stay](https://apps.apple.com/app/stay-for-safari/id1591620171) or [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) for Safari
 
-2. Install [ChatGPT Widescreen](https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js) userscript (will load in manager installed above)
+2. Install [ChatGPT Widescreen](https://scriptcat.org/script-show-page/6328) userscript (will load in manager installed above)
 
 3. Visit [chatgpt.com](https://chatgpt.com) or [poe.com](https://poe.com) & mode toggles are added to chatbar!
 
@@ -107,7 +107,7 @@ ChatGPT Widescreen is compatible w/ the following browsers using [ScriptCat](htt
 
 <br>
 
-<a href="https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
+<a href="https://scriptcat.org/script-show-page/6328"><img style="height: 45px" alt="[Install this script]" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/install-button.svg"></a><a href="#-installation"><img style="height: 45px" alt="[How to install]" title="How to install" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/buttons/greasy-fork/help-button.svg"></a>
 
 [Discuss](https://github.com/adamlui/chatgpt-widescreen/discussions) / [Get support](https://github.com/adamlui/chatgpt-widescreen/issues) /[More ChatGPT userscripts](https://github.com/adamlui/userscripts/tree/master/chatgpt)
 
