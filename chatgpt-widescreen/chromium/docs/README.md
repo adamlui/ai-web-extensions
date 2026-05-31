@@ -94,8 +94,8 @@
 
 *NOTE: Since full-window mode hides the sidebar, press '+' to start new chats*
 
-![\[image\]](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/chrome/pin-instructions/en.png)
-![\[image\]](https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/chrome/toolbar-menu/en.png)
+<img width=268 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/chrome/pin-instructions/en.png">
+<img width=295 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen/assets/images/screenshots/chrome/toolbar-menu/en.png">
 
 *Pro tip: For easier access to extension toggles, (1) click <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/toolbar/chrome-puzzle-piece/gray.png"> in the browser's toolbar, (2) then <img height=12 width=12 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/toolbar/push-pin/blue.png"> next to extension name.*
 
