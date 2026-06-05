@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.5.28
+// @version               2026.6.5
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon64.png
@@ -193,7 +193,7 @@
 // @connect               chatgpt.com
 // @connect               fanyi.sogou.com
 // @connect               raw.githubusercontent.com
-// @require               https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4.5.1/dist/chatgpt.min.js#sha256-whe4bcRrkNHKVacSVHMhmL0h+lYcYQHoTQiYzlgCcPs=
+// @require               https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4.8.0/dist/chatgpt.min.js#sha256-xnJGesl8EK0uHevmEWW2+2BpMeezqAxwmHEB4S4xA+o=
 // @require               https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require               https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@130fe5e/assets/js/chatbot/components/buttons.js#sha256-1EdgOW0kQxjTTzgMz/4JScPw5i04gPsKVBXPA0xQWDg=

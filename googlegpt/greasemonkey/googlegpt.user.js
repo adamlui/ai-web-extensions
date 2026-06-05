@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2026.5.28
+// @version                  2026.6.5
 // @license                  MIT
 // @icon                     https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@b8d34c0/assets/images/icons/app/black/icon48.png
 // @icon64                   https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@b8d34c0/assets/images/icons/app/black/icon64.png
@@ -383,7 +383,7 @@
 // @connect                  fanyi.sogou.com
 // @connect                  raw.githubusercontent.com
 // @connect                  scriptcat.org
-// @require                  https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4.5.1/dist/chatgpt.min.js#sha256-whe4bcRrkNHKVacSVHMhmL0h+lYcYQHoTQiYzlgCcPs=
+// @require                  https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4.8.0/dist/chatgpt.min.js#sha256-xnJGesl8EK0uHevmEWW2+2BpMeezqAxwmHEB4S4xA+o=
 // @require                  https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require                  https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require                  https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@130fe5e/assets/js/chatbot/components/buttons.js#sha256-1EdgOW0kQxjTTzgMz/4JScPw5i04gPsKVBXPA0xQWDg=

@@ -199,7 +199,7 @@
 // @description:zh-TW   從無所不知的 ChatGPT 生成無窮無盡的答案 (用任何語言!)
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.5.28
+// @version             2026.6.5
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3c0bbcb/assets/images/icons/infinity-symbol/black/with-robot/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@3c0bbcb/assets/images/icons/infinity-symbol/black/with-robot/icon64.png
@@ -217,7 +217,7 @@
 // @match               *://chatgpt.com/*
 // @connect             cdn.jsdelivr.net
 // @connect             raw.githubusercontent.com
-// @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4.5.1/dist/chatgpt.min.js#sha256-whe4bcRrkNHKVacSVHMhmL0h+lYcYQHoTQiYzlgCcPs=
+// @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4.8.0/dist/chatgpt.min.js#sha256-xnJGesl8EK0uHevmEWW2+2BpMeezqAxwmHEB4S4xA+o=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/userscripts@ff2baba/assets/js/lib/css.js/dist/css.min.js#sha256-zf9s8C0cZ/i+gnaTIUxa0+RpDYpsJVlyuV5L2q4KUdA=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/userscripts@ff2baba/assets/js/lib/dom.js/dist/dom.min.js#sha256-nTc2by3ZAz6AR7B8fOqjloJNETvjAepe15t2qlghMDo=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@9b871bc/chromium/extension/components/modals.js#sha256-z8OOmEiJhGr1iYVUmBidviqfidTws4qmWkuQGPvTQeA=
