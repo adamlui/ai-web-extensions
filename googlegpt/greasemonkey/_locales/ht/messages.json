@@ -87,6 +87,17 @@
   "placeholder_askSomethingElse": { "message": "Mande yon lòt bagay" },
   "placeholder_typeSomething": { "message": "Tape yon bagay" },
   "prompt_updateReplyLang": { "message": "Mete ajou lang repons lan" },
+  "alert_importantNotice": { "message": "Avi Enpòtan" },
+  "alert_poweredByAI": {
+    "message": "se Powered by teknoloji AI. Pandan ke ki fèt yo dwe itil/Pandan ke ki fèt yo dwe itil/"
+  },
+  "alert_aiCanMakeMistakes": { "message": "AI ka fè erè" },
+  "alert_alwaysVerifyInfo": { "message": "Toujou verifye enfòmasyon enpòtan" },
+  "alert_doubleCheckDecisions": { "message": "Double-tcheke desizyon kritik yo" },
+  "alert_dontRelySolelyOnAI": { "message": "Pa konte sèlman sou konsèy AI" },
+  "alert_notAsub": { "message": "Pa yon ranplasan" },
+  "alert_forProMedOrLegalMatters": { "message": "Pou zafè pwofesyonèl, medikal, oswa legal" },
+  "alert_useResponsibly": { "message": "Sèvi ak responsablite" },
   "alert_langUpdated": { "message": "Lang mete ajou" },
   "alert_willReplyIn": { "message": "pral reponn nan" },
   "alert_yourSysLang": { "message": "votre langue système" },

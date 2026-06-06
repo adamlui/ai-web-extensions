@@ -69,7 +69,9 @@
   "helptip_proxyAPImode": { "message": "Isebenzisa i-Proxy API ukuze ingangeni ku-AI" },
   "helptip_preferredAPI": { "message": "I-API ongayisebenzisa lapho uthola izimpendulo ku-Proxy Mode" },
   "helptip_streamingMode": { "message": "Thola izimpendulo kusakazo lombhalo oluqhubekayo" },
-  "helptip_autoGetAnswers": { "message": "Thumela imibuzo ngokuzenzakalelayo ku-GoogleGPT uma usebenzisa injini yokusesha" },
+  "helptip_autoGetAnswers": {
+    "message": "Thumela imibuzo ngokuzenzakalelayo ku-GoogleGPT uma usebenzisa injini yokusesha"
+  },
   "helptip_autoSummarizeResults": { "message": "Fingqa ngokuzenzakalelayo ikhasi lemiphumela yokusesha" },
   "helptip_autoFocusChatbar": { "message": "Ibha yengxoxo egxile ngokuzenzakalelayo noma nini lapho ivela" },
   "helptip_autoScroll": { "message": "Izimpendulo ze-auto-scroll njengoba zikhiqiza Kumodi Yokusakaza" },
@@ -87,6 +89,15 @@
   "placeholder_askSomethingElse": { "message": "Buza okunye" },
   "placeholder_typeSomething": { "message": "Thayipha okuthile" },
   "prompt_updateReplyLang": { "message": "Buyekeza ulimi lokuphendula" },
+  "alert_importantNotice": { "message": "Isaziso Esibalulekile" },
+  "alert_poweredByAI": { "message": "ixhaswa ubuchwepheshe be-AI. Ngenkathi iklanyelwe ukuba usizo" },
+  "alert_aiCanMakeMistakes": { "message": "I-AI ingenza amaphutha" },
+  "alert_alwaysVerifyInfo": { "message": "Qinisekisa imininingwane ebalulekile njalo" },
+  "alert_doubleCheckDecisions": { "message": "Hlola kabili izinqumo ezibucayi" },
+  "alert_dontRelySolelyOnAI": { "message": "Ungathembeli kuphela eselulekweni se-AI" },
+  "alert_notAsub": { "message": "Akuyona enye indawo" },
+  "alert_forProMedOrLegalMatters": { "message": "Ezindabeni zobungcweti, ezokwelapha, noma zomthetho" },
+  "alert_useResponsibly": { "message": "Sebenzisa ngendlela efanele" },
   "alert_langUpdated": { "message": "Ulimi lubuyekeziwe" },
   "alert_willReplyIn": { "message": "uzophendula ku" },
   "alert_yourSysLang": { "message": "uhlelo lwakho lolimi" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "isesikhathini" },
   "alert_unavailable": { "message": "ayitholakali" },
   "alert_isOnlyAvailFor": { "message": "itholakala kuphela ku" },
-  "alert_userscriptMgrNoStream": { "message": "Imenenja yakho yombhalo wabasebenzisi ayisekeli izimpendulo zokusakaza ezibuyayo" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Imenenja yakho yombhalo wabasebenzisi ayisekeli izimpendulo zokusakaza ezibuyayo"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "okwamanje itholakala kuphela ngo" },
   "alert_openAIsupportSoon": { "message": "Usizo lwe-OpenAI API luzofakwa maduzane" },
   "alert_waitingFor": { "message": "Ilinde" },

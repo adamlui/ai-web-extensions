@@ -69,10 +69,14 @@
   "helptip_proxyAPImode": { "message": "Utilizza un'API proxy per l'accesso no-login all'IA" },
   "helptip_preferredAPI": { "message": "API da utilizzare quando si ottengono risposte in Modalità Proxy" },
   "helptip_streamingMode": { "message": "Ricevi risposte in un flusso di testo continuo" },
-  "helptip_autoGetAnswers": { "message": "Invio automatico di query a GoogleGPT quando si utilizza il motore di ricerca" },
+  "helptip_autoGetAnswers": {
+    "message": "Invio automatico di query a GoogleGPT quando si utilizza il motore di ricerca"
+  },
   "helptip_autoSummarizeResults": { "message": "Riepiloga automaticamente la pagina dei risultati di ricerca" },
   "helptip_autoFocusChatbar": { "message": "Messa a fuoco automatica della chatbar ogni volta che viene visualizzata" },
-  "helptip_autoScroll": { "message": "Scorrimento automatico delle risposte man mano che vengono generate in modalità Streaming" },
+  "helptip_autoScroll": {
+    "message": "Scorrimento automatico delle risposte man mano che vengono generate in modalità Streaming"
+  },
   "helptip_showRelatedQueries": { "message": "Mostra le query correlate sotto la barra di chat" },
   "helptip_prefixMode": { "message": "Richiedi \"/\" prima delle domande per le risposte da mostrare" },
   "helptip_suffixMode": { "message": "Richiedi \"?\" dopo le domande per le risposte da mostrare" },
@@ -87,6 +91,15 @@
   "placeholder_askSomethingElse": { "message": "Chiedimi qualcos'altro" },
   "placeholder_typeSomething": { "message": "Digita qualcosa" },
   "prompt_updateReplyLang": { "message": "Aggiorna la lingua della risposta" },
+  "alert_importantNotice": { "message": "Avviso importante" },
+  "alert_poweredByAI": { "message": "è alimentato dalla tecnologia AI. Sebbene progettato per essere utile" },
+  "alert_aiCanMakeMistakes": { "message": "L'IA può commettere errori" },
+  "alert_alwaysVerifyInfo": { "message": "Verificare sempre le informazioni importanti" },
+  "alert_doubleCheckDecisions": { "message": "Ricontrolla le decisioni critiche" },
+  "alert_dontRelySolelyOnAI": { "message": "Non fare affidamento esclusivamente sui consigli dell'IA" },
+  "alert_notAsub": { "message": "Non sostitutivo" },
+  "alert_forProMedOrLegalMatters": { "message": "Per questioni professionali, mediche o legali" },
+  "alert_useResponsibly": { "message": "Utilizzare in modo responsabile" },
   "alert_langUpdated": { "message": "Lingua aggiornata" },
   "alert_willReplyIn": { "message": "risponderà tra" },
   "alert_yourSysLang": { "message": "Lingua del sistema" },
@@ -98,7 +111,9 @@
   "alert_isUpToDate": { "message": "è aggiornato" },
   "alert_unavailable": { "message": "non disponibile" },
   "alert_isOnlyAvailFor": { "message": "è disponibile solo per" },
-  "alert_userscriptMgrNoStream": { "message": "Il tuo usercript manager non supporta la restituzione delle risposte di flusso" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Il tuo usercript manager non supporta la restituzione delle risposte di flusso"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "è attualmente disponibile solo per" },
   "alert_openAIsupportSoon": { "message": "Il supporto per l'API OpenAI verrà aggiunto a breve" },
   "alert_waitingFor": { "message": "Attesa" },

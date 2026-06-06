@@ -70,14 +70,18 @@
   "helptip_preferredAPI": { "message": "API bilong yusim taim yu kisim bekim long Proxy Mode" },
   "helptip_streamingMode": { "message": "Kisim bekim long wanpela tok i stap oltaim" },
   "helptip_autoGetAnswers": { "message": "Ol i save salim ol askim long GoogleGPT taim ol i yusim search engine" },
-  "helptip_autoSummarizeResults": { "message": "Ol i save bungim ol samting bilong painim ol samting long rot bilong ol yet" },
+  "helptip_autoSummarizeResults": {
+    "message": "Ol i save bungim ol samting bilong painim ol samting long rot bilong ol yet"
+  },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar taim em i kamap" },
   "helptip_autoScroll": { "message": "Ol bekim bilong ol auto-scroll olsem ol i kamapim long streaming mode" },
   "helptip_showRelatedQueries": { "message": "Toksave long ol askim i stap daunbilo long chatbar" },
   "helptip_prefixMode": { "message": "Kisim \"/\" paslain long ol askim bilong kisim bekim bilong soim" },
   "helptip_suffixMode": { "message": "Kisim \"?\" bihain long ol askim long bekim bilong soim" },
   "helptip_widerSidebar": { "message": "Long sait bilong painim ol samting long hap bilong graun" },
-  "helptip_stickySidebar": { "message": "Dispela i mekim GoogleGPT i kamap ples klia long sait bilong ol samting, maski yu save skrapim ol samting" },
+  "helptip_stickySidebar": {
+    "message": "Dispela i mekim GoogleGPT i kamap ples klia long sait bilong ol samting, maski yu save skrapim ol samting"
+  },
   "helptip_anchorMode": { "message": "GoogleGPT i go daun long windo" },
   "helptip_bgAnimations": { "message": "Show animated backgrounds in UI components" },
   "helptip_fgAnimations": { "message": "Ol piksa bilong piksa long ol samting bilong UI" },
@@ -87,6 +91,19 @@
   "placeholder_askSomethingElse": { "message": "Mi laik askim yu long wanpela samting moa" },
   "placeholder_typeSomething": { "message": "Tok bilong wanpela samting" },
   "prompt_updateReplyLang": { "message": "Tokples" },
+  "alert_importantNotice": { "message": "Bikpela toksave" },
+  "alert_poweredByAI": {
+    "message": "dispela samting i save kamap long rot bilong AI. Tasol ol i ting bai ol i helpim ol arapela."
+  },
+  "alert_aiCanMakeMistakes": { "message": "Yumi inap mekim ol rong" },
+  "alert_alwaysVerifyInfo": { "message": "Bilong kisim save gut long ol samting" },
+  "alert_doubleCheckDecisions": { "message": "Ol bikpela disisen bilong skelim gut ol samting" },
+  "alert_dontRelySolelyOnAI": { "message": "No ken bilip long wanpela gutpela tok tasol" },
+  "alert_notAsub": { "message": "No long substitutes" },
+  "alert_forProMedOrLegalMatters": {
+    "message": "O ol i save mekim wok bilong lo, o ol i save mekim wok bilong ol long dokta,"
+  },
+  "alert_useResponsibly": { "message": "Yu mas mekim gut wok bilong yu" },
   "alert_langUpdated": { "message": "Tokples i go bek" },
   "alert_willReplyIn": { "message": "em bai bekim tok long" },
   "alert_yourSysLang": { "message": "tokples bilong yu" },
@@ -98,9 +115,13 @@
   "alert_isUpToDate": { "message": "em i stap up-to-date" },
   "alert_unavailable": { "message": "i no gat rot" },
   "alert_isOnlyAvailFor": { "message": "em i stap long rot bilong" },
-  "alert_userscriptMgrNoStream": { "message": "Man bilong lukautim ol usercript bilong yu i no save sapotim bekim bilong ol tok i kam bek" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Man bilong lukautim ol usercript bilong yu i no save sapotim bekim bilong ol tok i kam bek"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "long nau, ol i save yusim ol dispela samting long mekim wok bilong" },
-  "alert_openAIsupportSoon": { "message": "Ol i laik bai ol i ken helpim ol long mekim ol samting bilong helpim ol long kamap gutpela" },
+  "alert_openAIsupportSoon": {
+    "message": "Ol i laik bai ol i ken helpim ol long mekim ol samting bilong helpim ol long kamap gutpela"
+  },
   "alert_waitingFor": { "message": "Long Wait" },
   "alert_response": { "message": "bekim" },
   "alert_login": { "message": "Plim Plim Login" },

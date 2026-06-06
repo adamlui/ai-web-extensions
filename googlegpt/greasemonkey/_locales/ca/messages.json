@@ -72,21 +72,38 @@
   "helptip_autoGetAnswers": { "message": "Envia consultes automàtiques a GoogleGPT quan utilitzis el motor de cerca" },
   "helptip_autoSummarizeResults": { "message": "Resumeix automàticament la pàgina de resultats de cerca" },
   "helptip_autoFocusChatbar": { "message": "Enfoca automàticament la barra de xat sempre que aparegui" },
-  "helptip_autoScroll": { "message": "Respostes de desplaçament automàtic a mesura que es generen en mode de transmissió" },
+  "helptip_autoScroll": {
+    "message": "Respostes de desplaçament automàtic a mesura que es generen en mode de transmissió"
+  },
   "helptip_showRelatedQueries": { "message": "Mostra les consultes relacionades a sota de la barra de xat" },
   "helptip_prefixMode": { "message": "Requereix \"/\" abans de les consultes per obtenir respostes per mostrar" },
   "helptip_suffixMode": { "message": "Requereix \"?\" després de les consultes per obtenir respostes per mostrar" },
   "helptip_widerSidebar": { "message": "Expandeix horitzontalment la barra lateral de la pàgina de cerca" },
-  "helptip_stickySidebar": { "message": "Fa que GoogleGPT sigui visible a la barra lateral fins i tot mentre es desplaça" },
+  "helptip_stickySidebar": {
+    "message": "Fa que GoogleGPT sigui visible a la barra lateral fins i tot mentre es desplaça"
+  },
   "helptip_anchorMode": { "message": "Ancoratge de GoogleGPT a la part inferior de la finestra" },
   "helptip_bgAnimations": { "message": "Mostra fons animats als components de la interfície d'usuari" },
-  "helptip_fgAnimations": { "message": "Mostra les animacions de primer pla en els components de la interfície d'usuari" },
+  "helptip_fgAnimations": {
+    "message": "Mostra les animacions de primer pla en els components de la interfície d'usuari"
+  },
   "helptip_replyLanguage": { "message": "Idioma en què GoogleGPT pot respondre" },
   "helptip_colorScheme": { "message": "Esquema per mostrar els components de la interfície d'usuari de GoogleGPT en" },
   "helptip_debugMode": { "message": "Mostra el registre detallat a la consola del navegador" },
   "placeholder_askSomethingElse": { "message": "Altra cosa" },
   "placeholder_typeSomething": { "message": "Escriu alguna cosa" },
   "prompt_updateReplyLang": { "message": "Actualitza l'idioma de la resposta" },
+  "alert_importantNotice": { "message": "Avís important" },
+  "alert_poweredByAI": {
+    "message": "està impulsat per la tecnologia d'intel·ligència artificial. Tot i que està dissenyat per ser útil"
+  },
+  "alert_aiCanMakeMistakes": { "message": "La IA pot cometre errors" },
+  "alert_alwaysVerifyInfo": { "message": "Verifica sempre la informació important" },
+  "alert_doubleCheckDecisions": { "message": "Comprova les decisions crítiques" },
+  "alert_dontRelySolelyOnAI": { "message": "No confieu únicament en els consells de la IA" },
+  "alert_notAsub": { "message": "No és un substitut" },
+  "alert_forProMedOrLegalMatters": { "message": "Per assumptes professionals, mèdics o legals" },
+  "alert_useResponsibly": { "message": "Fes un ús responsable" },
   "alert_langUpdated": { "message": "Idioma actualitzat" },
   "alert_willReplyIn": { "message": "respondrà en" },
   "alert_yourSysLang": { "message": "l'idioma del sistema" },
@@ -98,7 +115,9 @@
   "alert_isUpToDate": { "message": "està actualitzat" },
   "alert_unavailable": { "message": "no disponible" },
   "alert_isOnlyAvailFor": { "message": "només està disponible per a" },
-  "alert_userscriptMgrNoStream": { "message": "El gestor de l'script d'usuari no admet el retorn de respostes de fluxos" },
+  "alert_userscriptMgrNoStream": {
+    "message": "El gestor de l'script d'usuari no admet el retorn de respostes de fluxos"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "actualment només està disponible per" },
   "alert_openAIsupportSoon": { "message": "En breu s'afegirà el suport per a l'API d'OpenAI" },
   "alert_waitingFor": { "message": "En espera de la còpia" },

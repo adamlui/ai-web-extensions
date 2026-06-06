@@ -1,5 +1,7 @@
 {
-  "appDesc": { "message": "Dodaje odpowiedzi sztucznej inteligencji do wyszukiwarki Google (obsługiwanej przez Google Gemma + GPT-4o!)" },
+  "appDesc": {
+    "message": "Dodaje odpowiedzi sztucznej inteligencji do wyszukiwarki Google (obsługiwanej przez Google Gemma + GPT-4o!)"
+  },
   "menuLabel_autoAnswer": { "message": "Automatyczna odpowiedź" },
   "menuLabel_autoSummarizeResults": { "message": "Automatycznie podsumuj wyniki" },
   "menuLabel_autoFocusChatbar": { "message": "Automatycznie ustawiaj ostrość na czacie" },
@@ -66,18 +68,26 @@
   "tooltip_code": { "message": "Kod" },
   "tooltip_generatingAudio": { "message": "Generowanie dźwięku" },
   "tooltip_sendRelatedQuery": { "message": "Wyślij powiązane zapytanie" },
-  "helptip_proxyAPImode": { "message": "Używa interfejsu API serwera proxy w celu uzyskania dostępu bez logowania do sztucznej inteligencji" },
+  "helptip_proxyAPImode": {
+    "message": "Używa interfejsu API serwera proxy w celu uzyskania dostępu bez logowania do sztucznej inteligencji"
+  },
   "helptip_preferredAPI": { "message": "Interfejs API używany podczas uzyskiwania odpowiedzi w trybie proxy" },
   "helptip_streamingMode": { "message": "Otrzymuj odpowiedzi w ciągłym strumieniu tekstu" },
-  "helptip_autoGetAnswers": { "message": "Automatyczne wysyłanie zapytań do GoogleGPT podczas korzystania z wyszukiwarki" },
+  "helptip_autoGetAnswers": {
+    "message": "Automatyczne wysyłanie zapytań do GoogleGPT podczas korzystania z wyszukiwarki"
+  },
   "helptip_autoSummarizeResults": { "message": "Automatycznie podsumowuj stronę wyników wyszukiwania" },
   "helptip_autoFocusChatbar": { "message": "Automatycznie skupiaj pasek czatu za każdym razem, gdy się pojawi" },
-  "helptip_autoScroll": { "message": "Automatyczne przewijanie odpowiedzi generowanych w trybie przesyłania strumieniowego" },
+  "helptip_autoScroll": {
+    "message": "Automatyczne przewijanie odpowiedzi generowanych w trybie przesyłania strumieniowego"
+  },
   "helptip_showRelatedQueries": { "message": "Pokaż powiązane zapytania poniżej paska czatu" },
   "helptip_prefixMode": { "message": "Wymagaj „/” przed zapytaniami o odpowiedzi do wyświetlenia" },
   "helptip_suffixMode": { "message": "Wymagaj „?” po zapytaniach o odpowiedzi do wyświetlenia" },
   "helptip_widerSidebar": { "message": "Rozwiń pasek boczny strony wyszukiwania w poziomie" },
-  "helptip_stickySidebar": { "message": "Sprawia, że GoogleGPT jest widoczny na pasku bocznym nawet podczas przewijania" },
+  "helptip_stickySidebar": {
+    "message": "Sprawia, że GoogleGPT jest widoczny na pasku bocznym nawet podczas przewijania"
+  },
   "helptip_anchorMode": { "message": "Zakotwicz GoogleGPT w dolnej części okna" },
   "helptip_bgAnimations": { "message": "Pokaż animowane tła w komponentach interfejsu użytkownika" },
   "helptip_fgAnimations": { "message": "Pokaż animacje pierwszego planu w komponentach interfejsu użytkownika" },
@@ -87,6 +97,17 @@
   "placeholder_askSomethingElse": { "message": "Coś innego" },
   "placeholder_typeSomething": { "message": "Zacznij pisać" },
   "prompt_updateReplyLang": { "message": "Zaktualizuj język odpowiedzi" },
+  "alert_importantNotice": { "message": "Ważna uwaga" },
+  "alert_poweredByAI": {
+    "message": "opiera się na technologii sztucznej inteligencji. Choć zaprojektowany, aby być pomocnym"
+  },
+  "alert_aiCanMakeMistakes": { "message": "Sztuczna inteligencja może popełniać błędy" },
+  "alert_alwaysVerifyInfo": { "message": "Zawsze sprawdzaj ważne informacje" },
+  "alert_doubleCheckDecisions": { "message": "Dokładnie sprawdź krytyczne decyzje" },
+  "alert_dontRelySolelyOnAI": { "message": "Nie polegaj wyłącznie na poradach dotyczących sztucznej inteligencji" },
+  "alert_notAsub": { "message": "Nie jest substytutem" },
+  "alert_forProMedOrLegalMatters": { "message": "W sprawach zawodowych, medycznych lub prawnych" },
+  "alert_useResponsibly": { "message": "Używaj odpowiedzialnie" },
   "alert_langUpdated": { "message": "Język został zaktualizowany" },
   "alert_willReplyIn": { "message": "odpowie za" },
   "alert_yourSysLang": { "message": "Język systemu" },
@@ -98,7 +119,9 @@
   "alert_isUpToDate": { "message": "jest aktualny" },
   "alert_unavailable": { "message": "niedostępne" },
   "alert_isOnlyAvailFor": { "message": "jest dostępny tylko dla" },
-  "alert_userscriptMgrNoStream": { "message": "Twój menedżer skryptów użytkownika nie obsługuje zwrotnych odpowiedzi strumieniowych" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Twój menedżer skryptów użytkownika nie obsługuje zwrotnych odpowiedzi strumieniowych"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "jest obecnie dostępny tylko dla" },
   "alert_openAIsupportSoon": { "message": "Obsługa OpenAI API zostanie wkrótce dodana" },
   "alert_waitingFor": { "message": "Czekamy na" },

@@ -66,18 +66,30 @@
   "tooltip_code": { "message": "Kode ti kodro" },
   "tooltip_generatingAudio": { "message": "Audio Lege ayeke dä ti téléchargé a-enregistre" },
   "tooltip_sendRelatedQuery": { "message": "Ti tokua mbeni hundango tënë so andu tënë ni" },
-  "helptip_proxyAPImode": { "message": "Sara kua na mbeni API ti proxy ti wara lege ti sara kua na aye so ayeke na lege ni ape" },
-  "helptip_preferredAPI": { "message": "API ti sara kua na ni na ngoi so mo yeke wara akiringo tënë na yâ ti mode Proxy" },
+  "helptip_proxyAPImode": {
+    "message": "Sara kua na mbeni API ti proxy ti wara lege ti sara kua na aye so ayeke na lege ni ape"
+  },
+  "helptip_preferredAPI": {
+    "message": "API ti sara kua na ni na ngoi so mo yeke wara akiringo tënë na yâ ti mode Proxy"
+  },
   "helptip_streamingMode": { "message": "Ti wara akiringo tënë na yâ ti mbeni mbeti so angbâ lakue" },
-  "helptip_autoGetAnswers": { "message": "Auto-send questions na GoogleGPT na ngoi so mo yeke sara kua na moteur ti gi ye" },
-  "helptip_autoSummarizeResults": { "message": "A yeke sara si a yeke nzoni ti tene azo ti Israël asara kua na aye so ala ye ti sara" },
+  "helptip_autoGetAnswers": {
+    "message": "Auto-send questions na GoogleGPT na ngoi so mo yeke sara kua na moteur ti gi ye"
+  },
+  "helptip_autoSummarizeResults": {
+    "message": "A yeke sara si a yeke nzoni ti tene azo ti Israël asara kua na aye so ala ye ti sara"
+  },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar na ngoi kue so a yeke bâ ni" },
   "helptip_autoScroll": { "message": "Auto-scroll kiringo tënë tongana ti so ala yeke sara na yâ ti mode ti streaming" },
   "helptip_showRelatedQueries": { "message": "Fa atënë so andu tënë ni na gbe ti chatbar" },
   "helptip_prefixMode": { "message": "A hunda \"/\" kozo ti tene a kiri tënë na ala" },
   "helptip_suffixMode": { "message": "A hunda ti tene \"?\" na peko ti so mo hunda ti wara kiringo tënë ti fa" },
-  "helptip_widerSidebar": { "message": "A yeke wara lege ti fa tënë na ndo ti mbeni ndo so ayeke na yâ ti mbeni ndo so a yeke wara" },
-  "helptip_stickySidebar": { "message": "Zia GoogleGPT abâ na yâ ti mbage ti mbage ti mbage ti mbage ni même tongana mo yeke pika" },
+  "helptip_widerSidebar": {
+    "message": "A yeke wara lege ti fa tënë na ndo ti mbeni ndo so ayeke na yâ ti mbeni ndo so a yeke wara"
+  },
+  "helptip_stickySidebar": {
+    "message": "Zia GoogleGPT abâ na yâ ti mbage ti mbage ti mbage ti mbage ni même tongana mo yeke pika"
+  },
   "helptip_anchorMode": { "message": "Anchor GoogleGPT na gbe ti fenêtre" },
   "helptip_bgAnimations": { "message": "A yeke sara si azo abâ peko ti aye so ayeke na yâ ti UI" },
   "helptip_fgAnimations": { "message": "A yeke wara a-animation na yâ ti akota mbage ti UI" },
@@ -87,6 +99,15 @@
   "placeholder_askSomethingElse": { "message": "Hunda mbeni ye nde" },
   "placeholder_typeSomething": { "message": "Ti sara ye na lege ni" },
   "prompt_updateReplyLang": { "message": "Tënë ti yanga ti kodoro niModifier" },
+  "alert_importantNotice": { "message": "Mbeni kota tënë" },
+  "alert_poweredByAI": { "message": "a yeke na lege ti kode ti sarango ye ti azo. A leke ni ti mû maboko na zo" },
+  "alert_aiCanMakeMistakes": { "message": "A lingbi ti sara afaute" },
+  "alert_alwaysVerifyInfo": { "message": "Mo yeke wara lakue akota ye so mo lingbi ti hinga" },
+  "alert_doubleCheckDecisions": { "message": "Gbu li ti mo na ndo ti akota desizion so mo mû" },
+  "alert_dontRelySolelyOnAI": { "message": "Zia bê ti mo gi na wango ti Jéhovah ape" },
+  "alert_notAsub": { "message": "A yeke mû place ti lo pëpe" },
+  "alert_forProMedOrLegalMatters": { "message": "Kusala or akusala, I wonder?" },
+  "alert_useResponsibly": { "message": "Sara kua na ni na lege ni" },
   "alert_langUpdated": { "message": "Yanga ti awambongi ti kodoro" },
   "alert_willReplyIn": { "message": "lo kiri tënë na lo" },
   "alert_yourSysLang": { "message": "yanga ti awambongi ti mo" },
@@ -98,7 +119,9 @@
   "alert_isUpToDate": { "message": "a yeke ti laso" },
   "alert_unavailable": { "message": "unbore MeUnbore" },
   "alert_isOnlyAvailFor": { "message": "tu n 'es ni fiable ni aimable" },
-  "alert_userscriptMgrNoStream": { "message": "Zo so ayeke sara kua na mo ayeke mû maboko na mo ape ti kiri na peko ti atënë so mo yeke kiri na ni" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Zo so ayeke sara kua na mo ayeke mû maboko na mo ape ti kiri na peko ti atënë so mo yeke kiri na ni"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "a yeke gi na lege ti" },
   "alert_openAIsupportSoon": { "message": "A yeke zia ande maboko na maboko ti OpenAI API na yâ ti kete ngoi" },
   "alert_waitingFor": { "message": "Ku e lam e ku na mbeti" },

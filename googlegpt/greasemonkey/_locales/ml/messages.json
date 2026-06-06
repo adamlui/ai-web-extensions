@@ -69,7 +69,9 @@
   "helptip_proxyAPImode": { "message": "AI-ലേക്ക് നോ-ലോഗിൻ ആക്‌സസ് ചെയ്യുന്നതിന് ഒരു പ്രോക്സി API ഉപയോഗിക്കുന്നു" },
   "helptip_preferredAPI": { "message": "പ്രോക്സി മോഡിൽ ഉത്തരങ്ങൾ ലഭിക്കുമ്പോൾ ഉപയോഗിക്കേണ്ട API" },
   "helptip_streamingMode": { "message": "തുടർച്ചയായ ടെക്സ്റ്റ് സ്ട്രീമിൽ മറുപടികൾ സ്വീകരിക്കുക" },
-  "helptip_autoGetAnswers": { "message": "സെർച്ച് എഞ്ചിൻ ഉപയോഗിക്കുമ്പോൾ GoogleGPT-ലേക്ക് യാന്ത്രികമായി ചോദ്യങ്ങൾ അയയ്ക്കുക" },
+  "helptip_autoGetAnswers": {
+    "message": "സെർച്ച് എഞ്ചിൻ ഉപയോഗിക്കുമ്പോൾ GoogleGPT-ലേക്ക് യാന്ത്രികമായി ചോദ്യങ്ങൾ അയയ്ക്കുക"
+  },
   "helptip_autoSummarizeResults": { "message": "തിരയൽ ഫലങ്ങളുടെ പേജ് യാന്ത്രികമായി സംഗ്രഹിക്കുക" },
   "helptip_autoFocusChatbar": { "message": "ദൃശ്യമാകുമ്പോഴെല്ലാം ഓട്ടോഫോക്കസ് ചാറ്റ്ബാർ" },
   "helptip_autoScroll": { "message": "സ്ട്രീമിംഗ് മോഡിൽ സൃഷ്ടിക്കുന്ന പ്രതികരണങ്ങൾ യാന്ത്രികമായി സ്ക്രോൾ ചെയ്യുക" },
@@ -87,6 +89,17 @@
   "placeholder_askSomethingElse": { "message": "മറ്റെന്തെങ്കിലും ചോദിക്കുക" },
   "placeholder_typeSomething": { "message": "എന്തെങ്കിലും ടൈപ്പ് ചെയ്യുക" },
   "prompt_updateReplyLang": { "message": "മറുപടി ഭാഷ അപ്‌ഡേറ്റ് ചെയ്യുക" },
+  "alert_importantNotice": { "message": "പ്രധാന അറിയിപ്പ്" },
+  "alert_poweredByAI": {
+    "message": "aI സാങ്കേതികവിദ്യ ഉപയോഗിച്ചാണ് ഇത് പ്രവർത്തിക്കുന്നത്. സഹായകരമാകാൻ രൂപകൽപ്പന ചെയ്തിരിക്കുമ്പോൾ"
+  },
+  "alert_aiCanMakeMistakes": { "message": "AIക്ക് തെറ്റുകൾ പറ്റാം" },
+  "alert_alwaysVerifyInfo": { "message": "എല്ലായ്പ്പോഴും പ്രധാനപ്പെട്ട വിവരങ്ങൾ പരിശോധിക്കുക" },
+  "alert_doubleCheckDecisions": { "message": "നിർണായക തീരുമാനങ്ങൾ രണ്ടുതവണ പരിശോധിക്കുക" },
+  "alert_dontRelySolelyOnAI": { "message": "AI ഉപദേശത്തെ മാത്രം ആശ്രയിക്കരുത്" },
+  "alert_notAsub": { "message": "ഒരു പകരക്കാരനല്ല" },
+  "alert_forProMedOrLegalMatters": { "message": "പ്രൊഫഷണൽ, മെഡിക്കൽ അല്ലെങ്കിൽ നിയമപരമായ കാര്യങ്ങൾക്കായി" },
+  "alert_useResponsibly": { "message": "ഉത്തരവാദിത്തത്തോടെ ഉപയോഗിക്കുക" },
   "alert_langUpdated": { "message": "ഭാഷ അപ്‌ഡേറ്റുചെയ്‌തു" },
   "alert_willReplyIn": { "message": "ൽ മറുപടി നൽകും" },
   "alert_yourSysLang": { "message": "നിങ്ങളുടെ സിസ്റ്റം ഭാഷ" },
@@ -98,7 +111,9 @@
   "alert_isUpToDate": { "message": "ഇന്നുവരെയുള്ള_മാറ്റങ്ങള്‍_വരുത്തിയത്" },
   "alert_unavailable": { "message": "ലഭ്യമല്ല" },
   "alert_isOnlyAvailFor": { "message": "എന്നതിന് മാത്രം ലഭ്യമാണ്" },
-  "alert_userscriptMgrNoStream": { "message": "നിങ്ങളുടെ യൂസർസ്ക്രിപ്റ്റ് മാനേജർ സ്ട്രീം പ്രതികരണങ്ങൾ മടക്കിനൽകുന്നതിനെ പിന്തുണയ്ക്കുന്നില്ല" },
+  "alert_userscriptMgrNoStream": {
+    "message": "നിങ്ങളുടെ യൂസർസ്ക്രിപ്റ്റ് മാനേജർ സ്ട്രീം പ്രതികരണങ്ങൾ മടക്കിനൽകുന്നതിനെ പിന്തുണയ്ക്കുന്നില്ല"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "നിലവിൽ ലഭിക്കുന്നത്" },
   "alert_openAIsupportSoon": { "message": "OpenAI API-നുള്ള പിന്തുണ ഉടൻ ചേർക്കും" },
   "alert_waitingFor": { "message": "കാത്തിരിക്കുന്നു" },

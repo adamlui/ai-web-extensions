@@ -36,7 +36,9 @@
   "about_poweredBy": { "message": "Izstrādāts" },
   "about_openSourceCode": { "message": "Atklātais pirmkods" },
   "about_latestChanges": { "message": "Jaunākās izmaiņas" },
-  "scheme_light": { "message": "Videi draudzīgs&#10;Produktam jābūt izgatavotam no ilgtspējīgiem materiāliem, lai radītu minimālu ietekmi uz vidi" },
+  "scheme_light": {
+    "message": "Videi draudzīgs&#10;Produktam jābūt izgatavotam no ilgtspējīgiem materiāliem, lai radītu minimālu ietekmi uz vidi"
+  },
   "scheme_dark": { "message": "Tumša" },
   "mode_proxy": { "message": "Starpniekservera režīms" },
   "mode_streaming": { "message": "Straumēšanas režīms" },
@@ -87,6 +89,15 @@
   "placeholder_askSomethingElse": { "message": "Pajautāt kaut ko citu" },
   "placeholder_typeSomething": { "message": "Ierakstiet kaut ko" },
   "prompt_updateReplyLang": { "message": "Atjaunināt atbildes valodu" },
+  "alert_importantNotice": { "message": "Svarīgs paziņojums" },
+  "alert_poweredByAI": { "message": "ko nodrošina mākslīgā intelekta tehnoloģija. Izstrādāts, lai būtu noderīgs" },
+  "alert_aiCanMakeMistakes": { "message": "MI var pieļaut kļūdas" },
+  "alert_alwaysVerifyInfo": { "message": "Vienmēr pārbaudiet svarīgu informāciju" },
+  "alert_doubleCheckDecisions": { "message": "Vēlreiz pārbaudiet kritiskos lēmumus" },
+  "alert_dontRelySolelyOnAI": { "message": "Nepaļaujieties tikai uz AI padomiem" },
+  "alert_notAsub": { "message": "Nav aizstājējs" },
+  "alert_forProMedOrLegalMatters": { "message": "Profesionāliem, medicīniskiem vai juridiskiem jautājumiem" },
+  "alert_useResponsibly": { "message": "Lietojiet atbildīgi" },
   "alert_langUpdated": { "message": "Valoda atjaunināta" },
   "alert_willReplyIn": { "message": "atbildēs pēc" },
   "alert_yourSysLang": { "message": "jūsu sistēmas valoda" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "Aktuāls" },
   "alert_unavailable": { "message": "Nav pieejams" },
   "alert_isOnlyAvailFor": { "message": "ir pieejams tikai" },
-  "alert_userscriptMgrNoStream": { "message": "Jūsu lietotāju skriptu pārvaldnieks neatbalsta straumes atbilžu atgriešanu" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Jūsu lietotāju skriptu pārvaldnieks neatbalsta straumes atbilžu atgriešanu"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "pašlaik ir pieejams tikai līdz" },
   "alert_openAIsupportSoon": { "message": "Drīzumā tiks pievienots OpenAI API atbalsts" },
   "alert_waitingFor": { "message": "Gaida" },

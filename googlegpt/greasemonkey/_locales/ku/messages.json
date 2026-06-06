@@ -1,5 +1,7 @@
 {
-  "appDesc": { "message": "Bersivên AI-ê li Lêgerîna Google-ê zêde dike (ji hêla Google Gemma + GPT-4o ve hatî hêz kirin!)" },
+  "appDesc": {
+    "message": "Bersivên AI-ê li Lêgerîna Google-ê zêde dike (ji hêla Google Gemma + GPT-4o ve hatî hêz kirin!)"
+  },
   "menuLabel_autoAnswer": { "message": "خو وەڵام دەرەوە" },
   "menuLabel_autoSummarizeResults": { "message": "Encamên Xweser Bi Kurte Bikin" },
   "menuLabel_autoFocusChatbar": { "message": "Oto-Focus Chatbar" },
@@ -16,7 +18,9 @@
   "menuLabel_pinTo": { "message": "Pin to" },
   "menuLabel_nothing": { "message": "Ne tiştek" },
   "menuLabel_top": { "message": "Jor" },
-  "menuLabel_sidebar": { "message": "Darika- kêlekê Veşêre@ title actions category - means actions changing smth in interface" },
+  "menuLabel_sidebar": {
+    "message": "Darika- kêlekê Veşêre@ title actions category - means actions changing smth in interface"
+  },
   "menuLabel_bottom": { "message": "Bin" },
   "menuLabel_background": { "message": "Paşxane" },
   "menuLabel_foreground": { "message": "Dîmena- pêş" },
@@ -28,7 +32,9 @@
   "menuLabel_settings": { "message": "Mîheng" },
   "menuLabel_random": { "message": "Lêrasthatî" },
   "menuLabel_saved": { "message": "پاشە کەوت کرا، پاشەکەوتکراو، ڕزگارکراو، ھەڵگیراو، دەستی گرتەوە، پاشەکەوتیکرد" },
-  "componentLabel_used": { "message": "بەکارھاتوو، بەکارھێنراو، دەسەدوو، ئاشنا، سوودوەرگیراو لێی، بەکارھاتووە، وەبەرھێنراو، پەیڕەو کراو، کۆن، کەڵک لێوەرگیراو، لەبەرکراو، پەیڕەوکراو، کارپێکراو، خراوەکار\n[ھونەر]: بەکارھێنراو، کۆن" },
+  "componentLabel_used": {
+    "message": "بەکارھاتوو، بەکارھێنراو، دەسەدوو، ئاشنا، سوودوەرگیراو لێی، بەکارھاتووە، وەبەرھێنراو، پەیڕەو کراو، کۆن، کەڵک لێوەرگیراو، لەبەرکراو، پەیڕەوکراو، کارپێکراو، خراوەکار\n[ھونەر]: بەکارھێنراو، کۆن"
+  },
   "about_author": { "message": "Nivîskar" },
   "about_and": { "message": "û" },
   "about_contributors": { "message": "ھاوبەشاکان، بەخشندەکان، بەھرەدرارەکان، بەشداریکەران" },
@@ -55,7 +61,9 @@
   "tooltip_shrink": { "message": "Shrink" },
   "tooltip_close": { "message": "Bigire" },
   "tooltip_copy": { "message": "Kopî bike" },
-  "tooltip_generate": { "message": "دەست دەکەوێت، دروست دەکات، پێک دێنێت، دەھێنێتە بەرھەم، بەدیھێنان، دروست کردن، چاککردن، خەلق کردن، منداڵبوون، ھێنانەدنیاوە\n[پزیشکی]: دروست کردن، دەرھێنان، پەیداکردن\n[کۆمپیوتەر]: بەدیھێنان" },
+  "tooltip_generate": {
+    "message": "دەست دەکەوێت، دروست دەکات، پێک دێنێت، دەھێنێتە بەرھەم، بەدیھێنان، دروست کردن، چاککردن، خەلق کردن، منداڵبوون، ھێنانەدنیاوە\n[پزیشکی]: دروست کردن، دەرھێنان، پەیداکردن\n[کۆمپیوتەر]: بەدیھێنان"
+  },
   "tooltip_generating": { "message": "بەرھەمدان، بوون، منداڵبوون، زاوزێکردن" },
   "tooltip_regenerate": { "message": "نوێی دەکاتەوە، پەیدا دەبێتەوە، بوونەوە" },
   "tooltip_regenerating": { "message": "Regenerating" },
@@ -87,6 +95,17 @@
   "placeholder_askSomethingElse": { "message": "شتێکی تر بپرسە" },
   "placeholder_typeSomething": { "message": "Tiştek binivîse" },
   "prompt_updateReplyLang": { "message": "نوێکردنەوەی زمانی وەرزیی پاسخ" },
+  "alert_importantNotice": { "message": "Agahdariya Girîng" },
+  "alert_poweredByAI": {
+    "message": "bi teknolojiya AI ve tê xebitandin. Her çend ji bo alîkarbûnê hatîye sêwirandin jî"
+  },
+  "alert_aiCanMakeMistakes": { "message": "AI dikare şaşiyan bike" },
+  "alert_alwaysVerifyInfo": { "message": "Agahiyên girîng her tim piştrast bike" },
+  "alert_doubleCheckDecisions": { "message": "Biryarên krîtîk du caran kontrol bikin" },
+  "alert_dontRelySolelyOnAI": { "message": "Tenê bi şîretên AI-ê bawer nekin" },
+  "alert_notAsub": { "message": "Ne cîgir e" },
+  "alert_forProMedOrLegalMatters": { "message": "Ji bo meseleyên pîşeyî, bijîşkî, an qanûnî" },
+  "alert_useResponsibly": { "message": "Bi berpirsiyarî bikar bînin" },
   "alert_langUpdated": { "message": "زمان نوێکرایەوە" },
   "alert_willReplyIn": { "message": "پاسخ بدۆزێنرێت لە" },
   "alert_yourSysLang": { "message": "زمانی سیستەمەکە" },
@@ -98,11 +117,15 @@
   "alert_isUpToDate": { "message": "نوێکرایەوە" },
   "alert_unavailable": { "message": "لەبەردەست دا نیە" },
   "alert_isOnlyAvailFor": { "message": "tenê ji bo peyda dibe" },
-  "alert_userscriptMgrNoStream": { "message": "Rêvebirê nivîsara weya bikarhêner bersivên vegerandina tîrêjê piştgirî nake" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Rêvebirê nivîsara weya bikarhêner bersivên vegerandina tîrêjê piştgirî nake"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "niha tenê ji hêla" },
   "alert_openAIsupportSoon": { "message": "Piştgiriya ji bo OpenAI API dê di demek kurt de were zêdekirin" },
   "alert_waitingFor": { "message": "چاوەڕیکردن" },
-  "alert_response": { "message": "وەڵام دانەوە، وەڵام، بەدمەوەھاتن، بەدەمەوەچوون، بەجێھێنان\n[پزیشکی]: وەڵام، وەڵامدانەوە: کردار یان جووڵەیە کە لە وەڵامی بەکارھێنانی دنەدەڕێکدا دەکڕێت\n[ئامار]: وەڵامدانەوە، بەدەنگەوەچوون\n[گەرمی بزووتن]: وەڵامدانەوە، وەڵامگری، بەرسڤ\n[رۆژنامەوانی]: وەڵامدانەوە یان کاردانەوە\n[کۆمپیوتەر]: وەڵام" },
+  "alert_response": {
+    "message": "وەڵام دانەوە، وەڵام، بەدمەوەھاتن، بەدەمەوەچوون، بەجێھێنان\n[پزیشکی]: وەڵام، وەڵامدانەوە: کردار یان جووڵەیە کە لە وەڵامی بەکارھێنانی دنەدەڕێکدا دەکڕێت\n[ئامار]: وەڵامدانەوە، بەدەنگەوەچوون\n[گەرمی بزووتن]: وەڵامدانەوە، وەڵامگری، بەرسڤ\n[رۆژنامەوانی]: وەڵامدانەوە یان کاردانەوە\n[کۆمپیوتەر]: وەڵام"
+  },
   "alert_login": { "message": "تکایە تایبەتی بکە" },
   "alert_thenRefreshPage": { "message": "paşê vê rûpelê nûve bikin" },
   "alert_tooManyRequests": { "message": "ChatGPT لە پرسیارەکانی زۆر زیاتر دیاریکراوە" },
@@ -110,7 +133,9 @@
   "alert_checkCloudflare": { "message": "تکایە پارێز کراوەی سیکوریتی Cloudflare بنێرە" },
   "alert_notWorking": { "message": "ne kar e" },
   "alert_ifIssuePersists": { "message": "Ger pirsgirêk berdewam bike" },
-  "alert_try": { "message": "ھەوڵ دەدات، دادگای دەکات، تاقی دەکاتەوە، ھەوڵدان، جیاکردنەوە، دەرھێنان، پاک کردنەوە، ھەوڵ، تاقی کردنەوە، دادگایی کردن" },
+  "alert_try": {
+    "message": "ھەوڵ دەدات، دادگای دەکات، تاقی دەکاتەوە، ھەوڵدان، جیاکردنەوە، دەرھێنان، پاک کردنەوە، ھەوڵ، تاقی کردنەوە، دادگایی کردن"
+  },
   "alert_switchingOn": { "message": "veguherandin" },
   "alert_switchingOff": { "message": "بڕینی تەزووی کارەبا" },
   "alert_selectingDiff": { "message": "hilbijartina cuda" },
@@ -121,7 +146,9 @@
   "btnLabel_moreAIextensions": { "message": "Zêdetir Pêvekên AI-ê" },
   "btnLabel_leaveReview": { "message": "Bihêle Review" },
   "btnLabel_rateUs": { "message": "Me binirxînin" },
-  "btnLabel_discuss": { "message": "گفتوگۆ دەکات، تاووتوێکردن(دانوستاندن)، گفتوگۆدەکات، تاووتوێکردن، دانوستان، وتووێژ، گفتوگۆ" },
+  "btnLabel_discuss": {
+    "message": "گفتوگۆ دەکات، تاووتوێکردن(دانوستاندن)، گفتوگۆدەکات، تاووتوێکردن، دانوستان، وتووێژ، گفتوگۆ"
+  },
   "btnLabel_getSupport": { "message": "پشتگیری بگرە" },
   "btnLabel_checkForUpdates": { "message": "پشکنینی نوێکردنەوە" },
   "btnLabel_update": { "message": "نوێکردنەوە" },

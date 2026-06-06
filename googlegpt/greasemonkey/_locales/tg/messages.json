@@ -69,7 +69,9 @@
   "helptip_proxyAPImode": { "message": "Name" },
   "helptip_preferredAPI": { "message": "API барои истифода ҳангоми гирифтани ҷавобҳо дар режими Proxy" },
   "helptip_streamingMode": { "message": "Қабул кардани ҷавобҳо дар ҷараёни матнии доимӣ" },
-  "helptip_autoGetAnswers": { "message": "Awtomatikong magpadala ng mga query sa GoogleGPT kapag gumagamit ng search engine" },
+  "helptip_autoGetAnswers": {
+    "message": "Awtomatikong magpadala ng mga query sa GoogleGPT kapag gumagamit ng search engine"
+  },
   "helptip_autoSummarizeResults": { "message": "Awtomatikong sumali ang pahina ng mga resulta sa paghah" },
   "helptip_autoFocusChatbar": { "message": "Панели чат бо фокуси худкор ҳар вақте, ки пайдо мешавад" },
   "helptip_autoScroll": { "message": "Посухҳои худкор" },
@@ -87,6 +89,17 @@
   "placeholder_askSomethingElse": { "message": "Як чизи дигарро пурсед" },
   "placeholder_typeSomething": { "message": "Чизеро чоп кунед" },
   "prompt_updateReplyLang": { "message": "Update reply language" },
+  "alert_importantNotice": { "message": "Огоҳии муҳим" },
+  "alert_poweredByAI": {
+    "message": "бо технологияи AI нигаронида шудааст. Дар ҳоле ки тарҳрезӣ шудааст, ки муфид бошад"
+  },
+  "alert_aiCanMakeMistakes": { "message": "AI метавонад хато кунад" },
+  "alert_alwaysVerifyInfo": { "message": "Ҳамеша маълумоти муҳимро тафтиш кунед" },
+  "alert_doubleCheckDecisions": { "message": "Санҷиши дубораи қарорҳои муҳим" },
+  "alert_dontRelySolelyOnAI": { "message": "Танҳо ба маслиҳати AI такя накунед" },
+  "alert_notAsub": { "message": "Ҷойивазкунӣ нест" },
+  "alert_forProMedOrLegalMatters": { "message": "Барои масъалаҳои касбӣ, тиббӣ ё ҳуқуқӣ" },
+  "alert_useResponsibly": { "message": "Истифодаи бомасъулият" },
   "alert_langUpdated": { "message": "Language updated" },
   "alert_willReplyIn": { "message": "will reply in" },
   "alert_yourSysLang": { "message": "your system language" },

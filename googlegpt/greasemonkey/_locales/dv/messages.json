@@ -87,6 +87,17 @@
   "placeholder_askSomethingElse": { "message": "އެހެން ސުވާލެއް ކުރޭ" },
   "placeholder_typeSomething": { "message": "އެއްޗެއް ޓައިޕް ކުރާށެވެ" },
   "prompt_updateReplyLang": { "message": "ރިޕްލައި ލެންގުއޭޖް އަޕްޑޭޓް ކުރޭ" },
+  "alert_importantNotice": { "message": "މުހިންމު ނޯޓިސް" },
+  "alert_poweredByAI": {
+    "message": "އެއީ އެއައި ޓެކްނޮލޮޖީން ކަރަންޓް އުފައްދާ އެއްޗެކެވެ. އެހީތެރިވާ ގޮތަށް ފަރުމާކޮށްފައިވާއިރު"
+  },
+  "alert_aiCanMakeMistakes": { "message": "އޭއައި އަށް ގޯސް ހެދިދާނެ" },
+  "alert_alwaysVerifyInfo": { "message": "އަބަދުވެސް މުހިންމު މައުލޫމާތުތައް ޔަގީންކުރުން" },
+  "alert_doubleCheckDecisions": { "message": "މުހިންމު ނިންމުންތައް ދެފަހަރު ޗެކްކުރުން" },
+  "alert_dontRelySolelyOnAI": { "message": "ހަމައެކަނި އޭއައިގެ ލަފާއަށް ބަރޯސާ ނުވާށެވެ" },
+  "alert_notAsub": { "message": "ބަދަލެއް ނޫނެވެ" },
+  "alert_forProMedOrLegalMatters": { "message": "ޕްރޮފެޝަނަލް، މެޑިކަލް، ނުވަތަ ގާނޫނީ ކަންކަމުގައި" },
+  "alert_useResponsibly": { "message": "ޒިންމާދާރުކަމާއެކު ބޭނުންކުރުން" },
   "alert_langUpdated": { "message": "ބަހުރުވަ އަޕްޑޭޓްކޮށްފި" },
   "alert_willReplyIn": { "message": "ޖަވާބު ދެއްވާނެއެވެ" },
   "alert_yourSysLang": { "message": "ތިޔަބޭފުޅުންގެ ސިސްޓަމް ލެންގުއޭޖް" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "އެންމެ ފަހުގެ" },
   "alert_unavailable": { "message": "ނުލިބެއެވެ" },
   "alert_isOnlyAvailFor": { "message": "ލިބޭނީ ހަމައެކަނި" },
-  "alert_userscriptMgrNoStream": { "message": "ތިބާގެ ޔޫޒަރސްކްރިޕްޓް މެނޭޖަރ ރިޓަރން ސްޓްރީމް ރެސްޕޮންސްތަކަށް ސަޕޯޓް ނުކުރެއެވެ" },
+  "alert_userscriptMgrNoStream": {
+    "message": "ތިބާގެ ޔޫޒަރސްކްރިޕްޓް މެނޭޖަރ ރިޓަރން ސްޓްރީމް ރެސްޕޮންސްތަކަށް ސަޕޯޓް ނުކުރެއެވެ"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "މިވަގުތު ލިބެން ހުރީ ހަމައެކަނި" },
   "alert_openAIsupportSoon": { "message": "އޯޕަންއޭއައި އެޕީއައި އަށް ސަޕޯޓް ވަރަށް އަވަހަށް އިތުރު ކުރެވޭނެ އެވެ" },
   "alert_waitingFor": { "message": "އިންތިޒާރު ކުރަމުން" },

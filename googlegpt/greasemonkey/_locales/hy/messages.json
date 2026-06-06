@@ -77,7 +77,9 @@
   "helptip_prefixMode": { "message": "Ցույց տալու համար պահանջեք «/» նախքան հարցումները" },
   "helptip_suffixMode": { "message": "Հարցումներից հետո պահանջեք «?» ցուցադրել պատասխանները" },
   "helptip_widerSidebar": { "message": "Հորիզոնական ընդլայնել որոնման էջի կողագիծը" },
-  "helptip_stickySidebar": { "message": "Դարձնում է GoogleGPT - ը տեսանելի կողային գոտում, նույնիսկ այն ժամանակ, երբ դուք թերթում եք" },
+  "helptip_stickySidebar": {
+    "message": "Դարձնում է GoogleGPT - ը տեսանելի կողային գոտում, նույնիսկ այն ժամանակ, երբ դուք թերթում եք"
+  },
   "helptip_anchorMode": { "message": "GoogleGPT - ի խարիսխը պատուհանի ներքևում" },
   "helptip_bgAnimations": { "message": "Ցույց տալ անիմացիոն ֆոնները UI բաղադրիչներում" },
   "helptip_fgAnimations": { "message": "Ցույց տալ նախապատմության անիմացիաները UI բաղադրիչներում" },
@@ -87,6 +89,17 @@
   "placeholder_askSomethingElse": { "message": "Հարցրեք մեկ այլ բան" },
   "placeholder_typeSomething": { "message": "Մուտքագրեք ինչ - որ" },
   "prompt_updateReplyLang": { "message": "Թարմացնել պատասխանների լեզուն" },
+  "alert_importantNotice": { "message": "Կարևոր ծանուցում" },
+  "alert_poweredByAI": {
+    "message": "աշխատում է արհեստական ինտելեկտի տեխնոլոգիայով ։ Թեև նախագծված է օգտակար լինելու համար"
+  },
+  "alert_aiCanMakeMistakes": { "message": "ԱԻ - ն կարող է սխալներ թույլ տալ" },
+  "alert_alwaysVerifyInfo": { "message": "Միշտ ստուգեք կարևոր տեղեկությունները" },
+  "alert_doubleCheckDecisions": { "message": "Կրկնակի ստուգեք կարևոր որոշումները" },
+  "alert_dontRelySolelyOnAI": { "message": "Մի ապավինեք միայն AI - ի խորհուրդներին" },
+  "alert_notAsub": { "message": "Փոխարինող չէ" },
+  "alert_forProMedOrLegalMatters": { "message": "Մասնագիտական, բժշկական կամ իրավաբանական հարցերով" },
+  "alert_useResponsibly": { "message": "Օգտագործեք պատասխանատու կերպով" },
   "alert_langUpdated": { "message": "Լեզուն թարմացվել է" },
   "alert_willReplyIn": { "message": "կպատասխանի" },
   "alert_yourSysLang": { "message": "համակարգի լեզուն" },
@@ -98,7 +111,9 @@
   "alert_isUpToDate": { "message": "այն արդիական է" },
   "alert_unavailable": { "message": "ազատ չէ" },
   "alert_isOnlyAvailFor": { "message": "հասանելի է միայն" },
-  "alert_userscriptMgrNoStream": { "message": "Ձեր օգտատիրոջ սկրիպտի կառավարիչը չի աջակցում հոսքային պատասխանների վերադարձը" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Ձեր օգտատիրոջ սկրիպտի կառավարիչը չի աջակցում հոսքային պատասխանների վերադարձը"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ներկայումս հասանելի է միայն" },
   "alert_openAIsupportSoon": { "message": "OpenAI API - ի աջակցումը շուտով կավելացվի" },
   "alert_waitingFor": { "message": "Սպասում ենք" },
