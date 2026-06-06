@@ -51,14 +51,29 @@
   "helptip_preferredAPI": { "message": "API per utilitzar quan s'obtenen respostes en mode Proxy" },
   "helptip_streamingMode": { "message": "Rebre respostes en un flux de text continu" },
   "helptip_autoFocusChatbar": { "message": "Enfoca automàticament la barra de xat sempre que aparegui" },
-  "helptip_autoScroll": { "message": "Respostes de desplaçament automàtic a mesura que es generen en mode de transmissió" },
+  "helptip_autoScroll": {
+    "message": "Respostes de desplaçament automàtic a mesura que es generen en mode de transmissió"
+  },
   "helptip_bgAnimations": { "message": "Mostra fons animats als components de la interfície d'usuari" },
-  "helptip_fgAnimations": { "message": "Mostra les animacions de primer pla en els components de la interfície d'usuari" },
+  "helptip_fgAnimations": {
+    "message": "Mostra les animacions de primer pla en els components de la interfície d'usuari"
+  },
   "helptip_replyLanguage": { "message": "Idioma en què AmazonGPT pot respondre" },
   "helptip_colorScheme": { "message": "Esquema per mostrar els components de la interfície d'usuari de AmazonGPT a" },
   "helptip_debugMode": { "message": "Mostra el registre detallat a la consola del navegador" },
   "placeholder_typeSomething": { "message": "Escriu alguna cosa" },
   "prompt_updateReplyLang": { "message": "Actualitza l'idioma de la resposta" },
+  "alert_importantNotice": { "message": "Avís important" },
+  "alert_poweredByAI": {
+    "message": "està impulsat per la tecnologia d'intel·ligència artificial. Tot i que està dissenyat per ser útil"
+  },
+  "alert_aiCanMakeMistakes": { "message": "La IA pot cometre errors" },
+  "alert_alwaysVerifyInfo": { "message": "Verifica sempre la informació important" },
+  "alert_doubleCheckDecisions": { "message": "Comprova les decisions crítiques" },
+  "alert_dontRelySolelyOnAI": { "message": "No confieu únicament en els consells de la IA" },
+  "alert_notAsub": { "message": "No és un substitut" },
+  "alert_forProMedOrLegalMatters": { "message": "Per assumptes professionals, mèdics o legals" },
+  "alert_useResponsibly": { "message": "Fes un ús responsable" },
   "alert_langUpdated": { "message": "S'ha actualitzat l'idioma" },
   "alert_willReplyIn": { "message": "respondrà en" },
   "alert_yourSysLang": { "message": "l'idioma del sistema" },
@@ -70,7 +85,9 @@
   "alert_isUpToDate": { "message": "està actualitzat" },
   "alert_unavailable": { "message": "no disponible" },
   "alert_isOnlyAvailFor": { "message": "només està disponible per a" },
-  "alert_userscriptMgrNoStream": { "message": "El gestor de l'script d'usuari no admet el retorn de respostes de fluxos" },
+  "alert_userscriptMgrNoStream": {
+    "message": "El gestor de l'script d'usuari no admet el retorn de respostes de fluxos"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "actualment només està disponible per" },
   "alert_openAIsupportSoon": { "message": "En breu s'afegirà el suport per a l'API d'OpenAI" },
   "alert_waitingFor": { "message": "En espera de la còpia" },

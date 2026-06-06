@@ -51,7 +51,9 @@
   "helptip_preferredAPI": { "message": "API, используемый при получении ответов в режиме прокси" },
   "helptip_streamingMode": { "message": "Получать ответы в непрерывном текстовом потоке" },
   "helptip_autoFocusChatbar": { "message": "Чат-бар с автофокусом, когда бы он ни появлялся" },
-  "helptip_autoScroll": { "message": "Автоматическая прокрутка ответов по мере их генерации в режиме потоковой передачи" },
+  "helptip_autoScroll": {
+    "message": "Автоматическая прокрутка ответов по мере их генерации в режиме потоковой передачи"
+  },
   "helptip_bgAnimations": { "message": "Показать анимированные фоны в компонентах пользовательского интерфейса" },
   "helptip_fgAnimations": { "message": "Показать анимацию переднего плана в компонентах пользовательского интерфейса" },
   "helptip_replyLanguage": { "message": "Язык для ответа AmazonGPT" },
@@ -59,6 +61,17 @@
   "helptip_debugMode": { "message": "Показать подробный вход в консоль браузера" },
   "placeholder_typeSomething": { "message": "Введите текст" },
   "prompt_updateReplyLang": { "message": "Обновить язык ответа" },
+  "alert_importantNotice": { "message": "Важное примечание" },
+  "alert_poweredByAI": {
+    "message": "основан на технологии искусственного интеллекта. Несмотря на то, что они разработаны, чтобы быть полезными"
+  },
+  "alert_aiCanMakeMistakes": { "message": "ИИ может ошибаться" },
+  "alert_alwaysVerifyInfo": { "message": "Всегда проверяйте важную информацию" },
+  "alert_doubleCheckDecisions": { "message": "Перепроверьте критические решения" },
+  "alert_dontRelySolelyOnAI": { "message": "Не полагайтесь исключительно на советы ИИ" },
+  "alert_notAsub": { "message": "Не является заменой" },
+  "alert_forProMedOrLegalMatters": { "message": "По профессиональным, медицинским или юридическим вопросам" },
+  "alert_useResponsibly": { "message": "Используйте ответственно" },
   "alert_langUpdated": { "message": "Язык обновлен" },
   "alert_willReplyIn": { "message": "Отвечу" },
   "alert_yourSysLang": { "message": "Язык системы" },
@@ -70,7 +83,9 @@
   "alert_isUpToDate": { "message": "<PROG_NAME> в актуальном состоянии" },
   "alert_unavailable": { "message": "отсутствует" },
   "alert_isOnlyAvailFor": { "message": "доступно только для" },
-  "alert_userscriptMgrNoStream": { "message": "Ваш менеджер пользовательских скриптов не поддерживает возврат ответов потока" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Ваш менеджер пользовательских скриптов не поддерживает возврат ответов потока"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "в настоящее время доступен только" },
   "alert_openAIsupportSoon": { "message": "Поддержка OpenAI API будет добавлена в ближайшее время" },
   "alert_waitingFor": { "message": "Ожидание" },

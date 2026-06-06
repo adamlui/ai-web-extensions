@@ -51,7 +51,9 @@
   "helptip_preferredAPI": { "message": "API de utilizat atunci când primiți răspunsuri în modul Proxy" },
   "helptip_streamingMode": { "message": "Primiți răspunsuri într-un flux continuu de text" },
   "helptip_autoFocusChatbar": { "message": "Bara de chat cu focalizare automată ori de câte ori apare" },
-  "helptip_autoScroll": { "message": "Derulare automată a răspunsurilor pe măsură ce acestea generează în modul de redare în flux" },
+  "helptip_autoScroll": {
+    "message": "Derulare automată a răspunsurilor pe măsură ce acestea generează în modul de redare în flux"
+  },
   "helptip_bgAnimations": { "message": "Afișați fundaluri animate în componentele UI" },
   "helptip_fgAnimations": { "message": "Afișați animațiile din prim-plan în componentele UI" },
   "helptip_replyLanguage": { "message": "Limba în care AmazonGPT poate răspunde" },
@@ -59,6 +61,15 @@
   "helptip_debugMode": { "message": "Afișați autentificarea detaliată în consola browserului" },
   "placeholder_typeSomething": { "message": "Scrieți ceva" },
   "prompt_updateReplyLang": { "message": "Actualizează limba răspunsului" },
+  "alert_importantNotice": { "message": "Notă importantă" },
+  "alert_poweredByAI": { "message": "este alimentat de tehnologia AI. Deși a fost conceput pentru a fi de ajutor" },
+  "alert_aiCanMakeMistakes": { "message": "IA poate face greșeli" },
+  "alert_alwaysVerifyInfo": { "message": "Verificați întotdeauna informațiile importante" },
+  "alert_doubleCheckDecisions": { "message": "Verifică încă o dată deciziile critice" },
+  "alert_dontRelySolelyOnAI": { "message": "Nu te baza exclusiv pe sfaturile IA" },
+  "alert_notAsub": { "message": "Nu este un înlocuitor" },
+  "alert_forProMedOrLegalMatters": { "message": "Pentru probleme profesionale, medicale sau juridice" },
+  "alert_useResponsibly": { "message": "Utilizați în mod responsabil" },
   "alert_langUpdated": { "message": "Limbă actualizată" },
   "alert_willReplyIn": { "message": "va răspunde în" },
   "alert_yourSysLang": { "message": "limba sistemului dvs" },
@@ -70,7 +81,9 @@
   "alert_isUpToDate": { "message": "Actualizat" },
   "alert_unavailable": { "message": "indisponibil" },
   "alert_isOnlyAvailFor": { "message": "este disponibil numai pentru" },
-  "alert_userscriptMgrNoStream": { "message": "Managerul dvs. de scripturi de utilizator nu acceptă returnarea răspunsurilor fluxului" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Managerul dvs. de scripturi de utilizator nu acceptă returnarea răspunsurilor fluxului"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "este disponibil în prezent numai de" },
   "alert_openAIsupportSoon": { "message": "Suportul pentru OpenAI API va fi adăugat în scurt timp" },
   "alert_waitingFor": { "message": "În așteptarea sincronizării" },

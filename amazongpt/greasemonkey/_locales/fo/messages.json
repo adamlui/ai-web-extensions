@@ -54,11 +54,24 @@
   "helptip_autoScroll": { "message": "Auto-scroll svar sum tey skapa í Streaming mode" },
   "helptip_bgAnimations": { "message": "Vís animeraðar bakgrunnar í UI-komponentum" },
   "helptip_fgAnimations": { "message": "Vís framsýningar í UI-komponentum" },
-  "helptip_replyLanguage": { "message": "Tað er ikki neyðugt at gera eina avgerð um, at tað ikki er møguligt at gera eina avgerð um, at" },
+  "helptip_replyLanguage": {
+    "message": "Tað er ikki neyðugt at gera eina avgerð um, at tað ikki er møguligt at gera eina avgerð um, at"
+  },
   "helptip_colorScheme": { "message": "Skema at vísa AmazonGPT UI komponentir í" },
   "helptip_debugMode": { "message": "Vís ítarliga innriting í leitarkonsol" },
   "placeholder_typeSomething": { "message": "Hvat er tað?" },
   "prompt_updateReplyLang": { "message": "Uppdatering av málinum" },
+  "alert_importantNotice": { "message": "Týdningarmikið ávaring" },
+  "alert_poweredByAI": { "message": "tað er gjørt av AI-tøkni. Men tey hugsa, at tey skulu hjálpa," },
+  "alert_aiCanMakeMistakes": { "message": "Eg kann gera mistøk" },
+  "alert_alwaysVerifyInfo": { "message": "At kanna týdningarmiklar upplýsingar" },
+  "alert_doubleCheckDecisions": { "message": "Tvístøðugar avgerðir" },
+  "alert_dontRelySolelyOnAI": { "message": "Vilt tú ikki bert líta á AI ráðgeving" },
+  "alert_notAsub": { "message": "Tað er ikki neyðugt at skifta" },
+  "alert_forProMedOrLegalMatters": {
+    "message": "Til ber at seta seg í samband við tey, sum hava tørv á hjálp, um tey hava"
+  },
+  "alert_useResponsibly": { "message": "Brúka ábyrgdarliga" },
   "alert_langUpdated": { "message": "Mál dagførd" },
   "alert_willReplyIn": { "message": "hann svarar í" },
   "alert_yourSysLang": { "message": "skipanarmál" },
@@ -70,7 +83,9 @@
   "alert_isUpToDate": { "message": "núverandi tíðindi" },
   "alert_unavailable": { "message": "ikki tøkt" },
   "alert_isOnlyAvailFor": { "message": "tað er bert at fáa" },
-  "alert_userscriptMgrNoStream": { "message": "Brúkaraskrivstjórin hjá tær tekur ikki undir við afturvendandi streymum" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Brúkaraskrivstjórin hjá tær tekur ikki undir við afturvendandi streymum"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "nú er tað bert at fáa" },
   "alert_openAIsupportSoon": { "message": "Stuðul til OpenAI API verður lagt afturat skjótt" },
   "alert_waitingFor": { "message": "Vænta eftir" },

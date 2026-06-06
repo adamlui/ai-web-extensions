@@ -51,14 +51,31 @@
   "helptip_preferredAPI": { "message": "ཁྱོད་ཀྱིས་ལན་འདི་ Proxy Modeནང་ལུ་ཐོབ་པའི་སྐབས་ལུ་ ལག་ལེན་འཐབ་དགོ་པའི་ API" },
   "helptip_streamingMode": { "message": "ལན་སློག འཕྲུལ་ཆས་ཚུ་ འཕྲུལ་ཆས་ཚུ་ འཕྲུལ་ཆས་ཚུ་" },
   "helptip_autoFocusChatbar": { "message": "རང་གིས་རང་ལུ་ལྟེ་བའི་ chatbar འདི་མཐོངམ་ད་" },
-  "helptip_autoScroll": { "message": "རང་བཞིན་གྱི་ཨེབ་ཐག་གི་ལན་འདེབས་ཚུ་ རྒྱང་བསྒྲགས་འབད་ཐངས་ནང་ བཟོ་སྐྲུན་འབད་ཐངས་ནང་" },
+  "helptip_autoScroll": {
+    "message": "རང་བཞིན་གྱི་ཨེབ་ཐག་གི་ལན་འདེབས་ཚུ་ རྒྱང་བསྒྲགས་འབད་ཐངས་ནང་ བཟོ་སྐྲུན་འབད་ཐངས་ནང་"
+  },
   "helptip_bgAnimations": { "message": "UIགི་ཡན་ལག་ཚུ་ནང་ལུ་ animated backgroundསྟོན་འབདཝ་ཨིན།" },
   "helptip_fgAnimations": { "message": "ཌའི་ལོག་གི་ཁ་བྱང་ཚུ་ ཌའི་ལོག་གི་ཁ་བྱང་ཚུ་ནང་སེལ་འཐུ་འབད།" },
   "helptip_replyLanguage": { "message": "ཁྱོད་ཀྱིས་ལན་སླབ་ནི་དེ་ བློ་ཁོག་ཆེ་ཏོག་ཏོ་ཅིག་ཨིན་ཟེར་སླབ་དགོ།" },
-  "helptip_colorScheme": { "message": "ཁྱོད་ཀྱིས་འབད་བ་ཅིན་ ཁྱོད་ཀྱིས་འབད་བ་ཅིན་ ཁྱོད་ཀྱིས་ང་དང་གཅིག་ཁར་ འབྲེལ་བ་འཐབ་ནི་དེ་ ལེགས་ཤོམ་ཨིན་ཟེར་ཤེས་འོང་" },
+  "helptip_colorScheme": {
+    "message": "ཁྱོད་ཀྱིས་འབད་བ་ཅིན་ ཁྱོད་ཀྱིས་འབད་བ་ཅིན་ ཁྱོད་ཀྱིས་ང་དང་གཅིག་ཁར་ འབྲེལ་བ་འཐབ་ནི་དེ་ ལེགས་ཤོམ་ཨིན་ཟེར་ཤེས་འོང་"
+  },
   "helptip_debugMode": { "message": "Browser consoleནང་ལུ་ Details loggingབཏོན་" },
   "placeholder_typeSomething": { "message": "འདི་བཟུམ་གྱི་" },
   "prompt_updateReplyLang": { "message": "སྐད་ཡིག་གི་དུས་ཚོད། བསྒྱུར་བཅོས་" },
+  "alert_importantNotice": { "message": "དྲན་བསྐུལ་ཁག་ཆེ་བ།" },
+  "alert_poweredByAI": {
+    "message": "འདི་ AI འཕྲུལ་རིག་གིས་དབང་བསྒྱུར་འབད་ཡོདཔ་ཨིན། ཁོང་གིས་འབད་བ་ཅིན་ ཁོང་གིས་ཆ་རོགས་འབད་ཚུགས་པས་ཟེར་མནོཝ་མས།"
+  },
+  "alert_aiCanMakeMistakes": { "message": "ང་གིས་འཛོལ་བ་དེ་ཚུ་ག་ར་བརྩི་ཚུགས་" },
+  "alert_alwaysVerifyInfo": { "message": "ཁྱོད་ཀྱིས་ བརྡ་དོན་ཁག་ཆེ་ཏོག་ཏོ་ཚུ་འཚོལ་དགོཔ་ཨིན།" },
+  "alert_doubleCheckDecisions": { "message": "གྲོས་ཐག་ཁག་ཆེ་ཏོག་ཏོ་ཚུ་ བརྟག་དཔྱད་འབད་" },
+  "alert_dontRelySolelyOnAI": { "message": "ཁྱོད་ཀྱིས་བསླབ་བྱ་ལུ་རྐྱངམ་གཅིག་བློ་མ་གཏད་" },
+  "alert_notAsub": { "message": "བསྒྱུར་བཅོས་འབད་མི་མིན་འདུག" },
+  "alert_forProMedOrLegalMatters": {
+    "message": "ཁྲིམས་ཀྱི་དཔྱད་ཡིག་དང་ ཁྲིམས་ཀྱི་དཔྱད་ཡིག་ དེ་ལས་ ཁྲིམས་ཀྱི་དཔྱད་ཡིག་ཚུ་"
+  },
+  "alert_useResponsibly": { "message": "འགན་འཁྲི་འབག་སྟེ་ལག་ལེན་འཐབ་" },
   "alert_langUpdated": { "message": "སྐད་ཡིག་གསར་བཅོས་འབད་" },
   "alert_willReplyIn": { "message": "ང་བཅས་ཀྱིས་ལན་རྐྱབ་ཨིན། ང་བཅས་ཀྱིས་ལན་རྐྱབ་ཨིན།" },
   "alert_yourSysLang": { "message": "(ཕྱ) སྐད་ཡིག་གི་མིང་།" },
@@ -70,7 +87,9 @@
   "alert_isUpToDate": { "message": "ད་ལྟོའི་བར་ན་ཡང་" },
   "alert_unavailable": { "message": "མ་ཐོབ་" },
   "alert_isOnlyAvailFor": { "message": "པ་ ཐོན་ཡོདཔ་ཨིན་པས།" },
-  "alert_userscriptMgrNoStream": { "message": "ཁྱེད་ཀྱི་ལག་ལེན་གྱི་ཡིག་འབྲུ་འཛིན་སྐྱོང་པ་གིས་ Return Stream ལན་སློགལུ་ རྒྱབ་སྐྱོར་མི་འབད་དོ།" },
+  "alert_userscriptMgrNoStream": {
+    "message": "ཁྱེད་ཀྱི་ལག་ལེན་གྱི་ཡིག་འབྲུ་འཛིན་སྐྱོང་པ་གིས་ Return Stream ལན་སློགལུ་ རྒྱབ་སྐྱོར་མི་འབད་དོ།"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ད་ལྟོ་ལག་ལེན་འཐབ་ཚུགས་མི་དེ་" },
   "alert_openAIsupportSoon": { "message": "OpenAI APIགི་དོན་ལུ་ རྒྱབ་སྐྱོར་འདི་ འཕྲལ་མགྱོགས་ར་ ཡར་སེང་འབད་ནི་ཨིན།" },
   "alert_waitingFor": { "message": "སྒུག་སྡོད་ནི་" },

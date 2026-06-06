@@ -59,6 +59,17 @@
   "helptip_debugMode": { "message": "Montre ouvri sesyon an detay nan konsole navigatè a" },
   "placeholder_typeSomething": { "message": "Tape yon bagay" },
   "prompt_updateReplyLang": { "message": "Mete ajou langaj repons lan" },
+  "alert_importantNotice": { "message": "Avi Enpòtan" },
+  "alert_poweredByAI": {
+    "message": "se Powered by teknoloji AI. Pandan ke ki fèt yo dwe itil/Pandan ke ki fèt yo dwe itil/"
+  },
+  "alert_aiCanMakeMistakes": { "message": "AI ka fè erè" },
+  "alert_alwaysVerifyInfo": { "message": "Toujou verifye enfòmasyon enpòtan" },
+  "alert_doubleCheckDecisions": { "message": "Double-tcheke desizyon kritik yo" },
+  "alert_dontRelySolelyOnAI": { "message": "Pa konte sèlman sou konsèy AI" },
+  "alert_notAsub": { "message": "Pa yon ranplasan" },
+  "alert_forProMedOrLegalMatters": { "message": "Pou zafè pwofesyonèl, medikal, oswa legal" },
+  "alert_useResponsibly": { "message": "Sèvi ak responsablite" },
   "alert_langUpdated": { "message": "Lang mete ajou" },
   "alert_willReplyIn": { "message": "pral reponn nan" },
   "alert_yourSysLang": { "message": "langaj sistèm ou an/votre lan" },
@@ -96,7 +107,9 @@
   "btnLabel_getSupport": { "message": "Jwenn Sipò" },
   "btnLabel_checkForUpdates": { "message": "Tcheke pou Mizajou" },
   "btnLabel_update": { "message": "Mizajou" },
-  "btnLabel_dismiss": { "message": "ranvwaye /rejte/revoke /abandone/elimine/rejeter /renvoyer/révoquer/éliminer/abandonner/annuler" },
+  "btnLabel_dismiss": {
+    "message": "ranvwaye /rejte/revoke /abandone/elimine/rejeter /renvoyer/révoquer/éliminer/abandonner/annuler"
+  },
   "btnLabel_visitPage": { "message": "vizite paj sa a/visitez cette page" },
   "btnLabel_download": { "message": "Telechaje" },
   "btnLabel_convo": { "message": "konvèzasyon" },

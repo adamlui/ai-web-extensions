@@ -59,6 +59,17 @@
   "helptip_debugMode": { "message": "Tarayıcı konsolunda ayrıntılı oturum açmayı göster" },
   "placeholder_typeSomething": { "message": "Bir şeyler yazın" },
   "prompt_updateReplyLang": { "message": "Yanıt dilini güncelleyin" },
+  "alert_importantNotice": { "message": "Önemli Uyarı" },
+  "alert_poweredByAI": {
+    "message": "yapay zeka teknolojisi tarafından desteklenmektedir. Yararlı olacak şekilde tasarlanırken"
+  },
+  "alert_aiCanMakeMistakes": { "message": "Yapay zeka hata yapabilir" },
+  "alert_alwaysVerifyInfo": { "message": "Her zaman önemli bilgileri doğrulayın" },
+  "alert_doubleCheckDecisions": { "message": "Kritik kararları iki kez kontrol edin" },
+  "alert_dontRelySolelyOnAI": { "message": "Sadece yapay zeka tavsiyelerine güvenmeyin" },
+  "alert_notAsub": { "message": "Yedek değil" },
+  "alert_forProMedOrLegalMatters": { "message": "Mesleki, tıbbi veya yasal konular için" },
+  "alert_useResponsibly": { "message": "Sorumlu kullanın" },
   "alert_langUpdated": { "message": "Dil güncelleme" },
   "alert_willReplyIn": { "message": "cevap verecek" },
   "alert_yourSysLang": { "message": "Sistem dili" },

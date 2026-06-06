@@ -47,11 +47,15 @@
   "tooltip_reply": { "message": "Odpowiedz" },
   "tooltip_code": { "message": "Kod" },
   "tooltip_generatingAudio": { "message": "Generowanie dźwięku" },
-  "helptip_proxyAPImode": { "message": "Używa interfejsu API serwera proxy w celu uzyskania dostępu bez logowania do sztucznej inteligencji" },
+  "helptip_proxyAPImode": {
+    "message": "Używa interfejsu API serwera proxy w celu uzyskania dostępu bez logowania do sztucznej inteligencji"
+  },
   "helptip_preferredAPI": { "message": "Interfejs API używany podczas uzyskiwania odpowiedzi w trybie proxy" },
   "helptip_streamingMode": { "message": "Otrzymuj odpowiedzi w ciągłym strumieniu tekstu" },
   "helptip_autoFocusChatbar": { "message": "Automatycznie skupiaj pasek czatu za każdym razem, gdy się pojawi" },
-  "helptip_autoScroll": { "message": "Automatyczne przewijanie odpowiedzi generowanych w trybie przesyłania strumieniowego" },
+  "helptip_autoScroll": {
+    "message": "Automatyczne przewijanie odpowiedzi generowanych w trybie przesyłania strumieniowego"
+  },
   "helptip_bgAnimations": { "message": "Pokaż animowane tła w komponentach interfejsu użytkownika" },
   "helptip_fgAnimations": { "message": "Pokaż animacje pierwszego planu w komponentach interfejsu użytkownika" },
   "helptip_replyLanguage": { "message": "Język odpowiedzi AmazonGPT" },
@@ -59,6 +63,17 @@
   "helptip_debugMode": { "message": "Pokaż szczegółowe logowanie w konsoli przeglądarki" },
   "placeholder_typeSomething": { "message": "Zacznij pisać" },
   "prompt_updateReplyLang": { "message": "Zaktualizuj język odpowiedzi" },
+  "alert_importantNotice": { "message": "Ważna uwaga" },
+  "alert_poweredByAI": {
+    "message": "opiera się na technologii sztucznej inteligencji. Choć zaprojektowany, aby być pomocnym"
+  },
+  "alert_aiCanMakeMistakes": { "message": "Sztuczna inteligencja może popełniać błędy" },
+  "alert_alwaysVerifyInfo": { "message": "Zawsze sprawdzaj ważne informacje" },
+  "alert_doubleCheckDecisions": { "message": "Dokładnie sprawdź krytyczne decyzje" },
+  "alert_dontRelySolelyOnAI": { "message": "Nie polegaj wyłącznie na poradach dotyczących sztucznej inteligencji" },
+  "alert_notAsub": { "message": "Nie jest substytutem" },
+  "alert_forProMedOrLegalMatters": { "message": "W sprawach zawodowych, medycznych lub prawnych" },
+  "alert_useResponsibly": { "message": "Używaj odpowiedzialnie" },
   "alert_langUpdated": { "message": "Język został zaktualizowany" },
   "alert_willReplyIn": { "message": "odpowie za" },
   "alert_yourSysLang": { "message": "Język systemu" },
@@ -70,7 +85,9 @@
   "alert_isUpToDate": { "message": "jest aktualny" },
   "alert_unavailable": { "message": "niedostępne" },
   "alert_isOnlyAvailFor": { "message": "jest dostępny tylko dla" },
-  "alert_userscriptMgrNoStream": { "message": "Twój menedżer skryptów użytkownika nie obsługuje zwrotnych odpowiedzi strumieniowych" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Twój menedżer skryptów użytkownika nie obsługuje zwrotnych odpowiedzi strumieniowych"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "jest obecnie dostępny tylko dla" },
   "alert_openAIsupportSoon": { "message": "Obsługa OpenAI API zostanie wkrótce dodana" },
   "alert_waitingFor": { "message": "Czekamy na" },

@@ -59,6 +59,17 @@
   "helptip_debugMode": { "message": "Ბრაუზერის კონსოლში შესვლის დეტალური ჩვენება" },
   "placeholder_typeSomething": { "message": "Აკრიფეთ რაიმე" },
   "prompt_updateReplyLang": { "message": "Განაახლეთ პასუხის ენა" },
+  "alert_importantNotice": { "message": "Მნიშვნელოვანი შეტყობინება" },
+  "alert_poweredByAI": {
+    "message": "აღჭურვილია ხელოვნური ინტელექტის ტექნოლოგიით. მიუხედავად იმისა, რომ ის სასარგებლოა"
+  },
+  "alert_aiCanMakeMistakes": { "message": "Ხელოვნურ ინტელექტს შეუძლია შეცდომების დაშვება" },
+  "alert_alwaysVerifyInfo": { "message": "Ყოველთვის გადაამოწმეთ მნიშვნელოვანი ინფორმაცია" },
+  "alert_doubleCheckDecisions": { "message": "Გადაამოწმეთ კრიტიკული გადაწყვეტილებები" },
+  "alert_dontRelySolelyOnAI": { "message": "Ნუ დაეყრდნობით მხოლოდ AI რჩევებს" },
+  "alert_notAsub": { "message": "Არ არის შემცვლელი" },
+  "alert_forProMedOrLegalMatters": { "message": "Პროფესიულ, სამედიცინო ან იურიდიულ საკითხებზე" },
+  "alert_useResponsibly": { "message": "Კეთილსინდისიერად გამოყენება" },
   "alert_langUpdated": { "message": "Განახლდა ენა" },
   "alert_willReplyIn": { "message": "უპასუხებს" },
   "alert_yourSysLang": { "message": "სისტემური ენა?" },
@@ -70,7 +81,9 @@
   "alert_isUpToDate": { "message": "განახლებულია" },
   "alert_unavailable": { "message": "მიუწვდომელი" },
   "alert_isOnlyAvailFor": { "message": "ხელმისაწვდომია მხოლოდ" },
-  "alert_userscriptMgrNoStream": { "message": "Თქვენი მომხმარებლების სკრიპტების მენეჯერი მხარს არ უჭერს ნაკადზე დაბრუნებულ პასუხებს" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Თქვენი მომხმარებლების სკრიპტების მენეჯერი მხარს არ უჭერს ნაკადზე დაბრუნებულ პასუხებს"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ამჟამად ხელმისაწვდომია მხოლოდ" },
   "alert_openAIsupportSoon": { "message": "OpenAI API-ის მხარდაჭერა მალე დაემატება" },
   "alert_waitingFor": { "message": "დისკის მოლოდინი" },

@@ -51,7 +51,9 @@
   "helptip_preferredAPI": { "message": "API para usar ao obter respostas no Modo Proxy" },
   "helptip_streamingMode": { "message": "Receber respostas num fluxo de texto contínuo" },
   "helptip_autoFocusChatbar": { "message": "Barra de chat com foco automático sempre que aparecer" },
-  "helptip_autoScroll": { "message": "Role automaticamente as respostas à medida que elas são geradas no Modo Streaming" },
+  "helptip_autoScroll": {
+    "message": "Role automaticamente as respostas à medida que elas são geradas no Modo Streaming"
+  },
   "helptip_bgAnimations": { "message": "Mostrar planos de fundo animados nos componentes da interface do usuário" },
   "helptip_fgAnimations": { "message": "Mostrar animações em primeiro plano nos componentes da interface do usuário" },
   "helptip_replyLanguage": { "message": "Idioma para o AmazonGPT responder" },
@@ -59,6 +61,15 @@
   "helptip_debugMode": { "message": "Mostrar início de sessão detalhado na consola do navegador" },
   "placeholder_typeSomething": { "message": "Escreva qualquer coisa" },
   "prompt_updateReplyLang": { "message": "Atualizar idioma de resposta" },
+  "alert_importantNotice": { "message": "Aviso Importante" },
+  "alert_poweredByAI": { "message": "é alimentado por tecnologia de IA. Embora concebido para ser útil" },
+  "alert_aiCanMakeMistakes": { "message": "A IA pode cometer erros" },
+  "alert_alwaysVerifyInfo": { "message": "Verifique sempre informações importantes" },
+  "alert_doubleCheckDecisions": { "message": "Verifique novamente as decisões críticas" },
+  "alert_dontRelySolelyOnAI": { "message": "Não confie apenas em conselhos de IA" },
+  "alert_notAsub": { "message": "Não é um substituto" },
+  "alert_forProMedOrLegalMatters": { "message": "Para assuntos profissionais, médicos ou legais" },
+  "alert_useResponsibly": { "message": "Use com responsabilidade" },
   "alert_langUpdated": { "message": "Idioma atualizado" },
   "alert_willReplyIn": { "message": "vai responder em" },
   "alert_yourSysLang": { "message": "Idioma do sistema" },
@@ -70,7 +81,9 @@
   "alert_isUpToDate": { "message": "está actualizado" },
   "alert_unavailable": { "message": "indisponível" },
   "alert_isOnlyAvailFor": { "message": "Apenas disponível para" },
-  "alert_userscriptMgrNoStream": { "message": "O seu gestor de scripts de utilizador não suporta respostas de fluxo de retorno" },
+  "alert_userscriptMgrNoStream": {
+    "message": "O seu gestor de scripts de utilizador não suporta respostas de fluxo de retorno"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "está disponível apenas até" },
   "alert_openAIsupportSoon": { "message": "O suporte para API OpenAI será adicionado em breve" },
   "alert_waitingFor": { "message": "A aguardar" },

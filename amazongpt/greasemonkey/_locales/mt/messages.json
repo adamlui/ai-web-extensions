@@ -51,7 +51,9 @@
   "helptip_preferredAPI": { "message": "API li għandek tuża meta tirċievi t-tweġibiet fil-Modalità Proxy" },
   "helptip_streamingMode": { "message": "Irċievi t-tweġibiet permezz ta' messaġġ kontinwu" },
   "helptip_autoFocusChatbar": { "message": "Fokus awtomatiku fuq iċ-chatbar kull meta jidher" },
-  "helptip_autoScroll": { "message": "It-tweġibiet awtomatikament jiskrolljaw hekk kif jiġġeneraw fil-Modalità Streaming" },
+  "helptip_autoScroll": {
+    "message": "It-tweġibiet awtomatikament jiskrolljaw hekk kif jiġġeneraw fil-Modalità Streaming"
+  },
   "helptip_bgAnimations": { "message": "Uri l-isfondi animati fil-komponenti tal-UI" },
   "helptip_fgAnimations": { "message": "Uri l-animazzjonijiet miksuba fil-komponenti tal-IU" },
   "helptip_replyLanguage": { "message": "Lingwa għal AmazonGPT biex twieġeb" },
@@ -59,6 +61,15 @@
   "helptip_debugMode": { "message": "Uri l-logging dettaljat fil-konsol tal-brawżer" },
   "placeholder_typeSomething": { "message": "Ikteb xi ħaġa" },
   "prompt_updateReplyLang": { "message": "Aġġorna l-lingwa tat-tweġibiet" },
+  "alert_importantNotice": { "message": "Avviż Importanti" },
+  "alert_poweredByAI": { "message": "hija mħaddma mit-teknoloġija tal-IA. Filwaqt li ddisinjat biex ikun ta' għajnuna" },
+  "alert_aiCanMakeMistakes": { "message": "L-IA tista' tagħmel żbalji" },
+  "alert_alwaysVerifyInfo": { "message": "Dejjem ivverifika informazzjoni importanti" },
+  "alert_doubleCheckDecisions": { "message": "Iċċekkja darbtejn id-deċiżjonijiet kritiċi" },
+  "alert_dontRelySolelyOnAI": { "message": "Tiddependix biss fuq il-parir tal-IA" },
+  "alert_notAsub": { "message": "Mhux sostitut" },
+  "alert_forProMedOrLegalMatters": { "message": "Għal kwistjonijiet professjonali, mediċi jew legali" },
+  "alert_useResponsibly": { "message": "Uża b' mod responsabbli" },
   "alert_langUpdated": { "message": "Lingwa aġġornata" },
   "alert_willReplyIn": { "message": "se twieġeb" },
   "alert_yourSysLang": { "message": "il-lingwa tas-sistema tiegħek" },
@@ -70,7 +81,9 @@
   "alert_isUpToDate": { "message": "huwa aġġornat" },
   "alert_unavailable": { "message": "mhux disponibbli" },
   "alert_isOnlyAvailFor": { "message": "huwa disponibbli biss għal" },
-  "alert_userscriptMgrNoStream": { "message": "Il-maniġer tal-iskript tal-utenti tiegħek ma jappoġġjax it-tweġibiet tal-flussi li jirrit" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Il-maniġer tal-iskript tal-utenti tiegħek ma jappoġġjax it-tweġibiet tal-flussi li jirrit"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "bħalissa hija disponibbli biss minn" },
   "alert_openAIsupportSoon": { "message": "L-appoġġ għall-API ta' OpenAI se jiżdied dalwaqt" },
   "alert_waitingFor": { "message": "Qed nistennew" },

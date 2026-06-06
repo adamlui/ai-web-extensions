@@ -59,6 +59,17 @@
   "helptip_debugMode": { "message": "Faʻaalia auiliiliga logging i le browser console" },
   "placeholder_typeSomething": { "message": "Ituaiga o se mea" },
   "prompt_updateReplyLang": { "message": "Faʻafouga o le tali gagana" },
+  "alert_importantNotice": { "message": "Faasilasilaga Taua" },
+  "alert_poweredByAI": {
+    "message": "o loo faagaoioia e tekinolosi AI. O le mea lea, 'ia' outou fesoasoani mai ai 'iā te' outou."
+  },
+  "alert_aiCanMakeMistakes": { "message": "E mafai ona faia e le AI ni mea sese" },
+  "alert_alwaysVerifyInfo": { "message": "Faʻamaonia i taimi uma faʻamatalaga taua" },
+  "alert_doubleCheckDecisions": { "message": "Faalua siaki faaiuga faitioga" },
+  "alert_dontRelySolelyOnAI": { "message": "Aua le na o le faalagolago i le fautuaga a le AI" },
+  "alert_notAsub": { "message": "E leai se sui" },
+  "alert_forProMedOrLegalMatters": { "message": "Mo mataupu tau tomai faapitoa, faafomai po o le tulafono" },
+  "alert_useResponsibly": { "message": "Faaaoga ma le faaeteete" },
   "alert_langUpdated": { "message": "Gagana faʻafouina" },
   "alert_willReplyIn": { "message": "o le a ou tali atu i" },
   "alert_yourSysLang": { "message": "lau gagana faiga" },

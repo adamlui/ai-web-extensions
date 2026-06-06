@@ -59,6 +59,17 @@
   "helptip_debugMode": { "message": "Muuji gelitaanka faahfaahsan ee qunsuliyada biraawsarka" },
   "placeholder_typeSomething": { "message": "Nooca wax" },
   "prompt_updateReplyLang": { "message": "Cusboonaysii Luuqadda Jawaabta" },
+  "alert_importantNotice": { "message": "Ogeysiis Muhiim ah" },
+  "alert_poweredByAI": {
+    "message": "waxay ku shaqeysaa tikniyoolajiyadda AI. Inkasta oo loo qorsheeyay in ay ka faa 'iideystaan"
+  },
+  "alert_aiCanMakeMistakes": { "message": "AI waxay sameyn kartaa khaladaad" },
+  "alert_alwaysVerifyInfo": { "message": "Had iyo jeer hubi macluumaadka muhiimka ah" },
+  "alert_doubleCheckDecisions": { "message": "Laba jeer hubi go 'aamada muhiimka ah" },
+  "alert_dontRelySolelyOnAI": { "message": "Kaliya ha ku tiirsanayn talooyinka AI" },
+  "alert_notAsub": { "message": "Maaha badal" },
+  "alert_forProMedOrLegalMatters": { "message": "Waayo, arrimaha xirfadeed, caafimaad, ama sharci" },
+  "alert_useResponsibly": { "message": "Si mas 'uuliyad leh u isticmaal" },
   "alert_langUpdated": { "message": "Luuqadda la cusbooneysiiyay" },
   "alert_willReplyIn": { "message": "ka jawaabi doonaa in" },
   "alert_yourSysLang": { "message": "luqadaada nidaamka" },
@@ -70,7 +81,9 @@
   "alert_isUpToDate": { "message": "waa up-to-date" },
   "alert_unavailable": { "message": "aan la aamini karin" },
   "alert_isOnlyAvailFor": { "message": "waxaa loo heli karaa oo keliya" },
-  "alert_userscriptMgrNoStream": { "message": "Maamulahaaga isticmaaleyaasha ma taageerayo soo noqoshada jawaabaha qulqulka" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Maamulahaaga isticmaaleyaasha ma taageerayo soo noqoshada jawaabaha qulqulka"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "hadda waxaa la heli karaa oo keliya by" },
   "alert_openAIsupportSoon": { "message": "Taageerada OpenAI API ayaa lagu dari doonaa goor dhow" },
   "alert_waitingFor": { "message": "Sugitaanka" },

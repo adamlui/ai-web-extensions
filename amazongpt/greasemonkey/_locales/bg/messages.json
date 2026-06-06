@@ -47,18 +47,33 @@
   "tooltip_reply": { "message": "Отговор" },
   "tooltip_code": { "message": "Код" },
   "tooltip_generatingAudio": { "message": "Генериране на аудио" },
-  "helptip_proxyAPImode": { "message": "Използва приложен програмен интерфейс (API) за прокси сървър (Proxy API) за достъп без влизане до изку" },
+  "helptip_proxyAPImode": {
+    "message": "Използва приложен програмен интерфейс (API) за прокси сървър (Proxy API) за достъп без влизане до изку"
+  },
   "helptip_preferredAPI": { "message": "API, който да се използва при получаване на отговори в режим на прокси сървър" },
   "helptip_streamingMode": { "message": "Получаване на отговори в непрекъснат текстов поток" },
   "helptip_autoFocusChatbar": { "message": "Чатбар за автоматично фокусиране, когато се появи" },
-  "helptip_autoScroll": { "message": "Автоматично превъртане на отговорите, тъй като те генерират в режим на поточно предаване" },
+  "helptip_autoScroll": {
+    "message": "Автоматично превъртане на отговорите, тъй като те генерират в режим на поточно предаване"
+  },
   "helptip_bgAnimations": { "message": "Показване на анимирани фонове в компонентите на потребителския интерфейс" },
-  "helptip_fgAnimations": { "message": "Показване на анимации на преден план в компонентите на потребителския интерфейс" },
+  "helptip_fgAnimations": {
+    "message": "Показване на анимации на преден план в компонентите на потребителския интерфейс"
+  },
   "helptip_replyLanguage": { "message": "Език, на който AmazonGPT да отговори" },
   "helptip_colorScheme": { "message": "Схема за показване на компонентите на потребителския интерфейс на AmazonGPT в" },
   "helptip_debugMode": { "message": "Показване на подробно регистриране в конзолата на браузъра" },
   "placeholder_typeSomething": { "message": "Въведете нещо" },
   "prompt_updateReplyLang": { "message": "Актуализиране на езика за отговор" },
+  "alert_importantNotice": { "message": "Важно известие" },
+  "alert_poweredByAI": { "message": "се захранва от AI технология. Въпреки че е проектирано да бъде полезно" },
+  "alert_aiCanMakeMistakes": { "message": "Изкуственият интелект може да прави грешки" },
+  "alert_alwaysVerifyInfo": { "message": "Винаги проверявайте важната информация" },
+  "alert_doubleCheckDecisions": { "message": "Проверете отново критичните решения" },
+  "alert_dontRelySolelyOnAI": { "message": "Не разчитайте единствено на съвети за изкуствен интелект" },
+  "alert_notAsub": { "message": "Не е заместител" },
+  "alert_forProMedOrLegalMatters": { "message": "За професионални, медицински или правни въпроси" },
+  "alert_useResponsibly": { "message": "Използвайте отговорно" },
   "alert_langUpdated": { "message": "езикът е актуализиран" },
   "alert_willReplyIn": { "message": "ще отговори след" },
   "alert_yourSysLang": { "message": "\"Системен език\"" },
@@ -70,7 +85,9 @@
   "alert_isUpToDate": { "message": "е актуален" },
   "alert_unavailable": { "message": "недостъпен" },
   "alert_isOnlyAvailFor": { "message": "се предлага само за" },
-  "alert_userscriptMgrNoStream": { "message": "Мениджърът на потребителския ви скрипт не поддържа отговори за връщане на поток" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Мениджърът на потребителския ви скрипт не поддържа отговори за връщане на поток"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "в момента се предлага само от" },
   "alert_openAIsupportSoon": { "message": "Поддръжката на OpenAI API ще бъде добавена скоро" },
   "alert_waitingFor": { "message": "Изчаква се синхронизация" },

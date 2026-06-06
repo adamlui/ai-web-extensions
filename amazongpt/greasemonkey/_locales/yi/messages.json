@@ -59,6 +59,17 @@
   "helptip_debugMode": { "message": "ווייַזן דיטיילד לאָגינג אין בלעטערער קאַנסאָול" },
   "placeholder_typeSomething": { "message": "טיפּ עפּעס" },
   "prompt_updateReplyLang": { "message": "דערהייַנטיקן ענטפער שפּראַך" },
+  "alert_importantNotice": { "message": "וויכטיקע מעלדונג" },
+  "alert_poweredByAI": {
+    "message": "ווערט געטריבן דורך קינסטלעכע אינטעליגענץ טעכנאָלאָגיע. כאָטש עס איז דיזיינד צו זיין נוצלעך"
+  },
+  "alert_aiCanMakeMistakes": { "message": "קינסטלעכע אינטעליגענץ קען מאַכן טעותים" },
+  "alert_alwaysVerifyInfo": { "message": "שטענדיק באַשטעטיקן וויכטיקע אינפֿאָרמאַציע" },
+  "alert_doubleCheckDecisions": { "message": "טשעק איבער קריטישע באַשלוסן נאכאמאל" },
+  "alert_dontRelySolelyOnAI": { "message": "פֿאַרלאָזט זיך נישט נאָר אויף עצה פֿון קינסטלעכער אינטעליגענץ" },
+  "alert_notAsub": { "message": "נישט קיין סובסטיטוט" },
+  "alert_forProMedOrLegalMatters": { "message": "פֿאַר פּראָפֿעסיאָנעלע, מעדיצינישע אָדער לעגאַלע ענינים" },
+  "alert_useResponsibly": { "message": "ניצן פאַראַנטוואָרטלעך" },
   "alert_langUpdated": { "message": "שפּראַך דערהייַנטיקט" },
   "alert_willReplyIn": { "message": "וועט ענטפערן אין" },
   "alert_yourSysLang": { "message": "דיין סיסטעם שפּראַך" },
@@ -70,7 +81,9 @@
   "alert_isUpToDate": { "message": "איז דערהייַנטיקט" },
   "alert_unavailable": { "message": "ניט בנימצא" },
   "alert_isOnlyAvailFor": { "message": "איז בלויז בנימצא פֿאַר" },
-  "alert_userscriptMgrNoStream": { "message": "דיין באַניצער סקריפּט פאַרוואַלטער שטיצט נישט צוריקקומען טייַך רעספּאָנסעס" },
+  "alert_userscriptMgrNoStream": {
+    "message": "דיין באַניצער סקריפּט פאַרוואַלטער שטיצט נישט צוריקקומען טייַך רעספּאָנסעס"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "איז דערווייַל בלויז בנימצא דורך" },
   "alert_openAIsupportSoon": { "message": "שטיצן פֿאַר OpenAI API וועט זיין מוסיף באַלד" },
   "alert_waitingFor": { "message": "ווארטן פֿאַר" },

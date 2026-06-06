@@ -28,7 +28,9 @@
   "mode_streaming": { "message": "ಸ್ಟ್ರೀಮಿಂಗ್ ಮೋಡ್" },
   "mode_autoScroll": { "message": "ಸ್ವಯಂ-ಸ್ಕ್ರೋಲ್ ಮಾಡಿ" },
   "mode_debug": { "message": "ಡೀಬಗ್ ಮೋಡ್" },
-  "tooltip_fontSize": { "message": "à² à²à³à²£à²²à²à³à²·à²£à²à²³à²¨à³à²¨à³ à²à³à²¨à³à²¯ à²¬à²¾à²°à²¿à²à³ à²¬à²³à²à³à²¦à²¾à²°à²¨à²¿à²à²¦ à²¬à²¦à²²à²¾à²¯à²¿à²¸à²²à²¾à²à²¿à²¦à³à²¦à³" },
+  "tooltip_fontSize": {
+    "message": "à² à²à³à²£à²²à²à³à²·à²£à²à²³à²¨à³à²¨à³ à²à³à²¨à³à²¯ à²¬à²¾à²°à²¿à²à³ à²¬à²³à²à³à²¦à²¾à²°à²¨à²¿à²à²¦ à²¬à²¦à²²à²¾à²¯à²¿à²¸à²²à²¾à²à²¿à²¦à³à²¦à³"
+  },
   "tooltip_sendReply": { "message": "ಪ್ರತ್ಯುತ್ತರ ಕಳುಹಿಸಿ" },
   "tooltip_askRandQuestion": { "message": "ಯಾದೃಚ್ಛಿಕ ಪ್ರಶ್ನೆಯನ್ನು ಕೇಳಿ" },
   "tooltip_minimize": { "message": "& ಕನಿಷ್ಠೀಕರಿಸು" },
@@ -59,6 +61,15 @@
   "helptip_debugMode": { "message": "ಬ್ರೌಸರ್ ಕನ್ಸೋಲ್ ‌ ನಲ್ಲಿ ವಿವರವಾದ ಲಾಗಿಂಗ್ ತೋರಿಸಿ" },
   "placeholder_typeSomething": { "message": "ಏನನ್ನಾದರೂ ಟೈಪ್ ಮಾಡಿ" },
   "prompt_updateReplyLang": { "message": "ಪ್ರತ್ಯುತ್ತರ ಭಾಷೆಯನ್ನು ನವೀಕರಿಸಿ" },
+  "alert_importantNotice": { "message": "ಪ್ರಮುಖ ಸೂಚನೆ" },
+  "alert_poweredByAI": { "message": "aI ತಂತ್ರಜ್ಞಾನದಿಂದ ಚಾಲಿತವಾಗಿದೆ. ಸಹಾಯಕವಾಗುವಂತೆ ವಿನ್ಯಾಸಗೊಳಿಸಿದಾಗ" },
+  "alert_aiCanMakeMistakes": { "message": "AI ತಪ್ಪುಗಳನ್ನು ಮಾಡಬಹುದು" },
+  "alert_alwaysVerifyInfo": { "message": "ಯಾವಾಗಲೂ ಪ್ರಮುಖ ಮಾಹಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ" },
+  "alert_doubleCheckDecisions": { "message": "ನಿರ್ಣಾಯಕ ನಿರ್ಧಾರಗಳನ್ನು ಎರಡು ಬಾರಿ ಪರಿಶೀಲಿಸಿ" },
+  "alert_dontRelySolelyOnAI": { "message": "AI ಸಲಹೆಯನ್ನು ಮಾತ್ರ ಅವಲಂಬಿಸಬೇಡಿ" },
+  "alert_notAsub": { "message": "ಬದಲಿಯಾಗಿಲ್ಲ" },
+  "alert_forProMedOrLegalMatters": { "message": "ವೃತ್ತಿಪರ, ವೈದ್ಯಕೀಯ ಅಥವಾ ಕಾನೂನು ವಿಷಯಗಳಿಗಾಗಿ" },
+  "alert_useResponsibly": { "message": "ಜವಾಬ್ದಾರಿಯುತವಾಗಿ ಬಳಸಿ" },
   "alert_langUpdated": { "message": "ಭಾಷೆ ಅಪ್ ‌ ಡೇಟ್ ಮಾಡಲಾಗಿದೆ" },
   "alert_willReplyIn": { "message": "ರಲ್ಲಿ ಪ್ರತ್ಯುತ್ತರಿಸುತ್ತಾರೆ" },
   "alert_yourSysLang": { "message": "ನಿಮ್ಮ ಸಿಸ್ಟಮ್ ಭಾಷೆ" },
@@ -70,7 +81,9 @@
   "alert_isUpToDate": { "message": "ಅಪ್ ‌ ಟು ಡೇಟ್ ಆಗಿದೆ" },
   "alert_unavailable": { "message": "ಲಭ್ಯವಿರುವುದಿಲ್ಲ" },
   "alert_isOnlyAvailFor": { "message": "ಗೆ ಮಾತ್ರ ಲಭ್ಯವಿದೆ" },
-  "alert_userscriptMgrNoStream": { "message": "ನಿಮ್ಮ ಯೂಸರ್ ‌ ಸ್ಕ್ರಿಪ್ಟ್ ಮ್ಯಾನೇಜರ್ ಸ್ಟ್ರೀಮ್ ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಹಿಂದಿರುಗಿಸುವುದನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ" },
+  "alert_userscriptMgrNoStream": {
+    "message": "ನಿಮ್ಮ ಯೂಸರ್ ‌ ಸ್ಕ್ರಿಪ್ಟ್ ಮ್ಯಾನೇಜರ್ ಸ್ಟ್ರೀಮ್ ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಹಿಂದಿರುಗಿಸುವುದನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ಪ್ರಸ್ತುತ ರೊಳಗೆ ಮಾತ್ರ ಲಭ್ಯವಿದೆ" },
   "alert_openAIsupportSoon": { "message": "OpenAI API ಗೆ ಬೆಂಬಲವನ್ನು ಶೀಘ್ರದಲ್ಲೇ ಸೇರಿಸಲಾಗುತ್ತದೆ" },
   "alert_waitingFor": { "message": "ನಿರೀಕ್ಷಿಸಲಾಗುತ್ತಿದೆ" },

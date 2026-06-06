@@ -48,7 +48,9 @@
   "tooltip_code": { "message": "Inambala" },
   "tooltip_generatingAudio": { "message": "Ukupanga Audio" },
   "helptip_proxyAPImode": { "message": "Apeksha Apeksha Apeksha" },
-  "helptip_preferredAPI": { "message": "Ifingakwafwa Ukwishiba Ifingakwafwa Ukuba ne Nsansa nga ca Kuti Ulesanga Amasuko mu" },
+  "helptip_preferredAPI": {
+    "message": "Ifingakwafwa Ukwishiba Ifingakwafwa Ukuba ne Nsansa nga ca Kuti Ulesanga Amasuko mu"
+  },
   "helptip_streamingMode": { "message": "Sangeni Amasuko mu Citabo ca Mbila Nsuma" },
   "helptip_autoFocusChatbar": { "message": "Awkwafina Chatbar Awkwafina" },
   "helptip_autoScroll": { "message": "Ukulele Tabs Ukulele Tabs ukulele tabs" },
@@ -59,6 +61,17 @@
   "helptip_debugMode": { "message": "Ukulele Tabs Ukulele Tabs In Browser Console" },
   "placeholder_typeSomething": { "message": "Mulesunga icintu cimo" },
   "prompt_updateReplyLang": { "message": "Update Mwakitwile language" },
+  "alert_importantNotice": { "message": "Ukucenjesha kwacindama" },
+  "alert_poweredByAI": {
+    "message": "tekinolojia yaingidijibwa na bukwashi bwa AI. Nangu ca kuti balibombeshe pa kuti bamwafwe"
+  },
+  "alert_aiCanMakeMistakes": { "message": "BANTU Bangacita Ifilubo" },
+  "alert_alwaysVerifyInfo": { "message": "Lyonse muleshininkisha Ifyebo Fyacindama" },
+  "alert_doubleCheckDecisions": { "message": "Tontonkanyeni pa fyo mwingacita pa kuti mulepingula bwino pa fintu" },
+  "alert_dontRelySolelyOnAI": { "message": "Mwilatetekela fye amano ya kwa Lesa" },
+  "alert_notAsub": { "message": "Tabalipo ne kupyanika" },
+  "alert_forProMedOrLegalMatters": { "message": "Pa milandu ya bumulandu, ya bumulandu, nelyo ya bumulandu" },
+  "alert_useResponsibly": { "message": "Bomfyeni Bwino" },
   "alert_langUpdated": { "message": "Lulanda Update" },
   "alert_willReplyIn": { "message": "asuka Iwashita" },
   "alert_yourSysLang": { "message": "ludimi lwenu lwa mu ntanda" },
