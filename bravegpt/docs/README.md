@@ -11,7 +11,7 @@
 
 <!-- SHIELDS -->
 
-<a href="https://github.com/KudoAI/brave-omnibox/blob/main/LICENSE.md">
+<a href="https://github.com/KudoAI/bravegpt/blob/main/LICENSE.md">
     <img alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/bravegpt/blob/main/greasemonkey/bravegpt.user.js">
     <img src="https://img.shields.io/github/size/KudoAI/bravegpt/greasemonkey/bravegpt.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>

@@ -1,5 +1,7 @@
 {
-  "appDesc": { "message": "Ҷавоби ChatGPT-ро ба панели паҳлӯии ҷасуронаи ҷустуҷӯ илова мекунад (бо GPT-4o идора карда мешавад!)" },
+  "appDesc": {
+    "message": "Ҷавоби ChatGPT-ро ба панели паҳлӯии ҷасуронаи ҷустуҷӯ илова мекунад (бо GPT-4o идора карда мешавад!)"
+  },
   "menuLabel_proxyAPImode": { "message": "Усули API Proxy" },
   "menuLabel_preferred": { "message": "Size Policy" },
   "menuLabel_autoAnswer": { "message": "Ð  Ð ° Ð ¼ Ð ¾ Ð ¸" },
@@ -69,7 +71,9 @@
   "helptip_proxyAPImode": { "message": "Name" },
   "helptip_preferredAPI": { "message": "API барои истифода ҳангоми гирифтани ҷавобҳо дар режими Proxy" },
   "helptip_streamingMode": { "message": "Қабул кардани ҷавобҳо дар ҷараёни матнии доимӣ" },
-  "helptip_autoGetAnswers": { "message": "Nagpapadala ng Awtomatikong mga query sa BraveGPT kapag gumagamit ng search engine" },
+  "helptip_autoGetAnswers": {
+    "message": "Nagpapadala ng Awtomatikong mga query sa BraveGPT kapag gumagamit ng search engine"
+  },
   "helptip_autoSummarizeResults": { "message": "Awtomatikong sumali ang pahina ng mga resulta sa paghah" },
   "helptip_autoFocusChatbar": { "message": "Панели чат бо фокуси худкор ҳар вақте, ки пайдо мешавад" },
   "helptip_autoScroll": { "message": "Посухҳои худкор" },
@@ -87,6 +91,17 @@
   "placeholder_askSomethingElse": { "message": "Як чизи дигарро пурсед" },
   "placeholder_typeSomething": { "message": "Чизеро чоп кунед" },
   "prompt_updateReplyLang": { "message": "Забони ҷавобро навсозӣ кунед" },
+  "alert_importantNotice": { "message": "Огоҳии муҳим" },
+  "alert_poweredByAI": {
+    "message": "бо технологияи AI нигаронида шудааст. Дар ҳоле ки тарҳрезӣ шудааст, ки муфид бошад"
+  },
+  "alert_aiCanMakeMistakes": { "message": "AI метавонад хато кунад" },
+  "alert_alwaysVerifyInfo": { "message": "Ҳамеша маълумоти муҳимро тафтиш кунед" },
+  "alert_doubleCheckDecisions": { "message": "Санҷиши дубораи қарорҳои муҳим" },
+  "alert_dontRelySolelyOnAI": { "message": "Танҳо ба маслиҳати AI такя накунед" },
+  "alert_notAsub": { "message": "Ҷойивазкунӣ нест" },
+  "alert_forProMedOrLegalMatters": { "message": "Барои масъалаҳои касбӣ, тиббӣ ё ҳуқуқӣ" },
+  "alert_useResponsibly": { "message": "Истифодаи бомасъулият" },
   "alert_langUpdated": { "message": "Забон нав карда шуд" },
   "alert_willReplyIn": { "message": "ҷавоб хоҳад дод" },
   "alert_yourSysLang": { "message": "забони системаи шумо" },

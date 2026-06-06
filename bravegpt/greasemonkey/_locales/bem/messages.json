@@ -67,7 +67,9 @@
   "tooltip_generatingAudio": { "message": "Ukupanga Audio" },
   "tooltip_sendRelatedQuery": { "message": "Tumineni ifipusho ifilanda pali ili lyashi" },
   "helptip_proxyAPImode": { "message": "Ibomfya API iya kwimininako ukwabula ukwingila mu AI" },
-  "helptip_preferredAPI": { "message": "Ifingakwafwa Ukwishiba Ifingakwafwa Ukuba ne Nsansa nga ca Kuti Ulesanga Amasuko mu" },
+  "helptip_preferredAPI": {
+    "message": "Ifingakwafwa Ukwishiba Ifingakwafwa Ukuba ne Nsansa nga ca Kuti Ulesanga Amasuko mu"
+  },
   "helptip_streamingMode": { "message": "Pokeleleni amasuko mu mashiwi ayakonkana" },
   "helptip_autoGetAnswers": { "message": "Tuma ifipusho ku BraveGPT ilyo ulebomfya injini ya kufwailamo" },
   "helptip_autoSummarizeResults": { "message": "Sangeni ifyebo pa mabula ya pa kompyuta" },
@@ -87,6 +89,17 @@
   "placeholder_askSomethingElse": { "message": "Ask Mukena Bali" },
   "placeholder_typeSomething": { "message": "Mulesunga icintu cimo" },
   "prompt_updateReplyLang": { "message": "Ubulasanshi ukubika citako" },
+  "alert_importantNotice": { "message": "Ukucenjesha kwacindama" },
+  "alert_poweredByAI": {
+    "message": "tekinolojia yaingidijibwa na bukwashi bwa AI. Nangu ca kuti balibombeshe pa kuti bamwafwe"
+  },
+  "alert_aiCanMakeMistakes": { "message": "BANTU Bangacita Ifilubo" },
+  "alert_alwaysVerifyInfo": { "message": "Lyonse muleshininkisha Ifyebo Fyacindama" },
+  "alert_doubleCheckDecisions": { "message": "Tontonkanyeni pa fyo mwingacita pa kuti mulepingula bwino pa fintu" },
+  "alert_dontRelySolelyOnAI": { "message": "Mwilatetekela fye amano ya kwa Lesa" },
+  "alert_notAsub": { "message": "Tabalipo ne kupyanika" },
+  "alert_forProMedOrLegalMatters": { "message": "Pa milandu ya bumulandu, ya bumulandu, nelyo ya bumulandu" },
+  "alert_useResponsibly": { "message": "Bomfyeni Bwino" },
   "alert_langUpdated": { "message": "Ludimi lwa lwa Tumama updated" },
   "alert_willReplyIn": { "message": "asuka Iwashita" },
   "alert_yourSysLang": { "message": "mfumo ya lulimi lwenu" },

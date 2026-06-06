@@ -74,10 +74,14 @@
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar nako le nako fa e tlhaga" },
   "helptip_autoScroll": { "message": "Auto-scroll answers as they generate in Streaming Mode" },
   "helptip_showRelatedQueries": { "message": "SHOW related queries below chatbar" },
-  "helptip_prefixMode": { "message": "Ke tlhoka \"/\" pele ga ke botsa dipotso gore ke bone dikarabo tse di tshwanelang go bontshiwa" },
+  "helptip_prefixMode": {
+    "message": "Ke tlhoka \"/\" pele ga ke botsa dipotso gore ke bone dikarabo tse di tshwanelang go bontshiwa"
+  },
   "helptip_suffixMode": { "message": "O tlhoka \"?\" morago ga dipotso tsa dikarabo tse o ka di bontshang" },
   "helptip_widerSidebar": { "message": "Bareng e e kafa letlhakoreng la tsebe ya go senka e atolositswe" },
-  "helptip_stickySidebar": { "message": "E dira gore BraveGPT e bonale mo bareng e e kafa letlhakoreng le eleng ka nako e o tsokotsang ka yone" },
+  "helptip_stickySidebar": {
+    "message": "E dira gore BraveGPT e bonale mo bareng e e kafa letlhakoreng le eleng ka nako e o tsokotsang ka yone"
+  },
   "helptip_anchorMode": { "message": "Anchor BraveGPT go ya kwa tlase mo fensetereng" },
   "helptip_bgAnimations": { "message": "SHOW animated background in UI components" },
   "helptip_fgAnimations": { "message": "Bontsha ditshwantsho tsa fa pele mo dikarolong tsa UI" },
@@ -87,6 +91,15 @@
   "placeholder_askSomethingElse": { "message": "ASK SENGWE SE SENGWE" },
   "placeholder_typeSomething": { "message": "Kwala sengwe mo go yone" },
   "prompt_updateReplyLang": { "message": "Puo e e tlhabolotsweng ya karabo" },
+  "alert_importantNotice": { "message": "Kitsiso ya Botlhokwa" },
+  "alert_poweredByAI": { "message": "e tsamaisiwa ke thekenoloji ya AI. Lemororo e rulaganyeditswe go nna mosola" },
+  "alert_aiCanMakeMistakes": { "message": "AI e ka dira diphoso" },
+  "alert_alwaysVerifyInfo": { "message": "TSHEDIMOSETSO YA BOTLHOKWA" },
+  "alert_doubleCheckDecisions": { "message": "Tlhatlhoba ditshwetso tse di masisi gabedi" },
+  "alert_dontRelySolelyOnAI": { "message": "Ga ke ikaege fela ka kgakololo ya AI" },
+  "alert_notAsub": { "message": "Eseng mo boemong jwa yone" },
+  "alert_forProMedOrLegalMatters": { "message": "Mo mererong ya seporofešenale, ya tsa kalafi, kgotsa ya molao" },
+  "alert_useResponsibly": { "message": "Ke e dirisa ka tsela e e nang le maikarab" },
   "alert_langUpdated": { "message": "Puo e ntshwafaditswe" },
   "alert_willReplyIn": { "message": "o tlile go araba ka" },
   "alert_yourSysLang": { "message": "puo ya gago ya thulaganyo" },
@@ -98,7 +111,9 @@
   "alert_isUpToDate": { "message": "e mo nakong" },
   "alert_unavailable": { "message": "ga e yo" },
   "alert_isOnlyAvailFor": { "message": "e teng fela go" },
-  "alert_userscriptMgrNoStream": { "message": "Mmanejara wa gago wa dikwalo tsa badirisi ga a tshegetse dikarabo tse di busediwang tsa" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Mmanejara wa gago wa dikwalo tsa badirisi ga a tshegetse dikarabo tse di busediwang tsa"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ga jaana e bonwa fela ke" },
   "alert_openAIsupportSoon": { "message": "Kemonokeng ya OpenAI API e tlile go tsenngwa mo bogautshwaneng" },
   "alert_waitingFor": { "message": "Ke ne ke letile" },

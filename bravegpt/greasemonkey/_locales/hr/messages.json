@@ -87,6 +87,17 @@
   "placeholder_askSomethingElse": { "message": "Nešto drugo" },
   "placeholder_typeSomething": { "message": "Upišite nešto" },
   "prompt_updateReplyLang": { "message": "Ažurirajte jezik odgovora" },
+  "alert_importantNotice": { "message": "Važna obavijest" },
+  "alert_poweredByAI": {
+    "message": "pokreće tehnologija umjetne inteligencije. Iako je osmišljen tako da bude koristan"
+  },
+  "alert_aiCanMakeMistakes": { "message": "Umjetna inteligencija može pogriješiti" },
+  "alert_alwaysVerifyInfo": { "message": "Uvijek provjerite važne informacije" },
+  "alert_doubleCheckDecisions": { "message": "Još jednom provjerite kritične odluke" },
+  "alert_dontRelySolelyOnAI": { "message": "Nemojte se oslanjati samo na savjete umjetne inteligencije" },
+  "alert_notAsub": { "message": "Nije zamjena" },
+  "alert_forProMedOrLegalMatters": { "message": "Za stručna, medicinska ili pravna pitanja" },
+  "alert_useResponsibly": { "message": "Koristite odgovorno" },
   "alert_langUpdated": { "message": "Jezik je ažuriran" },
   "alert_willReplyIn": { "message": "će odgovoriti u" },
   "alert_yourSysLang": { "message": "vaš sistemski jezik" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "Ažuriraj" },
   "alert_unavailable": { "message": "nedostupno" },
   "alert_isOnlyAvailFor": { "message": "dostupno je samo za" },
-  "alert_userscriptMgrNoStream": { "message": "Vaš upravitelj korisničkih skripti ne podržava povratne odgovore streama" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Vaš upravitelj korisničkih skripti ne podržava povratne odgovore streama"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "trenutačno je dostupno samo do" },
   "alert_openAIsupportSoon": { "message": "Uskoro će biti dodana podrška za OpenAI API" },
   "alert_waitingFor": { "message": "Čekanje na" },

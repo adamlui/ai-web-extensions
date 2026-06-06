@@ -69,7 +69,9 @@
   "helptip_proxyAPImode": { "message": "AIకి లాగిన్ చేయని యాక్సెస్ కోసం ప్రాక్సీ APIని ఉపయోగిస్తుంది" },
   "helptip_preferredAPI": { "message": "ప్రాక్సీ మోడ్ ‌ లో సమాధానాలు పొందేటప్పుడు ఉపయోగించడానికి API" },
   "helptip_streamingMode": { "message": "నిరంతర టెక్స్ట్ స్ట్రీమ్ ‌ లో ప్రత్యుత్తరాలను స్వీకరించండి" },
-  "helptip_autoGetAnswers": { "message": "సెర్చ్ ఇంజిన్ను ఉపయోగిస్తున్నప్పుడు BraveGPTకి స్వయంచాలకంగా ప్రశ్నలను పంపండి" },
+  "helptip_autoGetAnswers": {
+    "message": "సెర్చ్ ఇంజిన్ను ఉపయోగిస్తున్నప్పుడు BraveGPTకి స్వయంచాలకంగా ప్రశ్నలను పంపండి"
+  },
   "helptip_autoSummarizeResults": { "message": "శోధన ఫలితాల పేజీని స్వయంచాలకంగా సంగ్రహించండి" },
   "helptip_autoFocusChatbar": { "message": "ఆటో-ఫోకస్ చాట్ ‌ బార్ కనిపించినప్పుడల్లా" },
   "helptip_autoScroll": { "message": "స్ట్రీమింగ్ మోడ్ ‌ లో ఆటో-స్క్రోల్ స్పందనలు ఉత్పత్తి అవుతాయి" },
@@ -87,6 +89,15 @@
   "placeholder_askSomethingElse": { "message": "మరేదైనా అడగండి" },
   "placeholder_typeSomething": { "message": "ఏదో టైప్ చేయండి" },
   "prompt_updateReplyLang": { "message": "ప్రత్యుత్తర భాషను నవీకరించండి" },
+  "alert_importantNotice": { "message": "ముఖ్యమైన నోటీసు" },
+  "alert_poweredByAI": { "message": "aI సాంకేతిక పరిజ్ఞానం ద్వారా ఆధారితం. సహాయకరంగా ఉండేలా రూపొందించబడినప్పుడు" },
+  "alert_aiCanMakeMistakes": { "message": "AI తప్పులు చేయవచ్చు" },
+  "alert_alwaysVerifyInfo": { "message": "ఎల్లప్పుడూ ముఖ్యమైన సమాచారాన్ని ధృవీకరించండి" },
+  "alert_doubleCheckDecisions": { "message": "క్లిష్టమైన నిర్ణయాలను రెండుసార్లు తనిఖీ చేయండి" },
+  "alert_dontRelySolelyOnAI": { "message": "AI సలహాపై మాత్రమే ఆధారపడవద్దు" },
+  "alert_notAsub": { "message": "ప్రత్యామ్నాయం కాదు" },
+  "alert_forProMedOrLegalMatters": { "message": "వృత్తిపరమైన, వైద్య లేదా చట్టపరమైన విషయాల కోసం" },
+  "alert_useResponsibly": { "message": "బాధ్యతాయుతంగా ఉపయోగించండి" },
   "alert_langUpdated": { "message": "భాష నవీకరించబడింది" },
   "alert_willReplyIn": { "message": "లో ప్రత్యుత్తరం ఇస్తుంది" },
   "alert_yourSysLang": { "message": "మీ సిస్టమ్ భాష" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "తాజాగా ఉంది" },
   "alert_unavailable": { "message": "అందుబాటులో లేదు" },
   "alert_isOnlyAvailFor": { "message": "కోసం మాత్రమే అందుబాటులో ఉంది" },
-  "alert_userscriptMgrNoStream": { "message": "మీ యూజర్ ‌ స్క్రిప్ట్ మేనేజర్ స్ట్రీమ్ ప్రతిస్పందనలను తిరిగి ఇవ్వడానికి మద్దతు ఇవ్వదు" },
+  "alert_userscriptMgrNoStream": {
+    "message": "మీ యూజర్ ‌ స్క్రిప్ట్ మేనేజర్ స్ట్రీమ్ ప్రతిస్పందనలను తిరిగి ఇవ్వడానికి మద్దతు ఇవ్వదు"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ప్రస్తుతం లోపు మాత్రమే అందుబాటులో ఉంది" },
   "alert_openAIsupportSoon": { "message": "OpenAI APIకి మద్దతు త్వరలో జోడించబడుతుంది" },
   "alert_waitingFor": { "message": "ఈ సమయం కోసం వేచి ఉంది" },

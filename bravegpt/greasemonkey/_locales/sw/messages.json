@@ -1,5 +1,7 @@
 {
-  "appDesc": { "message": "Inaongeza majibu ya ChatGPT kwenye upau wa kando wa Utafutaji wa Ujasiri (unaendeshwa na GPT-4o!)" },
+  "appDesc": {
+    "message": "Inaongeza majibu ya ChatGPT kwenye upau wa kando wa Utafutaji wa Ujasiri (unaendeshwa na GPT-4o!)"
+  },
   "menuLabel_proxyAPImode": { "message": "Hali Mbadala ya API" },
   "menuLabel_preferred": { "message": "inayopendelewa" },
   "menuLabel_autoAnswer": { "message": "Mjibuji Kiotomatiki" },
@@ -87,6 +89,15 @@
   "placeholder_askSomethingElse": { "message": "Uliza kitu kingine" },
   "placeholder_typeSomething": { "message": "Andika kitu" },
   "prompt_updateReplyLang": { "message": "Sasisha lugha ya kujibu" },
+  "alert_importantNotice": { "message": "Ilani Muhimu" },
+  "alert_poweredByAI": { "message": "inaendeshwa na teknolojia ya AI. Huku ikibuniwa ili kusaidia" },
+  "alert_aiCanMakeMistakes": { "message": "AI inaweza kufanya makosa" },
+  "alert_alwaysVerifyInfo": { "message": "Thibitisha taarifa muhimu kila wakati" },
+  "alert_doubleCheckDecisions": { "message": "Angalia mara mbili maamuzi muhimu" },
+  "alert_dontRelySolelyOnAI": { "message": "Usitegemee tu ushauri wa AI" },
+  "alert_notAsub": { "message": "Sio mbadala" },
+  "alert_forProMedOrLegalMatters": { "message": "Kwa masuala ya kitaalamu, matibabu, au kisheria" },
+  "alert_useResponsibly": { "message": "Tumia kwa uwajibikaji" },
   "alert_langUpdated": { "message": "Lugha imesasishwa" },
   "alert_willReplyIn": { "message": "atajibu ndani ya" },
   "alert_yourSysLang": { "message": "lugha ya mfumo wako" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "imesasishwa" },
   "alert_unavailable": { "message": "(Haipatikani)" },
   "alert_isOnlyAvailFor": { "message": "inapatikana tu kwa" },
-  "alert_userscriptMgrNoStream": { "message": "Meneja wako wa hati za watumiaji haungi mkono majibu ya mkondo wa kurudi" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Meneja wako wa hati za watumiaji haungi mkono majibu ya mkondo wa kurudi"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "kwa sasa inapatikana tu na" },
   "alert_openAIsupportSoon": { "message": "Usaidizi wa API ya OpenAI utaongezwa hivi karibuni" },
   "alert_waitingFor": { "message": "Inasubiri" },

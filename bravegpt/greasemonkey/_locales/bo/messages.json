@@ -87,6 +87,19 @@
   "placeholder_askSomethingElse": { "message": "ངས་ད་དུང་འདྲི་ཞིག་ཞུ་རྒྱུ་ཡིན །" },
   "placeholder_typeSomething": { "message": "སྣ་ཚོགས །" },
   "prompt_updateReplyLang": { "message": "སྐད་ཡིག་གསར་འགྱུར །" },
+  "alert_importantNotice": { "message": "དྲན་བསྐུལ་ཁྱད་ཆོས །" },
+  "alert_poweredByAI": {
+    "message": "དེ་ནི་AI འཕྲུལ་རིག་གིས་དབང་བསྒྱུར་བྱེད ། འོན་ཀྱང་དེ་ཚོས་སྐྱབས་གྲོགས་བྱེད་འདོད་དོ །"
+  },
+  "alert_aiCanMakeMistakes": { "message": "ཁྱོད་ཀྱིས་ནོར་འཁྲུལ་བྱེད་སྲིད་དོ །" },
+  "alert_alwaysVerifyInfo": { "message": "རྒྱུན་དུ་དོན་གནད་ཆེ་བའི་བརྡ་དོན་ལ་ལྟ་དགོས །" },
+  "alert_doubleCheckDecisions": { "message": "གྲོས་ཐག་ཆོད་པའི་གནད་དོན་ཁག་གཉིས་པ །" },
+  "alert_dontRelySolelyOnAI": { "message": "ཤེས་རབ་ཀྱི་བསླབ་བྱ་ལ་ཡིད་ཆེས་མ་བྱེད་ཅིག" },
+  "alert_notAsub": { "message": "བསྒྱུར་བཅོས་གང་ཡང་མེད །" },
+  "alert_forProMedOrLegalMatters": {
+    "message": "ཁྲིམས་མཐུན་གྱི་གནད་དོན་དང་། སྨན་བཅོས་ཀྱི་གནད་དོན་དང་། ཁྲིམས་མཐུན་གྱི་གནད་དོན་བཅས་ཀྱི་སྐོར་ལ་"
+  },
+  "alert_useResponsibly": { "message": "འགན་འཁྲི་ཅན་གྱི་ལག་ལེན་" },
   "alert_langUpdated": { "message": "གསར་བསྒྱུར་ཟླ་ཚེས །" },
   "alert_willReplyIn": { "message": "ལན་སློག ལན་སློག" },
   "alert_yourSysLang": { "message": "(བོད་ཡིག) སྐད་ཡིག་གི་མིང་།" },
@@ -98,7 +111,9 @@
   "alert_isUpToDate": { "message": "ཡར་ངོའི་ཚེས་བཅུའི་དུས་སུ་" },
   "alert_unavailable": { "message": "ཉེར་སྤྱོད་མི་ཐུབ་པ" },
   "alert_isOnlyAvailFor": { "message": "རྒྱང་རིང་དུ་མ་གཏོགས་གཞན་གང་ཡང་མེད །" },
-  "alert_userscriptMgrNoStream": { "message": "ཁྱེད་ཀྱི་UserScript Manager གིས་Return Stream ལན་འདེབས་ལ་རྒྱབ་སྐྱོར་མི་བྱེད །" },
+  "alert_userscriptMgrNoStream": {
+    "message": "ཁྱེད་ཀྱི་UserScript Manager གིས་Return Stream ལན་འདེབས་ལ་རྒྱབ་སྐྱོར་མི་བྱེད །"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ད་ལྟའི་བར་དུ །" },
   "alert_openAIsupportSoon": { "message": "OpenAI API ལ་རྒྱབ་སྐྱོར་མགྱོགས་པོ་ཁ་སྣོན་བྱ་རྒྱུ་རེད།་" },
   "alert_waitingFor": { "message": "སྒུག་སྡོད་བྱེད་" },

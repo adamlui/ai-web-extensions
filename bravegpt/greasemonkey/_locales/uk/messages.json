@@ -69,10 +69,14 @@
   "helptip_proxyAPImode": { "message": "Використовує проксі API для доступу без входу до AI" },
   "helptip_preferredAPI": { "message": "API для використання при отриманні відповідей у режимі проксі-сервера" },
   "helptip_streamingMode": { "message": "Отримання відповідей у безперервному текстовому потоці" },
-  "helptip_autoGetAnswers": { "message": "Автоматичне надсилання запитів до BraveGPT під час використання пошукової системи" },
+  "helptip_autoGetAnswers": {
+    "message": "Автоматичне надсилання запитів до BraveGPT під час використання пошукової системи"
+  },
   "helptip_autoSummarizeResults": { "message": "Автоматично узагальнювати сторінку результатів пошуку" },
   "helptip_autoFocusChatbar": { "message": "Панель чату з автофокусом, коли вона з 'являється" },
-  "helptip_autoScroll": { "message": "Автоматичне прокручування відповідей, коли вони генеруються в режимі потокової передачі" },
+  "helptip_autoScroll": {
+    "message": "Автоматичне прокручування відповідей, коли вони генеруються в режимі потокової передачі"
+  },
   "helptip_showRelatedQueries": { "message": "Показати пов 'язані запити під панеллю чату" },
   "helptip_prefixMode": { "message": "Вимагати \"/\" перед запитами для відображення відповідей" },
   "helptip_suffixMode": { "message": "Вимагати \"?\" після запитів для відображення відповідей" },
@@ -87,6 +91,17 @@
   "placeholder_askSomethingElse": { "message": "Задати питання" },
   "placeholder_typeSomething": { "message": "Щось типу" },
   "prompt_updateReplyLang": { "message": "Оновити мову відповіді" },
+  "alert_importantNotice": { "message": "Важливе зауваження" },
+  "alert_poweredByAI": {
+    "message": "працює на технології штучного інтелекту. Незважаючи на те, що розроблений, щоб бути корисним"
+  },
+  "alert_aiCanMakeMistakes": { "message": "ШІ може помилятися" },
+  "alert_alwaysVerifyInfo": { "message": "Завжди перевіряйте важливу інформацію" },
+  "alert_doubleCheckDecisions": { "message": "Перевірте критично важливі рішення" },
+  "alert_dontRelySolelyOnAI": { "message": "Не покладайтеся лише на поради ШІ" },
+  "alert_notAsub": { "message": "Не є заміною" },
+  "alert_forProMedOrLegalMatters": { "message": "З професійних, медичних або юридичних питань" },
+  "alert_useResponsibly": { "message": "Використовуйте відповідально" },
   "alert_langUpdated": { "message": "Мову оновлено" },
   "alert_willReplyIn": { "message": "відповість у" },
   "alert_yourSysLang": { "message": "мова вашої системи" },
@@ -98,7 +113,9 @@
   "alert_isUpToDate": { "message": "оновлено" },
   "alert_unavailable": { "message": "недоступне" },
   "alert_isOnlyAvailFor": { "message": "доступний лише для" },
-  "alert_userscriptMgrNoStream": { "message": "Ваш менеджер скриптів користувачів не підтримує повернення відповідей потоку" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Ваш менеджер скриптів користувачів не підтримує повернення відповідей потоку"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "наразі доступний лише для" },
   "alert_openAIsupportSoon": { "message": "Підтримку API OpenAI буде додано найближчим часом" },
   "alert_waitingFor": { "message": "В очікуванні" },

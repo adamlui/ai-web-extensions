@@ -1,5 +1,7 @@
 {
-  "appDesc": { "message": "தைரியமான தேடல் பக்கப்பட்டியில் ChatGPT பதில்களைச் சேர்க்கிறது (GPT-4o ஆல் இயக்கப்படுகிறது!)" },
+  "appDesc": {
+    "message": "தைரியமான தேடல் பக்கப்பட்டியில் ChatGPT பதில்களைச் சேர்க்கிறது (GPT-4o ஆல் இயக்கப்படுகிறது!)"
+  },
   "menuLabel_proxyAPImode": { "message": "ப்ராக்ஸி API பயன்முறை" },
   "menuLabel_preferred": { "message": "விருப்பமானது" },
   "menuLabel_autoAnswer": { "message": "தானாக பதிலளிக்கவும்" },
@@ -87,6 +89,17 @@
   "placeholder_askSomethingElse": { "message": "வேறு ஏதாவது கேளுங்கள்" },
   "placeholder_typeSomething": { "message": "எதையாவது தட்டச்சு செய்க" },
   "prompt_updateReplyLang": { "message": "பதில் மொழியைப் புதுப்பிக்கவும்" },
+  "alert_importantNotice": { "message": "முக்கிய அறிவிப்பு" },
+  "alert_poweredByAI": {
+    "message": "aI தொழில்நுட்பத்தால் இயக்கப்படுகிறது. உதவிகரமாக இருக்கும்படி வடிவமைக்கப்பட்டுள்ளது"
+  },
+  "alert_aiCanMakeMistakes": { "message": "AI தவறுகளைச் செய்யலாம்" },
+  "alert_alwaysVerifyInfo": { "message": "எப்போதும் முக்கியமான தகவலைச் சரிபார்க்கவும்" },
+  "alert_doubleCheckDecisions": { "message": "முக்கியமான முடிவுகளை இருமுறை சரிபார்க்கவும்" },
+  "alert_dontRelySolelyOnAI": { "message": "AI ஆலோசனையை மட்டுமே நம்ப வேண்டாம்" },
+  "alert_notAsub": { "message": "ஒரு பதிலீடு அல்ல" },
+  "alert_forProMedOrLegalMatters": { "message": "தொழில்முறை, மருத்துவ அல்லது சட்ட விஷயங்களுக்காக" },
+  "alert_useResponsibly": { "message": "பொறுப்புடன் பயன்படுத்தவும்" },
   "alert_langUpdated": { "message": "மொழி புதுப்பிக்கப்பட்டது" },
   "alert_willReplyIn": { "message": "இல் பதிலளிப்பார்" },
   "alert_yourSysLang": { "message": "உங்கள் கணினி மொழி" },
@@ -98,7 +111,9 @@
   "alert_isUpToDate": { "message": "புதுப்பித்த" },
   "alert_unavailable": { "message": "கிடைக்கவில்லை" },
   "alert_isOnlyAvailFor": { "message": "க்கு மட்டுமே கிடைக்கிறது" },
-  "alert_userscriptMgrNoStream": { "message": "உங்கள் பயனர் ஸ்கிரிப்ட் மேலாளர் ஸ்ட்ரீம் பதில்களைத் திருப்பித் தருவதை ஆதரிக்கவில்லை" },
+  "alert_userscriptMgrNoStream": {
+    "message": "உங்கள் பயனர் ஸ்கிரிப்ட் மேலாளர் ஸ்ட்ரீம் பதில்களைத் திருப்பித் தருவதை ஆதரிக்கவில்லை"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "தற்போது ஆல் மட்டுமே கிடைக்கிறது" },
   "alert_openAIsupportSoon": { "message": "OpenAI APIக்கான ஆதரவு விரைவில் சேர்க்கப்படும்" },
   "alert_waitingFor": { "message": "காத்திருத்தல்" },

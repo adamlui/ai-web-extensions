@@ -1,5 +1,7 @@
 {
-  "appDesc": { "message": "Додава одговори на ChatGPT на страничната лента за храбро пребарување (напојува со GPT-4o!)" },
+  "appDesc": {
+    "message": "Додава одговори на ChatGPT на страничната лента за храбро пребарување (напојува со GPT-4o!)"
+  },
   "menuLabel_proxyAPImode": { "message": "Режим на прокси API" },
   "menuLabel_preferred": { "message": "Претпочитано" },
   "menuLabel_autoAnswer": { "message": "Автоматски одговор" },
@@ -87,6 +89,15 @@
   "placeholder_askSomethingElse": { "message": "Нешто друго" },
   "placeholder_typeSomething": { "message": "Напишете нешто" },
   "prompt_updateReplyLang": { "message": "Ажурирај јазик за одговор" },
+  "alert_importantNotice": { "message": "Важно известување" },
+  "alert_poweredByAI": { "message": "се напојува со AI технологија. Иако е дизајнирано да биде корисно" },
+  "alert_aiCanMakeMistakes": { "message": "ВИ може да направи грешки" },
+  "alert_alwaysVerifyInfo": { "message": "Секогаш проверувајте ги важните информации" },
+  "alert_doubleCheckDecisions": { "message": "Повторно проверете ги критичните одлуки" },
+  "alert_dontRelySolelyOnAI": { "message": "Не се потпирајте само на совети за вештачка интелигенција" },
+  "alert_notAsub": { "message": "Не е замена" },
+  "alert_forProMedOrLegalMatters": { "message": "За професионални, медицински или правни работи" },
+  "alert_useResponsibly": { "message": "Користете одговорно" },
   "alert_langUpdated": { "message": "Јазикот е ажуриран" },
   "alert_willReplyIn": { "message": "ќе ви одговори за" },
   "alert_yourSysLang": { "message": "јазикот на вашиот систем" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "е ажуриран" },
   "alert_unavailable": { "message": "недостапно" },
   "alert_isOnlyAvailFor": { "message": "е достапен само за" },
-  "alert_userscriptMgrNoStream": { "message": "Вашиот менаџер на кориснички скрипт не поддржува повратни одговори на преносот" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Вашиот менаџер на кориснички скрипт не поддржува повратни одговори на преносот"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "моментално е достапно само до" },
   "alert_openAIsupportSoon": { "message": "Поддршката за OpenAI API ќе биде додадена наскоро" },
   "alert_waitingFor": { "message": "ве чека" },

@@ -69,7 +69,9 @@
   "helptip_proxyAPImode": { "message": "Mampiasa Proxy API ho an'ny fidirana tsy misy login amin'ny AI" },
   "helptip_preferredAPI": { "message": "API ampiasaina rehefa mahazo valiny amin'ny fomba proxy" },
   "helptip_streamingMode": { "message": "Mahazo valiny amin'ny fikoriana lahatsoratra mitohy" },
-  "helptip_autoGetAnswers": { "message": "Alefaso fanontaniana ho azy amin'ny BraveGPT rehefa mampiasa milina fitadiavana" },
+  "helptip_autoGetAnswers": {
+    "message": "Alefaso fanontaniana ho azy amin'ny BraveGPT rehefa mampiasa milina fitadiavana"
+  },
   "helptip_autoSummarizeResults": { "message": "Fintino avy hatrany ny valin'ny fikarohana" },
   "helptip_autoFocusChatbar": { "message": "Mifantoka ho azy amin'ny chatbar isaky ny miseho" },
   "helptip_autoScroll": { "message": "Mitohy ho azy ny valiny rehefa mamokatra amin'ny fomba fikoriana" },
@@ -77,7 +79,9 @@
   "helptip_prefixMode": { "message": "Mitaky \"/\" alohan'ny fanontaniana mba hiseho ny valiny" },
   "helptip_suffixMode": { "message": "Mitaky \"?\" aorian'ny fanontaniana mba hiseho ny valiny" },
   "helptip_widerSidebar": { "message": "Ampitomboy ny sakany amin'ny sisin'ny pejy fitadiavana" },
-  "helptip_stickySidebar": { "message": "Mahatonga ny BraveGPT hita ao amin'ny Sidebar na dia rehefa horonan-taratasy ianao" },
+  "helptip_stickySidebar": {
+    "message": "Mahatonga ny BraveGPT hita ao amin'ny Sidebar na dia rehefa horonan-taratasy ianao"
+  },
   "helptip_anchorMode": { "message": "Vatofantsika BraveGPT ho ambany ny fikandrana" },
   "helptip_bgAnimations": { "message": "Asehoy anatin'ny singa fototra UI ireo afaran'ny sary mihetsiketsika" },
   "helptip_fgAnimations": { "message": "Asehoy ireo sary mihetsika amina singantaharo UI eo aloha" },
@@ -87,6 +91,15 @@
   "placeholder_askSomethingElse": { "message": "Manontania zavatra hafa" },
   "placeholder_typeSomething": { "message": "Soraty ny zavatra iray" },
   "prompt_updateReplyLang": { "message": "Havaozy ny fiteny famaliana" },
+  "alert_importantNotice": { "message": "Fanamarihana manan-danja" },
+  "alert_poweredByAI": { "message": "tena ao anatin'ireo teknolojia vaovao izy. Na dia natao hanampy aza ny tetikasa" },
+  "alert_aiCanMakeMistakes": { "message": "AI dia afaka manao fahadisoana" },
+  "alert_alwaysVerifyInfo": { "message": "Hanamarina foana fampahalalana manan-danja" },
+  "alert_doubleCheckDecisions": { "message": "Didim-pitsarana raiki-tampisaka" },
+  "alert_dontRelySolelyOnAI": { "message": "Aza miditra amin'izany ianao ry Vodka" },
+  "alert_notAsub": { "message": "Tsy nosoloana" },
+  "alert_forProMedOrLegalMatters": { "message": "Ho an'ny matihanina, ara-pitsaboana, na ara-dalàna ny raharaha" },
+  "alert_useResponsibly": { "message": "Ampiasao ny andraikitra" },
   "alert_langUpdated": { "message": "Nohavaozina ny fiteny" },
   "alert_willReplyIn": { "message": "hamaly amin'ny" },
   "alert_yourSysLang": { "message": "fitenin'ny rafitrao" },
@@ -98,7 +111,9 @@
   "alert_isUpToDate": { "message": "mankato ny fotoana" },
   "alert_unavailable": { "message": "tsy misy" },
   "alert_isOnlyAvailFor": { "message": "azo ihany ho an'ny" },
-  "alert_userscriptMgrNoStream": { "message": "Ny mpitantana ny userscript anao dia tsy manohana ny famaliana fikoriana" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Ny mpitantana ny userscript anao dia tsy manohana ny famaliana fikoriana"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "amin'izao fotoana izao dia azo amin'ny" },
   "alert_openAIsupportSoon": { "message": "Tsy ho ela dia hanohana ny OpenAI API" },
   "alert_waitingFor": { "message": "Miandry" },
