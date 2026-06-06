@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.6.5
+// @version                2026.6.5.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon64.png
@@ -142,7 +142,7 @@
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
-            app: 'fe03d36', // for cached <app|messages>.json
+            app: '2100b49', // for cached <app|messages>.json
             aiweb: '0ae4dce' // for cached ai-chat-apis.json5 + <code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         },
         config: { anchored: true }
@@ -2040,12 +2040,12 @@
     env.ui = { app: { scheme: app.config.scheme || ui.getScheme() }, site: { scheme: ui.getScheme() }}
 
     if (!app.config.aiSafetyWarned) {
-        modals.alert('⚠️ Important Notice:',
-            `<b>${app.name}</b> is powered by AI technology. While designed to be helpful:\n\n`
-                + '• <b>AI can make mistakes</b> - Always verify important information\n'
-                + `• <b>Double-check critical decisions</b> - Don't rely solely on AI advice\n`
-                + '• <b>Not a substitute</b> - For professional, medical, or legal matters\n\n'
-                + 'Use responsibly!',
+        modals.alert(`⚠️ ${app.msgs.alert_importantNotice}:`,
+            `<b>${app.name}</b> ${app.msgs.alert_poweredByAI}:\n\n`
+                + `• <b>${app.msgs.alert_aiCanMakeMistakes}</b> - ${app.msgs.alert_alwaysVerifyInfo}\n`
+                + `• <b>${app.msgs.alert_doubleCheckDecisions}</b> - ${app.msgs.alert_dontRelySolelyOnAI}\n`
+                + `• <b>${app.msgs.alert_notAsub}</b> - ${app.msgs.alert_forProMedOrLegalMatters}\n\n`
+                + `${app.msgs.alert_useResponsibly}!`,
             null, null, 388
         )
         settings.save('aiSafetyWarned', true)
