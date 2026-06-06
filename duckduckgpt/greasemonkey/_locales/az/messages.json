@@ -69,7 +69,9 @@
   "helptip_proxyAPImode": { "message": "AI-yə giriş imkanı olmayan giriş üçün Proksi API-sindən istifadə edir" },
   "helptip_preferredAPI": { "message": "Proksi Rejimində cavab alarkən istifadə etmək üçün API" },
   "helptip_streamingMode": { "message": "Davamlı mətn axınında cavablar alın" },
-  "helptip_autoGetAnswers": { "message": "Axtarış sistemindən istifadə edərkən DuckDuckGPT-yə sorğuları avtomatik göndərin" },
+  "helptip_autoGetAnswers": {
+    "message": "Axtarış sistemindən istifadə edərkən DuckDuckGPT-yə sorğuları avtomatik göndərin"
+  },
   "helptip_autoSummarizeResults": { "message": "Axtarış nəticələri səhifəsini avtomatik yekunlaşdırmaq" },
   "helptip_autoFocusChatbar": { "message": "Hər dəfə göründüyü zaman avtomatik fokus söhbət çubuğu" },
   "helptip_autoScroll": { "message": "Axın Rejimində yaratdıqları cavabları avtomatik sürüşdürün" },
@@ -87,6 +89,15 @@
   "placeholder_typeSomething": { "message": "Nəsə yazın" },
   "placeholder_askSomethingElse": { "message": "Başqa bir şey soruşun" },
   "prompt_updateReplyLang": { "message": "Cavab dilini yenilə" },
+  "alert_importantNotice": { "message": "Vacib Bildiriş" },
+  "alert_poweredByAI": { "message": "aI texnologiyası ilə təchiz edilmişdir. Faydalı olduğu müddətdə" },
+  "alert_aiCanMakeMistakes": { "message": "AI səhv edə bilər" },
+  "alert_alwaysVerifyInfo": { "message": "Vacib məlumatları həmişə doğrulayın" },
+  "alert_doubleCheckDecisions": { "message": "Mühüm qərarları iki dəfə yoxlayın" },
+  "alert_dontRelySolelyOnAI": { "message": "Yalnız AI məsləhətinə etibar etməyin" },
+  "alert_notAsub": { "message": "Əvəzləyici deyil" },
+  "alert_forProMedOrLegalMatters": { "message": "Peşəkar, tibbi və ya hüquqi məsələlər üçün" },
+  "alert_useResponsibly": { "message": "Məsuliyyətlə istifadə edin" },
   "alert_langUpdated": { "message": "Dil yeniləndi" },
   "alert_willReplyIn": { "message": "cavab verəcək" },
   "alert_yourSysLang": { "message": "sistem diliniz" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "yenilənir" },
   "alert_unavailable": { "message": "ƏLÇATAN DEYİL" },
   "alert_isOnlyAvailFor": { "message": "yalnız bunun üçün mövcuddur" },
-  "alert_userscriptMgrNoStream": { "message": "İstifadəçilər üzrə meneceriniz axın cavablarının qaytarılmasını dəstəkləmir" },
+  "alert_userscriptMgrNoStream": {
+    "message": "İstifadəçilər üzrə meneceriniz axın cavablarının qaytarılmasını dəstəkləmir"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "hazırda yalnız aşağıdakılar mövcuddur" },
   "alert_openAIsupportSoon": { "message": "OpenAI API üçün dəstək qısa zamanda əlavə ediləcək" },
   "alert_waitingFor": { "message": "Gözlənilir" },

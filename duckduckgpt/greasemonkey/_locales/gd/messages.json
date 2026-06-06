@@ -69,15 +69,23 @@
   "helptip_proxyAPImode": { "message": "A' cleachdadh API Proxy airson faighinn gu AI gun logadh a-steach" },
   "helptip_preferredAPI": { "message": "API ri chleachdadh nuair a gheibh thu freagairtean ann am Modh Proxy" },
   "helptip_streamingMode": { "message": "Faighinn freagairtean ann an sruth leantainneach de teacsa" },
-  "helptip_autoGetAnswers": { "message": "Fèin-ghnìomhach cuir ceistean gu DuckDuckGPT nuair a bhios tu a' cleachdadh motair rannsachaidh" },
-  "helptip_autoSummarizeResults": { "message": "Thoir geàrr - chunntas air duilleag nan toraidhean rannsachaidh gu fèin - obrachail" },
+  "helptip_autoGetAnswers": {
+    "message": "Fèin-ghnìomhach cuir ceistean gu DuckDuckGPT nuair a bhios tu a' cleachdadh motair rannsachaidh"
+  },
+  "helptip_autoSummarizeResults": {
+    "message": "Thoir geàrr - chunntas air duilleag nan toraidhean rannsachaidh gu fèin - obrachail"
+  },
   "helptip_autoFocusChatbar": { "message": "Fèin-ghnìomhach fòcas air an chatbar nuair a thig e am flaibhinn" },
-  "helptip_autoScroll": { "message": "Fèin-ghnìomhach scroll freagairtean fhad 's a tha iad a' cruthachadh ann an Modh Sruthadh" },
+  "helptip_autoScroll": {
+    "message": "Fèin-ghnìomhach scroll freagairtean fhad 's a tha iad a' cruthachadh ann an Modh Sruthadh"
+  },
   "helptip_showRelatedQueries": { "message": "Seall ceistean co-cheangailte fon chatbar" },
   "helptip_prefixMode": { "message": "Feum \"/\" mus cuir ceistean airson freagairtean a shealltainn" },
   "helptip_suffixMode": { "message": "Feum \"?\" às deidh ceistean airson freagairtean a shealltainn" },
   "helptip_widerSidebar": { "message": "Leudachadh taobh air an duilleag rannsachaidh" },
-  "helptip_stickySidebar": { "message": "Fàg DuckDuckGPT ri fhaicinn anns a' bhàr-taobh eadhon nuair a bhios tu a' scrolladh" },
+  "helptip_stickySidebar": {
+    "message": "Fàg DuckDuckGPT ri fhaicinn anns a' bhàr-taobh eadhon nuair a bhios tu a' scrolladh"
+  },
   "helptip_anchorMode": { "message": "Anchor DuckDuckGPT to bottom of window" },
   "helptip_bgAnimations": { "message": "Seall cùl-raointean beòthail ann an co-phàirtean an UI" },
   "helptip_fgAnimations": { "message": "Seall beòthachaidhean a 'bheulaibh ann am pàirtean an UI" },
@@ -87,6 +95,15 @@
   "placeholder_typeSomething": { "message": "Type rudeigin" },
   "placeholder_askSomethingElse": { "message": "Faigh ceist eile" },
   "prompt_updateReplyLang": { "message": "Ùrachadh cànain freagairte" },
+  "alert_importantNotice": { "message": "Brath chudromach" },
+  "alert_poweredByAI": { "message": "tha e air a stiùireadh le teicneòlas. Gus a bhith soirbheachail" },
+  "alert_aiCanMakeMistakes": { "message": "'S urrainn dhomh mearachdan a dhèanamh" },
+  "alert_alwaysVerifyInfo": { "message": "Dearbhaich fiosrachadh cudromach an - còmhnaidh" },
+  "alert_doubleCheckDecisions": { "message": "Co - dhùnaidhean breithneachail" },
+  "alert_dontRelySolelyOnAI": { "message": "Na cuir earbsa ann an comhairleachadh a - mhàin" },
+  "alert_notAsub": { "message": "Chan e neach - ionaid a th 'ann" },
+  "alert_forProMedOrLegalMatters": { "message": "Airson cùisean proifeasanta, meidigeach no laghail" },
+  "alert_useResponsibly": { "message": "Dèan briogadh deas gu h - ìosal" },
   "alert_langUpdated": { "message": "Cànan ùraichte" },
   "alert_willReplyIn": { "message": "freagairidh e ann an" },
   "alert_yourSysLang": { "message": "do chànan siostaim" },
@@ -98,7 +115,9 @@
   "alert_isUpToDate": { "message": "air a chumail suas gu ceàrnag" },
   "alert_unavailable": { "message": "gun fheum" },
   "alert_isOnlyAvailFor": { "message": "ri fhaighinn a-mhàin airson" },
-  "alert_userscriptMgrNoStream": { "message": "Chan eil do bhainistear userscript a' toirt taic do freagairtean sruthadh" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Chan eil do bhainistear userscript a' toirt taic do freagairtean sruthadh"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ri fhaighinn an-dràsta a-mhàin le" },
   "alert_openAIsupportSoon": { "message": "Bidh taic airson OpenAI API ri bhith air a chur ris a' cheum seo" },
   "alert_waitingFor": { "message": "A 'feitheamh ri" },

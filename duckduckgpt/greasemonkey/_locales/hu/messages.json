@@ -66,10 +66,14 @@
   "tooltip_code": { "message": "Termékkód" },
   "tooltip_generatingAudio": { "message": "Hang létrehozása" },
   "tooltip_sendRelatedQuery": { "message": "Kapcsolódó lekérdezés küldése" },
-  "helptip_proxyAPImode": { "message": "Proxy API-t használ a mesterséges intelligenciához való bejelentkezés nélküli hozzáféréshez" },
+  "helptip_proxyAPImode": {
+    "message": "Proxy API-t használ a mesterséges intelligenciához való bejelentkezés nélküli hozzáféréshez"
+  },
   "helptip_preferredAPI": { "message": "Proxy módban válaszadáskor használandó API" },
   "helptip_streamingMode": { "message": "Válaszok fogadása folyamatos szöveges adatfolyamban" },
-  "helptip_autoGetAnswers": { "message": "Lekérdezések automatikus küldése a DuckDuckGPT-nek a keresőmotor használatakor" },
+  "helptip_autoGetAnswers": {
+    "message": "Lekérdezések automatikus küldése a DuckDuckGPT-nek a keresőmotor használatakor"
+  },
   "helptip_autoSummarizeResults": { "message": "Keresési találatok oldalának automatikus összegzése" },
   "helptip_autoFocusChatbar": { "message": "Automatikus fókuszálás a csevegősávra, amikor megjelenik" },
   "helptip_autoScroll": { "message": "Válaszok automatikus görgetése Streaming módban generálva" },
@@ -87,6 +91,15 @@
   "placeholder_typeSomething": { "message": "Írjon be valamit" },
   "placeholder_askSomethingElse": { "message": "Más kérdésem van" },
   "prompt_updateReplyLang": { "message": "Válasz nyelvének frissítése" },
+  "alert_importantNotice": { "message": "Fontos figyelmeztetés" },
+  "alert_poweredByAI": { "message": "mI-technológiával működik. Bár úgy tervezték, hogy hasznos legyen" },
+  "alert_aiCanMakeMistakes": { "message": "Az AI hibázhat" },
+  "alert_alwaysVerifyInfo": { "message": "Mindig ellenőrizze a fontos információkat" },
+  "alert_doubleCheckDecisions": { "message": "Ellenőrizd újra a kritikus döntéseket" },
+  "alert_dontRelySolelyOnAI": { "message": "Ne hagyatkozzon kizárólag az AI tanácsaira" },
+  "alert_notAsub": { "message": "Nem helyettesítő" },
+  "alert_forProMedOrLegalMatters": { "message": "Szakmai, orvosi vagy jogi ügyekben" },
+  "alert_useResponsibly": { "message": "Használd felelősségteljesen" },
   "alert_langUpdated": { "message": "Nyelv frissítve" },
   "alert_willReplyIn": { "message": "válaszolni fog a következőben" },
   "alert_yourSysLang": { "message": "Rendszer nyelve" },
@@ -98,7 +111,9 @@
   "alert_isUpToDate": { "message": "naprakész" },
   "alert_unavailable": { "message": "nem elérhető" },
   "alert_isOnlyAvailFor": { "message": "csak ekkor érhető el" },
-  "alert_userscriptMgrNoStream": { "message": "A usercript menedzsere nem támogatja az adatfolyam-válaszok visszaküldését" },
+  "alert_userscriptMgrNoStream": {
+    "message": "A usercript menedzsere nem támogatja az adatfolyam-válaszok visszaküldését"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "jelenleg csak eddig érhető el" },
   "alert_openAIsupportSoon": { "message": "Hamarosan hozzáadjuk az OpenAI API támogatását" },
   "alert_waitingFor": { "message": "Várakozás" },

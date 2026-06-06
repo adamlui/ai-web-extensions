@@ -87,6 +87,17 @@
   "placeholder_typeSomething": { "message": "Tajpi ion" },
   "placeholder_askSomethingElse": { "message": "Demandi ion alian" },
   "prompt_updateReplyLang": { "message": "Ĝisdatigi respondan lingvon" },
+  "alert_importantNotice": { "message": "Grava rimarko" },
+  "alert_poweredByAI": {
+    "message": "ĝi estas funkciigita fare de AI-teknologio. Dum ĝi estas desegnita por esti utila"
+  },
+  "alert_aiCanMakeMistakes": { "message": "Povas fari erarojn" },
+  "alert_alwaysVerifyInfo": { "message": "Ĉiam kontrolu gravajn informojn" },
+  "alert_doubleCheckDecisions": { "message": "Duobla-kontroli kritikajn decidojn" },
+  "alert_dontRelySolelyOnAI": { "message": "Ne fidu nur je konsiloj" },
+  "alert_notAsub": { "message": "Neniu anstataŭaĵo" },
+  "alert_forProMedOrLegalMatters": { "message": "Por profesiaj, medicinaj, aŭ laŭleĝaj aferoj" },
+  "alert_useResponsibly": { "message": "Uzi respondece" },
   "alert_langUpdated": { "message": "Lingvo ĝisdatigita" },
   "alert_willReplyIn": { "message": "mi respondos en" },
   "alert_yourSysLang": { "message": "via lingvo" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "estas ĝisdata" },
   "alert_unavailable": { "message": "neatingebla" },
   "alert_isOnlyAvailFor": { "message": "estas disponebla nur por" },
-  "alert_userscriptMgrNoStream": { "message": "Via uzantoskripta administrilo ne subtenas revenantajn fluajn respondojn" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Via uzantoskripta administrilo ne subtenas revenantajn fluajn respondojn"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "nuntempe estas disponebla nur por" },
   "alert_openAIsupportSoon": { "message": "Subteno por OpenAI API estos aldonita baldaŭ" },
   "alert_waitingFor": { "message": "Atendante diskon" },

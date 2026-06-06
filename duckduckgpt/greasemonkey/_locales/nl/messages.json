@@ -72,7 +72,9 @@
   "helptip_autoGetAnswers": { "message": "Auto-send queries to DuckDuckGPT when using search engine" },
   "helptip_autoSummarizeResults": { "message": "Pagina met zoekresultaten automatisch samenvatten" },
   "helptip_autoFocusChatbar": { "message": "Chatbalk automatisch scherpstellen wanneer deze verschijnt" },
-  "helptip_autoScroll": { "message": "Reacties automatisch scrollen terwijl ze worden gegenereerd in de streamingmodus" },
+  "helptip_autoScroll": {
+    "message": "Reacties automatisch scrollen terwijl ze worden gegenereerd in de streamingmodus"
+  },
   "helptip_showRelatedQueries": { "message": "Toon gerelateerde vragen onder de chatbalk" },
   "helptip_prefixMode": { "message": "Vereisen \"/\" voor zoekopdrachten voor antwoorden om weer te geven" },
   "helptip_suffixMode": { "message": "Vereisen \"?\" na zoekopdrachten voor antwoorden om weer te geven" },
@@ -87,6 +89,15 @@
   "placeholder_typeSomething": { "message": "Typ iets" },
   "placeholder_askSomethingElse": { "message": "Iets anders" },
   "prompt_updateReplyLang": { "message": "Antwoordtaal bijwerken" },
+  "alert_importantNotice": { "message": "Belangrijke mededeling" },
+  "alert_poweredByAI": { "message": "wordt aangedreven door AI-technologie. Hoewel ontworpen om behulpzaam te zijn" },
+  "alert_aiCanMakeMistakes": { "message": "AI kan fouten maken" },
+  "alert_alwaysVerifyInfo": { "message": "Verifieer altijd belangrijke informatie" },
+  "alert_doubleCheckDecisions": { "message": "Controleer kritieke beslissingen dubbel" },
+  "alert_dontRelySolelyOnAI": { "message": "Vertrouw niet alleen op AI-advies" },
+  "alert_notAsub": { "message": "Geen vervanger" },
+  "alert_forProMedOrLegalMatters": { "message": "Voor professionele, medische of juridische zaken" },
+  "alert_useResponsibly": { "message": "Verantwoord gebruiken" },
   "alert_langUpdated": { "message": "taalbestand bijgewerkt" },
   "alert_willReplyIn": { "message": "zal antwoorden in" },
   "alert_yourSysLang": { "message": "Systeemtaal" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "<PROTECTED> is geactualiseerd" },
   "alert_unavailable": { "message": "niet beschikbaar" },
   "alert_isOnlyAvailFor": { "message": "Alleen beschikbaar voor" },
-  "alert_userscriptMgrNoStream": { "message": "Uw gebruikersscriptmanager ondersteunt geen terugkerende streamreacties" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Uw gebruikersscriptmanager ondersteunt geen terugkerende streamreacties"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "is momenteel alleen beschikbaar door" },
   "alert_openAIsupportSoon": { "message": "Ondersteuning voor OpenAI API wordt binnenkort toegevoegd" },
   "alert_waitingFor": { "message": "Wacht op" },

@@ -69,24 +69,43 @@
   "helptip_proxyAPImode": { "message": "Utiliza una API de proxy para el acceso sin inicio de sesión a la IA" },
   "helptip_preferredAPI": { "message": "API para usar al obtener respuestas en Modo Proxy" },
   "helptip_streamingMode": { "message": "Recibir respuestas en un flujo de texto continuo" },
-  "helptip_autoGetAnswers": { "message": "Enviar consultas automáticamente a DuckDuckGPT cuando se utiliza el motor de búsqueda" },
+  "helptip_autoGetAnswers": {
+    "message": "Enviar consultas automáticamente a DuckDuckGPT cuando se utiliza el motor de búsqueda"
+  },
   "helptip_autoSummarizeResults": { "message": "Resumir automáticamente la página de resultados de búsqueda" },
   "helptip_autoFocusChatbar": { "message": "Barra de chat de enfoque automático siempre que aparezca" },
-  "helptip_autoScroll": { "message": "Desplazar automáticamente las respuestas a medida que se generan en el modo de transmisión" },
+  "helptip_autoScroll": {
+    "message": "Desplazar automáticamente las respuestas a medida que se generan en el modo de transmisión"
+  },
   "helptip_showRelatedQueries": { "message": "Mostrar consultas relacionadas debajo de la barra de chat" },
   "helptip_prefixMode": { "message": "Requerir \"/\" antes de las consultas para que se muestren las respuestas" },
   "helptip_suffixMode": { "message": "Requerir \"?\" después de las consultas para que se muestren las respuestas" },
   "helptip_widerSidebar": { "message": "Expandir horizontalmente la barra lateral de la página de búsqueda" },
-  "helptip_stickySidebar": { "message": "Hace que DuckDuckGPT sea visible en la barra lateral incluso mientras te desplazas" },
+  "helptip_stickySidebar": {
+    "message": "Hace que DuckDuckGPT sea visible en la barra lateral incluso mientras te desplazas"
+  },
   "helptip_anchorMode": { "message": "Ancla DuckDuckGPT a la parte inferior de la ventana" },
   "helptip_bgAnimations": { "message": "Mostrar fondos animados en los componentes de la interfaz de usuario" },
-  "helptip_fgAnimations": { "message": "Mostrar animaciones en primer plano en los componentes de la interfaz de usuario" },
+  "helptip_fgAnimations": {
+    "message": "Mostrar animaciones en primer plano en los componentes de la interfaz de usuario"
+  },
   "helptip_replyLanguage": { "message": "Idioma para que DuckDuckGPT responda" },
-  "helptip_colorScheme": { "message": "Esquema para mostrar los componentes de la interfaz de usuario de DuckDuckGPT en" },
+  "helptip_colorScheme": {
+    "message": "Esquema para mostrar los componentes de la interfaz de usuario de DuckDuckGPT en"
+  },
   "helptip_debugMode": { "message": "Mostrar el inicio de sesión detallado en la consola del navegador" },
   "placeholder_typeSomething": { "message": "Escribe algo" },
   "placeholder_askSomethingElse": { "message": "Pida otra cosa" },
   "prompt_updateReplyLang": { "message": "Actualizar el idioma de la respuesta" },
+  "alert_importantNotice": { "message": "Aviso importante" },
+  "alert_poweredByAI": { "message": "funciona con tecnología de IA. Aunque está diseñado para ser útil" },
+  "alert_aiCanMakeMistakes": { "message": "La IA puede cometer errores" },
+  "alert_alwaysVerifyInfo": { "message": "Verificar siempre la información importante" },
+  "alert_doubleCheckDecisions": { "message": "Verifique dos veces las decisiones críticas" },
+  "alert_dontRelySolelyOnAI": { "message": "No confíe únicamente en los consejos de IA" },
+  "alert_notAsub": { "message": "No es un sustituto" },
+  "alert_forProMedOrLegalMatters": { "message": "Para asuntos profesionales, médicos o legales" },
+  "alert_useResponsibly": { "message": "Utilizar de forma responsable" },
   "alert_langUpdated": { "message": "Idioma Actualizado" },
   "alert_willReplyIn": { "message": "responderá en" },
   "alert_yourSysLang": { "message": "Idioma del sistema" },
@@ -98,7 +117,9 @@
   "alert_isUpToDate": { "message": "está actualizada" },
   "alert_unavailable": { "message": "no disponible" },
   "alert_isOnlyAvailFor": { "message": "solo está disponible para" },
-  "alert_userscriptMgrNoStream": { "message": "Su administrador de scripts de usuario no admite la devolución de respuestas de transmisión" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Su administrador de scripts de usuario no admite la devolución de respuestas de transmisión"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "actualmente solo está disponible para" },
   "alert_openAIsupportSoon": { "message": "El soporte para OpenAI API se añadirá en breve" },
   "alert_waitingFor": { "message": "paciente en espera de" },

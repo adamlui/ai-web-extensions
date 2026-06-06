@@ -69,10 +69,14 @@
   "helptip_proxyAPImode": { "message": "Verwendet eine Proxy-API für den No-Login-Zugriff auf KI" },
   "helptip_preferredAPI": { "message": "API zum Abrufen von Antworten im Proxy-Modus" },
   "helptip_streamingMode": { "message": "Erhalten Sie Antworten in einem kontinuierlichen Textstrom" },
-  "helptip_autoGetAnswers": { "message": "Automatisches Senden von Abfragen an DuckDuckGPT bei Verwendung der Suchmaschine" },
+  "helptip_autoGetAnswers": {
+    "message": "Automatisches Senden von Abfragen an DuckDuckGPT bei Verwendung der Suchmaschine"
+  },
   "helptip_autoSummarizeResults": { "message": "Suchergebnisseite automatisch zusammenfassen" },
   "helptip_autoFocusChatbar": { "message": "Autofokus-Chatbar, wann immer sie erscheint" },
-  "helptip_autoScroll": { "message": "Automatisches Scrollen von Antworten, wie sie im Streaming-Modus generiert werden" },
+  "helptip_autoScroll": {
+    "message": "Automatisches Scrollen von Antworten, wie sie im Streaming-Modus generiert werden"
+  },
   "helptip_showRelatedQueries": { "message": "Verwandte Abfragen unterhalb der Chatleiste anzeigen" },
   "helptip_prefixMode": { "message": "Erfordern Sie \"/\" vor Abfragen für Antworten, die angezeigt werden sollen" },
   "helptip_suffixMode": { "message": "Erfordern Sie \"?\" nach Abfragen für Antworten, die angezeigt werden sollen" },
@@ -87,6 +91,17 @@
   "placeholder_typeSomething": { "message": "Schreiben Sie etwas" },
   "placeholder_askSomethingElse": { "message": "Ein anderes System" },
   "prompt_updateReplyLang": { "message": "Antwortsprache aktualisieren" },
+  "alert_importantNotice": { "message": "Wichtiger Hinweis" },
+  "alert_poweredByAI": {
+    "message": "wird durch KI-Technologie angetrieben. Obwohl es so konzipiert ist, dass es hilfreich ist"
+  },
+  "alert_aiCanMakeMistakes": { "message": "KI kann Fehler machen" },
+  "alert_alwaysVerifyInfo": { "message": "Überprüfen Sie immer wichtige Informationen" },
+  "alert_doubleCheckDecisions": { "message": "Kritische Entscheidungen noch einmal überprüfen" },
+  "alert_dontRelySolelyOnAI": { "message": "Verlassen Sie sich nicht nur auf KI-Beratung" },
+  "alert_notAsub": { "message": "Kein Ersatz" },
+  "alert_forProMedOrLegalMatters": { "message": "Für berufliche, medizinische oder rechtliche Belange" },
+  "alert_useResponsibly": { "message": "Verantwortungsvoller Umgang" },
   "alert_langUpdated": { "message": "Sprache aktualisiert" },
   "alert_willReplyIn": { "message": "antwortet in" },
   "alert_yourSysLang": { "message": "Systemsprache" },
@@ -97,7 +112,9 @@
   "alert_upToDate": { "message": "Auf dem neuesten Stand" },
   "alert_isUpToDate": { "message": "ist auf dem aktuellen Stand" },
   "alert_unavailable": { "message": "Weil der Artikel nicht verfügbar ist" },
-  "alert_isOnlyAvailFor": { "message": "Es steht nur für <stringmarket stringmarket=\"omnipcx_office\"/> zur Verfügung" },
+  "alert_isOnlyAvailFor": {
+    "message": "Es steht nur für <stringmarket stringmarket=\"omnipcx_office\"/> zur Verfügung"
+  },
   "alert_userscriptMgrNoStream": { "message": "Ihr Benutzerskript-Manager unterstützt keine Stream-Antworten" },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ist derzeit nur verfügbar bis" },
   "alert_openAIsupportSoon": { "message": "Unterstützung für OpenAI-API wird in Kürze hinzugefügt" },

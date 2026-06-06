@@ -69,7 +69,9 @@
   "helptip_proxyAPImode": { "message": "Kirishsiz AI uchun Proxy API foydalanadi" },
   "helptip_preferredAPI": { "message": "Proksi rejimida javob olishda foydalanish uchun API" },
   "helptip_streamingMode": { "message": "Javoblarni uzluksiz matn oqimida qabul qiling" },
-  "helptip_autoGetAnswers": { "message": "Qidiruv tizimidan foydalanganda so'rovlarni DuckDuckGPT ga avtomatik yuboring" },
+  "helptip_autoGetAnswers": {
+    "message": "Qidiruv tizimidan foydalanganda so'rovlarni DuckDuckGPT ga avtomatik yuboring"
+  },
   "helptip_autoSummarizeResults": { "message": "Qidiruv natijalari sahifasini avtomatik umumlashtirish" },
   "helptip_autoFocusChatbar": { "message": "Chat paneli paydo bo'lganda unga avtomatik e'tibor qarating" },
   "helptip_autoScroll": { "message": "Oqim rejimida javoblar yaratilganda avtomatik aylantirish" },
@@ -87,6 +89,15 @@
   "placeholder_typeSomething": { "message": "Biror narsa yozing" },
   "placeholder_askSomethingElse": { "message": "Boshqa narsa so'rang" },
   "prompt_updateReplyLang": { "message": "Javob berish tilini yangilang" },
+  "alert_importantNotice": { "message": "Muhim ogohlantirish" },
+  "alert_poweredByAI": { "message": "AI texnologiyasi bilan ishlaydi. Foydali bo'lish uchun mo'ljallangan bo'lsa-da" },
+  "alert_aiCanMakeMistakes": { "message": "Sun'iy intellekt xato qilishi mumkin" },
+  "alert_alwaysVerifyInfo": { "message": "Muhim ma'lumotlarni har doim tekshiring" },
+  "alert_doubleCheckDecisions": { "message": "Muhim qarorlarni ikki marta tekshiring" },
+  "alert_dontRelySolelyOnAI": { "message": "Faqat AI maslahatlariga tayanmang" },
+  "alert_notAsub": { "message": "O'rinbosar emas" },
+  "alert_forProMedOrLegalMatters": { "message": "Kasbiy, tibbiy yoki huquqiy masalalar uchun" },
+  "alert_useResponsibly": { "message": "Mas'uliyat bilan foydalaning" },
   "alert_langUpdated": { "message": "Til yangilandi" },
   "alert_willReplyIn": { "message": "javob beradi" },
   "alert_yourSysLang": { "message": "tizim tilingiz" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "dolzarb hisoblanadi" },
   "alert_unavailable": { "message": "mavjud emas" },
   "alert_isOnlyAvailFor": { "message": "uchungina mavjud" },
-  "alert_userscriptMgrNoStream": { "message": "Sizning foydalanuvchi skripti menejeri oqim javoblarini qaytarishni qo'llab-quvvatlamaydi" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Sizning foydalanuvchi skripti menejeri oqim javoblarini qaytarishni qo'llab-quvvatlamaydi"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "hozircha faqat tomonidan mavjud" },
   "alert_openAIsupportSoon": { "message": "Tez orada OpenAI API qo'llab-quvvatlashi qo'shiladi" },
   "alert_waitingFor": { "message": "Kutilmoqda" },

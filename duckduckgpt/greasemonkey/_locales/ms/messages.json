@@ -69,7 +69,9 @@
   "helptip_proxyAPImode": { "message": "Menggunakan api Proksi untuk akses tanpa log masuk ke AI" },
   "helptip_preferredAPI": { "message": "Api untuk digunakan apabila mendapat jawapan dalam Mod Proksi" },
   "helptip_streamingMode": { "message": "Terima balasan dalam strim teks berterusan" },
-  "helptip_autoGetAnswers": { "message": "Hantar pertanyaan secara automatik ke DuckDuckGPT apabila menggunakan enjin carian" },
+  "helptip_autoGetAnswers": {
+    "message": "Hantar pertanyaan secara automatik ke DuckDuckGPT apabila menggunakan enjin carian"
+  },
   "helptip_autoSummarizeResults": { "message": "Ringkaskan halaman hasil carian secara automatik" },
   "helptip_autoFocusChatbar": { "message": "Auto-fokus bar sembang apabila ia muncul" },
   "helptip_autoScroll": { "message": "Tatal automatik jawapan apabila ia dijana dalam Mod Penstriman" },
@@ -87,6 +89,15 @@
   "placeholder_typeSomething": { "message": "Taipkan sesuatu" },
   "placeholder_askSomethingElse": { "message": "Tanya perkara lain" },
   "prompt_updateReplyLang": { "message": "Kemas kini bahasa balasan" },
+  "alert_importantNotice": { "message": "Notis Penting" },
+  "alert_poweredByAI": { "message": "dikuasakan oleh teknologi AI. Walaupun direka untuk membantu" },
+  "alert_aiCanMakeMistakes": { "message": "AI boleh membuat kesilapan" },
+  "alert_alwaysVerifyInfo": { "message": "Sentiasa sahkan maklumat penting" },
+  "alert_doubleCheckDecisions": { "message": "Semak semula keputusan kritikal" },
+  "alert_dontRelySolelyOnAI": { "message": "Jangan hanya bergantung pada nasihat AI" },
+  "alert_notAsub": { "message": "Bukan pengganti" },
+  "alert_forProMedOrLegalMatters": { "message": "Untuk perkara profesional, perubatan, atau undang-undang" },
+  "alert_useResponsibly": { "message": "Gunakan secara bertanggungjawab" },
   "alert_langUpdated": { "message": "Bahasa dikemas kini" },
   "alert_willReplyIn": { "message": "akan membalas dalam" },
   "alert_yourSysLang": { "message": "Bahasa Sistem" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "Kemas kini" },
   "alert_unavailable": { "message": "tiada" },
   "alert_isOnlyAvailFor": { "message": "hanya tersedia untuk" },
-  "alert_userscriptMgrNoStream": { "message": "Pengurus skrip pengguna anda tidak menyokong jawapan strim yang kembali" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Pengurus skrip pengguna anda tidak menyokong jawapan strim yang kembali"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "buat masa ini hanya tersedia oleh" },
   "alert_openAIsupportSoon": { "message": "Sokongan untuk api OpenAI akan ditambah sebentar lagi" },
   "alert_waitingFor": { "message": "Barang tunggu untuk vendor periksa" },

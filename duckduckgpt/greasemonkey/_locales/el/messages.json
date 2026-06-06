@@ -28,7 +28,9 @@
   "menuLabel_settings": { "message": "Ρυθμίσεις" },
   "menuLabel_random": { "message": "Τυχαία Σειρά" },
   "menuLabel_saved": { "message": "Αποθηκεύτηκε" },
-  "componentLabel_used": { "message": "#-#-#-#-#  nautilus.master.el.po (el)  #-#-#-#-#σε χρήση#-#-#-#-#  gparted.master.el.po (gparted.HEAD)  #-#-#-#-#χρησιμοποιούνται" },
+  "componentLabel_used": {
+    "message": "#-#-#-#-#  nautilus.master.el.po (el)  #-#-#-#-#σε χρήση#-#-#-#-#  gparted.master.el.po (gparted.HEAD)  #-#-#-#-#χρησιμοποιούνται"
+  },
   "about_author": { "message": "Συντάκτης" },
   "about_and": { "message": "και" },
   "about_contributors": { "message": "συντελεστές" },
@@ -66,10 +68,14 @@
   "tooltip_code": { "message": "Κωδικός" },
   "tooltip_generatingAudio": { "message": "Δημιουργία ήχου" },
   "tooltip_sendRelatedQuery": { "message": "Αποστολή σχετικού ερωτήματος" },
-  "helptip_proxyAPImode": { "message": "Χρησιμοποιεί ένα API διακομιστή μεσολάβησης για πρόσβαση χωρίς σύνδεση στην τεχνητή νοημοσύνη" },
+  "helptip_proxyAPImode": {
+    "message": "Χρησιμοποιεί ένα API διακομιστή μεσολάβησης για πρόσβαση χωρίς σύνδεση στην τεχνητή νοημοσύνη"
+  },
   "helptip_preferredAPI": { "message": "API για χρήση κατά τη λήψη απαντήσεων σε λειτουργία διακομιστή μεσολάβησης" },
   "helptip_streamingMode": { "message": "Λήψη απαντήσεων σε συνεχή ροή κειμένου" },
-  "helptip_autoGetAnswers": { "message": "Αυτόματη αποστολή ερωτημάτων στο DuckDuckGPT κατά τη χρήση της μηχανής αναζήτησης" },
+  "helptip_autoGetAnswers": {
+    "message": "Αυτόματη αποστολή ερωτημάτων στο DuckDuckGPT κατά τη χρήση της μηχανής αναζήτησης"
+  },
   "helptip_autoSummarizeResults": { "message": "Αυτόματη σύνοψη σελίδας αποτελεσμάτων αναζήτησης" },
   "helptip_autoFocusChatbar": { "message": "Γραμμή συνομιλίας αυτόματης εστίασης όποτε εμφανίζεται" },
   "helptip_autoScroll": { "message": "Αυτόματη κύλιση απαντήσεων καθώς δημιουργούνται σε λειτουργία ροής" },
@@ -87,6 +93,17 @@
   "placeholder_typeSomething": { "message": "Πληκτρολογήστε κάτι" },
   "placeholder_askSomethingElse": { "message": "Κάτι άλλο" },
   "prompt_updateReplyLang": { "message": "Ενημέρωση γλώσσας απάντησης" },
+  "alert_importantNotice": { "message": "Σημαντική σημείωση" },
+  "alert_poweredByAI": {
+    "message": "τροφοδοτείται από την τεχνολογία τεχνητής νοημοσύνης. Ενώ έχει σχεδιαστεί για να είναι χρήσιμος"
+  },
+  "alert_aiCanMakeMistakes": { "message": "Η τεχνητή νοημοσύνη μπορεί να κάνει λάθη" },
+  "alert_alwaysVerifyInfo": { "message": "Επαληθεύετε πάντα σημαντικές πληροφορίες" },
+  "alert_doubleCheckDecisions": { "message": "Διπλοελέγξτε τις κρίσιμες αποφάσεις" },
+  "alert_dontRelySolelyOnAI": { "message": "Μην βασίζεστε αποκλειστικά σε συμβουλές τεχνητής νοημοσύνης" },
+  "alert_notAsub": { "message": "Δεν είναι υποκατάστατο" },
+  "alert_forProMedOrLegalMatters": { "message": "Για επαγγελματικά, ιατρικά ή νομικά θέματα" },
+  "alert_useResponsibly": { "message": "Χρησιμοποιήστε υπεύθυνα" },
   "alert_langUpdated": { "message": "Η γλώσσα ενημερώθηκε" },
   "alert_willReplyIn": { "message": "θα απαντήσει σε" },
   "alert_yourSysLang": { "message": "Γλώσσα συστήματος" },
@@ -98,7 +115,9 @@
   "alert_isUpToDate": { "message": "είναι ενήμερο" },
   "alert_unavailable": { "message": "Μη Διαθέσιμη" },
   "alert_isOnlyAvailFor": { "message": "είναι διαθέσιμο μόνο για" },
-  "alert_userscriptMgrNoStream": { "message": "Ο διαχειριστής κειμένων χρηστών σας δεν υποστηρίζει την επιστροφή απαντήσεων ροής" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Ο διαχειριστής κειμένων χρηστών σας δεν υποστηρίζει την επιστροφή απαντήσεων ροής"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "είναι προς το παρόν διαθέσιμο μόνο από" },
   "alert_openAIsupportSoon": { "message": "Σύντομα θα προστεθεί υποστήριξη για το OpenAI API" },
   "alert_waitingFor": { "message": "Αναμονή για" },

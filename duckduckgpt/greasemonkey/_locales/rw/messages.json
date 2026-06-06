@@ -69,7 +69,9 @@
   "helptip_proxyAPImode": { "message": "Koresha Proxy API kugirango winjire kuri AI utinjiye" },
   "helptip_preferredAPI": { "message": "Kuri Gukoresha Ryari: in" },
   "helptip_streamingMode": { "message": "Akira ibisubizo mu murongo uhoraho w'inyandiko" },
-  "helptip_autoGetAnswers": { "message": "Ohereza ibibazo kuri DuckDuckGPT mu buryo bwikora igihe ukoresha imashini ishyakisha" },
+  "helptip_autoGetAnswers": {
+    "message": "Ohereza ibibazo kuri DuckDuckGPT mu buryo bwikora igihe ukoresha imashini ishyakisha"
+  },
   "helptip_autoSummarizeResults": { "message": "Inshamake Shakisha Ibisubizo Ipaji" },
   "helptip_autoFocusChatbar": { "message": "Reba ku murongo w'ubutumwa bwikora igihe ubonetse" },
   "helptip_autoScroll": { "message": "Koresha mu buryo bwikora ibisubizo igihe bikorwaho mu buryo bwa Streaming Mode" },
@@ -87,6 +89,15 @@
   "placeholder_typeSomething": { "message": "Andika ikintu" },
   "placeholder_askSomethingElse": { "message": "Baza ikindi kintu" },
   "prompt_updateReplyLang": { "message": "Hindura ururimi rw'igisubizo" },
+  "alert_importantNotice": { "message": "Igaragazambere ry'ingenzi" },
+  "alert_poweredByAI": { "message": "ikoranabuhanga rigezweho ryifashishwa na AI. Biteganyijwe ko azafashwa" },
+  "alert_aiCanMakeMistakes": { "message": "Koko kara hajimereba" },
+  "alert_alwaysVerifyInfo": { "message": "Kugenzura... By'ingirakamaro Ibisobanuro" },
+  "alert_doubleCheckDecisions": { "message": "Ibyemezo by'Inama Nkuru y'Ubujurire" },
+  "alert_dontRelySolelyOnAI": { "message": "Kanda aha wumve uko Kagame abyivugira" },
+  "alert_notAsub": { "message": "A Gusimbuza" },
+  "alert_forProMedOrLegalMatters": { "message": "Ku bibazo by'akazi, iby'ubuvuzi cyangwa iby'amategeko" },
+  "alert_useResponsibly": { "message": "Gukoresha neza" },
   "alert_langUpdated": { "message": "Ururimi rwarahinduwe" },
   "alert_willReplyIn": { "message": "izajya isubizamo" },
   "alert_yourSysLang": { "message": "ururimi rwa sisitemu yawe" },
@@ -98,7 +109,9 @@
   "alert_isUpToDate": { "message": "ni ku gihe" },
   "alert_unavailable": { "message": "ntiboneka" },
   "alert_isOnlyAvailFor": { "message": "iboneka gusa kuri" },
-  "alert_userscriptMgrNoStream": { "message": "Umuyobozi wa userscript ntabwo ashyigikira gusubiza mu buryo bwa stream" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Umuyobozi wa userscript ntabwo ashyigikira gusubiza mu buryo bwa stream"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ubu iraboneka gusa kuri" },
   "alert_openAIsupportSoon": { "message": "Inkunga ya OpenAI API izongerwa vuba" },
   "alert_waitingFor": { "message": "Tegereza" },

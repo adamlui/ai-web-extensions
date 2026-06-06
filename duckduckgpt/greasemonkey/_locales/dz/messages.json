@@ -69,10 +69,14 @@
   "helptip_proxyAPImode": { "message": "AIལུ་ ཐོ་བཀོད་འབད་ནིའི་དོན་ལུ་ Proxy API ལག་ལེན་འཐབ་དགོ།" },
   "helptip_preferredAPI": { "message": "ཁྱོད་ཀྱིས་ལན་འདི་ Proxy Modeནང་ལུ་ཐོབ་པའི་སྐབས་ལུ་ ལག་ལེན་འཐབ་དགོ་པའི་ API" },
   "helptip_streamingMode": { "message": "ལན་སློག འཕྲུལ་ཆས་ཚུ་ འཕྲུལ་ཆས་ཚུ་ འཕྲུལ་ཆས་ཚུ་" },
-  "helptip_autoGetAnswers": { "message": "འཚོལ་འཕྲུལ་ཆས་ལག་ལེན་འཐབ་པའི་སྐབས་ DuckDuckGPT ལུ་ དྲི་བཀོད་ཚུ་ རང་བཞིན་གྱིས་བཏང་།" },
+  "helptip_autoGetAnswers": {
+    "message": "འཚོལ་འཕྲུལ་ཆས་ལག་ལེན་འཐབ་པའི་སྐབས་ DuckDuckGPT ལུ་ དྲི་བཀོད་ཚུ་ རང་བཞིན་གྱིས་བཏང་།"
+  },
   "helptip_autoSummarizeResults": { "message": "འཚོལ་ཞིབ་གྲུབ་འབྲས་ཤོག་ལེབ་འདི་ རང་བཞིན་གྱིས་ཚུདཔ་ཨིན།" },
   "helptip_autoFocusChatbar": { "message": "ག་དུས་འབད་རུང་ རང་བཞིན་ཆེད་དམིགས་ཁ་སླབ་ཕྲ་རིང་" },
-  "helptip_autoScroll": { "message": "རང་བཞིན་གྱི་ཨེབ་ཐག་གི་ལན་འདེབས་ཚུ་ རྒྱང་བསྒྲགས་འབད་ཐངས་ནང་ བཟོ་སྐྲུན་འབད་ཐངས་ནང་" },
+  "helptip_autoScroll": {
+    "message": "རང་བཞིན་གྱི་ཨེབ་ཐག་གི་ལན་འདེབས་ཚུ་ རྒྱང་བསྒྲགས་འབད་ཐངས་ནང་ བཟོ་སྐྲུན་འབད་ཐངས་ནང་"
+  },
   "helptip_showRelatedQueries": { "message": "ཁ་སླབ་ཕྲ་རིང་གི་འོག་ལུ་འབྲེལ་བའི་འདྲི་དཔྱད་ཚུ་སྟོན" },
   "helptip_prefixMode": { "message": "ལན་ཚུ་སྟོན་ནིའི་དོན་ལུ་ འདྲི་དཔྱད་ཀྱི་ཧེ་མ་ \"/\" དགོ" },
   "helptip_suffixMode": { "message": "ལན་ཚུ་སྟོན་ནིའི་དོན་ལུ་འདྲི་དཔྱད་ཀྱི་ཤུལ་ལས་ \"?\" དགོ" },
@@ -87,6 +91,19 @@
   "placeholder_typeSomething": { "message": "འདི་བཟུམ་གྱི་" },
   "placeholder_askSomethingElse": { "message": "ད་རུང་དྲི་བ་གཅིག་དྲི་ནི་" },
   "prompt_updateReplyLang": { "message": "སྐད་ཡིག་གི་དུས་ཚོད། བསྒྱུར་བཅོས་" },
+  "alert_importantNotice": { "message": "དྲན་བསྐུལ་ཁག་ཆེ་བ།" },
+  "alert_poweredByAI": {
+    "message": "འདི་ AI འཕྲུལ་རིག་གིས་དབང་བསྒྱུར་འབད་ཡོདཔ་ཨིན། ཁོང་གིས་འབད་བ་ཅིན་ ཁོང་གིས་ཆ་རོགས་འབད་ཚུགས་པས་ཟེར་མནོཝ་མས།"
+  },
+  "alert_aiCanMakeMistakes": { "message": "ང་གིས་འཛོལ་བ་དེ་ཚུ་ག་ར་བརྩི་ཚུགས་" },
+  "alert_alwaysVerifyInfo": { "message": "ཁྱོད་ཀྱིས་ བརྡ་དོན་ཁག་ཆེ་ཏོག་ཏོ་ཚུ་འཚོལ་དགོཔ་ཨིན།" },
+  "alert_doubleCheckDecisions": { "message": "གྲོས་ཐག་ཁག་ཆེ་ཏོག་ཏོ་ཚུ་ བརྟག་དཔྱད་འབད་" },
+  "alert_dontRelySolelyOnAI": { "message": "ཁྱོད་ཀྱིས་བསླབ་བྱ་ལུ་རྐྱངམ་གཅིག་བློ་མ་གཏད་" },
+  "alert_notAsub": { "message": "བསྒྱུར་བཅོས་འབད་མི་མིན་འདུག" },
+  "alert_forProMedOrLegalMatters": {
+    "message": "ཁྲིམས་ཀྱི་དཔྱད་ཡིག་དང་ ཁྲིམས་ཀྱི་དཔྱད་ཡིག་ དེ་ལས་ ཁྲིམས་ཀྱི་དཔྱད་ཡིག་ཚུ་"
+  },
+  "alert_useResponsibly": { "message": "འགན་འཁྲི་འབག་སྟེ་ལག་ལེན་འཐབ་" },
   "alert_langUpdated": { "message": "སྐད་ཡིག་གི་ཡིག་སྣོད་ཚུ་" },
   "alert_willReplyIn": { "message": "ང་བཅས་ཀྱིས་ལན་རྐྱབ་ཨིན། ང་བཅས་ཀྱིས་ལན་རྐྱབ་ཨིན།" },
   "alert_yourSysLang": { "message": "རང་བཞིན་གླིང་གི་རྒྱབ་དོན།" },
@@ -98,7 +115,9 @@
   "alert_isUpToDate": { "message": "ད་ལྟོའི་བར་ན་ཡང་" },
   "alert_unavailable": { "message": "མ་ཐོབ་" },
   "alert_isOnlyAvailFor": { "message": "པ་ ཐོན་ཡོདཔ་ཨིན་པས།" },
-  "alert_userscriptMgrNoStream": { "message": "ཁྱོད་ཀྱི་ལག་ལེན་པའི་ཡིག་ཚུགས་འཛིན་སྐྱོང་པ་གིས་སླར་ལོག་རྒྱུན་ལམ་ལན་ཚུ་ལུ་རྒྱབ་སྐྱོར་མི་འབད།" },
+  "alert_userscriptMgrNoStream": {
+    "message": "ཁྱོད་ཀྱི་ལག་ལེན་པའི་ཡིག་ཚུགས་འཛིན་སྐྱོང་པ་གིས་སླར་ལོག་རྒྱུན་ལམ་ལན་ཚུ་ལུ་རྒྱབ་སྐྱོར་མི་འབད།"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ད་ལྟོ་ལག་ལེན་འཐབ་ཚུགས་མི་དེ་" },
   "alert_openAIsupportSoon": { "message": "OpenAI API གི་དོན་ལུ་ རྒྱབ་སྐྱོར་འདི་ འཕྲལ་མགྱོགས་ར་ ཡར་སེང་འབད་ནི་ཨིན།" },
   "alert_waitingFor": { "message": "སྒུག་སྡོད་ནི་" },

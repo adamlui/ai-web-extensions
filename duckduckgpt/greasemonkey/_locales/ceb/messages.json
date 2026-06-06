@@ -69,12 +69,16 @@
   "helptip_proxyAPImode": { "message": "Paggamit usa ka Proxy API alang sa dili pag-login nga pag-access sa AI" },
   "helptip_preferredAPI": { "message": "API sa paggamit sa diha nga sa pagkuha sa mga tubag sa Proxy Mode" },
   "helptip_streamingMode": { "message": "Pagdawat mga tubag sa usa ka padayon nga pag-stream sa teksto" },
-  "helptip_autoGetAnswers": { "message": "Auto-pagpadala sa mga pangutana sa DuckDuckGPT sa diha nga ang paggamit sa search engine" },
+  "helptip_autoGetAnswers": {
+    "message": "Auto-pagpadala sa mga pangutana sa DuckDuckGPT sa diha nga ang paggamit sa search engine"
+  },
   "helptip_autoSummarizeResults": { "message": "Awtomatikong i-summarize ang panid sa mga resulta sa pagpangita" },
   "helptip_autoFocusChatbar": { "message": "Auto-focus chatbar sa matag higayon nga kini makita" },
   "helptip_autoScroll": { "message": "Auto-scroll nga mga tubag samtang sila nagmugna sa Streaming Mode" },
   "helptip_showRelatedQueries": { "message": "Ipakita ang may kalabutan nga mga pangutana sa ubos chatbar" },
-  "helptip_prefixMode": { "message": "Gikinahanglan ang \"/\" sa wala pa ang mga pangutana alang sa mga tubag nga ipakita" },
+  "helptip_prefixMode": {
+    "message": "Gikinahanglan ang \"/\" sa wala pa ang mga pangutana alang sa mga tubag nga ipakita"
+  },
   "helptip_suffixMode": { "message": "Gikinahanglan \"?\" human sa mga pangutana alang sa mga tubag sa pagpakita" },
   "helptip_widerSidebar": { "message": "Horizontal nga pagpalapad sa sidebar sa panid sa pagpangita" },
   "helptip_stickySidebar": { "message": "Gihimo nga makita ang DuckDuckGPT sa sidebar bisan kung nag-scroll ka" },
@@ -87,6 +91,15 @@
   "placeholder_typeSomething": { "message": "Type sa usa ka butang" },
   "placeholder_askSomethingElse": { "message": "Pangutan-a ang usa ka butang nga lain" },
   "prompt_updateReplyLang": { "message": "Tubag sa Lenguahe" },
+  "alert_importantNotice": { "message": "Importante nga Pahibalo" },
+  "alert_poweredByAI": { "message": "gipadagan sa teknolohiya sa AI. Samtang gidisenyo aron makatabang" },
+  "alert_aiCanMakeMistakes": { "message": "Mahimo makahimo mga sayup ang AI" },
+  "alert_alwaysVerifyInfo": { "message": "Kanunay pamatud-an ang hinungdanon nga kasayuran" },
+  "alert_doubleCheckDecisions": { "message": "I-double-check ang mga kritikal nga desisyon" },
+  "alert_dontRelySolelyOnAI": { "message": "Ayaw lang pagsalig sa tambag" },
+  "alert_notAsub": { "message": "Dili kapuli" },
+  "alert_forProMedOrLegalMatters": { "message": "Alang sa propesyonal, medikal, o ligal nga mga butang" },
+  "alert_useResponsibly": { "message": "Usage Responsibly" },
   "alert_langUpdated": { "message": "Gi-update ang sinultian" },
   "alert_willReplyIn": { "message": "motubag diha" },
   "alert_yourSysLang": { "message": "ang imong sistema nga pinulongan" },
@@ -98,7 +111,9 @@
   "alert_isUpToDate": { "message": "karon nga gipahayag" },
   "alert_unavailable": { "message": "unavailable" },
   "alert_isOnlyAvailFor": { "message": "anaa lamang kini alang" },
-  "alert_userscriptMgrNoStream": { "message": "Ang imong tigdumala sa userscript dili mosuporta sa pagbalik sa mga tubag sa stream" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Ang imong tigdumala sa userscript dili mosuporta sa pagbalik sa mga tubag sa stream"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "sa pagkakaron anaa lamang" },
   "alert_openAIsupportSoon": { "message": "Ang suporta alang sa OpenAI API idugang sa dili madugay" },
   "alert_waitingFor": { "message": "dinhi sa balay" },

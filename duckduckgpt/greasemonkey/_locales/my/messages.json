@@ -69,10 +69,14 @@
   "helptip_proxyAPImode": { "message": "AI သို့ဝင်ရောက်ခြင်းမပြုရန် Proxy API ကိုအသုံးပြုသည်" },
   "helptip_preferredAPI": { "message": "Proxy Mode ဖြင့် အဖြေများရယူရာတွင် အသုံးပြုရန် API" },
   "helptip_streamingMode": { "message": "စဉ်ဆက်မပြတ်စာသားစီးဆင်းမှုတွင်အဖြေများကိုလက်ခံရရှိပါ" },
-  "helptip_autoGetAnswers": { "message": "ရှာဖွေရေးအင်ဂျင်ကို အသုံးပြု. သောအခါ DuckDuckGPT မှအော်တိုစေလွှတ်မေးမြန်းချက်" },
+  "helptip_autoGetAnswers": {
+    "message": "ရှာဖွေရေးအင်ဂျင်ကို အသုံးပြု. သောအခါ DuckDuckGPT မှအော်တိုစေလွှတ်မေးမြန်းချက်"
+  },
   "helptip_autoSummarizeResults": { "message": "ရှာဖွေမှု ရလဒ် စာမျက်နှာကို အလိုအလျောက် အကျဉ်းချုံးပါ" },
   "helptip_autoFocusChatbar": { "message": "အလိုအလျောက်-အာရုံစူးစိုက်မှု chatbar ပေါ်လာသည့်အခါတိုင်း" },
-  "helptip_autoScroll": { "message": "စီးဆင်းမှု အနေအထားတွင် တုံ့ပြန်ချက်များ တစ်ခါတစ်ရံ ထွက်ပေါ်လာသောအခါ အလိုအလျောက် လှိမ့်စေပါ" },
+  "helptip_autoScroll": {
+    "message": "စီးဆင်းမှု အနေအထားတွင် တုံ့ပြန်ချက်များ တစ်ခါတစ်ရံ ထွက်ပေါ်လာသောအခါ အလိုအလျောက် လှိမ့်စေပါ"
+  },
   "helptip_showRelatedQueries": { "message": "စကားပြောဘားအောက်တွင် သက်ဆိုင်ရာမေးခွန်းများကို ပြပါ" },
   "helptip_prefixMode": { "message": "အဖြေများကိုပြသရန် စုံစမ်းမေးမြန်းခြင်းမပြုမီ \"/\" လိုအပ်ပါသည်" },
   "helptip_suffixMode": { "message": "ပြရန် အဖြေများအတွက် မေးမြန်းပြီးနောက် \"?\" လိုအပ်ပါသည်" },
@@ -87,6 +91,15 @@
   "placeholder_typeSomething": { "message": "တစ်ခုခုကို ရိုက်ထည့်ပါ" },
   "placeholder_askSomethingElse": { "message": "အခြားတစ်ခုခုကို မေးပါ" },
   "prompt_updateReplyLang": { "message": "ပြန်ကြားချက်ဘာသာစကားကို အပ်ဒိတ်လုပ်ပါ" },
+  "alert_importantNotice": { "message": "အရေးကြီးအသိပေးချက်" },
+  "alert_poweredByAI": { "message": "၎ င်းကို AI နည်းပညာဖြင့်ပြုလုပ်ထားသည် ။ အေထာက္အကူ ျဖစ္ေစရန္ စီစဥ္ထားသည္ ။" },
+  "alert_aiCanMakeMistakes": { "message": "(၁) အမှားတွေလုပ်တတ်တယ်" },
+  "alert_alwaysVerifyInfo": { "message": "အရေးကြီးသော အချက်အလက်များကို အမြဲစစ်ဆေးပါ" },
+  "alert_doubleCheckDecisions": { "message": "အရေးကြီးဆုံးဖြတ်ချက်များကို နှစ်ကြိမ်စစ်ဆေးပါ ။" },
+  "alert_dontRelySolelyOnAI": { "message": "အၾကံဥာဏ္တစ္ခုကိုပဲ အားမကိုးပါနဲ႔" },
+  "alert_notAsub": { "message": "အစားထိုးခြင်းမဟုတ်ပါ" },
+  "alert_forProMedOrLegalMatters": { "message": "ပရော်ဖက်ရှင်နယ်, ဆေးဘက်ဆိုင်ရာသို့မဟုတ်ဥပဒေရေးရာကိစ္စရပ်များအတွက်" },
+  "alert_useResponsibly": { "message": "တာဝန်ယူမှုရှိစွာ အသုံးပြုပါ" },
   "alert_langUpdated": { "message": "ဘာသာစကားကို အပ်ဒိတ်လုပ်ထားသည်" },
   "alert_willReplyIn": { "message": "ဖြေကြားပေးပါမည်" },
   "alert_yourSysLang": { "message": "သင် ၏ စနစ်ဘာသာစကား" },
@@ -98,7 +111,9 @@
   "alert_isUpToDate": { "message": "နောက်ဆုံးအခြေအနေတွင်ရှိသည်" },
   "alert_unavailable": { "message": "(မရနိုင်ပါ)" },
   "alert_isOnlyAvailFor": { "message": "အတွက်သာ အသုံးပြုနိုင်မည် ဖြစ်ပါသည်" },
-  "alert_userscriptMgrNoStream": { "message": "သင် ၏ အသုံးပြုသူမှတ်တမ်း မန်နေဂျာသည် စီးဆင်းမှု တုံ့ပြန်မှုများကို မထောက်ပံ့ပါ" },
+  "alert_userscriptMgrNoStream": {
+    "message": "သင် ၏ အသုံးပြုသူမှတ်တမ်း မန်နေဂျာသည် စီးဆင်းမှု တုံ့ပြန်မှုများကို မထောက်ပံ့ပါ"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "လောလောဆယ်တွင်သာ ရရှိနိုင်ပါသည်" },
   "alert_openAIsupportSoon": { "message": "OpenAI API အတွက်အထောက်အပံ့ကိုမကြာမီထည့်သွင်းပါလိမ့်မည်" },
   "alert_waitingFor": { "message": "စောင့်ဆိုင်းနေသည်" },

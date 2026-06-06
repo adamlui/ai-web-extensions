@@ -69,7 +69,9 @@
   "helptip_proxyAPImode": { "message": "AI ནང་འཛུལ་མི་བྱེད་པའི་Proxy API ལག་ལེན་འཐབ་།" },
   "helptip_preferredAPI": { "message": "Proxy Mode ནང་ལན་འཚོལ་སྐབས་ལག་ལེན་བྱེད་པའི་API" },
   "helptip_streamingMode": { "message": "རྒྱུན་ཆད་མེད་པར་རྒྱུན་ཆད་མེད་པར་རྒྱུན་ཆད་མེད་པར་ལན་འདེབས་བྱ་" },
-  "helptip_autoGetAnswers": { "message": "འཚོལ་ཞིབ་འཕྲུལ་ཆས་བེད་སྤྱོད་བྱེད་སྐབས་ DuckDuckGPT ལ་རང་འགུལ་གྱིས་འདྲི་རྩད་གཏོང་བ།" },
+  "helptip_autoGetAnswers": {
+    "message": "འཚོལ་ཞིབ་འཕྲུལ་ཆས་བེད་སྤྱོད་བྱེད་སྐབས་ DuckDuckGPT ལ་རང་འགུལ་གྱིས་འདྲི་རྩད་གཏོང་བ།"
+  },
   "helptip_autoSummarizeResults": { "message": "འཚོལ་བཤེར་འབྲས་ཤོག་ངོས་རང་འགུལ་གྱིས་མདོར་བསྡུས །" },
   "helptip_autoFocusChatbar": { "message": "རང་བཞིན་གྱིས་དམིགས་བསལ་གྱི་གཏམ་གླེང་།" },
   "helptip_autoScroll": { "message": "རང་བཞིན་གྱིས་གློག་བརྙན་གཏོང་ཐབས་ཀྱི་ཐབས་ལམ་དུ་གློག་བརྙན་གཏོང་ཐབས་ཀྱི་ཐབས་ལམ་" },
@@ -77,7 +79,9 @@
   "helptip_prefixMode": { "message": "ལན་སྟོན་པའི་འདྲི་རྩད་ཀྱི་སྔོན་ལ་ \"/\" དགོས་" },
   "helptip_suffixMode": { "message": "ལན་སྟོན་པའི་འདྲི་རྩད་རྗེས་སུ་ \"?\" དགོས་" },
   "helptip_widerSidebar": { "message": "ཕྱོགས་རིས་འཚོལ་བཤེར་ཤོག་ངོས་ཟུར་པང་རྒྱ་བསྐྱེད་པ" },
-  "helptip_stickySidebar": { "message": "DuckDuckGPT ཕྱོགས་ཀྱི་སྒྲོམ་ནང་མཐོང་ཐུབ་པའི་ནུས་པ་ཡོད ། ཁྱོད་ཀྱིས་ཤོག་སྒྲིལ་རྒྱབ་སྐབས་ཀྱང་" },
+  "helptip_stickySidebar": {
+    "message": "DuckDuckGPT ཕྱོགས་ཀྱི་སྒྲོམ་ནང་མཐོང་ཐུབ་པའི་ནུས་པ་ཡོད ། ཁྱོད་ཀྱིས་ཤོག་སྒྲིལ་རྒྱབ་སྐབས་ཀྱང་"
+  },
   "helptip_anchorMode": { "message": "སྐར་ཁུང་རྩོམ་སྒྲིག་པ །_08/03/2020" },
   "helptip_bgAnimations": { "message": "UI ཡན་ལག་ཁག་ཏུ་སེམས་ཅན་གྱི་རྒྱབ་སྐྱོར་སྟོན་པ" },
   "helptip_fgAnimations": { "message": "UI ཡན་ལག་ཁག་གི་མདུན་ངོས་ཀྱི་རྣམ་པར་རིས་སྟོན་པ" },
@@ -87,6 +91,19 @@
   "placeholder_typeSomething": { "message": "སྣ་ཚོགས །" },
   "placeholder_askSomethingElse": { "message": "ངས་ད་དུང་འདྲི་ཞིག་ཞུ་རྒྱུ་ཡིན །" },
   "prompt_updateReplyLang": { "message": "སྐད་ཡིག་གསར་འགྱུར །" },
+  "alert_importantNotice": { "message": "དྲན་བསྐུལ་ཁྱད་ཆོས །" },
+  "alert_poweredByAI": {
+    "message": "དེ་ནི་AI འཕྲུལ་རིག་གིས་དབང་བསྒྱུར་བྱེད ། འོན་ཀྱང་དེ་ཚོས་སྐྱབས་གྲོགས་བྱེད་འདོད་དོ །"
+  },
+  "alert_aiCanMakeMistakes": { "message": "ཁྱོད་ཀྱིས་ནོར་འཁྲུལ་བྱེད་སྲིད་དོ །" },
+  "alert_alwaysVerifyInfo": { "message": "རྒྱུན་དུ་དོན་གནད་ཆེ་བའི་བརྡ་དོན་ལ་ལྟ་དགོས །" },
+  "alert_doubleCheckDecisions": { "message": "གྲོས་ཐག་ཆོད་པའི་གནད་དོན་ཁག་གཉིས་པ །" },
+  "alert_dontRelySolelyOnAI": { "message": "ཤེས་རབ་ཀྱི་བསླབ་བྱ་ལ་ཡིད་ཆེས་མ་བྱེད་ཅིག" },
+  "alert_notAsub": { "message": "བསྒྱུར་བཅོས་གང་ཡང་མེད །" },
+  "alert_forProMedOrLegalMatters": {
+    "message": "ཁྲིམས་མཐུན་གྱི་གནད་དོན་དང་། སྨན་བཅོས་ཀྱི་གནད་དོན་དང་། ཁྲིམས་མཐུན་གྱི་གནད་དོན་བཅས་ཀྱི་སྐོར་ལ་"
+  },
+  "alert_useResponsibly": { "message": "འགན་འཁྲི་ཅན་གྱི་ལག་ལེན་" },
   "alert_langUpdated": { "message": "གསར་བསྒྱུར་ཟླ་ཚེས །" },
   "alert_willReplyIn": { "message": "ལན་སློག ལན་སློག" },
   "alert_yourSysLang": { "message": "(བོད་ཡིག) སྐད་ཡིག་གི་མིང་།" },
@@ -98,7 +115,9 @@
   "alert_isUpToDate": { "message": "ཡར་ངོའི་ཚེས་བཅུའི་དུས་སུ་" },
   "alert_unavailable": { "message": "ཉེར་སྤྱོད་མི་ཐུབ་པ" },
   "alert_isOnlyAvailFor": { "message": "རྒྱང་རིང་དུ་མ་གཏོགས་གཞན་གང་ཡང་མེད །" },
-  "alert_userscriptMgrNoStream": { "message": "ཁྱེད་ཀྱི་UserScript Manager གིས་Return Stream ལན་འདེབས་ལ་རྒྱབ་སྐྱོར་མི་བྱེད །" },
+  "alert_userscriptMgrNoStream": {
+    "message": "ཁྱེད་ཀྱི་UserScript Manager གིས་Return Stream ལན་འདེབས་ལ་རྒྱབ་སྐྱོར་མི་བྱེད །"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "ད་ལྟའི་བར་དུ །" },
   "alert_openAIsupportSoon": { "message": "OpenAI API ལ་རྒྱབ་སྐྱོར་མགྱོགས་པོ་ཁ་སྣོན་བྱ་རྒྱུ་རེད།་" },
   "alert_waitingFor": { "message": "སྒུག་སྡོད་བྱེད་" },

@@ -69,7 +69,9 @@
   "helptip_proxyAPImode": { "message": "Name" },
   "helptip_preferredAPI": { "message": "API барои истифода ҳангоми гирифтани ҷавобҳо дар режими Proxy" },
   "helptip_streamingMode": { "message": "Қабул кардани ҷавобҳо дар ҷараёни матнии доимӣ" },
-  "helptip_autoGetAnswers": { "message": "Awtomatikong nagpapadala ng mga query sa DuckDuckGPT kapag gumagamit ng search engine" },
+  "helptip_autoGetAnswers": {
+    "message": "Awtomatikong nagpapadala ng mga query sa DuckDuckGPT kapag gumagamit ng search engine"
+  },
   "helptip_autoSummarizeResults": { "message": "Awtomatikong sumali ang pahina ng mga resulta sa paghah" },
   "helptip_autoFocusChatbar": { "message": "Панели чат бо фокуси худкор ҳар вақте, ки пайдо мешавад" },
   "helptip_autoScroll": { "message": "Посухҳои худкор" },
@@ -77,7 +79,9 @@
   "helptip_prefixMode": { "message": "Kinakailangan ng \"/\" bago mga query para sa mga tugon upang ipakita" },
   "helptip_suffixMode": { "message": "Kinakailangan ng \"?\" pagkatapos ng mga query para sa mga tugon up" },
   "helptip_widerSidebar": { "message": "Уфуқӣ густариш додани панели паҳлӯии саҳифаи ҷустуҷӯ" },
-  "helptip_stickySidebar": { "message": "DuckDuckGPT- ро дар панели паҳлӯӣ, ҳатто вақте ки шумо ҳаракат мекунед, намоён мекунад" },
+  "helptip_stickySidebar": {
+    "message": "DuckDuckGPT- ро дар панели паҳлӯӣ, ҳатто вақте ки шумо ҳаракат мекунед, намоён мекунад"
+  },
   "helptip_anchorMode": { "message": "Лангари DuckDuckGPT ба поёни тиреза" },
   "helptip_bgAnimations": { "message": "Намоиши заминаи аниматсионӣ дар ҷузъҳои UI" },
   "helptip_fgAnimations": { "message": "Намоиши аниматсияҳои пешзамина дар ҷузъҳои UI" },
@@ -87,6 +91,17 @@
   "placeholder_typeSomething": { "message": "Чизеро чоп кунед" },
   "placeholder_askSomethingElse": { "message": "Як чизи дигарро пурсед" },
   "prompt_updateReplyLang": { "message": "Забони ҷавобро навсозӣ кунед" },
+  "alert_importantNotice": { "message": "Огоҳии муҳим" },
+  "alert_poweredByAI": {
+    "message": "бо технологияи AI нигаронида шудааст. Дар ҳоле ки тарҳрезӣ шудааст, ки муфид бошад"
+  },
+  "alert_aiCanMakeMistakes": { "message": "AI метавонад хато кунад" },
+  "alert_alwaysVerifyInfo": { "message": "Ҳамеша маълумоти муҳимро тафтиш кунед" },
+  "alert_doubleCheckDecisions": { "message": "Санҷиши дубораи қарорҳои муҳим" },
+  "alert_dontRelySolelyOnAI": { "message": "Танҳо ба маслиҳати AI такя накунед" },
+  "alert_notAsub": { "message": "Ҷойивазкунӣ нест" },
+  "alert_forProMedOrLegalMatters": { "message": "Барои масъалаҳои касбӣ, тиббӣ ё ҳуқуқӣ" },
+  "alert_useResponsibly": { "message": "Истифодаи бомасъулият" },
   "alert_langUpdated": { "message": "Забон нав карда шуд" },
   "alert_willReplyIn": { "message": "ҷавоб хоҳад дод" },
   "alert_yourSysLang": { "message": "забони системаи шумо" },

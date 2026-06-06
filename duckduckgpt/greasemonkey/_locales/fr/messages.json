@@ -69,24 +69,47 @@
   "helptip_proxyAPImode": { "message": "Utilise une API proxy pour un accès sans connexion à l'IA" },
   "helptip_preferredAPI": { "message": "API à utiliser lors de l'obtention de réponses en mode proxy" },
   "helptip_streamingMode": { "message": "Recevoir des réponses dans un flux de texte continu" },
-  "helptip_autoGetAnswers": { "message": "Envoyer automatiquement des requêtes à DuckDuckGPT lors de l'utilisation du moteur de recherche" },
+  "helptip_autoGetAnswers": {
+    "message": "Envoyer automatiquement des requêtes à DuckDuckGPT lors de l'utilisation du moteur de recherche"
+  },
   "helptip_autoSummarizeResults": { "message": "Résumer automatiquement la page de résultats de recherche" },
-  "helptip_autoFocusChatbar": { "message": "Barre de discussion à mise au point automatique chaque fois qu'elle apparaît" },
-  "helptip_autoScroll": { "message": "Faire défiler automatiquement les réponses au fur et à mesure qu'elles sont générées en mode streaming" },
+  "helptip_autoFocusChatbar": {
+    "message": "Barre de discussion à mise au point automatique chaque fois qu'elle apparaît"
+  },
+  "helptip_autoScroll": {
+    "message": "Faire défiler automatiquement les réponses au fur et à mesure qu'elles sont générées en mode streaming"
+  },
   "helptip_showRelatedQueries": { "message": "Afficher les requêtes associées sous la barre de discussion" },
   "helptip_prefixMode": { "message": "Exiger «/» avant les requêtes de réponses à afficher" },
   "helptip_suffixMode": { "message": "Exiger «?» après les requêtes de réponses à afficher" },
   "helptip_widerSidebar": { "message": "Développer horizontalement la barre latérale de la page de recherche" },
-  "helptip_stickySidebar": { "message": "Rend DuckDuckGPT visible dans la barre latérale même lorsque vous faites défiler" },
+  "helptip_stickySidebar": {
+    "message": "Rend DuckDuckGPT visible dans la barre latérale même lorsque vous faites défiler"
+  },
   "helptip_anchorMode": { "message": "Ancrer DuckDuckGPT au bas de la fenêtre" },
-  "helptip_bgAnimations": { "message": "Afficher les arrière-plans animés dans les composants de l'interface utilisateur" },
-  "helptip_fgAnimations": { "message": "Afficher les animations de premier plan dans les composants de l'interface utilisateur" },
+  "helptip_bgAnimations": {
+    "message": "Afficher les arrière-plans animés dans les composants de l'interface utilisateur"
+  },
+  "helptip_fgAnimations": {
+    "message": "Afficher les animations de premier plan dans les composants de l'interface utilisateur"
+  },
   "helptip_replyLanguage": { "message": "Langue de réponse de DuckDuckGPT" },
-  "helptip_colorScheme": { "message": "Schéma pour afficher les composants de l'interface utilisateur de DuckDuckGPT dans" },
+  "helptip_colorScheme": {
+    "message": "Schéma pour afficher les composants de l'interface utilisateur de DuckDuckGPT dans"
+  },
   "helptip_debugMode": { "message": "Afficher la journalisation détaillée dans la console du navigateur" },
   "placeholder_typeSomething": { "message": "Tapez quelque chose" },
   "placeholder_askSomethingElse": { "message": "Demander quelque chose" },
   "prompt_updateReplyLang": { "message": "Mettre à jour la langue de réponse" },
+  "alert_importantNotice": { "message": "Avis important" },
+  "alert_poweredByAI": { "message": "est alimenté par la technologie de l'IA. Bien que conçu pour être utile" },
+  "alert_aiCanMakeMistakes": { "message": "L'IA peut faire des erreurs" },
+  "alert_alwaysVerifyInfo": { "message": "Vérifiez toujours les informations importantes" },
+  "alert_doubleCheckDecisions": { "message": "Vérifier deux fois les décisions critiques" },
+  "alert_dontRelySolelyOnAI": { "message": "Ne comptez pas uniquement sur les conseils de l'IA" },
+  "alert_notAsub": { "message": "Pas un substitut" },
+  "alert_forProMedOrLegalMatters": { "message": "Pour des questions professionnelles, médicales ou juridiques" },
+  "alert_useResponsibly": { "message": "Utiliser de manière responsable" },
   "alert_langUpdated": { "message": "Langue mise à jour" },
   "alert_willReplyIn": { "message": "répondra dans" },
   "alert_yourSysLang": { "message": "Langue du système" },
@@ -98,7 +121,9 @@
   "alert_isUpToDate": { "message": "Elle est à jour" },
   "alert_unavailable": { "message": "Il ne reste plus de produit disponible pour cette date" },
   "alert_isOnlyAvailFor": { "message": "n'est disponible que pour" },
-  "alert_userscriptMgrNoStream": { "message": "Votre gestionnaire de script utilisateur ne prend pas en charge le retour des réponses de flux" },
+  "alert_userscriptMgrNoStream": {
+    "message": "Votre gestionnaire de script utilisateur ne prend pas en charge le retour des réponses de flux"
+  },
   "alert_isCurrentlyOnlyAvailBy": { "message": "n'est actuellement disponible que pour" },
   "alert_openAIsupportSoon": { "message": "La prise en charge de l'API OpenAI sera ajoutée sous peu" },
   "alert_waitingFor": { "message": "En attente de" },

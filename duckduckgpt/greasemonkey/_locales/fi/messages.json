@@ -66,8 +66,12 @@
   "tooltip_code": { "message": "Koodi" },
   "tooltip_generatingAudio": { "message": "Luodaan ääntä" },
   "tooltip_sendRelatedQuery": { "message": "Lähetä liittyvä kysely" },
-  "helptip_proxyAPImode": { "message": "Käyttää välityspalvelimen sovellusliittymää tekoälyn kirjautumattomaan käyttöön" },
-  "helptip_preferredAPI": { "message": "Sovellusliittymä, jota käytetään, kun vastauksia haetaan välityspalvelintilassa" },
+  "helptip_proxyAPImode": {
+    "message": "Käyttää välityspalvelimen sovellusliittymää tekoälyn kirjautumattomaan käyttöön"
+  },
+  "helptip_preferredAPI": {
+    "message": "Sovellusliittymä, jota käytetään, kun vastauksia haetaan välityspalvelintilassa"
+  },
   "helptip_streamingMode": { "message": "Vastaanota vastaukset jatkuvana tekstivirtana" },
   "helptip_autoGetAnswers": { "message": "Lähetä kyselyt automaattisesti DuckDuckGPT: lle, kun käytät hakukonetta" },
   "helptip_autoSummarizeResults": { "message": "Tiivistä hakutulossivu automaattisesti" },
@@ -87,6 +91,15 @@
   "placeholder_typeSomething": { "message": "Kirjoita jotakin" },
   "placeholder_askSomethingElse": { "message": "Joku muu" },
   "prompt_updateReplyLang": { "message": "Päivitä vastauskieli" },
+  "alert_importantNotice": { "message": "Tärkeä huomautus" },
+  "alert_poweredByAI": { "message": "saa käyttövoimansa tekoälyteknologiasta. Vaikka se on suunniteltu avuliaaksi" },
+  "alert_aiCanMakeMistakes": { "message": "Tekoäly voi tehdä virheitä" },
+  "alert_alwaysVerifyInfo": { "message": "Vahvista aina tärkeät tiedot" },
+  "alert_doubleCheckDecisions": { "message": "Tarkista kriittiset päätökset vielä kerran" },
+  "alert_dontRelySolelyOnAI": { "message": "Älä luota pelkästään tekoälyneuvoihin" },
+  "alert_notAsub": { "message": "Ei korvike" },
+  "alert_forProMedOrLegalMatters": { "message": "Ammatillisiin, lääketieteellisiin tai oikeudellisiin asioihin" },
+  "alert_useResponsibly": { "message": "Käytä vastuullisesti" },
   "alert_langUpdated": { "message": "Kieli päivitetty" },
   "alert_willReplyIn": { "message": "vastaa" },
   "alert_yourSysLang": { "message": "järjestelmäkohtainen dokumentaatiokieli" },
