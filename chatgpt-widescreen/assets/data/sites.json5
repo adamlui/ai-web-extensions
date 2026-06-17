@@ -15,7 +15,7 @@
         "send": "button[data-testid=send-button]",
         "sidebar": "div[style*=-sidebar-width] button[data-testid=close-sidebar-button], div[style*=-sidebar-rail-width] button[aria-controls=stage-slideover-sidebar]",
         "stop": "button[data-testid=stop-button]",
-        "voice": "button[data-testid*=composer-speech-button], button:has(use[href$=\"svg#f8aa74\"])"
+        "voice": "button[style*=composer-speech-button], button[data-testid*=composer-speech-button], button:has(use[href$=\"svg#f8aa74\"])"
       },
       "footer": "div#thread-bottom-container > div:last-of-type",
       "header": "header#page-header",
