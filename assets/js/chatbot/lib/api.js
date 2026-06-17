@@ -241,7 +241,8 @@ window.api = {
                             .replace(/^['"]*(?:\d+\.?\s*)?['"]*/, '') // strip leading number + quotes
                             .replace(/['"]*$/, '')) // strip trailing quotes
                 }
-        })}
+            })
+        }
     },
 
     tryNew({ caller, reason = 'err' }) {
