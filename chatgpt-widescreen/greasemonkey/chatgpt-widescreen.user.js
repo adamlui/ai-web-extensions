@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.6.10
+// @version             2026.6.17
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -326,7 +326,7 @@
     window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
-        commitHashes: { app: '8648761' } // for cached <app|messages>.json + sites.json5
+        commitHashes: { app: '9809d5e' } // for cached <app|messages>.json + sites.json5
     }
     app.urls = {
         resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.commitHashes.app}` }
@@ -456,7 +456,7 @@
             if (mode == 'widescreen') { document.head.append(styles.widescreen.node) ; sync.mode('widescreen') }
             else if (mode == 'fullWindow') {
                 const { site } = env, { selectors } = sites[site],
-                      sidebarToggle = document.querySelector(selectors.btns.sidebar)
+                        sidebarToggle = document.querySelector(selectors.btns.sidebar)
                 if (site == 'chatgpt') {
                     const sidebars = {
                         left: document.querySelector(selectors.sidebar),
