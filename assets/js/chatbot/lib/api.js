@@ -232,15 +232,15 @@ window.api = {
                     else api.tryNew({ caller })
                 }
 
-                /* eslint-disable regexp/no-super-linear-backtracking */
                 function arrayify(strList) { // for get.related() calls
                     log.caller = 'api.process.text » arrayify()'
                     log.debug('Arrayifying related queries...')
-                    return (strList.trim().match(/^\d+\.?\s*([^\n]+?)(?=\n|\\n|$)/gm) || [])
+                    return (strList.trim().match(/^\d+\.?\s*((?:(?!\n|\\n).)*)/gm) || [])
                         .slice(0, 5) // limit to 1st 5
                         .map(match => match.replace(/\*\*/g, '') // strip markdown boldenings
-                            .replace(/^['"]*(?:\d+\.?\s*)?['"]*(.*?)['"]*$/g, '$1')) // strip numbering + quotes
-                } /* eslint-enable regexp/no-super-linear-backtracking */
+                            .replace(/^['"]*(?:\d+\.?\s*)?['"]*/, '') // strip leading number + quotes
+                            .replace(/['"]*$/, '')) // strip trailing quotes
+                }
         })}
     },
 
