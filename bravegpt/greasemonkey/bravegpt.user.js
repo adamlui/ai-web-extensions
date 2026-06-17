@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.6.17
+// @version               2026.6.17.1
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon64.png
@@ -201,7 +201,7 @@
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@5045b1d/assets/js/chatbot/components/menus.js#sha256-13HZm6QRq/dxVbeR2RmeiYmovD8XP/FTwiercFv4nm8=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@54d802d/assets/js/chatbot/components/replyBubble.js#sha256-hfm7kB1xZMyMT3pmMzmq6IdM6FWEjl9DSGtzUL1RZlI=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@54d802d/assets/js/chatbot/components/tooltip.js#sha256-VaSjsJ9RE8pe5fXrRFdy1lBT73KGDAC2DUb4UWpy3T8=
-// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@5045b1d/assets/js/chatbot/lib/api.js#sha256-x2DDQ4x8+Cj2l2FsgCA58thKWVGzDbrLTHm9i/kqigM=
+// @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f93a944/assets/js/chatbot/lib/api.js#sha256-PiRrvXkn06TU0GjMXy+ChXlR7ZwFXUDEw3eExyNA0M4=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@54d802d/assets/js/chatbot/lib/feedback.js#sha256-VB/w0tQj4AeZ+XYgFXendWx9uUroimUgCjl4LHQchx4=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@beedf43/assets/js/chatbot/lib/log.js#sha256-++SE7OgyoPZhNJ+cLiqSraFJCs59qVUhRm0vr1dCznY=
 // @require               https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@54d802d/assets/js/chatbot/lib/prompts.js#sha256-zQqAHklFJcr4O5DgBoI9fSRm4SDko8ra3vPjYCm2Z4Q=
