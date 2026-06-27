@@ -51,9 +51,9 @@
     "bump:ext": "node utils/bump/extension-manifests --cache",
     "bump:ext-nc": "npm run bump:ext -- --no-commit",
     "bump:ext-np": "npm run bump:ext -- --no-push",
-    "bump:chrome": "node utils/bump/extension-manifests --chrome",
+    "bump:chrome": "npm run bump:ext -- --chrome",
     "bump:chromium": "npm run bump:chrome",
-    "bump:ff": "node utils/bump/extension-manifests --ff",
+    "bump:ff": "npm run bump:ext -- --ff",
     "bump:firefox": "npm run bump:ff"
   },
   "devDependencies": {
