@@ -2,8 +2,9 @@
 
 // Replaces local <chatgpt|css|dom>.min.js w/ latest builds
 
-(async () => {
-    'use strict'
+'use strict'
+
+;(async () => {
 
     const fs = require('fs'),
           path = require('path')

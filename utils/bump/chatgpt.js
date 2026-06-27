@@ -5,8 +5,9 @@
 // NOTE: Doesn't git commit to allow script editing from breaking changes
 // NOTE: Pass --cache to use cachePaths.userJSpaths for faster init
 
-(async () => {
-    'use strict'
+'use strict'
+
+;(async () => {
 
     // Parse ARGS
     const args = process.argv.slice(2),
