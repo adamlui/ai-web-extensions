@@ -8,25 +8,26 @@ import fs from 'fs'
 import path from 'path'
 import ssri from 'ssri'
 
-const colors = {
+const colors = { ansi: {
     nc: '\x1b[0m',        // no color
     dg: '\x1b[38;5;243m', // dim gray
     bw: '\x1b[1;97m',     // bright white
     by: '\x1b[1;33m',     // bright yellow
     bg: '\x1b[1;92m',     // bright green
     br: '\x1b[1;91m'      // bright red
-}
-const { nc, dg, bw, by, bg, br } = colors,
-        lvlColors = { hash: dg, info: bw, working: by, success: bg, error: br },
-        log = {}
-Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) {
-    console.log(lvlColors[lvl] +( log.endedWithLineBreak ? msg.trimStart() : msg ) + nc)
+}}
+const { nc, dg, bw, by, bg, br } = colors.ansi
+colors.lvls = { hash: dg, info: bw, working: by, success: bg, error: br }
+
+const log = {}
+Object.keys(colors.lvls).forEach(lvl => log[lvl] = function(msg) {
+    console.log(colors.lvls[lvl] +( log.endedWithLineBreak ? msg.trimStart() : msg ) + nc)
     log.endedWithLineBreak = msg.toString().endsWith('\n')
 })
 
 export { colors, log }
 
-export function bumpVersion({ format = 'dateVer', type, filePath, verbose = true } = {}) {
+export function bumpVersion({ filePath, format = 'dateVer', type, verbose = true } = {}) {
     if (!filePath) throw new Error(`'filePath' option required by bumpVersion()`)
     if (format == 'semVer' && !/major|minor|patch/i.test(type))
         throw new Error(`'type' option <major|minor|patch> required by bumpVersion({ format: 'semVer' })`)
@@ -76,7 +77,10 @@ export function findFileBySuffix({
                 if (recursive) search(entryPath)
             } else if (stat.isFile()) {
                 if (ignoreFiles.includes(entry) || (entry.startsWith('.') && !dotFiles)) continue
-                if (entry.endsWith(suffix)) { foundFiles.push(entryPath) ; if (verbose) console.log(entryPath) }
+                if (entry.endsWith(suffix)) {
+                    foundFiles.push(entryPath)
+                    if (verbose) console.log(entryPath)
+                }
             }
         }
     })(path.resolve(dir))
@@ -85,12 +89,14 @@ export function findFileBySuffix({
 
 export async function generateSRIhash({ resURL, algorithm = 'sha256', verbose = true } = {}) {
     if (!resURL) throw new Error(`'resURL' option required by generateSRIhash()`)
-    try {
+    try { // to generate SRI hash
         const sriHash = ssri.fromData(
             Buffer.from(await (await fetch(resURL)).arrayBuffer()), { algorithms: [algorithm] }).toString()
         if (verbose) this.log.hash(`${sriHash}\n`)
         return sriHash
-    } catch (err) { throw new Error(`Cannot generate SRI hash for ${resURL}: ${err.message}`) }
+    } catch (err) {
+        throw new Error(`Cannot generate SRI hash for ${resURL}: ${err.message}`)
+    }
 }
 
 export async function getLatestCommitHash({ repo, path = '', source = 'github', verbose = true } = {}) {
@@ -100,41 +106,44 @@ export async function getLatestCommitHash({ repo, path = '', source = 'github', 
         gitlab: `https://gitlab.com/api/v4/projects/${encodeURIComponent(repo)}/repository/commits`
     }
     let latestCommitHash
-    for (const src of [source, source == 'github' ? 'gitlab' : 'github']) {
-        try {
+    for (const src of [source, source == 'github' ? 'gitlab' : 'github'])
+        try { // to get latest commit hash
             const data = await (await fetch(`${endpoints[src]}?path=${path}&per_page=1`)).json()
             latestCommitHash = data[0]?.sha || data[0]?.id
             if (latestCommitHash) break
-        } catch (err) { continue } // to next source
-    }
-    if (verbose && latestCommitHash) { this.log.hash(`${latestCommitHash}\n`) ; return latestCommitHash }
-    else if (!latestCommitHash)
+        } catch { continue } // to next source
+    if (latestCommitHash) {
+        if (verbose) this.log.hash(`${latestCommitHash}\n`)
+        return latestCommitHash
+    } else
         throw new Error(`Cannot fetch latest commit hash for: ${repo}${ path ? '/' + path : '' }`)
 }
 
 export function initKudoSyncBot() {
-    const gpgKeysPath = process.env.GPG_KEYS_PATH
-    let keyID = null
-    if (gpgKeysPath) {
-        const keyPath = path.join(gpgKeysPath, 'kudo-sync-bot-private-key.asc')
+    const { GPG_KEYS_PATH: gpgKeysPath } = process.env,
+            git = { name: 'kudo-sync-bot', email: 'auto-sync@kudoai.com' }
+    let keyID
+    if (gpgKeysPath) { // load keys/IDs
+        const keyPath = path.join(gpgKeysPath, `${git.name}-private-key.asc`)
         if (fs.existsSync(keyPath)) execFileSync('gpg', ['--batch', '--import', keyPath])
-        const keyIDpath = path.join(gpgKeysPath, 'kudo-sync-bot-key-id.txt')
+        const keyIDpath = path.join(gpgKeysPath, `${git.name}-key-id.txt`)
         if (fs.existsSync(keyIDpath)) keyID = fs.readFileSync(keyIDpath, 'utf8').trim()
     }
     if (keyID) process.env.GIT_COMMITTER_SIGNINGKEY = keyID
-    process.env.GIT_AUTHOR_NAME = 'kudo-sync-bot'
-    process.env.GIT_AUTHOR_EMAIL = 'auto-sync@kudoai.com'
-    process.env.GIT_COMMITTER_NAME = 'kudo-sync-bot'
-    process.env.GIT_COMMITTER_EMAIL = 'auto-sync@kudoai.com'
+    process.env.GIT_AUTHOR_NAME = process.env.GIT_COMMITTER_NAME = git.name
+    process.env.GIT_AUTHOR_EMAIL = process.env.GIT_COMMITTER_EMAIL = git.email
     return true
 }
 
 export async function isValidResource({ resURL, verbose = true } = {}) {
-    if (!resURL) throw new Error(`'resURL' option required by isValidResource()`)
-    try {
+    if (!resURL)
+        throw new Error(`'resURL' option required by isValidResource()`)
+    try { // to validate resURL
         const resIsValid = !/^(?:Failed to fetch|Package size exceeded)/.test(await (await fetch(resURL)).text())
-        if (verbose) this.log[resIsValid ? 'info' : 'error'](
-            `\n${ resIsValid ? 'V' : 'Inv' }alid resource: ${resURL}\n`)
+        if (verbose)
+            this.log[resIsValid ? 'info' : 'error'](`\n${ resIsValid ? 'V' : 'Inv' }alid resource: ${resURL}\n`)
         return resIsValid
-    } catch (err) { throw new Error(`Cannot validate ${resURL}: ${err.message}`) }
+    } catch (err) {
+        throw new Error(`Cannot validate ${resURL}: ${err.message}`)
+    }
 }
