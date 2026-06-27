@@ -2,11 +2,11 @@
 // Source: https://github.com/adamlui/ai-web-extensions/blob/main/utils/bump/lib/bump.mjs
 // Latest minified build: https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/utils/bump/lib/bump.min.mjs
 
-import { fileURLToPath } from 'url' // to init monorepo root
-import { execFileSync } from 'child_process' // to change Git author/committer
-import fs from 'fs' // to read/write files
-import path from 'path' // to manipulate paths
-import ssri from 'ssri' // to generate SHA-256 hashes
+import { execFileSync } from 'child_process'
+import { fileURLToPath } from 'url'
+import fs from 'fs'
+import path from 'path'
+import ssri from 'ssri'
 
 const colors = {
     nc: '\x1b[0m',        // no color
