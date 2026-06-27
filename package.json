@@ -46,7 +46,7 @@
     "bump:chatbot-nc": "npm run bump:chatbots-nc",
     "bump:chatbot-np": "npm run bump:chatbots-np",
     "bump:chatgpt": "node utils/bump/chatgpt",
-    "bump:res": "node utils/bump/userjs-resources --cache && node utils/bump/extension-resources",
+    "bump:res": "node utils/bump/userscript-requires --cache && node utils/bump/extension-resources",
     "bump:ext": "node utils/bump/extension-manifests --cache",
     "bump:ext-nc": "npm run bump:ext -- --no-commit",
     "bump:ext-np": "npm run bump:ext -- --no-push",
