@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.6.17.1
+// @version                2026.6.27
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon64.png
@@ -73,7 +73,7 @@
 // @connect                chats.kudoai.com
 // @connect                fanyi.sogou.com
 // @connect                raw.githubusercontent.com
-// @require                https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4.14.2/dist/chatgpt.min.js#sha256-HU+GlQoVScXwWgqL0tYKNSTLQhDsLkH3F6TSucijFWI=
+// @require                https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4.15.0/dist/chatgpt.min.js#sha256-RglS1MscMHGDI7nq1v0OXEHoEw8stDxErRzSuILzCrQ=
 // @require                https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js#sha256-dppVXeVTurw1ozOPNE3XqhYmDJPOosfbKQcHyQSE58w=
 // @require                https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@130fe5e/assets/js/chatbot/components/buttons.js#sha256-1EdgOW0kQxjTTzgMz/4JScPw5i04gPsKVBXPA0xQWDg=
@@ -81,7 +81,7 @@
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@5045b1d/assets/js/chatbot/components/menus.js#sha256-13HZm6QRq/dxVbeR2RmeiYmovD8XP/FTwiercFv4nm8=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@54d802d/assets/js/chatbot/components/replyBubble.js#sha256-hfm7kB1xZMyMT3pmMzmq6IdM6FWEjl9DSGtzUL1RZlI=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@54d802d/assets/js/chatbot/components/tooltip.js#sha256-VaSjsJ9RE8pe5fXrRFdy1lBT73KGDAC2DUb4UWpy3T8=
-// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f93a944/assets/js/chatbot/lib/api.js#sha256-PiRrvXkn06TU0GjMXy+ChXlR7ZwFXUDEw3eExyNA0M4=
+// @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@0bab5a8/assets/js/chatbot/lib/api.js#sha256-lZDUcdki4/4DcKN3++xh67epyfVHUCTzMqukQn4Ff3I=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@54d802d/assets/js/chatbot/lib/feedback.js#sha256-VB/w0tQj4AeZ+XYgFXendWx9uUroimUgCjl4LHQchx4=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@beedf43/assets/js/chatbot/lib/log.js#sha256-++SE7OgyoPZhNJ+cLiqSraFJCs59qVUhRm0vr1dCznY=
 // @require                https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@54d802d/assets/js/chatbot/lib/prompts.js#sha256-zQqAHklFJcr4O5DgBoI9fSRm4SDko8ra3vPjYCm2Z4Q=
