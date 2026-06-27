@@ -1,4 +1,4 @@
-// bump.mjs for finding/bumping/hashing etc.
+// bump.mjs lib for finding/bumping/hashing etc.
 // Source: https://github.com/adamlui/ai-web-extensions/blob/main/utils/bump/lib/bump.mjs
 // Latest minified build: https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions/utils/bump/lib/bump.min.mjs
 
@@ -8,14 +8,16 @@ import fs from 'fs'
 import path from 'path'
 import ssri from 'ssri'
 
-const colors = { ansi: {
-    nc: '\x1b[0m',        // no color
-    dg: '\x1b[38;5;243m', // dim gray
-    bw: '\x1b[1;97m',     // bright white
-    by: '\x1b[1;33m',     // bright yellow
-    bg: '\x1b[1;92m',     // bright green
-    br: '\x1b[1;91m'      // bright red
-}}
+const colors = {
+    ansi: {
+        nc: '\x1b[0m',        // no color
+        dg: '\x1b[38;5;243m', // dim gray
+        bw: '\x1b[1;97m',     // bright white
+        by: '\x1b[1;33m',     // bright yellow
+        bg: '\x1b[1;92m',     // bright green
+        br: '\x1b[1;91m'      // bright red
+    }
+}
 const { nc, dg, bw, by, bg, br } = colors.ansi
 colors.lvls = { hash: dg, info: bw, working: by, success: bg, error: br }
 
