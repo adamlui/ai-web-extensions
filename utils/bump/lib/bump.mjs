@@ -18,7 +18,8 @@ const colors = {
 }
 const { nc, dg, bw, by, bg, br } = colors
 const lvlColors = { hash: dg, info: bw, working: by, success: bg, error: br }
-const log = {} ; Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) {
+const log = {}
+Object.keys(lvlColors).forEach(lvl => log[lvl] = function(msg) {
     const formattedMsg = lvlColors[lvl] +( log.endedWithLineBreak ? msg.trimStart() : msg ) + nc
     console.log(formattedMsg) ; log.endedWithLineBreak = msg.toString().endsWith('\n')
 })
