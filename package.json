@@ -33,7 +33,7 @@
   },
   "scripts": {
     "prepare": "husky",
-    "dev:chatbots": "node utils/dev/chatbots",
+    "dev:chatbots": "node utils/remote-run https://cdn.jsdelivr.net/gh/adamlui/userscripts/utils/dev/chatbots.min.js --cache",
     "dev:chatbot": "npm run dev:chatbots",
     "build:css": "scss-to-css . dist",
     "lint": "eslint . --cache",
