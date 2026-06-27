@@ -1,5 +1,6 @@
 {
-  "name": "ai-web-extensions",
+  "name": "@adamlui/ai-web-extensions",
+  "private": true,
   "description": "AI browser extensions & userscripts to augment your web experience",
   "author": {
     "name": "Adam Lui",
