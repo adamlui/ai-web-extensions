@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+'use strict'
+
 const { execFileSync } = require('child_process'),
         fs = require('fs'),
         os = require('os'),
