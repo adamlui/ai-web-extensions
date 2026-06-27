@@ -527,7 +527,6 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 ## 📣 Social links
 
-[![](https://img.shields.io/mastodon/follow/111075576869014999?domain=https%3A%2F%2Ftechnodon.org&style=social "Follow @kudoai on Mastodon (technodon.org)")](https://technodon.org/@kudoai?utm_source=duckduckgpt&utm_content=github_shield)
 [![](https://img.shields.io/badge/Follow%20company%2fkudo--ai-151-blue?logo=linkedin&style=social "Follow company/kudo-ai on LinkedIn")](https://linkedin.com/company/kudo-ai)
 [![](https://img.shields.io/github/followers/kudoai?label=Follow%20%40kudoai&style=social "Follow @kudoai on GitHub")](https://github.com/KudoAI)
 [![](https://img.shields.io/youtube/channel/subscribers/UCdwQlbPJW3RbkLcHh_DGb0g?label=Follow%20%40kudoailabs&style=social "Follow @kudoailabs on YouTube")](https://www.youtube.com/@kudoailabs?sub_confirmation=1)
