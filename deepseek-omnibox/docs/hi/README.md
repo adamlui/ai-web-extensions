@@ -16,7 +16,7 @@
 <br><br>
 
 <a href="#">
-    <img src="https://img.shields.io/badge/Users-720-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
+    <img src="https://img.shields.io/badge/Users-1.1K-blue?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://chromewebstore.google.com/detail/deepseek-omnibox/gcgfmipiaiopmjcmggnnehnehhdjdkgi/reviews?utm_source=github&utm_medium=referral&utm_content=rating-shield">
     <img alt="[क्रोम वेब स्टोर रेटिंग]" src="https://img.shields.io/chrome-web-store/stars/gcgfmipiaiopmjcmggnnehnehhdjdkgi?logo=googlechrome&logoColor=white&labelColor=464646&color=8afc25&style=for-the-badge"></a>
 <a href="https://addons.mozilla.org/firefox/addon/deepseek-omnibox/reviews">
