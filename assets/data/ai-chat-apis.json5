@@ -35,7 +35,7 @@
     },
     "method": "POST",
     "parsingRequired": true,
-    "respPatterns": { "done": "data:(?:message_end|done)" },
+    "respPatterns": { "done": "data:(?:message_end|done)", "prefix": "\\{\"requestId\":\"[\\w-]+\"\\}" },
     "streamable": true,
     "supportsLongPrompts": true
   },
