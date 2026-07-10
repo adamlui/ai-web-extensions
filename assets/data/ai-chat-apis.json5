@@ -13,22 +13,6 @@
     "streamable": true,
     "supportsLongPrompts": false
   },
-  "GPTforLove": {
-    "disabled": true,
-    "endpoint": "https://api11.gptforlove.com/chat-process",
-    "expectedOrigin": {
-      "url": "https://ai28.gptforlove.com",
-      "headers": {
-        "Accept": "application/json, text/plain, */*",
-        "Priority": "u=0", "Sec-Fetch-Site": "same-site", "TE": "trailers"
-      }
-    },
-    "method": "POST",
-    "parsingRequired": true,
-    "respPatterns": { "done": "\"finish_reason\":\"stop\"", "fail": "\"data\":null,\"status\":\"Fail\"}" },
-    "streamable": true,
-    "supportsLongPrompts": true
-  },
   "MixerBox AI": {
     "endpoint": "https://chatai.mixerbox.com/api/chat/stream",
     "expectedOrigin": {
