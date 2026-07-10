@@ -2,7 +2,11 @@
 
 <div align="right">
     <h6>
-        English |
+        <picture>
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/icons/earth/white/icon32.svg">
+            <img height=14 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/icons/earth/black/icon32.svg">
+        </picture>
+        &nbsp;English |
         <a href="https://github.com/KudoAI/googlegpt/tree/main/docs/zh-cn/#readme">简体中文</a> 
     </h6>
 </div>
@@ -11,7 +15,10 @@
 
 <br>
 
-<img alt="GoogleGPT" width=888 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/logos/app/with-reflection/black.png">
+<picture>
+    <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/logos/app/with-reflection/white.png">
+    <img alt="GoogleGPT" width=888 src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@135d1a0/assets/images/logos/app/with-reflection/black.png">
+</picture>
 
 <br>
 
@@ -558,7 +565,10 @@ When disabled, a ChatGPT account is required to fetch responses. If OpenAI API i
 
 <div align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt/assets/images/logos/dependencies/collage/black.png">
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@7993b0e/assets/images/logos/dependencies/collage/white.png">
+    <img src="https://cdn.jsdelivr.net/gh/KudoAI/googlegpt@7993b0e/assets/images/logos/dependencies/collage/black.png">
+</picture>
 
 </div>
 
