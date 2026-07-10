@@ -83,7 +83,10 @@
 <div align="center">
 
 <a href="https://chatgpt.js.org">
-    <img width=546 src="https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@8169c77/assets/images/logos/chatgpt.js/with-reflection/lightmode/logo-6014x1334.png">    
+    <picture>
+        <source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@8169c77/assets/images/logos/chatgpt.js/with-reflection/darkmode/logo-6014x1334.png">
+        <img width=546 src="https://cdn.jsdelivr.net/gh/KudoAI/chatgpt.js@8169c77/assets/images/logos/chatgpt.js/with-reflection/lightmode/logo-6014x1334.png">
+    </picture>
 </a>
 <br><br>
 
@@ -111,7 +114,7 @@ ChatGPT Infinity is compatible w/ the following browsers using [ScriptCat](https
 - [QQ](https://browser.qq.com)
 - [Whale](https://whale.naver.com)
 
-<br><img alt="Android" width=111 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity/assets/images/logos/platforms/android/head-plus-word/green-head-black-word/logo150x24.png"><br>
+<br><picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@79c981b/assets/images/logos/platforms/android/head-plus-word/white/logo150x24.png"><img alt="Android" width=111 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-infinity@79c981b/assets/images/logos/platforms/android/head-plus-word/green-head-black-word/logo150x24.png"></picture><br>
 
 - [Mozilla Firefox](https://www.mozilla.org/firefox/browsers/mobile/android/)
 
@@ -140,12 +143,12 @@ For even more ChatGPT extensions, visit:
 
 ## 📜 Related apps
 
-### <img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/black/icon16.png"> [ChatGPT Auto-Talk 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts/#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/white/icon16.png"><img width=16 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/black/icon16.png"></picture> [ChatGPT Auto-Talk 📣](https://github.com/adamlui/chatgpt-auto-talk) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts/#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
 
 > Auto-play ChatGPT responses.
 [Install](https://github.com/adamlui/chatgpt-auto-talk/#-installation) / [Readme](https://github.com/adamlui/chatgpt-auto-talk/#readme) / [Discuss](https://github.com/adamlui/chatgpt-auto-talk/discussions)
 
-### [ChatGPT Auto-Continue](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts/#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
+### <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@86be032/assets/images/icons/app/white/icon32.png"><img height=16 src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-continue@86be032/assets/images/icons/app/black/icon32.png"></picture> [ChatGPT Auto-Continue](https://github.com/adamlui/chatgpt-auto-continue/#readme) &nbsp;<a href="https://github.com/awesome-scripts/awesome-userscripts/#-chatgpt"><img src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/badges/awesome/badge.svg"></a>
 
 > Automatically continue generating answers when ChatGPT responses get cut-off.
 [Install](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#-installation) / [Readme](https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#readme) / [Discuss](https://github.com/adamlui/chatgpt-auto-continue/discussions)
