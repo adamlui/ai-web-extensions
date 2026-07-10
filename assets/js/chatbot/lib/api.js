@@ -114,6 +114,7 @@ window.api = {
                     const donePattern = app.apis[callerAPI].respPatterns?.done
                     isDone = donePattern ? new RegExp(donePattern).test(respChunk) : false
                 }
+                textToShow = api.stripPrefix(textToShow, callerAPI)
 
                 // Show accumulated reply chunks
                 try {
@@ -212,6 +213,7 @@ window.api = {
                             caller.status = 'done' ; caller.attemptCnt = null
                             api.clearTimedOut(caller.triedAPIs) ; clearTimeout(caller.timeout)
                             textToShow = textToShow.replace(app.apis[callerAPI].respPatterns?.watermark, '').trim()
+                            textToShow = api.stripPrefix(textToShow, callerAPI).trim()
                             if (caller == get.reply) {
                                 show.reply({
                                     content: textToShow, footerContent: app.footerContent , apiUsed: callerAPI })
@@ -243,6 +245,11 @@ window.api = {
                 }
             })
         }
+    },
+
+    stripPrefix(text, apiName) {
+        const prefixPattern = app.apis[apiName]?.respPatterns?.prefix
+        return prefixPattern ? text.replace(new RegExp(`^${prefixPattern}`), '') : text
     },
 
     tryNew({ caller, reason = 'err' }) {
