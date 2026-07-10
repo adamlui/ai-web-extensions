@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.7.10.3
+// @version               2026.7.10.4
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon64.png
@@ -265,7 +265,7 @@
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
-            app: 'ed46d7a', // for cached <app|messages>.json
+            app: '40ac309', // for cached <app|messages>.json
             aiweb: '97c310e' // for cached ai-chat-apis.json5 + <code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         }
     }
@@ -1960,7 +1960,7 @@
         feedback() {
 
             // Init buttons
-            let btns = [ function productHunt(){}, function g2(){}, function alternativeto(){} ]
+            let btns = [function saashub(){}, function productHunt(){}, function g2(){}, function alternativeto(){}]
             if (modals.stack[0] != 'about') btns.push(function github(){})
 
             // Show modal
@@ -1985,7 +1985,8 @@
                 // Replace buttons w/ clones that don't dismiss modal
                 btn.replaceWith(btn = btn.cloneNode(true))
                 btn.onclick = () => modals.safeWinOpen(
-                    btn.textContent == 'Product Hunt' ? app.urls.review.productHunt
+                    btn.textContent == 'Sasshub' ? app.urls.review.saashub
+                  : btn.textContent == 'Product Hunt' ? app.urls.review.productHunt
                   : btn.textContent == 'G2' ? app.urls.review.g2
                   : btn.textContent == 'Alternativeto' ? app.urls.review.alternativeTo
                   : app.urls.discuss
