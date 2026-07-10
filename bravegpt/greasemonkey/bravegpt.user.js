@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.7.10.4
+// @version               2026.7.10.5
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon64.png
@@ -1985,7 +1985,7 @@
                 // Replace buttons w/ clones that don't dismiss modal
                 btn.replaceWith(btn = btn.cloneNode(true))
                 btn.onclick = () => modals.safeWinOpen(
-                    btn.textContent == 'Sasshub' ? app.urls.review.saashub
+                    btn.textContent == 'Saashub' ? app.urls.review.saashub
                   : btn.textContent == 'Product Hunt' ? app.urls.review.productHunt
                   : btn.textContent == 'G2' ? app.urls.review.g2
                   : btn.textContent == 'Alternativeto' ? app.urls.review.alternativeTo
