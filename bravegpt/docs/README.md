@@ -629,8 +629,8 @@ For even more ChatGPT extensions, visit:
 
 > Bring the magic of AI to Google Search (powered by Google Gemma + GPT-4o!)
 <br>[Install](https://scriptcat.org/scripts/code/6371/googlegpt.user.js) /
-[Readme](https://github.kudoai.com/googlegpt/#readme) /
-[Discuss](https://github.kudoai.com/googlegpt/discussions)
+[Readme](https://github.com/KudoAI/googlegpt/#readme) /
+[Discuss](https://github.com/KudoAI/googlegpt/discussions)
 
 <img height=10px width="100%" src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f0e2ef7/assets/images/separators/gradient-aqua.png">
 
