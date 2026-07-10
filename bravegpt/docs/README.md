@@ -582,25 +582,6 @@ All contributions are very welcome!
 
 <hr>
 
-<!-- STAR HISTORY -->
-
-<div align="center">
-
-<br>
-
-<a href="https://github.com/KudoAI/bravegpt/stargazers">
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=KudoAI/bravegpt&type=Timeline&theme=dark" />
-        <img width=665 src="https://api.star-history.com/svg?repos=KudoAI/bravegpt&type=Timeline" />
-    </picture>
-</a>
-
-<br><i>Consider giving this project a ⭐ if it helped you!</i>
-
-</div>
-
-<hr>
-
 ## 🤖 More ChatGPT extensions
 
 For even more ChatGPT extensions, visit:
