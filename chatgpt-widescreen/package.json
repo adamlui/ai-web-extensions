@@ -1,10 +1,17 @@
 {
+  "name": "@adamlui/chatgpt-widescreen",
+  "private": true,
+  "description": "Award-winning extension to enhance ChatGPT with wide/full/tall-screen + spamblock modes. Also works on poe.com!",
   "author": {
     "name": "Adam Lui",
     "email": "adam@kudoai.com",
     "url": "https://github.com/adamlui"
   },
   "homepage": "https://github.com/adamlui/chatgpt-widescreen/#readme",
+  "bugs": {
+    "url": "https://github.com/adamlui/chatgpt-widescreen/issues",
+    "email": "adam@kudoai.com"
+  },
   "license": "MIT",
   "funding": [
     {
