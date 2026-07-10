@@ -188,7 +188,7 @@ Contributions are welcome! Feel free to:
 - 🐛 [Report bugs][link-issues-bug]
 - 💡 [Suggest features][link-issues-feature]
 - 🔧 [Submit pull requests][link-pulls]
-- ⭐ [Star the repository][link-stargazers]
+- ⭐ [Star the repository][link-repo]
 
 ---
 
@@ -233,12 +233,12 @@ Made with ❤️ by [Adam Lui][link-author]
 [link-codefactor]: https://www.codefactor.io/repository/github/KudoAI/perplexity-omnibox
 [link-sonar]: https://sonarcloud.io/component_measures?metric=vulnerabilities&id=adamlui_perplexity-omnibox
 [link-license]: ../LICENSE.md
+[link-repo]: https://github.com/KudoAI/perplexity-omnibox
 [link-wiki]: https://github.com/KudoAI/perplexity-omnibox/wiki
 [link-issues]: https://github.com/KudoAI/perplexity-omnibox/issues
 [link-issues-bug]: https://github.com/KudoAI/perplexity-omnibox/issues/new?labels=bug
 [link-issues-feature]: https://github.com/KudoAI/perplexity-omnibox/issues/new?labels=enhancement
 [link-pulls]: https://github.com/KudoAI/perplexity-omnibox/pulls
-[link-stargazers]: https://github.com/KudoAI/perplexity-omnibox/stargazers
 [link-releases]: https://github.com/KudoAI/perplexity-omnibox/releases
 [link-ai-extensions]: https://aiwebextensions.com
 [link-author]: https://github.com/adamlui
