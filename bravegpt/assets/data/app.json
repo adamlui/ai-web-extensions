@@ -17,7 +17,8 @@
     "review": {
       "alternativeTo": "https://alternativeto.net/software/bravegpt/about/",
       "g2": "https://www.g2.com/products/bravegpt/take_survey",
-      "productHunt": "https://www.producthunt.com/products/bravegpt/reviews/new"
+      "productHunt": "https://www.producthunt.com/products/bravegpt/reviews/new",
+      "saashub": "https://www.saashub.com/bravegpt-reviews/new"
     },
     "support": "https://amazongpt.kudoai.com/issues",
     "update": { "gm": "https://gm.bravegpt.com" }
