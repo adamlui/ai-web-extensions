@@ -13,21 +13,6 @@ window.session = {
         }}})
     },
 
-    generateGPTFLkey() { // requires lib/crypto-js.js + <log|Math>
-        log.caller = 'session.generateGPTFLkey()'
-        log.debug('Generating GPTforLove key...')
-        let nn = Math.floor(new Date().getTime() / 1e3)
-        const fD = e => {
-            let t = CryptoJS.enc.Utf8.parse(e),
-                o = CryptoJS.AES.encrypt(t, 'vrewbhjvbrejhbevwjh156645', {
-                    mode: CryptoJS.mode.ECB, padding: CryptoJS.pad.Pkcs7
-            })
-            return o.toString()
-        }
-        const gptflKey = fD(nn)
-        return log.debug(gptflKey) || gptflKey
-    },
-
     getOAItoken() { // requires lib/feedback.js + <app|get|log|xhr> + GM_<get|set>Value()
         log.caller = 'session.getOAItoken()'
         log.debug('Getting OpenAI token...')

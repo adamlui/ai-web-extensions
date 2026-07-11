@@ -33,17 +33,8 @@ window.api = {
           : api == 'AIchatOS' ? {
                 network: true, prompt: lastUserMsg.content,
                 userId: app.apis.AIchatOS.userID, withoutContext: false
-        } : api == 'GPTforLove' ? {
-                prompt: lastUserMsg.content, secret: session.generateGPTFLkey(),
-                systemMessage: 'You are ChatGPT, the version is GPT-4o, a large language model trained by OpenAI. '
-                                + 'Follow the user\'s instructions carefully. '
-                                + `${prompts.create('language', { mods: 'noChinese' })} `
-                                + `${prompts.create('humanity', { mods: 'all' })} `,
-                temperature: 0.8, top_p: 1
         } : api == 'MixerBox AI' ? { model: 'gpt-3.5-turbo', prompt: msgs }
           : app.apis[api].method == 'GET' ? encodeURIComponent(lastUserMsg.content) : null
-        if (api == 'GPTforLove' && app.apis.GPTforLove.parentID) // include parentID for contextual replies
-            reqData.options = { parentMessageId: app.apis.GPTforLove.parentID }
         return log.debug(reqData) || reqData
     },
 
@@ -96,15 +87,7 @@ window.api = {
                 if (!app.apis[callerAPI].parsingRequired) textToShow += respChunk
                 else { // parse structured chunk(s)
                     let replyChunk = ''
-                    if (callerAPI == 'GPTforLove') { // extract parentID + deltas
-                        const chunkObjs = respChunk.trim().split('\n').map(line => JSON.parse(line))
-                        if (typeof chunkObjs[0].text == 'undefined') // error response
-                            replyChunk = JSON.stringify(chunkObjs[0]) // for fail flag check
-                        else { // AI response
-                            app.apis.GPTforLove.parentID = chunkObjs[0].id || null // for contextual replies
-                            chunkObjs.forEach(obj => replyChunk += obj.delta || '') // accumulate AI reply text
-                        }
-                    } else if (callerAPI == 'MixerBox AI') // extract/normalize AI reply data
+                    if (callerAPI == 'MixerBox AI') // extract/normalize AI reply data
                         replyChunk = [...respChunk.matchAll(/data:(.*)/g)] // arrayify data
                             .filter(match => !/message_(?:start|end)|done/.test(match)) // exclude signals
                             .map(match => // normalize whitespace
@@ -178,14 +161,7 @@ window.api = {
                     if (!app.apis[callerAPI].parsingRequired) {
                         textToShow = resp.responseText ; handleProcessCompletion() }
                     else { // parse structured responseText
-                        if (callerAPI == 'GPTforLove') {
-                            try {
-                                const chunkLines = resp.responseText.trim().split('\n'),
-                                    lastChunkObj = JSON.parse(chunkLines[chunkLines.length -1])
-                                app.apis.GPTforLove.parentID = lastChunkObj.id || null
-                                textToShow = lastChunkObj.text ; handleProcessCompletion()
-                            } catch (err) { handleProcessError(err) }
-                        } else if (callerAPI == 'MixerBox AI') {
+                        if (callerAPI == 'MixerBox AI') {
                             try {
                                 textToShow = [...resp.responseText.matchAll(/data:(.*)/g)] // arrayify data
                                     .filter(match => !/message_(?:start|end)|done/.test(match)) // exclude signals

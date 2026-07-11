@@ -3,13 +3,12 @@
 window.prompts = {
 
     augment(prompt, { api, caller } = {}) {
-        return api == 'GPTforLove' ? prompt // since augmented via reqData.systemMessage
-            : `{{${prompt}}} //`
-                + ` ${prompts.create('language')}`
-                + ` ${prompts.create('accuracy', { mods: 'all' })}`
-                + ` ${prompts.create('obedience', api == 'AIchatOS' ? { mods: 'noSensitivity' } : undefined )}`
-                + ` ${prompts.create('humanity', { mods: 'all' })}`
-                + ( caller == get.reply ? ' Reply to the prompt I enclosed in {{}} at the start of this msg.' : '' )
+        return `{{${prompt}}} //`
+            + ` ${prompts.create('language')}`
+            + ` ${prompts.create('accuracy', { mods: 'all' })}`
+            + ` ${prompts.create('obedience', api == 'AIchatOS' ? { mods: 'noSensitivity' } : undefined )}`
+            + ` ${prompts.create('humanity', { mods: 'all' })}`
+            + ( caller == get.reply ? ' Reply to the prompt I enclosed in {{}} at the start of this msg.' : '' )
     },
 
     create(type, { mods, prevQuery } = {}) {
