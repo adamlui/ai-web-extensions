@@ -80,7 +80,7 @@ for (const projectName of sortedProjects) {
 
         // Check latest commit for extension changes if forcible platform flag not set
         const platformManifestPath = path.dirname(
-            manifestPath.replace(process.cwd() + path.sep, '').replace(/\\/g, '/'))
+              manifestPath.replace(process.cwd() + path.sep, '').replace(/\\/g, '/'))
         if (!script.modes.chromiumOnly && !script.modes.ffOnly) {
             console.log(`Checking last commit details for ${platformManifestPath}...`)
             try {
@@ -94,7 +94,8 @@ for (const projectName of sortedProjects) {
                     continue
                 }
             } catch (err) {
-                bump.log.error('Error checking git history\n') }
+                bump.log.error('Error checking git history\n')
+            }
         }
 
         console.log(`Bumping version in ${
@@ -134,7 +135,8 @@ if (!script.modes.noCommit) {
         bump.log.success(`Success! ${Object.keys(bumpedManifests).length} manifest${pluralSuffix} updated${
             !script.modes.noCommit ? '/committed' : '' }${ !script.modes.noPush ? '/pushed' : '' } to GitHub`)
     } catch (err) {
-        bump.log.error('Git operation failed: ' + err.message) }
+        bump.log.error('Git operation failed: ' + err.message)
+    }
 }
 
 console.log('')

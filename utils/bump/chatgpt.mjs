@@ -26,7 +26,7 @@ bump.log.working('\nUpdating local chatgpt.min.js files...\n')
 const localMinFiles = await bump.findFileBySuffix({ suffix: 'chatgpt.min.js', verbose: false })
 if (localMinFiles.length) {
     const latestBuildURL = 'https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4/dist/chatgpt.min.js',
-            latestContent = await (await fetch(latestBuildURL)).text()
+          latestContent = await (await fetch(latestBuildURL)).text()
     for (const filePath of localMinFiles) {
         console.log(`Updated: ${filePath}`)
         fs.writeFileSync(filePath, latestContent, 'utf-8')
@@ -71,7 +71,7 @@ for (const userJSfilePath of userJSfiles) {
         }
         bump.log.working(`\nGenerating SRI for v${latestVer}...\n`)
         const newBaseURL = `${match[1]}${latestVer}${match[3]}`,
-                newSRI = await bump.generateSRIhash({ resURL: newBaseURL, verbose: false })
+              newSRI = await bump.generateSRIhash({ resURL: newBaseURL, verbose: false })
         if (oldSRI == newSRI) {
             console.log(`SRI unchanged for ${path.basename(userJSfilePath)} at v${latestVer}, skipping.`)
             continue
@@ -91,5 +91,5 @@ for (const userJSfilePath of userJSfiles) {
 
 bump.log[urlsUpdatedCnt ? 'success' : 'info'](
     `\n${ urlsUpdatedCnt ? 'Success! ' : '' }${
-            urlsUpdatedCnt} chatgpt.js @require(s) bumped across ${filesUpdatedCnt} file(s).`
+          urlsUpdatedCnt} chatgpt.js @require(s) bumped across ${filesUpdatedCnt} file(s).`
 )

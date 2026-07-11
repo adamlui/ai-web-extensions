@@ -93,7 +93,7 @@ for (const scriptPath of Object.keys(urlMap)) {
             continue
         }
         const targetRepo = repoMatch[1],
-                currentCommit = re.hash.commit.inline.exec(resURL)?.[2] || ''
+              currentCommit = re.hash.commit.inline.exec(resURL)?.[2] || ''
         let resLatestRef
         if (re.verTag.test(currentCommit)) { // get latest release tag
             const apiURL = `${script.urls.apis.github.repos}/${targetRepo}/releases/latest`
@@ -161,8 +161,8 @@ for (const userJSfilePath of userscripts) {
         const baseNewURL = `${match[1]}${latestCJSver}${match[3]}`
         bump.log.working(`\nGenerating SRI for v${latestCJSver}...\n`)
         const sriHash = await bump.generateSRIhash({ resURL: baseNewURL, verbose: false }),
-                newFullURL = `${baseNewURL}#${sriHash}`,
-                freshContent = fs.readFileSync(userJSfilePath, 'utf-8')
+              newFullURL = `${baseNewURL}#${sriHash}`,
+              freshContent = fs.readFileSync(userJSfilePath, 'utf-8')
         fs.writeFileSync(userJSfilePath, freshContent.replace(oldFullURL, newFullURL), 'utf-8')
         bump.log.success(`Updated @require in ${path.basename(userJSfilePath)}`)
         fileChanged = true ; urlsUpdatedCnt++
