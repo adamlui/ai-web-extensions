@@ -128,7 +128,7 @@ if (!script.modes.noCommit) {
         console.log('')
         if (!script.modes.noPush) {
             bump.log.working('\nPulling latest changes from remote to sync local repository...\n')
-            execSync('git pull')
+            execSync('git pull --rebase')
             bump.log.working(`\nPushing bump${pluralSuffix} to Git...\n`)
             execSync('git push')
         }
