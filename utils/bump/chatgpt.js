@@ -72,7 +72,7 @@
         let content = fs.readFileSync(userJSfilePath, 'utf-8'),
             fileChanged = false
         for (const match of [...content.matchAll(reCJSurl)]) {
-            const oldFullURL = match[0], oldVer = match[2], oldSRI = match[4] ? match[4].substring(1) : ''
+            const oldFullURL = match[0], oldVer = match[2], oldSRI = match[4]?.substring(1) ?? ''
             if (oldVer == latestVer) {
                 console.log(`${path.basename(userJSfilePath)} already at v${latestVer}`)
                 continue
