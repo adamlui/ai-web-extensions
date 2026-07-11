@@ -5,9 +5,9 @@
             <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@d11d2ee/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;English |
-        <a href="zh-cn/LICENSE.md">简体中文</a> |
-        <a href="ja/LICENSE.md">日本語</a> |
-        <a href="hi/LICENSE.md">हिंदी</a>
+        <a href="./zh-cn/LICENSE.md">简体中文</a> |
+        <a href="./ja/LICENSE.md">日本語</a> |
+        <a href="./hi/LICENSE.md">हिंदी</a>
     </h6>
 </div>
 

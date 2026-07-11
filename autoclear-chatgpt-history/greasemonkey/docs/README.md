@@ -2,7 +2,7 @@
 
 # <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@83f1921/assets/images/icons/openai/white/icon32.png"><img width=23 src="https://cdn.jsdelivr.net/gh/adamlui/autoclear-chatgpt-history@83f1921/assets/images/icons/openai/black/icon32.png"></picture> Autoclear ChatGPT History
 
-<a href="https://github.com/adamlui/autoclear-chatgpt-history/blob/main/LICENSE.md">
+<a href="https://github.com/adamlui/autoclear-chatgpt-history/blob/main/docs/LICENSE.md">
     <img alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/adamlui/autoclear-chatgpt-history/blob/main/greasemonkey/autoclear-chatgpt-history.user.js">
     <img height=32 src="https://img.shields.io/github/size/adamlui/autoclear-chatgpt-history/greasemonkey/autoclear-chatgpt-history.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>

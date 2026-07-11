@@ -11,7 +11,7 @@
 
 <!-- SHIELDS -->
 
-<a href="https://github.com/KudoAI/amazongpt/blob/main/LICENSE.md">
+<a href="https://github.com/KudoAI/amazongpt/blob/main/docs/LICENSE.md">
     <img height=32 alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/KudoAI/amazongpt/blob/main/greasemonkey/amazongpt.user.js">
     <img height=32 src="https://img.shields.io/github/size/KudoAI/amazongpt/greasemonkey/amazongpt.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>

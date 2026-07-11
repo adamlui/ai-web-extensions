@@ -5,7 +5,7 @@
             <img height=14 src=https://cdn.jsdelivr.net/gh/KudoAI/brave-omnibox@d722a3b/assets/images/icons/earth/black/icon32.svg>
         </picture>
         &nbsp;हिंदी |
-        <a href="https://github.com/KudoAI/brave-omnibox/blob/main/LICENSE.md">English</a> |
+        <a href="https://github.com/KudoAI/brave-omnibox/blob/main/docs/LICENSE.md">English</a> |
         <a href="https://github.com/KudoAI/brave-omnibox/blob/main/docs/zh-cn/LICENSE.md">简体中文</a>
     </h6>
 </div>

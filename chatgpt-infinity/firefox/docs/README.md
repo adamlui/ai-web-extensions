@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/amo/users/chatgpt-infinity?logo=weightsandbiases&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-infinity/">
     <img alt="[Mozilla Add-on Store]" src="https://img.shields.io/amo/v/chatgpt-infinity?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
-<a href="../LICENSE.md">
+<a href="./LICENSE.md">
     <img alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="#">
     <img src="https://img.shields.io/chrome-web-store/size/amikeononomkhphopbflomhnmdijjpmb?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>

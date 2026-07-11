@@ -10,7 +10,7 @@
     <img alt="[Mozilla Add-ons Ratings]" src="https://img.shields.io/amo/stars/chatgpt-widescreen?logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge&label=Rating"></a>
 <a href="https://addons.mozilla.org/firefox/addon/chatgpt-widescreen/">
     <img alt="[Mozilla Add-ons Store]" src="https://img.shields.io/amo/v/chatgpt-widescreen?label=Latest+Release&logo=firefox&logoColor=white&labelColor=464646&color=orange&style=for-the-badge"></a>
-<a href="../LICENSE.md">
+<a href="./LICENSE.md">
     <img alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="#">
     <img src="https://img.shields.io/chrome-web-store/size/jgnjpnmofkalfliddjelaciggjgnphgm?logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>

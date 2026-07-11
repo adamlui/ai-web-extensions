@@ -13,7 +13,7 @@
 
 # <picture><source type="image/png" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/white/icon32.png"><img width=23 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/openai/black/icon32.png"></picture> ChatGPT Auto-Talk 📣
 
-<a href="../LICENSE.md">
+<a href="./LICENSE.md">
     <img alt="[License: MIT]" src="https://img.shields.io/badge/License-MIT-orange.svg?logo=internetarchive&logoColor=white&labelColor=464646&style=for-the-badge"></a>
 <a href="https://github.com/adamlui/chatgpt-auto-talk/blob/main/greasemonkey/chatgpt-auto-talk.user.js">
     <img height=32 src="https://img.shields.io/github/size/adamlui/chatgpt-auto-talk/greasemonkey/chatgpt-auto-talk.user.js?label=Filesize&logo=databricks&logoColor=white&labelColor=464646&color=ff69b4&style=for-the-badge"></a>
