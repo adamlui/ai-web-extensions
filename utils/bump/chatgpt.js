@@ -9,15 +9,12 @@
 
 ;(async () => {
 
-    // Parse ARGS
     const args = process.argv.slice(2),
           config = { cacheMode: args.some(arg => arg.startsWith('--cache')) }
 
-    // Import LIBS
     const fs = require('fs'), // to read/write files
           path = require('path') // to manipulate paths
 
-    // Init CACHE paths
     const cachePaths = { root: '.cache' }
     cachePaths.bumpUtils = path.join(__dirname, `${cachePaths.root}/bump.min.mjs`)
     cachePaths.userJSpaths = path.join(__dirname, `${cachePaths.root}/userscript-paths.json`)
@@ -28,7 +25,6 @@
         'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f63b650/utils/bump/lib/bump.min.mjs')).text()))
     const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
 
-    // Update LOCAL chatgpt.min.js files
     bump.log.working('\nUpdating local chatgpt.min.js files...\n')
     const localMinFiles = await bump.findFileBySuffix({ suffix: 'chatgpt.min.js', verbose: false })
     if (localMinFiles.length) {
@@ -42,7 +38,6 @@
     } else
         bump.log.info('No chatgpt.min.js files found locally.\n')
 
-    // Collect userscripts
     bump.log.working(`\n${ config.cacheMode ? 'Collecting' : 'Searching for' } userscripts...\n`)
     let userJSfiles
     if (config.cacheMode) {
@@ -97,7 +92,6 @@
         }
     }
 
-    // Final summary
     bump.log[urlsUpdatedCnt ? 'success' : 'info'](
         `\n${ urlsUpdatedCnt ? 'Success! ' : '' }${
               urlsUpdatedCnt} chatgpt.js @require(s) bumped across ${filesUpdatedCnt} file(s).`
