@@ -13,14 +13,14 @@ import path from 'path'
 const args = process.argv.slice(2),
       config = { cacheMode: args.some(arg => arg.startsWith('--cache')) },
       cachePaths = { root: '.cache' }
-cachePaths.bumpUtils = path.join(import.meta.dirname, `${cachePaths.root}/bump.min.mjs`)
+cachePaths.bumpmjs = path.join(import.meta.dirname, `${cachePaths.root}/bump.min.mjs`)
 cachePaths.userJSpaths = path.join(import.meta.dirname, `${cachePaths.root}/userscript-paths.json`)
 
 // Import bump.mjs
-fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
-fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
+fs.mkdirSync(path.dirname(cachePaths.bumpmjs), { recursive: true })
+fs.writeFileSync(cachePaths.bumpmjs, (await (await fetch(
     'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f63b650/utils/bump/lib/bump.min.mjs')).text()))
-const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
+const bump = await import(`file://${cachePaths.bumpmjs}`) ; fs.unlinkSync(cachePaths.bumpmjs)
 
 bump.log.working('\nUpdating local chatgpt.min.js files...\n')
 const localMinFiles = await bump.findFileBySuffix({ suffix: 'chatgpt.min.js', verbose: false })
@@ -58,12 +58,12 @@ bump.log.working('\nFetching latest @kudoai/chatgpt.js version...\n')
 const latestVer = (await (await fetch('https://registry.npmjs.org/@kudoai/chatgpt.js/latest')).json()).version
 bump.log.info(`Latest version: ${latestVer}\n`)
 
-const reCJSurl = /(https:\/\/cdn\.jsdelivr\.net\/npm\/@kudoai\/chatgpt\.js@)([\d.]+)(\/dist\/chatgpt\.min\.js)(#sha256-\S+)?/g
+const re_cjsURL = /(https:\/\/cdn\.jsdelivr\.net\/npm\/@kudoai\/chatgpt\.js@)([\d.]+)(\/dist\/chatgpt\.min\.js)(#sha256-\S+)?/g
 let urlsUpdatedCnt = 0, filesUpdatedCnt = 0
 for (const userJSfilePath of userJSfiles) {
     let content = fs.readFileSync(userJSfilePath, 'utf-8'),
         fileChanged = false
-    for (const match of [...content.matchAll(reCJSurl)]) {
+    for (const match of [...content.matchAll(re_cjsURL)]) {
         const oldFullURL = match[0], oldVer = match[2], oldSRI = match[4]?.substring(1) ?? ''
         if (oldVer == latestVer) {
             console.log(`${path.basename(userJSfilePath)} already at v${latestVer}`)
@@ -80,7 +80,6 @@ for (const userJSfilePath of userJSfiles) {
         fileChanged = true ; urlsUpdatedCnt++
         bump.log.success(`Updated @require in ${path.basename(userJSfilePath)}`)
     }
-
     if (fileChanged) {
         fs.writeFileSync(userJSfilePath, content, 'utf-8')
         bump.log.working(`Bumping userscript version...\n`)
