@@ -5,7 +5,7 @@
             <img height=14 src="https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@8841371/assets/images/icons/earth/black/icon32.svg">
         </picture>
         &nbsp;English |
-        <a href="docs/hi/LICENSE.md">हिंदी</a>
+        <a href="./hi/LICENSE.md">हिंदी</a>
     </h6>
 </div>
 
