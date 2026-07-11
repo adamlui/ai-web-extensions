@@ -69,7 +69,7 @@ bump.log.working('\nCollecting resources...\n')
 const urlMap = {} ; let resCnt = 0
 userscripts.forEach(userscript => {
     const scriptContent = fs.readFileSync(userscript, 'utf-8'),
-            resURLs = [...scriptContent.matchAll(new RegExp(re.urls.jsdelivr.source, 'gm'))].map(match => match[1])
+          resURLs = [...scriptContent.matchAll(new RegExp(re.urls.jsdelivr.source, 'gm'))].map(match => match[1])
     if (resURLs?.length) { urlMap[userscript] = resURLs ; resCnt += resURLs.length }
 })
 bump.log.success(`${resCnt} potentially bumpable resource(s) found.`)
