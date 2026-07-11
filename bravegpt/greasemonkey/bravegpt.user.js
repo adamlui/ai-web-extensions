@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.7.10.7
+// @version               2026.7.10.8
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon64.png
@@ -187,7 +187,6 @@
 // @connect               api.openai.com
 // @connect               bravegpt.com
 // @connect               cdn.jsdelivr.net
-// @connect               chat-share.kudoai.workers.dev
 // @connect               chatai.mixerbox.com
 // @connect               chatgpt.com
 // @connect               fanyi.sogou.com
