@@ -1,16 +1,36 @@
 {
+  "name": "@adamlui/chatgpt-auto-talk",
+  "private": true,
+  "description": "Auto-plays ChatGPT responses",
   "author": {
     "name": "Adam Lui",
     "email": "adam@kudoai.com",
     "url": "https://github.com/adamlui"
   },
   "homepage": "https://github.com/adamlui/chatgpt-auto-talk/#readme",
+  "bugs": {
+    "url": "https://github.com/adamlui/chatgpt-auto-talk/issues",
+    "email": "adam@kudoai.com"
+  },
   "license": "MIT",
   "funding": [
-    { "type": "github", "url": "http://github.com/sponsors/adamlui" },
-    { "type": "ko-fi", "url": "https://ko-fi.com/adamlui" },
-    { "type": "paypal", "url": "https://paypal.me/adamlui" }
+    {
+      "type": "github",
+      "url": "http://github.com/sponsors/adamlui"
+    },
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/adamlui"
+    },
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/adamlui"
+    }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamlui/chatgpt-auto-talk.git"
+  },
   "scripts": {
     "prepare": "husky",
     "build:css": "scss-to-css",

@@ -1,10 +1,17 @@
 {
+  "name": "@adamlui/chatgpt-auto-infinity",
+  "private": true,
+  "description": "Generate endless answers from all-knowing ChatGPT (on any topic!)",
   "author": {
     "name": "Adam Lui",
     "email": "adam@kudoai.com",
     "url": "https://github.com/adamlui"
   },
   "homepage": "https://github.com/adamlui/chatgpt-infinity/#readme",
+  "bugs": {
+    "url": "https://github.com/adamlui/chatgpt-infinity/issues",
+    "email": "adam@kudoai.com"
+  },
   "license": "MIT",
   "funding": [
     {
@@ -20,6 +27,10 @@
       "url": "https://paypal.me/adamlui"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamlui/chatgpt-infinity.git"
+  },
   "scripts": {
     "prepare": "husky",
     "dev:pages": "http-server pages",

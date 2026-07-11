@@ -1,16 +1,36 @@
 {
+  "name": "@adamlui/chatgpt-auto-refresh",
+  "private": true,
+  "description": "Keeps ChatGPT sessions fresh, eliminating chat time limits + network errors + Cloudflare checks",
   "author": {
     "name": "Adam Lui",
     "email": "adam@kudoai.com",
     "url": "https://github.com/adamlui"
   },
   "homepage": "https://github.com/adamlui/chatgpt-auto-refresh/#readme",
+  "bugs": {
+    "url": "https://github.com/adamlui/chatgpt-auto-refresh/issues",
+    "email": "adam@kudoai.com"
+  },
   "license": "MIT",
   "funding": [
-    { "type": "github", "url": "http://github.com/sponsors/adamlui" },
-    { "type": "ko-fi", "url": "https://ko-fi.com/adamlui" },
-    { "type": "paypal", "url": "https://paypal.me/adamlui" }
+    {
+      "type": "github",
+      "url": "http://github.com/sponsors/adamlui"
+    },
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/adamlui"
+    },
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/adamlui"
+    }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamlui/chatgpt-auto-refresh.git"
+  },
   "scripts": {
     "prepare": "husky",
     "lint": "eslint . --cache",

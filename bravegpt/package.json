@@ -1,10 +1,17 @@
 {
+  "name": "@kudoai/bravegpt",
+  "private": true,
+  "description": "AI chat & search summaries in Brave Search, powered by the latest LLMs",
   "author": {
     "name": "KudoAI & contributors",
-    "email": "contact@kudoai.com",
-    "url": "https://www.kudoai.com"
+    "email": "authors@kudoai.com",
+    "url": "https://kudoai.com"
   },
-  "homepage": "https://www.bravegpt.com",
+  "homepage": "https://bravegpt.com",
+  "bugs": {
+    "url": "https://github.com/KudoAI/bravegpt/issues",
+    "email": "support@kudoai.com"
+  },
   "license": "MIT",
   "funding": [
     {
@@ -16,6 +23,10 @@
       "url": "http://paypal.biz/kudoai"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KudoAI/bravegpt.git"
+  },
   "scripts": {
     "prepare": "husky",
     "lint": "eslint . --cache",

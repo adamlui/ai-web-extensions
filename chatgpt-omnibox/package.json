@@ -1,16 +1,32 @@
 {
+  "name": "@kudoai/chatgpt-omnibox",
+  "private": true,
+  "description": "Type @chatgpt in address bar to get answers from ChatGPT",
   "author": {
-    "name": "Adam Lui",
-    "email": "adam@kudoai.com",
-    "url": "https://github.com/adamlui"
+    "name": "KudoAI & contributors",
+    "email": "authors@kudoai.com",
+    "url": "https://kudoai.com"
   },
-  "homepage": "https://github.com/KudoAI/chatgpt-omnibox/#readme",
+  "homepage": "https://kudoai.com/chatgptomnibox",
+  "bugs": {
+    "url": "https://github.com/KudoAI/chatgpt-omnibox/issues",
+    "email": "support@kudoai.com"
+  },
   "license": "MIT",
   "funding": [
-    { "type": "github", "url": "http://github.com/sponsors/adamlui" },
-    { "type": "ko-fi", "url": "https://ko-fi.com/adamlui" },
-    { "type": "paypal", "url": "https://paypal.me/adamlui" }
+    {
+      "type": "github",
+      "url": "http://github.com/sponsors/KudoAI"
+    },
+    {
+      "type": "paypal",
+      "url": "http://paypal.biz/kudoai"
+    }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KudoAI/chatgpt-omnibox.git"
+  },
   "scripts": {
     "prepare": "husky",
     "lint": "eslint . --cache",

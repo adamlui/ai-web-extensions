@@ -1,10 +1,17 @@
 {
+  "name": "@kudoai/duckduckgpt",
+  "private": true,
+  "description": "AI chat & search summaries in DuckDuckGo, powered by the latest LLMs",
   "author": {
     "name": "KudoAI & contributors",
-    "email": "opensource@kudoai.com",
-    "url": "https://www.kudoai.com"
+    "email": "authors@kudoai.com",
+    "url": "https://kudoai.com"
   },
-  "homepage": "https://www.duckduckgpt.com",
+  "homepage": "https://duckduckgpt.com",
+  "bugs": {
+    "url": "https://github.com/KudoAI/duckduckgpt/issues",
+    "email": "support@kudoai.com"
+  },
   "license": "MIT",
   "funding": [
     {
@@ -16,6 +23,10 @@
       "url": "http://paypal.biz/kudoai"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KudoAI/duckduckgpt.git"
+  },
   "scripts": {
     "prepare": "husky",
     "lint": "eslint . --cache",

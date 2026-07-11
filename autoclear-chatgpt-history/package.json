@@ -1,16 +1,36 @@
 {
+  "name": "@adamlui/autoclear-chatgpt-history",
+  "private": true,
+  "description": "Adds chat auto-clear functionality to ChatGPT for more privacy",
   "author": {
     "name": "Adam Lui",
     "email": "adam@kudoai.com",
     "url": "https://github.com/adamlui"
   },
   "homepage": "https://github.com/adamlui/autoclear-chatgpt-history/#readme",
+  "bugs": {
+    "url": "https://github.com/adamlui/autoclear-chatgpt-history/issues",
+    "email": "adam@kudoai.com"
+  },
   "license": "MIT",
   "funding": [
-    { "type": "github", "url": "http://github.com/sponsors/adamlui" },
-    { "type": "ko-fi", "url": "https://ko-fi.com/adamlui" },
-    { "type": "paypal", "url": "https://paypal.me/adamlui" }
+    {
+      "type": "github",
+      "url": "http://github.com/sponsors/adamlui"
+    },
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/adamlui"
+    },
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/adamlui"
+    }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamlui/autoclear-chatgpt-history.git"
+  },
   "scripts": {
     "prepare": "husky",
     "lint": "eslint . --cache",
