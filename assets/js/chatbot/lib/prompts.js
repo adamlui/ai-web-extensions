@@ -116,6 +116,7 @@ window.prompts = {
         get base() { // requires app
             const strResults = (
                   app.slug == 'bravegpt' ? document.querySelector('#results')
+                : app.slug == 'duckduckgpt' ? document.querySelector('[data-area*=mainline]')
                 : /* googlegpt */ app.centerCol
             ).innerText.trim()
             return 'Summarize these search results in a markdown list of couple bullets,'
