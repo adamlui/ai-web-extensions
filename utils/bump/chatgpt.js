@@ -69,25 +69,22 @@
     const reCJSurl = /(https:\/\/cdn\.jsdelivr\.net\/npm\/@kudoai\/chatgpt\.js@)([\d.]+)(\/dist\/chatgpt\.min\.js)(#sha256-\S+)?/g
     let urlsUpdatedCnt = 0, filesUpdatedCnt = 0
     for (const userJSfilePath of userJSfiles) {
-        let content = fs.readFileSync(userJSfilePath, 'utf-8')
-        let fileChanged = false
-        const matches = [...content.matchAll(reCJSurl)]
-
-        for (const match of matches) {
-            const oldFullURL = match[0], oldVer = match[2]
+        let content = fs.readFileSync(userJSfilePath, 'utf-8'),
+            fileChanged = false
+        for (const match of [...content.matchAll(reCJSurl)]) {
+            const oldFullURL = match[0], oldVer = match[2], oldSRI = match[4] ? match[4].substring(1) : ''
             if (oldVer == latestVer) {
                 console.log(`${path.basename(userJSfilePath)} already at v${latestVer}`)
                 continue
             }
-
-            // Build new URL w/o SRI
-            const baseNewURL = `${match[1]}${latestVer}${match[3]}`
             bump.log.working(`\nGenerating SRI for v${latestVer}...\n`)
-            const sriHash = await bump.generateSRIhash({ resURL: baseNewURL, verbose: false }),
-                  newFullURL = `${baseNewURL}#${sriHash}`
-
-            // Replace in content
-            content = content.replace(oldFullURL, newFullURL)
+            const newBaseURL = `${match[1]}${latestVer}${match[3]}`,
+                  newSRI = await bump.generateSRIhash({ resURL: newBaseURL, verbose: false })
+            if (oldSRI == newSRI) {
+                console.log(`SRI unchanged for ${path.basename(userJSfilePath)} at v${latestVer}, skipping.`)
+                continue
+            }
+            content = content.replace(oldFullURL, `${newBaseURL}#${newSRI}`)
             fileChanged = true ; urlsUpdatedCnt++
             bump.log.success(`Updated @require in ${path.basename(userJSfilePath)}`)
         }
