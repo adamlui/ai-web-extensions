@@ -2,7 +2,11 @@
 
 <div align="right">
     <h6>
-        English |
+        <picture>
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/userscripts@50c7ad3/assets/images/icons/earth/white/icon32.svg">
+            <img width=14 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@50c7ad3/assets/images/icons/earth/black/icon32.svg">
+        </picture>
+        &nbsp;English |
         <a href="https://github.com/adamlui/chatgpt-infinity/tree/main/docs/zh-cn/#readme">简体中文</a> |
         <a href="https://github.com/adamlui/chatgpt-infinity/tree/main/docs/ja/#readme">日本語</a>
     </h6>
