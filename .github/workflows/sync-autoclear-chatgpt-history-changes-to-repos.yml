@@ -43,22 +43,6 @@ jobs:
           cd ${{ github.workspace }}/adamlui/ai-web-extensions/autoclear-chatgpt-history
           loc_prefixes=( "root" "gm" )
 
-          # Sync LICENSE.md
-          for prefix in "${loc_prefixes[@]}" ; do
-            eval "${prefix}_license_content=\$(git show HEAD:\"./\$([[ \$prefix == \"gm\" ]] && echo \"greasemonkey/docs/\" || echo \"docs/\")LICENSE.md\")"
-            eval "${prefix}_license_modified=\$(git log -1 --format=\"%ct\" -- \"\$([[ \$prefix == \"gm\" ]] && echo \"greasemonkey/docs/\" || echo \"docs/\")LICENSE.md\")"
-          done
-          if (( root_license_modified > gm_license_modified )) ; then
-            if [[ "$root_license_content" != "$gm_license_content" ]] ; then
-              cp -f "docs/LICENSE.md" "greasemonkey/docs/LICENSE.md" ; sync_src="root"
-            fi
-          elif (( gm_license_modified > root_license_modified )) ; then
-            if [[ "$gm_license_content" != "$root_license_content" ]] ; then
-              cp -f "greasemonkey/docs/LICENSE.md" "docs/LICENSE.md" ; sync_src="greasemonkey"
-            fi
-          fi
-
-          # Sync other docs
           for file in docs/**/*.md ; do
             for prefix in "${loc_prefixes[@]}" ; do
               eval "${prefix}_doc_path=\"./\$([[ \$prefix == \"gm\" ]] && echo \"greasemonkey/\" || echo \"\")docs/${file#"docs/"}\""
