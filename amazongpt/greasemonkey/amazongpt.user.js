@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.7.11
+// @version                2026.7.11.1
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon64.png
@@ -1244,7 +1244,7 @@
                 [ // buttons
                     function checkForUpdates() { userscript.updateCheck() },
                     function getSupport(){},
-                    function discuss(){},
+                    function rateUs() { modals.open('feedback') },
                     function moreAIextensions(){}
                 ], '', 747 // modal width
             )
@@ -1278,8 +1278,8 @@
                     btn.textContent = `🚀 ${app.msgs.btnLabel_checkForUpdates}`
                 else if (/support/i.test(btn.textContent))
                     btn.textContent = `🧠 ${app.msgs.btnLabel_getSupport}`
-                else if (/discuss/i.test(btn.textContent))
-                    btn.textContent = `🗨️ ${app.msgs.btnLabel_discuss}`
+                else if (/rate/i.test(btn.textContent))
+                    btn.textContent = `⭐ ${app.msgs.btnLabel_rateUs}`
                 else if (/extensions/i.test(btn.textContent))
                     btn.textContent = `🤖 ${app.msgs.btnLabel_moreAIextensions}`
 
@@ -1331,6 +1331,42 @@
             })
 
             return apiModal
+        },
+
+        feedback() {
+
+            // Init buttons
+            let btns = [function saashub(){}]
+            if (modals.stack[0] != 'about') btns.push(function github(){})
+
+            // Show modal
+            const feedbackModal = modals.alert(`${app.msgs.alert_choosePlatform}:`, '', btns, '', 456)
+            feedbackModal.style.display = 'inline-table' // allow many buttons to fit
+
+            // Center CTA
+            feedbackModal.querySelector('h2').style.justifySelf = 'center'
+
+            // Re-style button cluster
+            const btnsDiv = feedbackModal.querySelector('.modal-buttons')
+            if (!env.browser.isCompact) // gridify wide view btns
+                btnsDiv.style.cssText = 'flex-wrap: wrap ; justify-content: center ; gap: 3px'
+
+            // Hack buttons
+            btns = btnsDiv.querySelectorAll('button')
+            btns.forEach((btn, idx) => {
+                if (idx == 0) btn.style.display = 'none' // hide Dismiss button
+                if (idx == btns.length -1) btn.classList.remove('primary-modal-btn') // de-emphasize last link
+                btn.style.marginTop = btn.style.marginBottom = '5px' // v-pad btns
+
+                // Replace buttons w/ clones that don't dismiss modal
+                btn.replaceWith(btn = btn.cloneNode(true))
+                btn.onclick = () => modals.safeWinOpen(
+                    btn.textContent == 'Saashub' ? app.urls.review.saashub
+                  : app.urls.discuss
+                )
+            })
+
+            return feedbackModal
         },
 
         handlers: {
