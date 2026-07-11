@@ -27,7 +27,7 @@ const script = {
     manifestSuffix: 'manifest.json'
 }
 script.cache.paths.bumpmjs = path.join(process.cwd(), `${script.cache.paths.root}/bump.min.mjs`)
-script.cache.paths.manifestPaths = path.join(process.cwd(), `${script.cache.paths.root}/manifest-paths.json`)
+script.cache.paths.manifestPaths = path.join(process.cwd(), `${script.cache.paths.root}/manifests.json`)
 const { cache: { paths: cachePaths }} = script
 
 // Import bump.mjs

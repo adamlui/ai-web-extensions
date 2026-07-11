@@ -14,7 +14,7 @@ const args = process.argv.slice(2),
       config = { cacheMode: args.some(arg => arg.startsWith('--cache')) },
       cachePaths = { root: '.cache' }
 cachePaths.bumpmjs = path.join(import.meta.dirname, `${cachePaths.root}/bump.min.mjs`)
-cachePaths.userJSpaths = path.join(import.meta.dirname, `${cachePaths.root}/userscript-paths.json`)
+cachePaths.userJSpaths = path.join(import.meta.dirname, `${cachePaths.root}/userscripts.json`)
 
 // Import bump.mjs
 fs.mkdirSync(path.dirname(cachePaths.bumpmjs), { recursive: true })
