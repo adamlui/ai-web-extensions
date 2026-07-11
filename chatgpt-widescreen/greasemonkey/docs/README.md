@@ -1,7 +1,14 @@
 <a id="top"></a>
 
 <div align="right">
-    <h5>English | <a href="https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/zh-cn/#readme">简体中文</a></h5>
+    <h6>
+        <picture>
+            <source type="image/svg+xml" media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/adamlui/userscripts@50c7ad3/assets/images/icons/earth/white/icon32.svg">
+            <img width=14 src="https://cdn.jsdelivr.net/gh/adamlui/userscripts@50c7ad3/assets/images/icons/earth/black/icon32.svg">
+        </picture>
+        &nbsp;English |
+        <a href="https://github.com/adamlui/chatgpt-widescreen/tree/main/docs/zh-cn/#readme">简体中文</a>
+    </h6>
 </div>
 
 <a href="https://scriptcat.org/script-show-page/6328"><img src="https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@115fa4e/assets/images/tiles/marquee/tile-1400x560.png"></a>
