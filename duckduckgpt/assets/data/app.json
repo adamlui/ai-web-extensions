@@ -2,7 +2,7 @@
   "name": "DuckDuckGPT", "symbol": "🐤", "shortName": "DDGPT", "slug": "duckduckgpt", "configKeyPrefix": "duckDuckGPT",
   "author": [
     { "name": "Adam Lui", "url": "https://github.com/adamlui" },
-    { "name": "KudoAI", "url": "https://www.kudoai.com" }
+    { "name": "KudoAI", "url": "https://kudoai.com" }
   ],
   "urls": {
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
@@ -14,8 +14,8 @@
     "discuss": "https://github.com/KudoAI/duckduckgpt/discussions",
     "donate": { "github": "https://github.com/sponsors/KudoAI" },
     "github": "https://github.com/KudoAI/duckduckgpt",
-    "publisher": "https://www.kudoai.com",
-    "relatedExtensions": "https://aiwebextensions.com",
+    "publisher": "https://kudoai.com",
+    "relatedExtensions": "https://github.com/adamlui/ai-web-extensions/#readme",
     "review": {
       "alternativeTo": "https://alternativeto.net/software/duckduckgpt/about/",
       "g2": "https://www.g2.com/products/duckduckgpt/take_survey",

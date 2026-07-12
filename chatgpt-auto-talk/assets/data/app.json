@@ -15,7 +15,7 @@
       "paypal": "https://paypal.me/adamlui"
     },
     "github": "https://github.com/adamlui/chatgpt-auto-talk",
-    "relatedExtensions": "https://aiwebextensions.com",
+    "relatedExtensions": "https://github.com/adamlui/ai-web-extensions/#readme",
     "support": "https://github.com/adamlui/chatgpt-auto-talk/issues",
     "update": { "gm": "https://raw.githubusercontent.com/adamlui/chatgpt-auto-talk/refs/heads/main/greasemonkey/chatgpt-auto-talk.user.js" }
   }

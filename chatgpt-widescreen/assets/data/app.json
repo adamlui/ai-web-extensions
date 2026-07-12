@@ -15,7 +15,7 @@
     },
     "download": { "gm": "https://scriptcat.org/scripts/code/6328/chatgpt-widescreen.user.js" },
     "github": "https://github.com/adamlui/chatgpt-widescreen",
-    "relatedExtensions": "https://aiwebextensions.com",
+    "relatedExtensions": "https://github.com/adamlui/ai-web-extensions/#readme",
     "review": {
       "chrome": "https://chromewebstore.google.com/detail/chatgpt-widescreen/jgnjpnmofkalfliddjelaciggjgnphgm/reviews",
       "edge": "https://microsoftedge.microsoft.com/addons/detail/chatgpt-widescreen/obnaaalnokmchdoagnhmllakaclaaooa",

@@ -10,13 +10,12 @@
     "contributors": "https://github.com/adamlui/chatgpt-auto-continue/tree/main/docs/#-contributors",
     "discuss": "https://github.com/adamlui/chatgpt-auto-continue/discussions",
     "donate": {
-      "cashapp": "https://cash.app/$adamlui",
       "github": "https://github.com/sponsors/adamlui",
       "ko-fi": "https://ko-fi.com/adamlui",
       "paypal": "https://paypal.me/adamlui"
     },
     "github": "https://github.com/adamlui/chatgpt-auto-continue",
-    "relatedExtensions": "https://aiwebextensions.com",
+    "relatedExtensions": "https://github.com/adamlui/ai-web-extensions/#readme",
     "review": {
       "chrome": "https://chromewebstore.google.com/detail/chatgpt-auto-continue/lbojnhaafilddefkdgmbplkafnckaoga/reviews",
       "edge": "https://microsoftedge.microsoft.com/addons/detail/chatgpt-autocontinue/kaicnimcjamamnlbaeaneofmdjibgepl",

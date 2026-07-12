@@ -6,14 +6,13 @@
     "assets": "https://cdn.jsdelivr.net/gh/KudoAI/deepseek-omnibox@latest/assets",
     "discuss": "https://github.com/KudoAI/deepseek-omnibox/discussions",
     "donate": {
-      "cashapp": "https://cash.app/$adamlui",
       "github": "https://github.com/sponsors/adamlui",
       "ko-fi": "https://ko-fi.com/adamlui",
       "paypal": "https://paypal.me/adamlui"
     },
     "github": "https://github.com/KudoAI/deepseek-omnibox",
-    "publisher": "https://aiwebextensions.com",
-    "relatedExtensions": "https://aiwebextensions.com",
+    "publisher": "https://kudoai.com",
+    "relatedExtensions": "https://github.com/adamlui/ai-web-extensions/#readme",
     "review": {
       "chrome": "https://chromewebstore.google.com/detail/deepseek-omnibox/gcgfmipiaiopmjcmggnnehnehhdjdkgi/reviews",
       "edge": "https://microsoftedge.microsoft.com/addons/detail/deepseek-omnibox/hghigiebpackbakklainbimglgiepfei/reviews",

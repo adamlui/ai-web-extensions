@@ -2,7 +2,7 @@
   "name": "GoogleGPT", "symbol": "🤖", "slug": "googlegpt", "configKeyPrefix": "googleGPT",
   "author": [
     { "name": "Adam Lui", "url": "https://github.com/adamlui" },
-    { "name": "KudoAI", "url": "https://www.kudoai.com" }
+    { "name": "KudoAI", "url": "https://kudoai.com" }
   ],
   "urls": {
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
@@ -15,8 +15,8 @@
     "donate": { "github": "https://github.com/sponsors/KudoAI" },
     "download": { "gm": "https://scriptcat.org/scripts/code/6371/googlegpt.user.js" },
     "github": "https://github.com/KudoAI/googlegpt",
-    "publisher": "https://www.kudoai.com",
-    "relatedExtensions": "https://aiwebextensions.com",
+    "publisher": "https://kudoai.com",
+    "relatedExtensions": "https://github.com/adamlui/ai-web-extensions/#readme",
     "review": {
       "linkedin": "https://www.linkedin.com/products/kudo-ai-duckduckgpt/",
       "saashub": "https://www.saashub.com/googlegpt-reviews/new",

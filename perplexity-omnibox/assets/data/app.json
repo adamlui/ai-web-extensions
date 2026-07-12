@@ -11,8 +11,8 @@
       "paypal": "https://paypal.me/adamlui"
     },
     "github": "https://github.com/KudoAI/perplexity-omnibox",
-    "publisher": "https://aiwebextensions.com",
-    "relatedExtensions": "https://aiwebextensions.com",
+    "publisher": "https://kudoai.com",
+    "relatedExtensions": "https://github.com/adamlui/ai-web-extensions/#readme",
     "review": {
       "chrome": "https://chromewebstore.google.com/detail/perplexity-omnibox/ckhgddjdjkphbaediggjdddjdjgkalom/reviews",
       "edge": "https://microsoftedge.microsoft.com/addons/detail/perplexity-omnibox/ffpccpmmcnampmlpdeioklmdjccfmpih/reviews",

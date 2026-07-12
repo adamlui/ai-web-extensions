@@ -51,4 +51,4 @@
 
 <a href="https://github.com/KudoAI/deepseek-omnibox/issues">समर्थन प्राप्त करें</a> /
 <a href="https://github.com/adamlui">लेखक से संपर्क करें</a> /
-<a href="https://aiwebextensions.com">अधिक AI वेब एक्सटेंशन</a>
+<a href="https://github.com/adamlui/ai-web-extensions/#readme">अधिक AI वेब एक्सटेंशन</a>

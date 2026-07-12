@@ -240,5 +240,5 @@ Made with ❤️ by [Adam Lui][link-author]
 [link-issues-feature]: https://github.com/KudoAI/perplexity-omnibox/issues/new?labels=enhancement
 [link-pulls]: https://github.com/KudoAI/perplexity-omnibox/pulls
 [link-releases]: https://github.com/KudoAI/perplexity-omnibox/releases
-[link-ai-extensions]: https://aiwebextensions.com
+[link-ai-extensions]: https://github.com/adamlui/ai-web-extensions/#readme
 [link-author]: https://github.com/adamlui

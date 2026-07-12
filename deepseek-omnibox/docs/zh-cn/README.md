@@ -55,4 +55,4 @@
 
 <a href="https://github.com/KudoAI/deepseek-omnibox/issues">获取支持</a> /
 <a href="https://github.com/adamlui">联系作者</a> /
-<a href="https://aiwebextensions.com">更多 AI 网络扩展</a>
+<a href="https://github.com/adamlui/ai-web-extensions/tree/main/docs/zh-cn/#readme">更多 AI 网络扩展</a>

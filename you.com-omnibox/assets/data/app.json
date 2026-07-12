@@ -11,8 +11,8 @@
       "paypal": "https://paypal.me/adamlui"
     },
     "github": "https://github.com/KudoAI/you.com-omnibox",
-    "publisher": "https://aiwebextensions.com",
-    "relatedExtensions": "https://aiwebextensions.com",
+    "publisher": "https://kudoai.com",
+    "relatedExtensions": "https://github.com/adamlui/ai-web-extensions/#readme",
     "review": { "firefox": "https://addons.mozilla.org/firefox/addon/you-omnibox" },
     "support": "https://github.com/KudoAI/you.com-omnibox/issues",
     "uninstall": "https://forms.gle/HkJFqQ7LEFCxNz6a6"

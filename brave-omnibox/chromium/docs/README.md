@@ -42,4 +42,4 @@
 
 <a href="https://github.com/KudoAI/brave-omnibox/issues">Get support</a> /
 <a href="https://github.com/adamlui">Contact author</a> /
-<a href="https://aiwebextensions.com">More AI web extensions</a>
+<a href="https://github.com/adamlui/ai-web-extensions/#readme">More AI web extensions</a>

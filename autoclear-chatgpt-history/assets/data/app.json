@@ -10,13 +10,12 @@
     "contributors": "https://github.com/adamlui/autoclear-chatgpt-history/tree/main/docs/#-contributors",
     "discuss": "https://github.com/adamlui/autoclear-chatgpt-history/discussions",
     "donate": {
-      "cashapp": "https://cash.app/$adamlui",
       "github": "https://github.com/sponsors/adamlui",
       "ko-fi": "https://ko-fi.com/adamlui",
       "paypal": "https://paypal.me/adamlui"
     },
     "github": "https://github.com/adamlui/autoclear-chatgpt-history",
-    "relatedExtensions": "https://aiwebextensions.com",
+    "relatedExtensions": "https://github.com/adamlui/ai-web-extensions/#readme",
     "support": "https://github.com/adamlui/autoclear-chatgpt-history/issues",
     "update": { "gm": "https://raw.githubusercontent.com/adamlui/autoclear-chatgpt-history/refs/heads/main/greasemonkey/autoclear-chatgpt-history.user.js" }
   }
