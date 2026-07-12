@@ -1,7 +1,9 @@
 {
   "name": "BraveGPT", "symbol": "🦁", "slug": "bravegpt", "configKeyPrefix": "braveGPT",
   "author": [
-    { "name": "Adam Lui", "url": "https://github.com/adamlui" }, { "name": "KudoAI", "url": "https://www.kudoai.com" }],
+    { "name": "Adam Lui", "url": "https://github.com/adamlui" },
+    { "name": "KudoAI", "url": "https://www.kudoai.com" }
+  ],
   "urls": {
     "aiwebAssets": "https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@latest/assets",
     "apis": { "chatShare": "https://chat-share.kudoai.workers.dev" },
