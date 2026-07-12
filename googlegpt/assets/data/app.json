@@ -15,6 +15,7 @@
     "github": "https://github.com/KudoAI/googlegpt",
     "publisher": "https://www.kudoai.com",
     "relatedExtensions": "https://aiwebextensions.com",
+    "review": { "linkedin": "https://www.linkedin.com/products/kudo-ai-duckduckgpt/" },
     "support": "https://github.com/KudoAI/googlegpt/issues",
     "update": { "gm": "https://scriptcat.org/scripts/code/6371/googlegpt.meta.js" }
   }

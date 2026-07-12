@@ -14,7 +14,10 @@
     "github": "https://github.com/KudoAI/amazongpt",
     "publisher": "https://www.kudoai.com",
     "relatedExtensions": "https://aiwebextensions.com",
-    "review": { "saashub": "https://www.saashub.com/amazongpt-reviews/new" },
+    "review": {
+      "linkedin": "https://www.linkedin.com/products/kudo-ai-amazongpt/",
+      "saashub": "https://www.saashub.com/amazongpt-reviews/new"
+    },
     "support": "ttps://amazongpt.kudoai.com/issues",
     "update": { "gm": "https://raw.githubusercontent.com/KudoAI/amazongpt/main/greasemonkey/amazongpt.user.js" }
   }
