@@ -149,7 +149,7 @@
 // @description:zu           Yengeza izimpendulo ze-AI ku-Google Search (inikwa amandla yi-Google Gemma + GPT-4o!)
 // @author                   KudoAI
 // @namespace                https://kudoai.com
-// @version                  2026.7.10.6
+// @version                  2026.7.12
 // @license                  MIT
 // @icon                     data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22170.667%22%20height=%22170.667%22%3E%3Cstyle%3E:root%7B--fill:%23000%7D@media%20(prefers-color-scheme:dark)%7B:root%7B--fill:%23fff%7D%7D%3C/style%3E%3Cpath%20fill=%22var(--fill)%22%20d=%22M82.346%20159.79c-18.113-1.815-31.78-9.013-45.921-24.184C23.197%20121.416%2017.333%20106.18%2017.333%2086c0-21.982%205.984-36.245%2021.87-52.131C55.33%2017.74%2069.27%2011.867%2091.416%2011.867c17.574%200%2029.679%203.924%2044.309%2014.363l8.57%206.116-8.705%208.705-8.704%208.704-4.288-3.608c-13.91-11.704-35.932-14.167-53.085-5.939-3.4%201.631-9.833%206.601-14.297%2011.045C44.669%2061.753%2040.95%2070.811%2040.95%2086c0%2014.342%203.594%2023.555%2013.26%2033.995%2019.088%2020.618%2048.46%2022.539%2070.457%204.608l5.333-4.348%2011.333%203.844c6.234%202.114%2011.54%203.857%2011.791%203.873.252.015-2.037%203.008-5.087%206.65-6.343%207.577-20.148%2017.217-30.493%2021.295-8.764%203.454-23.358%205.06-35.198%203.873zM92%2086.333V74.667h60.648l-11.41%2011.41-11.411%2011.41-18.914.257L92%2098z%22/%3E%3C/svg%3E
 // @icon64                   data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22170.667%22%20height=%22170.667%22%3E%3Cstyle%3E:root%7B--fill:%23000%7D@media%20(prefers-color-scheme:dark)%7B:root%7B--fill:%23fff%7D%7D%3C/style%3E%3Cpath%20fill=%22var(--fill)%22%20d=%22M82.346%20159.79c-18.113-1.815-31.78-9.013-45.921-24.184C23.197%20121.416%2017.333%20106.18%2017.333%2086c0-21.982%205.984-36.245%2021.87-52.131C55.33%2017.74%2069.27%2011.867%2091.416%2011.867c17.574%200%2029.679%203.924%2044.309%2014.363l8.57%206.116-8.705%208.705-8.704%208.704-4.288-3.608c-13.91-11.704-35.932-14.167-53.085-5.939-3.4%201.631-9.833%206.601-14.297%2011.045C44.669%2061.753%2040.95%2070.811%2040.95%2086c0%2014.342%203.594%2023.555%2013.26%2033.995%2019.088%2020.618%2048.46%2022.539%2070.457%204.608l5.333-4.348%2011.333%203.844c6.234%202.114%2011.54%203.857%2011.791%203.873.252.015-2.037%203.008-5.087%206.65-6.343%207.577-20.148%2017.217-30.493%2021.295-8.764%203.454-23.358%205.06-35.198%203.873zM92%2086.333V74.667h60.648l-11.41%2011.41-11.411%2011.41-18.914.257L92%2098z%22/%3E%3C/svg%3E
@@ -454,7 +454,7 @@
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
-            app: '9b82de5', // for cached <app|messages>.json
+            app: 'ee58db3', // for cached <app|messages>.json
             aiweb: '97c310e' // for cached ai-chat-apis.json5 + <code-languages|katex-delimiters|sogou-tts-lang-codes>.json
         }
     }
@@ -2081,7 +2081,7 @@
                 [ // buttons
                     function checkForUpdates() { userscript.updateCheck() },
                     function getSupport(){},
-                    function rateUs(){},
+                    function rateUs() { modals.open('feedback') },
                     function moreAIextensions(){}
                 ], '', 629 // modal width
             )
@@ -2103,7 +2103,7 @@
                 btn.style.cssText = 'height: 50px ; min-width: 136px'
 
                 // Replace link buttons w/ clones that don't dismiss modal
-                if (/support|rate|extensions/i.test(btn.textContent)) {
+                if (/support|extensions/i.test(btn.textContent)) {
                     btn.replaceWith(btn = btn.cloneNode(true))
                     btn.onclick = () => modals.safeWinOpen(
                         btn.textContent.includes(app.msgs.btnLabel_getSupport) ? app.urls.support
@@ -2168,6 +2168,44 @@
             })
 
             return apiModal
+        },
+
+        feedback() {
+
+            // Init buttons
+            let btns = [function linkedin(){}, function saashub(){}, function scriptcat(){}]
+            if (modals.stack[0] != 'about') btns.push(function github(){})
+
+            // Show modal
+            const feedbackModal = modals.alert(`${app.msgs.alert_choosePlatform}:`, '', btns, '', 456)
+            feedbackModal.style.display = 'inline-table' // allow many buttons to fit
+
+            // Center CTA
+            feedbackModal.querySelector('h2').style.justifySelf = 'center'
+
+            // Re-style button cluster
+            const btnsDiv = feedbackModal.querySelector('.modal-buttons')
+            if (!env.browser.isCompact) // gridify wide view btns
+                btnsDiv.style.cssText = 'flex-wrap: wrap ; justify-content: center ; gap: 3px'
+
+            // Hack buttons
+            btns = btnsDiv.querySelectorAll('button')
+            btns.forEach((btn, idx) => {
+                if (idx == 0) btn.style.display = 'none' // hide Dismiss button
+                if (idx == btns.length -1) btn.classList.remove('primary-modal-btn') // de-emphasize last link
+                btn.style.marginTop = btn.style.marginBottom = '5px' // v-pad btns
+
+                // Replace buttons w/ clones that don't dismiss modal
+                btn.replaceWith(btn = btn.cloneNode(true))
+                btn.onclick = () => modals.safeWinOpen(
+                    btn.textContent == 'Linkedin' ? app.urls.review.linkedin
+                  : btn.textContent == 'Saashub' ? app.urls.review.saashub
+                  : btn.textContent == 'Scriptcat' ? app.urls.review.scriptcat
+                  : app.urls.discuss
+                )
+            })
+
+            return feedbackModal
         },
 
         handlers: {
