@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.7.12.1
+// @version                2026.7.12.2
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon64.png
@@ -129,14 +129,15 @@
         scriptManager: {
             name: (() => { try { return GM_info.scriptHandler } catch (err) { return 'unknown' }})(),
             version: (() => { try { return GM_info.version } catch (err) { return 'unknown' }})()
-        }
-    } ; ['Chromium', 'Firefox', 'Chrome', 'Edge', 'Brave', 'Mobile'].forEach(platform =>
-        env.browser[`is${ platform == 'Firefox' ? 'FF' : platform }`] = chatgpt.browser['is' + platform]())
+        },
+        xhr: typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
+    }
+    ;['Chromium', 'Firefox', 'Chrome', 'Edge', 'Brave', 'Mobile'].forEach(platform =>
+        env.browser[`is${ platform == 'Firefox' ? 'FF' : platform }`] = chatgpt.browser[`is${platform}`]())
     Object.assign(env.browser, { get isCompact() { return innerWidth <= 480 }})
     env.scriptManager.supportsStreaming = /Tampermonkey|ScriptCat/.test(env.scriptManager.name)
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
                                       && parseInt(env.scriptManager.version.split('.')[0]) >= 5
-    window.xhr = typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
     window.app = {
         version: GM_info.script.version, chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
         commitHashes: {
@@ -147,7 +148,7 @@
     }
     app.urls = { resourceHost: `https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@${app.commitHashes.app}` }
     const remoteData = {
-        app: await new Promise(resolve => xhr({
+        app: await new Promise(resolve => env.xhr({
             method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
             onload: ({ responseText }) => resolve(JSON.parse(responseText))
         })),
@@ -155,7 +156,7 @@
             const msgBaseURL = `${app.urls.resourceHost}/greasemonkey/_locales`,
                   locale = `${ env.browser.language ? env.browser.language.replace('-', '_') : 'en' }`
             let msgURL = `${msgBaseURL}/${locale}/messages.json`, msgFetchesTried = 0
-            function fetchMsgs() { xhr({ method: 'GET', url: msgURL, onload: handleMsgs })}
+            function fetchMsgs() { env.xhr({ method: 'GET', url: msgURL, onload: handleMsgs })}
             function handleMsgs(resp) {
                 try { // to return localized messages.json
                     const msgs = JSON.parse(resp.responseText), flatMsgs = {}
@@ -188,11 +189,11 @@
         suggestDiffAPI:   `${app.msgs.alert_try} ${app.msgs.alert_selectingDiff} API`,
         suggestOpenAI:    `${app.msgs.alert_try} ${app.msgs.alert_switchingOff} ${app.msgs.mode_proxy}`
     }
-    app.katexDelimiters = await new Promise(resolve => xhr({ // used in show.reply()
+    app.katexDelimiters = await new Promise(resolve => env.xhr({ // used in show.reply()
         method: 'GET', onload: ({ responseText }) => resolve(JSON.parse(responseText)),
         url: `${app.urls.aiwebAssets}/data/katex-delimiters.json`
     }))
-    app.apis = Object.assign(Object.create(null), await new Promise(resolve => xhr({
+    app.apis = Object.assign(Object.create(null), await new Promise(resolve => env.xhr({
         method: 'GET', onload: ({ responseText }) => resolve(Object.fromEntries(
             Object.entries(JSON5.parse(responseText)).filter(([, api]) => !api.disabled))),
         url: `${app.urls.aiwebAssets}/data/ai-chat-apis.json5`
@@ -746,7 +747,7 @@
                 let retryCnt = 0 ; getData(url)
 
                 function getData(currentURL) {
-                    xhr({
+                    env.xhr({
                         method: 'GET', url: currentURL,
                         onload: ({ responseText, status }) => {
                             if (status >= 300 && status != 404) {
@@ -1900,7 +1901,7 @@
                     },
                     function visitPage() { modals.safeWinOpen(shareURL) },
                     function downloadChat() {
-                        xhr({
+                        env.xhr({
                             method: 'GET', url: shareURL,
                             onload: ({ responseText }) => {
                                 const download = responseText.match(/<title>([^<]+)<\/title>/i)[1]
