@@ -3,7 +3,7 @@
 // @description            Add AI chat & product/category summaries to Amazon shopping, powered by the latest LLMs like GPT-4o!
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.7.11.1
+// @version                2026.7.12
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/amazongpt@8e8ed1c/assets/images/icons/app/black-gold-teal/icon64.png
@@ -1336,7 +1336,7 @@
         feedback() {
 
             // Init buttons
-            let btns = [function saashub(){}]
+            let btns = [function saashub(){}, function linkedin(){}]
             if (modals.stack[0] != 'about') btns.push(function github(){})
 
             // Show modal
@@ -1361,7 +1361,8 @@
                 // Replace buttons w/ clones that don't dismiss modal
                 btn.replaceWith(btn = btn.cloneNode(true))
                 btn.onclick = () => modals.safeWinOpen(
-                    btn.textContent == 'Saashub' ? app.urls.review.saashub
+                    btn.textContent == 'Linkedin' ? app.urls.review.linkedin
+                  : btn.textContent == 'Saashub' ? app.urls.review.saashub
                   : app.urls.discuss
                 )
             })
