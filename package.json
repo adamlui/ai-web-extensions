@@ -47,7 +47,7 @@
     "bump:chatbot-nc": "npm run bump:chatbots-nc",
     "bump:chatbot-np": "npm run bump:chatbots-np",
     "bump:chatgpt": "node utils/bump/chatgpt.mjs",
-    "bump:res": "node utils/bump/userscript-requires.mjs --cache && node utils/bump/extension-resources.mjs",
+    "bump:res": "node utils/remote-run https://cdn.jsdelivr.net/gh/adamlui/userscripts/utils/bump/userscript-requires.min.mjs --cache && node utils/bump/extension-resources.mjs",
     "bump:ext": "node utils/bump/extension-manifests.mjs --cache",
     "bump:ext-nc": "npm run bump:ext -- --no-commit",
     "bump:ext-np": "npm run bump:ext -- --no-push",
