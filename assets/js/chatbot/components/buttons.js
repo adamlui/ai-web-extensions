@@ -1,4 +1,4 @@
-// Requires components/replyBubble.js + lib/<dom|Tone>.js + <app|get|prompts|show|tooltip|xhr>
+// Requires components/replyBubble.js + lib/<dom|Tone>.js + <app|get|prompts|show|tooltip>
 
 window.buttons = {
     reply: {
@@ -6,7 +6,7 @@ window.buttons = {
             types: ['copy', 'share', 'regen', 'speak'], // right-to-left
             styles: 'float: right ; cursor: pointer ;',
 
-            create() { // requires lib/<dom|Tone>.js + <app|get|prompts|show|tooltip|xhr>
+            create() { // requires lib/<dom|Tone>.js + <app|get|prompts|show|tooltip>
                 if (this.share) return
 
                 // Copy button
@@ -59,7 +59,7 @@ window.buttons = {
                     this.share.style.cursor = 'default' // remove finger
                     if (!app.config.fgAnimationsDisabled) this.share.style.animation = 'spinY 1s linear infinite'
                     tooltip.update(currentTarget) // to 'Generating HTML...'
-                    xhr({
+                    env.xhr({
                         method: 'POST', url: app.urls.apis.chatShare,
                         headers: { 'Content-Type': 'application/json', 'Referer': location.href },
                         data: JSON.stringify({ messages: prompts.stripAugments(app.msgChain) }),
@@ -153,7 +153,7 @@ window.buttons = {
                         iv, mode: CryptoJS.mode.CBC, pad: CryptoJS.pad.Pkcs7 }).toString()
 
                     // Play reply
-                    xhr({
+                    env.xhr({
                         url: 'https://fanyi.sogou.com/openapi/external/getWebTTS?S-AppId=102356845&S-Param='
                             + encodeURIComponent(securePayload),
                         method: 'GET', responseType: 'arraybuffer',

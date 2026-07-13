@@ -7,7 +7,7 @@ window.userscript = {
 
         // Fetch latest meta
         log.debug('Fetching latest userscript metadata...')
-        xhr({
+        env.xhr({
             method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`, headers: { 'Cache-Control': 'no-cache' },
             onload: ({ responseText }) => {
                 log.debug('Success! Response received')

@@ -1,4 +1,4 @@
- // Requires lib/<crypto-js|feedback>.js + <app|env|get|log|Math|xhr> + GM_cookie + GM_<delete|get|set>Value()
+ // Requires lib/<crypto-js|feedback>.js + <app|env|get|log|Math> + GM_cookie + GM_<delete|get|set>Value()
 
 window.session = {
 
@@ -13,7 +13,7 @@ window.session = {
         }}})
     },
 
-    getOAItoken() { // requires lib/feedback.js + <app|get|log|xhr> + GM_<get|set>Value()
+    getOAItoken() { // requires lib/feedback.js + <app|env|get|log> + GM_<get|set>Value()
         log.caller = 'session.getOAItoken()'
         log.debug('Getting OpenAI token...')
         return new Promise(resolve => {
@@ -21,7 +21,7 @@ window.session = {
             if (accessToken) { log.debug(accessToken) ; resolve(accessToken) }
             else {
                 log.debug(`No token found. Fetching from ${app.apis.OpenAI.endpoints.session}...`)
-                xhr({
+                env.xhr({
                     url: app.apis.OpenAI.endpoints.session,
                     onload: ({ responseText }) => {
                         if (session.isBlockedByCF(responseText)) return feedback.appAlert('checkCloudflare')

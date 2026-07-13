@@ -148,7 +148,7 @@
 // @description:zu         Yengeza izimpendulo ze-AI ku-DuckDuckGo (inikwa amandla yi-GPT-4o!)
 // @author                 KudoAI
 // @namespace              https://kudoai.com
-// @version                2026.7.12.3
+// @version                2026.7.12.4
 // @license                MIT
 // @icon                   https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@e73859f/assets/images/icons/app/icon48.png
 // @icon64                 https://cdn.jsdelivr.net/gh/KudoAI/duckduckgpt@e73859f/assets/images/icons/app/icon64.png
@@ -1263,7 +1263,7 @@
                 }
                 if (reqMethod == 'POST') xhrConfig.data = JSON.stringify(reqData)
                 else if (reqMethod == 'GET') xhrConfig.url += `?q=${reqData}`
-                xhr(xhrConfig)
+                env.xhr(xhrConfig)
             })
         },
 
@@ -1345,7 +1345,7 @@
             }
             if (reqMethod == 'POST') xhrConfig.data = JSON.stringify(reqData)
             else if (reqMethod == 'GET') xhrConfig.url += `?q=${reqData}`
-            xhr(xhrConfig)
+            env.xhr(xhrConfig)
 
             // Get/show Related Queries if enabled/missing/on 1st get.reply() attempt only
             if (!app.config.rqDisabled && !rqDiv && get.reply.attemptCnt == 1)
