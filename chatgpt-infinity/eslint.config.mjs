@@ -20,7 +20,7 @@ export default [
                 chrome: 'readonly', css: 'readonly', dom: 'readonly', env: 'writable', feedback: 'readonly',
                 i18n: 'readonly', icons: 'writable', infinity: 'readonly', modals: 'writable', settings: 'writable',
                 string: 'readonly', styles: 'writable', sync: 'readonly', toggles: 'writable', toolbarMenu: 'writable',
-                ui: 'readonly', updateCheck: 'readonly', xhr: 'writable'
+                ui: 'readonly', updateCheck: 'readonly'
             }
         },
         plugins: { 'import-x': importPlugin, 'js-styles': stylisticJS, regexp },

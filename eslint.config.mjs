@@ -28,7 +28,7 @@ export default [
                 sync: 'readonly', syncConfigToUI: 'readonly', themes: 'readonly', toggle: 'readonly',
                 toggleMode: 'readonly', toggles: 'writable', Tone: 'readonly', toolbarMenu: 'writable',
                 tooltip: 'writable', ui: 'readonly', update: 'readonly', updateCheck: 'readonly',
-                userscript: 'readonly', xhr: 'writable'
+                userscript: 'readonly'
             }
         },
         plugins: { 'import-x': importPlugin, 'js-styles': stylisticJS, regexp },

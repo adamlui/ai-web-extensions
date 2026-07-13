@@ -21,7 +21,7 @@ export default [
                 env: 'writable', feedback: 'readonly', i18n: 'readonly', icons: 'writable', importScripts: 'readonly',
                 JSON5: 'readonly', modals: 'readonly', settings: 'writable', sites: 'writable', styles: 'readonly',
                 sync: 'readonly', toggleMode: 'readonly', toolbarMenu: 'writable', tooltip: 'writable', ui: 'readonly',
-                updateCheck: 'readonly', xhr: 'writable'
+                updateCheck: 'readonly'
             }
         },
         plugins: { 'import-x': importPlugin, 'js-styles': stylisticJS, regexp },
