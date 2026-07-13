@@ -57,7 +57,7 @@
     "bump:firefox": "npm run bump:ff"
   },
   "devDependencies": {
-    "@adamlui/scss-to-css": "^2.4.4",
+    "@adamlui/scss-to-css": "^2.4.5",
     "@eslint/css": "^1.4.0",
     "@eslint/js": "^10.0.1",
     "@eslint/json": "^2.0.1",
