@@ -92,12 +92,12 @@ window.modals = {
 
         // Init buttons
         const modalBtns = [function productHunt(){}, function softonic(){}, function alternativeto(){}]
-        if (!this.runtime == 'greasemonkey')
-            modalBtns.unshift( // append extension store button
-                this.runtime == 'firefox' ? function firefoxAddons(){}
-              : app.sourceWebStore == 'chrome' ? function chromeWebStore(){}
-              : function edgeAddons(){}
-            )
+        modalBtns.unshift( // append extension store button
+            this.runtime == 'greasemonkey' ? function scriptcat(){}
+          : this.runtime == 'firefox' ? function firefoxAddons(){}
+          : app.sourceWebStore == 'chrome' ? function chromeWebStore(){}
+          : function edgeAddons(){}
+        )
 
         // Show modal
         const feedbackModal = modals.alert(`${i18n.getMsg('alert_choosePlatform')}:`, '', modalBtns)
@@ -115,6 +115,7 @@ window.modals = {
               : btn.textContent == 'Edge Addons' ? 'edge'
               : btn.textContent == 'Firefox Addons' ? 'firefox'
               : btn.textContent == 'Product Hunt' ? 'productHunt'
+              : btn.textContent == 'Scriptcat' ? 'scriptcat'
               : 'softonic'
             ])
         })
