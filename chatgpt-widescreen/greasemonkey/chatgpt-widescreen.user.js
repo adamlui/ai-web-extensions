@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.7.10
+// @version             2026.7.12
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -322,7 +322,6 @@
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
                                       && parseInt(env.scriptManager.version.split('.')[0]) >= 5
     ui.getScheme().then(scheme => env.ui.scheme = scheme)
-    window.xhr = typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
     window.app = {
         version: GM_info.script.version, configKeyPrefix: `${env.site} Widescreen`,
         chatgptjsVer: /chatgpt\.js@([\d.]+)/.exec(GM_info.scriptMetaStr)[1],
@@ -331,7 +330,7 @@
     app.urls = {
         resourceHost: `https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@${app.commitHashes.app}` }
     const remoteData = {
-        app: await new Promise(resolve => xhr({
+        app: await new Promise(resolve => env.xhr({
             method: 'GET', url: `${app.urls.resourceHost}/assets/data/app.json`,
             onload: ({ responseText }) => resolve(JSON.parse(responseText))
         })),
@@ -339,7 +338,7 @@
             const msgBaseURL = `${app.urls.resourceHost}/chromium/extension/_locales`,
                   locale = `${ env.browser.language ? env.browser.language.replace('-', '_') : 'en' }`
             let msgURL = `${msgBaseURL}/${locale}/messages.json`, msgFetchesTried = 0
-            function fetchMsgs() { xhr({ method: 'GET', url: msgURL, onload: handleMsgs })}
+            function fetchMsgs() { env.xhr({ method: 'GET', url: msgURL, onload: handleMsgs })}
             function handleMsgs(resp) {
                 try { // to return localized messages.json
                     const msgs = JSON.parse(resp.responseText), flatMsgs = {}
@@ -359,7 +358,7 @@
         })
     }
     Object.assign(app, { ...remoteData.app, urls: { ...app.urls, ...remoteData.app.urls }, msgs: remoteData.msgs })
-    window.sites = Object.assign(Object.create(null), await new Promise(resolve => xhr({
+    window.sites = Object.assign(Object.create(null), await new Promise(resolve => env.xhr({
         method: 'GET', url: `${app.urls.resourceHost}/assets/data/sites.json5`,
         onload: ({ responseText }) => resolve(JSON5.parse(responseText))
     })))
@@ -421,7 +420,7 @@
         return words.join(' ') // join'em back together
     }
 
-    window.updateCheck = () => xhr({
+    window.updateCheck = () => env.xhr({
         method: 'GET', url: `${app.urls.update.gm}?t=${Date.now()}`,
         headers: { 'Cache-Control': 'no-cache' },
         onload: ({ responseText }) => {
