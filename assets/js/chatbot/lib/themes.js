@@ -104,6 +104,7 @@ window.themes = {
                 ${selectors.btn.standby} {
                     --standby-btn-transition: transform 0.18s ease, background 0.2s ease ;
                     font-size: ${ app.slug == 'bravegpt' ? 10
+                                : app.slug == 'duckduckgpt' ? 11.5
                                 : /* googlegpt */ 11 }px ;
                     width: 80% ; height: ${ app.slug == 'bravegpt' ? 43 : 51 }px ;
                     margin-bottom: ${ app.slug == 'bravegpt' ? 13 : 16 }px }

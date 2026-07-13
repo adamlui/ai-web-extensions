@@ -124,6 +124,7 @@ window.ui = {
                 chatTextarea.style.height = `${{
                     amazongpt: chatTextarea.scrollHeight > 60 ? ( chatTextarea.scrollHeight +2 ) : 46,
                     bravegpt: chatTextarea.scrollHeight > 60 ? ( chatTextarea.scrollHeight +2 ) : 43,
+                    duckduckgpt: chatTextarea.scrollHeight - vOffset,
                     googlegpt: unpaddedHeight > 29 ? unpaddedHeight : 16
                 }[app.slug]}px`
                 prevLength = newLength

@@ -5,7 +5,8 @@ window.tooltip = { // requires dom.js + <app|env>
           --shadow: 3px 5px 16px 0 rgb(0,0,0,0.21) ; --transition: opacity 0.15s, transform 0.15s ;
             background-color: rgba(0,0,0,0.64) ; padding: ${ app.slug == 'googlegpt' ? '6px 7px' : '4px 6px 4px' };
             border: 1px solid #d9d9e3 ; border-radius: 6px ;
-            font-size: ${ app.slug == 'amazongpt' ? 0.87 : app.slug == 'bravegpt' ? 0.58 : /* googlegpt */ 0.75 }rem ;
+            font-size: ${
+                /amazon|duck/.test(app.slug) ? 0.87 : app.slug == 'bravegpt' ? 0.58 : /* googlegpt */ 0.75 }rem ;
             color: white ; fill: white ; stroke: white ; /* font/icon style */
             position: absolute ; /* for this.update() calcs */
             opacity: 0 ; height: fit-content ; z-index: 1250 ; /* visibility */

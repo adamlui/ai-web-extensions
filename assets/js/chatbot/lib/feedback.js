@@ -62,6 +62,7 @@ window.feedback = {
         notifIcon.style.cssText = (
             app.slug == 'amazongpt' ? 'width: 28px ; position: relative ; top: 4.8px ; margin-right: 8px'
           : app.slug == 'bravegpt' ? 'width: 32px ; position: relative ; top: 6px ; margin-right: 6px'
+          : app.slug == 'duckduckgpt' ? 'width: 31px ; position: relative ; top: 5.8px ; margin-right: 8px'
           : /* googlegpt */ 'width: 26px ; position: relative ; top: 2.8px ; margin-right: 6px'
         )
         notif.prepend(notifIcon)
@@ -71,6 +72,8 @@ window.feedback = {
             app.slug == 'amazongpt' ?
                 'width: 28px ; height: 28px ; position: relative ; top: 3.5px ; margin-left: 11px ;'
           : app.slug == 'bravegpt' ? 'width: 28px ; height: 28px ; position: relative ; top: 3px ; margin-left: 11px ;'
+          : app.slug == 'duckduckgpt' ?
+                'width: 28px ; height: 28px ; position: relative ; top: 3.5px ; margin-left: 11px ;'
           : /* googlegpt */ 'width: 28px ; height: 28px ; position: relative ; top: 3px ; margin-left: 11px ;'
         )
         const mode = Object.keys(settings.controls).find(

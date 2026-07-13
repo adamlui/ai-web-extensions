@@ -21,7 +21,7 @@ window.replyBubble = {
     updateMaxHeight() { // requires app
         const replyPre = app.div.querySelector('.reply-pre'),
               relatedQueries = app.div.querySelector(`.${app.slug}-related-queries`),
-              offsets = { bravegpt: [304, 278], googlegpt: [328, 309] }
+              offsets = { bravegpt: [304, 278], duckduckgpt: [245, 255], googlegpt: [328, 309] }
         const heights = {
             shorter: innerHeight - relatedQueries?.offsetHeight -( offsets[app.slug]?.[0] || 0 ),
             longer: innerHeight -( offsets[app.slug]?.[1] || 0 )
