@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.7.14
+// @version             2026.7.23
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -290,20 +290,6 @@
 
 (async () => {
     'use strict'
-
-    // Hide Perplexity notice on GH/GL if found
-    if (location.hostname.startsWith('git')) {
-        if (location.pathname.includes('chatgpt-widescreen')) {
-            const alertObserver = new MutationObserver(() => {
-                const perplexityAlert = [...document.querySelectorAll('.markdown-alert')]
-                        .find(alert => alert.textContent.includes('Perplexity'))
-                if (perplexityAlert) { perplexityAlert.style.display = 'none' ; alertObserver.disconnect() }
-            })
-            alertObserver.observe(document.body, { childList: true, subtree: true })
-            setTimeout(() => alertObserver.disconnect(), 5000) // don't observe forever
-        }
-        return
-    }
 
     // Init DATA
     window.env = {
