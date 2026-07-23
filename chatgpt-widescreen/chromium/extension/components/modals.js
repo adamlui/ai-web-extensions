@@ -91,7 +91,7 @@ window.modals = {
     feedback() { // requires lib/i18n.js + app.sourceWebStore
 
         // Init buttons
-        const modalBtns = [function productHunt(){}, function softonic(){}]
+        const modalBtns = [function productHunt(){}, function saashub(){}, function softonic(){}]
         modalBtns.unshift( // append extension store button
             this.runtime == 'greasemonkey' ? function scriptcat(){}
           : this.runtime == 'firefox' ? function firefoxAddons(){}
@@ -114,7 +114,8 @@ window.modals = {
               : btn.textContent == 'Edge Addons' ? 'edge'
               : btn.textContent == 'Firefox Addons' ? 'firefox'
               : btn.textContent == 'Product Hunt' ? 'productHunt'
-              : btn.textContent == 'ScriptCat' ? 'scriptcat'
+              : btn.textContent == 'Saashub' ? 'saashub'
+              : btn.textContent == 'Scriptcat' ? 'scriptcat'
               : 'softonic'
             ])
         })
