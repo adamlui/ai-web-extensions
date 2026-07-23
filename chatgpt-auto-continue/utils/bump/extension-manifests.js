@@ -21,7 +21,8 @@
     // Import LIBS
     const fs = require('fs'), // to read/write files
           path = require('path'), // to manipulate paths
-        { execSync, spawnSync } = require('child_process') // for git cmds
+        { execSync, spawnSync } = require('child_process'), // for git cmds
+        { createHash } = require('crypto') // for integrity verification
 
     // Init CACHE paths
     const cachePaths = { root: '.cache' }
@@ -29,8 +30,12 @@
 
     // Import BUMP UTILS
     fs.mkdirSync(path.dirname(cachePaths.bumpUtils), { recursive: true })
-    fs.writeFileSync(cachePaths.bumpUtils, (await (await fetch(
-        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f63b650/utils/bump/lib/bump.min.mjs')).text()))
+    const bumpUtilsContent = await (await fetch(
+        'https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@f63b650/utils/bump/lib/bump.min.mjs')).text()
+    if (createHash('sha256').update(bumpUtilsContent).digest('hex') !==
+            'fea2efd9d2bf02cae89e7fa7c2385a4a0910db93236543394cb087b6884b89c7')
+        throw new Error('Integrity check failed: unexpected content in bump.min.mjs')
+    fs.writeFileSync(cachePaths.bumpUtils, bumpUtilsContent)
     const bump = await import(`file://${cachePaths.bumpUtils}`) ; fs.unlinkSync(cachePaths.bumpUtils)
 
     // Init manifest PATHS
