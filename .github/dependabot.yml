@@ -5,6 +5,8 @@ updates:
     directory: /
     schedule:
       interval: daily
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: npm
     directories:
@@ -26,6 +28,8 @@ updates:
       - /you.com-omnibox
     schedule:
       interval: daily
+    cooldown:
+      semver-minor-days: 7
     groups:
       dev-dependencies:
         dependency-type: development
@@ -50,6 +54,8 @@ updates:
       - /you.com-omnibox
     schedule:
       interval: daily
+    cooldown:
+      semver-minor-days: 7
     groups:
       dev-dependencies:
         dependency-type: development
