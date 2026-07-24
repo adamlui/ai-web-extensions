@@ -23,7 +23,12 @@
       "rightbar": "div[class*=sidebar]:has(div[data-testid=screen-threadFlyOut])",
       "sidebar": "div#stage-slideover-sidebar, div.bg-token-sidebar-surface-primary",
       "spam": {
-        "ads": { "chat": "div.opacity-100:has(button[aria-label=\"Ad options\"])" }, // https://imgur.com/a/KCstkDt
+        "ads": {
+          "chat": {
+            "2026.7.23": "aside:has([data-assistant-ad-slot])", // https://imgur.com/a/PgSXbRA
+            "2026.5.26": "div.opacity-100:has(button[aria-label=\"Ad options\"])" // https://imgur.com/a/KCstkDt
+          }
+        },
         "banners": {
           "login": "//aside[.//button[contains(., 'Log in')]]",
           "promo": {
