@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.7.24.1
+// @version             2026.7.24.2
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -904,8 +904,9 @@
         if ((event.key == 'F11' || event.keyCode == 122) && !app.config.fullscreen) app.config.f11 = true
         else if ((event.key.startsWith('Esc') || event.keyCode == 27) && chatgpt.isTyping())
             try {
-                chatgpt.stop() ; requestAnimationFrame(() => !chatgpt.isTyping()
-                    && feedback.notify(app.msgs.notif_chatStopped, 'bottom-right'))
+                chatgpt.stop()
+                requestAnimationFrame(() =>
+                    !chatgpt.isTyping() && feedback.notify(app.msgs.notif_chatStopped, 'bottom-right'))
             } catch (err) {}
     })
 

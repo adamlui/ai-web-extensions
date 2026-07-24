@@ -251,8 +251,9 @@
         if ((event.key == 'F11' || event.keyCode == 122) && !app.config.fullscreen) app.config.f11 = true
         else if ((event.key.startsWith('Esc') || event.keyCode == 27) && chatgpt.isTyping())
             try {
-                chatgpt.stop() ; requestAnimationFrame(() => !chatgpt.isTyping()
-                    && feedback.notify(i18n.getMsg('notif_chatStopped'), 'bottom-right'))
+                chatgpt.stop()
+                requestAnimationFrame(() =>
+                    !chatgpt.isTyping() && feedback.notify(i18n.getMsg('notif_chatStopped'), 'bottom-right'))
             } catch (err) {}
     })
 
