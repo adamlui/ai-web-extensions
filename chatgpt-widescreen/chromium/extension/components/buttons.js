@@ -59,8 +59,8 @@ window.buttons = {
     async create() { // requires components/tooltip.js + lib/dom.js + <env|sites>
         if (!this.styles) this.stylize()
         const { site, ui: { hasTallChatbar }} = env, { [site]: { selectors }} = sites,
-              isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true'),
-              validBtnTypes = this.get.types.valid()
+                isGuestTempChat = selectors.btns.login && location.search.includes('temporary-chat=true'),
+                validBtnTypes = this.get.types.valid()
         if (site == 'chatgpt') this.rightBtn = await this.get.rightBtn() // for styles
 
         validBtnTypes.forEach(async btnType => {
@@ -119,7 +119,7 @@ window.buttons = {
         const { site } = env
         const chatbarDiv = await chatbar.get() ; if (!chatbarDiv) return this.state.status = 'missing'
         const parentToInsertInto = (
-            site == 'chatgpt' ? (await this.get.rightBtn()).closest('div.flex')
+            site == 'chatgpt' ? (await this.get.rightBtn()).closest('[class*=composer-trailing], div.flex')
                     /* poe */ : chatbarDiv.lastChild )
         parentToInsertInto.prepend( // wrap btns in flexbox for better control
             this.btnsDiv ||= dom.create.elem('div', {

@@ -5,7 +5,7 @@ window.chatbar = {
     async get() { // requires lib/dom.js + <env|sites>
         const { site } = env
         return site == 'chatgpt' ?
-            document.querySelector('form[data-type=unified-composer] > div:not(.hidden)')
+            document.querySelector('main form[class*=composer], form[data-type=unified-composer] > div:not(.hidden)')
                 : (await dom.get.loadedElem(sites[site].selectors.input)).parentNode.parentNode
     },
 
