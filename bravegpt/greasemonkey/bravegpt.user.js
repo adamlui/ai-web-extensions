@@ -148,7 +148,7 @@
 // @description:zu        Yengeza izimpendulo ze-AI ku-Brave Search (inikwa amandla yi-GPT-4o!)
 // @author                KudoAI
 // @namespace             https://kudoai.com
-// @version               2026.7.12.7
+// @version               2026.7.24
 // @license               MIT
 // @icon                  https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon48.png
 // @icon64                https://cdn.jsdelivr.net/gh/KudoAI/bravegpt@2f21b5f/assets/images/icons/app/icon64.png
@@ -287,8 +287,8 @@
                             flatMsgs[key] = msgs[key].message
                     resolve(flatMsgs)
                 } catch (err) { // if bad response
-                    msgFetchesTried++ ; if (msgFetchesTried == 3) return resolve({}) // try original/region-stripped/EN only
-                    msgURL = env.browser.language.includes('-') && msgFetchesTried == 1 ? // if regional lang on 1st try...
+                    msgFetchesTried++ ; if (msgFetchesTried == 3) return resolve({}) // try original/region-stripped/EN
+                    msgURL = env.browser.language.includes('-') && msgFetchesTried == 1 ? // if regional lang on 1st try
                         msgURL.replace(/(_locales\/[^_]+)_[^_]+(\/)/, '$1$2') // ...strip region before retrying
                             : `${msgBaseURL}/en/messages.json` // else use default English messages
                     fetchMsgs()
