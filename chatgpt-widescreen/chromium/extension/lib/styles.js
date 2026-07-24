@@ -91,7 +91,7 @@ window.styles = {
                         {${ site == 'chatgpt' ? 'opacity: 0 !important ; height: 15px !important' : 'display: none' }}`
                 }
                 ${ !app.config.justifyText ? '' : `
-                    ${ site == 'chatgpt' ? 'div[data-message-author-role]'
+                    ${ site == 'chatgpt' ? 'div[data-assistant-markdown]'
                                : /* poe */ 'div[class*=messageTextContainer]' }
                         { text-align: justify }`
                 }
