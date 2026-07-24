@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.7.23.11
+// @version             2026.7.24
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -265,7 +265,7 @@
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@ab7ee52/chromium/extension/lib/ui.js#sha256-5WwgnfGRtHsRP06nmjhqARB0T508syxAh5UWFMEFA+c=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@1f7c4b3/chromium/extension/components/buttons.js#sha256-cGSopZb76S75UojQQ0Npcb/nX+lUUM1zn3yjhgeffhc=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@511d193/chromium/extension/components/icons.js#sha256-6eK7coHHFB4zBfl8XXtjojrnfbBOFiEgYfQtz/Whv2E=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@c8c8c97/chromium/extension/components/modals.js#sha256-+DNbdxiHU2L4/PXMt7LGi47bQvHX3HJzAwux0mDeNo0=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@c2f16c7/chromium/extension/components/modals.js#sha256-9sYwaGlyeuwrNqXXrPmLYm8tqmMoAzpYYNz7mMzImG4=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@68d686d/chromium/extension/components/tooltip.js#sha256-/V1BXSQ92hspWdIOsRl38B1seJmPXzjMpcRMXZmfGqM=
 // @resource rpgCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/gray.min.css#sha256-48sEWzNUGUOP04ur52G5VOfGZPSnZQfrF3szUr4VaRs=
 // @resource rpwCSS     https://cdn.jsdelivr.net/gh/adamlui/ai-web-extensions@727feff/assets/styles/rising-particles/dist/white.min.css#sha256-6xBXczm7yM1MZ/v0o1KVFfJGehHk47KJjq8oTktH4KE=
