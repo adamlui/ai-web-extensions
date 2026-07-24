@@ -41,7 +41,6 @@ window.styles = {
                 chatgpt: `main form { width: ${
                     toWiden ? wcbWidth : chatbar.nativeWidth }px !important ; align-self: center }
                     ${ toWiden ? `
-                        body { overflow: clip }
                         div.wm-app-composerDock { display: flex }
                         div.wm-app-composerPositioner { display: inline-table !important }
                         div[data-swipable-detail-footer] { padding: 0 !important }
@@ -81,6 +80,7 @@ window.styles = {
                     tcbMaxHeight = site == 'chatgpt' ? 68 : 80,
                     tcbHeight = tcbMinHeight +( tcbMaxHeight - tcbMinHeight )* app.config.tallerChatboxHeight /100
             return app.config.extensionDisabled || app.config[`${env.site}Disabled`] ? '' : `
+                ${ site == 'chatgpt' ? 'body { overflow: clip !important }' : '' } /* prevent scrollbars on btn hover */
                 ${ app.config.tcbDisabled ? '' : `
                     ${ site == 'chatgpt' ? `div[class*=prose]:has(${selectors.input})` : selectors.input }
                         { max-height: ${tcbHeight}vh }
