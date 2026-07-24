@@ -17,7 +17,7 @@
         "stop": "button[data-testid=stop-button]",
         "voice": "button[style*=composer-speech-button], button[data-testid*=composer-speech-button], button:has(use[href$=\"svg#f8aa74\"])"
       },
-      "footer": "div#thread-bottom-container > div:last-of-type",
+      "footer": "div.wm-app-privacyPositioner, div#thread-bottom-container > div:last-of-type",
       "header": "header[class$=detailHeader], header#page-header",
       "input": "div#prompt-textarea",
       "rightbar": "div[class*=sidebar]:has(div[data-testid=screen-threadFlyOut])",
@@ -30,7 +30,6 @@
           }
         },
         "banners": {
-          "login": "//aside[.//button[contains(., 'Log in')]]",
           "promo": {
             "2025.12.30": "aside[class*=promo-banner]", // https://imgur.com/a/WFWUs3r
             "2026.4.22": "section[aria-labelledby*=promo]", // https://imgur.com/a/VEpgTLU
