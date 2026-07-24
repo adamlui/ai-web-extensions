@@ -122,10 +122,14 @@ window.modals = {
         return feedbackModal
     },
 
-    init(modal) { // requires lib/<css|dom>.js
+    init(modal) { // requires lib/css.js
         this.stylize()
         modal.classList.add(this.class) ; modal.parentNode.classList.add(`${this.class}-bg`)
         css.addRisingParticles(modal)
+        setTimeout(() => { // dim bg
+            modal.parentNode.style.backgroundColor = `rgba(67,70,72, ${ env.ui.scheme == 'dark' ? 0.62 : 0.33 })`
+            modal.parentNode.classList.add('animated')
+        }, 100) // delay for transition fx
     },
 
     observeRemoval(modal, modalType, modalSubType) { // to maintain stack for proper nav
@@ -179,6 +183,15 @@ window.modals = {
                 `.${this.class} [class*=modal-close-btn]:hover path { stroke: black ; fill: black }` : '' }
             .${this.class} [class*=modal-close-btn]:hover { background-color: #f2f2f2 } /* hover underlay */
             .${this.class} [class*=modal-close-btn] svg { margin: 11.5px } /* center SVG for hover underlay */
+            [class*=-modal-bg] {
+                pointer-events: auto ; /* override any disabling from site modals */
+                position: fixed ; top: 0 ; left: 0 ; width: 100% ; height: 100% ; /* expand to full view-port */
+                display: flex !important ; justify-content: center ; align-items: center ; z-index: 9999 ; /* align */
+                transition: var(--bg-transition) ; /* dim */
+                    -webkit-transition: var(--bg-transition) ; -moz-transition: var(--bg-transition) ;
+                    -o-transition: var(--bg-transition) ; -ms-transition: var(--bg-transition) }
+            [class*=-modal-bg].animated > div {
+                z-index: 13456 ; opacity: 0.98 ; transform: translateX(0) translateY(0) }
             .${this.class} a { color: #${ scheme == 'dark' ? '00cfff' : '1e9ebb' } !important }
             .${this.class} a:hover { text-decoration: none ; opacity: 0.7 ; transition: 0.15s ease }
             .${this.class} h2 { font-weight: bold }
