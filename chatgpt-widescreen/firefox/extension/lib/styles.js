@@ -11,7 +11,7 @@ window.styles = {
     },
 
     get outerDivSelector() { // requires env.site
-        return env.site == 'chatgpt' ? 'div.text-base > div'
+        return env.site == 'chatgpt' ? 'section.wm-app-conversation, div.text-base > div'
             : /* poe */ 'div[class*=ChatHomeMain_centered], div[class*=ChatMessagesView]'
     },
 
@@ -39,7 +39,14 @@ window.styles = {
                 -( site == 'chatgpt' ? 0 : 20 )
             return app.config.extensionDisabled || app.config[`${site}Disabled`] ? '' : {
                 chatgpt: `main form { width: ${
-                    toWiden ? wcbWidth : chatbar.nativeWidth }px !important ; align-self: center }`,
+                    toWiden ? wcbWidth : chatbar.nativeWidth }px !important ; align-self: center }
+                    ${ toWiden ? `
+                        div.wm-app-composerDock { display: flex }
+                        div.wm-app-composerPositioner { display: inline-table !important }
+                        div[data-swipable-detail-footer] { padding: 0 !important }
+                        form[class*=composer] { margin: 0 23px 16px }
+                        [data-mobile-landing-heading] ~ form[class*=composer] { margin: 23px 0 0 }
+                    ` : '' }`,
                 poe: toWiden && `[class*=ChatHomeMain_inputContainer], [class^=ChatPageMainFooter_footerInner] {
                     width: ${wcbWidth}px }`
             }[site]
