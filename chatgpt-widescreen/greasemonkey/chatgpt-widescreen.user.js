@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.7.23.4
+// @version             2026.7.23.5
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -253,8 +253,8 @@
 // @connect             cdn.jsdelivr.net
 // @connect             scriptcat.org
 // @require             https://cdn.jsdelivr.net/npm/@kudoai/chatgpt.js@4.15.1/dist/chatgpt.min.js#sha256-RglS1MscMHGDI7nq1v0OXEHoEw8stDxErRzSuILzCrQ=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/userscripts@8537359/assets/js/lib/css.js/dist/css.min.js#sha256-jNrtl5EI/AJfdjhOQyeLzHca7QQQ8dO+rf7OavISbYM=
-// @require             https://cdn.jsdelivr.net/gh/adamlui/userscripts@8537359/assets/js/lib/dom.js/dist/dom.min.js#sha256-xKxasv6KsO1nrPszHKosq1fcIj/3pS7YoPuDKqr38Wo=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/userscripts@43db4ae/assets/js/lib/css.js/dist/css.min.js#sha256-zf9s8C0cZ/i+gnaTIUxa0+RpDYpsJVlyuV5L2q4KUdA=
+// @require             https://cdn.jsdelivr.net/gh/adamlui/userscripts@43db4ae/assets/js/lib/dom.js/dist/dom.min.js#sha256-nTc2by3ZAz6AR7B8fOqjloJNETvjAepe15t2qlghMDo=
 // @require             https://cdn.jsdelivr.net/npm/json5@2.2.3/dist/index.min.js#sha256-S7ltnVPzgKyAGBlBG4wQhorJqYTehj5WQCrADCKJufE=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@68d686d/chromium/extension/lib/chatbar.js#sha256-SRE9UyuH01owWuLBPnjy0EuYAu5EdDAZtyRWogzEhno=
 // @require             https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@558a32b/chromium/extension/lib/feedback.js#sha256-tWTurwf53DZOc0g1E+EIH0k1A2GPbJ3li+2SJvcI6jE=
@@ -300,7 +300,8 @@
             name: (() => { try { return GM_info.scriptHandler } catch (err) { return 'unknown' }})(),
             version: (() => { try { return GM_info.version } catch (err) { return 'unknown' }})()
         },
-        site: location.hostname.split('.').slice(-2, -1)[0], ui: {}
+        site: location.hostname.split('.').slice(-2, -1)[0], ui: {},
+        xhr: typeof GM != 'undefined' && GM.xmlHttpRequest || GM_xmlhttpRequest
     }
     Object.assign(env.browser, { get isCompact() { return innerWidth <= 480 }})
     env.scriptManager.supportsTooltips = env.scriptManager.name == 'Tampermonkey'
