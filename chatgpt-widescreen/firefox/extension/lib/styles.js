@@ -41,6 +41,7 @@ window.styles = {
                 chatgpt: `main form { width: ${
                     toWiden ? wcbWidth : chatbar.nativeWidth }px !important ; align-self: center }
                     ${ toWiden ? `
+                        body { overflow: clip }
                         div.wm-app-composerDock { display: flex }
                         div.wm-app-composerPositioner { display: inline-table !important }
                         div[data-swipable-detail-footer] { padding: 0 !important }
