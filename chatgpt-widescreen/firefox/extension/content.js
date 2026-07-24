@@ -114,13 +114,12 @@
     // Run MAIN routine
 
     // Init UI props
-    if (env.site == 'chatgpt') {
+    if (env.site == 'chatgpt')
         sites.chatgpt.hasSidebar = !!await Promise.race([
             dom.get.loadedElem(sites.chatgpt.selectors.btns.sidebar), // DOM element if sidebar toggle loads
             dom.get.loadedElem(sites.chatgpt.selectors.btns.login).then(() => false), // null if login button loads
             new Promise(resolve => setTimeout(() => resolve(null), 3000)) // null if 3s passed
         ])
-    }
 
     // Init FULL-MODE states
     app.config.fullscreen = chatgpt.isFullScreen()

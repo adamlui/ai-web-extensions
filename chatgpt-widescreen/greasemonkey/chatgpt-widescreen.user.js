@@ -235,7 +235,7 @@
 // @description:zu      Thuthukisa iChatGPT ngemodi zesikrini ezibanzi/egcwele/ephezulu + imodi yokuvimbela i-spam. Futhi isebenza ku-poe.com!
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2026.7.24.2
+// @version             2026.7.24.3
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon48.png
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-widescreen@73594ea/assets/images/icons/widescreen-robot-emoji/icon64.png
@@ -770,14 +770,12 @@
     // Create browser TOOLBAR MENU + DISABLE SCRIPT if extension active
     toolbarMenu.register() ; if (env.extensionActive) return
 
-    // Init UI props
-    if (env.site == 'chatgpt') {
+     if (env.site == 'chatgpt')
         sites[env.site].hasSidebar = !!await Promise.race([
             dom.get.loadedElem(sites.chatgpt.selectors.btns.sidebar), // DOM element if sidebar toggle loads
             dom.get.loadedElem(sites.chatgpt.selectors.btns.login).then(() => false), // null if login button loads
             new Promise(resolve => setTimeout(() => resolve(null), 3000)) // null if 3s passed
         ])
-    }
 
     // Init FULL-MODE states
     app.config.fullscreen = chatgpt.isFullScreen()
